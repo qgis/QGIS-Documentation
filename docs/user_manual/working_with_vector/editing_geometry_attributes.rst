@@ -1036,35 +1036,37 @@ Advanced digitizing
 .. _table_advanced_editing:
 .. table:: Vector layer advanced editing toolbar
 
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | Icon                      | Purpose                                 | Icon                   | Purpose                 |
-  +===========================+=========================================+========================+=========================+
-  | |cad|                     | Enable Advanced Digitizing Tools        |                        |                         |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)|
-  | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                         |
-  | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                         |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |rotateFeature|           | Rotate Feature(s)                       | |simplify|             | Simplify Feature        |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |scaleFeature|            | Scale Feature                           |                        |                         |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |fillRing|                | Fill Ring                               | |reverseLine|          | Swap direction          |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |deleteRing|              | Delete Ring                             | |deletePart|           | Delete Part             |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |offsetCurve|             | Offset Curve                            | |reshape|              | Reshape Features        |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |splitParts|              | Split Parts                             | |splitFeatures|        | Split Features          |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |mergeFeatureAttributes|  | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols    |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
-  | |trimExtend|              | Trim or Extend Feature                  | |chamferFillet|        | Add Chamfer/fillet      |
-  +---------------------------+-----------------------------------------+------------------------+-------------------------+
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | Icon                      | Purpose                                 | Icon                   | Purpose                   |
+  +===========================+=========================================+========================+===========================+
+  | |cad|                     | Enable Advanced Digitizing Tools        | |featureArray|         | Copy features in an array |
+  |                           |                                         | |featureArrayLine|     |                           |
+  |                           |                                         | |featureArrayPoint|    |                           |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |moveFeature|             | Move Feature(s)                         | |moveFeatureCopy|      | Copy and Move Feature(s)  |
+  | |moveFeatureLine|         |                                         | |moveFeatureCopyLine|  |                           |
+  | |moveFeaturePoint|        |                                         | |moveFeatureCopyPoint| |                           |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |rotateFeature|           | Rotate Feature(s)                       | |simplify|             | Simplify Feature          |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |addRing|                 | Add Ring                                | |addPart|              | Add Part                  |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |fillRing|                | Fill Ring                               | |reverseLine|          | Swap direction            |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |deleteRing|              | Delete Ring                             | |deletePart|           | Delete Part               |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |offsetCurve|             | Offset Curve                            | |reshape|              | Reshape Features          |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |splitParts|              | Split Parts                             | |splitFeatures|        | Split Features            |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |mergeFeatureAttributes|  | Merge Attributes of Selected Features   | |mergeFeatures|        | Merge Selected Features   |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |rotatePointSymbols|      | Rotate Point Symbols                    | |offsetPointSymbols|   | Offset Point Symbols      |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |trimExtend|              | Trim or Extend Feature                  | |chamferFillet|        | Add Chamfer/fillet        |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
+  | |scaleFeature|            | Scale Feature                           |                        |                           |
+  +---------------------------+-----------------------------------------+------------------------+---------------------------+
 
 
 .. index::
@@ -1101,10 +1103,27 @@ The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing featur
 Likewise, you can create a translated copy of the feature(s) using the
 |moveFeatureCopy| :sup:`Copy and Move Feature(s)` tool.
 
+Another way to multiply features is by using the |featureArray| :guilabel:`Copy features in an array` map tool,
+available depending on the selected feature geometry.
+This tool regularly distributes copies of features in a linear direction,
+according to a defined spacing and/or number of copies.
+Click on the feature and move the mouse along the target path
+to define how the features are duplicated.
+
+The :guilabel:`Mode` option controls how the feature is multiplied.
+When using :guilabel:`Feature count`, the tool duplicates the feature based on a specified
+:guilabel:`Number of new features`.
+Moving the cursor farther from the initial click point results in larger gaps between features.
+To set a fixed distance between features, select :guilabel:`Spacing` mode
+and enter the desired value in :guilabel:`Spacing between features (map units)`.
+Alternatively, :guilabel:`Spacing and Feature Count` allows defining both the spacing
+and the total number of new features at once. The tool also supports copying multiple selected features simultaneously.
+
 .. note::
 
    If no feature is selected when you first click on the map canvas with any of
-   the :guilabel:`Move Feature(s)` or :guilabel:`Copy and Move Feature(s)` tools,
+   the :guilabel:`Move Feature(s)`, :guilabel:`Copy and Move Feature(s)`
+   or :guilabel:`Copy features in an array` tools,
    then only the feature under the mouse is affected by the action. So, if you
    want to move several features, they should be selected first.
 
@@ -2389,6 +2408,12 @@ To edit features in-place:
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
 .. |extractVertices| image:: /static/common/mAlgorithmExtractVertices.png
+   :width: 1.5em
+.. |featureArray| image:: /static/common/mActionFeatureArray.png
+   :width: 1.5em
+.. |featureArrayLine| image:: /static/common/mActionFeatureArrayLine.png
+   :width: 1.5em
+.. |featureArrayPoint| image:: /static/common/mActionFeatureArrayPoint.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
