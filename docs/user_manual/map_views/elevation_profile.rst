@@ -222,10 +222,12 @@ To create an elevation profile view:
 #. The next step is to configure the elevation properties of the layers you want to visualize.
 
    #. Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of layers.
-      By default, not all the layers of the project are loaded and referenced in the profile tool;
-      e.g., raster layers which are not marked as having elevation data in their properties are ignored.
-      Clicking the |addLayer| :sup:`Add layers` button will show a filtered list of possible layers
-      which can be added to the plot, but which currently aren't in the plot.
+      By default, the layer tree mimics, as much as possible, the main canvas :guilabel:`Layers` panel:
+      groups and layers of the project are loaded and referenced in the profile tool,
+      with their actual visibility properties.
+      Raster layers which are not marked as having elevation data in their properties are however ignored.
+      Clicking the |addLayer| :sup:`Add layers` button will show a filterable list
+      of the unloaded project's layers that could be added to the plot.
       Applying the dialog with selected layers will automatically mark them as having elevation data
       and immediately add them to the plot.
 
