@@ -2654,6 +2654,16 @@ and the values or range of values that are allowed to be added to each.
    Note that neither aliases nor comments are copied, since those are specific to
    each particular field.
 
+When designing attribute forms, it is often useful to know which fields have constraints
+or predefined values. This information is shown directly in the Attribute Form designer
+using visual indicators:
+
+* |constraint| : indicates that the field has one or more :ref:`constraints <constraints>` defined
+* |constraintHard| : indicates that the field has one or more enforced (hard) :ref:`constraints <constraints>` defined
+* |defaultValue| : indicates that the field has a predefined :ref:`default value <default_values>` set
+* |defaultValueApplyOnUpdate| : indicates that the field has a predefined :ref:`default value <default_values>`
+  that is applied on feature update
+
 .. index:: Default values, Fields constraints, Alias
 
 Common settings
@@ -2728,8 +2738,8 @@ constraints and:
   * A yellow cross appears when the unmet constraint is an unenforced one (``soft constraint``)
     and it does not prevent you to save the changes with the "wrong" values;
   * An orange cross can not be ignored and does not allow you to save your
-    modifications until they meet the constraints. It appears when the
-    |checkbox| :guilabel:`Enforce constraint` option is checked (``hard constraint``).
+    modifications until they meet the constraints. It appears when one of
+    the |checkbox| :guilabel:`Enforce constraint` options is checked (``hard constraint``).
 
 .. _default_values:
 
@@ -4137,11 +4147,19 @@ To do so:
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |constraint| image:: /static/common/mIndicatorConstraint.png
+   :width: 1.5em
+.. |constraintHard| image:: /static/common/mIndicatorConstraintHard.png
+   :width: 1.5em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
 .. |dataDefineOn| image:: /static/common/mIconDataDefineOn.png
+   :width: 1.5em
+.. |defaultValue| image:: /static/common/mIndicatorDefaultValue.png
+   :width: 1.5em
+.. |defaultValueApplyOnUpdate| image:: /static/common/mIndicatorDefaultValueApplyOnUpdate.png
    :width: 1.5em
 .. |degrees| unicode:: 0x00B0
    :ltrim:
