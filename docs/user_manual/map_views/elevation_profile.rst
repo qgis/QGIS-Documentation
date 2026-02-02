@@ -61,9 +61,11 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * - |layerTree| :sup:`Show Layer Tree`
      -
      - Shows or hides a list of project layers to configure rendering in the profile view.
-   * - |removeLayer| :sup:`Remove Group`
+   * - |addGroup| :sup:`Add Group`
      - 
-     - Removes selected group from the layer tree
+     - Allows grouping of layers, with similar logic to main canvas layer tree groups.
+       Individual groups can be checked or unchecked, allowing multiple layers to be shown or hidden
+       from the elevation profile at once.
    * - |captureLine| :sup:`Capture Curve`
      -
      - Draws interactively a line over the map canvas to represent the profile curve.
@@ -166,11 +168,21 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
 
 In the bottom left, a copy of the :guilabel:`Layers` panel can be displayed
 pushing the |layerTree| :guilabel:`Show Layer Tree` button.
-This is however an independent widget, with its own set of visible layers, in a custom stack order.
+This can be kept synchronized with the actual main :guilabel:`Layers` panel
+(using the |options| :sup:`Options` :menuselection:`-->`
+|checkbox| :guilabel:`Synchronize Layers to Project` checkbox),
+or be an independent widget, with its own set of visible layers,
+in a custom stack order.
 It allows you to control layers rendering and behavior within the plot canvas:
 
 * Tick the box next to the layer name to set whether it should be rendered in the plot canvas
-* Drag-and-drop layers up or down to change the order of the layers
+* Press |addGroup| :sup:`Add Group` to add individual groups for allowing multiple layers
+  to be shown or hidden from the elevation profile at once.
+  Selecting multiple layers or groups in the view and right click also allows to
+  :guilabel:`Group selected`items.
+  Right-clicking over a group allows to :guilabel:`Rename Group` or :guilabel:`Remove Group`.
+  A removed group will remove the group node from the layers tree while keeping its child layers
+* Drag-and-drop layers or groups up or down to change the rendering order
 * style rendering of layers in the profile view: double-click a layer or right-click
   and select :guilabel:`Properties...` to open the layer's :guilabel:`Elevation` properties tab
   for configuration.
@@ -215,9 +227,7 @@ To create an elevation profile view:
       Clicking the |addLayer| :sup:`Add layers` button will show a filtered list of possible layers
       which can be added to the plot, but which currently aren't in the plot.
       Applying the dialog with selected layers will automatically mark them as having elevation data
-      and immediately add them to the plot. Clicking the |removeLayer| :sup:`Remove Group`
-      button will remove the selected group while keeping its child layers: the child
-      layers are promoted one level up in the tree instead of being deleted.
+      and immediately add them to the plot.
 
       .. tip:: Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers
         from the main layer tree to one in the elevation profile tool.
@@ -372,6 +382,8 @@ to export an elevation profile, allowing you to reuse the plots in another softw
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |arrowLeft| image:: /static/common/mActionArrowLeft.png
@@ -403,8 +415,6 @@ to export an elevation profile, allowing you to reuse the plots in another softw
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
-   :width: 1.5em
-.. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
