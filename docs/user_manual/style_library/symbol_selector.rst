@@ -171,16 +171,6 @@ regardless it's of marker, line or fill sub-type:
 * the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering
   <draw_effects>`.
 
-In addition, marker and hashed line sub-types share a common option:
-
-* :guilabel:`Blank Segments`: allows defining blank sections along a feature
-  when using templated line symbology.
-  The information is stored as a data-defined property
-  (using a data field or an auxiliary storage field).
-  To create a blank segment, click on the desired starting point along the line
-  and click again to define the end of the segment. Existing segments can be
-  resized by dragging their start or end points along the line.
-  To remove a segment, select it and press :kbd:`Del`.
 
 .. note::
 
@@ -434,6 +424,25 @@ layer types:
     of the marker line symbols.
   * :guilabel:`Line offset`: the marker symbols can also be offset from the line
     feature.
+  * :guilabel:`Blank Segments`: allows defining blank sections along a feature.
+    This option is useful when repeated marker pattern would otherwise
+    result in undesirable result. For instance, when markers overlap with
+    other symbols or when parts of a line need to be kept empty for other map elements.
+
+    Blank segments are defined by distances from the start of the line and are stored
+    as a data-defined property, using either an existing field or an auxiliary storage field.
+    This lets you set blank sections for each feature.
+    Note that this tool affects symbol rendering only and does not modify
+    the underlying feature geometry.
+    
+    To create blank segments:
+
+    * Click near the line to define the start of a blank segment, and click
+      again to define its end.
+    * Drag the start or end of an existing blank segment along the line to
+      resize it.
+    * Drag the entire blank segment to move it along the line.
+    * Select a blank segment and press :kbd:`Del` to remove it.
 
 .. _hashed_line_symbol:
 
