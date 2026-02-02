@@ -602,7 +602,15 @@ actions like:
      -
      - :guilabel:`Attributes`
      - :ref:`statistical_summary`
-   * - |newElevationProfile| :guilabel:`Elevation Profile`
+   * - :menuselection:`Elevation Profiles -->`
+     -
+     -
+     - :ref:`label_elevation_profile_view`
+   * - |newElevationProfile| ::menuselection:`--> New Elevation Profile`
+     - :kbd:`Ctrl+Alt+E`
+     -
+     - :ref:`label_elevation_profile_view`
+   * - ::menuselection:`--> Manage Elevation Profiles...`
      -
      -
      - :ref:`label_elevation_profile_view`

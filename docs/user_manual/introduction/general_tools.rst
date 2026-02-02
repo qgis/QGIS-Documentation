@@ -2439,8 +2439,6 @@ For more information on the authentication system, see :ref:`authentication_inde
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |createTable| image:: /static/common/mActionCreateTable.png
-   :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |colorBox| image:: /static/common/mIconColorBox.png
@@ -2450,6 +2448,8 @@ For more information on the authentication system, see :ref:`authentication_inde
 .. |colorSwatches| image:: /static/common/mIconColorSwatches.png
    :width: 1.5em
 .. |colorWheel| image:: /static/common/mIconColorWheel.png
+   :width: 1.5em
+.. |createTable| image:: /static/common/mActionCreateTable.png
    :width: 1.5em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em

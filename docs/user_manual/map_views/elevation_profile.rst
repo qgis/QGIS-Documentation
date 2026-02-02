@@ -15,8 +15,21 @@ The :guilabel:`Elevation Profile` panel is a plotting tool for side view,
 for visualizing elevation data along a line.
 It supports vector, raster, mesh and point cloud layers. Data can be of 2D or 3D type.
 
-To add an elevation profile view, go to :menuselection:`View -->` |layoutItem3DMap| :menuselection:`Elevation Profile` menu.
-You can add as many profile views as you want, and they can be docked, piled on top of each other, or floating.
+To create or manage elevation profile panels,
+expand the :menuselection:`View --> Elevation Profiles -->` menu and either press:
+
+* |newElevationProfile| :menuselection:`New Elevation Profile` (:kbd:`Ctrl+Alt+E`):
+  creates an elevation profile based on the project layer tree.
+* :menuselection:`Manage Elevation Profiles...`: opens the :guilabel:`Elevation Profile Manager` dialog
+  listing all available elevation profile views, and allowing to:
+
+  * search for an elevation profile
+  * open any elevation profile in the project
+  * duplicate, rename or remove an existing elevation profile
+
+You can add as many profile views as you want, and they can be docked,
+piled on top of each other, or floating.
+They are stored in the project upon saving the project.
 
 .. _figure_elevation_tool_interaction:
 
@@ -48,9 +61,11 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
    * - |layerTree| :sup:`Show Layer Tree`
      -
      - Shows or hides a list of project layers to configure rendering in the profile view.
-   * - |removeLayer| :sup:`Remove Group`
+   * - |addGroup| :sup:`Add Group`
      - 
-     - Removes selected group from the layer tree
+     - Allows grouping of layers, with similar logic to main canvas layer tree groups.
+       Individual groups can be checked or unchecked, allowing multiple layers to be shown or hidden
+       from the elevation profile at once.
    * - |captureLine| :sup:`Capture Curve`
      -
      - Draws interactively a line over the map canvas to represent the profile curve.
@@ -153,11 +168,21 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
 
 In the bottom left, a copy of the :guilabel:`Layers` panel can be displayed
 pushing the |layerTree| :guilabel:`Show Layer Tree` button.
-This is however an independent widget, with its own set of visible layers, in a custom stack order.
+This can be kept synchronized with the actual main :guilabel:`Layers` panel
+(using the |options| :sup:`Options` :menuselection:`-->`
+|checkbox| :guilabel:`Synchronize Layers to Project` checkbox),
+or be an independent widget, with its own set of visible layers,
+in a custom stack order.
 It allows you to control layers rendering and behavior within the plot canvas:
 
 * Tick the box next to the layer name to set whether it should be rendered in the plot canvas
-* Drag-and-drop layers up or down to change the order of the layers
+* Press |addGroup| :sup:`Add Group` to add individual groups for allowing multiple layers
+  to be shown or hidden from the elevation profile at once.
+  Selecting multiple layers or groups in the view and right click also allows to
+  :guilabel:`Group selected`items.
+  Right-clicking over a group allows to :guilabel:`Rename Group` or :guilabel:`Remove Group`.
+  A removed group will remove the group node from the layers tree while keeping its child layers
+* Drag-and-drop layers or groups up or down to change the rendering order
 * style rendering of layers in the profile view: double-click a layer or right-click
   and select :guilabel:`Properties...` to open the layer's :guilabel:`Elevation` properties tab
   for configuration.
@@ -175,10 +200,10 @@ It also allows a set of interactions such as zooming, panning, measuring, identi
 Creating an elevation profile
 =============================
 
-To create a profile view, you can:
+To create an elevation profile view:
 
-#. Go to :menuselection:`View -->` |newElevationProfile| :menuselection:`Elevation Profile` menu.
-   The :guilabel:`Elevation profile` panel opens.
+#. Press :menuselection:`View -->` |newElevationProfile| :menuselection:`New Elevation Profile` button
+   or press :kbd:`Ctrl+Alt+E`. The :guilabel:`Elevation profile` view opens.
 #. Create the profile line along which the terrain and the features will be rendered.
    Select a drawing tool:
 
@@ -197,14 +222,14 @@ To create a profile view, you can:
 #. The next step is to configure the elevation properties of the layers you want to visualize.
 
    #. Push on the |layerTree| :sup:`Show Layer Tree` button to display the list of layers.
-      By default, not all the layers of the project are loaded and referenced in the profile tool;
-      e.g., raster layers which are not marked as having elevation data in their properties are ignored.
-      Clicking the |addLayer| :sup:`Add layers` button will show a filtered list of possible layers
-      which can be added to the plot, but which currently aren't in the plot.
+      By default, the layer tree mimics, as much as possible, the main canvas :guilabel:`Layers` panel:
+      groups and layers of the project are loaded and referenced in the profile tool,
+      with their actual visibility properties.
+      Raster layers which are not marked as having elevation data in their properties are however ignored.
+      Clicking the |addLayer| :sup:`Add layers` button will show a filterable list
+      of the unloaded project's layers that could be added to the plot.
       Applying the dialog with selected layers will automatically mark them as having elevation data
-      and immediately add them to the plot. Clicking the |removeLayer| :sup:`Remove Group`
-      button will remove the selected group while keeping its child layers: the child
-      layers are promoted one level up in the tree instead of being deleted.
+      and immediately add them to the plot.
 
       .. tip:: Holding :kbd:`Ctrl` key, it is possible to drag and drop additional layers
         from the main layer tree to one in the elevation profile tool.
@@ -359,6 +384,8 @@ to export an elevation profile, allowing you to reuse the plots in another softw
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
 .. |arrowLeft| image:: /static/common/mActionArrowLeft.png
@@ -383,8 +410,6 @@ to export an elevation profile, allowing you to reuse the plots in another softw
    :width: 1.5em
 .. |layerTree| image:: /static/common/mIconLayerTree.png
    :width: 1.5em
-.. |layoutItem3DMap| image:: /static/common/mLayoutItem3DMap.png
-   :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
@@ -392,8 +417,6 @@ to export an elevation profile, allowing you to reuse the plots in another softw
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |pan| image:: /static/common/mActionPan.png
-   :width: 1.5em
-.. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
