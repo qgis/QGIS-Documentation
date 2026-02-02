@@ -473,6 +473,12 @@ Further reading: :ref:`expression_function_GeometryGroup_start_point`,
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_end_point_section
+   :end-before: .. end_equals_section
+
+Further reading: :ref:`expression_function_GeometryGroup_overlay_equals`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_equals_section
    :end-before: .. end_extend_section
 
 Further reading: :ref:`qgisextendlines` algorithm
@@ -494,14 +500,16 @@ Further reading: :ref:`qgisswapxy` algorithm
    :start-after: .. end_flip_coordinates_section
    :end-before: .. end_force_polygon_ccw_section
 
-Further reading: :ref:`expression_function_GeometryGroup_force_polygon_cw`,
+Further reading: :ref:`qgisforceccw` algorithm,
+:ref:`expression_function_GeometryGroup_force_polygon_cw`,
 :ref:`expression_function_GeometryGroup_force_rhr`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_polygon_ccw_section
    :end-before: .. end_force_polygon_cw_section
 
-Further reading: :ref:`expression_function_GeometryGroup_force_polygon_ccw`,
+Further reading: :ref:`qgisforcecw` algorithm,
+:ref:`expression_function_GeometryGroup_force_polygon_ccw`,
 :ref:`expression_function_GeometryGroup_force_rhr`
 
 .. include:: expression_help/GeometryGroup.rst
@@ -627,8 +635,8 @@ algorithm
    :start-after: .. end_overlay_disjoint_section
    :end-before: .. end_overlay_equals_section
 
-Further reading: :ref:`array manipulation <array_functions>`,
-:ref:`qgisselectbylocation` algorithm
+Further reading: :ref:`expression_function_GeometryGroup_equals`,
+:ref:`array manipulation <array_functions>`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_equals_section
