@@ -1086,9 +1086,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-
 .. _PDAL: https://pdal.io/en/stable/
-.. |400| replace:: ``NEW in 4.0``
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
