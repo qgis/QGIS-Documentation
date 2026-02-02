@@ -276,6 +276,179 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _pdalcompare:
+
+Compare point clouds
+--------------------
+
+|400|
+
+Compares two point clouds using an M3C2 (Multiscale Model-to-Model Cloud Comparison)
+algorithm and outputs a subset (filtered using Poisson sampling, based on Subsampling
+cell size parameter) of the original point cloud.
+
+The M3C2 algorithm calculates the distance between two point clouds by considering
+the local orientation of the surface. It estimates surface normals at a user-defined
+scale and measures the average distance between clouds within a cylindrical
+projection along those normals.
+
+The approach is highly robust against sensor noise and surface roughness, making
+it the standard for detecting change in complex natural environments. It also
+provides a sign (indicating whether a surface has moved in or out) and
+a statistically significant level of detection to distinguish real change from
+measurement error.
+
+The output point cloud will have several new dimensions: ``m3c2_distance``,
+``m3c2_uncertainty``, ``m3c2_significant``, ``m3c2_std_dev1``, ``m3c2_std_dev2``,
+``m3c2_count1`` and ``m3c2_count2``.
+
+*References: Lague, Dimitri, Nicolas Brodu, and Jérôme Leroux. Accurate 3D Comparison
+of Complex Topography with Terrestrial Laser Scanner: Application to the Rangitikei
+Canyon (N-Z). arXiv, 2013, https://arxiv.org/abs/1302.1183.*
+
+.. attention:: Running this algorithm requires QGIS installed with PDAL_ >= 2.10
+   (see :menuselection:`Help --> About` menu).
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to compare
+   * - **Compare layer**
+     - ``INPUT_COMPARE``
+     - [point cloud]
+     - Point cloud to compare against
+   * - **Subsampling cell size**
+     - ``SUBSAMPLING_CELL_SIZE``
+     - [numeric: double]
+
+       Default: 0.0
+     - Minimum spacing between points (in map units).
+   * - **Normal radius**
+     - ``NORMAL_RADIUS``
+     - [numeric: double]
+
+       Default: 2.0
+     - Radius of the sphere around each core point that defines the neighbors from which normals are calculated.
+   * - **Cylinder radius**
+     - ``CYLINDER_RADIUS``
+     - [numeric: double]
+
+       Default: 2.0
+     - Radius of the cylinder inside of which points are searched for when calculating change.
+   * - **Cylinder half-length**
+     - ``CYLINDER_HALF_LENGTH``
+     - [numeric: double]
+
+       Default: 2.0
+     - The half-length of the cylinder of neighbors used for calculating change.
+   * - **Registration error**
+     - ``REGISTRATION_ERROR``
+     - [numeric: double]
+
+       Default: 0.0
+     - The estimated registration error between the two point clouds.
+   * - **Cylinder orientation**
+     - ``CYLINDER_ORIENTATION``
+     - [enumeration]
+
+       Default: 0
+     - Which direction to orient the cylinder/normal vector used for comparison between the two point clouds.
+
+       * 0 --- Up
+       * 1 --- Origin
+       * 2 --- None
+
+   * - **Comparison point cloud**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the comparison point cloud to. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filter expression**
+
+       Optional
+     - ``FILTER_EXPRESSION``
+     - [expression]
+     - A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of features in the point cloud data
+   * - **Cropping extent**
+
+       Optional
+     - ``FILTER_EXTENT``
+     - [extent]
+     - A map extent for selecting a subset of features in the point cloud data
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Comparison point cloud**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output comparison point cloud.
+       The output point cloud contains the following additional dimensions:
+
+       - ``m3c2_distance``
+       - ``m3c2_uncertainty``
+       - ``m3c2_significant``
+       - ``m3c2_std_dev1``
+       - ``m3c2_std_dev2``
+       - ``m3c2_count1``
+       - ``m3c2_count2``
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:compare``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _pdalcreatecopc:
 
 Create COPC
@@ -914,3 +1087,12 @@ Python code
 
 
 .. _PDAL: https://pdal.io/en/stable/
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |400| replace:: ``NEW in 4.0``
