@@ -1103,16 +1103,11 @@ The |moveFeature| :sup:`Move Feature(s)` tool allows you to move existing featur
 Likewise, you can create a translated copy of the feature(s) using the
 |moveFeatureCopy| :sup:`Copy and Move Feature(s)` tool.
 
-.. note::
-
-   If no feature is selected when you first click on the map canvas with any of
-   the :guilabel:`Move Feature(s)` or :guilabel:`Copy and Move Feature(s)` tools,
-   then only the feature under the mouse is affected by the action. So, if you
-   want to move several features, they should be selected first.
-
 Another way to multiply features is by using the |featureArray| :guilabel:`Copy features in an array` map tool,
 available depending on the selected feature geometry.
-This tool copies features along a line. Click on the feature and move the mouse along the target path
+This tool regularly distributes copies of features in a linear direction,
+according to a defined spacing and/or number of copies.
+Click on the feature and move the mouse along the target path
 to define how the features are duplicated.
 
 The :guilabel:`Mode` option controls how the feature is multiplied.
@@ -1123,6 +1118,14 @@ To set a fixed distance between features, select :guilabel:`Spacing` mode
 and enter the desired value in :guilabel:`Spacing between features (map units)`.
 Alternatively, :guilabel:`Spacing and Feature Count` allows defining both the spacing
 and the total number of new features at once. The tool also supports copying multiple selected features simultaneously.
+
+.. note::
+
+   If no feature is selected when you first click on the map canvas with any of
+   the :guilabel:`Move Feature(s)`, :guilabel:`Copy and Move Feature(s)`
+   or :guilabel:`Copy features in an array` tools,
+   then only the feature under the mouse is affected by the action. So, if you
+   want to move several features, they should be selected first.
 
 .. index::
    single: Digitizing tools; Rotate Feature
