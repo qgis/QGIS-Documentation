@@ -2191,7 +2191,14 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 * the :guilabel:`Mask sources` tab: list all the mask labels and mask symbol
   layers defined in the project.
   Select the items that would generate the mask over the selected masked symbol
-  layers
+  layers.
+
+  Mask sources can be selected individually, or by using a selective masking :guilabel:`Preset`.
+  A selective masking preset is a named collection of mask sources that can be reused across different layers in the project.
+  Clicking the |selectString| button allows you to create a new preset using :guilabel:`New Selective Masking Set...`,
+  or, for existing presets, you can :guilabel:`Rename Set...` or :guilabel:`Remove Set...`.
+  Presets are selected from the drop-down menu and help apply the same masking set consistently.
+  When a preset is updated, the change is automatically applied to all layers using that preset.
 
 .. _figure_mask_properties:
 
