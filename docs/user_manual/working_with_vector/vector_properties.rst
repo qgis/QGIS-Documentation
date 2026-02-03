@@ -2511,7 +2511,7 @@ Other Widgets
 The drag and drop designer offers a number of widgets that are not connected to a particular field.
 They can be used to enhance the appearance of the form or to display dynamically calculated values.
 
-* :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result
+* |widgetHtml| :guilabel:`HTML Widget`: embeds an HTML page, the HTML source may contain the result
   of dynamically calculated expressions.
 
   HTML widgets can be used for example to display images stored as BLOB in a field
@@ -2539,7 +2539,7 @@ They can be used to enhance the appearance of the form or to display dynamically
 
      A preview of your image is displayed on the right.
 
-* :guilabel:`QML Widget`: embeds a Qt QML_ document, displaying graphical elements in the attribute form.
+* |widgetQml| :guilabel:`QML Widget`: embeds a Qt QML_ document, displaying graphical elements in the attribute form.
   Beside the custom :guilabel:`Title` of the added widget and whether it should be shown or not,
   you can select from predefined :guilabel:`QML code` elements:
 
@@ -2558,9 +2558,9 @@ They can be used to enhance the appearance of the form or to display dynamically
 
      Setting a QML graph to display in attribute form
 
-* :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
+* |widgetText| :guilabel:`Text Widget`: displays a text widget which supports basic HTML markup
   and may contain the result of dynamically calculated expressions.
-* :guilabel:`Spacer Widget`: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
+* |widgetSpacer| :guilabel:`Spacer Widget`: inserts an empty transparent rectangle, increasing the vertical distance between two widgets.
 
 .. _QML: https://doc.qt.io/qt-6/qtqml-syntax-basics.html
 
@@ -2662,6 +2662,12 @@ using visual indicators:
 * |defaultValue| : indicates that the field has a predefined :ref:`default value <default_values>` set
 * |defaultValueApplyOnUpdate| : indicates that the field has a predefined :ref:`default value <default_values>`
   that is applied on feature update
+
+The indicators are shown only when constraints and/or default values are present.
+Hover over the icon for additional details about the specific configuration.
+
+When working in :ref:`Drag and drop <drag_drop_designer>` mode, the indicators are shown in the :guilabel:`Form Layout` panel.
+Otherwise, they are shown in the :guilabel:`Available Widgets` panel.
 
 .. index:: Default values, Fields constraints, Alias
 
@@ -2837,7 +2843,7 @@ Based on the field type, QGIS automatically determines and assigns a default
 widget type to it. You can then replace the widget with any other compatible
 with the field type. The available widgets are:
 
-* **Binary (BLOB)**: Available only for binary fields, it displays by default a label
+* |widgetBinary| **Binary (BLOB)**: Available only for binary fields, it displays by default a label
   with the size of the embedded data, if not empty.
   A drop-down button next to the label allows to:
 
@@ -2847,24 +2853,24 @@ with the field type. The available widgets are:
 
   It is also possible to preview the embedded binary file in the field,
   if combined in a drag-and-drop form with e.g. a :ref:`QML or HTML widget <other_widgets>`.
-* **Checkbox**: Displays a checkbox whose state defines the value to insert.
+* |widgetCheckbox| **Checkbox**: Displays a checkbox whose state defines the value to insert.
   Internally, the widget stores a value (e.g. 1 for checked, 0 for unchecked)
   while representing it visually as a toggled box. You can configure the
   stored values for the checked and unchecked states in the representation.
   It is also possible to display the checkbox state as a plain text using "True"/"False" labels.
   These settings influence how the values are shown in classification renderers.
-* **Classification**: Only available when a :ref:`categorized symbology
+* |widgetClassification| **Classification**: Only available when a :ref:`categorized symbology
   <categorized_renderer>` is applied to the layer, displays a combo box with
   the values of the classes.
-* **Color**: Displays a :ref:`color widget <color-selector>` allowing to select
+* |widgetColor| **Color**: Displays a :ref:`color widget <color-selector>` allowing to select
   a color; the color value is stored as a html notation in the attribute table.
-* **Date/Time**: Displays a line field which can open a calendar widget to enter
+* |widgetDateTime| **Date/Time**: Displays a line field which can open a calendar widget to enter
   a date, a time or both. Column type must be text. You can select a custom
   format, pop-up a calendar, etc.
 * **Enumeration**: Opens a combo box with predefined values fetched from the
   database. This is currently only supported by the PostgreSQL provider, for
   fields of ``enum`` type.
-* **Attachment**: Uses a "Open file" dialog to store file path in a
+* |widgetAttachment| **Attachment**: Uses a "Open file" dialog to store file path in a
   relative or absolute mode. It can be used to display the document path as a hyperlink
   or render the document within a dedicated widget in the form.
   Supported document types are image, web page, audio and video,
@@ -2878,7 +2884,7 @@ with the field type. The available widgets are:
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
 
-* **Geometry**: Compatible with the *Geometry* field type. For example, PostgreSQL and Memory layers 
+* |widgetGeometry| **Geometry**: Compatible with the *Geometry* field type. For example, PostgreSQL and Memory layers 
   can contain multiple geometry fields. QGIS uses the first geometry column as the layer geometry.
   Applying the Geometry widget to additional geometry fields allows lossless use of the data in the attribute form:
 
@@ -2886,12 +2892,12 @@ with the field type. The available widgets are:
   * Paste
   * Clear
 
-* **Hidden**: A hidden attribute column is invisible. The user is not able
+* |widgetHidden| **Hidden**: A hidden attribute column is invisible. The user is not able
   to see its contents.
 * **Key/Value**: Displays a two-columns table to store sets of key/value
   pairs within a single field. This is currently supported by the PostgreSQL
   provider, for fields of ``hstore`` type.
-* **JSON View**: Displays JSON data in a syntax highlighted text edit or in
+* |widgetJsonView| **JSON View**: Displays JSON data in a syntax highlighted text edit or in
   tree view. This widget is currently read only. Several options are available
   to change how the data is displayed. 'Default view' specify if the widget should
   appear in Text or Tree mode. 'Format JSON' has three options which are related
@@ -2901,10 +2907,10 @@ with the field type. The available widgets are:
   * Compact: Display data in a one-line size optimized string without newlines or spaces.
   * Disabled: Display data as it comes from the provider.
 
-* **List**: Displays a single column table to add different values within a
+* |widgetList| **List**: Displays a single column table to add different values within a
   single field. This is currently supported by the PostgreSQL provider,
   for fields of ``array`` type.
-* **Range**: Allows you to set numeric values from a specific range. The edit
+* |widgetRange| **Range**: Allows you to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
 
   .. note::
@@ -2913,22 +2919,22 @@ with the field type. The available widgets are:
    will be automatically recognized by QGIS and assigned a **Range** widget for the relevant fields.
    The widget will be prefilled with the minimum and maximum values specified in the domain.
 
-* **Relation Reference**: This is the default widget assigned to the referencing
+* |widgetRelationReference| **Relation Reference**: This is the default widget assigned to the referencing
   field (i.e., the foreign key in the child layer) when a :ref:`relation <vector_relations>`
   is set. It provides direct access to the parent feature's form which in turn
   embeds the list and form of its children. The number of entries in the widget
   can be limited for efficiency, and if limit is not set, all entries will be loaded.
   The field defined in the display expression is used as representable value in classification
   renderers.
-* **Text Edit** (default): This opens a text edit field that allows simple
+* |widgetTextEdit| **Text Edit** (default): This opens a text edit field that allows simple
   text or multiple lines to be used. If you choose multiple lines you
   can also choose html content.
 * **Unique Values**: You can select one of the values already used in
   the attribute table. If 'Editable' is activated, a line edit is shown with
   autocompletion support, otherwise a combo box is used.
-* **Uuid Generator**: Generates a read-only UUID (Universally Unique Identifiers)
+* |widgetUuid| **Uuid Generator**: Generates a read-only UUID (Universally Unique Identifiers)
   field, if empty.
-* **Value Map**: A combo box with predefined items. The value is stored in
+* |widgetValueMap| **Value Map**: A combo box with predefined items. The value is stored in
   the attribute, the description is shown in the combo box. You can define
   values manually or load them from a layer or a CSV file.
   The description is used as the representable value,
@@ -2939,7 +2945,7 @@ with the field type. The available widgets are:
    Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **coded Field Domains**
    will be automatically recognized by QGIS and assigned a **Value Map** widget for the relevant fields.
 
-* **Value Relation**: Offers values from a related table in a combobox.
+* |widgetValueRelation| **Value Relation**: Offers values from a related table in a combobox.
   You can select layer, key column and value column.
   The key column is the stored value in the attribute table,
   while the value column is the label shown in the combobox.
@@ -4308,6 +4314,48 @@ To do so:
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |widgetAttachment| image:: /static/common/mEditorWidgetAttachment.png
+   :width: 1.5em
+.. |widgetBinary| image:: /static/common/mEditorWidgetBinary.png
+   :width: 1.5em
+.. |widgetCheckbox| image:: /static/common/mEditorWidgetCheckbox.png
+   :width: 1.5em
+.. |widgetClassification| image:: /static/common/mEditorWidgetClassification.png
+   :width: 1.5em
+.. |widgetColor| image:: /static/common/mEditorWidgetColor.png
+   :width: 1.5em
+.. |widgetDateTime| image:: /static/common/mEditorWidgetDateTime.png
+   :width: 1.5em
+.. |widgetGeometry| image:: /static/common/mEditorWidgetGeometry.png
+   :width: 1.5em
+.. |widgetHidden| image:: /static/common/mEditorWidgetHidden.png
+   :width: 1.5em
+.. |widgetHtml| image:: /static/common/mEditorWidgetHtml.png
+   :width: 1.5em
+.. |widgetJsonView| image:: /static/common/mEditorWidgetJsonView.png
+   :width: 1.5em
+.. |widgetList| image:: /static/common/mEditorWidgetList.png
+   :width: 1.5em
+.. |widgetQml| image:: /static/common/mEditorWidgetQml.png
+   :width: 1.5em
+.. |widgetRange| image:: /static/common/mEditorWidgetRange.png
+   :width: 1.5em
+.. |widgetRelationEditor| image:: /static/common/mEditorWidgetRelationEditor.png
+   :width: 1.5em
+.. |widgetRelationReference| image:: /static/common/mEditorWidgetRelationReference.png
+   :width: 1.5em
+.. |widgetSpacer| image:: /static/common/mEditorWidgetSpacer.png
+   :width: 1.5em
+.. |widgetText| image:: /static/common/mEditorWidgetText.png
+   :width: 1.5em
+.. |widgetTextEdit| image:: /static/common/mEditorWidgetTextEdit.png
+   :width: 1.5em
+.. |widgetUuid| image:: /static/common/mEditorWidgetUuid.png
+   :width: 1.5em
+.. |widgetValueMap| image:: /static/common/mEditorWidgetValueMap.png
+   :width: 1.5em
+.. |widgetValueRelation| image:: /static/common/mEditorWidgetValueRelation.png
+   :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
