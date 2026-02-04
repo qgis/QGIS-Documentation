@@ -186,6 +186,7 @@ You then need to create connections to the server you are targeting:
 
    .. figure:: img/add_connection_wms.png
       :align: center
+      :width: 70%
 
       Creating a connection to a WMS server
 
@@ -213,6 +214,8 @@ You then need to create connections to the server you are targeting:
       See :ref:`authentication_index` for more details.
 
    * HTTP :guilabel:`Referer`
+   * :guilabel:`Default Image Format`: Detects the available image formats from the server,
+     allows you to set a preferred one and stores it in the connection settings.
    * :guilabel:`WMS DPI-Mode`: Available options are **all**, **off**, **QGIS**,
      **UMN** and **GeoServer**
    * :guilabel:`WMTS server-side tile pixel ratio`:  When rendering WMTS layers,
