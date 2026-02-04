@@ -29,6 +29,7 @@ Point Layers
 
 .. figure:: img/3d_point_symbol.png
    :align: center
+   :width: 50%
 
    Properties of a 3D point symbol
 
@@ -75,10 +76,11 @@ Line layers
 
 .. figure:: img/3d_line_symbol.png
    :align: center
+   :width: 50%
 
    Properties of a 3D line symbol
 
-* Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can
+* Beneath the :guilabel:`Width` and :guilabel:`Offset` settings you can
   define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
   z-values, you can define the 3d volumes with this setting.
 * With the :guilabel:`Altitude clamping` you define the position of the
@@ -99,10 +101,11 @@ Polygon Layers
 
 .. figure:: img/3d_polygon_symbol.png
    :align: center
+   :width: 50%
 
    Properties of a 3D polygon symbol
 
-* As for the other ones, :guilabel:`Height` can be defined in CRS units. You can
+* As for the other ones, :guilabel:`Offset` can be defined in CRS units. You can
   also use the |dataDefine| button to overwrite the value with a custom
   expression, a variable or an entry of the attribute table
 
@@ -125,8 +128,8 @@ Polygon Layers
   * :guilabel:`Front`
   * or :guilabel:`Back`
 * The :guilabel:`Rendered facade` determines the faces to display. Possible values
-  are :guilabel:`No facades`, :guilabel:`Walls`, :guilabel:`Roofs`, or
-  :guilabel:`Walls and roofs`
+  are :guilabel:`Walls`,
+  :guilabel:`Walls and Roof`, or :guilabel:`Walls, Roof and Floor`
 * |checkbox| :guilabel:`Add back faces`: for each triangle, creates both front and
   back face with correct normals - at the expense of increased number of vertex data.
   This option can be used to fix shading issues (e.g., due to data with inconsistent
