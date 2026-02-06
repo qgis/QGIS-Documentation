@@ -1366,6 +1366,7 @@ Manage styles from layer context menu
 
 Right-click on the layer in the :guilabel:`Layers` panel and select :guilabel:`Styles`
 to copy, paste, add, remove or rename layer styles.
+
 * :guilabel:`Copy Current Style`: copies all the settings of the active style to the clipboard.
 
   For both vector and raster layers, you can choose which style categories to copy/paste:
