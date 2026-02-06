@@ -1361,20 +1361,32 @@ to duplicate any layer in the map legend.
   are stored in the active style, always ensure you are editing the right style
   to avoid mistakenly altering a style used in a :ref:`map theme <map_themes>`.
 
-.. tip:: **Manage styles from layer context menu**
 
-   Right-click on the layer in the :guilabel:`Layers` panel to copy, paste, add
-   or rename layer styles.
-   For both vector and raster layers, you can choose which style categories to copy/paste:
+.. _manage_styles_from_layer_context_menu:
 
-    * :guilabel:`All Style Categories`
-    * :guilabel:`All Symbology and Labeling Categories` (including diagrams),
-       and :guilabel:`All Fields and Attribute Form Categories` for vector layers
-    * :guilabel:`All Symbology and Labeling Categories` option for raster layers
-    * or one of the available categories.
-    
-    Keep in mind that, for the raster layer, the :guilabel:`Symbology`
-    and :guilabel:`Rendering` categories are always copied together.
+Manage styles from layer context menu
+---------------------------------------
+
+Right-click on the layer in the :guilabel:`Layers` panel and select :guilabel:`Styles`
+to copy, paste, add, remove or rename layer styles.
+
+* :guilabel:`Copy Current Style`: copies all the settings of the active style to the clipboard.
+
+  For both vector and raster layers, you can choose which style categories to copy/paste:
+
+  * :guilabel:`All Style Categories`
+  * :guilabel:`All Symbology and Labeling Categories` (including diagrams),
+    and :guilabel:`All Fields and Attribute Form Categories` for vector layers
+  * :guilabel:`All Symbology and Labeling Categories` option for raster layers
+  * or one of the available categories.
+
+  Keep in mind that, for the raster layer, the :guilabel:`Symbology`
+  and :guilabel:`Rendering` categories are always copied together.
+
+* :guilabel:`Copy All Styles` copies all the styles of the layer to the clipboard.
+  You can then right-click another layer and select :guilabel:`Paste All Styles`
+  to apply the copied styles.
+  Saved styles are listed in the layer context menu, allowing quick switching between them.
 
 .. _store_style:
 
