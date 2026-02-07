@@ -211,8 +211,8 @@ All available tools are described in the following table.
   |                                                       | * Pressing :kbd:`Esc` closes the find bar.                                           |                           |
   +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
   | |commentEditorConsole| :guilabel:`Toggle comment`     | Comments out or uncomment selected lines, by adding or removing ``#`` character      |                           |
-  | (:kbd:`Ctrl+:`)                                       | (potentially followed by a space) at the start of the lines.                         |                           |
-  |                                                       | If the selection contains both comments and actual commands,                         |                           |
+  | (:kbd:`Ctrl+:` on Windows, :kbd:`Ctrl+/` on other     | (potentially followed by a space) at the start of the lines.                         |                           |
+  | platforms)                                            | If the selection contains both comments and actual commands,                         |                           |
   |                                                       | adds ``#`` at the start of each non empty line.                                      |                           |
   |                                                       | Pressing again the button reverts to the initial state.                              |                           |
   +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
