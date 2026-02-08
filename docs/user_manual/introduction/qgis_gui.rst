@@ -1150,18 +1150,17 @@ When starting QGIS for the first time not all core plugins are loaded.
 Vector
 ------
 
-By default, QGIS adds :ref:`Processing <sec_processing_intro>`
-algorithms to the :guilabel:`Vector` menu, grouped by sub-menus.
-This provides shortcuts for many common vector-based GIS tasks from
-different providers.
-If not all these sub-menus are available, enable the Processing plugin
+The :guilabel:`Vector` menu provides tools for analyzing, managing and manipulating vector datasets.
+By default, it is filled with a set of predefined :ref:`Processing <sec_processing_intro>` algorithms, grouped by sub-menus.
+This provides shortcuts for many common vector-based GIS tasks from core providers.
+If not all these sub-menus are available, enable the :guilabel:`Processing` plugin
 in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
-Note that the list of algorithms and their menu can be modified/extended
-with any Processing algorithms (read :ref:`processing.options`) or
-some external :ref:`plugins <plugins>`.
+.. note:: The list of tools and their menu can be modified/extended
+  with any Processing algorithms (read :ref:`processing.options`)
+  or by some third-party :ref:`plugins <plugins>`.
 
-This is what the :guilabel:`Vector` menu looks like if all core plugins are enabled.
+This is what the :guilabel:`Vector` menu looks like if all the core plugins are enabled.
 
 .. list-table:: The Vector menu items
    :header-rows: 1
@@ -1388,19 +1387,17 @@ This is what the :guilabel:`Vector` menu looks like if all core plugins are enab
 Raster
 ------
 
-By default, QGIS adds :ref:`Processing <sec_processing_intro>`
-algorithms to the :guilabel:`Raster` menu, grouped by sub-menus.
-This provides a shortcut for many common raster-based GIS tasks
-from different providers.
-If not all these sub-menus are available, enable the Processing
-plugin in
-:menuselection:`Plugins --> Manage and Install Plugins...`.
+The :guilabel:`Raster` menu provides tools for analyzing, managing and manipulating raster datasets.
+By default, it is filled with a set of predefined :ref:`Processing <sec_processing_intro>` algorithms, grouped by sub-menus.
+This provides shortcuts for many common raster-based GIS tasks from core providers.
+If not all these sub-menus are available, enable the :guilabel:`Processing` plugin
+in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
-Note that the list of algorithms and their menu can be modified/extended
-with any Processing algorithms (read :ref:`processing.options`) or
-some external :ref:`plugins <plugins>`.
+.. note:: The list of tools and their menu can be modified/extended
+  with any Processing algorithms (read :ref:`processing.options`)
+  or by some third-party :ref:`plugins <plugins>`.
 
-This is what the :guilabel:`Raster` menu looks like if all core plugins are enabled.
+This is what the :guilabel:`Raster` menu looks like if all the core plugins are enabled.
 
 .. list-table:: The Raster menu items
    :header-rows: 1
