@@ -83,6 +83,9 @@ The following tools are provided at the top of the 3D map view panel:
     and click again to set the end point. You can adjust the size of the section by moving the mouse after selecting the start and end points.
     Press :kbd:`Esc` or right-click to reset the selection.
   * Use |editCutDisabled| :sup:`Disable Cross Section` to remove the cross section.
+  * Set the :guilabel:`Tolerance` to define the width of the cross section. Click |locked| to disable spinbox and lock the value.
+  * Use |arrowLeft|:sup:`Nudge Left` and |arrowRight|:sup:`Nudge Right` to nudge the cross section area.
+    The direction (left or right) is determined by the orientation of the drawn line.
 * |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
   such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
   or :ref:`ambient occlusion <ambient_occlusion>`.
@@ -510,6 +513,10 @@ in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` f
    :width: 1.5em
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
+.. |arrowLeft| image:: /static/common/mActionArrowLeft.png
+   :width: 1.5em
+.. |arrowRight| image:: /static/common/mActionArrowRight.png
+   :width: 1.5em
 .. |camera| image:: /static/common/mIconCamera.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
@@ -525,6 +532,8 @@ in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` f
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
+   :width: 1.5em
+.. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
