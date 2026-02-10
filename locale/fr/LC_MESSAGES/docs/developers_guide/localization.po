@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,10 +14,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 "Language: fr\n"
@@ -151,6 +151,14 @@ msgstr ""
 "même considération s'applique aux types intégraux et aux méthodes "
 "``::toInt()`` ou ``::toLongLong()``."
 
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the other "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+"``QLocale().toDouble()`` ou ``QLocale().toInt()`` et les autres méthodes de "
+"conversion ``QLocale()`` peuvent être utilisées dans cette situation."
+
 #: ../../docs/developers_guide/localization.rst:71
 msgid ""
 "As a better alternative, QGIS API provides a few classes that should be used"
@@ -188,3 +196,21 @@ msgstr ""
 "La classe validateur est tolérante et essaiera d'interpréter l'entrée en "
 "vérifiant d'abord la locale de l'utilisateur et en revenant à la locale "
 "``C`` si elle ne correspond pas."
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it is"
+" possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g., a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+"La recommandation générale est d'utiliser :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` pour toutes les entrées/sorties de type virgule"
+" flottante chaque fois que cela est possible car il est très bien testé et "
+"valide correctement l'entrée. Comme alternative, il est possible d'utiliser "
+"la classe :class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` "
+"indépendamment sur une chaîne  de caractères obtenue à partir d'un autre "
+"widget (par exemple, un simple widget ``QLineEdit``)."
