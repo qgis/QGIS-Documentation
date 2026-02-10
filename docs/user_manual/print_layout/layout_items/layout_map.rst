@@ -416,8 +416,10 @@ and :guilabel:`Bottom` sides of the grid frame, you can indicate:
   * **Above tick**, **On tick**, **Under tick** when a tick-based frame is used
 
 You can also define the :guilabel:`Font` :ref:`properties <text_format>` (font, size, color, buffer,...)
-the :guilabel:`Distance to the map frame` and the :guilabel:`Coordinate precision`
-(number of decimals) for the drawn annotations. Moreover, :guilabel:`Annotation visibility`
+, the :guilabel:`Alignment` (left, center, right, justify), the :guilabel:`Distance to the map frame`
+and the :guilabel:`Coordinate precision` (number of decimals) for the drawn annotations.
+
+Moreover, :guilabel:`Annotation visibility`
 allows control over the visibility of individual grid annotations.
 See :ref:`dynamic_layout` for more information on how to use data-defined
 overrides to control annotation visibility.
