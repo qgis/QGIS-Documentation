@@ -3977,11 +3977,233 @@ Python code
 
 Lines to polygons
 -----------------
-Generates a polygon layer using as polygon rings the lines from an
-input line layer.
+Generates a polygon layer using as polygon rings the individual line features from an input line layer.
+Input LineString geometry doesn't need to close a loop,
+algorithm will automatically connect last to first point when forming a polygon.
+Result is always promoted to MultiPolygon.
+LineString geometry that has less than three vertices will produce
+new polygon features with **EMPTY** geometry.
 
 The attribute table of the output layer is the same as the one of
 the input layer.
+Attributes of the input line feature are ALWAYS kept in the output polygon geometry.
+
+Examples
+........
+
+Lines to polygons on linestrings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Features with 3 or more vertices are expected on input: **start point - vertex/vertices - end point**
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 30 40
+   :class: longtable
+
+   * - INPUT
+     - OUTPUT
+     - NOTE
+
+   * - **Feature a**: Single segment LineString
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_1.png
+          :width: 25 em
+          :align: center
+
+          LineString with two vertices
+
+     - **Feature a**: MultiPolygon EMPTY
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_1.png
+          :width: 25 em
+          :align: center
+
+          Output doesn't contain geometry
+
+     - | Algorithm creates one new feature with empty geometry, but with all attributes from source feature.
+       |
+       | **Output has a valid (empty) geometry.**
+
+   * - **Feature b**: LineString with three vertices
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_2.png
+          :width: 25 em
+          :align: center
+
+          Open LineString with three vertices
+
+     - **Feature b**: MultiPolygon
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_2.png
+          :width: 25 em
+          :align: center
+
+          Output is a triangle shaped MultiPolygon
+
+     - | Algorithm creates one new feature as MultiPolygon with one part, with all attributes from source feature.
+       |
+       | **Output has a valid geometry.**
+
+   * - **Feature c**: LineString that closes a loop
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_3.png
+          :width: 25 em
+          :align: center
+
+          Closed loop LineString
+
+     - **Feature c**: MultiPolygon
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_3.png
+          :width: 25 em
+          :align: center
+
+          Output is a shaped MultiPolygon
+
+     - | Algorithm creates one new feature as MultiPolygon with one part, with all attributes from source feature.
+       |
+       | **Output has a valid geometry.**
+
+   * - **Feature d**: MultiLineString with two parts
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_4.png
+          :width: 25 em
+          :align: center
+
+          Valid MultiLineString with two parts
+
+     - **Feature d**: MultiPolygon with two parts
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_4.png
+          :width: 25 em
+          :align: center
+
+          Two parts MultiPolygon with invalid geometry
+
+     - | Algorithm creates one new feature as MultiPolygon with two parts, all attributes from source feature are kept.
+
+       .. warning:: **Output geometry is invalid!**
+
+          MultiPolygon parts should not intersect.
+
+       .. tip:: **Options for fixing intersecting parts of MultiPolygon invalid geometry**
+
+          This can be fixed by using :ref:`qgisfixgeometries` algorithm with two possible scenarios:
+
+          1. *Fixing by structure repair method* - two parts will dissolve into MultiPolygon geometry with one part
+          2. *Fixing by linework repair method* - equal to symmetrical difference of two parts which results in MultiPolygon geometry with one part (doughnut shape in this case)
+
+   * - | **Feature e**: LineString
+       | **Feature f**: LineString
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_5.png
+          :width: 25 em
+          :align: center
+
+          Two distinct LineStrings, one geometrically contained inside another
+
+     - | **Feature e**: MultiPolygon
+       | **Feature f**: MultiPolygon
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_5.png
+          :width: 25 em
+          :align: center
+
+          Output are two single part MultiPolygons
+
+     - | Algorithm creates two new features as MultiPolygons, each having one part, each of them kept all attributes from source features.
+       |
+       | **Output has a valid geometry.**
+
+   * - **Feature g**: LineString
+
+       .. figure:: img/lines_to_polygons_from_linestr_input_6.png
+          :width: 25 em
+          :align: center
+
+          LineString in wave form
+
+     - **Feature g**: MultiPolygon
+
+       .. figure:: img/lines_to_polygons_from_linestr_output_6.png
+          :width: 25 em
+          :align: center
+
+          Single part MultiPolygon with invalid geometry
+
+     - | Algorithm creates one new feature as MultiPolygon with one self-intersecting part, all attributes from source feature are kept.
+
+       .. warning:: **Output geometry is invalid!**
+
+          MultiPolygon part should not self-intersect.
+
+       .. tip:: **Options for fixing self-intersection parts of MultiPolygon invalid geometry**
+
+          This can be fixed by using :ref:`qgisfixgeometries` algorithm:
+
+          1. *Fixing by structure repair method* or
+          2. *Fixing by linework repair method*
+
+          In both cases, self-intersecting part will be splitted into two individual parts
+
+Lines to polygons on lines
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Features with less than 3 vertices: **start point - end point**
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 30 40
+
+   * - INPUT
+     - OUTPUT
+     - NOTE
+
+   * - | **Feature b**: LineString with two vertices
+       | **Feature c**: LineString with two vertices
+
+       .. figure:: img/lines_to_polygons_from_lines_input_1.png
+          :width: 25 em
+          :align: center
+
+          Two geometrically connected line features.
+
+     - | **Feature b**: MultiPolygon EMPTY
+       | **Feature c**: MultiPolygon EMPTY
+
+       .. figure:: img/lines_to_polygons_from_lines_output_1.png
+          :width: 25 em
+          :align: center
+
+          Output features do not contain geometry.
+
+     - | Algorithm creates two new features with empty geometry, each containing all attributes from their source features.
+       |
+       | **Output has a valid (empty) geometry.**
+
+   * - | **Features d, e, f, g**: LineStrings with two vertices
+
+       .. figure:: img/lines_to_polygons_from_lines_input_2.png
+          :width: 25 em
+          :align: center
+
+          Four geometrically connected line features forming a closed loop.
+
+     - | **Feature d**: MultiPolygon EMPTY
+       | **Feature e**: MultiPolygon EMPTY
+       | **Feature f**: MultiPolygon EMPTY
+       | **Feature g**: MultiPolygon EMPTY
+
+       .. figure:: img/lines_to_polygons_from_lines_output_2.png
+          :width: 25 em
+          :align: center
+
+          Output features do not contain geometry.
+
+     - | Algorithm creates four new features with empty geometry, each containing all attributes from their source features.
+       |
+       | **Output has a valid (empty) geometry.**
 
 **Default menu**: :menuselection:`Vector --> Geometry Tools`
 
