@@ -83,7 +83,7 @@ and depending on the type of layer you are configuring, you will be given the fo
      - Text format
      - Label settings
      - Vector or mesh layer
-     - raster layer
+     - Raster layer
    * - :guilabel:`Text`
      - |checkbox|
      - |checkbox|
@@ -761,11 +761,27 @@ Label modes for line layers include:
     (placing the label at the left or the right of the line). It's possible to
     select several options at once. In that case, QGIS will look for the optimal
     label position.
-  * :guilabel:`Distance` between the label and the line
+  * :guilabel:`Distance` between the label and the line. This can also be set when
+    you select :guilabel:`Curved` mode.
 * :guilabel:`Curved`: draws the label following the curvature of the line
   feature. In addition to the parameters available with the :guilabel:`Parallel`
   mode, you can set the :guilabel:`Maximum angle between curved characters`,
   either inside or outside.
+  To control how the text is positioned, select :guilabel:`Character placement`
+  and set one of the following:
+
+  * :guilabel:`Default`
+  * :guilabel:`Stretch Word Spacing`: Stretches (or shrinks) word spacing so that
+    the curved label fits the whole line.
+  * :guilabel:`Stretch Character Spacing`: Stretches (or shrinks) character spacing
+    so that the curved label fits the whole line.
+  * :guilabel:`Character at Vertices`: Places individual characters from the label
+    at each corresponding vertex in the line.
+  
+  Checking the |unchecked|:guilabel:`Ignore label whitespace when detecting collisions` will
+  ignore the whitespace in the label text (e.g., spaces or tab character)
+  when determining if labels overlap or collide with obstacles.
+
 * :guilabel:`Horizontal`: draws labels horizontally along the length of the
   line feature.
 
@@ -1117,11 +1133,26 @@ Feature options
 
 Under :guilabel:`Feature options`:
 
-* You can choose to :guilabel:`Label every part of a multi-part features`
-  and :guilabel:`Limit number of features to be labeled to`.
+* For multipart geometry labeling, you can choose the following:
+  
+  * :guilabel:`Label Largest Part Only` to label only the largest part of a multipart geometry (default behavior).
+  * :guilabel:`Label Every Part with Entire Label` to label each part of a multipart geometry with the entire label text.
+  * :guilabel:`Split Label Text Lines over Parts` to label each part of a multipart geometry with a corresponding line of the label text.
+    If the multipart geometry has fewer parts than the number of text lines, any remaining lines will be ignored.
+  
+  .. note:: **Wrap on Character Configuration**
+
+    :guilabel:`Split Label Text Lines over Parts` depends on the
+    :guilabel:`Wrap on character` setting in the Formatting tab.
+    If the defined wrap character doesn't match the separator
+    used in the text, splitting will not work.
+    For example, if :guilabel:`Wrap on character` is set to 
+    :kbd:`Space` but the text is separated by commas, splitting will not occur.
+
+  Check the |unchecked|:guilabel:`Limit number of features to be labeled to`
+  to restrict the total number of features which will receive labels.
 * Both line and polygon layers offer the option to set a minimum size for
-  the features to be labeled, using :guilabel:`Suppress labeling of features
-  smaller than`.
+  the features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
 * For polygon features, you can also filter the labels to show according to
   whether they completely fit within their feature or not.
 * For line features, you can choose to :guilabel:`Merge connected lines
