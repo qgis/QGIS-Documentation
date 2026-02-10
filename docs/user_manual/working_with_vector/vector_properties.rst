@@ -2381,11 +2381,12 @@ in light gray to help identify them easily.
 
    Search fields using aliases and names in Attributes Form page
 
-At the bottom of the dialog, the :guilabel:`Preview Attributes Form` button allows you to preview the attributes form,
-reducing the need to switch back and forth between the |formView| :guilabel:`Attributes Form` dialog
-and the feature :ref:`form view <attribute_table_view>`.
-The preview uses a temporary empty feature, letting you interact with widgets and layout,
-and does not affect any real data.
+At the bottom of the dialog, the :guilabel:`Preview Attributes Form` button shows a live preview of the attribute form
+layout using a temporary empty feature. It lets you interact with the field widgets and see the layout
+exactly as it will appear when editing or adding a real feature, without affecting any actual data.
+This reduces the need to switch back and forth between the |formView| :guilabel:`Attributes Form`
+dialog and the table :ref:`form view <attribute_table_view>`.
+
 
 .. _figure_attributes_form_properties:
 
