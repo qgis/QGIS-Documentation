@@ -660,7 +660,7 @@ Field domain
 
 Field domains are rules that define acceptable values for a field in a database table.
 This is applicable when working with data sources that support field domains,
-such as GeoPackage and OpenfileGDB.
+such as GeoPackage and ESRI File Geodatabase.
 The following options are available:
 
 * :guilabel:`New Range Domain...`: create a new range domain to restrict field values
@@ -681,6 +681,10 @@ More details on each selected option are provided below:
   * :guilabel:`Split policy`
   * :guilabel:`Merge policy`
 
+  .. note::
+   Split and merge policies are only supported by the FileGDB driver.
+   They are not stored for formats such as GeoPackage.
+
 * Under :guilabel:`Range`, you can set the following options:
 
   * :guilabel:`Minimum`: set the minimum acceptable value for the field.
@@ -689,8 +693,7 @@ More details on each selected option are provided below:
 
 * :guilabel:`Values`: click the |symbologyAdd| :sup:`Add row` or |symbologyRemove| :sup:`Remove row` to manage
   the list of acceptable values for the field.
-* :guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard characters
-  (e.g., `*` for any sequence of characters, `?` for a single character).
+* :guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard characters.
 
 Update and delete field domains by selecting the desired domain from the list and
 right-clicking to access the context menu options.
