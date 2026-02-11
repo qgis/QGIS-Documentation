@@ -761,22 +761,27 @@ Label modes for line layers include:
     (placing the label at the left or the right of the line). It's possible to
     select several options at once. In that case, QGIS will look for the optimal
     label position.
-  * :guilabel:`Distance` between the label and the line. This can also be set when
-    you select :guilabel:`Curved` mode.
+  * :guilabel:`Distance` between the label and the line.
 * :guilabel:`Curved`: draws the label following the curvature of the line
   feature. In addition to the parameters available with the :guilabel:`Parallel`
   mode, you can set the :guilabel:`Maximum angle between curved characters`,
   either inside or outside.
+
   To control how the text is positioned, select :guilabel:`Character placement`
   and set one of the following:
 
-  * :guilabel:`Default`
-  * :guilabel:`Stretch Word Spacing`: Stretches (or shrinks) word spacing so that
+  * :guilabel:`Default`: applies stretching and spacing options from the :ref:`Formatting <labels_formatting>` tab to the label.
+  * :guilabel:`Stretch Word Spacing`: stretches (or shrinks) word spacing so that
     the curved label fits the whole line.
-  * :guilabel:`Stretch Character Spacing`: Stretches (or shrinks) character spacing
+  * :guilabel:`Stretch Character Spacing`: stretches (or shrinks) character spacing
     so that the curved label fits the whole line.
-  * :guilabel:`Character at Vertices`: Places individual characters from the label
+  * :guilabel:`Character at Vertices`: places individual characters from the label
     at each corresponding vertex in the line.
+    If the curved line geometry does not contain sufficient vertices for the characters present in the label text
+    then the excess characters are ignored and will not be rendered.
+    If the label’s distance setting is non-zero, then the character will be vertically offset
+    from the vertex position by this distance.
+    Characters are rotated to follow the line angle at the vertex.
   
   Checking the |unchecked|:guilabel:`Ignore label whitespace when detecting collisions` will
   ignore the whitespace in the label text (e.g., spaces or tab character)
@@ -1135,22 +1140,20 @@ Under :guilabel:`Feature options`:
 
 * For multipart geometry labeling, you can choose the following:
   
-  * :guilabel:`Label Largest Part Only` to label only the largest part of a multipart geometry (default behavior).
+  * :guilabel:`Label Largest Part Only` to label only the largest visible part of the feature within the current map view.
   * :guilabel:`Label Every Part with Entire Label` to label each part of a multipart geometry with the entire label text.
   * :guilabel:`Split Label Text Lines over Parts` to label each part of a multipart geometry with a corresponding line of the label text.
-    If the multipart geometry has fewer parts than the number of text lines, any remaining lines will be ignored.
-  
-  .. note:: **Wrap on Character Configuration**
-
-    :guilabel:`Split Label Text Lines over Parts` depends on the
-    :guilabel:`Wrap on character` setting in the Formatting tab.
-    If the defined wrap character doesn't match the separator
-    used in the text, splitting will not work.
-    For example, if :guilabel:`Wrap on character` is set to 
-    :kbd:`Space` but the text is separated by commas, splitting will not occur.
+    If the multipart geometry has fewer parts than the number of text lines, any remaining lines will be ignored,
+    while if it has more parts than text lines, the remaining parts will not be labeled.
+    :guilabel:`Split Label Text Lines over Parts` operates on the final
+    multiline label text. Line breaks can be introduced either by using
+    explicit line breaks (e.g., '\n') or by configuring the
+    :guilabel:`Wrap on character` option in the Formatting tab.
+    If the label text does not contain line breaks (explicit or generated
+    by wrapping), the split option will have no visible effect.
 
   Check the |unchecked|:guilabel:`Limit number of features to be labeled to`
-  to restrict the total number of features which will receive labels.
+  to restrict the total number of features in the layer which will receive labels.
 * Both line and polygon layers offer the option to set a minimum size for
   the features to be labeled, using :guilabel:`Suppress labeling of features smaller than`.
 * For polygon features, you can also filter the labels to show according to
