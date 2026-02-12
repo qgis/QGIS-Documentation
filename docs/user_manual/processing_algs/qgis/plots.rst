@@ -249,8 +249,8 @@ Basic parameters
      - Description
    * - **Profile curve**
      - ``CURVE``
-     - [vector: line]
-     - The line layer representing the profile curve along which the elevation profile will be generated
+     - [geometry: line]
+     - The LineString geometry (WKT or GeoJSON) representing the profile curve along which the elevation profile will be generated
    * - **Map layers**
      - ``MAP_LAYERS``
      - [layer] [list]
