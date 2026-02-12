@@ -715,7 +715,7 @@ guidelines:
   Layer                                     ``layer``
   Same output type as input type            ``same as input``
   Definition                                ``definition``
-  Point                                     ``point``
+  Line geometry                             ``geometry: line``
   Map layers                                ``layer`` ``list``
   Range                                     ``range``
   AuthConfig                                ``authconfig``
