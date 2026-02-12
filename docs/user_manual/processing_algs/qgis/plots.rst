@@ -223,6 +223,12 @@ Generate elevation profile image
 
 Creates an elevation profile image from a list of map layers and an optional terrain layer.
 
+.. figure:: img/elevation_profile_example.png
+   :align: center
+   :width: 60%
+
+   Example of elevation profile
+
 Parameters
 ..........
 
