@@ -173,7 +173,7 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _pdalclassify:
+.. _pdalclassifyground:
 
 Classify ground points
 ------------------------
@@ -299,7 +299,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``pdal:classify``
+**Algorithm ID**: ``pdal:classifyground``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
