@@ -173,6 +173,138 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _pdalclassify:
+
+Classify ground points
+------------------------
+
+Classifies ground points using the Simple Morphological Filter (SMRF) algorithm.
+Analyses elevation differences and local surface structure to separate ground from non-ground points.
+Morphological filtering is applied to identify iteratively,
+considering various parameters such as cell size, slope, elevation threshold
+and window size.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to classify.
+   * - **Grid Cell Size**
+     - ``CELL_SIZE``
+     - [numeric: double]
+
+       Default: 1.0
+     - Cell size for processing grid (in map units).
+       Smaller values gives finer detail but may increase noise.
+   * - **Scalar**
+     - ``SCALAR``
+     - [numeric: double]
+
+       Default: 1.25
+     - Threshold for steeper slopes. Higher value if the terrain
+       is rough, otherwise real ground might be misclassified.
+   * - **Slope**
+     - ``SLOPE``
+     - [numeric: double]
+
+       Default: 0.15
+     - Slope threshold (rise over run). How much slope is tolerated
+       as ground. Should be higher for steep terrain.
+   * - **Threshold**
+     - ``THRESHOLD``
+     - [numeric: double]
+
+       Default: 0.5
+     - Elevation threshold for separating ground from objects.
+       Higher values allow larger deviations from the ground.
+   * - **Window Size**
+     - ``WINDOW_SIZE``
+     - [numeric: double]
+
+       Default: 18.0
+     - Maximum filter window size. Higher values better identify
+       large buildings or objects, smaller values protect
+       smaller features.
+   * - **Classified Ground**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the classified ground points to.
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **VPC Output Format**
+
+       Optional
+     - ``VPC_OUTPUT_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Specify the underlying format in which data are stored
+       for VPC output. Possible formats are
+       
+       * 0 --- ``COPC``
+       * 1 --- ``LAZ``
+       * 2 --- ``LAS``
+       
+       LAZ/LAS may be faster to process, however only
+       allow rendering of the point cloud extents.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Classified Ground**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud with ground classification applied.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:classify``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _pdalclip:
 
 Clip point cloud
