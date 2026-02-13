@@ -244,7 +244,7 @@ Basic parameters
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the classified ground points to.
+     - Specify the point cloud file to export the classified ground points to. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
