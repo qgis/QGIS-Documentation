@@ -5613,7 +5613,7 @@ Parameters
 
        Optional
      - ``ANCHOR``
-     - [point]
+     - [coordinates]
 
        Default: Not set
      - X,Y coordinates of the point to rotate the
