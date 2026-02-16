@@ -700,6 +700,7 @@ guidelines:
   Raster band                               ``raster band``
   HTML file                                 ``html``
   Expression                                ``expression``             |expression|
+  Line geometry                             ``geometry: line``
   Point geometry                            ``coordinates``
   Extent                                    ``extent``
   CRS                                       ``crs``                    |setProjection|
@@ -715,7 +716,6 @@ guidelines:
   Layer                                     ``layer``
   Same output type as input type            ``same as input``
   Definition                                ``definition``
-  Point                                     ``point``
   Map layers                                ``layer`` ``list``
   Range                                     ``range``
   AuthConfig                                ``authconfig``

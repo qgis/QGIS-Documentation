@@ -1529,7 +1529,7 @@ Basic parameters
      - The number of the band to use as elevation
    * - **Observer location**
      - ``OBSERVER``
-     - [point]
+     - [coordinates]
      - The location of the observer
    * - **Observer height**
      - ``OBSERVER_HEIGHT``
