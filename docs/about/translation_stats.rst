@@ -93,76 +93,76 @@ Statistics of translation
      - |stats_ko|
      - Kurdish
      - |stats_ku|
-     - Lithuanian
+     - Latvian
+     - |stats_lv|
+   * - Lithuanian
      - |stats_lt|
-   * - Macedonian
+     - Macedonian
      - |stats_mk|
      - Malay
      - |stats_ms|
-     - Malayalam
+   * - Malayalam
      - |stats_ml|
-   * - Maori
+     - Maori
      - |stats_mi|
      - Marathi
      - |stats_mr|
-     - Mongolian
+   * - Mongolian
      - |stats_mn|
-   * - N'ko
+     - N'ko
      - |stats_nqo|
      - Nepali
      - |stats_ne|
-     - Norwegian Bokmål
+   * - Norwegian Bokmål
      - |stats_nb|
-   * - Persian
+     - Persian
      - |stats_fa|
      - Polish
      - |stats_pl|
-     - Portuguese (Brazil)
+   * - Portuguese (Brazil)
      - |stats_pt_BR|
-   * - Portuguese (Portugal)
+     - Portuguese (Portugal)
      - |stats_pt_PT|
      - Romanian
      - |stats_ro|
-     - Russian
+   * - Russian
      - |stats_ru|
-   * - Serbian
+     - Serbian
      - |stats_sr|
      - Slovak
      - |stats_sk|
-     - Slovenian
+   * - Slovenian
      - |stats_sl|
-   * - Spanish
+     - Spanish
      - |stats_es|
      - Swedish
      - |stats_sv|
-     - Tagalog
+   * - Tagalog
      - |stats_tl|
-   * - Tamil
+     - Tamil
      - |stats_ta|
      - Telugu
      - |stats_te|
-     - Thai
+   * - Thai
      - |stats_th|
-   * - Turkish
+     - Turkish
      - |stats_tr|
      - Ukrainian
      - |stats_uk|
-     - Urdu
+   * - Urdu
      - |stats_ur|
-   * - Vietnamese
+     - Vietnamese
      - |stats_vi|
-     -
-     -
      -
      -
 
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2026-01-27*
-.. |total_strings| replace:: **31321**
-.. |nb_languages| replace:: **61**
-.. |global_percentage| replace:: **16.65%**
+.. |today| replace:: *2026-02-17*
+.. |total_strings| replace:: **31320**
+.. |nb_languages| replace:: **62**
+.. |global_percentage| replace:: **16.14%**
 
 .. |stats_ar| replace:: 3.4
 .. |stats_az| replace:: 0.02
@@ -178,22 +178,23 @@ Statistics of translation
 .. |stats_eu| replace:: 1.08
 .. |stats_fa| replace:: 0.72
 .. |stats_fi| replace:: 1.26
-.. |stats_fr| replace:: 83.21
+.. |stats_fr| replace:: 83.45
 .. |stats_gl| replace:: 0.51
-.. |stats_he| replace:: 0.79
+.. |stats_he| replace:: 0.8
 .. |stats_hi| replace:: 0.38
 .. |stats_hr| replace:: 0.22
 .. |stats_ht| replace:: 0.28
 .. |stats_hu| replace:: 23.55
 .. |stats_id| replace:: 3.76
 .. |stats_ig| replace:: 0.11
-.. |stats_it| replace:: 99.97
+.. |stats_it| replace:: 99.96
 .. |stats_ja| replace:: 97.41
 .. |stats_ka| replace:: 0.22
 .. |stats_kab| replace:: 0.22
-.. |stats_ko| replace:: 94.47
+.. |stats_ko| replace:: 94.48
 .. |stats_ku| replace:: 0.28
-.. |stats_lt| replace:: 34.86
+.. |stats_lt| replace:: 35.24
+.. |stats_lv| replace:: -16.51
 .. |stats_mi| replace:: 0.28
 .. |stats_mk| replace:: 0.25
 .. |stats_ml| replace:: 0.22
@@ -215,10 +216,10 @@ Statistics of translation
 .. |stats_sq| replace:: 0.56
 .. |stats_sr| replace:: 0.22
 .. |stats_sv| replace:: 100.0
-.. |stats_ta| replace:: 0.58
+.. |stats_ta| replace:: 1.62
 .. |stats_te| replace:: 0.02
 .. |stats_th| replace:: 0.22
-.. |stats_tl| replace:: 1.32
+.. |stats_tl| replace:: 1.33
 .. |stats_tr| replace:: 3.34
 .. |stats_uk| replace:: 3.04
 .. |stats_ur| replace:: 0.1
