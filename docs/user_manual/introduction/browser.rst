@@ -428,14 +428,6 @@ each level of the dataset tree.
  such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 .. [2] For PostgreSQL connections: only supported with ALTER TABLE privilege.
 
-.. note::
-
-  When loading vector layers into QGIS, fields with |sourceFields| :guilabel:`Field Domains`
-  (such as those defined in a GeoPackage or ESRI File Geodatabase) are automatically
-  detected. These domains are database-level constraints, meaning they are enforced
-  by the database itself and apply across different applications, not just QGIS.
-  You can edit and delete these domains by right-clicking on the field domain entry.
-
 Importing vector layers into databases using Browser panel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
