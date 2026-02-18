@@ -356,13 +356,13 @@ containing both the certificate and private key, with an optional passphrase for
 
    PKI PKCS#12 file paths authentication configs
 
-Planetary Computer Authentication
-.................................
+Microsoft Planetary Computer Authentication
+...........................................
 
-The Planetary Computer authentication method allows QGIS to access Microsoft Planetary Computer data. It supports two modes:
+The Microsoft Planetary Computer authentication method allows QGIS to access Microsoft Planetary Computer data. It supports two modes:
 
-* Open Planetary Computer - uses SAS tokens to sign assets for access.
-* Planetary Pro Computer - requires SAS signing plus OAuth2 authentication.
+* `Open Planetary Computer <https://planetarycomputer.microsoft.com/>`_ - uses SAS tokens to sign assets for access.
+* `Planetary Computer Pro <https://learn.microsoft.com/azure/planetary-computer/configure-qgis>`_ - requires SAS signing plus OAuth2 authentication.
 
 .. _figure_authmethod_planetary:
 
