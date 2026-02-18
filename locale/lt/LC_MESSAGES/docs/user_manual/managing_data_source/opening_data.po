@@ -19,7 +19,7 @@ msgstr ""
 "Last-Translator: Tomas Straupis, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
@@ -1531,7 +1531,7 @@ msgstr "``Sveikas skaičius (integer - 64 bit)``"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:604
 msgid "``Decimal Number``: double precision floating point number"
-msgstr "``Dešimtainis skaičius``: double precision floating point number"
+msgstr "``Dešimtainis skaičius``: dvigubo tikslumo slankaus kablelio skaičius"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:605
 msgid "``Date``"
@@ -1588,7 +1588,7 @@ msgid ""
 "field` or let QGIS auto-detect it. Provide the appropriate "
 ":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
-"|radioButtonOn|:guilabel:`Gerai žinomas teksto (WKT)` parinktį, jei erdvinė "
+"|radioButtonOn|:guilabel:`Gerai žinomo teksto (WKT)` parinktį, jei erdvinė "
 "informacija išreikšta kaip WKT: parinkite :guilabel:`Geometrijos lauką`, "
 "kuriame yra WKT geometrija ir parinkite atitinkamą :guilabel:`Geometrijos "
 "tipą` arba leiskite QGIS jį aptikti automatiškai. Pateikite atitinkamą "
@@ -1697,7 +1697,7 @@ msgid ""
 "polygon), the name of the layers will be generated as *<filename.dxf> "
 "entities <geometry type>*."
 msgstr ""
-"DXF failams su keliais geometrijos tipais (taškas, linijoma ir/arba "
+"DXF failams su keliais geometrijos tipais (taškas, linija ir/arba "
 "poligonas), sluoksniai bus pavadinti kaip *<failas.dxf> esybės <geometry "
 "type>*."
 
@@ -1759,7 +1759,7 @@ msgid ""
 ":guilabel:`Expand Block Geometries`: imports the blocks in the drawing file "
 "as normal elements."
 msgstr ""
-":guilabel:`Išskleisti blokų geometrijas`: importuoja brėžinio failo bokus "
+":guilabel:`Išskleisti blokų geometrijas`: importuoja brėžinio failo blokus "
 "kaip normalius elementus."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:697
@@ -1913,7 +1913,7 @@ msgid ""
 "selecting the |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` "
 "option from the :menuselection:`Layer --> Add Layer` menu"
 msgstr ""
-"parinkdami parinktį |addSpatiaLiteLayer| :menuselection:`Pridėti SpatiaLite "
+"parinkdami |addSpatiaLiteLayer| :menuselection:`Pridėti SpatiaLite "
 "sluoksnį...` iš meniu :menuselection:`Sluoksniai --> Pridėti sluoksnį`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:768
@@ -2001,7 +2001,7 @@ msgid ""
 "databases, QGIS provides other tools to connect to each of them and load "
 "their tables:"
 msgstr ""
-"Norint skaityti ir rašyti lenteles QGIS palaikomų duomenų bazių formatų, "
+"Norint skaityti ir rašyti QGIS palaikomų duomenų bazių formatų lenteles, "
 "jums reikia sukurti jungti į tą duomenų bazę. Nors :ref:`QGIS naršyklės "
 "skydelis <browser_panel>` yra paprasčiausias ir rekomenduojamas būdas "
 "prisijungti ir naudoti duomenų bazes, QGIS teikia ir kitus įrankius "
@@ -2978,26 +2978,1061 @@ msgstr ":guilabel:`Slaptažodis`: prisijungimo prie duomenų bazės slaptažodis
 msgid ":guilabel:`SSL Settings`"
 msgstr ":guilabel:`SSL nustatymai`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1215
+msgid ""
+"|checkbox| :guilabel:`Enable TLS/SSL encryption`: Enables TLS 1.1 - TLS1.2 "
+"encryption. The server will choose the highest available."
+msgstr ""
+"|checkbox| :guilabel:`Įjungti TLS/SSL šifravimą`: įjungia TLS 1.1 - TLS1.2 "
+"šifravimą. Serveris pasirinks aukščiausią galimą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1217
+msgid ""
+":guilabel:`Provider`: Specifies the cryptographic library provider used for "
+"SSL communication. :guilabel:`sapcrypto` should work on all platforms, "
+":guilabel:`openssl` should work on |nix| |osx|, :guilabel:`mscrypto` should "
+"work on |win| and :guilabel:`commoncrypto` requires CommonCryptoLib to be "
+"installed."
+msgstr ""
+":guilabel:`Tiekėjas`: nurodo kriptografinės bibliotekos tiekėją, kurį "
+"naudoja SSL komunikacija. :guilabel:`sapcrypto` turėtų veikti visose "
+"platformose, :guilabel:`openssl` turėtų veikti |nix| |osx|, "
+":guilabel:`mscrypto` turėtų veikti |win| ir :guilabel:`commoncrypto` "
+"reikalauja, kad būtų įdiegtas CommonCryptoLib."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1222
+msgid ""
+"|checkbox| :guilabel:`Validate SSL certificate`: If checked, the SSL "
+"certificate will be validated using the truststore given in :guilabel:`Trust"
+" store file with public key`."
+msgstr ""
+"|checkbox| :guilabel:`Tikrinti SSL sertifikatą`: įjungus šią parinktį, SSL "
+"sertifikatas bus tikrinamas naudojant pasitikėjimo saugyklą, kuri nurodyta "
+":guilabel:`Pasitikėjimo saugojimo faile su viešu raktu`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1225
+msgid ""
+":guilabel:`Override hostname in certificate`: Specifies the host name used "
+"to verify server’s identity. The host name specified here verifies the "
+"identity of the server instead of the host name with which the connection "
+"was established. If you specify ``*`` as the host name, then the server's "
+"host name is not validated. Other wildcards are not permitted."
+msgstr ""
+":guilabel:`Permušti mašinos pavadinimą sertifikate`: nurodo mašinos "
+"pavadinimą, kurį reikia naudoti tikrinant serverio identitetą. Čia nurodytas"
+" mašinos vardas tikrina serverio identitetą, o ne mašinos pavadinimą, kuriuo"
+" jungtis buvo sukurta. Jei jūs kaip mašinos pavadinimą nurodysite ``*``, "
+"tada serverio mašinos pavadinimas nebus tikrinamas. Kiti pakeitimo ženklai "
+"neleidžiami."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1230
+msgid ""
+":guilabel:`Keystore file with private key`: Currently ignored. This "
+"parameter might allow to authenticate via certificate instead via user and "
+"password in future."
+msgstr ""
+":guilabel:`Raktų saugyklos failas su privačiu raktu`: šiuo metu ignoruojama."
+" Šis parametras galėtų ateityje leisti autentifikuotis naudojant sertifikatą"
+" vietoje naudotojo vardo ir slaptažodžio."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1233
+msgid ""
+":guilabel:`Trust store file with public key`: Specifies the path to a trust "
+"store file that contains the server’s public certificates if using OpenSSL. "
+"Typically, the trust store contains the root certificate or the certificate "
+"of the certification authority that signed the server’s public certificates."
+" If you are using the cryptographic library CommonCryptoLib or msCrypto, "
+"then leave this property empty."
+msgstr ""
+":guilabel:`Pasitikėjimo saugyklos failas su viešu raktu`: nurodo kelią iki "
+"pasitikėjimo saugyklos failo, kuriame yra serverio vieši sertifikatai, jei "
+"naudojama OpenSSL. Paprastai pasitikėjimo saugykloje yra šakninis "
+"sertifikatas arba sertifikatas įstaigos, kuri pasirašė serverio viešus "
+"sertifikatus. Jei jūs naudojate kriptografijos biblioteką CommonCryptoLib ar"
+" msCrypto, tada palikite šią parinktį tuščią."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1240
+msgid ""
+"|checkbox| :guilabel:`Only look for user's tables`: If checked, QGIS "
+"searches only for tables and views that are owned by the user that connects "
+"to the database."
+msgstr ""
+"|checkbox| :guilabel:`Žiūrėti tik naudotojo lentelėse`: įjungus šią parinktį"
+" QGIS ieškos tik lentelių ir vaizdų, kurių savininkas yra naudotojas, kuris "
+"jungiasi prie duomenų bazės."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1244
+msgid ""
+"|checkbox| :guilabel:`Use estimated table metadata`: If checked, estimated "
+"table metadata will be used if available. For large tables, this avoids slow"
+" table loads and potentially expensive computations, but may result in "
+"incorrect layer properties such as layer extent. The fast extent estimation "
+"is available starting with QRC1/2024 and SP8 in HANA Cloud and HANA On-"
+"Premise respectively."
+msgstr ""
+"|checkbox| :guilabel:`Naudoti įvertintus lentelės metaduomenis`: įjungus šią"
+" parinktį, bus naudojami įvertinti lentelės metaduomenys, jei jie yra "
+"surinkti. Didelėms lentelėms taip išvengiama lėto lentelės įkėlimo ir "
+"potencialiai brangių skaičiavimų, bet gali reikšti neteisingas sluoksnio "
+"savybes, tokias kaip sluoksnio apimtis. Greitas apimties įvertinimas galimas"
+" pradedant QRC1/2024 ir SP8 su HANA Cloud ir atitinkamai HANA vietiniame."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1251
+msgid ""
+"|checkbox| :guilabel:`Also list tables with no geometries`: If checked, QGIS"
+" searches also for tables and views that do not contain a spatial column."
+msgstr ""
+"|checkbox| :guilabel:`Taipogi rodyti lenteles be geometrijų`: įjungus šią "
+"parinktį QGIS ieško ir lentelių bei vaizdų, kuriuose nėra erdvinių "
+"stulpelių."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1254
+msgid "**Connecting to SAP HANA Cloud**"
+msgstr "**Prisijungimas prie SAP HANA debesies**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1256
+msgid ""
+"If you'd like to connect to an SAP HANA Cloud instance, you usually must set"
+" :guilabel:`Port Number` to ``443`` and check :guilabel:`Enable TLS/SSL "
+"encryption`."
+msgstr ""
+"Jei norite prisijungti prie SAP HANA debesies egzemplioriaus, jums paprastai"
+" reikia nurodyti :guilabel:`Prievado numerį` ``443`` ir įjungti parinktį "
+":guilabel:`Įjungti TLS/SSL šifravimą`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1263
+msgid "Loading a Database Layer"
+msgstr "Duomenų bazės sluoksnio įkėlimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1265
+msgid ""
+"Once you have one or more connections defined to a database (see section "
+":ref:`vector_create_stored_connection`), you can load layers from it. Of "
+"course, this requires that data are available. See section "
+":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
+" a PostGIS database."
+msgstr ""
+"Kai turite apsibrėžę vieną ar daugiau jungčių į duomenų baze (žr. skiltį "
+":ref:`vector_create_stored_connection`), jūs galite iš jų įkelti sluoksnius."
+" Žinoma, tam reikia, kad duomenys būtų pasiekiami. Daugiau informacijos apie"
+" tai, kaip įkelti duomenis į PostGIS duomenų bazę rasite skiltyje "
+":ref:`vector_import_data_in_postgis`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1271
+msgid "To load a layer from a database, you can perform the following steps:"
+msgstr ""
+"Kad įkeltumėte sluoksnį iš duomenų bazės, jums reikia įvykdyti šiuos "
+"žingsnius:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1273
+msgid ""
+"Open the corresponding tab of the database in the :guilabel:`Data Source "
+"Manager` dialog."
+msgstr ""
+"Atidarykite atitinkamos duomenų bazės kortelę dialoge :guilabel:`Duomenų "
+"šaltinių tvarkyklė`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1274
+msgid ""
+"Choose the connection name from the drop-down list and press "
+":guilabel:`Connect`."
+msgstr ""
+"Iškrentančiame sąraše parinkite jungties pavadinimą ir spauskite "
+":guilabel:`Prisijungti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1275
+msgid ""
+"Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
+msgstr ""
+"Įjunkite ar įjunkite parinktį |checkbox| :guilabel:`Taipogi rodyti lenteles "
+"be geometrijos`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1276
+msgid ""
+"Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
+"list of tables to those matching your search. You can also set this option "
+"before you hit the :guilabel:`Connect` button, speeding up the database "
+"fetching."
+msgstr ""
+"Pasirinktinai naudokite kelias |checkbox| :guilabel:`Paieškos parinktis`, "
+"kad sutrumpintumėte lentelių sąrašą iki to, kuris atitinka jūsų kriterijus. "
+"Jūs taipogi galite nurodyti šią parinktį prieš paspaudžiant mygtuką "
+":guilabel:`Prisijungti`, kad pagreitintumėte informacijos ištraukimą iš "
+"duomenų bazės."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1280
+msgid "Find the layer(s) you wish to add in the list of available layers."
+msgstr ""
+"Prieinamų sluoksnių sąraše suraskite sluoksnį(ius), kurį norite pridėti."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1281
+msgid ""
+"Select it by clicking on it. You can select multiple layers by holding down "
+"the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
+msgstr ""
+"Parinkite jį paspaudimu. Jūs galite parinkti kelis sluoksnius, parinkdami "
+"laikydami mygtuką :kbd:`Shift` ar :kbd:`Ctrl`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1283
+msgid ""
+"If applicable, use the :guilabel:`Set Filter` button (or double-click the "
+"layer) to start the :guilabel:`Query Builder` dialog (see section "
+":ref:`vector_query_builder`) and define which features to load from the "
+"selected layer. The filter expression appears in the ``sql`` column. This "
+"restriction can be removed or edited in the :menuselection:`Layer Properties"
+" --> General --> Provider Feature Filter` frame."
+msgstr ""
+"Jei taikoma, naudokite mygtuką :guilabel:`Nustatyti filtrą` (ar du kartus "
+"spauskite sluoksnį), kad įjungtumėte dialogą :guilabel:`Užklausos kūrėjas` "
+"(žr. skiltį :ref:`vector_query_builder`) ir nurodykite, kuriuos geoobjektus "
+"reikia įkelti iš parinkto sluoksnio. Filtro išraiška bus rodoma stulpelyje "
+"``sql``. Šį apribojimą galima išimti ar keisti :menuselection:`Sluoksnio "
+"savybės --> Bendra --> Tiekėjo geoobjektų filtras`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1289
+msgid ""
+"The checkbox in the ``Select at id`` column that is activated by default "
+"gets the feature ids without the attributes and generally speeds up the data"
+" loading."
+msgstr ""
+"Varnelė stulpelyje ``Parinkti pagal id``, kuri pagal nutylėjimą įjungta, "
+"ištraukia geoobjektų id be jų atributų, todėl dažniausiai pagreitina duomenų"
+" įkėlimą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1292
+msgid "Click on the :guilabel:`Add` button to add the layer to the map."
+msgstr ""
+"Spauskite mygtuką the :guilabel:`Pridėti`, kad pridėtumėte sluoksnį į "
+"žemėlapį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1300
+msgid "Add PostGIS Table(s) Dialog"
+msgstr "PostGIS lentelės(ių) pridėjimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1303
+msgid "**Use the Browser Panel to speed up loading of database table(s)**"
+msgstr ""
+"**Naudokite naršyklės skydelį, kad pagreitintumėte duomenų bazės "
+"lentelės(ių) įkėlimą**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1305
+msgid ""
+"Adding DB tables from the :guilabel:`Data Source Manager` may sometimes be "
+"time consuming as QGIS fetches statistics and properties (e.g. geometry type"
+" and field, CRS, number of features) for each table beforehand. To avoid "
+"this, once :ref:`the connection is set <vector_create_stored_connection>`, "
+"it is better to use the :ref:`Browser Panel <browser_panel>` or the :ref:`DB"
+" Manager <dbmanager>` to drag and drop the database tables into the map "
+"canvas."
+msgstr ""
+"DB lentelių pridėjimas naudojant :guilabel:`Duomenų šaltinių tvarkyklę` "
+"kartais gali užimti daug laiko, nes QGIS kiekvienai lentelei iš karto "
+"ištraukia statistikas ir savybes (pvz. geometrijos tipą ir lauką, CRS, "
+"geoobjektų skaičių). Kad to išvengtumėte, kai :ref:`jungtis nustatyta "
+"<vector_create_stored_connection>`, geriau naudoti :ref:`Naršyklės skydelį "
+"<browser_panel>` ar :ref:`DB tvarkyklę <dbmanager>`, kad temptumėte ir "
+"numestumėte duomenų bazės lenteles į žemėlapio drobę."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1316
+msgid "The Layer Metadata Search Panel"
+msgstr "Sluoksnio metaduomenų paieškos skydelis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1318
+msgid ""
+"By default, QGIS can retrieve layers metadata from the connections or data "
+"providers that allow metadata storage (more details on :ref:`saving metadata"
+" to the database <savemetadatatodb>`). The :guilabel:`Metadata search` panel"
+" allows to browse the layers by their metadata and add them to the project "
+"(either with a double-click or the :guilabel:`Add` button). The list can be "
+"filtered:"
+msgstr ""
+"Pagal nutylėjimą QGIS gali gauti sluoksnio metaduomenis iš jungties ar "
+"duomenų tiekėjų, kurie leidžia saugoti metaduomenis (daugiau informacijos "
+"rasite :ref:`metaduomenų įrašymas į duomenų bazę <savemetadatatodb>`). "
+"Skydelis :guilabel:`Metaduomenų paieška` leidžia naršyti po sluoksnius pagal"
+" jų metaduomenis ir pridėti juos į projektą (arba du kartus paspaudus arba "
+"naudojant mygtuką :guilabel:`Pridėti`). Sąrašą galima filtruoti:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1324
+msgid ""
+"by text, watching a set of metadata properties (identifier, title, abstract)"
+msgstr ""
+"pagal tekstą, stebint metaduomenų savybių aibę (identifikatorių, pavadinimą,"
+" santrauką)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1325
+msgid ""
+"by spatial extent, using the current :ref:`project extent "
+"<project_full_extent>` or the map canvas extent"
+msgstr ""
+"pagal erdvinę apimtį, naudojant dabartinio :ref:`projekto apimtį "
+"<project_full_extent>` arba žemėlapio drobės apimtį"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1326
+msgid "by the layer (geometry) type"
+msgstr "pagal sluoksnio (geometrijos) tipą"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1328
+msgid ""
+"The sources of metadata are implemented through a layer metadata provider "
+"system that can be extended by plugins."
+msgstr ""
+"Metaduomenų šaltinis įgyvendinamas per sluoksnio metaduomenų tiekėjo "
+"sistemą, kurią gali išplėsti priedai."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1334
+msgid "Layer Metadata Search Panel"
+msgstr "Sluoksnio metaduomenų paieškos skydelis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1337
+msgid "QGIS Custom formats"
+msgstr "QGIS savi formatai"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1339
+msgid "QGIS proposes two custom formats:"
+msgstr "QGIS siūlo du savo formatus:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1341
+msgid ""
+"Temporary Scratch Layer: a memory layer that is bound to the project (see "
+":ref:`vector_new_scratch_layer` for more information)"
+msgstr ""
+"Laikinas juodraštinis sluoksnis: atminties sluoksnis, kuris susietas su "
+"projektu (daugiau informacijos rasite skyriuje "
+":ref:`vector_new_scratch_layer`)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1343
+msgid ""
+"Virtual Layers: a layer resulting from a query on other layer(s) (see "
+":ref:`vector_virtual_layers` for more information)"
+msgstr ""
+"Virtualūs sluoksniai: sluoksnis, kuris gaunamas įvykdžius kito sluoksnio(ių)"
+" užklausą (daugiau informacijos rasite skyriuje "
+":ref:`vector_virtual_layers`)"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1350
+msgid "QLR - QGIS Layer Definition File"
+msgstr "QLR - QGIS sluoksnio apibrėžimo failas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1352
+msgid ""
+"Layer definitions can be saved as a :ref:`Layer Definition File "
+"<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
+" --> Save As Layer Definition File...` in the layer context menu."
+msgstr ""
+"Sluoksnio apibrėžimus galima įrašyti kaip :ref:`Sluoksnio apibrėžimo failus "
+"<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) naudojant sluoksnio "
+"kontekstinį meniu :menuselection:`Eksportuoti --> Įrašyti kaip sluoksnio "
+"apibrėžimo failą...`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1358
+msgid ""
+"The QLR format makes it possible to share \"complete\" QGIS layers with "
+"other QGIS users. QLR files contain links to the data sources and all the "
+"QGIS style information necessary to style the layer."
+msgstr ""
+"QLR formatas leidžia dalintis „pilnais“ QGIS sluoksniais su kitais QGIS "
+"naudotojais. QLR failuose yra nuorodos į duomenų šaltinius ir visa QGIS "
+"stiliaus informacija, kurios reikia sluoksniui."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1363
+msgid ""
+"QLR files are shown in the Browser Panel and can be used to add layers (with"
+" their saved styles) to the Layers Panel. You can also drag and drop QLR "
+"files from the system file manager into the map canvas."
+msgstr ""
+"QLR failai rodomi naršyklės skydelyje ir juos galima naudoti, norint pridėti"
+" sluoksnius (su jų įrašytais stiliais) į sluoksnių skydelį. Jūs taipogi "
+"galite tempti ir numesti QLR failus iš sistemos failų tvarkyklės į žemėlapio"
+" drobę."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1368
+msgid "Available actions for QLR files in the Browser Panel are:"
+msgstr "Galimi QLR failų veiksmai naršyklės skydelyje yra:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1370
+msgid ":menuselection:`Export Layer --> To file`"
+msgstr ":menuselection:`Eksportuoti sluoksnį --> Į failą`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1372
 msgid ":guilabel:`Layer Properties...`"
 msgstr ":guilabel:`Sluoksnio savybės...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1375
+msgid "Connecting to web services"
+msgstr "Prisijungimas prie žiniatinklio paslaugų"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1377
+msgid ""
+"With QGIS you can get access to different types of OGC web services (WM(T)S,"
+" WFS(-T), WCS, CSW, ...). Thanks to QGIS Server, you can also publish such "
+"services. :ref:`QGIS-Server-manual` contains descriptions of these "
+"capabilities."
+msgstr ""
+"QGIS leidžia jums pasiekti įvairius OGC žiniatinklio paslaugų tipus (WM(T)S,"
+" WFS(-T), WCS, CSW, ...). QGIS Serverio dėka jūs galite taipogi ir patys "
+"publikuoti tokias paslaugas. :ref:`QGIS-Server-manual` rasite šių galimybių "
+"aprašymus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1386
+msgid "Using Vector Tiles services"
+msgstr "Vektorinių kaladėlių paslaugų naudojimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1388
+msgid ""
+"Vector Tile services can be added via the |addVectorTileLayer| "
+":guilabel:`Vector Tiles` tab of the :guilabel:`Data Source Manager` dialog "
+"or the contextual menu of the :guilabel:`Vector Tiles` entry in the "
+":guilabel:`Browser` panel. Services can be either a :guilabel:`New Generic "
+"Connection...` or a :guilabel:`New ArcGIS Vector Tile Service "
+"Connection...`."
+msgstr ""
+"Vektorinių kaladėlių paslaugas galima pridėti kortelėje |addVectorTileLayer|"
+" :guilabel:`Vektorinės kaladėlės`, kurią rasite dialoge :guilabel:`Duomenų "
+"šaltinių tvarkyklė` ar įrašo :guilabel:`Vektorinės kaladėlės` kontekstiniame"
+" meniu :guilabel:`Naršyklės` skydelyje. Paslaugos gali būti arba "
+":guilabel:`Nauja bendra jungtis...` arba :guilabel:`Nauja ArcGIS vektorinių "
+"kaladėlių paslaugos jungtis...`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1734
 msgid "addVectorTileLayer"
 msgstr "addVectorTileLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1394
+msgid "You set up a service by adding:"
+msgstr "Jūs kuriate paslaugą pridėdami:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1396
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1475
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1563
+msgid "a :guilabel:`Name`"
+msgstr ":guilabel:`Pavadinimą`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1397
+msgid ""
+"a :guilabel:`Style URL`: a URL to a MapBox GL JSON style configuration. If "
+"provided, then that style will be applied whenever the layers from the "
+"connection are added to QGIS. In the case of Arcgis vector tile service "
+"connections, the URL overrides the default style configuration specified in "
+"the server configuration."
+msgstr ""
+":guilabel:`Stiliaus URL`: URL į MapBox GL JSON stiliaus konfigūraciją. Jei "
+"pateikta, tai stilius bus taikomas, kai jungties sluoksniai bus pridėti į "
+"QGIS. Jei tai Arcgis vektorinių kaladėlių paslaugos jungtis, URL permuš "
+"numatytą stilių konfigūraciją, nurodytą serverio konfigūracijoje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1403
+msgid ""
+"You can load vector tiles directly from a :guilabel:`Style URL`. The data "
+"source is automatically parsed from the style, and URLs with multiple "
+"sources are supported. That makes :guilabel:`Source URL` optional."
+msgstr ""
+"Jūs galite įkelti vektorines kaladėles tiesiogiai iš :guilabel:`Stiliaus "
+"URL`. Duomenų šaltinis automatiškai perduodamas iš stiliaus, palaikomi URL "
+"su keliais šaltiniais. Dėl to :guilabel:`Šaltinio URL` yra neprivalomas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1406
+#, python-brace-format
+msgid ""
+"the :guilabel:`Source URL`: of the type "
+"``http://example.com/{z}/{x}/{y}.pbf`` for generic services and "
+"``http://example.com/arcgis/rest/services/Layer/VectorTileServer`` for "
+"ArcGIS based services. The service must provide tiles in :file:`.pbf` "
+"format."
+msgstr ""
+":guilabel:`Šaltinio URL`: ``http://pavyzdys.lt/{z}/{x}/{y}.pbf`` tipo "
+"bazinėms paslaugoms ir "
+"``http://pavyzdys.lt/arcgis/rest/services/Layer/VectorTileServer`` ArcGIS "
+"paremtoms paslaugoms. Paslauga turi teikti kaladėles :file:`.pbf` formatu."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1410
+msgid ""
+"the |checkbox|:guilabel:`Min. Zoom Level` and the |checkbox|:guilabel:`Max. "
+"Zoom Level`. Vector Tiles have a pyramid structure. By using these options "
+"you have the opportunity to individually generate layers from the tile "
+"pyramid. These layers will then be used to render the Vector Tile in QGIS."
+msgstr ""
+"|checkbox|:guilabel:`Min. mastelis` ir |checkbox|:guilabel:`Maks. mastelis`."
+" Vektorinės kaladėlės turi piramidės struktūrą. Naudodami šias parinktis jūs"
+" galite kurti individualius kaladėlių piramidės sluoksnius. Šis sluoksniai "
+"bus naudojami braižant vektorines kaladėles QGIS'e."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1415
+msgid ""
+"For Mercator projection (used by OpenStreetMap Vector Tiles) Zoom Level 0 "
+"represents the whole world at a scale of 1:500.000.000. Zoom Level 14 "
+"represents the scale 1:35.000."
+msgstr ""
+"Merkatoriaus projekcijai (kurią naudoja OpenStreetMap vektorinės kaladėlės) "
+"mastelio lygis 0 reprezentuoja visą pasaulį masteliu 1:500.000.000. Lygis 14"
+" reprezentuoja mastelį 1:35.000."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1418
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1478
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1569
+msgid ""
+"the :ref:`authentication <authentication_index>` configuration if necessary"
+msgstr ""
+":ref:`autentifikacijos <authentication_index>` konfigūracija, jei reikia"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1419
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1480
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1570
+msgid "a :guilabel:`Referer`"
+msgstr ":guilabel:`Nukreipėją`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1421
+msgid ""
+":numref:`figure_vector_tiles_configuration` shows the dialog with the Vector"
+" Tiles service configuration."
+msgstr ""
+":numref:`figure_vector_tiles_configuration` vaizduojamas dialogas su "
+"vektorinių kaladėlių paslaugos konfigūracija."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1429
+msgid "Vector Tiles - Service configuration"
+msgstr "Vektorinės kaladėlės - paslaugos konfigūravimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1431
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`Vector Tiles` entry in :guilabel:`Data "
+"Source Manager` dialog or its context menu in the :guilabel:`Browser` panel."
+" Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"Konfigūraciją galima įrašyti į :file:`.XML` failą (:guilabel:`Įrašyti "
+"jungtis`) per įrašą :guilabel:`Vektorinės kaladėlės`, kurį rasite dialoge "
+":guilabel:`Duomenų šaltinių tvarkyklę` arba per jo kontekstinį meniu "
+"skydelyje :guilabel:`Naršyklė`. Analogiškai ją galima ir pridėti iš failo "
+"(:guilabel:`Įkelti jungtis`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1436
+msgid "Once a connection to a vector tile service is set, it's possible to:"
+msgstr "Kai nustatyti jungtis su vektorinių kaladėlių paslaugą, galima:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1438
+msgid ":guilabel:`Edit` the vector tile connection settings"
+msgstr ":guilabel:`Keisti` vektorinių kaladėlių jungties nustatymus"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1439
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1501
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1591
+msgid ":guilabel:`Remove` the connection"
+msgstr ":guilabel:`Išimti` jungtį"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1440
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1502
+msgid ""
+"From the :guilabel:`Browser` panel, right-click over the entry and you can "
+"also:"
+msgstr ""
+"Skydelyje :guilabel:`Naršyklė` paspaudus dešiniu pelės mygtuku virš įrašo "
+"jūs taipogi galite:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1443
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1507
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1611
+msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
+msgstr ""
+":guilabel:`Pridėti sluoksnį į projektą`: dvigubas paspaudimas taipogi "
+"prideda sluoksnį"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1444
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1508
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1612
+msgid ""
+"View the :guilabel:`Layer Properties...` and get access to metadata and a "
+"preview of the data provided by the service. More settings are available "
+"when the layer has been loaded into the project."
+msgstr ""
+"Žiūrėti :guilabel:`Sluoksnio savybes...` ir gauti prieigą prie metaduomenų "
+"bei peržiūrėti paslaugos teikiamus duomenis. Daugiau nustatymų rasite įkėlus"
+" sluoksnį į projektą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1452
+msgid "Using XYZ Tile services"
+msgstr "XYZ kaladėlių paslaugų naudojimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1454
+msgid ""
+"XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab of "
+"the :guilabel:`Data Source Manager` dialog or the contextual menu of the "
+":guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel. By default, "
+"QGIS provides some default and ready-to-use XYZ Tiles services:"
+msgstr ""
+"XYZ kaladėlių paslaugas galima pridėti kortelėje |addXyzLayer| "
+":guilabel:`XYZ`, kurią rasite dialoge :guilabel:`Duomenų šaltinių tvarkyklė`"
+" arba :guilabel:`XYZ kaladėlių` įrašo kontekstiniame meniu "
+":guilabel:`Naršyklės` skydelyje. Pagal nutylėjimą QGIS teikia kelias "
+"naudojimui paruoštas XYZ kaladėlių paslaugas:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1736
 msgid "addXyzLayer"
 msgstr "addXyzLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1459
+msgid ""
+"|xyz| :guilabel:`Mapzen Global Terrain`, allowing an immediate access to "
+"global DEM source for the projects. More details and resources at "
+"https://registry.opendata.aws/terrain-tiles/"
+msgstr ""
+"|xyz| :guilabel:`Mapzen Global Terrain`, iš karto suteikia projektms prieigą"
+" prie pasaulinio DEM šaltinio. Daugiau informacijos ir resursų rasite "
+"https://registry.opendata.aws/terrain-tiles/"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1462
+msgid ""
+"|xyz| :guilabel:`OpenStreetMap` to access the world 2D map. "
+":numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the "
+"OpenStreetMap XYZ Tile service configuration."
+msgstr ""
+"|xyz| :guilabel:`OpenStreetMap` prieiga prie viso pasaulio 2D žemėlapio. "
+":numref:`figure_xyz_tiles_openstreetmap` vaizduojamas dialogas su "
+"OpenStreetMap XYZ kaladėlių paslaugos konfigūracija."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1466
+msgid ""
+"To add a new service, press :guilabel:`New` (respectively :guilabel:`New "
+"Connection` from the Browser panel) and provide:"
+msgstr ""
+"Kad pridėtumėte naują paslaugą, spauskite :guilabel:`Nauja` (atitinkamai "
+":guilabel:`Nauja jungtis` naršyklės skydelyje) ir pateikite:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1473
+msgid "XYZ Tiles - OpenStreetMap configuration"
+msgstr "XYZ kaladėlės - OpenStreetMap konfigūracija"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1476
+#, python-brace-format
+msgid ""
+"the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or "
+"``file:///local_path/{z}/{x}/{y}.png``"
+msgstr ""
+":guilabel:`URL`, jūs galite pridėti ``http://pavyzdys.lt/{z}/{x}/{y}.png`` "
+"ar ``file:///vietinis_kelias/{z}/{x}/{y}.png``"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1479
+msgid "the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`"
+msgstr ":guilabel:`Min. mastelis` ir :guilabel:`Maks. mastelis`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1481
+msgid ""
+"the :guilabel:`Tile Resolution`: possible values are :guilabel:`Unknown (not"
+" scaled)`, :guilabel:`Standard (256x256 / 96DPI)` and :guilabel:`High "
+"(512x512 / 192DPI)`"
+msgstr ""
+":guilabel:`Kaladėlių rezoliucija`: galimos reikšmės yra :guilabel:`Nežinoma "
+"(nekeista)`, :guilabel:`Standartinė (256x256 / 96DPI)` ir :guilabel:`Aukšta "
+"(512x512 / 192DPI)`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1487
+msgid ""
+":guilabel:`Interpretation`: converts WMTS/XYZ raster datasets to a raster "
+"layer of single band float type following a predefined encoding scheme. "
+"Supported schemes are :guilabel:`Default` (no conversion is done), "
+":guilabel:`MapTiler Terrain RGB` and :guilabel:`Terrarium Terrain RGB`. The "
+"selected converter will translate the RGB source values to float values for "
+"each pixel. Once loaded, the layer will be presented as a single band "
+"floating point raster layer, ready for styling using QGIS usual :ref:`raster"
+" renderers <raster_rendering>`."
+msgstr ""
+":guilabel:`Interpretavimas`: keičia WMTS/XYZ rastro duomenų aibes į vienos "
+"kintančio kablelio juostos rastro sluoksnį pagal iš anksto nustatytą "
+"kodavimo sistemą. Palaikomos schemos yra :guilabel:`Numatytoji` (nedaromas "
+"joks konvertavimas), :guilabel:`MapTiler paviršiaus RGB` ir "
+":guilabel:`Terrarium paviršiaus RGB`. Parinktas keitimas išvers pradines RGB"
+" reikšmes į slankaus kablelio reikšmes kiekvienam pikseliui. Įkėlus, "
+"sluoksnis bus rodomas kaip vienos juostos slankaus kablelio rastras, "
+"paruoštas simbolizavimui naudojant standartinius QGIS :ref:`rastro braižymus"
+" <raster_rendering>`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1496
+msgid ""
+"Press :guilabel:`OK` to establish the connection. It will then be possible "
+"to:"
+msgstr "Spauskite :guilabel:`Gerai`, kad sukurtumėte jungtį. Tada bus galima:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1499
+msgid ""
+":guilabel:`Add` the new layer to the project; it is loaded with the name "
+"given in the settings."
+msgstr ""
+":guilabel:`Pridėti` į projektą naują sluoksnį, jis įkeliamas nustatymuose "
+"nurodytu pavadinimu."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1500
+msgid ":guilabel:`Edit` the XYZ connection settings"
+msgstr ":guilabel:`Keisti` XYZ jungties nustatymus"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1505
+msgid ""
+":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster "
+"<general_saveas>`"
+msgstr ""
+":menuselection:`Eksportuoti sluoksnį... --> Į failą`, :ref:`įrašyti jį kaip "
+"rastrą <general_saveas>`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1512
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`XYZ` entry in :guilabel:`Data Source "
+"Manager` dialog or its contextual menu in the :guilabel:`Browser` panel. "
+"Likewise, they can be added from a file (:guilabel:`Load Connections`)."
+msgstr ""
+"Konfigūraciją galima įrašyti į :file:`.XML` failą (:guilabel:`Įrašyti "
+"jungtis`) per įrašą :guilabel:`XYZ`, kurį rasite dialoge :guilabel:`Duomenų "
+"šaltinių tvarkyklę` arba per jo kontekstinį meniu skydelyje "
+":guilabel:`Naršyklė`. Analogiškai ją galima ir pridėti iš failo "
+"(:guilabel:`Įkelti jungtis`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1517
+msgid "The XML file for OpenStreetMap looks like this:"
+msgstr "OpenStreetMap skirtas XML failas atrodo taip:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1528
+msgid "**Loading XYZ tiles without creating a connection**"
+msgstr "**XYZ kaladėlių įkėlimas nekuriant jungties**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1530
+msgid ""
+"It is also possible to add XYZ tiles to a project without necessarily "
+"storing its connection settings in you user profile (e.g. for a dataset you "
+"may need once). In the :menuselection:`Data Source Manager --> XYZ` tab, "
+"edit any properties in the :guilabel:`Connection Details` group. The "
+":guilabel:`Name` field above should turn into ``Custom``. Press "
+":guilabel:`Add` to load the layer in the project. It will be named by "
+"default ``XYZ Layer``."
+msgstr ""
+"Galima pridėti į projektą XYZ kaladėles neįrašant jungties nustatymų į jūsų "
+"naudotojo profilį (pvz. duomenų rinkiniui, kurio jums reikia tik vieną "
+"kartą). Kortelėje :menuselection:`Duomenų šaltinių tvarkyklė --> XYZ`, "
+"keiskite bet kokias savybes grupėje :guilabel:`Jungties detalės`. Aukščiau "
+"esantis laukas :guilabel:`Pavadinimas` turėtų pasikeisti į ``Savas``. "
+"Spauskite :guilabel:`Pridėti`, kad įkeltumėte sluoksnį į projektą. Pagal "
+"nutylėjimą jis bus pavadintas ``XYZ sluoksnis``."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1538
+msgid "Examples of XYZ Tile services:"
+msgstr "XYZ kaladėlių paslaugų pavyzdžiai:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1540
+#, python-brace-format
+msgid ""
+"OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
+"mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
+"Zoom Level`: 19."
+msgstr ""
+"OpenStreetMap Monochrominis: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
+"mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. mastelis`: 0, :guilabel:`Maks. "
+"mastelis`: 19."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1543
+#, python-brace-format
+msgid ""
+"Google Maps: :guilabel:`URL`: "
+"``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
+" Level`: 0, :guilabel:`Max. Zoom Level`: 19."
+msgstr ""
+"Google Maps: :guilabel:`URL`: "
+"``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. "
+"mastelis`: 0, :guilabel:`Maks. mastelis`: 19."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1546
+#, python-brace-format
+msgid ""
+"Open Weather Map Temperature: :guilabel:`URL`: "
+"``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
+" :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."
+msgstr ""
+"Open Weather Map temperatūra: :guilabel:`URL`: "
+"``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
+" :guilabel:`Min. mastelis`: 0, :guilabel:`Maks. mastelis`: 19."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1555
+msgid "Using ArcGIS REST Servers"
+msgstr "ArcGIS REST serverių naudojimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1557
+msgid ""
+"ArcGIS REST Servers can be added via the |addAfsLayer| :guilabel:`ArcGIS "
+"REST Server` tab of the :guilabel:`Data Source Manager` dialog or the "
+"contextual menu of the :guilabel:`ArcGIS REST Servers` entry in the "
+":guilabel:`Browser` panel. Press :guilabel:`New` (respectively "
+":guilabel:`New Connection`) and provide:"
+msgstr ""
+"ArcGIS REST Serverius galima pridėti kortelėje |addAfsLayer| "
+":guilabel:`ArcGIS REST Serveris`, kurią rasite dialoge :guilabel:`Duomenų "
+"šaltinių tvarkyklė` arba :guilabel:`ArcGIS REST Serverių` įrašo "
+"kontekstiniame meniu :guilabel:`Naršyklės` skydelyje. Spauskite "
+":guilabel:`Naujas` (atitinkamai :guilabel:`Nauja jungtis`) ir nurodykite:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1710
 msgid "addAfsLayer"
 msgstr "addAfsLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1564
+msgid "the :guilabel:`URL`"
+msgstr ":guilabel:`URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1565
+msgid ""
+"a :guilabel:`Prefix`: This is used to specify the proxy prefix in the URL, "
+"which is necessary for some ArcGIS servers that use web proxy prefixes."
+msgstr ""
+":guilabel:`Priešdėlį`: tai naudojama nurodant URL proxy priešdėlį, kuris "
+"reikalingas kai kuriems ArcGIS serveriams, naudojantiems žiniatinklio proxy "
+"priešdėlius."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1567
+msgid "a :guilabel:`Community endpoint URL`"
+msgstr ":guilabel:`Bendruomenės prieigos taško URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1568
+msgid "a :guilabel:`Content endpoint URL`"
+msgstr ":guilabel:`Turinio prieigos taško URL`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1574
+msgid ""
+"ArcGIS Feature Service connections which have their corresponding Portal "
+"endpoint URLS set can be explored by content groups in the browser panel."
+msgstr ""
+"ArcGIS Feature Service jungtys, kurios turi nustatytus savo atitinkamus "
+"Portalo prieigos taškų URL, gali būti tiriamos naršyklės skydelio turinio "
+"grupėse."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1577
+msgid ""
+"If a connection has the Portal endpoints set, then expanding out the "
+"connection in the browser will show a “Groups” and “Services” folder, "
+"instead of the full list of services usually shown. Expanding out the groups"
+" folder will show a list of all content groups that the user is a member of,"
+" each of which can be expanded to show the service items belonging to that "
+"group."
+msgstr ""
+"Jei nurodyti jungties portalo prieigos taškai, tada išskleidus jungtį "
+"naršyklėje matysite „Grupių“ ir „Paslaugų“ aplankus vietoje paprastai rodomo"
+" pilno paslaugų sąrašo. Išskleidus grupių aplanką matysite sąrašą visų "
+"turinio grupių, kurių narys yra prisijungęs naudotojas, kiekvieną iš jų "
+"galima išskleisti ir pamatyti tai grupei priklausančius paslaugų elementus."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1583
+msgid ""
+"Configurations can be saved to :file:`.XML` file (:guilabel:`Save "
+"Connections`) through the :guilabel:`ArcGIS REST Server` entry in "
+":guilabel:`Data Source Manager` dialog. Likewise, they can be added from a "
+"file (:guilabel:`Load Connections`)."
+msgstr ""
+"Konfigūracijas galima įrašyti į :file:`.XML` failą (:guilabel:`Įrašyti "
+"jungtis`) per :guilabel:`ArcGIS REST Serverio` įrašą, kurį rasite dialoge "
+":guilabel:`Duomenų šaltinių tvarkyklė`. Analogiškai jas galima pridėti iš "
+"failo (:guilabel:`Įkelti jungtis`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1588
+msgid "Once a connection to an ArcGIS REST Server is set, it's possible to:"
+msgstr "Kai jungtis su ArcGIS REST Serveriu nustatyta, galima:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1590
+msgid ":guilabel:`Edit` the ArcGIS REST Server connection settings"
+msgstr ":guilabel:`Keisti` ArcGIS REST Serverio jungties nustatymus"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1592
+msgid ":guilabel:`Refresh` the connection"
+msgstr ":guilabel:`Atnaujinti` jungtį"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1593
+msgid "use a filter for the available layers"
+msgstr "naudoti filtrą galimiems sluoksniams"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1594
+msgid ""
+"choose from a list of available layers with the option to "
+"|checkbox|:guilabel:`Only request features overlapping the current view "
+"extent`"
+msgstr ""
+"parinkti iš sąrašo galimų sluoksnių su parinktimi "
+"|checkbox|:guilabel:`Prašyti tik geoobjektų, patenkančių į dabartinę "
+"žemėlapio vaizdo apimtį`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1597
+msgid ""
+"From the :guilabel:`Browser` panel, right-click over the connection entry "
+"and you can:"
+msgstr ""
+"Skydelyje :guilabel:`Naršyklė`, paspaudus dešinį mygtuką virš jungties įrašo"
+" jūs galėsite:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1600
+msgid ":guilabel:`Refresh`"
+msgstr ":guilabel:`Atnaujinti`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1601
+msgid ":guilabel:`Edit connection...`"
+msgstr ":guilabel:`Keisti jungtį...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1602
+msgid ":guilabel:`Remove connection...`"
+msgstr ":guilabel:`Išimti jungtį...`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1603
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1608
+msgid ""
+":guilabel:`View Service Info` which will open the default web browser and "
+"display the Service Info."
+msgstr ""
+":guilabel:`Peržiūrėti paslaugos informaciją` kuri atidarys numatytąją "
+"naršyklę ir ten parodys paslaugos informaciją."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1606
+msgid "Right-click over the layer entry and you can also:"
+msgstr "Dešiniu mygtuku paspaudę sluoksnio įrašą jūs galėsite:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1610
+msgid ":menuselection:`Export layer... --> To File`"
+msgstr ":menuselection:`Eksportuoti sluoksnį... --> Į failą`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1622
+msgid "Using 3D tiled scene services"
+msgstr "3D scenų kaladėlių paslaugų naudojimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1624
+msgid ""
+"QGIS supports multiple formats of 3D tiled datasets, grouped together as "
+"\"tiled scenes\". These include Cesium 3D Tiles and Quantized Mesh tiles."
+msgstr ""
+"QGIS palaiko įvairius 3D scenų kaladėlių formatus, sugrupuotus kaip „scenų "
+"kaladėlės“. Tarp jų yra 3D kaladėlės ir Quantized Mesh kaladėlės."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1627
+msgid ""
+"To load a tiled scene dataset into QGIS, use the |addTiledSceneLayer| "
+":guilabel:`Scene` tab in the :guilabel:`Data Source Manager` dialog."
+msgstr ""
+"Norėdami įkelti scenos kaladėlių duomenų aibę į QGIS, naudokite kortelę "
+"|addTiledSceneLayer| :guilabel:`Scena`, kurią rasite dialoge "
+":guilabel:`Duomenų šaltinių tvarkyklė`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1732
 msgid "addTiledSceneLayer"
 msgstr "addTiledSceneLayer"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1635
+msgid "Data Source Manager - Scene"
+msgstr "Duomenų šaltinių tvarkyklė - scena"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1637
+msgid ""
+"Create a connection by clicking on :guilabel:`New`. You can add a "
+":guilabel:`New Cesium 3D Tiles Connection` or a :guilabel:`New Quantized "
+"Mesh Connection`."
+msgstr ""
+"Sukurkite jungtį spausdami mygtuką :guilabel:`Nauja`. Jūs galite pridėti "
+":guilabel:`Naują Cesium 3D kaladėlių jungtį` arba :guilabel:`Naują Quantized"
+" Mesh jungtį`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1641
+msgid ""
+"Choose a :guilabel:`Name` and set the :guilabel:`URL` to the URL of a layer "
+"description JSON file."
+msgstr ""
+"Parinkite :guilabel:`Vardą` ir nustatykite :guilabel:`URL` tokį, kuris "
+"atitinka sluoksnio aprašymą JSON faile."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1643
+msgid ""
+"The URL may be remote (e.g. ``http://example.com/tileset.json``) or local "
+"(e.g. ``file:///path/to/tiles/tileset.json``)."
+msgstr ""
+"URL gali būti nutolęs (pvz. ``http://example.com/tileset.json``) arba "
+"vietinis (t.y. ``file:///path/to/tiles/tileset.json``)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1651
+msgid "Tiled Scene Connection"
+msgstr "Scenos kaladėlių jungtis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1653
+msgid "You can also add the service from :guilabel:`Browser Panel`."
+msgstr ""
+"Jūs taipogi galite pridėti paslaugą per :guilabel:`Naršyklės skydelį`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1655
+msgid ""
+"After creating new connection you are able to :guilabel:`Add` the new layer "
+"to your map."
+msgstr ""
+"Sukūrę naują jungtį galite :guilabel:`Pridėti` naują sluoksnį į jūsų "
+"žemėlapį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1663
+msgid "3D Tiles Layer - Textured"
+msgstr "3D kaladėlių sluoksnis - su tekstūromis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1670
+msgid "Quantized Mesh layer"
+msgstr "Kvantizuotas tinklo sluoksnis"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1676
+msgid "Using Cloud Connections"
+msgstr "Debesies jungčių naudojimas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1678
+msgid ""
+"QGIS supports connections to cloud services like Alibaba Cloud OSS, Amazon "
+"S3, Google Cloud Storage, Microsoft Azure Blob Storage, Microsoft Azure Data"
+" Lake Storage, and OpenStack Swift Object Storage. You can load vector and "
+"raster data from these services into QGIS. Set up a new |cloud| "
+":guilabel:`Cloud` connection in the :guilabel:`Browser` panel by right-"
+"clicking on the :guilabel:`Cloud` entry and selecting :guilabel:`New "
+"Connection`. You will see a drop-down list of available cloud services. "
+"Select the service you want to connect to and fill in the required fields:"
+msgstr ""
+"QGIS palaiko jungtis į debesijos paslaugas, tokias kaip Alibaba Cloud OSS, "
+"Amazon S3, Google Cloud Storage, Microsoft Azure Blob Storage, Microsoft "
+"Azure Data Lake Storage ir OpenStack Swift Object Storage. Jūs galite įkelti"
+" vektorinius ir rastro duomenis iš šių paslaugų į QGIS. Sukurkite naują "
+"|cloud| :guilabel:`Debesijos` jungtį :guilabel:`Naršyklės` skydelyje "
+"spausdami dešinį mygtuką ant įrašo :guilabel:`Debesija` ir parinkdami "
+":guilabel:`Nauja jungtis`. Jūs pamatysite galimų debesijos paslaugų "
+"iškrentantį sąrašą. Parinkite jums reikiamą paslaugą, prie kurios norite "
+"prisijungti, ir užpildykite reikiamus laukus:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1742
 msgid "cloud"
 msgstr "cloud"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1691
+msgid "Cloud Connection Dialog"
+msgstr "Debesijos prisijungimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1693
+msgid ":guilabel:`Name`: A name for the connection."
+msgstr ":guilabel:`Pavadinimas`: Jungties pavadinimas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1694
+msgid ""
+":guilabel:`Bucket or Container`: The name of the bucket or container in the "
+"cloud service."
+msgstr ""
+":guilabel:`Kibiras arba konteineris`: debesijos paslaugų kibiro ar "
+"konteinerio pavadinimas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1695
+msgid ""
+":guilabel:`Object Key` (optional): The key of the object in the bucket or "
+"container."
+msgstr ""
+":guilabel:`Objekto raktas` (neprivalomas): raktas objekto kibire ar "
+"konteineryje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1696
+msgid ":guilabel:`Credentials`: The credentials to access the cloud service."
+msgstr ""
+":guilabel:`Prisijungimo duomenys`: prieigos prie debesijos paslaugos "
+"prisijungimo duomenys."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1698
+msgid ""
+"You can also choose to :guilabel:`Save Connection` to an XML file or "
+":guilabel:`Load Connection` from an XML file."
+msgstr ""
+"Jūs taipogi galite pasirinkti :guilabel:`Įrašyti jungtį` į XML failą "
+":guilabel:`Įkelti jungtį` iš XML failo."
