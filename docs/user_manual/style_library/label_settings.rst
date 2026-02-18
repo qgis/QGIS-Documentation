@@ -775,17 +775,20 @@ Label modes for line layers include:
     the curved label fits the whole line.
   * :guilabel:`Stretch Character Spacing`: stretches (or shrinks) character spacing
     so that the curved label fits the whole line.
-  * :guilabel:`Character at Vertices`: places individual characters from the label
+  * :guilabel:`Characters at Vertices`: places individual characters from the label
     at each corresponding vertex in the line.
     If the curved line geometry does not contain sufficient vertices for the characters present in the label text
     then the excess characters are ignored and will not be rendered.
     If the label’s distance setting is non-zero, then the character will be vertically offset
     from the vertex position by this distance.
     Characters are rotated to follow the line angle at the vertex.
-  
-  Checking the |unchecked|:guilabel:`Ignore label whitespace when detecting collisions` will
-  ignore the whitespace in the label text (e.g., spaces or tab character)
-  when determining if labels overlap or collide with obstacles.
+
+  The |unchecked|:guilabel:`Ignore label whitespace when detecting collisions` option
+  controls how QGIS treats whitespace (i.e., spaces or tabs) in label text when determining
+  whether two labels collide (or when a label collides with an obstacle feature).
+  If unchecked, spaces are treated the same as text characters,
+  and a label or feature is not permitted to overlap spaces in another feature's label.
+  Check the option to allow spaces overlap.
 
 * :guilabel:`Horizontal`: draws labels horizontally along the length of the
   line feature.
