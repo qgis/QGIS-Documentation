@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Kwon.Yongchan <ruvyn@naver.com>, 2025
 # Harrissou Sant-anna, 2025
+# Kwon.Yongchan <ruvyn@naver.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,10 +15,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 "Language: ko\n"
@@ -134,6 +134,14 @@ msgstr ""
 "또는 Qt 클래스에서 사용할 수 있는 다른 ``::toDouble()`` 메소드들을 사용하지 마십시오. 이 메소드들은 로케일 설정을 "
 "무시하기 때문입니다. 정수 유형으로 변환하는  ``::toInt()`` 또는 ``::toLongLong()`` 메소드들도 마찬가지입니다."
 
+#: ../../docs/developers_guide/localization.rst:68
+msgid ""
+"``QLocale().toDouble()`` or ``QLocale().toInt()`` and the other "
+"``QLocale()`` conversion methods can be used in this situation."
+msgstr ""
+"이런 상황에서는 ``QLocale().toDouble()`` 또는 ``QLocale().toInt()`` 및 다른 "
+"``QLocale()`` 변환 메소드를 사용할 수 있습니다."
+
 #: ../../docs/developers_guide/localization.rst:71
 msgid ""
 "As a better alternative, QGIS API provides a few classes that should be used"
@@ -168,3 +176,19 @@ msgid ""
 msgstr ""
 "검증자(validator) 클래스는 유연하기 때문에, 먼저 사용자 로케일에 대해 입력값을 확인한 다음 일치하지 않는 경우 ``C`` "
 "로케일로 돌아갑니다."
+
+#: ../../docs/developers_guide/localization.rst:86
+msgid ""
+"The general recommendation is to use :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` for all floating point types I/O whenever it is"
+" possible because it is very well tested and it validates the input "
+"correctly. As an alternative it is possible to use the "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` class "
+"independently on a string obtained from another widget (e.g., a simple "
+"``QLineEdit`` widget)."
+msgstr ""
+"일반 권장 사항은 모든 부동소수점형 입력/출력에 대해 가능한 모든 경우에 :class:`QgsDoubleSpinBox "
+"<qgis.gui.QgsDoubleSpinBox>` 클래스를 사용하는 것입니다. 이 클래스가 매우 잘 테스트되어 있고 입력값을 정확하게 "
+"검증하기 때문입니다. 아니면 (단순 ``QLineEdit`` 위젯 같은) 또다른 위젯으로부터 가져온 문자열에 대해 "
+":class:`QgsDoubleValidator <qgis.gui.QgsDoubleValidator>` 클래스를 독립적으로 사용할 수도 "
+"있습니다."
