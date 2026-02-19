@@ -645,6 +645,120 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _pdalfilternoiseradius:
+
+Filter noise (using radius)
+-----------------------------
+|400|
+
+Filters noise in a point cloud using radius algorithm.
+Points are marked as noise if they have fewer than the
+minimum number of neighbors within the specified radius.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to be filtered for noise.
+   * - **Remove noise points**
+     - ``REMOVE_NOISE_POINTS``
+     - [boolean]
+
+       Default: False
+     - Set to True to remove points classified as noise from the output point cloud.
+       If False, noise points are kept in the output but remain classified as noise.
+   * - **Minimum number of neighbors in radius**
+     - ``MIN_K``
+     - [numeric: integer]
+    
+       Default: 2
+     - Minimum number of neighboring points within the search radius.
+   * - **Radius**
+     - ``RADIUS``
+     - [numeric: double]
+
+       Default: 1.0
+     - Search radius for counting neighboring points.
+   * - **Filtered (radius algorithm)**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the filtered point cloud to. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **VPC Output Format**
+
+       |400|
+     - ``VPC_OUTPUT_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Specify the underlying format in which data are stored
+       for Virtual Point Cloud (:file:`.vpc`) output.
+       Possible formats are:
+
+       * 0 --- ``COPC``
+       * 1 --- ``LAZ``
+       * 2 --- ``LAS``
+
+       LAZ/LAS may be faster to process, however they only
+       allow rendering of the point cloud extents.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered (radius algorithm)**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud layer where points are classified as noise based on the statistical filter.
+       If ``REMOVE_NOISE_POINTS`` is set to True, noise-classified points are removed from the output.
+       Otherwise, they remain in the layer and can be identified by their classification value (typically LAS class 7).
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:filternoiseradius``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _pdalmerge:
 
 Merge point cloud
