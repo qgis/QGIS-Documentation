@@ -511,6 +511,117 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _pdalfilternoisestatistical:
+
+Filter noise
+--------------
+
+Filters noise in a point cloud using a statistical outlier removal algorithm.
+For each point, the algorithm computes the mean distance to its K nearest neighbors.
+Points whose mean distance exceeds a threshold (mean distance + multiplier × standard deviation)
+are classified as noise.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to be filtered for noise.
+   * - **Remove noise points**
+     - ``REMOVE_NOISE_POINTS``
+     - [boolean]
+
+       Default: False
+     - Set to True to permanently remove points classified as noise from the output.
+   * - **Mean number of neighbors**
+     - ``MEAN_K``
+     - [numeric: integer]
+    
+       Default: 8
+     - Number of nearest neighbors (K) used to compute the average distance for each point.
+   * - **Standard deviation multiplier**
+     - ``MULTIPLIER``
+     - [numeric: double]
+
+       Default: 2.0
+     - Value used to multiply the standard deviation of the mean distances in order to
+       compute the threshold for classifying points as noise.
+       Higher values result in fewer points being classified as noise.
+   * - **Filtered (statistical algorithm)**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the filtered point cloud to. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **VPC Output Format**
+
+       Optional
+     - ``VPC_OUTPUT_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Specify the underlying format in which data are stored
+       for VPC output. Possible formats are
+       
+       * 0 --- ``COPC``
+       * 1 --- ``LAZ``
+       * 2 --- ``LAS``
+       
+       LAZ/LAS may be faster to process, however only
+       allow rendering of the point cloud extents.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered (statistical algorithm)**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud layer containing classified noise.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:filternoisestatistical``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _pdalinfo:
 
