@@ -316,6 +316,8 @@ each level of the dataset tree.
    | :menuselection:`New Field Domain -->       |              |              |            |            |               |            |
    | New Glob Domain`                           | |checkbox|   |              |            |            |               |            |
    +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
+   | :guilabel:`New Relationship...`            | |checkbox|   |              |            |            |               |            |
+   +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
    | :guilabel:`Delete <database_name>`         | |checkbox|   | |checkbox|   |            |            |               |            |
    +--------------------------------------------+--------------+--------------+------------+------------+---------------+------------+
    | :guilabel:`Compact Database (VACUUM)`      | |checkbox|   |              |            |            |               |            |
@@ -427,13 +429,6 @@ each level of the dataset tree.
  `vector file formats <https://gdal.org/en/latest/drivers/vector/index.html>`_
  such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 .. [2] For PostgreSQL connections: only supported with ALTER TABLE privilege.
-
-.. note::
-
-  When loading vector layers into QGIS, fields with |sourceFields| :guilabel:`Field Domains`
-  (such as those defined in a GeoPackage or ESRI File Geodatabase) are automatically
-  detected. These domains are database-level constraints, meaning they are enforced
-  by the database itself and apply across different applications, not just QGIS.
 
 Importing vector layers into databases using Browser panel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -697,6 +692,10 @@ Supported file types
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
 .. |stac| image:: /static/common/mIconStac.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |tiledSceneLayer| image:: /static/common/mIconTiledSceneLayer.png
    :width: 1.5em

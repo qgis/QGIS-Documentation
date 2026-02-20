@@ -651,6 +651,58 @@ selecting the columns in the :guilabel:`Feature id` column. For best
 performance, the :guilabel:`Feature id` value should be a single ``INTEGER``
 column.
 
+
+.. index:: Field domain
+.. _field_domain:
+
+Field domain
+-------------
+
+Field domains are rules that define acceptable values for a field in a database table.
+This is applicable when working with data sources that support field domains,
+such as GeoPackage and ESRI File Geodatabase.
+Field domains can be managed from the contextual menu of a field in the :guilabel:`Browser` panel.
+The following types are available:
+
+* :guilabel:`New Range Domain...`: creates a new domain to restrict field values
+  to a specified numeric range.
+* :guilabel:`New Coded Values Domain...`: creates a new domain to
+  restrict field values to a predefined list of acceptable values.
+* :guilabel:`New Glob Domain...`: creates a new domain to restrict field values
+  to matching a regular expression pattern.
+
+When creating a field domain, following options are provided in the dialog:
+
+* :guilabel:`Name`: set the name of the new field domain.
+* :guilabel:`Description`: provide a description for the new field domain.
+* :guilabel:`Field type`: select the data type of the field domain
+  (e.g., Boolean, Text, Integer, Decimal).
+* Additional :ref:`Policies <policies>`, only available for ESRI File Geodatabase format:
+
+  * :guilabel:`Split policy`
+  * :guilabel:`Merge policy`
+
+* Under :guilabel:`Range`, you can set the following options:
+
+  * :guilabel:`Minimum`: set the minimum acceptable value for the field.
+  * :guilabel:`Maximum`: set the maximum acceptable value for the field.
+  * Check the |checkbox| :guilabel:`Inclusive` if you want to include the boundary values in the acceptable range.
+
+* :guilabel:`Values`: click the |symbologyAdd| :sup:`Add row` or |symbologyRemove| :sup:`Remove row` to manage
+  the list of acceptable values for the field.
+* :guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard characters.
+
+Update and delete field domains by selecting the desired domain from the list and
+right-clicking to access the context menu options.
+You can also view the details of the domain assigned to a field.
+
+.. note::
+
+  When loading vector layers into QGIS, fields with |sourceFields| :guilabel:`Field Domains`
+  (such as those defined in a GeoPackage or ESRI File Geodatabase) are automatically
+  detected. These domains are database-level constraints, meaning they are enforced
+  by the database itself and apply across different applications, not just QGIS.
+
 .. index:: PostgreSQL; PostGIS; ST_Shift_Longitude
 
 Layers crossing 180° longitude
@@ -720,4 +772,10 @@ and a -180..180° representation of a 0..360° data.
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
+.. |symbologyAdd| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |symbologyRemove| image:: /static/common/symbologyRemove.png
    :width: 1.5em
