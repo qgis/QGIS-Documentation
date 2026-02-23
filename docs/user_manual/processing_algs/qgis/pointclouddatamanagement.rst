@@ -512,95 +512,6 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _pdalinfo:
-
-Point cloud information
------------------------
-
-Outputs basic metadata from an input point cloud file.
-
-Example of output information::
-
-    LAS           1.4
-    point format  6
-    count         56736130
-    scale         0.001 0.001 0.001
-    offset        431749.999 5440919.999 968.898
-    extent        431250 5440420 424.266
-                  432249.999 5441419.999 1513.531
-    crs           ETRS89 / UTM zone 34N (N-E) (EPSG:3046)  (vertical CRS missing!)
-    units         horizontal=metre  vertical=unknown
-
-    Attributes:
-    - X floating 8
-    - Y floating 8
-    - Z floating 8
-    - Intensity unsigned 2
-    - ReturnNumber unsigned 1
-    - NumberOfReturns unsigned 1
-    - ScanDirectionFlag unsigned 1
-    - EdgeOfFlightLine unsigned 1
-    - Classification unsigned 1
-    - ScanAngleRank floating 4
-    - UserData unsigned 1
-    - PointSourceId unsigned 2
-    - GpsTime floating 8
-    - ScanChannel unsigned 1
-    - ClassFlags unsigned 1
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [point cloud]
-     - Input point cloud layer to extract metadata information from
-   * - **Layer information**
-     - ``OUTPUT``
-     - [file]
-
-       Default: ``[Save to temporary file]``
-     - Specify the file to store the metadata information. :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Layer information**
-     - ``OUTPUT``
-     - [html]
-     - :file:`HTML` file to store the metadata information.
-
-Python code
-...........
-
-**Algorithm ID**: ``pdal:info``
-
-.. include:: ../algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
 .. _pdalmerge:
 
 Merge point cloud
@@ -696,6 +607,96 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _pdalinfo:
+
+Point cloud information
+-----------------------
+
+Outputs basic metadata from an input point cloud file.
+
+Example of output information::
+
+    LAS           1.4
+    point format  6
+    count         56736130
+    scale         0.001 0.001 0.001
+    offset        431749.999 5440919.999 968.898
+    extent        431250 5440420 424.266
+                  432249.999 5441419.999 1513.531
+    crs           ETRS89 / UTM zone 34N (N-E) (EPSG:3046)  (vertical CRS missing!)
+    units         horizontal=metre  vertical=unknown
+
+    Attributes:
+    - X floating 8
+    - Y floating 8
+    - Z floating 8
+    - Intensity unsigned 2
+    - ReturnNumber unsigned 1
+    - NumberOfReturns unsigned 1
+    - ScanDirectionFlag unsigned 1
+    - EdgeOfFlightLine unsigned 1
+    - Classification unsigned 1
+    - ScanAngleRank floating 4
+    - UserData unsigned 1
+    - PointSourceId unsigned 2
+    - GpsTime floating 8
+    - ScanChannel unsigned 1
+    - ClassFlags unsigned 1
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to extract metadata information from
+   * - **Layer information**
+     - ``OUTPUT``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specify the file to store the metadata information. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer information**
+     - ``OUTPUT``
+     - [html]
+     - :file:`HTML` file to store the metadata information.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:info``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _pdalreproject:
 
 Reproject point cloud
@@ -768,7 +769,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **REPROJECTED**
+   * - **Reprojected**
      - ``OUTPUT``
      - [point cloud]
      - Output point cloud layer in the target CRS.
@@ -996,8 +997,8 @@ Python code
 
 .. _pdaltile:
 
-Create tile from point cloud
-----------------------------
+Create tiles from point cloud
+-----------------------------
 
 Creates tiles from input point cloud files,
 recommended for best performance (in display or analysis) with such datasets in QGIS.

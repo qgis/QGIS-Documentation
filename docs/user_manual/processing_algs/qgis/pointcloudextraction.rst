@@ -122,6 +122,88 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _pdalfilter:
+
+Filter point cloud
+------------------
+
+Extracts point from the input point cloud which match PDAL expression and/or are inside of a cropping rectangle.
+
+.. figure:: img/point_cloud_filter.png
+   :align: center
+
+   Filtering of high vegetation class from an input point cloud layer
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to export
+   * - **Filter expression**
+     - ``FILTER_EXPRESSION``
+     - [expression]
+     - A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of features in the point cloud data
+   * - **Cropping extent**
+
+       Optional
+     - ``FILTER_EXTENT``
+     - [extent]
+     - A map extent for selecting a subset of features in the point cloud data
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Filtered**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the data to. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud layer with the filtered features of the input point cloud layer.
+       Currently supported formats are :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:filter``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _pdaldensity:
 
 Point cloud density
@@ -137,9 +219,6 @@ useful for quality checking of point cloud datasets.
 
 Parameters
 ..........
-
-Basic parameters
-^^^^^^^^^^^^^^^^
 
 .. list-table::
    :header-rows: 1
@@ -241,89 +320,6 @@ Python code
 ...........
 
 **Algorithm ID**: ``pdal:density``
-
-.. include:: ../algs_include.rst
-  :start-after: **algorithm_code_section**
-  :end-before: **end_algorithm_code_section**
-
-.. _pdalfilter:
-
-Filter point cloud
-------------------
-
-Extracts point from the input point cloud which match PDAL expression and/or are inside of a cropping rectangle.
-
-.. figure:: img/point_cloud_filter.png
-   :align: center
-
-   Filtering of high vegetation class from an input point cloud layer
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [point cloud]
-     - Input point cloud layer to export
-   * - **Filter expression**
-
-       Optional
-     - ``FILTER_EXPRESSION``
-     - [expression]
-     - A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of features in the point cloud data
-   * - **Cropping extent**
-
-       Optional
-     - ``FILTER_EXTENT``
-     - [extent]
-     - A map extent for selecting a subset of features in the point cloud data
-
-       .. include:: ../algs_include.rst
-          :start-after: **extent_options**
-          :end-before: **end_extent_options**
-
-   * - **Filtered**
-     - ``OUTPUT``
-     - [point cloud]
-
-       Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the data to. :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :class: longtable
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Filtered**
-     - ``OUTPUT``
-     - [point cloud]
-     - Output point cloud layer with the filtered features of the input point cloud layer.
-       Currently supported formats are :file:`.LAS`, :file:`.LAZ`, :file:`.COPC.LAZ` and :file:`.VPC`.
-
-Python code
-...........
-
-**Algorithm ID**: ``pdal:filter``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
