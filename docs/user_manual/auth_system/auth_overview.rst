@@ -320,9 +320,11 @@ OAuth2 Authentication
 The OAuth2 authentication method is used to connect to services that require OAuth2 2.0 authorization,
 allowing secure access using client credential and token-based authentication.
 
-.. note:: The OAuth2 authentication method now allows using ``localhost`` as the redirect host,
-   providing compatibility with services that do not accept ``http://127.0.0.1`` redirects 
-   (for example, Microsoft SharePoint).
+It supports using ``localhost`` as the redirect host,
+providing compatibility with services that do not accept ``http://127.0.0.1`` redirects (for example, Microsoft SharePoint).
+
+An advanced OAuth2 configuration option, :guilabel:`Extra token header(s)`,
+allows attaching additional tokens returned by the OAuth2 token endpoint as HTTP(S) request headers.
 
 .. _figure_authmethod_oauth2:
 
