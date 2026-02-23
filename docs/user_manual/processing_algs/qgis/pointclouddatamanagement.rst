@@ -993,6 +993,151 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _pdaltransformpointcloud:
+
+Transform point cloud
+------------------------
+
+Transforms point cloud coordinates using translation, rotation, and scaling operations using a 4x4 transformation matrix.
+The algorithm applies transformations in the following order: scaling, rotation (using Euler angles), then translation.
+Rotation angles are specified in degrees around the X, Y, and Z axes.
+All parameters are combined into a 4×4 transformation matrix that is passed to PDAL Wrench.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer to be transformed.
+   * - **X Translation**
+     - ``TRANSLATE_X``
+     - [numeric: double]
+
+       Default: 0
+     - Translation distance along X axis.
+   * - **Y Translation**
+     - ``TRANSLATE_Y``
+     - [numeric: double]
+
+       Default: 0
+     - Translation distance along Y axis.
+   * - **Z Translation**
+     - ``TRANSLATE_Z``
+     - [numeric: double]
+
+       Default: 0
+     - Translation distance along Z axis.
+   * - **X Scale**
+     - ``SCALE_X``
+     - [numeric: double]
+
+       Default: 1.0
+     - Scaling factor along X axis.
+   * - **Y Scale**
+     - ``SCALE_Y``
+     - [numeric: double]
+
+       Default: 1.0
+     - Scaling factor along Y axis.
+   * - **Z Scale**
+     - ``SCALE_Z``
+     - [numeric: double]
+
+       Default: 1.0
+     - Scaling factor along Z axis.
+   * - **X Rotation**
+     - ``ROTATE_X``
+     - [numeric: double]
+
+       Default: 0
+     - Rotation angle around X axis.
+   * - **Y Rotation**
+     - ``ROTATE_Y``
+     - [numeric: double]
+
+       Default: 0
+     - Rotation angle around Y axis.
+   * - **Z Rotation**
+     - ``ROTATE_Z``
+     - [numeric: double]
+
+       Default: 0
+     - Rotation angle around Z axis.
+   * - **Transformed**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the transformed point cloud to. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **VPC Output Format**
+
+       Optional
+     - ``VPC_OUTPUT_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Specify the underlying format in which data are stored
+       for VPC output. Possible formats are
+       
+       * 0 --- ``COPC``
+       * 1 --- ``LAZ``
+       * 2 --- ``LAS``
+       
+       LAZ/LAS may be faster to process, however only
+       allow rendering of the point cloud extents.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Transformed**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud layer containing transformed point cloud.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:transformpointcloud``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _pdaltile:
 
