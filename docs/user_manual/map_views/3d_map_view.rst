@@ -80,12 +80,18 @@ The following tools are provided at the top of the 3D map view panel:
     More options are available in the :ref:`General configuration <scene_extent>` tab.
   * |editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene by defining an area on the terrain in the 2D map canvas.
     Click to set the start point, move the mouse to define the line direction
-    and click again to set the end point. You can adjust the size of the section by moving the mouse after selecting the start and end points.
+    and click again to set the end point of the axis.
+    
+    * If the lock button next to the :guilabel:`Tolerance` field is in locked state (|locked|),
+      then the width of the cross section is set from the tolerance value
+      and the cross section is automatically drawn
+    * If the tolerance lock button is unlocked (|unlocked|), then you can adjust the size of the section
+      by moving the mouse over the map canvas and clicking at the desired width.
+    
     Press :kbd:`Esc` or right-click to reset the selection.
-  * Use |editCutDisabled| :sup:`Disable Cross Section` to remove the cross section.
-  * Set the :guilabel:`Tolerance` to define the width of the cross section. Click |locked| to disable spinbox and lock the value.
   * Use |arrowLeft|:sup:`Nudge Left` and |arrowRight|:sup:`Nudge Right` to nudge the cross section area.
     The direction (left or right) is determined by the orientation of the drawn line.
+  * Use |editCutDisabled| :sup:`Disable Cross Section` to remove the cross section.
 * |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
   such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
   or :ref:`ambient occlusion <ambient_occlusion>`.
@@ -562,6 +568,8 @@ in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` f
 .. |tiltUp| image:: /static/common/mActionTiltUp.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
+.. |unlocked| image:: /static/common/unlocked.png
    :width: 1.3em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
