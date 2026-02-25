@@ -238,7 +238,7 @@ values from the top row down, upward pointing means ascending values from
 the top row down).
 You can also choose to sort the rows with the :guilabel:`Sort...` option
 of the column header context menu.
-The :guilabel:`Configure attribute table sort order` dialog opens,
+The :guilabel:`Configure Attribute Table Sort Order` dialog opens,
 filled with the current sort order expression.
 Check |unchecked| :guilabel:`Defined sort order in attribute table`
 and edit the expression to suit your needs.
@@ -897,6 +897,8 @@ Other information about the feature follows:
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |zoomTo| image:: /static/common/mActionZoomTo.png
