@@ -1034,6 +1034,116 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _pdalheightabovegroundtriangulation:
+
+Height above ground (using triangulation)
+----------------------------------------------
+|400|
+
+Calculates the height of points above the ground surface in a point cloud using a
+`Delaunay triangulation <https://gwlucastrig.github.io/TinfourDocs/DelaunayIntro/index.html>`_ algorithm.
+The algorithm uses ground-classified points (classification value 2) to create a
+`Triangulated Irregular Network (TIN) <https://www.ian-ko.com/resources/triangulated_irregular_network.htm>`_ from
+specified number of neighbors, then computes the height above this surface for all points.
+The output adds a HeightAboveGround dimension to the point cloud. If 'Replace Z values' is enabled,
+the Z coordinate will be replaced with the height above ground value.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer used to calculate height above ground.
+   * - **Replace Z values with height above ground**
+     - ``REPLACE_Z``
+     - [boolean]
+
+       Default: True
+     - If set to True, Z coordinate will be replaced with the height above ground value.
+       Otherwise, the original Z values are kept.
+   * - **Number of neighbors for terrain construction**
+     - ``COUNT``
+     - [numeric: integer]
+    
+       Default: 10
+     - The number of neighboring ground-classified points used to construct the terrain surface for elevation interpolation.
+   * - **Height above ground (delaunay algorithm)**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the point cloud with height above ground value. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **VPC Output Format**
+
+       |400|
+     - ``VPC_OUTPUT_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Specify the underlying format in which data are stored
+       for Virtual Point Cloud (:file:`.vpc`) output.
+       Possible formats are:
+
+       * 0 --- ``COPC``
+       * 1 --- ``LAZ``
+       * 2 --- ``LAS``
+
+       LAZ/LAS may be faster to process, however they only
+       allow rendering of the point cloud extents.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Height above ground (nearest neighbour)**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud layer with height above ground calculated for each point.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:heightabovegroundtriangulation``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 .. _pdalmerge:
 
 Merge point cloud
