@@ -997,9 +997,10 @@ Python code
 
 Transform point cloud
 ------------------------
+|400|
 
 Transforms point cloud coordinates using translation, rotation, and scaling operations using a 4x4 transformation matrix.
-The algorithm applies transformations in the following order: scaling, rotation (using Euler angles), then translation.
+Applies transformations in the following order: scaling, rotation (using Euler angles), then translation.
 Rotation angles are specified in degrees around the X, Y, and Z axes.
 All parameters are combined into a 4×4 transformation matrix that is passed to PDAL Wrench.
 
@@ -1098,19 +1099,20 @@ Advanced parameters
      - Description
    * - **VPC Output Format**
 
-       Optional
+       |400|
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
        Default: 0
      - Specify the underlying format in which data are stored
-       for VPC output. Possible formats are
-       
+       for Virtual Point Cloud (:file:`.vpc`) output.
+       Possible formats are:
+
        * 0 --- ``COPC``
        * 1 --- ``LAZ``
        * 2 --- ``LAS``
-       
-       LAZ/LAS may be faster to process, however only
+
+       LAZ/LAS may be faster to process, however they only
        allow rendering of the point cloud extents.
 
 Outputs
