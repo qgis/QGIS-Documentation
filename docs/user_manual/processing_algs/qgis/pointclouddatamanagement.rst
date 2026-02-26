@@ -644,6 +644,122 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _pdalheightabovegroundbynearestneighbor:
+
+Height above ground
+-----------------------------
+|400|
+
+Calculates the height of points above the ground surface in a point cloud using a nearest neighbor algorithm.
+For each point, the algorithm finds the specified number of nearest ground-classified points
+(classification value 2) and interpolates the ground elevation from them using
+`Inverse Distance Weighting (IDW) <https://gisgeography.com/inverse-distance-weighting-idw-interpolation/>`_.
+The output adds a HeightAboveGround dimension to the point cloud.
+If 'Replace Z values' is enabled, the Z coordinate will be replaced with the height above ground value.
+Maximum Distance parameter can limit the search radius (0 = no limit).
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [point cloud]
+     - Input point cloud layer used to calculate height above ground.
+   * - **Replace Z values with height above ground**
+     - ``REPLACE_Z``
+     - [boolean]
+
+       Default: True
+     - If set to True, Z coordinate will be replaced with the height above ground value.
+       Otherwise, the original Z values are kept.
+   * - **Number of neighbors for terrain interpolation**
+     - ``COUNT``
+     - [numeric: integer]
+    
+       Default: 1
+     - The number of neighboring ground
+       points used to interpolate the terrain elevation.
+   * - **Maximum search distance**
+     - ``MAX_DISTANCE``
+     - [numeric: double]
+
+       Default: 0
+     - Maximum distance used to limit the search radius. If set to 0, the search distance is unlimited.
+   * - **Height above ground (nearest neighbour)**
+     - ``OUTPUT``
+     - [point cloud]
+
+       Default: ``[Save to temporary file]``
+     - Specify the point cloud file to export the point cloud with height above ground value. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **VPC Output Format**
+
+       |400|
+     - ``VPC_OUTPUT_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Specify the underlying format in which data are stored
+       for Virtual Point Cloud (:file:`.vpc`) output.
+       Possible formats are:
+
+       * 0 --- ``COPC``
+       * 1 --- ``LAZ``
+       * 2 --- ``LAS``
+
+       LAZ/LAS may be faster to process, however they only
+       allow rendering of the point cloud extents.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Height above ground (nearest neighbour)**
+     - ``OUTPUT``
+     - [point cloud]
+     - Output point cloud layer with height above ground calculated for each point.
+
+Python code
+...........
+
+**Algorithm ID**: ``pdal:heightabovegroundbynearestneighbor``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _pdalmerge:
 
