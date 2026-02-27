@@ -267,6 +267,8 @@ Some of these entries are not available when multiple selections are made
   :menuselection:`--> Paste Style`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :menuselection:`--> Add...`                                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Rename Current...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Load Style`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Save Style`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Edit symbol...`                                             |checkbox|
   :menuselection:`--> Copy Symbol`                                                |checkbox|
   :menuselection:`--> Paste Symbol`                                               |checkbox|
@@ -1368,7 +1370,7 @@ Manage styles from layer context menu
 ---------------------------------------
 
 Right-click on the layer in the :guilabel:`Layers` panel and select :guilabel:`Styles`
-to copy, paste, add, remove or rename layer styles.
+to copy, paste, add, remove, rename, load or save layer styles.
 
 * :guilabel:`Copy Current Style`: copies all the settings of the active style to the clipboard.
 
