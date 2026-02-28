@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Kwon.Yongchan <ruvyn@naver.com>, 2025
 # Transifex Bot <>, 2025
+# Kwon.Yongchan <ruvyn@naver.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,10 +16,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-12 07:02+0000\n"
 "PO-Revision-Date: 2025-02-27 21:36+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
@@ -102,6 +102,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:36
 msgid "**GML** --- Geography Markup Language"
 msgstr "**GML** -- 지리 마크업 언어(Geography Markup Language)"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:37
+msgid "**SensorThings API** --- SensorThings API (:ref:`sensor_things`)"
+msgstr "**센서싱스 API** --- 센서싱스(SensorThings) API (:ref:`sensor_things`)"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:39
 msgid ""
@@ -1559,10 +1563,245 @@ msgstr ""
 msgid "SensorThings"
 msgstr "SensorThings"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:795
+msgid ""
+"QGIS supports connections to `OGC SensorThings API "
+"<https://www.ogc.org/publications/standard/sensorthings/>`_, a standard "
+"providing an open and unified framework to interconnect IoT sensing devices,"
+" data, and applications over the Web. It is an open standard addressing the "
+"syntactic and semantic interoperability of the Internet of Things. It is "
+"based on the `Observations and Measurements "
+"<https://www.ogc.org/publications/standard/om/>`_ data model, a standardized"
+" model for observations, and for features involved in sampling when making "
+"observations."
+msgstr ""
+"QGIS는 웹 상에서 사물 인터넷(Internet of Things) 센서 장치, 데이터, 그리고 앱과 상호 연결할 수 있는 개방형 통합"
+" 프레임워크를 제공하는 표준인 `OGC 센서싱스 API "
+"<https://www.ogc.org/publications/standard/sensorthings/>`_ 에 접속하는 기능을 "
+"제공합니다. 이 API는 IoT의 구문적·의미적 상호 운용성을 다루는 개방형 표준으로, 관측을 위해 그리고 관측 시 샘플링되는 피처들을 "
+"위해 표준화된 `O&M(Observations and Measurements) "
+"<https://www.ogc.org/publications/standard/om/>` 데이터 모델을 기반으로 개발되었습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:803
+msgid "Setting connection"
+msgstr "연결 설정하기"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:805
+msgid ""
+"To add SensorThings data to QGIS use the |addSensorThingsLayer| "
+":guilabel:`SensorThings` tab in the :guilabel:`Data Source Manager` dialog."
+msgstr ""
+":guilabel:`Data Source Manager` 대화창에 있는 |addSensorThingsLayer| "
+":guilabel:`SensorThings` 탭을 통해 QGIS에 센서싱스 데이터를 추가할 수 있습니다."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:909
 msgid "addSensorThingsLayer"
 msgstr "addSensorThingsLayer"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:808
+msgid ""
+"To establish a new connection, press :guilabel:`New` (or :guilabel:`New "
+"SensorThings Connection` from the Browser panel) and provide "
+":guilabel:`Name` and :guilabel:`URL`. Advanced options, such as "
+":ref:`authentication <authentication_index>` and a :guilabel:`Referer`, can "
+"also be configured."
+msgstr ""
+"새 연결을 생성하려면 :guilabel:`New` 버튼을 (또는 탐색기 패널에서 :guilabel:`New SensorThings "
+"Connection` 버튼을) 누른 다음 :guilabel:`Name` 과 :guilabel:`URL` 을 입력하십시오. :ref:`인증"
+" <authentication_index>` 및 :guilabel:`Referer` 같은 고급 옵션들도 환경 설정할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:813
+msgid ""
+"Press :guilabel:`OK` to establish the connection. Then you will be able to:"
+msgstr ":guilabel:`OK` 버튼을 눌러 연결하십시오. 그러면 다음 작업을 할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:816
+msgid ":guilabel:`Edit` the SensorThings connection settings"
+msgstr ":guilabel:`Edit`: 센서싱스 연결 설정을 편집할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:817
+msgid ":guilabel:`Remove` the SensorThings connection"
+msgstr ":guilabel:`Remove`: 센서싱스 연결을 제거할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:822
+msgid "SensorThings Connection dialog"
+msgstr "센서싱스 연결 대화창"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:824
+msgid ""
+"Configurations can be saved to an :file:`.XML` file (:guilabel:`Save`) "
+"through the :guilabel:`SensorThings` entry in :guilabel:`Data Source "
+"Manager` dialog or its contextual menu in the :guilabel:`Browser` panel "
+"(:guilabel:`Save Connections`). Likewise, configurations can be added from a"
+" file (:guilabel:`Load`)."
+msgstr ""
+":guilabel:`Data Source Manager` 대화창의 :guilabel:`SensorThings` "
+"항목(:guilabel:`Save`) 또는 :guilabel:`Browser` 패널에 있는 :guilabel:`SensorThings` "
+"의 컨텍스트 메뉴(:guilabel:`Save Connections`)를 통해 환경 설정을 :file:`.XML` 파일로 저장할 수 "
+"있습니다. 마찬가지로 파일로부터 환경설정을 추가(:guilabel:`Load`)할 수도 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:830
+msgid "Loading SensorThings data"
+msgstr "센서싱스 데이터 불러오기"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:832
+msgid ""
+"Relations between layers (so-called entities) stored in a SensorThings "
+"dataset are expressed in the diagram below."
+msgstr "다음 다이어그램은 센서싱스 데이터셋에 저장된 레이어(통칭 엔티티)들 사이의 관계를 나타냅니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:838
+msgid ""
+"Data model Observations and Measurements (Source: `Sensor Web Tutorial by "
+"SIST network <https://sist.pages.in2p3.fr/anf21-sos52north/hands-on/09_sta-"
+"example-request/>`_)"
+msgstr ""
+"O&M 데이터 모델 (출처: `Sensor Web Tutorial by SIST network "
+"<https://sist.pages.in2p3.fr/anf21-sos52north/hands-on/09_sta-example-"
+"request/>`_)"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:841
+msgid ""
+"Any type of entity can be loaded in QGIS, but not all are spatial data. To "
+"load an entity, there are :guilabel:`Layer Settings` that can be configured:"
+msgstr ""
+"어떤 유형의 엔티티든 QGIS로 불러올 수 있지만, 모든 유형이 공간 데이터는 아닙니다. 엔티티를 불러오려면 다음 "
+":guilabel:`Layer Settings` 를 환경 설정해주면 됩니다:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:844
+msgid ""
+":guilabel:`Entity Type`: the entity to load from the data model as layer in "
+"QGIS"
+msgstr ":guilabel:`Entity Type`: 데이터 모델에서 QGIS에 레이어로 불러올 엔티티"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:845
+msgid ""
+":guilabel:`Geometry Type`: the geometry type of the selected entity to load."
+" Press |refresh| :sup:`Check available types` to limit the list to the "
+"actually supported geometry types."
+msgstr ""
+":guilabel:`Geometry Type`: 불러오기 위해 선택한 엔티티의 도형 유형. 목록을 실제로 지원되는 도형 유형들로 "
+"제한하려면 |refresh| :sup:`Check available types` 아이콘을 누르십시오."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:929
 msgid "refresh"
 msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:848
+msgid ":guilabel:`Page Size`"
+msgstr ":guilabel:`Page Size`: 용지 크기"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:849
+msgid ""
+":guilabel:`Feature Limit` sets a maximum number of features to request from "
+"the service"
+msgstr ":guilabel:`Feature Limit`: 서비스에 요청할 피처의 최대 개수를 설정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:850
+msgid ""
+":guilabel:`Extent Limit` sets a maximum extent limit for the layer, so that "
+"only features within the extent are requested"
+msgstr ":guilabel:`Extent Limit`: 범위 안에 있는 피처들만 요청되도록 레이어에 최대 범위 제한을 설정합니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:852
+msgid ""
+":guilabel:`Expansions`: The data model of SensorThings provides a mechanism "
+"of expansion of the results to related entities, similar to how tables are "
+"joined together in a relational database. Using this approach, you can "
+"expand the selected layer to include data from other items. This will "
+"flatten the relationship, creating as many parent features as children, and "
+"additional properties are added as columns in the attribute table."
+msgstr ""
+":guilabel:`Expansions`: 센서싱스 데이터 모델은 관계형 데이터베이스에서 테이블들이 결합되는 것과 유사한 방식으로 "
+"결과물을 관련 엔티티로 확장하는 메커니즘을 제공합니다. 이 접근 방식을 이용하면 선택한 레이어가 다른 항목에서 나온 데이터를 포함하도록 "
+"확장할 수 있습니다. 이때 하위 피처의 개수만큼 상위 피처를 생성하며 관계를 평탄화시키고, 속성 테이블에 추가 속성을 열로 추가합니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:864
+msgid ""
+"Use :guilabel:`Filter` to build a query to filter the data, using "
+"SensorThings filter syntax."
+msgstr ":guilabel:`Filter` 에서 데이터를 필터링하는 쿼리를 작성하십시오. 이때 센서싱스 필터 문법을 사용해야 합니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:866
+msgid ""
+"The above settings and filtering options are also available for update in "
+"the layer properties dialog, :guilabel:`Source` tab, once loaded in QGIS."
+msgstr ""
+"QGIS에 데이터를 불러온 다음에는, 레이어 속성 대화창의 :guilabel:`Source` 탭이 업데이트되어 이런 설정들과 필터링 "
+"옵션을 사용할 수 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:869
+msgid ""
+"Press :guilabel:`Add` to load the selected entity type as layer in QGIS."
+msgstr ":guilabel:`Add` 를 누르면 QGIS에 선택한 엔티티 유형을 레이어로 불러옵니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:876
+msgid "Working with a vector layer from SensorThings"
+msgstr "센서싱스 벡터 레이어 작업하기"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:878
+msgid ""
+"A SensorThings layer is loaded in QGIS as a vector layer. As such, it "
+"displays the same tabs in the :ref:`layer properties "
+"<vector_properties_dialog>` and allows same feature interactions using the "
+"selection or identify tools. There are however some specificities you should"
+" consider while working with SensorThings data."
+msgstr ""
+"QGIS는 센서싱스 레이어를 벡터 레이어로 불러옵니다. 따라서 센서싱스 레이어의 :ref:`레이어 속성 대화창 "
+"<vector_properties_dialog>` 은 벡터 레이어 속성 대화창과 동일한 탭들을 가지고 있어 선택 또는 식별 도구들을 통해"
+" 동일한 피처 상호 작용을 할 수 있습니다. 하지만 센서싱스 데이터를 작업할 때 고려해야 할 특이 사항들이 있습니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:883
+msgid ""
+"Because of the data model, the result property of a SensorThings Observation"
+" is a string field. In case you want to use its numerical representation in "
+"for example a graduated style, use an expression to convert the value to "
+"real and try() in case this fails (e.g., ``try( "
+"to_real(\"Observation_result\"), Null)``)."
+msgstr ""
+"데이터 모델 때문에, 센서싱스 관측의 산출물 속성은 문자열 필드입니다. 이를테면 문자열에 있는 숫자 표현을 그라데이션 스타일로 사용하고자"
+" 할 때 그 값을 실수로 변환해주는 표현식을 사용해야 합니다. 실수 변환이 실패하는 경우 ``try()`` 를 사용해보십시오. (예: "
+"``try( to_real(\"Observation_result\"), Null)``)"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:888
+msgid ""
+"In case you want to create a chart of the observations at one or more "
+"locations, you can install the QGIS plugin :guilabel:`Data Plotly`."
+msgstr ""
+"한 군데 이상의 위치에서 관측된 값들로 도표를 생성하고자 하는 경우, :guilabel:`Data Plotly` QGIS 플러그인을 "
+"설치하면 됩니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:891
+msgid "Now select the observations at a point location in the map view."
+msgstr "이제 맵뷰에 있는 위치 포인트에서 관측값을 선택하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:892
+msgid ""
+"Open the plotly panel and activate the :guilabel:`Use only selected "
+"features` checkbox."
+msgstr ""
+":guilabel:`Data Plotly` 패널을 열어서 :guilabel:`Use only selected features` 체크박스에"
+" 체크하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:893
+msgid ""
+"Select on the x-column a date-time property and on the y-column the "
+":guilabel:`Observation_result`. This will plot the observations at that "
+"location over time."
+msgstr ""
+"X 열에 날짜&시간 속성을 그리고 Y 열에 :guilabel:`Observation_result` 를 선택하십시오. 이렇게 하면 해당 "
+"위치의 관측값을 시계열로 볼 수 있는 도표를 그릴 것입니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:895
+msgid "Verify to filter by a single Observed Property."
+msgstr "관측 속성이 하나만 나타나도록 필터링하십시오."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:896
+msgid ""
+"Notice that the chart changes as soon as you select other locations on the "
+"map."
+msgstr "맵 상에서 다른 위치를 선택하면 도표가 바뀝니다."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:901
+msgid "Use Data plotly to plot the air quality observations at a location"
+msgstr "Data Plotly를 사용해서 어떤 위치의 공기질 관측값을 도표로 그리기"
