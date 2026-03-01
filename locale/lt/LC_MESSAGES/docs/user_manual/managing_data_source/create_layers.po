@@ -6,7 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2025
-# Tomas Straupis, 2025
+# Tomas Straupis, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,10 +15,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-18 12:17+0000\n"
 "PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Tomas Straupis, 2025\n"
+"Last-Translator: Tomas Straupis, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 "Language: lt\n"
@@ -157,13 +157,147 @@ msgstr ""
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:71
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:131
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:180
+msgid "To add fields to the layer you are creating:"
+msgstr "Norėdami pridėti laukus į jūsų kuriamą sluoksnį:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:73
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:133
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:182
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:301
+msgid "Enter the :guilabel:`Name` of the field"
+msgstr "Įveskite lauko :guilabel:`Pavadinimą`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:74
+msgid ""
+"Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,"
+" :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal "
+"number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Binary "
+"(BLOB)` and :guilabel:`Boolean`."
+msgstr ""
+"Parinkite duomenų :guilabel:`Tipą`. Palaikomi tipai yra "
+":guilabel:`Tekstiniai duomenys`, :guilabel:`Sveiki skaičiai` (integer ir "
+"integer64), :guilabel:`Dešimtainiai skaičiai`, :guilabel:`Datos` ir "
+":guilabel:`Datos su lauku`, :guilabel:`Dvejetainiai (BLOB)` ir "
+":guilabel:`Loginiai`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:78
+msgid ""
+"Depending on the selected data format, enter the :guilabel:`Maximum length` "
+"of values."
+msgstr ""
+"Priklausomai nuo parinkto duomenų formato, įveskite reikšmių "
+":guilabel:`Maksimalų ilgį`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:80
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:139
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:186
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:308
+msgid "Click on the |newAttribute| :guilabel:`Add to Fields List` button"
+msgstr "Spauskite mygtuką |newAttribute| :guilabel:`Pridėti į laukų sąrašą`"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:833
 msgid "newAttribute"
 msgstr "newAttribute"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:81
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:140
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:187
+msgid "Reproduce the steps above for each field you need to add"
+msgstr "Kartokite aukščiau pateiktus veiksmus visiems pridedamiems laukams"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:82
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:141
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:188
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:310
+msgid ""
+"You can later change the fields order using the |arrowUp| :sup:`Move Up` and"
+" |arrowDown| :sup:`Move Down` buttons"
+msgstr ""
+"Vėliau galite keisti laukų rikiuotę naudodami mygtukus |arrowUp| "
+":sup:`Perkelti aukštyn` ir |arrowDown| :sup:`Perkelti žemyn`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:829
+msgid "arrowUp"
+msgstr "arrowUp"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:831
+msgid "arrowDown"
+msgstr "arrowDown"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:84
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:143
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:190
+msgid ""
+"Once you are happy with the attributes, click :guilabel:`OK`. QGIS will add "
+"the new layer to the legend, and you can edit it as described in section "
+":ref:`sec_edit_existing_layer`."
+msgstr ""
+"Kai jums jau tinka atributai, spauskite :guilabel:`Gerai`. QGIS pridės naują"
+" sluoksnį į legendą ir jūs galėsite redaguoti jį kaip aprašyta skyriuje "
+":ref:`sec_edit_existing_layer`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:88
+msgid ""
+"By default, when creating a GeoPackage layer, QGIS generates a "
+":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
+"of the layer. The name can be changed. The geometry field, if availabe, is "
+"named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
+" on it. These options can be found under the :guilabel:`Advanced Options` "
+"together with the :guilabel:`Layer identifier` (short human readable name of"
+" the layer) and the :guilabel:`Layer description`."
+msgstr ""
+"Pagal nutylėjimą, kuriant GeoPackage sluoksnį QGIS sukuria "
+":guilabel:`Geoobjekto id lauką` pavadinimu ``fid``, kuris veikia kaip "
+"sluoksnio pirminis raktas. Pavadinimą galima pakeisti. Geometrijos laukas, "
+"jei toks yra, vadinamas ``geometry`` ir jūs galite pasirinkti "
+":guilabel:`Sukurti jam erdvinį indeksą`. Šias parinktis rasite tarp "
+":guilabel:`Sudėtingesnių parinkčių`, kartu su :guilabel:`Sluoksnio "
+"identifikatoriumi` (trumpu žmogui skaitomu sluoksnio pavadinimu) bei "
+":guilabel:`Sluoksnio aprašymu`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:97
+msgid ""
+"Further management of GeoPackage layers can be done with the :ref:`DB "
+"Manager <dbmanager>`."
+msgstr ""
+"Tolimesnį GeoPackage sluoksnių tvarkymą galima atlikti su :ref:`DB tvarkykle"
+" <dbmanager>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:105
+msgid "Creating a new Shapefile layer"
+msgstr "Naujo Shape failų sluoksnio kūrimas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:107
+msgid ""
+"To create a new ESRI Shapefile format layer, press the |newVectorLayer| "
+":menuselection:`New Shapefile Layer...` button in the :menuselection:`Layer "
+"--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` "
+"toolbar. The :guilabel:`New Shapefile Layer` dialog will be displayed as "
+"shown in :numref:`figure_create_shapefile`."
+msgstr ""
+"Norėdami sukurti naują ESRI Shape failų formato sluoksnį, spauskite mygtuką "
+"|newVectorLayer| :menuselection:`Naujas Shape failų sluoksnis...` meniu "
+":menuselection:`Sluoksnis --> Kurti sluoksnį -->` arba per "
+":guilabel:`Duomenų šaltinių tvarkyklės` įrankinėje. Dialogas "
+":guilabel:`Naujas Shape failo sluoksnis` bus rodomas kaip parodyta "
+":numref:`figure_create_shapefile`."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:843
 msgid "newVectorLayer"
 msgstr "newVectorLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:114
+msgid ""
+"Provide a path and file name using the :guilabel:`...` button next to "
+":guilabel:`File name`. QGIS will automatically add the right extension to "
+"the name you provide."
+msgstr ""
+"Nurodykite kelią ir failo pavadinimą naudodami mygtuką :guilabel:`...`, "
+"esantį greta :guilabel:`Failo pavadinimas`. QGIS automatiškai pridės tinkamą"
+" praplėtimą prie jūsų pateikto pavadinimo."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:841
 msgid "newSpatiaLiteLayer"
