@@ -353,8 +353,8 @@ msgid ""
 "regardless of their original CRS. Use of units and ellipsoid setting are "
 "available and make sense and you can perform calculations accordingly."
 msgstr ""
-"または、既存の座標参照系で *地理的座標系* 、 *投影された座標系* あるいは *ユーザ定義の座標系* "
-"を使用することができます。CRSの地球上における適用範囲のプレビューが表示されるため、適切なCRSを選択するのに役立ちます。プロジェクトに追加されたレイヤは、重ね合わせるために元のCRSに関係なくオンザフライでこのCRSに変換されます。使用する単位や楕円体の設定が可能かつ意味を持ち、これに応じて距離や面積の計算を行うことができます。"
+"または、既存の座標参照系で *地理座標系* 、 *投影座標系* あるいは *ユーザ定義* "
+"を使用することができます。CRSの地球上における適用範囲のプレビューが表示され、適切なCRSを選択するのに役立ちます。プロジェクトに追加されたレイヤは、重ね合わせるために元のCRSに関係なくオンザフライでこのCRSに変換されます。使用する単位や楕円体の設定が可能かつ意味を持ち、これに応じて距離や面積の計算を行うことができます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
 msgid ""
@@ -367,7 +367,7 @@ msgid ""
 "default."
 msgstr ""
 "QGISプロジェクトで新しいCRSを選択すると、 :guilabel:`プロジェクトのプロパティ` ダイアログ（ "
-":menuselection:`プロジェクト --> プロパティ...` ）の :guilabel:`一般情報` "
+":menuselection:`プロジェクト --> プロパティ...` ）の :guilabel:`全般` "
 "タブにある計測単位が選択したCRSに適合するように自動的に変更されます。例えば、一部のCRSは座標をメートルではなくフィートで定義するため、QGISプロジェクトをこれらのCRSのいずれかに設定すると、デフォルトでフィートを使用して測定するようにプロジェクトが設定されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
@@ -382,7 +382,7 @@ msgstr "レイヤのCRSを使用して、プロジェクトにCRSを割り当て
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
 "the CRS"
-msgstr ":guilabel:`レイヤ` パネルでCRSを使用したいレイヤを右クリックする"
+msgstr ":guilabel:`レイヤ` パネルでCRSを採取したいレイヤを右クリックする"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
 msgid "Select :guilabel:`Set project CRS from Layer`."
@@ -394,7 +394,7 @@ msgid ""
 "coordinates display are updated accordingly and all the layers in the "
 "project are on-the-fly translated to the new project CRS."
 msgstr ""
-"プロジェクトのCRSはレイヤのCRSで再定義されます。マップキャンバスの範囲や座標表示はこれに応じて更新され、プロジェクト内の全てのレイヤがオンザフライで新しいプロジェクトのCRSに変換されます。"
+"プロジェクトのCRSはそのレイヤのCRSで再定義されます。マップキャンバスの範囲や座標表示はこれに応じて更新され、プロジェクト内の全てのレイヤがオンザフライで新しいプロジェクトのCRSに変換されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
 msgid "Coordinate Reference System Selector"
@@ -426,7 +426,7 @@ msgid ""
 "that you frequently use in your everyday GIS work, these will be displayed "
 "in this list. Click on one of these items to select the associated CRS."
 msgstr ""
-"**最近使用したCRS** "
+"**最近使った座標参照系** "
 "：日常のGIS作業でよく使うCRSがあれば、このリストに表示されます。これらのいずれかひとつをクリックするとCRSを選択できます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
@@ -436,8 +436,8 @@ msgid ""
 "reference systems. To define a CRS, select it from the list by expanding the"
 " appropriate node and selecting the CRS. The active CRS is preselected."
 msgstr ""
-"**あらかじめ定義されたCRS** "
-"：これは、地理的座標系、投影された座標系およびユーザ定義の座標系など、QGISでサポートされているすべてのCRSのリストです。CRSを定義するには、該当するノードを展開してリストからCRSを選択します。現在アクティブなCRSは事前に選択されています。"
+"**あらかじめ定義された座標参照系** "
+"：これは、地理座標系、投影座標系およびユーザ定義の座標系など、QGISでサポートされている全てのCRSのリストです。CRSを決定するには、該当するノードを展開してリストからCRSを選択します。現在アクティブなCRSは事前に選択されています。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:232
 msgid ""
@@ -451,7 +451,7 @@ msgstr ""
 msgid ""
 "If you want to remove a recently used CRS from the list that can be done in "
 "several ways:"
-msgstr "最近使用したCRSをリストから削除するには、いくつかの方法があります："
+msgstr "最近使ったCRSをリストから削除するには、いくつかの方法があります："
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
 msgid ""
@@ -474,7 +474,7 @@ msgid ""
 ":guilabel:`Clear all recently used CRS` to remove all used CRS."
 msgstr ""
 "使ったCRSを右クリックし、|clearItem| :guilabel:`選択したCRSを最近使ったCRSから削除` "
-"を選んで選択したCRSを削除するか、|clearConsole| :guilabel:`Clear all recently used CRS` "
+"を選んで選択したCRSを削除するか、|clearConsole| :guilabel:`最近利用したCRSをクリア` "
 "を選んで使ったCRSをすべて削除します。 "
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
