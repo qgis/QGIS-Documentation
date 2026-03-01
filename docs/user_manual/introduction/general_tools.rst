@@ -1512,6 +1512,7 @@ you to fill:
 * **metadata**: information to help people find and understand the dataset,
   how they can access and use it... these are properties of the datasource and
   can live out of the QGIS project.
+  Metadata can also be defined for the project file itself.
 * **notes**: instructions and comments regarding the layer in the current project
 
 .. index:: Metadata, Metadata editor, Keyword
@@ -1520,9 +1521,8 @@ you to fill:
 Metadata
 --------
 
-In the layer properties dialog, the |editMetadata| :guilabel:`Metadata` tab
-provides you with options to create and edit a metadata report on your layer.
-
+In the project or layer properties dialog, the |editMetadata| :guilabel:`Metadata` tab
+provides you with options to create and edit a metadata report on the element.
 Information to fill concern:
 
 * the data :guilabel:`Identification`: basic attribution of the dataset (parent,

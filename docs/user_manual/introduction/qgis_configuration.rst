@@ -1928,12 +1928,9 @@ Available parameters are:
 Metadata Properties
 -------------------
 
-The |editMetadata| :guilabel:`Metadata` tab allows detailed metadata to be defined,
-including (among the others): author, creation date, language, abstracts,
-categories, keywords, contact details, links, history. There is also a
-validation functionality that checks if specific fields were filled, anyway
-this is not enforced. See :ref:`vector layer metadata properties
-<vectormetadatamenu>` for some details.
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your project.
+See :ref:`metadatamenu` for more information.
 
 View Settings
 --------------
