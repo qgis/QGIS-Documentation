@@ -113,8 +113,7 @@ msgid ""
 "automatically determine the correct CRS for a layer:"
 msgstr ""
 "QGISにレイヤが読み込まれるたびに、QGISはそのレイヤの正しいCRS "
-"を自動的に判断しようと試みます。ただし、CRS情報を持たずにレイヤが読み込まれた場合など、 "
-"場合によっては自動判別が不可能な場合もあります。レイヤの正しいCRSを自動的に判断できない場合のQGISの動作を以下の手順で設定することができます:"
+"を自動的に判断しようと試みますが、場合によってはできない場合があります。CRS情報を持たないレイヤが与えられたときなどです。レイヤの正しいCRSが自動的に判断できない場合のQGISの動作は、以下の手順で設定することができます:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
 msgid ""
@@ -138,8 +137,8 @@ msgid ""
 ":guilabel:`when a new layer is created, or when a layer is loaded that has "
 "no CRS`. One of:"
 msgstr ""
-":guilabel:`レイヤのCRS` グループで、 "
-":guilabel:`新規レイヤが作成されるか、あるいはCRSのないレイヤが読み込まれた場合...` のアクションとして、以下のうちどれかを設定します。"
+":guilabel:`レイヤのCRS` グループで、 :guilabel:`新規レイヤが作成された場合、CRSのないレイヤが読み込まれた場合...` "
+"のアクションとして、以下のうちどれかを設定します。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
 msgid ""
@@ -152,10 +151,10 @@ msgid ""
 "values, i.e. the same behavior as all layers get when :ref:`a project is set"
 " to have no CRS <project_crs>`."
 msgstr ""
-"|radioButtonOn| :guilabel:`未知のCRSのまま`: "
-"CRSを持たないレイヤがロードされた時にCRSを選択するプロンプトを表示せず、CRSの選択は後回しにされます。一度にたくさんのレイヤを読み込むときに便利です。CRSの選択が後回しになっているレイヤは、"
+"|radioButtonOn| :guilabel:`未知のCRSのままにする（何もしない）`: "
+"CRSを持たないレイヤが読み込まれたときにCRSを選択するプロンプトを表示せず、CRSの選択は後回しにされます。一度にたくさんのレイヤを読み込むときに便利です。CRSの選択が後回しになっているレイヤは、"
 " :guilabel:`レイヤ` パネル内でレイヤの横にある |indicatorNoCRS| "
-"アイコンで識別可能です。これらのレイヤは座標参照されず、レイヤの座標は純粋な数値の非地球投影の値として扱われます。これはつまり "
+"アイコンで識別できます。これらのレイヤは座標参照されず、レイヤの座標は純粋な数値の非地球投影の値として扱われます。これはつまり "
 ":ref:`プロジェクトのCRSが「投影なし」に設定された場合 <project_crs>` と同じ動作です。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
@@ -175,8 +174,8 @@ msgid ""
 "in other cases you will need to contact the original author of the data to "
 "determine the correct CRS to use."
 msgstr ""
-"|radioButtonOff| :guilabel:`CRSダイアログを表示`: "
-"CRSを手動で選択するよう、ダイアログが表示されます。正しい選択をすることが非常に重要です。なぜなら、間違ったCRSを選択をすると、レイヤが地表の間違った位置に置かれてしまいます！付随するメタデータにレイヤの正しいCRSが記述されていることもありますが、場合によっては、使用すべき正しいCRSを決定するためにデータの元の作成者に連絡する必要があるでしょう。"
+"|radioButtonOff| :guilabel:`CRSダイアログを表示する`: "
+"CRSを手動で選択するよう、ダイアログが表示されます。間違ったCRSを選択をするとレイヤが地表の間違った位置に置かれてしまうので、正しい選択をすることが非常に重要です！付随するメタデータにレイヤの正しいCRSが記述されていることもありますが、場合によっては、使用すべき正しいCRSを決定するためにデータの元の作成者に連絡する必要があるでしょう。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
 msgid "radioButtonOff"
@@ -184,21 +183,21 @@ msgstr "radioButtonOff"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
-msgstr "|radioButtonOff| :guilabel:`プロジェクトのCRSを使用`"
+msgstr "|radioButtonOff| :guilabel:`プロジェクトCRSを使う`"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
 msgid ""
 "|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
 ":guilabel:`Default CRS for layers` combobox above."
 msgstr ""
-"|radioButtonOff| :guilabel:`デフォルトCRSを使う` フレーム上部にある、 :guilabel:`レイヤのデフォルトCRS`"
-" コンボボックスで設定されたものを使います。"
+"|radioButtonOff| :guilabel:`デフォルトCRSを使う`: 上部にある、 :guilabel:`レイヤのデフォルトCRS` "
+"コンボボックスで設定されたものを使います。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
 msgid ""
 "To assign the same CRS to multiple layers that have no crs or have a wrong "
 "one in one operation:"
-msgstr "CRSのない、あるいはCRSを間違った複数のレイヤに対して、同じCRSを一度の操作で設定するには、"
+msgstr "CRSを持たないか間違ったCRSを持つ複数のレイヤに対して、同じCRSを一度の操作で設定するには:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
 msgid "Select the layers in the :guilabel:`Layers` panel"
@@ -209,8 +208,8 @@ msgid ""
 "Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
 "selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
 msgstr ""
-":kbd:`Ctrl+Shift+C` を押します。あるいは選択したレイヤのうち一つを右クリックするか、 :menuselection:`レイヤ -->"
-" レイヤCRSの設定` メニューをクリックします。"
+":kbd:`Ctrl+Shift+C` を押します。選択したレイヤのうち一つを右クリックするか、 :menuselection:`レイヤ --> "
+"レイヤCRSの設定` メニューをクリックすることもできます"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
 msgid "Find and select the right CRS to use"
@@ -256,10 +255,10 @@ msgid ""
 "with respect to each other!"
 msgstr ""
 "QGIS はラスタデータとベクタデータの両方に対して「オンザフライ」の CRS "
-"変換をサポートしています。これは、プロジェクト内の特定のマップレイヤの本来のCRS "
-"に関係なく、レイヤのCRSを常にプロジェクト用に定義された共通のCRSに自動的に変換します。舞台裏では、QGIS "
-"はプロジェクト内に含まれるすべてのレイヤを透過的にプロジェクトの CRS "
-"に再投影します。これによって、全てのレイヤがお互いに対して正しい位置にレンダリングされるのです！"
+"変換をサポートしています。これは、プロジェクトの地図レイヤが、それが土台にしているCRS "
+"に関わらず、プロジェクト用に定義された共通のCRSに常に自動的に変換されることを意味します。QGIS "
+"は舞台裏でプロジェクトに含まれる全てのレイヤをプロジェクトの CRS "
+"に透過的に再投影します。これによって、全てのレイヤがお互いに対して正しい位置にレンダリングされるのです！"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
 msgid ""
@@ -292,7 +291,7 @@ msgstr ""
 " -->` |options| :menuselection:`オプション...` （ "
 ":numref:`figure_projection_options` を参照）の :guilabel:`座標参照系（CRS）` タブで、 "
 ":guilabel:`新しいプロジェクトが作られた時のCRS` の設定で変更することができます。 "
-"プロジェクトのCRSを新規プロジェクトに読み込まれた最初のレイヤのCRSに合わせて自動的に設定するオプションや、新規作成されたすべてのプロジェクトで使用するデフォルトのCRSを選択するオプションがあります。この選択はその後のQGISセッションで使用するために保存されます。"
+"プロジェクトのCRSを新規プロジェクトに読み込まれた最初のレイヤのCRSに合わせて自動的に設定するオプションや、新規作成された全てのプロジェクトで使われるデフォルトのCRSを選択するオプションがあります。この選択はその後のQGISセッションで使われるために保存されます。"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
 msgid ""
