@@ -440,9 +440,11 @@ The algorithm dialogs update automatically to reflect changes made using the dra
 Socket Types
 ............
 
-In the Model Designer, input and output sockets are color-coded to indicate
-the type of data they accept or produce. The color is a visual aid only;
-compatibility between sockets is determined by the parameter type.
+In the model designer, input and output sockets are color-coded to indicate
+the type of data they accept or produce. The same color coding applies to
+rubber bands and parameter bullets on the canvas.
+The color is a visual aid only; compatibility between sockets is determined
+by the parameter type.
 
 The following table describes the meaning of each socket color.
 
@@ -479,6 +481,14 @@ The following table describes the meaning of each socket color.
      - Parameters that do not fit into the above categories.
 
 Sockets can only be connected when their data types are compatible.
+Parameter bullets use the same color coding as sockets: a bullet is outlined
+when the parameter holds its default value, and filled when a non-default value
+is set or a parameter box is connected. The label of each parameter is followed
+by its current value, which updates immediately as values are changed or
+parameter boxes are connected.
+
+When a parameter box is unfolded, its output section also shows the data type
+and current value being passed downstream.
 
 .. _figure_model_model:
 
