@@ -436,6 +436,50 @@ A visual edge follows the cursor and completes the connection when released.
 To remove a connection, drag the edge away from the input socket.
 The algorithm dialogs update automatically to reflect changes made using the drag-and-drop interface.
 
+
+Socket Types
+............
+
+In the Model Designer, input and output sockets are color-coded to indicate
+the type of data they accept or produce. The color is a visual aid only;
+compatibility between sockets is determined by the parameter type.
+
+The following table describes the meaning of each socket color.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 35 40
+
+   * - Socket color
+     - Data type category
+     - Description
+   * - :blue:`Blue`
+     - Numerical types
+     - Numbers, matrices, vectors, distances, durations, and other numeric values.
+   * - :green:`Green`
+     - Boolean
+     - ``True`` / ``False`` values.
+   * - :kaki:`Kaki`
+     - Vector and geometry types
+     - Vector geometries and vector layers, including meshes, point clouds, extents, vector tiles, and any object containing geometry.
+   * - :turquoise:`Turquoise`
+     - Raster types
+     - Raster images and raster layers.
+   * - :purple:`Purple`
+     - Enumerations
+     - Predefined selectable values (enum parameters).
+   * - :slate:`Slate blue`
+     - Textual types
+     - Strings, dates, coordinate reference systems (CRS), HTML content, and other text-based values.
+   * - :darkgray:`Dark gray`
+     - File system types
+     - File and directory paths.
+   * - :midgray:`Mid gray`
+     - Other types
+     - Parameters that do not fit into the above categories.
+
+Sockets can only be connected when their data types are compatible.
+
 .. _figure_model_model:
 
 .. figure:: img/models_model.png

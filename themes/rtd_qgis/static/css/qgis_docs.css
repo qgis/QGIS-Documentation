@@ -3,47 +3,53 @@
 
 /* Customize for QGIS Documentation*/
 .rst-content .guilabel {
- background:#7fbbe3
+  background: #7fbbe3
 }
 
 /* adds scrollbar to side navigator and keep showing the top title block */
 .wy-side-nav-search {
-   margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 .wy-side-scroll {
-   width: auto;
-   overflow-y: hidden;
-   display: flex;
-   flex-direction: column;
+  width: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
 }
+
 .wy-menu.wy-menu-vertical {
-   overflow-y: auto;
+  overflow-y: auto;
 }
 
 /*rtd theme does not render menuselection, so let's apply guilabel settings to it*/
 .rst-content .menuselection {
- background:#7fbbe3;
- font-size: 80%;
- border:1px solid #7fbbe3;
- font-weight:700;
- border-radius:4px;
- padding:2.4px 6px;
- margin:auto 2px
+  background: #7fbbe3;
+  font-size: 80%;
+  border: 1px solid #7fbbe3;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 2.4px 6px;
+  margin: auto 2px
 }
+
 /*keyboard text are by default rendered bigger*/
 .rst-content .kbd {
- font-size: 90%
+  font-size: 90%
 }
+
 .outdated {
   /* only to be visible for outdated releases*/
   background: #ffbaba;
   color: #6a0e0e;
 }
+
 .isTesting {
   /* only to be visible in testing*/
   background: #f3fbfb;
   color: black;
 }
+
 .outdated,
 .isTesting {
   /* top banner for testing and outdated docs*/
@@ -59,7 +65,7 @@
 
 /* Widen space for the documentation content*/
 .wy-nav-content {
-	max-width: 1260px;
+  max-width: 1260px;
 }
 
 /* Avoid images being too big on bigger screen*/
@@ -73,15 +79,15 @@
 from https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html */
 @media screen and (min-width: 767px) {
 
-   .wy-table-responsive table td {
-      /* !important prevents the common CSS stylesheets from overriding
+  .wy-table-responsive table td {
+    /* !important prevents the common CSS stylesheets from overriding
          this as on RTD they are loaded after this stylesheet */
-      white-space: normal !important;
-   }
+    white-space: normal !important;
+  }
 
-   .wy-table-responsive {
-      overflow: auto !important;
-   }
+  .wy-table-responsive {
+    overflow: auto !important;
+  }
 }
 
 .toc-columns ul {
@@ -100,4 +106,44 @@ from https://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html */
   .qgis-edit-guidelines {
     display: none;
   }
+}
+
+
+/* Add specific text roles with color display, allowing to write e.g., :blue:`Blue socket` */
+@import url("default.css");
+
+.red {
+  color: #FF0000;
+}
+
+.blue {
+  color: #229DD6;
+}
+
+.green {
+  color: #33C91C;
+}
+
+.kaki {
+  color: #B4B400;
+}
+
+.turquoise {
+  color: #00B4B4;
+}
+
+.purple {
+  color: #8044C9;
+}
+
+.slate {
+  color: #6464FF;
+}
+
+.darkgray {
+  color: #505050;
+}
+
+.midgray {
+  color: #808080;
 }
