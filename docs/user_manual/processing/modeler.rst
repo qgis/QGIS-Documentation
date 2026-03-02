@@ -198,6 +198,12 @@ View menu
      -
      -
      - Displays comments associated to every algorithm or input in the model designer
+   * - |checkbox| :guilabel:`Show Feature Count`
+     -
+     -
+     - Displays the number of features on the links between algorithms,
+       for vector layer connections. The model must be run at least once
+       to populate the feature counts.
    * - |unchecked| :guilabel:`Enable Snapping`
      -
      -
@@ -496,6 +502,12 @@ and current value being passed downstream.
    :align: center
 
    A complete model
+
+The model designer can display the number of features flowing through
+the connections between algorithms. Feature counts are shown on the links
+between algorithm inputs and outputs, and apply to vector layers only.
+The model must be run at least once before feature counts can be displayed.
+Feature counts can be toggled on or off via :menuselection:`View --> Show Feature Count`.
 
 With the :menuselection:`Edit --> Add Group Box` tool, you can add a draggable
 *box* to the canvas. This feature is very
