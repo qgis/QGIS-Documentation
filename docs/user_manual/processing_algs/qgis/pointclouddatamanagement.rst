@@ -1101,8 +1101,6 @@ Advanced parameters
      - Type
      - Description
    * - **VPC Output Format**
-
-       |400|
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
