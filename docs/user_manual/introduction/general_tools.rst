@@ -438,9 +438,11 @@ Right-click on a layer and select :menuselection:`Styles -->` in the list in ord
   and your layer rendering will automatically be updated on the map canvas.
 * copy part or all of the current style, and when applicable, paste a copied
   style from another layer
-* :guilabel:`Rename current...` style
+* :guilabel:`Rename Current...` style
 * :guilabel:`Add` a new style (which is actually a copy of the current one)
-* or :guilabel:`Remove current` style (only when multiple styles are available).
+* :guilabel:`Remove Current` style (only when multiple styles are available)
+* :guilabel:`Load Style...`
+* or :guilabel:`Save Style...`
 
   .. tip:: **Quickly share a layer style**
 
