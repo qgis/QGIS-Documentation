@@ -49,7 +49,7 @@ Map Border in detail
 The map border is a line that defines exactly the edges of the area shown on the
 map. When printing a map with a graticule (which we describe further down), you
 often find the coordinate information of the graticule lines along the border
-lines, as you can see in :numref:`figure_map_legend`.
+lines, as you can see in :numref:`figure_map_graticule`.
 
 Map Legend in detail
 ====================
