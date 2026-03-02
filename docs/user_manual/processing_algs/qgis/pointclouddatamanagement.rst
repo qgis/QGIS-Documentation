@@ -692,7 +692,7 @@ Parameters
      - ``MAX_DISTANCE``
      - [numeric: double]
 
-       Default: 0
+       Default: 0.0
      - Maximum distance used to limit the search radius. If set to 0, the search distance is unlimited.
    * - **Height above ground (nearest neighbour)**
      - ``OUTPUT``
