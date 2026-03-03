@@ -674,9 +674,8 @@ There are following options:
       by performing a Delaunay triangulation on points within the selection
       zone and interpolating Z values from the triangles intersecting the
       midpoint of the selection curve. The result depends on the number and
-      distribution of included points; increasing the :guilabel:`Tolerance`, under the
-      :ref:`Elevation profile <label_elevation_profile_view>` |options| :sup:`Options`, may improve
-      the output.
+      distribution of included points; increasing the :ref:`Elevation profile tolerance <elevation_profile_interface>`
+      may improve the output.
   * :guilabel:`Point size`: the size to render the points with, in supported units
     (millimeters, map units, pixels, ...)
   * :guilabel:`Style`: whether to render the points as :guilabel:`Circle` or :guilabel:`Square`
