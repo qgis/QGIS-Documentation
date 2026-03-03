@@ -664,6 +664,18 @@ There are following options:
   Larger values result in a faster generation with less points included.
 * Under :guilabel:`Profile Chart Appearance`, you can control the point display:
 
+  * :guilabel:`Interpretation`: Defines how elevation values are derived for
+    the profile:
+
+    * :guilabel:`Individual points`: Uses the original Z values from point
+      cloud points falling within the selection zone (selection curve plus
+      tolerance buffer).
+    * :guilabel:`Triangulated surface`: Generates a continuous elevation line
+      by performing a Delaunay triangulation on points within the selection
+      zone and interpolating Z values from the triangles intersecting the
+      midpoint of the selection curve. The result depends on the number and
+      distribution of included points; increasing the :ref:`Elevation profile tolerance <elevation_profile_interface>`
+      may improve the output.
   * :guilabel:`Point size`: the size to render the points with, in supported units
     (millimeters, map units, pixels, ...)
   * :guilabel:`Style`: whether to render the points as :guilabel:`Circle` or :guilabel:`Square`
@@ -921,6 +933,8 @@ After setting the attribute, value, and optional filter, digitize a selection us
    :width: 1.5em
 .. |multibandColor| image:: /static/common/multibandColor.png
    :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |paletted| image:: /static/common/paletted.png
    :width: 1.5em
 .. |pointCloudExtent| image:: /static/common/pointCloudExtent.png

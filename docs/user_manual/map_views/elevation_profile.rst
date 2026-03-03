@@ -41,6 +41,7 @@ They are stored in the project upon saving the project.
    Figure shows a coastline with a town behind a sea-dike.
    A larger tolerance applied to the elevation profile line returns more point cloud features.
 
+.. _`elevation_profile_interface`:
 
 The interface
 =============
