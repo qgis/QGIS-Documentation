@@ -31,19 +31,6 @@ To distribute those algorithms, you should create a new plugin that adds them to
 Processing Toolbox. The plugin should contain an algorithm provider, which has to be
 registered when the plugin is instantiated.
 
-Creating from scratch
-=====================
-
-To create a plugin from scratch which contains an algorithm provider, you can
-follow these steps using the Plugin Builder:
-
-#. Install the **Plugin Builder** plugin
-#. Create a new plugin using the Plugin Builder. When the Plugin Builder asks you for
-   the template to use, select "Processing provider".
-#. The created plugin contains a provider with a single algorithm. Both the provider
-   file and the algorithm file are fully commented and contain information about how to
-   modify the provider and add additional algorithms. Refer to them for more information.
-
 Updating a plugin
 =================
 
