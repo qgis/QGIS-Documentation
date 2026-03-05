@@ -70,11 +70,17 @@ The following tools are provided at the top of the 3D map view panel:
     * |checkbox| :guilabel:`Export textures`
 * |showPresets| :sup:`Set View Theme`: Allows you to select the set of layers to
   display in the map view from predefined :ref:`map themes <map_themes>`.
+
+.. _3d_mapview_cameramenu:
+
 * The |camera| :sup:`Camera` menu helps you control relation between the 2D and 3D views:
 
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
-  * :guilabel:`Show visible camera area in 2D map view`
+  * :guilabel:`Show visible camera area in 2D map view`: shows shaded triangular area
+    (in the map canvas and 2D map overlay) that represents the direction of the camera.
+  * :guilabel:`Show 2D map overlay`: displays 2D map overlay in the 3D view
+    to indicate the current location of the 3D camera and provide spatial context.
   * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
     and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
     More options are available in the :ref:`General configuration <scene_extent>` tab.
@@ -302,6 +308,7 @@ synchronization and skybox.
 
 .. figure:: img/3dmapconfiguration_camera.png
    :align: center
+   :width: 70%
 
    The 3D Map Camera Configuration dialog
 
@@ -326,6 +333,8 @@ synchronization and skybox.
 
      The 3D Axis context menu
 
+.. _3d_mapview_settings_camera_nav_sync:
+
 * The :guilabel:`Navigation Synchronization` parameter group adds options to
   synchronize 2D view with 3D camera position or 3D camera position with
   2D view or bi directional synchronization. The last option displays the extent
@@ -340,6 +349,21 @@ synchronization and skybox.
 
   Texture image files of the skybox can be files on the disk, remote URLs or
   embedded in the project (:ref:`more details <embedded_file_selector>`).
+
+* Check |Unchecked|:guilabel:`Show 2D Map Overlay` to display a 2D map indicating
+  the current position of the 3D camera.
+  A 2D map with the camera frustum centered on it will appear in the left corner of the 3D view.
+  The shaded triangular area that shows where the 3D camera is currently looking at
+  is also displayed if :guilabel:`Show visible camera area in 2D map view` is enabled
+  (see :ref:`camera menu <3d_mapview_cameramenu>` and
+  :ref:`navigation synchronization<3d_mapview_settings_camera_nav_sync>`).
+  To move the camera, drag the mouse until the view matches your desired perspective.
+
+  .. figure:: img/2dmap_overlay.png
+     :align: center
+
+     The 2D Map Overlay view
+
 
 Advanced
 --------
