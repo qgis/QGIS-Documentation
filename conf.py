@@ -158,7 +158,7 @@ html_context = {
     # information message on the top of the page.
     'isTesting': False,
     # Whether the version is the current LTR
-    'isLtr': False,
+    'isLtr': True,
 }
 
 # Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
