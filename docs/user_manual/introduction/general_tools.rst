@@ -431,18 +431,17 @@ Editing layer style
 
 From the :guilabel:`Layers` panel, you have shortcuts to change the layer rendering quickly and easily.
 
-Right-click on a layer and select :menuselection:`Styles -->` in the list in order to:
+Right-click on a layer and select :menuselection:`Styles -->`.
+See :ref:`manage_styles_from_layer_context_menu`
+for the list of available actions to manage layer styles.
 
-* see the :ref:`styles <manage_custom_style>` currently available for the layer.
-  If you defined many styles for the layer, you can switch from one to another
-  and your layer rendering will automatically be updated on the map canvas.
-* copy part or all of the current style, and when applicable, paste a copied
-  style from another layer
-* :guilabel:`Rename Current...` style
-* :guilabel:`Add` a new style (which is actually a copy of the current one)
-* :guilabel:`Remove Current` style (only when multiple styles are available)
-* :guilabel:`Load Style...`
-* or :guilabel:`Save Style...`
+From this menu you can:
+
+* see the :ref:`styles <manage_custom_style>` currently available for the layer
+  and switch between them. When you select another style, the layer rendering
+  is automatically updated on the map canvas.
+* copy part or all of the current style and, when applicable, paste a copied
+  style from another layer.
 
   .. tip:: **Quickly share a layer style**
 
@@ -1391,6 +1390,20 @@ to copy, paste, add, remove, rename, load or save layer styles.
   You can then right-click another layer and select :guilabel:`Paste All Styles`
   to apply the copied styles.
   Saved styles are listed in the layer context menu, allowing quick switching between them.
+
+* :guilabel:`Add...`: creates a new style based on the current one.
+
+* :guilabel:`Remove Current`: removes the currently active style
+  (available only when multiple styles exist).
+
+* :guilabel:`Rename Current...`: renames the currently active style.
+
+* :guilabel:`Load Style...`: loads a style from an external style file
+  and applies it to the layer.
+
+* :guilabel:`Save Style...`: saves the current layer style to an
+  external style file for reuse.
+
 
 .. _store_style:
 
