@@ -240,8 +240,7 @@ Calculate the length of a geometry line object. Calculations are always planimet
    * - Arguments
      - * **geometry** - line geometry object
    * - Examples
-     - * ``length(@geometry)`` → length of the current feature's geometry
-       * ``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0
+     - * ``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0
 
 
 .. end_length_section

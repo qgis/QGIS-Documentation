@@ -126,8 +126,7 @@ Returns the area of a geometry polygon object. Calculations are always planimetr
    * - Arguments
      - * **geometry** - polygon geometry object
    * - Examples
-     - * ``area(@geometry)`` → area of the current feature's geometry
-       * ``area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 8.0
+     - * ``area(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 8.0
 
 
 .. end_area_section
@@ -195,8 +194,7 @@ Returns the closure of the combinatorial boundary of the geometry (ie the topolo
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``boundary(@geometry)`` → boundary of the current feature's geometry
-       * ``geom_to_wkt(boundary(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'LineString(1 1,0 0,-1 1,1 1)'
+     - * ``geom_to_wkt(boundary(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'LineString(1 1,0 0,-1 1,1 1)'
        * ``geom_to_wkt(boundary(geom_from_wkt('LineString(1 1,0 0,-1 1)')))`` → 'MultiPoint ((1 1),(-1 1))'
 
 
@@ -529,8 +527,7 @@ Returns the convex hull of a geometry. It represents the minimum convex geometry
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``convex_hull(@geometry)`` → convex hull of the current feature's geometry
-       * ``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) )`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'
+     - * ``geom_to_wkt( convex_hull( geom_from_wkt( 'LINESTRING(3 3, 4 4, 4 10)' ) ) )`` → 'POLYGON((3 3, 4 10, 4 4, 3 3))'
 
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/convex_hull.png
@@ -719,8 +716,7 @@ Returns the last node from a geometry.
    * - Arguments
      - * **geometry** - geometry object
    * - Examples
-     - * ``end_point(@geometry)`` → end point of the current feature's geometry
-       * ``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → 'Point (0 2)'
+     - * ``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → 'Point (0 2)'
 
 
 .. figure:: /docs/user_manual/expressions/expression_help/img/end_point.*
@@ -987,7 +983,7 @@ Returns the Well-Known Binary (WKB) representation of a geometry
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``geom_to_wkb( @geometry )`` → binary blob of the current feature's geometry
+     - * ``geom_to_wkb( @geometry )`` → binary blob containing a geometry object
 
 
 .. end_geom_to_wkb_section
@@ -1010,8 +1006,7 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
      - * **geometry** - a geometry
        * **precision** - numeric precision
    * - Examples
-     - * ``geom_to_wkt(@geometry)`` → well-known text representation of the current feature's geometry
-       * ``geom_to_wkt( make_point(6, 50) )`` → 'POINT(6 50)'
+     - * ``geom_to_wkt( make_point(6, 50) )`` → 'POINT(6 50)'
        * ``geom_to_wkt(centroid(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')))`` → 'POINT(0 0.66666667)'
        * ``geom_to_wkt(centroid(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))')), 2)`` → 'POINT(0 0.67)'
 
@@ -1339,8 +1334,7 @@ Returns TRUE if the geometry is of Multi type.
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_multipart(@geometry)`` → checks if the current feature's geometry is multipart
-       * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE
+     - * ``is_multipart(geom_from_wkt('MULTIPOINT ((0 0),(1 1),(2 2))'))`` → TRUE
        * ``is_multipart(geom_from_wkt('POINT (0 0)'))`` → FALSE
 
 
@@ -1361,8 +1355,7 @@ Returns TRUE if a geometry is valid; if it is well-formed in 2D according to the
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``is_valid(@geometry)`` → checks if the current feature's geometry is valid
-       * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE
+     - * ``is_valid(geom_from_wkt('LINESTRING(0 0, 1 1, 2 2, 0 0)'))`` → TRUE
        * ``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE
 
 
@@ -1420,8 +1413,7 @@ Calculate the length of a geometry line object. Calculations are always planimet
    * - Arguments
      - * **geometry** - line geometry object
    * - Examples
-     - * ``length(@geometry)`` → length of the current feature's geometry
-       * ``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0
+     - * ``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0
 
 
 .. end_length_section
@@ -1441,8 +1433,7 @@ Calculates the 3D length of a geometry line object. If the geometry is not a 3D 
    * - Arguments
      - * **geometry** - line geometry object
    * - Examples
-     - * ``length3D(@geometry)`` → 3D length of the current feature's geometry
-       * ``length3D(geom_from_wkt('LINESTRINGZ(0 0 0, 3 0 4)'))`` → 5.0
+     - * ``length3D(geom_from_wkt('LINESTRINGZ(0 0 0, 3 0 4)'))`` → 5.0
 
 
 .. end_length3D_section
@@ -2582,8 +2573,7 @@ Returns the perimeter of a geometry polygon object. Calculations are always plan
    * - Arguments
      - * **geometry** - polygon geometry object
    * - Examples
-     - * ``perimeter(@geometry)`` → perimeter of the current feature's geometry
-       * ``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12.0
+     - * ``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12.0
 
 
 .. end_perimeter_section
@@ -3563,8 +3553,7 @@ Returns the maximum x coordinate of a geometry. Calculations are in the spatial 
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``x_max(@geometry)`` → the maximum x coordinate of the current feature's geometry
-       * ``x_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 4
+     - * ``x_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 4
 
 
 .. end_x_max_section
@@ -3584,8 +3573,7 @@ Returns the minimum x coordinate of a geometry. Calculations are in the spatial 
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``x_min(@geometry)`` → the minimum x coordinate of the current feature's geometry
-       * ``x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 2
+     - * ``x_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 2
 
 
 .. end_x_min_section
@@ -3685,8 +3673,7 @@ Returns the maximum y coordinate of a geometry. Calculations are in the spatial 
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``y_max(@geometry)`` → the maximum y coordinate of the current feature's geometry
-       * ``y_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 8
+     - * ``y_max( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 8
 
 
 .. end_y_max_section
@@ -3706,8 +3693,7 @@ Returns the minimum y coordinate of a geometry. Calculations are in the spatial 
    * - Arguments
      - * **geometry** - a geometry
    * - Examples
-     - * ``y_min(@geometry)`` → the minimum y coordinate of the current feature's geometry
-       * ``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5
+     - * ``y_min( geom_from_wkt( 'LINESTRING(2 5, 3 6, 4 8)') )`` → 5
 
 
 .. end_y_min_section
