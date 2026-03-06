@@ -57,7 +57,15 @@ Multiplication of two values
 \+
 ..
 
-Addition of two values. If one of the values is NULL the result will be NULL.
+Addition of two values or concatenation of two strings.
+
+
+
+For numeric and datetime operations if either value is NULL the result will be NULL.
+
+
+
+For string concatenation NULL values from fields are treated as empty strings. Use the || operator instead if NULL propagation for strings is required.
 
 .. list-table::
    :widths: 15 85
@@ -70,6 +78,8 @@ Addition of two values. If one of the values is NULL the result will be NULL.
    * - Examples
      - * ``5 + 4`` → 9
        * ``5 + NULL`` → NULL
+       * ``'5' + NULL`` → NULL
+       * ``'5' + "name"`` → '5' (if value in "name" field is NULL) or a concatenation of the two strings
        * ``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'
        * ``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → 2020-08-02T14:00:00
 
@@ -595,7 +605,7 @@ Joins two values together into a string.
 
 
 
-If one of the values is NULL the result will be NULL. See the CONCAT function for a different behavior.
+If one of the values is NULL the result will be NULL. See the **concat** function for an alternative concatenation behavior.
 
 .. list-table::
    :widths: 15 85
