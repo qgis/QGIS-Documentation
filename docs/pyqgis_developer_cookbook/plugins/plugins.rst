@@ -136,8 +136,6 @@ server                 False     boolean flag, :const:`True` or :const:`False`, 
                                  the plugin has a server interface
 hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
                                  the plugin provides processing algorithms
-supportsQt6            False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin supports Qt6 framework
 =====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
@@ -217,9 +215,6 @@ An example for this metadata.txt
   ; Both "MyOtherPlugin" and "YetAnotherPlugin" names come from their own metadata's
   ; name field
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
-
-  ; whether the plugin can be run on QGIS built with Qt6 
-  supportsQt6=True
 
 
 .. index:: Plugins; Initialisation
