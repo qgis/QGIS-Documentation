@@ -171,6 +171,7 @@ regardless it's of marker, line or fill sub-type:
 * the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering
   <draw_effects>`.
 
+
 .. note::
 
  While the description below assumes that the symbol layer type is bound to the
@@ -465,6 +466,25 @@ layer types:
     of the marker line symbols.
   * :guilabel:`Line offset`: the marker symbols can also be offset from the line
     feature.
+  * :guilabel:`Blank Segments`: allows defining blank sections along a feature.
+    This option is useful when repeated marker pattern would otherwise
+    result in undesirable result. For instance, when markers overlap with
+    other symbols or when parts of a line need to be kept empty for other map elements.
+
+    Blank segments are defined by distances from the start of the line and are stored
+    as a data-defined property, using either an existing field or an auxiliary storage field.
+    This lets you set blank sections for each feature.
+    Note that this tool affects symbol rendering only and does not modify
+    the underlying feature geometry.
+    
+    To create blank segments:
+
+    * Click near the line to define the start of a blank segment, and click
+      again to define its end.
+    * Drag the start or end of an existing blank segment along the line to
+      resize it.
+    * Drag the entire blank segment to move it along the line.
+    * Select a blank segment and press :kbd:`Del` to remove it.
 
 .. _hashed_line_symbol:
 
