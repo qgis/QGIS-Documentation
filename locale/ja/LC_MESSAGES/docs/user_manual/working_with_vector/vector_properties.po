@@ -281,7 +281,7 @@ msgid ""
 "destination (file, clipboard, database). See :ref:`manage_custom_style`."
 msgstr ""
 "ダイアログの下部にある :menuselection:`スタイル` "
-"メニューを使用すると、レイヤスタイルのプロパティまたはその一部をさまざまな対象（ファイル、クリップボード、データベース）からインポートしたり、対象へエクスポートしたりすることができます。"
+"メニューを使用すると、レイヤスタイルのプロパティ又はその一部を様々な対象（ファイル、クリップボード、データベース）からインポートしたり、それらへエクスポートしたりすることができます。"
 " :ref:`manage_custom_style` を参照してください。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:68
@@ -292,7 +292,7 @@ msgid ""
 "properties dialog is made unavailable for these layers."
 msgstr ""
 "埋め込まれたレイヤ（ :ref:`nesting_projects` "
-"を参照）のプロパティ（シンボロジ、ラベル、アクション、デフォルト値、フォーム...）は、元のプロジェクトファイルから引用されているため、この動作を壊す可能性のある変更を避けるために、埋め込まれたレイヤに対してはレイヤプロパティダイアログは利用できなくなっています。"
+"を参照）のプロパティ（シンボロジ、ラベル、アクション、デフォルト値、フォーム...）は、元のプロジェクトファイルから引用されているため、この動作を壊す可能性のある変更を避けるために、埋め込まれたレイヤのレイヤプロパティダイアログは利用できなくされています。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:77
 msgid "Information Properties"
@@ -6106,6 +6106,20 @@ msgstr ""
 msgid "duplicateLayout"
 msgstr "duplicateLayout"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3155
+msgid ""
+"In the dialogue that appears, make any changes that are necessary. See "
+":ref:`adding_actions` for further information. Once finished, press "
+":guilabel:`OK` to create a duplicate of the action with any changes that you"
+" made. If you did not edit the description, or if you changed it to be "
+"identical to the description of any other existing action, \"_1\" will be "
+"added to the end of it."
+msgstr ""
+"表示されるダイアログで必要な変更を加えてください。詳細については :ref:`adding_actions` を参照してください。完了したら "
+":guilabel:`OK` "
+"を押して、変更を加えたアクションの複製を作成します。記載を編集しなかったか、又は既存の他のアクションの記載と同じになるように変更した場合、その末尾に "
+"\"_1\" が加えられます。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3165
 msgid "Using Actions"
 msgstr "アクションを使用する"
@@ -6448,7 +6462,25 @@ msgstr "mapTips"
 msgid ""
 "|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
 "for the layer"
-msgstr "|checkbox| :guilabel:`Tipsを有効化` は、レイヤの地図のTipsを表示するかどうかを制御します。"
+msgstr "|checkbox| :guilabel:`Tipsを有効化` は、そのレイヤの地図のTipsを表示するかどうかを制御します。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3366
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame (also convenient for previewing"
+" the :guilabel:`Display name` output). Additionally, you can select and edit"
+" existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+":guilabel:`HTML Map Tip` "
+"は、QGIS式とHTMLスタイル・タグ（複数行、フォント、画像、ハイパーリンク、表など）を組み合わせた、地図のTips用の複雑で完全なHTMLテキストエディタを提供します。コードサンプルの結果は"
+" :guilabel:`プレビュー` フレームで確認できます（:guilabel:`表示名` "
+"出力のプレビューにも便利です）。さらに、:guilabel:`式を挿入/編集` ボタンを使用して既存の式を選択・編集することも可能です。 "
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3373
+msgid "Understanding the :guilabel:`Insert/Edit Expression` button behavior"
+msgstr ":guilabel:`式を挿入／編集` ボタンの動作を理解する"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3375
 msgid ""
@@ -6563,6 +6595,69 @@ msgid ""
 msgstr ""
 "地物の簡素化により、場合によってはレンダリングされた出力に不整合が発生することがあります。これには、ポリゴン間の細長い隙間の発生や、オフセットに基づくシンボルレイヤの不正確なレンダリングなどがあります。"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3449
+msgid ""
+"The |unchecked| :guilabel:`Fixed reference scale` indicates the map scale at"
+" which symbology and labeling sizes which uses paper-based units (such as "
+"millimeters or points) relate to. The sizes will be scaled accordingly "
+"whenever the map is viewed at a different scale."
+msgstr ""
+"|unchecked| :guilabel:`固定参照スケール` "
+"は、紙ベースの単位（ミリメートルやポイントなど）を使用したシンボルやラベルのサイズが関連する地図の縮尺を示します。地図が異なる縮尺で表示されるたびに、その大きさは縮尺に合わせて調整されます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3453
+msgid ""
+"For instance, a line layer using a 2mm wide line with a 1:2000 "
+":guilabel:`Reference scale` set will be rendered using 4mm wide lines when "
+"the map is viewed at 1:1000."
+msgstr ""
+"例えば、1:2000 の :guilabel:`参照スケール` "
+"が設定されている2mm幅のラインレイヤは、1:1000で表示した場合には4mm幅のラインでレンダリングされます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3456
+msgid ""
+"The :guilabel:`Selections` group allows you to control whether a specific "
+"color or symbol should be used in place of the defaults "
+"(:menuselection:`Project properties --> General --> Selection color`) for a "
+"particular layer. This is useful to improve the visibility of selected "
+"features with certain symbology:"
+msgstr ""
+":guilabel:`選択` グループでは、特定のレイヤに対してデフォルト（:menuselection:`プロジェクトのプロパティ --> 全般 "
+"--> "
+"選択物の色`）の代わりに特定の色や記号を使うかどうかを制御できます。これは、特定のシンボロジを持つ選択された地物の視認性を向上させるのに役立ちます。 "
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3461
+msgid ":guilabel:`Use default selection color`"
+msgstr ":guilabel:`デフォルト カラーを使う`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3462
+msgid ""
+":guilabel:`Override color for selected features`: e.g. if the layer uses a "
+"yellow color by default and the standard yellow selection is not visible."
+msgstr ":guilabel:`選択された地物の色を上書き`: 例: レイヤがデフォルトで黄色を使っており標準の黄色による選択が視認できないとき。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3464
+msgid ""
+":guilabel:`Override symbol for selected features`: e.g. if a line layer uses"
+" a thin symbol, and coloring the lines might not make them visible enough, "
+"overriding the symbol with a thicker line can help. Also, if the layer uses "
+"raster symbology or gradient fills/lines/shapeburst with color ramp "
+"symbology, then the default selection color is not applied at all; being "
+"able to set a specific simpler symbol to use for selected features in the "
+"layer can help."
+msgstr ""
+":guilabel:`選択された地物のシンボルを上書き`: "
+"例えば、ラインレイヤが細いシンボルを使用しており線の色付けだけでは視認性が十分でないとき、シンボルを太い線で上書きすることで改善できます。また、レイヤがラスタシンボロジやグラデーション塗りつぶし/線/シェイプバースト（カラーランプを使った）を使用しているとき、デフォルトの選択色は全く適用されません。レイヤ内の選択地物に特定の簡単なシンボルが設定できると便利です。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3470
+msgid ""
+"Rendering extremely detailed layers (e.g. polygon layers with a huge number "
+"of nodes), can cause layout exports in PDF/SVG format to be huge as all "
+"nodes are included in the exported file. This can also make the resultant "
+"file very slow to work with/open in other programs."
+msgstr ""
+"非常に詳細なレイヤ（膨大な数のノードを持つポリゴンレイヤなど）をレンダリングすると、全てのノードをエクスポートファイルに含めるため、PDF/SVG形式でのレイアウトエクスポートが巨大になることがあります。この結果、ファイルを他のプログラムで作業したり開いたりする際に非常に遅くなることもあります。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3474
 msgid ""
 "Checking |checkbox| :guilabel:`Force layer to render as raster` forces these"
@@ -6570,8 +6665,27 @@ msgid ""
 "all the nodes contained in these layers and the rendering is therefore sped "
 "up."
 msgstr ""
-"|checkbox| :guilabel:`レイヤをラスタとして描画する` "
+"|checkbox| :guilabel:`レイヤをラスタとして描画` "
 "にチェックを入れると、これらのレイヤがラスタ化されるので、このようなレイヤに含まれるノード全てをエクスポートするファイルに含める必要がなくなり、レンダリングが高速化されます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3478
+msgid ""
+"You can also do this by forcing the layout to export as a raster, but that "
+"is an all-or-nothing solution, given that the rasterisation is applied to "
+"all layers. Alternatively, you can rely on geometry simplification in "
+":ref:`layout export settings <create-output>`."
+msgstr ""
+"レイアウトを強制的にラスタとして書き出すことでも対応できますが、これは全てのレイヤにラスタ化が適用されるため、全てか無かの解決策となります。あるいは、:ref:`レイアウトのエクスポート設定"
+" <create-output>` におけるジオメトリの簡素化にまかせることもできます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3482
+msgid ""
+"|unchecked| :guilabel:`Refresh layer at interval`: controls whether and how "
+"regular a layer can be refreshed. Available :guilabel:`Configuration` "
+"options are:"
+msgstr ""
+"|checkbox| :guilabel:`レイヤ更新間隔`: レイヤを定期的にリフレッシュするかどうか、またその頻度を制御します。利用可能な "
+":guilabel:`設定` オプションは次のとおりです:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3485
 msgid ""
@@ -6718,6 +6832,14 @@ msgstr ":guilabel:`始点も終点も含む`"
 msgid "Variables Properties"
 msgstr "変数プロパティ"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3562
+msgid ""
+"The |expression| :guilabel:`Variables` tab lists all the variables available"
+" at the layer's level (which includes all global and project's variables)."
+msgstr ""
+"|expression| :guilabel:`変数` "
+"タブでは、レイヤのレベルで利用可能なすべての変数（すべてのグローバルおよびプロジェクトの変数も含む）を示しています。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3565
 msgid ""
 "It also allows the user to manage layer-level variables. Click the "
@@ -6753,6 +6875,32 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3590
 msgid "Vector layer elevation properties dialog"
 msgstr "ベクタレイヤの標高プロパティダイアログ"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3592
+msgid ""
+":guilabel:`Vertical Reference System`: If the CRS of your vector layer is a "
+"compound one (including a Z dimension), then the vertical CRS used for the "
+"layer will be the vertical component of the layer CRS. In this case, you "
+"cannot manually set a different vertical CRS. If your layer CRS is "
+"horizontal (2D), then you can select a specific vertical CRS by clicking on "
+"the |setProjection| :sup:`Select CRS`. Vertical reference systems are "
+"supported for vector layers by:"
+msgstr ""
+":guilabel:`垂直系CRS`: "
+"ベクタレイヤのCRSが複合型（Z次元を含む）の場合、レイヤで使用される鉛直系CRSは、レイヤCRSの鉛直成分となります。このとき、手動で異なる鉛直系CRSを設定することはできません。レイヤCRSが水平型(2D)のとき、|setProjection|"
+" :sup:`CRSを選択` をクリックして、特定の鉛直系CRSを選択できます。ベクタレイヤに対応している鉛直参照系は次のとおりです:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3599
+msgid ":ref:`Elevation profiles <label_elevation_profile_view>`"
+msgstr ":ref:`標高断面図 <label_elevation_profile_view>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3600
+msgid ":ref:`Identify Tool Results <identify_results_dialog>`"
+msgstr ":ref:`地物情報表示ツールの結果 <identify_results_dialog>`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3601
+msgid ":ref:`3D map views <label_3dmapview>`"
+msgstr ":ref:`3Dマップビュー <label_3dmapview>`"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3602
 msgid ""
@@ -6875,17 +7023,30 @@ msgid ""
 "features, and for non-extruded polygon features intersected by the profile "
 "line"
 msgstr ""
-":ref:`Line style <vector_line_symbols>`:  "
+":ref:`線のスタイル <vector_line_symbols>`:  "
 "押し出しのあるポイント地物とライン地物、および断面図線と交差する押し出しのないポリゴン地物用"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3654
 msgid ":ref:`Fill style <vector_fill_symbols>`: for extruded polygon features"
 msgstr ":ref:`塗りつぶしスタイル <vector_fill_symbols>`: 押し出しのあるポリゴン地物用"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3656
+msgid ""
+"as :guilabel:`Continuous Surface (e.g. contours)`: the elevation chart will "
+"be rendered as a surface instead of separate features by joining the sampled"
+" elevation results into a continuous line. This can enhance visualisation "
+"and is designed for vector layers which represent a continuous elevation "
+"surface, e.g. contour lines or surveyed elevation points. The profile "
+":guilabel:`Style` can be set as:"
+msgstr ""
+":guilabel:`連続的サーフェス（等高線など）`: "
+"標高チャートは、サンプリングされた標高の結果を連続した線に結合し、別々の地物ではなくサーフェスとしてレンダリングされます。これは視覚化を向上させることができ、等高線や測量された標高点など、連続した標高面を表すベクタレイヤ用に設計されています。断面図の"
+" :guilabel:`スタイル` は次のように設定できます："
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3663
 msgid ""
 "a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
-msgstr "特定の :ref:`Line style <vector_line_symbols>` を持った  :guilabel:`線`"
+msgstr "特定の :ref:`線のスタイル <vector_line_symbols>` を持った  :guilabel:`線`"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3664
 msgid ""
@@ -6894,7 +7055,7 @@ msgid ""
 "curve line. The surface symbology is represented using:"
 msgstr ""
 "塗りつぶしシンボルを使って、標高曲線の上（:guilabel:`Fill above`）または下（:guilabel:`Fill "
-"below`）にレンダリングされた標高面。表面のシンボロジは以下のように表されます:"
+"below`）にレンダリングされた標高サーフェス。サーフェスのシンボロジは次を使って表されます:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3668
 msgid "a :ref:`Fill style <vector_fill_symbols>`"
@@ -6932,6 +7093,18 @@ msgstr ""
 msgid "Dependencies Properties"
 msgstr "依存関係プロパティ"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3694
+msgid ""
+"The |dependencies| :guilabel:`Dependencies` tab allows to declare data "
+"dependencies between layers. A data dependency occurs when a data "
+"modification in a layer, not by direct user manipulation, may modify data of"
+" other layers. This is the case for instance when geometry of a layer is "
+"updated by a database trigger or custom PyQGIS scripting after modification "
+"of another layer's geometry."
+msgstr ""
+"|dependencies| :guilabel:`依存関係` "
+"タブでは、レイヤ間のデータの依存関係を宣言することができます。データの依存性は、あるレイヤのデータ修正が、ユーザーの直接操作が無くとも、他のレイヤのデータを修正できる場合に発生します。これには例えば、あるレイヤのジオメトリが、他のレイヤのジオメトリを修正した後に、データベーストリガーやカスタムPyQGISスクリプトによって更新される場合などがあります。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3701
 msgid ""
 "In the :guilabel:`Dependencies` tab, you can select any layers which may "
@@ -6945,6 +7118,15 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3711
 msgid "Legend Properties"
 msgstr "凡例プロパティ"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3713
+msgid ""
+"The |legend| :guilabel:`Legend` properties tab provides you with advanced "
+"settings for the :ref:`Layers panel <label_legend>` and/or the :ref:`print "
+"layout legend <layout_legend_item>`. These options include:"
+msgstr ""
+"|legend| :guilabel:`凡例` プロパティタブでは、 :ref:`レイヤパネル <label_legend>` や "
+":ref:`印刷レイアウトの凡例 <layout_legend_item>` に関する高度な設定ができます。これらのオプションには以下のものがあります："
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3717
 msgid ""
@@ -7012,6 +7194,32 @@ msgstr ""
 msgid "QGIS Server Properties"
 msgstr "QGISサーバープロパティ"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3758
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab consists of "
+":guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`Metadata URL`, "
+"and :guilabel:`Legend URL` sections."
+msgstr ""
+"|overlay| :guilabel:`QGISサーバー` タブは、 :guilabel:`説明` 、 :guilabel:`帰属` 、 "
+":guilabel:`メタデータURL` および :guilabel:`凡例URL` のセクションから構成されます。"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3762
+msgid ""
+"From the :guilabel:`Description` section, you can change the "
+":guilabel:`Short name` used to reference the layer in requests (to learn "
+"more about short names, read :ref:`services_basics_short_name`). You can "
+"also add or edit a :guilabel:`Title`, an alternative :guilabel:`WFS Title` "
+"and :guilabel:`Abstract` for the layer, or define a :guilabel:`Keyword list`"
+" here. These keyword lists can be used in a metadata catalog. If you want to"
+" use a title from an XML metadata file, you have to fill in a link in the "
+":guilabel:`Data URL` field."
+msgstr ""
+":guilabel:`説明` セクションでは、リクエスト内でのレイヤ参照に使用される :guilabel:`短い名前` （短い名前の詳細については、 "
+":ref:`services_basics_short_name` を参照）を変更できます。また、レイヤの :guilabel:`タイトル`、代替の "
+":guilabel:`WFSタイトル` や :guilabel:`要約` を追加・編集したり、 :guilabel:`キーワードリスト` "
+"をここに定義することができます。このキーワードリストはメタデータカタログで使用することができます。タイトルをXMLメタデータファイルから使用したい場合には、"
+" :guilabel:`データURL` フィールドにリンク先を入力する必要があります。"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3771
 msgid ""
 "Use :guilabel:`Attribution` to get attribute data from an XML metadata "
@@ -7048,6 +7256,14 @@ msgstr "QGISサーバーについて更に学ぶには、 :ref:`QGIS-Server-manu
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3794
 msgid "Digitizing Properties"
 msgstr "デジタイズプロパティ"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3796
+msgid ""
+"The |digitizing| :guilabel:`Digitizing` tab gives access to options that "
+"help to ensure the quality of digitized geometries."
+msgstr ""
+"|digitizing| :guilabel:`デジタイズ` "
+"タブはデジタイズしたジオメトリの品質を確保するために役立つオプションへのアクセスを提供します。"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3804
 msgid "The QGIS Digitizing tab in the vector layers properties dialog"
