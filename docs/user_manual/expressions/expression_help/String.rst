@@ -6,6 +6,78 @@
    in the resources/function_help/json/ folder in the
    qgis/QGIS repository.
 
+.. _expression_function_String_backslash_quote:
+
+\\' (quote character)
+.....................
+
+Inserts a literal single quote character in a string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - \\' (quote character)
+   * - Examples
+     - * ``'It\'s working'`` → 'It's working'
+
+
+.. end_\\'_(quote_character)_section
+
+.. _expression_function_String_backslash_backslash:
+
+\\\\ (backslash character)
+..........................
+
+Inserts a literal backslash character in a string.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - \\\\ (backslash character)
+   * - Examples
+     - * ``'C:\\Users\\Name'`` → 'C:\\Users\\Name'
+
+
+.. end_\\\\_(backslash_character)_section
+
+.. _expression_function_String_backslash_n:
+
+\\n (newline character)
+.......................
+
+Inserts a newline character in a string literal.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - \\n (newline character)
+   * - Examples
+     - * ``'Hello\nWorld'`` → a string with a newline between 'Hello' and 'World':<br>Hello<br>World
+
+
+.. end_\\n_(newline_character)_section
+
+.. _expression_function_String_backslash_t:
+
+\\t (tab character)
+...................
+
+Inserts a tab character in a string literal.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - \\t (tab character)
+   * - Examples
+     - * ``'Name\tAge\tCity'`` → Name    Age    City (tabs between the words)
+
+
+.. end_\\t_(tab_character)_section
+
 .. _expression_function_String_ascii:
 
 ascii
@@ -51,7 +123,11 @@ Returns the character associated with a unicode code.
 concat
 ......
 
-Concatenates several strings to one. NULL values are converted to empty strings. Other values (like numbers) are converted to strings.
+Concatenates several values to a single string. NULL values are converted to empty strings. Other values (like numbers) are converted to strings.
+
+
+
+See the **||** function for an alternative concatenation behavior.
 
 .. list-table::
    :widths: 15 85
