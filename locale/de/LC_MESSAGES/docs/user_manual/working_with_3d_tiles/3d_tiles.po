@@ -10,6 +10,7 @@
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
 # Joern G <j.gutzeit@umwelt-it.de>, 2025
+# asd asd <tspam-transifex@scharm.org>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -18,10 +19,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-27 20:20+0100\n"
 "PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
+"Last-Translator: asd asd <tspam-transifex@scharm.org>, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 "Language: de\n"
@@ -39,15 +40,78 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:6
 msgid "Working with 3D Tiles"
-msgstr "Working with 3D Tiles"
+msgstr "Arbeiten mit 3D Tiles"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:14
 msgid "What are 3D Tiles?"
-msgstr "What are 3D Tiles?"
+msgstr "Was sind 3D Tiles?"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:16
+msgid ""
+"3D tiles are specification for streaming and rendering large-scale 3D "
+"geospatial datasets. They use a hierarchical structure to efficiently manage"
+" and display 3D content, optimising performance by dynamically loading "
+"appropriate levels of detail. This technology is widely used in urban "
+"planning, architecture, simulation, gaming, and virtual reality, providing a"
+" standardised and interoperable solution for visualising complex "
+"geographical data."
+msgstr ""
+"3D Tiles sind eine Spezifikation für das Streamen und Visualisieren von "
+"großformatigen 3D Geodatensätzen. Grundlegend ist eine hi­e­r­ar­chische "
+"Datenstruktur, die es möglich macht 3D Daten effizient zu verwalten und "
+"darzustellen. Die Performance wird optimiert durch das dynamische nachladen "
+"von entsprechenden Detailstufen. Diese Technologie wird häufig in den "
+"Bereichen Stadtplanung, Architektur, Simulation, Gaming und Virtual Reality "
+"eingesetzt und bietet eine standardisierte und interoperable Lösung für die "
+"Visualisierung komplexer geografischer Daten."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:29
 msgid "Example of 3D tiles"
-msgstr "Example of 3D tiles"
+msgstr "Beispiele für 3D Tiles"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:32
+msgid "Currently, QGIS supports two formats of 3D tiles:"
+msgstr "Momentan unterstützt QGIS zwei Formate von 3D Tiles:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:34
+msgid ""
+"`Cesium 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_, used primarily"
+" for complex 3D models of buildings or whole cities. Such datasets can be "
+"provided by cloud-based platforms such as Cesium Ion or Google "
+"(*Photorealistic 3D Tiles*)."
+msgstr ""
+"`Cesium 3D Tiles <https://cesium.com/why-cesium/3d-tiles/>`_, werden "
+"hauptsächlich für komplexe 3D Modelle von Gebäuden oder ganzen Städten "
+"verwendet. Datensätze dieser Art können über cloudbasierte Plattformen wie "
+"Cesium Ion oder Google (*Photorealistic 3D Tiles*) abgerufen werden."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:38
+msgid ""
+"`Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_, used "
+"for terrain elevation data."
+msgstr ""
+"`Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_, werden"
+" für Geländehöhen eingesetzt."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:41
+msgid ""
+"See :ref:`3d_tiles` for instructions on how to add these data sources to "
+"QGIS."
+msgstr ""
+"Siehe :ref:`3d_tiles` für Erläuterungen wie Sie diese Datenquellen in QGIS "
+"hinzufügen."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:46
+msgid "3D Tiles Properties"
+msgstr "3D Tiles Eigenschaften"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:48
+msgid ""
+"The 3D tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"Der 3D Tiles :guilabel:`Layer Properties` Dialog umfasst die folgenden "
+"Bereiche:"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:228
 msgid "metadata"
@@ -99,6 +163,14 @@ msgstr ""
 " Platz, um schnell zusammengefasste Informationen und Metadaten des "
 "aktuellen Layers nachzuschlagen. Hier erhalten Sie folgende Informationen:"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:75
+msgid ""
+"based on the provider of the layer: name, URL, source type and path, number "
+"of zoom levels"
+msgstr ""
+"je nach Datenanbieter des Layers: Name, URL, Quelltyp und -pfad, Anzahl der "
+"Zoomstufen"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:77
 msgid ""
 "custom properties, used to store in the active project additional "
@@ -120,9 +192,26 @@ msgstr ""
 "das Koordinatenbezugssystem: Name, Einheiten, Methode, Genauigkeit, Referenz"
 " (d.h., ob es statisch oder dynamisch ist)"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
+msgid ""
+"picked from the :ref:`filled metadata <3dtilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+"aus den :ref:`Metadaten <3dtilesmetadatamenu>` werden weitere Informationen "
+"gezogen: Zugriff, Ausdehnung, weiterführende Links, Kontaktangaben und "
+"Versionen"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:88
 msgid "Source Properties"
 msgstr "Quelle"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:90
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected 3D tile, including:"
+msgstr ""
+"Der |system| :guilabel:`Source` Tab zeigt Basisinformationen über das "
+"ausgewählte 3D Tile, darunter:"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:93
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
@@ -153,6 +242,26 @@ msgstr "setProjection"
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:105
 msgid "Symbology Properties"
 msgstr "Symbolisierung"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:114
+msgid ""
+"By default, the layer is styled using texture, but you can change it to see "
+"the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` in the"
+" drop-down menu. You can also, change the mesh fill and line symbols similar"
+" to the vector polygons. Checking |checkbox| :guilabel:`Use texture colors` "
+"will render each mesh element with the average value of the full texture. "
+"This is a good option to try when dealing with a large dataset and want to "
+"get a quick overview of the data."
+msgstr ""
+"Standardmäßig wird die Ebene mit einer Textur gestaltet, aber Sie können "
+"dies ändern, um das Drahtgitter hinter der Szene anzuzeigen, indem Sie im "
+"Dropdown-Menü :guilabel:`Wireframe` auswählen. Sie können auch die Füllung "
+"und die Liniensymbole des Gitters ähnlich wie bei den Vektorpolygonen "
+"ändern. Wenn Sie das Kontrollkästchen :guilabel:`Use texture colors` "
+"aktivieren, wird jedes Netz-Element mit dem Durchschnittswert der gesamten "
+"Textur gerendert. Dies ist eine gute Option, wenn Sie mit einem großen "
+"Datensatz arbeiten und sich einen schnellen Überblick über die Daten "
+"verschaffen möchten."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:220
 msgid "checkbox"
