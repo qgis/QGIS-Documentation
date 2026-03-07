@@ -319,13 +319,13 @@ latex_elements = {
     \\newunicodechar{Ț}{\\cb{T}}
     \\newunicodechar{ț}{\\cb{t}}
     \\newunicodechar{≠}{$\\neq$}
-    \\newunicodechar{≥}{$\geq$}
-    \\newunicodechar{≤}{$\leq$}
-    \\newunicodechar{π}{$\pi$}
+    \\newunicodechar{≥}{$\\geq$}
+    \\newunicodechar{≤}{$\\leq$}
+    \\newunicodechar{π}{$\\pi$}
     \\newunicodechar{㎡}{$m^2$}
     \\newunicodechar{\u25BA}{$\u25BA$}
-    \\newunicodechar{′}{\ensuremath{^{\prime}}}
-    \\newunicodechar{″}{\ensuremath{^{\prime\prime}}}
+    \\newunicodechar{′}{\\ensuremath{^{\\prime}}}
+    \\newunicodechar{″}{\\ensuremath{^{\\prime\\prime}}}
     \\newunicodechar{​}{ }''',
 
     # Latex figure float alignment
@@ -341,7 +341,7 @@ if tags.has('ko'):
         'preamble': '''
         \\usepackage{fontspec}
         \\usepackage[space]{xeCJK}
-        \\renewcommand\CJKglue{}
+        \\renewcommand\\CJKglue{}
         \\setCJKmainfont{NanumMyeongjo}''',
     }
 
