@@ -27,7 +27,7 @@ The main steps for creating a plugin are:
 
 .. hint:: If you wish to update an existing plugin in order to support Qt6 and QGIS 4,
   please find instructions in the dedicated
-  `wiki <https://github.com/qgis/QGIS/wiki/Plugin-migration-to-be-compatible-with-Qt5-and-Qt6>`.
+  `wiki <https://github.com/qgis/QGIS/wiki/Plugin-migration-to-be-compatible-with-Qt5-and-Qt6>`_.
 
 .. index:: Plugins; Writing
 .. _plugin_setup:
