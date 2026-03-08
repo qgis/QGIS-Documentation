@@ -20,7 +20,7 @@ msgstr ""
 "Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.14.0\n"
 "Language: ja\n"
@@ -43,26 +43,34 @@ msgstr "メッシュデータの操作"
 msgid "What's a mesh?"
 msgstr "メッシュとは？"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:15
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and/or faces,"
+" in 2D or 3D space:"
+msgstr ""
+"メッシュとは非構造格子のことで、通常、時系列成分やその他の成分を持ちます。空間成分には、2Dまたは3D空間の頂点、辺、面の集合が含まれます。"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:19
 msgid ""
 "**vertices** - XY(Z) points (in the layer's coordinate reference system)"
-msgstr "**頂点** - （レイヤの座標参照系の）XY(Z) 成分を持つ点です。"
+msgstr "**頂点** - （レイヤの座標参照系の）XY(Z) 成分を持つ点です"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:20
 msgid "**edges** - connect pairs of vertices"
-msgstr "**辺** - 頂点の組を接続します。"
+msgstr "**辺** - 頂点の組を接続します"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:21
 msgid ""
 "**faces** - a face is a set of edges forming a closed shape - typically a "
 "triangle or a quadrilateral (quad), rarely polygons with more vertices"
-msgstr "**面** - 面は閉じた形状を形成する辺の集合です。通常は三角形または四辺形（quad）で、頂点数が多い多角形はめったにありません。"
+msgstr "**面** - 面は閉じた形状を形成する辺の集合です。通常は三角形または四辺形（quad）で、頂点数が多い多角形はめったにありません"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:24
 msgid ""
 "Relying on the above, mesh layers can thus have different types of "
 "structure:"
-msgstr "上記の要素に基づいて、メッシュレイヤはさまざまなタイプの構造を持つことができます："
+msgstr "上記の要素に基づいて、メッシュレイヤは様々なタイプの構造を持つことができます："
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:26
 msgid ""
@@ -122,7 +130,7 @@ msgid ""
 "case, it stores wind velocity at 10m at a particular moments in time (t1, "
 "t2, t3)."
 msgstr ""
-"以下のテーブルは、メッシュデータセットに格納できる情報についての概念を示しています。テーブルの列はメッシュの頂点のインデックスを表し、各行は1つのデータセットを表します。データセットはさまざまなデータ型を持つことができます。この例の場合には、ある特定の時間（t1、t2、t3）における地上10mの風速がテーブルに格納されています。"
+"以下のテーブルは、メッシュデータセットに格納できる情報についての概念を示しています。テーブルの列はメッシュの頂点のインデックスを表し、各行は1つのデータセットを表します。データセットはさまざまなデータ型を持つことができます。この例の場合、テーブルはある特定の時間（t1、t2、t3）における地上10mの風速を格納しています。"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:64
 msgid ""
@@ -264,8 +272,8 @@ msgid ""
 " simple scalar values (e.g. wind direction). For such quantities it is "
 "desirable to display arrows indicating the directions."
 msgstr ""
-"色を値に割り当てることでデータを可視化することができ（ :ref:`単バンド疑似カラー <label_colormaptab>` "
-"のラスタレンダリングと同様です）、メッシュトポロジに従って頂点間のデータが補間されます。いくつかの量は単純なスカラー値ではなく、2Dベクトル（例えば風向）であるのはよくあることです。そのような量については、方向を示す矢印を表示することが望ましいでしょう。"
+"色を値に割り当て（ :ref:`単バンド疑似カラー 1` "
+"のラスタレンダリングと同様です）、メッシュトポロジに従って頂点間のデータが補間することでデータを可視化することができます。ある量が単純なスカラー値ではなく、2Dベクトル（例えば風向）であることはよくあります。そのような量については、方向を示す矢印を表示することが望ましいでしょう。"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:94
 msgid "Possible visualisation of mesh data"
@@ -274,6 +282,19 @@ msgstr "メッシュデータの可視化事例"
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:99
 msgid "Supported formats"
 msgstr "サポートする形式"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:101
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_, and natively supports a "
+"`variety of formats <https://github.com/lutraconsulting/MDAL?tab=readme-ov-"
+"file#supported-formats>`__. Whether QGIS can edit a mesh layer depends on "
+"the format and the mesh structure type."
+msgstr ""
+"QGISは `MDALドライバ <https://github.com/lutraconsulting/MDAL>`_ "
+"を使用してメッシュデータにアクセスし、 `様々なフォーマット "
+"<https://github.com/lutraconsulting/MDAL?tab=readme-ov-file#supported-"
+"formats>`__ をネイティブにサポートしています。QGISでメッシュレイヤを編集できるかどうかは、フォーマットとメッシュ構造タイプによります。"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:106
 msgid ""
@@ -370,6 +391,10 @@ msgstr "|temporal| :ref:`時系列 <meshtemporal>`"
 msgid "temporal"
 msgstr "temporal"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:137
+msgid "|labelingSingle| :ref:`Labels <meshlabels>`:sup:`[1]`"
+msgstr "|labelingSingle| :ref:`ラベル <meshlabels>`:sup:`[1]`"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1265
 msgid "labelingSingle"
 msgstr "labelingSingle"
@@ -444,7 +469,7 @@ msgid ""
 " using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
 "<qgis.core.QgsMapLayer.setCustomProperty>` method."
 msgstr ""
-"カスタムプロパティには、そのレイヤに関する追加情報をアクティブなプロジェクトに保存するために使用されます。デフォルトのカスタムプロパティには、:ref:`レイヤノート"
+"カスタムプロパティは、そのレイヤに関する追加情報をアクティブなプロジェクトに保存するために使用されます。デフォルトのカスタムプロパティには、:ref:`レイヤノート"
 " <layer_notes>` を含めることができます。PyQGIS、具体的には :pyqgis:`setCustomProperty() "
 "<qgis.core.QgsMapLayer.setCustomProperty>` "
 "メソッドを使ってより多くのプロパティを作成・管理することができます。"
@@ -459,7 +484,7 @@ msgstr "プロバイダからの情報：領域、頂点の数、面の数、エ
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
 "(i.e. whether it's static or dynamic)"
-msgstr "空間参照システム（CRS）：CRSの名前、単位、投影法、精度、参照（静的か動的か）"
+msgstr "座標参照系（CRS）：CRSの名前、単位、投影法、精度、参照（静的か動的か）"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:176
 msgid ""
@@ -1442,9 +1467,41 @@ msgstr ""
 msgid "Elevation Properties"
 msgstr "標高プロパティ"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:659
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and :ref:`2D map view <label_mapview>` and its appearance in the "
+":ref:`profile tool charts <label_elevation_profile_view>`. Specifically, you"
+" can configure how heights from your dataset are interpreted:"
+msgstr ""
+"|elevationscale| :guilabel:`標高` タブには、 :ref:`3Dマップビュー <label_3dmapview>` と "
+":ref:`2Dマップビュー <label_mapview>` でのレイヤの標高プロパティと、 :ref:`断面図ツール "
+"<label_elevation_profile_view>` "
+"での外観を制御するオプションがあります。具体的にはデータセットから得た高さを解釈する方法を設定できます:"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:669
 msgid "Mesh Elevation properties"
 msgstr "メッシュ標高プロパティ"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:676
+msgid ""
+":guilabel:`Fixed Elevation Range`: the mesh layer is linked to a fixed "
+"elevation range. This mode is applicable when a layer has either a single "
+"fixed elevation or a range (slice) of elevation values. If a range is "
+"specified, mesh values will be extruded over this range. You can set the "
+":guilabel:`Lower` and :guilabel:`Upper` elevation range values for the "
+"layer, and specify whether the lower or upper :guilabel:`Limits` are "
+"inclusive or exclusive. When enabled, the layer will only be visible in "
+":ref:`elevation filtered 2D maps <elevation_controller>` when the layer's "
+"range is included in the map's Z range."
+msgstr ""
+":guilabel:`固定標高範囲`: メッシュレイヤは固定の標高範囲に関連付けされます。このモードは、レイヤが単一の固定標高か標高値の範囲 "
+"(スライス)を持つ場合に適用できます。範囲が指定されている場合、メッシュ値はこの範囲を超えて押し出されます。レイヤに対して標高範囲を "
+":guilabel:`下限` 及び :guilabel:`上限` の値で設定でき、:guilabel:`下限上限の扱い` "
+"で下限値及び／又は上限値を含むか含まないか (inclusive か exclusiveか) "
+"を指定することができます。有効にした場合、レイヤの範囲がマップのZ範囲に含まれているときだけ、:ref:`標高でフィルタされた2Dマップ "
+"<elevation_controller>` に表示されます。"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:694
 msgid ""
@@ -2535,7 +2592,7 @@ msgid ""
 "continuous and somewhat reasonably ordered. This optimizes relation between "
 "faces and vertices and increases the efficiency of calculation."
 msgstr ""
-"QGISは編集中、また元に戻す/やり直す操作を素早く行うために、削除された要素のために空の場所を保持します。これは、メモリ使用量の増加や非効率的なメッシュ構造を引き起こす可能性があります。|menuselection:`メッシュ"
+"QGISは編集中、また元に戻す/やり直す操作を素早く行うために、削除された要素のために空の場所を保持します。これは、メモリ使用量の増加や非効率的なメッシュ構造を引き起こす可能性があります。:menuselection:`メッシュ"
 " -->` |meshReindex| :menuselection:`面と点を再インデックス化` "
 "ツールは、このような穴を取り除き、面と頂点のインデックスをリナンバし、連続的である程度合理的な順序になるように設計されています。これにより、面と頂点の関係が最適化され、計算効率が向上します。"
 
