@@ -201,7 +201,7 @@ our translation efforts.
 Only the [current Long Term Release](https://docs.qgis.org/latest/) is being translated.
 
 To be part of the translation team, please follow
-[becoming a translator](https://www.qgis.org/en/site/getinvolved/translate.html#becoming-a-translator).
+[Becoming a translator](https://docs.qgis.org/testing/en/docs/documentation_guidelines/do_translations.html#becoming-a-translator).
 
 ## GitHub workflow
 
@@ -264,6 +264,8 @@ Sometimes, you may want to build the docs with really new translated strings
 that are not yet available in the main repository (e.g., from partially translated files).
 In that case, you need to manually pull the translations from Transifex to your local repository:
 
+1. Make sure you have a Transifex account and
+   [joined the QGIS-Documentation project team](/docs/documentation_guidelines/do_translations.rst)
 1. Checkout locally the repository and target branch in git
 1. Prepare the environment
 
