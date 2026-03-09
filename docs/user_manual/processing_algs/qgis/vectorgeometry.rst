@@ -7631,6 +7631,129 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgistransectfixeddistance:
+
+Transect (fixed distance)
+-------------------------
+
+Creates transects at fixed distance intervals along (multi)linestrings.
+
+A transect is a line oriented from an angle (by default perpendicular)
+to the input polylines at regular intervals.
+
+Field(s) from feature(s) are returned in the transect,
+with these new fields:
+
+* TR_FID: ID of the original feature
+* TR_ID: ID of the transect. Each transect have a unique ID
+* TR_SEGMENT: ID of the segment of the linestring
+* TR_ANGLE: Angle in degrees from the original line at the vertex
+* TR_LENGTH: Total length of the transect returned
+* TR_ORIENT: Side of the transect (only on the left or right of the line, or both side)
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+
+.. figure:: img/transect_fixed_distance.png
+   :align: center
+
+   Transects (red lines) created at fixed intervals along the input line layer (blue lines)
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Fixed sampling interval**
+     - ``INTERVAL``
+     - [numeric: double]
+  
+       Default: ``10.0``
+     - Distance between transects along the line
+   * - **Length of the transect**
+     - ``LENGTH``
+     - [numeric: double] |dataDefine|
+  
+       Default: ``5.0``
+     - Total length of each transect line
+   * - **Angle from original line at the vertices**
+     - ``ANGLE``
+     - [numeric: double] |dataDefine|
+  
+       Default: ``90.0``
+     - Angle in degrees from the original line. A value of 90° creates
+       perpendicular transects
+   * - **Side to create the transects**
+     - ``SIDE``
+     - [enumeration]
+  
+       Default: ``Both``
+     - Which side of the line to create transects on:
+       
+       * 0 --- Left
+       * 1 --- Right
+       * 2 --- Both
+   * - **Direction**
+
+       Optional
+     - ``DIRECTION``
+     - [enumeration]
+  
+       Default: ``Left to Right``
+     - Orientation direction for transects:
+       
+       * 0 --- Left to Right
+       * 1 --- Right to Left
+   * - **Transect**
+     - ``OUTPUT``
+     - [vector: line]
+  
+       Default: ``[Create temporary layer]``
+     - Specification of the output line layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Transect**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer containing the generated transects
+
+Python code
+...........
+
+**Algorithm ID**: ``native:transectfixeddistance``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+.. seealso:: :ref:`qgistransect`
 
 .. _qgistranslategeometry:
 
