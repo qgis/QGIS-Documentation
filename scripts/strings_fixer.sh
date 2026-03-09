@@ -20,35 +20,33 @@ TARGETFORMAT=${2:-"po"}
 declare -A MATCHING_STRINGS
 
 MATCHING_STRINGS=(
-       [">\` _"]=">\`_"
-       ["> \`_"]=">\`_"
-       [":ref: "]=":ref:"
-       [": ref: "]=":ref:"
-       [":ref : "]=":ref:"
-       [": ref :"]=":ref:"
-       [":guilabel: "]=":guilabel:"
-       [": guilabel: "]=":guilabel:"
-       [":guilabel : "]=":guilabel:"
-       [": guilabel :"]=":guilabel:"
-       [":sup: "]=":sup:"
-       [": sup: "]=":sup:"
-       [":sup : "]=":sup:"
-       [": sup :"]=":sup:"
-       [":menuselection: "]=":menuselection:"
-       [": menuselection: "]=":menuselection:"
-       [":menuselection : "]=":menuselection:"
-       [": menuselection :"]=":menuselection:"
-       # complete specific strings to update, e.g., urls from make linkcheck output
-       # ["oldstringtoreplace"]="newstringforreplacement"
+    [">\` _"]=">\`_"
+    ["> \`_"]=">\`_"
+    [":ref: "]=":ref:"
+    [": ref: "]=":ref:"
+    [":ref : "]=":ref:"
+    [": ref :"]=":ref:"
+    [":guilabel: "]=":guilabel:"
+    [": guilabel: "]=":guilabel:"
+    [":guilabel : "]=":guilabel:"
+    [": guilabel :"]=":guilabel:"
+    [":sup: "]=":sup:"
+    [": sup: "]=":sup:"
+    [":sup : "]=":sup:"
+    [": sup :"]=":sup:"
+    [":menuselection: "]=":menuselection:"
+    [": menuselection: "]=":menuselection:"
+    [":menuselection : "]=":menuselection:"
+    [": menuselection :"]=":menuselection:"
+    # complete specific strings to update, e.g., urls from make linkcheck output
+    # ["oldstringtoreplace"]="newstringforreplacement"
 )
 
-for FILE in `find ${SOURCEFILES} -type f -name "*.${TARGETFORMAT}"`
-do
-  echo "${FILE}";
+for FILE in $(find ${SOURCEFILES} -type f -name "*.${TARGETFORMAT}"); do
+    echo "${FILE}"
 
-  for string in "${!MATCHING_STRINGS[@]}"
-  do
-    #echo "$string - ${MATCHING_STRINGS[$string]}"
-    sed -i -e "s@${string}@${MATCHING_STRINGS[${string}]}@g" "${FILE}"
-  done
+    for string in "${!MATCHING_STRINGS[@]}"; do
+        #echo "$string - ${MATCHING_STRINGS[$string]}"
+        sed -i -e "s@${string}@${MATCHING_STRINGS[${string}]}@g" "${FILE}"
+    done
 done
