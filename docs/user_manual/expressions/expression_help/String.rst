@@ -145,6 +145,27 @@ See the **||** function for an alternative concatenation behavior.
 
 .. end_concat_section
 
+.. _expression_function_String_concat_ws:
+
+concat_ws
+.........
+
+Concatenates all but first arguments with separators into a single string. The first parameter is used as a separator. NULL arguments are ignored.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - concat_ws(separator, string, string2, ...)
+   * - Arguments
+     - * **separator** - separator to use when concatenating non-null values
+       * **string** - a string value
+   * - Examples
+     - * ``concat_ws(',', 'abcde', 2, NULL, 22)`` → 'abcde,2,22'
+
+
+.. end_concat_ws_section
+
 .. _expression_function_String_format:
 
 format
