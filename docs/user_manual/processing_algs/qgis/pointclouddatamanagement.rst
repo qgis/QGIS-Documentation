@@ -170,6 +170,19 @@ Parameters
 
        The overview point cloud will be created next to the VPC file -
        for example, for :file:`mydata.vpc`, the overview point cloud would be named :file:`mydata-overview.copc.laz`.
+   * - **Convert individual files to COPC format**
+
+       |400|
+     - ``CONVERT_COPC``
+     - [boolean]
+
+       Default: False
+     - When True, all the individual files in the virtual point cloud will also be converted
+       to :file:`.COPC` format to allow rendering of their points in QGIS.
+
+       When disabled, the format of each individual file will be preserved.
+       This is faster, however only the extent will be rendered for files using formats
+       other than :file:`.COPC` and :file:`.EPT`.
    * - **Virtual point cloud**
      - ``OUTPUT``
      - [point cloud]
