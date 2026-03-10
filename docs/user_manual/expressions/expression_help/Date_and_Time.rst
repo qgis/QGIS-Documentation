@@ -148,7 +148,7 @@ Returns the interval in milliseconds between the unix epoch and a given date val
 format_date
 ...........
 
-Formats a date type or string into a custom string format. Uses Qt date/time format strings. See `QDateTime::toString <https://doc.qt.io/qt-5/qdatetime.html#toString>`_.
+Formats a date type or string into a custom string format. Uses Qt date/time format strings. See `QDateTime::toString <https://doc.qt.io/archives/qt-5.15/qdatetime.html#toString>`_.
 
 .. list-table::
    :widths: 15 85
@@ -495,7 +495,7 @@ Calculates the length in seconds of an interval.
 to_date
 .......
 
-Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
+Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
 
 .. list-table::
    :widths: 15 85
@@ -521,7 +521,7 @@ Converts a string into a date object. An optional format string can be provided 
 to_datetime
 ...........
 
-Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-5/qdate.html#fromString-2>`_, `QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
+Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_, `QTime::fromString <https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
 
 .. list-table::
    :widths: 15 85
@@ -569,7 +569,7 @@ Converts a string to an interval type. Can be used to take days, hours, month, e
 to_time
 .......
 
-Converts a string into a time object. An optional format string can be provided to parse the string; see `QTime::fromString <https://doc.qt.io/qt-5/qtime.html#fromString-1>`_ for additional documentation on the format.
+Converts a string into a time object. An optional format string can be provided to parse the string; see `QTime::fromString <https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85

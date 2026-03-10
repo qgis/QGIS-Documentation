@@ -209,7 +209,7 @@ use something like:
     $ ulimit -Sn
     $ qgis
     
-Alternatively, you can use the newer ``prlimit`` utility. More info: https://manpages.ubuntu.com/manpages/latest/man1/prlimit.1.html
+Alternatively, you can use the newer ``prlimit`` utility. More info: https://man7.org/linux/man-pages/man1/prlimit.1.html
 
 
 **To fix it forever**

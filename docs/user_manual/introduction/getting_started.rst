@@ -32,7 +32,7 @@ packages (rpm and deb) or software repositories are provided for many flavors of
 GNU/Linux |nix|.
 
 For more information and instructions for your operating system check 
-https://download.qgis.org.
+https://qgis.org/download/.
 
 Installing from source
 ----------------------

@@ -140,7 +140,7 @@ Two different tools are currently used to do translations in QGIS:
   transparently does the process described above and pulls all the translatable
   texts in one place for the translator. Just pick the files you want and translate.
   Translated files are stored in the platform until another release is pushed.
-* `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, a Qt
+* `Qt Linguist <https://doc.qt.io/archives/qt-5.15/qtlinguist-index.html>`_, a Qt
   development tool, requires the translator to pull locally
   the :file:`.po` (or :file:`.ts`) files from the source code, translate and
   then push back.
@@ -283,7 +283,7 @@ In the menu you see the following buttons which are convenient to use.
   jumps to the first translation item it finds that still needs a translation.
 
 For further information on the use of Qt Linguist, see
-https://doc.qt.io/qt-5/linguist-translators.html
+https://doc.qt.io/archives/qt-5.15/linguist-translators.html
 
 .. warning::
 

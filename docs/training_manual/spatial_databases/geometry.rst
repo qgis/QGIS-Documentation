@@ -344,7 +344,7 @@ Geometry Cleaning
 -------------------------------------------------------------------------------
 
 You can get more information for this topic in `this blog entry
-<https://gisforthought.com/projects/postgis_tutorial/validity.html>`_.
+<https://postgis.net/workshops/postgis-intro/validity.html>`_.
 
 Differences between tables
 -------------------------------------------------------------------------------
