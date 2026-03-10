@@ -173,7 +173,7 @@ properties to define how a layer is compared.
 To deal with a certain tolerance for output values you can specify a ``compare``
 property for an output. The compare property can contain sub-properties for
 ``fields``. This contains information about how precisely a certain field is
-compared (``precision``) or a field can even entirely be ``skip``ed. There is a
+compared (``precision``) or a field can even entirely be ignored (``skip``). There is a
 special field name ``__all__`` which will apply a certain tolerance to all fields.
 There is another property ``geometry`` which also accepts a ``precision`` which is
 applied to each vertex.
