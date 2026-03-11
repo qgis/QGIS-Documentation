@@ -407,7 +407,7 @@ For example with **systemd**:
 fcgiwrap
 ^^^^^^^^
 
-Using `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
+Using `fcgiwrap <https://www.f5.com/products/nginx>`_
 is much easier to setup than **spawn-fcgi** but it's much slower.
 
 #. You first have to install the corresponding package:
@@ -1071,7 +1071,7 @@ or to manually modify the path to the SVG image so that it represents a valid re
 Integration with third parties
 ==============================
 
-QGIS Server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/publications>`_
+QGIS Server provides standard OGC web services like `WMS, WFS, etc. <https://www.ogc.org/standards>`_
 thus it can be used by a wide variety of end user tools.
 
 Integration with QGIS Desktop
@@ -1091,7 +1091,7 @@ are not implemented yet.
 Integration with MapProxy
 -------------------------
 
-`MapProxy <https://www.mapproxy.org/>`_ is a tile cache server and as it can read and
+`MapProxy <https://mapproxy.org/>`_ is a tile cache server and as it can read and
 serve any WMS/WMTS map server, it can be directly connected to QGIS server web
 services and improve end user experience.
 

@@ -57,7 +57,7 @@ of your OSGeo4W install. Look for something like
 Debugging using Pyscripter IDE (Windows)
 ========================================
 
-For using `Pyscripter IDE <https://github.com/pyscripter/pyscripter>`_,
+For using `Pyscripter IDE <https://github.com/lmbelo/pyscripter>`_,
 here's what you have to do:
 
 #. Make a copy of :file:`qgis-unstable.bat` and rename it ``pyscripter.bat``.

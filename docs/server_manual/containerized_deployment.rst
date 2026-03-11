@@ -51,7 +51,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
       # Add the current key for package downloading
       # Please refer to QGIS install documentation (https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu)
       && mkdir -m755 -p /etc/apt/keyrings \
-      && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg \
+      && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://qgis.org/download//downloads/qgis-archive-keyring.gpg \
       # Add repository for latest version of qgis-server
       # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/resources/installation-guide/#repositories)
       && echo "deb [signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/debian bookworm main" | tee /etc/apt/sources.list.d/qgis.list \
@@ -311,7 +311,7 @@ k8s) is pretty straight forward:
 If not, follow the
 `minikube tutorial <https://kubernetes.io/docs/tutorials/hello-minikube/>`_
 or
-`microk8s for Ubuntu <https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s>`_.
+`microk8s for Ubuntu <https://canonical.com/microk8s/docs/getting-started>`_.
 
 As Kubernetes installation can be really complex, we will only focus
 on aspects used by this demo.

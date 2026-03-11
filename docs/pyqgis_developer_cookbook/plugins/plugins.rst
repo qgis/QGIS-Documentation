@@ -628,7 +628,7 @@ It's done with Qt :command:`rcc` command:
     :file:`<Your QGIS Install Directory>\\apps\\Qt6\\bin\\rcc.exe`.
 
 .. _Qt Linguist: https://doc.qt.io/qt-6/qtlinguist-index.html
-.. _GitHub workflows: https://docs.github.com/en/actions/writing-workflows
+.. _GitHub workflows: https://docs.github.com/en/actions/how-tos/write-workflows
 .. _Gitlab-CI: https://docs.gitlab.com/ci/
 .. _Transifex: https://www.transifex.com
 .. _qgis-plugin-ci: https://opengisch.github.io/qgis-plugin-ci/

@@ -579,6 +579,6 @@ using the ``qgis`` label.
 Additional information about OTB and QGIS can be found in
 `OTB Cookbook <https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`__.
 
-.. _LAStools: https://rapidlasso.de/lastools-220107/
+.. _LAStools: https://rapidlasso.de/220107_lastools/
 .. _Wine: https://www.winehq.org/
 .. _OTB: https://www.orfeo-toolbox.org
