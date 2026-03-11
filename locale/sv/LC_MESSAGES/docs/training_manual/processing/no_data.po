@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/processing/no_data.rst:2
+msgid "The raster calculator. No-data values"
+msgstr "Rasterkalkylatorn. Värden utan data"
+
+#: ../../docs/training_manual/processing/no_data.rst:5
+msgid ""
+"In this lesson we will see how to use the raster calculator to perform some "
+"operations on raster layers. We will also explain what are no--data values "
+"and how the calculator and other algorithms deal with them"
+msgstr ""
+"I den här lektionen ska vi se hur man använder rasterkalkylatorn för att "
+"utföra vissa operationer på rasterlager. Vi kommer också att förklara vad "
+"som är no--data-värden och hur kalkylatorn och andra algoritmer hanterar dem"
+
+#: ../../docs/training_manual/processing/no_data.rst:8
+msgid ""
+"The raster calculator is one of the most powerful algorithms that you will "
+"find. It's a very flexible and versatile algorithm that can be used for many"
+" different calculations, and one that will soon become an important part of "
+"your toolbox."
+msgstr ""
+"Rasterkalkylatorn är en av de mest kraftfulla algoritmerna som du kan hitta."
+" Det är en mycket flexibel och mångsidig algoritm som kan användas för många"
+" olika beräkningar och som snart kommer att bli en viktig del av din "
+"verktygslåda."
+
+#: ../../docs/training_manual/processing/no_data.rst:10
+msgid ""
+"In this lesson we will be performing some calculation with the raster "
+"calculator, most of them rather simple. This will let us see how it is used "
+"and how it deals with some particular situations that it might find. "
+"Understanding that is important to later get the expected results when using"
+" the calculator, and also to understand certain techniques that are commonly"
+" applied with it."
+msgstr ""
+"I den här lektionen kommer vi att utföra några beräkningar med "
+"rasterkalkylatorn, de flesta av dem ganska enkla. På så sätt får vi se hur "
+"den används och hur den hanterar vissa speciella situationer som den kan "
+"stöta på. Att förstå detta är viktigt för att senare få de förväntade "
+"resultaten när man använder räknaren, och även för att förstå vissa tekniker"
+" som vanligtvis tillämpas med den."
+
+#: ../../docs/training_manual/processing/no_data.rst:12
+msgid ""
+"Open the QGIS project corresponding to this lesson and you will see that it "
+"contains several raster layers."
+msgstr ""
+"Öppna QGIS-projektet som motsvarar den här lektionen och du kommer att se "
+"att det innehåller flera rasterlager."
+
+#: ../../docs/training_manual/processing/no_data.rst:14
+msgid ""
+"Now open the toolbox and open the dialog corresponding to the raster "
+"calculator."
+msgstr ""
+"Öppna nu verktygslådan och öppna den dialogruta som motsvarar "
+"rasterkalkylatorn."
+
+#: ../../docs/training_manual/processing/no_data.rst:18
+msgid "The interface is different in recent versions."
+msgstr "Gränssnittet är annorlunda i de senaste versionerna."
+
+#: ../../docs/training_manual/processing/no_data.rst:20
+msgid "The dialog contains 2 parameters."
+msgstr "Dialogrutan innehåller 2 parametrar."
+
+#: ../../docs/training_manual/processing/no_data.rst:22
+msgid ""
+"The layers to use for the analysis. This is a multiple input, that meaning "
+"that you can select as many layers as you want. Click on the button on the "
+"right--hand side and then select the layers that you want to use in the "
+"dialog that will appear."
+msgstr ""
+"De lager som ska användas för analysen. Detta är en multiple input, vilket "
+"innebär att du kan välja så många lager som du vill. Klicka på knappen till "
+"höger och välj sedan de lager som du vill använda i den dialogruta som "
+"visas."
+
+#: ../../docs/training_manual/processing/no_data.rst:23
+msgid ""
+"The formula to apply. The formula uses the layers selected in the above "
+"parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, "
+"g2, g3...`` as variable names. That is, the formula ``a + 2 * b`` is the "
+"same as ``g1 + 2 * g2`` and will compute the sum of the value in the first "
+"layer plus two times the value in the second layer. The ordering of the "
+"layers is the same ordering that you see in the selection dialog."
+msgstr ""
+"Formeln som ska tillämpas. Formeln använder de lager som valts i parametern "
+"ovan och som namnges med bokstäver i alfabetet (``a, b, c...``) eller ``g1, "
+"g2, g3...`` som variabelnamn. Det innebär att formeln ``a + 2 * b`` är "
+"densamma som ``g1 + 2 * g2`` och beräknar summan av värdet i det första "
+"lagret plus två gånger värdet i det andra lagret. Ordningen på lagren är "
+"densamma som du ser i urvalsdialogen."
+
+#: ../../docs/training_manual/processing/no_data.rst:25
+msgid "The calculator is case sensitive."
+msgstr "Kalkylatorn är skiftlägeskänslig."
+
+#: ../../docs/training_manual/processing/no_data.rst:27
+msgid ""
+"To start with, we will change the units of the DEM from meters to feet. The "
+"formula we need is the following one:"
+msgstr ""
+"Till att börja med ändrar vi enheterna för DEM från meter till fot. Formeln "
+"vi behöver är följande:"
+
+#: ../../docs/training_manual/processing/no_data.rst:33
+msgid ""
+"Select the DEM in the layers field and type ``a * 3.28084`` in the formula "
+"field."
+msgstr "Välj DEM i fältet Lager och skriv ``a * 3.28084`` i formelfältet."
+
+#: ../../docs/training_manual/processing/no_data.rst:35
+msgid "For non English users: use always \".\", not \",\"."
+msgstr "För personer som inte använder engelska: använd alltid \".\", inte \",\"."
+
+#: ../../docs/training_manual/processing/no_data.rst:37
+msgid ""
+"Click *Run* to run the algorithm. You will get a layer that has the same "
+"appearance of the input layer, but with different values. The input layer "
+"that we used has valid values in all its cells, so the last parameter has no"
+" effect at all."
+msgstr ""
+"Klicka på *Run* för att köra algoritmen. Du kommer att få ett lager som har "
+"samma utseende som inputlagret, men med olika värden. Ingångslageret som vi "
+"använde har giltiga värden i alla sina celler, så den sista parametern har "
+"ingen effekt alls."
+
+#: ../../docs/training_manual/processing/no_data.rst:39
+msgid ""
+"Let's now perform another calculation, this time on the *accflow* layer. "
+"This layer contains values of accumulated flow, a hydrological parameter. It"
+" contains those values only within the area of a given watershed, with no--"
+"data values outside of it. As you can see, the rendering is not very "
+"informative, due to the way values are distributed. Using the logarithm of "
+"that flow accumulation will yield a much more informative representation. We"
+" can calculate that using the raster calculator."
+msgstr ""
+"Låt oss nu utföra en ny beräkning, den här gången på lageret *accflow*. "
+"Detta lager innehåller värden för ackumulerat flöde, en hydrologisk "
+"parameter. Det innehåller dessa värden endast inom området för en viss "
+"vattendelare, utan några datavärden utanför det. Som du kan se är "
+"renderingen inte särskilt informativ på grund av hur värdena är fördelade. "
+"Om man använder logaritmen för flödesackumuleringen får man en mycket mer "
+"informativ representation. Vi kan beräkna det med hjälp av "
+"rasterkalkylatorn."
+
+#: ../../docs/training_manual/processing/no_data.rst:41
+msgid ""
+"Open the algorithm dialog again, select the *accflow* layer as the only "
+"input layer, and enter the following formula: ``log(a)``."
+msgstr ""
+"Öppna algoritmdialogen igen, välj *accflow*-lagret som det enda "
+"inmatningslagret och ange följande formel: ``log(a)``."
+
+#: ../../docs/training_manual/processing/no_data.rst:43
+msgid "Here is the layer that you will get."
+msgstr "Här är lagret som du kommer att få."
+
+#: ../../docs/training_manual/processing/no_data.rst:47
+msgid ""
+"If you select the *Identify* tool to know the value of a layer at a given "
+"point, select the layer that we have just created, and click on a point "
+"outside of the basin, you will see that it contains a no--data value."
+msgstr ""
+"Om du väljer verktyget *Identify* för att få veta värdet på ett lager vid en"
+" viss punkt, väljer det lager som vi just har skapat och klickar på en punkt"
+" utanför bassängen, ser du att det innehåller ett no-data-värde."
+
+#: ../../docs/training_manual/processing/no_data.rst:51
+msgid ""
+"For the next exercise we are going to use two layers instead of one, and we "
+"are going to get a DEM with valid elevation values only within the basin "
+"defined in the second layer. Open the calculator dialog and select both "
+"layers of the project in the input layers field. Enter the following formula"
+" in the corresponding field:"
+msgstr ""
+"I nästa övning ska vi använda två lager i stället för ett, och vi ska få en "
+"DEM med giltiga höjdvärden endast inom den bassäng som definieras i det "
+"andra lageret. Öppna kalkylatorns dialogruta och välj projektets båda lager "
+"i fältet Input layers. Ange följande formel i motsvarande fält:"
+
+#: ../../docs/training_manual/processing/no_data.rst:57
+msgid ""
+"``a`` refers to the accumulated flow layer (since it is the first one to "
+"appear in the list) and ``b`` refers to the DEM. What we are doing in the "
+"first part of the formula here is to divide the accumulated flow layer by "
+"itself, which will result in a value of 1 inside the basin, and a no--data "
+"value outside. Then we multiply by the DEM, to get the elevation value in "
+"those cells inside the basin (``DEM * 1 = DEM``) and the no--data value "
+"outside (``DEM * no_data = no_data``)"
+msgstr ""
+"\"a\" avser det ackumulerade flödeslageret (eftersom det är det första som "
+"visas i listan) och \"b\" avser DEM. Vad vi gör i den första delen av "
+"formeln här är att dividera det ackumulerade flödeslageret med sig självt, "
+"vilket resulterar i ett värde på 1 inuti bassängen och ett värde utan data "
+"utanför. Sedan multiplicerar vi med DEM för att få höjdvärdet i dessa celler"
+" inne i bassängen (``DEM * 1 = DEM``) och värdet utan data utanför (``DEM * "
+"no_data = no_data``)"
+
+#: ../../docs/training_manual/processing/no_data.rst:59
+msgid "Here is the resulting layer."
+msgstr "Här är det resulterande lagret."
+
+#: ../../docs/training_manual/processing/no_data.rst:64
+msgid ""
+"This technique is used frequently to *mask* values in a raster layer, and is"
+" useful whenever you want to perform calculations for a region other that "
+"the arbitrary rectangular region that is used by raster layer. For instance,"
+" an elevation histogram of a raster layer doesn't have much meaning. If it "
+"is instead computed using only values corresponding to a basin (as in he "
+"case above), the result that we obtain is a meaningful one that actually "
+"gives information about the configuration of the basin."
+msgstr ""
+"Denna teknik används ofta för att *mask* värden i ett rasterlager och är "
+"användbar när du vill utföra beräkningar för en annan region än den "
+"godtyckliga rektangulära region som används av rasterlagret. Till exempel "
+"har ett höjdhistogram för ett rasterlager inte så stor betydelse. Om det "
+"istället beräknas med hjälp av endast värden som motsvarar en bassäng (som i"
+" fallet ovan), får vi ett meningsfullt resultat som faktiskt ger information"
+" om bassängens konfiguration."
+
+#: ../../docs/training_manual/processing/no_data.rst:66
+msgid ""
+"There are other interesting things about this algorithm that we have just "
+"run, apart from the no--data values and how they are handled. If you have a "
+"look at the extents of the layers that we have multiplied (you can do it "
+"double--clicking on their names of the layer in the table of contents and "
+"looking at their properties), you will see that they are not the same, since"
+" the extent covered by the flow accumulation layer is smaller that the "
+"extent of the full DEM."
+msgstr ""
+"Det finns andra intressanta saker med den här algoritmen som vi just har "
+"kört, bortsett från no--data-värdena och hur de hanteras. Om du tittar på "
+"omfattningen av de lager som vi har multiplicerat (du kan göra det genom att"
+" dubbelklicka på lagernamnen i innehållsförteckningen och titta på deras "
+"egenskaper), kommer du att se att de inte är desamma, eftersom omfattningen "
+"som täcks av flödesackumuleringslagret är mindre än omfattningen av hela "
+"DEM."
+
+#: ../../docs/training_manual/processing/no_data.rst:68
+msgid ""
+"That means that those layers do not match, and that they cannot be "
+"multiplied directly without homogenizing those sizes and extents by "
+"resampling one or both layers. However, we did not do anything. QGIS takes "
+"care of this situation and automatically resamples input layers when needed."
+" The output extent is the minimum covering extent calculated from the input "
+"layers, and the minimum cell size of their cellsizes."
+msgstr ""
+"Det innebär att dessa lager inte matchar varandra och att de inte kan "
+"multipliceras direkt utan att homogenisera dessa storlekar och utbredning "
+"genom att omsampla ett eller båda lagren. Vi har dock inte gjort någonting. "
+"QGIS tar hand om den här situationen och omsamplar automatiskt indatalageren"
+" när det behövs. Den utgående utbredningen är den minsta täckande "
+"utbredningen som beräknas från de ingående lageren och den minsta "
+"cellstorleken för deras cellstorlekar."
+
+#: ../../docs/training_manual/processing/no_data.rst:70
+msgid ""
+"In this case (and in most cases), this produces the desired results, but you"
+" should always be aware of the additional operations that are taking place, "
+"since they might affect the result. In cases when this behaviour might not "
+"be the desired, manual resampling should be applied in advance. In later "
+"chapters, we will see more about the behaviour of algorithms when using "
+"multiple raster layers."
+msgstr ""
+"I det här fallet (och i de flesta fall) ger detta önskat resultat, men du "
+"bör alltid vara medveten om de ytterligare operationer som äger rum, "
+"eftersom de kan påverka resultatet. I de fall då detta beteende kanske inte "
+"är det önskade bör manuell omsampling göras i förväg. I senare kapitel "
+"kommer vi att se mer om hur algoritmerna beter sig när man använder flera "
+"rasterlager."
+
+#: ../../docs/training_manual/processing/no_data.rst:73
+msgid ""
+"Let's finish this lesson with another masking exercise. We are going to "
+"calculate the slope in all areas with an elevation between 1000 and 1500 "
+"meters."
+msgstr ""
+"Låt oss avsluta den här lektionen med en annan maskeringsövning. Vi ska "
+"beräkna lutningen i alla områden med en höjd mellan 1000 och 1500 meter."
+
+#: ../../docs/training_manual/processing/no_data.rst:75
+msgid ""
+"In this case, we do not have a layer to use as a mask, but we can create it "
+"using the calculator."
+msgstr ""
+"I det här fallet har vi inte något lager att använda som mask, men vi kan "
+"skapa en sådan med hjälp av kalkylatorn."
+
+#: ../../docs/training_manual/processing/no_data.rst:77
+msgid ""
+"Run the calculator using the DEM as only input layer and the following "
+"formula"
+msgstr "Kör kalkylatorn med DEM som enda inmatningslager och följande formel"
+
+#: ../../docs/training_manual/processing/no_data.rst:83
+msgid ""
+"As you can see, we can use the calculator not only to do simple algebraic "
+"operations, but also to run more complex calculation involving conditional "
+"sentences, like the one above."
+msgstr ""
+"Som du ser kan vi använda miniräknaren inte bara för att göra enkla "
+"algebraiska operationer, utan också för att göra mer komplexa beräkningar "
+"med villkorliga meningar, som den ovan."
+
+#: ../../docs/training_manual/processing/no_data.rst:85
+msgid ""
+"The result has a value of 1 inside the range we want to work with, and no-"
+"data in cells outside of it."
+msgstr ""
+"Resultatet har värdet 1 inom det intervall vi vill arbeta med, och ingen "
+"data i celler utanför det."
+
+#: ../../docs/training_manual/processing/no_data.rst:89
+msgid ""
+"The no-data value comes from the 0/0 expression. Since that is an "
+"undetermined value, SAGA will add a NaN (Not a Number) value, which is "
+"actually handled as a no-data value. With this little trick you can set a "
+"no-data value without needing to know what the no--data value of the cell "
+"is."
+msgstr ""
+"Värdet utan data kommer från 0/0-uttrycket. Eftersom det är ett obestämt "
+"värde kommer SAGA att lägga till ett NaN-värde (Not a Number), som faktiskt "
+"hanteras som ett no-data-värde. Med det här lilla tricket kan du ställa in "
+"ett no-data-värde utan att behöva veta vad cellens no-data-värde är."
+
+#: ../../docs/training_manual/processing/no_data.rst:91
+msgid ""
+"Now you just have to multiply it by the slope layer included in the project,"
+" and you will get the desired result."
+msgstr ""
+"Nu behöver du bara multiplicera det med det sluttningslager som ingår i "
+"projektet, så får du önskat resultat."
+
+#: ../../docs/training_manual/processing/no_data.rst:93
+msgid ""
+"All that can be done in a single operation with the calculator. We leave "
+"that as an exercise for the reader."
+msgstr ""
+"Allt detta kan göras i en enda operation med miniräknaren. Vi lämnar det som"
+" en övning för läsaren."

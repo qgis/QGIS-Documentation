@@ -1,0 +1,777 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Harrissou Sant-anna, 2025
+# Transifex Bot <>, 2025
+# Tomas Straupis, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:32+0000\n"
+"Last-Translator: Tomas Straupis, 2025\n"
+"Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Vertimas yra bendruomenės pastangos, prie kurių :ref:`jūs galite prisijungti"
+" <translation_guidelines>`. Šis puslapis šiuo metu išverstas |translation "
+"progress|."
+
+#: ../../docs/server_manual/services/wfs.rst:2
+msgid "Web Feature Service (WFS)"
+msgstr "Tinklo Geoobjektų Paslauga - Web Feature Service (WFS)"
+
+#: ../../docs/server_manual/services/wfs.rst:4
+msgid ""
+"The **1.0.0** and **1.1.0** WFS standards implemented in QGIS Server provide"
+" a HTTP interface to query geographic features from a QGIS project. A "
+"typical WFS request defines the QGIS project to use and the layer to query."
+msgstr ""
+"QGIS Serveryje įgyvendinti **1.0.0** ir **1.1.0** WFS standartai teikia HTTP"
+" sąsają gauti geografinius geoobjektus iš QGIS projekto. Tipinėje WFS "
+"užklausoje nurodomas QGIS projektas ir sluoksnis, kuriame turi būti vykdoma "
+"užklausa."
+
+#: ../../docs/server_manual/services/wfs.rst:10
+msgid ""
+"Specifications document according to the version number of the service:"
+msgstr "Specifikacijos dokumentas pagal paslaugos versiją:"
+
+#: ../../docs/server_manual/services/wfs.rst:12
+msgid "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+msgstr "`WFS 1.0.0 <https://portal.ogc.org/files/?artifact_id=7176>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:13
+msgid "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+msgstr "`WFS 1.1.0 <https://portal.ogc.org/files/?artifact_id=8339>`_"
+
+#: ../../docs/server_manual/services/wfs.rst:15
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Standartinės QGIS Serverio teikiamos užklausos:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Request"
+msgstr "Užklausa"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Description"
+msgstr "Aprašymas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetCapabilities <wfs_getcapabilities>`"
+msgstr ":ref:`GetCapabilities <wfs_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Grąžina XML metaduomenis su informacija apie serverį"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GetFeature <wfs_getfeature>`"
+msgstr ":ref:`GetFeature <wfs_getfeature>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns a selection of features"
+msgstr "Grąžina geoobjektų rinkinį"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+msgstr ":ref:`DescribeFeatureType <wfs_describefeaturetype>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Returns a description of feature types and properties"
+msgstr "Grąžina geoobjektų tipų ir savybių aprašymą"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`Transaction <wfs_transaction>`"
+msgstr ":ref:`Transaction <wfs_transaction>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Allows features to be inserted, updated or deleted"
+msgstr "Leidžia įterpti, pakeisti ar ištrinti geoobjektus"
+
+#: ../../docs/server_manual/services/wfs.rst:30
+msgid "GetCapabilities"
+msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wfs.rst:32
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WFS 1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Standartiniai **GetCapabilities** užklausos parametrai pagal OGC WFS 1.0.0 "
+"ir 1.1.0 specifikacijas:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Parameter"
+msgstr "Parametras"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Required"
+msgstr "Privalomas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SERVICE <services_basics_service>`"
+msgstr ":ref:`SERVICE <services_basics_service>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Yes"
+msgstr "Taip"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the service (**WFS**)"
+msgstr "Paslaugos pavadinimas (**WFS**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`REQUEST <services_basics_request>`"
+msgstr ":ref:`REQUEST <services_basics_request>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "Užklausos pavadinimas (**GetCapabilities**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`VERSION <wfs_version>`"
+msgstr ":ref:`VERSION <wfs_version>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "No"
+msgstr "Ne"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Version of the service"
+msgstr "Paslaugos versija"
+
+#: ../../docs/server_manual/services/wfs.rst:43
+#: ../../docs/server_manual/services/wfs.rst:105
+#: ../../docs/server_manual/services/wfs.rst:585
+#: ../../docs/server_manual/services/wfs.rst:654
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr ""
+"Be standartinių, QGIS Serveris palaiko ir šiuos papildomus parametrus:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAP <services_basics_map>`"
+msgstr ":ref:`MAP <services_basics_map>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "QGIS project file"
+msgstr "QGIS projekto failas"
+
+#: ../../docs/server_manual/services/wfs.rst:57
+msgid "VERSION"
+msgstr "VERSION"
+
+#: ../../docs/server_manual/services/wfs.rst:59
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"Šis parametras leidžia nurodyti jūsų naudojamų paslaugų versiją. Tinkamos "
+"``VERSION`` parametro reikšmės yra:"
+
+#: ../../docs/server_manual/services/wfs.rst:62
+msgid "``1.0.0``"
+msgstr "``1.0.0``"
+
+#: ../../docs/server_manual/services/wfs.rst:63
+msgid "``1.1.0``"
+msgstr "``1.1.0``"
+
+#: ../../docs/server_manual/services/wfs.rst:65
+msgid ""
+"If no version is indicated in the request, then ``1.1.0`` is used by "
+"default."
+msgstr "Jei versija nenurodyta, pagal nutylėjimą naudojama ``1.1.0`` versija."
+
+#: ../../docs/server_manual/services/wfs.rst:68
+#: ../../docs/server_manual/services/wfs.rst:127
+#: ../../docs/server_manual/services/wfs.rst:146
+#: ../../docs/server_manual/services/wfs.rst:201
+#: ../../docs/server_manual/services/wfs.rst:260
+#: ../../docs/server_manual/services/wfs.rst:314
+#: ../../docs/server_manual/services/wfs.rst:338
+#: ../../docs/server_manual/services/wfs.rst:416
+#: ../../docs/server_manual/services/wfs.rst:461
+#: ../../docs/server_manual/services/wfs.rst:511
+#: ../../docs/server_manual/services/wfs.rst:535
+#: ../../docs/server_manual/services/wfs.rst:555
+#: ../../docs/server_manual/services/wfs.rst:595
+#: ../../docs/server_manual/services/wfs.rst:675
+msgid "URL example:"
+msgstr "URL pavyzdys:"
+
+#: ../../docs/server_manual/services/wfs.rst:81
+msgid "GetFeature"
+msgstr "GetFeature"
+
+#: ../../docs/server_manual/services/wfs.rst:83
+msgid ""
+"Standard parameters for the **GetFeature** request according to the OGC WFS "
+"1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Standartiniai **GetFeature** užklausos parametrai pagal OGC WFS 1.0.0 ir "
+"1.1.0 specifikacijas:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**GetFeature**)"
+msgstr "Užklausos pavadinimas (**GetFeature**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`TYPENAME <wfs_getfeature_typename>`"
+msgstr ":ref:`TYPENAME <wfs_getfeature_typename>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of layers"
+msgstr "Sluoksnių pavadinimai"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FEATUREID <wfs_getfeature_featureid>`"
+msgstr ":ref:`FEATUREID <wfs_getfeature_featureid>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Filter the features by ids"
+msgstr "Filtruoti geoobjektus pagal id"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+msgstr ":ref:`OUTPUTFORMAT <wfs_getfeature_outputformat>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Output Format"
+msgstr "Išvesties formatas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
+msgstr ":ref:`RESULTTYPE <wfs_getfeature_resulttype>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Type of the result"
+msgstr "Rezultato tipas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+msgstr ":ref:`PROPERTYNAME <wfs_getfeature_propertyname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of properties to return"
+msgstr "Grąžinamų savybių pavadinimas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
+msgstr ":ref:`MAXFEATURES <wfs_getfeature_maxfeatures>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Maximum number of features to return"
+msgstr "Maksimalus grąžinamų geoobjektų skaičius"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+msgstr ":ref:`SRSNAME <wfs_getfeature_srsname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Coordinate reference system"
+msgstr "Koordinačių atskaitos sistema"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`FILTER <wfs_getfeature_filter>`"
+msgstr ":ref:`FILTER <wfs_getfeature_filter>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "OGC Filter Encoding"
+msgstr "OGC filtro koduotė"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`BBOX <wfs_getfeature_bbox>`"
+msgstr ":ref:`BBOX <wfs_getfeature_bbox>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Map Extent"
+msgstr "Žemėlapio apimtis"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`SORTBY <wfs_getfeature_sortby>`"
+msgstr ":ref:`SORTBY <wfs_getfeature_sortby>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Sort the results"
+msgstr "Rikiuoti rezultatus"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+msgstr ":ref:`STARTINDEX <wfs_getfeature_startindex>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Paging"
+msgstr "Puslapiavimas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+msgstr ":ref:`GEOMETRYNAME <wfs_getfeature_geometryname>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Type of geometry to return"
+msgstr "Grąžinamos geometrijos tipas"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
+msgstr ":ref:`EXP_FILTER <wfs_getfeature_expfilter>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Expression filtering"
+msgstr "Išraiškų filtras"
+
+#: ../../docs/server_manual/services/wfs.rst:122
+msgid "TYPENAME"
+msgstr "TYPENAME"
+
+#: ../../docs/server_manual/services/wfs.rst:124
+msgid ""
+"This parameter allows to specify layer names and is mandatory if "
+"``FEATUREID`` is not set."
+msgstr ""
+"Šis parametras leidžia nurodyti sluoksnių pavadinimus ir yra privalomas, jei"
+" nenurodytas ``FEATUREID``."
+
+#: ../../docs/server_manual/services/wfs.rst:141
+msgid "FEATUREID"
+msgstr "FEATUREID"
+
+#: ../../docs/server_manual/services/wfs.rst:143
+msgid ""
+"This parameter allows to specify the ID of a specific feature and is formed "
+"like ``typename.fid,typename.fid,...``."
+msgstr ""
+"Šis parametras leidžia nurodyti konkretaus geoobjekto ID ir jo forma yra "
+"``typename.fid,typename.fid,...``."
+
+#: ../../docs/server_manual/services/wfs.rst:156
+msgid "XML response:"
+msgstr "XML atsakas:"
+
+#: ../../docs/server_manual/services/wfs.rst:180
+msgid "OUTPUTFORMAT"
+msgstr "OUTPUTFORMAT"
+
+#: ../../docs/server_manual/services/wfs.rst:183
+msgid ""
+"This parameter may be used to specify the format of the response. If "
+"``VERSION`` is greater or equal than ``1.1.0``, GML3 is the default format. "
+"Otherwise GML2 is used."
+msgstr ""
+"Šį parametrą galima naudoti, jei reikia nurodyti atsakymo formatą. Jei "
+"``VERSION`` yra naujesnė už ``1.1.0``, numatytasis formatas yra GML3. "
+"Priešingu atveju naudojamas GML2."
+
+#: ../../docs/server_manual/services/wfs.rst:187
+msgid "Available values are:"
+msgstr "Galimos reikšmės yra:"
+
+#: ../../docs/server_manual/services/wfs.rst:189
+msgid "``gml2``"
+msgstr "``gml2``"
+
+#: ../../docs/server_manual/services/wfs.rst:190
+msgid "``text/xml; subtype=gml/2.1.2``"
+msgstr "``text/xml; subtype=gml/2.1.2``"
+
+#: ../../docs/server_manual/services/wfs.rst:191
+msgid "``gml3``"
+msgstr "``gml3``"
+
+#: ../../docs/server_manual/services/wfs.rst:192
+msgid "``text/xml; subtype=gml/3.1.1``"
+msgstr "``text/xml; subtype=gml/3.1.1``"
+
+#: ../../docs/server_manual/services/wfs.rst:193
+msgid "``geojson``"
+msgstr "``geojson``"
+
+#: ../../docs/server_manual/services/wfs.rst:194
+msgid "``application/vnd.geo+json``,"
+msgstr "``application/vnd.geo+json``,"
+
+#: ../../docs/server_manual/services/wfs.rst:195
+msgid "``application/vnd.geo json``"
+msgstr "``application/vnd.geo json``"
+
+#: ../../docs/server_manual/services/wfs.rst:196
+msgid "``application/geo+json``"
+msgstr "``application/geo+json``"
+
+#: ../../docs/server_manual/services/wfs.rst:197
+msgid "``application/geo json``"
+msgstr "``application/geo json``"
+
+#: ../../docs/server_manual/services/wfs.rst:198
+msgid "``application/json``"
+msgstr "``application/json``"
+
+#: ../../docs/server_manual/services/wfs.rst:212
+msgid "GeoJSON response:"
+msgstr "GeoJSON atsakas:"
+
+#: ../../docs/server_manual/services/wfs.rst:252
+msgid "RESULTTYPE"
+msgstr "RESULTTYPE"
+
+#: ../../docs/server_manual/services/wfs.rst:254
+msgid ""
+"This parameter may be used to specify the kind of result to return. "
+"Available values are:"
+msgstr ""
+"Šį parametrą galima naudoti, jei reikia nurodyti kokio tipo rezultatą reikia"
+" grąžinti. Galimos reikšmės yra:"
+
+#: ../../docs/server_manual/services/wfs.rst:257
+msgid "``results``: the default behavior"
+msgstr "``results``: numatytoji elgsena"
+
+#: ../../docs/server_manual/services/wfs.rst:258
+msgid "``hits``: returns only a feature count"
+msgstr "``hits``: grąžina tik geoobjektų skaičių"
+
+#: ../../docs/server_manual/services/wfs.rst:275
+msgid "PROPERTYNAME"
+msgstr "PROPERTYNAME"
+
+#: ../../docs/server_manual/services/wfs.rst:277
+msgid ""
+"This parameter may be used to specify a specific property to return. A "
+"property needs to be mapped with a ``TYPENAME`` or a ``FEATUREID``:"
+msgstr ""
+"Šį parametrą galima naudoti, jei reikia nurodyti konkrečią grąžinamą savybę."
+" Savybė turi būti sutapatinta su ``TYPENAME`` ar ``FEATUREID``:"
+
+#: ../../docs/server_manual/services/wfs.rst:280
+msgid "Valid URL example:"
+msgstr "Tinkamo URL pavyzdys:"
+
+#: ../../docs/server_manual/services/wfs.rst:290
+msgid "On the contrary, the next URL will return an exception:"
+msgstr "O štai toks URL grąžins klaidą:"
+
+#: ../../docs/server_manual/services/wfs.rst:310
+msgid "MAXFEATURES"
+msgstr "MAXFEATURES"
+
+#: ../../docs/server_manual/services/wfs.rst:312
+msgid ""
+"This parameter allows to limit the number of features returned by the "
+"request."
+msgstr "Šis parametras leidžia riboti užklausa grąžinamų geoobjektų skaičių."
+
+#: ../../docs/server_manual/services/wfs.rst:326
+msgid ""
+"This parameter may be useful to improve performances when underlying vector "
+"layers are heavy."
+msgstr ""
+"Šį parametrą galima naudoti greitaveikos gerinimui, kai teikiami sunkūs "
+"vektoriniai sluoksniai."
+
+#: ../../docs/server_manual/services/wfs.rst:333
+msgid "SRSNAME"
+msgstr "SRSNAME"
+
+#: ../../docs/server_manual/services/wfs.rst:335
+msgid ""
+"This parameter allows to indicate the response output Spatial Reference "
+"System as well as the ``BBOX`` CRS and has to be formed like ``EPSG:XXXX``."
+msgstr ""
+"Šis parametras leidžia nurodyti užklausos išvesties erdvinę atskaitos "
+"sistemą bei ``BBOX`` CRS ir turi būti pateiktas formatu ``EPSG:XXXX``."
+
+#: ../../docs/server_manual/services/wfs.rst:352
+msgid "FILTER"
+msgstr "FILTER"
+
+#: ../../docs/server_manual/services/wfs.rst:354
+msgid ""
+"This parameter allows to filter the response with the **Filter Encoding** "
+"language defined by the `OGC Filter Encoding standard "
+"<https://www.ogc.org/standards/filter>`_. For example:"
+msgstr ""
+"Šis parametras leidžia filtruoti atsaką naudojant **Filtro kodavimo** kalbą,"
+" kuri apibrėžta `OGC Filtro kodavimo standarte "
+"<https://www.ogc.org/standards/filter>`_. Pavyzdžiui:"
+
+#: ../../docs/server_manual/services/wfs.rst:368
+msgid ""
+"In case of multiple typenames, filters have to be enclosed in parentheses:"
+msgstr "Kelių tipų atveju filtrus reikia apgaubti skliausteliais:"
+
+#: ../../docs/server_manual/services/wfs.rst:378
+msgid "Filter features that intersect with a polygon:"
+msgstr "Filtruoti geoobjektus, kurie kerta poligoną:"
+
+#: ../../docs/server_manual/services/wfs.rst:408
+msgid "BBOX"
+msgstr "BBOX"
+
+#: ../../docs/server_manual/services/wfs.rst:410
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+"Šis parametras leidžia nurodyti žemėlapio apimtį vienetais pagal dabartinį "
+"CRS. Koordinates reikia atskirti kableliais."
+
+#: ../../docs/server_manual/services/wfs.rst:413
+msgid ""
+"The ``SRSNAME`` parameter may specify the CRS of the extent. If not "
+"specified, the CRS of the layer is used."
+msgstr ""
+"Parametras ``SRSNAME`` leidžia nurodyti apimties CRS. Jei jis nenurodytas, "
+"naudojamas sluoksnio CRS."
+
+#: ../../docs/server_manual/services/wfs.rst:427
+msgid ""
+"The ``FEATUREID`` parameter cannot be used with the ``BBOX``. Any attempt "
+"will result in an exception:"
+msgstr ""
+"Parametro ``FEATUREID`` negalima naudoti kartu su ``BBOX``. Toks bandymas "
+"reikš klaidą:"
+
+#: ../../docs/server_manual/services/wfs.rst:440
+msgid "SORTBY"
+msgstr "SORTBY"
+
+#: ../../docs/server_manual/services/wfs.rst:442
+msgid ""
+"This parameter allows to sort resulting features according to property "
+"values and has to be formed like ``propertyname SORTRULE``."
+msgstr ""
+"Šis parametras leidžia rikiuoti gaunamus geoobjektus pagal savybių reikšmes "
+"ir turi būti suformuotas taip ``savybėspavadinimas SORTRULE``."
+
+#: ../../docs/server_manual/services/wfs.rst:445
+msgid "Available values for ``SORTRULE`` in case of descending sorting:"
+msgstr "Tinkamos ``SORTRULE`` reikšmės mažėjančiam rikiavimui:"
+
+#: ../../docs/server_manual/services/wfs.rst:447
+msgid "``D``"
+msgstr "``D``"
+
+#: ../../docs/server_manual/services/wfs.rst:448
+msgid "``+D``"
+msgstr "``+D``"
+
+#: ../../docs/server_manual/services/wfs.rst:449
+msgid "``DESC``"
+msgstr "``DESC``"
+
+#: ../../docs/server_manual/services/wfs.rst:450
+msgid "``+DESC``"
+msgstr "``+DESC``"
+
+#: ../../docs/server_manual/services/wfs.rst:453
+msgid "Available values for ``SORTRULE`` in case of ascending sorting:"
+msgstr "Tinkamos ``SORTRULE`` reikšmės didėjančiam rikiavimui:"
+
+#: ../../docs/server_manual/services/wfs.rst:455
+msgid "``A``"
+msgstr "``A``"
+
+#: ../../docs/server_manual/services/wfs.rst:456
+msgid "``+A``"
+msgstr "``+A``"
+
+#: ../../docs/server_manual/services/wfs.rst:457
+msgid "``ASC``"
+msgstr "``ASC``"
+
+#: ../../docs/server_manual/services/wfs.rst:458
+msgid "``+ASC``"
+msgstr "``+ASC``"
+
+#: ../../docs/server_manual/services/wfs.rst:473
+msgid "The corresponding result:"
+msgstr "Atitinkamas rezultatas:"
+
+#: ../../docs/server_manual/services/wfs.rst:502
+msgid "GEOMETRYNAME"
+msgstr "GEOMETRYNAME"
+
+#: ../../docs/server_manual/services/wfs.rst:504
+msgid ""
+"This parameter can be used to specify the kind of geometry to return for "
+"features. Available values are:"
+msgstr ""
+"Šį parametrą galima naudoti, jei reikia nurodyti, kokią geoobjektų "
+"geometriją reikia grąžinti. Galimos reikšmės yra:"
+
+#: ../../docs/server_manual/services/wfs.rst:507
+msgid "``extent``"
+msgstr "``extent``"
+
+#: ../../docs/server_manual/services/wfs.rst:508
+msgid "``centroid``"
+msgstr "``centroid``"
+
+#: ../../docs/server_manual/services/wfs.rst:509
+msgid "``none``"
+msgstr "``none``"
+
+#: ../../docs/server_manual/services/wfs.rst:526
+msgid "STARTINDEX"
+msgstr "STARTINDEX"
+
+#: ../../docs/server_manual/services/wfs.rst:528
+msgid ""
+"This parameter is standard in WFS 2.0, but it's an extension for WFS 1.0.0."
+msgstr ""
+"Tai standartinis WFS 2.0 parametras, o WFS 1.0.0 atveju jis yra plėtinys."
+
+#: ../../docs/server_manual/services/wfs.rst:531
+msgid ""
+"Actually, it can be used to skip some features in the result set and in "
+"combination with ``MAXFEATURES``, it provides the ability to page through "
+"results."
+msgstr ""
+"Jį galima naudoti, norint praleisti kelis geoobjektus rezultate, ir, kartu "
+"su ``MAXFEATURES``, leidžia gauti rezultatų puslapius."
+
+#: ../../docs/server_manual/services/wfs.rst:550
+msgid "EXP_FILTER"
+msgstr "EXP_FILTER"
+
+#: ../../docs/server_manual/services/wfs.rst:552
+msgid ""
+"This parameter allows to filter the response with QGIS expressions. The "
+"``;`` character is used to separate filters in case of multiple typenames."
+msgstr ""
+"Šis parametras leidžia filtruoti atsaką naudojant QGIS išraiškas. Simbolis "
+"``;`` naudojamas atskirti filtrus, jei yra keli tipų pavadinimai."
+
+#: ../../docs/server_manual/services/wfs.rst:569
+msgid "DescribeFeatureType"
+msgstr "DescribeFeatureType"
+
+#: ../../docs/server_manual/services/wfs.rst:571
+msgid ""
+"Standard parameters for the **DescribeFeatureType** request according to the"
+" OGC WFS 1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Standartiniai **DescribeFeatureType** užklausos parametrai pagal OGC WFS "
+"1.0.0 ir 1.1.0 specifikacijas:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**DescribeFeatureType**)"
+msgstr "Užklausos pavadinimas (**DescribeFeatureType**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Format of the response"
+msgstr "Atsako formatas"
+
+#: ../../docs/server_manual/services/wfs.rst:605
+msgid "Output response:"
+msgstr "Atsako išvestis:"
+
+#: ../../docs/server_manual/services/wfs.rst:629
+msgid "Transaction"
+msgstr "Transakcija"
+
+#: ../../docs/server_manual/services/wfs.rst:631
+msgid ""
+"This request allows to update, delete or add one or several features thanks "
+"to a XML document. The :ref:`delete <wfs_transaction_delete>` action may be "
+"achieved with a POST request as well as with the :ref:`OPERATION "
+"<wfs_transaction_operation>` parameter while the :ref:`add "
+"<wfs_transaction_add>` and the :ref:`update <wfs_transaction_update>` "
+"operations may be achieved through POST request only."
+msgstr ""
+"Ši užklausa leidžia keisti, trinti ar pridėti vieną ar kelis geoobjektus XML"
+" dokumento dėka. Veiksmą :ref:`delete <wfs_transaction_delete>` galima "
+"vykdyti tiek su POST užklausa, tiek ir su parametru :ref:`OPERATION "
+"<wfs_transaction_operation>`, o štai :ref:`add <wfs_transaction_add>` ir "
+":ref:`update <wfs_transaction_update>` veiksmus galima vykdyti tik su POST "
+"užklausomis."
+
+#: ../../docs/server_manual/services/wfs.rst:639
+msgid ""
+"Standard parameters for the **Transaction** request according to the OGC WFS"
+" 1.0.0 and 1.1.0 specifications:"
+msgstr ""
+"Standartiniai **Transaction** užklausos parametrai pagal OGC WFS 1.0.0 ir "
+"1.1.0 specifikacijas:"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Name of the request (**Transaction**)"
+msgstr "Užklausos pavadinimas (**Transaction**)"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid ":ref:`OPERATION <wfs_transaction_operation>`"
+msgstr ":ref:`OPERATION <wfs_transaction_operation>`"
+
+#: ../../docs/server_manual/services/wfs.rst:1
+msgid "Specify the operation"
+msgstr "Nurodykite veiksmą"
+
+#: ../../docs/server_manual/services/wfs.rst:670
+msgid "OPERATION"
+msgstr "OPERATION"
+
+#: ../../docs/server_manual/services/wfs.rst:672
+msgid ""
+"This parameter allows to delete a feature without using a POST request with "
+"a dedicated XML document."
+msgstr ""
+"Šis parametras leidžia trinti geoobjektą nenaudojant POST užklausos su "
+"dedikuotu XML dokumentu."
+
+#: ../../docs/server_manual/services/wfs.rst:688
+msgid ""
+"``FEATUREID``, ``BBOX`` and ``FILTER`` parameters are mutually exclusive and"
+" prioritized in this order."
+msgstr ""
+"``FEATUREID``, ``BBOX`` ir ``FILTER`` parametrai vienas kitą pašalina ir "
+"prioritetizuojami tokia tvarka."
+
+#: ../../docs/server_manual/services/wfs.rst:694
+msgid "Add features"
+msgstr "Pridėti geoobjektus"
+
+#: ../../docs/server_manual/services/wfs.rst:696
+#: ../../docs/server_manual/services/wfs.rst:728
+#: ../../docs/server_manual/services/wfs.rst:758
+msgid "POST request example:"
+msgstr "POST užklausos pavyzdys:"
+
+#: ../../docs/server_manual/services/wfs.rst:703
+msgid "with the *add.xml* document:"
+msgstr "su *add.xml* dokumentu:"
+
+#: ../../docs/server_manual/services/wfs.rst:726
+msgid "Update features"
+msgstr "Keisti geoobjektus"
+
+#: ../../docs/server_manual/services/wfs.rst:735
+msgid "with the *update.xml* document:"
+msgstr "su *update.xml* dokumentu:"
+
+#: ../../docs/server_manual/services/wfs.rst:756
+msgid "Delete features"
+msgstr "Trinti geoobjektus"
+
+#: ../../docs/server_manual/services/wfs.rst:765
+msgid "with the *delete.xml* document:"
+msgstr "su *delete.xml* dokumentu:"

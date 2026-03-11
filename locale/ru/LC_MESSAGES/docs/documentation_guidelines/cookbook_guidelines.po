@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Asdfgr Wertyu, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-27 20:20+0100\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Перевод - это работа сообщества : ссылка:`Вы можете присоединиться`. Эта "
+"страница в настоящее время переводится |прогресс перевода|."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:6
+msgid "Writing code in the PyQGIS Cookbook"
+msgstr "Написание кода в поваренной книге PyQGIS"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:11
+msgid ""
+"If you are planning to add or update some chapters of the :ref:`PyQGIS-"
+"Developer-Cookbook`, then you should follow some rules to enable automatic "
+"testing of the code snippets."
+msgstr ""
+"Если вы планируете добавить или обновить некоторые главы :ref:`PyQGIS- "
+"Разработчик- Книга рецептов`, то вам следует соблюдать некоторые правила, "
+"чтобы обеспечить автоматическое тестирование фрагментов кода."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:15
+msgid ""
+"Testing is really important because it allows automatic checking of the "
+"code. Code snippets with errors or code that uses outdated methods will fail"
+" and the notification will help you fix the problems."
+msgstr ""
+"Тестирование очень важно, потому что оно позволяет автоматически проверять "
+"код. Фрагменты кода с ошибками или код, использующий устаревшие методы, не "
+"будут работать, и уведомление поможет вам устранить проблемы."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:19
+msgid ""
+"For testing, we use the `Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Refer to the extension "
+"documentation for more detailed information."
+msgstr ""
+"Для тестирования мы используем расширение `Sphinx doctest "
+"<https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html>`_. За "
+"более подробной информацией обращайтесь к документации по расширению."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:25
+msgid "How to write testable code snippets"
+msgstr "Как писать тестируемые фрагменты кода"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:27
+msgid ""
+"Writing testable code snippets is not so different from the *old* method. "
+"Basically, you need to use a different Sphinx `directive`."
+msgstr ""
+"Написание тестируемых фрагментов кода не так уж сильно отличается от "
+"*старого* метода. По сути, вам нужно использовать другую `директиву` Sphinx."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:31
+msgid "Doctest sphinx directives"
+msgstr "Директивы Doctest sphinx"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:33
+msgid ""
+"Instead of embedding the code in a ``.. code-block:: python`` directive "
+"(which would highlight the code syntax automatically), you now need to embed"
+" it in a ``.. testcode::``. That is, instead of  this::"
+msgstr ""
+"Вместо того чтобы вставлять код в директиву ``. кодовый блок:: python`` "
+"(которая автоматически выделит синтаксис кода), теперь вам нужно вставить "
+"его в ``. тестовый код::``. То есть вместо this::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:42
+msgid "You now use this::"
+msgstr "Теперь вы используете это::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:49
+msgid ""
+"After you wrote the example code, you should add some *assertion* that will "
+"evaluate the code and that will be run automatically."
+msgstr ""
+"После того как вы написали код примера, необходимо добавить *ассерцию*, "
+"которая будет оценивать код и выполняться автоматически."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:52
+msgid ""
+"In the above example, you are creating a crs and with ``assert "
+"crs.isValid()`` you **test** if it is valid. If the code has a wrong python "
+"syntax or the ``crs.isValid()`` returns ``False``, this code snippet will "
+"fail during testing."
+msgstr ""
+"В приведенном выше примере вы создаете crs и с помощью ``assert "
+"crs.isValid()`` проверяете**, является ли он действительным. Если код имеет "
+"неправильный синтаксис python или ``crs.isValid()`` возвращает ``False``, "
+"этот фрагмент кода будет неудачным при тестировании."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:56
+msgid ""
+"To successfully run the tests on snippets, you must import all the classes "
+"and declare any variables used in the code snippets. You can include those "
+"in the code snippet itself (visible in the HTML pages) or you can add them "
+"to a ``.. testsetup::`` directive (hidden in the HTML pages). The ``.. "
+"testsetup::`` needs to be placed before the ``.. testcode::``::"
+msgstr ""
+"Для успешного выполнения тестов на сниппетах необходимо импортировать все "
+"классы и объявить все переменные, используемые в сниппетах кода. Вы можете "
+"включить их в сам сниппет кода (видимый на HTML-страницах) или добавить их в"
+" директиву ``. testsetup::`` (скрытую на HTML-страницах). Директива ``. "
+"testsetup::`` должна быть размещена перед директивой ``. testcode::``:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:71
+msgid ""
+"If the code snippet doesn't create objects (and therefore you cannot use "
+"something like ``assert object.isValid()``), you can test the code using the"
+" ``print()`` method, then add the expected results within a ``.. "
+"testoutput::`` directive to compare the expected output::"
+msgstr ""
+"Если фрагмент кода не создает объекты (и поэтому вы не можете использовать "
+"что-то вроде ``assert object.isValid()``), вы можете протестировать код с "
+"помощью метода ``print()``, а затем добавить ожидаемые результаты в "
+"директиву ``. testoutput::`` для сравнения ожидаемого вывода::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:86
+msgid ""
+"By default, the content of ``.. testoutput::`` is shown in the HTML output. "
+"To hide it from the HTML use the `:hide:` option::"
+msgstr ""
+"По умолчанию содержимое ``...testoutput::`` отображается в HTML-выводе. "
+"Чтобы скрыть его из HTML, используйте опцию `:hide:`:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:97
+msgid ""
+"If the code snippet contains any print statements, you MUST add a "
+"``testoutput`` with the expected outputs; otherwise the test will fail."
+msgstr ""
+"Если фрагмент кода содержит какие-либо операторы печати, вы ДОЛЖНЫ добавить "
+"``testoutput`` с ожидаемыми результатами, иначе тест будет провален."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:101
+msgid "Grouping tests"
+msgstr "Группировка тестов"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:103
+msgid ""
+"For each rst document, the code snippets are tested sequentially, which "
+"means you can use one ``.. testsetup::`` for all the following code snippets"
+" and that later snippets will have access to variables declared in earlier "
+"ones in the document."
+msgstr ""
+"Для каждого первого документа фрагменты кода тестируются последовательно, "
+"что означает, что вы можете использовать один ``...testsetup::`` для всех "
+"последующих фрагментов кода и что последующие фрагменты будут иметь доступ к"
+" переменным, объявленным в предыдущих фрагментах документа."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:107
+msgid ""
+"Alternatively, you can use groups to break down the examples on the same "
+"page in different tests."
+msgstr ""
+"Кроме того, можно использовать группы, чтобы разбить примеры на одной "
+"странице на разные тесты."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:110
+msgid ""
+"You add the code snippet to groups by adding one or more group names "
+"(separated by commas) in the respective directive::"
+msgstr ""
+"Вы добавляете фрагмент кода в группы, добавляя одно или несколько имен групп"
+" (через запятую) в соответствующей директиве::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:118
+msgid ""
+"The ``doctest`` will pick each group snippets and run them independently."
+msgstr ""
+"Программа ``doctest`` выберет каждую группу фрагментов и выполнит их "
+"независимо."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:122
+msgid ""
+"Use group names that make sense with the related content. Use something "
+"similar to <chapter>_<subchapter>, for example: crs_intro, crs_fromwkt. In "
+"case of failures, this will help identifying where the failures occur."
+msgstr ""
+"Используйте названия групп, которые имеют смысл для связанного с ними "
+"контента. Используйте что-то похожее на <chapter>_<subchapter>, например: "
+"crs_intro, crs_fromwkt. В случае сбоев это поможет определить, где "
+"происходят сбои."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:127
+msgid ""
+"If you don't declare any group, the code snippet will be added to a group "
+"named ``default``. If instead, you use ``*`` as a group name, the snippet "
+"will be used in all testing groups, something normally useful to use in the "
+"test setup::"
+msgstr ""
+"Если вы не объявите ни одной группы, фрагмент кода будет добавлен в группу с"
+" именем ``умолчанию``. Если вместо этого вы используете ``*`` в качестве "
+"имени группы, сниппет будет использоваться во всех группах тестирования, что"
+" обычно полезно использовать при настройке тестов::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:136
+msgid "How to test snippets on your local machine"
+msgstr "Как тестировать сниппеты на локальной машине"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:138
+msgid "Instructions are valid for Linux system."
+msgstr "Инструкции действительны для системы Linux."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:140
+msgid ""
+"To test Python code snippets, you need a *QGIS* installation. For this, "
+"there are many options. You can:"
+msgstr ""
+"Для тестирования фрагментов кода Python необходима установка *QGIS*. Для "
+"этого существует множество вариантов. Вы можете:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:143
+msgid ""
+"Use your system *QGIS* installation with *Sphinx* from a Python virtual "
+"environment::"
+msgstr ""
+"Используйте вашу системную установку *QGIS* с *Sphinx* из виртуальной среды "
+"Python::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:148
+msgid "Use a manually built installation of *QGIS*. You'd need to:"
+msgstr "Используйте собранную вручную установку *QGIS*. Вам потребуется:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:150
+msgid ""
+"Create a custom ``Makefile`` extension on top of the :file:`venv.mk` file, "
+"for example a :file:`user.mk` file with the following content::"
+msgstr ""
+"Создайте пользовательское расширение ``Makefile`` поверх файла "
+":file:`venv.mk`, например, файл :file:`user.mk` со следующим содержимым::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:158
+msgid "Or ::"
+msgstr "Или ::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:165
+msgid "Then, use it to run target ``doctest``::"
+msgstr "Затем используйте его для запуска цели ``doctest``::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:169
+msgid "Run target ``doctest`` inside the official *QGIS* docker image::"
+msgstr "Запустите цель ``doctest`` внутри официального докер-образа *QGIS*::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:173
+msgid ""
+"You have to install `Docker <https://www.docker.com/>`_ first because this "
+"uses a docker image with QGIS in it."
+msgstr ""
+"Сначала необходимо установить `Docker <https://www.docker.com/>`_, потому "
+"что он использует образ docker с QGIS."

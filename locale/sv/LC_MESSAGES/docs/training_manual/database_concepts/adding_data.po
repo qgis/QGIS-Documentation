@@ -1,0 +1,348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Daniel Nylander <po@danielnylander.se>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-15 11:22+0000\n"
+"PO-Revision-Date: 2025-02-27 21:34+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Översättning är en gemenskapsinsats :ref:`du kan gå med i "
+"<translation_guidelines>`. Den här sidan är för närvarande översatt till "
+"|translation progress|."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:2
+msgid "Lesson: Adding Data to the Model"
+msgstr "Lektion: Lägga till data i modellen"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:4
+msgid ""
+"The models we've created will now need to be populated with the data they're"
+" intended to contain."
+msgstr ""
+"De modeller som vi har skapat måste nu fyllas med de data som de är avsedda "
+"att innehålla."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:7
+msgid ""
+"**The goal for this lesson:** To learn how to insert new data into the "
+"database models."
+msgstr ""
+"**Målet för den här lektionen:** Att lära sig hur man lägger in nya data i "
+"databasmodellerna."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:11
+msgid "Insert statement"
+msgstr "Infoga uttalande"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:13
+msgid ""
+"How do you add data to a table? The sql :kbd:`INSERT` statement provides the"
+" functionality for this:"
+msgstr ""
+"Hur lägger man till data i en tabell? Sql :kbd:`INSERT`-uttalandet "
+"tillhandahåller funktionaliteten för detta:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:20
+msgid "A couple of things to note:"
+msgstr "Ett par saker att notera:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:22
+msgid ""
+"After the table name (:kbd:`streets`), you list the column names that you "
+"will be populating (in this case only the :kbd:`name` column)."
+msgstr ""
+"Efter tabellnamnet (:kbd:`streets`) listar du de kolumnnamn som du ska fylla"
+" i (i det här fallet endast kolumnen :kbd:`name`)."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:24
+msgid "After the :kbd:`values` keyword, place the list of field values."
+msgstr "Efter nyckelordet :kbd:`values` placeras listan med fältvärden."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:25
+msgid "Strings should be quoted using single quotes."
+msgstr "Strängar ska citeras med enkla citattecken."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:26
+msgid ""
+"Note that we did not insert a value for the :kbd:`id` column; this is "
+"because it is a sequence and will be auto-generated."
+msgstr ""
+"Observera att vi inte har angett något värde för kolumnen :kbd:`id`, "
+"eftersom den är en sekvens och kommer att genereras automatiskt."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:28
+msgid ""
+"If you do manually set the :kbd:`id`, you may cause serious problems with "
+"the integrity of your database."
+msgstr ""
+"Om du manuellt ställer in :kbd:`id` kan du orsaka allvarliga problem med "
+"integriteten i din databas."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:31
+msgid "You should see :kbd:`INSERT 0 1` if it is successful."
+msgstr "Du bör se :kbd:`INSERT 0 1` om det lyckas."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:33
+msgid ""
+"You can see the result of your insert action by selecting all the data in "
+"the table:"
+msgstr ""
+"Du kan se resultatet av din insert-åtgärd genom att markera alla data i "
+"tabellen:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:40
+msgid "Result:"
+msgstr "Resultat:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:52
+msgid "Try Yourself: :abbr:`★☆☆ (Basic level)`"
+msgstr "Prova själv: :abbr:`★☆☆☆ (Grundläggande nivå)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:54
+msgid ""
+"Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` "
+"table."
+msgstr ""
+"Använd kommandot :kbd:`INSERT` för att lägga till en ny gata i tabellen "
+":kbd:`streets`."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:56
+#: ../../docs/training_manual/database_concepts/adding_data.rst:96
+msgid "Answer"
+msgstr "Svar"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:59
+msgid ""
+"The SQL command you should use looks like this (you can replace the street "
+"name with a name of your choice)::"
+msgstr ""
+"SQL-kommandot som du ska använda ser ut så här (du kan ersätta gatunamnet "
+"med ett namn som du själv väljer)::"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:66
+msgid "Sequencing Data Addition According to Constraints"
+msgstr "Sekvensering av datatillägg enligt begränsningar"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:69
+msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
+msgstr "Prova själv: :abbr:`★★☆ (Måttlig nivå)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:71
+msgid ""
+"Try to add a person object to the :kbd:`people` table with the following "
+"details::"
+msgstr ""
+"Försök att lägga till ett personobjekt i tabellen :kbd:`people` med följande"
+" uppgifter::"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:78
+msgid ""
+"Recall that in this example, we defined phone numbers as strings, not "
+"integers."
+msgstr ""
+"Kom ihåg att vi i det här exemplet definierade telefonnummer som strängar, "
+"inte heltal."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:81
+msgid ""
+"At this point, you should have an error report if you try to do this without"
+" first creating a record for Main Street in the :kbd:`streets` table."
+msgstr ""
+"Nu bör du få en felrapport om du försöker göra det här utan att först skapa "
+"en post för Main Street i tabellen :kbd:`streets`."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:84
+msgid "You should have also noticed that:"
+msgstr "Det borde du också ha märkt:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:86
+msgid "You can't add the street using its name"
+msgstr "Du kan inte lägga till gatan genom att använda dess namn"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:87
+msgid ""
+"You can't add a street using a street :kbd:`id` before first creating the "
+"street record on the streets table"
+msgstr ""
+"Du kan inte lägga till en gata med hjälp av en gata :kbd:`id` innan du först"
+" skapar gatuposten i tabellen streets"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:90
+msgid ""
+"Remember that our two tables are linked via a Primary/Foreign Key pair. This"
+" means that no valid person can be created without there also being a valid "
+"corresponding street record."
+msgstr ""
+"Kom ihåg att våra två tabeller är länkade via ett Primary/Foreign Key-par. "
+"Detta innebär att ingen giltig person kan skapas utan att det också finns en"
+" giltig motsvarande gatupost."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:94
+msgid "Using the above knowledge, add the new person to the database."
+msgstr ""
+"Lägg till den nya personen i databasen med hjälp av ovanstående kunskaper."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:99
+msgid "Here is the correct SQL statement::"
+msgstr "Här är den korrekta SQL-satsen::"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:105
+msgid ""
+"If you look at the streets table again (using a select statement as before),"
+" you'll see that the :guilabel:`id` for the ``Main Road`` entry is *2*."
+msgstr ""
+"Om du tittar på gatutabellen igen (med en select-sats som tidigare) ser du "
+"att :guilabel:`id` för posten ``Main Road`` är *2*."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:108
+msgid ""
+"That's why we could merely enter the number ``2`` above. Even though we're "
+"not seeing ``Main Road`` written out fully in the entry above, the database "
+"will be able to associate that with the :guilabel:`street_id` value of *2*."
+msgstr ""
+"Det är därför vi bara kan ange numret ``2`` ovan. Även om vi inte ser ``Main"
+" Road`` helt utskriven i posten ovan, kommer databasen att kunna associera "
+"det med :guilabel:`street_id`-värdet *2*."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:112
+msgid ""
+"If you have already added a new street object, you might find that the new "
+"``Main Road`` has an :guilabel:`id` of *3* not *2*."
+msgstr ""
+"Om du redan har lagt till ett nytt gatuobjekt kan du upptäcka att den nya "
+"``Main Road`` har ett :guilabel:`id` på *3* inte *2*."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:117
+msgid "Select data"
+msgstr "Välj data"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:119
+msgid ""
+"We have already shown you the syntax for selecting records. Let's look at a "
+"few more examples:"
+msgstr ""
+"Vi har redan visat dig syntaxen för att välja poster. Låt oss titta på några"
+" fler exempel:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:135
+msgid ""
+"In later sessions we will go into more detail on how to select and filter "
+"data."
+msgstr ""
+"I senare sessioner kommer vi att gå in mer i detalj på hur man väljer och "
+"filtrerar data."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:138
+msgid "Update data"
+msgstr "Uppdatera data"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:140
+msgid ""
+"What if you want to make a change to some existing data? For example, a "
+"street name is changed:"
+msgstr ""
+"Vad händer om du vill göra en ändring i befintliga data? Till exempel om ett"
+" gatunamn ändras:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:147
+msgid ""
+"Be very careful using such update statements - if more than one record "
+"matches your :kbd:`WHERE` clause, they will all be updated!"
+msgstr ""
+"Var mycket försiktig när du använder sådana uppdateringssatser - om mer än "
+"en post matchar din :kbd:`WHERE`-klausul kommer de alla att uppdateras!"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:150
+msgid ""
+"A better solution is to use the primary key of the table to reference the "
+"record to be changed:"
+msgstr ""
+"En bättre lösning är att använda tabellens primärnyckel för att referera "
+"till den post som ska ändras:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:157
+msgid "It should return :kbd:`UPDATE 1`."
+msgstr "Den bör returnera :kbd:`UPDATE 1`."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:159
+msgid ""
+"the :kbd:`WHERE` statement criteria are case sensitive :kbd:`Main Road` is "
+"not the same as :kbd:`Main road`"
+msgstr ""
+"kriterierna för :kbd:`WHERE` är skiftlägeskänsliga :kbd:`Main Road` är inte "
+"samma sak som :kbd:`Main road`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:163
+msgid "Delete Data"
+msgstr "Radera data"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:165
+msgid ""
+"In order to delete an object from a table, use the :kbd:`DELETE` command:"
+msgstr ""
+"För att ta bort ett objekt från en tabell använder du kommandot "
+":kbd:`DELETE`:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:171
+msgid "Let's look at our people table now:"
+msgstr "Låt oss titta på vårt folkbord nu:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:182
+msgid "Try Yourself: :abbr:`★★★ (Advanced level)`"
+msgstr "Prova själv: :abbr:`★★★★ (Avancerad nivå)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:184
+msgid ""
+"Use the skills you have learned to add some new friends to your database:"
+msgstr ""
+"Använd de färdigheter du har lärt dig för att lägga till några nya vänner i "
+"din databas:"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:197
+msgid "In Conclusion"
+msgstr "Sammanfattningsvis"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:199
+msgid ""
+"Now you know how to add new data to the existing models you created "
+"previously. Remember that if you want to add new kinds of data, you may want"
+" to modify and/or create new models to contain that data."
+msgstr ""
+"Nu vet du hur du lägger till nya data i de befintliga modeller som du "
+"skapade tidigare. Kom ihåg att om du vill lägga till nya typer av data kan "
+"du behöva ändra och/eller skapa nya modeller som innehåller dessa data."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:204
+msgid "What's Next?"
+msgstr "Vad händer härnäst?"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:206
+msgid ""
+"Now that you've added some data, you'll learn how to use queries to access "
+"this data in various ways."
+msgstr ""
+"Nu när du har lagt till några data ska du lära dig hur du använder frågor "
+"för att komma åt dessa data på olika sätt."

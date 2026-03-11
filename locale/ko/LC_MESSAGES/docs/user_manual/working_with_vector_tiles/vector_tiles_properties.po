@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# 
+# Translators:
+# Harrissou Sant-anna, 2023
+# Transifex Bot <>, 2023
+# Kwon.Yongchan <ruvyn@naver.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.28\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-03 15:20+0000\n"
+"PO-Revision-Date: 2023-03-19 14:53+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:6
+msgid "Working with Vector Tiles"
+msgstr "벡터 타일 작업"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:14
+msgid "What are Vector Tiles?"
+msgstr "벡터 타일이란?"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:16
+msgid ""
+"Vector tiles are packets of geographic data, packaged into pre-defined "
+"roughly-square shaped \"tiles\" for transfer over the web. They combine pre-"
+"rendered raster map tiles and vector map tiles. The vector tile server "
+"returns vector map data, which has been clipped to the boundaries of each "
+"tile, instead of a pre-rendered map image. The clipped tiles represent the "
+"zoom-levels of the vector tile service, derived from a pyramid approach. "
+"Using this structure, the data-transfer is reduced in comparison to un-tiled"
+" vector maps. Only data within the current map view, and at the current zoom"
+" level need to be transferred. Also, compared to a tiled raster map, data "
+"transfer is also greatly reduced, as vector data is typically much smaller "
+"than a rendered bitmap. Vector tiles do not have any styling information "
+"assigned so QGIS needs to apply a cartographic style in order to display the"
+" data."
+msgstr ""
+"벡터 타일이란 지리 데이터의 패킷으로, 웹을 통해 전송하기 위해 사전 정의된 대략 정사각형 모양의 \"타일\" 을 말합니다. 사전 "
+"렌더링된 래스터 맵 타일과 벡터 맵 타일을 결합한 것입니다. 벡터 타일 서버는 사전 렌더링된 맵 이미지 대신 각 타일의 경계선을 따라 "
+"자른 벡터 맵 데이터를 반환합니다. 이렇게 자른 타일은 피라미드 접근법에서 파생된 벡터 타일 서비스의 확대/축소 수준을 나타냅니다. 이 "
+"구조를 사용하면, 타일화되지 않은 벡터 맵보다 데이터 전송량이 줄어듭니다. 현재 확대/축소 수준에서 현재 맵 뷰에 보이는 데이터만 "
+"전송하면 되니까요. 또 타일화된 래스터 맵과 비교해도 － 벡터 데이터가 일반적으로 렌더링된 비트맵보다 훨신 용량이 작기 때문에 － 데이터"
+" 전송량이 훨씬 줄어듭니다. 벡터 타일에는 할당된 스타일 작업이 없기 때문에, 데이터를 표시하기 위해서는 QGIS가 지도 제작 스타일을 "
+"적용해야 합니다."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:36
+msgid "Pyramid structure of vector tiles with zoom-levels"
+msgstr "확대/축소 수준을 가진 벡터 타일의 피라미드 구조"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:40
+msgid "Supported Formats"
+msgstr "지원 포맷"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:42
+msgid "There is support for vector tiles through:"
+msgstr "다음을 통해 벡터 타일을 지원할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:44
+msgid ""
+"remote sources (HTTP/S) - with XYZ template - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+msgstr ""
+"원격 소스(HTTP/S) - XYZ 템플릿과 함께 － 예: "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:45
+msgid ""
+"local files - with XYZ template - e.g. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+msgstr ""
+"로컬 파일 - XYZ 템플릿과 함께 － 예: "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:46
+msgid ""
+"local MBTiles database - e.g. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+msgstr ""
+"로컬 MBTiles 데이터베이스 － 예: ``type=mbtiles&url=file:///path/to/file.mbtiles``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:48
+msgid ""
+"To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| "
+":guilabel:`Vector Tile` tab in the :guilabel:`Data Source Manager` dialog. "
+"Read :ref:`vector_tiles` for more details."
+msgstr ""
+":guilabel:`Data Source Manager` 대화창에 있는 |addVectorTileLayer| "
+":guilabel:`Vector Tile` 탭을 통해 QGIS로 벡터 타일 데이터셋을 불러올 수 있습니다. 더 자세한 내용은 "
+":ref:`vector_tiles` 를 읽어보세요."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:121
+msgid "addVectorTileLayer"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:55
+msgid "Vector Tiles Dataset Properties"
+msgstr "벡터 타일 데이터셋 속성"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:58
+msgid "Information Properties"
+msgstr "정보 속성"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:60
+msgid ""
+"The :guilabel:`Information` tab is read-only and represents an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. Provided information are:"
+msgstr ""
+":guilabel:`Information` 탭은 읽기 전용으로, 현재 레이어에 대한 요약 정보 및 메타데이터를 한 눈에 볼 수 있는 "
+"흥미로운 장소입니다. 다음과 같은 정보를 제공합니다:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:64
+msgid ""
+"based on the provider of the layer: name, URI, source type and path, number "
+"of zoom levels"
+msgstr "레이어 제공자 기반: 이름, URI, 소스 유형 및 경로, 확대/축소 수준 개수"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:66
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr "좌표계: 이름, 단위, 메소드, 정확도, 참조(예: 정적인지 동적인지 여부)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:68
+msgid ""
+"picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+":ref:`채워진 메타데이터 <vectortilesmetadatamenu>` 로부터 선택: 접근, 범위, 링크, 연락처, 이력, ..."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:72
+msgid "Symbology and Label Properties"
+msgstr "심볼 및 라벨 속성"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:79
+msgid "Vector Tile Layer Symbology"
+msgstr "벡터 타일 레이어 심볼"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:81
+msgid ""
+"As vector tiles consist of point, line and polygon geometries, the "
+"respective symbols are available. To apply a cartographic style you need to "
+"use a :guilabel:`Style URL` when creating the :guilabel:`Vector Tiles "
+"Connection`. The symbology will be shown immediately in the |symbology| "
+":guilabel:`Symbology` tab after clicking the :guilabel:`OK` button."
+msgstr ""
+"벡터 타일이 포인트, 라인 및 폴리곤 도형으로 이루어져 있기 때문에, 각각의 심볼을 사용할 수 있습니다. 지도 제작 스타일을 적용하려면 "
+":guilabel:`Vector Tiles Connection` 을 생성할 때 :guilabel:`Style URL` 을 사용해야 "
+"합니다. :guilabel:`OK` 버튼을 클릭한 직후 |symbology| :guilabel:`Symbology` 탭에 심볼이 표시될 "
+"것입니다."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:125
+msgid "symbology"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:87
+msgid ""
+"To create your own cartographic style you can define a set of :ref:`rules "
+"<rule_based_rendering>` for features and apply style and label. In "
+":numref:`figure_vector_tile_symbology` we set up style and labeling for the "
+"OpenStreetMap ``landuse`` layer. The settings are made for the class "
+"``suburb`` here. For better visibility most of the rules are deselected."
+msgstr ""
+"사용자 자신의 지도 제작 스타일을 생성하려면 피처에 대한 :ref:`규칙 <rule_based_rendering>` 집합을 정의해서 "
+"스타일과 라벨에 적용하면 됩니다. :numref:`figure_vector_tile_symbology` 는 오픈스트리트맵 "
+"``landuse`` 레이어에 스타일 및 라벨 작업을 설정하는 모습입니다. 여기에서는 ``suburb`` 범주에 설정합니다. 가시성을 "
+"확보하기 위해 규칙 대부분을 선택 해제합니다."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:93
+msgid ""
+"At the bottom the :guilabel:`Current Zoom` is shown. Check the "
+":guilabel:`Visible rules only` option to filter the list of rules to only "
+"those that are visible at the given zoom level. This makes it easier to work"
+" with complex vector styling and to locate troublesome rules. Style and "
+"labelling can be dependent on the zoom level."
+msgstr ""
+"하단에 :guilabel:`Current Zoom` 이 보입니다. :guilabel:`Visible rules only` 옵션을 체크하면"
+" 지정한 확대/축소 수준에서 가시화되는 규칙 목록으로만 필터링합니다. 이렇게 하면 복잡한 벡터 스타일 작업을 쉽게 해주고, 문제가 생길 "
+"가능성이 있는 규칙을 구분하게 해줍니다. 스타일 및 라벨은 확대/축소 수준에 따라 달라질 수 있습니다."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:99
+msgid ""
+"There is also the option to import styles. Those styles can be supplied as:"
+msgstr "스타일을 가져올 수 있는 옵션도 있습니다. 다음과 같은 형식의 스타일을 지정할 수 있습니다:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:101
+msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
+msgstr ":guilabel:`QML` 파일 (:ref:`qgisstylefile`)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:102
+msgid ":guilabel:`MapBox GL Json` style configuration files"
+msgstr ":guilabel:`MapBox GL Json` 스타일 환경설정 파일"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:108
+msgid "Metadata Properties"
+msgstr "메타데이터 속성"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:110
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"|editMetadata| :guilabel:`Metadata` 탭에 사용자 레이어에 대한 메타데이터 리포트를 생성하고 편집할 수 있는 "
+"옵션이 있습니다. 더 자세한 정보는 :ref:`metadatamenu` 를 참조하세요."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles_properties.rst:123
+msgid "editMetadata"
+msgstr ""

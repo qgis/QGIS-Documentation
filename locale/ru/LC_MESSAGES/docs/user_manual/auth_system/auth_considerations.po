@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# 
+# Translators:
+# Asdfgr Wertyu, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.34\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-02 10:51+0100\n"
+"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2025\n"
+"Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort `you can join "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. This page is currently translated at |translation progress|."
+msgstr ""
+"Перевод осуществляется сообществом, вы можете присоединиться "
+"<https://qgis.org/en/site/getinvolved/translate.html#becoming-a-"
+"translator>`_. Эта страница в настоящее время переведена |translation "
+"progress|."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:4
+msgid "Security Considerations"
+msgstr "Соображения безопасности"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:11
+msgid ""
+"Once the master password is entered, the API is open to access "
+"authentication configs in the authentication database, similar to how "
+"Firefox works. However, in the initial implementation, no wall against "
+"PyQGIS access has been defined. This may lead to issues where a user "
+"downloads/installs a malicious PyQGIS plugin or standalone app that gains "
+"access to authentication credentials."
+msgstr ""
+"После ввода мастер-пароля API открывается для доступа к конфигурациям "
+"аутентификации в базе данных аутентификации, аналогично тому, как работает "
+"Firefox. Однако в первоначальной реализации не было определено никакой стены"
+" против доступа к PyQGIS. Это может привести к проблемам, когда пользователь"
+" загружает/устанавливает вредоносный плагин PyQGIS или отдельное приложение,"
+" которое получает доступ к учетным данным аутентификации."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:17
+msgid ""
+"The quick solution for initial release of feature is to just not include "
+"most PyQGIS bindings for the authentication system."
+msgstr ""
+"Быстрое решение для первоначального выпуска функции - просто не включать "
+"большинство привязок PyQGIS для системы аутентификации."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:20
+msgid ""
+"Another simple, though not robust, fix is to add a combobox in "
+":menuselection:`Settings --> Options --> Authentication` (defaults to "
+"\"never\"):"
+msgstr ""
+"Еще одно простое, хотя и не надежное исправление - добавить combobox в "
+":menuselection:`Настройки --> Параметры --> Аутентификация` (по умолчанию "
+"«никогда»):"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:28
+msgid ""
+"Such an option's setting would need to be saved in a location non-accessible"
+" to Python, e.g. the authentication database, and encrypted with the master "
+"password."
+msgstr ""
+"Параметры такой опции должны быть сохранены в недоступном для Python месте, "
+"например, в базе данных аутентификации, и зашифрованы мастер-паролем."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:32
+msgid "Another option may be to track which plugins the user has specifically"
+msgstr ""
+"Другой вариант - отслеживать, какие именно плагины установлены у "
+"пользователя"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:33
+msgid ""
+"allowed to access the authentication system, though it may be tricky to "
+"deduce which plugin is actually making the call."
+msgstr ""
+"разрешен доступ к системе аутентификации, хотя вычислить, какой именно "
+"плагин выполняет вызов, может быть непросто."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:37
+msgid ""
+"Sandboxing plugins, possibly in their own virtual environments, would reduce"
+" 'cross-plugin' hacking of authentication configs from another plugin that "
+"is authorized. This might mean limiting cross-plugin communication as well, "
+"but maybe only between third-party plugins."
+msgstr ""
+"Песочница плагинов, возможно, в их собственных виртуальных средах, уменьшит "
+"«кросс-плагиновый» взлом конфигураций аутентификации из другого плагина, "
+"который авторизован. Это может означать ограничение кросс-плагинового "
+"взаимодействия, но, возможно, только между сторонними плагинами."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:42
+msgid ""
+"Another good solution is to issue code-signing certificates to vetted plugin"
+" authors. Then validate the plugin's certificate upon loading. If need be "
+"the user can also directly set an untrusted policy for the certificate "
+"associated with the plugin using existing certificate management dialogs."
+msgstr ""
+"Еще одно хорошее решение - выдавать сертификаты подписи кода проверенным "
+"авторам плагинов. Затем проверять сертификат плагина при загрузке. При "
+"необходимости пользователь также может напрямую установить политику "
+"недоверия для сертификата, связанного с плагином, используя существующие "
+"диалоги управления сертификатами."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:47
+msgid ""
+"Alternatively, access to sensitive authentication system data from Python"
+msgstr ""
+"Кроме того, доступ к конфиденциальным данным системы аутентификации из "
+"Python"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:48
+msgid ""
+"could never be allowed, and only the use of QGIS core widgets, or "
+"duplicating authentication system integrations, would allow the plugin to "
+"work with resources that have an authentication configuration, while keeping"
+" master password and authentication config loading in the realm of the main "
+"app."
+msgstr ""
+"не может быть разрешена, и только использование виджетов ядра QGIS или "
+"дублирование интеграций системы аутентификации позволит плагину работать с "
+"ресурсами, имеющими конфигурацию аутентификации, при этом загрузка мастер-"
+"пароля и конфигурации аутентификации останется в сфере основного приложения."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:54
+msgid ""
+"The same security concerns apply to C++ plugins, though it will be harder to"
+" restrict access, since there is no function binding to simply be removed as"
+" with Python."
+msgstr ""
+"Те же проблемы безопасности относятся и к плагинам C++, хотя ограничить "
+"доступ к ним будет сложнее, поскольку нет привязки к функциям, которую можно"
+" просто удалить, как в Python."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:59
+msgid "Restrictions"
+msgstr "Ограничения"
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:61
+msgid ""
+"The confusing `licensing and exporting`_ issues associated with OpenSSL "
+"apply. In order for Qt to work with SSL certificates, it needs access to the"
+" OpenSSL libraries. Depending upon how Qt was compiled, the default is to "
+"dynamically link to the OpenSSL libs at run-time (to avoid the export "
+"limitations)."
+msgstr ""
+"К OpenSSL применимы запутанные вопросы `лицензирования и экспорта`. Для того"
+" чтобы Qt мог работать с SSL-сертификатами, ему необходим доступ к "
+"библиотекам OpenSSL. В зависимости от того, как был скомпилирован Qt, по "
+"умолчанию он динамически компонуется с библиотеками OpenSSL во время "
+"выполнения (чтобы избежать ограничений на экспорт)."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:66
+msgid ""
+"QCA follows a similar tactic, whereby linking to QCA incurs no restrictions,"
+" because the qca-ossl (OpenSSL) plugin is loaded at run-time. The qca-ossl "
+"plugin is directly linked to the OpenSSL libs. Packagers would be the ones "
+"needing to ensure any OpenSSL-linking restrictions are met, if they ship the"
+" plugin. Maybe.  I don't really know. I'm not a lawyer."
+msgstr ""
+"QCA следует аналогичной тактике, при которой связывание с QCA не накладывает"
+" никаких ограничений, поскольку плагин qca-ossl (OpenSSL) загружается во "
+"время выполнения. Плагин qca-ossl напрямую связан с библиотеками OpenSSL. "
+"Упаковщики должны будут убедиться в том, что все ограничения на привязку к "
+"OpenSSL соблюдены, если они поставляют плагин. Возможно. На самом деле я не "
+"знаю. Я не юрист."
+
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:72
+msgid ""
+"The authentication system safely disables itself when ``qca-ossl`` is not "
+"found at run-time."
+msgstr ""
+"Система аутентификации безопасно отключается, если ``qca-ossl`` не найдена "
+"во время выполнения."
