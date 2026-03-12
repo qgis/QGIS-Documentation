@@ -32,7 +32,7 @@ find $SOURCEPOFILES -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
 # each reference is made of 5 lines and a blank line
 sed -i "/$PROJECT/,+5d" $CONFIGFILE
 
-for POFILE in `find $SOURCEPOFILES -type f -name '*.po'`
+for POFILE in `find $SOURCEPOFILES -not -path '*/\.*' -type f -name '*.po'`
 do
   #echo $POFILE
   # get the po file, replacing 'en' with '<lang>' and removing double '//'s in path
