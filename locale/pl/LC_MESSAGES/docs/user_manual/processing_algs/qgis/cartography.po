@@ -7,19 +7,19 @@
 # Translators:
 # Harrissou Sant-anna, 2025
 # Transifex Bot <>, 2025
-# Milena Nowotarska <do.milenki@gmail.com>, 2025
+# Milena Nowotarska <do.milenki@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-02 02:18+0000\n"
+"POT-Creation-Date: 2025-05-23 07:49+0000\n"
 "PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Milena Nowotarska <do.milenki@gmail.com>, 2025\n"
+"Last-Translator: Milena Nowotarska <do.milenki@gmail.com>, 2026\n"
 "Language-Team: Polish (https://app.transifex.com/qgis/teams/6144/pl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 "Language: pl\n"
@@ -832,9 +832,54 @@ msgstr "Domyślnie: 96.0"
 msgid "**Algorithm ID**: ``native:extractlabels``"
 msgstr "**ID algorytmu**: ``native:extractlabels``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1291
+msgid "Print layout map extent to layer"
+msgstr "Zasięg mapy z wydruku jako warstwa"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1293
+msgid ""
+"Creates a polygon layer containing the extent of a print layout map item (or"
+" items), with attributes specifying the map size (in layout units, i.e. the "
+":ref:`reference map <reference_map>` units), scale and rotation."
+msgstr ""
+"Algorytm tworzy warstwę poligonową zawierającą zasięg mapy (lub map) z "
+"układu wydruku, z atrybutami określającymi rozmiar mapy (w jednostkach "
+"układu, na przykład  w jednostkach :ref:`mapy referencyjnej <reference_map> "
+"` ), skalę i obrót."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1297
+msgid ""
+"If the map item parameter is specified, then only the matching map extent "
+"will be exported. If it is not specified, all map extents from the layout "
+"will be exported."
+msgstr ""
+"Jeśli parametr mapy zostanie określony, eksportowany będzie tylko pasujący "
+"zasięg mapy. Jeśli nie zostanie określony, wyeksportowane zostaną wszystkie "
+"zasięgi map z układu."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1300
+msgid ""
+"Optionally, a specific output CRS can be specified. If it is not specified, "
+"the original map item CRS will be used."
+msgstr ""
+"Opcjonalnie można określić konkretny wyjściowy układ współrzędnych. Jeśli "
+"nie zostanie określony, zostanie użyty oryginalny układ współrzędnych mapy."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1320
+msgid "A print layout in the current project"
+msgstr "Układ wydruku w bieżącym projekcie"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1321
+msgid "**Map item**"
+msgstr "**Mapa**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1324
 msgid "``MAP``"
 msgstr "``MAP``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1327
+msgid "Default: *All the map items*"
+msgstr "Domyślnie: *Wszystkie obiekty mapowe*"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1332
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1379
@@ -849,6 +894,10 @@ msgstr "**Zasięg**"
 msgid "[vector: polygon]"
 msgstr "[vector: polygon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1354
+msgid "**Overrride CRS**"
+msgstr "**Nadpisz układ współrzędnych**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1357
 msgid "``CRS``"
 msgstr "``CRS``"
@@ -856,6 +905,10 @@ msgstr "``CRS``"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1358
 msgid "[crs]"
 msgstr "[układ współrzędnych]"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1360
+msgid "Default: *The layout CRS*"
+msgstr "Domyślnie: *Układ współrzędnych układu wydruku*"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1376
 msgid "``HEIGHT``"
@@ -873,6 +926,17 @@ msgstr "``WIDTH``"
 msgid "**Algorithm ID**: ``native:printlayoutmapextenttolayer``"
 msgstr "**ID algorytmu**: ``native:printlayoutmapextenttolayer``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1410
+msgid "Set layer style"
+msgstr "Ustaw styl warstwy"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1412
+msgid ""
+"Applies a provided style to a layer. The style must be defined in a "
+":file:`QML` file."
+msgstr ""
+"Stosuje styl do warstwy. Styl musi być zdefiniowany jako plik :file:`QML`."
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1428
 msgid "**Input Layer**"
 msgstr "**Warstwa wejściowa**"
@@ -882,9 +946,59 @@ msgstr "**Warstwa wejściowa**"
 msgid "[layer]"
 msgstr "[warstwa]"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1431
+msgid "Input layer you want to apply the style to"
+msgstr "Warstwa wejściowa, dla której chcesz przypisać styl"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1432
+msgid "**Style file**"
+msgstr "**Plik stylu**"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1435
+msgid "Path to the ``.qml`` file of the style"
+msgstr "Pełna ścieżka do pliku ``.qml`` ze stylem"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1456
 msgid "**Algorithm ID**: ``native:setlayerstyle``"
 msgstr "**ID algorytmu**: ``native:setlayerstyle``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1466
+msgid "Topological coloring"
+msgstr "Kolorowanie topologiczne"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1467
+msgid ""
+"Assigns a color index to polygon features in such a way that no adjacent "
+"polygons share the same color index, whilst minimizing the number of colors "
+"required."
+msgstr ""
+"Algorytm przypisuje indeks koloru do obiektów poligonowych w taki sposób, że"
+" żadne sąsiadujące poligony nie mają tego samego indeksu koloru, "
+"minimalizując jednocześnie liczbę wymaganych kolorów."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1470
+msgid "The algorithm allows choice of method to use when assigning colors."
+msgstr "Algorytm umożliwia wybór metody przypisywania kolorów."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1472
+msgid ""
+"A minimum number of colors can be specified if desired. The color index is "
+"saved to a new attribute named **color_id**."
+msgstr ""
+"W razie potrzeby można określić minimalną liczbę kolorów. Indeks koloru jest"
+" zapisywany w nowym atrybucie o nazwie **color_id**."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1481
+msgid "Topological colors example"
+msgstr "Przykład kolorowania topologicznego"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1498
+msgid "The input polygon layer"
+msgstr "Wejściowa warstwa poligonowa"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1499
+msgid "**Minimum number of colors**"
+msgstr "**Minimalna liczba kolorów**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1500
 msgid "``MIN_COLORS``"
@@ -894,6 +1008,14 @@ msgstr "``MIN_COLORS``"
 msgid "Default: 4"
 msgstr "Domyślnie: 4"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1504
+msgid "The minimum number of colors to assign. Minimum 1, maximum 1000."
+msgstr "Minimalna liczba kolorów do przypisania. Minimum 1, maksimum 1000."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1506
+msgid "**Minimum distance between features**"
+msgstr "**Minimalna odległość między obiektami**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1507
 msgid "``MIN_DISTANCE``"
 msgstr "``MIN_DISTANCE``"
@@ -902,17 +1024,56 @@ msgstr "``MIN_DISTANCE``"
 msgid "Default: 0.0"
 msgstr "Domyślnie: 0.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1514
+msgid "**Balance color assignment**"
+msgstr "**Balansuj przypisywanie kolorów**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1515
 msgid "``BALANCE``"
 msgstr "``BALANCE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1542
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1564
+msgid "**Colored**"
+msgstr "**Pokolorowane**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1572
 msgid "**Algorithm ID**: ``qgis:topologicalcoloring``"
 msgstr "**ID algorytmu**: ``qgis:topologicalcoloring``"
 
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1582
+msgid "Transfer annotations from main layer"
+msgstr "Przenieś adnotacje z warstwy głównej"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1584
+msgid ""
+"Transfers all :ref:`annotations <annotation_layer>` from the main annotation"
+" layer in a project to a new annotation layer. Items placement can then be "
+"adjusted within the layer stack."
+msgstr ""
+"Algorytm przenosi wszystkie :ref:`adnotacje <annotation_layer>` z głównej "
+"warstwy adnotacji w projekcie do nowej warstwy adnotacji."
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1599
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1617
+msgid "**New layer name**"
+msgstr "**Nazwa nowej warstwy**"
+
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1600
 msgid "``LAYER_NAME``"
 msgstr "``LAYER_NAME``"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1603
+msgid "Default: 'Annotations'"
+msgstr "Domyślnie: 'Przypisy'"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1604
+msgid "Name of the annotations layer to create"
+msgstr "Nazwa warstwy  z adnotacjami, która ma zostać utworzona"
+
+#: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1620
+msgid "A layer with items from the main annotation layer"
+msgstr "Warstwa z obiektami z głównej warstwy adnotacji"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:1625
 msgid "**Algorithm ID**: ``native:transferannotationsfrommain``"
