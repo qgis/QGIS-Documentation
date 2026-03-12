@@ -466,7 +466,7 @@ To create an animation:
    the camera positions/rotations at set times, and interpolating them in between
    these keyframes. Various :guilabel:`Interpolation` modes for animations are
    available (eg, linear, inQuad, outQuad, inCirc... -- more details at
-   https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
+   https://doc.qt.io/archives/qt-5.15/qeasingcurve.html#EasingFunction-typedef).
 
    The animation can also be previewed by moving the time slider.
    Keeping the :guilabel:`Loop` box checked will repeatedly run the
