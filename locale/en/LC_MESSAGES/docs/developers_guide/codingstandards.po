@@ -1,0 +1,564 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at "
+"|translation progress|."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:5
+msgid "QGIS Coding Standards"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:10
+msgid ""
+"QGIS coding standards are described in the policy document available at "
+"`QEP #314 <https://github.com/qgis/QGIS-Enhancement-"
+"Proposals/blob/master/qep-314-coding-style.md>`_. All developers are "
+"required to follow those policies. Please note that QEP #314 is a live "
+"document, and that these policies may change over time."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:15
+msgid "Classes"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:19
+msgid "Accessor Functions"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:21
+msgid ""
+"Ensure that accessors are correctly marked with ``const``. Where "
+"appropriate, this may require that cached value type member variables are"
+" marked with ``mutable``."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:27
+msgid "Function Arguments"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:29
+msgid ""
+"Pay careful attention to when arguments should be passed by reference. "
+"Unless argument objects are small and trivially copied (such as QPoint "
+"objects), they should be passed by const reference. For consistency with "
+"the Qt API, even implicitly shared objects are passed by const reference "
+"(e.g. ``setTitle( const QString& title )`` instead of ``setTitle( QString"
+" title )``."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:38
+msgid "Function Return Values"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:40
+msgid ""
+"Return small and trivially copied objects as values. Larger objects "
+"should be returned by const reference. The one exception to this is "
+"implicitly shared objects, which are always returned by value. Return "
+"``QObject`` or subclassed objects as pointers."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:45
+msgid "``int maximumValue() const``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:46
+msgid "``const LayerSet& layers() const``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:47
+msgid "``QString title() const`` (``QString`` is implicitly shared)"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:48
+msgid "``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:49
+msgid ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits "
+"``QObject``)"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:50
+msgid ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
+"abstract and will probably need to be casted)"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:55
+msgid "API Documentation"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:57
+msgid ""
+"It is required to write API documentation for every class, method, enum "
+"and other code that is available in the public API."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:60
+msgid ""
+"QGIS uses `Doxygen <https://www.doxygen.nl/index.html>`_ for "
+"documentation. Write descriptive and meaningful comments that give a "
+"reader information about what to expect, what happens in edge cases and "
+"give hints about other interfaces he could be looking for, best practices"
+" and code samples."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:67
+msgid "Members Variables"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:69
+msgid ""
+"Member variables should normally be in the ``private`` section and made "
+"available via getters and setters. One exception to this is for data "
+"containers like for error reporting. In such cases do not prefix the "
+"member with an ``m``."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:75
+msgid "Qt Designer"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:78
+msgid "Generated Classes"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:80
+msgid ""
+"QGIS classes that are generated from Qt Designer (ui) files should have a"
+" Base suffix. This identifies the class as a generated base class."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:83
+msgid "Examples:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:85
+msgid "``QgsPluginManagerBase``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:86
+msgid "``QgsUserOptionsBase``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:90
+msgid "Dialogs"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:92
+msgid ""
+"All dialogs should implement tooltip help for all toolbar icons and other"
+" relevant widgets. Tooltips add greatly to feature discoverability for "
+"both new and experienced users."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:96
+msgid ""
+"Ensure that the tab order for widgets is updated whenever the layout of a"
+" dialog changes."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:101
+msgid "C++ Files"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:104
+msgid "Standard Header and License"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:106
+msgid ""
+"Each source file should contain a header section patterned after the "
+"following example:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:126
+msgid ""
+"There is a template for Qt Creator in git repository. To use it, copy it "
+"from :source:`qt_creator_license_template "
+"<editors/QtCreator/qt_creator_license_template>` to a local location, "
+"adjust the mail address and - if required - the name and configure "
+"QtCreator to use it: :menuselection:`Tools --> Options --> C++ --> File "
+"Naming`."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:133
+msgid "Editing"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:135
+msgid ""
+"Any text editor/IDE can be used to edit QGIS code, providing the "
+"following requirements are met."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:139
+msgid "Tabs"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:141
+msgid ""
+"Set your editor to emulate tabs with spaces. Tab spacing should be set to"
+" 2 spaces."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:144
+msgid "In vim this is done with ``set expandtab ts=2``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:147
+msgid "Indentation"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:149
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":source:`prepare_commit.sh <scripts/prepare_commit.sh>` file that looks "
+"up the changed files and reindents them using astyle. This should be run "
+"before committing. You can also use :source:`astyle.sh "
+"<scripts/astyle.sh>` to indent individual files."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:155
+msgid ""
+"As newer versions of astyle indent differently than the version used to "
+"do a complete reindentation of the source, the script uses an old astyle "
+"version, that we include in our repository (enable ``WITH_ASTYLE`` in "
+"cmake to include it in the build)."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:162
+msgid "API Compatibility"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:164
+msgid "There is :api:`API documentation <>` for C++."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:166
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the "
+"API should be done in a manner similar to the Qt source code e.g."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:206
+msgid "SIP Bindings"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:208
+msgid ""
+"Some of the SIP files are automatically generated using a dedicated "
+"script."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:212
+msgid "Header pre-processing"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:215
+msgid ""
+"All the information to properly build the SIP file must be found in the "
+"C++ header file. Some macros are available for such definition:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:218
+msgid ""
+"Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
+"SIP_RUN`` for C++ code only. ``#else`` statements are handled in both "
+"cases."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:221
+msgid "Use ``SIP_SKIP`` to discard a line"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:222
+msgid "The following annotations are handled:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:224
+msgid "``SIP_FACTORY``: ``/Factory/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:225
+msgid "``SIP_OUT``: ``/Out/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:226
+msgid "``SIP_INOUT``: ``/In,Out/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:227
+msgid "``SIP_TRANSFER``: ``/Transfer/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:228
+msgid "``SIP_PYNAME(name)``: ``/PyName=name/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:229
+msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:230
+msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:231
+msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:233
+msgid ""
+"``private`` sections are not displayed, except if you use a ``#ifdef "
+"SIP_RUN`` statement in this block."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:235
+msgid ""
+"``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative "
+"default value of the python method. If the default value contains a comma"
+" ``,``, the value should be surrounded by single quotes ``'``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:238
+msgid ""
+"``SIP_PYTYPE(type)`` can be used to define an alternative type for an "
+"argument of the python method. If the type contains a comma ``,``, the "
+"type should be surrounded by single quotes ``'``"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:242
+msgid ""
+"A demo file, :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>`, is also available."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:246
+msgid "Generating the SIP file"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:248
+msgid "The SIP file can be generated using a dedicated script. For instance:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:254
+msgid ""
+"To automatically generate the SIP file of a newly added C++ file "
+":source:`sip_include.sh <scripts/sip_include.sh>` needs to be executed."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:257
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:source:`core_auto.sip <python/core/core_auto.sip>`, "
+":source:`gui_auto.sip <python/gui/gui_auto.sip>` or "
+":source:`analysis_auto.sip <python/analysis/analysis_auto.sip>`), it will"
+" be considered as generated automatically. A test will ensure that this "
+"file is up to date with its corresponding header."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:264
+msgid ""
+"To force recreation of SIP files, :source:`sipify_all.sh "
+"<scripts/sipify_all.sh>` shall be executed."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:268
+msgid "Improving sipify script"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:270
+msgid ""
+"If some improvements are required for sipify script, please add the "
+"missing bits to the demo file :source:`sipifyheader.h "
+"<tests/code_layout/sipify/sipifyheader.h>` and create the expected header"
+" :file:`sipifyheader.expected.sip` file. This will also be automatically "
+"tested as a unit test of the script itself."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:277
+msgid "Settings"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:279
+msgid "QGIS code base offers a mechanism to declare, register and use settings."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:281
+msgid ""
+"settings should be defined using one of the available implementations "
+"(:api:`QgsSettingsEntryString <classQgsSettingsEntryString.html>`, "
+":api:`QgsSettingsEntryInteger <classQgsSettingsEntryInteger.html>`, …)."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:284
+msgid ""
+"settings must be integrated in the settings tree (:api:`QgsSettingsTree "
+"<classQgsSettingsTree.html>`), this is automatically done when using the "
+"constructor with a parent node (:api:`QgsSettingsTreeNode "
+"<classQgsSettingsTreeNode.html>`)."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:287
+msgid ""
+"they are declared as ``const static`` either in a dedicated class or in "
+"the registry directly (core, gui, app, …)."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:289
+msgid "the setting key should be using a ``kebab-case``."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:292
+msgid "Coding Style"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:295
+msgid ""
+"Here are described some programming hints and tips that will hopefully "
+"reduce errors, development time and maintenance."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:300
+msgid "Where-ever Possible Generalize Code"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:302
+msgid ""
+"If you are cut-n-pasting code, or otherwise writing the same thing more "
+"than once, consider consolidating the code into a single function."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:305
+msgid "This will:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:307
+msgid "allow changes to be made in one location instead of in multiple places"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:308
+msgid "help prevent code bloat"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:309
+msgid ""
+"make it more difficult for multiple copies to evolve differences over "
+"time, thus making it harder to understand and maintain for others"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:314
+msgid "Put commands on separate lines"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:316
+msgid ""
+"When reading code it's easy to miss commands, if they are not at the "
+"beginning of the line. When quickly reading through code, it's common to "
+"skip lines if they don't look like what you are looking for in the first "
+"few characters. It's also common to expect a command after a conditional "
+"like ``if``."
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:321
+msgid "Consider:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:329
+msgid "It's very easy to miss part of what the flow of control. Instead use"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:342
+msgid "Book recommendations"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:345
+msgid ""
+"`Effective Modern C++ <https://www.oreilly.com/library/view/effective-"
+"modern-c/9781491908419/>`_, Scott Meyers"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:346
+msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c"
+"-plus-plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:347
+msgid ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:348
+msgid ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-"
+"Reusable-Object-Oriented/dp/0201633612>`_, GoF"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:350
+msgid ""
+"You should also really read this article from Qt Quarterly on `designing "
+"Qt style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:355
+msgid "Credits for contributions"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:357
+msgid ""
+"Contributors of new functions are encouraged to let people know about "
+"their contribution by:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:360
+msgid ""
+"adding a note to the changelog for the first version where the code has "
+"been incorporated, of the type::"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:366
+msgid ""
+"writing an article about the new feature on a blog, and add it to `QGIS "
+"Planet <https://planet.qgis.org/>`_"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:368
+msgid "adding their name to:"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:370
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ""
+
+#: ../../docs/developers_guide/codingstandards.rst:371
+msgid ":source:`doc/AUTHORS`"
+msgstr ""
+
