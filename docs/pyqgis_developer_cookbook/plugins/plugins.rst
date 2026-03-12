@@ -624,8 +624,8 @@ done with :command:`pyrcc5` command:
     executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\\bin\\pyrcc5.exe`.
 
-.. _Qt Linguist: https://doc.qt.io/qt-5/qtlinguist-index.html
-.. _GitHub workflows: https://docs.github.com/en/actions/writing-workflows
+.. _Qt Linguist: https://doc.qt.io/archives/qt-5.15/qtlinguist-index.html
+.. _GitHub workflows: https://docs.github.com/en/actions/how-tos/write-workflows
 .. _Gitlab-CI: https://docs.gitlab.com/ci/
 .. _Transifex: https://www.transifex.com
 .. _qgis-plugin-ci: https://opengisch.github.io/qgis-plugin-ci/

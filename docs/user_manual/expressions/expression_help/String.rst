@@ -96,7 +96,7 @@ Format a string using supplied arguments.
 format_date
 ...........
 
-Formats a date type or string into a custom string format. Uses Qt date/time format strings. See `QDateTime::toString <https://doc.qt.io/qt-5/qdatetime.html#toString>`_.
+Formats a date type or string into a custom string format. Uses Qt date/time format strings. See `QDateTime::toString <https://doc.qt.io/archives/qt-5.15/qdatetime.html#toString>`_.
 
 .. list-table::
    :widths: 15 85
