@@ -1,0 +1,306 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at "
+"|translation progress|."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:5
+msgid "DB Manager Plugin"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:7
+msgid ""
+"The DB Manager Plugin is intended to be the main tool to integrate and "
+"manage spatial database formats supported by QGIS (PostgreSQL, "
+"SpatiaLite, GeoPackage, Oracle Spatial, Virtual layers) in one user "
+"interface. The |dbManager| :sup:`DB Manager` Plugin provides several "
+"features. You can drag layers from the QGIS Browser into the DB Manager, "
+"and it will import your layer into your spatial database. You can drag "
+"and drop tables between spatial databases and they will get imported."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:189
+msgid "dbManager"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:22
+msgid "DB Manager dialog"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:25
+msgid ""
+"The :menuselection:`Database` menu allows you to connect to an existing "
+"database, to start the SQL window and to exit the DB Manager Plugin. Once"
+" you are connected to an existing database, the menus "
+":menuselection:`Schema` (relevant for DBMSs, such as PostgreSQL) and "
+":menuselection:`Table` will appear."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:32
+msgid ""
+"The :menuselection:`Schema` menu includes tools to create and delete "
+"(only if empty) schemas and, if topology is available (e.g. with PostGIS "
+"topology), to start a :guilabel:`TopoViewer`."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:36
+msgid ""
+"The :menuselection:`Table` menu allows you to create and edit tables and "
+"to delete tables and views. It is also possible to empty tables and to "
+"move tables between schemas. You can :guilabel:`Run Vacuum Analyze` for "
+"the selected table. *Vacuum* reclaims space and makes it available for "
+"reuse, and *analyze* updates statistics that is used to determine the "
+"most efficient way to execute a query. :guilabel:`Change Logging...` "
+"allows you to add change logging support to a table. Finally, you can "
+":guilabel:`Import Layer/File...` and :guilabel:`Export to File...`."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:50
+msgid ""
+"Using the DB Manager it is possible to add comments for tables and "
+"columns of a PostgreSQL Database."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:53
+msgid ""
+"The :guilabel:`Providers` window lists all existing databases supported "
+"by QGIS. With a double-click, you can connect to the database. With the "
+"right mouse button, you can rename and delete existing schemas and "
+"tables. Tables can also be added to the QGIS canvas with the context "
+"menu."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:60
+msgid ""
+"If connected to a database, the **main** window of the DB Manager offers "
+"four tabs. The :guilabel:`Info` tab provides information about the table "
+"and its geometry, as well as about existing fields, constraints and "
+"indexes. It allows you to create a spatial index on a the selected table."
+" The :guilabel:`Table` tab shows the table, and the :guilabel:`Preview` "
+"tab renders the geometries as preview. When you open an :guilabel:`SQL "
+"Window`, it will be placed in a new tab."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:71
+msgid "Working with the SQL Window"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:73
+msgid ""
+"You can use the DB Manager to execute SQL queries against your spatial "
+"database. Queries can be saved and loaded, and there the :guilabel:`SQL "
+"Query Builder` will help you formulate your queries. You can even view "
+"spatial output by checking :guilabel:`Load as new layer` and specifying "
+":guilabel:`Column(s) with unique values` (IDs), :guilabel:`Geometry "
+"column` and :guilabel:`Layer name (prefix)`. It is possible to highlight "
+"a portion of the SQL to only execute that portion when pressing "
+":kbd:`Ctrl+R` or clicking the :guilabel:`Execute` button."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:84
+msgid ""
+"QGIS also adds support for the ``REGEXP`` function in some providers. "
+"This allows users to use regular expressions in SQL filters or "
+"expressions, for example:"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:91
+msgid ""
+"This returns all features where the ``name`` field starts with the letter"
+" A."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:93
+msgid ""
+"After executing your query, you can select specific cells in the result "
+"set. Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the "
+"clipboard. The copied data is available as a formatted table. This allows"
+" you to paste the data into other applications, such as spreadsheet where"
+" it will show up as a table."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:99
+msgid ""
+"The :guilabel:`Query History` button stores the last 20 queries of each "
+"database and provider."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:102
+msgid "Double clicking on an entry will add the string to the SQL window."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:109
+msgid "Executing SQL queries in the DB Manager SQL window"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:113
+msgid ""
+"The SQL Window can also be used to create Virtual Layers. In that case, "
+"instead of selecting a database, select **QGIS Layers** under **Virtual "
+"Layers** before opening the SQL Window. See :ref:`vector_virtual_layers` "
+"for instructions on the SQL syntax to use."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:121
+msgid "Import Vector Layer"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:123
+msgid ""
+"You can import layer or file into your database. Here are the parameters "
+"you can set for the import process:"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:126
+msgid ""
+":guilabel:`Input`: Select the layer or file to import. Using the dropdown"
+" menu, select from the list of loaded layers in QGIS or click on the "
+":guilabel:`...` button to select a file from disk. Check the |checkbox| "
+":guilabel:`Import only selected features` to import only the selected "
+"features of the layer."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:187
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:131
+msgid ""
+":guilabel:`Output table`: Choose the :guilabel:`Schema` and provide a "
+"name for the new table."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:132
+msgid ":guilabel:`Options`: Here are some options for the import process:"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:134
+msgid ""
+"|checkbox| :guilabel:`Primary key`: Provide naming for the primary key "
+"field. By default, it is named ``id``."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:136
+msgid ""
+"|checkbox| :guilabel:`Geometry column`: Provide naming for the geometry "
+"column. By default, it is named ``geom``."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:138
+msgid ""
+"|checkbox| :guilabel:`Source SRID`: Define the SRID for the geometry "
+"column. By default, it uses the layer's CRS."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:140
+msgid ""
+"|checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject "
+"the geometries during the import process. By default, it uses the layer's"
+" CRS."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:142
+msgid ""
+"|checkbox| :guilabel:`Encoding`: Define the encoding of the source data. "
+"By default, it uses ``Automatic``. It is QGIS's automatic detection mode "
+"that attempts to guess the file's character encoding based on available "
+"metadata or system locale."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:144
+msgid ""
+"|checkbox| :guilabel:`Replace destination table (if exists)`: If a table "
+"with the same name already exists in the selected schema, it will be "
+"replaced."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:146
+msgid ""
+"|checkbox| :guilabel:`Do not promote to multi-part`: Geometries will be "
+"imported as single-part geometries."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:147
+msgid ""
+"|checkbox| :guilabel:`Convert field names to lower case`: All field names"
+" will be converted to lower case."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:148
+msgid ""
+"|checkbox| :guilabel:`Create spatial index`: A spatial index will be "
+"created on the geometry column after import."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:149
+msgid ""
+"|checkbox| :guilabel:`Comment`: Add comments to table. Only available for"
+" PostgreSQL databases."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:155
+msgid "Importing a vector layer into a spatial database using DB Manager"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:159
+msgid "Export to Vector File"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:161
+msgid ""
+"To export a table from your database to a vector file, select the desired"
+" :guilabel:`Format` and :guilabel:`Save as` location. Under "
+":guilabel:`Options`, you can set the following parameters:"
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:165
+msgid ""
+"|checkbox| :guilabel:`Source SRID`: Define the source SRID of the "
+"geometry column. By default, it uses the layer's CRS."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:167
+msgid ""
+"|checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject "
+"the geometries during the export process. By default, it uses the layer's"
+" CRS."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:169
+msgid "|checkbox| :guilabel:`Encoding`: Define the encoding of the output data."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:170
+msgid ""
+"|checkbox| :guilabel:`Replace destination table (if exists)`: If a table "
+"with the same name already exists at the selected location, it will be "
+"replaced."
+msgstr ""
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:177
+msgid "Exporting a table to a vector file using DB Manager"
+msgstr ""
+

@@ -1,0 +1,796 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 1980-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at "
+"|translation progress|."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:5
+msgid "The Table Items"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:12
+msgid "You can use table items to decorate and explain your map:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:14
+msgid ""
+":ref:`Attribute table <layout_attribute_table_item>`: automatically "
+"extracts a subset of the attributes of a layer, based on predefined rules"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:16
+msgid ""
+":ref:`Fixed table <layout_fixed_table_item>`: allows for creation of "
+"tables with contents manually entered (i.e. spreadsheet style), so that "
+"you can create completely custom tables."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:23
+msgid "The attribute table item"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:25
+msgid ""
+"Any layer in the project can have its attributes shown in the print "
+"layout. Use the |addTable| :guilabel:`Add Attribute Table` tool following"
+" :ref:`items creation instructions <create_layout_item>` to add a new "
+"table item that you can later manipulate the same way as exposed in "
+":ref:`interact_layout_item`."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:437
+msgid "addTable"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:30
+msgid ""
+"By default, a new attribute table item loads first rows of the first "
+"(alphabetically sorted) layer, with all the fields. You can however "
+"customize the table thanks to its :guilabel:`Item Properties` panel. "
+"Other than the :ref:`items common properties <item_common_properties>`, "
+"this feature has the following functionalities (see "
+":numref:`figure_layout_table`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:41
+msgid "Attribute table Item Properties Panel"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:45
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:258
+msgid "Main properties"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:47
+msgid ""
+"The :guilabel:`Main properties` group of the attribute table provides the"
+" following functionalities (see :numref:`figure_layout_table_ppt`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:55
+msgid "Attribute table Main properties Group"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:57
+msgid ""
+"For :guilabel:`Source` you can by default only select **Layer features** "
+"allowing you to select a :guilabel:`Layer` from the vector layers loaded "
+"in the project."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:61
+msgid ""
+"The |dataDefine| :sup:`Data-defined override` button near the layer list "
+"allows you to dynamically change the layer which is used to populate the "
+"table, e.g. you could fill the attribute table with different layer "
+"attributes per atlas page. Note that the table structure used "
+"(:numref:`figure_layout_table_select`) is the one of the layer shown in "
+"the :guilabel:`Layer` drop-down list and it is left intact, meaning that "
+"setting a data defined table to a layer with different field(s) will "
+"result in empty column(s) in the table."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:445
+msgid "dataDefine"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:70
+msgid ""
+"In case you activate the |checkbox|:guilabel:`Generate an atlas` option "
+"in the :guilabel:`Atlas` panel (see :ref:`atlas_generation`), there are "
+"two additional :guilabel:`Source` possible:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:443
+msgid "checkbox"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:74
+msgid ""
+"**Current atlas feature** (see :numref:`figure_layout_table_atlas`): you "
+"won't see any option to choose the layer, and the table item will only "
+"show a row with the attributes from the current feature of the atlas "
+"coverage layer."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:77
+msgid ""
+"and **Relation children** (see :numref:`figure_layout_table_relation`): "
+"an option with the relation names will show up. This feature can only be "
+"used if you have defined a :ref:`relation <vector_relations>` using your "
+"atlas coverage layer as parent, and the table will show the children rows"
+" of the atlas coverage layer's current feature."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:83
+msgid ""
+"The button :guilabel:`Refresh Table Data` can be used to refresh the "
+"table when the actual contents of the table has changed."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:92
+msgid "Attribute table Main properties for 'Current atlas feature'"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:100
+msgid "Attribute table Main properties for 'Relation children'"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:103
+msgid ""
+"The button :guilabel:`Attributes...` starts the :guilabel:`Select "
+"Attributes` dialog, (see :numref:`figure_layout_table_select`) that can "
+"be used to change the visible contents of the table. The upper part of "
+"the window shows the list of the attributes to display and the lower part"
+" helps you sort the data."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:113
+msgid "Attribute table Select attributes Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:115
+msgid "In the :guilabel:`Columns` section you can:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:117
+msgid ""
+"Move attributes up or down the list by selecting the rows and then using "
+"the |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows "
+"can be selected and moved at any one time."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:441
+msgid "arrowUp"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:439
+msgid "arrowDown"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:120
+msgid ""
+"Add an attribute with the |symbologyAdd| button. This will add an empty "
+"row at the bottom of the table where you can select a field to be the "
+"attribute value or create an attribute via a regular expression."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:449
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:123
+msgid ""
+"Remove an attribute with the |symbologyRemove| button. Multiple rows can "
+"be selected and removed at any one time."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:451
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:125
+msgid ""
+"Reset the attribute table back to its default state with the "
+":guilabel:`Reset` button."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:126
+msgid ""
+"Clear the table using the :guilabel:`Clear` button. This is useful when "
+"you have a large table but only want to show a small number of "
+"attributes. Instead of manually removing each row, it may be quicker to "
+"clear the table and add the rows needed."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:130
+msgid ""
+"Cell headings can be altered by adding the custom text in the "
+":guilabel:`Heading` column."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:131
+msgid ""
+"Cell alignment can be managed with the :guilabel:`Alignment` column which"
+" will dictate the texts position within the table cell."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:133
+msgid ""
+"Cell width can be manually managed by adding custom values to the "
+":guilabel:`width` column."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:135
+msgid "In the :guilabel:`Sorting` section you can:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:137
+msgid ""
+"Add an attribute to sort the table with: press the |symbologyAdd| button "
+"and a new empty row is added. Insert a field or an expression in the "
+":guilabel:`Attribute` column and set the :guilabel:`Sort order` to "
+"**Ascending** or **Descending**."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:140
+msgid ""
+"Select a row in the list and use the |arrowUp| and |arrowDown| buttons to"
+" change the sort priority on attribute level. Selecting a cell in the "
+":guilabel:`Sort Order` column helps you change the sorting order of the "
+"attribute field."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:144
+msgid ""
+"Use the |symbologyRemove| button to remove an attribute from the sorting "
+"list."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:148
+msgid "Feature filtering"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:150
+msgid ""
+"The :guilabel:`Feature filtering` group of the attribute table provides "
+"the following functionalities (see :numref:`figure_layout_table_filter`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:158
+msgid "Attribute table Feature filtering Group"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:160
+msgid "You can:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:162
+msgid "Define the :guilabel:`Maximum rows` to be displayed."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:163
+msgid ""
+"Activate |checkbox| :guilabel:`Remove duplicate rows from table` to show "
+"unique records only."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:164
+msgid ""
+"Activate |checkbox| :guilabel:`Show only visible features within a map` "
+"and select the corresponding :guilabel:`Linked map` whose visible "
+"features attributes will be displayed."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:166
+msgid ""
+"Activate |checkbox| :guilabel:`Show only features intersecting Atlas "
+"feature` is only available when |checkbox| :guilabel:`Generate an atlas` "
+"is activated. When activated it will show a table with only the features "
+"which intersect the current atlas feature."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:169
+msgid ""
+"Activate |checkbox| :guilabel:`Filter with` and provide a filter by "
+"typing in the input line or insert a regular expression using the given "
+"|expression| expression button. A few examples of filtering statements "
+"you can use when you have loaded the airports layer from the Sample "
+"dataset:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:447
+msgid "expression"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:174
+msgid "``ELEV > 500``"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:175
+msgid "``NAME = 'ANIAK'``"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:176
+msgid "``NAME NOT LIKE 'AN%'``"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:177
+msgid "``regexp_match( attribute( $currentfeature, 'USE' )  , '[i]')``"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:179
+msgid ""
+"The last regular expression will include only the airports that have a "
+"letter 'i' in the attribute field 'USE'."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:183
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:325
+msgid "Appearance"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:185
+msgid ""
+"The :guilabel:`Appearance` group of the attribute table provides the "
+"following functionalities (see :numref:`figure_layout_table_appearance`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:193
+msgid "Attribute table appearance Group"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:195
+msgid ""
+"Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table "
+"with empty cells. This option can also be used to provide additional "
+"empty cells when you have a result to show!"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:197
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:330
+msgid ""
+"With :guilabel:`Cell margins` you can define the margin around text in "
+"each cell of the table."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:198
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:331
+msgid ""
+"With :guilabel:`Display header` you can select from a list one of 'On "
+"first frame', 'On all frames' default option, or 'No header'."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:200
+msgid ""
+"The option :guilabel:`Empty table` controls what will be displayed when "
+"the result selection is empty."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:202
+msgid ""
+"**Draw headers only**, will only draw the header except if you have "
+"chosen 'No header' for :guilabel:`Display header`."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:204
+msgid ""
+"**Hide entire table**, will only draw the background of the table. You "
+"can activate |checkbox| :guilabel:`Don't draw background if frame is "
+"empty` in :guilabel:`Frames` to completely hide the table."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:207
+msgid ""
+"**Show set message**, will draw the header and adds a cell spanning all "
+"columns and display a message like 'No result' that can be provided in "
+"the option :guilabel:`Message to display`"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:210
+msgid ""
+"The option :guilabel:`Message to display` is only activated when you have"
+" selected **Show set message** for :guilabel:`Empty table`. The message "
+"provided will be shown in the table in the first row, when the result is "
+"an empty table."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:213
+msgid ""
+"With :guilabel:`Background color` you can set the background color of the"
+" table using the :ref:`color selector <color-selector>` widget. The "
+":guilabel:`Advanced customization` option helps you define different "
+"background colors for each cell (see "
+":numref:`figure_layout_table_background`)"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:223
+msgid "Attribute table Advanced Background Dialog"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:225
+msgid ""
+"|checkbox| :guilabel:`Apply layer conditional styling colors`: the "
+":ref:`conditional table formatting <conditional_formatting>` present in "
+"the layer is applied inside the layout attribute table (background color,"
+" font family and properties such as bold, italic, strikeout, underline, "
+"color, ...). Conditional formatting rules take precedence over other "
+"layout table formatting settings, e.g. they will override other cell "
+"background color settings such as alternating row colors."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:233
+msgid ""
+"With the :guilabel:`Wrap text on` option, you can define a character on "
+"which the cell content will be wraped each time it is met"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:235
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:336
+msgid ""
+"With :guilabel:`Oversized text` you define the behavior when the width "
+"set for a column is  smaller than its content's length. It can be **Wrap "
+"text** or **Truncate text**."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:239
+msgid ""
+"More properties of the attribute table item are described in the "
+":ref:`tables_common_properties` section."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:245
+msgid "The fixed table item"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:247
+msgid ""
+"Additional information about the map can be inserted manually into a "
+"table by choosing |addManualTable| :guilabel:`Add Fixed Table` and by "
+"following :ref:`items creation instructions <create_layout_item>` to add "
+"a new table item that you can later manipulate the same way as exposed in"
+" :ref:`interact_layout_item`."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:435
+msgid "addManualTable"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:252
+msgid ""
+"By default, an empty table with two minimized columns and rows appears in"
+" the map layout. You have to customize the table in the :guilabel:`Item "
+"Properties` panel. Other than the :ref:`items common properties "
+"<item_common_properties>`, this feature has the following "
+"functionalities:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:265
+msgid "Fixed table Item Properties Panel with Table designer"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:267
+msgid ""
+"In :guilabel:`Main properties`, press :guilabel:`Edit table...` to open "
+"the :guilabel:`Table designer` dialog where you can build your table "
+"(double-clicking the table item will also open the editor dialog):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:271
+msgid ""
+"On the left hand of the dialog, a table frame displays the active table "
+"item with its content and settings. Click or double-click on a cell and "
+"write a text to modify its contents. Press :kbd:`Ctrl+Enter` to add "
+"linebreak (for a multiline text). The logic for selecting multiple cells "
+"in the table is the same as in the vector layer :ref:`attribute table "
+"<interacting_features_table>`. Grab and move a row or column separator to"
+" resize the row above or the column before. A double-click on the "
+"separator will resize the row above or the column before to fit their "
+"contents. A right-click over column or row headers shows a contextual "
+"menu to insert columns or rows around the selection or to delete them."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:281
+msgid "Through the menus on top of the dialog, it is possible to:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:283
+msgid ""
+":menuselection:`File --> Import Content From Clipboard`: it overrides "
+"contents of the table."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:284
+msgid ""
+":menuselection:`File --> Close editor`: it closes the :guilabel:`Table "
+"Designer` dialog."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:285
+msgid ""
+"From the :menuselection:`Edit` menu, you can work with selection "
+"functionalities for rows and columns:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:287
+msgid ":guilabel:`Select all` cells in the table"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:288
+msgid ""
+":guilabel:`Select columns` or :guilabel:`Select Rows`: when cells are "
+"selected in the table, you can extend the selection respectively to their"
+" column(s) or row(s)"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:290
+msgid ":guilabel:`Clear Cells`: deletes the content of the selected cells"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:292
+msgid ""
+"The :menuselection:`Table` menu is the place where you design the "
+"structure of the table. You can:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:295
+msgid ":menuselection:`Insert rows -->` above or below the selection"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:296
+msgid ":menuselection:`Insert columns -->` before or after the selection"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:297
+msgid ":guilabel:`Delete Rows` or :guilabel:`Delete Columns` of selected cells"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:298
+msgid ""
+":guilabel:`Merge selected cells`: select multiple cells in a rectangular "
+"shape and you can merge them and concatenate their contents into the top "
+"left cell (whose styling is also applied to the merged cell, unless there"
+" is a last row/column cell in the selection)."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:301
+msgid ""
+":guilabel:`Split selected cells`: select a merged cell and you can split "
+"it back to its individual cells. The current text is kept in the top left"
+" cell, and the other cells are filled with their contents before they get"
+" merged. They are also reapplied their original styling."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:305
+msgid ""
+"|checkbox| :guilabel:`Include Header Row` whose styling can only be "
+"controlled from the :ref:`layout_table_fonts_and_styling` widget"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:308
+msgid ""
+"Select the cells and, on the right of the table frame, you can provide "
+"the :guilabel:`Cell Contents`:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:310
+msgid ""
+"Either manually enter the contents of each cell, or use an |expression| "
+":guilabel:`Expression` to automatically populate it."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:312
+msgid ""
+"Under the :guilabel:`Formatting` group, set specific options that apply "
+"to the selection and take precedence over the :ref:`global table content "
+"styling <layout_table_fonts_and_styling>`:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:315
+msgid "by choosing the :guilabel:`Text format`"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:316
+msgid "by |checkbox| :guilabel:`Format as number` (several formats are available)"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:317
+msgid ""
+"by defining the :guilabel:`Horizontal alignment` and the "
+":guilabel:`Vertical alignment`"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:319
+msgid "by choosing a :guilabel:`Background color`"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:321
+msgid ""
+"Define the :guilabel:`Cell Size` with :guilabel:`Row height` and "
+":guilabel:`Column width`."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:327
+msgid ""
+"The :guilabel:`Appearance` group of the fixed table provides the "
+"following functionalities:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:329
+msgid ""
+"Click |checkbox| :guilabel:`Show empty rows` to fill the attribute table "
+"with empty cells."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:333
+msgid ""
+"With :guilabel:`Background color` you can set the background color of the"
+" table using the :ref:`color selector <color-selector>` widget. The "
+":guilabel:`Advanced customization` option helps you define different "
+"background colors for each cell."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:340
+msgid ""
+"More properties of the fixed table item are described in the "
+":ref:`tables_common_properties` section."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:346
+msgid "Tables common functionalities"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:349
+msgid "Show grid"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:351
+msgid ""
+"The :guilabel:`Show grid` group of the table items provides the following"
+" functionalities (see :numref:`figure_layout_table_grid`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:359
+msgid "Attribute table Show grid Group"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:361
+msgid ""
+"Activate |checkbox| :guilabel:`Show grid` when you want to display the "
+"grid, the outlines of the table cells. You can also select to either "
+":guilabel:`Draw horizontal lines` or :guilabel:`Draw vertical lines` or "
+"both."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:364
+msgid ""
+"With :guilabel:`Line width` you can set the thickness of the lines used "
+"in the grid."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:365
+msgid ""
+"The :guilabel:`Color` of the grid can be set using the color selection "
+"widget."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:370
+msgid "Fonts and text styling"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:372
+msgid ""
+"The :guilabel:`Fonts and text styling` group of the table items provides "
+"the following functionalities (see :numref:`figure_layout_table_fonts`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:380
+msgid "Attribute table Fonts and text styling Group"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:382
+msgid ""
+"You can define :guilabel:`Font` properties for :guilabel:`Table heading` "
+"and :guilabel:`Table contents`, using the advanced :ref:`text settings "
+"<text_format>` widget (with buffer, shadow, paint effects, transparence, "
+"background, coloring, ...). Note that these changes do not affect the "
+"cells that have custom font assigned, either from the "
+":guilabel:`Appearance` section or the :guilabel:`Table Designer` dialog. "
+"Only cells with the default rendering are overwritten."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:388
+msgid ""
+"For :guilabel:`Table heading` you can additionally set the "
+":guilabel:`Alignment` to ``Follow column alignment`` or override this "
+"setting by choosing ``Left``, ``Center`` or ``Right``. The column "
+"alignment is set using the :guilabel:`Select Attributes` dialog (see "
+":numref:`figure_layout_table_select`)."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:395
+msgid "Frames"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:397
+msgid ""
+"The :guilabel:`Frames` group of the table item properties provides the "
+"following functionalities (see :numref:`figure_layout_table_frames`):"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:405
+msgid "Attribute table Frames Group"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:407
+msgid ""
+"With :guilabel:`Resize mode` you can select how to render the attribute "
+"table contents:"
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:410
+msgid ""
+"``Use existing frames`` displays the result in the first frame and added "
+"frames only."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:411
+msgid ""
+"``Extend to next page`` will create as many frames (and corresponding "
+"pages) as necessary to display the full selection of attribute table. "
+"Each frame can be moved around on the layout. If you resize a frame, the "
+"resulting table will be divided up between the other frames. The last "
+"frame will be trimmed to fit the table."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:416
+msgid ""
+"``Repeat until finished`` will also create as many frames as the `Extend "
+"to next page` option, except all frames will have the same size."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:419
+msgid ""
+"Use the :guilabel:`Add Frame` button to add another frame with the same "
+"size as selected frame. The result of the table that will not fit in the "
+"first frame will continue in the next frame when you use the Resize mode "
+"``Use existing frames``."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:422
+msgid ""
+"Activate |checkbox| :guilabel:`Don't export page if frame is empty` "
+"prevents the page to be exported when the table frame has no contents. "
+"This means all other layout items, maps, scalebars, legends etc. will not"
+" be visible in the result."
+msgstr ""
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_tables.rst:425
+msgid ""
+"Activate |checkbox| :guilabel:`Don't draw background if frame is empty` "
+"prevents the background to be drawn when the table frame has no contents."
+msgstr ""
+
