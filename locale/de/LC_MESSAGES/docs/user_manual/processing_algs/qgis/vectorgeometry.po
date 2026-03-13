@@ -8,11 +8,11 @@
 # Bernhard Ströbl <b.stroebl@stroweb.de>, 2025
 # Harrissou Sant-anna, 2025
 # Richard Duivenvoorde <richard@duif.net>, 2025
-# Steffen Hollah, 2025
 # stefan wolff <wolff@mellum.de>, 2025
 # Transifex Bot <>, 2025
 # Heather Hillers, 2025
 # Joern G <j.gutzeit@umwelt-it.de>, 2025
+# Steffen Hollah, 2026
 # 
 #, fuzzy
 msgid ""
@@ -21,10 +21,10 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-28 10:01+0000\n"
 "PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
+"Last-Translator: Steffen Hollah, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 "Language: de\n"
@@ -1991,6 +1991,17 @@ msgstr "**Abstand**"
 msgid "``DISTANCE``"
 msgstr "``DISTANCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:610
+msgid ""
+"Buffer distance (from the boundary of each feature). You can use the Data "
+"Defined button on the right to choose a field from which the radius will be "
+"calculated. This way you can have different radius for each feature."
+msgstr ""
+"Pufferabstand (von der Grenze jedes Objekts). Mit der Schaltfläche "
+"„Datendefinierte Übersteuerung“ auf der rechten Seite kann ein Feld "
+"ausgewählt werden, aus dem der Radius berechnet wird. Auf diese Weise kann "
+"für jedes Objekt ein anderer Radius festgelegt werden."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:614
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4382
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6339
@@ -2022,6 +2033,18 @@ msgstr "``SEGMENTS``"
 msgid "[numeric: integer]"
 msgstr "[numerisch: Ganzzahl]"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:619
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4387
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6344
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7054
+msgid ""
+"Controls the number of line segments to use to approximate a quarter circle "
+"when creating rounded offsets."
+msgstr ""
+"Steuert die Anzahl der Liniensegmente, die zur Annäherung an einen "
+"Viertelkreis beim Erstellen von abgerundeten Puffern verwendet werden "
+"sollen."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:621
 msgid "**End cap style**"
 msgstr "**Endstil**"
@@ -2029,6 +2052,11 @@ msgstr "**Endstil**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:622
 msgid "``END_CAP_STYLE``"
 msgstr "``END_CAP_STYLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:626
+msgid "Controls how line endings are handled in the buffer. One of:"
+msgstr ""
+"Steuert, wie Linienenden im Puffer behandelt werden. Mögliche Optionen:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:629
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:647
@@ -2045,6 +2073,10 @@ msgstr "1 --- Flach"
 msgid "2 --- Square"
 msgstr "2 --- Quadratisch"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:637
+msgid "Round, flat and square cap styles"
+msgstr "Runder, flacher und quadratischer Endstil"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:638
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4389
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6346
@@ -2057,6 +2089,16 @@ msgstr "**Verbindungsstil**"
 msgid "``JOIN_STYLE``"
 msgstr "``JOIN_STYLE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:643
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4394
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6351
+msgid ""
+"Specifies whether round, miter or beveled joins should be used when "
+"offsetting corners in a line. Options are:"
+msgstr ""
+"Legt fest, ob beim Puffern von Ecken in einer Linie runde, Gehrungs- oder "
+"abgeschrägte Verbindungen verwendet werden sollen. Mögliche Optionen:"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:648
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4399
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6356
@@ -2068,6 +2110,12 @@ msgstr "1 --- Eckig"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6357
 msgid "2 --- Bevel"
 msgstr "2 --- Abgefast"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:655
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4406
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6363
+msgid "Round, miter, and bevel join styles"
+msgstr "Runder, eckiger und abgefaster Verbindungsstil"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:656
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4407
@@ -2097,6 +2145,10 @@ msgstr "``MITER_LIMIT``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7490
 msgid "[numeric: double]"
 msgstr "[numerisch: Double]"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:671
+msgid "**Dissolve result**"
+msgstr "**Ergebnis auflösen**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:672
 msgid "``DISSOLVE``"
@@ -2136,10 +2188,24 @@ msgstr "[Boolean]"
 msgid "Default: False"
 msgstr "Standard: falsch"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:684
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:732
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7056
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7079
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7408
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7431
+msgid "**Buffered**"
+msgstr "**Gepuffert**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:697
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2180
 msgid "Advanced parameters"
 msgstr "Fortgeschrittene Parameter"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:707
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2190
+msgid "**Keep disjoint features separate**"
+msgstr "**Unzusammenhängende Ergebnisse getrennt halten**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:708
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2191
