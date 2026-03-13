@@ -792,11 +792,11 @@ features and view the attribute table.
 SensorThings 
 ============
 
-QGIS supports connections to `OGC SensorThings API <https://www.ogc.org/publications/standard/sensorthings/>`_,
+QGIS supports connections to `OGC SensorThings API <https://www.ogc.org/standards/sensorthings/>`_,
 a standard providing an open and unified framework to interconnect IoT sensing devices,
 data, and applications over the Web.
 It is an open standard addressing the syntactic and semantic interoperability of the Internet of Things.
-It is based on the `Observations and Measurements <https://www.ogc.org/publications/standard/om/>`_ data model,
+It is based on the `Observations and Measurements <https://www.ogc.org/standards/om/>`_ data model,
 a standardized model for observations, and for features involved in sampling when making observations.
 
 Setting connection

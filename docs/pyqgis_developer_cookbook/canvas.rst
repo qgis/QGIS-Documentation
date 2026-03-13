@@ -62,7 +62,7 @@ This framework generally provides a surface and a view where custom graphics
 items are placed and user can interact with them.  We will assume that you are
 familiar enough with Qt to understand the concepts of the graphics scene, view
 and items. If not, please read the `overview of the framework
-<https://doc.qt.io/qt-5/graphicsview.html>`_.
+<https://doc.qt.io/archives/qt-5.15/graphicsview.html>`_.
 
 Whenever the map has been panned, zoomed in/out (or some other action that triggers
 a refresh), the map is rendered again within the current extent. The layers are

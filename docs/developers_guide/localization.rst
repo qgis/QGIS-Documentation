@@ -16,7 +16,7 @@ Another option in the settings allows to define if the
 numeric thousands separator has to be used.
 
 All these features are implemented through the
-`QLocale <https://doc.qt.io/qt-5/qlocale.html>`_
+`QLocale <https://doc.qt.io/archives/qt-5.15/qlocale.html>`_
 QT class which provides a very complete support for numeric
 and date types representation.
 
@@ -33,7 +33,7 @@ do not use ``QString::number()`` because it does not take locale
 options into consideration and it always uses ``C`` locale.
 
 Also do not use string interpolation unless you use the ``L`` suffix as explained in
-`QString documentation <https://doc.qt.io/qt-5/qstring.html#arg-5>`_.
+`QString documentation <https://doc.qt.io/archives/qt-5.15/qstring.html#arg-5>`_.
 
 Use ``QLocale().toString()`` instead.
 

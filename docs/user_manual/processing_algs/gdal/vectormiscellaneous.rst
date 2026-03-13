@@ -459,7 +459,7 @@ Parameters
 
        Default: False
      - Applies cleanup operations on geometries to ensure they are valid regarding the rules
-       of the `Simple Features specification <https://www.ogc.org/publications/standard/sfs/>`_.
+       of the `Simple Features specification <https://www.ogc.org/standards/sfs/>`_.
    * - **Promote to Multipart**
      - ``PROMOTETOMULTI``
      - [boolean]
@@ -803,7 +803,7 @@ Parameters
 
        Default: False
      - Applies cleanup operations on geometries to ensure they are valid regarding the rules
-       of the `Simple Features specification <https://www.ogc.org/publications/standard/sfs/>`_.
+       of the `Simple Features specification <https://www.ogc.org/standards/sfs/>`_.
    * - **Promote to Multipart**
      - ``PROMOTETOMULTI``
      - [boolean]

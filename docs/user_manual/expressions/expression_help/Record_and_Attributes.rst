@@ -582,7 +582,7 @@ When the database parameter is a layer and the layer is in transaction mode, the
 uuid
 ....
 
-Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <https://doc.qt.io/qt-5/quuid.html#createUuid>`_ method.
+Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUuid::createUuid <https://doc.qt.io/archives/qt-5.15/quuid.html#createUuid>`_ method.
 
 .. list-table::
    :widths: 15 85
