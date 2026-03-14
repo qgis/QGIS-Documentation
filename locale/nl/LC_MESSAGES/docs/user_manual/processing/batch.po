@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# DiGro, 2025
+# Harrissou Sant-anna, 2026
+# DiGro, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: DiGro, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -125,7 +125,7 @@ msgstr ""
 "deze knop maakt het mogelijk dergelijke parameters weer te geven in het "
 "dialoogvenster voor Uitvoeren als een Batch proces."
 
-#: ../../docs/user_manual/processing/batch.rst:207
+#: ../../docs/user_manual/processing/batch.rst:213
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
@@ -136,7 +136,7 @@ msgstr ""
 "|symbologyAdd| :sup:`Regel toevoegen`: voegt een nieuw item voor "
 "configuratie voor Processing toe."
 
-#: ../../docs/user_manual/processing/batch.rst:209
+#: ../../docs/user_manual/processing/batch.rst:215
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
@@ -152,7 +152,7 @@ msgstr ""
 "nummer links en staat de :ref:`combinatie voor het toetsenbord "
 "<interacting_features_table>` voor meervoudige selectie toe."
 
-#: ../../docs/user_manual/processing/batch.rst:211
+#: ../../docs/user_manual/processing/batch.rst:217
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
@@ -162,7 +162,7 @@ msgstr ""
 "|fileOpen| :sup:`Open` een configuratiebestand voor verwerken van batch in "
 "Processing"
 
-#: ../../docs/user_manual/processing/batch.rst:203
+#: ../../docs/user_manual/processing/batch.rst:209
 msgid "fileOpen"
 msgstr "fileOpen"
 
@@ -174,7 +174,7 @@ msgstr ""
 "|fileSave| :sup:`Opslaan` de configuratie van batch voor Processing opslaan "
 "naar een bestand :file:`.JSON` dat later kan worden uitgevoerd"
 
-#: ../../docs/user_manual/processing/batch.rst:205
+#: ../../docs/user_manual/processing/batch.rst:211
 msgid "fileSave"
 msgstr "fileSave"
 
@@ -213,7 +213,7 @@ msgstr ""
 "Aan de onderzijde van de tabel, kunt u instellen of |checkbox| "
 ":guilabel:`Lagen laden bij voltooien` moet worden uitgevoerd."
 
-#: ../../docs/user_manual/processing/batch.rst:201
+#: ../../docs/user_manual/processing/batch.rst:207
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -282,7 +282,7 @@ msgstr ""
 "instellen van het aantal segmenten, gebaseerd op de bufferafstand van elke "
 "laag:"
 
-#: ../../docs/user_manual/processing/batch.rst:199
+#: ../../docs/user_manual/processing/batch.rst:205
 msgid "calculateField"
 msgstr "calculateField"
 
@@ -352,46 +352,61 @@ msgstr "worden overgeslagen, als de cel leeg is"
 
 #: ../../docs/user_manual/processing/batch.rst:140
 msgid ""
-"saved as a temporary layer: fill the cell with ``TEMPORARY_OUTPUT`` and "
-"remember to tick the |checkbox| :guilabel:`Load layers on completion` "
-"checkbox."
+"saved as a temporary layer: fill the cell with your chosen output name, "
+"select |checkbox| :guilabel:`Create Temporary Layer` from the "
+":guilabel:`...` drop-down, and remember to tick the |checkbox| "
+":guilabel:`Load layers on completion` checkbox. For temporary layers, the "
+"value you provide will be used as the layer name. You can use the "
+":ref:`Autofill <batch_parameters>` options to construct that name."
 msgstr ""
-"als een tijdelijk bestand worden opgeslagen: vult de cel met "
-"``TEMPORARY_OUTPUT`` en onthoud om het keuzevak |checkbox| :guilabel:`Lagen "
-"laden bij voltooien` te selecteren."
+"opgeslagen als een tijdelijke laag: vul de cel met de door u gekozen naam "
+"voor de uitvoer, selecteer |checkbox| :guilabel:`Tijdelijke laag maken` uit "
+"de keuzelijst :guilabel:`…`, en vergeet niet om het keuzevak |checkbox| "
+":guilabel:`Lagen laden bij voltooien` te selecteren. Voor tijdelijke lagen "
+"zal de waarde die u opgeeft worden gebruikt als de naam van de laag. U kunt "
+"de opties van :ref:`Autom. vullen <batch_parameters>` gebruiken om die naam "
+"te maken."
 
-#: ../../docs/user_manual/processing/batch.rst:142
+#: ../../docs/user_manual/processing/batch.rst:145
 msgid ""
 "saved as a plain file (:file:`.SHP`, :file:`.GPKG`, :file:`.XML`, "
-":file:`.PDF`, :file:`.JPG`,...) whose path could be set with the "
-":guilabel:`Autofill` options exposed beforehand. E.g. use "
-":guilabel:`Calculate by Expression...` to set output file names to complex "
-"expressions like:"
+":file:`.PDF`, :file:`.JPG`,...): choose :guilabel:`Select File/Folder...` "
+"from the :guilabel:`...` drop-down. For plain files, you can set the path "
+"using the :ref:`Autofill <batch_parameters>` options exposed beforehand."
 msgstr ""
-"worden opgeslagen als een gewoon bestand (:file:`.SHP`, :file:`.GPKG`, "
-":file:`.XML`, :file:`.PDF`, :file:`.JPG`,...) waarvan het pad kan worden "
-"ingesteld met de opties voor :guilabel:`Autom. vullen` zoals eerder "
-"weergegeven. Bijv. gebruiken van :guilabel:`Berekenen met expressie…` om de "
-"namen voor uitvoerbestanden voor complexe expressies in te stellen als:"
+"opgeslagen als een gewoon bestand (:file:`.SHP`, :file:`.GPKG`, "
+":file:`.XML`, :file:`.PDF`, :file:`.JPG`,...): kies :guilabel:`bestand/Map "
+"selecteren…` uit de keuzelijst :guilabel:`…`. Voor gewone bestanden kunt u "
+"het pad instellen met de opties van :ref:`Autom. vullen <batch_parameters>` "
+"die eerder werden getoond."
 
-#: ../../docs/user_manual/processing/batch.rst:151
+#: ../../docs/user_manual/processing/batch.rst:150
+msgid ""
+"E.g. use :guilabel:`Calculate by Expression...` to set output file names to "
+"complex expressions like:"
+msgstr ""
+"Gebruik bijvoorbeeld :guilabel:`Berekenen met expressie…` om namen voor "
+"uitvoer in te stellen als complexe expressies zoals:"
+
+#: ../../docs/user_manual/processing/batch.rst:157
 msgid ""
 "You can also type the file path directly or use the file chooser dialog that"
-" appears when clicking on the accompanying :guilabel:`...` button. Once you "
-"select the file, a new dialog is shown to allow for auto-completion of other"
-" cells in the same column (same parameter)."
+" appears when clicking on the accompanying :guilabel:`Select File/Folder...`"
+" button. Once you select the file, a new dialog is shown to allow for auto-"
+"completion of other cells in the same column (same parameter)."
 msgstr ""
 "U kunt ook het bestandspad direct intypen of het dialoogvenster voor het "
 "kiezen van een bestand gebruiken dat verschijnt bij het klikken op de "
-"betreffende knop :guilabel:`…`. Als u eenmaal het bestand hebt geselecteerd,"
-" wordt een nieuw dialoogvenster weergegeven om automatisch vullen voor "
-"andere cellen in dezelfde kolom mogelijk te maken (dezelfde parameter)."
+"betreffende knop :guilabel:`Bestand/Map selecteren…`. Als u eenmaal het "
+"bestand hebt geselecteerd, wordt een nieuw dialoogvenster weergegeven om "
+"automatisch vullen voor andere cellen in dezelfde kolom mogelijk te maken "
+"(dezelfde parameter)."
 
-#: ../../docs/user_manual/processing/batch.rst:161
+#: ../../docs/user_manual/processing/batch.rst:167
 msgid "Batch Processing Save"
 msgstr "Opslaan Batch-proces"
 
-#: ../../docs/user_manual/processing/batch.rst:163
+#: ../../docs/user_manual/processing/batch.rst:169
 msgid ""
 "If the default value (:guilabel:`Do not autofill`) is selected, it will just"
 " put the selected filename in the selected cell from the parameters table. "
@@ -404,7 +419,7 @@ msgstr ""
 "opties is geselecteerd, zullen alle cellen onder de geselecteerde "
 "automatisch worden gevuld, gebaseerd op gedefinieerde criteria."
 
-#: ../../docs/user_manual/processing/batch.rst:168
+#: ../../docs/user_manual/processing/batch.rst:174
 msgid ""
 ":guilabel:`Fill with numbers`: incrementally appends a number to the file "
 "name"
@@ -412,7 +427,7 @@ msgstr ""
 ":guilabel:`Vullen met getallen`: voegt een automatisch verhogend nummer toe "
 "aan de bestandsnaam"
 
-#: ../../docs/user_manual/processing/batch.rst:169
+#: ../../docs/user_manual/processing/batch.rst:175
 msgid ""
 ":guilabel:`Fill with parameter values`: you can select a parameter whose "
 "value in the same row is appended to the file name. This is particularly "
@@ -423,16 +438,16 @@ msgstr ""
 "is in het bijzonder nuttig voor het benoemen van objecten van de "
 "uitvoergegevens overeenkomstig die van de invoer."
 
-#: ../../docs/user_manual/processing/batch.rst:173
+#: ../../docs/user_manual/processing/batch.rst:179
 msgid "saved as a layer within a database container:"
 msgstr ""
 "worden opgeslagen als een laag binnen een container voor een database:"
 
-#: ../../docs/user_manual/processing/batch.rst:185
+#: ../../docs/user_manual/processing/batch.rst:191
 msgid "Executing the batch process"
 msgstr "Uitvoeren van het batch-proces"
 
-#: ../../docs/user_manual/processing/batch.rst:187
+#: ../../docs/user_manual/processing/batch.rst:193
 msgid ""
 "To execute the batch process once you have introduced all the necessary "
 "values, just click on :guilabel:`Run`. The :guilabel:`Log` panel is "
