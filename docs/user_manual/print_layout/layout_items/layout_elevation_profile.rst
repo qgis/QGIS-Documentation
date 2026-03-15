@@ -16,6 +16,12 @@ and follow :ref:`items creation instructions <create_layout_item>` to add a new
 elevation profile item that you can later manipulate the same way as demonstrated in :ref:`interact_layout_item`.
 
 A new elevation profile item has default settings that make it render an empty chart.
+
+.. figure:: img/layout_elevation_profile_item_properties.png
+   :align: center
+
+   Elevation profile item properties panel in the Print Layout.
+
 You can customize its properties in the :guilabel:`Item Properties` panel.
 In addition to the :ref:`common properties <item_common_properties>`,
 this feature has the following functionalities:
