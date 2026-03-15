@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# DiGro, 2025
+# Harrissou Sant-anna, 2026
+# DiGro, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: DiGro, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -232,49 +232,48 @@ msgstr ""
 "Diagram als gids gebruiken. Verbind eerst met de db address:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:182
-msgid "Then create a :file:`streets` table:"
-msgstr "Maak dan een tabel :kbd:`streets`:"
+msgid "Then create a ``streets`` table:"
+msgstr "Maak dan een tabel ``streets``:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:188
 msgid ""
-":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
-"PostgreSQL to start an integer sequence (auto-number) to populate the "
-":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
-"PostgreSQL to create a character field of 50 characters in length."
+"``serial`` and ``varchar`` are **data types**. ``serial`` tells PostgreSQL "
+"to start an integer sequence (auto-number) to populate the ``id`` "
+"automatically for every new record. ``varchar(50)`` tells PostgreSQL to "
+"create a character field of 50 characters in length."
 msgstr ""
-":kbd:`serial` en :kbd:`varchar` zijn **datatypen**. :kbd:`serial` vertelt "
-"PostgreSQL om een reeks van een geheel getal te starten (automatisch "
-"nummeren) om :kbd:`id` automatisch te vullen voor elk nieuw record. "
-":kbd:`varchar(50)` vertelt PostgreSQL om een veld van 50 tekens in lengte te"
-" maken."
+"``serial`` en ``varchar`` zijn **datatypen**. ``serial`` vertelt PostgreSQL "
+"om een reeks van een geheel getal te starten (automatisch nummeren) om "
+"``id`` automatisch te vullen voor elk nieuw record. ``varchar(50)`` vertelt "
+"PostgreSQL om een veld van 50 tekens in lengte te maken."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:193
 msgid ""
-"You will notice that the command ends with a :kbd:`;` - all SQL commands "
-"should be terminated this way. When you press :kbd:`Enter`, psql will report"
-" something like this:"
+"You will notice that the command ends with a ``;`` - all SQL commands should"
+" be terminated this way. When you press :kbd:`Enter`, psql will report "
+"something like this:"
 msgstr ""
-"Het zal u opvallen dat elke opdracht eindigt met een :kbd:`;` - alle "
-"opdrachten voor SQL zouden op deze manier moeten worden beëindigd. Wanneer u"
-" op Enter drukt, zal psql iets rapporteren als dit:"
+"Het zal u opvallen dat elke opdracht eindigt met een ``;`` - alle opdrachten"
+" voor SQL zouden op deze manier moeten worden beëindigd. Wanneer u op "
+":kbd:`Enter` drukt, zal psql iets rapporteren als dit:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:205
 msgid ""
 "That means your table was created successfully, with a primary key "
-":kbd:`streets_pkey` using :kbd:`streets.id`."
+"``streets_pkey`` using ``streets.id``."
 msgstr ""
 "Dat betekent dat uw tabel met succes werd gemaakt, met een primaire sleutel "
-":kbd:`streets_pkey` met behulp van :kbd:`streets.id`."
+"``streets_pkey`` met behulp van ``streets.id``."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:208
 msgid ""
-"Note: If you hit return without entering a :kbd:`;`, then you will get a "
-"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
-"enter more. Enter :kbd:`;` to run your command."
+"Note: If you hit return without entering a ``;``, then you will get a prompt"
+" like this: ``address-#``. This is because PostgreSQL is expecting you to "
+"enter more. Enter ``;`` to run your command."
 msgstr ""
-"Opmerking: Als u op Return drukte zonder een :kbd:`;` in te voeren, dan zult"
-" u een prompt zoals deze krijgen: :kbd:`address-#`. Dit omdat PG van u meer "
-"invoer verwacht. Voer :kbd:`;` in om uw opdracht uit te voeren."
+"Opmerking: Als u op Return drukte zonder een ``;`` in te voeren, dan zult u "
+"een prompt zoals deze krijgen: ``address-#``. Dat komt omdat PostgreSQL meer"
+" invoer van u verwacht. Voer ``;`` in om uw opdracht uit te voeren."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:212
 msgid "To view your table schema, you can do this:"
@@ -365,12 +364,12 @@ msgstr "Onze tabel is al gemaakt, dus doen we het op de eerste manier:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:308
 msgid ""
-"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
-"match a valid street :kbd:`id` from the :kbd:`streets` table."
+"That tells the ``people`` table that its ``street_id`` fields must match a "
+"valid street ``id`` from the ``streets`` table."
 msgstr ""
-"Dat vertelt de tabel :kbd:`people` dat zijn velden :kbd:`street_id` moeten "
-"overeenkomen met een geldige :kbd:`id` voor street uit de tabel "
-":kbd:`streets`."
+"Dat vertelt de tabel ``people`` dat zijn velden ``street_id`` moeten "
+"overeenkomen met een geldige ``id`` voor een street uit de tabel "
+"``streets``."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
@@ -408,10 +407,10 @@ msgid "Dropping Tables in SQL"
 msgstr "Tabellen in SQL verwijderen"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:377
-msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
+msgid "If you want to get rid of a table you can use the ``DROP`` command:"
 msgstr ""
-"Als u een tabel wilt verwijderen kunt u gebruk maken van de opdracht "
-":kbd:`drop`:"
+"Als u een tabel wilt verwijderen kunt u gebruik maken van de opdracht "
+"``DROP``:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:383
 msgid "In our current example, the above command would not work. Why not?"
@@ -422,44 +421,44 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/data_model.rst:388
 msgid ""
 "The reason the DROP command would not work in this case is because the "
-"*people* table has a Foreign Key constraint to the *streets* table. This "
-"means that dropping (or deleting) the *streets* table would leave the "
-"*people* table with references to non-existent *streets* data."
+"``people`` table has a Foreign Key constraint to the ``streets`` table. This"
+" means that dropping (or deleting) the ``streets`` table would leave the "
+"``people`` table with references to non-existent ``streets`` data."
 msgstr ""
 "De reden dat de opdracht DROP in dit geval niet zou werken is omdat de tabel"
-" *people* een beperking Foreign Key heeft voor de tabel *streets*. Dit "
-"betekent dat het verwijderen (of deleten) van de tabel *streets* de tabel "
-"*people* zou achterlaten met verwijzingen naar niet bestaande gegevens van "
-"*streets*."
+" ``people`` een beperking Foreign Key heeft voor de tabel ``streets``. Dit "
+"betekent dat het verwijderen (of deleten) van de tabel ``streets`` de tabel "
+"``people`` zou achterlaten met verwijzingen naar niet bestaande gegevens van"
+" ``streets``."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:393
 msgid ""
-"It is possible to 'force' the *streets* table to be deleted by using the "
-"``CASCADE`` command, but this would also delete the *people* and any other "
-"table which had a relationship to the *streets* table. Use with caution!"
+"It is possible to 'force' the ``streets`` table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the ``people`` and any other"
+" table which had a relationship to the ``streets`` table. Use with caution!"
 msgstr ""
-"Het is mogelijk om te 'forceren' dat de tabel *streets* wordt verwijderd "
+"Het is mogelijk om te 'forceren' dat de tabel ``streets`` wordt verwijderd "
 "door de opdracht ``CASCADE`` te gebruiken, maar dat zou ook de tabel "
-"*people* en elke andere tabel die een relatie heeft met de tabel *streets* "
-"verwijderen. Gebruik het met voorzichtigheid!"
+"``people`` en elke andere tabel die een relatie heeft met de tabel "
+"``streets`` verwijderen. Gebruik het met voorzichtigheid!"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:398
 msgid ""
-"If you used the same :kbd:`drop table` command on the `people` table, it "
+"If you used the same ``drop table`` command on the ``people`` table, it "
 "would be successful:"
 msgstr ""
-"Als u dezelfde opdracht :kbd:`drop table` zou gebruiken op de tabel "
-"`people`, zou die met succes worden uitgevoerd:"
+"Als u dezelfde opdracht ``drop table`` zou gebruiken op de tabel ``people``,"
+" zou die met succes worden uitgevoerd:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:406
 msgid ""
-"If you actually did enter that command and dropped the :kbd:`people` table, "
-"now would be a good time to rebuild it, as you will need it in the next "
+"If you actually did enter that command and dropped the ``people`` table, now"
+" would be a good time to rebuild it, as you will need it in the next "
 "exercises."
 msgstr ""
-"Als u echt die opdracht invoerde en de tabel :kbd:`people` verwijderde, zou "
-"nu een goed moment zijn om hem opnieuw te bouwen, omdat u het in de volgende"
-" oefeningen nodig heeft."
+"Als u die opdracht echt invoerde en de tabel ``people`` verwijderde, zou nu "
+"een goed moment zijn om hem opnieuw te bouwen, omdat u die in de volgende "
+"oefeningen nodig heeft."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
