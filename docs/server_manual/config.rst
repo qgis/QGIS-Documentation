@@ -57,7 +57,7 @@ several ways to define these variables. This is fully described in
    * - QGIS_OPTIONS_PATH
         Specifies the path to the directory with settings. It works the same way as
         QGIS application ``--optionspath`` option. It is looking for settings file in
-        ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``.
+        ``<QGIS_OPTIONS_PATH>/QGIS/QGIS4.ini``.
      - ''
      - All
 
@@ -102,7 +102,7 @@ several ways to define these variables. This is fully described in
    * - QGIS_SERVER_APPLICATION_NAME
         Name of the application to be used, for instance when connecting to a database to identify
         the QGIS server instance connected
-     - QGIS3 server
+     - QGIS4 server
      - All
 
    * - QGIS_SERVER_CACHE_DIRECTORY
@@ -380,14 +380,14 @@ For example with spawn-fcgi:
 
 .. code-block:: bash
 
- export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS3/profiles/default/
+ export QGIS_OPTIONS_PATH=/home/user/.local/share/QGIS/QGIS4/profiles/default/
  export QGIS_SERVER_LOG_STDERR=1
  export QGIS_SERVER_LOG_LEVEL=2
  spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi -s /tmp/qgisserver.sock -U www-data -G www-data -n
 
   QGIS Server Settings:
 
-    - QGIS_OPTIONS_PATH / '' (Override the default path for user configuration): '/home/user/.local/share/QGIS/QGIS3/profiles/default/' (read from ENVIRONMENT_VARIABLE)
+    - QGIS_OPTIONS_PATH / '' (Override the default path for user configuration): '/home/user/.local/share/QGIS/QGIS4/profiles/default/' (read from ENVIRONMENT_VARIABLE)
 
     - QGIS_SERVER_PARALLEL_RENDERING / '/qgis/parallel_rendering' (Activate/Deactivate parallel rendering for WMS getMap request): 'true' (read from INI_FILE)
 
@@ -401,11 +401,11 @@ For example with spawn-fcgi:
 
     - MAX_CACHE_LAYERS / '' (Specify the maximum number of cached layers): '100' (read from DEFAULT_VALUE)
 
-    - QGIS_SERVER_CACHE_DIRECTORY / '/cache/directory' (Specify the cache directory): '/root/.local/share/QGIS/QGIS3/profiles/default/cache' (read from DEFAULT_VALUE)
+    - QGIS_SERVER_CACHE_DIRECTORY / '/cache/directory' (Specify the cache directory): '/root/.local/share/QGIS/QGIS4/profiles/default/cache' (read from DEFAULT_VALUE)
 
     - QGIS_SERVER_CACHE_SIZE / '/cache/size' (Specify the cache size): '52428800' (read from INI_FILE)
 
-  Ini file used to initialize settings: /home/user/.local/share/QGIS/QGIS3/profiles/default/QGIS/QGIS3.ini
+  Ini file used to initialize settings: /home/user/.local/share/QGIS/QGIS4/profiles/default/QGIS/QGIS4.ini
 
 In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and
 **QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found in

@@ -155,9 +155,9 @@ is executed by the embedded Python interpreter.
 
 The path in the user's home directory usually is found under:
 
-* Linux: :file:`.local/share/QGIS/QGIS3`
-* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS3`
-* macOS: :file:`Library/Application Support/QGIS/QGIS3`
+* Linux: :file:`.local/share/QGIS/QGIS4`
+* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS4`
+* macOS: :file:`Library/Application Support/QGIS/QGIS4`
 
 The default system paths depend on the operating system. To find the
 paths that work for you, open the Python Console and run

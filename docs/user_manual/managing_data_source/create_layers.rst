@@ -686,7 +686,7 @@ to create, store and manipulate your queries:
 * As previously mentioned, queries can be saved as an :file:`.sql` file stored on disk.
   Using the |storedqueries| :sup:`Store Current Query` button, they can also be stored:
 
-  * In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` file,
+  * In the active :guilabel:`User Profile`, in the associated :file:`QGIS4.ini` file,
     thus accessible in subsequent projects
   * or as part of the :guilabel:`Current Project`.
 
