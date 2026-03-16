@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# DiGro, 2025
+# Harrissou Sant-anna, 2026
+# DiGro, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: DiGro, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -61,35 +61,11 @@ msgstr ""
 " een gestandaardiseerde en interoperabele oplossing voor het visualiseren "
 "van complexe geografische gegevens."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:29
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:28
 msgid "Example of 3D tiles"
 msgstr "Voorbeeld van 3D-tegels"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:32
-msgid "Currently, QGIS supports two formats of 3D tiles:"
-msgstr "Momenteel ondersteunt QGIS twee indelingen voor 3D-tegels:"
-
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:34
-msgid ""
-"`Cesium 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_, used primarily"
-" for complex 3D models of buildings or whole cities. Such datasets can be "
-"provided by cloud-based platforms such as Cesium Ion or Google "
-"(*Photorealistic 3D Tiles*)."
-msgstr ""
-"`Cesium 3D-tegels <https://cesium.com/why-cesium/3d-tiles/>`_, primair "
-"gebruikt voor complexe 3D-modellen van gebouwen of hele steden. Dergelijke "
-"gegevenssets kunnen worden geleverd door op de cloud gebaseerde platforms, "
-"zoals Cesium Ion of Google (*Photorealistic 3D Tiles*)."
-
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:38
-msgid ""
-"`Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_, used "
-"for terrain elevation data."
-msgstr ""
-"`Gekwantiseerde mazen-tegels <https://github.com/CesiumGS/quantized-mesh>`_,"
-" gebruikt voor gegevens van terreinhoogten."
-
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:41
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:30
 msgid ""
 "See :ref:`3d_tiles` for instructions on how to add these data sources to "
 "QGIS."
@@ -97,11 +73,84 @@ msgstr ""
 "Bekijk :ref:`3d_tiles` voor instructies over hoe deze databronnen aan QGIS "
 "toe te voegen."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:33
+msgid "State of 3D Tiles Support"
+msgstr "Status van ondersteuning voor 3D-tegels"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:35
+msgid "Currently, QGIS supports two formats of 3D tiles:"
+msgstr "Momenteel ondersteunt QGIS twee indelingen voor 3D-tegels:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:37
+msgid ""
+"`\"Cesium\" 3D Tiles <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ are "
+"used primarily for complex 3D models of buildings or whole cities. Such "
+"datasets can be provided by cloud-based platforms such as Cesium Ion or "
+"Google (*Photorealistic 3D Tiles*)."
+msgstr ""
+"`Cesium 3D-tegels <https://cesium.com/why-cesium/3d-tiles/>`_, worden "
+"primair gebruikt voor complexe 3D-modellen van gebouwen of hele steden. "
+"Dergelijke gegevenssets kunnen worden geleverd door op de cloud gebaseerde "
+"platforms, zoals Cesium Ion of Google (*Photorealistic 3D Tiles*)."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:40
+msgid ""
+"`Quantized Mesh <https://github.com/CesiumGS/quantized-mesh>`_  tiles are "
+"used for terrain elevation data."
+msgstr ""
+"`Gekwantiseerde mazen-tegels <https://github.com/CesiumGS/quantized-mesh>`_,"
+" worden gebruikt voor gegevens van terreinhoogten."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:42
+msgid "Supported *3D Tiles* features:"
+msgstr "Ondersteunde mogelijkheden *3D-tegels*:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:44
+msgid ""
+"QGIS currently has partial support for 3D Tiles 1.0 and partial support for "
+"3D Tiles 1.1."
+msgstr ""
+"QGIS heeft momenteel gedeeltelijke ondersteuning voor 3D Tiles 1.0 en "
+"gedeeltelijke ondersteuning voor 3D Tiles 1.1."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:46
+msgid ""
+"For 3D Tiles 1.0, the tile format Batched 3D Model (``b3dm``) is supported. "
+"The tile formats Instanced 3D Model (``i3dm``), Point Cloud (``pnts``) and "
+"Composite (``cmpt``) are not supported yet."
+msgstr ""
+"Voor 3D Tiles 1.0 wordt de tegelindeling Batched 3D Model (``b3dm``) "
+"ondersteund. De tegelindelingen Instanced 3D Model (``i3dm``), Point Cloud "
+"(``pnts``) en Composite (``cmpt``) worden nog niet ondersteund."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:49
+msgid ""
+"For 3D Tiles 1.1, the ``3DTILES_content_gltf`` extension is supported, so "
+"tile contents may also be encoded as glTF 2.0 (text or binary). The "
+"``EXT_mesh_gpu_instancing`` extension is not supported yet."
+msgstr ""
+"Voor 3D Tiles 1.1 wordt de extensie ``3DTILES_content_gltf`` ondersteund, "
+"dus de inhoud van tegels mag ook worden gecodeerd als glTF 2.0 (tekst of "
+"binair). De extensie ``EXT_mesh_gpu_instancing`` wordt nog niet ondersteund."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:52
+msgid ""
+"Currently only explicit tiling is supported. Implicit tiling is not "
+"supported yet"
+msgstr ""
+"Momenteel worden alleen expliciete tegels ondersteund. Impliciete tegels "
+"wordt nog niet ondersteund."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
+msgid "Currently only tilesets using EPSG:4978 are supported."
+msgstr ""
+"Momenteel worden alleen tegelsets die EPSG:4978 gebruiken ondersteund."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:60
 msgid "3D Tiles Properties"
 msgstr "Eigenschappen 3D-tegels"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:48
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:62
 msgid ""
 "The 3D tiles :guilabel:`Layer Properties` dialog provides the following "
 "sections:"
@@ -109,75 +158,72 @@ msgstr ""
 "Het 3D-tegel dialoogvenster :guilabel:`Laageigenschappen` verschaft de "
 "volgende gedeelten:"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:52
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:66
 msgid "|metadata| :ref:`Information <3dtilesinformationmenu>`"
 msgstr "|metadata| :ref:`Informatie <3dtilesinformationmenu>`"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:228
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:240
 msgid "metadata"
 msgstr "metadata"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:53
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:67
 msgid "|system| :ref:`Source <3dtilessourcemenu>`"
 msgstr "|system| :ref:`Bron<3dtilessourcemenu>`"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:238
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:250
 msgid "system"
 msgstr "system"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
-msgid "|symbology| :ref:`Symbology <3dtilessymbologymenu>`:sup:`[1]`"
-msgstr "|symbology| :ref:`Symbologie <3dtilessymbologymenu>`:sup:`[1]`"
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:68
+msgid "|symbology| :ref:`Symbology <3dtilessymbologymenu>` ([1]_)"
+msgstr "|symbology| :ref:`Symbologie <3dtilessymbologymenu>` ([1]_)"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:236
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:248
 msgid "symbology"
 msgstr "symbology"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:55
-msgid "|3d| :ref:`3D View <3dtiles3dviewmenu>`:sup:`[1]`"
-msgstr "|3d| :ref:`3D-weergave <3dtiles3dviewmenu>`:sup:`[1]`"
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:69
+msgid "|3d| :ref:`3D View <3dtiles3dviewmenu>` ([1]_)"
+msgstr "|3d| :ref:`3D-weergave <3dtiles3dviewmenu>` ([1]_)"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:218
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:230
 msgid "3d"
 msgstr "3d"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:56
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:70
 msgid "|rendering| :ref:`Rendering <3dtilesrenderingmenu>`"
 msgstr "|rendering| :ref:`Renderen <3dtilesrenderingmenu>`"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:232
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:244
 msgid "rendering"
 msgstr "rendering"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:57
-msgid "|elevationscale| :ref:`Elevation <3dtileselevationmenu>`:sup:`[1]`"
-msgstr "|elevationscale| :ref:`Hoogte<3dtileselevationmenu>`:sup:`[1]`"
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:71
+msgid "|elevationscale| :ref:`Elevation <3dtileselevationmenu>` ([1]_)"
+msgstr "|elevationscale| :ref:`Hoogte <3dtileselevationmenu>` ([1]_)"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:224
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:236
 msgid "elevationscale"
 msgstr "elevationscale"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:58
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:72
 msgid "|editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`"
 msgstr "|editMetadata| :ref:`Metadata <3dtilesmetadatamenu>`"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:222
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:234
 msgid "editMetadata"
 msgstr "editMetadata"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:63
-msgid ""
-":sup:`[1]` Also available in the :ref:`Layer styling panel "
-"<layer_styling_panel>`"
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:76
+msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
 msgstr ""
-":sup:`[1]` Ook beschikbaar in het :ref:`paneel Laag opmaken "
-"<layer_styling_panel>`"
+"Ook beschikbaar in het :ref:`paneel Laag opmaken <layer_styling_panel>`"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:69
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
 msgid "Information Properties"
 msgstr "Eigenschappen Informatie"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:71
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:84
 msgid ""
 "The :guilabel:`Information` tab is read-only and represents an interesting "
 "place to quickly grab summarized information and metadata on the current "
@@ -187,7 +233,7 @@ msgstr ""
 " snel wat overzichtsinformatie en metadata voor de huidige laag op te "
 "pakken. Verschafte informatie is:"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:75
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:88
 msgid ""
 "based on the provider of the layer: name, URL, source type and path, number "
 "of zoom levels"
@@ -195,7 +241,7 @@ msgstr ""
 "gebaseerd op de provider van de laag: naam, URL, type bron en pad, aantal "
 "zoomniveaus"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:77
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:90
 msgid ""
 "custom properties, used to store in the active project additional "
 "information about the layer. More properties can be created and managed "
@@ -207,7 +253,7 @@ msgstr ""
 "gemaakt en beheerd met PyQGIS, specifiek met de methode "
 ":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>`."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:80
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:93
 msgid ""
 "the Coordinate Reference System: name, units, method, accuracy, reference "
 "(i.e. whether it's static or dynamic)"
@@ -215,7 +261,7 @@ msgstr ""
 "het Coördinaten ReferentieSysteem: naam, eenheden, methode, nauwkeurigheid, "
 "verwijzing (d.i. of het statisch of dynamisch is)"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:95
 msgid ""
 "picked from the :ref:`filled metadata <3dtilesmetadatamenu>`: access, "
 "extents, links, contacts, history..."
@@ -223,11 +269,11 @@ msgstr ""
 "opgehaald uit de :ref:`gevulde metadata <3dtilesmetadatamenu>`: toegang, "
 "bereiken, links, contacten, geschiedenis…"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:88
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:101
 msgid "Source Properties"
 msgstr "Eigenschappen Bron"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:90
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:103
 msgid ""
 "The |system| :guilabel:`Source` tab displays basic information about the "
 "selected 3D tile, including:"
@@ -235,12 +281,12 @@ msgstr ""
 "De tab |system| :guilabel:`Bron` geeft basisinformatie weer over de "
 "geselecteerde 3D-tegel, inclusief:"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:93
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:106
 msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
 msgstr ""
 "de :guilabel:`Laagnaam` om weer te geven in het :guilabel:`paneel Lagen`;"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:94
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:107
 msgid ""
 "the :guilabel:`Coordinate Reference System`: Displays the layer's "
 ":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
@@ -256,19 +302,19 @@ msgstr ""
 ":ref:`crs_selector`). Gebruik dit proces alleen als het laag-CRS verkeerd is"
 " of niet werd gespecificeerd."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:234
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:246
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:105
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:118
 msgid "Symbology Properties"
 msgstr "Eigenschappen Symbologie"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:112
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:125
 msgid "3D Tile Layer Symbology"
 msgstr "Symbologie voor 3D-tegellaag "
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:114
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:127
 msgid ""
 "By default, the layer is styled using texture, but you can change it to see "
 "the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` in the"
@@ -287,29 +333,15 @@ msgstr ""
 " te proberen bij het behandelen van een grote gegevensset en een snel "
 "overzicht willen krijgen van de gegevens."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:220
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:232
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:128
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:141
 msgid "3D Tiles - textured and wireframe"
 msgstr "3D-tegels - met textuur en draadmodel"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:130
-msgid "To view the data you can open |new3DMap| :guilabel:`New 3D map view`."
-msgstr ""
-"U kunt de gegevens bekijken door te openen |new3DMap| :guilabel:`Nieuwe "
-"3D-kaartweergave`."
-
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:230
-msgid "new3DMap"
-msgstr "new3DMap"
-
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:137
-msgid "3D Map View"
-msgstr "3D-kaartweergave"
-
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:139
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:143
 msgid ""
 "From the :guilabel:`Symbology` tab, you can also set some options that "
 "invariably act on all features of the layer:"
@@ -317,7 +349,7 @@ msgstr ""
 "Vanaf de tab :guilabel:`Symbologie` kunt u ook enkele opties instellen die "
 "altijd acteren op alle objecten van de laag:"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:142
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:146
 msgid ""
 ":guilabel:`Maximum error`: This parameter determines the level of detail "
 "displayed in the 3D model. Similar to point clouds, 3D tiles often contain "
@@ -340,9 +372,9 @@ msgstr ""
 "zou vertragen. Verschillende eenheden kunnen worden geselecteerd om de "
 "instelling op maat te maken voor uw specifieke wensen."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:151
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:155
 msgid ""
-":guilabel:`Opacity`: Adjust the visibility of the underlying layer on the "
+":guilabel:`Opacity`: Adjusts the visibility of the underlying layer on the "
 "map canvas using this tool. Use slider to tailor the visibility of your "
 "scene layer according to your preferences. Alternatively, specify the exact "
 "percentage of visibility through the menu next to the slider."
@@ -353,7 +385,7 @@ msgstr ""
 "alternatief, specificeer het exacte percentage voor zichtbaarheid in het "
 "menu naast de schuifbalk."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:155
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:159
 msgid ""
 ":guilabel:`Blending mode`: You can achieve special rendering effects with "
 "these tools that you may previously only know from graphics programs. The "
@@ -365,16 +397,16 @@ msgstr ""
 "programma's. De pixels van de overliggende en onderliggende lagen worden "
 "vermengd volgens de instellingen zoals beschreven in :ref:`blend-modes`."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:163
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:167
 msgid "3D View Properties"
 msgstr "Eigenschappen 3D-weergave"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:165
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:169
 msgid ""
-":guilabel:`Maximum screen space error` determines the threshold for swapping"
-" terrain tiles with more detailed ones (and vice versa) - i.e. how soon the "
-"3D view will use higher quality tiles. Lower numbers mean more details in "
-"the scene at the expenses of increased rendering complexity."
+":guilabel:`Maximum screen space error`: Determines the threshold for "
+"swapping terrain tiles with more detailed ones (and vice versa) - i.e. how "
+"soon the 3D view will use higher quality tiles. Lower numbers mean more "
+"details in the scene at the expenses of increased rendering complexity."
 msgstr ""
 ":guilabel:`Maximum scherm fout`: Bepaalt de drempel voor het verwisselen van"
 " tegels voor het terrein door meer gedetailleerde (en vice versa) - d.i. hoe"
@@ -382,24 +414,38 @@ msgstr ""
 " getallen betekenen meer details in de scene, ten koste van een verhoogde "
 "complexiteit voor het renderen. "
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:170
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:174
 msgid ""
-"|unchecked| :guilabel:`Show bounding boxes` Show 3D bounding boxes of the "
+"|unchecked| :guilabel:`Show bounding boxes`: Shows 3D bounding boxes of the "
 "terrain tiles (useful for troubleshooting terrain issues)."
 msgstr ""
 "|unchecked| :guilabel:`Begrenzingsvakken tonen`: Geeft 3D-begrenzingsvakken "
 "weer van de tegels van het terrein (nuttig voor het oplossen van problemen "
-"met het terrein)."
+"met het terrein)"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:240
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:252
 msgid "unchecked"
 msgstr "unchecked"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:177
+msgid "To view the data you can open |new3DMap| :guilabel:`New 3D map view`."
+msgstr ""
+"U kunt de gegevens bekijken door te openen |new3DMap| :guilabel:`Nieuwe "
+"3D-kaartweergave`."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:242
+msgid "new3DMap"
+msgstr "new3DMap"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:184
+msgid "3D Map View"
+msgstr "3D-kaartweergave"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:189
 msgid "Rendering Properties"
 msgstr "Rendering"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:179
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:191
 msgid ""
 "Under |unchecked| :guilabel:`Scale dependent visibility`, you can set the "
 ":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
@@ -416,15 +462,15 @@ msgstr ""
 "huidige kaartvenster te gebruiken als grens voor de zichtbaarheid van het "
 "bereik. Bekijk :ref:`label_scaledepend` voor meer informatie."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:226
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:238
 msgid "mapIdentification"
 msgstr "mapIdentification"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:191
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:203
 msgid "Elevation Properties"
 msgstr "Eigenschappen hoogte"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:193
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:205
 msgid ""
 "The |elevationscale| :guilabel:`Elevation` tab provides options to control "
 "the layer elevation properties within a :ref:`3D map view "
@@ -434,7 +480,7 @@ msgstr ""
 "eigenschappen voor hoogte van de laag te beheren in een "
 ":ref:`3D-kaartweergave <label_3dmapview>`. Specifiek kunt u instellen:"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:197
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:209
 msgid ""
 ":guilabel:`Elevation Surface`: how the 3D layer vertices Z values should be "
 "interpreted as terrain elevation. You can apply a :guilabel:`Scale` factor "
@@ -444,11 +490,11 @@ msgstr ""
 "moeten interpreteren als hoogte voor het terrein. U kunt een factor voor "
 ":guilabel:`Schaal` en een :guilabel:`Verschuiving` toewijzen."
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:205
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:217
 msgid "Metadata Properties"
 msgstr "Metadata"
 
-#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:207
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:219
 msgid ""
 "The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
 "create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
