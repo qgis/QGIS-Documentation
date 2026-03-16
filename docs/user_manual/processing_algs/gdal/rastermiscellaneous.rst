@@ -1391,8 +1391,9 @@ Basic parameters
      - [raster] [list]
      - The input raster files. Can be multiple files.
    * - **Field name to hold the file path to the indexed rasters**
-     - ``PATH_FIELD_NAME``
+
        Optional
+     - ``PATH_FIELD_NAME``
      - [string]
 
        Default: 'location'
