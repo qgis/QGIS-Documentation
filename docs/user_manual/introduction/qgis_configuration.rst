@@ -943,6 +943,11 @@ This tab helps you configure general settings when :ref:`editing vector layer
   (see :ref:`typesofgeomerrors`)
 * :guilabel:`Default Z value` to use when creating new 3D features.
 
+**Measurements**
+
+* :guilabel:`Show feature area in status bar while digitizing`
+* :guilabel:`Show feature perimeter/total length in status bar while digitizing`
+
 **Rubberband**
 
 * Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
@@ -1156,10 +1161,15 @@ Layouts settings
    Layouts settings
 
 
-**Composition defaults**
+**Layout defaults**
 
-You can define the :guilabel:`Default font` used within the :ref:`print layout
-<label_printlayout>`.
+* Define the :guilabel:`Default font` used within the :ref:`print layout <label_printlayout>`
+* Define the :guilabel:`Legend mode` for newly created legends in the :ref:`print layout <label_printlayout>`.
+  Available options are:
+
+  * :guilabel:`Synchronize to All Project Layers`
+  * :guilabel:`Synchronize to Visible Layers`
+  * :guilabel:`Manual`
 
 **Grid appearance**
 
@@ -1928,9 +1938,12 @@ Available parameters are:
 Metadata Properties
 -------------------
 
-The |editMetadata| :guilabel:`Metadata` tab provides you with options
-to create and edit a metadata report on your project.
-See :ref:`metadatamenu` for more information.
+The |editMetadata| :guilabel:`Metadata` tab allows detailed metadata to be defined,
+including (among the others): author, creation date, language, abstracts,
+categories, keywords, contact details, links, history. There is also a
+validation functionality that checks if specific fields were filled, anyway
+this is not enforced. See :ref:`vector layer metadata properties
+<vectormetadatamenu>` for some details.
 
 View Settings
 --------------
