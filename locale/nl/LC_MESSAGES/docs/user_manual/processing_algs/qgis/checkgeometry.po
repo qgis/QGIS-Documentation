@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2026
-# DiGro, 2026
 # Harrissou Sant-anna, 2026
+# DiGro, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -34,6 +34,30 @@ msgstr ""
 "Vertalen is een inspanning van de gemeenschap :ref:`waaraan u deel kunt "
 "nemen <translation_guidelines>`. Deze pagina is momenteel voor |translation "
 "progress| vertaald."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:4
+msgid "Check Geometry"
+msgstr "Geometrie controleren"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:17
+msgid "Dangle-end lines"
+msgstr "Lijnen met hangende einden"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:19
+msgid ""
+"Detects dangle-end lines in line geometries and reports them as errors. A "
+"dangle-end line is a line feature that terminates at a vertex connected to "
+"only one segment, resulting in an endpoint without a proper connection."
+msgstr ""
+"Detecteert lijnen met hangende einden in geometrieën lijn en rapport die als"
+" fouten. Een lijn met een hangend einde is een object lijn dat eindigt op "
+"een punt dat is verbonden met slechts een segment, wat resulteert in een "
+"eindpunt zonder een juiste verbinding."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:26
+msgid "Identifying dangle-end features (in red) and vertices (yellow)."
+msgstr ""
+"Objecten met hangende einden identificeren (in rood) en punten (geel)."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:29
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:157
@@ -390,6 +414,71 @@ msgstr "``INPUT``"
 msgid "[vector: line]"
 msgstr "[vector: lijn]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:547
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:801
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:925
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1057
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1185
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1312
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1423
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1544
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1823
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1966
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2085
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2222
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2393
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2523
+msgid "Layer with the geometries to check."
+msgstr "Laag met de te controleren geometrieën."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:175
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:419
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:548
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:802
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:926
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1058
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1186
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1313
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1424
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1545
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1681
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1824
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1967
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2086
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2223
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2394
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2524
+msgid "**Unique feature identifier**"
+msgstr "**Unieke identificatie object**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:420
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:803
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:927
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1059
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1187
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1314
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1425
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1546
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1682
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1825
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1968
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2087
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2224
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2395
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2525
+msgid "``UNIQUE_ID``"
+msgstr "``UNIQUE_ID``"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:177
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:297
@@ -412,6 +501,74 @@ msgstr "[vector: lijn]"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2526
 msgid "[tablefield: any]"
 msgstr "[tabelveld: elk]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:178
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:551
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:805
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:929
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1061
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1189
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1316
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1427
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1548
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1827
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1970
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2089
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2226
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2397
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2527
+msgid "Field storing unique values for feature identification."
+msgstr ""
+"Veld dat de unieke waarden opslaat voor het identificeren van objecten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:109
+msgid "**Dangle-end errors**"
+msgstr "**Fouten hangende einden**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:300
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:360
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:424
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:483
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:557
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:615
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:741
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:807
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:865
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:935
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:993
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1063
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1121
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1196
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1254
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1322
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1433
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1478
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1550
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1608
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1686
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1744
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1844
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1902
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1977
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2022
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2098
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2156
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2265
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2330
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2405
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2464
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2529
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2588
+msgid "``ERRORS``"
+msgstr "``ERRORS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:111
@@ -482,6 +639,21 @@ msgstr "[vector: punt]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Standaard: ``[Tijdelijke laag maken]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:428
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:687
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1067
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1554
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1690
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1981
+msgid ""
+"Specification of the output layer containing the errors location. :ref:`One "
+"of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de locaties van de fouten bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -506,6 +678,11 @@ msgstr "Opslaan als tabel voor database…"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
 msgstr "De bestandscodering kan hier ook gewijzigd worden."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:124
+msgid "**Dangle-end features**"
+msgstr "**Objecten met hangende einden**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:192
@@ -585,6 +762,14 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2545
 msgid "Default: ``[Skip output]``"
 msgstr "Standaard: ``[Uitvoer overslaan]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:69
+msgid ""
+"Line layer containing the identified dangle-end line features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Lijnenlaag die de geïdentificeerde objecten met hangende einden bevat. "
+":ref:`Een van <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -705,6 +890,35 @@ msgstr "[numeriek: integer]"
 msgid "Default: 8"
 msgstr "Standaard: 8"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:93
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:343
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:598
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:724
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:848
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:976
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1104
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1237
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1350
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1461
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1591
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1727
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1885
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2005
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2139
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2305
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2447
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2571
+msgid ""
+"Numerical precision of geometric operations, given as an integer n, meaning "
+"that two vertices less than 10\\ :sup:`-n` apart (in map units) are "
+"considered to be merged."
+msgstr ""
+"Numerieke precisie voor geometrische bewerkingen, opgegeven als een integer "
+"n, wat betekent dat twee punten die elk kleiner zijn dan 10\\ :sup:`-n` (in "
+"kaarteenheden) worden verondersteld te worden samengevoegd."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:226
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:348
@@ -727,6 +941,140 @@ msgstr "Standaard: 8"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2576
 msgid "Outputs"
 msgstr "Uitvoer"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:112
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:362
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:485
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:617
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:743
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:867
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1123
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1256
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1369
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1480
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1610
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1746
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1904
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2024
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2158
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2332
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2466
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2590
+msgid ""
+"Output point layer representing the error locations and information. The "
+"output layer contains the following fields:"
+msgstr ""
+"Uitvoer puntenlaag die de locaties van de fouten en informatie bevat. De "
+"uitvoerlaag bevat de volgende velden:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:488
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:620
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:746
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:870
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:998
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1126
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1259
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1372
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1483
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1613
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1749
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1907
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2027
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2161
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2335
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2469
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2593
+msgid "``gc_layerid``: the ID of the input layer."
+msgstr "``gc_layerid``: de ID van de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:366
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:621
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:747
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:871
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:999
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1127
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1260
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1373
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1484
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1614
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1750
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1908
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2028
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2162
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2336
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2470
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2594
+msgid "``gc_layername``: the name of the input layer."
+msgstr "``gc_layername``: de naam van de invoerlaag."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:117
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"dangle-end."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object dat "
+"het hangende einde bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:118
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"dangle-end."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van het object dat het"
+" hangende einde bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:119
+msgid ""
+"``gc_vertidx``: the vertex index of the dangle-end in the feature's geometry"
+" ring."
+msgstr ""
+"``gc_vertidx``: de index van het hangende einde in de ring van de geometrie "
+"van het object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:120
+msgid "``gc_errorx``: the x coordinate of the dangle-end."
+msgstr "``gc_errorx``: de X-coördinaat van het hangende einde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:121
+msgid "``gc_errory``: the y coordinate of the dangle-end."
+msgstr "``gc_errory``: de Y-coördinaat van het hangende einde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:122
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:495
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:753
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1133
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1379
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1490
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1620
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1756
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2600
+msgid "``gc_error``"
+msgstr "``gc_error``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:123
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature with the dangle-end."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject met het hangende "
+"einde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:127
+msgid ""
+"Output line layer containing the input dangle-end features. If no dangle-end"
+" features are found, the output layer will be empty. Available fields are "
+"the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer lijnenlaag die de objecten met hangende einden van de invoer bevat. "
+"Als geen objecten met hangende einden zijn gevonden, zal de uitvoerlaag leeg"
+" zijn. Beschikbare velden zijn hetzelfde als in de uitvoer ``ERRORS``."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:132
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:260
@@ -751,6 +1099,10 @@ msgstr "Uitvoer"
 msgid "Python code"
 msgstr "Pythoncode"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:134
+msgid "**Algorithm ID**: ``native:checkgeometrydangle``"
+msgstr "**ID algoritme**: ``native:checkgeometrydangle``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -763,6 +1115,32 @@ msgstr ""
 "parameters* verschaft de NAME's en waarden van de parameters. Bekijk "
 ":ref:`processing_console` voor details over hoe algoritmes van Processing "
 "uit te voeren vanuit de console voor Python."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:144
+msgid "Degenerate polygons"
+msgstr "Polygonen degenereren "
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:146
+msgid ""
+"Checks the polygons with less than 3 points, which are degenerate polygons. "
+"Degenerate polygons are errors."
+msgstr ""
+"Controleert de polygonen met minder dan 3 punten, wat gedegenereerde "
+"polygonen zijn. Gedegenereerde polygonen zijn fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:151
+msgid ""
+"This algorithm detects invalid polygon geometries (degenerate polygons). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Dit algoritme detecteert ongeldige geometrieën polygoon (gedegenereerde "
+"polygonen). Open |options|:sup:`Geavanceerde opties` naast de "
+":guilabel:`Invoerlaag` en stel :guilabel:`Ongeldige objecten filteren` in op"
+" ``Niet filteren (betere uitvoering)`` om ervoor te zorgen dat deze "
+"ongeldige objecten niet worden uitgefilterd voor de verwerking."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2625
 msgid "options"
@@ -793,11 +1171,139 @@ msgstr "options"
 msgid "[vector: polygon]"
 msgstr "[vector: polygoon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:179
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:237
+msgid "**Degenerate polygons errors**"
+msgstr "**Fouten Polygonen degenereren**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:184
+msgid ""
+"Specification of the output layer containing the centroid of the degenerate "
+"polygons. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de gedegenereerde "
+"polygonen bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:252
+msgid "**Degenerate polygons features**"
+msgstr "**Objecten gedegenereerde polygonen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:197
+msgid ""
+"Specification of the output layer containing the degenerate polygons. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de gedegenereerde polygonen bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:245
+msgid ""
+"``gc_partidx``: the index of the geometry part of the degenerate polygon."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van de gedegenereerde"
+" polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:246
+msgid "``gc_ringidx``: the index of the ring of the degenerate polygon."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van de gedegenereerde "
+"polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:247
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:624
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:750
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:874
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1002
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1130
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1376
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1487
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1753
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1911
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2165
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2339
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2597
+msgid "``gc_vertidx``"
+msgstr "``gc_vertidx``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:248
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the degenerate polygon"
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van de gedegenereerde "
+"polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:249
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the degenerate polygon"
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van de gedegenereerde "
+"polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:251
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is degenerate."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat gedegenereerd is."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:255
+msgid ""
+"Output polygon layer with features containing the degenerate polygons. If no"
+" degenerate polygon features are found, the output layer will be empty. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten die de gedegenereerde polygonen bevatten."
+" Als geen objecten gedegenereerde polygonen zijn gevonden, zal de "
+"uitvoerlaag leeg zijn. Beschikbare velden zijn hetzelfde als in de uitvoer "
+"``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:262
+msgid "**Algorithm ID**: ``native:checkgeometrydegeneratepolygon``"
+msgstr "**ID algoritme**: ``native:checkgeometrydegeneratepolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:272
+msgid "Duplicated geometries"
+msgstr "Gedupliceerde geometrieën"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:274
+msgid ""
+"Checks for duplicated geometries in a vector layer, and reports them as "
+"errors."
+msgstr ""
+"Controleert op gedupliceerde geometrieën in een vectorlaag en rapporteert ze"
+" als fouten."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:293
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:546
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2522
 msgid "[vector: geometry]"
 msgstr "[vector: geometrie]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:294
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:418
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:677
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1680
+msgid "Layer with the geometries to check"
+msgstr "Laag met de te controleren geometrieën."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:422
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:681
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1684
+msgid "Field storing unique values for feature identification"
+msgstr ""
+"Veld dat de unieke waarden opslaat voor het identificeren van objecten"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:359
+msgid "**Duplicate geometries errors**"
+msgstr "**Fouten Gedupliceerde geometrieën**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:310
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:374
+msgid "**Duplicate geometries**"
+msgstr "**Gedupliceerde geometrieën**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:314
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:376
@@ -813,6 +1319,98 @@ msgstr "[vector: geometrie]"
 msgid "[vector: same as input]"
 msgstr "[vector: hetzelfde als invoer]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:317
+msgid ""
+"Specification of the output layer containing the geometries that were found "
+"to be duplicated. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de gevonden gedupliceerde geometrieën "
+"bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:367
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:622
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1128
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1374
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1485
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1909
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2163
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2337
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2595
+msgid "``gc_partidx``"
+msgstr "``gc_partidx``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:623
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:873
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1001
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1129
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1375
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1486
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1910
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2164
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2338
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2596
+msgid "``gc_ringidx``"
+msgstr "``gc_ringidx``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:370
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the duplicate geometry."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van de gedupliceerde "
+"geometrie."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:371
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the duplicate geometry."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van de gedupliceerde "
+"geometrie."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:372
+msgid ""
+"``gc_error``: the indices of the duplicate geometry (all except the highest "
+"index)."
+msgstr ""
+"``gc_error``: de indexen van de gedupliceerde geometrie (allemaal, behalve "
+"de hoogste)."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:373
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is a duplicate."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat een duplicaat is."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:377
+msgid ""
+"Output layer containing the geometries that were found to be duplicated. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die de gevonden gedupliceerde geometrieën bevat. Beschikbare "
+"velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:383
+msgid "**Algorithm ID**: ``native:checkgeometryduplicate``"
+msgstr "**ID algoritme**: ``native:checkgeometryduplicate``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:393
+msgid "Duplicated vertices"
+msgstr "Gedupliceerde punten"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:395
+msgid ""
+"Checks for duplicated vertices in line or polygon geometries, and reports "
+"them as errors."
+msgstr ""
+"Controleert op gedupliceerde punten in geometrieën lijn of polygoon en "
+"rapporteert ze als fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:398
+msgid ""
+":ref:`qgisfixgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`"
+msgstr ""
+":ref:`qgisfixgeometryduplicatenodes`, :ref:`qgisremoveduplicatevertices`"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:417
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:932
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1543
@@ -823,10 +1421,548 @@ msgstr "[vector: hetzelfde als invoer]"
 msgid "[vector: line, polygon]"
 msgstr "[vector: lijn, polygoon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:423
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:482
+msgid "**Duplicated vertices errors**"
+msgstr "**Fouten Gedupliceerde punten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:434
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:497
+msgid "**Duplicated vertices features**"
+msgstr "**Objecten gedupliceerde punten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:441
+msgid ""
+"Specification of the output layer containing the features with duplicated "
+"vertices. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de objecten met gedupliceerde punten "
+"bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:490
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"duplicate vertex."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object dat "
+"het gedupliceerde punt bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:491
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"duplicate vertex."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van het object dat het"
+" gedupliceerde punt bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:492
+msgid ""
+"``gc_vertidx``: the index of the duplicate vertex in the feature's geometry "
+"ring."
+msgstr ""
+"``gc_vertidx``: de index van het duplicaatpunt in de ring van de geometrie "
+"van het object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:493
+msgid "``gc_errorx``: the x coordinate of the duplicate vertex."
+msgstr "``gc_errorx``: de X-coördinaat van het duplicaatpunt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:494
+msgid "``gc_errory``: the y coordinate of the duplicate vertex."
+msgstr "``gc_errory``: de Y-coördinaat van het duplicaatpunt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:496
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that has duplicate "
+"vertices."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat duplicaatpunten "
+"heeft."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:500
+msgid ""
+"Output layer containing the features with duplicated vertices. Available "
+"fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die de objecten met gedupliceerde punten bevat. Beschikbare "
+"velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:506
+msgid "**Algorithm ID**: ``native:checkgeometryduplicatenodes``"
+msgstr "**ID algoritme**: ``native:checkgeometryduplicatenodes``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:516
+msgid "Features inside polygon"
+msgstr "Objecten binnen polygoon"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:518
+msgid ""
+"Checks the input geometries contained in the polygons from the polygon "
+"layers list. A polygon layer can be checked against itself. Any contained "
+"features are reported as errors."
+msgstr ""
+"Controleert de invoergeometrieën die in de polygonen zijn opgenomen uit de "
+"lijst met polygonenlagen. Een polygonenlaag kan met zichzelf worden "
+"gecontroleerd. Opgenomen objecten worden als fouten gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:525
+msgid "Reporting errors on features inside a polygon."
+msgstr "Fouten rapporteren voor objecten binnen een polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:527
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2373
+msgid ":ref:`qgisfixgeometrydeletefeatures`"
+msgstr ":ref:`qgisfixgeometrydeletefeatures`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1428
+msgid "**Polygon layers**"
+msgstr "**Polygonenlagen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:553
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1429
 msgid "``POLYGONS``"
 msgstr "``POLYGONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:554
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1430
+msgid "[vector: polygon][list]"
+msgstr "[vector: polygoon][lijst]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:555
+msgid "List of polygon layers to check against."
+msgstr "Lijst met polygonenlagen die moet worden gecontroleerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:614
+msgid "**Errors from contained features**"
+msgstr "**Fouten in opgenomen objecten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:561
+msgid ""
+"Point layer representing the contained features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Puntenlaag die de opgenomen objecten weergeeft. :ref:`Een van "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:567
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:629
+msgid "**Contained features**"
+msgstr "**Opgenomen objecten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:574
+msgid ""
+"Specification of the output layer containing features within the checked "
+"polygons. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de opgenomen objecten binnen de "
+"gecontroleerde polygonen bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:625
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the contained feature."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van het opgenomen object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:626
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the contained feature."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van het opgenomen object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:627
+msgid ""
+"``gc_error``: the layer name and feature ID of a polygon that contains the "
+"feature."
+msgstr ""
+"``gc_error``: de laagnaam en object-ID van de polygoon die het object bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:628
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is contained "
+"within another."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat is opgenomen "
+"binnen een ander."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:632
+msgid ""
+"Output layer containing features within the checked polygons. Available "
+"fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die de objecten met gecontroleerde polygonen bevat. Beschikbare "
+"velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:638
+msgid "**Algorithm ID**: ``native:checkgeometrycontained``"
+msgstr "**ID algoritme**: ``native:checkgeometrycontained``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:648
+msgid "Holes"
+msgstr "Gaten"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:650
+msgid "Detects holes in polygon geometries and reports them as errors."
+msgstr ""
+"Detecteert gaten in geometrieën polygoon en rapporteert ze als fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:655
+msgid "Reporting errors for holes on a polygon feature."
+msgstr "Fouten rapporteren voor gaten in een object polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:657
+msgid ":ref:`qgisfixgeometryhole`"
+msgstr ":ref:`qgisfixgeometryhole`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:682
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:740
+msgid "**Holes errors**"
+msgstr "**Fouten Gaten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:693
+msgid "**Polygons with holes**"
+msgstr "**Polygonen met gaten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:700
+msgid ""
+"Polygon layer with the features containing holes. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Polygonenlaag die objecten met gaten bevat. :ref:`Een van "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:748
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"hole."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object dat "
+"het gat bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:749
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"hole."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van het object dat het"
+" gat bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:751
+msgid "``gc_errorx``: the x coordinate of the centroid of the hole."
+msgstr "``gc_errorx``: de X-coördinaat van het zwaartepunt van het gat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:752
+msgid "``gc_errory``: the y coordinate of the centroid of the hole."
+msgstr "``gc_errory``: de Y-coördinaat van het zwaartepunt van het gat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:754
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that has a hole."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat een gat heeft."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:755
+msgid "**Polygon with holes**"
+msgstr "**Polygoon met gaten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:758
+msgid ""
+"Output polygon layer with features containing holes. If no holes are found, "
+"the output layer will be empty. Available fields are the same as in the "
+"``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten die gaten bevatten. Als geen gaten zijn "
+"gevonden, zal de uitvoerlaag leeg zijn. Beschikbare velden zijn hetzelfde "
+"als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:765
+msgid "**Algorithm ID**: ``native:checkgeometryhole``"
+msgstr "**ID algoritme**: ``native:checkgeometryhole``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:775
+msgid "Lines intersecting each other"
+msgstr "Lijnen die elkaar doorsnijden"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:777
+msgid ""
+"Checks intersections between line geometries within a layer. Intersections "
+"between two different lines are errors."
+msgstr ""
+"Controleert het doorsnijden van twee geometrieën binnen een laag. "
+"Doorsnijdingen tussen twee verschillende lijnen zijn fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:780
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:904
+msgid ""
+":ref:`qgislineintersections`, :ref:`qgisintersection`, "
+":ref:`qgischeckgeometryselfintersection`"
+msgstr ""
+":ref:`qgislineintersections`, :ref:`qgisintersection`, "
+":ref:`qgischeckgeometryselfintersection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:806
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:864
+msgid "**Intersection errors**"
+msgstr "**Fouten Doorsnijden**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:811
+msgid ""
+"Specification of the output layer containing the intersections location. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de locaties van het doorsnijden bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:817
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:879
+msgid "**Intersecting feature**"
+msgstr "**Doorsneden object**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:824
+msgid ""
+"Specification of the output layer for features intersecting each other. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag voor objecten die elkaar doorsnijden. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:872
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1000
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part where the "
+"intersection occurs."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object waar "
+"het doorsnijden optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:875
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1003
+msgid "``gc_errorx``: the x coordinate of the intersection point."
+msgstr "``gc_errorx``: de X-coördinaat van het doorsnijden."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:876
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1004
+msgid "``gc_errory``: the y coordinate of the intersection point."
+msgstr "``gc_errory``: de Y-coördinaat van het doorsnijden."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:877
+msgid "``UNIQUE_ID`` field: the unique ID of an intersecting input feature."
+msgstr "veld ``UNIQUE_ID``: de unieke ID van een doorsnijdend invoerobject."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:878
+msgid ""
+"``gc_error``: the layer name and index of the other intersecting feature."
+msgstr ""
+"``gc_error``: de laagnaam en index van het andere doorsnijdende object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:882
+msgid ""
+"Output layer containing, for each identified intersection, the feature (with"
+" same ``UNIQUE_ID`` value) it belongs to. If no intersections are found, the"
+" output layer will be empty. Available fields are the same as in the "
+"``ERRORS`` output."
+msgstr ""
+"Uitvoer lijnenlaag die de objecten voor elk geïdentificeerd doorsnijden "
+"bevat, het object (met dezelfde waarde ``UNIQUE_ID``) waartoe het behoort. "
+"Als geen doorsnijdingen zijn gevonden, zal de uitvoerlaag leeg zijn. "
+"Beschikbare velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:889
+msgid "**Algorithm ID**: ``native:checkgeometrylineintersection``"
+msgstr "**ID algoritme**: ``native:checkgeometrylineintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:899
+msgid "Lines intersecting other layer"
+msgstr "Lijnen die een andere laag doorsnijden"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:901
+msgid ""
+"Checks if the input line layer features intersect with the check layer "
+"features. An input feature that intersects with a check layer feature is an "
+"error."
+msgstr ""
+"Controleert of de objecten van de invoerlaag de objecten op de controlelaag "
+"doorsnijden. Een invoerobject dat een controlelaag doorsnijdt is een fout."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:930
+msgid "**Check layer**"
+msgstr "**Controlelaag**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:931
+msgid "``CHECK_LAYER``"
+msgstr "``CHECK_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:933
+msgid "Layer with the geometries to check against."
+msgstr "Laag met de geometrieën waarmee moet worden gecontroleerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:934
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:992
+msgid "**Line intersecting other layer errors**"
+msgstr "**Fouten Lijnen die een andere laag doorsnijden**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:939
+msgid ""
+"Specification of the output point layer containing the locations of "
+"intersection errors. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoer puntenlaag die de locaties van de doorsnijdende "
+"fouten bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:945
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1007
+msgid "**Line intersecting other layer features**"
+msgstr "**Lijn die andere laagobjecten doorsnijdt**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:949
+msgid "[line]"
+msgstr "[lijn]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:952
+msgid ""
+"Line layer with the input features that intersect features in the check "
+"layer. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Lijnenlaag met de invoerobjecten die objecten op de controlelaag "
+"doorsnijden. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:995
+msgid ""
+"Output point layer representing the error location and information. The "
+"output layer contains the following fields:"
+msgstr ""
+"Uitvoer puntenlaag die de locaties van de fouten en informatie bevat. De "
+"uitvoerlaag bevat de volgende velden:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1005
+msgid "``UNIQUE_ID`` field: the unique ID of the intersecting input feature."
+msgstr "veld ``UNIQUE_ID``: de unieke ID van een doorsnijdend puntobject."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1006
+msgid ""
+"``gc_error``: the index of the check layer where the intersection occurs."
+msgstr ""
+"``gc_error``: de index van de controlelaag waar het doorsnijden optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1010
+msgid ""
+"Output layer containing, for each identified intersection, the input feature"
+" it belongs to. If no intersections are found, the output layer will be "
+"empty. Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die, voor elk geïdentificeerd doorsnijden, het invoerobject "
+"bevat waartoe het behoort. Als geen doorsnijdingen zijn gevonden, zal de "
+"uitvoerlaag leeg zijn. Beschikbare velden zijn hetzelfde als in de uitvoer "
+"``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1017
+msgid "**Algorithm ID**: ``native:checkgeometrylinelayerintersection``"
+msgstr "**ID algoritme**: ``native:checkgeometrylinelayerintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1026
+msgid "Missing vertices along borders"
+msgstr "Ontbrekende punten langs randen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1028
+msgid ""
+"Checks for missing vertices along polygon borders. To be topologically "
+"correct, a vertex at the junction of two polygons must be present on both "
+"polygons. Missing vertices are errors."
+msgstr ""
+"Controleert op ontbrekende punten langs randen van polygonen. Om topologisch"
+" correct te zijn moet een punt op de kruising van twee polygonen aanwezig "
+"zijn op beide polygonen. Ontbrekende punten zijn fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1035
+msgid "Reporting errors for missing vertices on polygon features."
+msgstr "Fouten rapporteren voor ontbrekende punten in objecten polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1037
+msgid ":ref:`qgisfixgeometrymissingvertex`"
+msgstr ":ref:`qgisfixgeometrymissingvertex`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1062
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1120
+msgid "**Missing vertices errors**"
+msgstr "**Fouten Ontbrekende punten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1073
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1135
+msgid "**Missing vertices features**"
+msgstr "**Objecten met ontbrekende punten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1080
+msgid ""
+"Polygon layer with the features whose vertices are missing. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Polygonenlaag die objecten bevat waarvan punten ontbreken. :ref:`Een van "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1131
+msgid "``gc_errorx``: the x coordinate of the missing vertex."
+msgstr "``gc_errorx``: de X-coördinaat van het ontbrekende punt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1132
+msgid "``gc_errory``: the y coordinate of the missing vertex."
+msgstr "``gc_errory``: de Y-coördinaat van het ontbrekende punt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1134
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that has a missing "
+"vertex."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat een ontbrekend "
+"punt heeft."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1138
+msgid ""
+"Output polygon layer with features whose vertices are missing. There will be"
+" as many (duplicate) features as there are missing vertices in each "
+"geometry. If no vertices are missing, the output layer will be empty. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten waarvan punten ontbreken. Er zullen net "
+"zoveel (gedupliceerde) objecten zijn als er ontbrekende punten in elke "
+"geometrie zijn. Als er geen punten ontbreken, zal de uitvoerlaag leeg zijn. "
+"Beschikbare velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1146
+msgid "**Algorithm ID**: ``native:checkgeometrymissingvertex``"
+msgstr "**ID algoritme**: ``native:checkgeometrymissingvertex``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1156
+msgid "Overlaps"
+msgstr "Overlappingen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1158
+msgid ""
+"Calculates overlapping areas in polygon geometries, and reports areas "
+"smaller than a given minimum as errors."
+msgstr ""
+"Berekent overlappende gebieden in geometrieën polygoon en rapporteert "
+"gebieden, die kleiner zijn dan een opgegeven minimum, als fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1163
+msgid ""
+"Hashed polygons indicate overlapping areas smaller than the specified "
+"minimum."
+msgstr ""
+"Polygonen met arcering geven overlappende gebieden aan die kleiner zijn dan "
+"het gespecificeerde minimum."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1165
+msgid ":ref:`qgisfixgeometryoverlap`, :ref:`qgiscoveragevalidate`"
+msgstr ":ref:`qgisfixgeometryoverlap`, :ref:`qgiscoveragevalidate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1190
+msgid "**Minimum overlap area**"
+msgstr "**Minimale overlappende gebied**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1191
+msgid "``MIN_OVERLAP_AREA``"
+msgstr "``MIN_OVERLAP_AREA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1192
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1830
@@ -839,14 +1975,502 @@ msgstr "``POLYGONS``"
 msgid "[numeric: double]"
 msgstr "[numeriek: double]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1193
+msgid ""
+"Minimum area of the overlap to be reported as an error. If set to 0, all "
+"overlaps are reported."
+msgstr ""
+"Minimum gebied van de overlapping die moet worden gerapporteerd als een "
+"fout. Indien ingesteld op 0 worden alle overlappingen gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1195
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1253
+msgid "**Overlap errors**"
+msgstr "**Fouten Overlappingen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1200
+msgid ""
+"Specification of the output layer containing centroid points of the "
+"overlapping areas. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de overlappende "
+"gebieden bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1206
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1266
+msgid "**Overlap features**"
+msgstr "**Overlappende objecten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1213
+msgid ""
+"Specification of the output layer for features containing overlaps. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag voor objecten die overlappingen bevatten. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1261
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the overlapping area."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van het overlappende "
+"gebied."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1262
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the overlapping area."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van het overlappende "
+"gebied."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1263
+msgid "``gc_error``: the area of the overlapping geometry."
+msgstr "``gc_error``: het gebied van de overlappende geometrie."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1264
+msgid "``UNIQUE_ID`` field: the unique ID of an overlapped input feature."
+msgstr "veld ``UNIQUE_ID``: de unieke ID van een overlappend invoerobject."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1265
+#, python-brace-format
+msgid ""
+"``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the "
+"other overlapping feature."
+msgstr ""
+"``gc_overlap_feature_{unique_id}``: de veldwaarde van het het veld "
+"``UNIQUE_ID`` voor het andere overlappende object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1269
+msgid ""
+"Output layer containing the overlapping areas. Available fields are the same"
+" as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die de objecten met overlappende gebieden bevat. Beschikbare "
+"velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1275
+msgid "**Algorithm ID**: ``native:checkgeometryoverlap``"
+msgstr "**ID algoritme**: ``native:checkgeometryoverlap``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1284
+msgid "Points outside lines"
+msgstr "Punten buiten lijnen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1286
+msgid ""
+"Checks if the points in the input layer are covered by a line in the "
+"selected line layers. A point not covered by a line is an error."
+msgstr ""
+"Controleert of de punten in de invoerlaag worden bedekt door een lijn in de "
+"geselecteerde lijnenlagen. Een punt dat niet wordt bedekt door een lijn is "
+"een fout."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1292
+msgid "Reporting errors on points not covered by a line."
+msgstr "Fouten rapporteren voor punten die niet worden bedekt door een lijn."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1317
+msgid "**Line layers**"
+msgstr "**Lijnenlagen**"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1318
 msgid "``LINES``"
 msgstr "``LINES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1319
+msgid "[vector: line][list]"
+msgstr "[vector: lijn][lijst]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1320
+msgid "Layer(s) with the lines to check against."
+msgstr "La(a)g(en) waarvan de lijnen moeten worden gecontroleerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1321
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1366
+msgid "**Points not covered by a line**"
+msgstr "**Punten niet bedekt door een lijn**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1326
+msgid ""
+"Specification of the output layer containing points not covered by a line. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de punten bevat die niet worden bedekt "
+"door een lijn. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1377
+msgid "``gc_errorx``: the x coordinate of point outside the lines."
+msgstr "``gc_errorx``: de X-coördinaat van het punt buiten de lijnen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1378
+msgid "``gc_errory``: the y coordinate of point outside the lines."
+msgstr "``gc_errory``: de Y-coördinaat van het punt buiten de lijnen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1380
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is outside the "
+"lines."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat buiten de lijnen "
+"ligt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1385
+msgid "**Algorithm ID**: ``native:checkgeometrypointcoveredbyline``"
+msgstr "**ID algoritme**: ``native:checkgeometrypointcoveredbyline``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1395
+msgid "Points outside polygons"
+msgstr "Punten buiten polygonen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1397
+msgid ""
+"Checks if points from the input layer are in polygons from the selected "
+"polygon layers. Points that are not fully inside polygons are errors."
+msgstr ""
+"Controleert of de punten in de invoerlaag binnen polygonen liggen van de "
+"geselecteerde polygonenlagen. Punten, die niet volledig binnen polygonen "
+"liggen, zijn fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1403
+msgid "Reporting errors on points outside polygons."
+msgstr "Fouten rapporteren van punten buiten polygonen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1431
+msgid "Layer(s) with the polygons to check against."
+msgstr "La(a)g(en) waarmee de polygonen moeten worden gecontroleerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1432
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1477
+msgid "**Points outside polygons errors**"
+msgstr "**Fouten Punten buiten polygonen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1437
+msgid ""
+"Specification of the output layer containing points outside the polygons. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de punten bevat die buiten de polygonen "
+"liggen. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1488
+msgid "``gc_errorx``: the x coordinate of point outside the polygons."
+msgstr "``gc_errorx``: de X-coördinaat van het punt buiten de polygonen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1489
+msgid "``gc_errory``: the y coordinate of point outside the polygons."
+msgstr "``gc_errory``: de Y-coördinaat van het punt buiten de polygonen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1491
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is outside the "
+"polygons."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat buiten de "
+"polygonen ligt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1496
+msgid "**Algorithm ID**: ``native:checkgeometrypointinpolygon``"
+msgstr "**ID algoritme**: ``native:checkgeometrypointinpolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1506
+msgid "Self-contacts"
+msgstr "Zelfcontacten"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1508
+msgid ""
+"Checks if the geometry has self contact points (in line or polygon), i.e., a"
+" vertex that touches more than two segments of the same ring. Self contacts "
+"are errors."
+msgstr ""
+"Controleert of de geometrie punten hebben die contact met zichzelf hebben "
+"(in lijn of polygoon), d.i. een punt dat meer dan twee segmenten van "
+"dezelfde ring raakt. Zelfcontacten zijn fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1514
+msgid ""
+"This algorithm detects invalid polygon geometries (self-contacts). To ensure"
+" these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Dit algoritme detecteert ongeldige geometrieën polygoon (zelfcontacten). "
+"Open |options|:sup:`Geavanceerde opties` naast de :guilabel:`Invoerlaag` en "
+"stel :guilabel:`Ongeldige objecten filteren` in op ``Niet filteren (betere "
+"uitvoering)`` om ervoor te zorgen dat deze ongeldige objecten niet worden "
+"uitgefilterd voor de verwerking."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1522
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1658
+msgid "Self-intersection vs self-contact."
+msgstr "Zelfdoorsnijdend vs zelfcontact."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1524
+msgid ":ref:`qgischeckgeometryselfintersection`"
+msgstr ":ref:`qgischeckgeometryselfintersection`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1549
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1607
+msgid "**Self contact error points**"
+msgstr "**Fouten Punten zelfcontact**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1560
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1622
+msgid "**Self contact features**"
+msgstr "**Objecten met zelfcontact**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1564
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1700
 msgid "[same as input]"
 msgstr "[hetzelfde als invoer]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1567
+msgid ""
+"Line or polygon layer containing self-contact features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Lijnen- of polygonenlaag die objecten met zelfcontacten bevat. :ref:`Een van"
+" <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1615
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part where the self-"
+"contact occurs."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object waar "
+"het zelfcontact optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1616
+msgid "``gc_ringidx``: the index of the ring where the self-contact occurs."
+msgstr "``gc_ringidx``: de index van de ring waar het zelfcontact optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1617
+msgid "``gc_vertidx``: the index of the vertex where the self-contact occurs."
+msgstr "``gc_vertidx``: de index van het punt waar het zelfcontact optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1618
+msgid "``gc_errorx``: the x coordinate of the self-contact."
+msgstr "``gc_errorx``: de X-coördinaat van het zelfcontact."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1619
+msgid "``gc_errory``: the y coordinate of the self-contact."
+msgstr "``gc_errory``: de Y-coördinaat van het zelfcontact."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1621
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the self-contacting input feature."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject met het zelfcontact."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1625
+msgid ""
+"Output polygon or line layer with features containing the self-contact "
+"features. If no self-contact features are found, the output layer will be "
+"empty. Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten die de objecten met het zelfcontact "
+"bevatten. Als geen objecten met zelfcontact zijn gevonden, zal de "
+"uitvoerlaag leeg zijn. Beschikbare velden zijn hetzelfde als in de uitvoer "
+"``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1632
+msgid "**Algorithm ID**: ``native:checkgeometryselfcontact``"
+msgstr "**ID algoritme**: ``native:checkgeometryselfcontact``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1642
+msgid "Self-intersections"
+msgstr "Zelfdoorsnijdingen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1644
+msgid ""
+"Detects self-intersections in line or polygon geometries, and reports them "
+"as errors. Self-intersections occur when the segments of a geometry cross "
+"over each other without having a common vertex."
+msgstr ""
+"Detecteert zelfdoorsnijdingen in geometrieën lijn of polygoon en rapporteert"
+" ze als fouten. Zelfdoorsnijdingen treden op als de segmenten van een "
+"geometrie zich over elkaar uitstrekken, zonder een gemeenschappelijk punt te"
+" hebben."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1650
+msgid ""
+"This algorithm detects invalid polygon geometries (self-intersections). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Dit algoritme detecteert ongeldige geometrieën polygoon (zelf-doorsnijdend)."
+" Open |options|:sup:`Geavanceerde opties` naast de :guilabel:`Invoerlaag` en"
+" stel :guilabel:`Ongeldige objecten filteren` in op ``Niet filteren (betere "
+"uitvoering)`` om ervoor te zorgen dat deze ongeldige objecten niet worden "
+"uitgefilterd voor de verwerking."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1660
+msgid ""
+":ref:`qgisfixgeometryselfintersection`, :ref:`qgischeckgeometryselfcontact`"
+msgstr ""
+":ref:`qgisfixgeometryselfintersection`, :ref:`qgischeckgeometryselfcontact`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1685
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1743
+msgid "**Self-intersecting errors**"
+msgstr "**Fouten Zelfdoorsnijdingen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1696
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1760
+msgid "**Self-intersecting features**"
+msgstr "**Objecten met zelfdoorsnijdingen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1703
+msgid ""
+"Line or polygon layer containing self-intersected features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Lijnen- of polygonenlaag die de objecten met zelfdoorsnijdingen bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1751
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part where the self-"
+"intersection occurs."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object waar "
+"het zelf doorsnijden optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1752
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring where the self-"
+"intersection occurs."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van het object waar "
+"het zelf doorsnijden optreedt."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1754
+msgid "``gc_errorx``: the x coordinate of the self-intersection."
+msgstr "``gc_errorx``: de X-coördinaat van het zelf doorsnijden."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1755
+msgid "``gc_errory``: the y coordinate of the self-intersection."
+msgstr "``gc_errory``: de Y-coördinaat van het zelf doorsnijden."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1757
+msgid ""
+"``gc_segment_1``: the index of the first segment involved in the "
+"intersection."
+msgstr ""
+"``gc_segment_1``: de index van het eerste segment dat is betrokken bij het "
+"zelfkruisen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1758
+msgid ""
+"``gc_segment_2``: the index of the second segment involved in the "
+"intersection."
+msgstr ""
+"``gc_segment_2``: de index van het tweede segment dat is betrokken bij het "
+"zelfkruisen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1759
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the self-intersecting input feature."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het zelfdoorsnijdende invoerobject."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1763
+msgid ""
+"Output polygon or line layer with features containing the self-intersecting "
+"features. If no self-intersecting features are found, the output layer will "
+"be empty. Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten die de objecten met het "
+"zelfdoorsnijdingen bevatten. Als geen objecten met zelfdoorsnijding zijn "
+"gevonden, zal de uitvoerlaag leeg zijn. Beschikbare velden zijn hetzelfde "
+"als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1770
+msgid "**Algorithm ID**: ``native:checkgeometryselfintersection``"
+msgstr "**ID algoritme**: ``native:checkgeometryselfintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1779
+msgid "Sliver polygons"
+msgstr "Splinterpolygonen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1781
+msgid ""
+"Detects sliver polygons in a polygon layer, i.e., polygons with a thinness "
+"greater than a specified value."
+msgstr ""
+"Detecteert splinterpolygonen in een polygonenlaag, d.i. polygonen met een "
+"dunheid die groter is dan een gespecificeerde waarde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1784
+msgid ""
+"The thinness is the ratio between the area of the minimum square containing "
+"the polygon and the area of the polygon itself (a square has a thinness "
+"value of 1). The thinness value is between 1 and +infinity. A maximum area "
+"can be set for limiting the checks to polygons of a lower area. Polygons "
+"having a thinness higher than the maximum thinness are errors. To fix sliver"
+" polygons, use the :ref:`qgisfixgeometryarea` algorithm."
+msgstr ""
+"De dunheid is de verhouding tussen het gebied van het minimale vierkant dat "
+"de polygoon bevat en het gebied van de polygoon zelf (een vierkant dat een "
+"waarde voor dunheid heeft van 1). De waarde voor dunheid ligt tussen 1 en "
+"+oneindig. Een maximaal gebied mag worden ingesteld om de controles te "
+"beperken tot polygonen met een kleiner gebied. Polygonen die een dunheid "
+"hebben van meer dan de maximale dunheid zijn fouten. Gebruik het algoritme "
+":ref:`qgisfixgeometryarea` om splinterpolygonen te repareren."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1793
+msgid ""
+"This algorithm detects invalid polygon geometries (sliver polygons). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Dit algoritme detecteert ongeldige geometrieën polygoon (splinterpolygonen)."
+" Open |options|:sup:`Geavanceerde opties` naast de :guilabel:`Invoerlaag` en"
+" stel :guilabel:`Ongeldige objecten filteren` in op ``Niet filteren (betere "
+"uitvoering)`` om ervoor te zorgen dat deze ongeldige objecten niet worden "
+"uitgefilterd voor de verwerking."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1801
+msgid "Reporting errors on features with sliver polygons."
+msgstr "Fouten rapporteren voor objecten met splinterpolygonen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1803
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2065
+msgid ":ref:`qgisfixgeometryarea`"
+msgstr ":ref:`qgisfixgeometryarea`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1828
+msgid "**Maximum thinness**"
+msgstr "**Maximale dunheid**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1829
+msgid "``MAX_THINNESS``"
+msgstr "``MAX_THINNESS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1832
+msgid "Default: 20.0"
+msgstr "Standaard: 20.0"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1833
+msgid ""
+"Maximum thinness value of a polygon to be considered valid. Any polygon with"
+" a thinness value above this threshold is reported as error."
+msgstr ""
+"Maximale waarde voor dunheid van een polygoon die als geldig moet worden "
+"beschouwd. Elke polygoon met een waarde voor dunheid boven deze drempel "
+"wordt als fout gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1835
+msgid "**Maximum area (map units squared)**"
+msgstr "**Maximale gebied (vierkante kaarteenheden)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1836
+msgid "``MAX_AREA``"
+msgstr "``MAX_AREA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1839
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2231
@@ -855,9 +2479,378 @@ msgstr "[hetzelfde als invoer]"
 msgid "Default: 0.0"
 msgstr "Standaard: 0.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1840
+msgid ""
+"Maximum area of a polygon to be checked (in map units). Any polygon with an "
+"area above this threshold is skipped. A value of 0 means all polygons are "
+"checked."
+msgstr ""
+"Maximale gebied voor een polygoon dat moet worden gecontroleerd (in "
+"kaarteenheden). Elke polygoon met een gebied boven deze drempel wordt "
+"overgeslagen. De waarde 0 betekent dat alle polygonen moeten worden "
+"gecontroleerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1843
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1901
+msgid "**Sliver polygon errors**"
+msgstr "**Fouten Splinterpolygonen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1848
+msgid ""
+"Specification of the output layer containing the centroid points of sliver "
+"polygon features. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de objecten van de "
+"splinterpolygonen bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1854
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1916
+msgid "**Sliver polygon features**"
+msgstr "**Objecten splinterpolygoon**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1861
+msgid ""
+"Polygon layer containing sliver polygon features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Polygonenlaag die de objecten met splinterpolygonen bevat. :ref:`Een van "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1912
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the sliver polygon "
+"feature."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van het object "
+"splinterpolygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1913
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the sliver polygon "
+"feature."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van het object "
+"splinterpolygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1914
+msgid "``gc_error``: the thinness value of the sliver polygon feature."
+msgstr "``gc_error``: de waarde voor dunheid van het object splinterpolygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1915
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is a sliver "
+"polygon."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat een "
+"splinterpolygoon is."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1919
+msgid ""
+"Output layer with features containing the sliver polygons. If no sliver "
+"polygon features are found, the output layer will be empty. Available fields"
+" are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten die de splinterpolygonen bevatten. Als "
+"geen objecten met splinterpolygonen zijn gevonden, zal de uitvoerlaag leeg "
+"zijn. Beschikbare velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1926
+msgid "**Algorithm ID**: ``native:checkgeometrysliverpolygon``"
+msgstr "**ID algoritme**: ``native:checkgeometrysliverpolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1936
+msgid "Small angles"
+msgstr "Kleine hoeken"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1938
+msgid ""
+"Compares the angles within line or polygon geometries to a specified "
+"threshold, and reports as error any angle below that value."
+msgstr ""
+"Vergelijkt de hoeken binnen geometrieën lijn of polygoon met een "
+"gespecificeerde drempelwaarde en rapporteert als fout elke hoek beneden die "
+"waarde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1944
+msgid "Reporting errors on a line feature for angles lower than 15°."
+msgstr "Fouten rapporteren voor een object lijn voor hoeken kleiner dan 15°."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1946
+msgid ":ref:`qgisfixgeometryangle`"
+msgstr ":ref:`qgisfixgeometryangle`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1971
+msgid "**Minimum angle**"
+msgstr "**Minimale hoek**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1972
+msgid "``MIN_ANGLE``"
+msgstr "``MIN_ANGLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1974
+msgid ""
+"Allowed minimum angle between adjacent segments in a feature's geometry. Any"
+" angle below this threshold is reported as error."
+msgstr ""
+"Minimaal toegestane hoek tussen aanliggende segmenten in de geometrie van "
+"een object. Elk hoek beneden deze drempel wordt als fout gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1976
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2021
+msgid "**Small angle errors**"
+msgstr "**Fouten Kleine hoeken**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2029
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"small angle."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object dat de"
+" kleine hoek bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2030
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"small angle."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van het object dat de "
+"kleine hoek bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2031
+msgid ""
+"``gc_vertidx``: the index of the vertex with the small angle in the "
+"feature's geometry ring."
+msgstr ""
+"``gc_vertidx``: de index van het punt met de kleine hoek in de ring van de "
+"geometrie van het object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2032
+msgid "``gc_errorx``: the x coordinate of the vertex with the small angle."
+msgstr "``gc_errorx``: de X-coördinaat van het punt met de kleine hoek."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2033
+msgid "``gc_errory``: the y coordinate of the vertex with the small angle."
+msgstr "``gc_errory``: de Y-coördinaat van het punt met de kleine hoek."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2034
+msgid "``gc_error``: the error angle value."
+msgstr "``gc_error``: de foutwaarde van de hoek."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2035
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature with the small "
+"angle."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject met de kleine hoek."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2040
+msgid "**Algorithm ID**: ``native:checkgeometryangle``"
+msgstr "**ID algoritme**: ``native:checkgeometryangle``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2049
+msgid "Small polygons"
+msgstr "Kleine polygonen"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2051
+msgid ""
+"Detects polygon features whose area is below a specified value as errors."
+msgstr ""
+"Detecteert objecten polygoon waarvan het gebied onder een gespecificeerde "
+"waarde ligt als fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2055
+msgid ""
+"This algorithm detects invalid polygon geometries (small polygons). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Dit algoritme detecteert ongeldige geometrieën polygoon (kleine polygonen). "
+"Open |options|:sup:`Geavanceerde opties` naast de :guilabel:`Invoerlaag` en "
+"stel :guilabel:`Ongeldige objecten filteren` in op ``Niet filteren (betere "
+"uitvoering)`` om ervoor te zorgen dat deze ongeldige objecten niet worden "
+"uitgefilterd voor de verwerking."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2063
+msgid ""
+"Reporting errors on features with small polygons (below given area "
+"threshold)."
+msgstr "Fouten rapporteren voor objecten met kleine polygonen."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2090
+msgid "**Area threshold**"
+msgstr "**Drempelwaarde gebied**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2091
+msgid "``AREATHRESHOLD``"
+msgstr "``AREATHRESHOLD``"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2094
 msgid "Default: 0"
 msgstr "Standaard: 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2095
+msgid ""
+"Minimum area of a polygon to be considered valid, in selected units. Any "
+"polygon with an area below this threshold is reported as error."
+msgstr ""
+"Minimale gebied van een polygoon dat als geldig moet worden beschouwd, in "
+"geselecteerde eenheden. Elke polygoon met een gebied onder deze drempel "
+"wordt als fout gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2097
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2155
+msgid "**Small polygons errors**"
+msgstr "**Fouten Kleine polygonen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2102
+msgid ""
+"Specification of the output layer containing centroid points of small "
+"polygons. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de kleine polygonen"
+" bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2108
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2170
+msgid "**Small polygons features**"
+msgstr "**Objecten Kleine polygonen**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2115
+msgid ""
+"Specification of the output layer for features containing small polygon "
+"features. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de objecten kleine polygonen bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2166
+msgid "``gc_errorx``: the x coordinate of the centroid of the small polygon."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van de kleine polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2167
+msgid "``gc_errory``: the y coordinate of the centroid of the small polygon."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van de kleine polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2168
+msgid "``gc_error``: the area of the small polygon."
+msgstr "``gc_error``: het gebied van de kleine polygoon."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2169
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is a small "
+"polygon."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat een kleine "
+"polygoon is."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2173
+msgid ""
+"Output polygon layer with features containing the small polygon features. If"
+" no small polygon features are found, the output layer will be empty. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoer polygonenlaag met objecten die de objecten kleine polygonen "
+"bevatten. Als geen objecten met kleine polygonen zijn gevonden, zal de "
+"uitvoerlaag leeg zijn. Beschikbare velden zijn hetzelfde als in de uitvoer "
+"``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2180
+msgid "**Algorithm ID**: ``native:checkgeometryarea``"
+msgstr "**ID algoritme**: ``native:checkgeometryarea``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2190
+msgid "Small gaps"
+msgstr "Kleine gaten"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2192
+msgid ""
+"Checks for gaps between polygons in the input layer. Gaps with an area "
+"smaller than the gap threshold are reported as errors. If an allowed gaps "
+"layer is provided, the algorithm ignores gaps that fall entirely within "
+"polygons from this layer. An optional buffer can be applied to the allowed "
+"gaps."
+msgstr ""
+"Controles voor gaten tussen polygonen in de invoerlaag. Gaten met een "
+"kleiner gebied dan de drempelwaarde voor het gat worden als fouten "
+"gerapporteerd. Als een laag met toegestane gaten wordt verschaft, negeert "
+"het algoritme daten die geheel binnen polygonen van die laag vallen. Een "
+"optionele buffer kan op de toegestane gaten worden toegepast."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2200
+msgid ""
+"Reporting errors on polygon features for gaps smaller than the specified "
+"threshold."
+msgstr ""
+"Fouten rapporteren voor objecten polygoon met gaten die kleiner zijn dan de "
+"opgegeven drempelwaarde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2202
+msgid ":ref:`qgisfixgeometrygap`, :ref:`qgiscoveragevalidate`"
+msgstr ":ref:`qgisfixgeometrygap`, :ref:`qgiscoveragevalidate`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2227
+msgid "**Gap threshold**"
+msgstr "**Drempelwaarde gat**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2228
+msgid "``GAP_THRESHOLD``"
+msgstr "``GAP_THRESHOLD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2232
+msgid ""
+"Maximum area of gaps to be reported as errors, in map units. If set to 0, "
+"all the gaps are reported."
+msgstr ""
+"Maximale gebied van gaten die als fouten moeten worden gerapporteerd, in "
+"kaarteenheden. Indien ingesteld op 0 worden alle gaten gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2234
+msgid "**Allowed gaps layer**"
+msgstr "**Laag met toegestane gaten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2237
+msgid "``ALLOWED_GAPS_LAYER``"
+msgstr "``ALLOWED_GAPS_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2239
+msgid ""
+"Optional layer specifying polygons whose areas should be ignored during the "
+"gap check. Gaps that fall entirely within these polygons will not be "
+"reported as errors."
+msgstr ""
+"Optionele laag die polygonen specificeert waarvan de gebieden zouden moeten "
+"worden genegeerd bij het controleren op gaten. Gaten, die geheel binnen deze"
+" polygonen vallen, zullen niet als fouten worden gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2241
+msgid "**Allowed gaps buffer**"
+msgstr "**Buffer toegestane gaten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2244
+msgid "``ALLOWED_GAPS_BUFFER``"
+msgstr "``ALLOWED_GAPS_BUFFER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2248
+msgid ""
+"Buffer distance to apply to the allowed gaps layer, in selected units. Gaps "
+"located within this buffered area are ignored. Allows adding a spatial "
+"tolerance around allowed gaps to avoid reporting near-boundary gaps as "
+"errors."
+msgstr ""
+"Bufferafstand om toe te passen op de laag met toegestane gaten, in "
+"geselecteerde eenheden. Gaten die binnen dit buffergebied liggen worden "
+"genegeerd. Maakt het mogelijk een ruimtelijke tolerantie toe te voegen "
+"rondom toegestane gaten om te voorkomen dat gaten nabij de grenzen als "
+"fouten worden gerapporteerd."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2251
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2321
+msgid "**Neighbors layer**"
+msgstr "**Laag met buren**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2252
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2322
@@ -868,3 +2861,280 @@ msgstr "``NEIGHBORS``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2323
 msgid "[vector: table]"
 msgstr "[vector: tabel]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2256
+msgid ""
+"Specification of the output table representing the gap ID and the unique ID "
+"of its neighbor features. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoertabel die het ID voor het gat en de unieke ID van"
+" zijn buurobjecten weergeeft. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2262
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2329
+msgid "**Gap errors**"
+msgstr "**Fouten Gat**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2269
+msgid ""
+"Specification of the output layer containing the centroid points of the "
+"gaps. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de gaten bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2275
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2344
+msgid "**Gap features**"
+msgstr "**Objecten Gat**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2280
+msgid ""
+"Specification of the output layer containing the gap geometries. :ref:`One "
+"of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de geometrieën voor de gaten bevat. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2324
+msgid ""
+"A 1–N relational table, meaning that one gap can be associated with multiple"
+" neighboring polygons. The output table contains the following fields:"
+msgstr ""
+"Een relationele tabel 1–N, wat betekent dat een gat kan zijn geassocieerd "
+"met meerdere buurpolygonen. De uitvoertabel bevat de volgende velden:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2327
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2343
+msgid "``gc_errorid``: the ID of the gap."
+msgstr "``gc_errorid``: de ID van het gat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2328
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of an input feature that is a neighbor of"
+" the gap."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat een buurobject van"
+" het gat is."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2340
+msgid "``gc_errorx``: the x coordinate of the centroid of the gap."
+msgstr "``gc_errorx``: de X-coördinaat van het zwaartepunt van het gat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2341
+msgid "``gc_errory``: the y coordinate of the centroid of the gap."
+msgstr "``gc_errory``: de Y-coördinaat van het zwaartepunt van het gat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2342
+msgid "``gc_error``: the area of the gap."
+msgstr "``gc_error``: het gebied van het gat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2347
+msgid ""
+"Output layer containing the gap geometries. Available fields are the same as"
+" in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die de geometrieën van de gaten bevat. Beschikbare velden zijn "
+"hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2353
+msgid "**Algorithm ID**: ``native:checkgeometrygap``"
+msgstr "**ID algoritme**: ``native:checkgeometrygap``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2363
+msgid "Small segments"
+msgstr "Korte segmenten"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2365
+msgid ""
+"Calculates length of individual segments in line or polygon geometries, and "
+"reports segments shorter than a minimum length as errors."
+msgstr ""
+"Berekent lengten van individuele segmenten in geometrieën lijn of polygoon "
+"en rapporteert segmenten, die korter zijn dan een minimale lengte, als "
+"fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2371
+msgid ""
+"Reporting errors (in red) on single line segments shorter than the given "
+"threshold."
+msgstr ""
+"Fouten rapporteren (in rood) voor segmenten van een enkele lijn die korter "
+"zijn dan de opgegeven drempelwaarde."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2398
+msgid "**Minimum segment length**"
+msgstr "**Minimale lengte segment**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2399
+msgid "``MIN_SEGMENT_LENGTH``"
+msgstr "``MIN_SEGMENT_LENGTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2403
+msgid "Minimum length of segments to be considered valid, in map units."
+msgstr ""
+"Minimale lengte van segmenten die als geldig moeten worden beschouwd, in "
+"kaarteenheden."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2404
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2463
+msgid "**Short segments errors**"
+msgstr "**Fouten Korte segmenten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2409
+msgid ""
+"Specification of the output layer containing centroid of short segments. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de korte segmenten "
+"bevat. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2415
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2478
+msgid "**Short segments features**"
+msgstr "**Objecten Korte segmenten**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2422
+msgid ""
+"Specification of the output layer for features containing short segments. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag voor objecten die korte segmenten bevatten. "
+":ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2471
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"small segment."
+msgstr ""
+"``gc_partidx``: de index van het deel van de geometrie van het object dat "
+"het korte segment bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2472
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"small segment."
+msgstr ""
+"``gc_ringidx``: de index van de ring van de geometrie van het object dat het"
+" korte segment bevat."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2473
+msgid ""
+"``gc_vertidx``: the index of the end vertex of the small segment in the "
+"feature's geometry ring."
+msgstr ""
+"``gc_vertidx``: de index van het eindpunt van het korte segment in de ring "
+"van de geometrie van het object."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2474
+msgid "``gc_errorx``: the x coordinate of the centroid of the small segment."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van het korte segment."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2475
+msgid "``gc_errory``: the y coordinate of the centroid of the small segment."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van het korte segment."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2476
+msgid "``gc_error``: the error segment length."
+msgstr "``gc_error``: de lengte van het foute segment."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2477
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature with the small "
+"segment."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject met het korte segment."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2481
+msgid ""
+"Output layer containing, for each identified short segment, the feature it "
+"belongs to. Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die, voor elk geïdentificeerde korte segment, het object bevat "
+"waartoe het behoort. Beschikbare velden zijn hetzelfde als in de uitvoer "
+"``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2487
+msgid "**Algorithm ID**: ``native:checkgeometrysegmentlength``"
+msgstr "**ID algoritme**: ``native:checkgeometrysegmentlength``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2498
+msgid "Strictly multipart"
+msgstr "Strikt meerdelig"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2500
+msgid ""
+"Checks if multipart geometries have more than one part. Multipart geometries"
+" with only one part are errors."
+msgstr ""
+"Controleert of meerdelige geometrieën meer dan een deel hebben. Meerdelige "
+"geometrieën met slechts een deel zijn fouten."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2503
+msgid ":ref:`qgisfixgeometrymultipart`"
+msgstr ":ref:`qgisfixgeometrymultipart`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2528
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2587
+msgid "**One-part geometry errors**"
+msgstr "**Fouten Eendelige geometrie**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2533
+msgid ""
+"Specification of the output layer containing centroid of the multipart "
+"geometries that have only one part. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de zwaartepunten van de meerdelige "
+"geometrieën bevatten die slechts een deel hebben. :ref:`Een van "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2539
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2602
+msgid "**One-part geometry features**"
+msgstr "**Objecten Eendelige geometrie**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2546
+msgid ""
+"Specification of the output layer for features containing multipart "
+"geometries that have only one part. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specificatie van de uitvoerlaag die de objecten met meerdelige geometrieën "
+"bevat die slechts een deel hebben. :ref:`Een van <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2598
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the multipart geometry "
+"that has only one part."
+msgstr ""
+"``gc_errorx``: de X-coördinaat van het zwaartepunt van de meerdelige "
+"geometrie dat slechts een deel heeft."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2599
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the multipart geometry "
+"that has only one part."
+msgstr ""
+"``gc_errory``: de Y-coördinaat van het zwaartepunt van de meerdelige "
+"geometrie dat slechts een deel heeft."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2601
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is multipart "
+"but has only one part."
+msgstr ""
+"veld ``UNIQUE_ID``: de unieke ID van het invoerobject dat meerdelig is, maar"
+" slechts een deel heeft."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2605
+msgid ""
+"Output layer containing features that are multipart but have only one part. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Uitvoerlaag die de objecten bevat die meerdelig zijn, maar slechts een deel "
+"hebben. Beschikbare velden zijn hetzelfde als in de uitvoer ``ERRORS``."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2611
+msgid "**Algorithm ID**: ``native:checkgeometrymultipart``"
+msgstr "**ID algoritme**: ``native:checkgeometrymultipart``"
