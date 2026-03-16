@@ -1976,13 +1976,25 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
   The type of information to display can be selected in the bottom part of the menu:
 
-  * :guilabel:`Show distance`
-  * :guilabel:`Show angle`
-  * :guilabel:`Show XY coordinates`
-  * :guilabel:`Show Z value`
-  * :guilabel:`Show M value`
-  * :guilabel:`Show bearing/azimuth`
-  * :guilabel:`Show common snapping angle`
+  * |unchecked|:guilabel:`Show Floater`
+  * |unchecked|:guilabel:`Show Distance`
+  * |unchecked|:guilabel:`Show Angle`
+  * |unchecked|:guilabel:`Show XY Coordinates`
+  * |unchecked|:guilabel:`Show Z Value`
+  * |unchecked|:guilabel:`Show M Value`
+  * |unchecked|:guilabel:`Show Bearing/Azimuth`
+  * |unchecked|:guilabel:`Show Common Snapping Angle`
+  * :menuselection:`Show Area -->`
+
+    * :menuselection:`--> Hidden`
+    * :menuselection:`--> Show Ellipsoidal Area`
+    * :menuselection:`--> Show Cartesian Area`
+  * :menuselection:`Show Total Length/Perimeter-->`
+
+    * :menuselection:`--> Hidden`
+    * :menuselection:`--> Show Ellipsoidal Lengths`
+    * :menuselection:`--> Show Cartesian Lengths`
+  * |unchecked|:guilabel:`Show Weight`
 
 
 Below the toolbar, you will find a number of text boxes whose value reflects
