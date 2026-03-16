@@ -1641,7 +1641,7 @@ Advanced settings
 
 All the settings related to QGIS (UI, tools, data providers, Processing
 configurations, default values and paths, plugins options, expressions,
-geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
+geometry checks...) are saved in a :file:`QGIS/QGIS4.ini` file under the active
 :ref:`user profile <user_profiles>` directory.
 Configurations can be shared by copying this file to other installations.
 
@@ -1650,8 +1650,8 @@ settings through the :guilabel:`Advanced Settings Editor`.
 After you promise to be careful, the widget is populated with a tree of all
 the existing settings, and you can edit their value.
 Right-click over a setting or a group and you can delete it
-(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
-Changes are automatically saved in the :file:`QGIS3.ini` file.
+(to add a setting or group, you have to edit the :file:`QGIS4.ini` file).
+Changes are automatically saved in the :file:`QGIS4.ini` file.
 
 .. warning:: **Avoid using the Advanced tab settings blindly**
 
@@ -1692,9 +1692,9 @@ But you can create as many user profiles as you want:
      something like :file:`C:\\Users\\<username>`.
    * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
 
-     * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
-     * |win| :file:`%AppData%\\Roaming\\QGIS\\QGIS3\\profiles\\`
-     * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`
+     * |nix| :file:`.local/share/QGIS/QGIS4/profiles/`
+     * |win| :file:`%AppData%\\Roaming\\QGIS\\QGIS4\\profiles\\`
+     * |osx| :file:`Library/Application Support/QGIS/QGIS4/profiles/`
 
    The user profile folder can be opened from within QGIS using the
    :guilabel:`Open Active Profile Folder`.
@@ -1720,7 +1720,7 @@ User Profiles` menu. You can also run QGIS with a specific user profile from the
  If the bug prevents you to create a new user profile from within the :menuselection:`Settings --> User Profiles` menu,
  you can either:
 
- * Rename in the file explorer, the "broken" user profile folder in the :file:`QGIS3/profiles` folder
+ * Rename in the file explorer, the "broken" user profile folder in the :file:`QGIS4/profiles` folder
    and restart QGIS.
    A new ``default`` user profile will be created and executed.
  * Start QGIS from the command line, using the new :ref:`profile name <profile_commandline>` argument:
@@ -2683,9 +2683,9 @@ only the first found file will be used:
   and does not require any additional setup like passing commandline parameters
   or settings environment variable. Depending on the OS, it is:
 
-  * |nix| :file:`$HOME/.local/share/QGIS/QGIS3/`
-  * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS3\\`
-  * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`
+  * |nix| :file:`$HOME/.local/share/QGIS/QGIS4/`
+  * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS4\\`
+  * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS4/`
 * the installation directory, i.e., :file:`your_QGIS_package_path/resources/qgis_global_settings.ini`.
 
 Presently, there's no way to specify a file to write settings to; therefore,

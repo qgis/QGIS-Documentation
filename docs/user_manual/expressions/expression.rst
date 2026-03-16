@@ -303,7 +303,7 @@ Using the |fileSave| :sup:`Add current expression to user expressions` button
 above the expression editor frame, you can save important expressions you want
 to have quick access to. These are available from the **User expressions** group
 in the middle panel. They are saved under the :ref:`user profile <user_profiles>`
-(:file:`<userprofile>/QGIS/QGIS3.ini` file) and available in all expression
+(:file:`<userprofile>/QGIS/QGIS4.ini` file) and available in all expression
 dialogs inside all projects of the current user profile.
 
 A set of tools available above the expression editor frame helps you manage
@@ -318,7 +318,7 @@ the user expressions:
 * |sharingImport| :sup:`Import user expressions` from a ``.json`` file
   into the active user profile folder
 * |sharingExport| :sup:`Export user expressions` as a ``.json`` file;
-  all the user expressions in the user profile :file:`QGIS3.ini` file are
+  all the user expressions in the user profile :file:`QGIS4.ini` file are
   shared
 
 

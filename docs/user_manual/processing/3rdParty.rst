@@ -200,14 +200,14 @@ Perform the following steps to load and enable them using the
 
       * On Ubuntu, set the path to (or, better, include in the path):
 
-          /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-Resources/collections/rscripts
+          /home/<user>/.local/share/QGIS/QGIS4/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-Resources/collections/rscripts
 
         .. figure:: img/rscript_folder.png
            :align: center
 
       * On Windows, set the path to (or, better, include in the path):
 
-          C:\\Users\\<user>\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\resource_sharing\\repositories\\github.com\\qgis\\QGIS-Resources\\collections\\rscripts
+          C:\\Users\\<user>\\AppData\\Roaming\\QGIS\\QGIS4\\profiles\\default\\resource_sharing\\repositories\\github.com\\qgis\\QGIS-Resources\\collections\\rscripts
 
       To edit, double-click. You can then choose to just paste / type
       the path, or you can navigate to the directory by using the
@@ -434,7 +434,7 @@ If these two packages are not installed, R may try to load and install them
 (and all the libraries that they depend on).
 
 The following R libraries end up in
-:file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts`
+:file:`~/.local/share/QGIS/QGIS4/profiles/default/processing/rscripts`
 after ``sf_test`` has been run from the Processing Toolbox on Ubuntu with
 version 2.0 of the *Processing R Provider* plugin and a fresh install of
 *R* 3.4.4 (*apt* package ``r-base-core`` only):
