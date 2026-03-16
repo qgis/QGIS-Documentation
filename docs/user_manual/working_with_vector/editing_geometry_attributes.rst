@@ -498,6 +498,10 @@ adding new vertices:
   click and the ending right click are necessary in this mode.
 * The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
   :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
+* The |digitizeWithNURBS| :sup:`Digitize with NURBS Curve`: creates smooth curves using
+  NURBS control points and degree, allowing precise control over the curve shape.
+  NURBS degree controls the shape of the curve. Higher values make the curve smoother
+  and more flexible, while lower values create simpler curves.
 
 The selected technique remains while switching among the digitizing tools.
 You can combine any of the first three methods while drawing the same geometry.
@@ -2387,7 +2391,11 @@ To edit features in-place:
    :width: 1.5em
 .. |digitizeShape| image:: /static/common/mActionDigitizeShape.png
    :width: 1.5em
+.. |digitizeWithBezier| image:: /static/common/mActionDigitizeWithBezier.png
+   :width: 1.5em
 .. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
+.. |digitizeWithNURBS| image:: /static/common/mActionDigitizeWithNURBS.png
    :width: 1.5em
 .. |digitizeWithSegment| image:: /static/common/mActionDigitizeWithSegment.png
    :width: 1.5em
