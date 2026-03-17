@@ -127,22 +127,24 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   the following synchronization modes:
 
   * :guilabel:`Synchronize to All Project Layers`: displays all layers
-    from the layers panel, including unchecked layers.
-  * :guilabel:`Synchronize to Visible Layers`: displays only layers that
+    from the layers panel, including non-spatial and unchecked layers.
+  * :guilabel:`Synchronize to Visible Layers`: displays only spatial layers that
     are checked in the layers panel, regardless of whether
     they are visible within the linked map's extent.
+
+    .. note::
+       In both synchronization modes,
+       any changes made to legend-related settings in the layers
+       panel will automatically be propagated to the layout legend.
+
   * :guilabel:`Manual`: allows you to manually control
     which layers are shown in the legend. Use the :guilabel:`Reset`
-    button to repopulate the legend from:
+    button to discard custom changes and repopulate the legend from:
 
     * :guilabel:`Reset to All Project Layers`: repopulates the legend
       with all layers from the project.
     * :guilabel:`Reset to Visible Layers`: repopulates the legend
       with only the currently visible layers.
-
-  .. note::
-     Any changes made to legend-related settings in the layers
-     panel will automatically be propagated to the layout legend.
 
 * The legend items window lists all legend items and allows you to change item
   order, group layers, remove and restore items in the list, edit layer names
