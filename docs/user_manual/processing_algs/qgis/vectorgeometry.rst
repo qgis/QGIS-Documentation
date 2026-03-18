@@ -404,7 +404,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-.. _qgisapproximatedmedialaxis:
+.. _qgisapproximatemedialaxis:
 
 Approximate medial axis
 -----------------------
@@ -419,6 +419,11 @@ of input geometries.
 
 .. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
    (see :menuselection:`Help --> About` menu).
+
+.. figure:: img/approxmedialaxis.png
+   :align: center
+
+   Medial axis (red line) of a polygon layer
 
 Parameters
 ..........
@@ -468,7 +473,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``native:approximatedmedialaxis``
+**Algorithm ID**: ``native:approximatemedialaxis``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
