@@ -136,6 +136,9 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
        In both synchronization modes,
        any changes made to legend-related settings in the layers
        panel will automatically be propagated to the layout legend.
+       Layers with |checkbox| :guilabel:`Include automatically in print layout legend items`
+       unchecked in their layer's legend properties
+       will be excluded from the legend.
 
   * :guilabel:`Manual`: allows you to manually control
     which layers are shown in the legend. Use the :guilabel:`Reset`
