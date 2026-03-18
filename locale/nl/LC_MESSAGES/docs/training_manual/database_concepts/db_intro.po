@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# DiGro, 2025
+# Harrissou Sant-anna, 2026
+# DiGro, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: DiGro, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -329,11 +329,11 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:210
 msgid ""
-"Redesign the theoretical `people` table above to reduce duplication and to "
-"normalise the data structure."
+"Redesign the theoretical ``people`` table above to reduce duplication and to"
+" normalise the data structure."
 msgstr ""
-"Ontwerp de bovenstaande theoretische tabel `people` opnieuw om duplicatie te"
-" verminderen en de structuur van de gegevens te normaliseren."
+"Ontwerp de bovenstaande theoretische tabel ``people`` opnieuw om duplicatie "
+"te verminderen en de structuur van de gegevens te normaliseren."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:213
 msgid ""
@@ -345,17 +345,17 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:219
 msgid ""
-"The major problem with the *people* table is that there is a single address "
-"field which contains a person's entire address. Thinking about our "
-"theoretical *address* table earlier in this lesson, we know that an address "
-"is made up of many different properties. By storing all these properties in "
-"one field, we make it much harder to update and query our data. We therefore"
-" need to split the address field into the various properties. This would "
-"give us a table which has the following structure::"
+"The major problem with the ``people`` table is that there is a single "
+"address field which contains a person's entire address. Thinking about our "
+"theoretical ``address`` table earlier in this lesson, we know that an "
+"address is made up of many different properties. By storing all these "
+"properties in one field, we make it much harder to update and query our "
+"data. We therefore need to split the address field into the various "
+"properties. This would give us a table which has the following structure::"
 msgstr ""
-"Het belangrijkste probleem met de tabel *people* is dat er één enkel "
+"Het belangrijkste probleem met de tabel ``people`` is dat er één enkel "
 "adresveld is dat het gehele adres van een persoon bevat. Denkend aan onze "
-"theoretische tabel *address* eerder in deze les, weten we dat een adres "
+"theoretische tabel ``address`` eerder in deze les, weten we dat een adres "
 "bestaat uit veel verschillende eigenschappen. Door deze eigenschappen op te "
 "slaan in één enkel veld, maken we het veel moeilijker om onze gegevens bij "
 "te werken en te bevragen. We moeten daarom het adresveld splitsen in de "
@@ -431,13 +431,13 @@ msgstr "Entiteit Relaties Diagrammen"
 msgid ""
 "In a normalised database, you typically have many relations (tables). The "
 "entity-relationship diagram (ER Diagram) is used to design the logical "
-"dependencies between the relations. Consider our non-normalised `people` "
+"dependencies between the relations. Consider our non-normalised ``people`` "
 "table from earlier in the lesson:"
 msgstr ""
 "In een genormaliseerde database heeft u gewoonlijk vele relaties (tabellen)."
 " Het entiteit-relatie diagram (ER Diagram) wordt gebruikt om de logische "
-"afhankelijkheden tussen de relaties te ontwerpen. Denk aan onze niet-"
-"genormaliseerde tabel `people` eerder in deze les:"
+"afhankelijkheden tussen de relaties te ontwerpen. Denk aan onze niet "
+"genormaliseerde tabel ``people`` eerder in deze les:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:304
 msgid ""
@@ -454,11 +454,11 @@ msgstr "en:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:327
 msgid ""
-"We can then link the two tables using the 'keys' :kbd:`streets.id` and "
-":kbd:`people.streets_id`."
+"We can then link the two tables using the 'keys' ``streets.id`` and "
+"``people.streets_id``."
 msgstr ""
 "We kunnen dan de twee tabellen koppelen met behulp van de 'sleutels' "
-":kbd:`streets.id` en :kbd:`people.streets_id`."
+"``streets.id`` en ``people.streets_id``."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:330
 msgid ""
@@ -491,18 +491,18 @@ msgstr ""
 "door middel van een ER Diagram."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:349
-msgid "Our *people* table currently looks like this::"
-msgstr "Onze tabel *people* ziet er momenteel zo uit::"
+msgid "Our ``people`` table currently looks like this::"
+msgstr "Onze tabel ``people`` ziet er momenteel zo uit::"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:355
 msgid ""
 "The :guilabel:`street_id` column represents a 'one to many' relationship "
 "between the people object and the related street object, which is in the "
-"*streets* table."
+"``streets`` table."
 msgstr ""
 "De kolom :guilabel:`street_id` geeft een 'een-tot-veel'-relatie weer tussen "
 "het object people en het daaraan gerelateerde object straat, die in de tabel"
-" *streets* staat."
+" ``streets`` staat."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:358
 msgid ""
@@ -515,10 +515,10 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/db_intro.rst:365
 msgid ""
 "We can also create separate tables for the town or city name and country, "
-"linking them to our *people* table via 'one to many' relationships::"
+"linking them to our ``people`` table via 'one to many' relationships::"
 msgstr ""
 "We kunnen ook afzonderlijke tabellen maken voor de stads- of dorpsnaam en "
-"het land, en ze te koppelen aan onze tabel *people* via 'een-tot-"
+"het land, en ze te koppelen aan onze tabel ``people`` via 'een-tot-"
 "veel'-relaties::"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:373
@@ -533,14 +533,14 @@ msgstr "Beperkingen, Primaire sleutels en Vreemde sleutels"
 msgid ""
 "A database constraint is used to ensure that data in a relation matches the "
 "modeller's view of how that data should be stored. For example a constraint "
-"on your postal code could ensure that the number falls between :kbd:`1000` "
-"and :kbd:`9999`."
+"on your postal code could ensure that the number falls between ``1000`` and "
+"``9999``."
 msgstr ""
 "Een beperking voor een database wordt gebruikt om er voor te zorgen dat de "
 "gegevens in een relatie overeenkomt met de weergave van het model over hoe "
 "die gegevens zouden moeten worden opgeslagen. Een beperking op uw postcode "
 "zou er, bijvoorbeeld, voor kunnen zorgen dat de getallen vallen tussen "
-":kbd:`1000` en :kbd:`9999`."
+"``1000`` en ``9999``."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:386
 msgid ""
