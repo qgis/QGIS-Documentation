@@ -2137,8 +2137,9 @@ on layers and features, and also on print layout items:
 
    Examples of blend modes applied to a green feature over an orange
 
-   From top to bottom, left to right: Normal -- Lighten, Screen, Dodge, Addition --
-   Difference, Subtract -- Darken, Multiply, Burn -- Overlay, Soft light, Hard light
+   **A**: Normal, **B**: Lighten, **C**: Screen, **D**: Dodge, **E**: Addition,
+   **F**: Difference, **G**: Subtract, **H**: Darken, **I**: Multiply, **J**: Burn,
+   **K**: Overlay, **L**: Soft light, **M**: Hard light
 
 
 .. _blending_clipping:
