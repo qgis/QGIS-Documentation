@@ -1980,7 +1980,7 @@ Parameters
      - The join layer.
    * - **Layer 2 fields to copy (leave empty to copy all fields)**
      - ``FIELDS_TO_COPY``
-     - [fields]
+     - [tablefield: any] [list]
      - Join layer fields to copy (if empty, all fields will be
        copied).
    * - **Discard records which could not be joined**
