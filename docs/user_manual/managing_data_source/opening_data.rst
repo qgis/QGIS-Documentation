@@ -1274,7 +1274,7 @@ To load a layer from a database, you can perform the following steps:
    This may indicate an issue to detect:
 
    * features geometry type: in which case you can select the appropriate one
-     in the drop-dowmn list of the :guilabel:`Spatial Type` column
+     in the drop-down list of the :guilabel:`Spatial Type` column
    * layer CRS: you can enter the correct code in the :guilabel:`SRID` column
    * layer's primary key, in order to unequivocally identify each feature:
      this can be fixed by selecting one or more attributes in the drop-down list
