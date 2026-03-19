@@ -438,8 +438,8 @@ reference systems and projections.
 
 .. tip:: **Exporting datasets from PostgreSQL**
 
-   There is also a tool for exporting postgreSQL
-   datasets wth geographic data to Shapefile format: **pgsql2shp**.
+   There is also a tool for exporting PostgreSQL
+   datasets with geographic data to Shapefile format: **pgsql2shp**.
    It is shipped within your PostGIS distribution.
 
 .. index:: ogr2ogr

@@ -50,7 +50,7 @@ Supported *3D Tiles* features:
   tile contents may also be encoded as glTF 2.0 (text or binary). The
   ``EXT_mesh_gpu_instancing`` extension is not supported yet.
 * Currently only explicit tiling is supported. Implicit tiling is not
-  supported yet
+  supported yet.
 * Currently only tilesets using EPSG:4978 are supported.
 
 

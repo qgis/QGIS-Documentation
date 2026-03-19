@@ -318,7 +318,7 @@ visualization options of contours for the selected group, as shown in
   use |refresh| :sup:`Load` to fetch the min and max values of the current group
   or enter custom values if you want to exclude some.
 * Select |radioButtonOn| :guilabel:`Min/Max` to set the renderer's minimum and maximum values based on the chosen extent.
-* :guilabel:`Statictics extent` can be :guilabel:`Whole mesh`, :guilabel:`Current canvas` or :guilabel:`Updated canvas`.
+* :guilabel:`Statistics extent` can be :guilabel:`Whole mesh`, :guilabel:`Current canvas` or :guilabel:`Updated canvas`.
   :guilabel:`Updated canvas` means that min/max values used for the rendering
   will change with the canvas extent (dynamic stretching).
 * For 2D/3D meshes, select the :guilabel:`Resampling method` to interpolate the
@@ -998,7 +998,7 @@ To select mesh elements, you can use the following tools:
   see more at :ref:`select_mesh_by_polygon`.
 * |meshSelectExpression| :sup:`Select Mesh Elements by Expression` to select different mesh elements by expression,
   you can choose to :guilabel:`Select by vertices` or :guilabel:`Select by faces`, see more at :ref:`select_mesh_by_expression`.
-* |meshSelectIsolatedVertices| :sup:`Select Isolated Vertices`  to select all vertices that are not part of any mesh face.
+* |meshSelectIsolatedVertices| :sup:`Select Isolated Vertices` to select all vertices that are not part of any mesh face.
 * |meshSelectAll| :sup:`Select All Vertices` to select all vertices of the mesh layer.
 
 .. _digitize_mesh_elements:
