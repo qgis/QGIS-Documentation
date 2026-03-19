@@ -17,7 +17,7 @@ It has many different options and settings.
 Let's start to explore some of its features.
 
 #. Start a new map and add the ``roads`` layer from the :file:`training_data`
-   Geopackage.
+   GeoPackage.
 #. Install the **QuickMapServices** plugin.
 #. Click on :menuselection:`Web --> QuickMapServices`.
    The first menu lists different map providers (``OSM``, ``NASA``) with available maps.

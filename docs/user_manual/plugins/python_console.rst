@@ -225,7 +225,7 @@ All available tools are described in the following table.
   +-------------------------------------------------------+--------------------------------------------------------------------------------------+                           |
   | |classBrowserConsole| :guilabel:`Object inspector…`   | Shows and hides a dedicated browser with a tree structure                            |                           |
   |                                                       | for classes and functions available in the script.                                   |                           |
-  |                                                       | Click an item fo a quick access to its definition.                                   |                           |
+  |                                                       | Click an item for a quick access to its definition.                                   |                           |
   |                                                       | The tool requires an activation from                                                 |                           |
   |                                                       | the :ref:`Python settings - Run and Debug <python_debugger>`.                        |                           |
   +-------------------------------------------------------+--------------------------------------------------------------------------------------+---------------------------+
