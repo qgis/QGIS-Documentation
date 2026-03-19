@@ -1101,7 +1101,7 @@ An `ArcGIS REST Server`_ can host many different types of web services
 (feature service, map service, image service, ...).
 Read :ref:`arcgis_rest` for instructions to connect to an ArcGIS REST server.
 
-When loading layers form an ArcGIS Feature Service,
+When loading layers from an ArcGIS Feature Service,
 symbols are automatically converted to QGIS-native symbology,
 allowing QGIS to visually reproduce the same appearance as ArcGIS web maps.
 

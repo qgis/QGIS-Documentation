@@ -833,7 +833,7 @@ Outputs
    * - **Small angle fixed layer**
      - ``OUTPUT``
      - [same as input]
-     - Output layer with the geometry fix applied to the input features
+     - Output layer with the geometry fix applied to the input features.
        The layer contains the same fields as in the input layer.
 
 Python code
