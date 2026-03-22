@@ -91,7 +91,7 @@ To edit an existing Catalog Service entry:
 
 #. Select the entry you would like to edit
 #. Click the :guilabel:`Edit` button
-#. And modify the :guilabel:`Name` or :guilabel:`URL` values
+#. Modify the relevant parameters
 #. Click :guilabel:`OK`.
 
 To delete a Catalog Service entry, select the entry you would like to
