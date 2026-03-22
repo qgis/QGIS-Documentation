@@ -1156,10 +1156,16 @@ Layouts settings
    Layouts settings
 
 
-**Composition defaults**
+**Layout defaults**
 
-You can define the :guilabel:`Default font` used within the :ref:`print layout
-<label_printlayout>`.
+* Define the :guilabel:`Default font` used within the :ref:`print layout <label_printlayout>`
+* Define the :guilabel:`Legend mode` for controlling layers listed by default
+  in newly created :ref:`legends <legend_items>` in the print layout.
+  Available options are:
+
+  * :guilabel:`Synchronize to All Project Layers`
+  * :guilabel:`Synchronize to Visible Layers`
+  * :guilabel:`Manual`
 
 **Grid appearance**
 

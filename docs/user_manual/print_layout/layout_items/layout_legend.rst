@@ -107,6 +107,8 @@ panel provides the following functionalities:
      THEN 60
      END
 
+.. _legend_items:
+
 Legend items
 ------------
 
@@ -117,24 +119,43 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
 
 .. figure:: img/legend_items.png
    :align: center
+   :width: 50%
 
    Legend Items group
 
-* The legend will be updated automatically if |checkbox| :guilabel:`Auto update` is checked:
-  all spatial and visible layers are referenced in the legend,
-  unless the |checkbox| :guilabel:`Include automatically in print layout legend items`
-  in the layer properties legend tab is unchecked.
-  When :guilabel:`Auto update` is unchecked this will give you more control over the legend items.
-  All the icons below the legend items list will be activated,
-  allowing you for example to add layers that are not visible in the associated map item(s),
-  or layers that you excluded from the automatic legend update.
+* The layers listed in the legend can be updated by selecting one of
+  the following synchronization modes:
+
+  * :guilabel:`Synchronize to All Project Layers`: displays all layers
+    from the layers panel, including non-spatial and unchecked layers.
+  * :guilabel:`Synchronize to Visible Layers`: displays only spatial layers that
+    are checked in the layers panel, regardless of whether
+    they are visible within the linked map's extent.
+
+    .. note::
+       In both synchronization modes,
+       any changes made to legend-related settings in the layers
+       panel will automatically be propagated to the layout legend.
+       Layers with |checkbox| :guilabel:`Include automatically in print layout legend items`
+       unchecked in their layer's legend properties
+       will be excluded from the legend.
+
+  * :guilabel:`Manual`: allows you to manually control
+    which layers are shown in the legend. Use the :guilabel:`Reset`
+    button to discard custom changes and repopulate the legend from:
+
+    * :guilabel:`Reset to All Project Layers`: repopulates the legend
+      with all layers from the project.
+    * :guilabel:`Reset to Visible Layers`: repopulates the legend
+      with only the currently visible layers.
+
 * The legend items window lists all legend items and allows you to change item
   order, group layers, remove and restore items in the list, edit layer names
-  and symbology and add a filter.
+  and symbology and add a filter. These buttons will work only if you
+  enable :guilabel:`Manual` legend mode.
 
   * Use the |expandTree| :sup:`Expand all` and |collapseTree| :sup:`Collapse all` buttons
-    to respectively expand or collapse all the groups and subgroups in the legend tree. 
-    Ensure that the :guilabel:`Auto update` is unchecked to use these buttons.
+    to respectively expand or collapse all the groups and subgroups in the legend tree.
   * The item order can be changed using the |arrowUp| and |arrowDown| buttons or
     with 'drag-and-drop' functionality. The order can not be changed for WMS
     legend graphics.
@@ -161,15 +182,11 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   you can revert them by choosing :guilabel:`Reset to defaults` from the
   contextual menu of the legend entry.
 
-  After changing the symbology in the QGIS main window, you can click on
-  :guilabel:`Update All` to adapt the changes in the legend element of the print
-  layout.
-  
 * With the |checkbox| :guilabel:`Only show items inside linked maps`, only the
   legend items visible in the linked map will be listed in the legend. If you 
   have more than one map you can click on :guilabel:`...` and select other 
   maps from your layout.
-  This tool remains available when |checkbox| :guilabel:`Auto-update` is active.
+  This tool remains available in any legend mode.
 * While generating an atlas with polygon features, you can filter out legend
   items that lie outside the current atlas feature. To do that, check the
   |checkbox| :guilabel:`Only show items inside current atlas feature` option.
