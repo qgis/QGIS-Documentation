@@ -5,7 +5,7 @@ Preamble
 ********
 
 Welcome to the documentation of the geographical information system (GIS)
-software QGIS.
+software QGIS, an official OSGeo project.
 QGIS is subject to the GNU General Public License version 2, or any later version.
 More information is available on the `QGIS website <https://www.qgis.org/license>`_.
 

@@ -5,7 +5,7 @@ Developers Guide for QGIS
 #########################
 
 
-Welcome to the QGIS Development pages. Here you'll find rules, tools and
+Welcome to the QGIS (OSGeo project) Development pages. Here you'll find rules, tools and
 steps to easily and efficiently contribute to QGIS code.
 
 
