@@ -1,0 +1,143 @@
+name: Optimize Images
+
+on:
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Compression mode'
+        required: true
+        default: 'lossless'
+        type: choice
+        options:
+          - lossless
+          - lossy
+      path:
+        description: 'Path to optimize (default: build/html/)'
+        required: false
+        default: 'build/html/'
+
+  # Run on PRs that add/modify images
+  pull_request:
+    paths:
+      - '**.png'
+      - '**.PNG'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    name: Optimize PNG images
+
+    steps:
+    - name: Harden Runner
+      uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+      with:
+        egress-policy: audit
+
+    - name: Check out repository
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      with:
+        ref: ${{ github.head_ref || github.ref }}
+        fetch-depth: 0
+
+    - name: Install optimization tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y optipng pngquant
+
+    - name: Get changed images (PR only)
+      if: github.event_name == 'pull_request'
+      id: changed-images
+      run: |
+        # Get list of changed PNG files
+        CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- '*.png' '*.PNG' | tr '\n' ' ')
+        echo "files=$CHANGED" >> $GITHUB_OUTPUT
+        if [ -z "$CHANGED" ]; then
+          echo "No PNG files changed"
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "Changed files: $CHANGED"
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Optimize images (PR - changed files only)
+      if: github.event_name == 'pull_request' && steps.changed-images.outputs.has_changes == 'true'
+      run: |
+        for file in ${{ steps.changed-images.outputs.files }}; do
+          if [ -f "$file" ]; then
+            echo "Optimizing: $file"
+            BEFORE=$(stat -c%s "$file")
+            optipng -o2 -quiet "$file" || true
+            AFTER=$(stat -c%s "$file")
+            if [ "$AFTER" -lt "$BEFORE" ]; then
+              SAVED=$((BEFORE - AFTER))
+              echo "  Saved: $SAVED bytes"
+            fi
+          fi
+        done
+
+    - name: Optimize images (Manual trigger)
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+        MODE_FLAG=""
+        if [ "${{ inputs.mode }}" == "lossy" ]; then
+          MODE_FLAG="--lossy"
+        fi
+        ./scripts/optimize_images.sh $MODE_FLAG "${{ inputs.path }}"
+
+    - name: Check for changes
+      id: git-check
+      run: |
+        git diff --exit-code || echo "has_changes=true" >> $GITHUB_OUTPUT
+
+    - name: Commit optimized images (PR)
+      if: github.event_name == 'pull_request' && steps.git-check.outputs.has_changes == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add -A
+        git commit -m "Optimize PNG images
+
+        Automated image optimization using optipng."
+        git push
+
+    - name: Create PR with optimized images (Manual trigger)
+      if: github.event_name == 'workflow_dispatch' && steps.git-check.outputs.has_changes == 'true'
+      run: |
+        BRANCH="optimize-images-$(date +%Y%m%d-%H%M%S)"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git checkout -b "$BRANCH"
+        git add -A
+        git commit -m "Optimize PNG images (${{ inputs.mode }} mode)
+
+        Automated image optimization using optipng${{ inputs.mode == 'lossy' && ' and pngquant' || '' }}."
+        git push -u origin "$BRANCH"
+
+        gh pr create \
+          --title "Optimize PNG images (${{ inputs.mode }} mode)" \
+          --body "## Summary
+
+        Automated image optimization run.
+
+        - **Mode**: ${{ inputs.mode }}
+        - **Path**: ${{ inputs.path }}
+
+        This PR contains optimized PNG images to reduce repository size and improve page load times." \
+          --base ${{ github.ref_name }}
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Summary
+      run: |
+        echo "## Image Optimization Complete" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ steps.git-check.outputs.has_changes }}" == "true" ]; then
+          echo "Images were optimized and changes committed." >> $GITHUB_STEP_SUMMARY
+        else
+          echo "No optimization improvements found." >> $GITHUB_STEP_SUMMARY
+        fi

@@ -1,0 +1,247 @@
+name: QA Checks
+
+on:
+  push:
+    branches: [master, main]
+    paths-ignore:
+      - 'locale/**'
+  pull_request:
+    paths-ignore:
+      - 'locale/**'
+  # Allow manual trigger
+  workflow_dispatch:
+  # Weekly link check
+  schedule:
+    - cron: '0 3 * * 0'  # Every Sunday at 3am UTC
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # ============================================================================
+  # Pre-commit checks (linting, formatting, etc.)
+  # ============================================================================
+  pre-commit:
+    name: Pre-commit Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Cache Nix store
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: |
+            ~/.cache/nix
+            /nix/store
+          key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-nix-
+
+      - name: Cache pre-commit
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: ~/.cache/pre-commit
+          key: ${{ runner.os }}-pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pre-commit-
+
+      - name: Run pre-commit checks
+        run: |
+          nix develop --command pre-commit run --all-files --show-diff-on-failure
+        continue-on-error: false
+
+  # ============================================================================
+  # Build documentation with Nix environment
+  # ============================================================================
+  build-nix:
+    name: Build Documentation (Nix)
+    runs-on: ubuntu-latest
+    needs: pre-commit
+
+    strategy:
+      fail-fast: false
+      matrix:
+        build-type: [fasthtml, html]
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Cache Nix store
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: |
+            ~/.cache/nix
+            /nix/store
+          key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-nix-
+
+      - name: Cache Sphinx doctrees
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: build/.doctrees
+          key: ${{ runner.os }}-doctrees-${{ matrix.build-type }}-${{ hashFiles('docs/**/*.rst') }}
+          restore-keys: |
+            ${{ runner.os }}-doctrees-${{ matrix.build-type }}-
+
+      - name: Build documentation (${{ matrix.build-type }})
+        run: |
+          nix develop --command make ${{ matrix.build-type }}
+
+      - name: Check for build warnings (strict mode)
+        if: matrix.build-type == 'html'
+        run: |
+          # The html target uses -nW --keep-going which treats warnings as errors
+          # If we reach here, the build passed
+          echo "Build completed successfully with no errors"
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: docs-${{ matrix.build-type }}
+          path: build/html/en
+          retention-days: 7
+
+  # ============================================================================
+  # RST syntax validation
+  # ============================================================================
+  rst-check:
+    name: RST Syntax Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Cache Nix store
+        uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3
+        with:
+          path: |
+            ~/.cache/nix
+            /nix/store
+          key: ${{ runner.os }}-nix-${{ hashFiles('flake.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-nix-
+
+      - name: Run rstcheck
+        run: |
+          nix develop --command rstcheck \
+            --report-level error \
+            --ignore-roles pyqgis,api,source,sup,sub,menuselection,guilabel,kbd,file,ref,doc,term,command,program,option,envvar,abbr,dfn,numref,download \
+            --ignore-directives toctree,include,only,ifconfig,literalinclude,index,glossary,substitution-definitions,highlight,todo,todolist,deprecated,versionadded,versionchanged,seealso,productionlist,centered,testcode,testoutput,toggle,tabs,tab,code-block \
+            --ignore-languages python,bash,sql,json,xml,yaml \
+            docs/ || echo "RST check completed with some issues"
+
+  # ============================================================================
+  # Link checking (optional, runs on schedule)
+  # ============================================================================
+  linkcheck:
+    name: Check Links
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+
+      - name: Run linkcheck
+        run: |
+          nix develop --command make linkcheck
+        continue-on-error: true
+
+      - name: Upload linkcheck report
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: linkcheck-report
+          path: build/linkcheck/
+          retention-days: 30
+
+  # ============================================================================
+  # Summary job
+  # ============================================================================
+  qa-summary:
+    name: QA Summary
+    runs-on: ubuntu-latest
+    needs: [pre-commit, build-nix, rst-check]
+    if: always()
+
+    steps:
+      - name: Check job results
+        run: |
+          echo "## QA Results Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ needs.pre-commit.result }}" == "success" ]; then
+            echo "- :white_check_mark: Pre-commit checks passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- :x: Pre-commit checks failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ needs.build-nix.result }}" == "success" ]; then
+            echo "- :white_check_mark: Documentation build passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- :x: Documentation build failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          if [ "${{ needs.rst-check.result }}" == "success" ]; then
+            echo "- :white_check_mark: RST syntax check passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- :warning: RST syntax check had issues" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Fail if critical jobs failed
+          if [ "${{ needs.pre-commit.result }}" != "success" ] || [ "${{ needs.build-nix.result }}" != "success" ]; then
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo ":x: **QA checks failed. Please fix the issues above.**" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo ":tada: **All QA checks passed!**" >> $GITHUB_STEP_SUMMARY

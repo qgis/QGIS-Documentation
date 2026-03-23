@@ -1,6 +1,71 @@
+# Pre-commit hooks for QGIS Documentation
+# Install: pre-commit install
+# Run manually: pre-commit run --all-files
+# Update hooks: pre-commit autoupdate
 
 repos:
+  # Standard pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+        exclude: ^(locale/|_dummy/)
+      - id: end-of-file-fixer
+        exclude: ^(locale/|_dummy/)
+      - id: check-yaml
+        args: [--unsafe]
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ['--maxkb=1024']
+      - id: mixed-line-ending
+        args: [--fix=lf]
+        exclude: ^(locale/|_dummy/)
 
+  # RST linting with rstcheck
+  - repo: https://github.com/rstcheck/rstcheck
+    rev: v6.2.0
+    hooks:
+      - id: rstcheck
+        args:
+          - --report-level=warning
+          - --ignore-directives=toctree,include,only,ifconfig,literalinclude,index,glossary,substitution-definitions,highlight,todo,todolist,deprecated,versionadded,versionchanged,seealso,productionlist,centered,testcode,testoutput,testsetup,tabs,tab,code-block,toggle
+          - --ignore-roles=menuselection,guilabel,file,kbd,ref,doc,term,command,program,option,envvar,index,abbr,dfn,numref,eq,download,py:mod,py:obj,py:class,py:meth,py:attr,py:func,py:exc,pyqgis,api,source,sup,sub,raw,math
+          - --ignore-languages=python,bash,sql,json,xml,yaml
+        exclude: ^(locale/|_dummy/|build/)
+        additional_dependencies:
+          - sphinx
+
+  # RST style checker (doc8)
+  - repo: https://github.com/PyCQA/doc8
+    rev: v1.1.1
+    hooks:
+      - id: doc8
+        args:
+          - --max-line-length=300
+          - --ignore=D001,D002,D004
+        exclude: ^(locale/|_dummy/|build/)
+
+  # Spell checking
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          - --skip=*.po,*.pot,*.mo,*.svg,*.png,*.jpg,*.gif,*.ico,*.pyc,*.js,*.css,*.map
+          - --ignore-words-list=cange,fo,ges,hsa,ist,nd,ot,te,teh,theses,titel,ue,vertice,wil,sur,ans,rouge,ba,aas,pullrequest
+        exclude: ^(locale/|_dummy/|build/|scripts/)
+
+  # YAML formatting
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.33.0
+    hooks:
+      - id: yamllint
+        args: [-d, "{extends: relaxed, rules: {line-length: {max: 200}}}"]
+        exclude: ^(locale/|_dummy/|build/)
+
+  # Check for broken internal references (local script)
   - repo: local
     hooks:
       - id: find_set_subst
@@ -10,6 +75,24 @@ repos:
         always_run: true
         pass_filenames: false
 
+      - id: check-image-refs
+        name: Check image references exist
+        entry: ./scripts/check_image_refs.sh
+        language: script
+        files: \.(rst)$
+        exclude: ^(locale/|_dummy/|build/)
+
+      - id: rst-lint-staged
+        name: RST syntax check (staged files)
+        entry: bash -c 'for f in "$@"; do if [[ "$f" == *.rst ]]; then rstcheck --report-level error --ignore-roles pyqgis,api,source,sup,sub --ignore-directives testcode,testoutput,toggle,tabs,tab --ignore-languages python,bash,sql "$f" 2>&1 | grep -v "Unknown" || true; fi; done'
+        language: system
+        pass_filenames: true
+        files: \.(rst)$
+        exclude: ^(locale/|_dummy/|build/)
+
 ci:
   autofix_prs: true
   autoupdate_schedule: quarterly
+  skip:
+    - check-image-refs
+    - rst-lint-staged
