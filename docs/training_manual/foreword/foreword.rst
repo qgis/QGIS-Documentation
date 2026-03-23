@@ -17,6 +17,10 @@ Here are only some of the reasons:
 - *It's free, as in lunch.* Installing and using the QGIS program costs you a
   grand total of zero money. No initial fee, no recurring fee, nothing.
 
+- *It's backed by OSGeo.* QGIS is an official project of the Open Source
+  Geospatial Foundation (OSGeo), ensuring long-term support and alignment
+  with open geospatial standards.
+
 - *It's free, as in liberty.* If you need extra functionality in QGIS, you
   can do more than just hope it will be included in the next release. You can
   sponsor the development of a feature, or add it yourself if you are

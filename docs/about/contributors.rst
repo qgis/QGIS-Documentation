@@ -9,7 +9,8 @@
    .. contents::
       :local:
 
-QGIS is an open source project developed by a team of dedicated volunteers and
+QGIS is an open source project under the Open Source Geospatial Foundation (OSGeo)
+developed by a team of dedicated volunteers and
 organisations. We strive to be a welcoming community for people of all race, creed,
 gender and walks of life.
 At any moment, you can `get involved <https://qgis.org/community/involve/>`_.
