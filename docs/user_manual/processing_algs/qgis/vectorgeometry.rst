@@ -7537,7 +7537,7 @@ Creates transects on vertices for (multi)linestring.
 A transect is a line oriented from an angle (by default perpendicular)
 to the input polylines (at vertices).
 
-Field(s) from feature(s) are returned in the transect.
+The output transect layer includes the original feature fields along with new transect fields.
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
@@ -7652,7 +7652,7 @@ Creates transects at fixed distance intervals along (multi)linestrings.
 A transect is a line oriented from an angle (by default perpendicular)
 to the input polylines at regular intervals.
 
-Field(s) from feature(s) are returned in the transect.
+The output transect layer includes the original feature fields along with new transect fields.
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
