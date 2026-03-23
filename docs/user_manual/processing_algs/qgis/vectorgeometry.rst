@@ -7537,16 +7537,7 @@ Creates transects on vertices for (multi)linestring.
 A transect is a line oriented from an angle (by default perpendicular)
 to the input polylines (at vertices).
 
-Field(s) from feature(s) are returned in the transect with these
-new fields:
-
-* TR_FID: ID of the original feature
-* TR_ID: ID of the transect. Each transect have an unique ID
-* TR_SEGMENT: ID of the segment of the linestring
-* TR_ANGLE: Angle in degrees from the original line at the vertex
-* TR_LENGTH: Total length of the transect returned
-* TR_ORIENT: Side of the transect (only on the left or right of
-  the line, or both side)
+Field(s) from feature(s) are returned in the transect.
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
@@ -7594,7 +7585,17 @@ Parameters
        * 0 --- Left
        * 1 --- Right
        * 2 --- Both
+   * - **Direction**
 
+       Optional
+     - ``DIRECTION``
+     - [enumeration]
+  
+       Default: ``0``
+     - Orientation direction for transects:
+       
+       * 0 --- Left to Right
+       * 1 --- Right to Left
    * - **Transect**
      - ``OUTPUT``
      - [vector: line]
@@ -7622,7 +7623,15 @@ Outputs
    * - **Transect**
      - ``OUTPUT``
      - [vector: line]
-     - Output line layer
+     - Output line layer.
+       The output layer contains the following fields:
+  
+       - ``TR_FID``: ID of the original feature
+       - ``TR_ID``: ID of the transect. Each transect have a unique ID
+       - ``TR_SEGMENT``: ID of the segment of the linestring
+       - ``TR_ANGLE``: Angle in degrees from the original line at the vertex
+       - ``TR_LENGTH``: Total length of the transect returned
+       - ``TR_ORIENT``: Side of the transect (only on the left or right of the line, or both side)
 
 Python code
 ...........
@@ -7643,15 +7652,7 @@ Creates transects at fixed distance intervals along (multi)linestrings.
 A transect is a line oriented from an angle (by default perpendicular)
 to the input polylines at regular intervals.
 
-Field(s) from feature(s) are returned in the transect,
-with these new fields:
-
-* TR_FID: ID of the original feature
-* TR_ID: ID of the transect. Each transect have a unique ID
-* TR_SEGMENT: ID of the segment of the linestring
-* TR_ANGLE: Angle in degrees from the original line at the vertex
-* TR_LENGTH: Total length of the transect returned
-* TR_ORIENT: Side of the transect (only on the left or right of the line, or both side)
+Field(s) from feature(s) are returned in the transect.
 
 .. warning::
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
@@ -7710,7 +7711,6 @@ Parameters
        * 1 --- Right
        * 2 --- Both
    * - **Direction**
-
        Optional
      - ``DIRECTION``
      - [enumeration]
