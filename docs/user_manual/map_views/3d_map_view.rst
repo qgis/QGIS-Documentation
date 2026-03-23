@@ -520,9 +520,9 @@ in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` f
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
 .. |arrowLeft| image:: /static/common/mActionArrowLeft.png
-   :width: 1.5em
+   :width: 1.2em
 .. |arrowRight| image:: /static/common/mActionArrowRight.png
-   :width: 1.5em
+   :width: 1.2em
 .. |camera| image:: /static/common/mIconCamera.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
@@ -570,7 +570,7 @@ in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` f
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
 .. |unlocked| image:: /static/common/unlocked.png
-   :width: 1.3em
+   :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

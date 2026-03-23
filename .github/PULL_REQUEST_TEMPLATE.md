@@ -1,6 +1,6 @@
 <!---
 Include a few sentences describing the overall goals for this Pull Request.
- 
+
 A list of issues is at https://github.com/qgis/QGIS-Documentation/issues.
 Add "fix #issuenumber" for each issue the PR fixes. The ticket(s) will be closed automatically.
 If your PR doesn't fix entirely the ticket, only add the ticket(s) reference preceded by # character.

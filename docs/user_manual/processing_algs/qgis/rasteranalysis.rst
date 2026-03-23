@@ -4665,5 +4665,4 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |344| replace:: ``NEW in 3.44``
 .. |400| replace:: ``NEW in 4.0``
