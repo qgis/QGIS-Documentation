@@ -7556,6 +7556,8 @@ new fields:
 
    Dashed red lines represent the transect of the input line layer
 
+.. seealso:: :ref:`qgistransectfixeddistance`
+
 Parameters
 ..........
 
@@ -7659,6 +7661,8 @@ with these new fields:
 
    Transects (red lines) created at fixed intervals along the input line layer (blue lines)
 
+.. seealso:: :ref:`qgistransect`
+
 Parameters
 ..........
 
@@ -7698,8 +7702,9 @@ Parameters
      - ``SIDE``
      - [enumeration]
   
-       Default: ``Both``
-     - Which side of the line to create transects on:
+       Default: ``0``
+     - Which side of the line to create transects on (relative to the line
+       digitizing direction):
        
        * 0 --- Left
        * 1 --- Right
@@ -7710,7 +7715,7 @@ Parameters
      - ``DIRECTION``
      - [enumeration]
   
-       Default: ``Left to Right``
+       Default: ``0``
      - Orientation direction for transects:
        
        * 0 --- Left to Right
@@ -7742,7 +7747,15 @@ Outputs
    * - **Transect**
      - ``OUTPUT``
      - [vector: line]
-     - Output line layer containing the generated transects
+     - Output line layer containing the generated transects.
+       The output layer contains the following fields:
+  
+       - ``TR_FID``: ID of the original feature
+       - ``TR_ID``: ID of the transect. Each transect have a unique ID
+       - ``TR_SEGMENT``: ID of the segment of the linestring
+       - ``TR_ANGLE``: Angle in degrees from the original line at the vertex
+       - ``TR_LENGTH``: Total length of the transect returned
+       - ``TR_ORIENT``: Side of the transect (only on the left or right of the line, or both side)
 
 Python code
 ...........
@@ -7752,8 +7765,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-.. seealso:: :ref:`qgistransect`
 
 .. _qgistranslategeometry:
 
