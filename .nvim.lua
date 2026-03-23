@@ -104,203 +104,79 @@ end
 
 -- Parse Sphinx build output and populate quickfix list
 local function parse_sphinx_errors(log_file)
-  log_file = log_file or "build/sphinx_errors.log"
-
-  -- Try multiple possible log locations
-  local log_files = {
-    "build/sphinx_errors.log",
-    "build/benchmark_auto.log",
-    "build/benchmark_1.log",
-  }
-
-  local found_log = nil
-
-  -- Check each log file location
-  for _, lf in ipairs(log_files) do
-    local f = io.open(lf, "r")
-    if f then
-      f:close()
-      found_log = lf
-      break
-    end
-  end
-
-  if not found_log then
-    -- Try to find the most recent log
-    local handle = io.popen("find build -name '*.log' -newer Makefile 2>/dev/null | head -1")
-    if handle then
-      found_log = handle:read("*l")
-      handle:close()
-    end
-  end
-
-  if not found_log or found_log == "" then
-    vim.notify("No recent build log found. Run a build first.", vim.log.levels.WARN)
-    return
-  end
-
-  local file = io.open(found_log, "r")
-  if not file then
-    vim.notify("Could not open log: " .. found_log, vim.log.levels.ERROR)
-    return
-  end
-
-  local qf_items = {}
   local cwd = vim.fn.getcwd()
+  log_file = log_file or (cwd .. "/build/sphinx_errors.log")
 
-  for line in file:lines() do
-    -- Match Sphinx warning/error patterns
-    -- Format: /absolute/path/file.rst:123: WARNING: message
-    -- or: /absolute/path/file.rst:123: message
-    local filepath, lnum, msg
+  -- Check if file exists
+  if vim.fn.filereadable(log_file) == 0 then
+    vim.notify("Log file not found: " .. log_file .. "\nRun a build first.", vim.log.levels.WARN)
+    return
+  end
 
-    -- Pattern for WARNING/ERROR with absolute path ending in .rst
-    -- Match everything up to .rst, then :line: then WARNING/ERROR
-    filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*WARNING:%s*(.+)")
-    if not filepath then
-      filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*ERROR:%s*(.+)")
-    end
+  -- Read the file directly and parse line by line
+  local lines = vim.fn.readfile(log_file)
+  local qf_items = {}
+  local seen = {}
 
-    if filepath and lnum and msg then
-      -- Make path relative to cwd
-      local rel_path = filepath:gsub("^" .. cwd .. "/", "")
+  for _, line in ipairs(lines) do
+    -- Skip lines from .direnv or .vscode
+    if not line:match("%.direnv") and not line:match("%.vscode") and line:match("/docs/") then
+      -- Match pattern: /path/to/docs/file.rst:123: WARNING: message
+      local filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*WARNING:%s*(.+)")
 
-      -- Skip paths from .direnv or other non-project directories
-      if not rel_path:match("^%.direnv") and not rel_path:match("^/") then
-        table.insert(qf_items, {
-          filename = rel_path,
-          lnum = tonumber(lnum),
-          col = 1,
-          text = msg,
-          type = (msg:match("ERROR") or msg:match("error")) and "E" or "W",
-        })
+      if filepath and lnum then
+        -- Make path relative to cwd
+        local rel_path = filepath:gsub("^" .. cwd .. "/", "")
+
+        local key = rel_path .. ":" .. lnum
+        if not seen[key] then
+          seen[key] = true
+          table.insert(qf_items, {
+            filename = rel_path,
+            lnum = tonumber(lnum),
+            col = 1,
+            text = msg or "Warning",
+            type = "W",
+          })
+        end
       end
     end
   end
 
-  file:close()
-
   if #qf_items == 0 then
-    vim.notify("No project warnings found in: " .. found_log, vim.log.levels.INFO)
+    vim.notify("No project warnings found in: " .. log_file, vim.log.levels.INFO)
     return
   end
 
-  -- Remove duplicates (same file:line)
-  local seen = {}
-  local unique_items = {}
-  for _, item in ipairs(qf_items) do
-    local key = item.filename .. ":" .. item.lnum
-    if not seen[key] then
-      seen[key] = true
-      table.insert(unique_items, item)
-    end
-  end
-
   vim.fn.setqflist({}, 'r', {
-    title = 'Sphinx Build Warnings',
-    items = unique_items,
+    title = 'Sphinx Build Warnings (' .. #qf_items .. ')',
+    items = qf_items,
   })
   vim.cmd("copen")
-  vim.notify(string.format("Found %d issues. Use :cn/:cp to navigate.", #unique_items), vim.log.levels.INFO)
+  vim.notify(string.format("Found %d warnings. Use :cn/:cp to navigate.", #qf_items), vim.log.levels.INFO)
 end
 
 -- Run build and capture errors to quickfix
 local function build_and_capture_errors(cmd)
   return function()
-    local log_file = vim.fn.getcwd() .. "/build/sphinx_errors.log"
+    local cwd = vim.fn.getcwd()
+    local log_file = cwd .. "/build/sphinx_errors.log"
 
     -- Ensure build directory exists
-    vim.fn.mkdir(vim.fn.getcwd() .. "/build", "p")
+    vim.fn.mkdir(cwd .. "/build", "p")
 
-    vim.notify("Building... (output in :messages, errors will populate quickfix)", vim.log.levels.INFO)
+    vim.notify("Building... (will parse errors when done)", vim.log.levels.INFO)
 
-    -- Use terminal for visible output, capture to log file
-    local full_cmd = string.format("bash -c '%s 2>&1 | tee %s; exit ${PIPESTATUS[0]}'", cmd, log_file)
+    -- Run build with output captured to log file
+    local full_cmd = string.format("%s 2>&1 | tee %s", cmd, log_file)
 
-    vim.fn.jobstart(full_cmd, {
-      stdout_buffered = true,
-      stderr_buffered = true,
-      on_stdout = function(_, data)
-        -- Print output to messages for visibility
-        if data then
-          for _, line in ipairs(data) do
-            if line ~= "" then
-              print(line)
-            end
-          end
-        end
-      end,
-      on_stderr = function(_, data)
-        if data then
-          for _, line in ipairs(data) do
-            if line ~= "" then
-              print(line)
-            end
-          end
-        end
-      end,
+    vim.fn.jobstart({"bash", "-c", full_cmd}, {
+      cwd = cwd,
       on_exit = function(_, exit_code)
         vim.schedule(function()
-          -- Parse the log file for errors
-          local file = io.open(log_file, "r")
-          if not file then
-            vim.notify("Build completed but no log file found at: " .. log_file, vim.log.levels.WARN)
-            return
-          end
-
-          local qf_items = {}
-          local cwd = vim.fn.getcwd()
-
-          for line in file:lines() do
-            -- Match Sphinx warning/error patterns
-            -- Format: /absolute/path/file.rst:123: WARNING: message
-            local filepath, lnum, msg
-
-            filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*WARNING:%s*(.+)")
-            if not filepath then
-              filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*ERROR:%s*(.+)")
-            end
-
-            if filepath and lnum and msg then
-              -- Make path relative to cwd
-              local rel_path = filepath:gsub("^" .. cwd .. "/", "")
-
-              -- Skip paths from .direnv or other non-project directories
-              if not rel_path:match("^%.direnv") and not rel_path:match("^/") then
-                table.insert(qf_items, {
-                  filename = rel_path,
-                  lnum = tonumber(lnum),
-                  col = 1,
-                  text = msg,
-                  type = (msg:match("ERROR") or msg:match("error")) and "E" or "W",
-                })
-              end
-            end
-          end
-
-          file:close()
-
-          -- Remove duplicates
-          local seen = {}
-          local unique_items = {}
-          for _, item in ipairs(qf_items) do
-            local key = item.filename .. ":" .. item.lnum
-            if not seen[key] then
-              seen[key] = true
-              table.insert(unique_items, item)
-            end
-          end
-
-          if #unique_items > 0 then
-            vim.fn.setqflist({}, 'r', {
-              title = 'Sphinx Build Warnings',
-              items = unique_items,
-            })
-            vim.cmd("copen")
-            vim.notify(string.format("Build finished with %d issues. Use :cn/:cp to navigate.", #unique_items), vim.log.levels.WARN)
-          else
-            vim.notify("Build completed successfully!", vim.log.levels.INFO)
-          end
+          vim.notify("Build finished (exit " .. exit_code .. "). Parsing warnings...", vim.log.levels.INFO)
+          -- Parse the log file for warnings
+          parse_sphinx_errors(log_file)
         end)
       end,
     })
