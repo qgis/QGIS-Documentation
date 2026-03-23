@@ -6,7 +6,8 @@ Foreword
 
 Welcome to the wonderful world of Geographical Information Systems (GIS)!
 
-QGIS is an Open Source Geographic Information System.
+QGIS is an Open Source Geographic Information System and an official
+project of the Open Source Geospatial Foundation (OSGeo).
 The project was born in May 2002 and was established as a project on
 SourceForge in June the same year.
 We have worked hard to make GIS software (which is traditionally

@@ -8,7 +8,7 @@ Preamble
 A Gentle Introduction to GIS
 
 Brought to you with QGIS, a Free and Open Source Software GIS Application
-for everyone.
+for everyone, hosted by OSGeo.
 
 .. figure:: ../../static/common/logo.png
    :align: center
