@@ -146,98 +146,158 @@ local function parse_sphinx_errors(log_file)
   end
 
   local qf_items = {}
+  local cwd = vim.fn.getcwd()
 
   for line in file:lines() do
-    -- Match various Sphinx warning/error patterns
+    -- Match Sphinx warning/error patterns
+    -- Format: /absolute/path/file.rst:123: WARNING: message
+    -- or: /absolute/path/file.rst:123: message
     local filepath, lnum, msg
 
-    -- Pattern: /path/file.rst:123: WARNING: message
-    filepath, lnum, msg = line:match("([^:]+%.rst):(%d+):%s*WARNING:%s*(.+)")
+    -- Pattern for WARNING/ERROR with absolute path ending in .rst
+    -- Match everything up to .rst, then :line: then WARNING/ERROR
+    filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*WARNING:%s*(.+)")
     if not filepath then
-      filepath, lnum, msg = line:match("([^:]+%.rst):(%d+):%s*ERROR:%s*(.+)")
-    end
-    if not filepath then
-      -- Pattern: file.rst:123: message (without WARNING/ERROR prefix)
-      filepath, lnum, msg = line:match("([^:]+%.rst):(%d+):%s*(.+)")
+      filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*ERROR:%s*(.+)")
     end
 
     if filepath and lnum and msg then
-      -- Make path relative if absolute
-      filepath = filepath:gsub(vim.fn.getcwd() .. "/", "")
-      table.insert(qf_items, {
-        filename = filepath,
-        lnum = tonumber(lnum),
-        col = 1,
-        text = msg,
-        type = msg:match("ERROR") and "E" or "W",
-      })
+      -- Make path relative to cwd
+      local rel_path = filepath:gsub("^" .. cwd .. "/", "")
+
+      -- Skip paths from .direnv or other non-project directories
+      if not rel_path:match("^%.direnv") and not rel_path:match("^/") then
+        table.insert(qf_items, {
+          filename = rel_path,
+          lnum = tonumber(lnum),
+          col = 1,
+          text = msg,
+          type = (msg:match("ERROR") or msg:match("error")) and "E" or "W",
+        })
+      end
     end
   end
 
   file:close()
 
   if #qf_items == 0 then
-    vim.notify("No warnings or errors found in: " .. found_log, vim.log.levels.INFO)
+    vim.notify("No project warnings found in: " .. found_log, vim.log.levels.INFO)
     return
   end
 
-  vim.fn.setqflist(qf_items)
+  -- Remove duplicates (same file:line)
+  local seen = {}
+  local unique_items = {}
+  for _, item in ipairs(qf_items) do
+    local key = item.filename .. ":" .. item.lnum
+    if not seen[key] then
+      seen[key] = true
+      table.insert(unique_items, item)
+    end
+  end
+
+  vim.fn.setqflist({}, 'r', {
+    title = 'Sphinx Build Warnings',
+    items = unique_items,
+  })
   vim.cmd("copen")
-  vim.notify(string.format("Found %d issues in %s. Use ]q/[q to navigate.", #qf_items, found_log), vim.log.levels.INFO)
+  vim.notify(string.format("Found %d issues. Use :cn/:cp to navigate.", #unique_items), vim.log.levels.INFO)
 end
 
 -- Run build and capture errors to quickfix
 local function build_and_capture_errors(cmd)
   return function()
-    local log_file = "build/sphinx_errors.log"
+    local log_file = vim.fn.getcwd() .. "/build/sphinx_errors.log"
 
-    vim.notify("Building and capturing errors...", vim.log.levels.INFO)
+    -- Ensure build directory exists
+    vim.fn.mkdir(vim.fn.getcwd() .. "/build", "p")
 
-    vim.fn.jobstart(cmd .. " 2>&1 | tee " .. log_file, {
+    vim.notify("Building... (output in :messages, errors will populate quickfix)", vim.log.levels.INFO)
+
+    -- Use terminal for visible output, capture to log file
+    local full_cmd = string.format("bash -c '%s 2>&1 | tee %s; exit ${PIPESTATUS[0]}'", cmd, log_file)
+
+    vim.fn.jobstart(full_cmd, {
+      stdout_buffered = true,
+      stderr_buffered = true,
+      on_stdout = function(_, data)
+        -- Print output to messages for visibility
+        if data then
+          for _, line in ipairs(data) do
+            if line ~= "" then
+              print(line)
+            end
+          end
+        end
+      end,
+      on_stderr = function(_, data)
+        if data then
+          for _, line in ipairs(data) do
+            if line ~= "" then
+              print(line)
+            end
+          end
+        end
+      end,
       on_exit = function(_, exit_code)
         vim.schedule(function()
           -- Parse the log file for errors
           local file = io.open(log_file, "r")
           if not file then
-            vim.notify("Build completed but no log file found", vim.log.levels.WARN)
+            vim.notify("Build completed but no log file found at: " .. log_file, vim.log.levels.WARN)
             return
           end
 
           local qf_items = {}
+          local cwd = vim.fn.getcwd()
 
           for line in file:lines() do
-            -- Match various Sphinx warning/error patterns
+            -- Match Sphinx warning/error patterns
+            -- Format: /absolute/path/file.rst:123: WARNING: message
             local filepath, lnum, msg
 
-            -- Pattern: /path/file.rst:123: WARNING: message
-            filepath, lnum, msg = line:match("([^:]+%.rst):(%d+):%s*WARNING:%s*(.+)")
+            filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*WARNING:%s*(.+)")
             if not filepath then
-              filepath, lnum, msg = line:match("([^:]+%.rst):(%d+):%s*ERROR:%s*(.+)")
-            end
-            if not filepath then
-              -- Pattern: file.rst:123: message (without WARNING/ERROR prefix)
-              filepath, lnum, msg = line:match("([^:]+%.rst):(%d+):%s*(.+)")
+              filepath, lnum, msg = line:match("(.+%.rst):(%d+):%s*ERROR:%s*(.+)")
             end
 
             if filepath and lnum and msg then
-              -- Make path relative if absolute
-              filepath = filepath:gsub(vim.fn.getcwd() .. "/", "")
-              table.insert(qf_items, {
-                filename = filepath,
-                lnum = tonumber(lnum),
-                col = 1,
-                text = msg,
-                type = msg:match("ERROR") and "E" or "W",
-              })
+              -- Make path relative to cwd
+              local rel_path = filepath:gsub("^" .. cwd .. "/", "")
+
+              -- Skip paths from .direnv or other non-project directories
+              if not rel_path:match("^%.direnv") and not rel_path:match("^/") then
+                table.insert(qf_items, {
+                  filename = rel_path,
+                  lnum = tonumber(lnum),
+                  col = 1,
+                  text = msg,
+                  type = (msg:match("ERROR") or msg:match("error")) and "E" or "W",
+                })
+              end
             end
           end
 
           file:close()
 
-          if #qf_items > 0 then
-            vim.fn.setqflist(qf_items)
+          -- Remove duplicates
+          local seen = {}
+          local unique_items = {}
+          for _, item in ipairs(qf_items) do
+            local key = item.filename .. ":" .. item.lnum
+            if not seen[key] then
+              seen[key] = true
+              table.insert(unique_items, item)
+            end
+          end
+
+          if #unique_items > 0 then
+            vim.fn.setqflist({}, 'r', {
+              title = 'Sphinx Build Warnings',
+              items = unique_items,
+            })
             vim.cmd("copen")
-            vim.notify(string.format("Build finished with %d issues", #qf_items), vim.log.levels.WARN)
+            vim.notify(string.format("Build finished with %d issues. Use :cn/:cp to navigate.", #unique_items), vim.log.levels.WARN)
           else
             vim.notify("Build completed successfully!", vim.log.levels.INFO)
           end
@@ -564,8 +624,37 @@ wk.add({
 
   -- Diagnostics / Errors
   { "<leader>pe", group = "Errors/Diagnostics" },
-  { "<leader>peb", build_and_capture_errors("make fasthtml"), desc = "Build + capture errors" },
-  { "<leader>peB", build_and_capture_errors("make html"), desc = "Build strict + capture errors" },
+  { "<leader>peb", build_and_capture_errors("make fasthtml"), desc = "Build + capture errors (background)" },
+  { "<leader>peB", build_and_capture_errors("make html"), desc = "Build strict + capture (background)" },
+  {
+    "<leader>pet",
+    function()
+      -- Build in terminal, then parse errors
+      local log_file = vim.fn.getcwd() .. "/build/sphinx_errors.log"
+      vim.fn.mkdir(vim.fn.getcwd() .. "/build", "p")
+      local cmd = string.format("make fasthtml 2>&1 | tee %s", log_file)
+
+      local tt_ok, toggleterm = pcall(require, "toggleterm.terminal")
+      if tt_ok then
+        local Terminal = toggleterm.Terminal
+        local term = Terminal:new({
+          cmd = cmd,
+          direction = "float",
+          close_on_exit = false,
+          on_exit = function()
+            vim.schedule(function()
+              parse_sphinx_errors(log_file)
+            end)
+          end,
+        })
+        term:toggle()
+      else
+        vim.cmd("split | terminal " .. cmd)
+        vim.notify("After build completes, use <leader>pea to parse errors", vim.log.levels.INFO)
+      end
+    end,
+    desc = "Build in terminal + parse errors",
+  },
   { "<leader>per", rstcheck_to_quickfix, desc = "RST check to quickfix" },
   { "<leader>pea", function() parse_sphinx_errors() end, desc = "Parse last build log" },
   { "<leader>peo", "<cmd>copen<cr>", desc = "Open quickfix list" },
