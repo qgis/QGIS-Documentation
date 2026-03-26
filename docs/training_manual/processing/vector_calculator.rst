@@ -16,7 +16,7 @@ First, let's calculate the population density of white people in each polygon, w
 
 ::
 
-	( "WHITE" / "SHAPE_AREA" ) * 1000000
+   ( "WHITE" / "SHAPE_AREA" ) * 1000000
 
 The parameters dialog should be filled as shown below.
 
@@ -30,7 +30,7 @@ Enter the following formula
 
 ::
 
-	"MALES" / "FEMALES" 
+   "MALES" / "FEMALES" 
 
 This time the parameters window should look like this before pressing the :guilabel:`OK` button.
 
@@ -41,7 +41,7 @@ In earlier version, since both fields are of type integer, the result would be t
 
 We can use conditional functions to have a new field with ``male`` or ``female`` text strings instead of those ratio value, using the following formula::
 
-	CASE WHEN  "MALES" > "FEMALES"  THEN 'male' ELSE 'female' END
+   CASE WHEN  "MALES" > "FEMALES"  THEN 'male' ELSE 'female' END
 
 The parameters window should look like this.
 

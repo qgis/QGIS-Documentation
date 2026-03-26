@@ -28,7 +28,7 @@ To start with, we will change the units of the DEM from meters to feet. The form
 
 ::
 
-	h' = h * 3.28084
+   h' = h * 3.28084
 
 Select the DEM in the layers field and type ``a * 3.28084`` in the formula field.
 
@@ -52,7 +52,7 @@ For the next exercise we are going to use two layers instead of one, and we are 
 
 ::
 
-	a/a * b
+   a/a * b
 
 ``a`` refers to the accumulated flow layer (since it is the first one to appear in the list) and ``b`` refers to the DEM. What we are doing in the first part of the formula here is to divide the accumulated flow layer by itself, which will result in a value of 1 inside the basin, and a no--data value outside. Then we multiply by the DEM, to get the elevation value in those cells inside the basin (``DEM * 1 = DEM``) and the no--data value outside (``DEM * no_data = no_data``)
 
@@ -78,7 +78,7 @@ Run the calculator using the DEM as only input layer and the following formula
 
 ::
 
-	ifelse(abs(a-1250) < 250, 1, 0/0)
+   ifelse(abs(a-1250) < 250, 1, 0/0)
 
 As you can see, we can use the calculator not only to do simple algebraic operations, but also to run more complex calculation involving conditional sentences, like the one above.
 

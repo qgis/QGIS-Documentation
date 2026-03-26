@@ -120,10 +120,10 @@ and the QGIS upstream repositories, you need to:
    .. code-block:: bash
 
      git remote -v
-     # origin	https://github.com/<YourName>/QGIS.git (fetch)
-     # origin	https://github.com/<YourName>/QGIS.git (push)
-     # upstream	https://github.com/qgis/QGIS.git (fetch)
-     # upstream	https://github.com/qgis/QGIS.git (push)
+     # origin  https://github.com/<YourName>/QGIS.git (fetch)
+     # origin  https://github.com/<YourName>/QGIS.git (push)
+     # upstream   https://github.com/qgis/QGIS.git (fetch)
+     # upstream   https://github.com/qgis/QGIS.git (push)
 
    Your online repository is now accessible from your local drive and
    you can interact with it using the name ``origin``.

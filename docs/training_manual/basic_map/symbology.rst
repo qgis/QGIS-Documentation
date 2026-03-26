@@ -746,7 +746,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
       :align: center
 
 #. Repeat the same operations on ``Jet`` symbol.
-	   
+      
 #. Click :guilabel:`OK`
 #. Open the :guilabel:`Layer Properties` window for the ``lines``
    layer.

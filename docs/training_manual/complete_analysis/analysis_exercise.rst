@@ -260,7 +260,7 @@ have to be aligned.
 
 First we change the resolution of our rainfall data to 30 meters
 (pixel size):
-	
+   
 #. In the :guilabel:`Layers` panel, ensure that
    ``Rainfall_clipped`` is the active layer (i.e., it is highlighted by
    having been clicked on)

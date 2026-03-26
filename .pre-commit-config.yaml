@@ -1,8 +1,14 @@
-
 repos:
 
   - repo: local
     hooks:
+      - id: tabs-to-spaces
+        name: Convert tabs to spaces in RST files
+        entry: bash -c 'for f in "$@"; do expand -t 3 "$f" > "$f.tmp" && mv "$f.tmp" "$f"; done' _
+        language: system
+        files: \.(rst)$
+        exclude: ^(locale/|_dummy/|build/)
+
       - id: find_set_subst
         name: find_set_subst
         entry: ./scripts/find_set_subst.py

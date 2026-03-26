@@ -79,7 +79,7 @@ generate a rectangular grid of points. But you are only interested on those
 points that are actually inside your forest area (see the images below):
 
 .. figure:: img/grid_full_and_clip.png
-   :align: center	
+   :align: center 
 
 #. From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector
    geoprocessing --> Clip vector by mask layer`.

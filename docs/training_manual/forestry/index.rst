@@ -12,7 +12,7 @@ some new useful tools.
    :width: 15 em
 
 The development of this module has been sponsored by the European Union.
-	
+   
 .. toctree::
    :maxdepth: 2
 

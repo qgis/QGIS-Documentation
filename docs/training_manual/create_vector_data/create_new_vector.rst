@@ -296,7 +296,7 @@ table.
 
    .. figure:: img/edit_vertex_in_vertex_editor.png
      :align: center
-	 
+    
 #. After entering the updated value, hit the enter key to apply the change.
    You will see the vertex move to the new location in the map window.
 #. When done editing, click the |toggleEditing| :sup:`Toggle Editing`

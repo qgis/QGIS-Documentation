@@ -507,24 +507,24 @@ Alternatively you can use the makefile to extract messages from python code and
 Qt dialogs, if you created your plugin with Plugin Builder.
 At the beginning of the Makefile there is a LOCALES variable::
 
-	LOCALES = en
+   LOCALES = en
 
 Add the abbreviation of the language to this variable, for example for
 Hungarian language::
 
-	LOCALES = en hu
+   LOCALES = en hu
 
 Now you can generate or update the :file:`hu.ts` file (and the :file:`en.ts` too)
 from the sources by::
 
-	make transup
+   make transup
 
 After this, you have updated ``.ts`` file for all languages set in the LOCALES
 variable.
 Use **Qt Linguist** to translate the program messages.
 Finishing the translation the ``.qm`` files can be created by the transcompile::
 
-	make transcompile
+   make transcompile
 
 You have to distribute ``.ts`` files with your plugin.
 
@@ -584,7 +584,7 @@ which can be handy for debugging purposes.
 
 .. code-block:: python
 
-	my_plugin = qgis.utils.plugins['My Plugin']
+   my_plugin = qgis.utils.plugins['My Plugin']
 
 Log Messages
 ------------
