@@ -2009,6 +2009,11 @@ In case of lengthy operations, such as gathering of statistics in
 raster layers, executing Processing algorithms or rendering several
 layers in the map view, a progress bar is displayed in the status bar.
 
+When editing a vector layer, the area and total length or perimeter
+of the feature being digitized can also be displayed here,
+if enabled in :menuselection:`Settings --> Options --> Digitizing`
+under the :guilabel:`Measurements` group.
+
 Control the map canvas
 ----------------------
 

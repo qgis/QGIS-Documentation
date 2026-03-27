@@ -1972,11 +1972,10 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
 
 * |floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is checked,
   a contextual menu with digitizing information follows the cursor during digitizing.
-  The values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
+  Some of the values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
   edited and |locked| :sup:`Locked` after validation (pressing :kbd:`Enter`).
   The type of information to display can be selected in the bottom part of the menu:
 
-  * |unchecked|:guilabel:`Show Floater`
   * |unchecked|:guilabel:`Show Distance`
   * |unchecked|:guilabel:`Show Angle`
   * |unchecked|:guilabel:`Show XY Coordinates`
@@ -1994,6 +1993,13 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
     * :menuselection:`--> Hidden`
     * :menuselection:`--> Show Ellipsoidal Lengths`
     * :menuselection:`--> Show Cartesian Lengths`
+
+  .. note::
+     Area and total length/perimeter measurements default to :guilabel:`Hidden`.
+     The selected option is saved and used as the default for subsequent digitizing sessions.
+     These values are only displayed when the Advanced Digitizing panel is active
+     and the corresponding option is set to a value other than :guilabel:`Hidden`.
+
   * |unchecked|:guilabel:`Show Weight`
 
 
