@@ -943,6 +943,17 @@ This tab helps you configure general settings when :ref:`editing vector layer
   (see :ref:`typesofgeomerrors`)
 * :guilabel:`Default Z value` to use when creating new 3D features.
 
+**Measurements**
+
+* :guilabel:`Show feature area in status bar while digitizing`: sets whether
+  the feature area is displayed in the status bar during digitizing.
+  Available options are :guilabel:`Hidden`
+  and :guilabel:`Show Ellipsoidal Area`.
+* :guilabel:`Show feature perimeter/total length in status bar while digitizing`:
+  sets whether the feature perimeter or total length is displayed in the status bar
+  during digitizing. Available options are :guilabel:`Hidden`
+  and :guilabel:`Show Ellipsoidal Distances`.
+
 **Rubberband**
 
 * Define Rubberband :guilabel:`Line width`, :guilabel:`Line color`
