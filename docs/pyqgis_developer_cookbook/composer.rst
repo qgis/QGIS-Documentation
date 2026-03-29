@@ -100,7 +100,7 @@ Here's an example:
  from qgis.PyQt.QtCore import QEventLoop
  loop = QEventLoop()
  render.finished.connect(loop.quit)
- loop.exec_()
+ loop.exec()
 
 
 Rendering layers with different CRS

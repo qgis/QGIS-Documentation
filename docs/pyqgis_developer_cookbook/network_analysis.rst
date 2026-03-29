@@ -146,7 +146,7 @@ It's time to dive into the process.
 
    .. testcode:: network_analysis
 
-     director = QgsVectorLayerDirector(vectorLayer, -1, "", "", "", 3)
+     director = QgsVectorLayerDirector(vectorLayer, -1, "", "", "", QgsVectorLayerDirector.DirectionBoth)
      director.addStrategy(strategy)
 
 #. Now we can use the builder, which will create the graph,
@@ -282,7 +282,7 @@ or the :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
     i = 0
     while i < tree.edgeCount():
         rb = QgsRubberBand(iface.mapCanvas())
-        rb.setColor(Qt.red)
+        rb.setColor(Qt.GlobalColor.red)
         rb.addPoint(tree.vertex(tree.edge(i).fromVertex()).point())
         rb.addPoint(tree.vertex(tree.edge(i).toVertex()).point())
         i = i + 1
@@ -320,7 +320,7 @@ or the :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
         if edgeId == -1:
             continue
         rb = QgsRubberBand(iface.mapCanvas())
-        rb.setColor(Qt.red)
+        rb.setColor(Qt.GlobalColor.red)
         rb.addPoint(graph.vertex(graph.edge(edgeId).fromVertex()).point())
         rb.addPoint(graph.vertex(graph.edge(edgeId).toVertex()).point())
 
@@ -421,7 +421,7 @@ or :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method:
 
       # Display
       rb = QgsRubberBand(iface.mapCanvas())
-      rb.setColor(Qt.green)
+      rb.setColor(Qt.GlobalColor.green)
 
       # This may require coordinate transformation if project's CRS
       # is different from layer's CRS
@@ -479,7 +479,7 @@ or :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method:
 
       # Display
       rb = QgsRubberBand(iface.mapCanvas())
-      rb.setColor(Qt.red)
+      rb.setColor(Qt.GlobalColor.red)
 
       # This may require coordinate transformation if project's CRS
       # is different from layer's CRS
@@ -528,7 +528,7 @@ Here is an example:
     delta = iface.mapCanvas().getCoordinateTransform().mapUnitsPerPixel() * 1
 
     rb = QgsRubberBand(iface.mapCanvas())
-    rb.setColor(Qt.green)
+    rb.setColor(Qt.GlobalColor.green)
     rb.addPoint(QgsPointXY(pStart.x() - delta, pStart.y() - delta))
     rb.addPoint(QgsPointXY(pStart.x() + delta, pStart.y() - delta))
     rb.addPoint(QgsPointXY(pStart.x() + delta, pStart.y() + delta))
@@ -557,7 +557,7 @@ Here is an example:
     for i in upperBound:
         centerPoint = graph.vertex(i).point()
         rb = QgsRubberBand(iface.mapCanvas())
-        rb.setColor(Qt.red)
+        rb.setColor(Qt.GlobalColor.red)
         rb.addPoint(QgsPointXY(centerPoint.x() - delta, centerPoint.y() - delta))
         rb.addPoint(QgsPointXY(centerPoint.x() + delta, centerPoint.y() - delta))
         rb.addPoint(QgsPointXY(centerPoint.x() + delta, centerPoint.y() + delta))

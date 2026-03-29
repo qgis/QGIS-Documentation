@@ -150,7 +150,7 @@ Canvas
 
     from qgis.PyQt.QtCore import Qt
 
-    iface.mapCanvas().setCanvasColor(Qt.black)
+    iface.mapCanvas().setCanvasColor(Qt.GlobalColor.black)
     iface.mapCanvas().refresh()
 
 **Map Update interval**
@@ -626,7 +626,7 @@ Advanced TOC
 
   root = QgsProject.instance().layerTreeRoot()
   node = root.findLayer(layer.id())
-  new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
+  new_state = True if node.isVisible() == Qt.CheckState.Unchecked else False
   node.setItemVisibilityChecked(new_state)
 
 
@@ -814,8 +814,7 @@ Decorators
 
 .. testcode:: cheat_sheet
 
-    from qgis.PyQt.Qt import QTextDocument
-    from qgis.PyQt.QtGui import QFont
+    from qgis.PyQt.QtGui import QFont, QTextDocument
 
     mQFont = "Sans Serif"
     mQFontsize = 9
