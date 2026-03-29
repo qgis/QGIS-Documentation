@@ -10,54 +10,68 @@ Appendix C: QGIS File Formats
 .. index:: QGD
 .. _qgisprojectfile:
 
-QGS/QGZ - The QGIS Project File Format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.qgz or .qgs- The QGIS Project File Format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The **QGS** format is an XML format for storing QGIS projects.
-The **QGZ** format is a compressed (zip) archive containing a
-QGS file and a QGD file.
-The **QGD** file is the associated sqlite database of the qgis
-project that contain auxiliary data for the project.
-If there are no auxiliary data, the QGD file will be empty.
+When you see a file with either .qgz or .qgs extension, those are QGIS project files.  
 
-A QGIS file contains everything that is needed for storing a QGIS
-project, including:
-
-* project title
-* project CRS
-* the layer tree
-* snapping settings
-* relations
-* the map canvas extent
-* project models
-* legend
-* mapview docks (2D and 3D)
-* the layers with links to the underlying datasets (data sources) and
-  other layer properties including extent, SRS, joins, styles, renderer,
-  blend mode, opacity and more.
-* project properties
-
-The figures below show the top level tags in a QGS file and the expanded
-``ProjectLayers`` tag.
-
-.. _figure_qgs_toplevel:
-
-.. figure:: img/qgstoplevel.png
-   :align: center
-
-   The top level tags in a QGS file
-
-.. _figure_qgs_projectlayers:
-
-.. figure:: img/qgsprojectlayers.png
-   :align: center
-
-   The expanded top level ProjectLayers tag of a QGS file
+This file format does not itself contain any geodata, i.e., it does not contain aerial photos and it does not contain polygon or point features representing features on a map. It only contains data _about_ which layers to show and how to show them. 
 
 
-.. index:: QGIS Layer Definition File
-.. index:: QLR
-.. _qgislayerdefinitionfile:
+When you edit the name of a mountain in the layer called mountains and click `Save Layers Edit`, then that change is saved to the layer source, which might be a local GeoJson file or a remote database. But nothing is changed to the qgis project file. 
+
+When you change QGIS to show labels with those mountain names in blue and with Comic Sans, and you click "Save Project", this data about presentation is saved to the project file. 
+
+Evolution from qgs to qgz
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+QGIS version 2 only knew of one project file format, which was XML with a .qgs extension. 
+
+But XML has its limitations and eventually it was necessary to also store project data in other ways than plain XML. 
+
+With the introduction of QGIS 3 the default file format was .qgz, which is a zip archive containing the .qgs file. But because it's a zip file, it can also contain other files, so called *sidecar files*. Currently there are two official types of sidecar files:
+
+- .qgd (see section below)  
+- XXXXXX_styles.db, (see section below)
+
+Alternative: myproject.qgs with myproject_attachments.zip
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is however also possible to not use .qgz, and instead save a project to .qgs. If choosing so, any sidecar files will be saved to a separate zip file. E.g. when saving to myproject.qgs, the sidecar files will be written to the archive myproject_attachments.zip, placed in the same folder. 
+
+One reason for choosing to use .qgs instead of .qgz is 
+that it's better suited for running diff tools, e.g., if one wants to run version control on qgis project files. 
+
+.qgs - The QGIS Project XML Format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The .qgs is an XML format, which contains the most fundamental parts of the project. This includes:
+
+- project title
+- project CRS
+- the layer tree
+- snapping settings
+- relations
+- the map canvas extent
+- project models
+- legend
+- mapview docks (2D and 3D)
+- the layers with links to the underlying datasets (data sources) and other layer properties including extent, SRS, joins, styles, renderer, blend mode, opacity and more.
+- project properties
+
+.qgd - Sidecar for storing auxiliary data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+One example of auxiliary data is when the project file contains data about individual features from a layer, i.e., data that is associated with a feature, and thus not simply associated with a layer. One example is if the user specifies label placement for individual features. 
+
+If saving a project to foo.qgz, and the project contains any auxiliary data, then that aux data will be saved to foo.qgd which is added to the archive. If no auxiliary data is present, then this sidecar file won't be created. The d is short for database, and the file is an sqlite3 database. 
+
+XXXXXX_styles.db - Sidecar file for storing style information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+XXXXXX is a six character randomly generated string, so it could look like XiIaRN_styles.db or clnCHe_styles.db.
+
+Typically there is just one such sidecar file, but there might be more. They are sqlite3 databases and contain information relevant to layer styling. 
 
 QLR - The QGIS Layer Definition file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
