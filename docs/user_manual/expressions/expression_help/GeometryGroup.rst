@@ -735,7 +735,7 @@ Returns the last node from a geometry.
 equals
 ......
 
-Tests whether two geometries are equal. Note that the order of their vertices matters. Returns TRUE if geometry1 is exactly equal to geometry2.
+Alias for 'exactly_equals' with default geometry backend QGIS. Tests whether two geometries are equal. Note that the order of their vertices matters. Returns TRUE if geometry1 is exactly equal to geometry2.
 
 .. list-table::
    :widths: 15 85
@@ -754,6 +754,36 @@ Tests whether two geometries are equal. Note that the order of their vertices ma
 
 
 .. end_equals_section
+
+.. _expression_function_GeometryGroup_exactly_equals:
+
+exactly_equals
+..............
+
+Tests whether two geometries are exactly equal. Note that the order of their vertices matters. Returns TRUE if geometry1 is exactly equal to geometry2.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - exactly_equals(geometry1, geometry2, [backend=QGIS])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
+       * **backend** - Geometry backend implementation: QGIS or GEOS
+   * - Examples
+     - * ``exactly_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ) )`` → TRUE
+       * ``exactly_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ), 'QGIS' )`` → TRUE
+       * ``exactly_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ) )`` → FALSE
+       * ``exactly_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ), 'GEOS' )`` → FALSE
+       * ``exactly_equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ) )`` → TRUE
+       * ``exactly_equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 1 1, 0 0 )' ) )`` → FALSE
+       * ``exactly_equals( geom_from_wkt( 'POLYGON(( 0 0, 0 1, 1 1, 0 0 ))' ), geom_from_wkt( 'POLYGON(( 0 0, 1 1, 0 1, 0 0 ))' ) )`` → FALSE
+
+
+.. end_exactly_equals_section
 
 .. _expression_function_GeometryGroup_exif_geotag:
 
@@ -936,6 +966,36 @@ Forces a geometry to respect the Right-Hand-Rule, in which the area that is boun
 
 
 .. end_force_rhr_section
+
+.. _expression_function_GeometryGroup_fuzzy_equals:
+
+fuzzy_equals
+............
+
+Tests whether two geometries are fuzzy equal. Note that the order of their vertices matters. Returns TRUE if geometry1 is fuzzy equal to geometry2.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - fuzzy_equals(geometry1, geometry2, [backend=QGIS], [epsilon=1e-8])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
+       * **backend** - Geometry backend implementation: QGIS or GEOS
+       * **epsilon** - maximum difference for coordinates between the objects
+   * - Examples
+     - * ``fuzzy_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ) )`` → TRUE
+       * ``fuzzy_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0.5 0.5 )' ), epsilon:=1 )`` → TRUE
+       * ``fuzzy_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ) )`` → FALSE
+       * ``fuzzy_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ), 'GEOS' )`` → TRUE
+       * ``fuzzy_equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 0 0, 1.5 1.5 )' ), 'GEOS', 0.8 )`` → TRUE
+       * ``fuzzy_equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 0 0, 1.5 1.5 )' ), 'QGIS', 0.8 )`` → TRUE
+
+
+.. end_fuzzy_equals_section
 
 .. _expression_function_GeometryGroup_geom_from_gml:
 
@@ -2388,7 +2448,7 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
 overlay_equals
 ..............
 
-Returns whether the current feature's geometry is exactly equal to at least one feature's geometry from a target layer, or returns an array of expression-based results for the features in the target layer whose geometry is exactly equal to the current feature's geometry. Note that the order of vertices matters.
+Alias for 'overlay_exactly_equals' with default geometry backend QGIS. Returns whether the current feature's geometry is exactly equal to at least one feature's geometry from a target layer, or returns an array of expression-based results for the features in the target layer whose geometry is exactly equal to the current feature's geometry. Note that the order of vertices matters.
 
 .. list-table::
    :widths: 15 85
@@ -2415,6 +2475,77 @@ Returns whether the current feature's geometry is exactly equal to at least one 
 
 
 .. end_overlay_equals_section
+
+.. _expression_function_GeometryGroup_overlay_exactly_equals:
+
+overlay_exactly_equals
+......................
+
+Returns whether the current feature's geometry is exactly equal to at least one feature's geometry from a target layer, or returns an array of expression-based results for the features in the target layer whose geometry is exactly equal to the current feature's geometry. Note that the order of vertices matters.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_exactly_equals(layer, [expression], [filter], [limit], [cache=false], [backend=QGIS])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+       * **backend** - Geometry backend implementation: QGIS or GEOS
+   * - Examples
+     - * ``overlay_exactly_equals('regions')`` → TRUE if the current feature's geometry is exactly the same as the geometry of a region
+       * ``overlay_exactly_equals('regions', filter:= population > 10000)`` → TRUE if the current feature's geometry is exactly the same as the geometry of a region whose population is greater than 10000
+       * ``overlay_exactly_equals('regions', name)`` → an array of names, for the regions exactly equal to the current feature
+       * ``overlay_exactly_equals('regions', name, backend:='QGIS')`` → an array of names, for the regions exactly equal to the current feature
+       * ``array_to_string(overlay_exactly_equals('regions', name))`` → a string as a comma separated list of names, for the regions exactly equal to the current feature
+       * ``array_sort(overlay_exactly_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions exactly equal to the current feature and with a population greater than 10000
+       * ``overlay_exactly_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions exactly equal to the current feature
+
+.. note:: This function requires exact equality of geometries, meaning that the geometries 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 0 )' are different.
+
+
+.. end_overlay_exactly_equals_section
+
+.. _expression_function_GeometryGroup_overlay_fuzzy_equals:
+
+overlay_fuzzy_equals
+....................
+
+Returns whether the current feature's geometry is fuzzy equal to at least one feature's geometry from a target layer, or returns an array of expression-based results for the features in the target layer whose geometry is fuzzy equal to the current feature's geometry. Note that the order of vertices matters.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_fuzzy_equals(layer, [expression], [filter], [limit], [cache=false], [backend=QGIS], [epsilon=1e-8])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+       * **backend** - Geometry backend implementation: QGIS or GEOS
+       * **epsilon** - maximum difference for coordinates between the objects
+   * - Examples
+     - * ``overlay_fuzzy_equals('regions')`` → TRUE if the current feature's geometry is fuzzy the same as the geometry of a region
+       * ``overlay_fuzzy_equals('regions', filter:= population > 10000)`` → TRUE if the current feature's geometry is fuzzy the same as the geometry of a region whose population is greater than 10000
+       * ``overlay_fuzzy_equals('regions', name)`` → an array of names, for the regions fuzzy equal to the current feature
+       * ``overlay_fuzzy_equals('regions', name, backend:='QGIS')`` → an array of names, for the regions fuzzy equal to the current feature
+       * ``array_to_string(overlay_fuzzy_equals('regions', name, epsilon:=0.5))`` → a string as a comma separated list of names, for the regions fuzzy equal to the current feature
+       * ``array_sort(overlay_fuzzy_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions fuzzy equal to the current feature and with a population greater than 10000
+       * ``overlay_fuzzy_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions fuzzy equal to the current feature
+
+.. note:: This function requires exact equality of geometries, meaning that the geometries 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 0 )' are different.
+
+
+.. end_overlay_fuzzy_equals_section
 
 .. _expression_function_GeometryGroup_overlay_intersects:
 
@@ -2502,6 +2633,41 @@ Note: This function can be slow and consume a lot of memory for large layers.
 
 
 .. end_overlay_nearest_section
+
+.. _expression_function_GeometryGroup_overlay_topologically_equals:
+
+overlay_topologically_equals
+............................
+
+Returns whether the current feature's geometry is topologically equal to at least one feature's geometry from a target layer, or returns an array of expression-based results for the features in the target layer whose geometry is topologically equal to the current feature's geometry. Note that the order of vertices matters.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - overlay_topologically_equals(layer, [expression], [filter], [limit], [cache=false], [backend=GEOS])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **layer** - the layer whose overlay is checked
+       * **expression** - an optional expression to evaluate on the features from the target layer. If not set, the function will just return a boolean indicating whether there is at least one match.
+       * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
+       * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
+       * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
+       * **backend** - Geometry backend implementation: GEOS
+   * - Examples
+     - * ``overlay_topologically_equals('regions')`` → TRUE if the current feature's geometry is topologically the same as the geometry of a region
+       * ``overlay_topologically_equals('regions', filter:= population > 10000)`` → TRUE if the current feature's geometry is topologically the same as the geometry of a region whose population is greater than 10000
+       * ``overlay_topologically_equals('regions', name)`` → an array of names, for the regions topologically equal to the current feature
+       * ``overlay_topologically_equals('regions', name, backend:='GEOS')`` → an array of names, for the regions topologically equal to the current feature
+       * ``array_to_string(overlay_topologically_equals('regions', name))`` → a string as a comma separated list of names, for the regions topologically equal to the current feature
+       * ``array_sort(overlay_topologically_equals(layer:='regions', expression:="name", filter:= population > 10000))`` → an ordered array of names, for the regions topologically equal to the current feature and with a population greater than 10000
+       * ``overlay_topologically_equals(layer:='regions', expression:= geom_to_wkt(@geometry), limit:=2)`` → an array of geometries (in WKT), for up to two regions topologically equal to the current feature
+
+.. note:: This function requires exact equality of geometries, meaning that the geometries 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 0 )' are different.
+
+
+.. end_overlay_topologically_equals_section
 
 .. _expression_function_GeometryGroup_overlay_touches:
 
@@ -3222,6 +3388,34 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
    Tapered buffer on line features
 
 .. end_tapered_buffer_section
+
+.. _expression_function_GeometryGroup_topologically_equals:
+
+topologically_equals
+....................
+
+Tests whether two geometries are topologically equal. Note that the order of their vertices matters. Returns TRUE if geometry1 is topologically equal to geometry2.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - topologically_equals(geometry1, geometry2, [backend=GEOS])
+
+       [] marks optional arguments
+   * - Arguments
+     - * **geometry1** - a geometry
+       * **geometry2** - a geometry
+       * **backend** - Geometry backend implementation: GEOS
+   * - Examples
+     - * ``topologically_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ) )`` → TRUE
+       * ``topologically_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ), 'GEOS' )`` → TRUE
+       * ``topologically_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ) )`` → TRUE
+       * ``topologically_equals( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'MULTIPOINT( ( 0 0 ) )' ), 'GEOS' )`` → TRUE
+       * ``topologically_equals( geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ), geom_from_wkt( 'LINESTRING( 0 0, 1 1 )' ) )`` → TRUE
+
+
+.. end_topologically_equals_section
 
 .. _expression_function_GeometryGroup_touches:
 
