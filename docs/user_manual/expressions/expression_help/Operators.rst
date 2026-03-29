@@ -35,7 +35,15 @@ Remainder of division. Takes the sign of the dividend.
 \*
 ..
 
-Multiplication of two values
+Multiplication of two values.
+
+
+
+When used with two colors, performs component-wise multiplication on the color components (not alpha), clamping results to [0, 1]. The alpha channel of the left color is used. HSL and HSV colors are converted to RGB for the operation, and the result is an RGB color. CMYK colors produce a CMYK result.
+
+
+
+When used with a color and a number (in any order), multiplies each color component (excluding alpha) by the number, clamping results to [0, 1]. The alpha channel is preserved.
 
 .. list-table::
    :widths: 15 85
@@ -48,6 +56,7 @@ Multiplication of two values
    * - Examples
      - * ``5 * 4`` → 20
        * ``5 * NULL`` → NULL
+       * ``color_rgbf(0.2, 0.4, 0.6) * 2`` → RGBA: 0.40,0.80,1.00,1.00
 
 
 .. end_*_section
@@ -67,6 +76,14 @@ For numeric and datetime operations if either value is NULL the result will be N
 
 For string concatenation NULL values from fields are treated as empty strings. Use the || operator instead if NULL propagation for strings is required.
 
+
+
+When used with two colors, performs component-wise addition on the color components (not alpha), clamping results to [0, 1]. The alpha channel of the left color is used. HSL and HSV colors are converted to RGB for the operation, and the result is an RGB color. CMYK colors produce a CMYK result.
+
+
+
+When used with a color and a number (in any order), adds the number to each color component (excluding alpha), clamping results to [0, 1]. The alpha channel is preserved.
+
 .. list-table::
    :widths: 15 85
 
@@ -82,6 +99,7 @@ For string concatenation NULL values from fields are treated as empty strings. U
        * ``'5' + "name"`` → '5' (if value in "name" field is NULL) or a concatenation of the two strings
        * ``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'
        * ``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → 2020-08-02T14:00:00
+       * ``color_rgbf(0.2, 0.4, 0.6) + 0.1`` → RGBA: 0.30,0.50,0.70,1.00
 
 
 .. end_+_section
@@ -92,6 +110,14 @@ For string concatenation NULL values from fields are treated as empty strings. U
 ..
 
 Subtraction of two values. If one of the values is NULL the result will be NULL.
+
+
+
+When used with two colors, performs component-wise subtraction on the color components (not alpha), clamping results to [0, 1]. The alpha channel of the left color is used. HSL and HSV colors are converted to RGB for the operation, and the result is an RGB color. CMYK colors produce a CMYK result.
+
+
+
+When used with a color and a number (in any order), subtracts one from the other per color component (excluding alpha), clamping results to [0, 1]. The alpha channel is preserved.
 
 .. list-table::
    :widths: 15 85
@@ -105,6 +131,7 @@ Subtraction of two values. If one of the values is NULL the result will be NULL.
      - * ``5 - 4`` → 1
        * ``5 - NULL`` → NULL
        * ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
+       * ``color_rgbf(0.8, 0.6, 0.4) - 0.1`` → RGBA: 0.70,0.50,0.30,1.00
 
 
 .. end_-_section
@@ -114,7 +141,15 @@ Subtraction of two values. If one of the values is NULL the result will be NULL.
 /
 .
 
-Division of two values
+Division of two values.
+
+
+
+When used with two colors, performs component-wise division on the color components (not alpha), clamping results to [0, 1]. The alpha channel of the left color is used. HSL and HSV colors are converted to RGB for the operation, and the result is an RGB color. CMYK colors produce a CMYK result.
+
+
+
+When used with a color and a number, divides each color component (excluding alpha) by the number, clamping results to [0, 1]. The color must be on the left side. Division by zero returns NULL. The alpha channel is preserved.
 
 .. list-table::
    :widths: 15 85
@@ -127,6 +162,7 @@ Division of two values
    * - Examples
      - * ``5 / 4`` → 1.25
        * ``5 / NULL`` → NULL
+       * ``color_rgbf(0.8, 0.6, 0.4) / 2`` → RGBA: 0.40,0.30,0.20,1.00
 
 
 .. end_/_section
