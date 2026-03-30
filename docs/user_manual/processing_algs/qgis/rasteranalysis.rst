@@ -3226,6 +3226,9 @@ The output raster will be multi-band if multiple ranks are provided.
 If multiband rasters are used in the data raster stack,
 the algorithm will always perform the analysis on the first band of the rasters.
 
+.. figure:: img/raster_rank.png
+  :align: center
+
 .. seealso:: :ref:`qgiscellstackpercentrankfromvalue`, :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`, :ref:`qgiscellstatistics`, :ref:`qgisrastercalc`
 
 Parameters
