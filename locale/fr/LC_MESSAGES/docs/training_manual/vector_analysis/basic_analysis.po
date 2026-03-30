@@ -743,24 +743,28 @@ msgid ""
 "they overlap, since that's what we really wanted to know in the first place:"
 msgstr ""
 "Vous pouvez enlever les deux couches de tampon et garder seulement celle qui"
-" montre où elles se croisent, étant donné que c'est ce que nous voulons "
+" montre où elles se superposent, étant donné que c'est ce que nous voulons "
 "vraiment savoir en premier lieu :"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:346
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Extract the Buildings"
+msgstr ":abbr:`★☆☆ (Niveau basique)` Pas à pas : Extraire les bâtiments"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:348
 msgid ""
 "Now you've got the area that the buildings must overlap. Next, you want to "
 "extract the buildings in that area."
 msgstr ""
-"Maintenant, vous avez la zone où les bâtiments doivent se chevaucher. "
-"Ensuite, vous voulez extraire les bâtiments dans cette zone."
+"Maintenant, vous avez la zone dans laquelle les bâtiments doivent se "
+"trouver. Ensuite, vous voulez extraire les bâtiments dans cette zone."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:351
 msgid ""
 "Look for the menu entry :menuselection:`Vector Selection --> Extract by "
 "location` within the *Processing Toolbox*"
 msgstr ""
-"Cherchez l'entrée de menu :menuselection:`Sélection de vecteurs --> "
-"Extraction par emplacement` dans la *Boîte à outils traitement*"
+"Cherchez l'entrée de menu :menuselection:`Sélection dans un vecteur --> "
+"Extraction par localisation` dans la *Boîte à outils de traitements*"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:354
 msgid ""
@@ -770,15 +774,24 @@ msgid ""
 " to the features from`. Save to the :file:`vector_analysis.gpkg`, and name "
 "the layer ``well_located_houses``."
 msgstr ""
-"Sélectionnez ``buildings_34S`` dans :guilabel:`Extrayez les entités de``. "
-"Vérifiez :guilabel:`intersection` dans :guilabel:`Où les éléments (prédicat "
-"géométrique)`, sélectionnez la couche d'intersection tampon dans "
-":guilabel:`En comparant avec les éléments de `. Enregistrez dans le fichier "
+"Sélectionnez ``buildings_34S`` dans :guilabel:`Extraire les entités à partir"
+" de``. Cochez :guilabel:`intersecte` dans :guilabel:`Où les entités "
+"(prédicat géométrique)`, sélectionnez la couche d'intersection tampon dans "
+":guilabel:`En comparant les entités de`. Enregistrez dans le fichier "
 ":file:`vector_analysis.gpkg`, et nommez la couche ``well_located_houses``."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:365
 msgid "Click :guilabel:`Run` and close the dialog"
-msgstr "Cliquez sur :guilabel:`Executer` et fermez le dialogue"
+msgstr "Cliquez sur :guilabel:`Executer` et fermez la fenêtre"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
+msgid ""
+"You will probably find that not much seems to have changed. If so, move the "
+"``well_located_houses`` layer to the top of the layers list, then zoom in."
+msgstr ""
+"Vous allez probablement avoir l'impression que rien n'a changé. Si c'est le "
+"cas, déplacez la couche ``well_located_houses`` en haut de la liste des "
+"couches puis zoomez sur la carte."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
@@ -796,6 +809,13 @@ msgstr ""
 "Vous avez maintenant deux couches séparées et vous pouvez supprimer "
 "``buildings_34S`` de la liste des couches."
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:380
+msgid ""
+":abbr:`★★☆ (Moderate level)` Try Yourself: Further Filter our Buildings"
+msgstr ""
+":abbr:`★★☆ (Niveau intermédiaire)` Essayez vous-même : Filtrer davantage les"
+" bâtiments"
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:382
 msgid ""
 "We now have a layer which shows us all the buildings within 1km of a school "
@@ -806,6 +826,53 @@ msgstr ""
 "d'une école et à 50m d'une route. Nous devons maintenant réduire la "
 "sélection pour ne montrer que les bâtiments qui sont à 500m d'un restaurant."
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
+msgid ""
+"Using the processes described above, create a new layer called "
+"``houses_restaurants_500m`` which further filters your "
+"``well_located_houses`` layer to show only those which are within 500m of a "
+"restaurant."
+msgstr ""
+"En utilisant les processus décrits ci-dessus, créez une nouvelle couche "
+"appelée :guilabel:`houses_restaurants_500m` qui filtre davantage votre "
+"couche :guilabel:`well_located_houses` pour ne montrer que celles qui sont à"
+" moins de 500m d'un restaurant."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
+msgid ""
+"To create the new ``houses_restaurants_500m`` layer, we go through a two "
+"step process:"
+msgstr ""
+"Pour créer la nouvelle couche ``houses_restaurants_500m``, nous allons "
+"suivre deux étapes :"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
+msgid ""
+"First, create a buffer of 500m around the restaurants and add the layer to "
+"the map:"
+msgstr ""
+"Premièrement, créez un tampon de 500m autour des restaurants et ajoutez-le à"
+" la carte :"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:407
+msgid "Next, extract buildings within that buffer area:"
+msgstr "Ensuite, extrayez les bâtiments situés dans cette zone :"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:412
+msgid ""
+"Your map should now show only those buildings which are within 50m of a "
+"road, 1km of a school and 500m of a restaurant:"
+msgstr ""
+"Votre carte devrait maintenant ne montrer que les bâtiments qui sont à 50m "
+"d'une route, 1km d'une école et 500m d'un restaurant."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:419
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Select Buildings of the Right Size"
+msgstr ""
+":abbr:`★☆☆ (Niveau basique)` Pas à pas : Sélectionner les bâtiments de la "
+"bonne taille"
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:421
 msgid ""
 "To see which buildings are of the correct size (more than 100 square "
@@ -813,6 +880,17 @@ msgid ""
 msgstr ""
 "Pour savoir quels bâtiments sont de la bonne taille (plus de 100 mètres "
 "carrés), nous devons calculer leurs dimensions."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
+msgid ""
+"Select the ``houses_restaurants_500m`` layer and open the *Field Calculator*"
+" by clicking on the |calculateField| :sup:`Open Field Calculator` button in "
+"the main toolbar or in the attribute table window"
+msgstr ""
+"Sélectionnez la couche :guilabel:`houses_restaurants_500m` et ouvrez la "
+"*Calculatrice de champs* en cliquant sur le bouton |calculateField| "
+":sup:`Ouvrir la calculatrice champs` dans la barre d'outils principale ou "
+"dans la fenêtre de la table d'attributs"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"
@@ -824,10 +902,10 @@ msgid ""
 " to ``AREA``, choose :guilabel:`Decimal number (real)` as :guilabel:`Output "
 "field type`, and choose ``$area`` from the :menuselection:`Geometry` group."
 msgstr ""
-"Sélectionnez :guilabel:`créer un nouveau champs`, mettez le :guilabel:`nom "
-"de champ de sortie` à ``AREA``, choisissez :guilabel:`nombre decimal (real)`"
-" as :guilabel:`type de champ sortie`, et choisissez ``$area`` dans le groupe"
-" :menuselection:`Geometry`."
+"Sélectionnez :guilabel:`Créer un nouveau champ`, inscrivez ``AREA`` dans le "
+":guilabel:`Nom` , choisissez :guilabel:`Nombre décimal (réel)` comme "
+":guilabel:`Type`, et choisissez ``$area`` dans le groupe "
+":menuselection:`Géométrie`."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:437
 msgid ""
@@ -850,7 +928,7 @@ msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to finish editing, "
 "and save your edits when prompted."
 msgstr ""
-"Cliquez sur le bouton |toggleEditing| :sup:`basculer en mode edition` pour "
+"Cliquez sur le bouton |toggleEditing| :sup:`Basculer en mode édition` pour "
 "terminer l'édition, et enregistrez vos modifications lorsque vous y êtes "
 "invité."
 
@@ -864,7 +942,7 @@ msgid ""
 ":guilabel:`Provider Feature Filter` to ``\"AREA >= 100``."
 msgstr ""
 "Dans l'onglet :menuselection:`Source` des propriétés de la couche, réglez le"
-" filtre :guilabel:`Provider Feature Filter` à ``\"AREA >= 100``."
+" :guilabel:`Filtre d'entité du fournisseur de données` à ``\"AREA >= 100``."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:450
 msgid "Click :guilabel:`OK`."
