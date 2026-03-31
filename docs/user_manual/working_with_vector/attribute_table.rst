@@ -80,8 +80,8 @@ following functionality:
    "|saveEdits|", "Save Edits", "Save current modifications"
    "|refresh|", "Reload the table"
    "|newTableRow| :menuselection:`-->` ([1]_)", "Add feature", "Add new geometryless feature"
-   ":menuselection:`-->` |newTableRow|", "Add feature via attribute table", "Creates a new geometryless feature using the table view"
-   ":menuselection:`-->` |formSelect|", "Add feature via attribute form", "Creates a new geometryless feature using the form view"
+   ":menuselection:`-->` |newTableRow|", "Add feature via attribute table", "Inserts a new empty row in the attribute table to be filled in"
+   ":menuselection:`-->` |formSelect|", "Add feature via attribute form", "Opens the feature attributes form for data entry"
    "|deleteSelectedFeatures|", "Delete selected features", "Remove selected features from the layer"
    "|editCut|", "Cut selected features to clipboard", "", ":kbd:`Ctrl+X`"
    "|copySelected|", "Copy selected features to clipboard", "", ":kbd:`Ctrl+C`"
@@ -102,8 +102,7 @@ following functionality:
    "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
    "|actionRun|", "Actions", "Lists the actions related to the layer"
 
-.. [1] Pressing and holding the button helps you switch between table and form view
-  for adding new features. 
+.. [1] Press and hold to select whether to add the feature via the attribute table or form.
 
 .. attention:: Depending on the format of the data and the GDAL library built with
    your QGIS version, some tools may not be available.
