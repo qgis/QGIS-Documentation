@@ -3226,6 +3226,11 @@ The output raster will be multi-band if multiple ranks are provided.
 If multiband rasters are used in the data raster stack,
 the algorithm will always perform the analysis on the first band of the rasters.
 
+.. figure:: img/raster_rank.png
+  :align: center
+
+  Raster rank result for rank 1 (minimum value). NoData cells in any input raster result in a NoData output cell.
+
 .. seealso:: :ref:`qgiscellstackpercentrankfromvalue`, :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`, :ref:`qgiscellstatistics`, :ref:`qgisrastercalc`
 
 Parameters
