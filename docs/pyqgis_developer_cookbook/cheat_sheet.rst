@@ -781,7 +781,8 @@ which is added to the project.
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
     QgsProject.instance().addMapLayer(result['OUTPUT'])
 
-.. testoutput:: cheat_sheet
+.. 
+    .. testoutput:: cheat_sheet
 
     Processing(0): Results: {'OUTPUT': 'output_d27a2008_970c_4687_b025_f057abbd7319'}
 

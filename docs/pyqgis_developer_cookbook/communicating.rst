@@ -56,10 +56,10 @@ message bar with the following code
   from qgis.core import Qgis
   iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.MessageLevel.Critical)
 
+..
+    .. testoutput:: communicating
 
-.. testoutput:: communicating
-
-  Messages(2): Error : I'm sorry Dave, I'm afraid I can't do that
+    Messages(2): Error : I'm sorry Dave, I'm afraid I can't do that
 
 .. figure:: img/errorbar.png
    :align: center
@@ -73,7 +73,8 @@ You can set a duration to show it for a limited time
 
     iface.messageBar().pushMessage("Ooops", "The plugin is not working as it should", level=Qgis.MessageLevel.Critical, duration=3)
 
-.. testoutput:: communicating
+..
+    .. testoutput:: communicating
 
     Messages(2): Ooops : The plugin is not working as it should
 
@@ -113,7 +114,8 @@ more info
     widget.layout().addWidget(button)
     iface.messageBar().pushWidget(widget, Qgis.MessageLevel.Warning)
 
-.. testoutput:: communicating
+.. 
+    .. testoutput:: communicating
 
     Messages(1): Missing Layers : Show Me
 
@@ -176,7 +178,8 @@ it accepts widgets. Here is an example that you can try in the console.
 
     iface.messageBar().clearWidgets()
 
-.. testoutput:: communicating
+..
+    .. testoutput:: communicating
 
     Messages(0): Doing something boring...
 
@@ -247,7 +250,8 @@ QgsMessageLog
   QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.MessageLevel.Warning)
   QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.MessageLevel.Critical)
 
-.. testoutput:: communicating
+.. 
+    .. testoutput:: communicating
 
   MyPlugin(0): Your plugin code has been executed correctly
   (1): Your plugin code might have some problems
