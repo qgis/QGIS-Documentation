@@ -319,11 +319,11 @@ Advanced parameters
      - Specify the underlying format in which data are stored
        for Virtual Point Cloud (:file:`.VPC`) output.
        Possible formats are:
-       
+
        * 0 --- ``COPC``
        * 1 --- ``LAZ``
        * 2 --- ``LAS``
-       
+
        LAZ/LAS may be faster to process, however only
        allow rendering of the point cloud extents.
 
@@ -749,7 +749,7 @@ Parameters
    * - **Number of neighbors for terrain interpolation**
      - ``COUNT``
      - [numeric: integer]
-    
+
        Default: 1
      - The number of neighboring ground
        points used to interpolate the terrain elevation.
@@ -759,12 +759,13 @@ Parameters
 
        Default: 0.0
      - Maximum distance used to limit the search radius. If set to 0, the search distance is unlimited.
-   * - **Height above ground (nearest neighbour)**
+   * - **Height above ground**
      - ``OUTPUT``
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the point cloud with height above ground value. :ref:`One of <output_parameter_widget>`:
+     - Specify the point cloud file to export the point cloud with height above ground value.
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -810,7 +811,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Height above ground (nearest neighbour)**
+   * - **Height above ground**
      - ``OUTPUT``
      - [point cloud]
      - Output point cloud layer with height above ground calculated for each point.
@@ -981,12 +982,13 @@ Parameters
      - Value used to multiply the standard deviation of the mean distances in order to
        compute the threshold for classifying points as noise.
        Higher values result in fewer points being classified as noise.
-   * - **Filtered (statistical algorithm)**
+   * - **Filtered noise**
      - ``OUTPUT``
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the filtered point cloud to. :ref:`One of <output_parameter_widget>`:
+     - Specify the point cloud file to export the filtered point cloud to.
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1032,7 +1034,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Filtered (statistical algorithm)**
+   * - **Filtered noise**
      - ``OUTPUT``
      - [point cloud]
      - Output point cloud layer where points are classified as noise based on the statistical filter.
@@ -1094,12 +1096,13 @@ Parameters
 
        Default: 1.0
      - Search radius for counting neighboring points.
-   * - **Filtered (radius algorithm)**
+   * - **Filtered noise**
      - ``OUTPUT``
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the filtered point cloud to. :ref:`One of <output_parameter_widget>`:
+     - Specify the point cloud file to export the filtered point cloud to.
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1145,7 +1148,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Filtered (radius algorithm)**
+   * - **Filtered noise**
      - ``OUTPUT``
      - [point cloud]
      - Output point cloud layer where points are classified as noise based on the statistical filter.
@@ -1201,15 +1204,16 @@ Parameters
    * - **Number of neighbors for terrain construction**
      - ``COUNT``
      - [numeric: integer]
-    
+
        Default: 10
      - The number of neighboring ground-classified points used to construct the terrain surface for elevation interpolation.
-   * - **Height above ground (delaunay algorithm)**
+   * - **Height above ground**
      - ``OUTPUT``
      - [point cloud]
 
        Default: ``[Save to temporary file]``
-     - Specify the point cloud file to export the point cloud with height above ground value. :ref:`One of <output_parameter_widget>`:
+     - Specify the point cloud file to export the point cloud with height above ground value.
+       :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
@@ -1255,7 +1259,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Height above ground (nearest neighbour)**
+   * - **Height above ground**
      - ``OUTPUT``
      - [point cloud]
      - Output point cloud layer with height above ground calculated for each point.
