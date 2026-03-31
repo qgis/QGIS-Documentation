@@ -7,4 +7,4 @@ WORKDIR /
 RUN python3 -m venv docsenv && . docsenv/bin/activate && pip3 install -r /documentation/REQUIREMENTS.txt
 WORKDIR /documentation
 
-CMD make doctest-gh
+CMD ["make", "doctest-gh"]
