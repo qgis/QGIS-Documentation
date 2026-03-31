@@ -91,7 +91,7 @@ make -f venv.mk cleanall
 ### Fixing build locale error on macOS
 
 When the build on macOS fails with:
-  
+
 ```sh
 locale.Error: unsupported locale setting
 make: *** [html] Error 1
@@ -228,7 +228,7 @@ and some custom scripts:
       ```
   ---
 
-* The transifex integration bot: 
+* The transifex integration bot:
   manages pulls and pushes of the strings, in other words:
   - Tracks any changes of the English `*.po` resource files in GitHub
     and automatically sends them to the Transifex platform
@@ -357,4 +357,3 @@ which does not appear in documentation with directive ``testsetup``, for example
 
 For more information see *Sphinx* doctest extension documentation:
 https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html
-

@@ -1,5 +1,5 @@
 _This document is meant to explain the workflow to effectively
-and bug-freely release a new version of QGIS documentation_ 
+and bug-freely release a new version of QGIS documentation_
 
 # Versions and branch naming
 
@@ -95,7 +95,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 <details>
   <summary>Instructions when the new LTR officially takes place</summary>
 
-### Old LTR branch 
+### Old LTR branch
 <details>
 
 - [ ] In [conf.py](conf.py) file: set the html_context `outdated` option to `True`,
@@ -105,7 +105,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 
 </details>
 
-### New LTR branch 
+### New LTR branch
 <details>
 
 - [ ] In [conf.py](conf.py) file: set the html_context `isLtr` to `True`
@@ -148,7 +148,7 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 
 ### Repository and project configuration
 <details>
-  
+
 - [ ] Update the [docs index page](https://www.qgis.org/resources/hub/#documentation).
   Source file is available [hub.md](https://github.com/qgis/QGIS-Website/blob/main/content/resources/hub.md)
   - [ ] Reference the new version as current LTR
@@ -170,7 +170,7 @@ Many parts of the process are currently manual. This sometimes results in failin
 some steps were overlooked/forgotten.
 Automating the process as much as possible would lower the risk and make it less time consuming.
 
-* Some values are somehow copy-pasted across places while they could likely be put in a variable: 
+* Some values are somehow copy-pasted across places while they could likely be put in a variable:
 
   * languages list: they are defined in docs_conf.yml, Makefile, docker-world.sh
   * version number: it is defined in conf.py, Makefile, doctest.dockerfile
