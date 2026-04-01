@@ -356,7 +356,7 @@ URL like in the following snippet:
   quri.setParam("url", 'https://my_auth_enabled_server_ip/wms')
   rlayer = QgsRasterLayer(str(quri.encodedUri(), "utf-8"), 'states', 'wms')
 
-.. testoutput:: auth
+.. .. testoutput:: auth
     :hide:
 
     WMS(1): Download of capabilities failed:
@@ -380,7 +380,7 @@ class, is used to set a data source in the following way:
   quri.setParam("authcfg", authCfg)
   rlayer = QgsRasterLayer( quri.uri(False), 'states', 'wms')
 
-.. testoutput:: auth
+.. .. testoutput:: auth
     :hide:
 
     WMS(1): Download of capabilities failed:

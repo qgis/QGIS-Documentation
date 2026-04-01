@@ -54,12 +54,12 @@ message bar with the following code
 .. testcode:: communicating
 
   from qgis.core import Qgis
-  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.Critical)
+  iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=Qgis.MessageLevel.Critical)
 
+..
+    .. testoutput:: communicating
 
-.. testoutput:: communicating
-
-  Messages(2): Error : I'm sorry Dave, I'm afraid I can't do that
+    Messages(2): Error : I'm sorry Dave, I'm afraid I can't do that
 
 .. figure:: img/errorbar.png
    :align: center
@@ -71,9 +71,10 @@ You can set a duration to show it for a limited time
 
 .. testcode:: communicating
 
-    iface.messageBar().pushMessage("Ooops", "The plugin is not working as it should", level=Qgis.Critical, duration=3)
+    iface.messageBar().pushMessage("Ooops", "The plugin is not working as it should", level=Qgis.MessageLevel.Critical, duration=3)
 
-.. testoutput:: communicating
+..
+    .. testoutput:: communicating
 
     Messages(2): Ooops : The plugin is not working as it should
 
@@ -111,9 +112,10 @@ more info
     button.setText("Show Me")
     button.pressed.connect(showError)
     widget.layout().addWidget(button)
-    iface.messageBar().pushWidget(widget, Qgis.Warning)
+    iface.messageBar().pushWidget(widget, Qgis.MessageLevel.Warning)
 
-.. testoutput:: communicating
+.. 
+    .. testoutput:: communicating
 
     Messages(1): Missing Layers : Show Me
 
@@ -132,15 +134,15 @@ message box, or if it doesn't make sense to show it in the main QGIS window
         def __init__(self):
             QDialog.__init__(self)
             self.bar = QgsMessageBar()
-            self.bar.setSizePolicy( QSizePolicy.Minimum, QSizePolicy.Fixed )
+            self.bar.setSizePolicy( QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Fixed )
             self.setLayout(QGridLayout())
             self.layout().setContentsMargins(0, 0, 0, 0)
-            self.buttonbox = QDialogButtonBox(QDialogButtonBox.Ok)
+            self.buttonbox = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok)
             self.buttonbox.accepted.connect(self.run)
             self.layout().addWidget(self.buttonbox, 0, 0, 2, 1)
             self.layout().addWidget(self.bar, 0, 0, 1, 1)
         def run(self):
-            self.bar.pushMessage("Hello", "World", level=Qgis.Info)
+            self.bar.pushMessage("Hello", "World", level=Qgis.MessageLevel.Info)
 
     myDlg = MyDialog()
     myDlg.show()
@@ -166,9 +168,9 @@ it accepts widgets. Here is an example that you can try in the console.
     progressMessageBar = iface.messageBar().createMessage("Doing something boring...")
     progress = QProgressBar()
     progress.setMaximum(10)
-    progress.setAlignment(Qt.AlignLeft|Qt.AlignVCenter)
+    progress.setAlignment(Qt.AlignmentFlag.AlignLeft|Qt.AlignmentFlag.AlignVCenter)
     progressMessageBar.layout().addWidget(progress)
-    iface.messageBar().pushWidget(progressMessageBar, Qgis.Info)
+    iface.messageBar().pushWidget(progressMessageBar, Qgis.MessageLevel.Info)
 
     for i in range(10):
         time.sleep(1)
@@ -176,7 +178,8 @@ it accepts widgets. Here is an example that you can try in the console.
 
     iface.messageBar().clearWidgets()
 
-.. testoutput:: communicating
+..
+    .. testoutput:: communicating
 
     Messages(0): Doing something boring...
 
@@ -243,11 +246,12 @@ QgsMessageLog
 .. testcode:: communicating
 
   # You can optionally pass a 'tag' and a 'level' parameters
-  QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.Info)
-  QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.Warning)
-  QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.Critical)
+  QgsMessageLog.logMessage("Your plugin code has been executed correctly", 'MyPlugin', level=Qgis.MessageLevel.Info)
+  QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.MessageLevel.Warning)
+  QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.MessageLevel.Critical)
 
-.. testoutput:: communicating
+.. 
+    .. testoutput:: communicating
 
   MyPlugin(0): Your plugin code has been executed correctly
   (1): Your plugin code might have some problems

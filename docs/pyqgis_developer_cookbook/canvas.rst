@@ -110,11 +110,11 @@ set white background and enable anti-aliasing for smooth rendering
 
 .. testcode:: canvas
 
-  canvas.setCanvasColor(Qt.white)
+  canvas.setCanvasColor(Qt.GlobalColor.white)
   canvas.enableAntiAliasing(True)
 
 (In case you are wondering, ``Qt`` comes from ``PyQt.QtCore`` module and
-``Qt.white`` is one of the predefined ``QColor`` instances.)
+``Qt.GlobalColor.white`` is one of the predefined ``QColor`` instances.)
 
 Now it is time to add some map layers. We will first open a layer and add it to
 the current project. Then we will set the canvas extent and set the list of
@@ -240,7 +240,7 @@ are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` meth
           QMainWindow.__init__(self)
 
           self.canvas = QgsMapCanvas()
-          self.canvas.setCanvasColor(Qt.white)
+          self.canvas.setCanvasColor(Qt.GlobalColor.white)
 
           self.canvas.setExtent(layer.extent())
           self.canvas.setLayers([layer])
