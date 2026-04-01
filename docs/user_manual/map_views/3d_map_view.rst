@@ -84,6 +84,22 @@ The following tools are provided at the top of the 3D map view panel:
   * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
     and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
     More options are available in the :ref:`General configuration <scene_extent>` tab.
+  * :guilabel:`Camera controls`: allows you to control camera looking at XYZ in 3D map CRS coordinates.
+    This following options are shown in the dialog:
+
+    * :guilabel:`Looking at X`: set the camera position by entering X values
+    * :guilabel:`Looking at Y`: set the camera position by entering Y values
+    * :guilabel:`Looking at Z`: set the camera position by entering Z values
+    * :guilabel:`Distance from center`: controls how far the camera is from central point
+    * :guilabel:`Pitch`: controls how steep camera looks up and down
+    * :guilabel:`Heading`: controls the direction the camera faces
+
+    If you check |unchecked| :guilabel:`Live update`, any changes will instantly be shown.
+    Otherwise, you will need to click :guilabel:`Apply` button to see changes you have made.
+    When you move camera by dragging or scrolling, the dialog numbers update automatically.
+    This happens in real-time, regardless of the :guilabel:`Live update` setting.
+* The |editCut| :sup:`Cross Section` menu provides these capabilities:
+
   * |editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene by defining an area on the terrain in the 2D map canvas.
     Click to set the start point, move the mouse to define the line direction
     and click again to set the end point of the axis.
