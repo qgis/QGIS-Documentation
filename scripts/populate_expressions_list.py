@@ -101,7 +101,7 @@ def format_variant(function_dict, f_name):
         for arg in function_dict['arguments']:
             if "optional" in arg and arg["optional"]:
                 if "default" in arg:
-                    default = f'={arg["default"]}'
+                    default = f':={arg["default"]}'
                 else:
                     default = ''
                 arg_text = f'[{arg["arg"]}{default}]'
