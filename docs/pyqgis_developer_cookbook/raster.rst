@@ -114,7 +114,7 @@ The following code assumes ``rlayer`` is a
 
 .. testoutput:: raster
 
-    0
+    RasterLayerType.GrayOrUndefined
 
 .. testcode:: raster
 

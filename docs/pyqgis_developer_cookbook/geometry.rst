@@ -148,18 +148,18 @@ enumeration.
 .. testcode:: geometry
 
   print(gPnt.wkbType())
-  # output: 1
+  # output: WkbType.Point
   print(gLine.wkbType())
-  # output: 2
+  # output: WkbType.LineString
   print(gPolygon.wkbType())
-  # output: 3
+  # output: WkbType.Polygon
 
 .. testoutput:: geometry
   :hide:
 
-  1
-  2
-  3
+  WkbType.Point
+  WkbType.LineString
+  WkbType.Polygon
 
 As an alternative, one can use the :meth:`type() <qgis.core.QgsGeometry.type>`
 method which returns a value from the :meth:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes.geometryType>`
@@ -168,12 +168,12 @@ enumeration.
 .. testcode:: geometry
 
   print(gLine.type())
-  # output: 1
+  # output: GeometryType.Line
 
 .. testoutput:: geometry
   :hide:
 
-  1
+  GeometryType.Line
 
 You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
 function to get a human readable geometry type.
@@ -279,7 +279,7 @@ It's also possible to modify each part of the geometry using
 
 .. testoutput:: geometry
 
-    MultiPoint ((-10334726.79314758814871311 -5360105.10101194866001606),(-10462133.82917747274041176 -5217484.34365733992308378),(-10589398.51346861757338047 -5072020.35880533326417208))
+    MultiPoint ((-10334728.12541878595948219 -5360106.25905461423099041),(-10462135.16126426123082638 -5217485.4735023295506835),(-10589399.84444035589694977 -5072021.45942386891692877))
 
 .. index:: Geometry; Predicates and operations
 
