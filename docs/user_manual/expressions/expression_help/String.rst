@@ -266,7 +266,7 @@ Returns a number formatted with the locale separator for thousands. By default t
    :widths: 15 85
 
    * - Syntax
-     - format_number(number, [places=0], [language], [omit_group_separators=false], [trim_trailing_zeroes=false])
+     - format_number(number, [places:=0], [language], [omit_group_separators:=false], [trim_trailing_zeroes:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -397,7 +397,7 @@ Removes the longest string containing only the specified characters (a space by 
    :widths: 15 85
 
    * - Syntax
-     - ltrim(string, [characters=' '])
+     - ltrim(string, [characters:=' '])
 
        [] marks optional arguments
    * - Arguments
@@ -637,7 +637,7 @@ Removes the longest string containing only the specified characters (a space by 
    :widths: 15 85
 
    * - Syntax
-     - rtrim(string, [characters=' '])
+     - rtrim(string, [characters:=' '])
 
        [] marks optional arguments
    * - Arguments
@@ -712,7 +712,7 @@ Counts the number of occurrences of a substring within a string. By default, the
    :widths: 15 85
 
    * - Syntax
-     - substr_count(string, substring, [overlapping=False])
+     - substr_count(string, substring, [overlapping:=False])
 
        [] marks optional arguments
    * - Arguments

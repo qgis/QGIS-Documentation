@@ -64,7 +64,7 @@ Returns a color object based on its cyan, magenta, yellow, black and alpha compo
    :widths: 15 85
 
    * - Syntax
-     - color_cmykf(cyan, magenta, yellow, black, [alpha=1.0])
+     - color_cmykf(cyan, magenta, yellow, black, [alpha:=1.0])
 
        [] marks optional arguments
    * - Arguments
@@ -156,7 +156,7 @@ Returns a color object based on its hue, saturation, and lightness attributes.
    :widths: 15 85
 
    * - Syntax
-     - color_hslf(hue, saturation, lightness, [alpha=1.0])
+     - color_hslf(hue, saturation, lightness, [alpha:=1.0])
 
        [] marks optional arguments
    * - Arguments
@@ -226,7 +226,7 @@ Returns a color object based on its hue, saturation, and value attributes.
    :widths: 15 85
 
    * - Syntax
-     - color_hsvf(hue, saturation, value, [alpha=1.0])
+     - color_hsvf(hue, saturation, value, [alpha:=1.0])
 
        [] marks optional arguments
    * - Arguments
@@ -382,7 +382,7 @@ Returns a color object based on its red, green, blue and alpha components.
    :widths: 15 85
 
    * - Syntax
-     - color_rgbf(red, green, blue, [alpha=1.0])
+     - color_rgbf(red, green, blue, [alpha:=1.0])
 
        [] marks optional arguments
    * - Arguments
@@ -407,7 +407,7 @@ Returns a gradient ramp from a map of color strings and steps.
    :widths: 15 85
 
    * - Syntax
-     - create_ramp(map, [discrete=false])
+     - create_ramp(map, [discrete:=false])
 
        [] marks optional arguments
    * - Arguments

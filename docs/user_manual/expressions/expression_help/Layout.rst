@@ -37,7 +37,7 @@ Returns a list of credit (usage rights) strings for the layers shown in a layout
    :widths: 15 85
 
    * - Syntax
-     - map_credits([id], [include_layer_names=false], [layer_name_separator=': '])
+     - map_credits([id], [include_layer_names:=false], [layer_name_separator:=': '])
 
        [] marks optional arguments
    * - Arguments

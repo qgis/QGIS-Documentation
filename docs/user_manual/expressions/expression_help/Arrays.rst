@@ -163,7 +163,7 @@ Returns an array with only the items for which the expression evaluates to true.
    :widths: 15 85
 
    * - Syntax
-     - array_filter(array, expression, [limit=0])
+     - array_filter(array, expression, [limit:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -695,7 +695,7 @@ Returns the provided array with its elements sorted.
    :widths: 15 85
 
    * - Syntax
-     - array_sort(array, [ascending=true])
+     - array_sort(array, [ascending:=true])
 
        [] marks optional arguments
    * - Arguments
@@ -738,7 +738,7 @@ Concatenates array elements into a string separated by a delimiter and using opt
    :widths: 15 85
 
    * - Syntax
-     - array_to_string(array, [delimiter=','], [empty_value=''])
+     - array_to_string(array, [delimiter:=','], [empty_value:=''])
 
        [] marks optional arguments
    * - Arguments
@@ -764,7 +764,7 @@ Creates an array containing a sequence of numbers.
    :widths: 15 85
 
    * - Syntax
-     - generate_series(start, stop, [step=1])
+     - generate_series(start, stop, [step:=1])
 
        [] marks optional arguments
    * - Arguments
@@ -812,7 +812,7 @@ Returns an array of all strings captured by capturing groups, in the order the g
    :widths: 15 85
 
    * - Syntax
-     - regexp_matches(string, regex, [empty_value=''])
+     - regexp_matches(string, regex, [empty_value:=''])
 
        [] marks optional arguments
    * - Arguments
@@ -837,7 +837,7 @@ Splits string into an array using supplied delimiter and optional string for emp
    :widths: 15 85
 
    * - Syntax
-     - string_to_array(string, [delimiter=','], [empty_value=''])
+     - string_to_array(string, [delimiter:=','], [empty_value:=''])
 
        [] marks optional arguments
    * - Arguments
