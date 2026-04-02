@@ -113,9 +113,12 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 - [ ] In [conf.py](conf.py) file: set the html_context `outdated` option to `True`,
   and `isLtr` to `False`
 - [ ] Pull translations for all languages from transifex (see instructions in [README](README.md) file)
-- [ ] Build the docs one more time
-- [ ] Run `scripts/strings_fixer.sh` against po files: `bash scripts/strings_fixer.sh`
-- [ ] Run `scripts/strings_fixer.sh` against rst files: `bash scripts/strings_fixer.sh docs rst`
+- [ ] Run `make linkcheck` to find potential broken or redirected URLs
+- [ ] Clean up the strings:
+   - [ ] Update `scripts/strings_fixer.sh` with pairs of errors returned by linkcheck and their corresponding fixes
+   - [ ] Run `scripts/strings_fixer.sh` against rst files: `bash scripts/strings_fixer.sh docs rst`
+   - [ ] Run `scripts/strings_fixer.sh` against po files: `bash scripts/strings_fixer.sh`
+- [ ] Build the docs one last time
 
 </details>
 
