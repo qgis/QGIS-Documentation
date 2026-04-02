@@ -99,7 +99,7 @@ Manage Layers and overview
   ==============================  ==================================  ==============================  ==================================
   Icon                            Substitution                        Icon                            Substitution
   ==============================  ==================================  ==============================  ==================================
-  |dataSourceManager|             ``|dataSourceManager|``             \                               \
+  |dataSourceManager|             ``|dataSourceManager|``             |addGeoPackageLayer|            ``|addGeoPackageLayer|``
   |addOgrLayer|                   ``|addOgrLayer|``                   |addSensorThingsLayer|          ``|addSensorThingsLayer|``
   |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
   |addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
@@ -705,6 +705,8 @@ Grass integration
 .. |addExpression| image:: /static/common/mActionAddExpression.png
    :width: 1.5em
 .. |addGeometryAttributes| image:: /static/common/mAlgorithmAddGeometryAttributes.png
+   :width: 1.5em
+.. |addGeoPackageLayer| image:: /static/common/mActionAddGeoPackageLayer.png
    :width: 1.5em
 .. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em
