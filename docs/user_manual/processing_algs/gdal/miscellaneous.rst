@@ -9,10 +9,11 @@ Miscellaneous
       :class: toc-columns
 
 
-.. _gdalidentifydatasets:
+.. _gdaldataset_identify:
 
 Dataset Identification
 ----------------------
+|400|
 
 Reports the name of GDAL drivers that can open files contained in a folder,
 with optional additional details, and write the result into an output vector layer.
@@ -20,7 +21,7 @@ with optional additional details, and write the result into an output vector lay
 This algorithm is derived from the
 `GDAL dataset identify utility <https://gdal.org/en/stable/programs/gdal_dataset_identify.html>`_.
 
-.. attention:: Running this algorithm requires QGIS installed with GDAL_ >=  3.13.0
+.. attention:: Running this algorithm requires QGIS installed with GDAL_ >= 3.13.0
    (see :menuselection:`Help --> About` menu).
 
 Parameters
@@ -41,22 +42,22 @@ Parameters
    * - **Perform recursive exploration of the input folder**
      - ``RECURSIVE``
      - [boolean]
-  
+
        Default: ``True``
      - If checked, the algorithm will scan subfolders recursively to
        identify datasets in the entire directory tree.
-       
+
    * - **Add details about identified datasets in the output**
      - ``DETAILS``
      - [boolean]
-  
+
        Default: ``True``
      - If checked, additional details about each identified dataset 
        will be added to the output vector layer.
    * - **Output file**
      - ``OUTPUT``
      - [vector: any]
-  
+
        Default: ``[Save to temporary file]``
      - Specification of the output vector layer.
        :ref:`One of <output_parameter_widget>`:
@@ -83,11 +84,11 @@ Outputs
      - [vector: any]
 
      - Vector layer containing the identification fields:
-  
+
        - ``filename``: name of the file.
        - ``driver``: name of the GDAL driver that can open the file.
        - Additional fields if the **Add details about identified datasets in the output** option is checked:
-  
+
          - ``layout``: specifies the internal layout of the dataset,
            indicating how and where the different components of a TIFF file are stored.
            Currently, the only supported value (when set) is COG (Cloud Optimized GeoTIFF).
@@ -105,3 +106,12 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |400| replace:: ``NEW in 4.0``
