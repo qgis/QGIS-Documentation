@@ -442,10 +442,6 @@ A visual edge follows the cursor and completes the connection when released.
 To remove a connection, drag the edge away from the input socket.
 The algorithm dialogs update automatically to reflect changes made using the drag-and-drop interface.
 
-
-Socket Types
-............
-
 In the model designer, input and output sockets are color-coded to indicate
 the type of data they accept or produce. The same color coding applies to
 rubber bands and parameter bullets on the canvas.
@@ -461,24 +457,25 @@ The following table describes the meaning of each socket color.
    * - Socket color
      - Data type category
      - Description
-   * - :blue:`Blue`
-     - Numerical types
-     - Numbers, matrices, vectors, distances, durations, and other numeric values.
    * - :green:`Green`
      - Boolean
      - ``True`` / ``False`` values.
+   * - :purple:`Purple`
+     - Enumerations
+     - Predefined selectable values (enum parameters). The selected value is
+       shown using its descriptive label rather than its numeric index.
+   * - :blue:`Blue`
+     - Numerical types
+     - Numbers, matrices, vectors, distances, durations, and other numeric values.
+   * - :slate:`Slate blue`
+     - Textual types
+     - Strings, dates, coordinate reference systems (CRS), HTML content, and other text-based values.
    * - :kaki:`Kaki`
      - Vector and geometry types
      - Vector geometries and vector layers, including meshes, point clouds, extents, vector tiles, and any object containing geometry.
    * - :turquoise:`Turquoise`
      - Raster types
      - Raster images and raster layers.
-   * - :purple:`Purple`
-     - Enumerations
-     - Predefined selectable values (enum parameters).
-   * - :slate:`Slate blue`
-     - Textual types
-     - Strings, dates, coordinate reference systems (CRS), HTML content, and other text-based values.
    * - :darkgray:`Dark gray`
      - File system types
      - File and directory paths.
