@@ -130,9 +130,9 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 - [ ] In [docker-world.sh](docker-world.sh) file: complete the `langs` variable with the supported languages
 - [ ] In the [Makefile](Makefile): add the supported languages to the `LANGUAGES` parameter
 - [ ] Copy the cleaned up [locale](locale) folder from the old LTR branch to the new LTR branch
-- [ ] Run `scripts/create_transifex_resources.sh` to generate the `.tx/config` file and English source po files
-- [ ] Run `scripts/strings_fixer.sh` against rst files: `bash scripts/strings_fixer.sh docs rst`
 - [ ] Run `make linkcheck` and fix any new broken links found in the rst files
+- [ ] If necessary, update and run `scripts/strings_fixer.sh` against rst files: `bash scripts/strings_fixer.sh docs rst`
+- [ ] Run `scripts/create_transifex_resources.sh` to generate the `.tx/config` file and English source po files
 
 </details>
 
