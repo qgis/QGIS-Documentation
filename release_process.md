@@ -169,8 +169,8 @@ is being translated. So when a new LTR is published, we disconnect the old one a
   to the branch(es) in which to generate translation statistics
 - [ ] In [dependabot.yml](.github/dependabot.yml) file: Remove label for backporting dependencies update to the old LTR version
 
-</details>
 - [ ] Run `make linkcheck` and fix any new broken links found in the rst files
+</details>
 
 ### Repository and project configuration
 
