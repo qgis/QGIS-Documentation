@@ -9,6 +9,12 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    cooldown:
+      default-days: 7
+    groups:
+      all-actions:
+        patterns:
+          - "*
     labels:
       - "backport release_3.44"
       - "dependencies"
