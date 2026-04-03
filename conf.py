@@ -163,12 +163,6 @@ html_context = {
     'isLtr': False,
 }
 
-# Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
-
-html_css_files = ['css/qgis_docs.css']
-if html_context['isTesting'] or html_context['outdated']:
-    html_css_files.append('css/qgis_topbar.css')
-
 # Add custom tags to allow display of text based on the branch status
 if html_context['isTesting']:
     tags.add('testing')
