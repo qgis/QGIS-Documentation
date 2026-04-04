@@ -20,12 +20,10 @@ You can customize its properties in the :guilabel:`Item Properties` panel.
 In addition to the :ref:`common properties <item_common_properties>`,
 this feature has the following functionalities:
 
-.. todo: add properties screenshot
-   .. _figure_layout_elevationprofile_prop:
+.. _figure_layout_elevationprofile_properties:
 
-   .. figure:: img/elevationprofile_properties.png
+.. figure:: img/elevationprofile_properties.png
    :align: center
-   :width: 20em
 
    Elevation Profile Item Properties
 
@@ -44,10 +42,19 @@ Under the :guilabel:`Layers` group, check in the tree view the layers
 you would like to render in the profile item.
 Remember to properly configure the :guilabel:`Elevation` properties of the selected layers.
 
-Profile curve
--------------
+Profile curve and subsection indicators
+---------------------------------------
 
-* |unchecked| :guilabel:`Controlled by atlas`:
+.. _figure_layout_elevationprofile_curve_properties:
+
+.. figure:: img/elevationprofile_curve_subsections.png
+   :align: center
+
+   Elevation Profile Curve and Subsections Properties
+
+Under the :guilabel:`Profile curve` group, you can:
+
+* Toggle |unchecked| :guilabel:`Controlled by atlas`:
   the :ref:`profile curve <elevation_profile_create>` will be taken from the current atlas feature
   and the elevation profile view updated as you walk through the atlas features.
   This is currently supported for an active layout atlas or report, using a line geometry type coverage layer.
@@ -55,15 +62,20 @@ Profile curve
   should be from the profile curve in order to display in the layout elevation view.
   Only point features are currently returned.
 
-Show Subsections Indicator
---------------------------
-
-It is possible to highlight the position of the vertices of the curve on the Elevation Profile.
-Select the |checkbox| :guilabel:`Show Subsections Indicator` to display vertical lines at the distances of the vertices.
+Under the :guilabel:`Show Subsections Indicator` group, It is possible
+to highlight the position of the vertices of the curve on the Elevation Profile.
+Activate |checkbox| :guilabel:`Show Subsections Indicator` to display vertical lines at the distances of the vertices.
 Use the :guilabel:`Lines` drop-down list to set the symbol, color, opacity and width of the Subsections Indicator lines.
 
 Chart ranges
 ------------
+
+.. _figure_layout_elevationprofile_chart_ranges:
+
+.. figure:: img/elevationprofile_chart_ranges.png
+   :align: center
+
+   Elevation Profile Chart Ranges Properties
 
 A layout elevation profile item does not necessarily display the full extent of the elevation profile view it is based on.
 You can limit the area to render, providing:
@@ -73,6 +85,13 @@ You can limit the area to render, providing:
 
 Distance and elevation axes
 ---------------------------
+
+.. _figure_layout_elevationprofile_axes:
+
+.. figure:: img/elevationprofile_axes.png
+   :align: center
+
+   Elevation Profile Distance and Elevation Axes Properties
 
 The :guilabel:`Distance axis` and :guilabel:`Elevation axis` groups give options
 to tweak the grid over the elevation profile item, respectively on the X and Y axes:
@@ -88,6 +107,13 @@ to tweak the grid over the elevation profile item, respectively on the X and Y a
 
 Chart area
 ----------
+
+.. _figure_layout_elevationprofile_chart_area:
+
+.. figure:: img/elevationprofile_chart_area.png
+   :align: center
+
+   Elevation Profile Chart Area Properties
 
 Under :guilabel:`Chart area`, you can configure the rendering of the area
 in which the elevation profile plot is actually displayed:
