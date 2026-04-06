@@ -551,9 +551,8 @@ to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
-:numref:`figure_field_calculator`). If the layer is not in edit mode, a warning is
-displayed and using the field calculator will cause the layer to be put in
-edit mode before the calculation is made.
+:numref:`figure_field_calculator`). The layer will be put in
+edit mode (if not already) after the calculation is made.
 
 Based on the :ref:`Expression Builder <expression_builder>` dialog,
 the field calculator dialog offers a complete interface to define an expression
@@ -562,6 +561,11 @@ To use the field calculator dialog, you must select whether you want to:
 
 #. apply calculation on the whole layer or on selected features only
 #. create a new field for the calculation or update an existing one.
+
+You can also access the field calculator by right-clicking on a column header
+to directly edit that field.
+The field calculator dialog will open with the :guilabel:`Update existing field` option
+already checked and the selected column automatically chosen in the field dropdown.
 
 .. _figure_field_calculator:
 
