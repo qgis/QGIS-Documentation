@@ -2055,7 +2055,7 @@ def my_form_open(dialog, layer, feature):
       <widgets></widgets>
       <previewExpression></previewExpression>
       <mapTip>&lt;b&gt; Name of feature: &lt;/b&gt; [% "NAME_2" %] &lt;br&gt;
-&lt;b&gt; Is this place a Borough? &lt;/b&gt; &lt;br&gt; 
+&lt;b&gt; Is this place a Borough? &lt;/b&gt; &lt;br&gt;
 [% CASE WHEN "TYPE_2"='Borough'THEN'Yes'ELSE'No. It is a '|| "TYPE_2"END%]</mapTip>
     </maplayer>
     <maplayer autoRefreshEnabled="0" autoRefreshTime="0" geometry="Line" hasScaleBasedVisibilityFlag="0" labelsEnabled="1" legendPlaceholderImage="" maxScale="0" minScale="100000000" readOnly="0" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" simplifyAlgorithm="0" simplifyDrawingHints="1" simplifyDrawingTol="1" simplifyLocal="1" simplifyMaxScale="1" styleCategories="AllStyleCategories" symbologyReferenceScale="-1" type="vector" wkbType="MultiLineString">
