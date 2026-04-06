@@ -134,7 +134,7 @@ Source Properties
 -----------------
 
 In the |system| :guilabel:`Source` tab you can see and edit basic
-information about the point cloud layer:  
+information about the point cloud layer:
 
 .. _figure_point_cloud_source:
 
@@ -467,7 +467,7 @@ You can control the horizontal length of computed triangles:
 By checking the |checkbox| :guilabel:`Skip triangles longer than` option and setting up
 the threshold value, you can control the maximum lenght of a side of the triangles
 to consider in the horizontal plan. This can be particularly useful if you want to
-identify actual holes in the data. 
+identify actual holes in the data.
 
 .. _figure_shading_render_surface_example:
 
@@ -549,7 +549,7 @@ of the point cloud in 3D maps.
 3D Rendering modes
 ..................
 
-Following options can be selected from the drop down menu at the top of the tab: 
+Following options can be selected from the drop down menu at the top of the tab:
 
 * :guilabel:`No Rendering`: Data are not displayed
 * :guilabel:`Follow 2D Symbology`: Syncs features rendering in 3D
@@ -839,7 +839,7 @@ inside the :ref:`3D map view <label_3dmapview>`. These tools allow you to
 interactively select points, filter them based on expressions, and modify their attributes.
 
 .. note::
-   Only local COPC files are editable.  
+   Only local COPC files are editable.
    Other formats (e.g. LAS/LAZ) are automatically indexed into COPCs when added to QGIS,
    but only the resulting COPC file can be edited.
 
@@ -877,25 +877,25 @@ interactively select points, filter them based on expressions, and modify their 
 Adding attribute values and filtering points
 --------------------------------------------
 
-Before selecting points, choose the :guilabel:`Attribute` you want to modify and enter the :guilabel:`Value` to assign.  
+Before selecting points, choose the :guilabel:`Attribute` you want to modify and enter the :guilabel:`Value` to assign.
 Optionally, define a |expressionFilter| :sup:`Filter Points` expression to restrict which points are affected by selections and edits.
-Clicking the filter opens the :ref:`Query Builder <vector_query_builder>`, where you can create or test the expression.  
-Only points matching the filter will be affected by the subsequent selection and edits. Clearing the filter applies edits to all points. 
+Clicking the filter opens the :ref:`Query Builder <vector_query_builder>`, where you can create or test the expression.
+Only points matching the filter will be affected by the subsequent selection and edits. Clearing the filter applies edits to all points.
 
 Selecting points
 ----------------
 
 After setting the attribute, value, and optional filter, digitize a selection using one of the following methods:
 
-* |selectPolygon| :sup:`Select by Polygon`: draw a 2D polygon around points to select them.  
+* |selectPolygon| :sup:`Select by Polygon`: draw a 2D polygon around points to select them.
 * |rendering| :sup:`Select by Paintbrush`: drag the mouse to paint over points.
-  The brush size can be adjusted with the mouse scroll wheel.  
-* |selectAboveLine| :sup:`Select Above Line`: digitize a line to define the base of a trapezoid; points above it are selected.  
-* |selectBelowLine| :sup:`Select Below Line`: similar to the above, but selects points below the line.   
+  The brush size can be adjusted with the mouse scroll wheel.
+* |selectAboveLine| :sup:`Select Above Line`: digitize a line to define the base of a trapezoid; points above it are selected.
+* |selectBelowLine| :sup:`Select Below Line`: similar to the above, but selects points below the line.
 
 .. note::
-   Selection polygons are digitized directly in the 3D view.  
-   Camera movement is blocked while digitizing.  
+   Selection polygons are digitized directly in the 3D view.
+   Camera movement is blocked while digitizing.
    Only points in front of the camera’s near plane (i.e. currently rendered)
    are considered; points behind the camera are ignored.
 

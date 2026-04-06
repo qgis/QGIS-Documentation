@@ -374,8 +374,8 @@ The Microsoft Planetary Computer authentication method allows QGIS to access Mic
    Microsoft Planetary Computer authentication configs
 
 
-This method can be applied to STAC connections or directly to individual GDAL or point cloud layers. 
-When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests. 
+This method can be applied to STAC connections or directly to individual GDAL or point cloud layers.
+When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests.
 Support for encoding/decoding this configuration is also available for point cloud layers.
 
 Master Password and Auth Config Utilities

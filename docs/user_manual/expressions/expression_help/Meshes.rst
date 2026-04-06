@@ -29,7 +29,7 @@ Returns the area of the current mesh face. The area calculated by this function 
 $face_index
 ...........
 
-Returns the index of the current mesh face. 
+Returns the index of the current mesh face.
 
 .. list-table::
    :widths: 15 85
@@ -131,4 +131,3 @@ Returns the Z value of the current mesh vertex.
 
 
 .. end_$vertex_z_section
-

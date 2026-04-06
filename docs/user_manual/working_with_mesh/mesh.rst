@@ -711,7 +711,7 @@ Specifically, you can configure how heights from your dataset are interpreted:
   or use an |expression| :guilabel:`Expression` to auto-fill all group values based on an expression.
   When enabled, the layer will be filtered in the :ref:`2D map view <label_mapview>`,
   displaying only values within the map filter ranges.
-  In :ref:`3D map view <label_3dmapview>` or :ref:`profile tool charts <label_elevation_profile_view>`, 
+  In :ref:`3D map view <label_3dmapview>` or :ref:`profile tool charts <label_elevation_profile_view>`,
   the full extent of the layer will be displayed, ignoring the filtering.
 * :guilabel:`Profile Chart Appearance`: controls the rendering
   of the mesh elements elevation in the profile chart.

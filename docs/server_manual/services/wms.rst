@@ -1540,7 +1540,7 @@ SHOWRULEDETAILS
 ^^^^^^^^^^^^^^^
 
 This parameter specifies if the JSON output will also
-contain the details about the rule that generated the 
+contain the details about the rule that generated the
 legend entry. This parameter only has effect when the
 renderer is rule-based or categorized.
 

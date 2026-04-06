@@ -96,7 +96,7 @@ You **must** specify some parameters **before** the script body:
 #. It is also possible to define the name of your script using ``name``::
 
     ##My box plot script=name
-    
+
    If not defined, the file name will be used as the name of the script.
 
 Script body

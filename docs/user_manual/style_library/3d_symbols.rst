@@ -45,7 +45,7 @@ Point Layers
   * :guilabel:`Plane` defined by a :guilabel:`Size`
   * :guilabel:`Torus` defined by a :guilabel:`Radius` and a :guilabel:`Minor radius`
   * :guilabel:`3D Model`, using a 3D model file: supported formats include
-    wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`. 
+    wavefront :file:`.obj`, :file:`.glTF` and :file:`.fbx`.
     Models can be a file on disk, a remote URL or :ref:`embedded in the project
     <embedded_file_selector>`. Community-created models are shared on the `QGIS Hub
     <https://hub.qgis.org/wavefronts>`_.
@@ -143,7 +143,7 @@ Polygon Layers
 .. hint:: **Combination for best rendering of 3D data**
 
  :guilabel:`Culling mode`, :guilabel:`Add back faces` and :guilabel:`Invert normals`
- are all meant to fix the look of 3D data if it does not look right. 
+ are all meant to fix the look of 3D data if it does not look right.
  Typically when loading some data, it is best to first try ``culling mode=back``
  and ``add back faces=disabled`` - it is the most efficient.
  If the rendering does not look correct, try ``add back faces=enabled`` and

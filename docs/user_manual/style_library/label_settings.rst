@@ -1142,7 +1142,7 @@ Feature options
 Under :guilabel:`Feature options`:
 
 * For multipart geometry labeling, you can choose the following:
-  
+
   * :guilabel:`Label Largest Part Only` to label only the largest visible part of the feature within the current map view.
   * :guilabel:`Label Every Part with Entire Label` to label each part of a multipart geometry with the entire label text.
   * :guilabel:`Split Label Text Lines over Parts` to label each part of a multipart geometry with a corresponding line of the label text.

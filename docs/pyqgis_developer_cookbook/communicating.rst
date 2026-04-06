@@ -114,7 +114,7 @@ more info
     widget.layout().addWidget(button)
     iface.messageBar().pushWidget(widget, Qgis.MessageLevel.Warning)
 
-.. 
+..
     .. testoutput:: communicating
 
     Messages(1): Missing Layers : Show Me
@@ -250,7 +250,7 @@ QgsMessageLog
   QgsMessageLog.logMessage("Your plugin code might have some problems", level=Qgis.MessageLevel.Warning)
   QgsMessageLog.logMessage("Your plugin code has crashed!", level=Qgis.MessageLevel.Critical)
 
-.. 
+..
     .. testoutput:: communicating
 
   MyPlugin(0): Your plugin code has been executed correctly

@@ -55,7 +55,7 @@ is irrelevant and values are identified by their keys.
    :end-before: .. end_array_get_section
 
 .. hint:: You can also use the :ref:`index operator ([])
-  <expression_function_Operators_index>` to get a value from an array. 
+  <expression_function_Operators_index>` to get a value from an array.
 
 .. include:: expression_help/Arrays.rst
    :start-after: .. end_array_get_section
@@ -282,7 +282,7 @@ Fields and Values
 
 Contains a list of fields from the active layer, and special values.
 Fields list includes the ones stored in the dataset, :ref:`virtual
-<virtual_field>` and :ref:`auxiliary <vector_auxiliary_storage>` ones 
+<virtual_field>` and :ref:`auxiliary <vector_auxiliary_storage>` ones
 as well as from :ref:`joins <sec_joins>`.
 
 Double-click a field name to have it added to your expression. You can also
@@ -908,7 +908,7 @@ and values are identified by their keys.
    :end-before: .. end_map_get_section
 
 .. hint:: You can also use the :ref:`index operator ([])
-  <expression_function_Operators_index>` to get a value from a map. 
+  <expression_function_Operators_index>` to get a value from a map.
 
 .. include:: expression_help/Maps.rst
    :start-after: .. end_map_get_section
@@ -1154,8 +1154,8 @@ operators, with some special characteristics:
   return a NULL value. To return the other arguments regardless the NULL value,
   you may want to use the ``concat`` or ``array_to_string`` function::
 
-    'My feature id is: ' + NULL ==> NULL 
-    'My feature id is: ' || NULL => NULL 
+    'My feature id is: ' + NULL ==> NULL
+    'My feature id is: ' || NULL => NULL
     concat('My feature id is: ', NULL) => 'My feature id is: '
     array_to_string( array('My feature id is: ', NULL) ) => 'My feature id is: '
 

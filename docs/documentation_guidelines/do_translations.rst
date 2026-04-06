@@ -132,7 +132,7 @@ In order to provide translations:
  as a single :file:`.ts` file (e.g. ``qgis-application/qgis_en.ts (branch release-3_30)`` ).
  Translations are pulled to Github in development branch (daily),
  and at release time (for every released versions).
- 
+
 Two different tools are currently used to do translations in QGIS:
 
 * The `Transifex web platform <https://www.transifex.com/>`_, the **easiest and
@@ -197,7 +197,7 @@ In order to translate using Transifex, you need to:
       :align: center
 
       Select language for translation in the Transifex menu
-   
+
 #. Hover over your language and click either:
 
    * :guilabel:`View resources`: translatable :file:`.po` files with their ratio
@@ -207,11 +207,11 @@ In order to translate using Transifex, you need to:
 #. Identify the file you'd like to translate (in our case we are looking for the
    ``docs_user-manual_plugins_plugins-heatmap``, the heatmap plugin file)
    or any unfinished file and click on it: strings in the files are loaded
-   and you can use the interface to filter, translate, suggest translation... 
+   and you can use the interface to filter, translate, suggest translation...
 
    .. tip:: Clicking the ``Translate page`` link in the bottom left drop-down menu
      of a page brings you directly to its corresponding translation page in Transifex.
- 
+
 #. All you need to do is select each text and translate following the
    :ref:`guidelines <translate_manual>`.
 
@@ -413,7 +413,7 @@ part of it!!
 Summary Rules for translation
 -----------------------------
 
-#. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``, 
+#. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``,
    ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These are special tags
    used to replace images
 #. Do not change references that start with roles like ``:ref:``, ``:file:``,

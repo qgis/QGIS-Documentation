@@ -24,7 +24,7 @@ Here are only some of the reasons:
 - *It's free, as in liberty.* If you need extra functionality in QGIS, you
   can do more than just hope it will be included in the next release. You can
   sponsor the development of a feature, or add it yourself if you are
-  familiar with programming. 
+  familiar with programming.
 
 - *It's constantly developing.* Because anyone can add new features and improve
   on existing ones, QGIS never stagnates. The development of a new tool can

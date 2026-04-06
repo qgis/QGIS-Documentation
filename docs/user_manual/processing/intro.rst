@@ -17,7 +17,7 @@ you need to activate it:
 
    A :menuselection:`Processing` menu is now available in the top menu bar.
    From there you can reach the main components of this framework.
-   
+
 In the following sections, we will review how to use the graphical elements of
 this framework and make the most out of each one of them.
 

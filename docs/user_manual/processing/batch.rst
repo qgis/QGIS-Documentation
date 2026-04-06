@@ -180,7 +180,7 @@ as a single process. Depending on the algorithm, the output can be:
 
   ::
 
-    # Indicate a layer within a GeoPackage file 
+    # Indicate a layer within a GeoPackage file
     ogr:dbname='C:/Path/To/Geopackage.gpkg' table="New_Table" (geom)
 
     # Use the "Calculate By Expression" to output to different layers in a GeoPackage

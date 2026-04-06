@@ -97,7 +97,7 @@ which tables in the database contain geometry data.
 
    If the above ``INSERT`` statement causes an error, run this
    query first:
-   
+
    .. code-block:: sql
 
      select * from geometry_columns;

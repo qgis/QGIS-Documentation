@@ -52,7 +52,7 @@ Parameters
 
        Default: 0.1
      - Pixel size of the output raster layer in layer units.
-       
+
        In the GUI, the size can be specified by the number of rows
        (``Number of rows``) / columns (``Number of columns``) **or**
        the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
@@ -91,7 +91,7 @@ Parameters
        the point then the Epanechnikov kernel does.
        Consequently, triweight results in “sharper” hotspots and
        Epanechnikov results in “smoother” hotspots.
-       
+
        There are many shapes available (please see the
        `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
        for further information):
@@ -140,7 +140,7 @@ Parameters
    * - **Heatmap**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the output raster layer with kernel density values.
        :ref:`One of <output_parameter_widget>`:
@@ -335,7 +335,7 @@ Parameters
 
        Default: 0.1
      - Pixel size of the output raster layer in layer units.
-       
+
        In the GUI, the size can be specified by the number of rows
        (``Number of rows``) / columns (``Number of columns``) **or**
        the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
@@ -350,7 +350,7 @@ Parameters
    * - **Interpolated**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Raster layer of interpolated values.
        :ref:`One of <output_parameter_widget>`:
@@ -394,15 +394,15 @@ Line Density
 Calculates for each raster cell, the density measure of linear
 features within a circular neighbourhood. This measure is obtained by
 summing all the line segments intersecting the circular neighbourhood
-and dividing this sum by the area of such neighbourhood. 
-A weighting factor can be applied to the line segments. 
+and dividing this sum by the area of such neighbourhood.
+A weighting factor can be applied to the line segments.
 
 .. note:: This algorithm uses ellipsoid based measurements
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 .. figure:: img/linedensity.png
   :align: center
-  
+
   Line density example. Input layer source: Roads Overijssel - The
   Netherlands (OSM).
 
@@ -581,10 +581,10 @@ Parameters
 
        Default: 0
      - Set the interpolation method to be used. One of:
-       
+
        * :guilabel:`Linear`
        * :guilabel:`Clough-Toucher (cubic)`
-     
+
    * - **Extent (xmin, xmax, ymin, ymax)**
      - ``EXTENT``
      - [extent]
@@ -600,7 +600,7 @@ Parameters
 
        Default: 0.1
      - Pixel size of the output raster layer in layer units.
-       
+
        In the GUI, the size can be specified by the number of rows
        (``Number of rows``) / columns (``Number of columns``) **or**
        the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).

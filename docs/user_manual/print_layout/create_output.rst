@@ -116,9 +116,9 @@ To export a layout as an image:
 
      The :guilabel:`Crop to content` dialog also lets you add margins around
      the cropped bounds.
-  
-   * By checking |checkbox| :guilabel:`Open file after exporting` the exported 
-     file will automatically open in the default image viewer. 
+
+   * By checking |checkbox| :guilabel:`Open file after exporting` the exported
+     file will automatically open in the default image viewer.
 
 .. _figure_layout_output_image:
 
@@ -185,8 +185,8 @@ To export a layout as SVG:
      Sometimes, this can cause visible "seams" in the rasters
      for generated files. Checking this option would fix that, at the cost of a
      higher memory usage during exports.
-   * By checking |checkbox| :guilabel:`Open file after exporting` the exported 
-     file will automatically open in the default SVG viewer. 
+   * By checking |checkbox| :guilabel:`Open file after exporting` the exported
+     file will automatically open in the default SVG viewer.
 
 .. _figure_layout_output_svg:
 
@@ -223,11 +223,11 @@ To export a layout as PDF:
      :ref:`layout_export_settings`).
 
      .. note:: **Mind opacity settings for vector layers**
-   
+
       When you set a layer-wide opacity (or opacity for any vector symbology)
       to less than 100%, it forces a rasterized rendering of those objects during PDF exports.
       Depending on the size of the layer, this may considerably increase the PDF file size.
-      
+
    * |checkbox| :guilabel:`Append georeference information`: available only if
      the :ref:`reference map <reference_map>`, from which the information is taken,
      is on the first page.
@@ -236,7 +236,7 @@ To export a layout as PDF:
    * Set the :guilabel:`Text export`: controls whether text labels are always
      or preferably exported as :ref:`text or outline objects <render_labels_text>`.
    * Control the PDF :guilabel:`Image compression` using:
-   
+
      * :guilabel:`Lossy (JPEG)`, which is the default compression mode
      * or :guilabel:`Lossless`, which creates bigger files in most cases, but is
        much more suitable for printing outputs or for post-production in external applications.
@@ -254,7 +254,7 @@ To export a layout as PDF:
      than ``1/600 inch`` apart will be removed).
      This can reduce the size and complexity of the export file (very large
      files can fail to load in other applications).
-   * By checking |checkbox| :guilabel:`Open file after exporting` the exported 
+   * By checking |checkbox| :guilabel:`Open file after exporting` the exported
      file will automatically open in the default PDF viewer.
 
 
@@ -267,7 +267,7 @@ To export a layout as PDF:
 
 .. note:: Geospatial PDF export is supported, and a number of Geospatial PDF specific options
    are available:
-   
+
    * :guilabel:`Format` (Geospatial PDF format - there are some variations),
    * :guilabel:`Include multiple map themes` (specify map themes to include),
    * :guilabel:`Include vector feature information` (choose the layers and
@@ -490,10 +490,10 @@ Multiple_format_map_series_using_QGIS_2.6_ .
 Another example for using data-defined override buttons is the usage of a dynamic
 picture. For the following examples we use a geopackage layer containing a BLOB field
 called ``logo`` with the field type binary (see :ref:`vector_create_geopackage`).
-For every feature there is defined a different picture so that the atlas can iterate 
+For every feature there is defined a different picture so that the atlas can iterate
 over as described in :ref:`atlas_preview`.
 All you need to do is add a picture in the print layout and go to its
-:guilabel:`Item properties` in the atlas context. There you can find a 
+:guilabel:`Item properties` in the atlas context. There you can find a
 data-defined override button in the :guilabel:`Image source` section of the
 :guilabel:`Main Properties`.
 
@@ -505,13 +505,13 @@ data-defined override button in the :guilabel:`Image source` section of the
 In the following window choose :guilabel:`Edit` so that the :guilabel:`Expression String Builder`
 opens. From the :guilabel:`Fields and values` section you can find the BLOB field that
 was defined in the geopackage layer. Double-click the field name :file:`logo` and click :guilabel:`OK`.
- 
+
 .. _figure_expression_blob_picture_atlas:
- 
+
 .. figure:: img/expression_blob_picture_atlas.png
    :align: center
 
-The atlas iterates over the entries in the BLOB field provided that you choose the geopackage 
+The atlas iterates over the entries in the BLOB field provided that you choose the geopackage
 layer as :guilabel:`Coverage layer` (further instructions you can find in :ref:`atlas_preview`).
 
 These are just two examples of how you can use some advanced settings with atlas.
@@ -606,7 +606,7 @@ In the code sample, we create a dynamic bullet list of the related child feature
         // Show the parent feature's identifier (using its "ID" field)
         document.getElementById('parent').innerHTML = feature.properties.ID;
         //clear the existing relation contents
-        document.getElementById('my_children').innerHTML = ''; 
+        document.getElementById('my_children').innerHTML = '';
         feature.properties.my_relation.forEach(function(child_feature) {
         // for each related child feature, create a list element
         // with the feature's name (using its "NAME" field)
@@ -620,7 +620,7 @@ In the code sample, we create a dynamic bullet list of the related child feature
 During atlas creation there will be an iteration over the coverage layer
 containing the parent features. On each page, you will see a bullet list of
 the related child features following the parent's identifier.
-   
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

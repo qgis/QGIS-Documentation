@@ -2,7 +2,7 @@
 Appendix E: QGIS Application Network Connections
 ************************************************
 
-This is a list of the pre-configured/automated network connections that QGIS makes. 
+This is a list of the pre-configured/automated network connections that QGIS makes.
 Some of the connections are user initiated because they require an action
 from the user before they take place, others happen automatically.
 
@@ -113,4 +113,3 @@ from the user before they take place, others happen automatically.
      - https://cdn.proj.org
      - IP, PROJ version
      - Access logs are permanently deleted after one day
-

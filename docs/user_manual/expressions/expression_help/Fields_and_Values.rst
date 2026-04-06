@@ -25,4 +25,3 @@ Equates to a NULL value.
 
 
 .. end_NULL_section
-

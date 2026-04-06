@@ -30,7 +30,7 @@ contained by the mask geometry.
   :align: center
 
   Clipping operation between a two-feature input layer 'a' and a single
-  feature overlay layer 'b' (left) - resulting in a new layer with the modified 
+  feature overlay layer 'b' (left) - resulting in a new layer with the modified
   'a' features (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
@@ -63,7 +63,7 @@ Parameters
    * - **Clipped**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
        that are inside the overlay (clipping) layer.
@@ -120,7 +120,7 @@ the portions outside the overlay layer features are retained.
   :align: center
 
   Difference operation between a two-features input layer 'a' and a single
-  feature overlay layer 'b' (left) - resulting in a new layer with the modified 
+  feature overlay layer 'b' (left) - resulting in a new layer with the modified
   'a' features (right)
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
@@ -152,7 +152,7 @@ Basic parameters
    * - **Overlay layer**
      - ``OVERLAY``
      - [vector: geometry]
-     
+
      - Layer containing the geometries that will be subtracted from
        the input layer geometries.
        It is expected to have at least as many dimensions (point: 0D,
@@ -161,7 +161,7 @@ Basic parameters
    * - **Difference**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (parts of) features from the
        input layer that are not inside the overlay layer.
@@ -243,7 +243,7 @@ overlay layer features are retained.
   :align: center
 
   Difference operation between a two-feature input layer 'a' and single
-  feature overlay layers 'b' and 'c' (left) - resulting in a new layer with the modified 
+  feature overlay layers 'b' and 'c' (left) - resulting in a new layer with the modified
   'a' features (right)
 
 .. seealso:: :ref:`qgisdifference`, :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
@@ -323,7 +323,7 @@ included by default.
 .. figure:: img/extractbyextent.png
   :align: center
 
-  Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
+  Extract operation between a three-feature input layer 'a' and a dashed extent (left) -
   resulting features with dashed extent for reference (right)
 
 Optionally, feature geometries can also be clipped to the extent.
@@ -331,7 +331,7 @@ Optionally, feature geometries can also be clipped to the extent.
 .. figure:: img/extractbyextent_clip.png
   :align: center
 
-  Extract operation between a three-feature input layer 'a' and a dashed extent (left) - 
+  Extract operation between a three-feature input layer 'a' and a dashed extent (left) -
   resulting features with dashed extent for reference (right)
 
 .. seealso:: :ref:`qgisclip`
@@ -364,7 +364,7 @@ Parameters
    * - **Clip features to extent**
      - ``CLIP``
      - [boolean]
-       
+
        Default: False
      - If checked, the geometries will be clipped to the extent chosen
        instead of taking the whole geometry as output.
@@ -373,7 +373,7 @@ Parameters
    * - **Extracted**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
        that are inside the clip extent.
@@ -428,7 +428,7 @@ overlapping features from both the input and overlay layers.
   :align: center
 
   Intersection operation between a two-feature input layer 'a' and a single
-  feature overlay layer 'b' (left) - overlapping areas become a new two-feature layer 
+  feature overlay layer 'b' (left) - overlapping areas become a new two-feature layer
   with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
@@ -572,7 +572,7 @@ features from both the input and overlay layers.
   :align: center
 
   Intersection operation between a two-feature input layer 'a' and single
-  feature overlay layers 'b' and 'c' (left) - overlapping areas become a new two-feature layer 
+  feature overlay layers 'b' and 'c' (left) - overlapping areas become a new two-feature layer
   with all layers' attributes (right)
 
 .. warning::
@@ -695,20 +695,20 @@ Basic parameters
      - [vector: line]
      - Layer to use to find line intersections.
    * - **Input fields to keep (leave empty to keep all fields)**
-       
+
        Optional
      - ``INPUT_FIELDS``
      - [tablefield: any] [list]
-       
+
        Default: Not set
      - Field(s) of the input layer to keep in the output.
        If no fields are chosen all fields are taken.
    * - **Intersect fields to keep (leave empty to keep all fields)**
-       
+
        Optional
      - ``INTERSECT_FIELDS``
      - [tablefield: any] [list]
-       
+
        Default: Not set
      - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
@@ -716,7 +716,7 @@ Basic parameters
    * - **Intersection**
      - ``OUTPUT``
      - [vector: point]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the intersection points of the
        lines from the input and overlay layers.
@@ -818,7 +818,7 @@ Parameters
    * - **Split**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the splitted (in case they are
        intersected by a line in the split layer) line/polygon features
@@ -875,7 +875,7 @@ attributes and fields from both the input and overlay layers.
   :align: center
 
   Symmetrical difference operation between a two-features input layer
-  'a' and a single feature overlay layer 'b' (left) - 
+  'a' and a single feature overlay layer 'b' (left) -
   resulting three-feature layer with both layers' attributes (right)
 
 **Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
@@ -1008,7 +1008,7 @@ attribute values from both layers for overlapping features.
   :align: center
 
   Union operation between a two-feature input layer 'a' and a single
-  feature overlay layer 'b' (left) - resulting five-feature layer 
+  feature overlay layer 'b' (left) - resulting five-feature layer
   with attributes from both layers (right)
 
 .. note::
@@ -1149,7 +1149,7 @@ attribute values from overlay layers for overlapping features.
   :align: center
 
   Union operation between a two-feature input layer 'a' and single
-  feature overlay layers 'b' and 'c' (left) - resulting eleven-feature layer 
+  feature overlay layers 'b' and 'c' (left) - resulting eleven-feature layer
   with attributes from all layers (right)
 
 .. note::

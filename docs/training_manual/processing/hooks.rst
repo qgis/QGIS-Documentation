@@ -46,7 +46,7 @@ and check if this output is a file-based output and can be copied. If so, we det
 top-level directory in which output files are located and then copy all files to
 our directory.
 
-To activate this hook we need to open the Processing options, find the entry named 
+To activate this hook we need to open the Processing options, find the entry named
 *Post-execution script file* in the *General* group, and specify the filename of the
 hook script there. the specified hook will be executed after each Processing algorithm.
 
@@ -70,9 +70,9 @@ As in the previous example, first we import required QGIS and Processing
 packages.
 
 Then we iterate over all the algorithm parameters and if a ParameterVector parameter is found, we
-get the corresponding vector layer object from it. We loop over all the features of the layer and 
+get the corresponding vector layer object from it. We loop over all the features of the layer and
 check them for geometry errors. If at least one feature contains an invalid geometry, we print a warning message.
 
 To activate this hook we need enter its filename in the *Pre-execution script
-file* option in the Processing configuration dialog. 
+file* option in the Processing configuration dialog.
 The hook will be executed before running any Processing algorithm.

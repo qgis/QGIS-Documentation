@@ -214,7 +214,7 @@ Start a new pull request
    GitHub automatically opens a new page comparing the changes you made
    in your ``patch-xxx`` branch to the ``qgis/QGIS-Documentation:master`` branch.
 #. In all the cases, the comparing changes page can be reached by going to the "Pull requests" page
-   of your 
+   of your
    repository and click on :guilabel:`New pull request`.
 
 .. _compare_changes:
@@ -468,7 +468,7 @@ Alternatively you can clone your QGIS repository using the SSH protocol:
 .. tip:: **Permission denied (publickey) error?**
 
    If you get a Permission denied (publickey) error with the former command,
-   there may be a problem with your SSH key. See `GitHub help 
+   there may be a problem with your SSH key. See `GitHub help
    <https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey>`_ for details.
 
 Check the following if you used the SSH protocol:

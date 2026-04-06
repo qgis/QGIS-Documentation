@@ -37,7 +37,7 @@ original scanned map:
 #. Open the original map image, :menuselection:`File --> Open`, :file:`rautjarvi_map.tif`
    in the :file:`exercise_data/forestry` folder. Note that the forest stands are
    represented as green lines (with the number of the stand also in green inside
-   each polygon). 
+   each polygon).
 
    .. figure:: img/gimp_map.png
       :align: center
@@ -199,7 +199,7 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 
    With these snapping settings, whenever you are digitizing and get close enough
    to one of the points in the centroids layer or any vertex of your digitized
-   polygons, a pink square will appear on the point that will be snapped to. 
+   polygons, a pink square will appear on the point that will be snapped to.
 
 #. Finally, turn off the visibility of all the layers except ``forest_stands``
    and ``rautjarvi_georef``. Make sure that the map image has not transparency any more.
@@ -247,14 +247,14 @@ Your digitized polygon will look like this:
 
 |
 
-Now for the second polygon, pick up the stand number 358. Make sure that |checkbox| 
+Now for the second polygon, pick up the stand number 358. Make sure that |checkbox|
 :guilabel:`Avoid Overlap` is checked for the ``forest_stands`` layer (as shown above). This
 option ensures polygons do not overlap. So, if you
 digitize over an existing polygon, the new polygon will be trimmed to meet
 the border of the existing polygons. You can use this option
 to automatically obtain a common border.
 
-#. Begin digitizing the stand 358 at one of the common corners with the stand 357. 
+#. Begin digitizing the stand 358 at one of the common corners with the stand 357.
 #. Continue normally until you get to the other common corner for both stands.
 #. Finally, digitize a few points inside polygon 357 making sure that the common
    border is not intersected. See left image below.
@@ -317,7 +317,7 @@ file or a spreadsheet. For this exercise, the information from the inventory for
 #. Now add this file into the project:
 
    #. Use the |addDelimitedTextLayer| :sup:`Add Delimited Text Layer` tool.
-      This is accessed via :menuselection:`Layer --> Add Layer --> Add Delimited Text Layer...`. 
+      This is accessed via :menuselection:`Layer --> Add Layer --> Add Delimited Text Layer...`.
    #. Set details in the dialog as follows:
 
       .. figure:: img/inventory_csv_import.png
@@ -332,7 +332,7 @@ file or a spreadsheet. For this exercise, the information from the inventory for
    #. Open the Layer Properties for the ``forest_stands`` layer.
    #. Go to the :guilabel:`Joins` tab.
    #. Click |symbologyAdd| :sup:`Add new join` on the bottom of the dialog box.
-   #. Select :file:`rautjarvi_1994.csv` as the :guilabel:`Join layer` 
+   #. Select :file:`rautjarvi_1994.csv` as the :guilabel:`Join layer`
    #. Set the :guilabel:`Join` field to :guilabel:`ID`
    #. Set the :guilabel:`Target` field to :guilabel:`ID`
    #. Click :guilabel:`OK` two times.
@@ -361,7 +361,7 @@ you need to save the ``forest_stands`` layer as a new vector file. To do this:
 #. Right click on ``forest_stands`` layer
 #. Choose :menuselection:`Export --> Save Features As...`
 #. Set :guilabel:`Format` to :guilabel:`ESRI Shapefile`
-#. Set file name to :file:`forest_stands_1994.shp` under the :file:`forestry` folder 
+#. Set file name to :file:`forest_stands_1994.shp` under the :file:`forestry` folder
 #. To include the new file as a layer in the project, check |checkbox|
    :guilabel:`Add saved file to map`
 

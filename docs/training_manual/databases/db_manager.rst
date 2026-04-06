@@ -8,7 +8,7 @@ as more management oriented tools.
 
 
 **The goal for this lesson:** To learn how to interact with spatial
-databases using the QGIS DB Manager. 
+databases using the QGIS DB Manager.
 
 :abbr:`★☆☆ (Basic level)` Follow Along: Managing PostgreSQL Databases with DB Manager
 ---------------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ and be able to expand the ``myPG`` section and its ``public`` schema
 to see the tables we have worked with in previous sections.
 
 The first thing you may notice is that you can now see some metadata
-about the Schemas contained in your database. 
+about the Schemas contained in your database.
 
 .. figure:: img/db_manager_dialog.png
    :align: center
@@ -50,7 +50,7 @@ its name in tree and looking in the :guilabel:`Info` tab.
 
 In this panel you can see the :guilabel:`General Info` about the
 table as well the information that the PostGIS extension maintains
-about the geometry and spatial reference system. 
+about the geometry and spatial reference system.
 
 If you scroll down in the :guilabel:`Info` tab, you can see more
 information about the :guilabel:`Fields`, :guilabel:`Constraints`
@@ -76,7 +76,7 @@ Right-clicking on a layer in the tree and clicking
 So far we have only been viewing the database its schemas and tables
 and their metadata, but what if we wanted to alter the table to add
 an additional column perhaps?
-DB Manager allows you to do this directly. 
+DB Manager allows you to do this directly.
 
 #. Select the table you want to edit in the tree
 #. Select :menuselection:`Table --> Edit Table` from the menu, to open
@@ -99,7 +99,7 @@ spatial and normal indexes.
 
 .. figure:: img/indexes_panel.png
    :align: center
- 
+
 :abbr:`★☆☆ (Basic level)` Follow Along: Creating a New Table
 -------------------------------------------------------------------------------
 
@@ -123,7 +123,7 @@ tables in our database, let's use DB Manager to create a new table.
 
    .. figure:: img/create_table.png
       :align: center
- 
+
 #. Dismiss the dialog letting you know that the table was created and
    click :guilabel:`Close` to close the Create Table Dialog.
 
@@ -136,10 +136,10 @@ begin to add places to your table.
 -------------------------------------------------------------------------------
 
 The DB Manager will also let you do some basic database
-administration tasks. 
+administration tasks.
 It is certainly not a substitute for a more complete database
 administration tool, but it does provide some functionality that you
-can use to maintain your database. 
+can use to maintain your database.
 
 Database tables can often become quite large and tables which are
 being modified frequently can end up leaving around remnants of
@@ -148,7 +148,7 @@ The *VACUUM* command takes care of doing a kind of garbage collection
 to compact and optional analyze your tables for better performance.
 
 Let us take a look at how we can perform a *VACUUM ANALYZE* command
-from within DB Manager. 
+from within DB Manager.
 
 #. Select one of your tables in the DB Manager Tree
 #. Select :menuselection:`Table --> Run Vacuum Analyze` from the menu
@@ -195,7 +195,7 @@ Manager.
 #. Enter ``roads_primary`` as the :guilabel:`Layer name (prefix)`.
 #. Click :guilabel:`Load now!` to load the results as a new layer
    into your map.
- 
+
    .. figure:: img/sql_add_to_map.png
       :align: center
 

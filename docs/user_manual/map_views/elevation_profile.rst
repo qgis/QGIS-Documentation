@@ -58,12 +58,12 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      - Description
    * - |addLayer| :sup:`Add Layers`
      - hold :kbd:`Ctrl` while drag-and-drop
-     - Allows you to add new layers to a plot. 
+     - Allows you to add new layers to a plot.
    * - |layerTree| :sup:`Show Layer Tree`
      -
      - Shows or hides a list of project layers to configure rendering in the profile view.
    * - |addGroup| :sup:`Add Group`
-     - 
+     -
      - Allows grouping of layers, with similar logic to main canvas layer tree groups.
        Individual groups can be checked or unchecked, allowing multiple layers to be shown or hidden
        from the elevation profile at once.
@@ -83,7 +83,7 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
        (e.g. to find the optimal profile line based on the elevation).
    * - |clearConsole| :sup:`Clear`
      -
-     - Removes the profile line and any plot displayed in the :guilabel:`Elevation Profile` view 
+     - Removes the profile line and any plot displayed in the :guilabel:`Elevation Profile` view
    * - |identify| :sup:`Identify Features`
      -
      - Identifies features in the plot canvas via either a single click, or click-and-drag rectangle.
@@ -195,9 +195,9 @@ It is based on a graduated grid in which the horizontal axis displays the length
 and the vertical axis displays the Z elevation of the observed features.
 It also allows a set of interactions such as zooming, panning, measuring, identifying features, ... using the tools at the top.
 
-  
+
 .. _`elevation_profile_create`:
-  
+
 Creating an elevation profile
 =============================
 
@@ -209,7 +209,7 @@ To create an elevation profile view:
    Select a drawing tool:
 
    * |captureLine| :sup:`Capture Curve`: click left over the main map canvas to add vertices
-     and click right to finalize a line that will be used as profile line 
+     and click right to finalize a line that will be used as profile line
    * or |captureCurveFromFeature| :sup:`Capture Curve From Feature`:
      click a line feature on the map canvas to select it as the profile line.
      If multiple features are present at the clicked point then a popup menu will appear
@@ -246,7 +246,7 @@ To create an elevation profile view:
       * :ref:`Raster Elevation Properties <raster_elevation>`
       * :ref:`Vector Elevation Properties <vectorelevationmenu>`
       * :ref:`Point Cloud Elevation Properties <point_clouds_elevation>`
-      * :ref:`Mesh Elevation Properties <meshelevation>` 
+      * :ref:`Mesh Elevation Properties <meshelevation>`
 
       The profile view starts rendering terrain or features of active layers
       crossing the given profile curve, as soon as they have elevation properties configured.
@@ -282,7 +282,7 @@ Interacting with the profile Views
 
 When an elevation profile line is created, the plot canvas zooms to its full extent.
 On the X-axis you can see the length of the profile and,
-on the Y-axis the height range between minimum and maximum height captured, both in map units. 
+on the Y-axis the height range between minimum and maximum height captured, both in map units.
 
 When you move the mouse pointer in the elevation profile view, you will see two crossing dot lines:
 

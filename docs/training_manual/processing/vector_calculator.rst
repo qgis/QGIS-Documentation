@@ -30,7 +30,7 @@ Enter the following formula
 
 ::
 
-	"MALES" / "FEMALES" 
+	"MALES" / "FEMALES"
 
 This time the parameters window should look like this before pressing the :guilabel:`OK` button.
 

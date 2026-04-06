@@ -20,10 +20,10 @@ browser.
 Using the Browser panel you can locate, inspect and add data, as
 described in :ref:`browser_panel`.
 In addition, the Browser panel supports drag and drop of many QGIS
-resources, such as project files, Python scripts, Processing scripts and 
+resources, such as project files, Python scripts, Processing scripts and
 Processing models.
 
-Python scripts, Processing scripts and Processing models can also be opened for 
+Python scripts, Processing scripts and Processing models can also be opened for
 editing in an external editor and the graphical modeller.
 
 You can drag and drop layers from the :guilabel:`Layers` panel
@@ -106,7 +106,7 @@ A lot can be accomplished in the Browser panel
   Examples: HTML files, spreadsheets, images, PDFs, text files, ...
 * Copy entries
 * Rename and delete (multiple) layers (context menu: :menuselection:`Manage -->`)
-* Open a file explorer window and directly select the file 
+* Open a file explorer window and directly select the file
   :guilabel:`Show in Files`
 
 Resource specific actions are listed for the different resource groups
@@ -467,7 +467,7 @@ To add a layer using :guilabel:`Import Vector Layer...` follow these steps:
    destination table. By default, it is the CRS of the source layer, but it can
    be changed using the :ref:`CRS selector <crs_selector>`.
 #. Configure the :guilabel:`Attributes`:
-   
+
    * :guilabel:`Source expression`: expression used to populate the field. By default,
      this corresponds to the original source field.
    * :guilabel:`Name`: name of the field in the destination table.

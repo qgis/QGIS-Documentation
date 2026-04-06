@@ -63,7 +63,7 @@ Chart Ranges
 Set the minimum and maximum values for the axes to determine
 how the data is displayed. By default, the :guilabel:`Minimum X axis`
 and :guilabel:`Minimum Y axis` are set to 0, while the :guilabel:`Maximum X axis`
-and :guilabel:`Maximum Y axis` are set to 10. 
+and :guilabel:`Maximum Y axis` are set to 10.
 You can adjust these values to fit your data range and improve the chart's readability.
 For pie charts, these options are not available.
 
@@ -82,7 +82,7 @@ and match your layout style.
    For bar and line charts, symbols are assigned to series in the order they are listed.
    Make sure to have at least as many symbols as data series; otherwise,
    the last series will reuse the last available symbol.
-   
+
    For pie charts, colors are assigned to slices following the order
    defined by the color ramp rather than the series.
    If you use a discrete color ramp,
@@ -140,7 +140,7 @@ Data source
 In this section, select and configure the layer and fields you want to display in the chart.
 
 #. Select the :guilabel:`Layer` to use as the chart's data source.
-#. Check the |checkbox| :guilabel:`Sort by` option to sort data based on selected fields or expressions, 
+#. Check the |checkbox| :guilabel:`Sort by` option to sort data based on selected fields or expressions,
    and choose the sort direction (ascending or descending).
 #. Use the |symbologyAdd| and |symbologyRemove| buttons to add or delete series from the chart.
 #. Double-click a series name to rename it.

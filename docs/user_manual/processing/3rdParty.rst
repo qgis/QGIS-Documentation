@@ -120,7 +120,7 @@ Depending on your operating system, you may have to use
 .. note:: On **Windows** the R executable file is normally in
    a folder (``R-<version>``) under :file:`C:\\Program Files\\R\\`.
    Specify the folder and **NOT** the binary!
-   
+
    On **Linux** you just have to make sure that the R folder is
    in the PATH environment variable.
    If ``R`` in a terminal window starts R, then you are ready to go.
@@ -129,7 +129,7 @@ After installing the **Processing R Provider** plugin, you will find
 some example scripts in the :guilabel:`Processing Toolbox`:
 
 * :guilabel:`Scatterplot` runs an R function that produces a scatter
-  plot from two numerical fields of the provided vector layer. 
+  plot from two numerical fields of the provided vector layer.
 * :guilabel:`test_sf` does some operations that depend on the ``sf``
   package and can be used to check if the R package ``sf`` is
   installed.
@@ -215,9 +215,9 @@ Perform the following steps to load and enable them using the
       dialog that opens.
       It is possible to provide several directories here.
       They will be separated by a semicolon (";").
-   
+
       .. figure:: img/rscript_folder_add.png
-         :align: center   
+         :align: center
 
 If you would like to get all the R scrips from the QGIS 2 on-line
 collection, you can select *QGIS R script collection (from QGIS 2)*
@@ -524,19 +524,19 @@ To configure QGIS processing to find the OTB library:
    #. Set the :guilabel:`OTB application folder`. This is the location of your OTB
       applications ( :file:`<PATH_TO_OTB_INSTALLATION>/lib/otb/applications`)
    #. Click :guilabel:`OK` to save the settings and close the dialog.
-   
+
 If settings are correct, OTB algorithms will be available in the :guilabel:`Processing Toolbox`.
 
 Documentation of OTB settings available in QGIS Processing
 ...........................................................
 
-* **OTB folder**: This is the directory where OTB is available. 
+* **OTB folder**: This is the directory where OTB is available.
 
-* **OTB application folder**: This is the location(s) of OTB applications. 
+* **OTB application folder**: This is the location(s) of OTB applications.
 
   Multiple paths are allowed.
 
-* **Logger level** (optional): Level of logger to use by OTB applications. 
+* **Logger level** (optional): Level of logger to use by OTB applications.
 
   The level of logging controls the amount of detail printed during
   algorithm execution. Possible values for logger level are ``INFO``,
@@ -573,7 +573,7 @@ Starting from OTB 6.6.1, new releases of OTB are made compatible
 with at least the latest QGIS version available at that time.
 
 If you have issues with OTB applications in QGIS Processing, please open an issue
-on the `OTB bug tracker <https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_, 
+on the `OTB bug tracker <https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_,
 using the ``qgis`` label.
 
 Additional information about OTB and QGIS can be found in

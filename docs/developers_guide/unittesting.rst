@@ -1,6 +1,6 @@
 
-.. _qgis_unittesting: 
- 
+.. _qgis_unittesting:
+
 **************
  Unit Testing
 **************
@@ -206,7 +206,7 @@ implemented to replicate the conditions of a particular bug. For example:
    passed. We committed the regression test along with the bug fix. Now if
    anybody breakes this in the source code again in the future, we can
    immediately identify that the code has regressed.
-   
+
    Better yet, before committing any changes in the future, running our tests
    will ensure our changes don't have unexpected side effects - like breaking
    existing functionality.
@@ -386,7 +386,7 @@ individual pixel can differ from the reference image, so a black pixel indicates
 that the pixel in the rendered image must exactly match the same pixel in the
 reference image. A pixel with RGB 2, 2, 2 means that the rendered image can vary
 by up to 2 in its RGB values from the reference image, and a fully white pixel
-(255, 255, 255) means that the pixel is effectively ignored when comparing the 
+(255, 255, 255) means that the pixel is effectively ignored when comparing the
 expected and rendered images.
 
 A utility script to generate mask images is available as
@@ -417,7 +417,7 @@ copy a rendered image url from the cdash results page and pass it to the script.
 Be careful when generating mask images - you should always view the generated
 mask image and review any white areas in the image. Since these pixels are
 ignored, make sure that these white images do not cover any important portions
-of the reference image -- otherwise your unit test will be meaningless! 
+of the reference image -- otherwise your unit test will be meaningless!
 
 Similarly, you can manually "white out" portions of the mask if you deliberately
 want to exclude them from the test. This can be useful e.g. for tests which mix
@@ -678,7 +678,7 @@ like any executable.
 .. code-block:: bash
 
   $ ./output/bin/qgis_dxfexporttest
-  
+
   ********* Start testing of TestQgsDxfExport *********
   Config: Using QtTest library 5.12.5, Qt 5.12.5 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 9.2.1 20190827 (Red Hat 9.2.1-1))
   PASS   : TestQgsDxfExport::initTestCase()
@@ -694,7 +694,7 @@ This makes it possible to run a specific subset of tests:
 
 .. code-block:: bash
 
-  $ ./output/bin/qgis_dxfexporttest testPoints   
+  $ ./output/bin/qgis_dxfexporttest testPoints
   ********* Start testing of TestQgsDxfExport *********
   Config: Using QtTest library 5.12.5, Qt 5.12.5 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 9.2.1 20190827 (Red Hat 9.2.1-1))
   PASS   : TestQgsDxfExport::initTestCase()
@@ -706,10 +706,10 @@ This makes it possible to run a specific subset of tests:
 Sandboxing test run
 -------------------
 
-By default all test temporary files are written to the system temp directory (for example ``/tmp/`` on Linux systems or ``C:\temp`` on Windows). 
+By default all test temporary files are written to the system temp directory (for example ``/tmp/`` on Linux systems or ``C:\temp`` on Windows).
 A lot of files can be created in this directory during the test run.
 
-If you do not want to mix up with the common system temp directory (for example on a multi user server or in case of permission issue), 
+If you do not want to mix up with the common system temp directory (for example on a multi user server or in case of permission issue),
 you can create your own temp directory and specify it to ``ctest`` by setting the ``TMPDIR`` environment variable with your new directory.
 
 On Linux you could do it with:

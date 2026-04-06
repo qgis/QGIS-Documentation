@@ -175,7 +175,7 @@ one of the classes below and by calling the corresponding method of
    * - Filter Type
      - Base Class
      - QgsServerInterface registration
-   * - I/O 
+   * - I/O
      - :class:`QgsServerFilter <qgis.server.QgsServerFilter>`
      - :meth:`registerFilter() <qgis.server.QgsServerInterface.registerFilter>`
    * - Access Control
@@ -210,7 +210,7 @@ raise exceptions (while in a quite particular way as we’ll see below).
 
 All these methods return a boolean value indicating if the call should be propagated to the subsequent
 filters. If one of these method returns :const:`False` then the chain stop, otherwise the call will propagate
-to the next filter. 
+to the next filter.
 
 Here is the pseudo code showing how the server handles a typical request and when the
 filter’s callbacks are called:
@@ -253,12 +253,12 @@ much sense though).
 onSendResponse
 ^^^^^^^^^^^^^^
 
-This is called whenever any partial output is flushed from response buffer (i.e to **FCGI** ``stdout`` 
-if the fcgi server is used) and from there, to the client. 
+This is called whenever any partial output is flushed from response buffer (i.e to **FCGI** ``stdout``
+if the fcgi server is used) and from there, to the client.
 This occurs when huge content is streamed (like WFS GetFeature). In this case
 :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` may be called multiple times.
 
-Note that if the response is not streamed, then :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` will not be called at all. 
+Note that if the response is not streamed, then :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` will not be called at all.
 
 In all case, the last (or unique) chunk will be sent to client after a call to
 :meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>`.
@@ -274,7 +274,7 @@ onResponseComplete
 This is called once when core services (if hit) finish their process and the
 request is ready to be sent to the client.
 As discussed above, this method will be called before the last (or unique) chunk of
-data is sent to the client. 
+data is sent to the client.
 For streaming services, multiple calls to :meth:`onSendResponse() <qgis.server.QgsServerFilter.onSendResponse>` might have been called.
 
 :meth:`onResponseComplete() <qgis.server.QgsServerFilter.onResponseComplete>` is the

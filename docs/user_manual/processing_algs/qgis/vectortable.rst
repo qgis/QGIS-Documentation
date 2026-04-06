@@ -55,11 +55,11 @@ Parameters
        Default: 0
      - Choose the initial number of the incremental count
    * - **Modulus value**
-       
+
        Optional
      - ``MODULUS``
      - [numeric: integer]
-       
+
        Default: 0
      - Specifying an optional modulus value will restart the count to START
        whenever the field value reaches the modulus value. ``0`` means no restart.
@@ -169,10 +169,10 @@ Parameters
    * - **Field type**
      - ``FIELD_TYPE``
      - [enumeration]
-       
+
        Default: 0
      - Type of the new field. You can choose between:
-       
+
        * 0 --- Integer (32 bit)
        * 1 --- Decimal (double)
        * 2 --- Text (string)
@@ -184,17 +184,17 @@ Parameters
        * 8 --- String List
        * 9 --- Integer List
        * 10 --- Decimal (double) List
-       
+
    * - **Field length**
      - ``FIELD_LENGTH``
      - [numeric: integer]
-       
+
        Default: 10
      - Length of the field
    * - **Field precision**
      - ``FIELD_PRECISION``
      - [numeric: integer]
-       
+
        Default: 0
      - Precision of the field. Useful with Float field type.
    * - **Field alias**
@@ -212,7 +212,7 @@ Parameters
    * - **Added**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
        :ref:`One of <output_parameter_widget>`:
@@ -288,13 +288,13 @@ Parameters
    * - **Output field name**
      - ``FIELD_NAME``
      - [string]
-       
+
        Default: 'NUM_FIELD'
      - Name of the new field containing the indexes.
    * - **Layer with index field**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Vector layer with the numeric field containing indexes.
        :ref:`One of <output_parameter_widget>`:
@@ -306,7 +306,7 @@ Parameters
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
      - [vector: table]
-       
+
        Default: ``[Skip output]``
      - Specify the table to contain the summary of the class field
        mapped to the corresponding unique value.
@@ -336,7 +336,7 @@ Outputs
      - ``SUMMARY_OUTPUT``
      - [vector: table]
      - Table with summary of the class field mapped to the
-       corresponding unique value.  
+       corresponding unique value.
 
 Python code
 ...........
@@ -358,7 +358,7 @@ The X/Y fields can be calculated in a different CRS to the layer
 CRS).
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of point features
 
 Parameters
@@ -380,12 +380,12 @@ Parameters
    * - **Coordinate system**
      - ``CRS``
      - [crs]
-       
+
        Default: "EPSG:4326"
      - Coordinate reference system to use for the generated x and
        y fields.
    * - **Field prefix**
-       
+
        Optional
      - ``PREFIX``
      - [string]
@@ -463,16 +463,16 @@ Parameters
    * - **Result field name**
      - ``FIELD_NAME``
      - [string]
-       
+
        Default: 'NewField'
      - Name of the new field
    * - **Field type**
      - ``FIELD_TYPE``
      - [enumeration]
-       
+
        Default: 0
      - Type of the new field. One of:
-       
+
        * 0 --- Integer (32 bit)
        * 1 --- Decimal (double)
        * 2 --- Text (string)
@@ -484,21 +484,21 @@ Parameters
        * 8 --- String List
        * 9 --- Integer List
        * 10 --- Decimal (double) List
-       
+
    * - **Field length**
      - ``FIELD_LENGTH``
      - [numeric: integer]
-       
+
        Default: 10
      - Length of the field
    * - **Field precision**
      - ``FIELD_PRECISION``
      - [numeric: integer]
-       
+
        Default: 3
      - Precision of the field. Useful with Float field type.
    * - **Global expression**
-       
+
        Optional
      - ``GLOBAL``
      - [string]
@@ -514,22 +514,22 @@ Parameters
      - The Python formula to evaluate.
        Example: To calculate the area of an input polygon layer you
        can add::
-       
+
          value = $geom.area()
 
        To access an existing field use its name enclosed in the angle brackets.
        For example, to uppercase values of the "address" field::
 
          value = <address>.upper()
-       
+
    * - **Calculated**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the vector layer with the new calculated
        field. One of:
-       
+
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
@@ -680,10 +680,10 @@ Parameters
    * - **Exploded**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
-       
+
        .. include:: ../algs_include.rst
           :start-after: **layer_output_types**
           :end-before: **end_layer_output_types**
@@ -823,10 +823,10 @@ Parameters
    * - **Output field type**
      - ``FIELD_TYPE``
      - [enumeration]
-       
+
        Default: 0
      - The type of the field.  One of:
-       
+
        * 0 --- Decimal (double)
        * 1 --- Integer (32 bit)
        * 2 --- Text (string)
@@ -838,23 +838,23 @@ Parameters
        * 8 --- String List
        * 9 --- Integer List
        * 10 --- Decimal (double) List
-       
+
    * - **Output field width**
      - ``FIELD_LENGTH``
      - [numeric: integer]
-       
+
        Default: 0
      - The length of the result field (minimum 0)
    * - **Field precision**
      - ``FIELD_PRECISION``
      - [numeric: integer]
-       
+
        Default: 0
      - The precision of the result field (minimum 0, maximum 15)
    * - **Create new field**
      - ``NEW_FIELD``
      - [boolean]
-       
+
        Default: True
      - Should the result field be a new field
    * - **Formula**
@@ -864,7 +864,7 @@ Parameters
    * - **Calculated**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specification of the output layer.
 

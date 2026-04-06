@@ -10,7 +10,7 @@ Hydrological analysis
   some advanced features.
 
 Objectives: Starting with a DEM, we are going to extract a channel network,
-delineate watersheds and calculate some statistics. 
+delineate watersheds and calculate some statistics.
 
 #. The first thing is to load the project with the lesson data, which just contains a DEM.
 
@@ -28,7 +28,7 @@ delineate watersheds and calculate some statistics.
    Some algorithms calculate many layers, but the :guilabel:`Catchment Area` layer is the only one we will be using.
    You can get rid of the other ones if you want.
 
-   The rendering of the layer is not very informative. 
+   The rendering of the layer is not very informative.
 
    .. figure:: img/hydro/catchmentlayer.png
 
@@ -43,18 +43,18 @@ delineate watersheds and calculate some statistics.
 #. The catchment area (also known as flow accumulation) can be used to set a
    threshold for channel initiation. This can be done using the :guilabel:`Channel network`
    algorithm.
-   
+
    * :guilabel:`Initiation grid`: use the catchment area layer and not the logarithm one.
    * :guilabel:`Initiation threshold`: ``10.000.000``
-   * :guilabel:`Initiation type`: *Greater than* 
+   * :guilabel:`Initiation type`: *Greater than*
 
-   .. figure:: img/hydro/channelnetwork.png 
+   .. figure:: img/hydro/channelnetwork.png
 
    If you increase the :guilabel:`Initiation threshold` value, you will get a more sparse
    channel network. If you decrease it, you will get a denser one.
    With the proposed value, this is what you get.
 
-   .. figure:: img/hydro/channelnetworklayer.png 
+   .. figure:: img/hydro/channelnetworklayer.png
 
    The image above shows just the resulting vector layer and the DEM, but there
    should be also a raster layer with the same channel network. That raster
@@ -64,19 +64,19 @@ delineate watersheds and calculate some statistics.
    corresponding to that channel network, using as outlet points all the junctions
    in it. Here is how you have to set the corresponding parameters dialog.
 
-   .. figure:: img/hydro/watersheds.png 
+   .. figure:: img/hydro/watersheds.png
 
 
    And this is what you will get.
 
-   .. figure:: img/hydro/watershedslayer.png 
+   .. figure:: img/hydro/watershedslayer.png
 
 #. This is a raster result.
    You can vectorise it using the :guilabel:`Vectorising grid classes` algorithm.
 
-   .. figure:: img/hydro/vectorising.png 
+   .. figure:: img/hydro/vectorising.png
 
-   .. figure:: img/hydro/watershedslayervector.png 
+   .. figure:: img/hydro/watershedslayervector.png
 
 
 Now, let's try to compute statistics about the elevation values in one of the
@@ -90,25 +90,25 @@ within that subbasin and then pass it to the module that calculates those statis
 
    #. Select a polygon
 
-      .. figure:: img/hydro/selectedpolygon.png 
+      .. figure:: img/hydro/selectedpolygon.png
 
    #. Call the clipping algorithm with the following parameters:
 
-      .. figure:: img/hydro/clipgrid.png 
+      .. figure:: img/hydro/clipgrid.png
 
       The element selected in the input field is, of course, the DEM we want to clip.
 
       You will get something like this.
 
-      .. figure:: img/hydro/clippeddem.png 
+      .. figure:: img/hydro/clippeddem.png
 
 #. This layer is ready to be used in the :guilabel:`Raster layer statistics` algorithm.
 
-   .. figure:: img/hydro/rasterstats.png 
+   .. figure:: img/hydro/rasterstats.png
 
    The resulting statistics are the following ones.
 
-   .. figure:: img/hydro/stats.png 
+   .. figure:: img/hydro/stats.png
 
 We will use both the basin calculations procedure and the statistics
 calculation in other lessons, to find out how other elements can help us

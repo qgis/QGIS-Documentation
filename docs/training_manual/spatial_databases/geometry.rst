@@ -225,7 +225,7 @@ for that city and computing a buffer around that area.
                2,
                'SRID=4326;POINT(29 18)');
 
-  - Create myPolygonTable table  
+  - Create myPolygonTable table
 
    .. code-block:: psql
 
@@ -244,9 +244,9 @@ for that city and computing a buffer around that area.
    .. code-block:: psql
 
     INSERT INTO myPolygonTable (city_id, geom)
-      SELECT * FROM 
+      SELECT * FROM
       (
-        SELECT 
+        SELECT
           ROW_NUMBER() over (order by city_id)::integer AS city_id,
           ST_CONVEXHULL(ST_COLLECT(geom)) AS geom
             FROM people

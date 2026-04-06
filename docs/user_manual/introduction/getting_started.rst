@@ -31,7 +31,7 @@ Standard installers are available for |win| MS Windows and |osx| macOS. Binary
 packages (rpm and deb) or software repositories are provided for many flavors of
 GNU/Linux |nix|.
 
-For more information and instructions for your operating system check 
+For more information and instructions for your operating system check
 https://qgis.org/download/.
 
 Installing from source
@@ -263,7 +263,7 @@ Let's now add some decorations in order to shape the map and export it out of
 QGIS:
 
 #. Select :menuselection:`View --> Decorations --> Scale Bar` menu
-#. In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` option 
+#. In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` option
 #. Customize the options of the dialog as you want
 #. Press :guilabel:`Apply`
 #. Likewise, from the decorations menu, add more items (north arrow, copyright...)

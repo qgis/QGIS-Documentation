@@ -260,7 +260,7 @@ Using an icon substitution is usually achieved through these steps:
 
       My paragraph begins here with |logo|.
 
-#. Add (again) the icon substitution at the end of the file you are modifying. 
+#. Add (again) the icon substitution at the end of the file you are modifying.
    This helps connecting the replacement text with the actual image,
    and can be done by copy-pasting it from :file:`substitutions.txt`
    or by executing the :file:`scripts/find_set_subst.py` script.

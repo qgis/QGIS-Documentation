@@ -182,7 +182,7 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
        [] marks optional arguments
    * - Arguments
      - * **datetime** - date, time or datetime value
-       * **format** - String template used to format the string. 
+       * **format** - String template used to format the string.
 
          .. csv-table::
             :header-rows: 1
@@ -780,4 +780,3 @@ Calculates the length in years of an interval.
 
 
 .. end_year_section
-

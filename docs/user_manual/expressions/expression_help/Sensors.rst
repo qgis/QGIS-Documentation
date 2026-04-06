@@ -28,4 +28,3 @@ Returns the last captured value (or values as a map for sensors which report mul
 
 
 .. end_sensor_data_section
-

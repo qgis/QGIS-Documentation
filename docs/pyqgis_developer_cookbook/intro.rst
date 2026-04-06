@@ -141,7 +141,7 @@ starts.
 
 2. Setting the ``PYQGIS_STARTUP`` environment variable to an
    existing Python file
-   
+
 3. Specifying a startup script using the ``--code init_qgis.py``
    parameter.
 
@@ -214,7 +214,7 @@ In the following example, ``myfile.tif`` will be available via
 .. code-block:: bash
 
   qgis --code qgis_init.py --py-args myfile.tif -- otherfile.tif
-  
+
 If you want access to every command line parameter from within
 Python, you can use ``QCoreApplication.arguments()``
 

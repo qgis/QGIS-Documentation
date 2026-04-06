@@ -81,13 +81,13 @@ The following tools are provided at the top of the 3D map view panel:
   * |editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene by defining an area on the terrain in the 2D map canvas.
     Click to set the start point, move the mouse to define the line direction
     and click again to set the end point of the axis.
-    
+
     * If the lock button next to the :guilabel:`Tolerance` field is in locked state (|locked|),
       then the width of the cross section is set from the tolerance value
       and the cross section is automatically drawn
     * If the tolerance lock button is unlocked (|unlocked|), then you can adjust the size of the section
       by moving the mouse over the map canvas and clicking at the desired width.
-    
+
     Press :kbd:`Esc` or right-click to reset the selection.
   * Use |arrowLeft|:sup:`Nudge Left` and |arrowRight|:sup:`Nudge Right` to nudge the cross section area.
     The direction (left or right) is determined by the orientation of the drawn line.
@@ -387,7 +387,7 @@ Advanced
   * |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays some useful debugging
     and profiling information. This allows in particular to quickly see the frame graph and the scene graph
   * |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
-    from the point of view of the light used for shadows (for troubleshooting). 
+    from the point of view of the light used for shadows (for troubleshooting).
     The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
     and docked in a :guilabel:`Corner`.
   * |unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an  image
