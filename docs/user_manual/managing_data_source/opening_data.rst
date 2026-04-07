@@ -385,7 +385,7 @@ To load a layer from a file:
    `vector <https://gdal.org/en/latest/drivers/vector/>`__
    or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver documentation.
    At the top of the options, a text with hyperlink will directly lead to the documentation
-   of the appopriate driver for the selected file format.
+   of the appropriate driver for the selected file format.
 
    .. _figure_vector_layer_open_options:
 
@@ -620,7 +620,7 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
   :sup:`Select CRS` widget.
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented as WKT: select the :guilabel:`Geometry field`
-  containing the WKT geometry and choose the approriate :guilabel:`Geometry
+  containing the WKT geometry and choose the appropriate :guilabel:`Geometry
   field` or let QGIS auto-detect it.
   Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
   :sup:`Select CRS` widget.
@@ -814,7 +814,7 @@ Creating a stored Connection
 
 In order to read and write tables from a database format QGIS supports
 you have to create a connection to that database. While :ref:`QGIS Browser
-Panel <browser_panel>` is the simplest and recommanded way to connect to
+Panel <browser_panel>` is the simplest and recommended way to connect to
 and use databases, QGIS provides other tools to connect to each
 of them and load their tables:
 
@@ -1622,7 +1622,7 @@ ArcGIS REST Servers can be added via the
 #. Expand the tree to find and select the layers of interest.
    Their :guilabel:`Coordinate Reference System` is displayed at the bottom of the dialog.
 #. For raster-based layers, you can select the :guilabel:`Image encoding` to use
-   among a number of image formats advertized by the target service
+   among a number of image formats advertised by the target service
    ( e.g., ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... ).
 
 #. To add the selected layers to the map canvas, press :guilabel:`Add` button.

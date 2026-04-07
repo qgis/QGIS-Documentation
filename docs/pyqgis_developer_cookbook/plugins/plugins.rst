@@ -622,7 +622,7 @@ It's done with Qt :command:`rcc` command:
     Command Prompt or Powershell will probably result in the error "Windows
     cannot access the specified device, path, or file [...]".  The easiest
     solution is probably to use the OSGeo4W Shell but if you are comfortable
-    modifying the PATH environment variable or specifiying the path to the
+    modifying the PATH environment variable or specifying the path to the
     executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\\apps\\Qt6\\bin\\rcc.exe`.
 

@@ -88,7 +88,7 @@ To add fields to the layer you are creating:
 By default, when creating a GeoPackage layer, QGIS generates a
 :guilabel:`Feature id column` called ``fid`` which acts as the
 primary key of the layer. The name can be changed.
-The geometry field, if availabe, is named ``geometry``, and you can
+The geometry field, if available, is named ``geometry``, and you can
 choose to :guilabel:`Create a spatial index` on it.
 These options can be found under the :guilabel:`Advanced Options`
 together with the :guilabel:`Layer identifier` (short human readable
@@ -238,7 +238,7 @@ The :guilabel:`New Mesh Layer` dialog will be displayed as shown in
 
    #. Check |checkbox| :guilabel:`Initialize Mesh using`
    #. and select either a :guilabel:`Mesh from the current project`
-      or :guilabel:`Mesh from a file`. Informations on the selected mesh file
+      or :guilabel:`Mesh from a file`. Information on the selected mesh file
       are displayed for checkup.
 
    Note that only the frame of the mesh layer is transferred to the new layer;

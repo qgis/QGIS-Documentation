@@ -135,7 +135,7 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   in a first panel and displays only the attributes of the clicked identifier in the second one.
   There is a pull-down menu at the top of the first panel where the "identifier"
   can be specified using an attribute (:menuselection:`Columns -->`) or an :guilabel:`Expression`.
-  The pull-down also includes the last 10 expressions for re-use.
+  The pull-down also includes the last 10 expressions for reuse.
   Form view uses the layer fields configuration (see :ref:`vector_attributes_menu`).
 
   You can browse through the feature identifiers with the arrows on the bottom
@@ -289,7 +289,7 @@ Adding new rule opens a form to define:
 
 * the name of the rule;
 * a condition using any of the :ref:`expression builder <vector_expressions>` functions;
-* the formatting: it can be choosen from a list of predefined formats or created
+* the formatting: it can be chosen from a list of predefined formats or created
   based on properties like:
 
   * background and text colors;

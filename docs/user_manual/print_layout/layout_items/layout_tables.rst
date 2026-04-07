@@ -231,7 +231,7 @@ the following functionalities (see :numref:`figure_layout_table_appearance`):
   e.g. they will override other cell background color settings such as
   alternating row colors.
 * With the :guilabel:`Wrap text on` option, you can define a character on which
-  the cell content will be wraped each time it is met
+  the cell content will be wrapped each time it is met
 * With :guilabel:`Oversized text` you define the behavior when the width set for
   a column is  smaller than its content's length. It can be **Wrap text** or
   **Truncate text**.

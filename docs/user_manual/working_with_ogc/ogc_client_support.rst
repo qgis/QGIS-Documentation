@@ -842,7 +842,7 @@ Now we are ready to load WFS layers from the above connection.
      The query you build will appear after validation in the :guilabel:`SQL` column
      within the :guilabel:`WFS / OGC API - Features` table, and the filtered layer will display
      the |indicatorFilter| icon next to it in the :guilabel:`Layers` panel.
-     It is thus possibe to adjust the query at any moment.
+     It is thus possible to adjust the query at any moment.
 
 #. Click :guilabel:`Add` to add the layer to the map,
    using its default name from the queried service.

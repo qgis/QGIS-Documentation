@@ -323,7 +323,7 @@ your canvas:
 #. Select the bigger map element (``Map 0``).
 #. Go to the :guilabel:`Item properties` tab.
 #. In the list, check :guilabel:`Controlled by atlas`.
-#. And set the :guilabel:`Marging around feature` to ``10%``. The view extent
+#. And set the :guilabel:`Margin around feature` to ``10%``. The view extent
    will be 10% bigger than the polygons, which means that your detail maps will
    have a 10% overlap.
 

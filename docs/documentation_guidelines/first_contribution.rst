@@ -610,7 +610,7 @@ Share your Changes
 
 Now you can go to your GitHub repository and :ref:`create a Pull Request
 <sharing_changes>` as exposed in a previous section.
-Ensure you create a PR from your branch to the remote branch you are targetting
+Ensure you create a PR from your branch to the remote branch you are targeting
 in the official QGIS-Documentation repository.
 
 .. _clean_up:
@@ -620,7 +620,7 @@ Clean-up your local and remote repository
 
 After your PR has been merged into the official QGIS-Documentation, you can
 delete your branch. If you work a lot this way, in few weeks you will get a lot
-of unuseful branches. So keep your repository clean this way:
+of useless branches. So keep your repository clean this way:
 
 .. code-block:: bash
 

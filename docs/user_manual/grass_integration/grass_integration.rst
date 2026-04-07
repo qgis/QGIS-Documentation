@@ -182,24 +182,23 @@ file :file:`lakes.gml` from the QGIS 'Alaska' dataset (see :ref:`label_sampledat
    and select the file :file:`landcover.img`.
 #. As raster output name, define :file:`landcover_grass` and click
    :guilabel:`Run`. In the :guilabel:`Output` tab, you see the currently running GRASS
-   command ``r.in.gdal -o input=/path/to/landcover.img
-   output=landcover_grass``.
+   command ``r.in.gdal -o input=/path/to/landcover.img output=landcover_grass``.
 #. When it says **Successfully finished**, click :guilabel:`View Output`.
    The :file:`landcover_grass` raster layer is now imported into GRASS and
    will be visualized in the QGIS canvas.
 #. To import the vector GML file :file:`lakes.gml`, click the module
    :file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module allows
-   you to import OGR-supported vector files into a GRASS :file:`LOCATION`. The
-   module dialog for :file:`v.in.ogr` appears.
-#. Browse to the folder :file:`gml` in the QGIS 'Alaska' dataset and select the
-   file :file:`lakes.gml` as OGR file.
-#. As vector output name, define :file:`lakes_grass` and click :guilabel:`Run`. You
-   don't have to care about the other options in this example. In the
-   :guilabel:`Output` tab you see the currently running GRASS command
+   you to import OGR-supported vector files into a GRASS :file:`LOCATION`.
+   The module dialog for :file:`v.in.ogr` appears.
+#. Browse to the folder :file:`gml` in the QGIS 'Alaska' dataset
+   and select the file :file:`lakes.gml` as OGR file.
+#. As vector output name, define :file:`lakes_grass` and click :guilabel:`Run`.
+   You don't have to care about the other options in this example.
+   In the :guilabel:`Output` tab you see the currently running GRASS command
    ``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass``.
-#. When it says **Succesfully finished**, click :guilabel:`View Output`. The
-   :file:`lakes_grass` vector layer is now imported into GRASS and will be
-   visualized in the QGIS canvas.
+#. When it says **Successfully finished**, click :guilabel:`View Output`.
+   The :file:`lakes_grass` vector layer is now imported into GRASS
+   and will be visualized in the QGIS canvas.
 
 .. _sec_create_loc:
 

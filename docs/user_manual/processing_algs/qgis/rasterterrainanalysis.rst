@@ -360,7 +360,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the ouput raster corresponding to the depression-free DEM.
+     - Specify the output raster corresponding to the depression-free DEM.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -438,7 +438,7 @@ Outputs
    * - **Output layer (filled DEM)**
      - ``OUTPUT_FILLED_DEM``
      - [raster]
-     - Ouput raster corresponding to the depression-free digital elevation model.
+     - Output raster corresponding to the depression-free digital elevation model.
    * - **Output layer (flow directions)**
      - ``OUTPUT_FLOW_DIRECTIONS``
      - [raster]

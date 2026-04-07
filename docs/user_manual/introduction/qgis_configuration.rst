@@ -1024,7 +1024,7 @@ Elevation settings
 In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific color
 to use as the :guilabel:`Background color` for :ref:`elevation profiles <label_elevation_profile_view>`.
 This can make the chart more readable for certain datasets, e.g., point clouds with RGB coloring,
-where the default background color is too similar to point colors to be easily discernable.
+where the default background color is too similar to point colors to be easily discernible.
 If unchanged, the elevation profiles will continue to display using the standard system background color.
 
 
@@ -2108,7 +2108,7 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
 
 .. tip:: **Use project colors to quickly assign and update color widgets**
 
-  Project colors can be refered to using their label and the color widgets
+  Project colors can be referred to using their label and the color widgets
   they are used in are bound to them. This means that instead of repeatedly
   setting the same color for many properties and, to avoid a cumbersome update
   you can:

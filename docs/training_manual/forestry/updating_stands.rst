@@ -192,7 +192,7 @@ We will create a buffer around the point locations, using the protection distanc
 #. Set :guilabel:`Input layer` to |pointLayer| ``squirrel``
 #. Set :guilabel:`Distance` to ``15 meters``
 #. Set :guilabel:`Buffered` to :file:`exercise_data\\forestry\\squirrel_15m.shp`
-#. Check |checkbox| :guilabel:`Open output file afer running algorithm`
+#. Check |checkbox| :guilabel:`Open output file after running algorithm`
 #. Click :guilabel:`Run`
 #. Once the process is completed, click :guilabel:`Close`
 
@@ -225,7 +225,7 @@ you can use the :guilabel:`Join attributes by location` algorithm:
 #. Set :guilabel:`Join type` as :guilabel:`Take attributes of the first matching feature only (one-to-one)`
 #. Leave unchecked :guilabel:`Discard records which could not be joined`
 #. Set :guilabel:`Joined layer` to :file:`exercise_data\\forestry\\stands_squirrel.shp`
-#. Check |checkbox| :guilabel:`Open output file afer running algorithm`
+#. Check |checkbox| :guilabel:`Open output file after running algorithm`
 #. Click :guilabel:`Run`
 #. Once the process is completed, you can :guilabel:`Close` the dialog.
 

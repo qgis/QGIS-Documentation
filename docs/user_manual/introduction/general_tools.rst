@@ -129,7 +129,7 @@ panel:
 * |hideSelectedLayers| :guilabel:`Hide Selected Layers`
 * |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: changes the visibility of
   the first selected layer in the panel, and applies that state to the other selected
-  layers. Also accesible through :kbd:`Space` shortcut.
+  layers. Also accessible through :kbd:`Space` shortcut.
 * :guilabel:`Toggle Selected Layers Independently`: changes the visibility status
   of each selected layer
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
@@ -700,7 +700,7 @@ Available tools are organized under following tabs:
   in order to detect causes of slow down
 
 .. note:: Plugin authors can extend the panel with custom tabs
- for debugging and developping their own plugins.
+ for debugging and developing their own plugins.
  This is done using :meth:`registerDevToolWidgetFactory
  <qgis.gui.QgisInterface.registerDevToolWidgetFactory>` method.
 
@@ -2272,7 +2272,7 @@ When the |dataDefine| :sup:`Data-defined override` button is associated with a
 size, a width, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
 option that helps you change how the data is applied to the parameter for each feature.
 Basically, QGIS will scale a range of input values over a range of output values,
-and render each feature with their corresponding ouput value.
+and render each feature with their corresponding output value.
 
 The assistant allows you to:
 

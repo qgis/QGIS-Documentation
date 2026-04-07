@@ -77,7 +77,7 @@ layer:
 
    * |radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`:
      there will be no prompt to select a CRS when a layer without CRS is loaded,
-     defering CRS choice to a later time. Convenient when loading a lot of
+     deferring CRS choice to a later time. Convenient when loading a lot of
      layers at once. Such layers will be identifiable in the :guilabel:`Layers`
      panel by the |indicatorNoCRS| icon next to them.
      They'll also be un-referenced, with coordinates from the layer treated as

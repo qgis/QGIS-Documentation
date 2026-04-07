@@ -76,7 +76,7 @@ What we will try to do now is to create an algorithm that calculates the TWI fro
 
    .. figure:: img/modeler_twi/canvas_2.png
 
-#. The second algorithm we have to add to our model is the catchment area algorithm. We will use the algorithm named :guilabel:`Catchment area (Paralell)`. We will use the DEM layer again as input, and none of the ouputs it produces are final, so here is how you have to fill the corresponding dialog.
+#. The second algorithm we have to add to our model is the catchment area algorithm. We will use the algorithm named :guilabel:`Catchment area (Parallel)`. We will use the DEM layer again as input, and none of the outputs it produces are final, so here is how you have to fill the corresponding dialog.
 
    .. figure:: img/modeler_twi/area_modeler.png
 

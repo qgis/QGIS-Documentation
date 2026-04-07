@@ -58,7 +58,7 @@ namely handling of the snapping tolerance and the search radius.
   it to an existing vertex or segment.
 
   The tolerance setting affects all tools that work with snapping and
-  applies by default to new layers and projets. It can however be overridden
+  applies by default to new layers and projects. It can however be overridden
   at layer level (see :ref:`snapping_options`).
 
 .. index:: Search radius
@@ -659,7 +659,7 @@ Red circles will appear when hovering vertices.
 
   .. tip:: **Feature selection bounds vertex tool**
 
-    Vertices can be selected accross different features (or layers).
+    Vertices can be selected across different features (or layers).
     If you are looking for vertices of a specific feature in a crowded place,
     first select that feature. Then draw the rectangle or polygon selector
     with the vertex tool around the vertices: only the selected feature's
@@ -1364,7 +1364,7 @@ part from the first to the last intersection with the original line.
 
 For polygons, it will reshape the polygon's boundary. For it to work, the
 reshape tool's line must cross the polygon's boundary at least twice. To draw
-the line, click on the map canvas to add vertexes. To finish it, just
+the line, click on the map canvas to add vertices. To finish it, just
 right-click. Like with the lines, only the segment between the first and the
 last intersections is considered. The reshape line's segments that are inside
 the polygon will result in cropping it, where the ones outside the polygon will
@@ -1920,7 +1920,7 @@ digitizing tools` button to activate the set of tools.
 .. note:: The tools are not enabled if the map view is in geographic coordinates.
 
 The aim of the Advanced Digitizing tool is to lock coordinates, lengths, and angles
-when moving the mouse during the digitalizing in the map canvas.
+when moving the mouse during the digitizing in the map canvas.
 
 You can also create constraints with relative or absolute reference. Relative
 reference means that the next vertex constraints' values will be relative to the
@@ -2057,7 +2057,7 @@ Absolute reference digitizing
 -----------------------------
 
 When drawing a new geometry from scratch, it is very useful to have the
-possibility to start digitizing vertexes at given coordinates.
+possibility to start digitizing vertices at given coordinates.
 
 For example, to add a new feature to a polygonal layer, click the
 |capturePolygon| button. You can enter the exact coordinates where you want
@@ -2155,7 +2155,7 @@ Continuous lock
 Both in absolute or relative reference digitizing, angle, distance, X, Y, Z
 and M constraints can be locked continuously by clicking the |lockRepeating|
 :guilabel:`Continuous lock` buttons. Using continuous lock allows you to
-digitize several points or vertexes using the same constraints.
+digitize several points or vertices using the same constraints.
 
 
 .. _construction_mode:
@@ -2166,7 +2166,7 @@ Construction mode
 You can enable and disable *construction mode* by clicking on the
 |cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` keyboard
 shortcut. While in construction mode, clicking the map canvas won't add new
-vertexes, but will capture the clicks' positions so that you can use them as
+vertices, but will capture the clicks' positions so that you can use them as
 reference points to then lock distance, angle or X, Y, Z, M relative values.
 
 In the |cadConstruction| :sup:`Construction mode` you will find a drop-down menu
