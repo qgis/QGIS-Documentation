@@ -1522,10 +1522,8 @@ Parameters
        Default: 1
      - The type of the final joined layer. One of:
 
-       * 0 --- Create separate feature for each matching feature
-	 (one-to-many)
-       * 1 --- Take attributes of the first matching feature only
-	 (one-to-one)
+       * 0 --- Create separate feature for each matching feature (one-to-many)
+       * 1 --- Take attributes of the first matching feature only (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
@@ -1697,12 +1695,9 @@ Parameters
      - [enumeration]
      - The type of the final joined layer. One of:
 
-       * 0 --- Create separate feature for each matching feature
-	 (one-to-many)
-       * 1 --- Take attributes of the first matching feature only
-	 (one-to-one)
-       * 2 --- Take attributes of the feature with largest overlap
-	 only (one-to-one)
+       * 0 --- Create separate feature for each matching feature (one-to-many)
+       * 1 --- Take attributes of the first matching feature only (one-to-one)
+       * 2 --- Take attributes of the feature with largest overlap only (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``

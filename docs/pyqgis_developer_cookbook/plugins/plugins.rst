@@ -100,8 +100,7 @@ metadata.txt
 First, the Plugin Manager needs to retrieve some basic information about the
 plugin such as its name, description etc. This information is stored in :file:`metadata.txt`.
 
-.. note::
-   All metadata must be in UTF-8 encoding.
+.. note:: All metadata must be in UTF-8 encoding.
 
 .. _plugin_metadata_table:
 
@@ -127,15 +126,15 @@ homepage               False     a valid URL pointing to the homepage of your pl
 repository             True      a valid URL for the source code repository
 tracker                False     a valid URL for tickets and bug reports
 icon                   False     a file name or a relative path (relative to
-                                 the base folder of the plugin's compressed
-                                 package) of a web friendly image (PNG, JPEG)
+                                 the base folder of the plugin's compressed package)
+                                 of a web friendly image (PNG, JPEG)
 category               False     one of ``Raster``, ``Vector``, ``Database``, ``Mesh`` and ``Web``
-plugin_dependencies    False     PIP-like comma separated list of other plugins to install, use
-                                 plugin names coming from their metadata's name field
-server                 False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin has a server interface
-hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin provides processing algorithms
+plugin_dependencies    False     PIP-like comma separated list of other plugins to install,
+                                 use plugin names coming from their metadata's name field
+server                 False     boolean flag, :const:`True` or :const:`False`,
+                                 determines if the plugin has a server interface
+hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`,
+                                 determines if the plugin provides processing algorithms
 =====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
@@ -469,9 +468,9 @@ languages you want.
 
 .. warning::
 
-   Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
-   otherwise the language loading will fail! Use the 2 letter shortcut for the
-   language (**it** for Italian, **de** for German, etc...)
+  Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
+  otherwise the language loading will fail! Use the 2 letter shortcut for the
+  language (**it** for Italian, **de** for German, etc...)
 
 .ts file
 ........
@@ -507,24 +506,24 @@ Alternatively you can use the makefile to extract messages from python code and
 Qt dialogs, if you created your plugin with Plugin Builder.
 At the beginning of the Makefile there is a LOCALES variable::
 
-	LOCALES = en
+    LOCALES = en
 
 Add the abbreviation of the language to this variable, for example for
 Hungarian language::
 
-	LOCALES = en hu
+    LOCALES = en hu
 
 Now you can generate or update the :file:`hu.ts` file (and the :file:`en.ts` too)
 from the sources by::
 
-	make transup
+    make transup
 
 After this, you have updated ``.ts`` file for all languages set in the LOCALES
 variable.
 Use **Qt Linguist** to translate the program messages.
 Finishing the translation the ``.qm`` files can be created by the transcompile::
 
-	make transcompile
+    make transcompile
 
 You have to distribute ``.ts`` files with your plugin.
 
@@ -538,9 +537,9 @@ You should see your plugin in the correct language.
 
 .. warning::
 
-   If you change something in your plugin (new UIs, new menu, etc..) you have to
-   **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
-   again the command of above.
+  If you change something in your plugin (new UIs, new menu, etc..) you have to
+  **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
+  again the command of above.
 
 Sharing your plugin
 ===================
@@ -584,7 +583,7 @@ which can be handy for debugging purposes.
 
 .. code-block:: python
 
-	my_plugin = qgis.utils.plugins['My Plugin']
+    my_plugin = qgis.utils.plugins['My Plugin']
 
 Log Messages
 ------------
@@ -604,7 +603,7 @@ resources for the GUI, such as icons:
 
   <RCC>
     <qresource prefix="/plugins/testplug" >
-       <file>icon.png</file>
+      <file>icon.png</file>
     </qresource>
   </RCC>
 

@@ -1653,47 +1653,57 @@ Let's have a look at some examples:
 
 #. Label based on two fields 'name' and 'place' with a comma as separator::
 
-   "name" || ', ' || "place"
+    "name" || ', ' || "place"
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       John Smith, Paris
 
 #. Label based on two fields 'name' and 'place' with other texts:
 
-   .. code-block:: none
+   ::
 
       'My name is ' + "name" + 'and I live in ' + "place"
       'My name is ' || "name" || 'and I live in ' || "place"
       concat('My name is ', name, ' and I live in ', "place")
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       My name is John Smith and I live in Paris
 
 #. Label based on two fields 'name' and 'place' with other texts combining
    different concatenation functions:
 
-   .. code-block:: none
+   ::
 
       concat('My name is ', name, ' and I live in ' || place)
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       My name is John Smith and I live in Paris
 
-   Or, if the field 'place' is NULL, returns::
+   Or, if the field 'place' is NULL, returns:
+
+   .. code-block:: text
 
       My name is John Smith
 
 #. Multi-line label based on two fields 'name' and 'place' with a
    descriptive text:
 
-   .. code-block:: none
+   ::
 
       concat('My name is ', "name", '\n' , 'I live in ' , "place")
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       My name is John Smith
       I live in Paris
@@ -1701,35 +1711,41 @@ Let's have a look at some examples:
 #. Label based on a field and the $area function to show the place's name
    and its rounded area size in a converted unit:
 
-   .. code-block:: none
+   ::
 
       'The area of ' || "place" || ' has a size of '
       || round($area/10000) || ' ha'
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       The area of Paris has a size of 10500 ha
 
 #. Create a CASE ELSE condition. If the population value in field
    `population` is <= 50000 it is a town, otherwise it is a city:
 
-   .. code-block:: none
+   ::
 
       concat('This place is a ',
       CASE WHEN "population" <= 50000 THEN 'town' ELSE 'city' END)
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       This place is a town
 
 #. Display name for the cities and no label for the other features
    (for the "city" context, see example above):
 
-   .. code-block:: none
+   ::
 
       CASE WHEN "population" > 50000 THEN "NAME" END
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       Paris
 

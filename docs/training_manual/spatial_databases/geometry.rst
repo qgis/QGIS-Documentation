@@ -103,7 +103,7 @@ For this exercise you should do the following:
 
 Your updated people schema should look something like this:
 
-.. code-block:: none
+.. code-block:: psql
 
   \d people
 
@@ -132,14 +132,14 @@ Your updated people schema should look something like this:
 .. admonition:: Answer
   :class: dropdown
 
-  ::
+  .. code-block:: sql
 
     delete from people;
     alter table people add column city_id int not null references cities(id);
 
   (capture cities in QGIS)
 
-  ::
+  .. code-block:: sql
 
     insert into people (name,house_no, street_id, phone_no, city_id, geom)
        values ('Faulty Towers',
@@ -167,7 +167,7 @@ Your updated people schema should look something like this:
 
   If you're getting the following error message:
 
-  ::
+  .. code-block:: psql
 
     ERROR:  insert or update on table "people" violates foreign key constraint
             "people_city_id_fkey"
@@ -199,7 +199,7 @@ for that city and computing a buffer around that area.
 
   - Add some people in 'Tokyo Outer Wards' city
 
-   .. code-block:: psql
+   .. code-block:: sql
 
     INSERT INTO people (name, house_no, street_id, phone_no, city_id, geom)
        VALUES ('Bad Aboum',
@@ -227,7 +227,7 @@ for that city and computing a buffer around that area.
 
   - Create myPolygonTable table
 
-   .. code-block:: psql
+   .. code-block:: sql
 
     CREATE TABLE myPolygonTable (
       id serial NOT NULL PRIMARY KEY,
@@ -241,7 +241,7 @@ for that city and computing a buffer around that area.
 
   - Create and load the convex hulls
 
-   .. code-block:: psql
+   .. code-block:: sql
 
     INSERT INTO myPolygonTable (city_id, geom)
       SELECT * FROM
@@ -252,8 +252,6 @@ for that city and computing a buffer around that area.
             FROM people
             GROUP BY city_id
       ) convexHulls;
-
-
 
 
 Access Sub-Objects
@@ -373,7 +371,7 @@ tablespaces:
 
 When you create a database, you can then specify which tablespace to use e.g.:
 
-.. code-block:: bash
+.. code-block:: psql
 
   createdb --tablespace=homespace t4a
 
