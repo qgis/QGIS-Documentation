@@ -82,7 +82,7 @@ PyQGIS provides several options for creating a geometry:
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
     print(gLine)
     gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1),
-	QgsPointXY(2, 2), QgsPointXY(2, 1)]])
+      QgsPointXY(2, 2), QgsPointXY(2, 1)]])
     print(gPolygon)
 
   .. testoutput:: geometry
