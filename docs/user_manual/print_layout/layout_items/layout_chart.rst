@@ -147,7 +147,7 @@ In this section, select and configure the layer and fields you want to display i
 #. Click :guilabel:`Modify Series...` button and define the :guilabel:`X-axis` and :guilabel:`Y-axis` fields using the drop-down lists.
    Optionally, add a filter expression to display only specific data in the chart.
 #. Check the |checkbox| :guilabel:`Use only features visible within a map` option to include only features that are currently visible
-   in the map canvas based on the current map extent. From the :guilabel:`Linked map` drop-down list, select the map to link the chart to.
+   in a layout map item. From the :guilabel:`Linked map` drop-down list, select the map to link the chart to.
 #. Check the |checkbox| :guilabel:`Use only features intersecting atlas features` option to include only features that intersect
    with the :ref:`atlas feature <atlas_generation>`.
 
