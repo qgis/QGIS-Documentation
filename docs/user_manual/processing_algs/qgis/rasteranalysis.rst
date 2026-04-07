@@ -4650,6 +4650,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. |344| replace:: ``NEW in 3.44``
 .. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
@@ -4670,5 +4671,4 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |344| replace:: ``NEW in 3.44``
 .. |400| replace:: ``NEW in 4.0``

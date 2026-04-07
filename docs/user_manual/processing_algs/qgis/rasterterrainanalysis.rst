@@ -1182,11 +1182,14 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. |344| replace:: ``NEW in 3.44``
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |344| replace:: ``NEW in 3.44``
 .. |400| replace:: ``NEW in 4.0``
