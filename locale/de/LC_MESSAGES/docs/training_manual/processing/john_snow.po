@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Steffen Hollah, 2025
+# Steffen Hollah, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Steffen Hollah, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -87,16 +87,6 @@ msgstr ""
 " von Pumpen sowie eine nach OSM gerenderte Karte im TIFF Format. Öffnen Sie "
 "das zu dieser Lektion gehörende QGIS Projekt."
 
-#: ../../docs/training_manual/processing/john_snow.rst:15
-msgid ""
-"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
-"polygons) of the pumps layer, to get the influence zone of each pump. The "
-"*Voronoi Diagram* algorithm can be used for that."
-msgstr ""
-"Der erste Schritt ist die Erstellung eines Voronoi Diagramms (bzw. Thiessen-"
-"Polygone) für den Layer der Pumpen, um die Einflusszone für jede Pumpe zu "
-"ermitteln. Der Algorithmus *Voronoi-Polygone* kann dazu verwendet werden."
-
 #: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr ""
@@ -105,45 +95,6 @@ msgstr ""
 #: ../../docs/training_manual/processing/john_snow.rst:26
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "Die meisten Fälle liegen offensichtlich innerhalb eines der Polygone."
-
-#: ../../docs/training_manual/processing/john_snow.rst:28
-msgid ""
-"To get a more quantitative result, we can count the number of deaths in each"
-" polygon. Since each point represents a building where deaths occured, and "
-"the number of deaths is stored in an attribute, we cannot just count the "
-"points. We need a weighted count, so we will use the *Count points in "
-"polygon (weighted)* tool."
-msgstr ""
-"Um ein genaueres Ergebnis zu erhalten, zählen wir die Todesfälle in jedem "
-"Polygon. Jeder Punkt steht für ein Gebäude in dem Todesfälle auftraten. Da "
-"die Anzahl der Todesfälle in der Attributtabelle gespeichert ist, reicht es "
-"nicht, nur die Punkte zu zählen. Wir benötigen eine gewichetete Zählung. "
-"Dazu können wir das Werkzeug *Punkte in Polygon zählen* verwenden."
-
-#: ../../docs/training_manual/processing/john_snow.rst:32
-msgid ""
-"The new field will be called *DEATHS*, and we use the *COUNT* field as "
-"weighting field. The resulting table clearly reflects that the number of "
-"deaths in the polygon corresponding to the first pump is much larger than "
-"the other ones."
-msgstr ""
-"Das neue Feld wird *DEATHS* genannt und wir nutzen das Feld *COUNT* als "
-"Wichtungsfeld. Die Ergebnistabelle zeigt eindeutig, dass die Anzahl der "
-"Todesfälle im zur ersten Pumpe gehörenden Polygon größer ist, als in den "
-"anderen Polygonen."
-
-#: ../../docs/training_manual/processing/john_snow.rst:36
-msgid ""
-"Another good way of visualizing the dependence of each point in the "
-"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
-"line to the closest one. This can be done with the *Distance to nearest hub*"
-" tool, and using the configuration shown next."
-msgstr ""
-"Ein anderer guter Weg zur Visualisierung der Abhängigkeit jedes Punktes aus "
-"dem Layer ``Cholera_deaths`` zu den Punkten im Layer ``Pumps`` ist die "
-"Erstellung einer Linie zu der am nächsten gelegenden Pumpe. Dies kann mit "
-"Hilfe des Werkzeuges *Abstand zum nächsten Knoten (Linie zu Knoten)* und der"
-" unten aufgeführten Konfiguration erfolgen."
 
 #: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
@@ -162,29 +113,6 @@ msgstr ""
 "sondern der Anzahl der Orte an denen Todesfälle auftraten, entspricht. Es "
 "ist zwar ein repräsentativer Parameter, allerdings ohne Berücksichtigung der"
 " mehrfachen Todesfälle an einigen Orten."
-
-#: ../../docs/training_manual/processing/john_snow.rst:46
-msgid ""
-"A density layer will also give us a very clear view of what is happening. We"
-" can create it with the *Kernel density* algorithm. Using the "
-"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
-"100, the extent and cellsize of the streets raster layer, we get something "
-"like this."
-msgstr ""
-"Ein Dichtelayer kann das ebenfalls sehr gut verdeutlichen. Wir können ihn "
-"mit Hilfe des Algorithmus *Heatmap (Kerndichtenschätzung)* erstellen. Wenn "
-"wir den Layer *Cholera_deaths*, das *COUNT* Feld als Wichtungsfeld mit einem"
-" Radius von 100 und die Ausdehnung des Rasterlayers der Straßen verwenden, "
-"erhalten wir in etwa die folgende Ausgabe."
-
-#: ../../docs/training_manual/processing/john_snow.rst:50
-msgid ""
-"Remember that, to get the output extent, you do not have to type it. Click "
-"on the button on the right-hand side and select *Use layer/canvas extent*."
-msgstr ""
-"Denken Sie daran, dass Sie die Ausdehnung der Ausgabe nicht eintippen "
-"müssen. Klicken Sie auf die Schaltfläche auf der rechten Seite und wählen "
-"*Use layer/canvas extent*."
 
 #: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""

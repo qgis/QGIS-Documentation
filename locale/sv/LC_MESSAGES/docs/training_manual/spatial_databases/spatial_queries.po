@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 16:37+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -163,44 +163,6 @@ msgstr "Börja med att skapa en ny databas (avsluta psql-skalet först):"
 msgid "Remember to install the postgis extensions:"
 msgstr "Kom ihåg att installera postgis-tilläggen:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
-msgid ""
-"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
-"directory. Refer back to the previous lesson for instructions, but remember "
-"that you'll need to create a new PostGIS connection to the new database. You"
-" can import from the terminal or via DB Manager. Import the files into the "
-"following database tables:"
-msgstr ""
-"Importera sedan de data som finns i katalogen :kbd:`exercise_data/postgis/`."
-" Gå tillbaka till föregående lektion för instruktioner, men kom ihåg att du "
-"måste skapa en ny PostGIS-anslutning till den nya databasen. Du kan "
-"importera från terminalen eller via DB Manager. Importera filerna till "
-"följande databastabeller:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
-msgid ":kbd:`points.shp` into :kbd:`building`"
-msgstr ":kbd:`points.shp` in i :kbd:`building`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
-msgid ":kbd:`lines.shp` into :kbd:`road`"
-msgstr ":kbd:`lines.shp` in i :kbd:`road`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
-msgid ":kbd:`polygons.shp` into :kbd:`region`"
-msgstr ":kbd:`polygoner.shp` into :kbd:`region`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
-msgid ""
-"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
-"Layers` dialog, as usual. When you open their attribute tables, you'll note "
-"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
-" PostGIS import."
-msgstr ""
-"Ladda dessa tre databaslager till QGIS via dialogrutan :guilabel:`Add "
-"PostGIS Layers`, som vanligt. När du öppnar deras attributtabeller kommer du"
-" att se att de har både ett :kbd:`id`-fält och ett :kbd:`gid`-fält som "
-"skapats av PostGIS-importen."
-
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
@@ -275,21 +237,6 @@ msgstr "Det mörkare området är bufferten:"
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "Välj med hjälp av bufferten:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
-msgid ""
-"In this query, the original buffer view is used as any other table would be."
-" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.geom`, is "
-"used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that "
-"intersects it. However, Hokkaido itself is excluded from this select "
-"statement, because we don't want it; we only want the regions adjoining it."
-msgstr ""
-"I den här frågan används den ursprungliga buffertvyn som vilken annan tabell"
-" som helst. Den får aliaset :kbd:`a`, och dess geometrifält, :kbd:`a.geom`, "
-"används för att välja alla polygoner i tabellen :kbd:`region` (alias "
-":kbd:`b`) som skär den. Själva Hokkaido är dock utesluten från denna "
-"urvalssats, eftersom vi inte vill ha den utan bara de regioner som gränsar "
-"till den."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""

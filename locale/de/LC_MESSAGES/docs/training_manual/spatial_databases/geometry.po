@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Steffen Döring, 2025
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -48,35 +47,9 @@ msgstr ""
 "erstellen; trotzdem ist das Verständnis für die Erstellung von Abfragen und "
 "für die Nachvollziehbarkeit wie die Daten aufgebaut ist nützlich."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:10
-msgid ""
-"**The goal of this lesson:** To better understand how to create spatial "
-"entities directly in PostgreSQL/PostGIS."
-msgstr ""
-"**Ziel dieser Lektion:** Ein besseres Verständnis wie man räumliche Objekte "
-"direkt in PostgreSQL/PostGIS erstellt."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:15
 msgid "Creating Linestrings"
 msgstr "Erstellen von Linien"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:17
-msgid ""
-"Going back to our :kbd:`address` database, let's get our streets table "
-"matching the others; i.e., having a constraint on the geometry, an index and"
-" an entry in the geometry_columns table."
-msgstr ""
-"Lassen Sie uns unsere :kbd:`address` Datenbank an die anderen Datenbanken "
-"anpassen; sie soll eine Einschränkung bezüglich der Geometrie, einen Index "
-"und einen Eintrag in der geometry_columns Tabelle erhalten."
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:24
-msgid ""
-"Modify the :kbd:`streets` table so that it has a geometry column of type "
-"ST_LineString."
-msgstr ""
-"Verändern Sie die Tabelle :kbd:`streets` so, dass sie eine Geometriespalte "
-"des Typs ST_LineString enthält."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -218,18 +191,6 @@ msgstr ""
 msgid "Access Sub-Objects"
 msgstr "Zugriff auf Unter-Objekte"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:262
-msgid ""
-"With the SFS-Model functions, you have a wide variety of options to access "
-"sub-objects of SFS Geometries. When you want to select the first vertex "
-"point of every polygon geometry in the table myPolygonTable, you have to do "
-"this in this way:"
-msgstr ""
-"Die SFS-Model Funktionen bieten eine große Bandbreite an Optionen zum "
-"Zugriff auf Sub-Objekte der SFS Geometrien. Wenn man den ersten Stützpunkt "
-"aller Polygone in der Tabelle myPolygonTable selektieren möchte, geht man "
-"wie folgt vor:"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:267
 msgid "Transform the polygon boundary to a linestring:"
 msgstr "Umwandeln der Polygongrenze in eine Linie:"
@@ -266,18 +227,6 @@ msgstr ""
 msgid "Building Geometries from Other Geometries"
 msgstr "Geometrien aus anderen Geometrien erstellen"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:316
-msgid ""
-"From a given point table, you want to generate a linestring. The order of "
-"the points is defined by their :kbd:`id`. Another ordering method could be a"
-" timestamp, such as the one you get when you capture waypoints with a GPS "
-"receiver."
-msgstr ""
-"Man möchte aus einer gegebenen Tabelle mit Punkten eine Linie generieren. "
-"Die Ordnung der Punkte ist durch ihre :kbd:`id` vorgegeben. Eine andere "
-"Methode zur Ordnung könnte ein Zeitstempel sein, den man z.B. bei der "
-"Aufzeichnung von Wegpunkten im GPS-Empfänger erhält."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:324
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
@@ -311,14 +260,6 @@ msgid ""
 msgstr ""
 "Um den Unterschied zwischen zwei Tabellen mit derselben Struktur "
 "herauszufinden, kann man das PostgreSQL Schlüsselwort ``EXCEPT`` verwenden:"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:361
-msgid ""
-"As the result, you will get all records from table_a which are not stored in"
-" table_b."
-msgstr ""
-"Im Ergebnis erhält man alle Datensätze aus table_a die nicht in table_b "
-"gespeichert sind."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:365
 msgid "Tablespaces"

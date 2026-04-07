@@ -2,26 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Lucía Betancourt, 2025
-# Eric Armijo, 2025
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 16:37+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -169,44 +167,6 @@ msgstr ""
 msgid "Remember to install the postgis extensions:"
 msgstr "Recuerda instalar las extensiones de postgis:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
-msgid ""
-"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
-"directory. Refer back to the previous lesson for instructions, but remember "
-"that you'll need to create a new PostGIS connection to the new database. You"
-" can import from the terminal or via DB Manager. Import the files into the "
-"following database tables:"
-msgstr ""
-"A continuación, importe los datos proporcionados en el directorio "
-":kbd:`exercise_data/postgis/`. Consulte la lección anterior para obtener "
-"instrucciones, pero recuerde que deberá crear una nueva conexión PostGIS a "
-"la nueva base de datos. Puede importar desde el terminal o mediante DB "
-"Manager. Importe los archivos a las siguientes tablas de la base de datos:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
-msgid ":kbd:`points.shp` into :kbd:`building`"
-msgstr ":kbd:`points.shp` en :kbd:`building`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
-msgid ":kbd:`lines.shp` into :kbd:`road`"
-msgstr ":kbd:`lines.shp` en :kbd:`road`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
-msgid ":kbd:`polygons.shp` into :kbd:`region`"
-msgstr ":kbd:`polygons.shp` en :kbd:`region`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
-msgid ""
-"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
-"Layers` dialog, as usual. When you open their attribute tables, you'll note "
-"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
-" PostGIS import."
-msgstr ""
-"Cargue estas tres capas de base de datos en QGIS a través del cuadro de "
-"diálogo :guilabel:`Add PostGIS Layers`, como de costumbre. Cuando abra sus "
-"tablas de atributos, notará que tienen un campo: kbd: ʻid` y un campo "
-":kbd:`gid` creado por la importación de PostGIS."
-
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
@@ -285,21 +245,6 @@ msgstr "El área más oscura es el búfer:"
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "Seleccionar usando el búfer:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
-msgid ""
-"In this query, the original buffer view is used as any other table would be."
-" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.geom`, is "
-"used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that "
-"intersects it. However, Hokkaido itself is excluded from this select "
-"statement, because we don't want it; we only want the regions adjoining it."
-msgstr ""
-"En esta consulta, la vista de la zona intermedia original se utiliza como "
-"cualquier otra tabla. Se le da el alias :kbd:`a`, y su campo de geometría, "
-":kbd:`a.geom`, se utiliza para seleccionar cualquier polígono de la tabla "
-":kbd:`region` (alias :kbd:`b`) que lo intersecte. Sin embargo, el propio "
-"Hokkaido queda excluido de esta selección, porque no lo queremos; sólo "
-"queremos las regiones adyacentes."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""

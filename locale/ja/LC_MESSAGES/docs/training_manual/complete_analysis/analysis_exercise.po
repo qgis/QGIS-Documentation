@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2025
-# Harrissou Sant-anna, 2025
+# tomoya miyoshi, 2026
+# tomoyuki arai <tarai.3367@gmail.com>, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -707,12 +708,6 @@ msgstr "何が起こっているのかを適切に確認するために、レイ
 msgid "Changing the symbology of vector layers"
 msgstr "ベクタレイヤのシンボロジを変更する"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:307
-msgid ""
-"In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` "
-"layer"
-msgstr ":guilabel:`レイヤ` パネルで、 :guilabel:`Streets` レイヤを右クリックします"
-
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:309
 msgid "Select :guilabel:`Properties` from the menu that appears"
 msgstr "表示されるメニューから :guilabel:`プロパティ` を選びます"
@@ -731,20 +726,6 @@ msgid ""
 "...)"
 msgstr "下のリストから記号を選択するか、新しい記号を設定します（色、透明度、...）"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:314
-msgid ""
-"Click :guilabel:`OK` to close the :guilabel:`Layer Properties` dialog. This "
-"will change the rendering of the :guilabel:`Streets` layer."
-msgstr ""
-":guilabel:`OK` をクリックして :guilabel:`レイヤプロパティ` ダイアログを閉じます。これで "
-":guilabel:`Streets` レイヤのレンダリングが変更されます。"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:317
-msgid ""
-"Follow a similar process for the :guilabel:`Zoning` layer and choose an "
-"appropriate color for it"
-msgstr "同様の手順で、 :guilabel:`Zoning` レイヤに適切な色を選びます"
-
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:323
 msgid "Changing the symbology of raster layers"
 msgstr "ラスタレイヤのシンボロジを変更する"
@@ -752,12 +733,6 @@ msgstr "ラスタレイヤのシンボロジを変更する"
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:325
 msgid "Raster layer symbology is somewhat different."
 msgstr "ラスタレイヤのシンボロジはいくらか異なります。"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:327
-msgid ""
-"Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall30` raster"
-" layer"
-msgstr "ラスタレイヤ :guilabel:`Rainfall30` の :guilabel:`プロパティ` ダイアログを開きます"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:329
 msgid ""
@@ -1013,17 +988,6 @@ msgid ""
 "Ensure that the :guilabel:`Open output file after running algorithm` box is "
 "selected."
 msgstr ":guilabel:`結果をプロジェクトに追加する` のボックスが選択されていることを確認します。"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:463
-msgid ""
-"In the :guilabel:`Raster bands` list on the left, you will see all the "
-"raster layers in your :guilabel:`Layers` panel. If your Slope layer is "
-"called :guilabel:`slope`, it will be listed as ``slope@1``. Indicating band "
-"1 of the slope raster."
-msgstr ""
-"左側の :guilabel:`バンド` リストには、 :guilabel:`レイヤ` パネルにあるすべてのラスタレイヤが表示されています。傾斜レイヤが "
-":guilabel:`slope` という名前であれば、``slope@1`` "
-"という名前で表示されます。これは傾斜ラスタのバンド1であることを示しています。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:468
 msgid "The slope needs to be between ``15`` and ``60`` degrees."
@@ -1400,24 +1364,9 @@ msgstr "地図から ``aspect_slope_rainfall_all`` レイヤを削除します"
 msgid "Save your project"
 msgstr "プロジェクトを保存します"
 
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:665
-msgid ""
-"When we use an algorithm to vectorize a raster, sometimes the algorithm "
-"yields what is called \"Invalid geometries\", i.e. there are empty polygons,"
-" or polygons with mistakes in them, that will be difficult to analyze in the"
-" future. So, we need to use the \"Fix Geometry\" tool."
-msgstr ""
-"あるアルゴリズムを使ってラスタをベクタ化する際、「無効なジオメトリ」と呼ばれるものが生成されることがあります。つまり、空のポリゴンや、間違いのあるポリゴンが存在し、将来的に解析が困難になる可能性があるのです。そこで、「ジオメトリの修復」ツールを使う必要があります。"
-
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:672
 msgid "Fixing geometry"
 msgstr "ジオメトリを修復する"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:674
-msgid ""
-"In the :guilabel:`Processing Toolbox`, search for \"Fix geometries\", and "
-":guilabel:`Execute...` it"
-msgstr ":guilabel:`プロセシングツールボックス` で 「ジオメトリの修復」を検索し、 :guilabel:`実行...` します"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:676
 msgid "For the :guilabel:`Input layer`, select ``aspect_slope_rainfall_1``"
@@ -1744,10 +1693,6 @@ msgid ""
 msgstr ""
 ":guilabel:`入力レイヤ` は ``university`` 、 :guilabel:`第2の入力レイヤ` は "
 "``suitable_areas`` とします"
-
-#: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:833
-msgid "Set an appropriate output location and name (:guilabel:`Joined layer`)"
-msgstr "適切な出力場所と名前を設定します （:guilabel:`出力レイヤ`）"
 
 #: ../../docs/training_manual/complete_analysis/analysis_exercise.rst:835
 msgid "Set the :guilabel:`Maximum nearest neighbors` to ``4``"

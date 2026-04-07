@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Harrissou Sant-anna, 2026
+# Daniel Nylander <po@danielnylander.se>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -96,22 +97,6 @@ msgstr ""
 " gränserna för stadsområdet, och sedan buffrar vi det så att vi får ett "
 "rasterlager som täcker lite mer än vad som är absolut nödvändigt."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:30
-msgid ""
-"To calculate the bounding box , we can use the *Polygon from layer extent* "
-"algorithm"
-msgstr ""
-"För att beräkna begränsningsrutan kan vi använda algoritmen *Polygon från "
-"lagerutbredning*"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:34
-msgid ""
-"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
-"following parameter values."
-msgstr ""
-"För att buffra den använder vi algoritmen *Fixed distance buffer* med "
-"följande parametervärden."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
@@ -126,28 +111,6 @@ msgstr ""
 "Här är den resulterande begränsningsrutan som erhålls med hjälp av "
 "parametrarna som visas ovan"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:44
-msgid ""
-"It is a rounded box, but we can easily get the equivalent box with square "
-"angles, by running the *Polygon from layer extent* algorithm on it. We could"
-" have buffered the city limits first, and then calculate the extent "
-"rectangle, saving one step."
-msgstr ""
-"Det är en rundad låda, men vi kan enkelt få en motsvarande låda med "
-"fyrkantiga vinklar genom att köra algoritmen *Polygon från lagrets "
-"utsträckning* på den. Vi kunde ha buffrat stadsgränserna först och sedan "
-"beräknat omfattningsrektangeln, vilket sparar ett steg."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:50
-msgid ""
-"You will notice that the rasters has a different projection from the vector."
-" We should therefore reproject them before proceeding further, using the "
-"*Warp (reproject)* tool."
-msgstr ""
-"Du kommer att märka att rasterna har en annan projektion än vektorn. Vi bör "
-"därför omprojicera dem innan vi går vidare, med hjälp av verktyget *Warp "
-"(reproject)*."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
@@ -156,25 +119,7 @@ msgstr ""
 "De senaste versionerna har ett mer komplext gränssnitt. Se till att minst en"
 " komprimeringsmetod är vald."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:59
-msgid ""
-"With this layer that contains the bounding box of the raster layer that we "
-"want to obtain, we can crop both of the raster layers, using the *Clip "
-"raster with polygon* algorithm."
-msgstr ""
-"Med detta lager som innehåller gränsboxen för det rasterlager som vi vill få"
-" fram kan vi beskära båda rasterlagren med hjälp av algoritmen *Clip raster "
-"with polygon*."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:65
-msgid ""
-"Once the layers have been cropped, they can be merged using the SAGA *Mosaic"
-" raster layers* algorithm."
-msgstr ""
-"När lagren har beskurits kan de slås samman med hjälp av SAGA *Mosaic raster"
-" layers*-algoritmen."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:69
+#: ../../docs/training_manual/processing/cutting_merging.rst:68
 msgid ""
 "You can save time merging first and then cropping, and you will avoid "
 "calling the clipping algorithm twice. However, if there are several layers "
@@ -194,69 +139,23 @@ msgstr ""
 "ytterligare verktyg för att automatisera den operationen. I det här exemplet"
 " har vi bara två lager, så du behöver inte oroa dig för det nu."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:77
+#: ../../docs/training_manual/processing/cutting_merging.rst:76
 msgid "With that, we get the final DEM we want."
 msgstr "Därmed får vi den slutliga DEM som vi vill ha."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:81
+#: ../../docs/training_manual/processing/cutting_merging.rst:80
 msgid "Now it is time to compute the slope layer."
 msgstr "Nu är det dags att beräkna lutningslageret."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:83
-msgid ""
-"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
-" but the DEM obtained in the last step is not suitable as input, since "
-"elevation values are in meters but cellsize is not expressed in meters (the "
-"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
-"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
-"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
-"then correctly calculate the slope, with either SAGA or GDAL."
-msgstr ""
-"Ett lutningslager kan beräknas med algoritmen *Slope, Aspect, Curvature*, "
-"men den DEM som erhölls i det sista steget är inte lämplig som indata, "
-"eftersom höjdvärdena är i meter men cellstorleken inte uttrycks i meter "
-"(lageret använder ett CRS med geografiska koordinater). En omprojektering "
-"behövs. För att återprojicera ett rasterlager kan algoritmen *Warp "
-"(reproject)* användas igen. Vi omprojicerar till ett CRS med meter som enhet"
-" (t.ex. 3857), så att vi sedan kan beräkna lutningen korrekt, med antingen "
-"SAGA eller GDAL."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:91
+#: ../../docs/training_manual/processing/cutting_merging.rst:90
 msgid "With the new DEM, slope can now be computed."
 msgstr "Med den nya DEM kan lutningen nu beräknas."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:95
+#: ../../docs/training_manual/processing/cutting_merging.rst:94
 msgid "And here is the resulting slope layer."
 msgstr "Och här är det resulterande sluttningslageret."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:99
-msgid ""
-"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
-"expressed in degrees or radians; degrees are a more practical and common "
-"unit. In case you calculated it in radians, the *Metric conversions* "
-"algorithm will help us to do the conversion (but in case you didn't know "
-"that algorithm existed, you could use the raster calculator that we have "
-"already used)."
-msgstr ""
-"Lutningen som produceras av algoritmen *Slope, Aspect, Curvature* kan "
-"uttryckas i grader eller radianer; grader är en mer praktisk och vanlig "
-"enhet. Om du beräknade den i radianer hjälper algoritmen *Metric "
-"conversions* oss att göra omvandlingen (men om du inte visste att den "
-"algoritmen fanns kan du använda rasterkalkylatorn som vi redan har använt)."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:107
-msgid ""
-"Reprojecting the converted slope layer back with the *Reproject raster "
-"layer*, we get the final layer we wanted."
-msgstr ""
-"Genom att återprojicera det konverterade sluttningslageret tillbaka med * "
-"Återprojicera rasterlager * får vi det slutliga lageret vi ville ha."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
-msgid "todo: Add image"
-msgstr "att göra: Lägg till bild"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:112
 msgid ""
 "The reprojection processes might have caused the final layer to contain data"
 " outside the bounding box that we calculated in one of the first steps. This"

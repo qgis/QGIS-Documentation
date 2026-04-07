@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
+# tomoya miyoshi, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: tomoya miyoshi, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -41,7 +41,7 @@ msgstr "ベクタデータ"
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:449
+#: ../../docs/gentle_gis_introduction/vector_data.rst:452
 msgid "gentleLogo"
 msgstr "gentleLogo"
 
@@ -276,24 +276,6 @@ msgstr ""
 msgid "Polygon features in detail"
 msgstr "ポリゴン地物の詳細"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:159
-msgid ""
-"Polygon features are **enclosed areas** like dams, islands, country "
-"boundaries and so on. Like polyline features, polygons are created from a "
-"series of vertices that are connected with a continuous line. However "
-"because a polygon always describes an enclosed area, the first and last "
-"vertices should always be at the same place! Polygons often have **shared "
-"geometry** –-- boundaries that are in common with a neighbouring polygon. "
-"Many GIS applications have the capability to ensure that the boundaries of "
-"neighbouring polygons exactly coincide. We will explore this in the "
-":ref:`gentle_gis_topology` topic later in this tutorial."
-msgstr ""
-"ポリゴン地物は、ダム、島、国境などの **囲まれた領域** "
-"です。ポリライン地物と同様に、ポリゴンは連続線で連結された一連の頂点から作成されます。しかし、ポリゴンは常に閉じた領域を記述しているので、最初と最後の頂点は常に同じ場所でなければなりません！ポリゴンは、多くの場合、"
-" **共有ジオメトリ** "
-"---隣接するポリゴンと共通している境界を有します。多くのGISアプリケーションには、隣接するポリゴンの境界が正確に一致することを確実にする能力があります。このチュートリアルの後の"
-" :ref:`gentle_gis_topology` トピックではこれについて見ていきます。"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:168
 msgid ""
 "As with points and polylines, polygons have **attributes**. The attributes "
@@ -327,23 +309,6 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_data.rst:186
 msgid "Editing vector data"
 msgstr "ベクタデータの編集"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:188
-msgid ""
-"The GIS application will allow you to create and modify the geometry data in"
-" a layer --– a process called **digitising** –-- which we will look at more "
-"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
-"the GIS application will only allow you to create new polygons in that "
-"layer. Similarly if you want to change the shape of a feature, the "
-"application will only allow you to do it if the changed shape is correct. "
-"For example it won't allow you to edit a line in such a way that it has only"
-" one vertex –-- remember in our discussion of lines above that all lines "
-"must have at least two vertices."
-msgstr ""
-"GISアプリケーションでは、レイヤのジオメトリデータを作成、修正すること --– このプロセスは **デジタイジング** と呼ばれます–-- "
-"ができます。デジタイジングについては、後のチュートリアルで詳しく説明します。あるレイヤ中にポリゴン (例. 農業用貯水池)がある場合, "
-"GISアプリケーションがそのレイヤに作成を許すのは新たなポリゴンだけです。同様に、地物の形状を変更したいとき、アプリケーションは変更された形状が正しいときだけそれを許します。例えば、1つの頂点しかない線を引くことはできません"
-" –-- 線は必ず2つ以上の頂点を有する必要があるということを思い出してください。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:197
 msgid ""
@@ -648,81 +613,64 @@ msgstr ""
 "お住まいの地域の地形図のコピー（ :numref:`figure_sample_map` "
 "に示されているものなど）を使用して、学習者がさまざまな種類のベクタデータの例を地図上で強調表示して識別できるかどうかを確認します。"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:390
-msgid ""
-"Think of how you would create vector features in a GIS to represent real "
-"world features on your school grounds. Create a table of different features "
-"in and around your school and then task your learners to decide whether they"
-" would be best represented in the GIS as a point, line or polygon. See "
-"table_vector_1_ for an example."
-msgstr ""
-"学校の敷地にある現実世界の地物を表すために、GISでベクタ地物をどのように作成するか考えてください。学校の中および周りのさまざまな地物のテーブルを作成し、その後、それらはGISではポイント、ライン、ポリゴンのどれで表現するのが最善かを決定する課題を生徒たちに与えます。例えば"
-" table_vector_1_ を参照してください。"
-
 #: ../../docs/gentle_gis_introduction/vector_data.rst:402
 msgid ""
 "Can you identify two point features and one polygon feature on this map?"
 msgstr "この地図上の2つのポイント地物と1つのポリゴン地物を識別できますか？"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+#: ../../docs/gentle_gis_introduction/vector_data.rst:410
 msgid "Real world feature"
 msgstr "実際の地物"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:408
+#: ../../docs/gentle_gis_introduction/vector_data.rst:410
 msgid "Suitable Geometry Type"
 msgstr "最適なジオメトリ型"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:410
+#: ../../docs/gentle_gis_introduction/vector_data.rst:412
 msgid "The school flagpole"
 msgstr "学校の旗のポール"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:412
+#: ../../docs/gentle_gis_introduction/vector_data.rst:414
 msgid "The soccer field"
 msgstr "サッカー場"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:414
+#: ../../docs/gentle_gis_introduction/vector_data.rst:416
 msgid "The footpaths in and around the school"
 msgstr "学校および周辺の歩道"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:416
+#: ../../docs/gentle_gis_introduction/vector_data.rst:418
 msgid "Places where taps are located"
 msgstr "蛇口のある場所"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:418
+#: ../../docs/gentle_gis_introduction/vector_data.rst:420
 msgid "Etc."
 msgstr "Etc."
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:421
-msgid ""
-"Table Vector 1: Create a table like this (leaving the geometry type column "
-"empty) and ask your learners to decide on suitable geometry types."
-msgstr "表ベクタ1：このような（ジオメトリ型の列を空に残した）表を作り、生徒たちに適切なジオメトリ型を決めるように問います。"
-
-#: ../../docs/gentle_gis_introduction/vector_data.rst:425
+#: ../../docs/gentle_gis_introduction/vector_data.rst:428
 msgid "Something to think about"
 msgstr "考えてみよう"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:427
+#: ../../docs/gentle_gis_introduction/vector_data.rst:430
 msgid ""
 "If you don't have a computer available, you can use a toposheet and "
 "transparency sheets to show your learners about vector data."
 msgstr "利用可能なコンピュータがなくても、ベクタデータを生徒たちに見せるためトポシートと透明なシートを使用できます。"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:431
+#: ../../docs/gentle_gis_introduction/vector_data.rst:434
 msgid "Further reading"
 msgstr "参考文献"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:433
+#: ../../docs/gentle_gis_introduction/vector_data.rst:436
 msgid ""
 "The QGIS User Guide also has more detailed information on working with "
 "vector data in QGIS."
 msgstr "QGISユーザーガイドでは, ベクタデータの操作についてより詳細な情報が含まれています."
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:437
+#: ../../docs/gentle_gis_introduction/vector_data.rst:440
 msgid "What's next?"
 msgstr "次は？"
 
-#: ../../docs/gentle_gis_introduction/vector_data.rst:439
+#: ../../docs/gentle_gis_introduction/vector_data.rst:442
 msgid ""
 "In the section that follows we will take a closer look at **attribute data**"
 " to see how it can be used to describe vector features."

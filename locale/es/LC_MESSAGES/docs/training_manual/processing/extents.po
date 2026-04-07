@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
+# Ever Medina <ever.medinaftal@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Ever Medina <ever.medinaftal@gmail.com>, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -29,9 +30,9 @@ msgid ""
 "<translation_guidelines>`. This page is currently translated at |translation"
 " progress|."
 msgstr ""
-"La traducción es un esfuerzo comunitario :ref:`puede unirse "
-"<translation_guidelines>`. Esta página está actualmente traducida en "
-"|progreso de traducción|."
+"La traducción es un esfuerzo comunitario :ref:`al que puedes unirte "
+"<translation_guidelines>`. Esta página está actualmente traducida en un "
+"|translation progress|."
 
 #: ../../docs/training_manual/processing/extents.rst:2
 msgid "Defining extents"
@@ -65,15 +66,6 @@ msgstr ""
 " ingresando los cuatro valores que la definen (min X, min Y, max X, max Y); "
 "sin embargo en esta lección veremos otros modos más prácticos e interesantes"
 " para hacer lo mismo. "
-
-#: ../../docs/training_manual/processing/extents.rst:15
-msgid ""
-"First, let's open an algorithm that requires an extent to be defined. Open "
-"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
-msgstr ""
-"En primer lugar, abra un algoritmo que requiera la definición de una "
-"extensión. Abra el algoritmo *Rasterize*, que crea una capa raster a partir "
-"de una capa vectorial."
 
 #: ../../docs/training_manual/processing/extents.rst:20
 msgid ""
@@ -118,14 +110,6 @@ msgstr ""
 msgid "Let's see what each one of them does."
 msgstr "Veamos cómo funciona cada una de ellas."
 
-#: ../../docs/training_manual/processing/extents.rst:42
-msgid ""
-"The first option is *Use layer/canvas extent*, which will show the selection"
-" dialog shown below."
-msgstr ""
-"La primera opción es *Usar extensión de capa/lienzo* que desplegará el "
-"recuadro de diálogo mostrado abajo."
-
 #: ../../docs/training_manual/processing/extents.rst:47
 msgid ""
 "Here you can select the extent of the canvas (the extent covered by the "
@@ -138,16 +122,6 @@ msgstr ""
 "selecciona, se pulsa *OK* y el cuadro de texto se completará automáticamente"
 " con los valores correspondientes. "
 
-#: ../../docs/training_manual/processing/extents.rst:51
-msgid ""
-"The second option is *Select extent on canvas*. In this case, the algorithm "
-"dialog disappears and you can click and drag on the QGIS canvas to define "
-"the desired extent."
-msgstr ""
-"La segunda opción es *Seleccionar extensión sobre el lienzo*. En este caso, "
-"el cuadro de diálogo del algoritmo desaparece y se puede pulsar y arrastrar "
-"el cursor en el lienzo de QGIS para definir la extensión deseada."
-
 #: ../../docs/training_manual/processing/extents.rst:57
 msgid ""
 "Once you release the mouse button, the dialog will reappear and the text box"
@@ -156,47 +130,10 @@ msgstr ""
 "Una vez que se suelta el botón del ratón, el cuadro de diálogo vuelve a "
 "aparecer con los valores correspondientes a la extensión definida."
 
-#: ../../docs/training_manual/processing/extents.rst:60
-msgid ""
-"The last option is *Use min covering extent from input layers*, which is the"
-" default option. This will compute the min covering extent of all layers "
-"used to run the algorithm, and there is no need to enter any value in the "
-"text box. In the case of a single input layer, as in the algorithm we are "
-"running, the same extent can be obtained by selecting that same input layer "
-"in the *Use layer/canvas extent* that we already saw. However, when there "
-"are several input layers, the min covering extent does not correspond to any"
-" of the input layer extent, since it is computed from all of them together."
-msgstr ""
-"La última opción es *Usar la extensión mínima de cobertura a partir de las "
-"capas de entrada*. Esta es la opción predeterminada. Calcula la extensión "
-"mínima que cubre todas las capas usadas para correr el algoritmo y no es "
-"necesario ingresar ningún valor en el cuadro de texto.  En el caso de usar "
-"una sola capa, como en el algoritmo que estamos usando, la misma extensión "
-"puede obtenerse seleccionando la misma capa de entrada en *Usar extensión de"
-" capa/lienzo*. Sin embargo, cuando hay muchas capas de entrada, la mínima "
-"extensión no corresponde a la extensión de ninguna de las capas ya que se "
-"calcula a partir de todas ellas tomadas en conjunto."
-
 #: ../../docs/training_manual/processing/extents.rst:69
 msgid "We will use this last method to execute our rasterization algorithm."
 msgstr ""
 "Usaremos este último método para ejecutar el algoritmo de rasterización. "
-
-#: ../../docs/training_manual/processing/extents.rst:71
-msgid "Fill the parameters dialog as shown next, and press *OK*."
-msgstr ""
-"Es necesario llenar el cuadro de diálogo de parámetros tal como se muestra a"
-" continuación y se pulsa *OK*."
-
-#: ../../docs/training_manual/processing/extents.rst:75
-msgid ""
-"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
-"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
-"result in a smaller file size and faster computations."
-msgstr ""
-"En este caso será mejor usar *Integer (1byte)* en lugar de *Floating point "
-"(4byte)*, dado que el *NAME* es un entero cuyo valor máximo =64. Esto dará "
-"como resultado un archivo más pequeño y cálculos más veloces."
 
 #: ../../docs/training_manual/processing/extents.rst:79
 msgid ""
@@ -205,19 +142,6 @@ msgid ""
 msgstr ""
 "Obtendremos una capa raster que cubre exactamente el área cubierta por la "
 "capa vectorial original."
-
-#: ../../docs/training_manual/processing/extents.rst:84
-msgid ""
-"In some cases, the last option, *Use min covering extent from input layers*,"
-" might not be available. This will happen in those algorithm that do not "
-"have input layers, but just parameters of other types. In that case, you "
-"will have to enter the value manually or use any of the other options."
-msgstr ""
-"En algunos casos, la última opción *Usar la extensión mínima de cobertura a "
-"partir de las capas de entrada* puede no hallarse disponible. Esto ocurrirá "
-"en aquellos algoritmos que no requieren capas de entrada sino sólo "
-"parámetros de otra índole. En esos casos se deberá ingresar los valores "
-"manualmente o usar algunas de las otras opciones. "
 
 #: ../../docs/training_manual/processing/extents.rst:89
 msgid ""

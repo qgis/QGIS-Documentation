@@ -2,25 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2025
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
+# fairtommy <fairtommy@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -60,13 +61,6 @@ msgid ""
 msgstr ""
 "範囲が必要とされる場合は、それを定義する4つの値（最小X、最小Y、最大X、最大Y）を入力することによって手動で定義できますが、他にもそれを同様に行うより実用的でより興味深い方法があります。このレッスンではそれらのすべてを見ることができます。"
 
-#: ../../docs/training_manual/processing/extents.rst:15
-msgid ""
-"First, let's open an algorithm that requires an extent to be defined. Open "
-"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
-msgstr ""
-"まずは、定義する範囲を必要とするアルゴリズムを開いてみましょう。ベクタレイヤからラスタレイヤを作成する *ラスタ化* アルゴリズムを開きます。"
-
 #: ../../docs/training_manual/processing/extents.rst:20
 msgid ""
 "All the parameters, except for the last two ones, are used to define which "
@@ -98,12 +92,6 @@ msgstr ""
 msgid "Let's see what each one of them does."
 msgstr "それらのそれぞれが何をするか見てみましょう。"
 
-#: ../../docs/training_manual/processing/extents.rst:42
-msgid ""
-"The first option is *Use layer/canvas extent*, which will show the selection"
-" dialog shown below."
-msgstr "第１のオプションは *レイヤー/キャンバス範囲を使用* で、以下に示す選択ダイアログが表示されます。"
-
 #: ../../docs/training_manual/processing/extents.rst:47
 msgid ""
 "Here you can select the extent of the canvas (the extent covered by the "
@@ -114,69 +102,21 @@ msgstr ""
 "ここでは、キャンバスの範囲（現在のズームでカバーされている範囲）、または利用可能ないずれかのレイヤの範囲を選択できます。それを選択して *OK* "
 "をクリックすると、テキストボックスが自動的に対応する値で満たされます。"
 
-#: ../../docs/training_manual/processing/extents.rst:51
-msgid ""
-"The second option is *Select extent on canvas*. In this case, the algorithm "
-"dialog disappears and you can click and drag on the QGIS canvas to define "
-"the desired extent."
-msgstr ""
-"第2のオプションは、 *キャンバス上で範囲選択* "
-"です。この場合、アルゴリズムダイアログが消え、所望の範囲を定義するためにQGISキャンバス上でクリック＆ドラッグできます。"
-
 #: ../../docs/training_manual/processing/extents.rst:57
 msgid ""
 "Once you release the mouse button, the dialog will reappear and the text box"
 " will already have the values corresponding to the defined extent."
 msgstr "マウスボタンを放すとダイアログが再び現れ、そのテキストボックスには定義された範囲に対応する値がすでに入っています。"
 
-#: ../../docs/training_manual/processing/extents.rst:60
-msgid ""
-"The last option is *Use min covering extent from input layers*, which is the"
-" default option. This will compute the min covering extent of all layers "
-"used to run the algorithm, and there is no need to enter any value in the "
-"text box. In the case of a single input layer, as in the algorithm we are "
-"running, the same extent can be obtained by selecting that same input layer "
-"in the *Use layer/canvas extent* that we already saw. However, when there "
-"are several input layers, the min covering extent does not correspond to any"
-" of the input layer extent, since it is computed from all of them together."
-msgstr ""
-"最後のオプションは、 *入力レイヤ範囲をカバーする最小の使用* "
-"で、デフォルトのオプションです。これは、アルゴリズムを実行するために使用されるすべてのレイヤの範囲をカバーする最小を計算し、テキストボックスに任意の値を入力する必要はありません。入力レイヤが単一の場合には、実行されているアルゴリズムのように、同じ程度には、すでに見た"
-" *レイヤ/キャンバス範囲を使用* "
-"で同じ入力レイヤを選択することによって得ることができます。入力レイヤが複数存在する場合、それは一緒にそれらの全てから計算されるので、範囲をカバーする最小は、入力レイヤの範囲のいずれにも該当しません。"
-
 #: ../../docs/training_manual/processing/extents.rst:69
 msgid "We will use this last method to execute our rasterization algorithm."
 msgstr "ラスタ化アルゴリズムを実行するために、この最後のメソッドを使用します。"
-
-#: ../../docs/training_manual/processing/extents.rst:71
-msgid "Fill the parameters dialog as shown next, and press *OK*."
-msgstr "次に示すようにパラメータダイアログボックスを入力し、 *OK* を押してください。"
-
-#: ../../docs/training_manual/processing/extents.rst:75
-msgid ""
-"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
-"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
-"result in a smaller file size and faster computations."
-msgstr ""
-"この場合には、 *NAME* は最大値=64の整数なので、*浮動小数点（4バイト）* よりも *整数（1バイト）* "
-"を使用するほうが良いです。これによってファイルサイズは小さくなり、計算がより高速になります。"
 
 #: ../../docs/training_manual/processing/extents.rst:79
 msgid ""
 "You will get a rasterized layer that covers exactly the area covered by the "
 "original vector layer."
 msgstr "元のベクタレイヤがカバーする区域を正確にカバーするラスタ化レイヤが得られるでしょう。"
-
-#: ../../docs/training_manual/processing/extents.rst:84
-msgid ""
-"In some cases, the last option, *Use min covering extent from input layers*,"
-" might not be available. This will happen in those algorithm that do not "
-"have input layers, but just parameters of other types. In that case, you "
-"will have to enter the value manually or use any of the other options."
-msgstr ""
-"場合によっては、最後のオプション *入力レイヤ範囲をカバーする最小の使用* "
-"が使用できないことがあります。これは、入力レイヤを持たず他のタイプのパラメータだけ持つアルゴリズムで起こります。その場合は、手動で値を入力するか、他のオプションのいずれかを使用する必要があります。"
 
 #: ../../docs/training_manual/processing/extents.rst:89
 msgid ""

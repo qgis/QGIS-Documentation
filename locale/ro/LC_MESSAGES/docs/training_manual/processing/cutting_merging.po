@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -99,22 +99,6 @@ msgstr ""
 "încât să existe un strat raster care îl acoperă un pic mai mult decât este "
 "necesar."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:30
-msgid ""
-"To calculate the bounding box , we can use the *Polygon from layer extent* "
-"algorithm"
-msgstr ""
-"Pentru a calcula caseta de încadrare, putem folosi algoritmul *Poligonului "
-"din extinderea stratului*"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:34
-msgid ""
-"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
-"following parameter values."
-msgstr ""
-"Pentru a-l tampona, vom folosi algorimul *Fixed distance buffer*, cu "
-"următoarele valori pentru parametri."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
@@ -128,28 +112,6 @@ msgid ""
 msgstr ""
 "Aici se află caseta de încadrare obținută, utilizând parametrii de mai sus"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:44
-msgid ""
-"It is a rounded box, but we can easily get the equivalent box with square "
-"angles, by running the *Polygon from layer extent* algorithm on it. We could"
-" have buffered the city limits first, and then calculate the extent "
-"rectangle, saving one step."
-msgstr ""
-"Este o casetă rotundă, dar putem obține cu ușurință o casetă echivalentă, cu"
-" unghiuri drepte, prin rularea algoritmului *Poligon din extinderea "
-"stratului* asupra ei. Am putea să tamponăm mai întâi limitele orașului, iar "
-"apoi să calculăm extinderea dreptunghiului, economisind un pas."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:50
-msgid ""
-"You will notice that the rasters has a different projection from the vector."
-" We should therefore reproject them before proceeding further, using the "
-"*Warp (reproject)* tool."
-msgstr ""
-"Veți observa că rasterele au o proiecție diferită față de vector. Prin "
-"urmare, ar trebui să le reproiectăm înainte de a trece mai departe, folosind"
-" instrumentul *Warp (reproiectare)*."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
@@ -158,25 +120,7 @@ msgstr ""
 "Versiunile recente au o interfață mai complexă. Asigurați-vă că cel puțin o "
 "metodă de compresie este selectată."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:59
-msgid ""
-"With this layer that contains the bounding box of the raster layer that we "
-"want to obtain, we can crop both of the raster layers, using the *Clip "
-"raster with polygon* algorithm."
-msgstr ""
-"Cu ajutorul acestui strat, care conține caseta de încadrare a stratului "
-"raster pe care dorim să-l obținem, putem decupa ambele straturi raster, "
-"utilizând algoritmul de *Decupare grilă după un poligon*."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:65
-msgid ""
-"Once the layers have been cropped, they can be merged using the SAGA *Mosaic"
-" raster layers* algorithm."
-msgstr ""
-"După ce straturile au fost decupate, ele se pot uni cu ajutorul algoritmului"
-" SAGA *Straturi raster mozaicate*."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:69
+#: ../../docs/training_manual/processing/cutting_merging.rst:68
 msgid ""
 "You can save time merging first and then cropping, and you will avoid "
 "calling the clipping algorithm twice. However, if there are several layers "
@@ -198,70 +142,23 @@ msgstr ""
 "exemplul următor nu este cazul să vă faceți griji, deoarece folosim numai "
 "două straturi."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:77
+#: ../../docs/training_manual/processing/cutting_merging.rst:76
 msgid "With that, we get the final DEM we want."
 msgstr "Cu asta, vom obține DEM-ul final pe care ni-l dorim."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:81
+#: ../../docs/training_manual/processing/cutting_merging.rst:80
 msgid "Now it is time to compute the slope layer."
 msgstr "Acum este timpul să calculăm stratul pantei."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:83
-msgid ""
-"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
-" but the DEM obtained in the last step is not suitable as input, since "
-"elevation values are in meters but cellsize is not expressed in meters (the "
-"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
-"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
-"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
-"then correctly calculate the slope, with either SAGA or GDAL."
-msgstr ""
-"Stratul pantei poate fi calculat cu ajutorul algoritmului *Pantă, Aspect, "
-"Curbură*, însă DEM-ul obținut în ultima etapă nu este potrivit ca intrare, "
-"deoarece valorile altitudinii sunt exprimate în metri, iar mărimea celulei "
-"nu este exprimată în metri (stratul folosește un CRS cu coordonate "
-"geografice). De aceea, este nevoie de o reproiectare. Pentru a reproiecta "
-"stratul raster, se poate utiliza iarăși algoritmul *Warp (reproiectare)*. "
-"Vom efectua reproiectarea într-un CRS având metrul ca unitate (cum ar fi "
-"3857), astfel încât vom putea calcula corect panta, fie cu SAGA, ori cu "
-"GDAL."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:91
+#: ../../docs/training_manual/processing/cutting_merging.rst:90
 msgid "With the new DEM, slope can now be computed."
 msgstr "Panta poate fi de acum calculată, cu ajutorul noului DEM."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:95
+#: ../../docs/training_manual/processing/cutting_merging.rst:94
 msgid "And here is the resulting slope layer."
 msgstr "Iar aici este stratul pantei rezultate."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:99
-msgid ""
-"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
-"expressed in degrees or radians; degrees are a more practical and common "
-"unit. In case you calculated it in radians, the *Metric conversions* "
-"algorithm will help us to do the conversion (but in case you didn't know "
-"that algorithm existed, you could use the raster calculator that we have "
-"already used)."
-msgstr ""
-"Panta produsă de algoritmul *Pantă, Aspect, Curbură* este exprimată în "
-"radiani, deși gradele reprezintă o unitate mai practică și mai comună. "
-"Algoritmul de *Conversii metrice* ne va ajuta să facem conversia (dar în "
-"cazul în care nu ați fi știut că acest algoritm există, ați fi putut utiliza"
-" calculatorul raster, pe care le-am folosit deja)."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:107
-msgid ""
-"Reprojecting the converted slope layer back with the *Reproject raster "
-"layer*, we get the final layer we wanted."
-msgstr ""
-"Reproiectând stratului pantă convertit, cu ajutorul *Reproiectării stratului"
-" raster*, obținem stratul final pe care l-am dorit."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
-msgid "todo: Add image"
-msgstr "todo: De adăugat imaginea"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:112
 msgid ""
 "The reprojection processes might have caused the final layer to contain data"
 " outside the bounding box that we calculated in one of the first steps. This"

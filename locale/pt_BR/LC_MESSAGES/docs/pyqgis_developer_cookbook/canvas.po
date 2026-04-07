@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -184,7 +184,7 @@ msgstr ""
 "camada e a adicionaremos ao projeto atual. Em seguida, definiremos a "
 "extensão da tela e a lista de camadas para a tela."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:140
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:139
 msgid ""
 "After executing these commands, the canvas should show the layer you have "
 "loaded."
@@ -192,11 +192,11 @@ msgstr ""
 "Depois de executar esses comandos, a tela deve mostrar a camada que você "
 "carregou."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:146
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:145
 msgid "Rubber Bands and Vertex Markers"
 msgstr "Bandas raster e fazedor de vértices"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:148
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:147
 msgid ""
 "To show some additional data on top of the map in canvas, use map canvas "
 "items. It is possible to create custom canvas item classes (covered below), "
@@ -216,15 +216,15 @@ msgstr ""
 "movida/redimensionada automaticamente quando a tela for panorâmica ou "
 "ampliada."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:156
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:155
 msgid "To show a polyline:"
 msgstr "Para mostrar uma polilinha:"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:164
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:163
 msgid "To show a polygon"
 msgstr "Para mostrar o poligono"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:172
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:171
 msgid ""
 "Note that points for polygon is not a plain list: in fact, it is a list of "
 "rings containing linear rings of the polygon: first ring is the outer "
@@ -234,7 +234,7 @@ msgstr ""
 "lista de anéis contendo anéis lineares do polígono: primeiro anel é a borda "
 "externa, ainda mais (opcional) anéis correspondem aos buracos no polígono."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:176
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:175
 msgid ""
 "Rubber bands allow some customization, namely to change their color and line"
 " width"
@@ -242,7 +242,7 @@ msgstr ""
 "As  Bandas Raster permitem alguma personalização, ou seja, para mudar sua "
 "cor e linha de largura"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:184
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:183
 msgid ""
 "The canvas items are bound to the canvas scene. To temporarily hide them "
 "(and show them again), use the :func:`hide` and :func:`show` combo. To "
@@ -254,7 +254,7 @@ msgstr ""
 ":func:`show`. Para remover completamente o item, você deve removê-lo da cena"
 " da tela"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:192
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:191
 msgid ""
 "(in C++ it's possible to just delete the item, however in Python ``del r`` "
 "would just delete the reference and the object will still exist as it is "
@@ -264,7 +264,7 @@ msgstr ""
 " r`` seria apenas suprimir a referência eo objeto continuará a existir, uma "
 "vez que é de propriedade da tela)"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:196
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:195
 msgid ""
 "Rubber band can be also used for drawing points, but the "
 ":class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited "
@@ -276,11 +276,11 @@ msgstr ""
 "isso (:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` apenas desenha um "
 "retângulo ao redor do ponto desejado)."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:200
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:199
 msgid "You can use the vertex marker like this:"
 msgstr "Você pode usar o marcador de vértice assim:"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:207
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:206
 msgid ""
 "This will draw a red cross on position **[10,45]**. It is possible to "
 "customize the icon type, size, color and pen width"
@@ -288,7 +288,7 @@ msgstr ""
 "Isto irá desenhar uma cruz vermelha na posição **[10,45]**. É possível "
 "personalizar o tipo de ícone, tamanho, cor e largura da caneta"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:217
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:216
 msgid ""
 "For temporary hiding of vertex markers and removing them from canvas, use "
 "the same methods as for rubber bands."
@@ -296,11 +296,11 @@ msgstr ""
 "Para ocultar temporariamente os marcadores de vértice e removê-los da tela, "
 "use os mesmos métodos usados ​​para rubber bands."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:223
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:222
 msgid "Using Map Tools with Canvas"
 msgstr "Usando Ferramentas de Mapas na Tela"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:225
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:224
 msgid ""
 "The following example constructs a window that contains a map canvas and "
 "basic map tools for map panning and zooming. Actions are created for "
@@ -325,7 +325,7 @@ msgstr ""
 "de mapa anterior é desmarcada. As ferramentas de mapa são ativadas usando o "
 "método :meth:`setMapTool () <qgis.gui.QgsMapCanvas.setMapTool>`."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:289
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:288
 msgid ""
 "You can try the above code in the Python console editor. To invoke the "
 "canvas window, add the following lines to instantiate the ``MyWnd`` class. "
@@ -336,11 +336,11 @@ msgstr ""
 "``MyWnd``. Eles renderizarão a camada atualmente selecionada na tela recém-"
 "criada"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:325
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:324
 msgid "Add items to map canvas contextual menu"
 msgstr "Adicionar itens ao menu contextual da tela do mapa"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:327
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:326
 msgid ""
 "Interaction with map canvas can also be done through entries you may add to "
 "its contextual menu using the :attr:`contextMenuAboutToShow "
@@ -351,7 +351,7 @@ msgstr ""
 ":attr:`contextMenuAboutToShow "
 "<qgis.gui.QgsMapCanvas.contextMenuAboutToShow>` sinal."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:331
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:330
 msgid ""
 "The following code adds :menuselection:`My menu --> My Action` action next "
 "to default entries when you right-click over the map canvas."
@@ -360,11 +360,11 @@ msgstr ""
 "ao lado das entradas padrão quando você clicar com o botão direito do mouse "
 "sobre a tela do mapa."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:350
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:349
 msgid "Writing Custom Map Tools"
 msgstr "Desenhar ferramenta de mapa personalizada"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:352
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:351
 msgid ""
 "You can write your custom tools, to implement a custom behavior to actions "
 "performed by users on the canvas."
@@ -372,7 +372,7 @@ msgstr ""
 "Você pode escrever suas ferramentas personalizadas, para implementar um "
 "comportamento personalizado nas ações executadas pelos usuários na tela."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:355
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:354
 msgid ""
 "Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`,"
 " class or any derived class, and selected as active tools in the canvas "
@@ -384,7 +384,7 @@ msgstr ""
 "como ferramentas ativas na tela usando o :meth:`setMapTool () "
 "<qgis.gui.QgsMapCanvas. setMapTool>` como já vimos."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:360
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:359
 msgid ""
 "Here is an example of a map tool that allows to define a rectangular extent "
 "by clicking and dragging on the canvas. When the rectangle is defined, it "
@@ -398,11 +398,11 @@ msgstr ""
 "elementos de banda de borracha descritos antes para mostrar o retângulo "
 "selecionado, uma vez que está a ser definida."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:434
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:433
 msgid "Writing Custom Map Canvas Items"
 msgstr "Desenhar itens da tela do mapa"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:436
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:435
 msgid "Here is an example of a custom canvas item that draws a circle:"
 msgstr ""
 "Aqui está um exemplo de um item de tela personalizado que desenha um "

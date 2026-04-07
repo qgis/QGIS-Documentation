@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:36+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -78,21 +77,6 @@ msgstr ""
 "identificare le zone più produttive e quelle dove la produttività può essere"
 " migliorata."
 
-#: ../../docs/training_manual/processing/interpolation.rst:22
-msgid ""
-"The first thing to do is to clean--up the layer, since it contains redundant"
-" points. These are caused by the movement of the harvester, in places where "
-"it has to do a turn or it changes its speed for some reason. The *Points "
-"filter* algorithm will be useful for this. We will use it twice, to remove "
-"points that can be considered outliers both in the upper and lower part of "
-"the distribution."
-msgstr ""
-"La prima cosa che devi fare è pulire il livello dai punti ridondanti. Questi"
-" sono causati dal movimento della mietitrebbia, dove deve curvare o dove "
-"cambia la velocità. L'algoritmo  *Points filter*  ti è utile per questo. Lo "
-"usi due volte, per rimuovere i punti che possono essere considerati valori "
-"anomali sia nella parte alta che in quella bassa della distribuzione."
-
 #: ../../docs/training_manual/processing/interpolation.rst:28
 msgid "For the first execution, use the following parameter values."
 msgstr "Per i valori anomali superiormente, usa i seguenti parametri."
@@ -119,42 +103,9 @@ msgstr ""
 "numero minore di punti. Puoi verificare, confrontando le rispettive tabelle "
 "di attributi."
 
-#: ../../docs/training_manual/processing/interpolation.rst:43
-msgid "Now let's rasterize the layer using the *Rasterize* algorithm."
-msgstr "Ora rasterizziamo il layer usando l'algoritmo *Rasterize*."
-
-#: ../../docs/training_manual/processing/interpolation.rst:47
-msgid ""
-"The *Filtered points* layer refers to the resulting one of the second "
-"filter. It has the same name as the one produced by the first filter, since "
-"the name is assigned by the algorithm, but you should not use the first one."
-" Since we will not be using it for anything else, you can safely remove it "
-"from your project to avoid confusion, and leave just the last filtered "
-"layer."
-msgstr ""
-"Il layer *Filtered points* si riferisce a quello risultante dal secondo "
-"filtro. Ha lo stesso nome di quello prodotto dal primo filtro, in quanto il "
-"nome viene assegnato dall'algoritmo, ma non devi utilizzare il primo. "
-"Quest'ultimo, dal momento che non verrà utilizzato per altro, lo puoi "
-"rimuovere dal  progetto per evitare confusione, e puoi lasciare solo "
-"l'ultimo  layer *Filtered points*."
-
 #: ../../docs/training_manual/processing/interpolation.rst:53
 msgid "The resulting raster layer looks like this."
 msgstr "Il raster risultante si presenta così"
-
-#: ../../docs/training_manual/processing/interpolation.rst:57
-msgid ""
-"It is already a raster layer, but it is missing data in some of its cells. "
-"It only contain valid values in those cells that contained a point from the "
-"vector layer that we have just rasterized, and a no--data value in all the "
-"other ones. To fill the missing values, we can use the *Close gaps* "
-"algorithm."
-msgstr ""
-"È un raster, ma manca del dato in alcune celle. Esso contiene solo i valori "
-"in quelle celle che contenevano un punto dal vettore che abbiamo appena "
-"rasterizzati. Per riempire i valori mancanti, puoi usare l'algoritmo *Close "
-"gaps*."
 
 #: ../../docs/training_manual/processing/interpolation.rst:64
 msgid "The layer without no--data values looks like this."
@@ -168,16 +119,6 @@ msgstr ""
 "Per limitare l'area coperta dai dati alla regione in cui è stata misurata la"
 " resa delle colture, puoi ritagliare il raster con i limiti del vettore "
 "punti."
-
-#: ../../docs/training_manual/processing/interpolation.rst:73
-msgid ""
-"And for a smoother result (less accurate but better for rendering in the "
-"background as a support layer), we can apply a *Gaussian filter* to the "
-"layer."
-msgstr ""
-"E per un risultato più uniforme (meno preciso ma migliore per la "
-"visualizzazione di fondo come layer di supporto), puoi applicare *Gaussian "
-"filter* al raster."
 
 #: ../../docs/training_manual/processing/interpolation.rst:78
 msgid "With the above parameters you will get the following result"

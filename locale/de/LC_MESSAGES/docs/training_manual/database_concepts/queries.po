@@ -2,27 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Andreas Kaufmann, 2025
-# Steffen Döring, 2025
-# Harrissou Sant-anna, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
+# Steffen Döring, 2026
+# Andreas Kaufmann, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Joern G <j.gutzeit@umwelt-it.de>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -36,14 +35,6 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
-#: ../../docs/training_manual/database_concepts/queries.rst:4
-msgid ""
-"When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
-" you are interrogating the database for information."
-msgstr ""
-"Wenn Sie ein Kommando wie :kbd:`SELECT ...` schreiben, wird es in der Regel "
-"als Abfrage bezeichnet - Sie befragen die Datenbank nach Informationen."
-
 #: ../../docs/training_manual/database_concepts/queries.rst:7
 msgid ""
 "**The goal of this lesson:** To learn how to create queries that will return"
@@ -51,18 +42,6 @@ msgid ""
 msgstr ""
 "**Ziel dieser Lektion:** Zu lernen, wie man Abfragen erstellt, die nützliche"
 " Informationen zurückgeben."
-
-#: ../../docs/training_manual/database_concepts/queries.rst:10
-msgid ""
-"If you did not do so in the previous lesson, add the following people "
-"objects to your :kbd:`people` table. If you receive any errors related to "
-"foreign key constraints, you will need to add the 'Main Road' object to your"
-" streets table first"
-msgstr ""
-"Wenn Sie es noch nicht in der letzten Lektion gemacht haben, fügen Sie die "
-"folgenden Personen zur Tabelle :kbd:`people` hinzu. Wenn Sie Fehlermeldungen"
-" zu Einschränkungen des Fremdschlüssels erhalten, müssen Sie zuerst das "
-"Objekt 'Main Road' in die streets Tabelle einfügen"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:28
 msgid "Ordering Results"
@@ -121,33 +100,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/queries.rst:100
 msgid "You can also filter based on text data:"
 msgstr "Man kann auch auf Basis von Textdaten filtern:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:112
-msgid ""
-"Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
-"them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
-"Norman` entry has not been returned."
-msgstr ""
-"Hier wurde die Klausel :kbd:`LIKE` verwendet, um alle Namen, die :kbd:`s` "
-"enthalten zu finden. Man sieht, dass die Abfrage zwischen Groß- und "
-"Kleinschreibung unterscheidet, so dass der Eintrag :kbd:`Sally Norman` nicht"
-" zurückgegeben wurde."
-
-#: ../../docs/training_manual/database_concepts/queries.rst:116
-msgid ""
-"If you want to search for a string of letters regardless of case, you can do"
-" a case in-sensitive search using the :kbd:`ILIKE` clause:"
-msgstr ""
-"Wenn man eine Zeichenkette ohne Unterscheidung zwischen Groß- und "
-"Kleinschriebung suchen möchte, kann man die Klausel :kbd:`ILIKE` verwenden:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:129
-msgid ""
-"That query returned every **people** object with an :kbd:`r` or :kbd:`R` in "
-"their name."
-msgstr ""
-"Diese Abfrage gab alle Objekte **people** zurück, die ein :kbd:`r` oder "
-":kbd:`R` in ihrem Namen enthalten."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:133
 msgid "Joins"
@@ -220,15 +172,6 @@ msgstr ""
 "Schauen wir uns die Daten nach den Veränderungen an: wir können unsere "
 "Abfrage aus dem vorherigen Kapitel wieder verwenden:"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:204
-msgid ""
-"Now let's show you a sub-selection on this data. We want to show only people"
-" who live in ``street_id`` number :kbd:`1`:"
-msgstr ""
-"Nun erstellen wir eine Unterauswahl basierend auf diesen Daten. Wir wollen  "
-"nur die Personen ausgeben, die in der Straße mit ``street_id``  :kbd:`1` "
-"leben:"
-
 #: ../../docs/training_manual/database_concepts/queries.rst:227
 msgid ""
 "Although this is a very simple example and unnecessary with our small data-"
@@ -259,14 +202,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/queries.rst:251
 msgid "If we want the counts to be summarised by street name we can do this:"
 msgstr "Wir können die Anzahl auch über den Straßennamen zusammenfassen:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:270
-msgid ""
-"Because we have not used an :kbd:`ORDER BY` clause, the order of your "
-"results may not match what is shown here."
-msgstr ""
-"Da wir keine :kbd:`ORDER BY` Klausel verwendet haben, weicht die Reihenfolge"
-" der Ergebnisse unter Umständen von der hier dargestellten ab."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:276
 msgid ""

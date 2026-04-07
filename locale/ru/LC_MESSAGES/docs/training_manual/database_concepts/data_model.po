@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Asdfgr Wertyu, 2025
+# Asdfgr Wertyu, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Asdfgr Wertyu, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
@@ -228,51 +228,6 @@ msgstr ""
 "Давайте начнем создавать таблицы! В качестве руководства мы будем "
 "использовать нашу ER-диаграмму. Сначала подключитесь к базе данных адресов:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:182
-msgid "Then create a :file:`streets` table:"
-msgstr "Затем создайте таблицу :file:`улицы`:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:188
-msgid ""
-":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
-"PostgreSQL to start an integer sequence (auto-number) to populate the "
-":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
-"PostgreSQL to create a character field of 50 characters in length."
-msgstr ""
-":kbd:`серийный` и :kbd:`varchar` - это **типы данных**. :kbd:`serial` "
-"указывает PostgreSQL начать последовательность целых чисел (auto-number) для"
-" автоматического заполнения :kbd:`id` для каждой новой записи. "
-":kbd:`varchar(50)` указывает PostgreSQL создать символьное поле длиной 50 "
-"символов."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:193
-msgid ""
-"You will notice that the command ends with a :kbd:`;` - all SQL commands "
-"should be terminated this way. When you press :kbd:`Enter`, psql will report"
-" something like this:"
-msgstr ""
-"Вы заметите, что команда заканчивается символом :kbd:`;` - все команды SQL "
-"должны завершаться таким образом. Когда вы нажмете :kbd:`Enter`, psql "
-"сообщит примерно следующее:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:205
-msgid ""
-"That means your table was created successfully, with a primary key "
-":kbd:`streets_pkey` using :kbd:`streets.id`."
-msgstr ""
-"Это означает, что ваша таблица была создана успешно, с первичным ключом "
-":kbd:`streets_pkey`, использующим :kbd:`streets.id`."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:208
-msgid ""
-"Note: If you hit return without entering a :kbd:`;`, then you will get a "
-"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
-"enter more. Enter :kbd:`;` to run your command."
-msgstr ""
-"Примечание: Если вы нажмете return, не введя :kbd:`;`, то получите "
-"подсказку, подобную этой: :kbd:`address-#`. Это происходит потому, что PG "
-"ожидает, что вы введете больше. Введите :kbd:`;`, чтобы выполнить команду."
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:212
 msgid "To view your table schema, you can do this:"
 msgstr "Чтобы просмотреть схему таблицы, можно сделать следующее:"
@@ -364,14 +319,6 @@ msgid "Our table has already been created, so let's do it the first way:"
 msgstr ""
 "Наша таблица уже создана, поэтому давайте сделаем это первым способом:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:308
-msgid ""
-"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
-"match a valid street :kbd:`id` from the :kbd:`streets` table."
-msgstr ""
-"Это сообщает таблице :kbd:`people`, что ее поля :kbd:`street_id` должны "
-"соответствовать действительной улице :kbd:`id` из таблицы :kbd:`streets`."
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
@@ -405,55 +352,9 @@ msgstr "Что приводит к:"
 msgid "Dropping Tables in SQL"
 msgstr "Сбрасывание таблиц в SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:377
-msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
-msgstr ""
-"Если вы хотите избавиться от таблицы, вы можете использовать команду "
-":kbd:`drop`:"
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:383
 msgid "In our current example, the above command would not work. Why not?"
 msgstr "В нашем примере приведенная выше команда не сработает. Почему?"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:388
-msgid ""
-"The reason the DROP command would not work in this case is because the "
-"*people* table has a Foreign Key constraint to the *streets* table. This "
-"means that dropping (or deleting) the *streets* table would leave the "
-"*people* table with references to non-existent *streets* data."
-msgstr ""
-"Причина, по которой команда DROP не сработает в этом случае, заключается в "
-"том, что таблица *people* имеет ограничение Внешний ключ к таблице "
-"*streets*. Это означает, что удаление таблицы *улицы* приведет к тому, что "
-"таблица *люди* будет содержать ссылки на несуществующие данные *улицы*."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:393
-msgid ""
-"It is possible to 'force' the *streets* table to be deleted by using the "
-"``CASCADE`` command, but this would also delete the *people* and any other "
-"table which had a relationship to the *streets* table. Use with caution!"
-msgstr ""
-"Можно \"принудительно\" удалить таблицу *улицы* с помощью команды "
-"``CASCADE``, но это также приведет к удалению таблицы *люди* и любой другой "
-"таблицы, связанной с таблицей *улицы*. Используйте с осторожностью!"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:398
-msgid ""
-"If you used the same :kbd:`drop table` command on the `people` table, it "
-"would be successful:"
-msgstr ""
-"Если использовать ту же команду :kbd:`drop table` для таблицы `people`, она "
-"будет успешной:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:406
-msgid ""
-"If you actually did enter that command and dropped the :kbd:`people` table, "
-"now would be a good time to rebuild it, as you will need it in the next "
-"exercises."
-msgstr ""
-"Если вы действительно ввели эту команду и сбросили таблицу :kbd:`people`, "
-"сейчас самое время ее восстановить, поскольку она понадобится вам в "
-"следующих упражнениях."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"

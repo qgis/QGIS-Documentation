@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 16:37+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -99,6 +99,14 @@ msgstr ""
 "Linestring (polylignes) et Polygon (ainsi que leur aggrégation sous forme "
 "d'objets multiples)."
 
+#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:33
+msgid ""
+"For further information, have a look at the `OGC Simple Feature for SQL "
+"<https://www.ogc.org/standards/sfs>`_ standard."
+msgstr ""
+"Pour de plus amples informations, se référer au standard `OGC Simple Feature"
+" for SQL <https://www.ogc.org/standards/sfs>`_."
+
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:37
 msgid "Add a geometry field to table"
 msgstr "Ajoutez un champ géométrique à la table "
@@ -161,29 +169,11 @@ msgstr ""
 "A ce stade, vous pouvez également ajouter une entrée dans la table "
 "`geometry_columns`:"
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:93
-msgid ""
-"Why? :kbd:`geometry_columns` is used by certain applications to be aware of "
-"which tables in the database contain geometry data."
-msgstr ""
-"Pourquoi ? La colonne :kbd:`geometry_columns` est utilisée par certaines "
-"applications pour savoir quelles sont les tables de la base de données qui "
-"contiennent des données géométriques."
-
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:98
 msgid ""
 "If the above ``INSERT`` statement causes an error, run this query first:"
 msgstr ""
 "Si la commande `INSERT` retourne une erreur, lancez d'abord cette requête::"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:105
-msgid ""
-"If the column :kbd:`f_table_name` contains the value :kbd:`people`, then "
-"this table has already been registered and you don't need to do anything "
-"more."
-msgstr ""
-"Si la colonne :kbd:`f_table_name` contient la valeur :kbd:`people`, alors "
-"cette table a déjà été enregistré et vous n'avez rien à faire de plus."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:109
 msgid ""
@@ -193,24 +183,9 @@ msgstr ""
 "La valeur ``2`` fait référence au nombre de dimensions; dans ce cas, deux: "
 "**X** et **Y**."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:112
-msgid ""
-"The value :kbd:`4326` refers to the projection we are using; in this case, "
-"WGS 84, which is referred to by the number 4326 (refer to the earlier "
-"discussion about the EPSG)."
-msgstr ""
-"La valeur :kbd:`4326` indique que la table utilise une projection WGS 84 qui"
-" est référencée par le numéro 4326 (référez-vous à la discussion précédente "
-"à propos des codes EPSG)."
-
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:117
 msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
 msgstr ":abbr:`★☆☆ (Niveau basique)` Essayez vous-même"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:119
-msgid "Add an appropriate `geometry_columns` entry for your new cities layer"
-msgstr ""
-"Ajoutez une entrée dans la table `geometry_columns` pour la couche cities."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:132
 msgid "Add geometry record to table using SQL"
@@ -251,25 +226,6 @@ msgstr ""
 "que vous voulez ajouter si vous avez déjà indiqué le SRID pour le jeu de "
 "données utilisé, comme nous l'avons fait auparavant."
 
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:157
-msgid ""
-"Now is probably a good time to open QGIS and try to view your :kbd:`people` "
-"table. Also, we should try editing / adding / deleting records and then "
-"performing select queries in the database to see how the data has changed."
-msgstr ""
-"C'est le bon moment pour ouvrir QGIS et tenter de visualiser la table "
-":kbd:`people`. De plus, nous pouvons essayer d'éditer/ajouter/supprimer des "
-"enregistrements et réaliser des requêtes sur la base de données pour "
-"visualiser comment la donnée est modifiée."
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:161
-msgid ""
-"To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add "
-"PostGIS Layers` menu option or toolbar button:"
-msgstr ""
-"Pour charger une couche PostGIS dans QGIS, utilisez l'entrée de menu "
-":menuselection:`Couche --> Ajouter une couche PostGIS` ou la barre d'outils:"
-
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:164
 msgid "|addPostgisLayer|"
 msgstr "|addPostgisLayer|"
@@ -291,28 +247,6 @@ msgstr ""
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:176
 msgid "Then define a new connection, e.g.::"
 msgstr "Définissez alors une nouvelle connexion, par exemple::"
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:186
-msgid ""
-"To see whether QGIS has found the :kbd:`address` database and that your "
-"username and password are correct, click :guilabel:`Test Connect`. If it "
-"works, check the boxes next to :guilabel:`Save Username` and :guilabel:`Save"
-" Password`. Then click :guilabel:`OK` to create this connection."
-msgstr ""
-"Pour vérifier que QGIS trouve bien la base de données :kbd:`address` et que "
-"votre compte/mot de passe sont corrects, cliquez sur :guilabel:`Tester la "
-"connexion`. Si ça fonctionne, cochez les cases après :guilabel:`Enregistrer "
-"le nom de l'utilisateur`  et :guilabel:`Enregistrer le mot de passe` . "
-"Cliquez alors sur :guilabel:`OK` pour créer cette connexion."
-
-#: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:191
-msgid ""
-"Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`"
-" and add layers to your project as usual."
-msgstr ""
-"Retournez dans la boîte de dialogue :guilabel:`Ajouter une ou plusieurs "
-"tables PostGIS` , cliquez sur :guilabel:`Connecter` et ajoutez les couches à"
-" votre projet comme d'habitude."
 
 #: ../../docs/training_manual/spatial_databases/simple_feature_model.rst:195
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"

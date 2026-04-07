@@ -2,26 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Transifex Bot <>, 2025
-# Báthory Péter <bathory86p@gmail.com>, 2025
+# Harrissou Sant-anna, 2026
+# Báthory Péter <bathory86p@gmail.com>, 2026
+# Transifex Bot <>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -100,32 +100,6 @@ msgstr ""
 msgid "Layer Coordinate Reference Systems"
 msgstr "Réteg koordináta-rendszerek"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
-msgid ""
-"In order to correctly project data into a specific target CRS, either your "
-"data must contain information about its coordinate reference system or you "
-"will need to manually assign the correct CRS to the layer. For PostGIS "
-"layers, QGIS uses the spatial reference identifier that was specified when "
-"that PostGIS layer was created. For data supported by GDAL, QGIS relies on "
-"the presence of a recognized means of specifying the CRS. For instance, for "
-"the Shapefile format this is a file containing an ESRI Well-Known Text "
-"(:index:`WKT`) representation of the layer's CRS. This projection file has "
-"the same base name as the :file:`.shp` file and a :file:`.prj` extension. "
-"For example, :file:`alaska.shp` would have a corresponding projection file "
-"named :file:`alaska.prj`."
-msgstr ""
-"Az adatok helyes cél koordináta-rendszerbe vetítéséhez vagy az adatban kell "
-"tartalmazza az információt a koordináta-rendszerről, vagy Önnek kell a "
-"réteghez a helyes koordináta-rendszert hozzárendelnie. PostGIS rétegek "
-"esetében a QGIS a PostGIS réteg létrehozásakor megadott térbeli "
-"vonatkoztatási rendszert használja. A GDAL által támogatott formátumok "
-"esetében a QGIS a koordináta-rendszert meghatározó erőforrások meglétére "
-"támaszkodik. Például Shapefile formátumnál ez egy fájl, ami ESRI Well-Known "
-"Text (:index:`WKT`) ábrázolja a réteg koordináta-rendszerét. Ennek a "
-"vetületfájlnak a neve megegyezik az :file:`.shp` fájléval, csak a "
-"kiterjesztése :file:`.prj`. Például az :file:`alaska.shp` megfelelő "
-"vetületfájlja az :file:`alaska.prj`."
-
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
 msgid ""
 "Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
@@ -149,7 +123,7 @@ msgstr ""
 "Nyissa meg a :menuselection:`Beállítások -->` |options| "
 ":menuselection:`Beállítások --> Koordináta-rendszer` lapot"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:439
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:437
 msgid "options"
 msgstr "options"
 
@@ -181,11 +155,11 @@ msgstr ""
 "|radioButtonOn| :guilabel:`Koordináta-rendszer meghagyása ismeretlennek (ne tegyen semmit)`: nem fog rákérdezni a koordináta-rendszer kiválasztására, ha egy koordináta-rendszer nélküli réteget tölt be, így azt későbbi időpontra halasztja. Kényelmes, ha több réteget tölt be egyszerre. Az ilyen rétegek mellett a :guilabel:`Rétegek` panelen |indicatorNoCRS| ikon látható. Ezek a rétegek nem lesznek hivatkozva, a \n"
 "koordinátáikat pusztán számnak, Földtől független értéknek tekintjük, ami hasonló viselkedés, mint ami minden réteggel történik, ha :ref:`a projekt koordináta-rendszer nélkülinek van beállítva <project_crs>`."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:437
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:435
 msgid "indicatorNoCRS"
 msgstr "indicatorNoCRS"
 
@@ -206,7 +180,7 @@ msgstr ""
 "az adatok eredeti szerzővel, hogy meghatározza a megfelelő koordináta-"
 "rendszert."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:439
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
@@ -384,7 +358,7 @@ msgstr ""
 "használják, mint amilyen a szerepjáték térképek, épületek, mikroszkopikus "
 "dolgok térképezése. Ez esetben:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:453
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:451
 msgid "unchecked"
 msgstr "unchecked"
 
@@ -428,35 +402,17 @@ msgstr ""
 "egymást. A mértékegységek használata és az ellipszoid beállítás elérhető és "
 "van is értelme, ezeknek megfelelően végezhet számításokat."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
-msgid ""
-"Whenever you select a new CRS for your QGIS project, the measurement units "
-"will automatically be changed in the :guilabel:`General` tab of the "
-":guilabel:`Project properties` dialog (:menuselection:`Project --> "
-"Properties...`) to match the selected CRS. For instance, some CRSs define "
-"their coordinates in feet instead of meters, so setting your QGIS project to"
-" one of these CRSs will also set your project to measure using feet by "
-"default."
-msgstr ""
-"Amikor egy QGIS projekthez új koordináta-rendszert választ, mérések "
-"mértékegységei automatikusan módosulnak a :guilabel:`Projekt tulajdonságok` "
-"párbeszédablak :guilabel:`Általános` lapján (:menuselection:`Projekt --> "
-"Tulajdonságok…`), hogy megfeleljenek a kiválasztott koordináta-rendszernek. "
-"Például egyes koordináta-rendszerek a koordinátáikat méter helyett lábban "
-"határozzák meg, így a QGIS projektben egy ilyen koordináta-rendszert "
-"kiválasztva a projektet is alapértelmezés szerint lábban mérésre állítja be."
-
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:191
 msgid "**Setting the project CRS from a layer**"
 msgstr "**Projekt koordináta-rendszerének beállítása egy rétegből**"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
 msgid "You can assign a CRS to the project using a layer CRS:"
 msgstr ""
 "Hozzárendelhet a projekthez koordináta-rendszert egy réteg koordináta-"
 "rendszere alapján is:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
 "the CRS"
@@ -464,12 +420,12 @@ msgstr ""
 "A :guilabel:`Rétegek` panelen kattintson jobb egérgombbal arra a rétegre, "
 "amiből a koordináta-rendszert venni szeretné"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
 msgid "Select :guilabel:`Set project CRS from Layer`."
 msgstr ""
 "Válassza a :guilabel:`Projekt vetület beállítása a rétegből` menüpontot."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
 msgid ""
 "The project's CRS is redefined using the layer's CRS. Map canvas extent, "
 "coordinates display are updated accordingly and all the layers in the "
@@ -479,15 +435,15 @@ msgstr ""
 "kiterjedése, a koordinátamegjelenítés ennek megfelelően frissül és a projekt"
 " összes rétege röptében át lesz számolva az új koordináta-rendszerbe."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:208
 msgid "Coordinate Reference System Selector"
 msgstr "Koordináta-rendszer választó"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
 msgid "CRS Selector"
 msgstr "CRS-választó"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:219
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
 msgid ""
 "This dialog helps you assign a Coordinate Reference System to a project or a"
 " layer, provided a set of projection databases. Items in the dialog are:"
@@ -496,7 +452,7 @@ msgstr ""
 "rendszert rendelni egy projekthez vagy réteghez. A párbeszédablak elemei a "
 "következők:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:222
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:220
 msgid ""
 "**Filter**: If you know the EPSG code, the identifier, or the name for a "
 "Coordinate Reference System, you can use the search feature to find it. "
@@ -505,7 +461,7 @@ msgstr ""
 "**Szűrő**: Ha tudja a koordináta-rendszer EPSG-kódját, azonosítóját vagy "
 "nevét, kereshet ezekre. Adja meg az EPSG-kódot, azonosítót, vagy a nevet."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:223
 msgid ""
 "**Recently used coordinate reference systems**: If you have certain CRSs "
 "that you frequently use in your everyday GIS work, these will be displayed "
@@ -516,7 +472,7 @@ msgstr ""
 "során, azok meg fognak jelenni ebben a listában. Kattintson egy elemre a "
 "hozzárendelt koordináta-rendszer kiválasztásához."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:226
 msgid ""
 "**Coordinate reference systems of the world**: This is a list of all CRSs "
 "supported by QGIS, including Geographic, Projected and Custom coordinate "
@@ -528,7 +484,7 @@ msgstr ""
 "egyénieket. Koordináta-rendszer megadásához válassza ki a listából lenyitva "
 "a megfelelő kategóriát. Az aktív koordináta-rendszer előre ki van választva."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:232
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:230
 msgid ""
 "**PROJ text**: This is the CRS string used by the PROJ projection engine. "
 "This text is read-only and provided for informational purposes."
@@ -536,7 +492,7 @@ msgstr ""
 "**PROJ szöveg**: Ez a PROJ vetületi motor által használt koordináta-rendszer"
 " definíciós szöveg. Ez a szöveg csak olvasható, és tájékoztató jellegű."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:236
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:234
 msgid ""
 "If you want to remove a recently used CRS from the list that can be done in "
 "several ways:"
@@ -544,7 +500,7 @@ msgstr ""
 "Ha egy nemrég használt CRS-t szeretne eltávolítani a listáról, ez "
 "többféleképpen is megtehető:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:237
 msgid ""
 "Press |clearItem| :sup:`Remove from recently used CRS` button on the right "
 "side."
@@ -552,15 +508,15 @@ msgstr ""
 "A jobb oldalon található |clearItem| :sup:`Eltávolítás a legutóbb használt "
 "CRS-ek közül` gombot megnyomva."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
 msgid "clearItem"
 msgstr "clearItem"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
 msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
 msgstr "Press :kbd:`Del` billentyűvel a törlendő CRS kijelölése után."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:242
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:240
 msgid ""
 "Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected "
 "CRS from recently used CRS` to remove selected CRS or |clearConsole| "
@@ -571,11 +527,11 @@ msgstr ""
 "menüpontot vagy az |clearConsole| :guilabel:`Összes nemrég használt CRS "
 "törlése` menüpontot."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
 msgid "clearConsole"
 msgstr "clearConsole"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:248
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:246
 msgid ""
 "The CRS selector also shows a rough preview of the geographic area for which"
 " a selected CRS is valid for use. Many CRSs are designed only for use in "
@@ -592,11 +548,11 @@ msgstr ""
 "hozzávetőleges használati területet. Ezenkívül ez az előnézeti térkép az "
 "aktuális fő térképvászon aktuális kiterjedését is megjelöli."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:261
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:259
 msgid "Custom Coordinate Reference System"
 msgstr "Egyéni koordináta-rendszer"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:261
 msgid ""
 "If QGIS does not provide the coordinate reference system you need, you can "
 "define a custom CRS. To define a CRS, select |customProjection| "
@@ -611,11 +567,11 @@ msgstr ""
 "tárolódnak. Az egyéni koordináta-rendszereken kívül ez az adatbázis "
 "tartalmazza a térbeli könyvjelzőket és a többi egyéni adatot."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:435
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
 msgid "customProjection"
 msgstr "customProjection"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:269
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
 msgid ""
 "Defining a custom CRS in QGIS requires a good understanding of the PROJ "
 "projection library. To begin, refer to \"Cartographic Projection Procedures "
@@ -629,7 +585,7 @@ msgstr ""
 "Evendentől, U.S. Geological Survey Open-File Report 90-284, 1990 (elérhető "
 "itt: https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:275
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:273
 msgid ""
 "This manual describes the use of ``proj`` and related command line "
 "utilities. The cartographic parameters used with ``proj`` are described in "
@@ -640,7 +596,7 @@ msgstr ""
 "leírása a felhasználói kézikönyvben található, és megegyeznek a QGIS által "
 "használtakkal."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:279
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:277
 msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
@@ -648,47 +604,47 @@ msgstr ""
 "Az :guilabel:`Egyéni koordináta-rendszer párbeszédablak` csak két paraméter "
 "megadását igényli a koordináta-rendszer definiálásához:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:282
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:280
 msgid "A descriptive name"
 msgstr "Egy beszédes név"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:283
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:281
 msgid "The cartographic parameters in PROJ or WKT format"
 msgstr "A kartográfiai paraméterek PROJ vagy WKT formátumban"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:283
 msgid "To create a new CRS:"
 msgstr "Új koordináta-rendszer készítéséhez:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
 msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
 msgstr ""
 "Kattintson az |symbologyAdd| :sup:`Új koordináta-rendszer hozzáadása` gombra"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:447
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:445
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:286
 msgid "Enter a descriptive name"
 msgstr "Adjon meg egy beszédes nevet"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
 msgid ""
 "Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`"
 msgstr ""
 "Válassza ki a formátumot: ez lehet :guilabel:`Proj karakterlánc` vagy "
 ":guilabel:`WKT`"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:290
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
 msgid "Add the CRS :guilabel:`Parameters`."
 msgstr "Adja meg a koordináta-rendszer :guilabel:`Paramétereket`."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:292
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:290
 msgid "**Prefer storing the CRS definition in WKT format**"
 msgstr "**Inkább WKT formátumban tárolja a CRS definíciót**"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:294
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:292
 msgid ""
 "Although both ``Proj String`` and ``WKT`` formats are supported, it's highly"
 " recommended to store projection definitions in the WKT format. Therefore, "
@@ -702,7 +658,7 @@ msgstr ""
 "meg a paramétereket, majd váltson WKT formátumra. A QGIS átalakítja a "
 "definíciót WKT formátumba, amelyet később elmenthet."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:298
 msgid ""
 "Click :guilabel:`Validate` to test whether the CRS definition is an "
 "acceptable projection definition."
@@ -710,11 +666,11 @@ msgstr ""
 "Kattintson az :guilabel:`Ellenőrzés` gombra, amivel ellenőrizheti, hogy a "
 "megadott koordináta-rendszer definíció elfogadható vetület definíció-e."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:308
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:306
 msgid "Custom CRS Dialog"
 msgstr "Egyéni koordináta-rendszer párbeszédablak"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:311
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:309
 msgid ""
 "You can test your CRS parameters to see if they give sane results. To do "
 "this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
@@ -728,18 +684,18 @@ msgstr ""
 " mezőkben. Kattintson a :guilabel:`Számít` gombra, majd hasonlítsa össze az "
 "eredményt a koordináta-rendszerében lévő ismert értékekkel."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:317
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:315
 msgid "Integrate an NTv2-transformation in QGIS"
 msgstr "NTv2 transzformáció integrálása QGIS-be"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:317
 msgid ""
 "To integrate an NTv2 transformation file in QGIS you need one more step:"
 msgstr ""
 "Ahhoz, hogy a QGIS-t NTv2 transzformációs fájllal egészítse ki, egy további "
 "lépésre lesz szüksége:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
 msgid ""
 "Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
 ":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
@@ -747,7 +703,7 @@ msgstr ""
 "Helyezze el az NTv2 fájlt (.gsb) a QGIS által használt CRS/Proj könyvtárában"
 " (pl. :file:`C:\\\\OSGeo4W64\\\\share\\\\proj` Windows felhasználó esetében)"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:323
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
 msgid ""
 "Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
 " the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
@@ -758,15 +714,15 @@ msgstr ""
 "paramétert az :guilabel:`Egyéni vetület` :guilabel:`Paraméterek` mezőjében "
 "(:menuselection:`Beállítások --> Egyéni vetületek…`)."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:332
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:330
 msgid "Setting an NTv2 transformation"
 msgstr "Egy NTv2 transzformáció beállítása"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:337
 msgid "Datum Transformations"
 msgstr "Dátumtranszformációk"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:341
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
 msgid ""
 "In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
 " whenever you use layers with different coordinate systems QGIS "
@@ -778,7 +734,7 @@ msgstr ""
 " használ, a háttérben a QGIS újravetíti azokat a projekt koordináta-"
 "rendszerébe."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:346
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:344
 msgid ""
 "By default, QGIS will attempt to use the most accurate transformation "
 "available. However, in some cases this may not be possible, e.g. whenever "
@@ -800,7 +756,7 @@ msgstr ""
 "QGIS :ref:`felhasználói profil <user_profiles>` könyvtár alatti :file:`proj`"
 " könyvtárba."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:356
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:354
 msgid ""
 "If desired, QGIS can also prompt you whenever multiple possible "
 "transformations can be made between two CRSs, and allow you to make an "
@@ -811,7 +767,7 @@ msgstr ""
 "között több lehetséges átalakítás is létezik, és segít tudatos döntést hozni"
 " az adathoz legmegfelelőbb transzformáció kiválasztásában."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:360
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:358
 msgid ""
 "This customization is done in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab menu under the "
@@ -821,7 +777,7 @@ msgstr ""
 ":menuselection:`Beállítások… --> Transzformációk` lapon az "
 ":guilabel:`Alapértelmezett dátumtranszformációk` alatt lehet elvégezni:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:364
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:362
 msgid ""
 "using |checkbox| :guilabel:`Ask for datum transformation if several are "
 "available`: when more than one appropriate datum transformation exist for a "
@@ -840,11 +796,11 @@ msgstr ""
 " a választásra és automatikusan alkalmazni fogja minden újonnan létrehozott "
 "projektben."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:371
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:369
 msgid ""
 "or defining a list of appropriate datum transformations to use as defaults "
 "when loading a layer to a project or reprojecting a layer."
@@ -853,7 +809,7 @@ msgstr ""
 "alapértelmezettként használhatók egy réteg projektbe való betöltésekor vagy "
 "egy réteg újravetítésekor."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:374
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:372
 msgid ""
 "Use the |symbologyAdd| button to open the :guilabel:`Select Datum "
 "Transformations` dialog. Then:"
@@ -861,7 +817,7 @@ msgstr ""
 "Használja a |symbologyAdd| gombot a :guilabel:`Dátumtranszformációk "
 "választása` párbeszédablak megnyitásához. Ezután:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:375
 msgid ""
 "Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
 "the |setProjection| :sup:`Select CRS` widget."
@@ -869,15 +825,15 @@ msgstr ""
 "Válassza ki a réteg :guilabel:`Forrás CRS`-ét a legördülőlistából, vagy a "
 "|setProjection| :sup:`Koordináta-rendszer kiválasztása` gombbal."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:445
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
 msgstr "Adja meg hasonló módon a :guilabel:`Cél CRS`-t."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:380
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
 msgid ""
 "A list of available transformations from source to destination will be shown"
 " in the table. Clicking a row shows details on the settings applied and the "
@@ -888,11 +844,11 @@ msgstr ""
 "alkalmazott beállításokról, az elérhető pontosságról és a felhasználási "
 "területről."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:390
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:388
 msgid "Selecting a preferred default datum transformation"
 msgstr "Előnyben részesített alapértelmezett dátumtranszformáció kiválasztása"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:392
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:390
 msgid ""
 "In some cases a transformation may not be available for use on your system. "
 "In this case, the transformation will still be shown (greyed) in this list "
@@ -909,11 +865,11 @@ msgstr ""
 ":ref:`felhasználói profil <user_profiles>` :file:`proj` mappájában lesz "
 "eltárolva."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:399
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:397
 msgid "Find your preferred transformation and select it"
 msgstr "Keresse meg és válassza ki a kívánt transzformációt"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:400
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:398
 msgid ""
 "Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
 " operation fails`"
@@ -921,11 +877,11 @@ msgstr ""
 "Igény szerint állítsa be a |checkbox| :guilabel:`Tartalék transzformációk "
 "engedélyezése` lehetőséget"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:402
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:400
 msgid "Click :guilabel:`OK`."
 msgstr "Kattintson az :guilabel:`OK` gombra."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:404
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:402
 msgid ""
 "A row is added to the table under :guilabel:`Default Datum Transformations` "
 "with information about the :guilabel:`Source CRS`, the "
@@ -937,7 +893,7 @@ msgstr ""
 "transzformációban használt :guilabel:`Művelet`-et és hogy be van-e jelölve a"
 " :guilabel:`Tartalék transzformációk engedélyezése`."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:409
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:407
 msgid ""
 "From now, QGIS automatically uses the selected datum transformations for "
 "further transformation between these two CRSs until you remove it "
@@ -949,15 +905,15 @@ msgstr ""
 "transzformációk során. A lista elemeit törölheti (|symbologyRemove|) vagy "
 "szerkesztheti (|toggleEditing|)."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:449
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:447
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:451
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:449
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:414
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:412
 msgid ""
 "Datum transformations set in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab will be inherited by all "

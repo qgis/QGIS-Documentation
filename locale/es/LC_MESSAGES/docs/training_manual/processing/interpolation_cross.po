@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Eric Armijo, 2025
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -71,34 +70,6 @@ msgstr ""
 "originales para usarlos para evaluar la calidad del proceso de "
 "interpolación."
 
-#: ../../docs/training_manual/processing/interpolation_cross.rst:10
-#, python-format
-msgid ""
-"First, we have to rasterize the points layer and fill the resulting no--data"
-" cells, but using just a fraction of the points in the layer. We will save "
-"10% of the points for a later check, so we need to have 90% of the points "
-"ready for the interpolation. To do so, we could use the *Split shapes layer "
-"randomly* algorithm, which we have already used in a previous lesson, but "
-"there is a better way to do that, without having to create any new "
-"intermediate layer. Instead of that, we can just select the points we want "
-"to use for the interpolation (the 90% fraction), and then run the algorithm."
-" As we have already seen, the rasterizing algorithm will use only those "
-"selected points and ignore the rest. The selection can be done using the "
-"*Random selection* algorithm. Run it with the following parameters."
-msgstr ""
-"Primero, tenemos que rasterizar la capa de puntos y llenar las celdas sin "
-"datos resultantes, pero usando solo una fracción de los puntos de la capa. "
-"Ahorraremos el 10% de los puntos para una verificación posterior, por lo que"
-" debemos tener el 90% de los puntos listos para la interpolación. Para "
-"hacerlo, podríamos usar el algoritmo * Dividir capa de formas aleatoriamente"
-" *, que ya usamos en una lección anterior, pero hay una mejor manera de "
-"hacerlo, sin tener que crear ninguna nueva capa intermedia. En lugar de eso,"
-" podemos seleccionar los puntos que queremos usar para la interpolación (la "
-"fracción del 90%) y luego ejecutar el algoritmo. Como ya hemos visto, el "
-"algoritmo de rasterización usará solo esos puntos seleccionados e ignorará "
-"el resto. La selección se puede hacer usando el algoritmo * Selección "
-"aleatoria *. Ejecútelo con los siguientes parámetros."
-
 #: ../../docs/training_manual/processing/interpolation_cross.rst:14
 #, python-format
 msgid "That will select 90% of the points in the layer to rasterize"
@@ -111,16 +82,6 @@ msgid ""
 msgstr ""
 "La selección es aleatoria, por lo que su selección puede diferir de la "
 "selección que se muestra en la imagen de arriba."
-
-#: ../../docs/training_manual/processing/interpolation_cross.rst:20
-msgid ""
-"Now run the *Rasterize* algorithm to get the first raster layer, and then "
-"run the *Close gaps* algorithm to fill the no--data cells [Cell resolution: "
-"100 m]."
-msgstr ""
-"Ahora ejecute el algoritmo *Rasterize* para obtener la primera capa ráster, "
-"y luego ejecutar el algoritmo *Cerrar espacios* para llenar las celdas sin "
-"datos [Resolución de celda: 100 m]."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:24
 msgid ""
@@ -144,28 +105,6 @@ msgstr ""
 "Como vamos a usar los puntos que no están seleccionados, primero invirtamos "
 "la selección."
 
-#: ../../docs/training_manual/processing/interpolation_cross.rst:30
-msgid ""
-"The points contain the original values, but not the interpolated ones. To "
-"add them in a new field, we can use the *Add raster values to points* "
-"algorithm"
-msgstr ""
-"Los puntos contienen los valores originales, pero no los interpolados. Para "
-"agregarlos en un nuevo campo, podemos usar el algoritmo *Agregar valores "
-"ráster a los puntos*"
-
-#: ../../docs/training_manual/processing/interpolation_cross.rst:34
-msgid ""
-"The raster layer to select (the algorithm supports multiple raster, but we "
-"just need one) is the resulting one from the interpolation. We have renamed "
-"it to *interpolate* and that layer name is the one that will be used for the"
-" name of the field to add."
-msgstr ""
-"La capa ráster a seleccionar (el algoritmo admite múltiples ráster, pero "
-"solo necesitamos una) es la resultante de la interpolación. Lo hemos "
-"renombrado a *interpolar* y ese nombre de capa es el que se usará para el "
-"nombre del campo a agregar."
-
 #: ../../docs/training_manual/processing/interpolation_cross.rst:36
 msgid ""
 "Now we have a vector layer that contains both values, with points that were "
@@ -173,14 +112,6 @@ msgid ""
 msgstr ""
 "Ahora tenemos una capa vectorial que contiene ambos valores, con puntos que "
 "no se usaron para la interpolación."
-
-#: ../../docs/training_manual/processing/interpolation_cross.rst:40
-msgid ""
-"Now, we will use the fields calculator for this task. Open the *Field "
-"calculator* algorithm and run it with the following parameters."
-msgstr ""
-"Ahora, usaremos la calculadora de campos para esta tarea. Abra el algoritmo "
-"*Calculadora de campos* y ejecútelo con los siguientes parámetros."
 
 #: ../../docs/training_manual/processing/interpolation_cross.rst:44
 msgid ""

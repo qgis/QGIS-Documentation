@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
+# Clem Las, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Clem Las, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -45,12 +46,11 @@ msgid ""
 "increases the flexibility you have when considering data sources and "
 "processing methods for solving a GIS problem."
 msgstr ""
-"La conversion entre les formats raster et vecteur vous permet d'utiliser des"
-" données raster et vectorielles lors de la résolution d'un problème de SIG, "
-"aussi bien que l'utilisation des différentes méthodes d'analyse propres à "
-"ces deux formes de données géographiques. Cela augmente la flexibilité que "
-"vous avez lors de l'examen des sources de données et méthodes de traitement "
-"pour résoudre un problème de SIG."
+"La conversion entre les formats raster et vecteur vous permet d'utiliser ces"
+" deux types de données lors de la résolution d'un problème de SIG, ainsi que"
+" les différentes méthodes d'analyse propres à ces deux formes de données "
+"géographiques. Cela augmente les possibilités que vous avez lors de l'examen"
+" des données et méthodes de traitement pour résoudre un problème de SIG."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:10
 msgid ""
@@ -58,9 +58,9 @@ msgid ""
 " data to the other. Let's convert the raster result of the previous lesson "
 "to a vector."
 msgstr ""
-"Pour combiner une analyse raster et vectorielle, vous devez convertir un "
-"type de données à l'autre. Convertissons le résultat raster de la précédente"
-" leçon en un vecteur."
+"Pour combiner une analyse raster et vectorielle, vous devez effectuer la "
+"conversion d'un type de données à l'autre. Convertissons le résultat raster "
+"de la précédente leçon en un vecteur."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:14
 msgid ""
@@ -78,16 +78,6 @@ msgstr ""
 ":abbr:`★★☆ (Niveau intermédiaire)` Pas à pas : L'outil :guilabel:`Raster "
 "vers vecteur`"
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
-msgid ""
-"Start with the map from the last module, :kbd:`raster_analysis.qgs`. There "
-"you should have the :kbd:`all_conditions_simple.tif` calculated during the "
-"previous exercises."
-msgstr ""
-"Débutez avec la carte du dernier module, :kbd:`raster_analysis.qgs`. Ici, "
-"vous devriez avoir le :kbd:`all_conditions_simple.tif` calculé durant les "
-"derniers exercices."
-
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:24
 msgid ""
 "Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
@@ -99,14 +89,6 @@ msgstr ""
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:26
 msgid "Set it up like this:"
 msgstr "Configurez-la comme ceci :"
-
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:31
-msgid ""
-"Change the field name (describing the values of the raster) to "
-":guilabel:`suitable`."
-msgstr ""
-"Changez le nom du champ (décrivant les valeurs du raster) en "
-":guilabel:`suitable`."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:33
 msgid ""
@@ -158,16 +140,6 @@ msgstr ""
 msgid "Answer"
 msgstr "Réponse"
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:56
-msgid ""
-"Open the :guilabel:`Query Builder` by right-clicking on the "
-":guilabel:`all_terrain` layer in the :guilabel:`Layers` panel, and selecting"
-" the :menuselection:`Properties --> Source` tab."
-msgstr ""
-"Ouvrez le :guilabel:`Constructeur de requêtes` en faisant un clic droit sur "
-"la couche :guilabel:`all_terrain` dans le panneau :guilabel:`Couches` puis "
-"en sélectionnant l'onglet :menuselection:`Propriétés --> Source`."
-
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:59
 msgid "Then build the query ``\"suitable\" = 1``."
 msgstr "Construisez ensuite la requête ``\"suitable\" = 1``."
@@ -181,16 +153,6 @@ msgstr ""
 "Cliquez sur :guilabel:`OK` pour valider et enlever tous les polygones qui ne"
 " remplissent pas cette condition. Lorsque visualisés par-dessus le raster, "
 "on constatera que les périmètres se superposent parfaitement :"
-
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:67
-msgid ""
-"You can save this layer by right-clicking on the :guilabel:`all_terrain` "
-"layer in the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`, "
-"then continue as per the instructions."
-msgstr ""
-"Vous pouvez sauvegarder cette couche en faisant un clic droit sur la couche "
-":guilabel:`all_terrain` dans le panneau :guilabel:`Couches` et sélectionnant"
-" :guilabel:`Enregistrer sous...`, puis suivez les instructions."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:72
 msgid ""
@@ -220,10 +182,6 @@ msgstr ""
 "Raster)` pour démarrer cet outil, puis configurez-le comme dans la capture "
 "d'écran ci-dessous :"
 
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:84
-msgid ":guilabel:`Input layer` is :guilabel:`all_terrain`."
-msgstr "la :guilabel:`Couche d'entrée` est :guilabel:`all_terrain`."
-
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:85
 msgid "Field name is :guilabel:`suitable`."
 msgstr "Le nom du champ est :guilabel:`suitable`."
@@ -240,13 +198,6 @@ msgid ""
 msgstr ""
 ":guilabel:`largeur` et :guilabel:`hauteur` sont respectivement ``837`` et "
 "``661`` "
-
-#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:89
-msgid ""
-"Get the :guilabel:`Output extent` from the :guilabel:`all_terrain` layer."
-msgstr ""
-"Récupérez l':guilabel:`Emprise de la sortie` à partir de la couche "
-":guilabel:`all_terrain`."
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:90
 msgid ""

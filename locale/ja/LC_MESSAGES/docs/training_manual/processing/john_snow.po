@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
+# Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: tomoya miyoshi, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -72,15 +72,6 @@ msgid ""
 msgstr ""
 "データセットには、コレラによる死者の位置とポンプの位置のシェープファイル、およびTIFFフォーマットでのOSMレンダリングされた地図が含まれています。このレッスンのための対応QGISプロジェクトを開きます。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:15
-msgid ""
-"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
-"polygons) of the pumps layer, to get the influence zone of each pump. The "
-"*Voronoi Diagram* algorithm can be used for that."
-msgstr ""
-"まず、ポンプレイヤのボロノイ図（別名：ティーセン多角形）を計算し、各ポンプの影響範囲を得ます。 *ボロノイ図* "
-"アルゴリズムは、そのために使用することができます。"
-
 #: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr "かなり簡単ですが、それですでに興味深い情報が得られます。"
@@ -88,38 +79,6 @@ msgstr "かなり簡単ですが、それですでに興味深い情報が得ら
 #: ../../docs/training_manual/processing/john_snow.rst:26
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "明らかに、ほとんどの患者がポリゴンの1つの範囲内にあります"
-
-#: ../../docs/training_manual/processing/john_snow.rst:28
-msgid ""
-"To get a more quantitative result, we can count the number of deaths in each"
-" polygon. Since each point represents a building where deaths occured, and "
-"the number of deaths is stored in an attribute, we cannot just count the "
-"points. We need a weighted count, so we will use the *Count points in "
-"polygon (weighted)* tool."
-msgstr ""
-"より定量的な結果を得るためには、各ポリゴンにおける死者数をカウントできます。各ポイントは死者が発生した建物を表し、死者数は属性に格納されているので、ポイントをカウントするだけではできません。重み付けされたカウントを必要とするので、"
-" *ポリゴンカウントポイント（加重）* ツールを使用します。"
-
-#: ../../docs/training_manual/processing/john_snow.rst:32
-msgid ""
-"The new field will be called *DEATHS*, and we use the *COUNT* field as "
-"weighting field. The resulting table clearly reflects that the number of "
-"deaths in the polygon corresponding to the first pump is much larger than "
-"the other ones."
-msgstr ""
-"新しいフィールドは *DEATH（死亡）* と呼ばれ、そして *COUNT* "
-"フィールドを重みフィールドとして使用します。得られたテーブルは、明らかに第一のポンプに対応するポリゴンにおける死者数が他のものよりもはるかに大きいことを反映しています。"
-
-#: ../../docs/training_manual/processing/john_snow.rst:36
-msgid ""
-"Another good way of visualizing the dependence of each point in the "
-"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
-"line to the closest one. This can be done with the *Distance to nearest hub*"
-" tool, and using the configuration shown next."
-msgstr ""
-"``Pumps（ポンプ）`` レイヤのあるポイントと ``Cholera_deaths（コレラ死者）`` "
-"レイヤの各ポイントとの依存関係を視覚化するもう一つの良い方法は、最も近いものへ線を描くことです。これは、*最寄のハブへの距離* "
-"ツールで行われ、次のような構成を使用できます。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
@@ -134,24 +93,6 @@ msgid ""
 "cases than other."
 msgstr ""
 "線の数は中央のポンプの方が多いですが、これは死者数ではなくコレラ患者が発見された場所の数を表していることを忘れないでください。それは代表的なパラメータですが、ある場所では他の場所よりも多くの患者が発生している可能性が考慮されていません。"
-
-#: ../../docs/training_manual/processing/john_snow.rst:46
-msgid ""
-"A density layer will also give us a very clear view of what is happening. We"
-" can create it with the *Kernel density* algorithm. Using the "
-"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
-"100, the extent and cellsize of the streets raster layer, we get something "
-"like this."
-msgstr ""
-"密度レイヤはまた、何が起きているかを非常に明確に示してくれます。それは *カーネル密度* アルゴリズムで作成できます。 "
-"*Cholera_deaths（コレラ死者）* レイヤ、重みフィールドとしてその *COUNT（数）* "
-"フィールド、半径を100、街路ラスタレイヤの範囲とセルサイズを使用すると、次のようになります。"
-
-#: ../../docs/training_manual/processing/john_snow.rst:50
-msgid ""
-"Remember that, to get the output extent, you do not have to type it. Click "
-"on the button on the right-hand side and select *Use layer/canvas extent*."
-msgstr "出力範囲の設定に入力する必要はありません。右側のボタンをクリックし、 *レイヤ/キャンバス範囲を使用* を選択します。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""

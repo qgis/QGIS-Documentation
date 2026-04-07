@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -89,63 +89,9 @@ msgstr ""
 "Neste caso, precisamos de uma camada vetorial (restrita a pontos) e um "
 "atributo dela, com os valores que utilizaremos para a rasterização."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:14
-msgid ""
-"The next step is to compute the extent of the selected features. That's "
-"where we can use the model-only tool called *Vector layer bounds*. First, we"
-" will have to create a layer that has the extent of those selected features."
-" Then, we can use this tool on that layer."
-msgstr ""
-"O próximo passo é calcular a extensão das características selecionadas. É aí"
-" que podemos usar a ferramenta somente modelo chamada *Limites da camada "
-"vetorial*. Primeiro, teremos que criar uma camada que tenha a extensão "
-"dessas características selecionadas. Depois, podemos usar esta ferramenta "
-"nessa camada."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:16
-msgid ""
-"An easy way of creating a layer with the extent of the selected features is "
-"to compute a convex hull of the input points layer. It will use only the "
-"selected point, so the convex hull will have the same bounding box as the "
-"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
-"convex hull layer as input. It should look this in the modeler canvas:"
-msgstr ""
-"Uma maneira fácil de criar uma camada com a extensão das características "
-"selecionadas é calcular um casco convexo da camada de pontos de entrada. Ele"
-" usará apenas o ponto selecionado, de modo que o casco convexo terá a mesma "
-"caixa de delimitação que a seleção. Então podemos adicionar o algoritmo "
-"*Limites da camada vetorial*, e usar a camada convexa do casco como entrada."
-" Ele deve ser visto na tela do modelador:"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:20
-msgid ""
-"The result from the *Vector layer bounds* is a set of four numeric values "
-"and a extent object. We will use both the numeric outputs and the extent for"
-" this exercise."
-msgstr ""
-"O resultado dos *Limites da camada vetorial* é um conjunto de quatro valores"
-" numéricos e um objeto de extensão. Usaremos as saídas numéricas e a "
-"extensão para este exercício."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:24
-msgid ""
-"We can now add the algorithm that rasterizes the vector layer, using the "
-"extent from the *Vector layer bounds* algorithm as input."
-msgstr ""
-"Nós podemos agora adicionar o algoritmo que rasteriza a camada vetorial, "
-"usando a extensão do algoritmo *Limites da camada vetorial* como entrada."
-
 #: ../../docs/training_manual/processing/modeler_only.rst:26
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "Preencher os parâmetros do algoritmo como mostrado a seguir:"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:34
-msgid ""
-"Finally, fill the no-data values of the raster layer using the *Close gaps* "
-"algorithm."
-msgstr ""
-"Por fim, preencher os valores sem dados da camada matricial usando o "
-"algoritmo *Fechar lacunas*."
 
 #: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""

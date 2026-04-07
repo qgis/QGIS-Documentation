@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Kwon.Yongchan <ruvyn@naver.com>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -111,24 +110,9 @@ msgstr ""
 "레이어 목록 아래 있는 :guilabel:`Only request features overlapping the view extent` "
 "옵션을 체크 해제하십시오. 여러분의 현재 맵 캔버스가 관심 지역인 남극을 커버하고 있지 않을 수도 있기 때문입니다."
 
-#: ../../docs/training_manual/online_resources/wfs.rst:35
-msgid ""
-"Find the layer :guilabel:`antarctica_country_border`. You can use the "
-":guilabel:`Filter` box at the top."
-msgstr ""
-"``antarctica_country_border`` 레이어를 찾으십시오. 상단의 :guilabel:`Filter` 텍스트란을 사용해도 "
-"됩니다."
-
 #: ../../docs/training_manual/online_resources/wfs.rst:37
 msgid "Click on the layer to select it:"
 msgstr "해당 레이어를 클릭해서 선택한 다음:"
-
-#: ../../docs/training_manual/online_resources/wfs.rst:38
-msgid ""
-"Find and select also the layer :guilabel:`south_poles_wfs`. You might need "
-"to hold :kbd:`Ctrl`."
-msgstr ""
-"``south_poles_wfs`` 레이어도 찾아서 선택하십시오. :kbd:`Ctrl` 키를 누른 채 선택해야 할 수도 있습니다."
 
 #: ../../docs/training_manual/online_resources/wfs.rst:44
 msgid "Click :guilabel:`Add`."
@@ -153,12 +137,6 @@ msgid ""
 msgstr ""
 "레이어들 가운데 하나를 선택하면 피처 선택 및 속성 테이블 도구가 활성화되는 것을 알 수 있을 것입니다. 이 레이어들은 벡터 "
 "레이어입니다."
-
-#: ../../docs/training_manual/online_resources/wfs.rst:56
-msgid ""
-"Select the :guilabel:`south_poles_wfs` layer and open its attribute table. "
-"You should see this:"
-msgstr "``south_poles_wfs`` 레이어를 선택한 다음 속성 테이블을 여십시오. 다음을 보게 될 것입니다:"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:62
 msgid ""
@@ -198,30 +176,6 @@ msgstr ""
 "WFS 레이어를 불러온 다음 쿼리할 수도 있지만, 대부분의 경우 불러오기 전에 쿼리하는 편이 훨씬 효율적입니다. 그렇게 하면 사용자가 "
 "원하는 피처만 요청하기 때문에 훨씬 적은 대역폭을 쓰게 되기 때문입니다."
 
-#: ../../docs/training_manual/online_resources/wfs.rst:87
-msgid ""
-"For example, on the WFS server we're currently using, there is a layer "
-"called :guilabel:`countries (excluding Antarctica)`. Let's say that we want "
-"to know where South Africa is relative to the :guilabel:`south_poles_wfs` "
-"layer (and perhaps also the :guilabel:`antarctica_country_border` layer) "
-"that's already been loaded."
-msgstr ""
-"예를 들어, 현재 사용 중인 WFS 서버 상에 ``countries (excluding Antarctica)`` 라는 레이어가 있습니다."
-" 여기서 (아마도 ``antarctica_country_border`` 레이어와 함께) 이미 불러온 ``south_poles_wfs`` "
-"레이어의 위치와 남아프리카 공화국의 위치를 비교해보고 싶다고 해봅시다."
-
-#: ../../docs/training_manual/online_resources/wfs.rst:93
-msgid ""
-"There are two ways to do this. You can load the whole :guilabel:`countries "
-"...` layer, and then build a query as usual once it's loaded. However, "
-"transmitting the data for all the countries in the world and then only using"
-" the data for South Africa seems a bit wasteful of bandwidth. Depending on "
-"your connection, this dataset can take several minutes to load."
-msgstr ""
-"두 가지 방법이 있습니다. 첫 번째는 ``countries (excluding Antarctica)`` 레이어 전체를 불러온 다음, "
-"평소와 마찬가지로 쿼리를 작성할 수 있습니다. 하지만 전 세계의 모든 나라들의 데이터를 전송받아 남아프리카 공화국의 데이터만 이용하는 "
-"것은 대역폭을 조금 낭비하는 것 같군요. 사용자의 인터넷 연결 속도에 따라 이 데이터를 불러오는 데 몇 분이 걸릴 수도 있습니다."
-
 #: ../../docs/training_manual/online_resources/wfs.rst:99
 msgid ""
 "The alternative is to build the query as a filter before even loading the "
@@ -241,17 +195,6 @@ msgid ""
 "Connect to the server we used before and you should see the list of "
 "available layers."
 msgstr "이전에 사용했던 서버에 연결하면 사용할 수 있는 레이어들의 목록을 볼 수 있을 것입니다."
-
-#: ../../docs/training_manual/online_resources/wfs.rst:105
-msgid ""
-"Find and double-click the :guilabel:`countries (excluding Antarctica)` "
-"layer. The layer name is ``country_borders_excluding_antarctica``. You can "
-"also select the layer and press :guilabel:`Build query` button at the bottom"
-" of the dialog:"
-msgstr ""
-"``countries (excluding Antarctica)`` 레이어를 찾아서 더블클릭하십시오. 레이어 이름이 "
-"``country_borders_excluding_antarctica`` 입니다. 레이어를 선택한 다음 대화창 하단에 있는 "
-":guilabel:`Build query` 버튼을 눌러도 됩니다:"
 
 #: ../../docs/training_manual/online_resources/wfs.rst:113
 msgid ""

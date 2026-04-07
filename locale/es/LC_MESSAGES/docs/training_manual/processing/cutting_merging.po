@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -97,22 +97,6 @@ msgstr ""
 "los límites del área de la ciudad, y luego lo almacenamos en búfer, para "
 "tener una capa ráster que cubra un poco más de lo estrictamente necesario."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:30
-msgid ""
-"To calculate the bounding box , we can use the *Polygon from layer extent* "
-"algorithm"
-msgstr ""
-"Para calcular el cuadro delimitador, podemos usar el algoritmo *Polígono de "
-"extensión de capa*"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:34
-msgid ""
-"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
-"following parameter values."
-msgstr ""
-"Para amortiguarlo, utilizamos el algoritmo *Búfer de distancia fija*, con "
-"los siguientes valores de parámetro."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
@@ -127,29 +111,6 @@ msgstr ""
 "Aquí está el cuadro delimitador resultante obtenido usando los parámetros "
 "que se muestran arriba"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:44
-msgid ""
-"It is a rounded box, but we can easily get the equivalent box with square "
-"angles, by running the *Polygon from layer extent* algorithm on it. We could"
-" have buffered the city limits first, and then calculate the extent "
-"rectangle, saving one step."
-msgstr ""
-"Es un cuadro redondeado, pero podemos obtener fácilmente el cuadro "
-"equivalente con ángulos cuadrados, ejecutando el algoritmo *Polígono desde "
-"extensión de capa* en él. Primero podríamos haber almacenado en búfer los "
-"límites de la ciudad y luego calcular el rectángulo de extensión, ahorrando "
-"un paso."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:50
-msgid ""
-"You will notice that the rasters has a different projection from the vector."
-" We should therefore reproject them before proceeding further, using the "
-"*Warp (reproject)* tool."
-msgstr ""
-"Notará que los rásteres tienen una proyección diferente a la del vector. Por"
-" lo tanto, deberíamos reproyectarlos antes de continuar, usando la "
-"herramienta *Warp(reproject)*."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
@@ -158,25 +119,7 @@ msgstr ""
 "Las versiones recientes tienen una interfaz más compleja. Asegúrese de "
 "seleccionar al menos un método de compresión."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:59
-msgid ""
-"With this layer that contains the bounding box of the raster layer that we "
-"want to obtain, we can crop both of the raster layers, using the *Clip "
-"raster with polygon* algorithm."
-msgstr ""
-"Con esta capa que contiene el cuadro delimitador de la capa ráster que "
-"queremos obtener, podemos recortar ambas capas ráster, usando el algoritmo "
-"*Recortar ráster con polígono*."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:65
-msgid ""
-"Once the layers have been cropped, they can be merged using the SAGA *Mosaic"
-" raster layers* algorithm."
-msgstr ""
-"Una vez que se han recortado las capas, se pueden fusionar utilizando el "
-"algoritmo *Mosaico de Capas ráster*."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:69
+#: ../../docs/training_manual/processing/cutting_merging.rst:68
 msgid ""
 "You can save time merging first and then cropping, and you will avoid "
 "calling the clipping algorithm twice. However, if there are several layers "
@@ -196,71 +139,23 @@ msgstr ""
 "herramientas adicionales para automatizar esa operación. En este ejemplo, "
 "solo tenemos dos capas, por lo que no debería preocuparse por eso ahora."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:77
+#: ../../docs/training_manual/processing/cutting_merging.rst:76
 msgid "With that, we get the final DEM we want."
 msgstr "Con eso, obtenemos el MDE final que queremos."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:81
+#: ../../docs/training_manual/processing/cutting_merging.rst:80
 msgid "Now it is time to compute the slope layer."
 msgstr "Ahora es el momento de calcular la capa de pendiente."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:83
-msgid ""
-"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
-" but the DEM obtained in the last step is not suitable as input, since "
-"elevation values are in meters but cellsize is not expressed in meters (the "
-"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
-"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
-"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
-"then correctly calculate the slope, with either SAGA or GDAL."
-msgstr ""
-"Una capa de pendiente se puede calcular con el algoritmo *Pendiente, "
-"Aspecto, Curvatura*, pero el MDE obtenido en el último paso no es adecuado "
-"como entrada, ya que los valores de elevación están en metros pero el tamaño"
-" de celda no se expresa en metros (la capa usa un SRC con coordenadas "
-"geográficas). Se necesita una reproyección. Para reproyectar una capa "
-"ráster, el algoritmo *Warp (reproyectar)* se puede usar nuevamente. "
-"Reproyectamos en un SRC con metros como unidades (por ejemplo, 3857), para "
-"que luego podamos calcular correctamente la pendiente, ya sea con SAGA o "
-"GDAL."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:91
+#: ../../docs/training_manual/processing/cutting_merging.rst:90
 msgid "With the new DEM, slope can now be computed."
 msgstr "Con el nuevo MDE, ahora se puede calcular la pendiente."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:95
+#: ../../docs/training_manual/processing/cutting_merging.rst:94
 msgid "And here is the resulting slope layer."
 msgstr "Y aquí está la capa de pendiente resultante."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:99
-msgid ""
-"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
-"expressed in degrees or radians; degrees are a more practical and common "
-"unit. In case you calculated it in radians, the *Metric conversions* "
-"algorithm will help us to do the conversion (but in case you didn't know "
-"that algorithm existed, you could use the raster calculator that we have "
-"already used)."
-msgstr ""
-"La pendiente producida por el algoritmo *Pendiente, Aspecto, Curvatura* se "
-"puede expresar en grados o radianes; Los grados son una unidad más práctica "
-"y común. En caso de que lo hayas calculado en radianes, el algoritmo "
-"*Conversiones métricas* nos ayudará a hacer la conversión (pero en caso de "
-"que no supieras que existía el algoritmo, puedes usar la calculadora ráster "
-"que ya hemos usado)."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:107
-msgid ""
-"Reprojecting the converted slope layer back with the *Reproject raster "
-"layer*, we get the final layer we wanted."
-msgstr ""
-"Al volver a proyectar la capa de pendiente convertida con la *Reproyectar "
-"capa ráster*, obtenemos la capa final que queríamos."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
-msgid "todo: Add image"
-msgstr "todo: Agregar imagen"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:112
 msgid ""
 "The reprojection processes might have caused the final layer to contain data"
 " outside the bounding box that we calculated in one of the first steps. This"

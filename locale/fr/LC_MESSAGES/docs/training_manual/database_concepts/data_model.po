@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Isabel Kiefer, 2025
+# Isabel Kiefer, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Isabel Kiefer, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -235,51 +235,6 @@ msgstr ""
 "relation comme guide. D'abord, connectez-vous à l'adresse de la base de "
 "données:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:182
-msgid "Then create a :file:`streets` table:"
-msgstr "Puis créez une table :file:`streets`"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:188
-msgid ""
-":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
-"PostgreSQL to start an integer sequence (auto-number) to populate the "
-":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
-"PostgreSQL to create a character field of 50 characters in length."
-msgstr ""
-":kbd:`serial` et :kbd:`varchar` sont des **types de données**. :kbd:`serial`"
-" indique à PostgreSQL de démarrer une séquence d'entier (numérotation "
-"automatique) pour remplir le champ :kbd:`id` automatiquement à chaque "
-"enregistrement. :kbd:`varchar(50)` indique à PostgreSQL de créer un champ de"
-" caractère de 50 caractères de long."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:193
-msgid ""
-"You will notice that the command ends with a :kbd:`;` - all SQL commands "
-"should be terminated this way. When you press :kbd:`Enter`, psql will report"
-" something like this:"
-msgstr ""
-"Vous remarquerez que les commandes se terminent par le caractère :kbd:`;`. "
-"Toutes les commandes SQL se terminent ainsi. Lorsque vous appuyez sur "
-":kbd:`Entrée`, psql renvoie la sortie suivante:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:205
-msgid ""
-"That means your table was created successfully, with a primary key "
-":kbd:`streets_pkey` using :kbd:`streets.id`."
-msgstr ""
-"Ça signifie que votre table a été créée avec succès et possède une clé "
-"primaire :kbd:`streets_pkey` basée sur :kbd:`streets.id`."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:208
-msgid ""
-"Note: If you hit return without entering a :kbd:`;`, then you will get a "
-"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
-"enter more. Enter :kbd:`;` to run your command."
-msgstr ""
-"Note: si vous avez appuyé sur Entrée sans avoir saisi un :kbd:`;` alors vous"
-" aurez un prompt de la forme :kbd:`address-#`. PG s'attend à ce que vous "
-"terminiez votre commande. Entrez :kbd:`;` avant de la lancer."
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:212
 msgid "To view your table schema, you can do this:"
 msgstr "Pour visualiser le schéma de votre table, vous pouvez saisir:"
@@ -370,14 +325,6 @@ msgstr "Définir la clef lors de la création de la table."
 msgid "Our table has already been created, so let's do it the first way:"
 msgstr "Notre table a déjà été créée, utilisons donc la première méthode:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:308
-msgid ""
-"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
-"match a valid street :kbd:`id` from the :kbd:`streets` table."
-msgstr ""
-"Cela indique à la table :kbd:`people` que le champ :kbd:`street_id` doit "
-"être un :kbd:`id` valide de la table :kbd:`streets`."
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
@@ -411,59 +358,11 @@ msgstr "Qui résulte dans:"
 msgid "Dropping Tables in SQL"
 msgstr "Supprimer des tables en SQL"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:377
-msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
-msgstr ""
-"Si vous voulez supprimer une table, vous pouvez utiliser la commande "
-":kbd:`drop`:"
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:383
 msgid "In our current example, the above command would not work. Why not?"
 msgstr ""
 "Dans notre exemple actuel, la commande ci-dessus ne fonctionnerait pas. "
 "Pourquoi ?"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:388
-msgid ""
-"The reason the DROP command would not work in this case is because the "
-"*people* table has a Foreign Key constraint to the *streets* table. This "
-"means that dropping (or deleting) the *streets* table would leave the "
-"*people* table with references to non-existent *streets* data."
-msgstr ""
-"La raison pour laquelle la commande DROP ne fonctionnerait pas dans ce cas "
-"est que la table *people* possède une contrainte de clé étrangère vers la "
-"table *streets*. Cela signifie que l'abandon (ou la suppression) de la table"
-" *streets* laisserait la table *people* avec des références à des données "
-"*streets* inexistantes."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:393
-msgid ""
-"It is possible to 'force' the *streets* table to be deleted by using the "
-"``CASCADE`` command, but this would also delete the *people* and any other "
-"table which had a relationship to the *streets* table. Use with caution!"
-msgstr ""
-"Il est possible de « forcer » la table *streets* à être supprimée en "
-"utilisant la commande ``CASCADE``, mais cela supprimerait également la table"
-" *people* et toute autre table ayant une relation avec la table *streets*. A"
-" utiliser avec précaution !"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:398
-msgid ""
-"If you used the same :kbd:`drop table` command on the `people` table, it "
-"would be successful:"
-msgstr ""
-"Si vous avez utilisé la même commande :kbd:`drop table` sur la table "
-"`people`, elle devrait avoir réussi:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:406
-msgid ""
-"If you actually did enter that command and dropped the :kbd:`people` table, "
-"now would be a good time to rebuild it, as you will need it in the next "
-"exercises."
-msgstr ""
-"Si vous avez entré cette commande et supprimé la table :kbd:`people`, il "
-"sera bon de la recréer car vous en aurez besoin pour les prochains "
-"exercices."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"

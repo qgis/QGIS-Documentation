@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -52,39 +51,13 @@ msgstr ""
 "può essere utile per scrivere interrogazioni e capire come è costruito il "
 "database."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:10
-msgid ""
-"**The goal of this lesson:** To better understand how to create spatial "
-"entities directly in PostgreSQL/PostGIS."
-msgstr ""
-"**L'obiettivo di questa lezione:** Capire meglio come creare entità spaziali"
-" direttamente in PostgreSQL/PostGIS."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:15
 msgid "Creating Linestrings"
 msgstr "Crea linee"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:17
-msgid ""
-"Going back to our :kbd:`address` database, let's get our streets table "
-"matching the others; i.e., having a constraint on the geometry, an index and"
-" an entry in the geometry_columns table."
-msgstr ""
-"Torna al  database :kbd:`address`, fai in modo che la tabella delle strade "
-"corrisponda alle altre; cioè, avendo un vincolo sulla geometria, un indice e"
-" una voce nella tabella geometry_columns."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:22
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
 msgstr "Prova Tu: :abbr:`★★☆ (Livello Intermedio)`"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:24
-msgid ""
-"Modify the :kbd:`streets` table so that it has a geometry column of type "
-"ST_LineString."
-msgstr ""
-"Modificare la tabella :kbd:`streets`  in modo che abbia una colonna geometry"
-" di tipo ST_LineString."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -216,17 +189,6 @@ msgstr "(acquisizione città in QGIS)"
 msgid "If you're getting the following error message:"
 msgstr "Se stai riscontrando il seguente messaggio di errore:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:176
-msgid ""
-"then it means that while experimenting with creating polygons for the cities"
-" table, you must have deleted some of them and started over. Just check the "
-"entries in your cities table and use any :guilabel:`id` which exists."
-msgstr ""
-"significa che mentre si sperimenta la creazione di poligoni per la tabella "
-"delle città, devi averne cancellati alcuni e ricominciare da capo. Controlla"
-" le voci della tabella delle città e utilizza tutti gli :guilabel:`id` che "
-"sono esistenti."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Looking at Our Schema"
 msgstr "Guarda lo schema"
@@ -263,17 +225,6 @@ msgstr "Crea e carica la delimitazione minima convessa"
 msgid "Access Sub-Objects"
 msgstr "Accedi agli oggetti"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:262
-msgid ""
-"With the SFS-Model functions, you have a wide variety of options to access "
-"sub-objects of SFS Geometries. When you want to select the first vertex "
-"point of every polygon geometry in the table myPolygonTable, you have to do "
-"this in this way:"
-msgstr ""
-"Con le funzioni del modello SFS, hai  una vasta gamma di opzioni per "
-"accedere agli oggetti di Geometrie SFS. Se vuoi selezionare il primo vertice"
-" di ogni poligono nella tabella myPolygonTable, devi fare in questo modo:"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:267
 msgid "Transform the polygon boundary to a linestring:"
 msgstr "Trasforma il policono di confine in una linea:"
@@ -309,18 +260,6 @@ msgstr ""
 #: ../../docs/training_manual/spatial_databases/geometry.rst:314
 msgid "Building Geometries from Other Geometries"
 msgstr "Costruisci geometrie da altre geometrie"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:316
-msgid ""
-"From a given point table, you want to generate a linestring. The order of "
-"the points is defined by their :kbd:`id`. Another ordering method could be a"
-" timestamp, such as the one you get when you capture waypoints with a GPS "
-"receiver."
-msgstr ""
-"Da una determinata tabella di punti, vuoi generare una linea. L'ordine dei "
-"punti è definito dal loro  :kbd:`id`. Un altro metodo per ordinare potrebbe "
-"essere una tabella oraria, come quello che si ottiene quando si acquisiscono"
-" punti con un ricevitore GPS."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:324
 msgid ""
@@ -363,14 +302,6 @@ msgid ""
 msgstr ""
 "Per rilevare la differenza tra due tabelle con la stessa struttura, è "
 "possibile utilizzare la parola PostgreSQL ``EXCEPT``:"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:361
-msgid ""
-"As the result, you will get all records from table_a which are not stored in"
-" table_b."
-msgstr ""
-"Come risultato, otterrai tutti i record di table_a che non sono memorizzati "
-"in table_b."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:365
 msgid "Tablespaces"

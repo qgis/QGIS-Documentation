@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -72,20 +71,6 @@ msgstr "**Obiettivo di questa lezione:** Come usare un WMS e i suoi limiti."
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Loading a WMS Layer"
 msgstr ":abbr:`★☆☆ (Livello Base)` Passo dopo passo: Caricare un Layer WMS"
 
-#: ../../docs/training_manual/online_resources/wms.rst:21
-msgid ""
-"For this exercise, you can either use the basic map you made at the start of"
-" the course, or just start a new map and load some existing layers into it. "
-"For this example, we used a new map and loaded the original "
-":guilabel:`places`, :guilabel:`landuse` and :guilabel:`protected_areas` "
-"layers and adjusted the symbology:"
-msgstr ""
-"Per questo esercizio, puoi usare la mappa di base che hai fatto all'inizio "
-"del corso, o semplicemente iniziare una nuova mappa e caricarvi alcuni layer"
-" esistenti. Per questo esempio, abbiamo usato una nuova mappa e caricato i "
-"layer originali :guilabel:`places`, :guilabel:`landuse` e "
-":guilabel:`protected_areas` e abbiamo modificato la simbologia:"
-
 #: ../../docs/training_manual/online_resources/wms.rst:31
 msgid ""
 "Load these layers into a new map, or use your original map with only these "
@@ -124,20 +109,6 @@ msgstr "dataSourceManager"
 #: ../../docs/training_manual/online_resources/wms.rst:274
 msgid "addWmsLayer"
 msgstr "addWmsLayer"
-
-#: ../../docs/training_manual/online_resources/wms.rst:45
-msgid ""
-"Remember how you connected to a SpatiaLite or GeoPackage database at the "
-"beginning of the course. The :guilabel:`landuse`, :guilabel:`buildings`, and"
-" :guilabel:`roads` layers are stored in a database. To use those layers, you"
-" first needed to connect to the database. Using a WMS is similar, with the "
-"exception that the layers are on a remote server."
-msgstr ""
-"Ricorda come ti sei connesso a un database SpatiaLite o GeoPackage "
-"all'inizio del corso. I layer :guilabel:`landuse`, :guilabel:`buildings`, e "
-":guilabel:`roads` sono memorizzati in un database. Per usare questi layer, "
-"devi prima connetterti al database. Usare un WMS è simile, con l'eccezione "
-"che i layer sono su un server remoto."
 
 #: ../../docs/training_manual/online_resources/wms.rst:51
 msgid ""
@@ -193,16 +164,6 @@ msgstr ""
 msgid "These are all the layers hosted by this WMS server."
 msgstr "Questi sono tutti i layer ospitati da questo server WMS"
 
-#: ../../docs/training_manual/online_resources/wms.rst:79
-msgid ""
-"Click once on the :guilabel:`OSM-WMS` layer. This will display the default "
-":guilabel:`Coordinate Reference System` in use and the number of CRSes "
-"supported by the dataset:"
-msgstr ""
-"Fai clic una volta sul layer :guilabel:`OSM-WMS`. Questo mostrerà il "
-":guilabel:`Sistema di Riferimento delle Coordinate` predefinito in uso e il "
-"numero di Sistemi di Riferimento delle Coordinate supportati dal dataset:"
-
 #: ../../docs/training_manual/online_resources/wms.rst:86
 msgid ""
 "Since we're not using ``EPSG:4326 - WGS 84`` for our map, let's find one "
@@ -247,16 +208,6 @@ msgstr ""
 "Fai clic su :guilabel:`OK`. Il sistema di riferimento delle coordinate "
 "assegnato alla voce viene modificato."
 
-#: ../../docs/training_manual/online_resources/wms.rst:101
-msgid ""
-"Click :guilabel:`Add` to load the layer in your project using "
-":guilabel:`Layer name`` (default is :guilabel:`OpenStreetMap WMS - by "
-"terrestris`)."
-msgstr ""
-"Clicca :guilabel:`Aggiungi` per caricare il layer nel tuo progetto "
-"utilizzando :guilabel:`Nome layer`` (impostato di default su "
-":guilabel:`OpenStreetMap WMS - di terrestris`)."
-
 #: ../../docs/training_manual/online_resources/wms.rst:103
 msgid ""
 "Close the :guilabel:`Data Source Manager` dialog if not done automatically"
@@ -280,16 +231,6 @@ msgstr ""
 "Riduci lo zoom per ottenere una vista globale dei layer. Noterai che i layer"
 " non sono posizionati correttamente (vicino all'ovest dell'Africa). Questo "
 "perché la proiezione \"al volo\" è disabilitata."
-
-#: ../../docs/training_manual/online_resources/wms.rst:113
-msgid ""
-"Let's enable the reprojection again, but using the same projection as the "
-":guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo "
-"Mercator`."
-msgstr ""
-"Abilitiamo di nuovo la riproiezione, ma usando la stessa proiezione del "
-"layer :guilabel:`OpenStreetMap WMS`, che è :guilabel:`WGS 84 / Pseudo "
-"Mercator`."
 
 #: ../../docs/training_manual/online_resources/wms.rst:116
 msgid "Open the :menuselection:`Project --> Properties... --> CRS` tab"
@@ -401,10 +342,6 @@ msgid ""
 msgstr ""
 "Aggiungi il server WMS ``eAtlas`` con questo URL: "
 "``https://maps.eatlas.org.au/maps/wms``"
-
-#: ../../docs/training_manual/online_resources/wms.rst:167
-msgid "Load a :guilabel:`World: Hillshading` layer into the map."
-msgstr "Carica un layer :guilabel:`World: Hillshading` nella mappa."
 
 #: ../../docs/training_manual/online_resources/wms.rst:168
 msgid ""
@@ -524,14 +461,6 @@ msgstr ""
 "tariffe né ha restrizioni di accesso ed è globale. Pertanto, soddisfa i "
 "requisiti. Tuttavia, tenete presente che questo è solo un esempio. Ci sono "
 "molti altri server WMS tra cui scegliere."
-
-#: ../../docs/training_manual/online_resources/wms.rst:225
-msgid ""
-"Add the :guilabel:`bluemarble` layer from the :guilabel:`MapServer "
-"Demonstration Server`. Is that a suitable dataset for our study area?"
-msgstr ""
-"Aggiungi il layer :guilabel:`bluemarble` dal :guilabel:`MapServer "
-"Demonstration Server`. È un dataset adatto per la nostra area di studio?"
 
 #: ../../docs/training_manual/online_resources/wms.rst:231
 msgid ""

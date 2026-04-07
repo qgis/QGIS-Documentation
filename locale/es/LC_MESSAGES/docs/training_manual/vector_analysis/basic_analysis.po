@@ -2,26 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Lucía Betancourt, 2025
-# Eric Armijo, 2025
-# Harrissou Sant-anna, 2025
+# Eric Armijo, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -231,14 +230,6 @@ msgstr "Cárgalos, y además :file:`landuse.sqlite`."
 msgid "Zoom to the layer extent to see |majorUrbanName|, South Africa"
 msgstr "Zoom a la extensión de la capa para ver |majorUrbanName|, Sudáfrica"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:91
-msgid ""
-"Before proceeding we will filter the :guilabel:`roads` layer, in order to "
-"have only some specific road types to work with."
-msgstr ""
-"Antes de proceder filtraremos la capa :guilabel:`roads`, para tener solo "
-"unos tipos específicos de carreteras con las que trabajar."
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:94
 msgid ""
 "Some roads in OSM datasets are listed as ``unclassified``, ``tracks``, "
@@ -285,16 +276,6 @@ msgid ""
 msgstr ""
 "``IS NOT NULL`` combinado con el operador ``AND`` excluye roads sin valor en"
 " el campo``highway``."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
-msgid ""
-"Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
-"helps you remember that this layer has a filter activated, so some features "
-"may not be available in the project."
-msgstr ""
-"Note el icono |indicatorFilter| al lado de la capa :guilabel:`roads`. Le "
-"ayuda a recordar que esta capa tiene un filtro activado, por lo que algunas "
-"entidades pueden no estar disponibles en el proyecto."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
 msgid "indicatorFilter"
@@ -343,12 +324,6 @@ msgid ""
 msgstr ""
 "En este ejemplo, estamos utilizando el SRC *WGS 84 / UTM zone 34S*, pero "
 "debe usar un SRC UTM que sea más apropiado para su región."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
-msgid ""
-"Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
-msgstr ""
-"Click derecho en la capa :guilabel:`roads` en el panel :guilabel:`Capas`"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
@@ -580,18 +555,6 @@ msgstr ""
 "Tenga en cuenta que hay áreas distintas dentro de su búfer, que corresponden"
 " a cada carretera individual. Para deshacerse de este problema:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
-msgid ""
-"Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
-" :guilabel:`Dissolve results` enabled."
-msgstr ""
-"Desmarque la capa :guilabel:`roads_buffer_50m` y recree el buffer con "
-":guilabel:`Disolver resultados` activado."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
-msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
-msgstr "Guarde la salida como :guilabel:`roads_buffer_50m_dissolved`"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
 msgstr "Click en :guilabel:`Ejecutar` y cierre el diálogo :guilabel:`Buffer`"
@@ -646,36 +609,9 @@ msgstr "Respuesta"
 msgid "Your buffer dialog should look like this:"
 msgstr "Su diálogo de búfer debería verse así:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
-msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
-msgstr "La :guilabel:`Buffer distance` es :guilabel:`1` kilómetro."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
-msgid ""
-"The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
-" is optional, but it's recommended, because it makes the output buffers look"
-" smoother. Compare this:"
-msgstr ""
-"El valor de :guilabel:`Segments to approximate` se establece en "
-":guilabel:`20`. Esto es opcional, pero se recomienda, porque hace que los "
-"búferes de salida se vean más fluidos. Compara esto:"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
 msgid "To this:"
 msgstr "A esto:"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
-msgid ""
-"The first image shows the buffer with the :guilabel:`Segments to "
-"approximate` value set to :guilabel:`5` and the second shows the value set "
-"to :guilabel:`20`. In our example, the difference is subtle, but you can see"
-" that the buffer's edges are smoother with the higher value."
-msgstr ""
-"La primera imagen muestra el búfer con el valor de :guilabel:`Segments to "
-"approximate` establecido en :guilabel:`5` y la segunda muestra el valor "
-"establecido en :guilabel:`20`. En nuestro ejemplo, la diferencia es sutil, "
-"pero puede ver que los bordes del búfer son más suaves con el valor más "
-"alto."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Overlapping Areas"
@@ -769,16 +705,6 @@ msgstr ""
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr "Click en :guilabel:`Ejecutar` y cierre el diálogo"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
-msgid ""
-"You will probably find that not much seems to have changed. If so, move the "
-":guilabel:`well_located_houses` layer to the top of the layers list, then "
-"zoom in."
-msgstr ""
-"Probablemente encontrará que no parece haber cambiado mucho. Si es así, "
-"mueva la capa :guilabel:`well_located_houses` a la parte superior de la "
-"lista de capas, luego amplíe."
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
@@ -812,25 +738,6 @@ msgstr ""
 "una escuela y a menos de 50m de una carretera. Ahora tenemos que reducir la "
 "selección para que sólo nos muestre los edificios que están a menos de 500 "
 "metros de un restaurante."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
-msgid ""
-"Using the processes described above, create a new layer called "
-":guilabel:`houses_restaurants_500m` which further filters your "
-":guilabel:`well_located_houses` layer to show only those which are within "
-"500m of a restaurant."
-msgstr ""
-"Usando los procesos descritos anteriormente, cree una nueva capa llamada "
-":guilabel:`C` que filtre aún más su capa :guilabel:`well_located_houses` "
-"para mostrar solo aquellos que están dentro de 500m de un restaurante."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
-msgid ""
-"To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
-" two step process:"
-msgstr ""
-"Para crear la nueva capa :guilabel:`houses_restaurants_500m`, pasamos por un"
-" proceso de dos pasos:"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
@@ -867,17 +774,6 @@ msgid ""
 msgstr ""
 "Para ver qué edificios son del tamaño correcto (más de 100 metros "
 "cuadrados), necesitamos calcular su tamaño."
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
-msgid ""
-"Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
-"Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
-" button in the main toolbar or in the attribute table window"
-msgstr ""
-"Seleccione la capa :guilabel:`houses_restaurants_500m` y abra la "
-"*Calculadora de campo* haciendo click en el botón |CalculateField| "
-":sup:`Abrir calculadora de campo` en la barra de herramientas principal o en"
-" la ventana de la tabla de atributos"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"

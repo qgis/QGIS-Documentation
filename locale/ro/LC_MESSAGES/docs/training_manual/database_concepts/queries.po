@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Sorin Călinică <scalinica@gmail.com>, 2025
+# Sorin Călinică <scalinica@gmail.com>, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
@@ -34,14 +34,6 @@ msgstr ""
 "alăturați <translation_guidelines>`. În prezent, această pagină este tradusă"
 " |translation progress|."
 
-#: ../../docs/training_manual/database_concepts/queries.rst:4
-msgid ""
-"When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
-" you are interrogating the database for information."
-msgstr ""
-"Când scrieți o comandă :kbd:`SELECT ...` interogați baza de date pentru "
-"informații."
-
 #: ../../docs/training_manual/database_concepts/queries.rst:7
 msgid ""
 "**The goal of this lesson:** To learn how to create queries that will return"
@@ -49,18 +41,6 @@ msgid ""
 msgstr ""
 "**Scopul acestei lecții:** De a afla cum să creați interogări, care vor "
 "returna informații utile."
-
-#: ../../docs/training_manual/database_concepts/queries.rst:10
-msgid ""
-"If you did not do so in the previous lesson, add the following people "
-"objects to your :kbd:`people` table. If you receive any errors related to "
-"foreign key constraints, you will need to add the 'Main Road' object to your"
-" streets table first"
-msgstr ""
-"Dacă nu ați făcut asta în lecția precedentă, adăugați următoarele obiecte "
-"persoană în tabela :kbd:`people`. Dacă primiți erori legate de "
-"constrângerile de cheie externă, va trebui să adăugați mai întâi obiectul "
-"'Main Road' în tabela de străzi."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:28
 msgid "Ordering Results"
@@ -117,33 +97,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/queries.rst:100
 msgid "You can also filter based on text data:"
 msgstr "Puteți filtra, de asemenea, pe baza datelor de text:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:112
-msgid ""
-"Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
-"them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
-"Norman` entry has not been returned."
-msgstr ""
-"Am folosit clauza :kbd:`LIKE` pentru a găsi toate numele care conțin un "
-":kbd:`s`. De remarcat că această interogare ține cont de capitalizare, deci "
-"înregistrarea :kbd:`Sally Norman` nu a fost întoarsă."
-
-#: ../../docs/training_manual/database_concepts/queries.rst:116
-msgid ""
-"If you want to search for a string of letters regardless of case, you can do"
-" a case in-sensitive search using the :kbd:`ILIKE` clause:"
-msgstr ""
-"Dacă doriți să căutați un șir de caractere indiferent de capitalizare, "
-"puteți executa o căutare care nu ține cont de capitalizare folosind clauza "
-":kbd:`ILIKE`:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:129
-msgid ""
-"That query returned every **people** object with an :kbd:`r` or :kbd:`R` in "
-"their name."
-msgstr ""
-"Acea interogare a returnat fiecare obiect **people** care conține un "
-":kbd:`r` sau un :kbd:`R` în nume."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:133
 msgid "Joins"
@@ -215,14 +168,6 @@ msgstr ""
 "Haideți să aruncăm o privire rapidă la datele noastre în urma modificărilor:"
 " putem refolosi interogarea din secțiunea anterioară:"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:204
-msgid ""
-"Now let's show you a sub-selection on this data. We want to show only people"
-" who live in ``street_id`` number :kbd:`1`:"
-msgstr ""
-"Acum, vom efectua o sub-selecție asupra acestor date. Vrem să arătăm doar "
-"persoanele care locuiesc în ``street_id`` numărul :kbd:`1`:"
-
 #: ../../docs/training_manual/database_concepts/queries.rst:227
 msgid ""
 "Although this is a very simple example and unnecessary with our small data-"
@@ -253,14 +198,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/queries.rst:251
 msgid "If we want the counts to be summarised by street name we can do this:"
 msgstr "Dacă dorim un rezumat după numele străzii, putem proceda astfel:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:270
-msgid ""
-"Because we have not used an :kbd:`ORDER BY` clause, the order of your "
-"results may not match what is shown here."
-msgstr ""
-"Pentru că nu am folosit clauza :kbd:`ORDER BY`, ordinea rezultatelor dvs. ar"
-" putea să nu se potrivească ce ceea ce este prezentat aici."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:274
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"

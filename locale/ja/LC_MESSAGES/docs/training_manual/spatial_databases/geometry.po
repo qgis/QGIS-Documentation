@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: tomoya miyoshi, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -49,34 +48,13 @@ msgstr ""
 " のような GIS "
 "を使用するでしょう。しかし、それらがどのように形作られているかを知ることは、クエリを書いたりデータベースがどのように作られているかを理解するのに役立ちます。"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:10
-msgid ""
-"**The goal of this lesson:** To better understand how to create spatial "
-"entities directly in PostgreSQL/PostGIS."
-msgstr "**このレッスンの目的** PostgreSQL/PostGIS で空間要素を直接作成する方法をよく理解する。"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:15
 msgid "Creating Linestrings"
 msgstr "ラインストリングの作成"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:17
-msgid ""
-"Going back to our :kbd:`address` database, let's get our streets table "
-"matching the others; i.e., having a constraint on the geometry, an index and"
-" an entry in the geometry_columns table."
-msgstr ""
-":kbd:`address` "
-"データベースに戻って、他に一致するstreetテーブルを取得してみましょう。すなわち、ジオメトリ、インデックスとGEOMETRY_COLUMNSテーブル中のエントリに制約を持ちます。"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:22
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
 msgstr "やってみよう: :abbr:`★★☆ （中級レベル）`"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:24
-msgid ""
-"Modify the :kbd:`streets` table so that it has a geometry column of type "
-"ST_LineString."
-msgstr "タイプST_LineStringのジオメトリ列を持つように :kbd:`street` テーブルを修正します。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -186,15 +164,6 @@ msgstr "（QGISでcitiesをキャプチャする）"
 msgid "If you're getting the following error message:"
 msgstr "次のエラーメッセージが出た場合:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:176
-msgid ""
-"then it means that while experimenting with creating polygons for the cities"
-" table, you must have deleted some of them and started over. Just check the "
-"entries in your cities table and use any :guilabel:`id` which exists."
-msgstr ""
-"これは、citiesテーブルのポリゴンを作成する実験中に、そのうちのいくつかを削除してやり直したことを意味します。citiesテーブルのエントリを確認して、存在する"
-" :guilabel:`id` を使ってみてください。"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Looking at Our Schema"
 msgstr "スキーマに着目する"
@@ -229,16 +198,6 @@ msgstr "凸包を作成して読み込みます"
 msgid "Access Sub-Objects"
 msgstr "サブオブジェクトへのアクセス"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:262
-msgid ""
-"With the SFS-Model functions, you have a wide variety of options to access "
-"sub-objects of SFS Geometries. When you want to select the first vertex "
-"point of every polygon geometry in the table myPolygonTable, you have to do "
-"this in this way:"
-msgstr ""
-"SFS-"
-"モデルの機能を使用すると、SFSジオメトリのサブオブジェクトにアクセスするためのさまざまなオプションを持っています。テーブルmyPolygonTable内のすべてのポリゴンジオメトリの最初の頂点を選択したいときは、このような方法でこれを実行する必要があります："
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:267
 msgid "Transform the polygon boundary to a linestring:"
 msgstr "ポリゴン境界をラインストリングに変換する："
@@ -272,16 +231,6 @@ msgstr ""
 msgid "Building Geometries from Other Geometries"
 msgstr "ジオメトリを他のジオメトリから構築する"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:316
-msgid ""
-"From a given point table, you want to generate a linestring. The order of "
-"the points is defined by their :kbd:`id`. Another ordering method could be a"
-" timestamp, such as the one you get when you capture waypoints with a GPS "
-"receiver."
-msgstr ""
-"与えられたポイントテーブルから、ラインストリングを生成します。ポイントの順序は、その :kbd:`id` "
-"によって定義されます。別の並べ方は、GPS受信機でウェイポイントをキャプチャするときに得るような、タイムスタンプになりうるかもしれません。"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:324
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
@@ -306,9 +255,8 @@ msgid ""
 "You can get more information for this topic in `this blog entry "
 "<https://postgis.net/workshops/postgis-intro/validity.html>`_."
 msgstr ""
-"このトピックについては `このブログエントリ "
-"<https://postgis.net/workshops/postgis-intro/validity.html>`_ "
-"にもっと情報があります。"
+"このトピックについては `このブログエントリ <https://postgis.net/workshops/postgis-"
+"intro/validity.html>`_ にもっと情報があります。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:350
 msgid "Differences between tables"
@@ -319,12 +267,6 @@ msgid ""
 "To detect the difference between two tables with the same structure, you can"
 " use the PostgreSQL keyword ``EXCEPT``:"
 msgstr "同じ構造を持つ2つのテーブルの差を検出するには、PostgreSQLキーワード ``EXCEPT`` を使用します："
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:361
-msgid ""
-"As the result, you will get all records from table_a which are not stored in"
-" table_b."
-msgstr "結果として、table_aからtable_bに格納されていないすべてのレコードが得られるでしょう。"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:365
 msgid "Tablespaces"

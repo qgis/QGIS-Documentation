@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -37,14 +37,6 @@ msgstr ""
 msgid "Lesson: Queries"
 msgstr "Lektion: Frågor"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:4
-msgid ""
-"When you write a :kbd:`SELECT ...` command it is commonly known as a query -"
-" you are interrogating the database for information."
-msgstr ""
-"När du skriver ett :kbd:`SELECT ...`-kommando kallas det vanligen en query -"
-" du frågar databasen efter information."
-
 #: ../../docs/training_manual/database_concepts/queries.rst:7
 msgid ""
 "**The goal of this lesson:** To learn how to create queries that will return"
@@ -52,18 +44,6 @@ msgid ""
 msgstr ""
 "**Målet med den här lektionen:** Att lära dig hur du skapar frågor som ger "
 "användbar information."
-
-#: ../../docs/training_manual/database_concepts/queries.rst:10
-msgid ""
-"If you did not do so in the previous lesson, add the following people "
-"objects to your :kbd:`people` table. If you receive any errors related to "
-"foreign key constraints, you will need to add the 'Main Road' object to your"
-" streets table first"
-msgstr ""
-"Om du inte gjorde det i den föregående lektionen, lägg till följande people-"
-"objekt i tabellen :kbd:`people`. Om du får några fel relaterade till "
-"begränsningar för främmande nycklar måste du först lägga till objektet "
-"\"Main Road\" i tabellen streets"
 
 #: ../../docs/training_manual/database_concepts/queries.rst:28
 msgid "Ordering Results"
@@ -118,33 +98,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/queries.rst:100
 msgid "You can also filter based on text data:"
 msgstr "Du kan också filtrera baserat på textdata:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:112
-msgid ""
-"Here we used the :kbd:`LIKE` clause to find all names with an :kbd:`s` in "
-"them. You'll notice that this query is case-sensitive, so the :kbd:`Sally "
-"Norman` entry has not been returned."
-msgstr ""
-"Här använde vi klausulen :kbd:`LIKE` för att hitta alla namn med en :kbd:`s`"
-" i sig. Du kommer att märka att den här frågan är skiftlägeskänslig, så "
-":kbd:`Sally Norman` har inte returnerats."
-
-#: ../../docs/training_manual/database_concepts/queries.rst:116
-msgid ""
-"If you want to search for a string of letters regardless of case, you can do"
-" a case in-sensitive search using the :kbd:`ILIKE` clause:"
-msgstr ""
-"Om du vill söka efter en sträng med bokstäver oberoende av "
-"skiftlägesskillnad kan du göra en skiftlägeskänslig sökning med hjälp av "
-"klausulen :kbd:`ILIKE`:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:129
-msgid ""
-"That query returned every **people** object with an :kbd:`r` or :kbd:`R` in "
-"their name."
-msgstr ""
-"Den frågan returnerade alla **people**-objekt med en :kbd:`r` eller :kbd:`R`"
-" i sitt namn."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:133
 msgid "Joins"
@@ -214,14 +167,6 @@ msgstr ""
 "Låt oss ta en snabb titt på våra data efter dessa ändringar: vi kan "
 "återanvända vår fråga från föregående avsnitt:"
 
-#: ../../docs/training_manual/database_concepts/queries.rst:204
-msgid ""
-"Now let's show you a sub-selection on this data. We want to show only people"
-" who live in ``street_id`` number :kbd:`1`:"
-msgstr ""
-"Låt oss nu visa dig ett underval på dessa data. Vi vill bara visa personer "
-"som bor i ``street_id`` nummer :kbd:`1`:"
-
 #: ../../docs/training_manual/database_concepts/queries.rst:227
 msgid ""
 "Although this is a very simple example and unnecessary with our small data-"
@@ -253,14 +198,6 @@ msgid "If we want the counts to be summarised by street name we can do this:"
 msgstr ""
 "Om vi vill att räkningarna ska sammanfattas efter gatunamn kan vi göra "
 "detta:"
-
-#: ../../docs/training_manual/database_concepts/queries.rst:270
-msgid ""
-"Because we have not used an :kbd:`ORDER BY` clause, the order of your "
-"results may not match what is shown here."
-msgstr ""
-"Eftersom vi inte har använt en :kbd:`ORDER BY`-klausul, kanske ordningen på "
-"dina resultat inte stämmer överens med vad som visas här."
 
 #: ../../docs/training_manual/database_concepts/queries.rst:274
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"

@@ -2,27 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Andreas Kaufmann, 2025
-# Joern G <j.gutzeit@umwelt-it.de>, 2025
-# Steffen Döring, 2025
-# Harrissou Sant-anna, 2025
+# Andreas Kaufmann, 2026
+# Harrissou Sant-anna, 2026
+# Steffen Döring, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:31+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Steffen Döring, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -221,51 +220,6 @@ msgstr ""
 "Wir erstellen nun einige Tabellen! Dazu verwenden wir unser ER-Diagramm als "
 "Vorlage. Stellen Sie zuerst die Verbindung zur Adressdatenbank her:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:182
-msgid "Then create a :file:`streets` table:"
-msgstr "Erstellen Sie dann eine Tabelle :Datei:`streets`:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:188
-msgid ""
-":kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells "
-"PostgreSQL to start an integer sequence (auto-number) to populate the "
-":kbd:`id` automatically for every new record. :kbd:`varchar(50)` tells "
-"PostgreSQL to create a character field of 50 characters in length."
-msgstr ""
-":kbd:`serial` und :kbd:`varchar` sind **Datentypen**. :kbd:`serial` teilt "
-"PostgreSQL mit, dass eine ganzzahlige Reihe (automatisch vergebene Zahlen) "
-"zur Füllung des Feldes :kbd:`id` für jeden neuen Datensatz erstellt werden "
-"soll. :kbd:`varchar(50)` teilt PostgreSQL mit, dass ein Zeichenkettenfeld "
-"mit einer Länge von 50 Zeichen erstellt werden soll."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:193
-msgid ""
-"You will notice that the command ends with a :kbd:`;` - all SQL commands "
-"should be terminated this way. When you press :kbd:`Enter`, psql will report"
-" something like this:"
-msgstr ""
-"Wir bemerken, dass das Kommando mit einem :kbd:`;` endet - alle SQL "
-"Kommandos sollten so enden. Wenn Sie :kbd:`Enter` drücken, wird psql eine "
-"ähnliche Meldung wie folgt ausgeben:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:205
-msgid ""
-"That means your table was created successfully, with a primary key "
-":kbd:`streets_pkey` using :kbd:`streets.id`."
-msgstr ""
-"Das bedeutet, dass Ihre Tabelle mit dem Primärschlüssel :kbd:`streets_pkey` "
-"für :kbd:`streets.id` erfolgreich erstellt wurde."
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:208
-msgid ""
-"Note: If you hit return without entering a :kbd:`;`, then you will get a "
-"prompt like this: :kbd:`address-#`. This is because PG is expecting you to "
-"enter more. Enter :kbd:`;` to run your command."
-msgstr ""
-"Achtung: Wenn Sie die Eingabe ohne :kbd:`;` beenden, erhalten Sie eine "
-"Meldung wie: :kbd:`address-#`. Dies geschieht, weil PG noch eine weitere "
-"Eingabe erwartet. Geben Sie zum Abschließen des Kommandos :kbd:`;` ein."
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:212
 msgid "To view your table schema, you can do this:"
 msgstr ""
@@ -336,15 +290,6 @@ msgid "Our table has already been created, so let's do it the first way:"
 msgstr ""
 "Unsere Tabelle wurde schon erstellt, wir verwenden also den ersten Weg:"
 
-#: ../../docs/training_manual/database_concepts/data_model.rst:308
-msgid ""
-"That tells the :kbd:`people` table that its :kbd:`street_id` fields must "
-"match a valid street :kbd:`id` from the :kbd:`streets` table."
-msgstr ""
-"Damit teilen wir der Tabelle :kbd:`people` mit, dass ihr Feld "
-":kbd:`street_id` einen gültigen Wert aus der Spalte :kbd:`id` der Tabelle "
-":kbd:`streets` enthalten muss."
-
 #: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
@@ -378,30 +323,6 @@ msgstr "Das Ergebnis ist:"
 #: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
 msgstr "Löschen von Tabellen mit SQL"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:377
-msgid "If you want to get rid of a table you can use the :kbd:`drop` command:"
-msgstr ""
-"Wenn man Tabellen los werden möchte, kann man das Kommando :kbd:`drop` "
-"verwenden:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:398
-msgid ""
-"If you used the same :kbd:`drop table` command on the `people` table, it "
-"would be successful:"
-msgstr ""
-"Wenn man dasselbe Kommando :kbd:`drop table` mit der Tabelle `people` "
-"verwendenen würde, wäre es erfolgreich:"
-
-#: ../../docs/training_manual/database_concepts/data_model.rst:406
-msgid ""
-"If you actually did enter that command and dropped the :kbd:`people` table, "
-"now would be a good time to rebuild it, as you will need it in the next "
-"exercises."
-msgstr ""
-"Wenn Sie das Kommando eingegeben haben und die Tabelle :kbd:`people` "
-"gelöscht wurde, ist es ein guter Zeitpunkt, um die Tabelle neu zu erstellen."
-" Wir werden sie für die nächsten Übungen benötigen."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"

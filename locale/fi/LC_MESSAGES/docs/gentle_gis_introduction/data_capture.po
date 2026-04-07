@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Transifex Bot <>, 2025
+# Harrissou Sant-anna, 2026
+# Transifex Bot <>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Transifex Bot <>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Finnish (https://app.transifex.com/qgis/teams/6144/fi/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -28,7 +28,7 @@ msgstr ""
 msgid "|gentleLogo|"
 msgstr "|gentleLogo|"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:438
+#: ../../docs/gentle_gis_introduction/data_capture.rst:440
 msgid "gentleLogo"
 msgstr "gentleLogo"
 
@@ -62,15 +62,6 @@ msgstr ""
 "**sijaintia**, kun taas ominaisuustiedot kuvaavat kohteen **ominaisuuksia** "
 "(väri, koko, ikä, jne.)."
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:21
-msgid ""
-"In this section we will look more closely at the process of creating and "
-"editing vector data --– both the geometry and attributes of vector features."
-msgstr ""
-"Tässä osioissa tutustumme tarkemmin vektoriaineistojen luomiseen ja "
-"muokkaamiseen ---- sekä vektorikohteiden geometrian että niiden "
-"ominaisuustietojen osalta."
-
 #: ../../docs/gentle_gis_introduction/data_capture.rst:25
 msgid "How does GIS digital data get stored?"
 msgstr ""
@@ -93,63 +84,41 @@ msgstr ""
 "OpenDocument-formaatissa tai :file:`.doc` Word Document -tiedostona ja niin "
 "edelleen."
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:33
-msgid ""
-"Just like these other applications, GIS Applications can store their data in"
-" files on the computer hard disk. There are a number of different file "
-"formats for GIS data, but the most common one is probably the 'shape file'. "
-"The name is a little odd in that although we call it a shape file "
-"(singular), it actually consists of at least three different files that work"
-" together to store your digital vector data, as shown in table_shapefile_."
-msgstr ""
-"Kuten muutkin sovellukset, GIS-sovellukset tallentavat aineistoja "
-"tiedostoihin tietokoneen kovalevylle. Paikkatietoaineistoille on olemassa "
-"useita eri tiedostoformaatteja, mutta tunnetuin niistä on luultavasti 'shape"
-" file'. Tiedostoformaatin nimi on hieman outo, sillä vaikka nimi on "
-"yksikkömuodossa (file = yksi tiedosto), se koostuu oikeasti vähintään "
-"kolmesta erillisestä tiedostosta jotka työskentelevät yhdessä tallentaakseen"
-" digitaalista vektoriaineistoa, kuten näkyy taulukosta_shapefile_."
-
-#: ../../docs/gentle_gis_introduction/data_capture.rst:43
+#: ../../docs/gentle_gis_introduction/data_capture.rst:45
 msgid "Extension"
 msgstr "Tiedostopääte"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:43
+#: ../../docs/gentle_gis_introduction/data_capture.rst:45
 msgid "Description"
 msgstr "Kuvaus"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:45
+#: ../../docs/gentle_gis_introduction/data_capture.rst:47
 msgid ":file:`.shp`"
 msgstr ":file:`.shp`"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:45
+#: ../../docs/gentle_gis_introduction/data_capture.rst:47
 msgid "The geometry of vector features are stored in this file"
 msgstr "Vektorikohteiden geometriatiedot on tallennettu tähän tiedostoon"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:47
+#: ../../docs/gentle_gis_introduction/data_capture.rst:49
 msgid ":file:`.dbf`"
 msgstr ":file:`.dbf`"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:47
+#: ../../docs/gentle_gis_introduction/data_capture.rst:49
 msgid "The attributes of vector features are stored in this file"
 msgstr "Vektorikohteiden ominaisuustiedot on tallennettu tähän tiedostoon"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:49
+#: ../../docs/gentle_gis_introduction/data_capture.rst:51
 msgid ":file:`.shx`"
 msgstr ":file:`.shx`"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:49
+#: ../../docs/gentle_gis_introduction/data_capture.rst:51
 msgid ""
 "This file is an index that helps the GIS Application to find features more "
 "quickly."
 msgstr ""
 "Tämä on indeksitiedosto, joka auttaa GIS-sovellusta löytämään oikeat kohteet"
 " nopeammin."
-
-#: ../../docs/gentle_gis_introduction/data_capture.rst:52
-msgid ""
-"Table Shapefile 1: The basic files that together make up a 'shapefile'."
-msgstr "Taulukko Shapefile 1: Tiedostot joista yksi 'shapefile' koostuu"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:67
 msgid ""
@@ -231,44 +200,49 @@ msgstr ""
 msgid "Example 2: Creating a map of pollution levels along a river"
 msgstr "Esimerkki 2: Karttaesitys veden epäpuhtauksista joen varrella"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
 msgid "pH"
 msgstr "pH"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:141
+#: ../../docs/gentle_gis_introduction/data_capture.rst:143
 msgid "CB"
 msgstr "CB"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:143
-#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+#: ../../docs/gentle_gis_introduction/data_capture.rst:149
 msgid "6"
 msgstr "6"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:143
+#: ../../docs/gentle_gis_introduction/data_capture.rst:145
 msgid "Patience"
 msgstr "Patience"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
 msgid "2"
 msgstr "2"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
 msgid "5"
 msgstr "5"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:145
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+#: ../../docs/gentle_gis_introduction/data_capture.rst:149
+msgid "Y"
+msgstr "Y"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:147
 msgid "Thabo"
 msgstr "Thabo"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:147
+#: ../../docs/gentle_gis_introduction/data_capture.rst:149
 msgid "Victor"
 msgstr "Victor"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:156
+#: ../../docs/gentle_gis_introduction/data_capture.rst:158
 msgid "Creating an empty shapefile"
 msgstr "Tyhjän shape-tiedoston luominen"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:158
+#: ../../docs/gentle_gis_introduction/data_capture.rst:160
 msgid ""
 "Once you have planned what features you want to capture into the GIS, and "
 "the geometry type and attributes that each feature should have, you can move"
@@ -278,7 +252,7 @@ msgstr ""
 "geometriatyyppi on ja mitä attribuutteja kohteelle annetaan, voit edetä "
 "seuraavaan vaiheeseen, tyhjän shape-tiedoston luomiseen. "
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:173
+#: ../../docs/gentle_gis_introduction/data_capture.rst:175
 msgid ""
 "Creating a new vector layer is as simple as filling in a few details in a "
 "form. First you choose the geometry type, and then you add the attribute "
@@ -287,30 +261,14 @@ msgstr ""
 "Vektoritason luominen käy helposti täyttämällä muutama dialogin kysymä "
 "tieto. Valitse ensin geometriatyyppi ja sen jälkeen lisää attribuuttikentät."
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:176
-msgid ""
-"Next you will add fields to the attribute table. Normally we give field "
-"names that are short, have no spaces and indicate what type of information "
-"is being stored in that field. Example field names may be 'pH', "
-"'RoofColour', 'RoadType' and so on. As well as choosing a name for each "
-"field, you need to indicate how the information should be stored in that "
-"field –-- i.e. is it a number, a word or a sentence, or a date?"
-msgstr ""
-"Seuraavaksi lisäät kentät attribuuttitauluun. Yleensä suositellaan lyhyitä "
-"kentän nimiä, joissa ei ole välilyöntejä eikä skandimerkkejä ja jotka "
-"kuvaavat minkälaista tietoa tietokenttään tallennetaan. Esimerkkejä "
-"suositelluista kentän nimistä ovat 'pH', 'TieTyyppi', 'KatonVari' jne. "
-"Lisäksi on määritettävä mikä on kenttään tallennettavan tiedon muoto, esim. "
-"numero, teksti, päivämäärä. "
-
-#: ../../docs/gentle_gis_introduction/data_capture.rst:367
+#: ../../docs/gentle_gis_introduction/data_capture.rst:369
 msgid "What have we learned?"
 msgstr "Mitä olemme oppineet?"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:389
+#: ../../docs/gentle_gis_introduction/data_capture.rst:391
 msgid "Now you try!"
 msgstr "Nyt on sinun vuorosi yrittää!"
 
-#: ../../docs/gentle_gis_introduction/data_capture.rst:426
+#: ../../docs/gentle_gis_introduction/data_capture.rst:428
 msgid "What's next?"
 msgstr "Mitä seuraavaksi?"

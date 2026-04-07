@@ -2,29 +2,29 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Transifex Bot <>, 2025
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
+# Emilie ELLONG-KOTTO, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-01 13:25+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Emilie ELLONG-KOTTO, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
-#: ../../<rst_prologue>:5
+#: ../../<rst_prolog>:5
 msgid ""
 "Translation is a community effort :ref:`you can join "
 "<translation_guidelines>`. This page is currently translated at |translation"
@@ -59,6 +59,20 @@ msgstr "processingAlgorithm"
 msgid "General"
 msgstr "Général"
 
+#: ../../docs/user_manual/processing/configuration.rst:22
+msgid ""
+"The :guilabel:`General` block contains the default settings to control how "
+"the algorithm dialog as well as input or output parameters should behave. "
+"Some of the settings can however be overridden at the algorithm level, per "
+":ref:`algorithm run <alg_override_setting>` or for :ref:`individual "
+"parameters <alg_parameter_types>`."
+msgstr ""
+"Le bloc :guilabel:`General` gère les réglages par défaut de la boîte de "
+"dialogue de l'algorithme de traitement et des paramètres d'entrée et de "
+"sortie. Certains réglages peuvent cependant être modifiés au sein de "
+"l'algorithme, soit pour affecter :ref:`l'exécution de l'algorithme` dans son"
+" ensemble, soir pour des :ref:`paramètres individuels`."
+
 #: ../../docs/user_manual/processing/configuration.rst:28
 msgid ""
 ":guilabel:`Default output raster layer extension` is by default ``tif``"
@@ -77,6 +91,48 @@ msgstr ""
 ":guilabel:`Filtrer les entités invalides` lors de l'exécution d'un "
 "algorithme :"
 
+#: ../../docs/user_manual/processing/configuration.rst:32
+msgid ""
+":guilabel:`Do not filter (better performance)`: all the features (with valid"
+" and invalid geometries) are processed, but the result may be erroneous "
+"depending on how the geometry invalidity affects the operations"
+msgstr ""
+":guilabel:`Ne pas filtrer (performances améliorées)` : toutes les entités "
+"(avec géométries valides et invalides) sont traitées, mais il se peut que le"
+" résultat soit erroné selon la façon dont les géométries invalides affectent"
+" les calculs."
+
+#: ../../docs/user_manual/processing/configuration.rst:35
+msgid ""
+":guilabel:`Skip (ignore) features with invalid geometries`, meaning that "
+"only a subset of your dataset (the valid geometry features) will be "
+"processed"
+msgstr ""
+":guilabel:`Passer (ignorer) les entités avec des géométries invalides` : "
+"seule une partie du jeu de données (les entités dont la géométrie est "
+"valide) sera traitée."
+
+#: ../../docs/user_manual/processing/configuration.rst:38
+msgid ""
+":guilabel:`Stop algorithm execution when a geometry is invalid`: you'll need"
+" to track and fix the invalid geometries if you want the algorithm to "
+"process the whole layer. Algorithms like :ref:`qgischeckvalidity` or "
+":ref:`qgisfixgeometries` can help you achieve this."
+msgstr ""
+":guilabel:`Arrêter l'exécution de l'algorithme quand une géométrie est "
+"invalide` : il vous faudra retrouver et corriger les géométries invalides "
+"pour que l'algorithme traite la couche complète. Des algorithmes tels que "
+":ref:`Check validity` ou :ref:`Réparer les géométries` peuvent vous aider "
+"dans cette tâche."
+
+#: ../../docs/user_manual/processing/configuration.rst:43
+msgid ""
+"The :guilabel:`Invalid features filtering` setting can be overridden on a "
+"per-input basis, at algorithm runtime."
+msgstr ""
+"Le paramétrage de l'option :guilabel:`Filtrage des éléments invalides' peut "
+"être modifié au cas-par-cas, lors de l'exécution de l'algorithme."
+
 #: ../../docs/user_manual/processing/configuration.rst:45
 msgid ""
 ":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
@@ -94,7 +150,7 @@ msgstr ""
 
 #: ../../docs/user_manual/processing/configuration.rst:50
 msgid ":guilabel:`Max Threads`"
-msgstr ":guilabel:`Max Threads`"
+msgstr ":guilabel:`Nombre maximal de threads`"
 
 #: ../../docs/user_manual/processing/configuration.rst:61
 msgid ""
@@ -188,10 +244,6 @@ msgid ""
 msgstr ""
 "Sélectionnez le fichier de style (:file:`.qml`) que vous souhaitez appliquer"
 " à chaque résultat et appuyez sur :guilabel:`OK`."
-
-#: ../../docs/user_manual/processing/configuration.rst:192
-msgid "menu"
-msgstr "menu"
 
 #: ../../docs/user_manual/processing/configuration.rst:130
 msgid "Menus"

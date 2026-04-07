@@ -927,17 +927,575 @@ msgstr "Įrašymas kaip naujo rastro sluoksnio"
 msgid "Vector specific parameters"
 msgstr "Vektorių parametrai"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:408
+msgid ""
+"Depending on the format of export, some of these options may be available:"
+msgstr ""
+"Priklausomai nuo eksportuojamo formato, gali būti galimos kai kurios iš šių "
+"parinkčių:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:410
+msgid ""
+":guilabel:`Format`: exports to any vector format GDAL can write to, such as "
+"GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or "
+"MIF, SpatiaLite, CSV, KML, ODS, ..."
+msgstr ""
+":guilabel:`Formatas`: eksportuoja bet į bet kokį vektorinį formatą, kurį "
+"GDAL moka rašyti, tai gali būti GeoPackage, GML, ESRI Shapefile, AutoCAD "
+"DXF, ESRI FileGDB, Mapinfo TAB ar MIF, SpatiaLite, CSV, KML, ODS, ..."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:413
+msgid ""
+":guilabel:`Layer name`: available when the :guilabel:`File name` refers to a"
+" container-like format, this entry represents the output layer."
+msgstr ""
+":guilabel:`Sluoksnio pavadinimas`: galimas, kai :guilabel:`Failo "
+"pavadinimas` nurodo konteinerio tipo formatą, šis laukas nurodys išvesties "
+"sluoksnį."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:415
+msgid ":guilabel:`Encoding`"
+msgstr ":guilabel:`Koduotė`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:416
+msgid ":guilabel:`Save only selected features`"
+msgstr ":guilabel:`Įrašyti tik parinktus geoobjektus`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:417
+msgid ""
+":guilabel:`Select fields to export and their export options`: provides means"
+" to export fields with custom names and :ref:`form widget <configure_field>`"
+" settings:"
+msgstr ""
+":guilabel:`Parinkite eksportuojamus laukus ir jų eksportavimo parinktis`: "
+"teikia būda eksportuoti laukus savais pavadinimais ir :ref:`formų valdiklio "
+"<configure_field>` nustatymai:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:421
+msgid ""
+"Check rows under the :guilabel:`Name` column to choose fields to keep in the"
+" output layer, or press :guilabel:`Select All` or :guilabel:`Deselect All` "
+"buttons"
+msgstr ""
+"Ties stulpeliu :guilabel:`Pavadinimas` parinkite eilutes, kurių laukus "
+"reikia palikti išvesties sluoksnyje arba spauskite mygtuką "
+":guilabel:`Parinkti viską` ar :guilabel:`Neparinkti nieko`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:424
+msgid ""
+"Toggle the :guilabel:`Use aliases for exported name` checkbox to populate "
+"the :guilabel:`Export name` column with corresponding field aliases or reset"
+" to the original field name. Double-clicking a cell will also edit the name."
+msgstr ""
+"Perjunkite parinktį :guilabel:`Naudoti pseudonimus eksportuojamiems "
+"pavadinimams`, kad užpildytumėte :guilabel:`Eksportuojamas pavadinimas` "
+"stulpelį atitinkamo lauko pseudonimais ar nustatytumėte pradinį lauko "
+"pavadinimą. Du kartus paspaudus celę taipogi bus galima redaguoti "
+"pavadinimą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:428
+msgid ""
+"Depending on whether attribute form custom widgets are in use, you can "
+":guilabel:`Replace all selected raw field values by displayed values`. E.g. "
+"if a ``value map`` widget is applied to a field, the output layer will "
+"contain the description values instead of the original values. The "
+"replacement can also be done on a field by field basis, in the "
+":guilabel:`Replace with displayed values` column."
+msgstr ""
+"Priklausomai nuo to, ar naudojami atributai iš savų valdiklių, jūs galite "
+":guilabel:`Pakeisti visas pradines laukų reikšmes rodomomis reikšmėmis`. "
+"Pavyzdžiui, jei laukui taikomas valdiklis ``reikšmių žemėlapis``, išvesties "
+"sluoksnyje bus aprašymo reikšmės, o ne pradinės reikšmės. Pakeitimą galima "
+"atlikti konkretiems laukams stulpelyje :guilabel:`Keisti rodomomis "
+"reikšmėmis`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:435
+msgid ""
+":guilabel:`Persist layer metadata`: ensures that any layer :ref:`metadata "
+"<vectormetadatamenu>` present in the source layer will be copied and stored:"
+msgstr ""
+":guilabel:`Išlaikyti sluoksnio metaduomenis`: užtikrina, kad visi šaltinio "
+"sluoksnyje esantys sluoksnio :ref:`metaduomenys <vectormetadatamenu>` bus "
+"nukopijuoti ir įrašyti:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:438
+msgid "in the newly created layer, if the output is of GeoPackage format"
+msgstr "naujai sukurtame sluoksnyje, jei išvestis yra GeoPackage formato"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:439
+msgid ""
+"as a :file:`.qmd` file along with the output layer, for other formats. Note "
+"that file-based formats supporting more than one dataset (e.g. SpatiaLite, "
+"DXF,...) may have unintended behavior."
+msgstr ""
+"kitiems formatams - :file:`.qmd` faile greta išvesties sluoksnio. "
+"Pastebėtina, kad failais paremti formatai, kurie palaiko daugiau nei vieną "
+"duomenų rinkinį (pvz. SpatiaLite, DXF,...), gali turėti netikėtą elgseną."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:442
+msgid ""
+":guilabel:`Symbology export`: can be used mainly for DXF export and for all "
+"file formats who manage OGR feature styles (see note below) as DXF, KML, tab"
+" file formats:"
+msgstr ""
+":guilabel:`Simbologijos eksportas`: galima naudoti pagrinde DXF eksportui ir"
+" visiems failų formatams, kurie valdo OGR geoobjektų stilius (žr. pastabą "
+"žemiau) kaip DXF, KML, tab failų formatus:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:446
+msgid "**No symbology**: default style of the application that reads the data"
+msgstr ""
+"**Be simbologijos**: numatytasis aplikacijos stilius, kuris skaito duomenis"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:447
+msgid ""
+"**Feature symbology**: save style with OGR Feature Styles (see note below)"
+msgstr ""
+"**Geoobjektų simbologija**: įrašyti stilių su OGR geoobjektų stiliais (žr. "
+"pastabą žemiau)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:448
+msgid ""
+"**Symbol Layer symbology**: save with OGR Feature Styles (see note below) "
+"but export the same geometry multiple times if there are multiple symbology "
+"symbol layers used"
+msgstr ""
+"**Simbolių sluoksnio simbologija**: įrašyti su OGR geoobjektų stiliais (žr. "
+"pastabą žemiau), bet eksportuoti tas pačias geometrijas kelis kartus, jei "
+"naudojamas daugiau nei vienas simbologijos sluoksnis"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:451
+msgid "A **Scale** value can be applied to the latest options"
+msgstr "**Mastelio** reikšmę galima taikyti paskutinėms parinktims"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:455
+msgid ""
+"*OGR Feature Styles* are a way to store style directly in the data as a "
+"hidden attribute. Only some formats can handle this kind of information. "
+"KML, DXF and TAB file formats are such formats. For advanced details, you "
+"can read the `OGR Feature Styles specification "
+"<https://gdal.org/en/latest/user/ogr_feature_style.html>`_ document."
+msgstr ""
+"*OGR geoobjektų stilius* yra būdas saugoti stilių tiesiai duomenyse kaip "
+"paslėptą atributą. Tik kai kurie formatai palaiko tokį informacijos tipą. "
+"Tokie failų formatai yra KML, DXF ir TAB. Sudėtingesnes detales rasite `OGR "
+"geoobjektų stilių specifikacijos "
+"<https://gdal.org/en/latest/user/ogr_feature_style.html>`_ dokumente."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:461
+msgid ""
+":guilabel:`Geometry`: you can configure the geometry capabilities of the "
+"output layer"
+msgstr ""
+":guilabel:`Geometrija`: jūs galite konfigūruoti išvesties sluoksnio "
+"geometrijos galimybes"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:464
+msgid ""
+":guilabel:`geometry type`: keeps the original geometry of the features when "
+"set to **Automatic**, otherwise removes or overrides it with any type. You "
+"can add an empty geometry column to an attribute table and remove the "
+"geometry column of a spatial layer."
+msgstr ""
+":guilabel:`geometrijos tipas`: palieka pradinę geoobjektų geometriją, jei "
+"parinkta **Automatinis**, kitais atvejais išmeta ar permuša jį bet kuriuo "
+"tipu. Jūs galite pridėti tuščią geometrijos stulpelį į atributų lentelę ir "
+"išimti erdvinio sluoksnio geometrijos stulpelį."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:468
+msgid ""
+":guilabel:`Force multi-type`: forces creation of multi-geometry features in "
+"the layer."
+msgstr ""
+":guilabel:`Priversti multi-tipą`: priverčia milti-geometrijų geoobjektų "
+"kūrimą šiame sluoksnyje."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:470
+msgid ":guilabel:`Include z-dimension` to geometries."
+msgstr ":guilabel:`Įtraukti z-matmenis` geometrijose."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:474
+msgid ""
+"Overriding layer geometry type makes it possible to do things like save a "
+"geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any type "
+"of geometry (point, line, polygon), so that geometries can then be manually "
+"added to rows with the |addPart| :sup:`Add Part` tool."
+msgstr ""
+"Sluoksnio geometrijos tipo permušimas leidžia atlikti tokius dalykus kaip "
+"įrašyti lentelę be geometrijos (pvz. :file:`.csv` failą) į shape failą SU "
+"bet kokiu geometrijos tipu (taškas, linija, poligonas), kad vėliau būtų "
+"galima rankiniu būdu į įrašus pridėti geometrijas naudojant įrankį |addPart|"
+" :sup:`Pridėti dalį`."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:983
 msgid "addPart"
 msgstr "addPart"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:479
+msgid ""
+":guilabel:`Datasource Options`, :guilabel:`Layer Options` or "
+":guilabel:`Custom Options` which allow you to configure advanced parameters "
+"depending on the output format. Some are described in "
+":ref:`supported_format` but for full details, see the `GDAL "
+"<https://gdal.org/en/latest>`_ driver documentation. Each file format has "
+"its own custom parameters, e.g. for the ``GeoJSON`` format have a look at "
+"the `GDAL GeoJSON "
+"<https://gdal.org/en/latest/drivers/vector/geojson.html#layer-creation-"
+"options>`_ documentation."
+msgstr ""
+":guilabel:`Duomenų šaltinių parinktys`, :guilabel:`Sluoksnio parinktys` ar "
+":guilabel:`Savo parinktys`, kurios leidžia jums konfigūruoti sudėtingesnius "
+"parametrus priklausomai nuo išvesties formato. Kai kurios aprašytos "
+":ref:`supported_format`, bet pilną informaciją rasite `GDAL "
+"<https://gdal.org/en/latest>`_ tvarkyklės dokumentacijoje. Kiekvienas failo "
+"formatas turi savo parametrus, pavyzdžiui ``GeoJSON`` formato atveju "
+"skaitykite `GDAL GeoJSON "
+"<https://gdal.org/en/latest/drivers/vector/geojson.html#layer-creation-"
+"options>`_ dokumentaciją."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:493
+msgid "Saving as a new vector layer"
+msgstr "Įrašymas kaip naujo vektorinio sluoksnio"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:497
+msgid ""
+"When saving a vector layer into an existing file, depending on the "
+"capabilities of the output format (Geopackage, SpatiaLite, FileGDB...), the "
+"user can decide whether to:"
+msgstr ""
+"Įrašant vektorinį sluoksnį į esamą failą, priklausomai nuo išvesties failo "
+"formato galimybių (Geopackage, SpatiaLite, FileGDB...), naudotjas gali "
+"pasirinkti ar:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:501
+msgid "overwrite the whole file"
+msgstr "perrašyti visą failą"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:502
+msgid "overwrite only the target layer (the layer name is configurable)"
+msgstr ""
+"perrašyti tik paskirties sluoksnį (galima konfigūruoti sluoksnio pavadinimą)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:503
+msgid "append features to the existing target layer"
+msgstr "pridėti geoobjektus į esamą paskirties sluoksnį"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:504
+msgid "append features, add new fields if there are any."
+msgstr "pridėti geoobjektus, pridėti naujus laukus, jei tokių yra."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:506
+msgid ""
+"For formats like ESRI Shapefile, MapInfo .tab, feature append is also "
+"available."
+msgstr ""
+"Formatams, tokiems kaip ESRI Shapefile, MapInfo .tab, galima taipogi "
+"papildyti geoobjektus."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:509
 msgid "Point Cloud specific parameters"
 msgstr "Taškų masyvo parametrai"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:511
+msgid ""
+"Similar to raster and vector layers, point cloud layers can be saved in a "
+"different format and/or reprojected to a different coordinate reference "
+"system (CRS). This allows you to export a point cloud layer to vector or "
+"point cloud formats. Current supported formats are: Temporary scratch "
+"(memory layer), GeoPackage, ESRI Shapefile, DXF and LAS/LAZ point cloud. In "
+"addition to the common parameters listed above, exporting point cloud layers"
+" includes the following options:"
+msgstr ""
+"Panašiai kaip rastrų ir vektorių sluoksniams, taškų masyvų sluoksnius galima"
+" įrašyti skirtingais formatais ir/arba perprojektuoti į kitą koordinačių "
+"atskaitos sistemą (CRS). Tai leidžia jums eksportuoti taškų masyvų "
+"sluoksnius į vektorių ar taškų masyvų formatus. Šiuo metu palaikomi formatai"
+" yra: Laikinas juodraštinis (atminties sluoksnis), GeoPackage, ESRI "
+"Shapefile, DXF ir LAS/LAZ taškų masyvas. Be bendrų aukščiau išvardintų "
+"parametrų, eksportuojant į taškų masyvų sluoksnius, galima naudoti šias "
+"parinktis:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:518
+msgid ""
+":guilabel:`Filter by Polygon Layer`: Allows you to filter the point cloud "
+"data based on a polygon layer."
+msgstr ""
+":guilabel:`Filtruoti pagal poligonų sluoksnį`: leidžia jums filtruoti taškų "
+"masyvo duomenis pagal poligonų sluoksnį."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:519
+msgid ""
+":guilabel:`Elevation Range`: Enables filtering of the point cloud data based"
+" on a specified Z range."
+msgstr ""
+":guilabel:`Aukščio diapazonas`: leidžia filtruoti taškų masyvo duomenis "
+"pagal nurodytą Z diapazoną."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:520
+msgid ""
+":guilabel:`Limit number of points`: Provides an option to limit the number "
+"of points exported from the point cloud layer."
+msgstr ""
+":guilabel:`Riboti taškų skaičių`: suteikia parinktį riboti iš taškų masyvo "
+"sluoksnio eksportuojamų taškų skaičių."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:527
+msgid "Saving a point cloud layer as a new layer"
+msgstr "Taškų masyvo sluoksnio įrašymas kaip naujo sluoksnio"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:533
+msgid "Creating new DXF files"
+msgstr "Naujų DXF failų kūrimas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:535
+msgid ""
+"Besides the :guilabel:`Save As...` dialog which provides options to export a"
+" single layer to another format, including :file:`*.DXF`, QGIS provides "
+"another tool to export multiple layers as a single DXF layer. It's "
+"accessible in the :menuselection:`Project --> Import/Export --> Export "
+"Project to DXF...` menu."
+msgstr ""
+"Be dialogo :guilabel:`Įrašyti kaip...`, kuris teikia parinktis eksportuoti "
+"vieną sluoksnį į kitą formatą, įskaitant ir :file:`*.DXF`, QGIS teikia kitą "
+"įrankį, leidžiantį eksportuoti kelis sluoksnius kaip vieną DXF sluoksnį. Jį "
+"rasite per meniu :menuselection:`Projektas --> Importuoti/Eksportuoti --> "
+"Eksportuoti projektą į DXF...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:545
+msgid "Exporting a project to DXF dialog"
+msgstr "Projekto eksportavimo į DXF dialogas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:547
+msgid "In the :guilabel:`DXF Export` dialog:"
+msgstr ":guilabel:`DXF eksporto` dialoge:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:549
+msgid "Provide the destination file."
+msgstr "Nurodykite paskirties failą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:550
+msgid ""
+"Choose the symbology mode and scale (see the :ref:`OGR Feature Styles "
+"<ogr_features_note>` note), if applicable."
+msgstr ""
+"Parinkite simbologijos režimą ir mastelį (žr. pastabą apie :ref:`OGR "
+"geoobjektų stilius <ogr_features_note>`), jei jis taikomas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:552
+msgid "Select the data :guilabel:`Encoding`."
+msgstr "Parinkite duomenų :guilabel:`Koduotę`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:553
+msgid ""
+"Select the :guilabel:`CRS` to apply: the selected layers will be reprojected"
+" to the given CRS."
+msgstr ""
+"Parinkite taikomą :guilabel:`CRS`: parinkti sluoksniai bus perprojektuoti į "
+"nurodytą CRS."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:555
+msgid ""
+"Select the layers to include in the DXF files either by checking them in the"
+" table widget or automatically picking them from an existing :ref:`map theme"
+" <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` "
+"buttons can help to quickly set the data to export."
+msgstr ""
+"Parinkite sluoksnius, kuriuos reikia įtraukti į DXF failus, arba juos "
+"pažymėdami lentelės valdiklyje, arba automatiškai juos parinkdami iš esamos "
+":ref:`žemėlapio temos <map_themes>`. Mygtukai :guilabel:`Parinkti viską` ir "
+":guilabel:`Neparinkti nieko` gali padėti jums greitai nurodyti "
+"eksportuojamus duomenis."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:560
+msgid "For each layer, you can:"
+msgstr "Kiekvienam sluoksniui jūs galite:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:562
+msgid ""
+"Override the output layer name without altering the original project layer. "
+"For this, click on the :guilabel:`Layer` name in the dialog and write the "
+"output name to use."
+msgstr ""
+"Permušti išvesties sluoksnio pavadinimą nekeičiant pradinio projekto "
+"sluoksnio. Tam spauskite :guilabel:`Sluoksnio` pavadinimą dialoge ir "
+"įrašykite išvestyje naudotiną pavadinimą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:566
+msgid ""
+":guilabel:`Output layer attribute`: Choose whether to export all the "
+"features in a single DXF layer or rely on a field whose values are used to "
+"split the features into layers in the DXF output. In the latter case, each "
+"layer will take its name from the corresponding field value."
+msgstr ""
+":guilabel:`Išvesties sluoksnio atributai`: Parinkite ar eksportuoti visus "
+"geoobjektus viename DXF sluoksnyje, ar remtis lauku, kurio reikšmės būtų "
+"naudojamos atskirti geoobjektus į atskirus sluoksnius DXF išvestyje. "
+"Paskutiniu atveju kiekvienas sluoksnis bus pavadintas pagal atitinkamo lauko"
+" reikšmę."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:570
+msgid ":guilabel:`Allow data defined symbol blocks`:"
+msgstr ":guilabel:`Leisti pagal duomenis apibrėžiamus simbolių blokus`:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:571
+msgid ""
+":guilabel:`Maximum number of symbol blocks`: creates symbol blocks up to the"
+" specified limit, starting with the ones containing the highest number of "
+"references. The other symbols are written as they are. ``-1`` means no "
+"limitation."
+msgstr ""
+":guilabel:`Maksimalus simbolių blokų skaičius`: kuria simbolių blokus iki "
+"nurodytos ribos, pradedant tais, kurie turi didžiausią nuorodų skaičių. Kiti"
+" simboliai įrašomi tokie, kokie jie yra. ``-1`` reiškia, kad apribojimo "
+"nėra."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:575
+msgid "Optionally, you can also choose to:"
+msgstr "Pasirinktinai dar galite:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:577
+msgid ""
+"|unchecked| :guilabel:`Use the layer title as name if set` instead of the "
+"layer name itself: the title is taken from the :ref:`metadata "
+"<vectormetadatamenu>` or :ref:`server <vectorservermenu>` properties of the "
+"layer;"
+msgstr ""
+"|unchecked| :guilabel:`Naudoti sluoksnio antraštę, kaip pavadinimą, jei ji "
+"nurodyta`, vietoje sluoksnio pavadinimo: antraštė imama iš :ref:`metaduomenų"
+" <vectormetadatamenu>` arba :ref:`serverio <vectorservermenu>` sluoksnio "
+"savybių;"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1035
 msgid "unchecked"
 msgstr "unchecked"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:580
+msgid ""
+"|unchecked| :guilabel:`Export features intersecting the current map extent`;"
+msgstr ""
+"|unchecked| :guilabel:`Eksportuoti geoobjektus, kertančius dabartinę "
+"žemėlapio apimtį`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:581
+msgid ""
+"|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
+msgstr ""
+"|unchecked| :guilabel:`Priverstinai kurti 2d išvestį (pvz. palaikyti "
+"polilinijos plotį)`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:582
+msgid ""
+"|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements;"
+msgstr ""
+"|checkbox| :guilabel:`Eksportuoti užrašus kaip MTEXT elementus` ar TEXT "
+"elementus;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:583
+msgid "|unchecked| :guilabel:`Use only selected features`;"
+msgstr "|unchecked| :guilabel:`Naudoti tik parinktus geoobjektus`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:584
+msgid ""
+"|unchecked| :guilabel:`Export lines with zero width`: all the lines are "
+"exported with minimal width ``0`` (hairline) if enabled. This helps keep the"
+" lines minimal in the file regardless of the zoom level, and can be handy "
+"for doing further CAD-editing with the exported dxf, especially if there are"
+" many features next to each other on the map."
+msgstr ""
+"|unchecked| :guilabel:`Eksportuoti linijas su nuliniu pločiu`: jungus visos "
+"linijos eksportuojamos su minimaliu pločiu ``0`` (plauko). Tai padeda "
+"linijas faile laikyti minimaliomis nepriklausomai nuo mastelio ir gali būti "
+"patogu darant tolimesnį CAD-redagavimą su eksportuotu dxf, ypač jei "
+"žemėlapyje yra daug vienas šalia kito esančių geoobjektų."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:592
+msgid "The precedence for defining the output layer name is as follows:"
+msgstr "Išvesties sluoksnio pavadinimo apibrėžimo prioritetas yra toks:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:594
+msgid "The field value from :guilabel:`Output layer attribute`"
+msgstr "Reikšmė lauke :guilabel:`Išvesties sluoksnio atributas`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:595
+msgid "The overridden name in :guilabel:`Layer` column"
+msgstr "Permuštas pavadinimas stulpelyje :guilabel:`Sluoksnis`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:596
+msgid "The :guilabel:`Use the layer title as name if set` option"
+msgstr ""
+"Parinktis :guilabel:`Naudoti sluoksnio antraštę kaip pavadinimą, jei "
+"nurodyta`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:597
+msgid "The layer name"
+msgstr "Sluoksnio pavadinimas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:599
+msgid ""
+"Current settings defined in the :guilabel:`DXF Export` dialog may be stored "
+"in an XML file for reusing them in other sessions. For this, the "
+":guilabel:`Settings` combo box has two options: :guilabel:`Load Settings "
+"from File...` and :guilabel:`Save Settings to File...`."
+msgstr ""
+"Dabartinius nustatymus, apibrėžtus dialoge :guilabel:`DXF eksportas`, galima"
+" įrašyta į XML failą ir vėliau iš naujo panaudoti kitose sesijose. Tam "
+":guilabel:`Nustatymų` mygtukas turi dvi parainktis: :guilabel:`Įkelti "
+"nustatymus iš failo...` ir :guilabel:`Įrašyti nustatymus į failą...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:608
+msgid "Creating new layers from the clipboard"
+msgstr "Naujų sluoksnių kūrimas iš iškarpinės"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:610
+msgid ""
+"Features that are on the clipboard can be pasted into a new layer. To do "
+"this, Select some features, copy them to the clipboard, and then paste them "
+"into a new layer using :menuselection:`Edit --> Paste Features as -->` and "
+"choosing:"
+msgstr ""
+"Iškarpinėje esančius geoobjektus galima įkelti į naują sluoksnį. Norėdami "
+"tai padaryti, parinkite kelis geoobjektus, nukopijuokite juos į iškarpinę ir"
+" tada įkelkite juos į naują sluoksnį naudodami meniu :menuselection:`Keisti "
+"--> Įkelti geoobjektus kaip -->` ir ten parinkdami:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:614
+msgid ""
+":guilabel:`New Vector Layer...`: the :guilabel:`Save vector layer as...` "
+"dialog appears (see :ref:`general_saveas` for parameters)"
+msgstr ""
+":guilabel:`Naujas vektorinis sluoksnis...`: pasirodys dialogas "
+":guilabel:`Įrašyti vektorinį sluoksnį kaip...` (žr. :ref:`general_saveas` "
+"parametrų sąrašui)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:616
+msgid ""
+"or :guilabel:`Temporary Scratch Layer...`: you need to provide a name for "
+"the layer"
+msgstr ""
+"arba :guilabel:`Laikinas juodraštinis sluoksnis...`: jums reikės nurodyti "
+"sluoksnio pavadinimą"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:619
+msgid ""
+"A new layer, filled with selected features and their attributes is created "
+"(and added to map canvas)."
+msgstr ""
+"Sukuriamas (ir pridedamas į žemėlapio drobę) naujas sluoksnis, užpildytas "
+"parinktais geoobjektais ir jų atributais."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:622
+msgid ""
+"Creating layers from the clipboard is possible with features selected and "
+"copied within QGIS as well as features from another application, as long as "
+"their geometries are defined using well-known text (WKT)."
+msgstr ""
+"Kurti sluoksnius iš iškarpinės galima tiek geoobjektus parinkus ir "
+"nukopijavus su QGIS, tiek ir su kitomis aplikacijomis, jei jų geometrijos "
+"apibrėžiamos naudojant gerai žinomą tekstą (WKT)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:631
+msgid "Creating SQL Query Layers"
+msgstr "SQL užklausų sluoksnių kūrimas"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1009
 msgid "indicatorFilter"

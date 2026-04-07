@@ -2,26 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# fairtommy <fairtommy@gmail.com>, 2025
-# Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: tomoya miyoshi, 2025\n"
+"POT-Creation-Date: 2026-03-22 20:55+0000\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -57,16 +55,6 @@ msgid ""
 msgstr ""
 "このレッスンにはひとつのテーブルとひとつのポリゴンレイヤが必要です。テーブル内の座標に基づいてポイントレイヤを作成し、各ポリゴン内のポイントの数を数えます。このレッスンに対応するQGISプロジェクト(second_alg)を開くと、XとY座標を持ったテーブルがありますが、ポリゴンレイヤはありませんが心配しないでください。これからプロセシング・ジオアルゴリズムを使って作成します。"
 
-#: ../../docs/training_manual/processing/second_alg.rst:9
-msgid ""
-"The first thing we are going to do is to create a points layer from the "
-"coordinates in the table, using the *Points layer from table* algorithm. You"
-" now know how to use the search box, so it should not be hard for you to "
-"find it. Double--click on it to run it and get to its following dialog."
-msgstr ""
-"まずやることは、 *テーブルから点レイヤを作成* "
-"アルゴリズムを使用して、テーブル内の座標からポイントレイヤを作成することです。もう検索ボックスの使い方は知っているので、それを見つけるのは難しくない筈です。それをダブルクリックして実行し、次のダイアログを表示させます。"
-
 #: ../../docs/training_manual/processing/second_alg.rst:11
 msgid ""
 "This algorithm, like the one from the previous lesson, just generates a "
@@ -78,17 +66,6 @@ msgid ""
 "*Table*: the table with the coordinates. You should select here the table "
 "from the lesson data."
 msgstr "*テーブル* ：座標を持つテーブル。ここでレッスンのデータからテーブルを選択する必要があります。"
-
-#: ../../docs/training_manual/processing/second_alg.rst:14
-msgid ""
-"*X and Y fields*: these two parameters are linked to the first one. The "
-"corresponding selector will show the name of those fields that are available"
-" in the selected table. Select the *XCOORD* field for the *X* parameter, and"
-" the *YYCOORD* field for the *Y* parameter."
-msgstr ""
-"*XとYフィールド* "
-"：これら2つのパラメータは最初のものに関連しています。対応するセレクタには、選択したテーブルで利用できるフィールドの名前が表示されます。 *X*  "
-"パラメータには *XCOORD* フィールド、 *Y* パラメータには *YYCOORD* フィールドを選択してください。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:15
 msgid ""
@@ -106,22 +83,6 @@ msgstr ""
 #: ../../docs/training_manual/processing/second_alg.rst:17
 msgid "Your dialog should look like this."
 msgstr "ダイアログは次のようになります。"
-
-#: ../../docs/training_manual/processing/second_alg.rst:21
-msgid ""
-"Now press the *Run* button to get the following layer (you may need to zoom "
-"full to reenter the map around the newly created points):"
-msgstr ""
-"次に *実行* ボタンを押して、次のレイヤを得ます（新たに作成されたポイントの周辺にマップを再表示するにはズームを最大にする必要があるかもしれません）:"
-
-#: ../../docs/training_manual/processing/second_alg.rst:25
-msgid ""
-"The next thing we need is the polygon layer. We are going to create a "
-"regular grid of polygons using the *Create grid* algorithm, which has the "
-"following parameters dialog."
-msgstr ""
-"次に必要とするのはポリゴンレイヤです。*グリッドを作成* "
-"アルゴリズムを使用して、構造格子のポリゴンを作成します。このアルゴリズムには次のパラメータダイアログがあります。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:29
 msgid ""
@@ -163,10 +124,6 @@ msgid ""
 msgstr ""
 "ここでは入力ポイントレイヤの範囲を覆うグリッドを作成したいので、それらの座標を使い、アルゴリズムがグリッドを作成するのに要するパラメータであるグリッドの中心座標と幅と高さを計算する必要があります。少し数学が必要ですが、計算機ダイアログと入力ポイントレイヤの定数を使って自分でやってみましょう。"
 
-#: ../../docs/training_manual/processing/second_alg.rst:39
-msgid "Select *Rectangles (polygons)* in the *Type* field."
-msgstr "*グリッドタイプ* フィールドは *長方形（ポリゴン）* を選択します。"
-
 #: ../../docs/training_manual/processing/second_alg.rst:41
 msgid ""
 "As in the case of the last algorithm, we have to enter the CRS here as well."
@@ -177,26 +134,6 @@ msgstr ""
 #: ../../docs/training_manual/processing/second_alg.rst:43
 msgid "In the end, you should have a parameters dialog like this:"
 msgstr "最終的に、次のようなパラメータダイアログになるはずです:"
-
-#: ../../docs/training_manual/processing/second_alg.rst:47
-msgid ""
-"(Better add one spacing on the width and height: Horizontal spacing: 0.0001,"
-" Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: "
-"-5.695674, Center Y: 40.2477955) The case of X center is a bit tricky, see: "
-"-5.696126+(( -5.695222+ 5.696126)/2)"
-msgstr ""
-"（幅と高さにひとつ間隔を追加した方が良いでしょう：水平間隔：0.0001、垂直間隔：0.0001、幅：0.001004、高さ：0.000651、中心X：-5.695674、中心Y：40.2477955）X中心は少し複雑です:"
-" -5.696126 +（（-5.695222+ 5.696126）/ 2）"
-
-#: ../../docs/training_manual/processing/second_alg.rst:50
-msgid "Press *Run* and you will get the graticule layer."
-msgstr "*実行* を押すと経緯線網レイヤが表示されます。"
-
-#: ../../docs/training_manual/processing/second_alg.rst:54
-msgid ""
-"The last step is to count the points in each one of the rectangles of that "
-"graticule. We will use the *Count points in polygons* algorithm."
-msgstr "最後のステップは、その経緯線網の各長方形の中の点を数えることです。 *ポリゴン内の点の数* アルゴリズムを使用します。"
 
 #: ../../docs/training_manual/processing/second_alg.rst:58
 msgid "Now we have the result we were looking for."
@@ -212,28 +149,3 @@ msgid ""
 msgstr ""
 "このレッスンを終える前に、データを永続的に保存したい場合に役立つ簡単なヒントを紹介します。全ての出力ファイルを特定のフォルダに保存したい場合、フォルダ名を毎回入力する必要はありません。代わりに、プロセシングメニューに移動し、"
 " *オプションと設定* を選択します。すると設定ダイアログが開きます。"
-
-#: ../../docs/training_manual/processing/second_alg.rst:64
-msgid ""
-"In the *Output folder* entry that you will find in the *General* group, type"
-" the path to your destination folder."
-msgstr "*一般情報* グループで見つかる *出力フォルダ* エントリで、保存先フォルダのパスを入力します。"
-
-#: ../../docs/training_manual/processing/second_alg.rst:68
-msgid ""
-"Now when you run an algorithm, just use the filename instead of the full "
-"path. For instance, with the configuration shown above, if you enter "
-"``graticule.shp`` as the output path for the algorithm that we have just "
-"used, the result will be saved in ``D:\\processing_output\\graticule.shp``. "
-"You can still enter a full path in case you want a result to be saved in a "
-"different folder."
-msgstr ""
-"これでアルゴリズムを実行するときに、完全パスの代わりにファイル名を使うだけでよくなりました。例えば上の設定において、先ほどのアルゴリズムの出力パスとして"
-" ``graticule.shp`` を入力すると、結果は ``D:\\processing_output\\graticule.shp`` "
-"に保存されます。結果を別のフォルダに保存したい場合は、完全パスを入力することもできます。"
-
-#: ../../docs/training_manual/processing/second_alg.rst:71
-msgid ""
-"Try yourself the *Create grid* algorithm with different grid sizes, and also"
-" with different types of grids."
-msgstr "*グリッドを作成* アルゴリズムを異なるグリッドサイズで、またグリッドの異なる種類で自分で試してみてください。"

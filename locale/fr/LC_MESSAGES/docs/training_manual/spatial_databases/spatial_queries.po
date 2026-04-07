@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 16:37+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -169,44 +169,6 @@ msgstr ""
 msgid "Remember to install the postgis extensions:"
 msgstr "Rappelez-vous d'installer les extensions PostGIS::"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
-msgid ""
-"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
-"directory. Refer back to the previous lesson for instructions, but remember "
-"that you'll need to create a new PostGIS connection to the new database. You"
-" can import from the terminal or via DB Manager. Import the files into the "
-"following database tables:"
-msgstr ""
-"Ensuite, importez les données fournies dans le répertoire "
-":kbd:`exercise_data/postgis/`. Référez-vous à la leçon précédente mais "
-"souvenez-vous que vous devez créer une nouvelle connexion PostGIS à la "
-"nouvelle base de données. Vous pouvez importer depuis le terminal ou via DB "
-"Manager. Importez les fichiers dans les tables suivantes de la base:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
-msgid ":kbd:`points.shp` into :kbd:`building`"
-msgstr ":kbd:`points.shp` dans :kbd:`building`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
-msgid ":kbd:`lines.shp` into :kbd:`road`"
-msgstr ":kbd:`lines.shp` dans :kbd:`road`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
-msgid ":kbd:`polygons.shp` into :kbd:`region`"
-msgstr ":kbd:`polygons.shp` dans :kbd:`region`"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
-msgid ""
-"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
-"Layers` dialog, as usual. When you open their attribute tables, you'll note "
-"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
-" PostGIS import."
-msgstr ""
-"Chargez ces trois couches dans QGIS via la boîte de dialogue "
-":guilabel:`Ajouter des couches PostGIS`, comme d'habitude. Lorsque vous "
-"ouvrez les tables d'attributs, vous pouvez remarquer qu'elles ont un champ "
-":guilabel:`id` et un autre :guilabel:`gid`, créés lors de l'import PostGIS."
-
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
@@ -285,21 +247,6 @@ msgstr "La surface la plus sombre est le tampon:"
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "Sélection à l'aide du tampon:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
-msgid ""
-"In this query, the original buffer view is used as any other table would be."
-" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.geom`, is "
-"used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that "
-"intersects it. However, Hokkaido itself is excluded from this select "
-"statement, because we don't want it; we only want the regions adjoining it."
-msgstr ""
-"Dans cette requête, la vue originelle du tampon est utilisée comme n'importe"
-" quelle autre table. Elle dispose d'un alias :kbd:`a` et son champ de "
-"géométrie, :kbd:`a.geom`, est utilisé pour sélectionner un polygone dans la "
-"table :kbd:`region` (alias :kbd:`b`) qui l'intersecte. Néanmoins, Hokkaido "
-"est exclue de cette sélection car nous n'en voulons pas, nous voulons "
-"seulement les régions qui la touche."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""

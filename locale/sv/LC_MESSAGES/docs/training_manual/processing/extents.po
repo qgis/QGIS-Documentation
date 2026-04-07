@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Daniel Nylander <po@danielnylander.se>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -67,15 +67,6 @@ msgstr ""
 "också andra mer praktiska och mer intressanta sätt att göra det på. Vi "
 "kommer att se dem alla i den här lektionen."
 
-#: ../../docs/training_manual/processing/extents.rst:15
-msgid ""
-"First, let's open an algorithm that requires an extent to be defined. Open "
-"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
-msgstr ""
-"Låt oss först öppna en algoritm som kräver att en utsträckning definieras. "
-"Öppna algoritmen *Rasterize*, som skapar ett rasterlager från ett "
-"vektorlager."
-
 #: ../../docs/training_manual/processing/extents.rst:20
 msgid ""
 "All the parameters, except for the last two ones, are used to define which "
@@ -118,14 +109,6 @@ msgstr ""
 msgid "Let's see what each one of them does."
 msgstr "Låt oss se vad var och en av dem gör."
 
-#: ../../docs/training_manual/processing/extents.rst:42
-msgid ""
-"The first option is *Use layer/canvas extent*, which will show the selection"
-" dialog shown below."
-msgstr ""
-"Det första alternativet är *Use layer/canvas extent*, som visar den "
-"urvalsdialog som visas nedan."
-
 #: ../../docs/training_manual/processing/extents.rst:47
 msgid ""
 "Here you can select the extent of the canvas (the extent covered by the "
@@ -137,16 +120,6 @@ msgstr ""
 " zoomen) eller förlängningen av något av de tillgängliga lagren. Markera det"
 " och klicka på *OK*, så fylls textrutan automatiskt med motsvarande värden."
 
-#: ../../docs/training_manual/processing/extents.rst:51
-msgid ""
-"The second option is *Select extent on canvas*. In this case, the algorithm "
-"dialog disappears and you can click and drag on the QGIS canvas to define "
-"the desired extent."
-msgstr ""
-"Det andra alternativet är *Select extent on canvas*. I det här fallet "
-"försvinner algoritmdialogen och du kan klicka och dra på QGIS-rutan för att "
-"definiera önskad utsträckning."
-
 #: ../../docs/training_manual/processing/extents.rst:57
 msgid ""
 "Once you release the mouse button, the dialog will reappear and the text box"
@@ -155,47 +128,11 @@ msgstr ""
 "När du släpper musknappen visas dialogrutan igen och textrutan har redan de "
 "värden som motsvarar den definierade omfattningen."
 
-#: ../../docs/training_manual/processing/extents.rst:60
-msgid ""
-"The last option is *Use min covering extent from input layers*, which is the"
-" default option. This will compute the min covering extent of all layers "
-"used to run the algorithm, and there is no need to enter any value in the "
-"text box. In the case of a single input layer, as in the algorithm we are "
-"running, the same extent can be obtained by selecting that same input layer "
-"in the *Use layer/canvas extent* that we already saw. However, when there "
-"are several input layers, the min covering extent does not correspond to any"
-" of the input layer extent, since it is computed from all of them together."
-msgstr ""
-"Det sista alternativet är *Use min covering extent from input layers*, "
-"vilket är standardalternativet. Detta beräknar den minsta täckande "
-"utbredningen för alla lager som används för att köra algoritmen, och det "
-"finns inget behov av att ange något värde i textrutan. Om det finns ett enda"
-" inmatningslager, som i den algoritm vi kör, kan samma utsträckning erhållas"
-" genom att välja samma inmatningslager i *Use layer/canvas extent* som vi "
-"redan har sett. Men när det finns flera inmatningslager motsvarar inte den "
-"minsta täckande omfattningen något av inmatningslagrens omfattning, eftersom"
-" den beräknas från dem alla tillsammans."
-
 #: ../../docs/training_manual/processing/extents.rst:69
 msgid "We will use this last method to execute our rasterization algorithm."
 msgstr ""
 "Vi kommer att använda den sista metoden för att utföra vår "
 "rasteriseringsalgoritm."
-
-#: ../../docs/training_manual/processing/extents.rst:71
-msgid "Fill the parameters dialog as shown next, and press *OK*."
-msgstr "Fyll i parameterdialogrutan enligt nästa bild och tryck på *OK*."
-
-#: ../../docs/training_manual/processing/extents.rst:75
-msgid ""
-"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
-"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
-"result in a smaller file size and faster computations."
-msgstr ""
-"I det här fallet är det bättre att använda ett *Integer (1 byte)* i stället "
-"för ett *Floating point (4 byte)*, eftersom *NAME* är ett heltal med "
-"maxvärde=64. Detta kommer att resultera i en mindre filstorlek och snabbare "
-"beräkningar."
 
 #: ../../docs/training_manual/processing/extents.rst:79
 msgid ""
@@ -204,19 +141,6 @@ msgid ""
 msgstr ""
 "Du får ett rastrerat lager som täcker exakt det område som täcks av det "
 "ursprungliga vektorlagret."
-
-#: ../../docs/training_manual/processing/extents.rst:84
-msgid ""
-"In some cases, the last option, *Use min covering extent from input layers*,"
-" might not be available. This will happen in those algorithm that do not "
-"have input layers, but just parameters of other types. In that case, you "
-"will have to enter the value manually or use any of the other options."
-msgstr ""
-"I vissa fall kan det hända att det sista alternativet, *Use min covering "
-"extent from input layers*, inte är tillgängligt. Detta händer i de "
-"algoritmer som inte har indatalager, utan bara parametrar av andra typer. I "
-"så fall måste du ange värdet manuellt eller använda något av de andra "
-"alternativen."
 
 #: ../../docs/training_manual/processing/extents.rst:89
 msgid ""

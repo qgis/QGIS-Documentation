@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Asdfgr Wertyu, 2025
+# Harrissou Sant-anna, 2026
+# Asdfgr Wertyu, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Asdfgr Wertyu, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Asdfgr Wertyu, 2026\n"
 "Language-Team: Russian (https://app.transifex.com/qgis/teams/6144/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ru\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
@@ -73,14 +73,6 @@ msgstr ""
 msgid "In the :guilabel:`Layers` panel, enable these layers:"
 msgstr "В панели :guilabel:`Layers` вам надо активировать эти слои:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
-msgid ":guilabel:`hillshade`,"
-msgstr ":guilabel:`hillshade`"
-
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
-msgid ":guilabel:`solution` (or :guilabel:`buildings_over_100`)"
-msgstr ":guilabel:`solution` (или :guilabel:`buildings_over_100`)"
-
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
 msgid ""
 "In addition to these layers, which should already be loaded in the map from "
@@ -99,18 +91,6 @@ msgstr ""
 "Если вам не хватает некоторых слоев, вы должны найти их внутри "
 ":file:`exercise_data/residential_development/`"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
-msgid ""
-"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
-"Geoprocessing Tools`) to create a new vector layer called "
-":file:`new_solution.shp` which contains only those buildings which intersect"
-" the :guilabel:`suitable_terrain` layer."
-msgstr ""
-"Вам надо использовать инструмент :guilabel:`Intersection` tool "
-"(:menuselection:`Vector --> Geoprocessing Tools`) для того, чтобы создать "
-"новый векторный слой, который называется :file:`new_solution.shp` и содержит"
-" только те здания, которые пересекают слой :guilabel:`suitable_terrain`."
-
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
 msgid ""
 "You should now have a layer showing certain buildings as your solution, for "
@@ -123,40 +103,10 @@ msgstr ""
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results"
 msgstr ":abbr:`★★☆ (Умеренный уровень)` Испытай себя: Проверка результатов"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
-msgid ""
-"Look at each of the buildings in your :guilabel:`new_solution` layer. "
-"Compare them with the :guilabel:`suitable_terrain` layer by changing the "
-"symbology for the :guilabel:`new_solution` layer so that it has outlines "
-"only. What do you notice about some of the buildings? Are they all suitable "
-"just because they intersect with the :guilabel:`suitable_terrain` layer? Why"
-" or why not? Which ones would you deem to be unsuitable?"
-msgstr ""
-"Посмотрите на каждое из зданий в вашем слое :guilabel:`new_solution`. "
-"Сравните их со слоем :guilabel:`suitable_terrain`, изменив символы для слоя "
-":guilabel:`new_solution` так, чтобы на нем были только контуры. Что вы "
-"заметили в некоторых зданиях? Все ли они подходят только потому, что "
-"пересекаются со слоем :guilabel:`suitable_terrain`? Почему или почему нет? "
-"Какие из них вы считаете не подходят?"
-
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
 msgid "Answer"
 msgstr "Ответить"
-
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
-msgid ""
-"You may notice that some of the buildings in your :file:`new_solution` layer"
-" have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
-"only part of the building - and therefore only part of the property - lies "
-"on suitable terrain. We can therefore sensibly eliminate those buildings "
-"from our dataset."
-msgstr ""
-"Вы можете заметить, что некоторые здания в слое :file:`new_solution` были "
-"«нарезаны» инструментом :guilabel:`Intersection`. Это показывает, что только"
-" часть здания - и, следовательно, только часть объекта - лежит на подходящей"
-" местности. Поэтому мы можем разумно исключить эти здания из нашего набора "
-"данных."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis"
@@ -169,19 +119,6 @@ msgid ""
 msgstr ""
 "Вы можете увидеть из результатов, что некоторые из включенных зданий на "
 "самом деле не походят и поэтому нам надо уточнить анализ."
-
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
-msgid ""
-"We want to ensure that our analysis returns only those buildings which fall "
-"entirely within the :guilabel:`suitable_terrain` layer. How would you "
-"achieve this? Use one or more Vector Analysis tools and remember that our "
-"buildings are all over 100m squared in size."
-msgstr ""
-"Мы хотим убедиться, что наш анализ выдаст только те здания, которые "
-"полностью сидят внутри слоя :guilabel:`suitable_terrain`. Как вам этого "
-"добиться? Надо использовать один или несколько инструментов векторного "
-"анализа и помните, что все наши здания имеют площадь более 100 квадратных "
-"метров."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
 msgid "At the moment, your analysis should look something like this:"
@@ -201,18 +138,6 @@ msgstr ""
 "Если его радиус превышает 100 метров, то при вычитании 100 метров из его "
 "размера (со всех сторон) часть его останется посередине."
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
-msgid ""
-"Therefore, you can run an *interior buffer* of 100 meters on your existing "
-":guilabel:`suitable_terrain` vector layer. In the output of the buffer "
-"function, whatever remains of the original layer will represent areas where "
-"there is suitable terrain for 100 meters beyond."
-msgstr ""
-"Поэтому вы можете запустить *внутренний буфер* в 100 метров на существующем "
-"векторном слое :guilabel:`suitable_terrain`. На выходе функции буфера все, "
-"что осталось от исходного слоя, будет представлять области, где есть "
-"подходящая местность на 100 метров дальше."
-
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
 msgid "To demonstrate:"
 msgstr "Чтобы продемонстрировать:"
@@ -229,16 +154,6 @@ msgstr ""
 msgid "Set it up like this:"
 msgstr "Настройте его таким образом:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
-msgid ""
-"Use the :guilabel:`suitable_terrain` layer with ``10`` segments and a buffer"
-" distance of ``-100``. (The distance is automatically in meters because your"
-" map is using a projected CRS.)"
-msgstr ""
-"Используйте слой :guilabel:`suitable_terrain` с ``10`` сегментами и буферным"
-" расстоянием ``-100``. (Расстояние автоматически указывается в метрах, "
-"поскольку на вашей карте используется проецируемая CRS)."
-
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
 msgid ""
 "Save the output in :file:`exercise_data/residential_development/` as "
@@ -246,14 +161,6 @@ msgid ""
 msgstr ""
 "Сохраните результат в :file:`exercise_data/residential_development/` как "
 ":file:`suitable_terrain_continuous100m.shp`."
-
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
-msgid ""
-"If necessary, move the new layer above your original "
-":guilabel:`suitable_terrain` layer."
-msgstr ""
-"При необходимости переместите новый слой выше исходного слоя "
-":guilabel:`suitable_terrain`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
 msgid "Your results will look like something like this:"
@@ -272,29 +179,9 @@ msgstr ""
 msgid "Set up like this:"
 msgstr "Установите его так:"
 
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
-msgid ""
-"Select features in :guilabel:`new_solution` that intersect features in "
-":guilabel:`suitable_terrain_continuous100m.shp`."
-msgstr ""
-"Выберите особенности в :guilabel:`new_solution`, которые пересекаются с "
-"особенностями в :guilabel:`suitable_terrain_continuous100m.shp`."
-
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
 msgid "This is the result:"
 msgstr "Вот результат:"
-
-#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
-msgid ""
-"The yellow buildings are selected. Although some of the buildings fall "
-"partly outside the new :guilabel:`suitable_terrain_continuous100m` layer, "
-"they lie well within the original :guilabel:`suitable_terrain` layer and "
-"therefore meet all of our requirements."
-msgstr ""
-"Выбраны желтые здания. Хотя некоторые здания частично выходят за пределы "
-"нового слоя :guilabel:`suitable_terrain_continuous100m`, они находятся в "
-"пределах исходного слоя :guilabel:`suitable_terrain` и поэтому отвечают всем"
-" нашим требованиям."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
 msgid ""

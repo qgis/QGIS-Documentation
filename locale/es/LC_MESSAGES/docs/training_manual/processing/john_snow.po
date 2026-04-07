@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -85,17 +85,6 @@ msgstr ""
 "ubicaciones de bombas, y un mapa rendido OSM en formato TIFF. Abra el "
 "proyecto de QGIS correspondiente para esta lección."
 
-#: ../../docs/training_manual/processing/john_snow.rst:15
-msgid ""
-"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
-"polygons) of the pumps layer, to get the influence zone of each pump. The "
-"*Voronoi Diagram* algorithm can be used for that."
-msgstr ""
-"Lo primero que debe hacer es calcular el diagrama de Voronoi (también "
-"conocido como polígonos de Thiessen) de la capa de bombas, para obtener la "
-"zona de influencia de cada bomba. El algoritmo *Diagrama de Voronoi* se "
-"puede usar para eso."
-
 #: ../../docs/training_manual/processing/john_snow.rst:22
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr "Bastante fácil, pero ya nos dará información interesante."
@@ -104,44 +93,6 @@ msgstr "Bastante fácil, pero ya nos dará información interesante."
 msgid "Clearly, most cases are within one of the polygons"
 msgstr ""
 "Claramente, muchos de los casos se encuentran dentro de uno de los polígonos"
-
-#: ../../docs/training_manual/processing/john_snow.rst:28
-msgid ""
-"To get a more quantitative result, we can count the number of deaths in each"
-" polygon. Since each point represents a building where deaths occured, and "
-"the number of deaths is stored in an attribute, we cannot just count the "
-"points. We need a weighted count, so we will use the *Count points in "
-"polygon (weighted)* tool."
-msgstr ""
-"Para obtener un resultado más cuantitativo, podemos contar el número de "
-"muertes en cada polígono. Dado que cada punto representa un edificio donde "
-"las muertes ocurrieron, y el número de muertes se almacena en un atributo, "
-"no podemos contar los puntos. Necesitamos un recuento ponderado, por lo que "
-"utilizaremos la herramienta *Contar puntos en polígono (ponderada)*."
-
-#: ../../docs/training_manual/processing/john_snow.rst:32
-msgid ""
-"The new field will be called *DEATHS*, and we use the *COUNT* field as "
-"weighting field. The resulting table clearly reflects that the number of "
-"deaths in the polygon corresponding to the first pump is much larger than "
-"the other ones."
-msgstr ""
-"El nuevo campo se llamará *DEATHS*, y usamos el campo *COUNT* como campo de "
-"ponderación. La tabla resultante refleja claramente que el número de muertes"
-" en el polígono correspondiente a la primera bomba es mucho más grande que "
-"los otros."
-
-#: ../../docs/training_manual/processing/john_snow.rst:36
-msgid ""
-"Another good way of visualizing the dependence of each point in the "
-"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
-"line to the closest one. This can be done with the *Distance to nearest hub*"
-" tool, and using the configuration shown next."
-msgstr ""
-"Otra buena forma de visualizar la dependencia de cada punto de la capa "
-"``Cholera_deaths`` con un punto en la capa ``Pumps`` es dibujar una línea al"
-" más cercano. Esto se puede hacer con la herramienta *Distancia al centro "
-"más cercano*, y el uso de la configuración que se muestra a continuación."
 
 #: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
@@ -160,29 +111,6 @@ msgstr ""
 "lugares donde se encontraron casos de cólera. Es un parámetro "
 "representativo, pero no está considerando que algunos lugares podrían tener "
 "más casos que otros."
-
-#: ../../docs/training_manual/processing/john_snow.rst:46
-msgid ""
-"A density layer will also give us a very clear view of what is happening. We"
-" can create it with the *Kernel density* algorithm. Using the "
-"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
-"100, the extent and cellsize of the streets raster layer, we get something "
-"like this."
-msgstr ""
-"Una capa de densidad también nos dará una visión muy clara de lo que está "
-"sucediendo. Podemos crearlo con el algoritmo *Densidad de Kernel *. Usar la "
-"capa *Cholera_deaths*, su campo *COUNT * como campo de peso, con un radio de"
-" 100, la extensión y tamaño de celda de la capa ráster de calles, obtenemos "
-"algo como esto."
-
-#: ../../docs/training_manual/processing/john_snow.rst:50
-msgid ""
-"Remember that, to get the output extent, you do not have to type it. Click "
-"on the button on the right-hand side and select *Use layer/canvas extent*."
-msgstr ""
-"Recuerde que, para conseguir la extensión de salida, no tiene que "
-"escribirla. Haga clic en el botón en el lado derecho y seleccione *Uso "
-"capa/extensión del área del mapa*."
 
 #: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""

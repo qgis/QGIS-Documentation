@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -67,15 +67,6 @@ msgstr ""
 "mais il y a aussi d'autres façons plus pratiques et plus intéressantes de le"
 " faire. Nous les verrons toutes dans cette leçon."
 
-#: ../../docs/training_manual/processing/extents.rst:15
-msgid ""
-"First, let's open an algorithm that requires an extent to be defined. Open "
-"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
-msgstr ""
-"Premièrement, ouvrons un algorithme qui requière une étendue comme "
-"paramètre. Ouvrez l'algorithme *Rasterisation*, qui crée une couche raster à"
-" partir d'une couche vectorielle."
-
 #: ../../docs/training_manual/processing/extents.rst:20
 msgid ""
 "All the parameters, except for the last two ones, are used to define which "
@@ -121,14 +112,6 @@ msgstr ""
 msgid "Let's see what each one of them does."
 msgstr "Voyons ce que fait chacune d'entre elles."
 
-#: ../../docs/training_manual/processing/extents.rst:42
-msgid ""
-"The first option is *Use layer/canvas extent*, which will show the selection"
-" dialog shown below."
-msgstr ""
-"La première option est *Utiliser l'emprise de la couche/du canevas*, qui "
-"montrera la boîte de dialogue de sélection montrée ci-dessous."
-
 #: ../../docs/training_manual/processing/extents.rst:47
 msgid ""
 "Here you can select the extent of the canvas (the extent covered by the "
@@ -141,16 +124,6 @@ msgstr ""
 " Sélectionnez-la et cliquez sur *OK*, et la zone de texte sera "
 "automatiquement remplie avec les valeurs correspondantes."
 
-#: ../../docs/training_manual/processing/extents.rst:51
-msgid ""
-"The second option is *Select extent on canvas*. In this case, the algorithm "
-"dialog disappears and you can click and drag on the QGIS canvas to define "
-"the desired extent."
-msgstr ""
-"La seconde option est *Sélectionner l'emprise depuis le canevas*. Dans ce "
-"cas, la boîte de dialogue de l'algorithme disparaît et vous pouvez cliquer "
-"et faire glisser sur le canevas QGIS pour définir l'étendue désirée."
-
 #: ../../docs/training_manual/processing/extents.rst:57
 msgid ""
 "Once you release the mouse button, the dialog will reappear and the text box"
@@ -160,50 +133,11 @@ msgstr ""
 "réapparaîtra et la zone de texte aura déjà les valeurs correspondantes à "
 "l'emprise définie."
 
-#: ../../docs/training_manual/processing/extents.rst:60
-msgid ""
-"The last option is *Use min covering extent from input layers*, which is the"
-" default option. This will compute the min covering extent of all layers "
-"used to run the algorithm, and there is no need to enter any value in the "
-"text box. In the case of a single input layer, as in the algorithm we are "
-"running, the same extent can be obtained by selecting that same input layer "
-"in the *Use layer/canvas extent* that we already saw. However, when there "
-"are several input layers, the min covering extent does not correspond to any"
-" of the input layer extent, since it is computed from all of them together."
-msgstr ""
-"La dernière option est *Utiliser l'étendue de couverture minimale depuis les"
-" couches d'entrée*, qui est l'option par défaut. Cette fonction calcule "
-"l'étendue de couverture minimale de toutes les couches utilisées pour "
-"exécuter l'algorithme, et il n'y a pas besoin d'entrer de valeur dans la "
-"zone de texte. Dans le cas d'une seule couche d'entrée, comme dans "
-"l'algorithme que nous avons lancé, la même étendue peut être obtenue en "
-"sélectionnant cette même couche d'entrée dans *Utiliser l'emprise de la "
-"couche/du canevas* que nous avons déjà vu. Cependant, quand il y a plusieurs"
-" couches d'entrée, l'étendue de couverture minimale ne doit correspondre à "
-"aucune étendue d'une des couches d'entrée, car elle est calculée à partir de"
-" toutes les couches mises ensemble."
-
 #: ../../docs/training_manual/processing/extents.rst:69
 msgid "We will use this last method to execute our rasterization algorithm."
 msgstr ""
 "Nous utiliserons cette dernière méthode pour exécuter notre algorithme de "
 "mise en raster."
-
-#: ../../docs/training_manual/processing/extents.rst:71
-msgid "Fill the parameters dialog as shown next, and press *OK*."
-msgstr ""
-"Remplissez la boîte de dialogue des paramètres comme montré par la suite et "
-"cliquez sur *OK*."
-
-#: ../../docs/training_manual/processing/extents.rst:75
-msgid ""
-"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
-"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
-"result in a smaller file size and faster computations."
-msgstr ""
-"Dans ce cas, utilisez plutôt un *entier (1 octet)* au lieu d'un *réel (4 "
-"octets)*, car *NAME* est un entier ayant une valeur maximum=64. Une taille "
-"de fichier plus petite et des calculs plus rapides en résulteront."
 
 #: ../../docs/training_manual/processing/extents.rst:79
 msgid ""
@@ -212,19 +146,6 @@ msgid ""
 msgstr ""
 "Vous obtiendrez une couche de numérisation qui couvre exactement la zone "
 "couverte par la couche vecteur originale."
-
-#: ../../docs/training_manual/processing/extents.rst:84
-msgid ""
-"In some cases, the last option, *Use min covering extent from input layers*,"
-" might not be available. This will happen in those algorithm that do not "
-"have input layers, but just parameters of other types. In that case, you "
-"will have to enter the value manually or use any of the other options."
-msgstr ""
-"Dans certains cas, la dernière option, *Utiliser l'emprise de couverture "
-"minimale depuis les couches d'entrée*, pourrait ne pas être disponible. "
-"C'est le cas avec les algorithmes qui n'ont pas de couches d'entrée, mais "
-"seulement des paramètres d'autres types. Dans ce cas, vous devrez entrer la "
-"valeur manuellement ou utiliser une des autres options."
 
 #: ../../docs/training_manual/processing/extents.rst:89
 msgid ""

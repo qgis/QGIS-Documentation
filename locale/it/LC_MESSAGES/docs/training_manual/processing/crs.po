@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -81,24 +80,6 @@ msgstr ""
 "l'algoritmo non contenga un campo SR specifico (come è successo nell'ultima "
 "lezione con l'algoritmo del reticolo)"
 
-#: ../../docs/training_manual/processing/crs.rst:23
-msgid ""
-"Open the project corresponding to this lesson and you will see two layers "
-"named 23030 and 4326. They both contain the same points, but in different "
-"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
-"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
-"actually the same layer."
-msgstr ""
-"Apri il progetto corrispondente a questa lezione: noterai due vettori "
-"denominati 23030 e 4326. Entrambi contengono gli stessi punti, ma in SR "
-"differenti (EPSG:23030 e EPSG:4326). Essi appaiono nella stessa posizione "
-"perché QGIS sta riproiettando al volo nel SR del progetto (EPSG:4326), ma in"
-" realtà non rappresentano lo stesso vettore."
-
-#: ../../docs/training_manual/processing/crs.rst:29
-msgid "Open the *Export/Add geometry columns* algorithm."
-msgstr "Apri l'algoritmo *Esporta/Aggiungi colonne geometriche*."
-
 #: ../../docs/training_manual/processing/crs.rst:33
 msgid ""
 "This algorithm add new columns to the attributes table of a vector layer. "
@@ -122,21 +103,6 @@ msgstr ""
 "ingresso, vedrai ognuno di essi con il SR corrispondente. Ciò significa che,"
 " sebbene appaiano nella stessa posizione sulla mappa, saranno trattati "
 "diversamente. Selezione il vettore 4326."
-
-#: ../../docs/training_manual/processing/crs.rst:43
-msgid ""
-"The other parameter of the algorithm allows to set how the algorithm uses "
-"coordinates to calculate the new value that it will add to the resulting "
-"layers. Most algorithms do not have an option like that, and just use the "
-"coordinates directly. Select the *Layer CRS* option to just use coordinates "
-"as they are. This is how almost all geoalgorithms work."
-msgstr ""
-"L'altro parametro dell'algoritmo permette di definire come l'algoritmo "
-"utilizza le coordinate per calcolare il nuovo valore che sarà aggiunto al "
-"vettore risultante. La maggior parte degli algoritmi non ha un'opzione "
-"simile, e usa direttamente le coordinate. Seleziona l'opzione *SR del "
-"vettore* per usare le coordinate così come sono. Questo è il modo con cui "
-"funzionano quasi tutti gli algoritmi."
 
 #: ../../docs/training_manual/processing/crs.rst:49
 msgid ""
@@ -245,28 +211,3 @@ msgstr ""
 "Un modulo interessante che ha a che fare con i SR è quello di riproiezione. "
 "Esso rappresenta un caso particolare poiché ha un vettore in ingresso "
 "(quello da riproiettare), ma non utilizza il suo SR per quello in uscita."
-
-#: ../../docs/training_manual/processing/crs.rst:97
-msgid "Open the *Reproject layer* algorithm."
-msgstr "Apri l'algoritmo *Riproietta vettore*."
-
-#: ../../docs/training_manual/processing/crs.rst:101
-msgid ""
-"Select any of the layers as input, and select EPSG:23029 as the destination "
-"CRS. Run the algorithm and you will get a new layer, identical to the input "
-"one, but with a different CRS. It will appear on the same region of the "
-"canvas, like the other ones, since QGIS will reproject it on the fly, but "
-"its original coordinates are different. You can see that by running the "
-"*Export/Add geometry columns* algorithm using this new layer as input, and "
-"veryfing that the added coordinates are different to the ones in the "
-"attribute tables of both of the two layers that we had computed before."
-msgstr ""
-"Seleziona in ingresso un qualunque vettore, e seleziona EPSG:23029 come SR "
-"di destinazione. Eseguendo l'algoritmo otterrai un nuovo vettore, identico a"
-" quello in ingresso, ma con un SR diverso. Apparirà nella stessa regione "
-"della mappa, come gli altri, poiché QGIS lo riproietterà al volo, ma le sue "
-"coordinate di partenza sono diverse. Puoi notare ciò eseguendo l'algoritmo "
-"*Esporta/Aggiungi colonne geometriche* usando questo nuovo vettore in "
-"ingresso, e verificando che le coordinate aggiunte siano diverse rispetto a "
-"quelle nella tabella degli attributi di entrambi i vettori che abbiamo "
-"elaborato prima."

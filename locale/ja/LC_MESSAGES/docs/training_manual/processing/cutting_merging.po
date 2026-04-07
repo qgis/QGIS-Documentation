@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
+# Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: tomoya miyoshi, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -84,18 +84,6 @@ msgid ""
 msgstr ""
 "まず、望む領域を定義する矩形を作成します。これを行うには、市の面積の限界を有するレイヤのバウンディングボックスを含むレイヤを作成し、それから厳密に必要であるよりもう少しカバーするラスタレイヤを有するように、それをバッファリングします。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:30
-msgid ""
-"To calculate the bounding box , we can use the *Polygon from layer extent* "
-"algorithm"
-msgstr "バウンディングボックスを計算するために、 *レイヤの範囲からポリゴン* アルゴリズムを使用できます"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:34
-msgid ""
-"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
-"following parameter values."
-msgstr "それをバッファリングするために、以下のパラメーター値で、 *固定距離バッファ* アルゴリズムを使用します。"
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
@@ -106,47 +94,13 @@ msgid ""
 "Here is the resulting bounding box obtained using the parameters shown above"
 msgstr "これが上に示したパラメーターを用いて得られた結果のバウンディングボックスです"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:44
-msgid ""
-"It is a rounded box, but we can easily get the equivalent box with square "
-"angles, by running the *Polygon from layer extent* algorithm on it. We could"
-" have buffered the city limits first, and then calculate the extent "
-"rectangle, saving one step."
-msgstr ""
-"これは丸みを帯びた箱ですが、それに *レイヤの範囲からポリゴン* "
-"アルゴリズムを実行することで、正方形の角度での同等のボックスを簡単に取得できます。最初の市域をバッファリングして、一ステップ省略し、範囲矩形を計算することもできたでしょう。"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:50
-msgid ""
-"You will notice that the rasters has a different projection from the vector."
-" We should therefore reproject them before proceeding further, using the "
-"*Warp (reproject)* tool."
-msgstr ""
-"ラスターは、ベクタと別の投影を有することがわかります。したがって、 *ワープ（再投影）* "
-"ツールを使用して、さらに進む前にそれらを再投影する必要があります。"
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
 "compression method is selected."
 msgstr "最近のバージョンではより複雑なインターフェイスになっています。少なくとも1つの圧縮方式が選択されていることを確認します。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:59
-msgid ""
-"With this layer that contains the bounding box of the raster layer that we "
-"want to obtain, we can crop both of the raster layers, using the *Clip "
-"raster with polygon* algorithm."
-msgstr ""
-"入手したいラスタレイヤのバウンディングボックスが含まれるこのレイヤで、 *ポリゴンでラスタをクリップ* "
-"アルゴリズムを使用して、ラスタレイヤの両方をトリミングできます。"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:65
-msgid ""
-"Once the layers have been cropped, they can be merged using the SAGA *Mosaic"
-" raster layers* algorithm."
-msgstr "レイヤを切り出したら、SAGA *Mosaic raster layers* アルゴリズムを使ってレイヤを統合することができます。"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:69
+#: ../../docs/training_manual/processing/cutting_merging.rst:68
 msgid ""
 "You can save time merging first and then cropping, and you will avoid "
 "calling the clipping algorithm twice. However, if there are several layers "
@@ -159,61 +113,23 @@ msgid ""
 msgstr ""
 "最初にマージしてからトリミングすると時間を節約でき、二回クリッピングアルゴリズムを呼び出さずにすむでしょう。しかしながら、マージする複数のレイヤがあってそれらがかなり大きなサイズを持っている場合、それが後工程に処理が困難であるよりも大きなレイヤになってしまいます。その場合はクリッピングアルゴリズムを数回呼び出す必要があります。時間がかかるかもしれませんが、心配しないで。その操作を自動化するためにいくつかの追加のツールがあることがすぐにわかりますから。この例では、レイヤは2つだけなので、今それを心配することはありません。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:77
+#: ../../docs/training_manual/processing/cutting_merging.rst:76
 msgid "With that, we get the final DEM we want."
 msgstr "それによって、私たちが望む最後のDEMが得られます。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:81
+#: ../../docs/training_manual/processing/cutting_merging.rst:80
 msgid "Now it is time to compute the slope layer."
 msgstr "では傾斜レイヤを計算しましょう。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:83
-msgid ""
-"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
-" but the DEM obtained in the last step is not suitable as input, since "
-"elevation values are in meters but cellsize is not expressed in meters (the "
-"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
-"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
-"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
-"then correctly calculate the slope, with either SAGA or GDAL."
-msgstr ""
-"傾斜レイヤは *傾斜・方向・曲率* "
-"アルゴリズムを用いて計算できますが、標高値はメートル単位ですがセルサイズはメートルで表現されていないため、最後の工程で得られたDEMは入力として適していません（レイヤは地理座標を持つCRS使用しています）。再投影が必要とされています。ラスタレイヤを再投影するために、*ワープ（再投影）*"
-" アルゴリズムを再び使用できます。単位（例えば3857）メートルでCRSに再投影、その後、正しくSAGAやGDALのいずれかで、傾きを計算できます。"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:91
+#: ../../docs/training_manual/processing/cutting_merging.rst:90
 msgid "With the new DEM, slope can now be computed."
 msgstr "新DEMでは、傾きが計算できるようになりました。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:95
+#: ../../docs/training_manual/processing/cutting_merging.rst:94
 msgid "And here is the resulting slope layer."
 msgstr "そして、これが結果の傾斜レイヤです。"
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:99
-msgid ""
-"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
-"expressed in degrees or radians; degrees are a more practical and common "
-"unit. In case you calculated it in radians, the *Metric conversions* "
-"algorithm will help us to do the conversion (but in case you didn't know "
-"that algorithm existed, you could use the raster calculator that we have "
-"already used)."
-msgstr ""
-"*傾斜・方向・曲率* "
-"アルゴリズムによって作成される傾斜は、度またはラジアンで表現できます。度は、より実用的で一般的な単位です。ラジアンでそれを計算した場合は、 "
-"*メトリック変換* "
-"アルゴリズムが変換を行うのに役立ちます（しかし、そのアルゴリズムが存在してると知らなかった場合は、すでに使用しているラスタ計算機を使用できたでしょう）。"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:107
-msgid ""
-"Reprojecting the converted slope layer back with the *Reproject raster "
-"layer*, we get the final layer we wanted."
-msgstr "*ラスタレイヤ再投影* で変換された斜面レイヤを再投影して戻すと、望んでいた最終レイヤーが得られます。"
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
-msgid "todo: Add image"
-msgstr "TODO：画像を追加します。"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:112
 msgid ""
 "The reprojection processes might have caused the final layer to contain data"
 " outside the bounding box that we calculated in one of the first steps. This"

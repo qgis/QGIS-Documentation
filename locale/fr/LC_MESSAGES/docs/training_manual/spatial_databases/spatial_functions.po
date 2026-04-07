@@ -2,24 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
+# Emilie ELLONG-KOTTO, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Emilie ELLONG-KOTTO, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -122,9 +123,29 @@ msgstr ""
 "<https://www.postgresql.org/download/>`_. Puis suivez `ce guide "
 "<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:53
+msgid ""
+"More information about installing on Windows can be found on the `PostGIS "
+"website <https://postgis.net/documentation/getting_started/>`_."
+msgstr ""
+"Vous trouverez plus d'informations sur l'installation sous Windows sur le "
+"site web de `PostGIS <https://postgis.net/documentation/getting_started/>`_."
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:57
 msgid "Installing on Other Platforms"
 msgstr "Installation sur les autres plate-formes"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
+msgid ""
+"The `PostGIS website download "
+"<https://postgis.net/documentation/getting_started/>`_ has information about"
+" installing on other platforms including macOS and on other Linux "
+"distributions"
+msgstr ""
+"Le site web de téléchargement de `PostGIS "
+"<https://postgis.net/documentation/getting_started/>`_ fournit des "
+"informations sur l'installation sur d'autres plateformes, y compris macOS, "
+"et sur d'autres distributions Linux"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:64
 msgid "Configuring Databases to use PostGIS"
@@ -187,13 +208,13 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:97
 msgid ""
-"This is the command we're looking for: :kbd:`st_pointfromtext`.  To page "
+"This is the command we're looking for: ``st_pointfromtext``.  To page "
 "through the list, use the down arrow, then press :kbd:`Q` to quit back to "
 "the psql shell."
 msgstr ""
-"C'est la commande que nous recherchons : :kbd:`st_pointfromtext`. Pour "
+"Voici la commande que nous recherchons : :kbd:`st_pointfromtext`. Pour "
 "parcourir la liste, utilisez la flèche vers le bas, puis appuyez sur "
-":kbd:`Q` pour revenir au shell psql"
+":kbd:`Q` pour revenir au shell psql."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:100
 msgid "Try running this command:"
@@ -208,14 +229,6 @@ msgstr "Résultat :"
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:115
 msgid "Three things to note:"
 msgstr "Trois choses à noter:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:117
-msgid ""
-"We defined a point at position 1,1 (EPSG:4326 is assumed) using "
-":kbd:`POINT(1 1)`,"
-msgstr ""
-"Nous avons défini un point à la position 1,1 (dans le SRID EPSG:4326) en "
-"utilisant :kbd:`POINT(1 1)`,"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:119
 msgid ""
@@ -255,14 +268,14 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:149
 msgid ""
-"Here, we entered the string :kbd:`POINT(1,1)`, turned it into a point using "
-":kbd:`st_pointfromtext()`, and turned it back into a human-readable form "
-"with :kbd:`st_astext()`, which gave us back our original string."
+"Here, we entered the string ``POINT(1,1)``, turned it into a point using "
+"``st_pointfromtext()``, and turned it back into a human-readable form with "
+"``st_astext()``, which gave us back our original string."
 msgstr ""
-"Ici nous avons inséré la chaîne :kbd:`POINT(1,1)`, nous l'avons transformée "
-"en point en utilisant la fonction :kbd:`st_pointfromtext()` et nous l'avons "
-"reconvertie sous forme lisible par l'humain avec la fonction "
-":kbd:`st_astext()` qui nous redonne notre chaîne originelle."
+"Ici, nous avons inscrit la chaîne :kbd:`POINT(1,1)`, nous l'avons "
+"transformée en point en utilisant la fonction :kbd:`st_pointfromtext()` et "
+"nous l'avons reconvertie sous forme lisible par l'humain avec la fonction "
+":kbd:`st_astext()` ce qui nous a retourné notre chaîne originelle."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:154
 msgid ""
@@ -337,12 +350,12 @@ msgstr ""
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:221
 msgid ""
-"The :kbd:`srtext` is the projection definition in well known text (you may "
+"The ``srtext`` is the projection definition in well known text (you may "
 "recognise this from .prj files in your shapefile collection)."
 msgstr ""
-"Le champ :kbd:`srtext` correspond à la définition de la projection au format"
-" Well Known Text (c'est le même qui est utilisés dans les fichiers .prj des "
-"fichiers Shape)."
+"Le champ :kbd:`srtext` donne le descriptif de la projection dans le format "
+"Well Known Text (on retrouve ce descriptif dans les fichiers .prj des "
+"fichiers Shapefile)."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:225
 msgid "In Conclusion"

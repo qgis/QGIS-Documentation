@@ -2,27 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# 徐保才 <1302638819@qq.com>, 2025
-# Harrissou Sant-anna, 2025
-# Li Hongsheng, 2025
-# bc G, 2025
+# 徐保才 <1302638819@qq.com>, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: bc G, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -185,12 +183,6 @@ msgstr "请加载上述数据，以及 :file:`landuse.sqlite` 。"
 msgid "Zoom to the layer extent to see |majorUrbanName|, South Africa"
 msgstr "缩放到图层范围以查看南非的 |majorUrbanName|"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:91
-msgid ""
-"Before proceeding we will filter the :guilabel:`roads` layer, in order to "
-"have only some specific road types to work with."
-msgstr "在继续之前，我们将过滤 :guilabel:`roads` 图层，以便只处理某些指定的道路类型。"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:94
 msgid ""
 "Some roads in OSM datasets are listed as ``unclassified``, ``tracks``, "
@@ -228,15 +220,6 @@ msgid ""
 "value in the ``highway`` field."
 msgstr "``IS NOT NULL`` 与 ``AND`` 运算符结合使用时，排除在 ``highway`` 字段中空值的道路。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
-msgid ""
-"Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
-"helps you remember that this layer has a filter activated, so some features "
-"may not be available in the project."
-msgstr ""
-"请注意 :guilabel:`roads` 图层旁边的 |indicatorFilter| "
-"图标。这有助于您记住，该图层有已激活的过滤器，因此某些要素可能在工程中不可用。"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
@@ -271,11 +254,6 @@ msgid ""
 "In this example, we are using the *WGS 84 / UTM zone 34S* CRS, but you "
 "should use a UTM CRS which is more appropriate for your region."
 msgstr "在此示例，我们使用的是 *WGS 84 / UTM zone 34S* CRS，但您应该使用更符合您所在地区的 UTM CRS。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
-msgid ""
-"Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
-msgstr "右键单击 :guilabel:`图层` 面板中的 :guilabel:`roads` 图层"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
@@ -432,17 +410,6 @@ msgid ""
 " each individual road. To get rid of this problem:"
 msgstr "请注意，缓冲区内有不同的区域，对应于每条单独的道路。要解决此问题，请执行以下操作："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
-msgid ""
-"Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
-" :guilabel:`Dissolve results` enabled."
-msgstr ""
-"取消勾选 :guilabel:`roads_buffer_50m` 图层，并在启用 :guilabel:`融合结果` 的情况下重新创建缓冲区。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
-msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
-msgstr "将输出保存为 :guilabel:`roads_buffer_50m_dissolved`"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
 msgstr "单击 :guilabel:`运行` 并关闭 :guilabel:`缓冲区` 对话框"
@@ -486,31 +453,9 @@ msgstr "回答"
 msgid "Your buffer dialog should look like this:"
 msgstr "您的缓冲区对话框应如下所示："
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
-msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
-msgstr ":guilabel:`缓冲距离` 为 :guilabel:`1` 千米。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
-msgid ""
-"The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
-" is optional, but it's recommended, because it makes the output buffers look"
-" smoother. Compare this:"
-msgstr ""
-":guilabel:`近似线段数` 值设置为 :guilabel:`20` 。这是可选的，但建议这样做，因为这会使输出缓冲区看起来更平滑。比较一下："
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
 msgid "To this:"
 msgstr "对此："
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
-msgid ""
-"The first image shows the buffer with the :guilabel:`Segments to "
-"approximate` value set to :guilabel:`5` and the second shows the value set "
-"to :guilabel:`20`. In our example, the difference is subtle, but you can see"
-" that the buffer's edges are smoother with the higher value."
-msgstr ""
-"第一幅图显示的缓冲区是将 :guilabel:`近似线段数` 值设置为 :guilabel:`5` ，第二幅图显示的是设置为 "
-":guilabel:`20` 的值。在我们的示例中，差异很小，但您可以看到，缓冲区的边随着值的增加而变得更平滑。"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:310
 msgid ""
@@ -580,14 +525,6 @@ msgstr ""
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr "单击 :guilabel:`运行` 并关闭对话框"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
-msgid ""
-"You will probably find that not much seems to have changed. If so, move the "
-":guilabel:`well_located_houses` layer to the top of the layers list, then "
-"zoom in."
-msgstr ""
-"您可能会发现似乎没有太大变化。如果是这样，请将 :guilabel:`well_located_houses` 图层移到图层列表的顶部，然后放大。"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
@@ -606,22 +543,6 @@ msgid ""
 "and within 50m of a road. We now need to reduce that selection to only show "
 "buildings which are within 500m of a restaurant."
 msgstr "我们现在有一个图层，显示了学校1千米和道路50米范围以内的所有建筑。现在需要减少选择，只显示距离餐厅500米以内的建筑。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
-msgid ""
-"Using the processes described above, create a new layer called "
-":guilabel:`houses_restaurants_500m` which further filters your "
-":guilabel:`well_located_houses` layer to show only those which are within "
-"500m of a restaurant."
-msgstr ""
-"使用上述流程，创建一个名为 :guilabel:`houses_restaurants_500m` 的新图层，该图层可进一步过滤 "
-":guilabel:`well_located_houses` 图层，仅显示餐厅500m范围内的房屋。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
-msgid ""
-"To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
-" two step process:"
-msgstr "要创建 :guilabel:`houses_restaurants_500m` 新图层，需要经过两个步骤："
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
@@ -644,15 +565,6 @@ msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
 msgstr "要查看哪些建筑的面积符合要求 (超过100平方米)，我们需要计算它们的面积。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
-msgid ""
-"Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
-"Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
-" button in the main toolbar or in the attribute table window"
-msgstr ""
-"选择 :guilabel:`houses_restaurants_500m` 图层，通过单击主工具栏或属性表窗口中的 |calculateField| "
-":sup:`打开字段计算器` 按钮打开 *字段计算器*"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"

@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Kwon.Yongchan <ruvyn@naver.com>, 2025
+# Harrissou Sant-anna, 2026
+# Kwon.Yongchan <ruvyn@naver.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -62,14 +62,6 @@ msgstr ""
 "범위가 필요할 경우, 범위를 정의하는 값 4개(min X, min Y, max X, max Y)를 직접 입력해서 정의할 수 있지만, 좀 "
 "더 실용적이고 재미있는 방식으로 정의할 수도 있습니다. 이번 수업에서 그 모든 방식을 다룰 것입니다."
 
-#: ../../docs/training_manual/processing/extents.rst:15
-msgid ""
-"First, let's open an algorithm that requires an extent to be defined. Open "
-"the *Rasterize* algorithm, which creates a raster layer from a vector layer."
-msgstr ""
-"먼저 범위를 정의해야 하는 알고리즘을 선택해봅시다. 벡터 레이어로부터 래스터 레이어를 생성하는 :guilabel:`Rasterize` "
-"알고리즘을 실행하십시오."
-
 #: ../../docs/training_manual/processing/extents.rst:20
 msgid ""
 "All the parameters, except for the last two ones, are used to define which "
@@ -105,12 +97,6 @@ msgstr ""
 msgid "Let's see what each one of them does."
 msgstr "이 옵션들이 어떤 일을 하는지 하나씩 알아봅시다."
 
-#: ../../docs/training_manual/processing/extents.rst:42
-msgid ""
-"The first option is *Use layer/canvas extent*, which will show the selection"
-" dialog shown below."
-msgstr "첫 번째 옵션은 다음 선택 대화창을 띄우는 :guilabel:`Use layer/canvas extent` 입니다."
-
 #: ../../docs/training_manual/processing/extents.rst:47
 msgid ""
 "Here you can select the extent of the canvas (the extent covered by the "
@@ -121,71 +107,21 @@ msgstr ""
 "캔버스의 (현재 줌 단계에서 커버하는) 범위 혹은 사용할 수 있는 레이어 가운데 아무 범위나 선택할 수 있습니다. 선택한 다음 "
 ":guilabel:`OK` 를 클릭하면, 텍스트란에 자동적으로 상응하는 값을 채울 것입니다."
 
-#: ../../docs/training_manual/processing/extents.rst:51
-msgid ""
-"The second option is *Select extent on canvas*. In this case, the algorithm "
-"dialog disappears and you can click and drag on the QGIS canvas to define "
-"the desired extent."
-msgstr ""
-"두 번째 옵션은 :guilabel:`Select extent on canvas` 입니다. 이 경우 알고리즘 대화창이 사라지고, QGIS "
-"캔버스 상에서 클릭&드래그하여 원하는 범위를 정의할 수 있습니다."
-
 #: ../../docs/training_manual/processing/extents.rst:57
 msgid ""
 "Once you release the mouse button, the dialog will reappear and the text box"
 " will already have the values corresponding to the defined extent."
 msgstr "마우스 버튼을 놓으면 대화창이 다시 나타나는데, 정의한 범위에 상응하는 값이 이미 텍스트란을 채우고 있을 것입니다."
 
-#: ../../docs/training_manual/processing/extents.rst:60
-msgid ""
-"The last option is *Use min covering extent from input layers*, which is the"
-" default option. This will compute the min covering extent of all layers "
-"used to run the algorithm, and there is no need to enter any value in the "
-"text box. In the case of a single input layer, as in the algorithm we are "
-"running, the same extent can be obtained by selecting that same input layer "
-"in the *Use layer/canvas extent* that we already saw. However, when there "
-"are several input layers, the min covering extent does not correspond to any"
-" of the input layer extent, since it is computed from all of them together."
-msgstr ""
-"마지막은 기본 옵션인 :guilabel:`Use min covering extent from input layers` 입니다. 알고리즘을"
-" 실행하는 데 쓰이는 모든 레이어의 최소 커버 범위를 계산할 것입니다. 텍스트란에 어떤 값도 입력할 필요가 없습니다. 지금 실행하고 있는"
-" 알고리즘처럼 입력 레이어가 단 하나일 경우, 앞에서 살펴본 :guilabel:`Use layer/canvas extent` 와 동일한 "
-"입력 레이어를 선택해서 동일한 범위를 얻을 수 있습니다. 하지만 입력 레이어가 두 개 이상일 경우, 최소 커버 범위는 어떤 입력 레이어의"
-" 범위와도 일치하지 않습니다. 모든 입력 레이어로부터 계산되기 때문입니다."
-
 #: ../../docs/training_manual/processing/extents.rst:69
 msgid "We will use this last method to execute our rasterization algorithm."
 msgstr "래스터화 알고리즘을 실행하는 데 이 마지막 방식을 사용하겠습니다."
-
-#: ../../docs/training_manual/processing/extents.rst:71
-msgid "Fill the parameters dialog as shown next, and press *OK*."
-msgstr "파라미터 대화창을 다음과 같이 설정한 다음, :guilabel:`OK` 를 클릭하십시오."
-
-#: ../../docs/training_manual/processing/extents.rst:75
-msgid ""
-"In this case, better use an *Integer (1 byte)* instead of a *Floating point "
-"(4 byte)*, since the *NAME* is an integer with maximum value=64. This will "
-"result in a smaller file size and faster computations."
-msgstr ""
-"이번 예제에서는 *부동소수점형 (4바이트)* 보다 *정수형 (1바이트)* 형식을 사용하는 편이 낫습니다. *NAME* 이 최대값이 64인"
-" 정수이기 때문입니다. 이렇게 설정하면 파일 용량도 줄어들고 처리 시간도 빨리집니다."
 
 #: ../../docs/training_manual/processing/extents.rst:79
 msgid ""
 "You will get a rasterized layer that covers exactly the area covered by the "
 "original vector layer."
 msgstr "원래 벡터 레이어와 정확히 동일한 영역을 커버하는, 래스터화된 레이어를 얻을 것입니다."
-
-#: ../../docs/training_manual/processing/extents.rst:84
-msgid ""
-"In some cases, the last option, *Use min covering extent from input layers*,"
-" might not be available. This will happen in those algorithm that do not "
-"have input layers, but just parameters of other types. In that case, you "
-"will have to enter the value manually or use any of the other options."
-msgstr ""
-"어떤 경우 마지막 :guilabel:`Use min covering extent from input layers` 옵션을 사용하지 못 할"
-" 수도 있습니다. 입력 레이어 없이 다른 유형의 파라미터만을 가지는 알고리즘일 때 그렇습니다. 이런 경우, 값들을 직접 입력하거나 다른 "
-"옵션을 이용해야 할 것입니다."
 
 #: ../../docs/training_manual/processing/extents.rst:89
 msgid ""

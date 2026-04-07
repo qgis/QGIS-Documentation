@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -89,53 +89,6 @@ msgstr ""
 "Eingabedaten hinzu. Wir benötigen einen Vektorlayer (nur Punkte) und ein "
 "Attribut des Layers, das wir für die Rasterung verwenden werden."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:14
-msgid ""
-"The next step is to compute the extent of the selected features. That's "
-"where we can use the model-only tool called *Vector layer bounds*. First, we"
-" will have to create a layer that has the extent of those selected features."
-" Then, we can use this tool on that layer."
-msgstr ""
-"Der nächste Schritt ist die Ermittlung der Ausdehnung der selektierten "
-"Objekte. Dafür verwenden wir das modellinterne Werkzeug *Layerausdehnung "
-"extrahieren*. Als Erstes müssen wir einen Layer erstellen, der die "
-"Ausdehnung der gewählten Objekte hat. Danach können wir das Werkzeug mit "
-"diesem Layer verwenden."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:16
-msgid ""
-"An easy way of creating a layer with the extent of the selected features is "
-"to compute a convex hull of the input points layer. It will use only the "
-"selected point, so the convex hull will have the same bounding box as the "
-"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
-"convex hull layer as input. It should look this in the modeler canvas:"
-msgstr ""
-"Ein einfacher Weg zur Erstellung eines Layers mit der Ausdehnung der "
-"selektierten Objekte ist die Berechnung einer konvexen Hülle für den "
-"Punktlayer. Dabei werden nur die gewählten Punkte verwendet, so dass die "
-"konvexe Hülle dieselbe Ausdehnung wie der Begrenzungsrahmen der Auswahl hat."
-" Wir nutzen dann den Algorithmus *Layerausdehnung extrahieren* mit der "
-"konvexen Hülle als Eingabe. Unser Arbeitsbereich sollte nun in etwa wie "
-"folgt aussehen:"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:20
-msgid ""
-"The result from the *Vector layer bounds* is a set of four numeric values "
-"and a extent object. We will use both the numeric outputs and the extent for"
-" this exercise."
-msgstr ""
-"Das Ergebnis von *Layerausdehnung extrahieren* ist eine Menge von vier "
-"Zahlen und ein Ausdehnungsobjekt. Wir werden beides in dieser Übung "
-"verwenden."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:24
-msgid ""
-"We can now add the algorithm that rasterizes the vector layer, using the "
-"extent from the *Vector layer bounds* algorithm as input."
-msgstr ""
-"Wir können nun den Algorithmus zur Rasterung unter Nutzung der Ausdehung aus"
-" dem Algorithmus *Layerausdehnung extrahieren* einfügen."
-
 #: ../../docs/training_manual/processing/modeler_only.rst:26
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "Füllen Sie die Paramter des Algorithmus wie folgt:"
@@ -143,14 +96,6 @@ msgstr "Füllen Sie die Paramter des Algorithmus wie folgt:"
 #: ../../docs/training_manual/processing/modeler_only.rst:30
 msgid "The canvas should now look like."
 msgstr "Der Arbeitsbereich sollte jetzt so aussehen:"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:34
-msgid ""
-"Finally, fill the no-data values of the raster layer using the *Close gaps* "
-"algorithm."
-msgstr ""
-"Füllen Sie zum Schluss die Leerwerte des Rasterlayers mit Hilfe des "
-"Algorithmus *Close gaps*."
 
 #: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""

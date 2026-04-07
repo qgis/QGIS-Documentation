@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -57,56 +57,15 @@ msgstr ""
 msgid "Insert statement"
 msgstr "Insérer une déclaration"
 
-#: ../../docs/training_manual/database_concepts/adding_data.rst:13
-msgid ""
-"How do you add data to a table? The sql :kbd:`INSERT` statement provides the"
-" functionality for this:"
-msgstr ""
-"Comme ajoutez-vous des données à une table ? Le SQL :kbd:`INSERT` fournit la"
-" fonctionnalité pour ceci ::"
-
 #: ../../docs/training_manual/database_concepts/adding_data.rst:20
 msgid "A couple of things to note:"
 msgstr "Un certain nombre de choses à noter :"
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:22
-msgid ""
-"After the table name (:kbd:`streets`), you list the column names that you "
-"will be populating (in this case only the :kbd:`name` column)."
-msgstr ""
-"Après le nom de la table (:kbd:`streets`), vous listez les noms des colonnes"
-" que vous peuplerez (dans ce cas-là seulement la colonne :kbd:`name`)."
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:24
-msgid "After the :kbd:`values` keyword, place the list of field values."
-msgstr ""
-"Après le mot clé :kbd:`valeurs`, placez la liste des valeurs de champ."
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:25
 msgid "Strings should be quoted using single quotes."
 msgstr ""
 "Des chaînes de caractères devraient être citées en utilisant des guillemets "
 "simples."
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:26
-msgid ""
-"Note that we did not insert a value for the :kbd:`id` column; this is "
-"because it is a sequence and will be auto-generated."
-msgstr ""
-"Notez que nous n'avons pas inséré une valeur pour la colonne :kbd:`id` ; "
-"c'est parce que c'est une séquence et qu'elle sera auto-générée."
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:28
-msgid ""
-"If you do manually set the :kbd:`id`, you may cause serious problems with "
-"the integrity of your database."
-msgstr ""
-"Si vous remplissez manuellement le :kbd:`id`, vous pouvez avoir de sérieux "
-"problèmes avec l'entier de votre base de données."
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:31
-msgid "You should see :kbd:`INSERT 0 1` if it is successful."
-msgstr "Vous pourrez voir :kbd:`INSERT 0 1` si cela a fonctionné."
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:33
 msgid ""
@@ -123,14 +82,6 @@ msgstr "Résultat :"
 #: ../../docs/training_manual/database_concepts/adding_data.rst:52
 msgid "Try Yourself: :abbr:`★☆☆ (Basic level)`"
 msgstr ":abbr:`★☆☆ (Niveau basique)` Essayez vous-même"
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:54
-msgid ""
-"Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` "
-"table."
-msgstr ""
-"Utiliser la commande :kbd:`INSERT` pour ajouter une nouvelle rue à la table "
-":kbd:`streets`."
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:56
 #: ../../docs/training_manual/database_concepts/adding_data.rst:96
@@ -153,14 +104,6 @@ msgstr "Séquençage d'ajout de données en fonction des contraintes"
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
 msgstr ":abbr:`★★☆ (Niveau intermédiaire)` Essayez vous-même"
 
-#: ../../docs/training_manual/database_concepts/adding_data.rst:71
-msgid ""
-"Try to add a person object to the :kbd:`people` table with the following "
-"details::"
-msgstr ""
-"Essayez d'ajouter un objet personne à la table :kbd:`people` avec les "
-"détails suivants ::"
-
 #: ../../docs/training_manual/database_concepts/adding_data.rst:78
 msgid ""
 "Recall that in this example, we defined phone numbers as strings, not "
@@ -169,15 +112,6 @@ msgstr ""
 "Rappelez-vous que dans cet exemple, nous avons défini les numéros de "
 "téléphone comme chaînes de caractères, et non comme entiers."
 
-#: ../../docs/training_manual/database_concepts/adding_data.rst:81
-msgid ""
-"At this point, you should have an error report if you try to do this without"
-" first creating a record for Main Street in the :kbd:`streets` table."
-msgstr ""
-"À cette étape, vous devriez avoir un rapport d'erreur si vous essayez de "
-"faire cela sans d'abord créer un enregistrement pour Main Street dans la "
-"table :kbd:`streets`."
-
 #: ../../docs/training_manual/database_concepts/adding_data.rst:84
 msgid "You should have also noticed that:"
 msgstr "Vous devriez aussi avoir remarqué ceci :"
@@ -185,14 +119,6 @@ msgstr "Vous devriez aussi avoir remarqué ceci :"
 #: ../../docs/training_manual/database_concepts/adding_data.rst:86
 msgid "You can't add the street using its name"
 msgstr "Vous ne pouvez pas ajouter la rue en utilisant son nom"
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:87
-msgid ""
-"You can't add a street using a street :kbd:`id` before first creating the "
-"street record on the streets table"
-msgstr ""
-"Vous ne pouvez pas ajouter une rue en utilisant un :kbd:`id` de rue avant "
-"d'avoir d'abord créé l'enregistrement de la rue dans la table des rues."
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:90
 msgid ""
@@ -247,15 +173,6 @@ msgstr ""
 "Et si vous voulez faire un changement de quelques données existantes ? Par "
 "exemple, un nom de rue est changé ::"
 
-#: ../../docs/training_manual/database_concepts/adding_data.rst:147
-msgid ""
-"Be very careful using such update statements - if more than one record "
-"matches your :kbd:`WHERE` clause, they will all be updated!"
-msgstr ""
-"Soyez très prudent en utilisant ces déclarations de mise à jour - si plus "
-"d'un enregistrement correspond à votre clause :kbd:`WHERE`, ils seront tous "
-"mis à jour !"
-
 #: ../../docs/training_manual/database_concepts/adding_data.rst:150
 msgid ""
 "A better solution is to use the primary key of the table to reference the "
@@ -264,28 +181,9 @@ msgstr ""
 "Une meilleure solution est d'utiliser une clé primaire de la table pour "
 "référencer l'enregistrement qui doit être changé ::"
 
-#: ../../docs/training_manual/database_concepts/adding_data.rst:157
-msgid "It should return :kbd:`UPDATE 1`."
-msgstr "Il devrait être retourné :kbd:`UPDATE 1`."
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:159
-msgid ""
-"the :kbd:`WHERE` statement criteria are case sensitive :kbd:`Main Road` is "
-"not the same as :kbd:`Main road`"
-msgstr ""
-"Les critères de déclaration :kbd:`WHERE` sont sensibles aux majuscules et "
-"minuscules : :kbd:`Main Road` n'est pas la même chose que :kbd:`Main road`."
-
 #: ../../docs/training_manual/database_concepts/adding_data.rst:163
 msgid "Delete Data"
 msgstr "Supprimer les données"
-
-#: ../../docs/training_manual/database_concepts/adding_data.rst:165
-msgid ""
-"In order to delete an object from a table, use the :kbd:`DELETE` command:"
-msgstr ""
-"Afin de supprimer un objet d'une table, utilisez la commande :kbd:`DELETE` "
-"::"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:171
 msgid "Let's look at our people table now:"

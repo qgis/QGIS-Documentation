@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -79,24 +79,6 @@ msgstr ""
 "algoritmo contenha um campo SRC específico (como aconteceu na última lição "
 "com o algoritmo da retícula)"
 
-#: ../../docs/training_manual/processing/crs.rst:23
-msgid ""
-"Open the project corresponding to this lesson and you will see two layers "
-"named 23030 and 4326. They both contain the same points, but in different "
-"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
-"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
-"actually the same layer."
-msgstr ""
-"Abra o projeto correspondente a esta lição e você vai ver duas camadas "
-"nomeadas 23030 e 4326. Ambas contêm os mesmos pontos, mas em diferentes SRC "
-"(EPSG: 23030 e EPSG: 4326). Elas aparecem no mesmo lugar porque o QGIS está "
-"reprojetando automaticamente para o CRS  do projeto(EPSG: 4326), mas elas "
-"não são realmente a mesma camada."
-
-#: ../../docs/training_manual/processing/crs.rst:29
-msgid "Open the *Export/Add geometry columns* algorithm."
-msgstr "Abra o algoritmo *Export/Add geometry columns*."
-
 #: ../../docs/training_manual/processing/crs.rst:33
 msgid ""
 "This algorithm add new columns to the attributes table of a vector layer. "
@@ -120,20 +102,6 @@ msgstr ""
 " entrada, você verá cada um com seu SRC correspondente. Isso significa que, "
 "apesar de aparecerem no mesmo lugar em sua tela, eles serão tratados de "
 "forma diferente. Selecione a camada 4326."
-
-#: ../../docs/training_manual/processing/crs.rst:43
-msgid ""
-"The other parameter of the algorithm allows to set how the algorithm uses "
-"coordinates to calculate the new value that it will add to the resulting "
-"layers. Most algorithms do not have an option like that, and just use the "
-"coordinates directly. Select the *Layer CRS* option to just use coordinates "
-"as they are. This is how almost all geoalgorithms work."
-msgstr ""
-"O outro parâmetro permite definir a forma como o algoritmo usa coordenadas "
-"para calcular o novo valor que irá adicionar às camadas resultantes. A "
-"maioria dos algoritmos não têm uma opção assim e só usam as coordenadas "
-"diretamente. Selecione a opção *Layer CRS* para apenas usar coordenadas como"
-" coordenadas. Essa é a forma como quase todos os geoalgoritmos trabalham."
 
 #: ../../docs/training_manual/processing/crs.rst:49
 msgid ""
@@ -242,28 +210,3 @@ msgstr ""
 "Um módulo interessante que lida com SRCs é o da reprojeção. Ele representa "
 "um caso particular, uma vez que tem uma camada de entrada (que será "
 "reprojetada), mas não usará o SRC dela para a saída."
-
-#: ../../docs/training_manual/processing/crs.rst:97
-msgid "Open the *Reproject layer* algorithm."
-msgstr "Ara o algoritmo *Reproject layer*."
-
-#: ../../docs/training_manual/processing/crs.rst:101
-msgid ""
-"Select any of the layers as input, and select EPSG:23029 as the destination "
-"CRS. Run the algorithm and you will get a new layer, identical to the input "
-"one, but with a different CRS. It will appear on the same region of the "
-"canvas, like the other ones, since QGIS will reproject it on the fly, but "
-"its original coordinates are different. You can see that by running the "
-"*Export/Add geometry columns* algorithm using this new layer as input, and "
-"veryfing that the added coordinates are different to the ones in the "
-"attribute tables of both of the two layers that we had computed before."
-msgstr ""
-"Selecione qualquer uma das camadas como entrada e selecione o EPSG: 23029 "
-"como o SRC de destino. Execute o algoritmo e você terá uma nova camada, "
-"idêntica a da entrada, mas com outro SRC. Ela aparecerá na mesma região da "
-"tela, como as outras, uma vez que o QGIS irá reprojetá-la dinamicamente, mas"
-" suas coordenadas originais serão diferentes. Você pode ver isso executando "
-"o algoritmo *Export/Add geometry columns* usando essa nova camada como "
-"entrada e verificando que as coordenadas adicionadas são diferentes das que "
-"estão nas tabelas de atributos de ambas as camadas que havíamos processado "
-"anteriormente."

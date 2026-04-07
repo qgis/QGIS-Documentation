@@ -2,26 +2,26 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# tomoya miyoshi, 2025
-# Kayama Yoichi <yoichi.kayama@gmail.com>, 2025
+# tomoyuki arai <tarai.3367@gmail.com>, 2026
+# tomoya miyoshi, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-22 20:55+0000\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -255,7 +255,7 @@ msgstr ""
 "ボタンをクリックし、適切な投影法を手動で定義する必要があります。これは、 :file:`.prj` ファイルが :guilabel:`CRS` "
 "ダイアログで表示されるようなQGISで使用される投影法パラメータを完全には指定していないことが多いためです。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:722
 msgid "setProjection"
 msgstr "setProjection"
 
@@ -553,25 +553,11 @@ msgid ""
 msgstr ""
 "CSVTファイルを使用してデータ型を伝える代わりに、QGISはフィールド型を自動的に検出し、想定されるフィールド型を変更する可能性を提供します。 "
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:295
-msgid "PostGIS Layers"
-msgstr "PostGISレイヤ"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:297
-msgid ""
-"PostGIS layers are stored in a PostgreSQL database. The advantages of "
-"PostGIS are spatial indexing, filtering and querying capabilities. Using "
-"PostGIS, vector functions such as select and identify work more accurately "
-"than they do with GDAL layers in QGIS."
-msgstr ""
-"PostGISレイヤはPostgreSQLデータベースに保存されます。PostGISの利点は、空間インデックス、フィルタリング、クエリする能力です。PostGISを使用すると、selectやidentifyなどのベクタ関数は、QGISのGDALレイヤを使用した場合よりも正確に動作します。"
-" "
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:306
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:312
 msgid "**PostGIS Layers**"
 msgstr "**PostGISレイヤ**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:308
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:314
 msgid ""
 "Normally, a PostGIS layer is identified by an entry in the geometry_columns "
 "table. QGIS can load layers that do not have an entry in the "
@@ -580,7 +566,7 @@ msgid ""
 msgstr ""
 "通常、PostGISレイヤはgeometry_columnsテーブルのエントリがあることによって識別されます。QGISでは、geometry_columnsテーブルのエントリを持たないレイヤもロードすることができます。これには、テーブルとビューの両方が含まれます。ビューの作成については、PostgreSQLのマニュアルを参照してください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:315
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:319
 msgid ""
 "This section contains some details on how QGIS accesses PostgreSQL layers. "
 "Most of the time, QGIS should simply provide you with a list of database "
@@ -592,15 +578,15 @@ msgstr ""
 "このセクションでは、QGISがPostgreSQLレイヤにアクセスする方法について、いくつかの詳細を説明します。ほとんどの場合、QGIS "
 "は単純にロード可能なデータベーステーブルのリストをユーザーに提供し、要求に応じてテーブルを読み込むだけです。しかし、PostgreSQLのテーブルをQGISに読み込むことができない場合には、以下の情報がQGISのメッセージを理解するための助けとなり、PostgreSQLのテーブルやビュー定義を修正してQGISで読み込めるようになるための方向性が得られるかもしれません。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:324
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:328
 msgid "A PostgreSQL database can also store QGIS projects."
 msgstr "PostgreSQLデータベースにもQGISのプロジェクトを保存できます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:327
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:331
 msgid "Primary key"
 msgstr "主キー"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:329
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:333
 msgid ""
 "QGIS requires that PostgreSQL layers contain a column that can be used as a "
 "unique key for the layer. For tables, this usually means that the table "
@@ -616,7 +602,7 @@ msgstr ""
 "列を主キーとして使用することもできます。テーブルにこれらの項目がない場合、oid "
 "列が代わりに使用されます。列にインデックスが作成されると、パフォーマンスが向上します（PostgreSQLでは主キーが自動的にインデックス化されることに注意してください）。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:338
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:342
 msgid ""
 "QGIS offers a checkbox **Select at id** that is activated by default. This "
 "option gets the ids without the attributes, which is faster in most cases."
@@ -624,11 +610,11 @@ msgstr ""
 "QGISには、デフォルトで有効になっている **idで選択** チェックボックスがあります。このオプションは属性なしのid "
 "を取得しますが、多くの場合、これは主キーによる検索よりも高速です。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:343
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:347
 msgid "View"
 msgstr "ビュー"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:345
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:349
 msgid ""
 "If the PostgreSQL layer is a view, the same requirement exists, but views do"
 " not always have primary keys or columns with unique constraints on them. "
@@ -640,7 +626,7 @@ msgid ""
 msgstr ""
 "PostgreSQLのレイヤがビューである場合でも同様の要件がありますが、ビューは必ずしも主キーやユニーク制約のある列を持っているとは限りません。ビューをロードする前に、QGISダイアログで主キーフィールド（整数である必要があります）を定義する必要があります。適切な列がビューに存在しない場合、QGISはレイヤをロードしません。このような場合には、適切な列（整数型で、主キーであるかまたはユニーク制約があり、できればインデックス付き）を確実に含むようにビューを変更することが解決策となります。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:353
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:357
 msgid ""
 "As for table, a checkbox **Select at id** is activated by default (see above"
 " for the meaning of the checkbox). It can make sense to disable this option "
@@ -649,58 +635,47 @@ msgstr ""
 "テーブルに関しては、 **idで選択** "
 "のチェックボックスがデフォルトで有効になっています（チェックボックスの意味については上記参照）。複雑なビューを使用する場合には、このオプションを無効にした方がよいかもしれません。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:357
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:361
 msgid "**PostgreSQL foreign table**"
 msgstr "**PostgreSQL外部テーブル**"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:359
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:363
 msgid ""
 "PostgreSQL foreign tables are not explicitely supported by the PostgreSQL "
 "provider and will be handled like a view."
 msgstr "PostgreSQL外部テーブルはPostgreSQLプロバイダによって明示的にサポートされてはおらず、ビューのように扱われます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:365
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:369
 msgid "QGIS layer_style table and database backup"
 msgstr "QGIS layer_style テーブルとデータベースのバックアップ"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:367
-msgid ""
-"If you want to make a backup of your PostGIS database using the "
-":file:`pg_dump` and :file:`pg_restore` commands, and the default layer "
-"styles as saved by QGIS fail to restore afterwards, you need to set the XML "
-"option to :file:`DOCUMENT` before the restore command:"
-msgstr ""
-":file:`pg_dump` コマンドと :file:`pg_restore` "
-"コマンドを使用してPostGISデータベースのバックアップを作成したい場合、QGISで保存されたデフォルトのレイヤスタイルがその後のリストアに失敗する場合には、リストアコマンドの前にXML"
-" オプションを :file:`DOCUMENT` に設定する必要があります。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:372
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:376
 msgid "Make a PLAIN backup of the ``layer_style`` table"
 msgstr "``layer_style`` テーブルのPLAINバックアップを作ります"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:373
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:377
 msgid "Open the file within a text editor"
 msgstr "そのファイルをテキストエディタで開きます"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:374
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:378
 msgid ""
 "Change the line ``SET xmloption = content;`` into ``SET XML OPTION "
 "DOCUMENT;``"
 msgstr "``SET xmloption = context;`` の行を ``SET XML OPTION DOCUMENT;`` に変えます"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:375
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:379
 msgid "Save the file"
 msgstr "ファイルを保存します"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:376
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:380
 msgid "Use psql to restore the table in the new database"
 msgstr "psqlを使ってテーブルを新しいデータベースにリストアします"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:380
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:384
 msgid "Filter database side"
 msgstr "データベース側でのフィルタ"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:382
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:386
 msgid ""
 "QGIS allows to filter features already on server side. Check "
 ":menuselection:`Settings --> Options --> Data Sources -->` |checkbox| "
@@ -713,15 +688,15 @@ msgstr ""
 "データソース -->` の |checkbox| :menuselection:`可能であればサーバ側で式を実行する` "
 "にチェックを入れると、サーバ側でフィルタリングされます。データベースに送信されるのは、サポートされている式のみです。サポートされていない演算子や関数を使用した式は、ローカル側での評価に滑らかにフォールバックします。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:712
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:391
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:395
 msgid "Support of PostgreSQL data types"
 msgstr "PostgreSQLのデータ型のサポート"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:393
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:397
 msgid ""
 "Data types supported by the PostgreSQL provider include: integer, float, "
 "boolean, binary object, varchar, geometry, timestamp, array, hstore and "
@@ -730,23 +705,15 @@ msgstr ""
 "PostgreSQLプロバイダでサポートされているデータ型には、以下のものが含まれます：整数、浮動小数点、論理値、バイナリオブジェクト、可変長文字、幾何データ、"
 " 日付/時刻、配列、 hstore（キー/バリュー型）、JSON"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:402
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:406
 msgid "Importing Data into PostgreSQL"
 msgstr "PostgreSQLへデータをインポートする"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:404
-msgid ""
-"Data can be imported into PostgreSQL/PostGIS using several tools, including "
-"the DB Manager plugin and the command line tools shp2pgsql and ogr2ogr."
-msgstr ""
-"データは、DBマネージャプラグインやコマンドラインツールのshp2pgsql、ogr2ogrなど、いくつかのツールを使用してPostgreSQL/ "
-"PostGISにインポートできます。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:409
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:413
 msgid "DB Manager"
 msgstr "DB Manager"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:411
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:415
 msgid ""
 "QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can be"
 " used to load data, and it includes support for schemas. See section "
@@ -756,15 +723,15 @@ msgstr ""
 "という名前のコアプラグインが付属しています。これはデータをロードするために使用することができ、スキーマもサポートしています。詳細は "
 ":ref:`dbmanager` を参照してください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
 msgid "dbManager"
 msgstr "dbManager"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:416
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:420
 msgid "shp2pgsql"
 msgstr "shp2pgsql"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:418
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:422
 msgid ""
 "PostGIS includes a utility called **shp2pgsql**, that can be used to import "
 "Shapefile format datasets into a PostGIS-enabled database. For example, to "
@@ -776,7 +743,7 @@ msgstr ""
 " :file:`lakes.shp` という名前のシェープファイル形式のデータセットを ``gis_data`` "
 "という名前のPostgreSQLデータベースにインポートするには、次のコマンドを使用します::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:426
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:430
 msgid ""
 "This creates a new layer named ``lakes_new`` in the ``gis_data`` database. "
 "The new layer will have a spatial reference identifier (SRID) of 2964. See "
@@ -787,57 +754,15 @@ msgstr ""
 "という名前の新規レイヤが作成されます。この新しいレイヤは空間参照識別子（SRID）が2964になります。空間参照系と投影法についての詳細は、 "
 ":ref:`label_projections` を参照してください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:435
-msgid "**Exporting datasets from PostGIS**"
-msgstr "**PostGISからデータセットをエクスポートする**"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:437
-msgid ""
-"There is also a tool for exporting PostGIS datasets to Shapefile format: "
-"**pgsql2shp**. It is shipped within your PostGIS distribution."
-msgstr ""
-"PostGISのデータセットをシェープファイル形式へとエクスポートするツール **pgsql2shp** "
-"もあります。このツールはPostGISディストリビューションに付属しています。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:445
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:449
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:447
-msgid ""
-"In addition to **shp2pgsql** and **DB Manager**, there is another tool for "
-"feeding geographical data in PostGIS: **ogr2ogr**. It is part of your GDAL "
-"installation."
-msgstr ""
-"**shp2pgsql** や **DBマネージャ** の他にも、PostGISにデータを読み込ませるツールがあります。 **ogr2ogr** "
-"です。これはGDALのインストールに含まれています。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:451
-msgid "To import a Shapefile format dataset into PostGIS, do the following::"
-msgstr "シェープファイル形式のデータセットをPostGISにインポートするには、次のコマンドを使用します::"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:456
-msgid ""
-"This will import the Shapefile format dataset :file:`alaska.shp` into the "
-"PostGIS database *postgis* using the user *postgres* with the password "
-"*topsecret* on the host server *myhost.de*."
-msgstr ""
-"このコマンドは、シェープファイル形式のデータセット :file:`alaska.shp` をホストサーバー *myhost.de* "
-"上のPostGISデータベース *postgis* にユーザー *postgres* 、パスワード *topsecret* を使用してインポートします。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
-msgid ""
-"Note that GDAL must be built with PostgreSQL to support PostGIS. You can "
-"verify this by typing (in |nix|)::"
-msgstr ""
-"GDALはPostGISをサポートするためにPostgreSQLと一緒にビルドされなければならないことに注意してください。タイプすることで確認できます "
-"(in |nix|)::"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
 msgid "nix"
 msgstr "nix"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:466
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:470
 msgid ""
 "If you prefer to use the PostgreSQL's **COPY** command instead of the "
 "default **INSERT INTO** method, you can export the following environment "
@@ -846,11 +771,11 @@ msgstr ""
 "デフォルトの **INSERT INTO** メソッドの代わりにPostgreSQLの **COPY** "
 "コマンドを使用したい場合には、以下の環境変数を設定します（ |nix| と |osx| では利用可能）::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "osx"
 msgstr "osx"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:472
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:476
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You need"
 " to create them manually, using the normal SQL command **CREATE INDEX** "
@@ -862,24 +787,11 @@ msgstr ""
 "を使用して手動でインデックスを作成する必要があります（次のセクション :ref:`vector_improving_performance` "
 "で説明します）。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:482
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:486
 msgid "Improving Performance"
 msgstr "パフォーマンスの改善"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:484
-msgid ""
-"Retrieving features from a PostgreSQL database can be time-consuming, "
-"especially over a network. You can improve the drawing performance of "
-"PostgreSQL layers by ensuring that a PostGIS spatial index exists on each "
-"layer in the database. PostGIS supports creation of a GiST (Generalized "
-"Search Tree) index to speed up spatial searching (GiST index information is "
-"taken from the PostGIS documentation available at https://postgis.net)."
-msgstr ""
-"PostgreSQLデータベースからの地物の取得は、特にネットワーク経由では時間がかかります。データベース内の各レイヤにPostGIS空間インデックスがあることで、PostgreSQLレイヤの描画パフォーマンスを向上させることができます。PostGISは空間検索を高速化するためにGiST"
-" (Generalized Search Tree) インデックスの作成をサポートしています（GiSTインデックスの情報は "
-"https://postgis.net にあるPostGISドキュメントから引用しています）。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:491
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:495
 msgid ""
 "You can use the DBManager to create an index for your layer. You should "
 "first select the layer and click on :menuselection:`Table --> Edit table`, "
@@ -890,11 +802,11 @@ msgstr ""
 "テーブルの編集` をクリックして、 :menuselection:`インデックス` タブを開き、 :guilabel:`空間インデックスの追加` "
 "ボタンを押します。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:497
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:501
 msgid "The syntax for creating a GiST index is::"
 msgstr "GiSTインデックスを作成するための構文は以下のとおりです::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:503
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:507
 msgid ""
 "Note that for large tables, creating the index can take a long time. Once "
 "the index is created, you should perform a ``VACUUM ANALYZE``. See the "
@@ -905,15 +817,15 @@ msgstr ""
 "を実行してください。詳細な情報については、PostGISドキュメント（ :ref:`literature_and_web` のPOSTGIS-"
 "PROJECT ）を参照してください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:508
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:512
 msgid "The following example creates a GiST index::"
 msgstr "下記の例では、GiSTインデックスを作成しています::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:532
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:536
 msgid "SpatiaLite Layers"
 msgstr "SpatiaLiteレイヤ"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:534
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:538
 msgid ""
 "If you want to save a vector layer using the SpatiaLite format, you can do "
 "this by following instructions at :ref:`general_saveas`. You select "
@@ -924,7 +836,7 @@ msgstr ""
 ":guilabel:`形式` として ``SpatiaLite`` を選択し、 :guilabel:`ファイル名` と :guilabel:`レイヤ名`"
 " を入力してください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:545
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:549
 msgid ""
 "QGIS also supports editable views in SpatiaLite. For SpatiaLite data "
 "management, you can also use the core plugin :ref:`DB Manager <dbmanager>`."
@@ -932,17 +844,17 @@ msgstr ""
 "QGISはSpatiaLiteで編集可能なビューもサポートしています。SpatiaLiteデータの管理には、 :ref:`DBマネージャ "
 "<dbmanager>` コアプラグインを使用することもできます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:549
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:553
 msgid ""
 "If you want to create a new SpatiaLite layer, please refer to section "
 ":ref:`vector_create_spatialite`."
 msgstr "新しいSpatiaLiteレイヤを作成したい場合は :ref:`vector_create_spatialite` を参照して下さい。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:558
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:560
 msgid "GeoJSON specific parameters"
 msgstr "GeoJSONに特有のパラメータ"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:560
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:562
 msgid ""
 "When :ref:`exporting layers <general_saveas>` to GeoJSON, there are some "
 "specific :guilabel:`Layer Options` available. These options come from GDAL "
@@ -951,7 +863,7 @@ msgstr ""
 "GeoJSON形式で :ref:`レイヤをエクスポートする <general_saveas>` 場合、いくつか特有の "
 ":guilabel:`レイヤオプション` があります。これらのオプションは、ファイルに書き出すGDALのオプションに由来するものです："
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:564
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:566
 msgid ""
 ":guilabel:`COORDINATE_PRECISION` the maximum number of digits after the "
 "decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon"
@@ -961,23 +873,23 @@ msgstr ""
 ":guilabel:`COORDINATE_PRECISION` "
 "座標を書き込む際の小数点区切り文字以下の最大桁数を指定します。デフォルトは15です（注：緯度経度座標の場合には6で十分です）。末尾に続くゼロは切り捨てられます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:579
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:581
 msgid ""
 ":guilabel:`WRITE_BBOX` set to YES to include the bounding box of the "
 "geometries at the feature and feature collection level"
 msgstr ""
 ":guilabel:`WRITE_BBOX` をYESに設定すると、地物や地物コレクションのレベルでジオメトリのバウンディングボックスを含めます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:588
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:590
 msgid ""
 "GeoJSON - Newline Delimited has some specific Layer options availabe too:"
 msgstr "GeoJSON - Newline Delimited にもいくつかの特有のレイヤオプションがあります。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:590
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:592
 msgid ":guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)"
 msgstr ":guilabel:`COORDINATE_PRECISION` 上記を参照してください（GeoJSONのものと同様です）。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:591
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:593
 msgid ""
 ":guilabel:`RS` whether to start records with the RS=0x1E character. The "
 "difference is how the features are separated: only by a newline (LF) "
@@ -991,11 +903,11 @@ msgstr ""
 "geojsonl）か、レコード区切り（RS）文字がレコードの前に置かれて改行文字で区切られるか（GeoJSON Text Sequences, "
 "geojsons）です。 デフォルトはNOです。拡張子が指定されない場合は、ファイルに :file:`.json` 拡張子が付きます。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:604
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:606
 msgid "SAP HANA Spatial Layers"
 msgstr "SAP HANA空間レイヤ"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:606
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:608
 msgid ""
 "This section contains some details on how QGIS accesses SAP HANA layers. "
 "Most of the time, QGIS should simply provide you with a list of database "
@@ -1008,11 +920,11 @@ msgstr ""
 "HANAのレイヤにアクセスする方法について、いくつかの詳細を説明します。ほとんどの場合、QGISは単純にロード可能なデータベーステーブルのリストをユーザーに提供し、要求に応じてテーブルを読み込むだけです。しかし、SAP"
 " HANAのテーブルまたはビューをQGISに読み込むことができない場合には、以下の情報が参考となり、根本的な原因を理解し問題解決の助けとなるでしょう。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:613
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:615
 msgid "Feature Identification"
 msgstr "地物の識別"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:615
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:617
 msgid ""
 "If you'd like to use all of QGIS' feature editing capabilities, QGIS must be"
 " able to unambiguously identify each feature in a layer. Internally, QGIS "
@@ -1021,7 +933,7 @@ msgid ""
 msgstr ""
 "QGISの地物編集機能の全てを利用したい場合には、QGISがレイヤ内の各地物を明確に識別できる必要があります。内部的には、QGISは地物の識別に64ビットの符号付き整数を使用します。負の値の範囲は特別な目的のために予約されています。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:620
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:622
 msgid ""
 "Therefore, the SAP HANA provider requires a unique key that can be mapped to"
 " a positive 64-bit integer to fully support QGIS' feature editing "
@@ -1031,11 +943,11 @@ msgstr ""
 "従って、QGISの地物編集機能を完全にサポートするためには、SAP "
 "HANAプロバイダには64ビットの正の整数にマッピングできるユニークキーが必要です。もしもこのようなマッピングを作成できない場合には、地物を表示することはできますが、編集できない可能性があります。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:626
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:628
 msgid "Adding tables"
 msgstr "テーブルの追加"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:628
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:630
 msgid ""
 "When adding a table as a layer, the SAP HANA provider uses the table's "
 "primary key to map it to a unique feature id. Therefore, to have full "
@@ -1045,7 +957,7 @@ msgstr ""
 "レイヤとしてテーブルを追加する際に、SAP HANAプロバイダはテーブルの主キーを使用して、主キーをユニークな地物IDにマッピングします。 "
 "従って、地物編集機能を完全にサポートするためには、テーブルの定義に主キーが必要です。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:632
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:634
 msgid ""
 "The SAP HANA provider supports multi-column primary keys, but if you'd like "
 "to get the best performance, your primary key should be a single column of "
@@ -1054,11 +966,11 @@ msgstr ""
 "SAP HANAプロバイダはマルチカラムの主キーをサポートしていますが、ベストな性能を得たい場合には、主キーは ``INTEGER`` "
 "型の単一カラムとしてください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:637
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:639
 msgid "Adding views"
 msgstr "ビューの追加"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:639
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:641
 msgid ""
 "When adding a view as a layer, the SAP HANA provider cannot automatically "
 "identify columns that unambiguously identify a feature. Furthermore, some "
@@ -1067,7 +979,7 @@ msgstr ""
 "レイヤとしてビューを追加する際に、SAP "
 "HANAプロバイダは地物を一義的に特定するカラムを自動的に特定することはありません。さらに、一部のビューは読み取り専用で、編集できません。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:643
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:645
 msgid ""
 "To have full feature editing support, the view must be updatable (check "
 "column ``IS_READ_ONLY`` in system view ``SYS.VIEWS`` for the view in "
@@ -1084,11 +996,11 @@ msgstr ""
 " カラムで選択することで指定できます。ベストな性能を得たい場合には、 :guilabel:`地物ID` の値は単一の ``INTEGER`` "
 "型のカラムとしてください。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:655
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
 msgid "Layers crossing 180° longitude"
 msgstr "経度 180° をまたぐレイヤ"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
 msgid ""
 "Many GIS packages don't wrap layers with a geographic reference system "
 "(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
@@ -1100,31 +1012,15 @@ msgstr ""
 "多くのGISパッケージは、地理参照系（緯度経度）が180度の経線を越えるレイヤをラップしません。その結果、このようなレイヤをQGISで開くと、近くに表示されるはずの2つの場所が大きく離れて表示されることがあります。:numref:`Figure_vector_crossing`"
 " では、マップキャンバスの左端にある小さな点（チャタム諸島）は、ニュージーランド本島の右側のグリッド内にあるはずです。 "
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:670
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:672
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr "180° 経線をまたぐ緯度経度による地図"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:673
-msgid "Solving in PostGIS"
-msgstr "PostGISで解決する"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:688
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:690
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr "**ST_ShiftLongitude** 関数を適用した経度180°越え"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
-msgid ""
-"Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, for "
-"example, the DB Manager plugin."
-msgstr ""
-"例えばDBマネージャプラグインを使用して、データをPostGISにインポートします（ "
-":ref:`vector_import_data_in_postgis` 参照）。"
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
-msgid "Use the PostGIS command line interface to issue the following command:"
-msgstr "PostGISのコマンドラインインターフェイスを使って、以下のコマンドを実行します： "
-
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:700
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
 msgid ""
 "If everything went well, you should receive a confirmation about the number "
 "of features that were updated. Then you'll be able to load the map and see "

@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -92,51 +92,6 @@ msgstr ""
 "punkter) och ett attribut från det, med de värden som vi kommer att använda "
 "för rasterisering."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:14
-msgid ""
-"The next step is to compute the extent of the selected features. That's "
-"where we can use the model-only tool called *Vector layer bounds*. First, we"
-" will have to create a layer that has the extent of those selected features."
-" Then, we can use this tool on that layer."
-msgstr ""
-"Nästa steg är att beräkna omfattningen av de valda funktionerna. Det är här "
-"vi kan använda det modellverktyg som kallas *Vector layer bounds*. Först "
-"måste vi skapa ett lager som har omfattningen av de valda funktionerna. "
-"Sedan kan vi använda det här verktyget på det lagret."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:16
-msgid ""
-"An easy way of creating a layer with the extent of the selected features is "
-"to compute a convex hull of the input points layer. It will use only the "
-"selected point, so the convex hull will have the same bounding box as the "
-"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
-"convex hull layer as input. It should look this in the modeler canvas:"
-msgstr ""
-"Ett enkelt sätt att skapa ett lager med omfattningen av de valda "
-"funktionerna är att beräkna ett konvext skrov för lagret med "
-"inmatningspunkter. Det kommer bara att använda den valda punkten, så det "
-"konvexa skrovet kommer att ha samma avgränsningsbox som urvalet. Sedan kan "
-"vi lägga till algoritmen *Vector layer bounds* och använda det konvexa "
-"skrovlagret som indata. Det bör se ut så här i modelleringsduken:"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:20
-msgid ""
-"The result from the *Vector layer bounds* is a set of four numeric values "
-"and a extent object. We will use both the numeric outputs and the extent for"
-" this exercise."
-msgstr ""
-"Resultatet från *Vector layer bounds* är en uppsättning med fyra numeriska "
-"värden och ett extent-objekt. Vi kommer att använda både de numeriska "
-"värdena och extent-objektet i den här övningen."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:24
-msgid ""
-"We can now add the algorithm that rasterizes the vector layer, using the "
-"extent from the *Vector layer bounds* algorithm as input."
-msgstr ""
-"Vi kan nu lägga till algoritmen som rastrerar vektorlagret, med hjälp av "
-"omfattningen från algoritmen *Vector layer bounds* som indata."
-
 #: ../../docs/training_manual/processing/modeler_only.rst:26
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "Fyll i parametrarna för algoritmen enligt nästa bild:"
@@ -144,14 +99,6 @@ msgstr "Fyll i parametrarna för algoritmen enligt nästa bild:"
 #: ../../docs/training_manual/processing/modeler_only.rst:30
 msgid "The canvas should now look like."
 msgstr "Canvas bör nu se ut som följer."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:34
-msgid ""
-"Finally, fill the no-data values of the raster layer using the *Close gaps* "
-"algorithm."
-msgstr ""
-"Slutligen fyller du i rasterlagrets värden utan data med hjälp av algoritmen"
-" *Close gaps*."
 
 #: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""

@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -52,40 +52,13 @@ msgstr ""
 "sont formulés peut être pratique pour écrire des requêtes et comprendre "
 "comment la base de données est assemblée."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:10
-msgid ""
-"**The goal of this lesson:** To better understand how to create spatial "
-"entities directly in PostgreSQL/PostGIS."
-msgstr ""
-"**Objectif de cette leçon :** Mieux comprendre comment créer des entités "
-"spatiales directement dans PostgreSQL/PostGIS."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:15
 msgid "Creating Linestrings"
 msgstr "Création de polylignes"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:17
-msgid ""
-"Going back to our :kbd:`address` database, let's get our streets table "
-"matching the others; i.e., having a constraint on the geometry, an index and"
-" an entry in the geometry_columns table."
-msgstr ""
-"Retournons à notre base de données :kbd:`address` et faisons en sorte que la"
-" table des rues corresponde à celles précédemment étudiées, c'est-à-dire "
-"qu'il existe une contrainte géométrique, un index et en entrée dans la table"
-" de métadonnées geometry_columns."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:22
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
 msgstr ":abbr:`★★☆ (Niveau intermédiaire)` Essayez vous-même"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:24
-msgid ""
-"Modify the :kbd:`streets` table so that it has a geometry column of type "
-"ST_LineString."
-msgstr ""
-"Modifiez la table :kbd:`streets` de sorte à ce qu'il y ait une colonne "
-"géométrie de type ST_PolyLigne."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -218,17 +191,6 @@ msgstr "Ajouter des villes dans QGIS"
 msgid "If you're getting the following error message:"
 msgstr "Si vous obtenez le message suivant :"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:176
-msgid ""
-"then it means that while experimenting with creating polygons for the cities"
-" table, you must have deleted some of them and started over. Just check the "
-"entries in your cities table and use any :guilabel:`id` which exists."
-msgstr ""
-"Alors cela signifie que vous avez probablement supprimé des entités lorsque "
-"vous avez expérimenté la création de polygones dans la table \"cities\". "
-"Vérifiez donc les entrées dans la table \"cities\" et utilisez n'importe "
-"quelle valeur du champ :guilabel:`id` qui existerait encore."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Looking at Our Schema"
 msgstr "Regarder notre Schéma"
@@ -253,18 +215,6 @@ msgstr ""
 #: ../../docs/training_manual/spatial_databases/geometry.rst:260
 msgid "Access Sub-Objects"
 msgstr "Accès aux sous-objets"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:262
-msgid ""
-"With the SFS-Model functions, you have a wide variety of options to access "
-"sub-objects of SFS Geometries. When you want to select the first vertex "
-"point of every polygon geometry in the table myPolygonTable, you have to do "
-"this in this way:"
-msgstr ""
-"Avec les fonctions du Modèle-SFS, vous avez une large variété d'options pour"
-" accéder aux sous-objets des Géométries SFS. Lorsque vous voulez "
-"sélectionner le premier point du sommet de chaque géométrie de polygone dans"
-" la table myPolygonTable, vous devez faire cela de cette manière :"
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:267
 msgid "Transform the polygon boundary to a linestring:"
@@ -302,18 +252,6 @@ msgstr ""
 msgid "Building Geometries from Other Geometries"
 msgstr "Construction de géométries à partir d'autres géométries"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:316
-msgid ""
-"From a given point table, you want to generate a linestring. The order of "
-"the points is defined by their :kbd:`id`. Another ordering method could be a"
-" timestamp, such as the one you get when you capture waypoints with a GPS "
-"receiver."
-msgstr ""
-"À partir d'une table d'un point donné, vous voulez générer une polyligne. "
-"L'ordre des points est défini par leur :kbd:`id`. Une autre méthode d'ordre "
-"pourrait être un horodatage, comme celui que vous obtenez lorsque vous "
-"capturez des points de navigation avec un récepteur GPS."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:324
 msgid ""
 "To create a linestring from a new point layer called 'points', you can run "
@@ -341,9 +279,8 @@ msgid ""
 "You can get more information for this topic in `this blog entry "
 "<https://postgis.net/workshops/postgis-intro/validity.html>`_."
 msgstr ""
-"Vous trouverez sur `ce blog "
-"<https://postgis.net/workshops/postgis-intro/validity.html>`_ plus "
-"d'informations à ce sujet. "
+"Vous trouverez sur `ce blog <https://postgis.net/workshops/postgis-"
+"intro/validity.html>`_ plus d'informations à ce sujet. "
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:350
 msgid "Differences between tables"
@@ -356,14 +293,6 @@ msgid ""
 msgstr ""
 "Pour déceler la différence entre deux tables ayant la même structure, vous "
 "pouvez utiliser le mot-clé ``EXCEPT`` de PostgreSQL:"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:361
-msgid ""
-"As the result, you will get all records from table_a which are not stored in"
-" table_b."
-msgstr ""
-"Comme résultat, vous obtiendrez tous les enregistrements de la table_a qui "
-"ne sont pas stockés dans la table_b."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:365
 msgid "Tablespaces"

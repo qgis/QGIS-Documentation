@@ -9,6 +9,7 @@
 # Andrés Betancourt, 2026
 # Eric Armijo, 2026
 # Harrissou Sant-anna, 2026
+# Luis Alfredo López Gonzales, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Luis Alfredo López Gonzales, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -35,6 +36,31 @@ msgstr ""
 "La traducción es un esfuerzo comunitario :ref:`puede unirse "
 "<translation_guidelines>`. Esta página está actualmente traducida en "
 "|progreso de traducción|."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:4
+msgid "Check Geometry"
+msgstr "Validar geometrías"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:17
+msgid "Dangle-end lines"
+msgstr "Extremos colgantes"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:19
+msgid ""
+"Detects dangle-end lines in line geometries and reports them as errors. A "
+"dangle-end line is a line feature that terminates at a vertex connected to "
+"only one segment, resulting in an endpoint without a proper connection."
+msgstr ""
+"Detecta líneas con extremos colgantes en geometrías de tipo línea y las "
+"reporta como errores. Un extremo colgante es una línea que termina en un "
+"vértice conectado únicamente a un segmento, lo que da como resultado un "
+"punto final sin una conexión adecuada."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:26
+msgid "Identifying dangle-end features (in red) and vertices (yellow)."
+msgstr ""
+"Identificación de objetos con extremos colgantes (en rojo) y vértices (en "
+"amarillo)."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:29
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:157
@@ -389,7 +415,72 @@ msgstr "``INPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:924
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1009
 msgid "[vector: line]"
-msgstr "[vectorial: lineal]"
+msgstr "[vector: lineal]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:46
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:174
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:547
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:801
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:925
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1057
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1185
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1312
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1423
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1544
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1823
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1966
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2085
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2222
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2393
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2523
+msgid "Layer with the geometries to check."
+msgstr "Capa con las geometrías para validar"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:175
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:419
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:548
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:678
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:802
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:926
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1058
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1186
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1313
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1424
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1545
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1681
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1824
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1967
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2086
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2223
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2394
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2524
+msgid "**Unique feature identifier**"
+msgstr "**Identificador único del objeto**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:296
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:420
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:803
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:927
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1059
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1187
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1314
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1425
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1546
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1682
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1825
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1968
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2087
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2224
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2395
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2525
+msgid "``UNIQUE_ID``"
+msgstr "``UNIQUE_ID``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:177
@@ -413,6 +504,73 @@ msgstr "[vectorial: lineal]"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2526
 msgid "[tablefield: any]"
 msgstr "[campo de tabla: cualquiera]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:178
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:551
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:805
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:929
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1061
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1189
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1316
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1427
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1548
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1827
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1970
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2089
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2226
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2397
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2527
+msgid "Field storing unique values for feature identification."
+msgstr "Campo que almacena valores únicos para la identificación de objetos."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:109
+msgid "**Dangle-end errors**"
+msgstr "**Errores de extremos colgantes**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:238
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:300
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:360
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:424
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:483
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:557
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:615
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:741
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:807
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:865
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:935
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:993
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1063
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1121
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1196
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1254
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1322
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1367
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1433
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1478
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1550
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1608
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1686
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1744
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1844
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1902
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1977
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2022
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2098
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2156
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2265
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2330
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2405
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2464
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2529
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2588
+msgid "``ERRORS``"
+msgstr "``ERRORES``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:111
@@ -483,6 +641,21 @@ msgstr "[vector: punto]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Predeterminado: ``[Crear capa temporal]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:428
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:687
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1067
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1554
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1690
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1981
+msgid ""
+"Specification of the output layer containing the errors location. :ref:`One "
+"of <output_parameter_widget>`:"
+msgstr ""
+"Especificación de la capa de salida que contiene la ubicación de los "
+"errores. :ref:`Una de <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -507,6 +680,11 @@ msgstr "Guardar en tabla de base de datos..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
 msgstr "El fichero codificado también puede ser cambiado aquí."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:124
+msgid "**Dangle-end features**"
+msgstr "**Objetos con extremos colgantes**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:64
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:192
@@ -586,6 +764,14 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2545
 msgid "Default: ``[Skip output]``"
 msgstr "Preestablecido: ``[Omitir salida]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:69
+msgid ""
+"Line layer containing the identified dangle-end line features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Capa de líneas que contiene los objetos con extremos colgantes "
+"identificados. :ref:`Uno de <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -705,6 +891,35 @@ msgstr "[numérico: entero]"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2570
 msgid "Default: 8"
 msgstr "Preestablecido: 8"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:93
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:221
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:343
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:466
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:598
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:724
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:848
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:976
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1104
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1237
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1350
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1461
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1591
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1727
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1885
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2005
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2139
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2305
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2447
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2571
+msgid ""
+"Numerical precision of geometric operations, given as an integer n, meaning "
+"that two vertices less than 10\\ :sup:`-n` apart (in map units) are "
+"considered to be merged."
+msgstr ""
+"Precisión numérica de las operaciones geométricas, dada como un entero n, lo"
+" que significa que dos vértices separados por menos de 10\\ :sup:`-n` (en "
+"unidades del mapa) se consideran como fusionados."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:226

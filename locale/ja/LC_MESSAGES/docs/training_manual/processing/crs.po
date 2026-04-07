@@ -2,10 +2,10 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # tomoya miyoshi, 2026
 # 
 #, fuzzy
@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -70,20 +70,6 @@ msgid ""
 msgstr ""
 "入力レイヤがない場合はプロジェクトのCRSが使用されますが、アルゴリズムに具体的なCRSフィールドが含まれていれば、（経緯線網アルゴリズムを使った前回のレッスンのように）それが使われます"
 
-#: ../../docs/training_manual/processing/crs.rst:23
-msgid ""
-"Open the project corresponding to this lesson and you will see two layers "
-"named 23030 and 4326. They both contain the same points, but in different "
-"CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS "
-"is reprojecting on the fly to the project CRS (EPSG:4326), but they are not "
-"actually the same layer."
-msgstr ""
-"このレッスンに対応するプロジェクトを開き、23030と4326という名前の2つのレイヤを表示してください。その両方は同じ点が含んでいますが、CRSは異なっています（EPSG：23030とEPSG：4326）。QGISがプロジェクトCRS（EPSG：4326）にオンザフライで再投影していので、それらは全く同じ場所に表示されますが、実際には同じレイヤではありません。"
-
-#: ../../docs/training_manual/processing/crs.rst:29
-msgid "Open the *Export/Add geometry columns* algorithm."
-msgstr "*ジオメトリ属性を追加* アルゴリズムを開きます。"
-
 #: ../../docs/training_manual/processing/crs.rst:33
 msgid ""
 "This algorithm add new columns to the attributes table of a vector layer. "
@@ -101,17 +87,6 @@ msgid ""
 "differently. Select the 4326 layer."
 msgstr ""
 "入力レイヤのフィールドにある使用可能なレイヤのリストには、各レイヤとそれに対応するCRSが表示されています。それは、キャンバスの同じ場所に表示されても異なる方法で処理されることを意味します。4326レイヤを選択してください。"
-
-#: ../../docs/training_manual/processing/crs.rst:43
-msgid ""
-"The other parameter of the algorithm allows to set how the algorithm uses "
-"coordinates to calculate the new value that it will add to the resulting "
-"layers. Most algorithms do not have an option like that, and just use the "
-"coordinates directly. Select the *Layer CRS* option to just use coordinates "
-"as they are. This is how almost all geoalgorithms work."
-msgstr ""
-"アルゴリズムのもうひとつのパラメータは、アルゴリズムが結果レイヤに追加する新たな値を計算するために、どのように座標を使用するかを設定できます。ほとんどのアルゴリズムにはこのようなオプションはなく、座標を直接使うだけです。座標をそのまま使用する場合は、*レイヤCRS*"
-" オプションを選択します。これは、ほぼ全ての地理アルゴリズムの動作です。"
 
 #: ../../docs/training_manual/processing/crs.rst:49
 msgid ""
@@ -190,22 +165,3 @@ msgid ""
 "reproject), but it will not use its CRS for the output one."
 msgstr ""
 "CRSを扱う興味深いモジュールのひとつが再投影モジュールです。それが特殊なケースを代表するのは、入力レイヤ（再投影の対象となるもの）を持つが、そのCRSを出力レイヤに使わないからです。"
-
-#: ../../docs/training_manual/processing/crs.rst:97
-msgid "Open the *Reproject layer* algorithm."
-msgstr "*レイヤを再投影* アルゴリズムを開く。"
-
-#: ../../docs/training_manual/processing/crs.rst:101
-msgid ""
-"Select any of the layers as input, and select EPSG:23029 as the destination "
-"CRS. Run the algorithm and you will get a new layer, identical to the input "
-"one, but with a different CRS. It will appear on the same region of the "
-"canvas, like the other ones, since QGIS will reproject it on the fly, but "
-"its original coordinates are different. You can see that by running the "
-"*Export/Add geometry columns* algorithm using this new layer as input, and "
-"veryfing that the added coordinates are different to the ones in the "
-"attribute tables of both of the two layers that we had computed before."
-msgstr ""
-"入力として、レイヤのいずれかを選択し、出力CRSとしてEPSG:23029を選択します。アルゴリズムを実行すると、入力レイヤと同じで、異なるCRSを持つ新しいレイヤが生成されます。QGISではそれをオンザフライで再投影するので、他のものと同様にキャンバスの同じ領域に表示されますが、元にしている座標は異なっています。この新しいレイヤを入力として"
-" *ジオメトリ属性を追加* "
-"アルゴリズムを実行すると、追加された座標が前に計算した2つのレイヤの属性テーブルのものと異なっていることを確認することができます。"

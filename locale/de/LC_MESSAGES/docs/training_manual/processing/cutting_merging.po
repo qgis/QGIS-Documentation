@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:35+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -100,22 +100,6 @@ msgstr ""
 " einen Rasterlayer erhalten, der etwas mehr als die erforderliche Fläche "
 "abdeckt. "
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:30
-msgid ""
-"To calculate the bounding box , we can use the *Polygon from layer extent* "
-"algorithm"
-msgstr ""
-"Um den Begrenzungsrahmen zu erstellen, können wir den Algorithmus "
-"*Layerausdehnung extrahieren* verwenden. "
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:34
-msgid ""
-"To buffer it, we use the *Fixed distance buffer* algorithm, with the "
-"following parameter values."
-msgstr ""
-"Zur Erstellung des Puffers verwenden wir den Algorithmus *Puffer* mit den "
-"folgenden Parametern."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
 "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
@@ -130,29 +114,6 @@ msgstr ""
 "Hier sehen Sie den Begrenzungsrahmen, der mit den gegebenen Parametern "
 "erzeugt wird."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:44
-msgid ""
-"It is a rounded box, but we can easily get the equivalent box with square "
-"angles, by running the *Polygon from layer extent* algorithm on it. We could"
-" have buffered the city limits first, and then calculate the extent "
-"rectangle, saving one step."
-msgstr ""
-"Es ist ein abgerundeter Rahmen. Wenn wir den Algorithmus *Layerausdehnung "
-"extrahieren* auf ihn anwenden, erzeugen wir daraus einen rechteckigen "
-"Rahmen. Wir hätten auch zuerst die Stadtgrenzen puffern und darauf basierend"
-" den Begrenzungsrahmen erstellen können. Dadurch hätten wir einen Schritt "
-"gespart."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:50
-msgid ""
-"You will notice that the rasters has a different projection from the vector."
-" We should therefore reproject them before proceeding further, using the "
-"*Warp (reproject)* tool."
-msgstr ""
-"Die Rasterlayer verwenden eine andere Projektion als der Vektorlayer. Wir "
-"müssen sie bevor wir fortfahren mit Hilfe des Werkzeuges *Transformieren "
-"(reprojizieren)* transformieren."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
@@ -161,16 +122,7 @@ msgstr ""
 "Neuere Versionen verwenden eine komplexere Schnittstelle. Stellen Sie "
 "sicher, dass mindestens eine Komprimierungsmethode gewählt wurde."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:59
-msgid ""
-"With this layer that contains the bounding box of the raster layer that we "
-"want to obtain, we can crop both of the raster layers, using the *Clip "
-"raster with polygon* algorithm."
-msgstr ""
-"Mit Hilfe des Layers des Begrenzungsrahmens schneiden wir beide Rasterlayer "
-"zu. Wir verwenden dazu das Werkzeug *Raster auf Layermaske zuschneiden*."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:69
+#: ../../docs/training_manual/processing/cutting_merging.rst:68
 msgid ""
 "You can save time merging first and then cropping, and you will avoid "
 "calling the clipping algorithm twice. However, if there are several layers "
@@ -190,72 +142,23 @@ msgstr ""
 "Automatisierung solcher Operationen erlaubt. In diesem Beispiel haben wir "
 "nur zwei Layer, so dass das jetzt nicht so wichtig ist."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:77
+#: ../../docs/training_manual/processing/cutting_merging.rst:76
 msgid "With that, we get the final DEM we want."
 msgstr "Wir haben jetzt unser finales DEM wie wir es wollten."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:81
+#: ../../docs/training_manual/processing/cutting_merging.rst:80
 msgid "Now it is time to compute the slope layer."
 msgstr "Jetzt ist es an der Zeit, den Layer mit dem Gefälle zu berechnen."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:83
-msgid ""
-"A slope layer can be computed with the *Slope, Aspect, Curvature* algorithm,"
-" but the DEM obtained in the last step is not suitable as input, since "
-"elevation values are in meters but cellsize is not expressed in meters (the "
-"layer uses a CRS with geographic coordinates). A reprojection is needed. To "
-"reproject a raster layer, the *Warp (reproject)* algorithm can be used "
-"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
-"then correctly calculate the slope, with either SAGA or GDAL."
-msgstr ""
-"Ein Gefällelayer kann mit Hilfe des Algorithmus *Slope, Aspect, Curvature* "
-"berechnet werden. Allerdings ist unserer erstelltes DEM nicht als "
-"Eingabedatei geeignet, da nur die Höhenwerte in Meter hinterlegt sind. Die "
-"Zellengröße verwendet nicht Meter (der Layer liegt in einem KBS mit "
-"geographischen Koordinaten vor). Wir müssen ihn reprojizieren. Dazu können "
-"wir wieder den Algorithmus *Transformieren (reprojizieren)* verwenden. Wir "
-"reprojizieren in ein KBS mit der Einheit Meter (z.B. 3857), so dass wir dann"
-" das Gefälle korrekt mit SAGA oder GDAL bestimmen können."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:91
+#: ../../docs/training_manual/processing/cutting_merging.rst:90
 msgid "With the new DEM, slope can now be computed."
 msgstr "Mit dem neuen DEM kann nun die Hangneigung berechnet werden."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:95
+#: ../../docs/training_manual/processing/cutting_merging.rst:94
 msgid "And here is the resulting slope layer."
 msgstr "Hier ist der resultierende Layer mit der Hangneigung."
 
-#: ../../docs/training_manual/processing/cutting_merging.rst:99
-msgid ""
-"The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
-"expressed in degrees or radians; degrees are a more practical and common "
-"unit. In case you calculated it in radians, the *Metric conversions* "
-"algorithm will help us to do the conversion (but in case you didn't know "
-"that algorithm existed, you could use the raster calculator that we have "
-"already used)."
-msgstr ""
-"Die Hangneigung, die durch den Algorithmus *Slope, Aspect, Curvature* "
-"berechnet wird, kann in Grad oder Radiant ausgegeben werden. Die "
-"verbreitetere und auch praktikablere Einheit ist Grad. Falls Sie die Neigung"
-" in Radiant berechnet haben, kann man die Einheit mit Hilfe des Algorithmus "
-"*Metric conversions* umrechnen (für den Fall, dass man diesen Algortihmus "
-"nicht kennen würde, hätte man auch den Rasterrechner verwenden können, den "
-"wir schon benutzt haben)."
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:107
-msgid ""
-"Reprojecting the converted slope layer back with the *Reproject raster "
-"layer*, we get the final layer we wanted."
-msgstr ""
-"Nach dem erneuten Reprojizieren des konvertierten Neigungslayers mit "
-"*Transformieren (reprojizieren)* zurück zum Ausgangs KBS erhalten wir den "
-"Ergebnislayer, den wir uns vorgstellt haben."
-
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
-msgid "todo: Add image"
-msgstr "todo: Bild einfügen"
-
-#: ../../docs/training_manual/processing/cutting_merging.rst:112
 msgid ""
 "The reprojection processes might have caused the final layer to contain data"
 " outside the bounding box that we calculated in one of the first steps. This"

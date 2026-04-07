@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -91,54 +91,6 @@ msgstr ""
 " et un attribut en provenant, avec les valeurs que nous utiliserons pour la "
 "rasterisation."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:14
-msgid ""
-"The next step is to compute the extent of the selected features. That's "
-"where we can use the model-only tool called *Vector layer bounds*. First, we"
-" will have to create a layer that has the extent of those selected features."
-" Then, we can use this tool on that layer."
-msgstr ""
-"L'étape suivante consiste à calculer l'emprise de l'entité sélectionnée. "
-"C'est là que nous pouvons utiliser l'outil de modélisation unique appelé  "
-"*Vector layer bounds*. D'abord, nous allons devoir créer une couche qui "
-"possède une emprise de ces entités sélectionnée. Ensuite nous pourrons "
-"utiliser cet outil sur cette couche.  "
-
-#: ../../docs/training_manual/processing/modeler_only.rst:16
-msgid ""
-"An easy way of creating a layer with the extent of the selected features is "
-"to compute a convex hull of the input points layer. It will use only the "
-"selected point, so the convex hull will have the same bounding box as the "
-"selection. Then we can add the *Vector layer bounds* algorithm, and use the "
-"convex hull layer as input. It should look this in the modeler canvas:"
-msgstr ""
-"Une manière simple de créer une couche avec l'étendue des entités "
-"sélectionnées consiste à calculer une enveloppe convexe de la couche de "
-"points d'entrée. Cela utilisera uniquement les points sélectionnés, de sorte"
-" que l'enveloppe convexe aura la même boîte englobante que la sélection. "
-"Ensuite, nous pouvons ajouter l'algorithme *Limites de la couche vecteur*, "
-"et utiliser la couche de  l'enveloppe convexe en entrée. Cela devrait "
-"ressembler à ça dans l'espace de travail du modeleur :"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:20
-msgid ""
-"The result from the *Vector layer bounds* is a set of four numeric values "
-"and a extent object. We will use both the numeric outputs and the extent for"
-" this exercise."
-msgstr ""
-"Le résultat du *Vector layer bounds* est un ensemble de quatre valeurs "
-"numériques et d'une emprise d'objet. Nous utiliserons à la fois les "
-"résultats numériques et l'emprise pour cet exercice."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:24
-msgid ""
-"We can now add the algorithm that rasterizes the vector layer, using the "
-"extent from the *Vector layer bounds* algorithm as input."
-msgstr ""
-"Nous pouvons maintenant ajouter l'algorithme qui rasterise la couche "
-"vecteur, en utilisant comme source l'emprise de l'algorithme du  *Vector "
-"layer bounds*"
-
 #: ../../docs/training_manual/processing/modeler_only.rst:26
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr ""
@@ -147,14 +99,6 @@ msgstr ""
 #: ../../docs/training_manual/processing/modeler_only.rst:30
 msgid "The canvas should now look like."
 msgstr "Le canvas devrait être :"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:34
-msgid ""
-"Finally, fill the no-data values of the raster layer using the *Close gaps* "
-"algorithm."
-msgstr ""
-"Enfin, remplissez les valeurs absentes de la couche raster avec l'algorithme"
-" *Close gaps*. "
 
 #: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""

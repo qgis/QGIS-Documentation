@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Kwon.Yongchan <ruvyn@naver.com>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-27 16:37+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -150,41 +149,6 @@ msgstr "첫 번째로, 새 데이터베이스를 생성하십시오 (먼저 psql
 msgid "Remember to install the postgis extensions:"
 msgstr "PostGIS 확장 프로그램을 설치하는 것을 잊지 마십시오:"
 
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
-msgid ""
-"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
-"directory. Refer back to the previous lesson for instructions, but remember "
-"that you'll need to create a new PostGIS connection to the new database. You"
-" can import from the terminal or via DB Manager. Import the files into the "
-"following database tables:"
-msgstr ""
-"두 번째로, :kbd:`exercise_data/postgis/` 디렉터리에서 제공하는 데이터를 가져오십시오. 이전 강의에서 배운 "
-"내용대로 하되, 새 데이터베이스에는 새 PostGIS 연결을 생성해야 한다는 것을 기억하십시오. 터미널에서 또는 데이터베이스 관리자를 "
-"통해 데이터를 가져올 수 있습니다. 파일을 다음 데이터베이스 테이블로 가져오십시오:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
-msgid ":kbd:`points.shp` into :kbd:`building`"
-msgstr ":kbd:`points.shp` 를 :kbd:`building` 테이블로"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
-msgid ":kbd:`lines.shp` into :kbd:`road`"
-msgstr ":kbd:`lines.shp` 를 :kbd:`road` 테이블로"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
-msgid ":kbd:`polygons.shp` into :kbd:`region`"
-msgstr ":kbd:`polygons.shp` 를 :kbd:`region` 테이블로"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
-msgid ""
-"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
-"Layers` dialog, as usual. When you open their attribute tables, you'll note "
-"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
-" PostGIS import."
-msgstr ""
-"평상시대로 :guilabel:`Add PostGIS Layers` 대화 창을 통해 이 세 데이터베이스 레이어를 QGIS로 불러오십시오. "
-"이 레이어들의 속성 테이블을 열면, :kbd:`id` 필드와 함께 PostGIS 가져오기 과정에서 생성된 :kbd:`gid` 필드를 둘 "
-"다 가지고 있다는 사실을 알 수 있습니다."
-
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
@@ -254,19 +218,6 @@ msgstr "어두운 영역이 버퍼입니다:"
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "이 버퍼를 써서 선택합니다:"
-
-#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
-msgid ""
-"In this query, the original buffer view is used as any other table would be."
-" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.geom`, is "
-"used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that "
-"intersects it. However, Hokkaido itself is excluded from this select "
-"statement, because we don't want it; we only want the regions adjoining it."
-msgstr ""
-"이 쿼리에서 다른 어떤 테이블과도 마찬가지로 원본 버퍼 뷰를 사용했습니다. 뷰에 :kbd:`a` 라는 별명을 부여하고, 해당 뷰의 "
-":kbd:`a.geom` 이라는 도형 필드를 사용해서 :kbd:`region` 테이블(별명 :kbd:`b`)에서 뷰와 교차하는 모든 "
-"폴리곤을 선택했습니다. 그러나 Hokkaido 자체는 이 선택 선언문에서 제외되었습니다. 해당 지역이 아니라 인접한 지역만을 원하기 "
-"때문입니다."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""

@@ -2,11 +2,11 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Transifex Bot <>, 2025
+# tomoyuki arai <tarai.3367@gmail.com>, 2026
+# Harrissou Sant-anna, 2026
 # tomoya miyoshi, 2026
 # 
 #, fuzzy
@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:55+0000\n"
 "Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -78,20 +78,6 @@ msgid ""
 msgstr ""
 "前回のレッスンで作成したQGISプロジェクト :file:`forest_inventory.qgs` "
 "を開いてください。少なくとも以下のレイヤがあるはずです："
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:27
-msgid ""
-":guilabel:`forest_stands_2012` (with a 50% transparency, green fill and "
-"darker green border lines)"
-msgstr ":guilabel:`forest_stands_2012` （透過率50％、緑色の塗りつぶし、濃い緑色の枠線）"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:29
-msgid ":guilabel:`systematic_plots_clip`"
-msgstr ":guilabel:`systematic_plots_clip`"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:30
-msgid ":guilabel:`rautjarvi_aerial`"
-msgstr ":guilabel:`rautjarvi_aerial`"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:32
 msgid "Save the project with a new name, :file:`map_creation.qgs`."
@@ -364,12 +350,6 @@ msgstr ""
 "後で ``forest_stands_2012`` "
 "レイヤの緑色のスタイリングを使うことになります。これを維持したまま、林分の境界線だけを表示するビジュアライゼーションにするためです:"
 
-#: ../../docs/training_manual/forestry/forest_maps.rst:141
-msgid ""
-"Right click on :guilabel:`forest_stands_2012` and select "
-":guilabel:`Duplicate`"
-msgstr ":guilabel:`forest_stands_2012` を右クリックして :guilabel:`複製` を選びます"
-
 #: ../../docs/training_manual/forestry/forest_maps.rst:142
 msgid ""
 "You get a new layer named ``forest_stands_2012 copy`` that you can use to "
@@ -511,21 +491,6 @@ msgstr ""
 #: ../../docs/training_manual/forestry/forest_maps.rst:215
 msgid "Go back to the map, but don't close the :guilabel:`Print Layout`."
 msgstr "地図に戻りますが、 :guilabel:`印刷レイアウト` は閉じないでください。"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:216
-msgid ""
-"Right click the :guilabel:`forest_stands_2012` layer and click on "
-":guilabel:`Zoom to Layer Extent`."
-msgstr ""
-":guilabel:`forest_stands_2012` レイヤを右クリックし、 :guilabel:`レイヤの領域にズーム` をクリックします。"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:218
-msgid ""
-"Deactivate all layers except for :guilabel:`basic_map` and "
-":guilabel:`forest_stands_2012`."
-msgstr ""
-":guilabel:`basic_map` と :guilabel:`forest_stands_2012` "
-"を除くすべてのレイヤを非アクティブ化します。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:219
 msgid ""
@@ -813,10 +778,6 @@ msgstr ""
 msgid "Go back to the map view."
 msgstr "地図ビューに戻ります。"
 
-#: ../../docs/training_manual/forestry/forest_maps.rst:354
-msgid "Enable editing for the :guilabel:`atlas_coverage` layer."
-msgstr ":guilabel:`atlas_coverage` レイヤの編集を有効にします。"
-
 #: ../../docs/training_manual/forestry/forest_maps.rst:355
 msgid "Select the polygons that are selected (in yellow) in the image below."
 msgstr "下の画像に（黄色で）選択されたポリゴンを選択します。"
@@ -844,12 +805,6 @@ msgid ""
 "account:"
 msgstr ""
 "使用しているカバレッジレイヤは、まだ地図内のラベルの内容をカスタマイズするために使用できる有用な情報を持っていません。最初のステップはそれらを作成すること、たとえばポリゴン領域のゾーンコードや野外チームが考慮すべき備考を記載したフィールドを追加することができます："
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:370
-msgid ""
-"Open the :guilabel:`Attribute table` for the :guilabel:`atlas_coverage` "
-"layer."
-msgstr ":guilabel:`atlas_coverage` レイヤの :guilabel:`属性テーブル` を開きます。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:371
 msgid "Enable editing."
@@ -888,30 +843,11 @@ msgid ""
 " the default value for all the polygons."
 msgstr ":guilabel:`式` ボックスに ``'No remarks.'`` と書きます。これですべてのポリゴンに規定値を設定します。"
 
-#: ../../docs/training_manual/forestry/forest_maps.rst:380
-msgid ""
-"The forest manager will have some information about the area that might be "
-"useful when visiting the area. For example, the existence of a bridge, a "
-"swamp or the location of a protected species. The :guilabel:`atlas_coverage`"
-" layer is probably in edit mode still, add the following text in the "
-":guilabel:`Remarks` field to the corresponding polygons (double click the "
-"cell to edit it):"
-msgstr ""
-"森林管理者は、その区域を訪れる際に役立つような情報を持っているはずです。例えば、橋や沼地の存在、保護種の位置などです。:guilabel:`atlas_coverage`"
-" レイヤはまだ編集モードになっていると思うので、対応するポリゴンの :guilabel:`Remarks` "
-"フィールドに以下のテキストを追加します（編集するにはセルをダブルクリックします）:"
-
 #: ../../docs/training_manual/forestry/forest_maps.rst:387
 msgid ""
 "For the :guilabel:`Zone` 2: ``Bridge to the North of plot 19. Siberian "
 "squirrel between p_13 and p_14.``"
 msgstr ":guilabel:`Zone` 2: ``plot 19の北に橋。P_13とp_14の間にエゾモモンガ。``"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:389
-msgid ""
-"For the :guilabel:`Zone` 6: `Difficult to transit in swamp to the North of "
-"the lake.``"
-msgstr ":guilabel:`Zone` 6: ``湖の北にある沼の通過は難しい。``"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:390
 msgid ""
@@ -921,15 +857,6 @@ msgstr ":guilabel:`Zone` 7: ``p_94の南東にエゾモモンガ。``"
 #: ../../docs/training_manual/forestry/forest_maps.rst:391
 msgid "Disable editing and save your edits."
 msgstr "編集を無効にして、編集内容を保存します。"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:393
-msgid ""
-"Almost ready, now you have to tell the Atlas tool that you want some of the "
-"text labels to use the information from the :guilabel:`atlas_coverage` "
-"layer's attribute table."
-msgstr ""
-"ほぼ準備ができたので、次は地図帳ツールに、テキストラベルの一部に :guilabel:`atlas_coverage` "
-"レイヤの属性テーブルの情報を使用するよう指示する必要があります。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:396
 msgid "Go back to the :guilabel:`Print Layout`."
@@ -967,32 +894,11 @@ msgstr ""
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` をクリックします。"
 
-#: ../../docs/training_manual/forestry/forest_maps.rst:405
-msgid ""
-"The text inside the box in the :guilabel:`Item properties` should show "
-"``Detail map inventory zone: [% \"Zone\" %]``. Note that the ``[% \"Zone\" "
-"%]`` will be substituted by the value of the field :guilabel:`Zone` for the "
-"corresponding feature from the layer :guilabel:`atlas_coverage`."
-msgstr ""
-":guilabel:`アイテムプロパティ` にあるボックスの中のテキストが ``詳細地図ゾーン: [% \"Zone\" %]`` "
-"になっているでしょう。その ``[% \"Zone\" %]`` が :guilabel:`atlas_coverage` レイヤの対応する地物の "
-":guilabel:`Zone` フィールドの値に置き換わることに注意してください。"
-
 #: ../../docs/training_manual/forestry/forest_maps.rst:410
 msgid ""
 "Test the contents of the label by looking at the different Atlas preview "
 "maps."
 msgstr "異なる地図帳プレビュー地図を見て、ラベルの内容をテストします。"
-
-#: ../../docs/training_manual/forestry/forest_maps.rst:411
-msgid ""
-"Do the same for the labels with the text :guilabel:`Remarks:` using the "
-"field with the zone information. You can leave a break line before you enter"
-" the expression. You can see the result for the preview of zone 2 in the "
-"image below:"
-msgstr ""
-"ゾーン情報を持つフィールドを使用して、 :guilabel:`Remarks:` "
-"というテキストを持つラベルにも同じことをします。式を入力する前に改行を入れておくとよいでしょう。ゾーン2のプレビューの結果は、下の画像で見ることができます："
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:418
 msgid ""

@@ -2,25 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2025
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:34+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -209,12 +208,6 @@ msgstr "それらを読み込み、さらに :file:`landuse.sqlite` も読み込
 msgid "Zoom to the layer extent to see |majorUrbanName|, South Africa"
 msgstr "レイヤの範囲を拡大すると、|majorUrbanName|, 南アフリカが表示されます。"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:91
-msgid ""
-"Before proceeding we will filter the :guilabel:`roads` layer, in order to "
-"have only some specific road types to work with."
-msgstr "先に進む前に、特定の道路タイプだけを扱うために、 :guilabel:`roads` レイヤーをフィルタリングします。"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:94
 msgid ""
 "Some roads in OSM datasets are listed as ``unclassified``, ``tracks``, "
@@ -254,15 +247,6 @@ msgid ""
 "value in the ``highway`` field."
 msgstr ""
 "``IS NOT NULL`` と ``AND`` 演算子を組み合わせると、 ``highway`` フィールドに値がない道路は除外されます。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
-msgid ""
-"Note the |indicatorFilter| icon next to the :guilabel:`roads` layer. It "
-"helps you remember that this layer has a filter activated, so some features "
-"may not be available in the project."
-msgstr ""
-":guilabel:`roads` レイヤの横にある |indicatorFilter| "
-"アイコンに注目してください。このレイヤはフィルタが有効になっているので、プロジェクトで利用できない地物があることを思い出すのに役立ちます。"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
 msgid "indicatorFilter"
@@ -306,11 +290,6 @@ msgid ""
 "should use a UTM CRS which is more appropriate for your region."
 msgstr ""
 "この例では、*WGS 84 / UTM zone 34S* CRSを使用していますが、あなたの地域に適したUTM CRSを使用する必要があります。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
-msgid ""
-"Right click the :guilabel:`roads` layer in the :guilabel:`Layers` panel"
-msgstr ":guilabel:`レイヤ` パネルで :guilabel:`roads` レイヤを右クリックします"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
@@ -510,18 +489,6 @@ msgid ""
 " each individual road. To get rid of this problem:"
 msgstr "バッファの中に、それぞれの道路に対応する明確な地域があることに注意してください。この問題を解消するために;"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
-msgid ""
-"Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer with"
-" :guilabel:`Dissolve results` enabled."
-msgstr ""
-":guilabel:`roads_buffer_50m` レイヤのチェックを外し、 :guilabel:`結果を融合する` "
-"を有効にしてバッファを作成し直します。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
-msgid "Save the output as :guilabel:`roads_buffer_50m_dissolved`"
-msgstr "出力を :guilabel:`roads_buffer_50m_dissolved` という名前で保存します"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
 msgstr ":guilabel:`実行` をクリックして、 :guilabel:`バッファ` ダイアログを閉じます"
@@ -570,33 +537,9 @@ msgstr "答え"
 msgid "Your buffer dialog should look like this:"
 msgstr "バッファダイアログはこのように表示されます:"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
-msgid "The :guilabel:`Buffer distance` is :guilabel:`1` kilometer."
-msgstr ":guilabel:`バッファ距離` は :guilabel:`1` キロメートルです。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
-msgid ""
-"The :guilabel:`Segments to approximate` value is set to :guilabel:`20`. This"
-" is optional, but it's recommended, because it makes the output buffers look"
-" smoother. Compare this:"
-msgstr ""
-":guilabel:`Segments to approximate` の値は :guilabel:`20` "
-"に設定されます。これはオプションですが、出力バッファがより滑らかになるため、推奨されています。これを:"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
 msgid "To this:"
 msgstr "これと比較してみましょう:"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
-msgid ""
-"The first image shows the buffer with the :guilabel:`Segments to "
-"approximate` value set to :guilabel:`5` and the second shows the value set "
-"to :guilabel:`20`. In our example, the difference is subtle, but you can see"
-" that the buffer's edges are smoother with the higher value."
-msgstr ""
-"最初の画像は :guilabel:`Segments to Approximate` の値を :guilabel:`5` に設定したバッファ、2番目は "
-":guilabel:`20` "
-"に設定したバッファを示します。この例では、微妙な違いですが、高い値の方がバッファのエッジが滑らかになっていることがわかります。"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Overlapping Areas"
@@ -676,15 +619,6 @@ msgstr ""
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr ":guilabel:`実行` をクリックしてダイアログを閉じます"
 
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
-msgid ""
-"You will probably find that not much seems to have changed. If so, move the "
-":guilabel:`well_located_houses` layer to the top of the layers list, then "
-"zoom in."
-msgstr ""
-"おそらく、あまり変化がないように見えると思います。その場合は、 :guilabel:`well_located_houses` "
-"レイヤをレイヤリストの一番上に移動し、拡大してください。"
-
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
@@ -709,23 +643,6 @@ msgid ""
 "buildings which are within 500m of a restaurant."
 msgstr ""
 "今、私たちの学校の1キロ内や道路の50メートル内のすべての建物を表示するレイヤーを持っています。今その選択を、レストランの500メートル内にある建物を表示するだけに削減する必要があります。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
-msgid ""
-"Using the processes described above, create a new layer called "
-":guilabel:`houses_restaurants_500m` which further filters your "
-":guilabel:`well_located_houses` layer to show only those which are within "
-"500m of a restaurant."
-msgstr ""
-"上で説明したプロセスを使って、 :guilabel:`houses_restaurants_500m` "
-"という名前の新しいレイヤを作りなさい。このレイヤは :guilabel:`well_located_houses` "
-"レイヤをさらにフィルタリングして、レストランから 500m 以内にある住宅のみを表示します。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
-msgid ""
-"To create the new :guilabel:`houses_restaurants_500m` layer, we go through a"
-" two step process:"
-msgstr "新しい :guilabel:`houses_restaurants_500m` レイヤを作成するために、2つのステップを経ます:"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
@@ -753,15 +670,6 @@ msgid ""
 "To see which buildings are of the correct size (more than 100 square "
 "meters), we need to calculate their size."
 msgstr "どの建物が適正規模（100平方メートル以上）かを確認するためには、その大きさを計算する必要があります。"
-
-#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
-msgid ""
-"Select the :guilabel:`houses_restaurants_500m` layer and open the *Field "
-"Calculator* by clicking on the |calculateField| :sup:`Open Field Calculator`"
-" button in the main toolbar or in the attribute table window"
-msgstr ""
-":guilabel:`houses_restaurants_500m` レイヤを選択し、メインツールバーの |calculateField| "
-":sup:`フィールド計算機を開く` ボタンまたは属性テーブルウィンドウをクリックして *フィールド計算機* を開きます"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"

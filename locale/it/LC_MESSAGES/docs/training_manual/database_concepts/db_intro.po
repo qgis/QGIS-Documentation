@@ -2,25 +2,25 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:33+0000\n"
-"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -201,7 +201,7 @@ msgid ""
 "<https://www.postgresql.org/docs/current/datatype.html>`_"
 msgstr ""
 "Ci sono molti altri tipi di dati che puoi usare - controlla il manuale di "
-"PostgreSQL `<https://www.postgresql.org/docs/current/datatype.html>`_"
+"PostgreSQL `<https://www.postgresql.org/docs/current/datatype.html> `_"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:116
 msgid "Modelling an Address Database"
@@ -327,40 +327,13 @@ msgstr ""
 " il nome di una città cambia, devi fare un sacco di lavoro per aggiornare il"
 " tuo database."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:210
-msgid ""
-"Redesign the theoretical `people` table above to reduce duplication and to "
-"normalise the data structure."
-msgstr ""
-"Riprogetta la tabella teorica `people` di cui sopra per ridurre la "
-"duplicazione e normalizzare la struttura dei dati."
-
 #: ../../docs/training_manual/database_concepts/db_intro.rst:213
 msgid ""
 "You can read more about database normalisation `here "
 "<https://en.wikipedia.org/wiki/Database_normalization>`_"
 msgstr ""
 "Puoi leggere di più sulla normalizzazione del database qui "
-"`<https://en.wikipedia.org/wiki/Database_normalization>`_"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:219
-msgid ""
-"The major problem with the *people* table is that there is a single address "
-"field which contains a person's entire address. Thinking about our "
-"theoretical *address* table earlier in this lesson, we know that an address "
-"is made up of many different properties. By storing all these properties in "
-"one field, we make it much harder to update and query our data. We therefore"
-" need to split the address field into the various properties. This would "
-"give us a table which has the following structure::"
-msgstr ""
-"Il problema principale della tabella *people* è che c'è un solo campo "
-"indirizzo che contiene l'intero indirizzo di una persona. Pensando alla "
-"nostra teorica tabella *address* di prima in questa lezione, sappiamo che un"
-" indirizzo è composto da molte proprietà diverse. Memorizzando tutte queste "
-"proprietà in un solo campo, rendiamo molto più difficile aggiornare e "
-"interrogare i nostri dati. Abbiamo quindi bisogno di dividere il campo "
-"indirizzo nelle varie proprietà. Questo ci darebbe una tabella che ha la "
-"seguente struttura:"
+"`<https://en.wikipedia.org/wiki/Database_normalization>` _"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:233
 msgid ""
@@ -425,18 +398,6 @@ msgstr ""
 msgid "Entity Relationship Diagramming"
 msgstr "Diagramma Entità Relazione"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:289
-msgid ""
-"In a normalised database, you typically have many relations (tables). The "
-"entity-relationship diagram (ER Diagram) is used to design the logical "
-"dependencies between the relations. Consider our non-normalised `people` "
-"table from earlier in the lesson:"
-msgstr ""
-"In un database normalizzato, si hanno tipicamente molte relazioni (tabelle)."
-" Il diagramma entità-relazione (ER Diagram) è usato per disegnare le "
-"dipendenze logiche tra le relazioni. Considera la nostra tabella non "
-"normalizzata `people` nella lezione precedente:"
-
 #: ../../docs/training_manual/database_concepts/db_intro.rst:304
 msgid ""
 "With a little work we can split it into two tables, removing the need to "
@@ -448,14 +409,6 @@ msgstr ""
 #: ../../docs/training_manual/database_concepts/db_intro.rst:316
 msgid "and:"
 msgstr "e:"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:327
-msgid ""
-"We can then link the two tables using the 'keys' :kbd:`streets.id` and "
-":kbd:`people.streets_id`."
-msgstr ""
-"Possiamo quindi collegare le due tabelle usando le 'chiavi' "
-":kbd:`streets.id` e :kbd:`people.streets_id`."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:330
 msgid ""
@@ -487,20 +440,6 @@ msgstr ""
 "prova a vedere se puoi normalizzarlo ulteriormente e mostrarlo per mezzo di "
 "un diagramma ER."
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:349
-msgid "Our *people* table currently looks like this::"
-msgstr "La nostra tabella *people* attualmente assomiglia a questa:"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:355
-msgid ""
-"The :guilabel:`street_id` column represents a 'one to many' relationship "
-"between the people object and the related street object, which is in the "
-"*streets* table."
-msgstr ""
-"La colonna :guilabel:`street_id` rappresenta una relazione 'uno a molti' tra"
-" l'oggetto people e il relativo oggetto street, che si trova nella tabella "
-"*streets*."
-
 #: ../../docs/training_manual/database_concepts/db_intro.rst:358
 msgid ""
 "One way to further normalise the table is to split the name field into "
@@ -509,14 +448,6 @@ msgstr ""
 "Un modo per normalizzare ulteriormente la tabella è quello di sudividere il "
 "campo nome in *nome* e *cognome*:"
 
-#: ../../docs/training_manual/database_concepts/db_intro.rst:365
-msgid ""
-"We can also create separate tables for the town or city name and country, "
-"linking them to our *people* table via 'one to many' relationships::"
-msgstr ""
-"Possiamo anche creare tabelle separate per il nome della città e del paese, "
-"collegandole alla nostra tabella *people* tramite relazioni 'uno a molti':"
-
 #: ../../docs/training_manual/database_concepts/db_intro.rst:373
 msgid "An ER Diagram to represent this would look like this:"
 msgstr "Un diagramma ER per rappresentare questo sarebbe il seguente:"
@@ -524,18 +455,6 @@ msgstr "Un diagramma ER per rappresentare questo sarebbe il seguente:"
 #: ../../docs/training_manual/database_concepts/db_intro.rst:379
 msgid "Constraints, Primary Keys and Foreign Keys"
 msgstr "Vincoli, chiavi primarie e chiavi esterne"
-
-#: ../../docs/training_manual/database_concepts/db_intro.rst:381
-msgid ""
-"A database constraint is used to ensure that data in a relation matches the "
-"modeller's view of how that data should be stored. For example a constraint "
-"on your postal code could ensure that the number falls between :kbd:`1000` "
-"and :kbd:`9999`."
-msgstr ""
-"Un vincolo di database è utile per assicurare che i dati in una relazione "
-"corrispondano a come tali dati devono essere memorizzati. Ad esempio un "
-"vincolo sul tuo codice postale potrebbe garantire che il numero sia tra 1000"
-" e 9999."
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:386
 msgid ""

@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Daniel Nylander <po@danielnylander.se>, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-27 20:20+0100\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -51,39 +51,13 @@ msgstr ""
 "digitaliseringsverktyg, men att förstå hur de formuleras kan vara praktiskt "
 "när du skriver frågor och förstår hur databasen är uppbyggd."
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:10
-msgid ""
-"**The goal of this lesson:** To better understand how to create spatial "
-"entities directly in PostgreSQL/PostGIS."
-msgstr ""
-"** Målet med denna lektion: ** För att bättre förstå hur man skapar spatiala"
-" enheter direkt i PostgreSQL / PostGIS."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:15
 msgid "Creating Linestrings"
 msgstr "Skapa linjestring"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:17
-msgid ""
-"Going back to our :kbd:`address` database, let's get our streets table "
-"matching the others; i.e., having a constraint on the geometry, an index and"
-" an entry in the geometry_columns table."
-msgstr ""
-"Vi går tillbaka till vår databas :kbd:`address` och ser till att vår "
-"gatutabell stämmer överens med de andra, dvs. att den har en begränsning för"
-" geometrin, ett index och en post i tabellen geometry_columns."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:22
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
 msgstr "Prova själv: :abbr:`★★☆ (Måttlig nivå)`"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:24
-msgid ""
-"Modify the :kbd:`streets` table so that it has a geometry column of type "
-"ST_LineString."
-msgstr ""
-"Modifiera tabellen :kbd:`streets` så att den har en geometrikolumn av typen "
-"ST_LineString."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:26
 msgid ""
@@ -211,17 +185,6 @@ msgstr "(fånga städer i QGIS)"
 msgid "If you're getting the following error message:"
 msgstr "Om du får följande felmeddelande:"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:176
-msgid ""
-"then it means that while experimenting with creating polygons for the cities"
-" table, you must have deleted some of them and started over. Just check the "
-"entries in your cities table and use any :guilabel:`id` which exists."
-msgstr ""
-"så betyder det att när du experimenterade med att skapa polygoner för "
-"stadstabellen, måste du ha tagit bort några av dem och börjat om. "
-"Kontrollera bara posterna i din stadstabell och använd alla :guilabel:`id` "
-"som finns."
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:183
 msgid "Looking at Our Schema"
 msgstr "En titt på vårt schema"
@@ -258,18 +221,6 @@ msgstr "Skapa och ladda de konvexa skroven"
 msgid "Access Sub-Objects"
 msgstr "Åtkomst till underobjekt"
 
-#: ../../docs/training_manual/spatial_databases/geometry.rst:262
-msgid ""
-"With the SFS-Model functions, you have a wide variety of options to access "
-"sub-objects of SFS Geometries. When you want to select the first vertex "
-"point of every polygon geometry in the table myPolygonTable, you have to do "
-"this in this way:"
-msgstr ""
-"Med SFS-Model-funktionerna har du en mängd olika alternativ för att komma åt"
-" underobjekt till SFS-geometrier. Om du vill välja den första vertexpunkten "
-"för varje polygongeometri i tabellen myPolygonTable, måste du göra det på "
-"följande sätt:"
-
 #: ../../docs/training_manual/spatial_databases/geometry.rst:267
 msgid "Transform the polygon boundary to a linestring:"
 msgstr "Omvandla polygongränsen till en linjestring:"
@@ -305,18 +256,6 @@ msgstr ""
 #: ../../docs/training_manual/spatial_databases/geometry.rst:314
 msgid "Building Geometries from Other Geometries"
 msgstr "Bygga geometrier från andra geometrier"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:316
-msgid ""
-"From a given point table, you want to generate a linestring. The order of "
-"the points is defined by their :kbd:`id`. Another ordering method could be a"
-" timestamp, such as the one you get when you capture waypoints with a GPS "
-"receiver."
-msgstr ""
-"Från en given punkttabell vill du generera en linjestring. Ordningen på "
-"punkterna definieras av deras :kbd:`id`. En annan ordningsmetod kan vara en "
-"tidsstämpel, t.ex. den som du får när du registrerar waypoints med en GPS-"
-"mottagare."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:324
 msgid ""
@@ -359,14 +298,6 @@ msgid ""
 msgstr ""
 "För att upptäcka skillnaden mellan två tabeller med samma struktur kan du "
 "använda PostgreSQL-nyckelordet ``EXCEPT``:"
-
-#: ../../docs/training_manual/spatial_databases/geometry.rst:361
-msgid ""
-"As the result, you will get all records from table_a which are not stored in"
-" table_b."
-msgstr ""
-"Resultatet blir att du får alla poster från tabell_a som inte finns lagrade "
-"i tabell_b."
 
 #: ../../docs/training_manual/spatial_databases/geometry.rst:365
 msgid "Tablespaces"

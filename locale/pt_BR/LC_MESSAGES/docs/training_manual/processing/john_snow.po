@@ -2,24 +2,24 @@
 # Copyright (C) 2002-now, QGIS project
 # This file is distributed under the same license as the QGIS Documentation
 # package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2025
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-15 11:22+0000\n"
-"PO-Revision-Date: 2025-02-27 21:32+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2025\n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: pt_BR\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -92,44 +92,6 @@ msgstr "Muito fácil, porém ele nos dará informação interessantes."
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "Claramente, muitos casos estão dentro de um dos polígonos"
 
-#: ../../docs/training_manual/processing/john_snow.rst:28
-msgid ""
-"To get a more quantitative result, we can count the number of deaths in each"
-" polygon. Since each point represents a building where deaths occured, and "
-"the number of deaths is stored in an attribute, we cannot just count the "
-"points. We need a weighted count, so we will use the *Count points in "
-"polygon (weighted)* tool."
-msgstr ""
-"Para obter um resultado mais quantitativo, podemos contar o número de mortes"
-" em cada polígono. Como cada ponto representa um imóvel onde as mortes "
-"ocorreram e o número de mortes é armazenado em um atributo, não podemos "
-"apenas contar os pontos. Precisamos de uma contagem ponderada, então vamos "
-"usar a ferramenta * Contagem de pontos em polígono (ponderado)*."
-
-#: ../../docs/training_manual/processing/john_snow.rst:32
-msgid ""
-"The new field will be called *DEATHS*, and we use the *COUNT* field as "
-"weighting field. The resulting table clearly reflects that the number of "
-"deaths in the polygon corresponding to the first pump is much larger than "
-"the other ones."
-msgstr ""
-"O novo campo será denominado de *MORTES* e usamos o campo *CONTAGEM* como "
-"campo  ponderado. A tabela resultante reflete claramente que o número de "
-"mortes no polígono correspondente à primeira bomba é muito maior do que as "
-"outras."
-
-#: ../../docs/training_manual/processing/john_snow.rst:36
-msgid ""
-"Another good way of visualizing the dependence of each point in the "
-"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
-"line to the closest one. This can be done with the *Distance to nearest hub*"
-" tool, and using the configuration shown next."
-msgstr ""
-"Outra boa maneira de visualizar a dependência de cada ponto na camada "
-"``Cholera_deaths`` com um ponto na camada ``Pumps`` é desenhar uma linha "
-"para o ponto mais próximo. Isso pode ser feito com a ferramenta * Distância "
-"até o hub mais próximo*, e usando a configuração mostrada a seguir."
-
 #: ../../docs/training_manual/processing/john_snow.rst:40
 msgid "The result looks like this:"
 msgstr "O resultado se parece com isso:"
@@ -147,29 +109,6 @@ msgstr ""
 "onde os casos de cólera foram encontrados. É um parâmetro representativo, "
 "mas não está considerando que alguns locais possam ter mais casos do que "
 "outros."
-
-#: ../../docs/training_manual/processing/john_snow.rst:46
-msgid ""
-"A density layer will also give us a very clear view of what is happening. We"
-" can create it with the *Kernel density* algorithm. Using the "
-"*Cholera_deaths* layer, its *COUNT* field as weight field, with a radius of "
-"100, the extent and cellsize of the streets raster layer, we get something "
-"like this."
-msgstr ""
-"Uma camada de densidade também nos dará uma visão muito clara do que está "
-"acontecendo. Podemos criá-la com o algoritmo *densidade Kernel*. Usando a "
-"camada *Cholera_deaths* a extensão e o tamanho da célula da camada raster da"
-" rua, poderá ser analisado pela densidade Kernel com o campo *CONTAGEM* como"
-" campo de ponderação, com um raio de 100."
-
-#: ../../docs/training_manual/processing/john_snow.rst:50
-msgid ""
-"Remember that, to get the output extent, you do not have to type it. Click "
-"on the button on the right-hand side and select *Use layer/canvas extent*."
-msgstr ""
-"Lembre-se que, para obter a extensão de saída, você não precisa digitá-lo. "
-"Clique no botão no lado direito e selecione *Use camada/extensão da área do "
-"mapa*."
 
 #: ../../docs/training_manual/processing/john_snow.rst:54
 msgid ""
