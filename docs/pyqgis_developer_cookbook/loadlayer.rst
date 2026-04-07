@@ -97,7 +97,7 @@ providers:
 
   * for ESRI Shapefile:
 
-    .. code::
+    .. code-block:: python
 
       uri = "testdata/airports.shp"
       vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")

@@ -390,14 +390,14 @@ include expressions. Make sure that you place the expression part
 For example, for a city layer with fields ``CITY_NAME`` and ``ZIPCODE``,
 you could insert this:
 
-.. code::
+.. code-block:: text
 
    The area of [% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',
    format_number($area/1000000, 2) ) %] km2
 
 or, another combination:
 
-.. code::
+.. code-block:: text
 
    The area of [% upper(CITY_NAME)%],[%ZIPCODE%] is
    [%format_number($area/1000000,2) %] km2
@@ -440,7 +440,7 @@ field :guilabel:`Orientation`, select :guilabel:`Edit...` to open the
 :guilabel:`Expression string builder` dialog and enter the following
 expression:
 
-.. code::
+.. code-block:: text
 
    CASE WHEN bounds_width(@atlas_geometry) > bounds_height(@atlas_geometry)
    THEN 'Landscape' ELSE 'Portrait' END
@@ -451,14 +451,14 @@ reposition the location of the layout items as well. For the map item you can
 use the |dataDefine| button of its :guilabel:`Width` property to set it
 dynamic using the following expression:
 
-.. code::
+.. code-block:: text
 
    @layout_pagewidth - 20
 
 Likewise, use the |dataDefine| button of the :guilabel:`Height` property to
 provide the following expression to constrain map item size:
 
-.. code::
+.. code-block:: text
 
    @layout_pageheight - 20
 
@@ -472,7 +472,7 @@ Next move the label to the right position, choose the middle button for
 the :guilabel:`Reference point`, and provide the following expression for
 field :guilabel:`X`:
 
-.. code::
+.. code-block:: text
 
    @layout_pagewidth / 2
 
@@ -593,7 +593,7 @@ Using the JavaScript ``setFeature`` function it allows you to make flexible HTML
 which represents relations in whatever format you like (lists, tables, etc).
 In the code sample, we create a dynamic bullet list of the related child features.
 
-.. code:: html
+.. code-block:: html
 
    // Declare the two HTML div elements we will use for the parent feature id
    // and information about the children
