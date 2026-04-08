@@ -648,7 +648,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randomextractwithinsubsets``
+**Algorithm ID**: ``native:randomextractwithinsubsets``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -810,7 +810,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:randomselectionwithinsubsets``
+**Algorithm ID**: ``native:randomselectionwithinsubsets``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -906,7 +906,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:selectbyattribute``
+**Algorithm ID**: ``native:selectbyattribute``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -978,7 +978,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:selectbyexpression``
+**Algorithm ID**: ``native:selectbyexpression``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
