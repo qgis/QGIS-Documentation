@@ -45,16 +45,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-            python -m pip install --upgrade pip
-            pip install -r REQUIREMENTS.txt
+          python -m pip install --upgrade pip
+          pip install -r REQUIREMENTS.txt
 
       - name: Generate English PO files
         id: "generate-po-files"
         run: |
-            make gettext
-            sphinx-intl update -p build/gettext -l en
-            # Remove obsolete strings from the generated *.po files
-            find locale/en/LC_MESSAGES/ -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
+          make gettext
+          sphinx-intl update -p build/gettext -l en
+          # Remove obsolete strings from the generated *.po files
+          find locale/en/LC_MESSAGES/ -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
 
       - name: Commit the changes in the PO files
         id: "auto-commit-action"
