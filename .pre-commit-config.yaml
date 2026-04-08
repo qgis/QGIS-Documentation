@@ -47,6 +47,16 @@ repos:
         additional_dependencies:
           - sphinx
 
+  # RST style checker (doc8)
+  - repo: https://github.com/PyCQA/doc8
+    rev: v1.1.1
+    hooks:
+      - id: doc8
+        args:
+          - --max-line-length=300
+          - --ignore=D001,D002,D004
+        exclude: ^(locale/|_dummy/|build/)
+
   # - repo: local
   #   hooks:
   #     - id: find_set_subst
