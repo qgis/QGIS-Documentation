@@ -38,6 +38,7 @@ Custom, user-created CRSs are stored in a user CRS database. See
 section :ref:`sec_custom_projections` for information on managing your custom
 coordinate reference systems.
 
+.. index:: WKT
 .. _layer_crs:
 
 Layer Coordinate Reference Systems
@@ -49,7 +50,7 @@ to manually assign the correct CRS to the layer. For PostgreSQL layers, QGIS use
 the spatial reference identifier that was specified when that PostgreSQL layer was
 created. For data supported by GDAL, QGIS relies on the presence of a
 recognized means of specifying the CRS. For instance, for the Shapefile format
-this is a file containing an ESRI Well-Known Text (:index:`WKT`)
+this is a file containing an ESRI Well-Known Text (WKT)
 representation of the layer's CRS. This projection file has the same base name
 as the :file:`.shp` file and a :file:`.prj` extension. For example,
 :file:`alaska.shp` would have a corresponding projection file named
