@@ -32,6 +32,20 @@ repos:
         args: [-d, "{extends: relaxed, rules: {line-length: {max: 200}}}"]
         exclude: ^(locale/|_dummy/|build/)
 
+  # RST linting with rstcheck
+  - repo: https://github.com/rstcheck/rstcheck
+    rev: v6.2.0
+    hooks:
+      - id: rstcheck
+        args:
+          - --report-level=warning
+          - --ignore-directives=toctree,include,only,ifconfig,literalinclude,index,glossary,substitution-definitions,highlight,todo,todolist,deprecated,versionadded,versionchanged,seealso,productionlist,centered,testcode,testoutput,testsetup,tabs,tab,code-block,toggle
+          - --ignore-roles=menuselection,guilabel,file,kbd,ref,doc,term,command,program,option,envvar,index,abbr,dfn,numref,eq,download,py:mod,py:obj,py:class,py:meth,py:attr,py:func,py:exc,pyqgis,api,source,sup,sub,raw,math
+          - --ignore-languages=python,bash,sql,json,xml,yaml
+        exclude: ^(locale/|_dummy/|build/)
+        additional_dependencies:
+          - sphinx
+
   # - repo: local
   #   hooks:
   #     - id: find_set_subst
