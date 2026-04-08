@@ -22,57 +22,57 @@ jobs:
       TARGET_BRANCH: "release_3.44"
 
     steps:
-    - name: Harden Runner
-      uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
-      with:
-        egress-policy: block
-        allowed-endpoints: >
-          api.ipify.org:443
-          github.com:443
-          objects.githubusercontent.com:443
-          raw.githubusercontent.com:443
-          rest.api.transifex.com:443
-          storage.svc.transifex.net:443
-          release-assets.githubusercontent.com:443
+      - name: Harden Runner
+        uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.ipify.org:443
+            github.com:443
+            objects.githubusercontent.com:443
+            raw.githubusercontent.com:443
+            rest.api.transifex.com:443
+            storage.svc.transifex.net:443
+            release-assets.githubusercontent.com:443
 
-    - name: Check out repository
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      with:
-        fetch-depth: 1
-        ref: ${{ env.TARGET_BRANCH }}
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+          ref: ${{ env.TARGET_BRANCH }}
 
-    - name: Install Transifex client
-      run: |
-          curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
-          mv tx LICENSE -t /usr/local/bin/
+      - name: Install Transifex client
+        run: |
+            curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
+            mv tx LICENSE -t /usr/local/bin/
 
-    - shell: bash
-      name: create .transifexrc file
-      env:
-        TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
-      run: |
-        sudo echo -e "[https://app.transifex.com]\nrest_hostname = https://rest.api.transifex.com\ntoken = $TRANSIFEX_PASSWORD" > ~/.transifexrc
+      - shell: bash
+        name: create .transifexrc file
+        env:
+          TRANSIFEX_PASSWORD: ${{ secrets.TRANSIFEX_PASSWORD }}
+        run: |
+          sudo echo -e "[https://app.transifex.com]\nrest_hostname = https://rest.api.transifex.com\ntoken = $TRANSIFEX_PASSWORD" > ~/.transifexrc
 
-    - name: Download and sanitize files and folders
-      run: bash ./scripts/minimize_translation.sh
+      - name: Download and sanitize files and folders
+        run: bash ./scripts/minimize_translation.sh
 
-    # - name: Show changes
-    #   run: echo `git status`
+      # - name: Show changes
+      #   run: echo `git status`
 
-    - name: Load translations if any
-      run: |
-        git config --global user.name 'Transifex update'
-        git config --global user.email 'tx-update@users.noreply.github.com'
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        if git add locale/* && git commit -m "Loading new translations"; then
-          git push
-        else
-         echo "No new translations"
-        fi
+      - name: Load translations if any
+        run: |
+          git config --global user.name 'Transifex update'
+          git config --global user.email 'tx-update@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          if git add locale/* && git commit -m "Loading new translations"; then
+            git push
+          else
+          echo "No new translations"
+          fi
 
 
-    # - name: Pull source file using transifex client
-    #   uses: transifex/cli-action@bc67c0ab1369ef941f0963d902c45d11688c8bc9 # v1
-    #   with:
-    #       token: ${{ secrets.TRANSIFEX_PASSWORD }}
-    #       args: pull --force --mode onlytranslated -l fr
+      # - name: Pull source file using transifex client
+      #   uses: transifex/cli-action@bc67c0ab1369ef941f0963d902c45d11688c8bc9 # v1
+      #   with:
+      #       token: ${{ secrets.TRANSIFEX_PASSWORD }}
+      #       args: pull --force --mode onlytranslated -l fr
