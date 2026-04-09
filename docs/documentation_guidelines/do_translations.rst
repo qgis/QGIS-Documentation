@@ -462,15 +462,15 @@ For any question, please contact the `QGIS Community Team
    :width: 1.3em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em
-.. |linguist_done_next| image:: img/linguist_done_next.png
+.. |linguist_done_next| image:: /static/common/linguist_done_next.png
    :width: 2em
-.. |linguist_next| image:: img/linguist_next.png
+.. |linguist_next| image:: /static/common/linguist_next.png
    :width: 2em
-.. |linguist_next_todo| image:: img/linguist_next_todo.png
+.. |linguist_next_todo| image:: /static/common/linguist_next_todo.png
    :width: 2em
-.. |linguist_previous| image:: img/linguist_previous.png
+.. |linguist_previous| image:: /static/common/linguist_previous.png
    :width: 2em
-.. |linguist_previous_todo| image:: img/linguist_previous_todo.png
+.. |linguist_previous_todo| image:: /static/common/linguist_previous_todo.png
    :width: 2em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
