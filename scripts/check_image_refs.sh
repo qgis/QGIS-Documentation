@@ -12,6 +12,7 @@ NC='\033[0m'
 
 errors=0
 checked=0
+repo_dir=$(git rev-parse --show-toplevel)
 
 for file in "$@"; do
     if [[ ! -f "$file" ]]; then
@@ -29,9 +30,9 @@ for file in "$@"; do
 
         ((checked++)) || true
 
-        # Handle absolute paths (from docs root)
+        # Handle absolute paths (from repo root)
         if [[ "$img_path" == /* ]]; then
-            full_path="docs${img_path}"
+            full_path="${repo_dir}${img_path}"
         else
             full_path="$dir/$img_path"
         fi
