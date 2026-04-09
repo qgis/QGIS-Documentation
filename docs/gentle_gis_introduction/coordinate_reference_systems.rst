@@ -498,5 +498,5 @@ In the section that follows we will take a closer look at **Map Production**.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |gentleLogo| image:: img/gentlelogo.png
+.. |gentleLogo| image:: /static/common/gentlelogo.png
    :width: 3em
