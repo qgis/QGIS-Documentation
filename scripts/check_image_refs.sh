@@ -34,7 +34,15 @@ for file in "$@"; do
         if [[ "$img_path" == /* ]]; then
             full_path="${repo_dir}${img_path}"
         else
-            full_path="$dir/$img_path"
+           # To do: let's momentarily ignore files whose extension is *,
+           # substitute for both png and gif image in expression e.g.
+           # Note that existence of most of these files is checked in find_set_subst.py script.
+           # Also ignore "extension" as extension, used in guideliness
+            if [[ "$img_path" =~ .*\.(\*|extension) ]]; then
+                continue
+            else
+                full_path="$dir/$img_path"
+            fi
         fi
 
         # Normalize path
