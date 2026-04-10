@@ -934,7 +934,7 @@ where *f1* is the spread and *f2* the midpoint.
 .. figure:: img/gaussianimage.png
   :align: center
 
-  Fuzzify raster example. Input raster source: Land Tirol -
+  Fuzzify raster (gaussian membership) example. Input raster source: Land Tirol -
   data.tirol.gv.at.
 
 .. seealso:: :ref:`qgisfuzzifyrasterlargemembership`,
@@ -1081,6 +1081,12 @@ In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
 The large membership function is defined as :math:`\mu(x)={1}/({1+{(x/f_2)}^{-f_1}})`
 where *f1* is the spread and *f2* the midpoint.
+
+.. figure:: img/largemembershipimage.png
+  :align: center
+
+  Fuzzify raster (large membership) example. Input raster source: Land Tirol -
+  data.tirol.gv.at.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`,
@@ -1233,6 +1239,12 @@ Pixels values smaller than the low bound are given 0 membership
 whereas pixel values greater than the high bound are given 1
 membership.
 
+.. figure:: img/linearmembershipimage.png
+  :align: center
+
+  Fuzzify raster (linear membership) example. Input raster source: Land Tirol -
+  data.tirol.gv.at.
+
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
@@ -1377,6 +1389,12 @@ In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
 The near membership function is defined as :math:`\mu(x)={1}/(1+f_1*({x-f_2})²)`,
 where *f1* is the spread and *f2* the midpoint.
+
+.. figure:: img/nearmembershipimage.png
+  :align: center
+
+  Fuzzify raster (near membership) example. Input raster source: Land Tirol -
+  data.tirol.gv.at.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
@@ -1529,6 +1547,12 @@ Pixels values smaller than the low bound are given 0 membership
 whereas pixel values greater than the high bound are given 1
 membership.
 
+.. figure:: img/powermembershipimage.png
+  :align: center
+
+  Fuzzify raster (power membership) example. Input raster source: Land Tirol -
+  data.tirol.gv.at.
+
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`, :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`, :ref:`qgisfuzzifyrasternearmembership`,
   :ref:`qgisfuzzifyrastersmallmembership`
@@ -1677,6 +1701,12 @@ In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
 The small membership function is defined as :math:`\mu(x)=1/({1+{(x/f_2)}^{f_1}})`,
 where *f1* is the spread and *f2* the midpoint.
+
+.. figure:: img/smallmembershipimage.png
+  :align: center
+
+  Fuzzify raster (small membership) example. Input raster source: Land Tirol -
+  data.tirol.gv.at.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
