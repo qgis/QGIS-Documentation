@@ -25,6 +25,8 @@ import sys
 import os
 from hashlib import md5
 from sphinx.roles import MenuSelection
+from docutils import nodes
+from docutils.parsers.rst import roles
 
 project = 'QGIS Documentation'
 copyright = '2002-now, QGIS project'
@@ -161,10 +163,6 @@ html_context = {
     'isLtr': False,
 }
 
-# Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
-if html_context['isTesting'] or html_context['outdated']:
-    html_css_files = ['css/qgis_topbar.css']
-
 # Add custom tags to allow display of text based on the branch status
 if html_context['isTesting']:
     tags.add('testing')
@@ -255,6 +253,23 @@ rst_prolog = r"""
 # A list of warning codes to suppress arbitrary warning messages.
 suppress_warnings = ["config.cache"]
 
+# -- Custom text roles for colored sockets ---------------------------------
+
+def make_colored_role(color_name):
+    def role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+        node = nodes.inline(text, text)
+        node['classes'].append(color_name)
+        return [node], []
+    return role
+
+colors = [
+    "red", "blue", "green", "kaki", "turquoise",
+    "purple", "slate", "darkgray", "midgray"
+]
+
+for c in colors:
+    roles.register_local_role(c, make_colored_role(c))
+
 # -- Options for LaTeX output --------------------------------------------------
 
 latex_engine = 'xelatex'
@@ -327,7 +342,22 @@ latex_elements = {
     \\newunicodechar{\u25BA}{$\u25BA$}
     \\newunicodechar{′}{\\ensuremath{^{\\prime}}}
     \\newunicodechar{″}{\\ensuremath{^{\\prime\\prime}}}
-    \\newunicodechar{​}{ }''',
+    \\newunicodechar{​}{ }'''
+
+
+    # Add specific text roles with color display
+    '''
+    \\usepackage{xcolor}
+    \\newcommand{\\DUrolered}[1]{{\\color[HTML]{FF0000} #1}}
+    \\newcommand{\\DUroleblue}[1]{{\\color[HTML]{229DD6} #1}}
+    \\newcommand{\\DUrolegreen}[1]{{\\color[HTML]{33C91C} #1}}
+    \\newcommand{\\DUrolekaki}[1]{{\\color[HTML]{B4B400} #1}}
+    \\newcommand{\\DUroleturquoise}[1]{{\\color[HTML]{00B4B4} #1}}
+    \\newcommand{\\DUrolepurple}[1]{{\\color[HTML]{8044C9} #1}}
+    \\newcommand{\\DUroleslate}[1]{{\\color[HTML]{6464FF} #1}}
+    \\newcommand{\\DUroledarkgray}[1]{{\\color[HTML]{505050} #1}}
+    \\newcommand{\\DUrolemidgray}[1]{{\\color[HTML]{808080} #1}}
+    ''',
 
     # Latex figure float alignment
     # use ‘H’ to disable floating, and position the figures strictly in the order they appear in the source
