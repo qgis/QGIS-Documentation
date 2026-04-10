@@ -22,7 +22,7 @@ for file in "$@"; do
     dir=$(dirname "$file")
 
     # Extract image paths from RST directives
-    # Patterns: .. image:: path, .. figure:: path, :file:`path`
+    # Patterns: .. image:: path, .. figure:: path
     while IFS= read -r img_path; do
         if [[ -z "$img_path" ]]; then
             continue
