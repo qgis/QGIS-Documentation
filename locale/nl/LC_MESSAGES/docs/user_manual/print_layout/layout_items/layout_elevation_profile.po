@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-10 13:34+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -54,7 +54,7 @@ msgstr ""
 "nieuw item Hoogteprofiel toe te voegen dat u later kunt bewerken op dezelfde"
 " manier zoals is gedemonstreerd in :ref:`interact_layout_item`."
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:110
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:136
 msgid "elevationProfile"
 msgstr "elevationProfile"
 
@@ -70,7 +70,11 @@ msgstr ""
 ":guilabel:`Item-eigenschappen`. Naast de :ref:`algemene eigenschappen "
 "<item_common_properties>`, heeft dit object de volgende functionaliteiten:"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:33
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:28
+msgid "Elevation Profile Item Properties"
+msgstr "item-eigenschappen Hoogteprofiel"
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:31
 msgid ""
 "The Elevation profile :guilabel:`Item Properties` panel embeds a top toolbar"
 " with the following functionalities:"
@@ -78,18 +82,18 @@ msgstr ""
 "Het paneel :guilabel:`Item-eigenschappen` voor het Hoogteprofiel heeft een "
 "ingebedde werkbalk aan de bovenkant met de volgende functionaliteiten:"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:36
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:34
 msgid ""
 "|refresh| :sup:`Update elevation profile` to refresh the item rendering"
 msgstr ""
 "|refresh| :sup:`Hoogteprofiel vernieuwen` om het renderen van het item te "
 "vernieuwen"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:112
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:138
 msgid "refresh"
 msgstr "refresh"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:37
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:35
 msgid ""
 "|copyProfileSettings| :sup:`Copy from elevation profile`: a drop-down menu "
 "to select an elevation profile view from. The view settings are applied to "
@@ -100,15 +104,15 @@ msgstr ""
 "worden toegepast op het item Hoogteprofiel in de lay-out, en kunnen later "
 "worden aangepast."
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:108
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:134
 msgid "copyProfileSettings"
 msgstr "copyProfileSettings"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:41
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:39
 msgid "Layers"
 msgstr "Lagen"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:43
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:41
 msgid ""
 "Under the :guilabel:`Layers` group, check in the tree view the layers you "
 "would like to render in the profile item. Remember to properly configure the"
@@ -118,30 +122,38 @@ msgstr ""
 "wilt renderen in het item Hoogteprofiel. Vergeet niet de eigenschappen "
 ":guilabel:`Hoogte` van de geselecteerde lagen juist te configureren."
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:48
-msgid "Profile curve"
-msgstr "Profiel bogen"
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:46
+msgid "Profile curve and subsection indicators"
+msgstr "Profielboog en indicatie subgedeelte"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:50
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:53
+msgid "Elevation Profile Curve and Subsections Properties"
+msgstr "Eigenschappen boog en subgedeelten van Hoogteprofiel"
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:55
+msgid "Under the :guilabel:`Profile curve` group, you can:"
+msgstr "In de groep :guilabel:`Profiel boog` kunt u:"
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:57
 msgid ""
-"|unchecked| :guilabel:`Controlled by atlas`: the :ref:`profile curve "
+"Toggle |unchecked| :guilabel:`Controlled by atlas`: the :ref:`profile curve "
 "<elevation_profile_create>` will be taken from the current atlas feature and"
 " the elevation profile view updated as you walk through the atlas features. "
 "This is currently supported for an active layout atlas or report, using a "
 "line geometry type coverage layer."
 msgstr ""
-"|unchecked| :guilabel:`Beheerd door Atlas`: de :ref:`boog voor het profiel "
-"<elevation_profile_create>` zal worden genomen uit het huidige object van "
-"Atlas en de weergave van het hoogteprofiel wordt bijgewerkt als u door de "
-"objecten van Atlas gaat. Dit wordt momentele ondersteund voor een actieve "
-"lay-out Atlas of rapport, met behulp van een bedekkingslaag van het type "
-"geometrie lijn."
+"Schakelaar |unchecked| :guilabel:`Beheerd door Atlas`: de :ref:`boog voor "
+"het profiel <elevation_profile_create>` zal worden genomen uit het huidige "
+"object van Atlas en de weergave van het hoogteprofiel wordt bijgewerkt als u"
+" door de objecten van Atlas gaat. Dit wordt momentele ondersteund voor een "
+"actieve lay-out Atlas of rapport, met behulp van een bedekkingslaag van het "
+"type geometrie lijn."
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:114
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:140
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:54
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:61
 msgid ""
 "The :guilabel:`Tolerance` distance, which can be data-defined, helps you "
 "control how far a feature of the visible layers should be from the profile "
@@ -153,34 +165,35 @@ msgstr ""
 "vanaf de boog van het profiel om te worden weergegeven in de weergave van de"
 " hoogte van de lay-out. Alleen objecten punt worden momenteel teruggegeven."
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:59
-msgid "Show Subsections Indicator"
-msgstr "Indicatie voor subgedeelten weergeven"
-
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:61
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:65
 msgid ""
-"It is possible to highlight the position of the vertices of the curve on the"
-" Elevation Profile. Select the |checkbox| :guilabel:`Show Subsections "
-"Indicator` to display vertical lines at the distances of the vertices. Use "
-"the :guilabel:`Lines` drop-down list to set the symbol, color, opacity and "
-"width of the Subsections Indicator lines."
+"Under the :guilabel:`Show Subsections Indicator` group, It is possible to "
+"highlight the position of the vertices of the curve on the Elevation "
+"Profile. Activate |checkbox| :guilabel:`Show Subsections Indicator` to "
+"display vertical lines at the distances of the vertices. Use the "
+":guilabel:`Lines` drop-down list to set the symbol, color, opacity and width"
+" of the Subsections Indicator lines."
 msgstr ""
-"Het is mogelijk de positie van de punten van de boog i het Hoogteprofiel te "
-"accentueren. Selecteer |checkbox| :guilabel:`Indicatie voor subgedeelten "
-"weergeven` om verticale lijnen weer te geven op afstanden van de punten. "
-"gebruik de keuzelijst :guilabel:`Lijnen` om het symbool, de kleur, opaciteit"
-" en breedte van de lijnen voor de indicatie van de subgedeelten in te "
-"stellen."
+"In de groep :guilabel:`Indicatie subgedeelten weergeven` is het mogelijk de "
+"positie van de punten van de boog in het Hoogteprofiel te accentueren. "
+"Activeer |checkbox| :guilabel:`Indicatie voor subgedeelten weergeven` om "
+"verticale lijnen weer te geven op afstanden van de punten. Gebruik de "
+"keuzelijst :guilabel:`Lijnen` om het symbool, de kleur, opaciteit en breedte"
+" van de lijnen voor de indicatie van de subgedeelten in te stellen."
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:106
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:132
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:66
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:71
 msgid "Chart ranges"
 msgstr "Bereiken diagram"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:68
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:78
+msgid "Elevation Profile Chart Ranges Properties"
+msgstr "Eigenschappen diagrambereiken Hoogteprofiel"
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:80
 msgid ""
 "A layout elevation profile item does not necessarily display the full extent"
 " of the elevation profile view it is based on. You can limit the area to "
@@ -190,7 +203,7 @@ msgstr ""
 "gehele bereik weer te geven van de weergave van het hoogteprofiel waarop het"
 " is gebaseerd. U kunt het te renderen gebied beperken, door op te geven:"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:71
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:83
 msgid ""
 "on the X axis, the :guilabel:`Minimum distance` and :guilabel:`Maximum "
 "distance` from the profile curve starting point"
@@ -198,18 +211,22 @@ msgstr ""
 "op de X-as, de :guilabel:`Minimum afstand` en :guilabel:`Maximum afstand` "
 "vanaf het beginpunt van de boog van het profiel"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:72
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:84
 msgid ""
 "On the Y axis, the :guilabel:`Minimum elevation` and :guilabel:`Maximum "
 "elevation`"
 msgstr ""
 "op de Y-as, de :guilabel:`Minimum hoogte` en :guilabel:`Maximum hoogte`"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:75
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:87
 msgid "Distance and elevation axes"
 msgstr "Assen voor afstand en hoogte"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:77
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:94
+msgid "Elevation Profile Distance and Elevation Axes Properties"
+msgstr "Eigenschappen afstand en assen hoogte Hoogteprofiel"
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:96
 msgid ""
 "The :guilabel:`Distance axis` and :guilabel:`Elevation axis` groups give "
 "options to tweak the grid over the elevation profile item, respectively on "
@@ -219,7 +236,7 @@ msgstr ""
 "het raster over het item Hoogteprofiel aan te passen, respectievelijk op de "
 "X- en Y-as:"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:80
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:99
 msgid ""
 "the distance display :guilabel:`Unit`, allowing to override the map canvas "
 "unit"
@@ -227,7 +244,7 @@ msgstr ""
 "de weergave van de :guilabel:`Eenheid` voor afstand, wat het mogelijk maakt "
 "de eenheid van het kaartvenster te overschrijven"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:81
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:100
 msgid ""
 "the graduation on the axis with both a :guilabel:`Major interval` and "
 ":guilabel:`Minor interval`"
@@ -235,7 +252,7 @@ msgstr ""
 "de verdeling op de as met zowel een :guilabel:`Hoogste interval` als een "
 ":guilabel:`Laagste interval`"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:82
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:101
 msgid ""
 "the line symbols to apply to the corresponding :guilabel:`Major grid lines` "
 "and :guilabel:`Minor grid lines`"
@@ -243,7 +260,7 @@ msgstr ""
 "de toe te passen lijnsymbolen voor de corresponderende :guilabel:`Hoofd-"
 "rasterlijnen` en :guilabel:`Sub-rasterlijnen`"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:83
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:102
 msgid ""
 "how regular the graduation items should be labeled (:guilabel:`Label "
 "interval`) as well as their :guilabel:`Label format` and :guilabel:`Label "
@@ -253,7 +270,7 @@ msgstr ""
 "(:guilabel:`Interval label`) als ook hun :guilabel:`Label indeling` en "
 ":guilabel:`Label lettertype`"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:85
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:104
 msgid ""
 "the :guilabel:`Distance labels`: configures whether the distance unit symbol"
 " should be placed next to :guilabel:`Every value`, :guilabel:`First value`, "
@@ -265,11 +282,15 @@ msgstr ""
 ":guilabel:`Eerste waarde`, :guilabel:`Laatste waarde`, :guilabel:`Eerste en "
 "laatste waarden`, of moet worden overgeslagen (:guilabel:`Geen`)"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:90
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:109
 msgid "Chart area"
 msgstr "Gebied diagram"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:92
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:116
+msgid "Elevation Profile Chart Area Properties"
+msgstr "Eigenschappen diagramgebied Hoogteprofiel"
+
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:118
 msgid ""
 "Under :guilabel:`Chart area`, you can configure the rendering of the area in"
 " which the elevation profile plot is actually displayed:"
@@ -277,14 +298,14 @@ msgstr ""
 "Onder :guilabel:`Gebied diagram` kunt u het renderen configureren van het "
 "gebied waarin de plot van het hoogteprofiel feitelijk wordt weergegeven:"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:95
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:121
 msgid "a :guilabel:`Background` fill symbol"
 msgstr "een symbool voor vulling van :guilabel:`Achtergrond`"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:96
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:122
 msgid "a :guilabel:`Border` line symbol"
 msgstr "een symbool  lijn voor :guilabel:`Rand`"
 
-#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:97
+#: ../../docs/user_manual/print_layout/layout_items/layout_elevation_profile.rst:123
 msgid "the margins from the elevation profile item border"
 msgstr "de marges vanaf de rand van het item Hoogteprofiel"
