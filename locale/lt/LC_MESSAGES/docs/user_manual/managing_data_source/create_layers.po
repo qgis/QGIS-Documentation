@@ -1497,13 +1497,94 @@ msgstr ""
 msgid "Creating SQL Query Layers"
 msgstr "SQL užklausų sluoksnių kūrimas"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:633
+msgid ""
+"Beside loading an entire layer in a project or creating new layers from "
+"scratch or pasted features, you can also load layers generated on the fly "
+"from other layer(s). They are the result of a more or less advanced filter "
+"using SQL language, applied to stored layers regardless of their data "
+"provider or their availability in the active project. This means that "
+"temporary layers are not compatible with this feature. Depending on the "
+"provider, one or more layers can be used to write the query. The generated "
+"layer remains dependent on the layer(s) involved in the query and is loaded "
+"with the |indicatorFilter| :sup:`Filter` icon next to it."
+msgstr ""
+"Be viso sluoksnio įkėlimo į projektą ar naujų sluoksnių kūrimo nuo nulio ar "
+"įkeltų geoobjektų, jūs taipogi galite įkelti sluoksnius, kurie sukurti iš "
+"kito(ų) sluoksnio(ių). Jie yra rezultatas daugiau ar mažiau sudėtingo "
+"filtro, naudojančio SQL kalbą, pritaikyto įrašytiems sluoksniams "
+"nepriklausomai nuo duomenų tiekėjo ar jų prieinamumo aktyviame projekte. Tai"
+" reiškia, kad laikini sluoksniai nesuderinami su šia savybe. Priklausomai "
+"nuo tiekėjo, užklausoje galima naudoti vieną arba daugiau sluoksnių. "
+"Sukurtas sluoksnis liks nepriklausomas nuo užklausoje panaudoto(ų) "
+"sluoksnio(ių), ir jis įkeliamas naudojant greta esančią piktogramą "
+"|indicatorFilter| :sup:`Filtras`."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1009
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:643
+msgid "This feature is accessible:"
+msgstr "Ši savybė prieinama:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:645
+msgid ""
+"From the :guilabel:`Browser` panel, right-click on a supported data (plain "
+"layer, database connection, schema or table) and select `Execute SQL...` "
+"entry in the contextual menu."
+msgstr ""
+":guilabel:`Naršyklės` skydelyje, spauskite dešinį pelės mygtuką ant "
+"palaikomų duomenų (paprastas sluoksnis, duomenų bazės jungtis, schema ar "
+"lentlė) ir kontekstiniame meniu parinkite `Vykdyti SQL...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:648
+msgid ""
+"From the :guilabel:`Layers` panel, select a loaded layer, right-click and "
+"select `Execute SQL...` entry in the contextual menu."
+msgstr ""
+":guilabel:`Sluoksnių` skydelyje, parinkite įkeltą sluoksnį, spauskite dešinį"
+" pelės mygtuką ir kontekstiniame meniu parinkite `Vykdyti SQL...`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:651
+msgid ""
+"This opens a window with a central text box widget where you can write SQL "
+"queries."
+msgstr ""
+"Tai atvers langą su centriniu teksto įvedimo valdikliu, kur jūs galėsite "
+"rašyti SQL užklausas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:658
+msgid "Executing SQL queries in the Execute SQL window"
+msgstr "SQL užklausų vykdymas SQL vykdymo lange"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:662
+msgid ""
+"At the top of the dialog, a toolbar provides a set of tools to create, store"
+" and manipulate your queries:"
+msgstr ""
+"Dialogo viršuje dialogas teikia įrankinę su rinkinių įrankių, skirtų kurti, "
+"saugoti ir keisti jūsų užklausas:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:665
+msgid ""
+"|fileOpen| :sup:`Open Queries...`: fills the text editor widget with "
+"contents from an existing :file:`.sql` file"
+msgstr ""
+"|fileOpen| :sup:`Atverti užklausas...`: užpildo redaktoriaus valdiklį "
+"turiniu iš esamo :file:`.sql` failo"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1003
 msgid "fileOpen"
 msgstr "fileOpen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:667
+msgid ""
+"|fileSave| :sup:`Save Queries...` and |fileSaveAs| :sup:`Save Queries as...`"
+" help you store the written query to a :file:`.sql` file"
+msgstr ""
+"|fileSave| :sup:`Įrašyti užklausas...` ir |fileSaveAs| :sup:`Įrašyti "
+"užklausas kaip...` padeda jums įrašyti užklausas į :file:`.sql` failą"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1005
 msgid "fileSave"
@@ -1512,6 +1593,16 @@ msgstr "fileSave"
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1007
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:669
+msgid ""
+"Statements of the query can be adjusted using the |editCut| :sup:`Cut`, "
+"|editCopy| :sup:`Copy` and |editPaste| :sup:`Paste` buttons. Likewise, you "
+"can |undo| :sup:`Undo` or |redo| :sup:`Redo` your changes."
+msgstr ""
+"Užklausas galima keisti naudojant mygtukus |editCut| :sup:`Iškirpti`, "
+"|editCopy| :sup:`Kopijuoti` ir |editPaste| :sup:`Įkelti`. Taip pat galite "
+"|undo| :sup:`Atšaukti` ar |redo| :sup:`Pakartoti` jūsų pakeitimus."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:999
 msgid "editCut"
@@ -1533,13 +1624,215 @@ msgstr "undo"
 msgid "redo"
 msgstr "redo"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:672
+msgid ""
+"The |search| :sup:`Find & Replace` enables, at the bottom of the dialog, a "
+"widget allowing to look for a particular string in your SQL code. The search"
+" can be case sensitive, affect partial or whole word, rely on a regular "
+"expression. It is then possible to navigate through the found strings, "
+"replacing them one by one or all in a row."
+msgstr ""
+"|search| :sup:`Rasti ir pakeisti` įjungia dialogo apačioje valdiklį, kuris "
+"leidžia ieškoti konkretaus teksto jūsų SQL kode. Paieška gali atsižvelgti į "
+"raidžių dydį, ieškoti dalinio ar pilno žodžio, remtis reguliaria išraiška. "
+"Tada galima pereiti per visas rastas eilutes, pakeičiant jas po vieną arba "
+"visas kartu."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1029
 msgid "search"
 msgstr "search"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:678
+msgid "Use |clearConsole| :sup:`Clear SQL Editor` to wipe the text editor."
+msgstr ""
+"Naudokite |clearConsole| :sup:`Išvalyti SQL redaktorių`, jei norite ištrinti"
+" visą tekstą."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:993
 msgid "clearConsole"
 msgstr "clearConsole"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:679
+msgid ""
+"The |queryHistory| :sup:`History` button opens a dialog storing previously "
+"run queries. More at :ref:`sql_history`."
+msgstr ""
+"Mygtukas |queryHistory| :sup:`Istorija` atveria dialogą, kuriame yra "
+"anksčiau vykdytos užklausos. Daugiau informacijos rasite :ref:`sql_history`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:1025
+msgid "queryHistory"
+msgstr "queryHistory"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:681
+msgid ""
+"As previously mentioned, queries can be saved as an :file:`.sql` file stored"
+" on disk. Using the |storedqueries| :sup:`Store Current Query` button, they "
+"can also be stored:"
+msgstr ""
+"Kaip minėta anksčiau, užklausas galima įrašyti kaip :file:`.sql` failą "
+"diske. Naudojant mygtuką |storedqueries| :sup:`Įrašyti dabartinę užklausą` "
+"jas taipogi galima įrašyti:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:1033
+msgid "storedqueries"
+msgstr "storedqueries"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:684
+msgid ""
+"In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` "
+"file, thus accessible in subsequent projects"
+msgstr ""
+"aktyviame :guilabel:`Naudotojo profilyje`, susijusiame :file:`QGIS3.ini` "
+"faile, taip jis būtų prieinamas kituose projektuose"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:686
+msgid "or as part of the :guilabel:`Current Project`."
+msgstr "kaip :guilabel:`Dabartinio projekto` dalį."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:688
+msgid ""
+"Clicking an entry from the stored queries drop-down menu inserts that query "
+"in the expression being written. The stored entry can also be deleted, from "
+"the drop-down menu."
+msgstr ""
+"Paspaudus įrašą įrašytų užklausų iškrentančiame meniu įterpia  tą užklausą į"
+" tuo metu rašomą išraišką. Įrašytą įrašą taipogi galima ištrinti per "
+"iškrentantį meniu."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:693
+msgid "Running and loading queries as layer"
+msgstr "Užklausų vykdymas ir įkėlimas kaip sluoksnio"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:695
+msgid ""
+"In the central part of the :guilabel:`Execute SQL` dialog, you build your "
+"query using the SQL syntax supported by the underlying provider (e.g., OGR_,"
+" GeoPackage_, PostgreSQL_)."
+msgstr ""
+"Centrinėje :guilabel:`Vykdyti SQL` dialogo dalyje jūs kuriate jūsų užklausą "
+"naudodami SQL sintaksę, kurią palaiko atitinkamas tiekėjas (t.y., OGR_, "
+"GeoPackage_, PostgreSQL_)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:698
+msgid ""
+"By default, if opened from a layer entry, a sample SQL query is provided. "
+"Editing tools to select, cut, copy, paste, undo and redo are available as "
+"well from the contextual menu."
+msgstr ""
+"Pagal nutylėjimą, jei atverta iš sluoksnio įrašo, pateikiama pavyzdinė SQL "
+"užklausa. Iš kontekstinio meniu galima naudoti redagavimo įrankius parinkti,"
+" iškirpti, kopijuoti, įkelti, atšaukti ir pakartoti."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:705
+msgid "**Finding the right SQL syntax for your dataset**"
+msgstr "**Jūsų duomenų aibei tinkamos SQL sintaksės paieška**"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:707
+msgid ""
+"To find the appropriate SQL dialect for your dataset, press the "
+":guilabel:`...` button next to the :guilabel:`Subset filter` option in the "
+"bottom part of the dialog."
+msgstr ""
+"Kad rastumėte jūsų duomenų aibei tinkamą SQL dialektą, spauskite mygtuką "
+":guilabel:`...`, esantį greta apatinėje dialogo dalyje esančios parinkties "
+":guilabel:`Poaibio filtras`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:711
+msgid ""
+"When ready, pressing the :guilabel:`Execute` button below the text area will"
+" run the query. It is possible to highlight a portion of the SQL to only "
+"execute that portion when pressing :kbd:`Ctrl+R` or clicking the "
+":guilabel:`Execute selection` button. Use the :guilabel:`Stop` button to "
+"abort the execution."
+msgstr ""
+"Kai viskas paruošta, spauskite po teksto valdikliu esantį mygtuką "
+":guilabel:`Vykdyti`, kad vykdytumėte užklausą. Galima pažymėti dalį SQL ir "
+"vykdyti tik tą dalį spaudžiant :kbd:`Ctrl+R` arba spaudžiant mygtuką "
+":guilabel:`Vykdyti pažymėjimą`. Norėdami nutraukti vykdymą spauskite mygtuką"
+" :guilabel:`Stabdyti`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:717
+msgid ""
+"A successful query execution will display a table at the bottom of the "
+"dialog with returned features. You can select specific cells in the result "
+"set. Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the "
+"clipboard. The copied data is available as a formatted table. This allows "
+"you to paste the data into other applications, such as spreadsheet where it "
+"will show up as a table."
+msgstr ""
+"Po sėkmingo užklausos vykdymo dialogo apačioje bus rodoma lentelė su "
+"grąžintais geoobjektais. Jūs galite parinkti konkrečias rezultatų rinkinio "
+"celes. Naudokite klavišų kombinaciją :kbd:`Ctrl+C`, kad nukopijuotumėte "
+"parinktas celes į iškarpinę. Nukopijuoti duomenys pasiekiami kaip formatuota"
+" lentelė. Tai leidžia jums įkelti duomenis į kitas aplikacijas, tokias kaip "
+"skaičiuokles, kur jos matysis kaip lentelė."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:725
+msgid ""
+"The returned table can be loaded in QGIS expanding the :guilabel:`Load as "
+"new layer` group and configuring parameters (their availability depends on "
+"the layer provider):"
+msgstr ""
+"Grąžintą lentelę galima įkelti į QGIS išplečiant grupę :guilabel:`Įkelti "
+"kaip naują sluoksnį` ir sukonfigūravus parametrus (jie priklauso nuo "
+"sluoksnio tiekėjo):"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:728
+msgid ""
+":guilabel:`Column(s) with unique values` to indicate primary key of the "
+"data,"
+msgstr ""
+":guilabel:`Stulpelis(iai) su unikaliomis reikšmėmis` duomenų pirminio rakto "
+"nurodymui,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:729
+msgid ""
+":guilabel:`Geometry column`: check the box to load the layer as a spatial "
+"one, and indicate the geometry field name"
+msgstr ""
+":guilabel:`Geometrijos stulpelis`: įjunkite varnelę, kad įkeltumėte sluoksnį"
+" kaip erdvinį, ir nurodykite geometrijos lauko pavadinimą"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:731
+msgid ""
+":guilabel:`Subset filter`: allows to filter the results using a ``WHERE`` "
+"clause. It can be written in the text box, or built using the :ref:`Query "
+"builder <vector_query_builder>` after you pressed :guilabel:`...`. Make sure"
+" to use fields that are available in the SQL layer."
+msgstr ""
+":guilabel:`Poaibio filtras`: leidžia filtruoti rezultatus naudojant "
+"``WHERE`` sąlygą. Ją galima rašyti teksto lauke arba sukurti naudojant "
+":ref:`Užklausos kūrėją <vector_query_builder>` po to, kai paspaudžiate "
+":guilabel:`...`. Įsitikinkite, kad naudojante laukus, kurie yra SQL "
+"sluoksnyje."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:735
+msgid ":guilabel:`Avoid selecting by feature ID`"
+msgstr ":guilabel:`Vengti parinkti pagal geoobjekto ID`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:736
+msgid ":guilabel:`Layer name` in the project"
+msgstr ":guilabel:`Sluoksnio pavadinimas` projekte"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:738
+msgid ""
+"At any time, in the :guilabel:`Layers panel`, you can adjust the output "
+"layer by right-clicking and selecting :guilabel:`Update SQL expression...`. "
+"The :guilabel:`Update SQL` dialog opens, prefilled with the applied query "
+"that you can edit as you wish. Once ready, press :guilabel:`Update layer` "
+"and the layer will be modified in-place."
+msgstr ""
+"Bet kuriuo metu :guilabel:`Sluoksnių skydelyje` jūs galite pakeisti "
+"išvesties sluoksnį spausdami dešinį pelės mygtuką ir parinkdami "
+":guilabel:`Keisti SQL išraišką...`. Atidaromas dialogas :guilabel:`Keisti "
+"SQL`, kuriame įrašoma taikoma užklausa, kurią jūs galite keisti. Kai viskas "
+"paruošta, spauskite :guilabel:`Atnaujinti sluoksnį` ir sluoksnis bus "
+"pakeistas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:747
+msgid "Query History"
+msgstr "Užklausų istoriją"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:985
 msgid "addVirtualLayer"
