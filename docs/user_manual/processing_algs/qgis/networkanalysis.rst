@@ -601,9 +601,9 @@ Basic parameters
           :end-before: **end_layer_output_types**
 
    * - **Non-routable features**
-     - ``OUTPUT_NON_ROUTABLE``
 
        Optional
+     - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
        Default: ``[Skip output]``
