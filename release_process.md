@@ -175,7 +175,7 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 ### Repository and project configuration
 
 <details>
-  
+
 - [ ] Update the [docs index page](https://www.qgis.org/resources/hub/#documentation).
   Source file is available [hub.md](https://github.com/qgis/QGIS-Website/blob/main/content/resources/hub.md)
   - [ ] Reference the new version as current LTR

@@ -52,7 +52,7 @@ Outputs
    * - **Output**
      - ``OUTPUT``
      - [same as input]
-     - The resulting layer with the updated history in its **Metadata properties**. 
+     - The resulting layer with the updated history in its **Metadata properties**.
 
 Python code
 ...........

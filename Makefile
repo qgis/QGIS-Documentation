@@ -97,7 +97,7 @@ site: html zip
 
 full: html zip
 	make LANG=$(LANG) pdf;
-	
+
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
 all: springclean
@@ -141,4 +141,3 @@ doctest:
 linkcheck:
 	$(SPHINXBUILD) -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
 	@echo "Check finished. Report is in $(BUILDDIR)/linkcheck/output.txt."
-

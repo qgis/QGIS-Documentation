@@ -1217,7 +1217,7 @@ interface provides two options to define and associate a new attribute table:
   layer has a classified symbology applied. Otherwise, this option is disabled. Applying classified
   symbology also triggers an option in the layer context menu to |createTable|:guilabel:`Create Raster Attribute Table`.
   Click this button and set the following options in the :guilabel:`New Raster Attribute Table` dialog.
-  
+
    * :guilabel:`Managed by the data provider`: the attribute table will be saved
      and managed by the data provider (if supported), overwriting any existing table
      for the raster band used by the current style. Depending on the data provider,
@@ -1287,22 +1287,22 @@ At the top of the dialog, a set of tools allows to edit and save changes to the 
   column to the raster attribute table. The dialog lets you define:
 
   * :guilabel:`Column Type`, which can be:
-  
+
     * |radioButtonOff| :guilabel:`Standard column`
     * |radioButtonOff| :guilabel:`Color RGBA`
     * |radioButtonOff| :guilabel:`Color ramp (RGBA minimum and RGBA maximum)`
 
   * :guilabel:`Column Definition`, including:
-  
+
     * :guilabel:`Name` of the column (mandatory)
     * :guilabel:`Usage`, which can be:
-    
+
       * :guilabel:`Pixel Count`: stores the number of pixels belonging to a given value or value range.
       * :guilabel:`Generic`: general-purpose column with no predefined meaning.
       * :guilabel:`Name`: stores the class name or label associated with a raster value or range.
 
     * :guilabel:`Data type`, which can be:
-    
+
       * :guilabel:`String`
       * :guilabel:`Integer`
       * :guilabel:`Long Integer`
@@ -1342,7 +1342,7 @@ Identify raster cells
 =====================
 
 The |identify| :ref:`identify features <identify>` tool allows you to get information about
-specific points in a raster layer. 
+specific points in a raster layer.
 
 To use the |identify|:guilabel:`Identify features` tool:
 

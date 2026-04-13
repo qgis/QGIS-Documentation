@@ -301,7 +301,7 @@ Parameters
    * - **Map units per pixel**
      - ``MAP_UNITS_PER_PIXEL``
      - [numeric: double]
-       
+
        Default: 100.0
      - Pixel size (in map units). Minimum value: 0.0
    * - **Make background transparent**
@@ -594,7 +594,7 @@ Basic parameters
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Output directory**
      - ``OUTPUT_DIRECTORY``
      - [folder]

@@ -37,7 +37,7 @@ For this reason, it has a tool called the *Layout Manager*.
 
    .. figure:: img/print_composer_dialog.png
       :align: center
-   
+
 You could also create this new layout via the
 :menuselection:`Project --> New Print Layout...` menu.
 
@@ -298,10 +298,10 @@ For our purposes, we're going to use PDF.
 
    .. figure:: img/layout_export_pdf.png
       :align: center
-   
+
 #. You can safely use the default values now and click
    :guilabel:`Save`.
-   
+
    QGIS will proceed to the map export and push a message
    on top of the print layout dialog as soon as it finishes.
 #. Click the hyperlink in the message to open the folder in which

@@ -3804,4 +3804,3 @@ Returns the minimum z coordinate of a geometry, or NULL if the geometry has no z
 
 
 .. end_z_min_section
-

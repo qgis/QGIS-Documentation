@@ -84,7 +84,7 @@ In the future a .qlr file may hold a reference to more than one layer.
 
 .. figure:: img/qlr.png
    :align: center
-   
+
    The top level tags of a QLR file
 
 

@@ -279,7 +279,7 @@ Map Navigation and attributes
   |temporal|                      ``|temporal``                       |temporalNavigationOff|         ``|temporalNavigationOff|``
   |temporalNavigationFixedRange|  ``|temporalNavigationFixedRange|``  |temporalNavigationAnimated|    ``|temporalNavigationAnimated|``
   |temporalNavigationMovie|       ``|temporalNavigationMovie|``       |newElevationProfile|           ``|newElevationProfile|``
-  |elevation|                     ``|elevation|``                     
+  |elevation|                     ``|elevation|``
   ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -571,8 +571,8 @@ Processing
   |processingAlgorithm|           ``|processingAlgorithm|``           |processingModel|               ``|processingModel|``
   |processingHistory|             ``|processingHistory|``             |processingResult|              ``|processingResult|``
   |menu|                          ``|menu|``                          |runSelected|                   ``|runSelected|``
-  |processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``  
-  |saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``  
+  |processSelected|               ``|processSelected|``               |editHelpContent|               ``|editHelpContent|``
+  |saveAsPython|                  ``|saveAsPython|``                  |modelOutput|                   ``|modelOutput|``
   |qgsProjectFile|                ``|qgsProjectFile|``                |addToProject|                  ``|addToProject|``
   |fieldInteger|                  ``|fieldInteger|``
   |meanCoordinates|               ``|meanCoordinates|``               |extractLayerExtent|            ``|extractLayerExtent|``

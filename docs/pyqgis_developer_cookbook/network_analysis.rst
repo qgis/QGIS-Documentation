@@ -240,7 +240,7 @@ same arguments, but returns a tuple of arrays:
  (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, startId, 0)
 
 Here is some very simple code to display the shortest path tree using the graph created
-with the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>` 
+with the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
 or the :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
 (select linestring layer in :guilabel:`Layers` panel and replace coordinates with your own).
 
@@ -248,7 +248,7 @@ or the :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
   :class:`QgsRubberBand <qgis.gui.QgsRubberBand>` objects and may be slow on large datasets.
 
 .. tabs::
-  
+
  .. tab:: shortestTree()
 
   .. testcode:: network_analysis
@@ -367,9 +367,9 @@ uses the :meth:`shortestTree() <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
 or :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method:
 
 .. tabs::
-  
+
   .. tab:: shortestTree()
-    
+
     .. testcode:: network_analysis
 
       from qgis.core import *

@@ -87,7 +87,7 @@ in different CRSs.
 #. Add another vector layer to your map which has the data for South
    Africa only.
    You will find it as :file:`exercise_data/world/RSA.shp`.
-#. Load it. 
+#. Load it.
    A quick way to see its CRS is by hovering the mouse over the layer
    in the legend. It is ``EPSG:3410``.
 

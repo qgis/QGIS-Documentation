@@ -46,7 +46,7 @@ To create a new GeoPackage layer, press the |newGeoPackageLayer|
 :menuselection:`Layer --> Create Layer -->` menu or from the
 :guilabel:`Data Source Manager` toolbar.
 You can also create a new GeoPackage layer through the :guilabel:`Browser Panel`
-by selecting the :guilabel:`Create Database and Layer...`. 
+by selecting the :guilabel:`Create Database and Layer...`.
 The :guilabel:`New GeoPackage Layer` dialog will be displayed as shown in
 :numref:`figure_create_geopackage`.
 
@@ -85,7 +85,7 @@ To add fields to the layer you are creating:
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
 
-By default, when creating a GeoPackage layer, QGIS generates a 
+By default, when creating a GeoPackage layer, QGIS generates a
 :guilabel:`Feature id column` called ``fid`` which acts as the
 primary key of the layer. The name can be changed.
 The geometry field, if availabe, is named ``geometry``, and you can

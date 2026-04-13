@@ -43,7 +43,7 @@ Why not 2 *meters*? Or any other unit, for that matter?
   The units being used by the example query are degrees, because the CRS that
   the layer is using is WGS 84. This is a Geographic CRS, which means that its
   units are in degrees. A Projected CRS, like the UTM projections, is in meters.
-  
+
   Remember that when you write a query, you need to know which units the layer's
   CRS is in. This will allow you to write a query that will return the results
   that you expect.

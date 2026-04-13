@@ -91,7 +91,7 @@ make -f venv.mk cleanall
 ### Fixing build locale error on macOS
 
 When the build on macOS fails with:
-  
+
 ```sh
 locale.Error: unsupported locale setting
 make: *** [html] Error 1

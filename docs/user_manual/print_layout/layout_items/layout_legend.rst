@@ -52,7 +52,7 @@ In Main properties you can:
 * Choose which :guilabel:`Map` item the current legend will refer to.
   By default, the map over which the legend item is drawn is picked. If none,
   then it falls back to the :ref:`reference map <reference_map>`.
-  
+
   .. note:: :ref:`Variables <expression_variables>` of the linked map item
    (@map_id, @map_scale, @map_extent...) are also accessible from data-defined
    properties of the legend.
@@ -129,7 +129,7 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   and symbology and add a filter.
 
   * Use the |expandTree| :sup:`Expand all` and |collapseTree| :sup:`Collapse all` buttons
-    to respectively expand or collapse all the groups and subgroups in the legend tree. 
+    to respectively expand or collapse all the groups and subgroups in the legend tree.
     Ensure that the :guilabel:`Auto update` is unchecked to use these buttons.
   * The item order can be changed using the |arrowUp| and |arrowDown| buttons or
     with 'drag-and-drop' functionality. The order can not be changed for WMS
@@ -160,10 +160,10 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   After changing the symbology in the QGIS main window, you can click on
   :guilabel:`Update All` to adapt the changes in the legend element of the print
   layout.
-  
+
 * With the |checkbox| :guilabel:`Only show items inside linked maps`, only the
-  legend items visible in the linked map will be listed in the legend. If you 
-  have more than one map you can click on :guilabel:`...` and select other 
+  legend items visible in the linked map will be listed in the legend. If you
+  have more than one map you can click on :guilabel:`...` and select other
   maps from your layout.
   This tool remains available when |checkbox| :guilabel:`Auto-update` is active.
 * While generating an atlas with polygon features, you can filter out legend
@@ -239,7 +239,7 @@ also be controlled via the style manager.
 
 A custom symbol can also be specified for vector symbols. This can be useful to tweak the render
 of a specific symbol, to enhance it in the legend or have a symbol independent from its true symbol preview.
-This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified. 
+This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified.
 
 
 Fonts and text formatting

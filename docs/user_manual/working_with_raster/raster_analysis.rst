@@ -147,7 +147,7 @@ in one step.
 In other words, for every cell less than 50 set its value to 1.
 For every cell greater than or equal 50 set its value to 2.
 
-Or you can use the ``IF`` operator. 
+Or you can use the ``IF`` operator.
 
 ::
 

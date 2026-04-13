@@ -474,7 +474,7 @@ the model must use when loading the results into a project. This gives the model
 creator a means of ensuring that layers are logically ordered on the canvas when
 running a model, such as placing a vector layer output over a raster layer output,
 or a point layer over a polygon layer.
-The model creator can also set an optional "Group name" for the outputs for 
+The model creator can also set an optional "Group name" for the outputs for
 automatically grouping outputs within the layer tree using a new group name or by
 adding them to an existing group.
 In the ``Model`` menu you will find the ``Reorder Output Layers...`` entry and by

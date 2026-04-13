@@ -87,7 +87,7 @@ listed in the panel on the left:
    Creating a Smart Group
 
 Tags and smart groups are not mutually exclusive: they are simply two different
-ways to organize your style elements. 
+ways to organize your style elements.
 Unlike the smart groups that automatically fetch their belonged items based on
 the input constraints, tags are filled by the user. To edit any of those
 categories, you can either:
@@ -148,7 +148,7 @@ When a tab is enabled, you can:
   item following :ref:`symbols <symbol-selector>`, :ref:`color ramps
   <color-ramp>` or :ref:`text format and label <showlabels>` builder description.
 * Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit
-  item` button and configure as mentioned above. 
+  item` button and configure as mentioned above.
 * Delete existing items: to delete an element you no longer need, select it and
   click |symbologyRemove| :sup:`Remove item` (also available through right-click).
   The item will be deleted from the local database.
@@ -167,7 +167,7 @@ Right-clicking over a selection of items also allows you to:
 * :guilabel:`Edit Item`: applies to the item you right-click over;
 * :guilabel:`Copy Item`;
 * :guilabel:`Paste Item ...`: pasting to one of the categories of the style manager
-  or elsewhere in QGIS (symbol or color buttons) 
+  or elsewhere in QGIS (symbol or color buttons)
 * :guilabel:`Export Selected Symbol(s) as PNG...` (only available with symbols);
 * :guilabel:`Export Selected Symbol(s) as SVG...` (only available with symbols);
 
@@ -242,7 +242,7 @@ Using the Browser panel
 
 It's also possible to import style items into the active user profile style
 database directly from the :guilabel:`Browser` panel:
-   
+
 #. Select the style :file:`.xml` file in the browser
 #. Drag-and-drop it over the map canvas or right-click and select
    :guilabel:`Import Style...`

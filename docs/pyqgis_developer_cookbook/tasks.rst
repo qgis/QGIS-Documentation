@@ -103,7 +103,7 @@ There are several ways to create a QGIS task:
 
    Moreover always make sure that :class:`context <qgis.core.QgsProcessingContext>`
    and :class:`feedback <qgis.core.QgsProcessingFeedback>` live for at
-   least as long as the tasks that use them. QGIS will crash if, 
+   least as long as the tasks that use them. QGIS will crash if,
    upon completion of a task, *QgsTaskManager* fails to access the *context* and *feedback*
    against which the task was scheduled.
 
@@ -434,7 +434,7 @@ added to the project in a safe way.
 
   alg = QgsApplication.processingRegistry().algorithmById(
                                         'qgis:randompointsinextent')
-  # `context` and `feedback` need to 
+  # `context` and `feedback` need to
   # live for as least as long as `task`,
   # otherwise the program will crash.
   # Initializing them globally is a sure way

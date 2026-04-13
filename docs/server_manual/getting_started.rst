@@ -730,11 +730,11 @@ A simple procedure is the following:
 
      > apache-restart.bat
 
-#. Let's add a sample project. You can use your own, or one from `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_. 
+#. Let's add a sample project. You can use your own, or one from `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_.
    Make sure that you place it in the same folder that your *QGIS_PROJECT_FILE* environment variable is pointing to:
 
    ::
-    
+
      > "C:/Users/*Your USERNAME*/qgis_projects/qgis-server-tutorial-data/world.qgs"
 
 #. Open browser window to testing a GetCapabilities request to QGIS Server.

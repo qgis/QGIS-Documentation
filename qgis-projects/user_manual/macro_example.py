@@ -10,4 +10,3 @@ def saveProject():
 
 def closeProject():
     pass
-

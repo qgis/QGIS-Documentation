@@ -16,15 +16,15 @@ Modeler tools
 
 .. _qgiscalculateexpression:
 
-Calculate expression 
+Calculate expression
 --------------------
 
-It calculates the result of a QGIS expression and eliminates 
-the need to use the same expression multiple times throughout 
-a model when the same result is required more than once. 
+It calculates the result of a QGIS expression and eliminates
+the need to use the same expression multiple times throughout
+a model when the same result is required more than once.
 Additionally, it enables use cases that would otherwise not be
 possible. For instance, you can generate a timestamp value once
-and use it multiple times within the model, if the timestamp 
+and use it multiple times within the model, if the timestamp
 were recalculated every time, the values would vary during the
 model's runtime.
 
@@ -43,7 +43,7 @@ Parameters
    * - **Input**
      - ``INPUT``
      - [expression]
-     - Expression to calculate 
+     - Expression to calculate
 
 Outputs
 .......
@@ -61,7 +61,7 @@ Outputs
      - ``OUTPUT``
      - [Result Value]
      - Calculated result value, the data type of the
-       output will vary based on the specific expression used 
+       output will vary based on the specific expression used
        in the algorithm.
 
 Python code

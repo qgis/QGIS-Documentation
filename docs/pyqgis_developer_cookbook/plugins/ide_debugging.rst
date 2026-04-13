@@ -83,7 +83,7 @@ here's what you have to do:
 
 More popular than Pyscripter, Eclipse is a common choice among developers. In
 the following section, we will be explaining how to configure it for
-developing and testing plugins. 
+developing and testing plugins.
 
 Debugging using Eclipse and PyDev
 =================================
@@ -216,7 +216,7 @@ libraries.
 #. First open the Libraries tab.
 #. Add a New Folder and choose the python folder of your QGIS installation.
    If you do not know where this folder is (it's not the plugins folder):
-   
+
    #. Open QGIS
    #. Start a python console
    #. Enter ``qgis``

@@ -155,7 +155,7 @@ Input types
      - Dataset groups of mesh layer
    * - Mesh Dataset Time
      - :class:`QgsProcessingParameterMeshDatasetTime <qgis.core.QgsProcessingParameterMeshDatasetTime>`
-     - 
+     -
      - Dataset index from a mesh layer by time setting
    * - Mesh Layer
      - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
@@ -304,4 +304,3 @@ Output types
    * - :class:`QgsProcessingOutputVectorTileLayer <qgis.core.QgsProcessingOutputVectorTileLayer>`
      -
      - A vector tile layer
-

@@ -26,7 +26,7 @@ Below are listed people who dedicate their time and energy to write, review,
 and update the whole QGIS documentation.
 
 .. csv-table::
-   :widths: auto       
+   :widths: auto
 
    "Tim Sutton", "Yves Jacolin", "Jacob Lanstorp", "Gary E. Sherman", "Richard Duivenvoorde"
    "Tara Athan", "Anita Graser", "Arnaud Morvan",  "Gavin Macaulay", "Luca Casagrande"
@@ -61,7 +61,7 @@ and update the whole QGIS documentation.
    "Jakob Miksch", "Nicolas Boisteault", "Bertrand Rix", "Jorge Rosales", "Selma Vidimlic"
 
 
-.. index:: 
+.. index::
    single: Contributors; Translators
 .. _doc_translators:
 
@@ -78,7 +78,7 @@ The current translations are made possible thanks to:
 
 .. csv-table::
    :header: "Language", "Contributors"
-   :widths: 15, 80              
+   :widths: 15, 80
 
    "Bahasa Indonesia", "Emir Hartato, I Made Anombawa, Januar V. Simarmata,
    Muhammad Iqnaul Haq Siregar, Trias Aditya"

@@ -79,7 +79,7 @@ Export to spreadsheet
 ---------------------
 
 Exports the attributes of a selection of vector layers into a spreadsheet document
-or optionally appends them to an existing spreadsheet as additional sheets. 
+or optionally appends them to an existing spreadsheet as additional sheets.
 
 Parameters
 ..........
