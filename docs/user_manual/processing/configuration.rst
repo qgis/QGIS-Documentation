@@ -122,7 +122,7 @@ or for :ref:`individual parameters <alg_parameter_types>`.
 * :guilabel:`Warn before executing if parameter CRS's do not match`: By default, QGIS native algorithms
   (i.e. the ones listed under the |menu| :menuselection:`Menus --> QGIS (native C++)` group)
   transparently reproject the input layers to the first one's CRS before execution.
-  Check this option to get a notification from the other tools that do not suppport reprojection,
+  Check this option to get a notification from the other tools that do not support reprojection,
   when the inputs CRS are not identical.
   Third-party providers are not concerned.
 

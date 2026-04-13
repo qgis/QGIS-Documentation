@@ -38,7 +38,7 @@ working with QGIS.
 The popular and powerful GeoTiff format is a good alternative.
 
 QGIS makes use of georeference information inside the raster layer
-(e.g., :index:`GeoTiff`) or an associated *world file* to properly
+(e.g., GeoTiff) or an associated *world file* to properly
 display the data.
 
 .. if there are particularities for some raster formats that are worth mention,
@@ -360,7 +360,7 @@ It can make sense to disable this option when you use expensive views.
 
 .. note:: **PostgreSQL foreign table**
 
-   PostgreSQL foreign tables are not explicitely supported by the PostgreSQL
+   PostgreSQL foreign tables are not explicitly supported by the PostgreSQL
    provider and will be handled like a view.
 
 .. _layer_style_backup:
@@ -587,7 +587,7 @@ Besides GeoJSON there is also an option to export to
 Instead of a FeatureCollection with Features, you can stream one type
 (probably only Features) sequentially separated with newlines.
 
-GeoJSON - Newline Delimited has some specific Layer options availabe too:
+GeoJSON - Newline Delimited has some specific Layer options available too:
 
 * :guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)
 * :guilabel:`RS` whether to start records with the RS=0x1E character.

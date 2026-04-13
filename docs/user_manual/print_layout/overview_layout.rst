@@ -633,7 +633,7 @@ Or you can add many types of items on each page.
 Adding a new page
 .................
 
-Futhermore, a layout can be made using different size and/or orientation of pages.
+Furthermore, a layout can be made using different size and/or orientation of pages.
 To add a page, select the |newPage| :guilabel:`Add Pages...` tool
 from the :menuselection:`Layout` menu or :guilabel:`Layout Toolbar`.
 The :guilabel:`Insert Pages` dialog opens and you are asked to fill:

@@ -180,7 +180,7 @@ on all features of the layer:
   You can also make a precise definition of the percentage of visibility in the menu beside the slider.
 * :guilabel:`Blending mode`: You can achieve special rendering effects with these tools
   that you may previously only know from graphics programs.
-  The pixels of your overlaying and underlaying layers are mixed through the settings
+  The pixels of your overlaying and underlying layers are mixed through the settings
   described in :ref:`blend-modes`.
 
 Styles

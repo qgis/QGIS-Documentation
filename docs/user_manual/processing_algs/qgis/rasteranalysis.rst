@@ -3402,15 +3402,14 @@ Parameters
        Options:
 
        * 0 --- Count Only Above Base Level: only pixels above the base
-	 level will add to the volume.
+         level will add to the volume.
        * 1 --- Count Only Below Base Level: only pixels below the base
-	 level will add to the volume.
+         level will add to the volume.
        * 2 --- Subtract Volumes Below Base level: pixels above the
-	 base level will add to the volume, pixels below the base
-	 level will subtract from the volume.
+         base level will add to the volume, pixels below the base
+         level will subtract from the volume.
        * 3 --- Add Volumes Below Base level: Add the volume
-         regardless whether the pixel is above or below the base
-	 level.
+         regardless whether the pixel is above or below the base level.
          This is equivalent to sum the absolute values of the
          difference between the pixel value and the base level.
    * - **Surface volume report**
@@ -3788,7 +3787,7 @@ Rescale raster
 Rescales raster layer to a new value range, while preserving the shape
 (distribution) of the raster's histogram (pixel values). Input values
 are mapped using a linear interpolation from the source raster's
-minimum and maximum pixel values to the destination minimum and miximum
+minimum and maximum pixel values to the destination minimum and maximum
 pixel range.
 
 By default the algorithm preserves the original NoData value, but there

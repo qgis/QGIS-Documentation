@@ -32,6 +32,41 @@ repos:
         args: [-d, "{extends: relaxed, rules: {line-length: {max: 200}}}"]
         exclude: ^(locale/|_dummy/|build/)
 
+  # RST linting with rstcheck
+  - repo: https://github.com/rstcheck/rstcheck
+    rev: v6.2.0
+    hooks:
+      - id: rstcheck
+        args:
+          - --report-level=warning
+          - --ignore-directives=toctree,include,only,ifconfig,literalinclude,index,glossary,substitution-definitions,highlight,todo,todolist,deprecated,versionadded,versionchanged,seealso,productionlist,centered,testcleanup,testcode,testoutput,testsetup,tabs,tab,code-block,toggle
+          - --ignore-roles=menuselection,guilabel,file,kbd,ref,doc,term,command,program,option,envvar,index,abbr,dfn,numref,eq,download,py:mod,py:obj,py:class,py:meth,py:attr,py:func,py:exc,pyqgis,api,source,sup,sub,raw,math
+          - --ignore-languages=python,bash,sql,json,xml,yaml
+          - --ignore-substitutions=version,rarr,srtmFileName
+        exclude: ^(locale/|_dummy/|build/)
+        additional_dependencies:
+          - sphinx
+
+  # RST style checker (doc8)
+  - repo: https://github.com/PyCQA/doc8
+    rev: v1.1.1
+    hooks:
+      - id: doc8
+        args:
+          - --max-line-length=300
+          - --ignore=D001,D002,D004
+        exclude: ^(locale/|_dummy/|build/)
+
+  # Spell checking
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          - --skip=*.po,*.pot,*.mo,*.svg,*.png,*.jpg,*.gif,*.ico,*.pyc,*.js,*.css,*.map,*.qgs,*.qgz
+          - --ignore-words-list=tripel,linz,parameteras,lightening,clos,januar,claus,sist,pixelx
+        exclude: ^(locale/|_dummy/|build/|scripts/)
+
   # - repo: local
   #   hooks:
   #     - id: find_set_subst

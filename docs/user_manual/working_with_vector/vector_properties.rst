@@ -1011,7 +1011,7 @@ features of the layer:
 * :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
   You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
-  underlaying layers are mixed through the settings described in :ref:`blend-modes`.
+  underlying layers are mixed through the settings described in :ref:`blend-modes`.
 
 * Apply :ref:`paint effects <draw_effects>` on all the layer features with the
   :guilabel:`Draw Effects` button.
@@ -1649,47 +1649,57 @@ Let's have a look at some examples:
 
 #. Label based on two fields 'name' and 'place' with a comma as separator::
 
-   "name" || ', ' || "place"
+    "name" || ', ' || "place"
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       John Smith, Paris
 
 #. Label based on two fields 'name' and 'place' with other texts:
 
-   .. code-block:: none
+   ::
 
       'My name is ' + "name" + 'and I live in ' + "place"
       'My name is ' || "name" || 'and I live in ' || "place"
       concat('My name is ', name, ' and I live in ', "place")
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       My name is John Smith and I live in Paris
 
 #. Label based on two fields 'name' and 'place' with other texts combining
    different concatenation functions:
 
-   .. code-block:: none
+   ::
 
       concat('My name is ', name, ' and I live in ' || place)
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       My name is John Smith and I live in Paris
 
-   Or, if the field 'place' is NULL, returns::
+   Or, if the field 'place' is NULL, returns:
+
+   .. code-block:: text
 
       My name is John Smith
 
 #. Multi-line label based on two fields 'name' and 'place' with a
    descriptive text:
 
-   .. code-block:: none
+   ::
 
       concat('My name is ', "name", '\n' , 'I live in ' , "place")
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       My name is John Smith
       I live in Paris
@@ -1697,35 +1707,41 @@ Let's have a look at some examples:
 #. Label based on a field and the $area function to show the place's name
    and its rounded area size in a converted unit:
 
-   .. code-block:: none
+   ::
 
       'The area of ' || "place" || ' has a size of '
       || round($area/10000) || ' ha'
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       The area of Paris has a size of 10500 ha
 
 #. Create a CASE ELSE condition. If the population value in field
    `population` is <= 50000 it is a town, otherwise it is a city:
 
-   .. code-block:: none
+   ::
 
       concat('This place is a ',
       CASE WHEN "population" <= 50000 THEN 'town' ELSE 'city' END)
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       This place is a town
 
 #. Display name for the cities and no label for the other features
    (for the "city" context, see example above):
 
-   .. code-block:: none
+   ::
 
       CASE WHEN "population" > 50000 THEN "NAME" END
 
-   Returns::
+   Returns:
+
+   .. code-block:: text
 
       Paris
 
@@ -1819,7 +1835,7 @@ or |diagram| :ref:`diagram <sec_diagram>` properties:
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or draging an
+* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or dragging an
   area, you pin overlaid items. If you click or drag an area holding :kbd:`Shift`,
   the items are unpinned. Finally, you can also click or drag an area holding
   :kbd:`Ctrl` to toggle their pin status.
@@ -2595,7 +2611,7 @@ In all cases you must enter the name of the function that will be called
 
 An example is (in module MyForms.py):
 
-::
+.. code-block:: python
 
   def open(dialog,layer,feature):
       geom = feature.geometry()
@@ -3254,15 +3270,15 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 
 Two example actions are shown below:
 
-* ``konqueror https://www.google.com/search?q=%nam``
+* ``konqueror https://www.google.com/search?q=%name``
 * ``konqueror https://www.google.com/search?q=%%``
 
 In the first example, the web browser konqueror is invoked and passed a URL
-to open. The URL performs a Google search on the value of the ``nam`` field
+to open. The URL performs a Google search on the value of the ``name`` field
 from our vector layer. Note that the application or script called by the
 action must be in the path, or you must provide the full path. To be certain, we
 could rewrite the first example as:
-``/opt/kde3/bin/konqueror https://www.google.com/search?q=%nam``. This will
+``/opt/kde3/bin/konqueror https://www.google.com/search?q=%name``. This will
 ensure that the konqueror application will be executed when the action is
 invoked.
 
@@ -3318,7 +3334,7 @@ able to make a spatial selection of localities and export these field values
 to a text file for the selected record (shown in yellow in the QGIS map area).
 Here is the action to achieve this:
 
-::
+.. code-block:: bash
 
   bash -c "echo \"%taxon_name %lat %long\" >> /tmp/species_localities.txt"
 
@@ -3326,7 +3342,7 @@ Here is the action to achieve this:
 After selecting a few localities and running the action on each one, opening
 the output file will show something like this:
 
-::
+.. code-block:: text
 
   Acacia mearnsii -34.0800000000 150.0800000000
   Acacia mearnsii -34.9000000000 150.1200000000

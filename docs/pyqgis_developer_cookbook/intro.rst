@@ -125,7 +125,7 @@ Processing Plugins
 
 Processing Plugins can be used to process data. They are easier to develop,
 more specific and more lightweight than Python Plugins. :ref:`processing_plugin`
-explains when the use of Processing algorithms is appropiate and how to develop
+explains when the use of Processing algorithms is appropriate and how to develop
 them.
 
 .. index::
@@ -179,7 +179,7 @@ existing Python file.
 
 This code will run before QGIS initialization is complete.
 This method is very useful for cleaning
-sys.path, which may have undesireable paths, or for isolating/loading
+sys.path, which may have undesirable paths, or for isolating/loading
 the initial environment without requiring a virtual environment, e.g.
 homebrew or MacPorts installs on Mac.
 

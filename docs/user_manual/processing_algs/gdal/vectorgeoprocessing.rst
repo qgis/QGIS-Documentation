@@ -618,8 +618,7 @@ Basic parameters
 
        Default: False
      - If set, the result is dissolved.
-	If no field is set for dissolving, all the buffers are
-	dissolved into one feature.
+       If no field is set for dissolving, all the buffers are dissolved into one feature.
    * - **Produce one feature for each geometry in any kind of
        geometry collection in the source file**
      - ``EXPLODE_COLLECTIONS``

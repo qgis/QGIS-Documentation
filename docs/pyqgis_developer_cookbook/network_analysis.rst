@@ -50,7 +50,7 @@ that is to convert a vector layer into a graph.
 All further actions will use this graph, not the layer.
 
 As a source we can use any polyline vector layer. Nodes of the polylines
-become graph vertexes, and segments of the polylines are graph edges.
+become graph vertices, and segments of the polylines are graph edges.
 If several nodes have the same coordinates then they are the same graph vertex.
 So two lines that have a common node become connected to each other.
 
@@ -191,11 +191,11 @@ It's time to dive into the process.
 Graph analysis
 ==============
 
-Networks analysis is used to find answers to two questions: which vertexes
+Networks analysis is used to find answers to two questions: which vertices
 are connected and how to find a shortest path. To solve these problems the
 network analysis library provides Dijkstra's algorithm.
 
-Dijkstra's algorithm finds the shortest route from one of the vertexes of the
+Dijkstra's algorithm finds the shortest route from one of the vertices of the
 graph to all the others and the values of the optimization parameters.
 The results can be represented as a shortest path tree.
 
@@ -203,7 +203,7 @@ The shortest path tree is a directed weighted graph (or more precisely a tree)
 with the following properties:
 
 * only one vertex has no incoming edges — the root of the tree
-* all other vertexes have only one incoming edge
+* all other vertices have only one incoming edge
 * if vertex B is reachable from vertex A, then the path from A to B is the
   single available path and it is optimal (shortest) on this graph
 
@@ -357,8 +357,8 @@ The whole algorithm can be written as:
         assign T = TT
     add point A to path
 
-At this point we have the path, in the form of the inverted list of vertexes
-(vertexes are listed in reversed order from end point to start point) that will
+At this point we have the path, in the form of the inverted list of vertices
+(vertices are listed in reversed order from end point to start point) that will
 be visited during traveling by this path.
 
 Here is the sample code for QGIS Python Console (you may need to load and
@@ -489,8 +489,8 @@ or :meth:`dijkstra() <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method:
 Areas of availability
 ---------------------
 
-The area of availability for vertex A is the subset of graph vertexes that are
-accessible from vertex A and the cost of the paths from A to these vertexes are
+The area of availability for vertex A is the subset of graph vertices that are
+accessible from vertex A and the cost of the paths from A to these vertices are
 not greater that some value.
 
 More clearly this can be shown with the following example: "There is a fire
@@ -505,8 +505,8 @@ If cost[i] is less than or equal to a predefined value,
 then vertex i is inside the area of availability, otherwise it is outside.
 
 A more difficult problem is to get the borders of the area of availability.
-The bottom border is the set of vertexes that are still accessible,
-and the top border is the set of vertexes that are not accessible.
+The bottom border is the set of vertices that are still accessible,
+and the top border is the set of vertices that are not accessible.
 In fact this is simple:
 it is the availability border based on the edges of the shortest path tree
 for which the source vertex of the edge is accessible

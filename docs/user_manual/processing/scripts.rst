@@ -197,11 +197,11 @@ The following code
                 #
                 # It's important to pass on the context and feedback objects to
                 # child algorithms, so that they can properly give feedback to
-                # users and handle cancelation requests.
+                # users and handle cancellation requests.
                 context=context,
                 feedback=feedback)
 
-            # Check for cancelation
+            # Check for cancellation
             if feedback.isCanceled():
                 return {}
 
@@ -280,9 +280,9 @@ Processing algorithm standard functions:
     algorithms, the original parameter values should be used (e.g.
     ``parameters['OUTPUT']``).
 
-    It is good practice to check the feedback object for cancelation
+    It is good practice to check the feedback object for cancellation
     as much as is sensibly possible! Doing so allows for responsive
-    cancelation, instead of forcing users to wait for unwanted processing
+    cancellation, instead of forcing users to wait for unwanted processing
     to occur.
 
     The algorithm should return values for all the output
@@ -400,7 +400,7 @@ help simplify the coding of the algorithm.
 * The @alg.input decorator is used to define the inputs of the algorithm.
 * The @alg.output decorator is used to define the outputs of the algorithm.
 
-For existing parameters and their correspondance, read :ref:`processing_algs_input_output`.
+For existing parameters and their correspondence, read :ref:`processing_algs_input_output`.
 
 
 Handing algorithm output

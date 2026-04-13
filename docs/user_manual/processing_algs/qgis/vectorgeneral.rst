@@ -895,7 +895,7 @@ Input datasources are identified with ``input1``, ``input2``... ``inputN`` and
 a simple query will look like ``SELECT * FROM input1``.
 
 Beside a simple query, you can add expressions or variables within the
-``SQL query`` parameter itself. This is particulary useful if this algorithm is
+``SQL query`` parameter itself. This is particularly useful if this algorithm is
 executed within a Processing model and you want to use a model input as a
 parameter of the query. An example of a query will then be ``SELECT * FROM
 [% @table %]`` where ``@table`` is the variable that identifies the model input.
@@ -1503,10 +1503,8 @@ Parameters
        Default: 1
      - The type of the final joined layer. One of:
 
-       * 0 --- Create separate feature for each matching feature
-	 (one-to-many)
-       * 1 --- Take attributes of the first matching feature only
-	 (one-to-one)
+       * 0 --- Create separate feature for each matching feature (one-to-many)
+       * 1 --- Take attributes of the first matching feature only (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
@@ -1678,12 +1676,9 @@ Parameters
      - [enumeration]
      - The type of the final joined layer. One of:
 
-       * 0 --- Create separate feature for each matching feature
-	 (one-to-many)
-       * 1 --- Take attributes of the first matching feature only
-	 (one-to-one)
-       * 2 --- Take attributes of the feature with largest overlap
-	 only (one-to-one)
+       * 0 --- Create separate feature for each matching feature (one-to-many)
+       * 1 --- Take attributes of the first matching feature only (one-to-one)
+       * 2 --- Take attributes of the feature with largest overlap only (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``

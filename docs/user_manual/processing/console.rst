@@ -124,106 +124,106 @@ work), you get the following description:
 
      INPUT: Input layer
 
-     	Parameter type:	QgsProcessingParameterFeatureSource
+        Parameter type: QgsProcessingParameterFeatureSource
 
-     	Accepted data types:
-     		- str: layer ID
-     		- str: layer name
-     		- str: layer source
-     		- QgsProcessingFeatureSourceDefinition
-     		- QgsProperty
-     		- QgsVectorLayer
+        Accepted data types:
+           - str: layer ID
+           - str: layer name
+           - str: layer source
+           - QgsProcessingFeatureSourceDefinition
+           - QgsProperty
+           - QgsVectorLayer
 
      DISTANCE: Distance
 
-     	Parameter type:	QgsProcessingParameterDistance
+        Parameter type: QgsProcessingParameterDistance
 
-     	Accepted data types:
-     		- int
-     		- float
-     		- QgsProperty
+        Accepted data types:
+           - int
+           - float
+           - QgsProperty
 
      SEGMENTS: Segments
 
-     	Parameter type:	QgsProcessingParameterNumber
+        Parameter type: QgsProcessingParameterNumber
 
-     	Accepted data types:
-     		- int
-     		- float
-     		- QgsProperty
+        Accepted data types:
+           - int
+           - float
+           - QgsProperty
 
      END_CAP_STYLE: End cap style
 
-     	Parameter type:	QgsProcessingParameterEnum
+        Parameter type: QgsProcessingParameterEnum
 
-     	Available values:
-     		- 0: Round
-     		- 1: Flat
-     		- 2: Square
+        Available values:
+           - 0: Round
+           - 1: Flat
+           - 2: Square
 
-     	Accepted data types:
-     		- int
-     		- str: as string representation of int, e.g. '1'
-     		- QgsProperty
+        Accepted data types:
+           - int
+           - str: as string representation of int, e.g. '1'
+           - QgsProperty
 
      JOIN_STYLE: Join style
 
-	Parameter type:	QgsProcessingParameterEnum
+        Parameter type: QgsProcessingParameterEnum
 
-	Available values:
-		- 0: Round
-		- 1: Miter
-		- 2: Bevel
+        Available values:
+           - 0: Round
+           - 1: Miter
+           - 2: Bevel
 
-	Accepted data types:
-		- int
-		- str: as string representation of int, e.g. '1'
-		- QgsProperty
+        Accepted data types:
+           - int
+           - str: as string representation of int, e.g. '1'
+           - QgsProperty
 
      MITER_LIMIT: Miter limit
 
-     	Parameter type:	QgsProcessingParameterNumber
+        Parameter type: QgsProcessingParameterNumber
 
-     	Accepted data types:
-     		- int
-     		- float
-     		- QgsProperty
+        Accepted data types:
+           - int
+           - float
+           - QgsProperty
 
      DISSOLVE: Dissolve result
 
-     	Parameter type:	QgsProcessingParameterBoolean
+        Parameter type: QgsProcessingParameterBoolean
 
-     	Accepted data types:
-		- bool
-		- int
-		- str
-		- QgsProperty
+        Accepted data types:
+           - bool
+           - int
+           - str
+           - QgsProperty
 
      OUTPUT: Buffered
 
-     	Parameter type:	QgsProcessingParameterFeatureSink
+        Parameter type: QgsProcessingParameterFeatureSink
 
-     	Accepted data types:
-     		- str: destination vector file, e.g. 'd:/test.shp'
-     		- str: 'memory:' to store result in temporary memory layer
-     		- str: using vector provider ID prefix and destination URI,
-                       e.g. 'postgres:...' to store result in PostgreSQL table
-     		- QgsProcessingOutputLayerDefinition
-     		- QgsProperty
+        Accepted data types:
+           - str: destination vector file, e.g. 'd:/test.shp'
+           - str: 'memory:' to store result in temporary memory layer
+           - str: using vector provider ID prefix and destination URI,
+                  e.g. 'postgres:...' to store result in PostgreSQL table
+           - QgsProcessingOutputLayerDefinition
+           - QgsProperty
 
      ----------------
      Outputs
      ----------------
 
      OUTPUT:  <QgsProcessingOutputVectorLayer>
-     	Buffered
+        Buffered
 
 
 Now you have everything you need to run any algorithm. As we have
 already mentioned, algorithms can be run using: ``run()``.
 Its syntax is as follows:
 
-::
+.. code-block:: python
 
     >>> processing.run(name_of_the_algorithm, parameters)
 
@@ -262,21 +262,21 @@ list gives a quick review of how to introduce values for each type of input para
   options, you can use the ``algorithmHelp()`` command, as above.
   For instance, the ``native:buffer`` algorithm has an enumeration called JOIN_STYLE:
 
-  ::
+  .. code-block:: text
 
      JOIN_STYLE: Join style
 
-	Parameter type:	QgsProcessingParameterEnum
+        Parameter type: QgsProcessingParameterEnum
 
-	Available values:
-		- 0: Round
-		- 1: Miter
-		- 2: Bevel
+        Available values:
+           - 0: Round
+           - 1: Miter
+           - 2: Bevel
 
-	Accepted data types:
-		- int
-		- str: as string representation of int, e.g. '1'
-		- QgsProperty
+        Accepted data types:
+           - int
+           - str: as string representation of int, e.g. '1'
+           - QgsProperty
 
   In this case, the parameter has three options.
   Notice that ordering is zero-based.
@@ -534,7 +534,7 @@ algorithm. This is very useful if your algorithm takes a long time to complete.
 
 The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an
 :meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that
-should be monitored to enable cancelation of the algorithm by the user.
+should be monitored to enable cancellation of the algorithm by the user.
 The :meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of
 :class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send information
 to the user, and :meth:`reportError() <qgis.core.QgsProcessingFeedback.reportError>`

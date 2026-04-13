@@ -44,7 +44,7 @@ Let's add them.
 
 #. Choose the one that best fits your needs, and load the data in the project!
 
-It is also possible to search trough the now available data providers
+It is also possible to search through the now available data providers
 
 #. Open the plugin's search tab by clicking on :menuselection:`Web --> QuickMapServices --> Search QMS`.
    This option of the plugin allows you to filter the available base maps
