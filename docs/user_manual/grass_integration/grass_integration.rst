@@ -197,7 +197,7 @@ file :file:`lakes.gml` from the QGIS 'Alaska' dataset (see :ref:`label_sampledat
    don't have to care about the other options in this example. In the
    :guilabel:`Output` tab you see the currently running GRASS command
    ``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass``.
-#. When it says **Succesfully finished**, click :guilabel:`View Output`. The
+#. When it says **Successfully finished**, click :guilabel:`View Output`. The
    :file:`lakes_grass` vector layer is now imported into GRASS and will be
    visualized in the QGIS canvas.
 

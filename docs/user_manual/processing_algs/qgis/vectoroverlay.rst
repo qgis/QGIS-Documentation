@@ -820,7 +820,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain the splitted (in case they are
+     - Specify the layer to contain the split (in case they are
        intersected by a line in the split layer) line/polygon features
        from the input layer.
        :ref:`One of <output_parameter_widget>`:

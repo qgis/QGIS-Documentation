@@ -164,7 +164,7 @@ to the corresponding registry by using one of the methods exposed by the server 
 Server filter plugins
 ---------------------
 
-Filters come in three different flavors and they can be instanciated by subclassing
+Filters come in three different flavors and they can be instantiated by subclassing
 one of the classes below and by calling the corresponding method of
 :class:`QgsServerInterface <qgis.server.QgsServerInterface>`:
 

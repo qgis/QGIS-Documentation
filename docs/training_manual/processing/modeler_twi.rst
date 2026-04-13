@@ -3,19 +3,29 @@
 Starting with the model designer
 ============================================================
 
-.. note:: In this lesson we will use the model designer, a powerful component that we can use to define a workflow and run a chain of algorithms.
+.. note:: In this lesson we will use the model designer,
+ a powerful component that we can use to define a workflow and run a chain of algorithms.
 
-A normal session with the processing tools includes more than running a single algorithm. Usually several of them are run to obtain a result, and the outputs of some of those algorithms are used as input for some of the other ones.
+A normal session with the processing tools includes more than running a single algorithm.
+Usually several of them are run to obtain a result,
+and the outputs of some of those algorithms are used as input for some of the other ones.
 
-Using the model designer, that workflow can be put into a model, which will run all the necessary algorithms in a single run, thus simplifying the whole process and automating it.
+Using the model designer, that workflow can be put into a model,
+which will run all the necessary algorithms in a single run,
+thus simplifying the whole process and automating it.
 
-To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called :guilabel:`Topographic wetness index (twi)`.
+To start this lesson, we are going to calculate a parameter named Topographic Wetness Index.
+The algorithm that computes it is called :guilabel:`Topographic wetness index (twi)`.
 
 .. figure:: img/modeler_twi/twi.png
 
-As you can see, there are two mandatory inputs: :guilabel:`Slope` and :guilabel:`Catchment Area`. There is also an optional input, but we will not be using it, so we can ignore it.
+As you can see, there are two mandatory inputs: :guilabel:`Slope` and :guilabel:`Catchment Area`.
+There is also an optional input, but we will not be using it, so we can ignore it.
 
-The data for this lesson contains just a DEM, so we do not have any of the required inputs. However, we know how to calculate both of them from that DEM, since we have already seen the algorithms to compute slope and catchment area. So we can first compute those layers and then use them for the TWI algorithm.
+The data for this lesson contains just a DEM, so we do not have any of the required inputs.
+However, we know how to calculate both of them from that DEM,
+since we have already seen the algorithms to compute slope and catchment area.
+So we can first compute those layers and then use them for the TWI algorithm.
 
 Here are the parameter dialogs that you should use to calculate the 2 intermediate layers.
 
@@ -29,19 +39,28 @@ And this is how you have to set the parameters dialog of the TWI algorithm.
 
 .. figure:: img/modeler_twi/twi_filled.png
 
-This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering). You can use the :file:`twi.qml` style provided.
+This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering).
+You can use the :file:`twi.qml` style provided.
 
 .. figure:: img/modeler_twi/twi_layer.png
 
-What we will try to do now is to create an algorithm that calculates the TWI from a DEM in just one single step. That will save us work in case we later have to compute a TWI layer from another DEM, since we will need just one single step to do it instead of the three above. All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them. This is where the model designer comes in.
+What we will try to do now is to create an algorithm that calculates the TWI from a DEM in just one single step.
+That will save us work in case we later have to compute a TWI layer from another DEM,
+since we will need just one single step to do it instead of the three above.
+All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them.
+This is where the model designer comes in.
 
 #. Open the modeler by selecting its menu entry in the processing menu.
 
    .. figure:: img/modeler_twi/modeler.png
 
-   Two things are needed to create a model: setting the inputs that it will need, and defining the algorithm that it contains. Both of them are done by adding elements from the two tabs in the left-hand side of the modeler window: :guilabel:`Inputs` and :guilabel:`Algorithms`.
+   Two things are needed to create a model: setting the inputs that it will need,
+   and defining the algorithm that it contains. Both of them are done by adding elements
+   from the two tabs in the left-hand side of the modeler window:
+   :guilabel:`Inputs` and :guilabel:`Algorithms`.
 
-#. Let's start with the inputs. In this case we do not have much to add. We just need a raster layer with the DEM, and that will be our only input data.
+#. Let's start with the inputs. In this case we do not have much to add.
+   We just need a raster layer with the DEM, and that will be our only input data.
 
 #. Double click on the :guilabel:`Raster layer` input and you will see the following dialog.
 
@@ -49,7 +68,8 @@ What we will try to do now is to create an algorithm that calculates the TWI fro
 
 #. Here we will have to define the input we want:
 
-   #. Since we expect this raster layer to be a DEM, we will call it ``DEM``. That's the name that the user of the model will see when running it.
+   #. Since we expect this raster layer to be a DEM, we will call it ``DEM``.
+      That's the name that the user of the model will see when running it.
    #. Since we need that layer to work, we will define it as a mandatory layer.
 
    Here is how the dialog should be configured.
@@ -76,7 +96,7 @@ What we will try to do now is to create an algorithm that calculates the TWI fro
 
    .. figure:: img/modeler_twi/canvas_2.png
 
-#. The second algorithm we have to add to our model is the catchment area algorithm. We will use the algorithm named :guilabel:`Catchment area (Paralell)`. We will use the DEM layer again as input, and none of the ouputs it produces are final, so here is how you have to fill the corresponding dialog.
+#. The second algorithm we have to add to our model is the catchment area algorithm. We will use the algorithm named :guilabel:`Catchment area (Parallel)`. We will use the DEM layer again as input, and none of the outputs it produces are final, so here is how you have to fill the corresponding dialog.
 
    .. figure:: img/modeler_twi/area_modeler.png
 

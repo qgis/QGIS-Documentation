@@ -4693,7 +4693,7 @@ Parameters
 
        Default: 0.0
      - Distance from the end of the input line, representing the
-       position beyond which no point feature shoud be created.
+       position beyond which no point feature should be created.
    * - **Interpolated points**
      - ``OUTPUT``
      - [vector: point]
@@ -7112,7 +7112,7 @@ Parameters
      - ``INPUT``
      - [vector: polygon]
      - Input polygon vector layer
-   * - **Tesselated**
+   * - **Tessellated**
      - ``OUTPUT``
      - [vector: polygon]
 
@@ -7136,7 +7136,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Tesselated**
+   * - **Tessellated**
      - ``OUTPUT``
      - [vector: polygon]
      - Output multipolygonZ layer

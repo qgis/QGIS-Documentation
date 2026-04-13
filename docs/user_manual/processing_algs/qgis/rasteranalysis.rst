@@ -3787,7 +3787,7 @@ Rescale raster
 Rescales raster layer to a new value range, while preserving the shape
 (distribution) of the raster's histogram (pixel values). Input values
 are mapped using a linear interpolation from the source raster's
-minimum and maximum pixel values to the destination minimum and miximum
+minimum and maximum pixel values to the destination minimum and maximum
 pixel range.
 
 By default the algorithm preserves the original NoData value, but there

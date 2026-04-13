@@ -895,7 +895,7 @@ Input datasources are identified with ``input1``, ``input2``... ``inputN`` and
 a simple query will look like ``SELECT * FROM input1``.
 
 Beside a simple query, you can add expressions or variables within the
-``SQL query`` parameter itself. This is particulary useful if this algorithm is
+``SQL query`` parameter itself. This is particularly useful if this algorithm is
 executed within a Processing model and you want to use a model input as a
 parameter of the query. An example of a query will then be ``SELECT * FROM
 [% @table %]`` where ``@table`` is the variable that identifies the model input.

@@ -9,14 +9,12 @@ Appendix D: QGIS R script syntax
 Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna
 <https://www.santannapisa.it/en/node/70078>`_
 
-Writing R scripts in Processing is a bit tricky because of the
-special syntax.
+Writing R scripts in Processing is a bit tricky because of the special syntax.
 
 A Processing R script starts with defining its **Inputs** and
 **Outputs**, each preceded with double hash characters (``##``).
 
-Before the inputs, the group to place the algoritm in can be
-specified.
+Before the inputs, the group to place the algorithm in can be specified.
 If the group already exists, the algorithm will be added to it,
 if not, the group will be created.
 In the example below, the name of the group is *My group*:
@@ -46,8 +44,7 @@ There are several types of inputs:
 Outputs
 =======
 
-As for the inputs, each output has to be defined at the beginning of
-the script:
+As for the inputs, each output has to be defined at the beginning of the script:
 
 * vector: ``##output= output vector``
 * raster: ``##output= output raster``

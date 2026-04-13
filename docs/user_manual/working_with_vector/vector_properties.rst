@@ -1011,7 +1011,7 @@ features of the layer:
 * :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
   You can achieve special rendering effects with these tools that you may previously
   only know from graphics programs. The pixels of your overlaying and
-  underlaying layers are mixed through the settings described in :ref:`blend-modes`.
+  underlying layers are mixed through the settings described in :ref:`blend-modes`.
 
 * Apply :ref:`paint effects <draw_effects>` on all the layer features with the
   :guilabel:`Draw Effects` button.
@@ -1835,7 +1835,7 @@ or |diagram| :ref:`diagram <sec_diagram>` properties:
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or draging an
+* |pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or dragging an
   area, you pin overlaid items. If you click or drag an area holding :kbd:`Shift`,
   the items are unpinned. Finally, you can also click or drag an area holding
   :kbd:`Ctrl` to toggle their pin status.
@@ -3270,15 +3270,15 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 
 Two example actions are shown below:
 
-* ``konqueror https://www.google.com/search?q=%nam``
+* ``konqueror https://www.google.com/search?q=%name``
 * ``konqueror https://www.google.com/search?q=%%``
 
 In the first example, the web browser konqueror is invoked and passed a URL
-to open. The URL performs a Google search on the value of the ``nam`` field
+to open. The URL performs a Google search on the value of the ``name`` field
 from our vector layer. Note that the application or script called by the
 action must be in the path, or you must provide the full path. To be certain, we
 could rewrite the first example as:
-``/opt/kde3/bin/konqueror https://www.google.com/search?q=%nam``. This will
+``/opt/kde3/bin/konqueror https://www.google.com/search?q=%name``. This will
 ensure that the konqueror application will be executed when the action is
 invoked.
 

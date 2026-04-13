@@ -465,7 +465,7 @@ Each point keeps its color for interpolation in the triangle.
 You can control the horizontal length of computed triangles:
 
 By checking the |checkbox| :guilabel:`Skip triangles longer than` option and setting up
-the threshold value, you can control the maximum lenght of a side of the triangles
+the threshold value, you can control the maximum length of a side of the triangles
 to consider in the horizontal plan. This can be particularly useful if you want to
 identify actual holes in the data.
 

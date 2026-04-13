@@ -534,7 +534,7 @@ algorithm. This is very useful if your algorithm takes a long time to complete.
 
 The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an
 :meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that
-should be monitored to enable cancelation of the algorithm by the user.
+should be monitored to enable cancellation of the algorithm by the user.
 The :meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of
 :class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send information
 to the user, and :meth:`reportError() <qgis.core.QgsProcessingFeedback.reportError>`
