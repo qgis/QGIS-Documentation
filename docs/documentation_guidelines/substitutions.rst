@@ -35,7 +35,7 @@ If no replacement exists:
 
      .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
         :width: 1.5em
-     .. |splitLayer| image:: /static/common/split_layer.png
+     .. |stackedDiagram| image:: /static/common/stacked-diagram.png
         :width: 1.5em
 
 #. Update the target section(s) of the docs, using your new substitution.

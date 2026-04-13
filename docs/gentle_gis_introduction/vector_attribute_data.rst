@@ -515,5 +515,5 @@ by creating new data.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |gentleLogo| image:: img/gentlelogo.png
+.. |gentleLogo| image:: /static/common/gentlelogo.png
    :width: 3em

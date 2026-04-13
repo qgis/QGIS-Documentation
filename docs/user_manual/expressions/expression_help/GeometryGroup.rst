@@ -723,7 +723,7 @@ Returns the last node from a geometry.
        * ``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → 'Point (0 2)'
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/end_point.*
+.. figure:: expression_help/img/end_point.*
    :align: center
 
    End point of a line feature
@@ -821,7 +821,7 @@ Returns a line string representing the exterior ring of a polygon geometry. If t
      - * ``geom_to_wkt(exterior_ring(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),( 0.1 0.1, 0.1 0.2, 0.2 0.2, 0.2, 0.1, 0.1 0.1))')))`` → 'LineString (-1 -1, 4 0, 4 2, 0 2, -1 -1)'
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/exterior_ring.*
+.. figure:: expression_help/img/exterior_ring.*
    :align: center
 
    The dashed line represents the exterior ring of the polygon
@@ -849,7 +849,7 @@ Returns an extruded version of the input (Multi-)Curve or (Multi-)Linestring geo
        * ``geom_to_wkt(extrude(geom_from_wkt('MultiLineString((1 2, 3 2), (4 3, 8 3))'), 1, 2))`` → 'MultiPolygon (((1 2, 3 2, 4 4, 2 4, 1 2)),((4 3, 8 3, 9 5, 5 5, 4 3)))'
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/extrude.*
+.. figure:: expression_help/img/extrude.*
    :align: center
 
    Generating a polygon by extruding a line with offset in x and y directions
@@ -1208,7 +1208,7 @@ Returns a specific interior ring from a polygon geometry, or NULL if the geometr
      - * ``geom_to_wkt(interior_ring_n(geom_from_wkt('POLYGON((-1 -1, 4 0, 4 2, 0 2, -1 -1),(-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1),(-1 -1, 4 0, 4 2, 0 2, -1 -1))'),1))`` → 'LineString (-0.1 -0.1, 0.4 0, 0.4 0.2, 0 0.2, -0.1 -0.1))'
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/interior_ring_n.*
+.. figure:: expression_help/img/interior_ring_n.*
    :align: center
 
    The dashed line represents a specific interior ring of the polygon
@@ -2814,7 +2814,7 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
        * ``rotate(@geometry, 45)`` → geometry rotated 45 degrees clockwise around the center of its bounding box
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/rotate.*
+.. figure:: expression_help/img/rotate.*
    :align: center
 
    Rotating features
@@ -3087,7 +3087,7 @@ Constructs square/rectangular waves along the boundary of a geometry.
      - * ``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves with wavelength 3 and amplitude 1 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/square_wave.*
+.. figure:: expression_help/img/square_wave.*
    :align: center
 
    Symbolizing features with square waves
@@ -3119,7 +3119,7 @@ Constructs randomized square/rectangular waves along the boundary of a geometry.
      - * ``square_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized square waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/square_wave_randomized.*
+.. figure:: expression_help/img/square_wave_randomized.*
    :align: center
 
    Symbolizing features with square randomized waves
@@ -3144,7 +3144,7 @@ Returns the first node from a geometry.
      - * ``geom_to_wkt(start_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → 'Point (4 0)'
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/start_point.*
+.. figure:: expression_help/img/start_point.*
    :align: center
 
    Starting point of a line feature
@@ -3317,7 +3317,7 @@ Constructs triangular waves along the boundary of a geometry.
      - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave.*
+.. figure:: expression_help/img/triangular_wave.*
    :align: center
 
    Symbolizing features with triangular waves
@@ -3349,7 +3349,7 @@ Constructs randomized triangular waves along the boundary of a geometry.
      - * ``triangular_wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized triangular waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/triangular_wave_randomized.*
+.. figure:: expression_help/img/triangular_wave_randomized.*
    :align: center
 
    Symbolizing features with triangular randomized waves
@@ -3400,7 +3400,7 @@ Constructs rounded (sine-like) waves along the boundary of a geometry.
      - * ``wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Sine-like waves with wavelength 3 and amplitude 1 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/wave.*
+.. figure:: expression_help/img/wave.*
    :align: center
 
    Symbolizing features with waves
@@ -3432,7 +3432,7 @@ Constructs randomized curved (sine-like) waves along the boundary of a geometry.
      - * ``wave_randomized(geom_from_wkt('LineString(0 0, 10 0)'), 2, 3, 0.1, 0.2)`` → Randomly sized curved waves with wavelengths between 2 and 3 and amplitudes between 0.1 and 0.2 along the linestring
 
 
-.. figure:: /docs/user_manual/expressions/expression_help/img/wave_randomized.*
+.. figure:: expression_help/img/wave_randomized.*
    :align: center
 
    Symbolizing features with randomized waves
