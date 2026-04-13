@@ -199,7 +199,7 @@ in the :guilabel:`General` tab of the :menuselection:`Project --> Properties…`
    The project's CRS is redefined using the layer's CRS. Map canvas extent,
    coordinates display are updated accordingly and all the layers in
    the project are on-the-fly translated to the new project CRS.
-   
+
 
 .. index:: CRS Selection
 .. _crs_selector:
@@ -212,7 +212,7 @@ Coordinate Reference System Selector
 .. figure:: img/crs_selector.png
    :align: center
 
-   CRS Selector 
+   CRS Selector
 
 This dialog helps you assign a Coordinate Reference System to a project or a
 layer, provided a set of projection databases. Items in the dialog are:
@@ -231,16 +231,16 @@ layer, provided a set of projection databases. Items in the dialog are:
   engine. This text is read-only and provided for informational purposes.
 
 
-If you want to remove a recently used CRS from the list that can be done in 
+If you want to remove a recently used CRS from the list that can be done in
 several ways:
 
-* Press |clearItem| :sup:`Remove from recently used CRS` button on the right 
+* Press |clearItem| :sup:`Remove from recently used CRS` button on the right
   side.
 * Press :kbd:`Del` after selecting CRS that you want to remove.
 * Right-click on used CRS and choose
-  |clearItem| :guilabel:`Remove selected CRS from recently used CRS` to remove 
+  |clearItem| :guilabel:`Remove selected CRS from recently used CRS` to remove
   selected CRS
-  or |clearConsole| :guilabel:`Clear all recently used CRS` to remove all used 
+  or |clearConsole| :guilabel:`Clear all recently used CRS` to remove all used
   CRS.
 
 The CRS selector also shows a rough preview of the geographic

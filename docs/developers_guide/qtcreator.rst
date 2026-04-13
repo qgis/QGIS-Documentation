@@ -134,7 +134,7 @@ directory.
 #. When the build is complete, you'll find the :file:`qgis` executable in
    the :file:`${HOME}/apps/bin` folder.
 
-.. 
+..
     All this section is commented since it conveys information I could not confirm
     or I'm not sure it's necessary since I get good results without.
     Review for devs are more than welcome to sort this out.
@@ -214,7 +214,7 @@ source file and click in the left column.
 .. image:: img/breakPoint.jpeg
 
 Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start
-Debugging` in the bottom left of the window. 
+Debugging` in the bottom left of the window.
 
 
 .. |build| image:: img/build.png

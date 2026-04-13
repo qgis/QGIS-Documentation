@@ -84,7 +84,7 @@ In other words, do not trust what you see in the canvas, but always have in mind
 that the original data will be used. That is not so important in this case,
 since we are just using one single layer at a time, but in an algorithm that
 needs several of them (such as a clip algorithm), layers that appear to match
-or overlay might be very far one from each other, since they might have different CRSs. 
+or overlay might be very far one from each other, since they might have different CRSs.
 
 Algorithms performs no reprojection (except in the reprojection algorithm
 that we will see next), so it is up to you to make sure that layers have

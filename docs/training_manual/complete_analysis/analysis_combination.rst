@@ -69,33 +69,33 @@ over 100m squared in size.
    :class: dropdown
 
    At the moment, your analysis should look something like this:
-   
+
    .. figure:: img/new_solution_example.png
       :align: center
-   
+
    Consider a circular area, continuous for 100 meters in all directions.
-   
+
    .. figure:: img/circle_100.png
       :align: center
-   
+
    If it is greater than 100 meters in radius, then subtracting 100 meters from
    its size (from all directions) will result in a part of it being left in the
    middle.
-   
+
    .. figure:: img/circle_with_remainder.png
       :align: center
-   
+
    Therefore, you can run an *interior buffer* of 100 meters on your existing
    ``suitable_terrain`` vector layer. In the output of the buffer
    function, whatever remains of the original layer will represent areas where
    there is suitable terrain for 100 meters beyond.
-   
+
    To demonstrate:
-   
+
    #. Go to :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` to open
       the Buffer(s) dialog.
    #. Set it up like this:
-   
+
       .. figure:: img/suitable_terrain_buffer.png
          :align: center
 
@@ -106,16 +106,16 @@ over 100m squared in size.
       :file:`suitable_terrain_continuous100m.shp`.
    #. If necessary, move the new layer above your original
       ``suitable_terrain`` layer.
-   
+
       Your results will look like something like this:
-   
+
       .. figure:: img/suitable_buffer_results.png
          :align: center
-   
+
    #. Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
       Research Tools --> Select by location`).
    #. Set up like this:
-   
+
       .. figure:: img/select_by_location.png
          :align: center
 
@@ -123,15 +123,15 @@ over 100m squared in size.
       ``suitable_terrain_continuous100m.shp``.
 
       This is the result:
-   
+
       .. figure:: img/buffer_select_result.png
          :align: center
-   
+
       The yellow buildings are selected. Although some of the buildings fall
       partly outside the new ``suitable_terrain_continuous100m`` layer,
       they lie well within the original ``suitable_terrain`` layer and
       therefore meet all of our requirements.
-   
+
    #. Save the selection under :file:`exercise_data/residential_development/` as
       :file:`final_answer.shp`.
 

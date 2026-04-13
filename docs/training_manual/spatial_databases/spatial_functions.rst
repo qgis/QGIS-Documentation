@@ -35,7 +35,7 @@ commands.
 .. code-block:: bash
 
   $ sudo apt install wget ca-certificates
-  $ sudo lsb_release -a 
+  $ sudo lsb_release -a
   $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
   $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
   $ sudo apt-get update
@@ -45,7 +45,7 @@ commands.
 Installing under Windows
 -------------------------------------------------------------------------------
 
-Installing on Windows can be done from binary packages using a normal Windows installation dialogs. 
+Installing on Windows can be done from binary packages using a normal Windows installation dialogs.
 
 First Visit `the download page <https://www.postgresql.org/download/>`_. Then follow `this guide
 <https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_.

@@ -97,8 +97,8 @@ Provided information are:
 * and related to its geometry (spatial extent, CRS...) or its attributes (number
   of fields, characteristics of each...).
 
-.. note:: Layers from a PostgreSQL provider include additional information in their Layer Properties 
-   under the Information tab. Users can view privileges for the connected database user, 
+.. note:: Layers from a PostgreSQL provider include additional information in their Layer Properties
+   under the Information tab. Users can view privileges for the connected database user,
    an estimate of the number of rows, and details about spatial indexes associated with the table.
 
 .. _vectorsourcemenu:
@@ -541,7 +541,7 @@ available modes are:
   from 1 to 16 and four classes, each class will have a size of four).
 * Fixed Interval: each class will have a fixed range of values (e.g. with the
   values from 1 to 16 and an interval size of 4, the classes will be 1-4,
-  5-8, 9-12 and 13-16).  
+  5-8, 9-12 and 13-16).
 * Logarithmic scale: suitable for data with a wide range of values.
   Narrow classes for low values and wide classes for large values (e.g. for
   decimal numbers with range [0..100] and two classes, the first class will
@@ -1146,9 +1146,9 @@ updated as you set the parameters.
 Animation settings
 ..................
 
-To allow any symbol to become an :ref:`animated symbol <animated_marker>`, 
-you can utilize :guilabel:`Animation settings` panel. In this panel, 
-you can enable animation for the symbol and set a specific frame rate for 
+To allow any symbol to become an :ref:`animated symbol <animated_marker>`,
+you can utilize :guilabel:`Animation settings` panel. In this panel,
+you can enable animation for the symbol and set a specific frame rate for
 the symbol's redrawing.
 
 #. Start by going to the top symbol level and select :guilabel:`Advanced`
@@ -1157,11 +1157,11 @@ the symbol's redrawing.
 #. Check |checkbox| :guilabel:`Is Animated` to enable animation for the symbol
 #. Configure the :guilabel:`Frame rate`, i.e. how fast the animation would
    be played
-#. You can now use ``@symbol_frame`` variable in any sub-symbol data defined 
-   property in order to animate that property. 
+#. You can now use ``@symbol_frame`` variable in any sub-symbol data defined
+   property in order to animate that property.
 
-For example, setting the symbol's rotation to data 
-defined expression ``@symbol_frame % 360`` 
+For example, setting the symbol's rotation to data
+defined expression ``@symbol_frame % 360``
 will cause the symbol to rotate over time, with rotation speed dictated by
 the symbol's frame rate:
 
@@ -2453,7 +2453,7 @@ directly linked to a particular field (like the HTML/QML widgets or the
         :guilabel:`Group box in container` (a collapsible group box inside a tab or another group)
         or a :guilabel:`Row` (a container type that allows you to arrange your widgets in a horizontal row,
         automatically determining the number of columns based on the number of widgets),
-      * the :guilabel:`Within`: this optional feature allows you to select an existing container 
+      * the :guilabel:`Within`: this optional feature allows you to select an existing container
         in which the new container (:guilabel:`Group box in container` or :guilabel:`Row`) will be embedded.
       * and the :guilabel:`Number of columns` the embedded fields should be distributed over
 
@@ -2819,9 +2819,9 @@ These policies apply :guilabel:`When adding features`:
 
 Available options are:
 
-* :guilabel:`Use Default Value`:  
+* :guilabel:`Use Default Value`:
   The field value is initialized using its configured
-  :ref:`default value <default_values>`.  
+  :ref:`default value <default_values>`.
   If no default value is defined, the field starts unset.
 
 * :guilabel:`Reuse Last Entered Value`:
@@ -2889,7 +2889,7 @@ with the field type. The available widgets are:
    relative paths. This increases portability of a :file:`.qgs` project with
    multimedia information attached.
 
-* |widgetGeometry| **Geometry**: Compatible with the *Geometry* field type. For example, PostgreSQL and Memory layers 
+* |widgetGeometry| **Geometry**: Compatible with the *Geometry* field type. For example, PostgreSQL and Memory layers
   can contain multiple geometry fields. QGIS uses the first geometry column as the layer geometry.
   Applying the Geometry widget to additional geometry fields allows lossless use of the data in the attribute form:
 
@@ -2944,7 +2944,7 @@ with the field type. The available widgets are:
   values manually or load them from a layer or a CSV file.
   The description is used as the representable value,
   meaning it will be shown in classification renderers.
-  
+
   .. note::
 
    Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined **coded Field Domains**
@@ -3340,15 +3340,15 @@ the value of the selected field in the identify results or attribute table.
 Duplicating Actions
 -------------------
 
-QGIS allows you to duplicate existing actions. To duplicate an attribute action, 
-open the vector :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab. 
+QGIS allows you to duplicate existing actions. To duplicate an attribute action,
+open the vector :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab.
 In the :guilabel:`Actions` tab, click the |duplicateLayout| :sup:`Duplicate an action`
-to open the :guilabel:`Duplicate Action` dialog. You must have selected at least one existing action 
+to open the :guilabel:`Duplicate Action` dialog. You must have selected at least one existing action
 in order to create a duplicate.
 
-In the dialogue that appears, make any changes that are necessary. See :ref:`adding_actions` 
-for further information. Once finished, press :guilabel:`OK` to create a duplicate of the action with 
-any changes that you made. If you did not edit the description, or if you changed it to be 
+In the dialogue that appears, make any changes that are necessary. See :ref:`adding_actions`
+for further information. Once finished, press :guilabel:`OK` to create a duplicate of the action with
+any changes that you made. If you did not edit the description, or if you changed it to be
 identical to the description of any other existing action, "_1" will be added to the end of it.
 
 .. index::
@@ -3557,9 +3557,9 @@ feature identification:
     Applicable when |checkbox| :guilabel:`Enable Map Tips` is active
     and no HTML code is set.
 * :guilabel:`Sort Order`: an optional field or
-  :ref:`expression <vector_expressions>` that controls the default ordering 
-  of features when displayed in the :ref:`attribute table views <attribute_table_view>` and :ref:`relation 
-  editor widgets <edit_widgets>`. You can set the sort direction 
+  :ref:`expression <vector_expressions>` that controls the default ordering
+  of features when displayed in the :ref:`attribute table views <attribute_table_view>` and :ref:`relation
+  editor widgets <edit_widgets>`. You can set the sort direction
   using the |arrowDown| :guilabel:`Sort direction` button.
 * |checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips for the layer
   if enabled, provides a complex and full HTML text editor for map tips,
@@ -3567,8 +3567,8 @@ feature identification:
   You can check the result of your code sample in the :guilabel:`Preview Map Tips` frame
   (also convenient for previewing the :guilabel:`Display name` output).
   Additionally, you can select and edit existing expressions
-  using the :guilabel:`Insert/Edit Expression` button. 
-  
+  using the :guilabel:`Insert/Edit Expression` button.
+
   .. note:: Understanding the :guilabel:`Insert/Edit Expression` button behavior
 
    If you select some text within an expression (between "[%" and "%]"),
@@ -3794,7 +3794,7 @@ Specifically, you can set:
   If your layer CRS is horizontal (2D), then you can select a specific vertical CRS
   by clicking on the |setProjection| :sup:`Select CRS`.
   Vertical reference systems are supported for vector layers by:
-   
+
    * :ref:`Elevation profiles <label_elevation_profile_view>`
    * :ref:`Identify Tool Results <identify_results_dialog>`
    * :ref:`3D map views <label_3dmapview>`

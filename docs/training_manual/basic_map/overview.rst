@@ -162,7 +162,7 @@ Try to find each of these tools on your screen. What is their purpose?
 What's Next?
 -------------------------------------------------------------------------------
 
-Now that you are familiar with the basics of the QGIS interface, in the next 
+Now that you are familiar with the basics of the QGIS interface, in the next
 lesson we will see how to load some common data types.
 
 

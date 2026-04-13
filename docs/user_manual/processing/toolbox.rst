@@ -43,7 +43,7 @@ In the upper part of the toolbox dialog, you will find a set of tools to:
 * toggle the toolbox to the :ref:`in-place modification mode <processing_inplace_edit>`
   using the |processSelected| :sup:`Edit Features In-Place` button: only
   the algorithms that are suitable to be executed on the active layer without
-  outputting a new layer are displayed; 
+  outputting a new layer are displayed;
 * open the |options| :sup:`Options` dialog.
 
 Below this toolbar is a |search| :guilabel:`Search...` box to help you easily find
@@ -139,7 +139,7 @@ The parameters found in the table can be of one of the following types.
 
    Besides selecting from the drop-down menu or browsing sources,
    you can also drag and drop a layer from the :guilabel:`Layers` or :guilabel:`Browser` panel,
-   or from the Operating System file explorer directly into the combobox.  
+   or from the Operating System file explorer directly into the combobox.
   .. note::
 
      By default, the layer widget shows the CRS of the layer along with its name.

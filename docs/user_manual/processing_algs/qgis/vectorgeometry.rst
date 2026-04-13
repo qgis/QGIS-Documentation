@@ -1097,21 +1097,21 @@ Types of error messages and their meanings
 
        .. figure:: img/geos_rep_point.png
           :align: center
-          
+
      - |taskCancel| *Repeated point*
      - |taskCancel| *Line a contains x duplicate node(s) at b*
    * - **Segments of a line intersect each other**
 
        .. figure:: img/qgis_seg_line_int.png
           :align: center
-          
+
      -
      - |taskCancel| *Segments a and b of line c intersect at d*
    * - **Polygon geometry touches itself and generates a ring**
 
        .. figure:: img/geos_ring_inter.png
           :align: center
-          
+
      - |taskCancel| *Ring self-intersection*
      - |taskCancel| *Ring self-intersection*
    * - **Two rings (exterior or interior) of a
@@ -1119,28 +1119,28 @@ Types of error messages and their meanings
 
        .. figure:: img/geos_dupl_rings.png
           :align: center
-          
+
      - |taskCancel| *Duplicate rings*
      -
    * - **Geometry touches itself**
 
        .. figure:: img/geos_self_inter.png
           :align: center
-          
+
      - |taskCancel| *Self-intersection*
      -
    * - **A polygon geometry is on top of another polygon geometry**
 
        .. figure:: img/geos_nest_shell.png
           :align: center
-          
+
      - |taskCancel| *Nested shell*
      -
    * - **Part of a MultiPolygon geometry is within a hole of a MultiPolygon geometry**
 
        .. figure:: img/qgis_poliinside_.png
           :align: center
-          
+
      -
      - |taskCancel| *Polygon a lies inside polygon b*
    * - Point geometry does not have a proper coordinate pair.
@@ -2919,14 +2919,14 @@ Outputs
      - The output (point) vector layer containing the vertices from
        the input layer geometries.
        Other than the input attributes, the output layer also contains the following fields:
-       
+
        - ``vertex_index``: the index of the vertex within the geometry. The first vertex is indexed as 0.
        - ``vertex_part``: the part number of the geometry that the vertex belongs to. For single-part geometries, this is always 0.
          For multi-part geometries (e.g. MultiPolygon or MultiLine), this indicates which part the vertex comes from.
        - ``vertex_part_ring``: for polygon geometries, this indicates whether the vertex belongs to the outer ring (0) or one of the inner rings (1, 2, ...).
        - ``vertex_part_index``: the index of the vertex in its specific ring (outer or inner).
        - ``distance``: the distance from the previous vertex.
-       - ``angle``: returns approximate angle at a vertex. 
+       - ``angle``: returns approximate angle at a vertex.
          Usually the average angle between adjacent segments,
          and can be pictured as the orientation of a line following
          the curvature of the geometry at the specified vertex.
@@ -4203,15 +4203,15 @@ Outputs
    * - **Bounding geometry**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output (bounding) polygon vector layer. 
-       It has the fields from the input layer  
+     - The output (bounding) polygon vector layer.
+       It has the fields from the input layer
        and, depending on the selected parameter ``TYPE``,
        the output also has the attributes:
 
        * ``width``, ``height``, ``area`` and ``perimeter`` of the Envelope (Bounding Box)
        * ``width``, ``height``, ``area``, ``angle`` and ``perimeter`` of the Minimum Oriented Rectangle
        * ``radius`` and ``area`` of the Minimum Enclosing Circle
-       * ``area`` and ``perimeter`` of the Convex Hull 
+       * ``area`` and ``perimeter`` of the Convex Hull
 
 Python code
 ...........
@@ -7595,10 +7595,10 @@ Parameters
        Optional
      - ``DIRECTION``
      - [enumeration]
-  
+
        Default: ``0``
      - Orientation direction for transects:
-       
+
        * 0 --- Left to Right
        * 1 --- Right to Left
    * - **Transect**
@@ -7630,7 +7630,7 @@ Outputs
      - [vector: line]
      - Output line layer.
        The output layer contains the following fields:
-  
+
        - ``TR_FID``: ID of the original feature
        - ``TR_ID``: ID of the transect. Each transect have a unique ID
        - ``TR_SEGMENT``: ID of the segment of the linestring
@@ -7688,30 +7688,30 @@ Parameters
    * - **Fixed sampling interval**
      - ``INTERVAL``
      - [numeric: double]
-  
+
        Default: ``10.0``
      - Distance between transects along the line
    * - **Length of the transect**
      - ``LENGTH``
      - [numeric: double] |dataDefine|
-  
+
        Default: ``5.0``
      - Total length of each transect line
    * - **Angle from original line at the vertices**
      - ``ANGLE``
      - [numeric: double] |dataDefine|
-  
+
        Default: ``90.0``
      - Angle in degrees from the original line. A value of 90° creates
        perpendicular transects
    * - **Side to create the transects**
      - ``SIDE``
      - [enumeration]
-  
+
        Default: ``0``
      - Which side of the line to create transects on (relative to the line
        digitizing direction):
-       
+
        * 0 --- Left
        * 1 --- Right
        * 2 --- Both
@@ -7719,16 +7719,16 @@ Parameters
        Optional
      - ``DIRECTION``
      - [enumeration]
-  
+
        Default: ``0``
      - Orientation direction for transects:
-       
+
        * 0 --- Left to Right
        * 1 --- Right to Left
    * - **Transect**
      - ``OUTPUT``
      - [vector: line]
-  
+
        Default: ``[Create temporary layer]``
      - Specification of the output line layer.
        :ref:`One of <output_parameter_widget>`:
@@ -7754,7 +7754,7 @@ Outputs
      - [vector: line]
      - Output line layer containing the generated transects.
        The output layer contains the following fields:
-  
+
        - ``TR_FID``: ID of the original feature
        - ``TR_ID``: ID of the transect. Each transect have a unique ID
        - ``TR_SEGMENT``: ID of the segment of the linestring

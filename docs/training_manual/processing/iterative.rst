@@ -23,7 +23,7 @@ You can run it using the watersheds layer and the DEM as input, and you will get
 
 As you can see, the area covered by all the watershed polygons is used.
 
-You can have the DEM clipped with just a single watershed by selecting the desired watershed and then running the algorithm as we did before. 
+You can have the DEM clipped with just a single watershed by selecting the desired watershed and then running the algorithm as we did before.
 
 .. figure:: img/iterative/selection.png
 

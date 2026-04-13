@@ -35,10 +35,10 @@ The main steps for creating a plugin are:
 Getting started
 ===============
 
-Before starting to write a new plugin, have a look at the 
+Before starting to write a new plugin, have a look at the
 :ref:`official_pyqgis_repository`.
-The source code of existing plugins can help you to learn more about programming. 
-You may also find that a similar plugin already exists and you may be able to 
+The source code of existing plugins can help you to learn more about programming.
+You may also find that a similar plugin already exists and you may be able to
 extend it or at least build on it to develop your own.
 
 .. _plugin_files_architecture:
@@ -53,15 +53,15 @@ There are two plugin template resources that can help get you started:
 * For educational purposes or whenever a minimalist approach is desired, the
   `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
   provides the basic files (skeleton) necessary to create a valid QGIS Python plugin.
-* For a more fully feature plugin template, the 
-  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create 
-  templates for multiple different plugin types, including features such as 
-  localization (translation) and testing. 
+* For a more fully feature plugin template, the
+  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create
+  templates for multiple different plugin types, including features such as
+  localization (translation) and testing.
 
 A typical plugin directory includes the following files:
 
 * :file:`metadata.txt` - *required* - Contains general info, version, name and some other
-  metadata used by plugins website and plugin infrastructure.  
+  metadata used by plugins website and plugin infrastructure.
 * :file:`__init__.py` - *required* - The starting point of the plugin. It has to have the
   :func:`classFactory` method and may have any other initialisation code.
 * :file:`mainPlugin.py` - *core code* - The main working code of the plugin. Contains all
@@ -70,10 +70,10 @@ A typical plugin directory includes the following files:
 * :file:`form.py` - *compiled GUI* - The translation of the form.ui described above to Python.
 * :file:`resources.qrc` - *optional* - An .xml document created by Qt Designer. Contains
   relative paths to resources used in the GUI forms.
-* :file:`resources.py` - *compiled resources, optional* - The translation of the .qrc file 
+* :file:`resources.py` - *compiled resources, optional* - The translation of the .qrc file
   described above to Python.
-* :file:`LICENSE` - *required* if plugin is to be published or updated in the 
-  QGIS Plugins Directory, otherwise *optional*. File should be a plain text file 
+* :file:`LICENSE` - *required* if plugin is to be published or updated in the
+  QGIS Plugins Directory, otherwise *optional*. File should be a plain text file
   with no file extension in the filename.
 
 .. warning::
@@ -344,7 +344,7 @@ Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a name
 specific to your plugin so that it can be customized.
 
 While help and about actions can also be added to your custom menu,
-a convenient place to make them available is in the 
+a convenient place to make them available is in the
 QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
 :meth:`pluginHelpMenu() <qgis.gui.QgisInterface.pluginHelpMenu>` method.
 
@@ -361,7 +361,7 @@ QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
         self.iface.pluginHelpMenu().addAction(self.help_action)
 
         self.help_action.triggered.connect(self.show_help)
-        
+
     @staticmethod
     def show_help():
         """ Open the online help. """
@@ -574,7 +574,7 @@ or using continuous integration
 like `GitHub workflows`_ or `Gitlab-CI`_
 as well as `Transifex`_ for translation.
 
-It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions. 
+It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions.
 
 Accessing Plugins
 -----------------
@@ -598,7 +598,7 @@ Resource File
 -------------
 
 Some plugins use resource files, for example :file:`resources.qrc` which define
-resources for the GUI, such as icons:     
+resources for the GUI, such as icons:
 
 .. code-block:: xml
 

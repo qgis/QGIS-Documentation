@@ -148,7 +148,7 @@ Degenerate polygons are errors.
 
 .. note::
 
-   This algorithm detects invalid polygon geometries (degenerate polygons).  
+   This algorithm detects invalid polygon geometries (degenerate polygons).
    To ensure these invalid features are not filtered out before processing, open
    |options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set
    :guilabel:`Invalid feature filtering` to ``Do not Filter (Better Performance)``.
@@ -1835,7 +1835,7 @@ Basic parameters
    * - **Maximum area (map units squared)**
      - ``MAX_AREA``
      - [numeric: double]
-  
+
        Default: 0.0
      - Maximum area of a polygon to be checked (in map units).
        Any polygon with an area above this threshold is skipped.

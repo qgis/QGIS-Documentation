@@ -204,7 +204,7 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
        [] marks optional arguments
    * - Arguments
      - * **datetime** - date, time or datetime value
-       * **format** - String template used to format the string. 
+       * **format** - String template used to format the string.
 
          .. csv-table::
             :header-rows: 1
@@ -894,4 +894,3 @@ Returns a string wrapped to a maximum/minimum number of characters.
 
 
 .. end_wordwrap_section
-

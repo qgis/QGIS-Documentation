@@ -14,7 +14,7 @@ print layout.
    background color of the shapes bounding frame (set to transparent by default).
 
 
-.. index:: 
+.. index::
    single: Layout item; Basic shape
 .. _layout_basic_shape_item:
 
@@ -122,7 +122,7 @@ SVG may require some tags following this :ref:`instruction <parameterized_svg>`.
 
    Polyline Node Shape Item Properties Panel
 
-.. index:: 
+.. index::
    single: Layout item; Arrow
 .. _layout_arrow_item:
 

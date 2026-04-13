@@ -124,12 +124,12 @@ Symbology Properties
 
    3D Tile Layer Symbology
 
-By default, the layer is styled using texture, but you can change it 
-to see the wireframe mesh behind the scene by choosing :guilabel:`Wireframe` 
-in the drop-down menu. You can also, change the mesh fill and line symbols 
-similar to the vector polygons. 
-Checking |checkbox| :guilabel:`Use texture colors` will render each mesh element 
-with the average value of the full texture. 
+By default, the layer is styled using texture, but you can change it
+to see the wireframe mesh behind the scene by choosing :guilabel:`Wireframe`
+in the drop-down menu. You can also, change the mesh fill and line symbols
+similar to the vector polygons.
+Checking |checkbox| :guilabel:`Use texture colors` will render each mesh element
+with the average value of the full texture.
 This is a good option to try when dealing with a large dataset and
 want to get a quick overview of the data.
 
@@ -138,23 +138,23 @@ want to get a quick overview of the data.
 .. figure:: img/3d_tiles_textured_and_wireframe.png
    :align: center
 
-   3D Tiles - textured and wireframe 
+   3D Tiles - textured and wireframe
 
-From the :guilabel:`Symbology` tab, you can also set some options that 
+From the :guilabel:`Symbology` tab, you can also set some options that
 invariably act on all features of the layer:
 
-* :guilabel:`Maximum error`: This parameter determines the level of detail 
-  displayed in the 3D model. Similar to point clouds, 3D tiles 
+* :guilabel:`Maximum error`: This parameter determines the level of detail
+  displayed in the 3D model. Similar to point clouds, 3D tiles
   often contain more information than necessary for visual representation.
-  By adjusting this setting, you control the balance between display density 
+  By adjusting this setting, you control the balance between display density
   and rendering speed. A larger value (e.g., 5 mm) may introduce noticeable
   gaps between elements, while a smaller value (e.g., 0.1 mm) could lead to
   the rendering of an excessive number of details, potentially slowing down
   the rendering process. Different units can be selected to tailor the setting
   to your specific needs.
-* :guilabel:`Opacity`: Adjusts the visibility of the underlying layer on the 
-  map canvas using this tool. Use slider to tailor the visibility 
-  of your scene layer according to your preferences. Alternatively, specify the 
+* :guilabel:`Opacity`: Adjusts the visibility of the underlying layer on the
+  map canvas using this tool. Use slider to tailor the visibility
+  of your scene layer according to your preferences. Alternatively, specify the
   exact percentage of visibility through the menu next to the slider.
 * :guilabel:`Blending mode`: You can achieve special rendering effects with these tools
   that you may previously only know from graphics programs.
@@ -167,11 +167,11 @@ invariably act on all features of the layer:
 ------------------
 
 * :guilabel:`Maximum screen space error`: Determines the threshold for swapping
-  terrain tiles with more detailed ones (and vice versa) - i.e. how soon the 3D 
-  view will use higher quality tiles. Lower numbers mean more details in the 
+  terrain tiles with more detailed ones (and vice versa) - i.e. how soon the 3D
+  view will use higher quality tiles. Lower numbers mean more details in the
   scene at the expenses of increased rendering complexity.
 
-* |unchecked| :guilabel:`Show bounding boxes`: Shows 3D bounding boxes of the 
+* |unchecked| :guilabel:`Show bounding boxes`: Shows 3D bounding boxes of the
   terrain tiles (useful for troubleshooting terrain issues).
 
 To view the data you can open |new3DMap| :guilabel:`New 3D map view`.

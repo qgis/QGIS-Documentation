@@ -301,7 +301,7 @@ Returns a specific component from a color string or color object, e.g., the red 
      - * **color** - a color string or a color object
        * **component** - a string corresponding to the color component to return. Valid options are:
 
-         
+
 
          * red: RGB red component (0-255)
          * green: RGB green component (0-255)
@@ -615,7 +615,7 @@ Sets a specific color component for a color string or a color object, e.g., the 
      - * **color** - a color string or a color object
        * **component** - a string corresponding to the color component to set. Valid options are:
 
-         
+
 
          * red: RGB red component (0-255)
          * green: RGB green component (0-255)
@@ -640,4 +640,3 @@ Sets a specific color component for a color string or a color object, e.g., the 
 
 
 .. end_set_color_part_section
-

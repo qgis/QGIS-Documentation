@@ -36,7 +36,7 @@
     existing ones on Transifex.
 
     For the time being, localized translations are only available for
-    the Long Term releases branch, but should nevertheless be suitable to learn how to 
+    the Long Term releases branch, but should nevertheless be suitable to learn how to
     use QGIS.
 
 Welcome to the official documentation of `QGIS <https://qgis.org>`_,

@@ -249,7 +249,7 @@ You then need to create connections to the server you are targeting:
 Once the new WMS/WMTS server connection has been created, it will be preserved for
 future QGIS sessions.
 Note that it is also possible to :guilabel:`Load` the connection parameters
-from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file.
 
 .. index:: Proxy, Proxy server
 
@@ -709,7 +709,7 @@ To be able to load a WCS Layer, first create a connection to the WCS server:
 
 Note that any proxy settings you may have set in your preferences are also recognized.
 Also note that it is possible to :guilabel:`Load` the connection parameters
-from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file.
 
 Now we are ready to load WCS layers from the above connection.
 
@@ -729,10 +729,10 @@ QGIS also supports background download and progressive rendering,
 on-disk caching of downloaded features and version autodetection.
 
 Layers of servers implementing `OGC API - Features - Part 4: Create, Replace,
-Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can be turned into 
-editing mode to allow creating, modifying and deleting features. Note that each 
-created/modified/deleted feature requires a dedicated network request, so 
-performance might suffer in case of simultaneous modification of hundreds or 
+Update and Delete <https://docs.ogc.org/DRAFTS/20-002.html>`_ can be turned into
+editing mode to allow creating, modifying and deleting features. Note that each
+created/modified/deleted feature requires a dedicated network request, so
+performance might suffer in case of simultaneous modification of hundreds or
 more features at a time.
 
 In general, adding a WFS layer is very similar to the procedure used with WMS.
@@ -822,7 +822,7 @@ To be able to load a WFS Layer, first create a connection to the WFS server:
 
 Note that any proxy settings you may have set in your preferences are also recognized.
 Also note that it is possible to :guilabel:`Load` the connection parameters
-from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file. 
+from a :file:`.XML` file or :guilabel:`Save` them to a :file:`.XML` file.
 
 Now we are ready to load WFS layers from the above connection.
 
@@ -862,7 +862,7 @@ features and view the attribute table.
 .. index:: SensorThings
 .. _sensor_things:
 
-SensorThings 
+SensorThings
 ============
 
 QGIS supports connections to `OGC SensorThings API <https://www.ogc.org/standards/sensorthings/>`_,
@@ -937,7 +937,7 @@ To load an entity, there are :guilabel:`Layer Settings` that can be configured:
 Use :guilabel:`Filter` to build a query to filter the data, using SensorThings filter syntax.
 
 .. note:: The above settings and filtering options are also available
-  for update in the layer properties dialog, :guilabel:`Source` tab, once loaded in QGIS. 
+  for update in the layer properties dialog, :guilabel:`Source` tab, once loaded in QGIS.
 
 Press :guilabel:`Add` to load the selected entity type as layer in QGIS.
 
@@ -1021,8 +1021,8 @@ STAC connections can be added in QGIS using either the :guilabel:`Browser panel`
   In the dialog that appears, enter a :guilabel:`Name` for the connection, the :guilabel:`URL` of the STAC catalog
   and optionally fill in :guilabel:`Authentication` credentials and a :guilabel:`Referer`.
   Then click :guilabel:`OK`.
- 
-  Use this method for browsing static STAC catalogs that do not support search or filtering. 
+
+  Use this method for browsing static STAC catalogs that do not support search or filtering.
 
 * **Data Source Manager:**
   For STAC APIs you can use |dataSourceManager| :guilabel:`Data Source Manager` dialog.

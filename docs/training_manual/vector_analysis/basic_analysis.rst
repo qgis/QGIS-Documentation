@@ -158,7 +158,7 @@ Feel free to choose the best workflow for yourself.
 
 #. Repeat this process for each layer, creating a new layer in the
    :file:`vector_analysis.gpkg` GeoPackage file with ``_34S`` appended to the original name.
-   
+
    On macOS, press the :guilabel:`Replace` button in the dialog that pops up
    to allow QGIS to overwrite the existing GeoPackage.
 
@@ -219,7 +219,7 @@ QGIS allows you to calculate distances between any vector object.
 #. By default, *Processing* creates temporary layers and adds them to
    the :guilabel:`Layers` panel.
    You can also append the result to the GeoPackage database by:
-   
+
    #. Clicking on the :guilabel:`...` button and choose
       :guilabel:`Save to GeoPackage...`
    #. Naming the new layer ``roads_buffer_50m``
@@ -287,8 +287,8 @@ Save the new layer in the :file:`vector_analysis.gpkg` file as ``schools_buffer_
 
    The :guilabel:`Buffer distance` is ``1`` kilometer.
 
-   * The :guilabel:`Segments to approximate` value is set to ``20``. 
-     This is optional, but it's recommended, because it makes the output buffers 
+   * The :guilabel:`Segments to approximate` value is set to ``20``.
+     This is optional, but it's recommended, because it makes the output buffers
      look smoother. Compare this:
 
      .. figure:: img/schools_buffer_5.png

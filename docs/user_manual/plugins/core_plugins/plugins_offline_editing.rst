@@ -46,7 +46,7 @@ To use the plugin:
 #. You can check |checkbox| :guilabel:`Only synchronize selected features if a
    selection is present` allowing to only save and work on a
    subset. It can be invaluable in case of large layers.
-  
+
    This is all!
 #. Save your project and bring it on the field.
 #. Edit the layers offline.

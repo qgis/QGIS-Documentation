@@ -1064,7 +1064,7 @@ def my_form_open(dialog, layer, feature):
             <widgets></widgets>
             <previewExpression>COALESCE( "NAME_2", '&lt;NULL&gt;' )</previewExpression>
             <mapTip>&lt;b&gt; Name of feature: &lt;/b&gt; [% "NAME_2" %] &lt;br&gt;
-&lt;b&gt; Is this place a Borough? &lt;/b&gt; &lt;br&gt; 
+&lt;b&gt; Is this place a Borough? &lt;/b&gt; &lt;br&gt;
 [% CASE WHEN "TYPE_2"='Borough'THEN'Yes'ELSE'No. It is a '|| "TYPE_2"END%]</mapTip>
             <layerGeometryType>2</layerGeometryType>
           </qgis>
@@ -1334,7 +1334,7 @@ def my_form_open(dialog, layer, feature):
       <widgets></widgets>
       <previewExpression>COALESCE( "NAME_2", '&lt;NULL&gt;' )</previewExpression>
       <mapTip>&lt;b&gt; Name of feature: &lt;/b&gt; [% "NAME_2" %] &lt;br&gt;
-&lt;b&gt; Is this place a Borough? &lt;/b&gt; &lt;br&gt; 
+&lt;b&gt; Is this place a Borough? &lt;/b&gt; &lt;br&gt;
 [% CASE WHEN "TYPE_2"='Borough'THEN'Yes'ELSE'No. It is a '|| "TYPE_2"END%]</mapTip>
     </maplayer>
   </projectlayers>

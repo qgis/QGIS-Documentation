@@ -46,7 +46,7 @@ Parameters
    * - **Assigned CRS**
      - ``CRS``
      - [crs]
-       
+
        Default: ``EPSG:4326 - WGS84``
      - Select the new CRS to assign to the vector layer
    * - **Assigned CRS**
@@ -101,7 +101,7 @@ The output layer will have a point geometry reflecting the geocoded location
 as well as a number of attributes associated to the geocoded location.
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of point features
 
 .. note:: This algorithm is compliant with the `usage policy
@@ -193,11 +193,11 @@ Parameters
    * - **Bookmark destination**
      - ``DESTINATION``
      - [enumeration]
-       
+
        Default: 0
      - Select the destination for the bookmarks.
        One of:
-       
+
        * 0 --- Project bookmarks
        * 1 --- User bookmarks
    * - **Name field**
@@ -226,7 +226,7 @@ Outputs
    * - **Count of bookmarks added**
      - ``COUNT``
      - [numeric: integer]
-     - 
+     -
 
 Python code
 ...........
@@ -262,17 +262,17 @@ Parameters
    * - **Bookmark source**
      - ``SOURCE``
      - [enumeration] [list]
-       
+
        Default: [0,1]
      - Select the source(s) of the bookmarks.
        One or more of:
-       
+
        * 0 --- Project bookmarks
        * 1 --- User bookmarks
    * - **Output CRS**
      - ``CRS``
      - [crs]
-       
+
        Default: ``EPSG:4326 - WGS 84``
      - The CRS of the output layer
    * - **Output**
@@ -481,7 +481,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - 
+   * -
      - ``INPUT``
      - [same as input]
      - The input vector layer with the defined projection
@@ -730,18 +730,18 @@ Parameters
      - [vector: geometry]
      - The revised or modified vector layer
    * - **Attributes to consider for match**
-   
+
        Optional
      - ``COMPARE_ATTRIBUTES``
      - [tablefield: any] [list]
      - Attributes to consider for match. By default, all attributes
-       are compared.  
+       are compared.
    * - **Geometry comparison behavior**
-   
+
        Optional
      - ``MATCH_TYPE``
      - [enumeration]
-       
+
        Default: 1
      - Defines the criteria for comparison. Options:
 
@@ -801,7 +801,7 @@ Outputs
    * - **Unchanged features**
      - ``UNCHANGED``
      - [vector: same as Original layer]
-     - Vector layer containing the unchanged features. 
+     - Vector layer containing the unchanged features.
    * - **Added features**
      - ``ADDED``
      - [vector: same as Original layer]
@@ -907,16 +907,16 @@ Python code
 
 Execute SQL
 -----------
-Runs a simple or complex query based only on SELECT with ``SQL`` syntax 
+Runs a simple or complex query based only on SELECT with ``SQL`` syntax
 on the source layer.
 
 Input datasources are identified with ``input1``, ``input2``... ``inputN`` and
 a simple query will look like ``SELECT * FROM input1``.
 
-Beside a simple query, you can add expressions or variables within the 
+Beside a simple query, you can add expressions or variables within the
 ``SQL query`` parameter itself. This is particulary useful if this algorithm is
 executed within a Processing model and you want to use a model input as a
-parameter of the query. An example of a query will then be ``SELECT * FROM 
+parameter of the query. An example of a query will then be ``SELECT * FROM
 [% @table %]`` where ``@table`` is the variable that identifies the model input.
 
 The result of the query will be added as a new layer.
@@ -1076,11 +1076,11 @@ Parameters
 
        Default: 0
      - Type of symbology to apply to output layers. You can choose between:
-       
+
        * 0 --- No Symbology
        * 1 --- Feature Symbology
        * 2 --- Symbol Layer Symbology
-       
+
    * - **Symbology scale**
      - ``SYMBOLOGY_SCALE``
      - [scale]
@@ -1388,8 +1388,8 @@ Flatten relationship
 --------------------
 
 Flattens a :ref:`relationship <vector_relations>` for a vector layer,
-exporting a single layer containing one parent feature per 
-related child feature. This master feature contains all the 
+exporting a single layer containing one parent feature per
+related child feature. This master feature contains all the
 attributes for the related features.
 This allows to have the relation as a plain table that can be e.g. exported to CSV.
 
@@ -1446,7 +1446,7 @@ Outputs
    * - **Flattened layer**
      - ``OUTPUT``
      - [same as input]
-     - A layer containing master features 
+     - A layer containing master features
        with all the attributes for the related features
 
 Python code
@@ -1457,7 +1457,7 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-  
+
 
 .. _qgisjoinattributestable:
 
@@ -1585,7 +1585,7 @@ Outputs
    * - **Number of joined features from input table**
      - ``JOINED_COUNT``
      - [numeric: integer]
-     - 
+     -
    * - **Unjoinable features from first layer**
 
        Optional
@@ -1603,7 +1603,7 @@ Outputs
        Optional
      - ``UNJOINABLE_COUNT``
      - [numeric: integer]
-     - 
+     -
 
 Python code
 ...........
@@ -1707,7 +1707,7 @@ Parameters
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
      - [boolean]
-     
+
        Default: False
      - Remove from the output the input layer's features which could not
        be joined
@@ -1762,7 +1762,7 @@ Outputs
    * - **Number of joined features from input table**
      - ``JOINED_COUNT``
      - [numeric: integer]
-     - 
+     -
    * - **Unjoinable features from first layer**
 
        Optional
@@ -1893,7 +1893,7 @@ Parameters
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
      - [boolean]
-     
+
        Default: False
      - Remove from the output the input layer's features which could not be joined
    * - **Joined layer**
@@ -1986,7 +1986,7 @@ Parameters
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
      - [boolean]
-     
+
        Default: False
      - Remove from the output the input layer records which could not
        be joined
@@ -1997,7 +1997,7 @@ Parameters
    * - **Maximum nearest neighbors**
      - ``NEIGHBORS``
      - [numeric: integer]
-     
+
        Default: 1
      - Maximum number of nearest neighbors
    * - **Maximum distance**
@@ -2206,14 +2206,14 @@ Parameters
    * - **Sort ascending**
      - ``ASCENDING``
      - [boolean]
-       
+
        Default: True
      - If checked the vector layer will be sorted from
        small to large values.
    * - **Sort nulls first**
      - ``NULLS_FIRST``
      - [boolean]
-       
+
        Default: False
      - If checked, Null values are placed first
    * - **Ordered**
@@ -2508,7 +2508,7 @@ Advanced parameters
        * 0 --- Create or overwrite file
        * 1 --- Create or overwrite layer
        * 2 --- Append features to existing layer, but do not create new fields
-       * 3 --- Append features to existing layer, and create new fields if needed  
+       * 3 --- Append features to existing layer, and create new fields if needed
 
 Outputs
 .......
@@ -2619,7 +2619,7 @@ Optionally, the separator string can be a regular expression
 for added flexibility.
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of point, line, and polygon features
 
 .. warning::
@@ -2652,13 +2652,13 @@ Parameters
    * - **Use regular expression separator**
      - ``REGEX``
      - [boolean]
-       
+
        Default: False
-     - 
+     -
    * - **Split**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``Create temporary layer``
      - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
 
@@ -2737,7 +2737,7 @@ Basic parameters
    * - **Output directory**
      - ``OUTPUT``
      - [folder]
-       
+
        Default: ``[Save to temporary folder]``
      - Specify the directory for the output layers.
        :ref:`One of <output_parameter_widget>`:

@@ -208,7 +208,7 @@ use something like:
     $ ulimit -Sn #number_of_allowed_open_files
     $ ulimit -Sn
     $ qgis
-    
+
 Alternatively, you can use the newer ``prlimit`` utility. More info: https://man7.org/linux/man-pages/man1/prlimit.1.html
 
 

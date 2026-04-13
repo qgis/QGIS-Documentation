@@ -133,7 +133,7 @@ The :menuselection:`Project` menu provides access and exit points for
    * - :menuselection:`--> Clear List`
      -
      -
-     - :ref:`sec_projects` 
+     - :ref:`sec_projects`
    * - :guilabel:`Close`
      -
      -
@@ -500,7 +500,7 @@ views using the :menuselection:`View` tools. For example, you can:
 
 * Create new 2D or 3D map views next to the main map canvas
 * :ref:`Zoom or pan <zoom_pan>` to any place
-* Query the attributes or geometry of the displayed features 
+* Query the attributes or geometry of the displayed features
 * Enhance the map view with preview modes, annotations or decorations
 * Access any panel or toolbar
 
@@ -569,7 +569,7 @@ actions like:
    * - :menuselection:`-->` |elevation| :guilabel:`Elevation Controller`
      -
      -
-     - :ref:`elevation_controller`   
+     - :ref:`elevation_controller`
    * - |identify| :guilabel:`Identify Features`
      - :kbd:`Ctrl+Shift+I`
      - :guilabel:`Attributes`
@@ -592,7 +592,7 @@ actions like:
        :guilabel:`Measure Bearing`
      -
      - :guilabel:`Attributes`
-     - :ref:`sec_measure`   
+     - :ref:`sec_measure`
    * - :menuselection:`-->` |measureAngle|
        :guilabel:`Measure Angle`
      -
@@ -1595,7 +1595,7 @@ This is what the :menuselection:`Database` menu looks like if all the core plugi
      - :guilabel:`Database`
      - :ref:`offlinedit`
    * - |queryHistory| :guilabel:`Query History...`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`execute_sql`
    * - |dbManager| :guilabel:`DB Manager...`
@@ -2045,7 +2045,7 @@ is not magnified, i.e. is rendered at accurate scale relative to the monitor's r
 A default magnification value can be defined within
 :menuselection:`Settings --> Options --> Rendering --> Rendering Behavior`,
 which is very useful for high-resolution screens to enlarge small
-symbols. In addition, a setting in :menuselection:`Settings --> Options --> Canvas & Legend --> DPI` 
+symbols. In addition, a setting in :menuselection:`Settings --> Options --> Canvas & Legend --> DPI`
 controls whether QGIS respects each monitor's physical DPI or uses the overall system logical DPI.
 
 To the right of the magnifier tool you can define a current clockwise

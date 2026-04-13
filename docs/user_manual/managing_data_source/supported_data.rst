@@ -169,7 +169,7 @@ The first row usually contains the column names. A common type of
 delimited text file is a CSV (Comma Separated Values), with
 columns separated by commas.
 Delimited text files can also contain positional information (see
-:ref:`csv_geometry`). 
+:ref:`csv_geometry`).
 
 QGIS allows you to load a delimited text file as a layer or an ordinary
 table (see :ref:`browser_panel` or :ref:`vector_loading_csv`).
@@ -178,9 +178,9 @@ First check that the file meets the following requirements:
 #. The file must have a delimited header row of field names.
    This must be the first line of the data (ideally the first row in
    the text file).
-#. If geometry should be enabled, the file must contain field(s) 
+#. If geometry should be enabled, the file must contain field(s)
    that define the geometry. These field(s) can have any name.
-#. The X and Y coordinates fields (if geometry is defined by 
+#. The X and Y coordinates fields (if geometry is defined by
    coordinates) must be specified as numbers.
    The coordinate system is not important.
 #. If you have a CSV file with non-string columns, you can have an

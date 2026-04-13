@@ -215,7 +215,7 @@ Python code
 
 Open file or URL
 ----------------
-Opens files in their default associated application, 
+Opens files in their default associated application,
 or URLs in the user's default web browser.
 
 Parameters

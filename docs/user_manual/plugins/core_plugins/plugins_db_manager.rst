@@ -97,7 +97,7 @@ you to paste the data into other applications, such as spreadsheet where it will
 show up as a table.
 
 The :guilabel:`Query History` button stores the last 20 queries of each database
-and provider.  
+and provider.
 
 Double clicking on an entry will add the string to the SQL window.
 
@@ -130,12 +130,12 @@ for the import process:
   features of the layer.
 * :guilabel:`Output table`: Choose the :guilabel:`Schema` and provide a name for the new table.
 * :guilabel:`Options`: Here are some options for the import process:
-   
-   - |checkbox| :guilabel:`Primary key`: Provide naming for the primary key field. 
+
+   - |checkbox| :guilabel:`Primary key`: Provide naming for the primary key field.
      By default, it is named ``id``.
    - |checkbox| :guilabel:`Geometry column`: Provide naming for the geometry column.
      By default, it is named ``geom``.
-   - |checkbox| :guilabel:`Source SRID`: Define the SRID for the geometry column. 
+   - |checkbox| :guilabel:`Source SRID`: Define the SRID for the geometry column.
      By default, it uses the layer's CRS.
    - |checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject the geometries
      during the import process. By default, it uses the layer's CRS.

@@ -129,18 +129,18 @@ to store in our database.
 
   For our theoretical address table, we might want to store the following
   properties::
-  
+
       House Number
       Street Name
       Suburb Name
       City Name
       Postcode
       Country
-  
+
   When creating the table to represent an address object, we would create columns
   to represent each of these properties and we would name them with SQL-compliant
   and possibly shortened names::
-  
+
       house_number
       street_name
       suburb
@@ -347,31 +347,31 @@ normalise it further and show your thoughts by means of an ER Diagram.
 
 
   Our ``people`` table currently looks like this::
-  
+
      id |     name     | house_no | street_id |  phone_no
      ---+--------------+----------+-----------+-------------
       1 | Horst Duster |        4 |         1 | 072 121 122
-  
+
   The :guilabel:`street_id` column represents a 'one to many' relationship between the
   people object and the related street object, which is in the ``streets`` table.
-  
+
   One way to further normalise the table is to split the name field into
   *first_name* and *last_name*::
-  
+
       id | first_name | last_name  | house_no | street_id |  phone_no
       ---+------------+------------+----------+-----------+------------
        1 |    Horst   |   Duster   |     4    |     1     | 072 121 122
-  
+
   We can also create separate tables for the town or city name and country,
   linking them to our ``people`` table via 'one to many' relationships::
-  
+
       id | first_name | last_name | house_no | street_id | town_id | country_id
       ---+------------+-----------+----------+-----------+---------+------------
        1 |    Horst   |   Duster  |     4    |     1     |    2    |     1
-  
-  
+
+
   An ER Diagram to represent this would look like this:
-  
+
   .. figure:: img/er-people-normalised-example.png
      :align: center
 

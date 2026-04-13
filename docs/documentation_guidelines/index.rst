@@ -37,4 +37,3 @@ project, you may find help at `Get Involved in the QGIS Community
    cookbook_guidelines
    do_translations
    substitutions
-

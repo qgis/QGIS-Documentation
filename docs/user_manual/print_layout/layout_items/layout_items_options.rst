@@ -48,7 +48,7 @@ To create a layout item from scratch:
 
 You can also:
 
-#. Select an existing item with the |select| :sup:`Select/Move item` button 
+#. Select an existing item with the |select| :sup:`Select/Move item` button
    from the :guilabel:`Toolbox` toolbar
 #. Use the contextual menu or the :menuselection:`Edit` menu tools to copy/cut the item
    and paste it at the mouse position as a new item.
@@ -122,8 +122,8 @@ by distributing equidistantly:
 Rotating items
 ..............
 
-Selected layout items feature a rotation handle above them.  
-Click and drag this handle to rotate the item interactively on the layout canvas.  
+Selected layout items feature a rotation handle above them.
+Click and drag this handle to rotate the item interactively on the layout canvas.
 Holding the :kbd:`Ctrl` key while rotating constrains the selected item(s) to rotate in 15° steps,
 allowing for precise alignment.
 
@@ -195,7 +195,7 @@ This can be done by selecting the items and press the |distributeLeft| :guilabel
 
 * |distributeLeft| :guilabel:`Distribute Left Edges` or |distributeRight|:guilabel:`Distribute Right Edges` of items equidistantly
 * |distributeTop| :guilabel:`Distribute Top edges` or  |distributeBottom| :guilabel:`Distribute Bottom Edges` of items equidistantly
-* |distributeHCenter| :guilabel:`Distribute Horizontal Centers` or |distributeVCenter| :guilabel:`Distribute Vertical Centers` of items equidistantly 
+* |distributeHCenter| :guilabel:`Distribute Horizontal Centers` or |distributeVCenter| :guilabel:`Distribute Vertical Centers` of items equidistantly
 * Add equal space between items: |distributeHSpace| :guilabel:`Distribute Horizontal Spacing Equally`
   or |distributeVSpace|:guilabel:`Distribute Vertical Spacing Equally`
 
@@ -228,7 +228,7 @@ Background, Item ID, Variables and Rendering (see :numref:`figure_layout_common`
 * The :guilabel:`Position and size` group lets you define the size and position
   of the frame which contains the item (see :ref:`position_size` for more information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
-  You can also rotate the item interactively using its rotation handle.  
+  You can also rotate the item interactively using its rotation handle.
   See :ref:`rotate_items` for more details.
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
   Use the :guilabel:`Color`, :guilabel:`Thickness` and :guilabel:`Join style` widgets

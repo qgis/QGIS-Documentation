@@ -348,9 +348,9 @@ layer types:
     can be tweaked, so that they can be placed at nicer positions to account for corners
     in the line (also can be used potentially to "align" adjacent dash pattern borders)
   * |checkbox| :guilabel:`Align dash pattern to line length`: the dash pattern
-    length will be adjusted so that the line will end with a complete dash 
+    length will be adjusted so that the line will end with a complete dash
     element, instead of a gap.
-  * |checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically 
+  * |checkbox| :guilabel:`Tweak dash pattern at sharp corners`: dynamically
     adjusts the dash pattern placement so that sharp corners are represented
     by a full dash element coming into and out of the sharp corner.
     Dependent on :guilabel:`Align dash pattern to line length`.
@@ -488,7 +488,7 @@ layer types:
 
 .. _raster_line_symbol:
 
-* **Raster line**: renders and repeats a raster image following the length 
+* **Raster line**: renders and repeats a raster image following the length
   of a line feature shape. The :guilabel:`Stroke width`, :guilabel:`Offset`,
   :guilabel:`Join style`, :guilabel:`Cap style` and :guilabel:`Opacity`
   can be adjusted.
@@ -628,7 +628,7 @@ symbol layer types:
   of the feature, because calculation takes into account the polygon(s)
   clipped to area visible in map canvas for rendering and ignores holes.
   Use the :ref:`geometry generator symbol <geometry_generator_symbol>`
-  if you want the exact centroid. 
+  if you want the exact centroid.
 
   You can:
 
@@ -688,7 +688,7 @@ symbol layer types:
 
 .. _point_pattern_fill_symbol:
 
-* **Point pattern fill**: fills the polygon with a grid pattern of 
+* **Point pattern fill**: fills the polygon with a grid pattern of
   :ref:`marker symbol <vector_marker_symbols>`. You can set:
 
   * :guilabel:`Alignment`: defines how the pattern is positioned relative
@@ -756,7 +756,7 @@ symbol layer types:
 
 .. _random_marker_fill:
 
-* **Random marker fill**: fills the polygon with a :ref:`marker symbol 
+* **Random marker fill**: fills the polygon with a :ref:`marker symbol
   <vector_marker_symbols>` placed at random locations within the polygon
   boundary. You can set:
 
@@ -777,9 +777,9 @@ symbol layer types:
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <embedded_file_selector>`).
   Options include (data defined) opacity, size, coordinate mode (object
-  or viewport), rotation and offset. Under the option Size you can 
-  independently adjust the width and height of the fill pattern, enabling 
-  stretched raster fills in either the horizontal or vertical directions. 
+  or viewport), rotation and offset. Under the option Size you can
+  independently adjust the width and height of the fill pattern, enabling
+  stretched raster fills in either the horizontal or vertical directions.
   The image width and height can be set using any of the
   :ref:`common units <unit_selector>` or as a percentage of the original size.
 
@@ -906,14 +906,14 @@ The parameters can then be defined as expressions in the :guilabel:`Dynamic SVG 
 
 .. note::
 
- QGIS is looking for a complete SVG node. So if your parameter is within a more complex node, 
- you need to inject the complete node with the expression. 
+ QGIS is looking for a complete SVG node. So if your parameter is within a more complex node,
+ you need to inject the complete node with the expression.
  For instance, ``transform="rotate(param(angle)"`` will not work.
- Instead, you need to do ``transform="param(rotation)"`` and ``rotation`` parameter will be defined 
+ Instead, you need to do ``transform="param(rotation)"`` and ``rotation`` parameter will be defined
  with the expression ``'rotate(' || coalesce(my_field, 0) || ')'``.
 
-.. _geometry_generator_symbol: 
- 
+.. _geometry_generator_symbol:
+
 The Geometry Generator
 ......................
 
@@ -934,7 +934,7 @@ Some examples:
 
   ::
 
-   centroid( $geometry ) 
+   centroid( $geometry )
 
 * Visually overlap features within a 100 map units distance from a point feature,
   i.e generate a 100m buffer around the point
@@ -1040,7 +1040,7 @@ Animated marker
 ...............
 
 Animated marker symbol type allows you to use a :file:`.GIF`, :file:`.WebP`,
-:file:`.MNG`, etc. animation file to represent points on your map. 
+:file:`.MNG`, etc. animation file to represent points on your map.
 You can specify:
 
 * :guilabel:`File` path,
@@ -1049,15 +1049,15 @@ You can specify:
 * :guilabel:`Size` in any :ref:`supported unit <unit_selector>`,
 * :guilabel:`Opacity`,
 * :guilabel:`Rotation`,
-* :guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions 
+* :guilabel:`Offset` in :guilabel:`x` and :guilabel:`y` directions
   from the marker position,
-* :guilabel:`Anchor point`   
+* :guilabel:`Anchor point`
 
 There are two ways to handle animated symbols:
 
-* **When your map is not configured as an animation** (i.e. it's a standard QGIS 
-  project without animations), the frame for the animated markers will be 
-  determined solely by the current timestamp. 
+* **When your map is not configured as an animation** (i.e. it's a standard QGIS
+  project without animations), the frame for the animated markers will be
+  determined solely by the current timestamp.
 
   .. only:: html
 
@@ -1067,10 +1067,10 @@ There are two ways to handle animated symbols:
 
        Animated marker when map is not configured as animation
 
-* **When your map is** :ref:`configured as an animation <maptimecontrol>`, 
+* **When your map is** :ref:`configured as an animation <maptimecontrol>`,
   the animated markers will sync with the animation's timeline.
   This means that animated markers will pause when the animation is paused,
-  progress with the animation, and so forth. The map will also be redrawn 
+  progress with the animation, and so forth. The map will also be redrawn
   according to the frame rate established for temporal animation. This mode
   is also applied when exporting an animation using the temporal controller.
 

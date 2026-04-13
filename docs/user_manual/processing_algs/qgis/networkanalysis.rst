@@ -76,7 +76,7 @@ Advanced parameters
      - ``DIRECTION_FIELD``
      - [tablefield: any]
      - The field used to specify directions for the network edges.
-       
+
        The values used in this field are specified with the three parameters
        ``Value for forward direction``, ``Value for backward direction``
        and ``Value for both directions``.
@@ -272,7 +272,7 @@ Advanced parameters
      - ``DIRECTION_FIELD``
      - [tablefield: any]
      - The field used to specify directions for the network edges.
-       
+
        The values used in this field are specified with the three parameters
        ``Value for forward direction``, ``Value for backward direction``
        and ``Value for both directions``.
@@ -325,7 +325,7 @@ Advanced parameters
      - [tablefield: numeric]
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
-       
+
        If a feature does not have a value in this field, or
        no field is set then the default speed value (provided
        with the ``Default speed`` parameter) is used.
@@ -995,7 +995,7 @@ Basic parameters
      - ``DIRECTION_FIELD``
      - [tablefield: any]
      - The field used to specify directions for the network edges.
-       
+
        The values used in this field are specified with the three parameters
        ``Value for forward direction``, ``Value for backward direction``
        and ``Value for both directions``.
@@ -1047,11 +1047,11 @@ Basic parameters
        Optional
      - ``OUTPUT_INVALID_NODES``
      - [vector: line]
-  
+
        Default: ``[Create temporary layer]``
      - Specify the output line layer for the invalid network nodes.
        :ref:`One of <output_parameter_widget>`:
-  
+
        .. include:: ../algs_include.rst
            :start-after: **layer_output_types_skip**
            :end-before: **end_layer_output_types_skip**

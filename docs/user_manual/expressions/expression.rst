@@ -123,13 +123,13 @@ using functions, layer fields and values. It contains the following widgets:
   * A set of basic operators to help you build the expression
   * An indication of the expected format of output when you are data-defining
     feature properties
-  * A live :guilabel:`Output preview` of the expression (up to 60 characters), 
-    evaluated on the first feature of the Layer by default. To view output preview 
-    text exceeding 60 characters, you can hover your cursor over the text to display 
+  * A live :guilabel:`Output preview` of the expression (up to 60 characters),
+    evaluated on the first feature of the Layer by default. To view output preview
+    text exceeding 60 characters, you can hover your cursor over the text to display
     a tooltip pop-up containing the entire output preview. To copy the output preview
-    text onto your clipboard, right-click on the output preview text and select 
+    text onto your clipboard, right-click on the output preview text and select
     |editCopy| :guilabel:`Copy Expression Value`.
-    
+
     You can browse and evaluate other features of the layer using the
     :guilabel:`Feature` combobox (the values are taken from the
     :ref:`display name <maptips>` property of the layer).
@@ -330,7 +330,7 @@ Function Editor
 
 With the :guilabel:`Function Editor` tab, you are able to write your own functions
 in Python language. This provides a handy and comfortable way to address
-particular needs that would not be covered by the predefined functions. This also 
+particular needs that would not be covered by the predefined functions. This also
 allows you to create and manage custom expressions for use in QGIS projects.
 
 .. _figure_expression_function:
@@ -341,9 +341,9 @@ allows you to create and manage custom expressions for use in QGIS projects.
    The Function Editor tab
 
 .. note::
- File scripts are autosaved by default, however, project functions are stored within the project and 
+ File scripts are autosaved by default, however, project functions are stored within the project and
  require the project to be saved in order for changes to be preserved.
- 
+
  To create a new function:
 
 #. Press the |symbologyAdd| :sup:`New File` button.

@@ -5,6 +5,25 @@
 
 repos:
 
+  # Standard pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+        exclude: ^(locale/|_dummy/)
+      - id: end-of-file-fixer
+        exclude: ^(locale/|_dummy/)
+      - id: check-yaml
+        args: [--unsafe]
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ['--maxkb=1024']
+      - id: mixed-line-ending
+        args: [--fix=lf]
+        exclude: ^(locale/|_dummy/)
+
   # YAML formatting
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.33.0

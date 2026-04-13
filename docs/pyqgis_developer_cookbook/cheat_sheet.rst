@@ -220,7 +220,7 @@ Otherwise
 .. testcode:: cheat_sheet
 
     for layer in QgsProject.instance().mapLayers().values():
-        print(f"{layer.name()} of type {layer.type().name}")    
+        print(f"{layer.name()} of type {layer.type().name}")
 
 .. testoutput:: cheat_sheet
 
@@ -781,7 +781,7 @@ which is added to the project.
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
     QgsProject.instance().addMapLayer(result['OUTPUT'])
 
-.. 
+..
     .. testoutput:: cheat_sheet
 
     Processing(0): Results: {'OUTPUT': 'output_d27a2008_970c_4687_b025_f057abbd7319'}

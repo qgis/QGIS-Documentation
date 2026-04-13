@@ -1,5 +1,5 @@
-.. _processing_testing: 
- 
+.. _processing_testing:
+
 *******************************
  Processing Algorithms Testing
 *******************************

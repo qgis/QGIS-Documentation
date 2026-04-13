@@ -6,4 +6,3 @@ rm -rf .vscode-extensions
 rm -rf __pycache__
 cd ..
 cd -
-

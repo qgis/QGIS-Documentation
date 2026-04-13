@@ -1,19 +1,19 @@
 Lesson: Working with Databases in the QGIS Browser
 ===============================================================================
 
-In the previous 2 modules we looked at the basic concepts, features and 
-functions of relational databases as well as extensions that let us store, 
+In the previous 2 modules we looked at the basic concepts, features and
+functions of relational databases as well as extensions that let us store,
 manage, query and manipulate spatial data in a relational database. This
-section will dive deeper into how to effectively use spatial databases in QGIS. 
+section will dive deeper into how to effectively use spatial databases in QGIS.
 
-**The goal for this lesson:** To learn how to interact with spatial databases 
-using the QGIS Browser interface. 
+**The goal for this lesson:** To learn how to interact with spatial databases
+using the QGIS Browser interface.
 
 :abbr:`★☆☆ (Basic level)` Follow Along: Adding Database Tables to QGIS using the Browser
 -----------------------------------------------------------------------------------------
 
-We have already briefly looked at how to add tables from a database as QGIS 
-layers, now lets look at this in a bit more detail and look at the different 
+We have already briefly looked at how to add tables from a database as QGIS
+layers, now lets look at this in a bit more detail and look at the different
 ways this can be done in QGIS. Lets start by looking at the new Browser
 interface.
 
@@ -31,13 +31,13 @@ interface.
   Canvas.
 
 * Right Clicking on a table/layer in this view will give you a few options.
-  Click on the :guilabel:`Properties` item to look at the properties of the 
+  Click on the :guilabel:`Properties` item to look at the properties of the
   layer.
 
 .. figure:: img/postgis_layer_properties.png
    :align: center
 
-.. note:: Of course you can also use this interface to connect to PostgreSQL 
+.. note:: Of course you can also use this interface to connect to PostgreSQL
    databases hosted on a server external to your workstation. Right clicking
    on the PostgreSQL entry in the tree will allow you to specify connection
    parameters for a new connection.
@@ -47,7 +47,7 @@ interface.
 ------------------------------------------------------------------------------------
 
 Now that we have seen how to add an entire table as a QGIS layer it might be
-nice to learn how to add a filtered set of records from a table as a layer 
+nice to learn how to add a filtered set of records from a table as a layer
 by using queries that we learned about in previous sections.
 
 * Start a new empty map with no layers
@@ -59,7 +59,7 @@ by using queries that we learned about in previous sections.
   working with previously.
 * Click the ``lines`` layer to select it, but instead of adding it, click
   the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder`
-  dialog. 
+  dialog.
 * Construct the following expression using the buttons or by entering it
   directly::
 
@@ -78,7 +78,7 @@ than the entire layer.
 In Conclusion
 -------------------------------------------------------------------------------
 
-You have seen how to interact with spatial databases using the QGIS Browser and 
+You have seen how to interact with spatial databases using the QGIS Browser and
 how to add layers to your map based on a query filter.
 
 What's Next?

@@ -46,4 +46,3 @@ Returns the authority ID string for a coordinate reference system.
 
 
 .. end_crs_to_authid_section
-

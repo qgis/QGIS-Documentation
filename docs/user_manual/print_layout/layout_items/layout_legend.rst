@@ -52,7 +52,7 @@ In Main properties you can:
 * Choose which :guilabel:`Map` item the current legend will refer to.
   By default, the map over which the legend item is drawn is picked. If none,
   then it falls back to the :ref:`reference map <reference_map>`.
-  
+
   .. note:: :ref:`Variables <expression_variables>` of the linked map item
    (@map_id, @map_scale, @map_extent...) are also accessible from data-defined
    properties of the legend.
@@ -183,8 +183,8 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
   contextual menu of the legend entry.
 
 * With the |checkbox| :guilabel:`Only show items inside linked maps`, only the
-  legend items visible in the linked map will be listed in the legend. If you 
-  have more than one map you can click on :guilabel:`...` and select other 
+  legend items visible in the linked map will be listed in the legend. If you
+  have more than one map you can click on :guilabel:`...` and select other
   maps from your layout.
   This tool remains available in any legend mode.
 * While generating an atlas with polygon features, you can filter out legend
@@ -260,7 +260,7 @@ also be controlled via the style manager.
 
 A custom symbol can also be specified for vector symbols. This can be useful to tweak the render
 of a specific symbol, to enhance it in the legend or have a symbol independent from its true symbol preview.
-This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified. 
+This custom symbol will override the legend symbol, but will take into account the symbol :guilabel:`Patch` specified.
 
 
 Fonts and text formatting

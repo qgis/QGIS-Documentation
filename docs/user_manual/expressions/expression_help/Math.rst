@@ -608,4 +608,3 @@ Returns the tangent of an angle.
 
 
 .. end_tan_section
-

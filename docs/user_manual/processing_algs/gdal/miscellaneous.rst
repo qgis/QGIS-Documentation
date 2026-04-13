@@ -52,7 +52,7 @@ Parameters
      - [boolean]
 
        Default: ``True``
-     - If checked, additional details about each identified dataset 
+     - If checked, additional details about each identified dataset
        will be added to the output vector layer.
    * - **Output file**
      - ``OUTPUT``
@@ -66,7 +66,7 @@ Parameters
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
 
-.. _GDAL: https://gdal.org/en/stable/   
+.. _GDAL: https://gdal.org/en/stable/
 
 Outputs
 .......
