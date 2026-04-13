@@ -285,7 +285,7 @@ QGIS:
 
 That's it! You can see how easy it is to visualize raster and vector layers in
 QGIS, configure them and generate your map in an image format you can use in
-other softwares. Let's move on to learn more about the available functionality,
+other software. Let's move on to learn more about the available functionality,
 features and settings, and how to use them.
 
 .. note::

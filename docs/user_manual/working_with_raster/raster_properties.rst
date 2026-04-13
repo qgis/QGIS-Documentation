@@ -647,7 +647,7 @@ Use the :guilabel:`Global opacity` slider to set to what extent the
 underlying layers (if any) should be visible through the current
 raster layer.
 This is very useful if you overlay raster layers (e.g., a shaded
-relief map overlayed by a classified raster map).
+relief map overlaid by a classified raster map).
 This will make the look of the map more three dimensional.
 The opacity of the raster can be data-defined, and vary e.g. depending on
 the visibility of another layer, by temporal variables, on different pages
@@ -881,7 +881,7 @@ Check the |checkbox| :guilabel:`Dynamic Temporal Control` option and
 set whether the layer redraw should be:
 
 * :guilabel:`Automatic`: the rendering is controlled by the underlying
-  data provider if it suppports temporal data handling. E.g. this can be used
+  data provider if it supports temporal data handling. E.g. this can be used
   with WMS-T layers or PostgreSQL rasters.
 
   .. A bit more info on this automatic option would be necessary.

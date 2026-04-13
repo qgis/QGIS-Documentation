@@ -15,8 +15,7 @@ special syntax.
 A Processing R script starts with defining its **Inputs** and
 **Outputs**, each preceded with double hash characters (``##``).
 
-Before the inputs, the group to place the algoritm in can be
-specified.
+Before the inputs, the group to place the algorithm in can be specified.
 If the group already exists, the algorithm will be added to it,
 if not, the group will be created.
 In the example below, the name of the group is *My group*:

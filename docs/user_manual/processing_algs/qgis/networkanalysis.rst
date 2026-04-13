@@ -975,7 +975,7 @@ Basic parameters
      - [numeric: double]
 
        Default: Not set
-     - The minimum allowed distance between two distint graph nodes.
+     - The minimum allowed distance between two distinct graph nodes.
        Nodes closer than this distance (but not identical) will be flagged as errors.
        Leave empty to disable this check.
    * - **Minimum separation between nodes and non-noded segments**

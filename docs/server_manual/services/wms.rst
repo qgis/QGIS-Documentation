@@ -2108,7 +2108,7 @@ The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that
  &map0:HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &map0:HIGHLIGHT_LABELBUFFERSIZE=1.5
 
-Here is the image outputed by the above request in which a polygon and
+Here is the image outputted by the above request in which a polygon and
 a label are drawn on top of the normal map:
 
 .. _figure_server_redlining:

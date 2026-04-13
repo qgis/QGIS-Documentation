@@ -41,7 +41,7 @@ Custom authentication databases
 -------------------------------
 
 QGIS can be configured to use a custom authentication database instead of the above
-mentioned default SQLite one: any database suppported by the Qt SQL module can be
+mentioned default SQLite one: any database supported by the Qt SQL module can be
 used (e.g. PostgreSQL, MySQL, etc), provided that the corresponding Qt SQL driver is
 available in the system.
 
@@ -441,7 +441,7 @@ When using the selector, :guilabel:`No authentication` is displayed in the
 pop-up menu control when nothing is selected, when there are no configurations
 to choose from, or when a previously assigned configuration can no longer be
 found in the database. Use the drop-down menu to select an existing authentication
-configuration or press |symbologyAdd| :sup:`Create a new autentication configuration`
+configuration or press |symbologyAdd| :sup:`Create a new authentication configuration`
 to create a configuration you could use.
 More details at :ref:`authentication`.
 

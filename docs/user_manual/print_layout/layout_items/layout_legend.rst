@@ -231,7 +231,7 @@ Legend items can also be customized individually in the :guilabel:`Legend Items 
 But these customization can only be done with |checkbox| :guilabel:`Auto update` disabled.
 
 Double-clicking on an item or pressing |symbologyEdit| :sup:`Edit selected item properties`
-allows for futher customization.
+allows for further customization.
 
 :guilabel:`Label`
 
@@ -319,7 +319,7 @@ You can:
   ``0.00mm`` means there is no value set.
 * |checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline
   to the symbol representing the band color of the raster layer; you can set
-  both the :guilabel:`Stroke color` and :guilabel:`Tickness`.
+  both the :guilabel:`Stroke color` and :guilabel:`Thickness`.
 
 .. _figure_layout_legend_symbol:
 

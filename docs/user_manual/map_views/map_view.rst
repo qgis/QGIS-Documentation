@@ -477,7 +477,7 @@ annotations to the map canvas.
    * The interval and offset parameters can be set based on the:
 
      * :guilabel:`Canvas Extents`: generates a grid with an interval that is
-       approximatively 1/5 of the canvas width
+       approximately 1/5 of the canvas width
      * :guilabel:`Active Raster Layer` resolution
 #. Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of
    the grid marks and set:

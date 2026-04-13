@@ -204,7 +204,7 @@ implemented to replicate the conditions of a particular bug. For example:
    (the cell count was 99 instead of 100).
 #. Then we went to fix the bug and reran the unit test and the regression test
    passed. We committed the regression test along with the bug fix. Now if
-   anybody breakes this in the source code again in the future, we can
+   anybody breaks this in the source code again in the future, we can
    immediately identify that the code has regressed.
 
    Better yet, before committing any changes in the future, running our tests

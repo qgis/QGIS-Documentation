@@ -1378,7 +1378,7 @@ Advanced parameters
      - Name
      - Type
      - Description
-   * - **Overrride CRS**
+   * - **Override CRS**
 
        Optional
      - ``CRS``

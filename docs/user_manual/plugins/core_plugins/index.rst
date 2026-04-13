@@ -37,7 +37,7 @@ Icon                    Plugin                        Description               
 .. note::
 
    To use the Core Plugins |grassTools| GRASS 7, |grassLogo| GRASS GIS provider,
-   they have to be configured. Informations can be found :ref:`here <processing.results>`.
+   they have to be configured. Information can be found :ref:`here <processing.results>`.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

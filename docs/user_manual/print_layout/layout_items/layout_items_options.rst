@@ -286,7 +286,7 @@ QGIS allows advanced rendering for layout items just like vector and raster laye
 
 * :guilabel:`Blending mode`: With this tool you can achieve effects
   which would otherwise only be achieved using graphic rendering software.
-  The pixels of your overlaying and underlaying items can be mixed according to the mode set
+  The pixels of your overlaying and underlying items can be mixed according to the mode set
   (see :ref:`blend-modes` for description of each effect).
 * :guilabel:`Opacity`: You can make the underlying item in the layout visible with this tool.
   Use the slider to adapt the visibility of your item to your needs.

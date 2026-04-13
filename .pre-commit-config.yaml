@@ -57,6 +57,16 @@ repos:
           - --ignore=D001,D002,D004
         exclude: ^(locale/|_dummy/|build/)
 
+  # Spell checking
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          - --skip=*.po,*.pot,*.mo,*.svg,*.png,*.jpg,*.gif,*.ico,*.pyc,*.js,*.css,*.map,*.qgs,*.qgz
+          - --ignore-words-list=tripel,linz,parameteras,lightening,clos,januar,claus,sist,pixelx
+        exclude: ^(locale/|_dummy/|build/|scripts/)
+
   # - repo: local
   #   hooks:
   #     - id: find_set_subst

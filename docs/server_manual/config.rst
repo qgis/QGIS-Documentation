@@ -145,7 +145,7 @@ several ways to define these variables. This is fully described in
      - All
 
    * - QGIS_SERVER_IGNORE_RENDERING_ERRORS
-        Sets whether the server should return the rendered map/layout even if rendering errors occured.
+        Sets whether the server should return the rendered map/layout even if rendering errors occurred.
         If false, the server throws an error (usually http 500 with text 'internal server error')
         if a rendering error is reported.
      - false
