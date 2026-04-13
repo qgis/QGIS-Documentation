@@ -11,12 +11,17 @@ Network analysis
 
 Extract network end points
 ----------------------------
+``Added in 4.0``
 
 Extracts the end points (nodes) from a network line layer.
 Two definitions are available for identifying end points:
 
-#. Nodes with only all incoming or all outgoing edges: Identifies 'Source' or 'Sink' nodes based on the direction of flow. These are nodes where flow can start (only outgoing) or stop (only incoming).
-#. Nodes connected to a single edge: Identifies topological 'dead-ends' or 'dangles', regardless of directionality. This checks if the node is connected to only one other distinct node.
+#. Nodes with only all incoming or all outgoing edges:
+   Identifies 'Source' or 'Sink' nodes based on the direction of flow.
+   These are nodes where flow can start (only outgoing) or stop (only incoming).
+#. Nodes connected to a single edge: Identifies topological 'dead-ends'
+   or 'dangles', regardless of directionality.
+   This checks if the node is connected to only one other distinct node.
 
 Parameters
 ..........
@@ -958,6 +963,7 @@ Python code
 
 Validate network
 ---------------------
+``Added in 4.0``
 
 Analyzes a network vector layer to identify data and topology errors that may affect network analysis tools (like shortest path).
 Optional checks include:

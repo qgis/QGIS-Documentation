@@ -408,7 +408,7 @@ Python code
 
 Approximate medial axis
 -----------------------
-|400|
+``Added in 4.0``
 
 Generates a simplified skeleton of polygon geometries by approximating their
 medial axis. The output is a line layer representing the central structure
@@ -3343,8 +3343,7 @@ Python code
 
 Force polygons clockwise
 ------------------------
-
-|400|
+``Added in 4.0``
 
 Forces polygon geometries to respect the convention where the exterior ring
 is oriented in a clockwise direction and the interior rings in a counter-clockwise
@@ -3412,8 +3411,7 @@ Python code
 
 Force polygons counter-clockwise
 --------------------------------
-
-|400|
+``Added in 4.0``
 
 Forces polygon geometries to respect the convention where the exterior ring
 is oriented in a counter-clockwise direction and the interior rings in a clockwise
@@ -5730,7 +5728,7 @@ Python code
 
 Remove parts by area
 ----------------------
-|400|
+``Added in 4.0``
 
 Takes a polygon layer and removes polygons which are smaller than a specified area.
 
@@ -5813,7 +5811,7 @@ Python code
 
 Remove parts by length
 ----------------------
-|400|
+``Added in 4.0``
 
 Takes a line layer and removes lines which are shorter than a specified length.
 
@@ -8064,7 +8062,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |400| replace:: ``NEW in 4.0``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

@@ -545,6 +545,8 @@ Parameters
    * - **Duplicates**
 
        Optional
+
+       ``Added in 4.0``
      - ``DUPLICATES``
      - [same as input]
 

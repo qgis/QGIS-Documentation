@@ -70,7 +70,7 @@ Advanced parameters
      - Description
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -175,7 +175,7 @@ Parameters
        for example, for :file:`mydata.vpc`, the overview point cloud would be named :file:`mydata-overview.copc.laz`.
    * - **Convert individual files to COPC format**
 
-       |400|
+       ``Added in 4.0``
      - ``CONVERT_COPC``
      - [boolean]
 
@@ -227,7 +227,7 @@ Python code
 
 Classify ground points
 ------------------------
-|400|
+``Added in 4.0``
 
 Classifies ground points using the
 `Simple Morphological Filter (SMRF) <https://pdal.io/en/stable/stages/filters.smrf.html>`_ algorithm.
@@ -435,7 +435,7 @@ Advanced parameters
 
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -482,8 +482,7 @@ Python code
 
 Compare point clouds
 --------------------
-
-|400|
+``Added in 4.0``
 
 Compares two point clouds using an M3C2 (Multiscale Model-to-Model Cloud Comparison)
 algorithm and outputs a subset (filtered using Poisson sampling, based on Subsampling
@@ -782,7 +781,7 @@ Advanced parameters
      - The CRS to apply to the layer
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -829,7 +828,7 @@ Python code
 
 Filter noise
 --------------
-|400|
+``Added in 4.0``
 
 Filters noise in a point cloud using a statistical outlier removal algorithm.
 For each point, the algorithm computes the mean distance to its K nearest neighbors.
@@ -946,7 +945,7 @@ Python code
 
 Filter noise (using radius)
 -----------------------------
-|400|
+``Added in 4.0``
 
 Filters noise in a point cloud using radius algorithm.
 Points are marked as noise if they have fewer than the
@@ -1059,7 +1058,7 @@ Python code
 
 Height above ground
 -----------------------------
-|400|
+``Added in 4.0``
 
 Calculates the height of points above the ground surface in a point cloud using a nearest neighbor algorithm.
 For each point, the algorithm finds the specified number of nearest ground-classified points
@@ -1178,7 +1177,7 @@ Python code
 
 Height above ground (using triangulation)
 ----------------------------------------------
-|400|
+``Added in 4.0``
 
 Calculates the height of points above the ground surface in a point cloud using a
 `Delaunay triangulation <https://gwlucastrig.github.io/TinfourDocs/DelaunayIntro/index.html>`_ algorithm.
@@ -1534,7 +1533,7 @@ Advanced parameters
        between the origin and target systems.
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -1662,7 +1661,7 @@ Advanced parameters
 
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -1783,7 +1782,7 @@ Advanced parameters
 
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -1829,7 +1828,7 @@ Python code
 
 Transform point cloud
 ------------------------
-|400|
+``Added in 4.0``
 
 Transforms point cloud coordinates using translation, rotation, and scaling operations using a 4x4 transformation matrix.
 Applies transformations in the following order: scaling, rotation (using Euler angles), then translation.
@@ -1972,12 +1971,3 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 .. _PDAL: https://pdal.io/en/stable/
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |400| replace:: ``NEW in 4.0``
