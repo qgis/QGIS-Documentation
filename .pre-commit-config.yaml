@@ -67,14 +67,22 @@ repos:
           - --ignore-words-list=tripel,linz,parameteras,lightening,clos,januar,claus,sist,pixelx
         exclude: ^(locale/|_dummy/|build/|scripts/)
 
-  # - repo: local
-  #   hooks:
-  #     - id: find_set_subst
-  #       name: find_set_subst
-  #       entry: ./scripts/find_set_subst.py
-  #       language: system
-  #       always_run: true
-  #       pass_filenames: false
+  # Check for broken internal references (local script)
+  - repo: local
+    hooks:
+      # - id: find_set_subst
+      #   name: find_set_subst
+      #   entry: ./scripts/find_set_subst.py
+      #   language: system
+      #   always_run: true
+      #   pass_filenames: false
+
+      - id: check-image-refs
+        name: Check image references exist
+        entry: ./scripts/check_image_refs.sh
+        language: script
+        files: \.(rst)$
+        exclude: ^(locale/|_dummy/|build/)
 
 ci:
   autofix_prs: true
