@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -67,11 +67,11 @@ msgid ""
 "coordinate reference systems."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:45
 msgid "Layer Coordinate Reference Systems"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:47
 msgid ""
 "In order to correctly project data into a specific target CRS, either "
 "your data must contain information about its coordinate reference system "
@@ -80,13 +80,13 @@ msgid ""
 "specified when that PostgreSQL layer was created. For data supported by "
 "GDAL, QGIS relies on the presence of a recognized means of specifying the"
 " CRS. For instance, for the Shapefile format this is a file containing an"
-" ESRI Well-Known Text (:index:`WKT`) representation of the layer's CRS. "
-"This projection file has the same base name as the :file:`.shp` file and "
-"a :file:`.prj` extension. For example, :file:`alaska.shp` would have a "
+" ESRI Well-Known Text (WKT) representation of the layer's CRS. This "
+"projection file has the same base name as the :file:`.shp` file and a "
+":file:`.prj` extension. For example, :file:`alaska.shp` would have a "
 "corresponding projection file named :file:`alaska.prj`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:59
 msgid ""
 "Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
 "determine the correct CRS for that layer. In some cases this is not "
@@ -95,32 +95,32 @@ msgid ""
 "automatically determine the correct CRS for a layer:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:65
 msgid ""
 "Open :menuselection:`Settings -->` |options| :menuselection:`Options... "
 "--> CRS`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:437
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:438
 msgid "options"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:72
 msgid "The CRS tab in the QGIS Options Dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:74
 msgid ""
 "Under the :guilabel:`CRS for layers` group, set the action to do "
 ":guilabel:`when a new layer is created, or when a layer is loaded that "
 "has no CRS`. One of:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:78
 msgid ""
 "|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
 "will be no prompt to select a CRS when a layer without CRS is loaded, "
-"defering CRS choice to a later time. Convenient when loading a lot of "
+"deferring CRS choice to a later time. Convenient when loading a lot of "
 "layers at once. Such layers will be identifiable in the "
 ":guilabel:`Layers` panel by the |indicatorNoCRS| icon next to them. "
 "They'll also be un-referenced, with coordinates from the layer treated as"
@@ -128,15 +128,15 @@ msgid ""
 " get when :ref:`a project is set to have no CRS <project_crs>`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:442
 msgid "radioButtonOn"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:435
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:436
 msgid "indicatorNoCRS"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:86
 msgid ""
 "|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to "
 "manually select the CRS. Selecting the correct choice is crucial, as a "
@@ -146,65 +146,65 @@ msgid ""
 "of the data to determine the correct CRS to use."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:439
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:440
 msgid "radioButtonOff"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:93
 msgid ""
 "|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
 ":guilabel:`Default CRS for layers` combobox above."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:98
 msgid ""
 "To assign the same CRS to multiple layers that have no crs or have a "
 "wrong one in one operation:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
 msgid "Select the layers in the :guilabel:`Layers` panel"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:102
 msgid ""
 "Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
 "selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
 msgid "Find and select the right CRS to use"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:105
 msgid ""
 "And press :guilabel:`OK`. You can confirm that it has been set correctly "
 "in the :guilabel:`Source` tab of the layers' properties dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:108
 msgid ""
 "Note that changing the CRS in this setting does not alter the underlying "
 "data source in any way, rather it just changes how QGIS interprets the "
 "raw coordinates from the layer in the current QGIS project."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:118
 msgid "Project Coordinate Reference Systems"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:120
 msgid ""
 "Every project in QGIS also has an associated Coordinate Reference System."
 " The project CRS determines how data is projected from its underlying raw"
 " coordinates to the flat map rendered within your QGIS map canvas."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:124
 msgid ""
 "QGIS supports \"on the fly\" CRS transformation for both raster and "
 "vector data. This means that regardless of the underlying CRS of "
@@ -215,7 +215,7 @@ msgid ""
 "correct position with respect to each other!"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:132
 msgid ""
 "It is important to make an appropriate choice of CRS for your QGIS "
 "projects. Choosing an inappropriate CRS can cause your maps to look "
@@ -227,7 +227,7 @@ msgid ""
 "that your QGIS project follows these standards."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:141
 msgid ""
 "By default, QGIS starts each new project using a global default "
 "projection. This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"),"
@@ -242,22 +242,22 @@ msgid ""
 "subsequent QGIS sessions."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:152
 msgid ""
 "The project CRS can also be set through the :guilabel:`CRS` tab of the "
 ":menuselection:`Project --> Properties...` dialog. It will also be shown "
 "in the lower-right of the QGIS status bar."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:161
 msgid "Project Properties Dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:163
 msgid "Available options are:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:165
 msgid ""
 "|unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`: "
 "Checking this setting will disable ALL projection handling within the "
@@ -268,28 +268,28 @@ msgid ""
 "maps, building mapping or microscopic stuff. In this case:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:451
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:452
 msgid "unchecked"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:173
 msgid ""
 "No reprojection is done while rendering the layers: features are just "
 "drawn using their raw coordinates."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
 msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:176
 msgid ""
 "The distance and area units, and the coordinate display are locked out "
 "and forced to \"unknown units\"; all measurements are done in unknown map"
 " units, and no conversion is possible."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:180
 msgid ""
 "or an existing coordinate reference system that can be *geographic*, "
 "*projected* or *user-defined*. A preview of the CRS extent on earth is "
@@ -299,7 +299,7 @@ msgid ""
 "available and make sense and you can perform calculations accordingly."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:187
 msgid ""
 "If you change your project's CRS and want the units (for distance and "
 "area) to match the units defined by the CRS, make sure you have selected "
@@ -308,54 +308,54 @@ msgid ""
 "dialog."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:191
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:192
 msgid "**Setting the project CRS from a layer**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:194
 msgid "You can assign a CRS to the project using a layer CRS:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:196
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the layer you want to "
 "pick the CRS"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:198
 msgid "Select :guilabel:`Set project CRS from Layer`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:200
 msgid ""
 "The project's CRS is redefined using the layer's CRS. Map canvas extent, "
 "coordinates display are updated accordingly and all the layers in the "
 "project are on-the-fly translated to the new project CRS."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:208
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:209
 msgid "Coordinate Reference System Selector"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:216
 msgid "CRS Selector"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
 msgid ""
 "This dialog helps you assign a Coordinate Reference System to a project "
 "or a layer, provided a set of projection databases. Items in the dialog "
 "are:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:220
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:221
 msgid ""
 "**Filter**: If you know the EPSG code, the identifier, or the name for a "
 "Coordinate Reference System, you can use the search feature to find it. "
 "Enter the EPSG code, the identifier or the name."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:223
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:224
 msgid ""
 "**Recently used coordinate reference systems**: If you have certain CRSs "
 "that you frequently use in your everyday GIS work, these will be "
@@ -363,7 +363,7 @@ msgid ""
 "associated CRS."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:226
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:227
 msgid ""
 "**Coordinate reference systems of the world**: This is a list of all CRSs"
 " supported by QGIS, including Geographic, Projected and Custom coordinate"
@@ -372,44 +372,44 @@ msgid ""
 "preselected."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:230
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:231
 msgid ""
 "**PROJ text**: This is the CRS string used by the PROJ projection engine."
 " This text is read-only and provided for informational purposes."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:234
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:235
 msgid ""
 "If you want to remove a recently used CRS from the list that can be done "
 "in several ways:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:237
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:238
 msgid ""
 "Press |clearItem| :sup:`Remove from recently used CRS` button on the "
 "right side."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:432
 msgid "clearItem"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:240
 msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:240
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
 msgid ""
 "Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected"
 " CRS from recently used CRS` to remove selected CRS or |clearConsole| "
 ":guilabel:`Clear all recently used CRS` to remove all used CRS."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:430
 msgid "clearConsole"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:246
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:247
 msgid ""
 "The CRS selector also shows a rough preview of the geographic area for "
 "which a selected CRS is valid for use. Many CRSs are designed only for "
@@ -420,11 +420,11 @@ msgid ""
 "extent."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:259
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:260
 msgid "Custom Coordinate Reference System"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:261
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:262
 msgid ""
 "If QGIS does not provide the coordinate reference system you need, you "
 "can define a custom CRS. To define a CRS, select |customProjection| "
@@ -434,11 +434,11 @@ msgid ""
 " data."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:434
 msgid "customProjection"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
 msgid ""
 "Defining a custom CRS in QGIS requires a good understanding of the PROJ "
 "projection library. To begin, refer to \"Cartographic Projection "
@@ -447,56 +447,56 @@ msgid ""
 "at https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:273
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:274
 msgid ""
 "This manual describes the use of ``proj`` and related command line "
 "utilities. The cartographic parameters used with ``proj`` are described "
 "in the user manual and are the same as those used by QGIS."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:277
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:278
 msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:280
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:281
 msgid "A descriptive name"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:281
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:282
 msgid "The cartographic parameters in PROJ or WKT format"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:283
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:284
 msgid "To create a new CRS:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:286
 msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:445
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:446
 msgid "symbologyAdd"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:286
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
 msgid "Enter a descriptive name"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
 msgid "Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
 msgid "Add the CRS :guilabel:`Parameters`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:290
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
 msgid "**Prefer storing the CRS definition in WKT format**"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:292
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:293
 msgid ""
 "Although both ``Proj String`` and ``WKT`` formats are supported, it's "
 "highly recommended to store projection definitions in the WKT format. "
@@ -505,17 +505,17 @@ msgid ""
 "convert the definition to the WKT format that you can later save."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:298
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:299
 msgid ""
 "Click :guilabel:`Validate` to test whether the CRS definition is an "
 "acceptable projection definition."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:306
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:307
 msgid "Custom CRS Dialog"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:309
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:310
 msgid ""
 "You can test your CRS parameters to see if they give sane results. To do "
 "this, enter known WGS 84 latitude and longitude values in "
@@ -524,21 +524,21 @@ msgid ""
 "your coordinate reference system."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:315
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:316
 msgid "Integrate an NTv2-transformation in QGIS"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:317
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:318
 msgid "To integrate an NTv2 transformation file in QGIS you need one more step:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:320
 msgid ""
 "Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
 ":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:322
 msgid ""
 "Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition"
 " in the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
@@ -546,15 +546,15 @@ msgid ""
 "Projections...`)."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:330
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:331
 msgid "Setting an NTv2 transformation"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:337
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:338
 msgid "Datum Transformations"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:340
 msgid ""
 "In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning "
 "that whenever you use layers with different coordinate systems QGIS "
@@ -563,7 +563,7 @@ msgid ""
 "CRS!"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:344
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:345
 msgid ""
 "By default, QGIS will attempt to use the most accurate transformation "
 "available. However, in some cases this may not be possible, e.g. whenever"
@@ -576,7 +576,7 @@ msgid ""
 ":ref:`user profile <user_profiles>` folder."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:354
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:355
 msgid ""
 "If desired, QGIS can also prompt you whenever multiple possible "
 "transformations can be made between two CRSs, and allow you to make an "
@@ -584,14 +584,14 @@ msgid ""
 " for your data."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:358
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
 msgid ""
 "This customization is done in the :menuselection:`Settings -->` |options|"
 " :menuselection:`Options --> Transformations` tab menu under the "
 ":guilabel:`Default datum transformations` group:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:362
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:363
 msgid ""
 "using |checkbox| :guilabel:`Ask for datum transformation if several are "
 "available`: when more than one appropriate datum transformation exist for"
@@ -602,48 +602,48 @@ msgid ""
 "remembered and automatically applied to any newly created QGIS projects."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:428
 msgid "checkbox"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:369
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:370
 msgid ""
 "or defining a list of appropriate datum transformations to use as "
 "defaults when loading a layer to a project or reprojecting a layer."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:372
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:373
 msgid ""
 "Use the |symbologyAdd| button to open the :guilabel:`Select Datum "
 "Transformations` dialog. Then:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:375
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:376
 msgid ""
 "Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu "
 "or the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:444
 msgid "setProjection"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
 msgid ""
 "A list of available transformations from source to destination will be "
 "shown in the table. Clicking a row shows details on the settings applied "
 "and the corresponding accuracy and area of use of the transformation."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:388
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:389
 msgid "Selecting a preferred default datum transformation"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:390
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:391
 msgid ""
 "In some cases a transformation may not be available for use on your "
 "system. In this case, the transformation will still be shown (greyed) in "
@@ -654,21 +654,21 @@ msgid ""
 "directory."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:397
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:398
 msgid "Find your preferred transformation and select it"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:398
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:399
 msgid ""
 "Set whether you |checkbox| :guilabel:`Allow fallback transforms if "
 "preferred operation fails`"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:400
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:401
 msgid "Click :guilabel:`OK`."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:402
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:403
 msgid ""
 "A row is added to the table under :guilabel:`Default Datum "
 "Transformations` with information about the :guilabel:`Source CRS`, the "
@@ -677,7 +677,7 @@ msgid ""
 "enabled."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:407
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:408
 msgid ""
 "From now, QGIS automatically uses the selected datum transformations for "
 "further transformation between these two CRSs until you remove it "
@@ -685,15 +685,15 @@ msgid ""
 "in the list."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:447
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:448
 msgid "symbologyRemove"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:449
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:450
 msgid "toggleEditing"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:412
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
 msgid ""
 "Datum transformations set in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab will be inherited by all"

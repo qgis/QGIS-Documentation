@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -37,7 +37,7 @@ msgid ""
 "the modeler, to provide additional functionality to models."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:6
+#: ../../docs/training_manual/processing/modeler_only.rst:7
 msgid ""
 "The goal of this lesson is to use the modeler to create an interpolation "
 "algorithm that takes into account the current selection, not just to use "
@@ -45,7 +45,7 @@ msgid ""
 " the interpolated raster layer."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:8
+#: ../../docs/training_manual/processing/modeler_only.rst:11
 msgid ""
 "The interpolation process involves two steps, as it has been already "
 "explained in previous lessons: rasterizing the points layer and fill the "
@@ -58,14 +58,14 @@ msgid ""
 "additional tools into our model."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:10
+#: ../../docs/training_manual/processing/modeler_only.rst:19
 msgid ""
 "Open the modeler and start the model by adding the required inputs. In "
 "this case we need a vector layer (restricted to points) and an attribute "
 "from it, with the values that we will use for rasterizing."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:14
+#: ../../docs/training_manual/processing/modeler_only.rst:25
 msgid ""
 "The next step is to compute the extent of the selected features. That's "
 "where we can use the model-only tool called :guilabel:`Vector layer "
@@ -73,7 +73,7 @@ msgid ""
 "those selected features. Then, we can use this tool on that layer."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:16
+#: ../../docs/training_manual/processing/modeler_only.rst:30
 msgid ""
 "An easy way of creating a layer with the extent of the selected features "
 "is to compute a convex hull of the input points layer. It will use only "
@@ -83,34 +83,34 @@ msgid ""
 " the modeler canvas:"
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:20
+#: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""
 "The result from the :guilabel:`Vector layer bounds` is a set of four "
 "numeric values and a extent object. We will use both the numeric outputs "
 "and the extent for this exercise."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:24
+#: ../../docs/training_manual/processing/modeler_only.rst:43
 msgid ""
 "We can now add the algorithm that rasterizes the vector layer, using the "
 "extent from the :guilabel:`Vector layer bounds` algorithm as input."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:26
+#: ../../docs/training_manual/processing/modeler_only.rst:46
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:30
+#: ../../docs/training_manual/processing/modeler_only.rst:50
 msgid "The canvas should now look like."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:34
+#: ../../docs/training_manual/processing/modeler_only.rst:54
 msgid ""
 "Finally, fill the no-data values of the raster layer using the "
 ":guilabel:`Close gaps` algorithm."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:38
+#: ../../docs/training_manual/processing/modeler_only.rst:58
 msgid ""
 "The algorithm is now ready to be saved and added to the toolbox. You can "
 "run it and it will generate a raster layer from interpolating the "
@@ -118,29 +118,29 @@ msgid ""
 "extent as the selection."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:40
+#: ../../docs/training_manual/processing/modeler_only.rst:62
 msgid ""
-"Here's an improvement to the algorithm. We have used a harcoded value for"
-" the cellsize when rasterizing. This value is fine for our test input "
+"Here's an improvement to the algorithm. We have used a hardcoded value "
+"for the cellsize when rasterizing. This value is fine for our test input "
 "layer, but might not be for other cases. We could add a new parameter, so"
 " the user enters the desired value, but a much better approach would be "
 "to have that value automatically computed."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:42
+#: ../../docs/training_manual/processing/modeler_only.rst:67
 msgid ""
 "We can use the modeler-only calculator, and compute that value from the "
 "extent coordinates. For instance, to create a layer with a fixed width of"
 " 100 pixels, we can use the following formula in the calculator."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:46
+#: ../../docs/training_manual/processing/modeler_only.rst:72
 msgid ""
 "Now we have to edit the rasterize algorithm, so it uses the output of the"
 " calculator instead of the hardcoded value."
 msgstr ""
 
-#: ../../docs/training_manual/processing/modeler_only.rst:48
+#: ../../docs/training_manual/processing/modeler_only.rst:74
 msgid "The final algorithm should look like this:"
 msgstr ""
 

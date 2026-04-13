@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -81,7 +81,7 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
 msgid ""
 "As a source we can use any polyline vector layer. Nodes of the polylines "
-"become graph vertexes, and segments of the polylines are graph edges. If "
+"become graph vertices, and segments of the polylines are graph edges. If "
 "several nodes have the same coordinates then they are the same graph "
 "vertex. So two lines that have a common node become connected to each "
 "other."
@@ -203,13 +203,13 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:194
 msgid ""
 "Networks analysis is used to find answers to two questions: which "
-"vertexes are connected and how to find a shortest path. To solve these "
+"vertices are connected and how to find a shortest path. To solve these "
 "problems the network analysis library provides Dijkstra's algorithm."
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:198
 msgid ""
-"Dijkstra's algorithm finds the shortest route from one of the vertexes of"
+"Dijkstra's algorithm finds the shortest route from one of the vertices of"
 " the graph to all the others and the values of the optimization "
 "parameters. The results can be represented as a shortest path tree."
 msgstr ""
@@ -225,7 +225,7 @@ msgid "only one vertex has no incoming edges — the root of the tree"
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:206
-msgid "all other vertexes have only one incoming edge"
+msgid "all other vertices have only one incoming edge"
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:207
@@ -331,7 +331,7 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
 msgid ""
 "At this point we have the path, in the form of the inverted list of "
-"vertexes (vertexes are listed in reversed order from end point to start "
+"vertices (vertices are listed in reversed order from end point to start "
 "point) that will be visited during traveling by this path."
 msgstr ""
 
@@ -350,9 +350,9 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:492
 msgid ""
-"The area of availability for vertex A is the subset of graph vertexes "
+"The area of availability for vertex A is the subset of graph vertices "
 "that are accessible from vertex A and the cost of the paths from A to "
-"these vertexes are not greater that some value."
+"these vertices are not greater that some value."
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
@@ -376,8 +376,8 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
 msgid ""
 "A more difficult problem is to get the borders of the area of "
-"availability. The bottom border is the set of vertexes that are still "
-"accessible, and the top border is the set of vertexes that are not "
+"availability. The bottom border is the set of vertices that are still "
+"accessible, and the top border is the set of vertices that are not "
 "accessible. In fact this is simple: it is the availability border based "
 "on the edges of the shortest path tree for which the source vertex of the"
 " edge is accessible and the target vertex of the edge is not."

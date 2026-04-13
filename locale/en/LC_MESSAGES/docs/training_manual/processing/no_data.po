@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,7 +18,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../<rst_prolog>:5
 msgid ""
@@ -123,7 +123,7 @@ msgid ""
 "has no effect at all."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:39
+#: ../../docs/training_manual/processing/no_data.rst:40
 msgid ""
 "Let's now perform another calculation, this time on the *accflow* layer. "
 "This layer contains values of accumulated flow, a hydrological parameter."
@@ -134,24 +134,24 @@ msgid ""
 "representation. We can calculate that using the raster calculator."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:41
+#: ../../docs/training_manual/processing/no_data.rst:47
 msgid ""
 "Open the algorithm dialog again, select the *accflow* layer as the only "
 "input layer, and enter the following formula: ``log(a)``."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:43
+#: ../../docs/training_manual/processing/no_data.rst:50
 msgid "Here is the layer that you will get."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:47
+#: ../../docs/training_manual/processing/no_data.rst:54
 msgid ""
 "If you select the *Identify* tool to know the value of a layer at a given"
 " point, select the layer that we have just created, and click on a point "
 "outside of the basin, you will see that it contains a no--data value."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:51
+#: ../../docs/training_manual/processing/no_data.rst:60
 msgid ""
 "For the next exercise we are going to use two layers instead of one, and "
 "we are going to get a DEM with valid elevation values only within the "
@@ -160,7 +160,7 @@ msgid ""
 " formula in the corresponding field:"
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:57
+#: ../../docs/training_manual/processing/no_data.rst:69
 msgid ""
 "``a`` refers to the accumulated flow layer (since it is the first one to "
 "appear in the list) and ``b`` refers to the DEM. What we are doing in the"
@@ -171,11 +171,11 @@ msgid ""
 "data value outside (``DEM * no_data = no_data``)"
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:59
+#: ../../docs/training_manual/processing/no_data.rst:75
 msgid "Here is the resulting layer."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:64
+#: ../../docs/training_manual/processing/no_data.rst:80
 msgid ""
 "This technique is used frequently to *mask* values in a raster layer, and"
 " is useful whenever you want to perform calculations for a region other "
@@ -186,18 +186,18 @@ msgid ""
 "one that actually gives information about the configuration of the basin."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:66
+#: ../../docs/training_manual/processing/no_data.rst:87
 msgid ""
 "There are other interesting things about this algorithm that we have just"
 " run, apart from the no--data values and how they are handled. If you "
 "have a look at the extents of the layers that we have multiplied (you can"
-" do it double--clicking on their names of the layer in the table of "
-"contents and looking at their properties), you will see that they are not"
-" the same, since the extent covered by the flow accumulation layer is "
-"smaller that the extent of the full DEM."
+" do it double-clicking on the names of the layer in the table of contents"
+" and looking at their properties), you will see that they are not the "
+"same, since the extent covered by the flow accumulation layer is smaller "
+"that the extent of the full DEM."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:68
+#: ../../docs/training_manual/processing/no_data.rst:93
 msgid ""
 "That means that those layers do not match, and that they cannot be "
 "multiplied directly without homogenizing those sizes and extents by "
@@ -207,7 +207,7 @@ msgid ""
 "from the input layers, and the minimum cell size of their cellsizes."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:70
+#: ../../docs/training_manual/processing/no_data.rst:98
 msgid ""
 "In this case (and in most cases), this produces the desired results, but "
 "you should always be aware of the additional operations that are taking "
@@ -217,39 +217,39 @@ msgid ""
 "when using multiple raster layers."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:73
+#: ../../docs/training_manual/processing/no_data.rst:104
 msgid ""
 "Let's finish this lesson with another masking exercise. We are going to "
 "calculate the slope in all areas with an elevation between 1000 and 1500 "
 "meters."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:75
+#: ../../docs/training_manual/processing/no_data.rst:107
 msgid ""
 "In this case, we do not have a layer to use as a mask, but we can create "
 "it using the calculator."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:77
+#: ../../docs/training_manual/processing/no_data.rst:109
 msgid ""
 "Run the calculator using the DEM as only input layer and the following "
 "formula"
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:83
+#: ../../docs/training_manual/processing/no_data.rst:115
 msgid ""
 "As you can see, we can use the calculator not only to do simple algebraic"
 " operations, but also to run more complex calculation involving "
 "conditional sentences, like the one above."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:85
+#: ../../docs/training_manual/processing/no_data.rst:118
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and "
 "no-data in cells outside of it."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:89
+#: ../../docs/training_manual/processing/no_data.rst:122
 msgid ""
 "The no-data value comes from the 0/0 expression. Since that is an "
 "undetermined value, SAGA will add a NaN (Not a Number) value, which is "
@@ -258,13 +258,13 @@ msgid ""
 "cell is."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:91
+#: ../../docs/training_manual/processing/no_data.rst:126
 msgid ""
 "Now you just have to multiply it by the slope layer included in the "
 "project, and you will get the desired result."
 msgstr ""
 
-#: ../../docs/training_manual/processing/no_data.rst:93
+#: ../../docs/training_manual/processing/no_data.rst:128
 msgid ""
 "All that can be done in a single operation with the calculator. We leave "
 "that as an exercise for the reader."
