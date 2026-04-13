@@ -136,6 +136,7 @@ Python code
 
 DTM filter (slope-based)
 ------------------------
+``Added in 3.34``
 
 Can be used to filter a digital elevation model in order to classify its cells into ground and object (non-ground) cells.
 
@@ -256,6 +257,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -304,7 +307,7 @@ Python code
 
 Fill sinks (Wang & Liu)
 ------------------------
-|344|
+``Added in 3.44``
 
 Uses a method proposed by Wang & Liu to identify and fill surface depressions in digital elevation models.
 
@@ -1181,9 +1184,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. |344| replace:: ``NEW in 3.44``
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -236,6 +236,8 @@ Basic parameters
           :end-before: **end_layer_output_types_skip**
 
    * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
@@ -360,6 +362,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -390,7 +394,9 @@ Outputs
      - [vector: line]
      - Line layer representing the parts of the network
        that can be serviced by the start points, for the given cost.
-   * - **Non routable features**
+   * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
      - An optional output which will be used to store any input features
@@ -503,6 +509,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -617,6 +625,8 @@ Basic parameters
    * - **Non-routable features**
 
        Optional
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
@@ -642,6 +652,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -669,7 +681,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
-   * - **Non routable features**
+   * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
      - An optional output layer which will be used to store any input features
@@ -752,6 +766,8 @@ Basic parameters
    * - **Non-routable features**
 
        Optional
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
@@ -778,6 +794,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -805,7 +823,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
-   * - **Non routable features**
+   * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
      - An optional output layer which will be used to store any input features
@@ -896,6 +916,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 

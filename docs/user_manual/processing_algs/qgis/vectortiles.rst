@@ -12,6 +12,7 @@ Vector Tiles
 
 Download vector tiles
 ---------------------
+``Added in 3.32``
 
 Downloads vector tiles of an input vector tile layer and saves them in a local vector tile file.
 

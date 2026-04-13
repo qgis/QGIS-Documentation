@@ -15,6 +15,7 @@ Point Cloud Data Management
 
 Assign projection
 -----------------
+``Added in 3.32``
 
 Assigns a Coordinate Reference System to a point cloud layer, if it is missing or wrong.
 A new layer is created.
@@ -118,6 +119,7 @@ Python code
 
 Build virtual point cloud (VPC)
 -------------------------------
+``Added in 3.32``
 
 Creates a :ref:`virtual point cloud (VPC) <virtual_point_cloud>` from input point cloud data.
 
@@ -358,6 +360,7 @@ Python code
 
 Clip point cloud
 ----------------
+``Added in 3.32``
 
 Clips a point cloud layer by a polygon layer
 so that the resulting point cloud contains only points within the polygons.
@@ -652,6 +655,7 @@ Python code
 
 Create COPC
 -----------
+``Added in 3.32``
 
 Creates the index for all the input point cloud files in a batch mode.
 
@@ -715,6 +719,7 @@ Python code
 
 Create tiles from point cloud
 -----------------------------
+``Added in 3.32``
 
 Creates tiles from input point cloud files,
 recommended for best performance (in display or analysis) with such datasets in QGIS.
@@ -1284,6 +1289,7 @@ Python code
 
 Merge point cloud
 -----------------
+``Added in 3.32``
 
 Merges multiple point cloud files into a single one.
 
@@ -1379,6 +1385,7 @@ Python code
 
 Point cloud information
 -----------------------
+``Added in 3.32``
 
 Outputs basic metadata from an input point cloud file.
 
@@ -1469,6 +1476,7 @@ Python code
 
 Reproject point cloud
 ---------------------
+``Added in 3.32``
 
 Reprojects a point cloud to a different Coordinate Reference System (CRS).
 
@@ -1573,6 +1581,7 @@ Python code
 
 Thin (by sampling radius)
 -------------------------
+``Added in 3.32``
 
 Creates a thinned version of the point cloud by performing sampling by distance point
 (reduces the number of points within a certain radius).
@@ -1700,6 +1709,7 @@ Python code
 
 Thin (by skipping points)
 -------------------------
+``Added in 3.32``
 
 Creates a thinned version of the point cloud by keeping only every N-th point
 (reduces the number of points by skipping nearby points).

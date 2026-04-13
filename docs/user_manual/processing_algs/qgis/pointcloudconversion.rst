@@ -14,6 +14,7 @@ Point Cloud Conversion
 
 Convert point cloud format
 --------------------------
+``Added in 3.32``
 
 Converts a point cloud to a different file format, e.g. creates a compressed :file:`.LAZ`.
 
@@ -109,6 +110,7 @@ Python code
 
 Export point cloud to raster
 ----------------------------
+``Added in 3.32``
 
 Exports point cloud data to a 2D raster grid having cell size of given resolution,
 writing values from the specified attribute.
@@ -237,6 +239,7 @@ Python code
 
 Export point cloud to raster (using triangulation)
 --------------------------------------------------
+``Added in 3.32``
 
 Exports point cloud data to a 2D raster grid using a triangulation of points
 and then interpolating cell values from triangles.
@@ -380,6 +383,7 @@ Python code
 
 Export point cloud to vector
 -----------------------------
+``Added in 3.32``
 
 Exports point cloud data to a vector layer with 3D points (a GeoPackage),
 optionally with extra attributes.

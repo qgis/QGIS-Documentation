@@ -14,6 +14,7 @@ Point Cloud Extraction
 
 Boundary
 --------
+``Added in 3.32``
 
 Exports a polygon file containing point cloud layer boundary.
 It may contain holes and it may be a multi-part polygon.
@@ -126,6 +127,7 @@ Python code
 
 Filter point cloud
 ------------------
+``Added in 3.32``
 
 Extracts point from the input point cloud which match PDAL expression and/or are inside of a cropping rectangle.
 
@@ -241,6 +243,7 @@ Python code
 
 Point cloud density
 -------------------
+``Added in 3.32``
 
 Exports a raster file based on the number of points within each raster cell -
 useful for quality checking of point cloud datasets.

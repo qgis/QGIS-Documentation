@@ -786,6 +786,8 @@ Advanced parameters
      - Type
      - Description
    * - **Keep disjoint features separate**
+
+       ``Added in 3.32``
      - ``SEPARATE_DISJOINT``
      - [boolean]
 
@@ -1736,12 +1738,16 @@ Parameters
    * - **Tolerance**
 
        Optional
+
+       ``Added in 3.34``
      - ``TOLERANCE``
      - [numeric: double]
 
        Default: 0.0
      - Specifies an optional snapping tolerance which can be used to improve the robustness of the triangulation.
    * - **Add point IDs to output**
+
+       ``Added in 3.34``
      - ``ADD_ATTRIBUTES``
      - [boolean]
 
@@ -7994,12 +8000,16 @@ Parameters
    * - **Tolerance**
 
        Optional
+
+       ``Added in 3.34``
      - ``TOLERANCE``
      - [numeric: double]
 
        Default: 0.0
      - Specifies an optional snapping tolerance which can be used to improve the robustness of the voronoi.
    * - **Copy attributes from input features**
+
+       ``Added in 3.34``
      - ``COPY_ATTRIBUTES``
      - [boolean]
 

@@ -822,6 +822,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -866,6 +868,8 @@ Python code
 
 Surface to Polygon
 ------------------
+``Added in 3.42``
+
 Exports a polygon file containing the boundary of a mesh layer.
 The resulting polygon may contain holes and may be a multi-part polygon.
 
