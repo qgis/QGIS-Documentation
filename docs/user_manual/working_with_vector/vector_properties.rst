@@ -2615,7 +2615,7 @@ In all cases you must enter the name of the function that will be called
 
 An example is (in module MyForms.py):
 
-::
+.. code-block:: python
 
   def open(dialog,layer,feature):
       geom = feature.geometry()
@@ -3381,7 +3381,7 @@ able to make a spatial selection of localities and export these field values
 to a text file for the selected record (shown in yellow in the QGIS map area).
 Here is the action to achieve this:
 
-::
+.. code-block:: bash
 
   bash -c "echo \"%taxon_name %lat %long\" >> /tmp/species_localities.txt"
 
@@ -3389,7 +3389,7 @@ Here is the action to achieve this:
 After selecting a few localities and running the action on each one, opening
 the output file will show something like this:
 
-::
+.. code-block:: text
 
   Acacia mearnsii -34.0800000000 150.0800000000
   Acacia mearnsii -34.9000000000 150.1200000000

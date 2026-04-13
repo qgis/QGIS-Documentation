@@ -109,7 +109,7 @@ For example, to reuse the |fileOpen|
 :source:`mActionFileOpen.svg <images/themes/default/mActionFileOpen.svg>` icon available
 in the QGIS code repository:
 
-.. code:: py
+.. code-block:: python
 
     # e.g. somewhere in the initGui
     self.file_open_action = QAction(
