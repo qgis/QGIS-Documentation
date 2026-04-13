@@ -3172,7 +3172,7 @@ Parameters
 
        Default: 0 (Minimum and Maximum)
      - Choose which extrema to extract:
-     
+
        - 0: Minimum and Maximum
        - 1: Minimum only
        - 2: Maximum only
@@ -3785,13 +3785,13 @@ Python code
 
 Rescale raster
 --------------
-Rescales raster layer to a new value range, while preserving the shape 
-(distribution) of the raster's histogram (pixel values). Input values 
-are mapped using a linear interpolation from the source raster's 
-minimum and maximum pixel values to the destination minimum and miximum 
+Rescales raster layer to a new value range, while preserving the shape
+(distribution) of the raster's histogram (pixel values). Input values
+are mapped using a linear interpolation from the source raster's
+minimum and maximum pixel values to the destination minimum and miximum
 pixel range.
 
-By default the algorithm preserves the original NoData value, but there 
+By default the algorithm preserves the original NoData value, but there
 is an option to override it.
 
 .. figure:: img/rescale_raster.png
@@ -3836,11 +3836,11 @@ Basic parameters
        Default value: 255.0
      - Maximum pixel value to use in the rescaled layer
    * - **New NoData value**
-   
+
        Optional
      - ``NODATA``
      - [numeric: double]
-     
+
        Default value: Not set
      - Value to assign to the NoData pixels.
        If unset, original NoData values are preserved.
@@ -4227,35 +4227,35 @@ The created point layer will be in the same spatial reference system as the sele
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
-..........   
+..........
 
-.. list-table::  
-   :header-rows: 1  
-   :widths: 20 20 20 40  
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
-   * - Label  
-     - Name  
-     - Type  
-     - Description  
-   * - **Input Layer**  
-     - ``INPUT``  
-     - [vector: polygon]  
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: polygon]
      - Polygon layer defining the zones.
-   * - **Raster Layer**  
-     - ``RASTER``  
-     - [raster]  
+   * - **Raster Layer**
+     - ``RASTER``
+     - [raster]
      - Raster layer to extract the minimum and maximum values from.
-   * - **Raster Band**  
-     - ``BAND``  
-     - [raster band]  
-       
-       Default: The first band of the raster layer  
+   * - **Raster Band**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
      - If the raster has multiple bands, select the band to process.
-   * - **Zonal extrema**  
-     - ``OUTPUT``  
+   * - **Zonal extrema**
+     - ``OUTPUT``
      - [vector: point]
-     
-       Default: ``[Create temporary layer]``  
+
+       Default: ``[Create temporary layer]``
      - Specification of the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -4264,23 +4264,23 @@ Parameters
 
 
 Outputs
-.......  
+.......
 
-.. list-table::  
-   :header-rows: 1  
-   :widths: 20 20 20 40  
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
-   * - Label  
-     - Name  
-     - Type  
-     - Description  
-   * - **Zonal extrema**  
-     - ``OUTPUT``  
-     - [vector: point]  
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Zonal extrema**
+     - ``OUTPUT``
+     - [vector: point]
      - Output layer containing the minimum and maximum points for each zone.
 
 Python code
-...........  
+...........
 
 **Algorithm ID**: ``native:zonalminmaxpoint``
 

@@ -10,9 +10,9 @@ Georeferencer
    .. contents::
       :local:
 
-The |georefRun| Georeferencer is a tool for aligning unreferenced raster or vector layers 
-to known coordinate systems using Ground Control Points (GCPs). 
-It supports exporting transformed rasters (GeoTIFF) and vectors (shapefiles, geopackages, etc.) 
+The |georefRun| Georeferencer is a tool for aligning unreferenced raster or vector layers
+to known coordinate systems using Ground Control Points (GCPs).
+It supports exporting transformed rasters (GeoTIFF) and vectors (shapefiles, geopackages, etc.)
 or writing accompanying world files (for raster only). The basic
 approach to georeferencing a layer is to locate points on it for which
 you can accurately determine coordinates.
@@ -112,17 +112,17 @@ Entering ground control points (GCPs)
      :sup:`From map canvas` button to add the X and Y coordinates with the help of a
      georeferenced map already loaded in the QGIS map canvas. The CRS will be set
      automatically.
-   - When entering GCPs from the main map canvas, you have the option to hide 
-     the georeferencer window while selecting points from the main canvas. 
-     If the |checkbox| :guilabel:`Automatically hide georeferencer window` 
-     checkbox is ticked, after clicking |pencil| :guilabel:`From Map Canvas`, 
-     the main georeferencer window will be hidden until a point is added on the 
-     map canvas. 
-     The :guilabel:`Enter Map Coordinates` dialog will remain open. 
-     If the box is unchecked, both windows will remain open while selecting a 
-     point on the map canvas. 
-     This option only takes effect when the georeferencer window is not docked 
-     in the main interface. 
+   - When entering GCPs from the main map canvas, you have the option to hide
+     the georeferencer window while selecting points from the main canvas.
+     If the |checkbox| :guilabel:`Automatically hide georeferencer window`
+     checkbox is ticked, after clicking |pencil| :guilabel:`From Map Canvas`,
+     the main georeferencer window will be hidden until a point is added on the
+     map canvas.
+     The :guilabel:`Enter Map Coordinates` dialog will remain open.
+     If the box is unchecked, both windows will remain open while selecting a
+     point on the map canvas.
+     This option only takes effect when the georeferencer window is not docked
+     in the main interface.
 #. Continue entering points. You should have at least four points, and the more
    coordinates you can provide, the better the result will be. There are
    additional tools for zooming and panning the working area in
@@ -184,35 +184,35 @@ Currently, the following :guilabel:`Transformation types` are available:
    from the other algorithms, as it does not actually transform the raster pixels.
    It allows positioning (translating) the image and uniform scaling, but no rotation or other transformations.
    It is the most suitable if your image is a good quality raster map, in a known CRS, but is just missing georeferencing information. At least 2 GCPs are needed.
-   
-*  The **Helmert** transformation also allows rotation. It is particularly useful if your raster is a good quality local 
+
+*  The **Helmert** transformation also allows rotation. It is particularly useful if your raster is a good quality local
    map or orthorectified aerial image, but not aligned with the grid bearing in your CRS. At least 2 GCPs are needed.
-   
-*  The **Polynomial 1** algorithm allows a more general affine transformation, in particular also a uniform shear. Straight lines remain straight 
-   (i.e., collinear points stay collinear) and parallel lines remain parallel. This is particularly useful for georeferencing data cartograms, 
+
+*  The **Polynomial 1** algorithm allows a more general affine transformation, in particular also a uniform shear. Straight lines remain straight
+   (i.e., collinear points stay collinear) and parallel lines remain parallel. This is particularly useful for georeferencing data cartograms,
    which may have been plotted (or data collected) with different ground pixel sizes in different directions. At least 3 GCP's are required.
 
-*  The **Polynomial** algorithms 2-3 use more general 2nd or 3rd degree polynomials instead of just affine transformation. This allows them to account 
-   for curvature or other systematic warping of the image, for instance photographed maps with curving edges. At least 6 (respectively 10) GCP's are required.  
-   Angles and local scale are not preserved or treated uniformly across the image. In particular, straight lines may become curved, and there may be significant 
+*  The **Polynomial** algorithms 2-3 use more general 2nd or 3rd degree polynomials instead of just affine transformation. This allows them to account
+   for curvature or other systematic warping of the image, for instance photographed maps with curving edges. At least 6 (respectively 10) GCP's are required. 
+   Angles and local scale are not preserved or treated uniformly across the image. In particular, straight lines may become curved, and there may be significant
    distortion introduced at the edges or far from any GCPs arising from extrapolating the data-fitted polynomials too far.
 
-*  The **Projective** algorithm generalizes Polynomial 1 in a different way, allowing transformations representing a central projection between 2 non-parallel planes, 
-   the image and the map canvas. Straight lines stay straight, but parallelism is not preserved and scale across the image varies consistently with the 
-   change in perspective. This transformation type is most useful for georeferencing angled photographs (rather than flat scans) of good quality maps, or 
+*  The **Projective** algorithm generalizes Polynomial 1 in a different way, allowing transformations representing a central projection between 2 non-parallel planes,
+   the image and the map canvas. Straight lines stay straight, but parallelism is not preserved and scale across the image varies consistently with the
+   change in perspective. This transformation type is most useful for georeferencing angled photographs (rather than flat scans) of good quality maps, or
    oblique aerial images. A minimum of 4 GCPs is required.
-   
-*  Finally, the **Thin Plate Spline** (TPS) algorithm "rubber sheets" the raster using multiple local polynomials to match the GCPs specified, with overall 
-   surface curvature minimized. Areas away from GCPs will be moved around in the output to 
-   accommodate the GCP matching, but will otherwise be minimally locally deformed.  TPS is most useful for georeferencing damaged, deformed, or otherwise slightly 
-   inaccurate maps, or poorly orthorectified aerials.  It is also useful for approximately georeferencing and implicitly reprojecting maps with unknown projection type 
-   or parameters, but where a regular grid or dense set of ad-hoc GCPs can be matched with a reference map layer. It technically requires a minimum of 
+
+*  Finally, the **Thin Plate Spline** (TPS) algorithm "rubber sheets" the raster using multiple local polynomials to match the GCPs specified, with overall
+   surface curvature minimized. Areas away from GCPs will be moved around in the output to
+   accommodate the GCP matching, but will otherwise be minimally locally deformed.  TPS is most useful for georeferencing damaged, deformed, or otherwise slightly
+   inaccurate maps, or poorly orthorectified aerials.  It is also useful for approximately georeferencing and implicitly reprojecting maps with unknown projection type
+   or parameters, but where a regular grid or dense set of ad-hoc GCPs can be matched with a reference map layer. It technically requires a minimum of
    10 GCPs, but usually more to be successful.
-   
-In all of the algorithms except TPS, if more than the minimum GCPs are specified, parameters will be fitted so that the overall residual error is minimized. 
-This is helpful to minimize the impact of registration errors, i.e. slight imprecisions in pointer clicks or typed coordinates, or other small local image deformations.  
-Absent other GCPs to compensate, such errors or deformations could translate into significant distortions, especially 
-near the edges of the georeferenced image.  However, if more than the minimum GCPs are specified, they will match only approximately in the output.  
+
+In all of the algorithms except TPS, if more than the minimum GCPs are specified, parameters will be fitted so that the overall residual error is minimized.
+This is helpful to minimize the impact of registration errors, i.e. slight imprecisions in pointer clicks or typed coordinates, or other small local image deformations. 
+Absent other GCPs to compensate, such errors or deformations could translate into significant distortions, especially
+near the edges of the georeferenced image.  However, if more than the minimum GCPs are specified, they will match only approximately in the output.
 In contrast, TPS will precisely match all specified GCPs, but may introduce significant deformations between nearby GCPs with registration errors.
 
 Define the Resampling method
@@ -220,8 +220,8 @@ Define the Resampling method
 
 The type of resampling you choose will likely depend on your input data
 and the ultimate objective of the exercise. If you don't want to change
-statistics of the raster (other than as implied by nonuniform geometric scaling if using other than the Linear, Helmert, or Polynomial 1 transformations), 
-you might want to choose 'Nearest neighbour'. In contrast, 
+statistics of the raster (other than as implied by nonuniform geometric scaling if using other than the Linear, Helmert, or Polynomial 1 transformations),
+you might want to choose 'Nearest neighbour'. In contrast,
 'cubic resampling', for instance, will usually generate a visually smoother result.
 
 It is possible to choose between five different resampling methods:
@@ -266,7 +266,7 @@ raster.
 * The |checkbox| :guilabel:`Use 0 for transparency when needed` can be activated,
   if pixels with the value 0 shall be visualized transparent. In our example
   toposheet, all white areas would be transparent.
-* The |checkbox| :guilabel:`Save GCP Points` will store GCP Points in a file next 
+* The |checkbox| :guilabel:`Save GCP Points` will store GCP Points in a file next
   to the output raster.
 * Finally, |checkbox| :guilabel:`Load in project when done` loads the output raster
   automatically into the QGIS map canvas when the transformation is done.
@@ -348,19 +348,19 @@ type of layer you are georeferencing.
 Configure the georeferencer
 ---------------------------
 
-You can customize the behavior of the georeferencer in :menuselection:`Settings 
---> Configure Georeferencer` (or use keyboard shortcut :kbd:`Ctrl+P`). 
+You can customize the behavior of the georeferencer in :menuselection:`Settings
+--> Configure Georeferencer` (or use keyboard shortcut :kbd:`Ctrl+P`).
 
-* Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying GCP 
-  IDs and X/Y coordinates in both the Georeferencer window and the main map canvas. 
-* :guilabel:`Residual Units` controls whether residual units are given in pixels 
+* Under :guilabel:`Point Tip` you can use the checkboxes to toggle displaying GCP
+  IDs and X/Y coordinates in both the Georeferencer window and the main map canvas.
+* :guilabel:`Residual Units` controls whether residual units are given in pixels
   or map units
 * :guilabel:`PDF Report` allows you to set margin size in mm for the report export
 * :guilabel:`PDF Map` allows you to choose a paper size for the map export
-* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window 
-  docked`. 
-  This will dock the Georeferencer window in the main QGIS window rather than 
-  showing it as a separate window that can be minimized. 
+* Finally, you can activate to |checkbox| :guilabel:`Show Georeferencer window
+  docked`.
+  This will dock the Georeferencer window in the main QGIS window rather than
+  showing it as a separate window that can be minimized.
 
 
 

@@ -169,7 +169,7 @@ assignment given in this section.
 To do so, you will need to create and feed an answer block beneath the instructions.
 
 #. First, create the custom collapsible widget that contains the answer::
-  
+
     .. admonition:: Answer
        :class: dropdown
 
@@ -217,7 +217,7 @@ If you are explaining a new concept, you will need to write the new concept's
 name in italics by enclosing it in asterisks (``*``).
 
 ::
-  
+
   This sample text shows how to introduce a *new concept*.
 
 Emphasis
@@ -239,7 +239,7 @@ Images
 
 * When adding an image, save it to an :file:`img` folder next to the lesson file.
 * Include it in the document like this::
-  
+
     .. figure:: img/image_file.extension
        :align: center
 
@@ -301,12 +301,12 @@ Adding notes
   easily be made part of the flow of the lesson. This is the markup::
 
     [Normal paragraph.]
-  
+
     .. note:: Note text.
       New line within note.
-  
+
       New paragraph within note.
-  
+
     [Unindented text resumes normal paragraph.]
 
 Adding a sponsorship/authorship note

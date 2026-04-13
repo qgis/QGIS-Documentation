@@ -5,7 +5,7 @@ The raster calculator. No-data values
 .. note:: In this lesson we will see how to use the raster calculator to perform some operations on raster layers. We will also explain what are no--data values and how the calculator and other algorithms deal with them
 
 
-The raster calculator is one of the most powerful algorithms that you will find. It's a very flexible and versatile algorithm that can be used for many different calculations, and one that will soon become an important part of your toolbox. 
+The raster calculator is one of the most powerful algorithms that you will find. It's a very flexible and versatile algorithm that can be used for many different calculations, and one that will soon become an important part of your toolbox.
 
 In this lesson we will be performing some calculation with the raster calculator, most of them rather simple. This will let us see how it is used and how it deals with some particular situations that it might find. Understanding that is important to later get the expected results when using the calculator, and also to understand certain techniques that are commonly applied with it.
 
@@ -38,7 +38,7 @@ Click *Run* to run the algorithm. You will get a layer that has the same appeara
 
 Let's now perform another calculation, this time on the *accflow* layer. This layer contains values of accumulated flow, a hydrological parameter. It contains those values only within the area of a given watershed, with no--data values outside of it. As you can see, the rendering is not very informative, due to the way values are distributed. Using the logarithm of that flow accumulation will yield a much more informative representation. We can calculate that using the raster calculator.
 
-Open the algorithm dialog again, select the *accflow* layer as the only input layer, and enter the following formula: ``log(a)``. 
+Open the algorithm dialog again, select the *accflow* layer as the only input layer, and enter the following formula: ``log(a)``.
 
 Here is the layer that you will get.
 

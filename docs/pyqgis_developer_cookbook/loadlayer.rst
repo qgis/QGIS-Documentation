@@ -90,7 +90,7 @@ providers:
 
 * The ogr provider from the GDAL library supports a `wide variety of formats
   <https://gdal.org/en/latest/drivers/vector/index.html>`_,
-  also called drivers in GDAL speak. 
+  also called drivers in GDAL speak.
   Examples are ESRI Shapefile, Geopackage, Flatgeobuf, Geojson, ...
   For single-file formats the filepath usually suffices as uri.
   For geopackages or dxf, a pipe separated suffix allows to specify the layer to load.

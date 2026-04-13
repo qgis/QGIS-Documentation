@@ -134,7 +134,7 @@ Source Properties
 -----------------
 
 In the |system| :guilabel:`Source` tab you can see and edit basic
-information about the point cloud layer:  
+information about the point cloud layer:
 
 .. _figure_point_cloud_source:
 
@@ -467,7 +467,7 @@ You can control the horizontal length of computed triangles:
 By checking the |checkbox| :guilabel:`Skip triangles longer than` option and setting up
 the threshold value, you can control the maximum lenght of a side of the triangles
 to consider in the horizontal plan. This can be particularly useful if you want to
-identify actual holes in the data. 
+identify actual holes in the data.
 
 .. _figure_shading_render_surface_example:
 
@@ -549,7 +549,7 @@ of the point cloud in 3D maps.
 3D Rendering modes
 ..................
 
-Following options can be selected from the drop down menu at the top of the tab: 
+Following options can be selected from the drop down menu at the top of the tab:
 
 * :guilabel:`No Rendering`: Data are not displayed
 * :guilabel:`Follow 2D Symbology`: Syncs features rendering in 3D

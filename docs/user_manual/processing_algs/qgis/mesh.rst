@@ -34,7 +34,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -168,7 +168,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -266,7 +266,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -355,7 +355,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -449,7 +449,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -557,7 +557,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -648,7 +648,7 @@ Parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Starting time**
      - ``STARTING_TIME``
      - [datetime]
@@ -764,7 +764,7 @@ Basic parameters
    * - **Dataset groups**
      - ``DATASET_GROUPS``
      - [layer] [list]
-     - The dataset groups 
+     - The dataset groups
    * - **Dataset time**
      - ``DATASET_TIME``
      - [datetime]
@@ -955,7 +955,7 @@ Parameters
    * - **Input layers**
      - ``SOURCE_DATA``
      - [vector: any] [list]
-     - Vector layers to combine to generate the mesh layer 
+     - Vector layers to combine to generate the mesh layer
    * - **Vector layer**
      - GUI ONLY
      - [vector: any] [list]
@@ -1028,4 +1028,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-

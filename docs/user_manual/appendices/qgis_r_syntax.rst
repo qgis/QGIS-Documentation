@@ -53,7 +53,7 @@ the script:
 * raster: ``##output= output raster``
 * table: ``##output= output table``
 * plots: ``##output_plots_to_html`` (##showplots in earlier versions)
-* To show R output in the *Result Viewer*, put ``>`` in 
+* To show R output in the *Result Viewer*, put ``>`` in
   front of the command whose output you would like to show.
 
 

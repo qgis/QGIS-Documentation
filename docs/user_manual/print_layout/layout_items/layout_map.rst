@@ -315,7 +315,7 @@ As grid type, you can specify to use a:
 * **Markers**: only displays customizable markers symbol at grid lines intersection;
 * or **Frame and annotations only**.
 
-Other than the grid type, you can define: 
+Other than the grid type, you can define:
 
 * the :guilabel:`CRS` of the grid: by default, it will follow the map item CRS.
   Press |setProjection| :sup:`Select CRS` button to set it to a different CRS.
@@ -487,7 +487,7 @@ of the overview on the selected map frame. You can customize it with:
 * The |checkbox| :guilabel:`Center on overview` pans the map item content so
   that the overview frame is displayed at the center of the map. You can only
   use one overview item to center, when you have several overviews.
-  
+
 .. _`overview_stack_position`:
 
 * The :guilabel:`Position` controls exactly where in the map item's layer stack

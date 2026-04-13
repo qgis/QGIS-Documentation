@@ -102,7 +102,7 @@ a plugin on the official repository:
 #. all required metadata listed in :ref:`metadata table<plugin_metadata_table>`
    must be present
 #. the `version` metadata field must be unique
-#. a license file must be included, saved as ``LICENSE`` with no extension (i.e. 
+#. a license file must be included, saved as ``LICENSE`` with no extension (i.e.
    not ``LICENSE.txt`` for example)
 
 Plugin structure
@@ -112,9 +112,9 @@ Following the validation rules the compressed (.zip) package of your plugin
 must have a specific structure to validate as a functional plugin. As the
 plugin will be unzipped inside the users plugins folder it must have it's own
 directory inside the .zip file to not interfere with other plugins. Mandatory
-files are: :file:`metadata.txt`,  :file:`__init__.py` and :file:`LICENSE`. 
-But it would be nice to have a :file:`README` and of course an icon to represent 
-the plugin. Following is an example of how a :file:`plugin.zip` 
+files are: :file:`metadata.txt`,  :file:`__init__.py` and :file:`LICENSE`.
+But it would be nice to have a :file:`README` and of course an icon to represent
+the plugin. Following is an example of how a :file:`plugin.zip`
 could look like.
 
 ::
@@ -134,4 +134,3 @@ could look like.
     |-- main_code.py
     |-- README
     |-- ui_Qt_user_interface_file.ui
-

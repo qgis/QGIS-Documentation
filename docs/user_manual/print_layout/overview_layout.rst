@@ -397,7 +397,7 @@ and the relations between them (see :ref:`interact_layout_item`).
 Add Item menu
 .............
 
-These are tools to create layout items. 
+These are tools to create layout items.
 Each of them is deeply described in :ref:`layout_items` chapter.
 
 .. table:: "Add Item" Menu Tools
@@ -644,7 +644,7 @@ The :guilabel:`Insert Pages` dialog opens and you are asked to fill:
   (``A4``, ``B0``, ``Legal``, ``Letter``, ``ANSI A``, ``Arch A`` and their derivatives
   as well as a resolution type, such as ``1920x1080`` or ``1024x768``)
   with associated :guilabel:`Orientation` (Portrait or Landscape).
-  
+
   The page size can also be of a ``custom`` format;
   In that case, you'd need to enter its :guilabel:`Width` and :guilabel:`Height`
   (with locked size ratio if needed) and select the unit to use
@@ -676,10 +676,10 @@ The :guilabel:`Item Properties` panel opens with settings such as:
   and the count of available pages
 * the :guilabel:`Page size` frame described above.
   You can modify each property using the data defined override options
-  (see :ref:`atlas_data_defined_override` for a use case); 
+  (see :ref:`atlas_data_defined_override` for a use case);
 * the :guilabel:`Background` of the current page using the :ref:`color <color-selector>`
   or :ref:`symbol <symbol-selector>` you want.
-* the :guilabel:`Apply to all Pages` button updates the current page properties to the 
+* the :guilabel:`Apply to all Pages` button updates the current page properties to the
   other existing pages in the layout;
 * the |unchecked| :guilabel:`Exclude page from exports` to control whether
   the current page with its content should be included in the :ref:`layout output <create-output>`;

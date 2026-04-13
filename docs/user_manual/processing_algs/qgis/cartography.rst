@@ -73,7 +73,7 @@ Parameters
    * - **Aligned layer**
      - ``OUTPUT``
      - [vector: point]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the rotated output vector layer. :ref:`One of <output_parameter_widget>`:
 
@@ -150,7 +150,7 @@ Parameters
    * - **Output style database**
      - ``OUTPUT``
      - [file]
-       
+
        Default: ``[Save to temporary file]``
      - Output :file:`.XML` file combining the selected style items.
        :ref:`One of <output_parameter_widget>`:
@@ -1403,7 +1403,7 @@ Outputs
    * - **Map height**
      - ``HEIGHT``
      - [numeric: double]
-     - 
+     -
    * - **Extent**
      - ``OUTPUT``
      - [vector: polygon]
@@ -1412,15 +1412,15 @@ Outputs
    * - **Map rotation**
      - ``ROTATION``
      - [numeric: double]
-     - 
+     -
    * - **Map scale**
      - ``SCALE``
      - [numeric: double]
-     - 
+     -
    * - **Map width**
      - ``WIDTH``
      - [numeric: double]
-     - 
+     -
 
 Python code
 ...........
@@ -1549,21 +1549,21 @@ Parameters
      - Options are:
 
        * 0 --- By feature count
-         
+
          Attempts to assign colors so that the count of
          features assigned to each individual color index
          is balanced.
-         
+
        * 1 --- By assigned area
-         
+
          Assigns colors so that the total area of features
          assigned to each color is balanced.
          This mode can be useful to help avoid large
          features resulting in one of the colors appearing
          more dominant on a colored map.
-         
+
        * 2 --- By distance between colors
-         
+
          Assigns colors in order to maximize the distance
          between features of the same color.
          This mode helps to create a more uniform

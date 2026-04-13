@@ -376,7 +376,7 @@ Advanced
   * |unchecked| :guilabel:`Show debug overlay`: visual overlay which displays some useful debugging
     and profiling information. This allows in particular to quickly see the frame graph and the scene graph
   * |unchecked| :guilabel:`Debug Shadow Map`: renders the scene as a red-black image
-    from the point of view of the light used for shadows (for troubleshooting). 
+    from the point of view of the light used for shadows (for troubleshooting).
     The widget is set with a proportional :guilabel:`Size` to the 3D map view's,
     and docked in a :guilabel:`Corner`.
   * |unchecked| :guilabel:`Debug Depth Map`: renders the scene's depth map as an  image

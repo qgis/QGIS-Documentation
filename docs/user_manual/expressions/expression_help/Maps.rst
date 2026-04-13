@@ -339,4 +339,3 @@ Note that the plus sign '+' is not converted.
 
 
 .. end_url_encode_section
-

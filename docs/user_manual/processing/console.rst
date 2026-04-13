@@ -99,33 +99,33 @@ work), you get the following description:
 
      >>> processing.algorithmHelp("native:buffer")
      Buffer (native:buffer)
-     
+
      This algorithm computes a buffer area for all the features in an
      input layer, using a fixed or dynamic distance.
-     
+
      The segments parameter controls the number of line segments to
      use to approximate a quarter circle when creating rounded
      offsets.
-     
+
      The end cap style parameter controls how line endings are handled
      in the buffer.
-     
+
      The join style parameter specifies whether round, miter or
      beveled joins should be used when offsetting corners in a line.
-     
+
      The miter limit parameter is only applicable for miter join
      styles, and controls the maximum distance from the offset curve
      to use when creating a mitered join.
-     
-     
+
+
      ----------------
      Input parameters
      ----------------
-     
+
      INPUT: Input layer
-     
+
      	Parameter type:	QgsProcessingParameterFeatureSource
-     
+
      	Accepted data types:
      		- str: layer ID
      		- str: layer name
@@ -133,39 +133,39 @@ work), you get the following description:
      		- QgsProcessingFeatureSourceDefinition
      		- QgsProperty
      		- QgsVectorLayer
-     
+
      DISTANCE: Distance
-     
+
      	Parameter type:	QgsProcessingParameterDistance
-     
+
      	Accepted data types:
      		- int
      		- float
      		- QgsProperty
-     
+
      SEGMENTS: Segments
-     
+
      	Parameter type:	QgsProcessingParameterNumber
-     
+
      	Accepted data types:
      		- int
      		- float
      		- QgsProperty
-     
+
      END_CAP_STYLE: End cap style
-     
+
      	Parameter type:	QgsProcessingParameterEnum
-     
+
      	Available values:
      		- 0: Round
      		- 1: Flat
      		- 2: Square
-     
+
      	Accepted data types:
      		- int
      		- str: as string representation of int, e.g. '1'
      		- QgsProperty
-     
+
      JOIN_STYLE: Join style
 
 	Parameter type:	QgsProcessingParameterEnum
@@ -179,30 +179,30 @@ work), you get the following description:
 		- int
 		- str: as string representation of int, e.g. '1'
 		- QgsProperty
-     
+
      MITER_LIMIT: Miter limit
-     
+
      	Parameter type:	QgsProcessingParameterNumber
-     
+
      	Accepted data types:
      		- int
      		- float
      		- QgsProperty
-     
+
      DISSOLVE: Dissolve result
-     
+
      	Parameter type:	QgsProcessingParameterBoolean
-     
+
      	Accepted data types:
 		- bool
 		- int
 		- str
 		- QgsProperty
-          
+
      OUTPUT: Buffered
-     
+
      	Parameter type:	QgsProcessingParameterFeatureSink
-     
+
      	Accepted data types:
      		- str: destination vector file, e.g. 'd:/test.shp'
      		- str: 'memory:' to store result in temporary memory layer
@@ -210,15 +210,15 @@ work), you get the following description:
                        e.g. 'postgres:...' to store result in PostgreSQL table
      		- QgsProcessingOutputLayerDefinition
      		- QgsProperty
-     
+
      ----------------
      Outputs
      ----------------
-     
+
      OUTPUT:  <QgsProcessingOutputVectorLayer>
      	Buffered
-     
-     
+
+
 Now you have everything you need to run any algorithm. As we have
 already mentioned, algorithms can be run using: ``run()``.
 Its syntax is as follows:
@@ -277,7 +277,7 @@ list gives a quick review of how to introduce values for each type of input para
 		- int
 		- str: as string representation of int, e.g. '1'
 		- QgsProperty
-     
+
   In this case, the parameter has three options.
   Notice that ordering is zero-based.
 * Boolean.  Use ``True`` or ``False``.
@@ -345,9 +345,9 @@ you can use the ``runAndLoadResults()`` method instead of ``run()``.
     >>> processing.runAndLoadResults("native:buffer", {parameters:values})
 
 
-If you want to open an algorithm dialog from the console you can use the 
-``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm 
-name, but you can also define the dictionary of parameters so that the dialog 
+If you want to open an algorithm dialog from the console you can use the
+``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm
+name, but you can also define the dictionary of parameters so that the dialog
 will be filled automatically:
 
 .. code-block:: python
@@ -409,7 +409,7 @@ smoothing the layer.
 .. code-block:: python
   :linenos:
 
-  from qgis.core import (QgsProcessingAlgorithm, 
+  from qgis.core import (QgsProcessingAlgorithm,
          QgsProcessingParameterNumber,
          QgsProcessingParameterFeatureSource,
          QgsProcessingParameterFeatureSink)
@@ -437,7 +437,7 @@ smoothing the layer.
           self.addParameter(QgsProcessingParameterFeatureSource(
               self.INPUT_VECTOR, "Input vector"))
           self.addParameter(QgsProcessingParameterNumber(
-              self.INPUT_BUFFERDIST, "Buffer distance", 
+              self.INPUT_BUFFERDIST, "Buffer distance",
               QgsProcessingParameterNumber.Double,
               100.0))
           self.addParameter(QgsProcessingParameterFeatureSink(

@@ -37,7 +37,7 @@ function fix_versionsUrl {
       # Do the replacement
       perl -i -p0e "s@<dl>(\s*)<dt>Versions</dt>.*</dl>@<dl>\1<dt>Versions</dt>${REPL}\n      \n    </dl>@smg" ${HTMLFILE};
 
-      # let's clear the replacement variable 
+      # let's clear the replacement variable
       unset REPL
 
     done
@@ -46,4 +46,3 @@ function fix_versionsUrl {
 }
 
 fix_versionsUrl ${SPATH}
-

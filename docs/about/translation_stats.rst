@@ -225,4 +225,3 @@ Statistics of translation
 .. |stats_vi| replace:: 1.65
 .. |stats_zh-Hans| replace:: 26.35
 .. |stats_zh-Hant| replace:: 2.82
-

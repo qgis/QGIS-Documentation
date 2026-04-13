@@ -1532,8 +1532,8 @@ and for loading/saving metadata in the "Default" location.
    Metadata load/save options
 
 
-The "Default" location used by :guilabel:`Save to Default Location` and 
-:guilabel:`Restore from Default Location` changes depending on the underlying 
+The "Default" location used by :guilabel:`Save to Default Location` and
+:guilabel:`Restore from Default Location` changes depending on the underlying
 data source and on its configuration:
 
 .. _`savemetadatatodb`:
@@ -1550,7 +1550,7 @@ data source and on its configuration:
   become available for search and filtering in the browser and in
   the :ref:`layer metadata search panel <layer_metadata_search_panel>`.
 
-* For all other file based data sources :guilabel:`Save to Default Location` 
+* For all other file based data sources :guilabel:`Save to Default Location`
   saves the metadata in a :file:`.qmd` file alongside the file.
 
 * In all other cases :guilabel:`Save to Default Location` saves the metadata
@@ -2369,7 +2369,7 @@ authentication configuration.
 You can save any or both of the ``User name`` and ``Password`` parameters, in
 which case they will be used by default each time you need to connect to this
 database or service. If not saved, you'll be prompted to supply the credentials to
-connect to the database or service in next QGIS sessions. 
+connect to the database or service in next QGIS sessions.
 You can cancel the prompt, in which case the connection will fail.
 Click the :guilabel:`Ignore for session` button to avoid being prompted again during
 the current QGIS session. It is also possible to :guilabel:`Ignore for 10 seconds`. This will

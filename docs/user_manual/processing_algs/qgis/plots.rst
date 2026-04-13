@@ -58,14 +58,14 @@ Parameters
      - [string]
 
        Default: ""
-     - If empty, the name of the category field is used. 
+     - If empty, the name of the category field is used.
        With a single space, the axis title is hidden.
    * - **Y-axis Title**
 
        Optional
      - ``YAXIS_TITLE``
      - [string]
-       
+
        Default: ""
      - If empty, the name of the value field is used.
        With a single space, the axis title is hidden.
@@ -159,7 +159,7 @@ Parameters
        Optional
      - ``TITLE``
      - [string]
-  
+
        Default: ""
      - Title of the plot
    * - **X-axis Title**
@@ -167,7 +167,7 @@ Parameters
        Optional
      - ``XAXIS_TITLE``
      - [string]
-           
+
        Default: ""
      - If empty, the name of the category field is used.
        With a single space, the axis title is not shown.

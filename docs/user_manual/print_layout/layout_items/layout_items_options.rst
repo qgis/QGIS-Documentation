@@ -48,7 +48,7 @@ To create a layout item from scratch:
 
 You can also:
 
-#. Select an existing item with the |select| :sup:`Select/Move item` button 
+#. Select an existing item with the |select| :sup:`Select/Move item` button
    from the :guilabel:`Toolbox` toolbar
 #. Use the contextual menu or the :menuselection:`Edit` menu tools to copy/cut the item
    and paste it at the mouse position as a new item.
@@ -183,7 +183,7 @@ This can be done by selecting the items and press the |distributeLeft| :guilabel
 
 * |distributeLeft| :guilabel:`Distribute Left Edges` or |distributeRight|:guilabel:`Distribute Right Edges` of items equidistantly
 * |distributeTop| :guilabel:`Distribute Top edges` or  |distributeBottom| :guilabel:`Distribute Bottom Edges` of items equidistantly
-* |distributeHCenter| :guilabel:`Distribute Horizontal Centers` or |distributeVCenter| :guilabel:`Distribute Vertical Centers` of items equidistantly 
+* |distributeHCenter| :guilabel:`Distribute Horizontal Centers` or |distributeVCenter| :guilabel:`Distribute Vertical Centers` of items equidistantly
 * Add equal space between items: |distributeHSpace| :guilabel:`Distribute Horizontal Spacing Equally`
   or |distributeVSpace|:guilabel:`Distribute Vertical Spacing Equally`
 

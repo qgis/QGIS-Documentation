@@ -214,7 +214,7 @@ Parameters
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
-       
+
        Default: True
      - Specifies whether to create a spatial index or not
    * - **Convert field names to lowercase**
@@ -607,7 +607,7 @@ Parameters
    * - **Database**
      - ``DATABASE``
      - [enumeration]
-       
+
        Default: not set
      - Select a SQLite/SpatiaLite database connected to the current session
    * - **SQL query**

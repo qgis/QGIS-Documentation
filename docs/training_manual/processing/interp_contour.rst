@@ -26,7 +26,7 @@ Then measure variation among methods and correlate it with distance to points:
 - :menuselection:`GDAL --> Proximity`
 - :menuselection:`GRASS --> r.covar` to show the correlation matrix; check the
   significance of the correlation e.g. with http://vassarstats.net/rsig.html.
- 
+
 Thus, areas far from points will have less accurate interpolation.
 
 Contour

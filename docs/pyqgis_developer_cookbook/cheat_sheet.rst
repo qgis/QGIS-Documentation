@@ -220,7 +220,7 @@ Otherwise
 .. testcode:: cheat_sheet
 
     for layer in QgsProject.instance().mapLayers().values():
-        print(f"{layer.name()} of type {layer.type().name}")    
+        print(f"{layer.name()} of type {layer.type().name}")
 
 .. testoutput:: cheat_sheet
 

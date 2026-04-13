@@ -365,7 +365,7 @@ Returns the most common values in an array.
      - * **array** - an array
        * **option='all'** - a string specifying the return values handling. Valid options are:
 
-         
+
 
          * all: Default, all most common values are returned in an array.
          * any: Returns one of the most common values.
@@ -485,7 +485,7 @@ Returns the less common values in an array.
      - * **array** - an array
        * **option='all'** - a string specifying the return values handling. Valid options are:
 
-         
+
 
          * all: Default, all less common values are returned in an array.
          * any: Returns one of the less common values.
@@ -850,4 +850,3 @@ Splits string into an array using supplied delimiter and optional string for emp
 
 
 .. end_string_to_array_section
-

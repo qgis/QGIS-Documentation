@@ -50,7 +50,7 @@ and the text box will be automatically filled with the corresponding values.
 
 The second option is :guilabel:`Select extent on canvas`. In this case, the algorithm
 dialog disappears and you can click and drag on the QGIS canvas to define
-the desired extent. 
+the desired extent.
 
 .. figure:: img/extents/extent_drag.png
 

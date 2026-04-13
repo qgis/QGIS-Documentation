@@ -199,7 +199,7 @@ the next opening of the attribute table.
 
 In the :ref:`Data Source Settings <datasources_options>`, you can choose to
 |checkbox| :guilabel:`Autosize all columns by default when opening attribute table`,
-which will make "Autosize All Columns" the default view every time attribute tables are opened in QGIS. 
+which will make "Autosize All Columns" the default view every time attribute tables are opened in QGIS.
 
 .. _organize_columns:
 
@@ -218,7 +218,7 @@ In the new dialog, you can:
   disappear from every instance of the attribute table dialog until it is
   actively restored. It is also possible to:
 
-  * choose :guilabel:`Show All` to display all the fields (columns) and actions in the table 
+  * choose :guilabel:`Show All` to display all the fields (columns) and actions in the table
   * choose :guilabel:`Hide All` to hide all the fields (columns) and actions in the table
   * use the :guilabel:`Toggle selection` to invert visibility of the current selection of columns.
     You can use :ref:`keyboard combination <interacting_features_table>`
@@ -583,7 +583,7 @@ A short example illustrates how field calculator works when using the
 #. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision` to ``3``
 #. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
    of the geometry into the Field calculator expression box (you will begin to see
-   a preview of the output, up to 60 characters, below the expression box updating 
+   a preview of the output, up to 60 characters, below the expression box updating
    in real-time as the expression is assembled).
 #. Complete the expression by typing ``/ 1000`` in the Field calculator expression box
    and click :guilabel:`OK`.

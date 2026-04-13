@@ -1,9 +1,9 @@
-More interpolation 
+More interpolation
 ===================
 
 .. note:: This chapter shows another practical case where interpolation algorithms are used.
 
-Interpolation is a common technique, and it can be used to demonstrate several techniques that can be applied using the QGIS processing framework. This lesson uses some interpolation algorithms that were already introduced, but has a different approach. 
+Interpolation is a common technique, and it can be used to demonstrate several techniques that can be applied using the QGIS processing framework. This lesson uses some interpolation algorithms that were already introduced, but has a different approach.
 
 The data for this lesson contains also a points layer, in this case with elevation data. We are going to interpolate it much in the same way as we did in the previous lesson, but this time we will save part of the original data to use it for assessing the quality of the interpolation process.
 
@@ -21,7 +21,7 @@ Now run the :guilabel:`Rasterize` algorithm to get the first raster layer, and t
 
 .. figure:: img/interpolation_cross/filled.png
 
-To check the quality of the interpolation, we can now use the points that are not selected. At this point, we know the real elevation (the value in the points layer) and the interpolated elevation (the value in the interpolated raster layer). We can compare the two by computing the differences between those values. 
+To check the quality of the interpolation, we can now use the points that are not selected. At this point, we know the real elevation (the value in the points layer) and the interpolated elevation (the value in the interpolated raster layer). We can compare the two by computing the differences between those values.
 
 Since we are going to use the points that are not selected, first, let's invert the selection.
 

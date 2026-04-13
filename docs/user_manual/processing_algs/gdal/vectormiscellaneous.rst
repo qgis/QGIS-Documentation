@@ -38,7 +38,7 @@ Parameters
    * - **Create "unioned" VRT**
      - ``UNIONED``
      - [boolean]
-       
+
        Default: False
      - Check if you want to unite all the vectors in a
        single ``vrt`` file

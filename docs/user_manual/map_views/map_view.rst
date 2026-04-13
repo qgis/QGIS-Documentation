@@ -194,7 +194,7 @@ rendering based on a time variation. To achieve this, you need:
    * or from the :menuselection:`View --> Panels --> Temporal controller panel`
      menu
    * or from the :menuselection:`View --> Data Filtering --> Temporal controller panel`
-     menu  
+     menu
 
 .. _temporal_controller:
 
@@ -320,7 +320,7 @@ where you can:
   for your elevation filter. Use the |checkbox| :guilabel:`Invert Direction` option to reverse
   the elevation filter slider, so that it moves from high values at the bottom to low values at the top.
 * :guilabel:`Set Elevation Range` to open the project elevation tab, where you can set dedicated lower and upper bounds for the elevation range
-* :guilabel:`Disable Elevation Filter` to remove the elevation filter from the map canvas 
+* :guilabel:`Disable Elevation Filter` to remove the elevation filter from the map canvas
 
 .. index::
    single: Bookmarks
@@ -361,7 +361,7 @@ To create a bookmark:
 #. Enter or select a group name in which to store related bookmarks
 #. Select the extent of the area you wish to save, using the :ref:`extent selector
    <extent_selector>` widget
-#. Change the map :guilabel:`Rotation`   
+#. Change the map :guilabel:`Rotation`
 #. Indicate the :guilabel:`CRS` to use for the extent
 #. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
    Bookmarks` or :guilabel:`Project Bookmarks` (by default, this drop-down list
@@ -430,8 +430,8 @@ You can perform the following tasks:
        You can also drag and drop the bookmark between folders (user and
        project) and subfolders (groups).
 
-You can manage bookmark actions by right-click on the desired bookmark in the 
-:guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by typing the 
+You can manage bookmark actions by right-click on the desired bookmark in the
+:guilabel:`Spatial Bookmarks Manager`. You can also zoom to bookmarks by typing the
 bookmark name in the :ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
@@ -1152,7 +1152,7 @@ In the measure window, you will see coordinates for all your points and distance
 Keep in mind that the first row will contain only coordinates, as it represents your starting point.
 Now it is possible to copy all your line measurements at once to the clipboard
 using the :guilabel:`Copy` button. Clicking the :guilabel:`Configuration` button
-you will access to :guilabel:`Measure Tool Copy Settings` where you can set up 
+you will access to :guilabel:`Measure Tool Copy Settings` where you can set up
 :ref:`copy options <measure_copy_settings>`. To stop measuring, click the right
 mouse button.
 

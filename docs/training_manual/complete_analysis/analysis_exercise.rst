@@ -56,7 +56,7 @@ Follow Along: Setting up the Map
    Under the :guilabel:`CRS` tab of the dialog that appears, use the
    "Filter" tool to search for "33S".
    Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with EPSG code
-   ``32733``). 
+   ``32733``).
 #. Click :guilabel:`OK`
 
    .. figure:: img/crs.png
@@ -250,7 +250,7 @@ this area.
    .. figure:: img/clipped_r_filtered_v_reordered_l.png
       :align: center
 
-      Map view with filtered vector, clipped raster and reordered layers 
+      Map view with filtered vector, clipped raster and reordered layers
 
 Align the rasters
 ......................................................................
@@ -260,7 +260,7 @@ have to be aligned.
 
 First we change the resolution of our rainfall data to 30 meters
 (pixel size):
-	
+
 #. In the :guilabel:`Layers` panel, ensure that
    ``Rainfall_clipped`` is the active layer (i.e., it is highlighted by
    having been clicked on)
@@ -268,7 +268,7 @@ First we change the resolution of our rainfall data to 30 meters
    menu item to open the :guilabel:`Warp (Reproject)` dialog
 #. Under :guilabel:`Resampling method to use`, select :guilabel:`Bilinear (2x2 kernel)`
    from the drop down menu
-#. Set :guilabel:`Output file resolution in target georeferenced units` to ``30`` 
+#. Set :guilabel:`Output file resolution in target georeferenced units` to ``30``
 #. Scroll down to :guilabel:`Reprojected` and save the output in your
    :file:`rainfall/reprojected` directory as :file:`Rainfall30.tif`.
 #. Make sure that |checkbox|
@@ -296,7 +296,7 @@ Then we align the DEM:
    :file:`DEM/reprojected` directory as :file:`DEM30.tif`.
 #. Make sure that |checkbox|
    :guilabel:`Open output file after running algorithm` is checked
-   
+
 
 In order to properly see what's going on, the symbology for the
 layers needs to be changed.
@@ -342,7 +342,7 @@ Raster layer symbology is somewhat different.
    .. figure:: img/raster_symbology.png
       :align: center
 
-      Raster symbology 
+      Raster symbology
 
    The ``Rainfall30`` raster, if visible, should change colors,
    allowing you to see different brightness values for each pixel
@@ -387,7 +387,7 @@ that was written for this purpose.
    .. figure:: img/hillshade.png
       :align: center
 
-      Raster analysis Hillshade 
+      Raster analysis Hillshade
 
 The new ``hillshade`` layer has appeared in the
 :guilabel:`Layers` panel.
@@ -423,7 +423,7 @@ Slope
    .. figure:: img/slope.png
       :align: center
 
-      Raster analysis Slope 
+      Raster analysis Slope
 
 The slope image has been calculated and added to the map.
 As usual, it is rendered in grayscale.
@@ -459,7 +459,7 @@ Reclassifying rasters
 #. Ensure that the
    :guilabel:`Open output file after running algorithm` box is
    selected.
-   
+
    In the :guilabel:`Raster bands` list on the left, you will see all
    the raster layers in your :guilabel:`Layers` panel.
    If your Slope layer is called ``slope``, it will be listed
@@ -479,7 +479,7 @@ Reclassifying rasters
    .. figure:: img/raster_calculator_slope.png
       :align: center
 
-      Raster calculator Slope 
+      Raster calculator Slope
 
 Now find the correct aspect (east-facing: between ``45`` and ``135``
 degrees) using the same approach.
@@ -488,8 +488,8 @@ degrees) using the same approach.
 
      (aspect@1 > 45) AND (aspect@1 < 135)
 
-You will know it worked when all of the east-facing slopes are white 
-in the resulting raster (it's almost as if they are being lit by the 
+You will know it worked when all of the east-facing slopes are white
+in the resulting raster (it's almost as if they are being lit by the
 morning sunlight).
 
 Find the correct rainfall (greater than ``1000`` mm) the same way.
@@ -532,12 +532,12 @@ Save the project.
 .. figure:: img/aspect_slope_rainfall.png
    :align: center
 
-   Map view where all three criteria are satisfied  
+   Map view where all three criteria are satisfied
 
-The next criterion that needs to be satisfied is that the area must be 
+The next criterion that needs to be satisfied is that the area must be
 ``250`` m away from urban areas.
 We will satisfy this requirement by ensuring that the areas we compute
-are inside rural areas, and are ``250`` m or more from the edge of the area. 
+are inside rural areas, and are ``250`` m or more from the edge of the area.
 Hence, we need to find all rural areas first.
 
 Finding rural areas
@@ -608,7 +608,7 @@ Creating a negative buffer
    .. figure:: img/rural_buffer.png
       :align: center
 
-      Map view with rural buffer 
+      Map view with rural buffer
 
 
 Now you need to combine your ``rural_buffer`` vector layer with the
@@ -620,7 +620,7 @@ layers are more convenient when we want to calculate areas.
 Vectorizing the raster
 ----------------------------------------------------------------------
 
-#. Click on the menu item 
+#. Click on the menu item
    :menuselection:`Raster --> Conversion --> Polygonize (Raster to  Vector)...`
 #. Select the :file:`aspect_slope_rainfall` raster  as
    :guilabel:`Input layer`
@@ -638,13 +638,13 @@ Vectorizing the raster
    .. figure:: img/vectorized.png
       :align: center
 
-      Raster to Vector 
+      Raster to Vector
 
 All areas of the raster have been vectorized, so you need to select
 only the areas that have a value of ``1`` in the ``suitable`` field.
 (Digital Number.
 
-#. Open the :guilabel:`Query Builder` dialog (right-click - 
+#. Open the :guilabel:`Query Builder` dialog (right-click -
    :guilabel:`Filter...`) for the new vector layer
 #. Build this query::
 
@@ -712,7 +712,7 @@ Determining the Intersection of vectors
 The next criteria on the list is that the area must be greater than
 ``6000`` ㎡.
 You will now calculate the polygon areas in order to identify the
-areas that are the appropriate size for this project. 
+areas that are the appropriate size for this project.
 
 Calculating the area for each polygon
 ----------------------------------------------------------------------
@@ -739,7 +739,7 @@ Calculating the area for each polygon
    .. figure:: img/field_calculator_area.png
       :align: center
 
-      Field Calculator  
+      Field Calculator
 
 #. Click :guilabel:`OK`
 #. Do the same thing for another new field called ``id``.
@@ -755,7 +755,7 @@ Calculating the area for each polygon
    .. figure:: img/attribute_table.png
       :align: center
 
-      Attribute table with area and id columns 
+      Attribute table with area and id columns
 
 Selecting areas of a given size
 ----------------------------------------------------------------------
@@ -786,8 +786,8 @@ Digitize the University of Cape Town
 #. Finish creating the new layer (click :guilabel:`OK`)
 #. Hide all layers except the new ``university`` layer and the
    ``Streets`` layer.
-#. Add a background map (OSM): 
-   
+#. Add a background map (OSM):
+
    #. Go to the :guilabel:`Browser` panel and navigate to
       :menuselection:`XYZ Tiles --> OpenStreetMap`
    #. Drag and drop the ``OpenStreetMap`` entry to the bottom of the
@@ -799,7 +799,7 @@ Digitize the University of Cape Town
    recognizable location.
    Before you return to QGIS, take note of where the university is
    located, and what is nearby.
-   
+
 #. Ensure that the ``Streets`` layer clicked on, and that the
    ``university`` layer is highlighted in the
    :guilabel:`Layers` panel

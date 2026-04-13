@@ -637,11 +637,11 @@ In QGIS:
 
 #. Open the :guilabel:`Layer Properties` for the ``landuse`` layer.
 #. In the |symbology| :guilabel:`Symbology` tab, change the symbol structure by
-   changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill` 
+   changing the :guilabel:`Symbol Layer Type` to :guilabel:`SVG Fill`
    shown below.
 #. Click the :guilabel:`...` button and then
    :guilabel:`Select File...` to select your SVG image.
- 
+
    It's added to the symbol tree and you can now customize its different
    characteristics (colors, angle, effects, units...).
 
@@ -673,7 +673,7 @@ of lines layer.
    already been defined.
 
 #. From the :guilabel:`Labels` tab, select the |labelmask| :guilabel:`Mask` (and not :guilabel:`Masks` in general category list)
-   
+
 #. Enable label mask by checking the |unchecked| :guilabel:`Enable mask` option
 
    A message tells you that the now defined label mask shape can be later selected as a mask source to
@@ -696,13 +696,13 @@ of lines layer.
 
    .. figure:: img/mask_selection.png
       :align: center
-   
+
 #. Click :guilabel:`OK`
 
 
 You can see now that labels are masking the black part of lines, leaving only the
 yellow part.
-   
+
 .. figure:: img/label_masking.png
    :align: center
 
@@ -729,11 +729,11 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
 
    .. figure:: img/mask_hierarchy.png
       :align: center
-   
+
    Now, let's define a mask that is identical to our plane marker but a little bit bigger.
 
 #. Select the newly created ``Simple Marker`` symbol layer and change its :guilabel:`Symbol layer type` to ``SVG marker``
-   
+
 #. Set the SVG file path to be the same as the already existing SVG marker, and the size to be bigger (24 millimeters
    is a pretty good choice for this use case).
 
@@ -741,12 +741,12 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
    situation.
 
    You should get something like that:
-   
+
    .. figure:: img/point_masking.png
       :align: center
 
 #. Repeat the same operations on ``Jet`` symbol.
-	   
+
 #. Click :guilabel:`OK`
 #. Open the :guilabel:`Layer Properties` window for the ``lines``
    layer.
@@ -757,7 +757,7 @@ For the sake of visibility, you can switch off ``polys`` layer visibility.
    configuration.
 
 #. Uncheck the :guilabel:`Label mask` ``polys`` checkbox and check both ``B52`` and ``Jet`` :guilabel:`Mask symbol layer`
-   
+
 #. Click :guilabel:`OK`
 
 You now see that black planes are masking the black part of lines, with only the yellow part visible.

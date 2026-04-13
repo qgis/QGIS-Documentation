@@ -21,7 +21,7 @@ first tab (:guilabel:`Setup`):
   checking to the geometries of the selected features.
 * :guilabel:`Allowed geometry types` gives the chance to restrict the geometry
   type of the input layer(s) to:
-  
+
   * |checkbox| Point
   * |checkbox| Multipoint
   * |checkbox| Line
@@ -31,47 +31,47 @@ first tab (:guilabel:`Setup`):
 
 * :guilabel:`Geometry validity`. Depending on geometry types you can choose
   between:
-  
-  * |checkbox| :guilabel:`Self intersections` 
-  * |checkbox| :guilabel:`Duplicate nodes` 
+
+  * |checkbox| :guilabel:`Self intersections`
+  * |checkbox| :guilabel:`Duplicate nodes`
   * |checkbox| :guilabel:`Self contacts`
   * |checkbox| :guilabel:`Polygon with less than 3 nodes`.
-  
-* :guilabel:`Geometry properties`. Depending on geometry types, different 
+
+* :guilabel:`Geometry properties`. Depending on geometry types, different
   options are available:
-  
+
   * |checkbox| :guilabel:`Polygons and multipolygons may not contain any holes`
-  * |checkbox| :guilabel:`Multipart objects must consist of more than one part` 
+  * |checkbox| :guilabel:`Multipart objects must consist of more than one part`
   * |checkbox| :guilabel:`Lines must not have dangles`
 
-* :guilabel:`Geometry conditions`. Allows you to add some condition to validate 
+* :guilabel:`Geometry conditions`. Allows you to add some condition to validate
   the geometries with:
-  
+
   * |checkbox| :guilabel:`Minimal segment length (map units)` |selectNumber|
   * |checkbox| :guilabel:`Minimum angle between segment (deg)` |selectNumber|
-  * |checkbox| :guilabel:`Minimal polygon area (map units sqr.)` |selectNumber| 
+  * |checkbox| :guilabel:`Minimal polygon area (map units sqr.)` |selectNumber|
   * |checkbox| :guilabel:`No sliver polygons` with a :guilabel:`Maximum thinness`
-    |selectNumber| and a |checkbox| :guilabel:`Max. area (map units sqr.)` 
-    |selectNumber| 
+    |selectNumber| and a |checkbox| :guilabel:`Max. area (map units sqr.)`
+    |selectNumber|
 
 * :guilabel:`Topology checks`. Depending on geometry types, many different
   options are available:
-  
-  * |checkbox| :guilabel:`Checks for duplicates` 
+
+  * |checkbox| :guilabel:`Checks for duplicates`
   * |checkbox| :guilabel:`Checks for features within other features`
   * |checkbox| :guilabel:`Checks for overlaps smaller than` |selectNumber|
   * |checkbox| :guilabel:`Checks for gaps smaller than` |selectNumber|
-  * |checkbox| :guilabel:`Points must be covered by lines` 
+  * |checkbox| :guilabel:`Points must be covered by lines`
   * |checkbox| :guilabel:`Points must properly lie inside a polygon`
-  * |checkbox| :guilabel:`Lines must not intersect any other lines` 
-  * |checkbox| :guilabel:`Lines must not intersect with features of layer` 
-    |selectString| 
+  * |checkbox| :guilabel:`Lines must not intersect any other lines`
+  * |checkbox| :guilabel:`Lines must not intersect with features of layer`
+    |selectString|
   * |checkbox| :guilabel:`Polygons must follow boundaries of layer` |selectString|
 
 * :guilabel:`Tolerance`. You can define the tolerance of the check in map layer
   units.
 * :guilabel:`Output vector layer` gives the choice to:
-  
+
   * |radioButtonOn| :guilabel:`Modify input layer`
   * |radioButtonOn| :guilabel:`Create new layers`
 
@@ -143,7 +143,7 @@ Below the zoom action when clicking on the table row, you can:
   * Delete feature
   * No action
 
-* |options| :guilabel:`Error resolution settings` allows you to change the 
+* |options| :guilabel:`Error resolution settings` allows you to change the
   default resolution method depending on the error type
 
 .. tip:: **Fix multiple errors**

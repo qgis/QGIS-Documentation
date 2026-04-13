@@ -377,10 +377,10 @@ direction and a negative value does the opposite.
    digitize parts of the feature with tracing enabled and other
    parts with tracing disabled.
    Tools behave as usual when tracing is disabled.
-   
+
 .. tip:: **Convert tracing to curved geometries**
-   
-   By using :menuselection:`Settings --> Options --> Digitizing --> Tracing` 
+
+   By using :menuselection:`Settings --> Options --> Digitizing --> Tracing`
    you can create curved geometries while digitizing.
    See :ref:`digitizing options <digitizing_options>`.
 
@@ -610,7 +610,7 @@ operation is done, selection stays active for this feature and tool.
 
 .. tip:: **Drawing a series of new vertices**
 
-   The vertex tool does not support :ref:`automatic tracing <tracing>` and is optimized for 
+   The vertex tool does not support :ref:`automatic tracing <tracing>` and is optimized for
    editing individual vertices and moving or deleting an arbitrary selection
    of multiple vertices.  Try using the |reshape|:sup:`Reshape Features`
    tool when you need to replace or insert a series of new vertices,
@@ -1390,13 +1390,13 @@ To create a shift of a line or polygon layer, you must first go into editing mod
 and activate the |offsetCurve| :sup:`Offset Curve` tool.
 Then click on a feature to shift it.
 Move the mouse and click where wanted or enter the desired distance in
-the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an offset copy. 
+the user input widget. Holding :kbd:`Ctrl` during the 2nd click will make an offset copy.
 Your changes may then be saved with the |saveEdits|
 :sup:`Save Layer Edits` tool.
 
 For geometries on background layers make sure that snapping is on and hold :kbd:`Ctrl`
 to select the geometry from the background. Also hold :kbd:`Ctrl` when doing the second click.
-Geometries will be converted to the target layer geometry type. 
+Geometries will be converted to the target layer geometry type.
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) or
 the |settings| icon in the :guilabel:`User Input` dialog allows
@@ -1671,7 +1671,7 @@ In order to trim or extend existing geometries:
 
 .. note:: Snapping is automatically enabled when this tool is activated.
  Your original snapping settings will be restored once the tool is deactivated.
- 
+
 .. attention:: Pay attention to the modified geometry while using the |trimExtend|
   :sup:`Trim/Extend` tool. Depending on the inputs, it can create invalid
   geometries, potentially resulting in failure at layer saving.
@@ -1907,7 +1907,7 @@ At the top of the :guilabel:`Digitizing panel`, you find the following buttons:
   You can switch from one method to the other during the digitizing operation,
   and this avoids disabling any of the snapping options in the meantime.
   Press :kbd:`N` (or :kbd:`Shift+N`) during a digitizing operation to cycle through the angles list.
-  
+
 * |floater| :sup:`Floater settings`: if the :guilabel:`Show floater` item is checked,
   a contextual menu with digitizing information follows the cursor during digitizing.
   The values can be accessed using the :ref:`panel's shortcuts <digitizing_panel_shortcuts>`,
