@@ -297,13 +297,13 @@ coordinate values and the currently selected raster resolution (see Neteler & Mi
 #. Click :guilabel:`Next`, check out the summary to make sure it's all correct and
    click :guilabel:`Finish`.
 
-
+.. index:: GRASS vector data model
 .. _label_vectmodel:
 
 The GRASS vector data model
 ===========================
 
-It is important to understand the :index:`GRASS vector data model` prior to digitizing.
+It is important to understand the GRASS vector data model prior to digitizing.
 In general, GRASS uses a topological vector model.
 This means that areas are not represented as closed polygons, but by one or more
 boundaries. A boundary between two adjacent areas is digitized only once, and it
