@@ -15,6 +15,7 @@ Check Geometry
 
 Dangle-end lines
 ----------------
+``Added in 3.42``
 
 Detects dangle-end lines in line geometries and reports them as errors.
 A dangle-end line is a line feature that terminates at a vertex connected to only one segment,
@@ -142,6 +143,7 @@ Python code
 
 Degenerate polygons
 -------------------
+``Added in 3.42``
 
 Checks the polygons with less than 3 points, which are degenerate polygons.
 Degenerate polygons are errors.
@@ -270,6 +272,7 @@ Python code
 
 Duplicated geometries
 ---------------------
+``Added in 3.42``
 
 Checks for duplicated geometries in a vector layer, and reports them as errors.
 
@@ -391,6 +394,7 @@ Python code
 
 Duplicated vertices
 -------------------
+``Added in 3.42``
 
 Checks for duplicated vertices in line or polygon geometries,
 and reports them as errors.
@@ -514,6 +518,7 @@ Python code
 
 Features inside polygon
 -----------------------
+``Added in 3.42``
 
 Checks the input geometries contained in the polygons from the polygon layers list.
 A polygon layer can be checked against itself.
@@ -646,6 +651,7 @@ Python code
 
 Holes
 ------------
+``Added in 3.42``
 
 Detects holes in polygon geometries and reports them as errors.
 
@@ -773,6 +779,7 @@ Python code
 
 Lines intersecting each other
 -----------------------------
+``Added in 3.42``
 
 Checks intersections between line geometries within a layer.
 Intersections between two different lines are errors.
@@ -897,6 +904,7 @@ Python code
 
 Lines intersecting other layer
 ------------------------------
+``Added in 3.42``
 
 Checks if the input line layer features intersect with the check layer features.
 An input feature that intersects with a check layer feature is an error.
@@ -1024,6 +1032,7 @@ Python code
 
 Missing vertices along borders
 ------------------------------
+``Added in 3.42``
 
 Checks for missing vertices along polygon borders.
 To be topologically correct, a vertex at the junction of two polygons
@@ -1154,6 +1163,7 @@ Python code
 
 Overlaps
 ------------------
+``Added in 3.42``
 
 Calculates overlapping areas in polygon geometries, and reports areas smaller than a given minimum as errors.
 
@@ -1282,6 +1292,7 @@ Python code
 
 Points outside lines
 --------------------
+``Added in 3.42``
 
 Checks if the points in the input layer are covered by a line in the selected line layers.
 A point not covered by a line is an error.
@@ -1393,6 +1404,7 @@ Python code
 
 Points outside polygons
 -----------------------
+``Added in 3.42``
 
 Checks if points from the input layer are in polygons from the selected polygon layers.
 Points that are not fully inside polygons are errors.
@@ -1504,6 +1516,7 @@ Python code
 
 Self-contacts
 ------------------
+``Added in 3.42``
 
 Checks if the geometry has self contact points (in line or polygon),
 i.e., a vertex that touches more than two segments of the same ring.
@@ -1640,6 +1653,7 @@ Python code
 
 Self-intersections
 ------------------
+``Added in 3.42``
 
 Detects self-intersections in line or polygon geometries, and reports them as errors.
 Self-intersections occur when the segments of a geometry cross over each other
@@ -1777,6 +1791,7 @@ Python code
 
 Sliver polygons
 ------------------
+``Added in 3.42``
 
 Detects sliver polygons in a polygon layer,
 i.e., polygons with a thinness greater than a specified value.
@@ -1934,6 +1949,7 @@ Python code
 
 Small angles
 ------------
+``Added in 3.42``
 
 Compares the angles within line or polygon geometries to a specified threshold,
 and reports as error any angle below that value.
@@ -2047,6 +2063,7 @@ Python code
 
 Small polygons
 ------------------
+``Added in 3.42``
 
 Detects polygon features whose area is below a specified value as errors.
 
@@ -2188,6 +2205,7 @@ Python code
 
 Small gaps
 ---------------------
+``Added in 3.42``
 
 Checks for gaps between polygons in the input layer.
 Gaps with an area smaller than the gap threshold are reported as errors.
@@ -2361,6 +2379,7 @@ Python code
 
 Small segments
 ---------------------
+``Added in 3.42``
 
 Calculates length of individual segments in line or polygon geometries,
 and reports segments shorter than a minimum length as errors.
@@ -2496,6 +2515,7 @@ Python code
 
 Strictly multipart
 ---------------------
+``Added in 3.42``
 
 Checks if multipart geometries have more than one part.
 Multipart geometries with only one part are errors.
@@ -2613,7 +2633,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

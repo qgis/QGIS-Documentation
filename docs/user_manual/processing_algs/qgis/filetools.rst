@@ -103,6 +103,8 @@ Python code
 
 HTTP(S) POST/GET request
 ------------------------
+``Added in 3.40``
+
 Performs a HTTP(S) POST/GET request and returns the HTTP status code and the reply data.
 If an error occurs then the error code and the message will be returned.
 Optionally, the result can be written to a file on the disk.

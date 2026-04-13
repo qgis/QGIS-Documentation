@@ -200,12 +200,17 @@ Parameters
    * - **Field alias**
 
        Optional
+
+       ``Added in 3.32``
      - ``FIELD_ALIAS``
      - [string]
      - Set a name to use as alias for the field. Not supported by all format types.
    * - **Field comment**
 
        Optional
+
+       ``Added in 3.32``
+
      - ``FIELD_COMMENT``
      - [string]
      - Store a comment describing the field. Not supported by all format types.
@@ -1006,11 +1011,11 @@ Parameters
          When using a template layer, indicates whether there are constraints
          applied to the template field. Hover over the cell to display the constraints.
 
-       :guilabel:`Alias` (``field_alias``) [string]
+       :guilabel:`Alias` (``field_alias``) [string] --- ``Added in 3.32``
          Set a name to use as alias for the field. Not supported by all format types.
          Existing aliases are displayed and will be copied to the destination layer if supported.
 
-       :guilabel:`Comment` (``field_comment``) [string]
+       :guilabel:`Comment` (``field_comment``) [string] --- ``Added in 3.32``
          Store a comment describing the field. Not supported by all format types.
          Existing comments are displayed and will be copied to the destination layer if supported.
 

@@ -875,6 +875,8 @@ Basic parameters
      - [vector: geometry]
      - Input vector layer
    * - **Enable listing of all layers in the dataset**
+
+       ``Added in 3.40``
      - ``ALL_LAYERS``
      - [boolean]
 
@@ -913,6 +915,7 @@ Basic parameters
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
+``Added in 3.40``
 
 .. list-table::
    :header-rows: 1
@@ -963,6 +966,8 @@ Python code
 
 Vector Information (JSON)
 -------------------------
+``Added in 3.40``
+
 Creates an information file that lists information about an
 OGR-supported data source.
 The output will be shown in a 'Result' window and can be written

@@ -2102,6 +2102,9 @@ Parameters
        If not specified, the CRS of the first input
        layer is used.
    * - **Add source layer information (layer name and path)**
+
+       ``Added in 3.42``
+
      - ``ADD_SOURCE_FIELDS``
      - [boolean]
 
@@ -2321,6 +2324,8 @@ Basic parameters
        Default: ``EPSG:4326 - WGS 84``
      - Destination coordinate reference system
    * - **Convert curved geometries to straight segments**
+       ``Added in 3.32``
+
      - ``CONVERT_CURVED_GEOMETRIES``
      - [boolean]
 

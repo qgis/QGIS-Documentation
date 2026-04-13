@@ -919,6 +919,8 @@ Basic parameters
        Default: Not set
      - Value to use for NoData
    * - **Handling of extent differences**
+
+       ``Added in 3.34``
      - ``EXTENT_OPT``
      - [enumeration]
 
