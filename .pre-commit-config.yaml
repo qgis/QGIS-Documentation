@@ -1,14 +1,26 @@
+# Pre-commit hooks for QGIS Documentation
+# Install: pre-commit install
+# Run manually: pre-commit run --all-files
+# Update hooks: pre-commit autoupdate
 
 repos:
 
-  - repo: local
+  # YAML formatting
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.33.0
     hooks:
-      - id: find_set_subst
-        name: find_set_subst
-        entry: ./scripts/find_set_subst.py
-        language: system
-        always_run: true
-        pass_filenames: false
+      - id: yamllint
+        args: [-d, "{extends: relaxed, rules: {line-length: {max: 200}}}"]
+        exclude: ^(locale/|_dummy/|build/)
+
+  # - repo: local
+  #   hooks:
+  #     - id: find_set_subst
+  #       name: find_set_subst
+  #       entry: ./scripts/find_set_subst.py
+  #       language: system
+  #       always_run: true
+  #       pass_filenames: false
 
 ci:
   autofix_prs: true
