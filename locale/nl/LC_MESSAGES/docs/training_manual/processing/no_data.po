@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# DiGro, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -165,7 +166,7 @@ msgstr ""
 " die we gebruikten had geldige waarden in al zijn cellen, dus heeft de "
 "laatste parameter in het geheel geen effect."
 
-#: ../../docs/training_manual/processing/no_data.rst:39
+#: ../../docs/training_manual/processing/no_data.rst:40
 msgid ""
 "Let's now perform another calculation, this time on the *accflow* layer. "
 "This layer contains values of accumulated flow, a hydrological parameter. It"
@@ -184,7 +185,7 @@ msgstr ""
 "een veel meer informatieve weergave opleveren. We kunnen die berekenen met "
 "behulp van de Raster calculator."
 
-#: ../../docs/training_manual/processing/no_data.rst:41
+#: ../../docs/training_manual/processing/no_data.rst:47
 msgid ""
 "Open the algorithm dialog again, select the *accflow* layer as the only "
 "input layer, and enter the following formula: ``log(a)``."
@@ -193,11 +194,11 @@ msgstr ""
 "*accflow* als de enige laag voor de invoer, en voer de volgende formule in: "
 "``log(a)``."
 
-#: ../../docs/training_manual/processing/no_data.rst:43
+#: ../../docs/training_manual/processing/no_data.rst:50
 msgid "Here is the layer that you will get."
 msgstr "Hier is de laag die u zult krijgen."
 
-#: ../../docs/training_manual/processing/no_data.rst:47
+#: ../../docs/training_manual/processing/no_data.rst:54
 msgid ""
 "If you select the *Identify* tool to know the value of a layer at a given "
 "point, select the layer that we have just created, and click on a point "
@@ -208,7 +209,7 @@ msgstr ""
 "zojuist hebben gemaakt en klik op een punt buiten het bassin, u zult zien "
 "dat het een waarde Geen gegevens bevat."
 
-#: ../../docs/training_manual/processing/no_data.rst:51
+#: ../../docs/training_manual/processing/no_data.rst:60
 msgid ""
 "For the next exercise we are going to use two layers instead of one, and we "
 "are going to get a DEM with valid elevation values only within the basin "
@@ -222,7 +223,7 @@ msgstr ""
 "calculator en selecteer beide lagen van het project in het veld voor de "
 "invoerlagen. Voer de volgende formule in het corresponderende veld in:"
 
-#: ../../docs/training_manual/processing/no_data.rst:57
+#: ../../docs/training_manual/processing/no_data.rst:69
 msgid ""
 "``a`` refers to the accumulated flow layer (since it is the first one to "
 "appear in the list) and ``b`` refers to the DEM. What we are doing in the "
@@ -241,11 +242,11 @@ msgstr ""
 " * 1 = DEM``) en de waarden Geen gegevens daarbuiten (``DEM * no_data = "
 "no_data``)"
 
-#: ../../docs/training_manual/processing/no_data.rst:59
+#: ../../docs/training_manual/processing/no_data.rst:75
 msgid "Here is the resulting layer."
 msgstr "Hier is de resulterende laag."
 
-#: ../../docs/training_manual/processing/no_data.rst:64
+#: ../../docs/training_manual/processing/no_data.rst:80
 msgid ""
 "This technique is used frequently to *mask* values in a raster layer, and is"
 " useful whenever you want to perform calculations for a region other that "
@@ -264,12 +265,12 @@ msgstr ""
 "resultaat dat we verkrijgen een betekenisvolle die in feite informatie geeft"
 " over de configuratie van het bassin."
 
-#: ../../docs/training_manual/processing/no_data.rst:66
+#: ../../docs/training_manual/processing/no_data.rst:87
 msgid ""
 "There are other interesting things about this algorithm that we have just "
 "run, apart from the no--data values and how they are handled. If you have a "
 "look at the extents of the layers that we have multiplied (you can do it "
-"double--clicking on their names of the layer in the table of contents and "
+"double-clicking on the names of the layer in the table of contents and "
 "looking at their properties), you will see that they are not the same, since"
 " the extent covered by the flow accumulation layer is smaller that the "
 "extent of the full DEM."
@@ -277,12 +278,13 @@ msgstr ""
 "Los van de waarden Geen gegevens en hoe zij worden afgehandeld zijn er "
 "andere interessante dingen met betrekking tot dit algoritme dat we zojuist "
 "hebben uitgevoerd. Als u eens kijkt naar de bereiken van de lagen die we "
-"hebben vermenigvuldigd (u kunt dat doen door te dubbelklikken op de naam van"
-" de laag in de inhoudsopgave en hun eigenschappen bekijken), zult u zien dat"
-" zij niet hetzelfde zijn, omdat het bereik dat wordt bedekt door de laag van"
-" de geaccumuleerde stroom kleiner is dan het bereik van de volledige DEM."
+"hebben vermenigvuldigd (u kunt dat doen door te dubbelklikken op de namen "
+"van de lagen in de inhoudsopgave en de eigenschappen te bekijken), zult u "
+"zien dat zij niet hetzelfde zijn, omdat het bereik dat wordt bedekt door de "
+"laag van de geaccumuleerde stroom kleiner is dan het bereik van de volledige"
+" DEM."
 
-#: ../../docs/training_manual/processing/no_data.rst:68
+#: ../../docs/training_manual/processing/no_data.rst:93
 msgid ""
 "That means that those layers do not match, and that they cannot be "
 "multiplied directly without homogenizing those sizes and extents by "
@@ -299,7 +301,7 @@ msgstr ""
 "berekend vanuit de invoerlagen, en de minimale celgrootte van hun "
 "celgrootten."
 
-#: ../../docs/training_manual/processing/no_data.rst:70
+#: ../../docs/training_manual/processing/no_data.rst:98
 msgid ""
 "In this case (and in most cases), this produces the desired results, but you"
 " should always be aware of the additional operations that are taking place, "
@@ -316,7 +318,7 @@ msgstr ""
 "zien over het gedrag van algoritmes indien gebruikt met meerdere "
 "rasterlagen."
 
-#: ../../docs/training_manual/processing/no_data.rst:73
+#: ../../docs/training_manual/processing/no_data.rst:104
 msgid ""
 "Let's finish this lesson with another masking exercise. We are going to "
 "calculate the slope in all areas with an elevation between 1000 and 1500 "
@@ -326,7 +328,7 @@ msgstr ""
 "helling berekenen voor alle gebieden met een hoogte tussen 1000 en 1500 "
 "meter."
 
-#: ../../docs/training_manual/processing/no_data.rst:75
+#: ../../docs/training_manual/processing/no_data.rst:107
 msgid ""
 "In this case, we do not have a layer to use as a mask, but we can create it "
 "using the calculator."
@@ -334,7 +336,7 @@ msgstr ""
 "In dit geval hebben we geen laag die we als masker kunnen gebruiken, maar "
 "die kunnen we maken met behulp van de calculator."
 
-#: ../../docs/training_manual/processing/no_data.rst:77
+#: ../../docs/training_manual/processing/no_data.rst:109
 msgid ""
 "Run the calculator using the DEM as only input layer and the following "
 "formula"
@@ -342,7 +344,7 @@ msgstr ""
 "Voer de calculator uit met behulp van de DEM als enige invoerlaag en de "
 "volgende formule"
 
-#: ../../docs/training_manual/processing/no_data.rst:83
+#: ../../docs/training_manual/processing/no_data.rst:115
 msgid ""
 "As you can see, we can use the calculator not only to do simple algebraic "
 "operations, but also to run more complex calculation involving conditional "
@@ -353,7 +355,7 @@ msgstr ""
 "berekeningen uit te voeren die voorwaardelijke zinnen in zich hebben, zoals "
 "die hierboven."
 
-#: ../../docs/training_manual/processing/no_data.rst:85
+#: ../../docs/training_manual/processing/no_data.rst:118
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and no-"
 "data in cells outside of it."
@@ -361,7 +363,7 @@ msgstr ""
 "Het resultaat heeft een waarde van 1 binnen het bereik waarmee we willen "
 "werken, en Geen gegevens in cellen daarbuiten."
 
-#: ../../docs/training_manual/processing/no_data.rst:89
+#: ../../docs/training_manual/processing/no_data.rst:122
 msgid ""
 "The no-data value comes from the 0/0 expression. Since that is an "
 "undetermined value, SAGA will add a NaN (Not a Number) value, which is "
@@ -375,7 +377,7 @@ msgstr ""
 "kunt u een waarde Geen gegevens instellen, zonder dat u hoeft te weten wat "
 "de waarde geen gegevens van de cel is."
 
-#: ../../docs/training_manual/processing/no_data.rst:91
+#: ../../docs/training_manual/processing/no_data.rst:126
 msgid ""
 "Now you just have to multiply it by the slope layer included in the project,"
 " and you will get the desired result."
@@ -384,7 +386,7 @@ msgstr ""
 "die is opgenomen in het project, en zult u het gewenste resultaat "
 "verkrijgen."
 
-#: ../../docs/training_manual/processing/no_data.rst:93
+#: ../../docs/training_manual/processing/no_data.rst:128
 msgid ""
 "All that can be done in a single operation with the calculator. We leave "
 "that as an exercise for the reader."
