@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -47,7 +47,7 @@ msgstr ""
 "vectorlaag, gebaseerd op een rekenkundige uitdrukking, met behulp van de "
 "vectorcalculator."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:7
+#: ../../docs/training_manual/processing/vector_calculator.rst:8
 msgid ""
 "We already know how to use the raster calculator to create new raster layers"
 " using mathematical expressions. A similar algorithm is available for vector"
@@ -63,7 +63,7 @@ msgstr ""
 "ingevoerde uitdrukking. Het algoritme heet :guilabel:`Veld calculator` en "
 "heeft het volgende dialoogvenster voor parameters."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:11
+#: ../../docs/training_manual/processing/vector_calculator.rst:15
 msgid ""
 "In newer versions of Processing the interface has changed considerably, it's"
 " more powerful and easier to use."
@@ -71,36 +71,36 @@ msgstr ""
 "In nieuwere versies van Processing is de interface aanzienlijk gewijzigd, "
 "hij is krachtiger en eenvoudiger te gebruiken."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:13
+#: ../../docs/training_manual/processing/vector_calculator.rst:17
 msgid "Here are a few examples of using that algorithm."
 msgstr "Hier zijn enkele voorbeelden van het gebruik van dat algoritme."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:15
+#: ../../docs/training_manual/processing/vector_calculator.rst:19
 msgid ""
 "First, let's calculate the population density of white people in each "
 "polygon, which represents a census. We have two fields in the attributes "
 "table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just"
 " have to divide them and multiply by one million (to have density per square"
-" km), so we can use the following formula in the corresponding field"
+" km), so we can use the following formula in the corresponding field::"
 msgstr ""
 "Laten we eerst de bevolkingsdichtheid berekenen van blanke mensen in elke "
 "polygoon, wat een census weergeeft. We hebben twee velden in de "
 "attributentabel die we daarvoor kunnen gebruiken, namelijk ``WHITE`` en "
 "``SHAPE_AREA``. We moeten ze alleen delen en vermenigvuldigen met 1 miljoen "
 "(om de dichtheid per vierkante km te verkrijgen), dus we kunnen de volgende "
-"formule in het overeenkomstige veld gebruiken"
+"formule gebruiken in het overeenkomstige veld::"
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:21
+#: ../../docs/training_manual/processing/vector_calculator.rst:26
 msgid "The parameters dialog should be filled as shown below."
 msgstr ""
 "Het dialoogvenster voor de parameters zou moeten worden gevuld zoals "
 "hieronder weergegeven."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:25
-msgid "This will generate a new field named ``WHITE_DENS``"
-msgstr "Dit zal een nieuw veld genereren, genaamd ``WHITE_DENS``"
+#: ../../docs/training_manual/processing/vector_calculator.rst:30
+msgid "This will generate a new field named ``WHITE_DENS``."
+msgstr "Dit zal een nieuw veld genereren, genaamd ``WHITE_DENS``."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:27
+#: ../../docs/training_manual/processing/vector_calculator.rst:32
 msgid ""
 "Now let's calculate the ratio between the ``MALES`` and ``FEMALES`` fields "
 "to create a new one that indicates if male population is numerically "
@@ -110,11 +110,11 @@ msgstr ""
 "een nieuw veld te maken dat aangeeft of de mannelijk bevolking numeriek "
 "domineert boven de vrouwelijke bevolking."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:29
-msgid "Enter the following formula"
-msgstr "Voer de volgende formule in"
-
 #: ../../docs/training_manual/processing/vector_calculator.rst:35
+msgid "Enter the following formula::"
+msgstr "Voer de volgende formule in::"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:39
 msgid ""
 "This time the parameters window should look like this before pressing the "
 ":guilabel:`OK` button."
@@ -122,7 +122,7 @@ msgstr ""
 "Deze keer zou het venster met de parameters er zo uit moeten zien voordat op"
 " de knop :guilabel:`OK` wordt gedrukt."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:40
+#: ../../docs/training_manual/processing/vector_calculator.rst:44
 msgid ""
 "In earlier version, since both fields are of type integer, the result would "
 "be truncated to an integer. In this case the formula should be: ``1.0 *  "
@@ -134,7 +134,7 @@ msgstr ""
 "``1.0 * \"MALES\" / \"FEMALES\"`` moeten zijn, om aan te geven dat we een "
 "getal floating point als resultaat willen hebben."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:42
+#: ../../docs/training_manual/processing/vector_calculator.rst:47
 msgid ""
 "We can use conditional functions to have a new field with ``male`` or "
 "``female`` text strings instead of those ratio value, using the following "
@@ -144,14 +144,14 @@ msgstr ""
 "tekststrings ``male`` of ``female`` te krijgen in plaats van de waarden voor"
 " de ratio, met behulp van de volgende formule::"
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:46
+#: ../../docs/training_manual/processing/vector_calculator.rst:52
 msgid "The parameters window should look like this."
 msgstr "Het venster voor de parameters zou er zo uit moeten zien."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:50
+#: ../../docs/training_manual/processing/vector_calculator.rst:56
 msgid ""
 "A python field calculator is available in the :guilabel:`Advanced Python "
-"field calculator`, which will not be detailed here"
+"field calculator`, which will not be detailed here."
 msgstr ""
 "Een Python veldcalculator is beschikbaar in de :guilabel:`Advanced Python "
-"field calculator`, waarover we hier niet in detail treden"
+"field calculator`, waarover we hier niet in detail treden."
