@@ -87,7 +87,7 @@ the result that we obtain is a meaningful one that actually gives information ab
 There are other interesting things about this algorithm that we have just run,
 apart from the no--data values and how they are handled.
 If you have a look at the extents of the layers that we have multiplied
-(you can do it double-clicking on the names of the layer in the table of contents and looking at their properties),
+(you can do it double-clicking on the names of the layers in the table of contents and looking at the properties),
 you will see that they are not the same, since the extent covered by the flow accumulation layer is smaller that the extent of the full DEM.
 
 That means that those layers do not match, and that they cannot be multiplied directly
