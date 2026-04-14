@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: DiGro, 2026\n"
 "Language-Team: Dutch (https://app.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -47,18 +47,18 @@ msgstr ""
 "de Toolbox, zodat u meer bekend raakt met de elementen van het framework "
 "Processing."
 
-#: ../../docs/training_manual/processing/john_snow.rst:7
+#: ../../docs/training_manual/processing/john_snow.rst:8
 msgid ""
 "Now that everything is configured and we can use external algorithms, we "
 "have a very powerful tool to perform spatial analysis. It is time to work "
-"out a larger exercise with some real--world data."
+"out a larger exercise with some real world data."
 msgstr ""
 "Nu alles is geconfigureerd en we externe algoritmes kunnen gebruiken, hebben"
 " we een zeer krachtig gereedschap om ruimtelijke analyses uit te voeren. Het"
 " is tijd om een wat grotere oefening met gegevens uit de echte wereld uit te"
 " werken."
 
-#: ../../docs/training_manual/processing/john_snow.rst:9
+#: ../../docs/training_manual/processing/john_snow.rst:12
 msgid ""
 "We will be using the well-known dataset that John Snow used in 1854, in his "
 "groundbreaking work "
@@ -77,7 +77,7 @@ msgstr ""
 "manier om weer te geven hoe deze ruimtelijke problemen kunnen worden "
 "geanalyseerd en opgelost door verschillende gereedschappen van Processing."
 
-#: ../../docs/training_manual/processing/john_snow.rst:11
+#: ../../docs/training_manual/processing/john_snow.rst:19
 msgid ""
 "The dataset contains shapefiles with cholera deaths and pump locations, and "
 "an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
@@ -87,7 +87,7 @@ msgstr ""
 " gerenderde kaart in de indeling TIFF. Open het overeenkomstige project van "
 "QGIS voor deze les."
 
-#: ../../docs/training_manual/processing/john_snow.rst:15
+#: ../../docs/training_manual/processing/john_snow.rst:24
 msgid ""
 "The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
 "polygons) of the pumps layer, to get the influence zone of each pump. The "
@@ -98,18 +98,18 @@ msgstr ""
 "voor elke pomp te verkrijgen. Het algoritme :guilabel:`Voronoi-polygonen` "
 "kan daarvoor worden gebruikt."
 
-#: ../../docs/training_manual/processing/john_snow.rst:22
+#: ../../docs/training_manual/processing/john_snow.rst:31
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr "Redelijk eenvoudig, maar het geeft ons al interessante informatie."
 
-#: ../../docs/training_manual/processing/john_snow.rst:26
+#: ../../docs/training_manual/processing/john_snow.rst:35
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "Duidelijk, de meeste gevallen liggen binnen een van de polygonen"
 
-#: ../../docs/training_manual/processing/john_snow.rst:28
+#: ../../docs/training_manual/processing/john_snow.rst:37
 msgid ""
 "To get a more quantitative result, we can count the number of deaths in each"
-" polygon. Since each point represents a building where deaths occured, and "
+" polygon. Since each point represents a building where deaths occurred, and "
 "the number of deaths is stored in an attribute, we cannot just count the "
 "points. We need a weighted count, so we will use the :guilabel:`Count points"
 " in polygon` tool."
@@ -120,7 +120,7 @@ msgstr ""
 "eenvoudigweg de punten tellen. We hebben een gewogen telling nodig, dus "
 "zullen we het gereedschap :guilabel:`Punten in polygonen tellen` gebruiken."
 
-#: ../../docs/training_manual/processing/john_snow.rst:32
+#: ../../docs/training_manual/processing/john_snow.rst:44
 msgid ""
 "The new field will be called ``DEATHS``, and we use the ``COUNT`` field as "
 "weighting field. The resulting table clearly reflects that the number of "
@@ -132,7 +132,7 @@ msgstr ""
 "dat het aantal doden in de polygoon die overeenkomt met de eerste pomp veel "
 "groter is dan in de andere."
 
-#: ../../docs/training_manual/processing/john_snow.rst:36
+#: ../../docs/training_manual/processing/john_snow.rst:50
 msgid ""
 "Another good way of visualizing the dependence of each point in the "
 "``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
@@ -145,11 +145,11 @@ msgstr ""
 " gereedschap :guilabel:`Afstand tot dichtstbijzijnde naaf`, en de hieronder "
 "getoonde configuratie te gebruiken."
 
-#: ../../docs/training_manual/processing/john_snow.rst:40
+#: ../../docs/training_manual/processing/john_snow.rst:56
 msgid "The result looks like this:"
 msgstr "Het resultaat ziet er uit als dit:"
 
-#: ../../docs/training_manual/processing/john_snow.rst:44
+#: ../../docs/training_manual/processing/john_snow.rst:60
 msgid ""
 "Although the number of lines is larger in the case of the central pump, do "
 "not forget that this does not represent the number of deaths, but the number"
@@ -163,7 +163,7 @@ msgstr ""
 "representatieve parameter, maar het houdt geen rekening met het feit dat "
 "sommige locaties meer gevallen zouden kunnen hebben dan andere."
 
-#: ../../docs/training_manual/processing/john_snow.rst:46
+#: ../../docs/training_manual/processing/john_snow.rst:65
 msgid ""
 "A density layer will also give us a very clear view of what is happening. We"
 " can create it with the :guilabel:`Heatmap (Kernel density estimation)` "
@@ -178,7 +178,7 @@ msgstr ""
 "bereik en de celgrootte van de rasterlaag Streets, krijgen we zoiets als "
 "dit."
 
-#: ../../docs/training_manual/processing/john_snow.rst:50
+#: ../../docs/training_manual/processing/john_snow.rst:72
 msgid ""
 "Remember that, to get the output extent, you do not have to type it. Click "
 "on the button on the right-hand side and select :guilabel:`Use layer/canvas "
@@ -188,7 +188,7 @@ msgstr ""
 "voeren. Klik op de knop aan de rechterkant en selecteer :guilabel:`Bereik "
 "laag/kaartvenster gebruiken`."
 
-#: ../../docs/training_manual/processing/john_snow.rst:54
+#: ../../docs/training_manual/processing/john_snow.rst:77
 msgid ""
 "Select the streets raster layer and its extent will be automatically added "
 "to the text field. You must do the same with the cellsize, selecting the "
@@ -198,7 +198,7 @@ msgstr ""
 " toegevoegd aan het tekstveld. U moet hetzelfde doen voor de celgrootte, "
 "door ook de celgrootte van die laag te selecteren."
 
-#: ../../docs/training_manual/processing/john_snow.rst:56
+#: ../../docs/training_manual/processing/john_snow.rst:80
 msgid ""
 "Combining with the pumps layer, we see that there is one pump clearly in the"
 " hotspot where the maximum density of death cases is found."
