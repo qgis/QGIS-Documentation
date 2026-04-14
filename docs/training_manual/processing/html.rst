@@ -46,4 +46,4 @@ the form of numeric values. The algorithm that we have just executed is one of t
 Each one of those values is handled as a single output, and stored in a variable.
 This has no importance at all now, but once we move to the model designer,
 you will see that it will allow us to use those values as numeric inputs for
-other algorithms. 
+other algorithms.

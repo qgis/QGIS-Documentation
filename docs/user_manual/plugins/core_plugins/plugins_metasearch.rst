@@ -79,7 +79,7 @@ To add a Catalog Service entry:
 
 #. Click the :guilabel:`New` button
 #. Enter a :guilabel:`Name` for the service, as well as the
-   :guilabel:`URL` (endpoint).
+   :guilabel:`URL` (endpoint) and select the :guilabel:`Catalog Type`.
    Note that for OGC CSW 2.0.2 Catalogs, only the base URL is
    required (not a full GetCapabilities URL).  For OGC API - Records
    Catalogs, the URL should be the path to the collection endpoint
@@ -91,7 +91,7 @@ To edit an existing Catalog Service entry:
 
 #. Select the entry you would like to edit
 #. Click the :guilabel:`Edit` button
-#. And modify the :guilabel:`Name` or :guilabel:`URL` values
+#. Modify the relevant parameters
 #. Click :guilabel:`OK`.
 
 To delete a Catalog Service entry, select the entry you would like to
@@ -179,8 +179,8 @@ Select a result and:
   When clicking this button, MetaSearch will verify if this is a
   valid OWS.
   The service will then be added to the appropriate QGIS connection
-  list, and the appropriate connection dialog will appear. If you 
-  choose :guilabel:`Add GIS File` the linked GIS file will be 
+  list, and the appropriate connection dialog will appear. If you
+  choose :guilabel:`Add GIS File` the linked GIS file will be
   added to the current project.
 
 .. _figure_metasearch_metadata:
@@ -205,7 +205,7 @@ You can fine tune MetaSearch with the following :guilabel:`Settings`:
 * :guilabel:`Server Timeout`: when searching metadata catalogs, the
   number of seconds for blocking connection attempt.
   Default value is 10.
-* :guilabel:`Disable SSL verification`: option to switch off ssl 
+* :guilabel:`Disable SSL verification`: option to switch off ssl
   verification.
 * :guilabel:`Results paging`: when searching metadata catalogs, the
   number of results to show per page. Default value is 10.

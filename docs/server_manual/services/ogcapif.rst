@@ -419,7 +419,7 @@ Custom template functions
   content type, for example "text/html" will return "HTML"
 - ``nl2br( text )``: Returns the input text with all newlines replaced
   by "<br>" tags
-- ``starts_with( string, prefix )``: returns true if a string begins 
+- ``starts_with( string, prefix )``: returns true if a string begins
   with the provided string prefix, false otherwise
 
 

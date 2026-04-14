@@ -4,7 +4,7 @@
   inputs.geospatial.url = "github:imincik/geospatial-nix.repo";
   inputs.nixpkgs.follows = "geospatial/nixpkgs";
 
-  outputs = { self, geospatial, nixpkgs }: 
+  outputs = { self, geospatial, nixpkgs }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -58,10 +58,9 @@
           pkgs.texlive.combined.scheme-full
         ];
         shellHook = ''
-          
+
           #source ${./scripts/shell-hook.sh}
         '';
       };
     };
 }
-

@@ -125,7 +125,7 @@ Processing Plugins
 
 Processing Plugins can be used to process data. They are easier to develop,
 more specific and more lightweight than Python Plugins. :ref:`processing_plugin`
-explains when the use of Processing algorithms is appropiate and how to develop
+explains when the use of Processing algorithms is appropriate and how to develop
 them.
 
 .. index::
@@ -141,7 +141,7 @@ starts.
 
 2. Setting the ``PYQGIS_STARTUP`` environment variable to an
    existing Python file
-   
+
 3. Specifying a startup script using the ``--code init_qgis.py``
    parameter.
 
@@ -155,9 +155,9 @@ is executed by the embedded Python interpreter.
 
 The path in the user's home directory usually is found under:
 
-* Linux: :file:`.local/share/QGIS/QGIS3`
-* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS3`
-* macOS: :file:`Library/Application Support/QGIS/QGIS3`
+* Linux: :file:`.local/share/QGIS/QGIS4`
+* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS4`
+* macOS: :file:`Library/Application Support/QGIS/QGIS4`
 
 The default system paths depend on the operating system. To find the
 paths that work for you, open the Python Console and run
@@ -179,7 +179,7 @@ existing Python file.
 
 This code will run before QGIS initialization is complete.
 This method is very useful for cleaning
-sys.path, which may have undesireable paths, or for isolating/loading
+sys.path, which may have undesirable paths, or for isolating/loading
 the initial environment without requiring a virtual environment, e.g.
 homebrew or MacPorts installs on Mac.
 
@@ -214,7 +214,7 @@ In the following example, ``myfile.tif`` will be available via
 .. code-block:: bash
 
   qgis --code qgis_init.py --py-args myfile.tif -- otherfile.tif
-  
+
 If you want access to every command line parameter from within
 Python, you can use ``QCoreApplication.arguments()``
 

@@ -1020,7 +1020,7 @@ Finally, let's check whether everything went well
     fields: 4
     features: 1
     extent: 10.0 10.0 10.0 10.0
-    F: 1 ['Johnny', 2, 0.3, PyQt5.QtCore.QDateTime(2000, 1, 1, 12, 0)] <QgsPointXY: POINT(10 10)>
+    F: 1 ['Johnny', 2, 0.3, PyQt6.QtCore.QDateTime(2000, 1, 1, 12, 0)] <QgsPointXY: POINT(10 10)>
 
 .. index:: Vector layers; Symbology
 

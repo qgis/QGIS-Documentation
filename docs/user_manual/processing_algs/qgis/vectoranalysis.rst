@@ -293,7 +293,7 @@ If both options are used, the weight field will take precedence and
 the unique class field will be ignored.
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
@@ -2012,7 +2012,7 @@ the lines across each polygon.
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>` 
+:ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`

@@ -15,7 +15,7 @@ What are Vector Tiles?
 
 Vector tiles are packets of geographic data, packaged into pre-defined
 roughly-square shaped "tiles" for transfer over the web. They combine
-pre-rendered raster map tiles and vector map tiles. 
+pre-rendered raster map tiles and vector map tiles.
 The vector tile server returns vector map data, which has been clipped
 to the boundaries of each tile, instead of a pre-rendered map image.
 The clipped tiles represent the zoom-levels of the vector tile service,
@@ -26,7 +26,7 @@ current zoom level need to be transferred.
 Also, compared to a tiled raster map, data transfer is also greatly reduced,
 as vector data is typically much smaller than a rendered bitmap.
 Vector tiles do not have any styling information assigned so QGIS needs to
-apply a cartographic style in order to display the data. 
+apply a cartographic style in order to display the data.
 
 .. _figure_vector_tiles_pyramidstructure:
 
@@ -180,7 +180,7 @@ on all features of the layer:
   You can also make a precise definition of the percentage of visibility in the menu beside the slider.
 * :guilabel:`Blending mode`: You can achieve special rendering effects with these tools
   that you may previously only know from graphics programs.
-  The pixels of your overlaying and underlaying layers are mixed through the settings
+  The pixels of your overlaying and underlying layers are mixed through the settings
   described in :ref:`blend-modes`.
 
 Styles

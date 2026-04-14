@@ -28,7 +28,7 @@ It's a good idea to regularly check for this type of warnings if you are not sur
 From the :menuselection:`Processing --> History...` menu, you'll find *algorithms* that are executed,
 regardless of they are executed from the GUI or from the console (which will be explained later in this manual).
 The execution is stored in this dialog as a console call.
-That means that everytime you run an algorithm, a console command is added to the log,
+That means that every time you run an algorithm, a console command is added to the log,
 and you have the full history of your working session.
 Here is how that history looks like:
 

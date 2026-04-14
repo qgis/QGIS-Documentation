@@ -647,7 +647,7 @@ Use the :guilabel:`Global opacity` slider to set to what extent the
 underlying layers (if any) should be visible through the current
 raster layer.
 This is very useful if you overlay raster layers (e.g., a shaded
-relief map overlayed by a classified raster map).
+relief map overlaid by a classified raster map).
 This will make the look of the map more three dimensional.
 The opacity of the raster can be data-defined, and vary e.g. depending on
 the visibility of another layer, by temporal variables, on different pages
@@ -881,7 +881,7 @@ Check the |checkbox| :guilabel:`Dynamic Temporal Control` option and
 set whether the layer redraw should be:
 
 * :guilabel:`Automatic`: the rendering is controlled by the underlying
-  data provider if it suppports temporal data handling. E.g. this can be used
+  data provider if it supports temporal data handling. E.g. this can be used
   with WMS-T layers or PostgreSQL rasters.
 
   .. A bit more info on this automatic option would be necessary.
@@ -914,7 +914,7 @@ set whether the layer redraw should be:
   temporal navigation. When **unchecked**, only pixels matching the current temporal
   range are visible, pixels appear and disappear as you move through time. When
   **checked**, all pixels from the start time through the current position remain
-  visible, creating a cumulative view. 
+  visible, creating a cumulative view.
 
   :guilabel:`Represents Temporal Values` mode is effective for:
 
@@ -1228,7 +1228,7 @@ interface provides two options to define and associate a new attribute table:
   layer has a classified symbology applied. Otherwise, this option is disabled. Applying classified
   symbology also triggers an option in the layer context menu to |createTable|:guilabel:`Create Raster Attribute Table`.
   Click this button and set the following options in the :guilabel:`New Raster Attribute Table` dialog.
-  
+
    * :guilabel:`Managed by the data provider`: the attribute table will be saved
      and managed by the data provider (if supported), overwriting any existing table
      for the raster band used by the current style. Depending on the data provider,
@@ -1298,22 +1298,22 @@ At the top of the dialog, a set of tools allows to edit and save changes to the 
   column to the raster attribute table. The dialog lets you define:
 
   * :guilabel:`Column Type`, which can be:
-  
+
     * |radioButtonOff| :guilabel:`Standard column`
     * |radioButtonOff| :guilabel:`Color RGBA`
     * |radioButtonOff| :guilabel:`Color ramp (RGBA minimum and RGBA maximum)`
 
   * :guilabel:`Column Definition`, including:
-  
+
     * :guilabel:`Name` of the column (mandatory)
     * :guilabel:`Usage`, which can be:
-    
+
       * :guilabel:`Pixel Count`: stores the number of pixels belonging to a given value or value range.
       * :guilabel:`Generic`: general-purpose column with no predefined meaning.
       * :guilabel:`Name`: stores the class name or label associated with a raster value or range.
 
     * :guilabel:`Data type`, which can be:
-    
+
       * :guilabel:`String`
       * :guilabel:`Integer`
       * :guilabel:`Long Integer`
@@ -1353,7 +1353,7 @@ Identify raster cells
 =====================
 
 The |identify| :ref:`identify features <identify>` tool allows you to get information about
-specific points in a raster layer. 
+specific points in a raster layer.
 
 To use the |identify|:guilabel:`Identify features` tool:
 

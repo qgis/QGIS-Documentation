@@ -124,7 +124,7 @@ Then, restart Apache:
 
 .. code-block:: bash
 
- systemctl restart apache2 
+ systemctl restart apache2
 
 How to use a plugin
 ===================

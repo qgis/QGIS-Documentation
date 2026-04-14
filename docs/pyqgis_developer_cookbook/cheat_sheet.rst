@@ -150,7 +150,7 @@ Canvas
 
     from qgis.PyQt.QtCore import Qt
 
-    iface.mapCanvas().setCanvasColor(Qt.black)
+    iface.mapCanvas().setCanvasColor(Qt.GlobalColor.black)
     iface.mapCanvas().refresh()
 
 **Map Update interval**
@@ -220,7 +220,7 @@ Otherwise
 .. testcode:: cheat_sheet
 
     for layer in QgsProject.instance().mapLayers().values():
-        print(f"{layer.name()} of type {layer.type().name}")    
+        print(f"{layer.name()} of type {layer.type().name}")
 
 .. testoutput:: cheat_sheet
 
@@ -626,7 +626,7 @@ Advanced TOC
 
   root = QgsProject.instance().layerTreeRoot()
   node = root.findLayer(layer.id())
-  new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
+  new_state = True if node.isVisible() == Qt.CheckState.Unchecked else False
   node.setItemVisibilityChecked(new_state)
 
 
@@ -781,7 +781,8 @@ which is added to the project.
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
     QgsProject.instance().addMapLayer(result['OUTPUT'])
 
-.. testoutput:: cheat_sheet
+..
+    .. testoutput:: cheat_sheet
 
     Processing(0): Results: {'OUTPUT': 'output_d27a2008_970c_4687_b025_f057abbd7319'}
 
@@ -814,8 +815,7 @@ Decorators
 
 .. testcode:: cheat_sheet
 
-    from qgis.PyQt.Qt import QTextDocument
-    from qgis.PyQt.QtGui import QFont
+    from qgis.PyQt.QtGui import QFont, QTextDocument
 
     mQFont = "Sans Serif"
     mQFontsize = 9

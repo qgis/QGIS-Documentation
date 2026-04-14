@@ -59,7 +59,7 @@ We should therefore reproject them before proceeding further, using the
 With this layer that contains the bounding box of the raster layer that we want
 to obtain, we can crop both of the raster layers, using the :guilabel:`Clip raster by mask layer` algorithm.
 
-.. figure:: img/cutting_merging/clip.png 
+.. figure:: img/cutting_merging/clip.png
 
 Once the layers have been cropped, they can be merged using the SAGA :guilabel:`Mosaic raster layers` algorithm.
 

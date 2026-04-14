@@ -24,7 +24,7 @@ Returns an aggregate value calculated using features from another layer.
      - * **layer** - a string, representing either a layer name or layer ID
        * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
 
-         
+
 
          * count
          * count_distinct
@@ -546,7 +546,7 @@ Returns an aggregate value calculated using all matching child features from a l
      - * **relation** - a string, representing a relation ID
        * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
 
-         
+
 
          * count
          * count_distinct
@@ -631,4 +631,3 @@ Returns the aggregate summed value from a field or expression.
 
 
 .. end_sum_section
-

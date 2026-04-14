@@ -190,4 +190,3 @@ Returns TRUE if a path corresponds to a file.
 
 
 .. end_is_file_section
-

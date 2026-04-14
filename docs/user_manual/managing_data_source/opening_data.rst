@@ -385,7 +385,7 @@ To load a layer from a file:
    `vector <https://gdal.org/en/latest/drivers/vector/>`__
    or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver documentation.
    At the top of the options, a text with hyperlink will directly lead to the documentation
-   of the appopriate driver for the selected file format.
+   of the appropriate driver for the selected file format.
 
    .. _figure_vector_layer_open_options:
 
@@ -395,15 +395,15 @@ To load a layer from a file:
       Loading a Shapefile with open options
 
 #. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
-   When adding vector datasets containing multiple layers, the 
-   :guilabel:`Select Items to Add` dialog will appear. In this dialog, you can 
-   choose the specific layers from your dataset that you want to add. 
+   When adding vector datasets containing multiple layers, the
+   :guilabel:`Select Items to Add` dialog will appear. In this dialog, you can
+   choose the specific layers from your dataset that you want to add.
    Also, under :guilabel:`Options` you can choose to:
 
    * |checkbox|:guilabel:`Add layers to a group`
    * |checkbox|:guilabel:`Show system and internal tables`
    * |checkbox|:guilabel:`Show empty vector layers`.
-   
+
    :numref:`figure_vector_loaded` shows QGIS after loading the :file:`alaska.shp` file.
 
    .. _figure_vector_loaded:
@@ -471,7 +471,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
   and `raster <https://gdal.org/en/latest/drivers/raster/ogcapi.html>`_ data
   from servers that implement the OGC API standards.
   To use this option:
-  
+
   #. Select |radioButtonOn| :guilabel:`OGC API` from the :guilabel:`Data Source Manager`
      dialog.
   #. Enter the endpoint of the OGC API service you want to connect to. Note that you
@@ -620,7 +620,7 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
   :sup:`Select CRS` widget.
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented as WKT: select the :guilabel:`Geometry field`
-  containing the WKT geometry and choose the approriate :guilabel:`Geometry
+  containing the WKT geometry and choose the appropriate :guilabel:`Geometry
   field` or let QGIS auto-detect it.
   Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
   :sup:`Select CRS` widget.
@@ -686,7 +686,7 @@ contents:
    file to import.
 #. Specify the coordinate reference system of the data in the drawing file.
 #. Input the location of the :guilabel:`Target package`, i.e. the GeoPackage file
-   that will store the data. If an existing file is provided, then it will be 
+   that will store the data. If an existing file is provided, then it will be
    overwritten.
 #. Choose how to import ``blocks`` with the dedicated combobox:
 
@@ -814,7 +814,7 @@ Creating a stored Connection
 
 In order to read and write tables from a database format QGIS supports
 you have to create a connection to that database. While :ref:`QGIS Browser
-Panel <browser_panel>` is the simplest and recommanded way to connect to
+Panel <browser_panel>` is the simplest and recommended way to connect to
 and use databases, QGIS provides other tools to connect to each
 of them and load their tables:
 
@@ -1090,7 +1090,7 @@ create MS SQL Server connection through :guilabel:`Data Source Manager`.
 
    MS SQL Server Connection
 
-To create a new MS SQL Server connection, you need to provide some of the 
+To create a new MS SQL Server connection, you need to provide some of the
 following information in the :guilabel:`Connection Details` dialog:
 
 * :guilabel:`Connection name`
@@ -1140,7 +1140,7 @@ Optionally, you can activate the following options:
 * |checkbox| :guilabel:`Use only a Subset of Schemas` will allow you to filter
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
   You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema in the list.
- 
+
 Renaming a Vector Table (MS SQL)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1324,7 +1324,7 @@ To load a layer from a database, you can perform the following steps:
 The Layer Metadata Search Panel
 ===============================
 
-By default, QGIS can retrieve layers metadata from the connections or data providers that allow metadata storage 
+By default, QGIS can retrieve layers metadata from the connections or data providers that allow metadata storage
 (more details on :ref:`saving metadata to the database <savemetadatatodb>`).
 The :guilabel:`Metadata search` panel allows to browse the layers by their metadata
 and add them to the project (either with a double-click or the :guilabel:`Add` button).
@@ -1335,7 +1335,7 @@ The list can be filtered:
 * by the layer (geometry) type
 
 .. note:: The sources of metadata are implemented through a layer metadata provider system
- that can be extended by plugins. 
+ that can be extended by plugins.
 
 .. figure:: img/layer_metadata_search_panel.png
    :align: center
@@ -1482,7 +1482,7 @@ from the Browser panel) and provide:
    XYZ Tiles - OpenStreetMap configuration
 
 * a :guilabel:`Name`
-* the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or 
+* the :guilabel:`URL`, you can add ``http://example.com/{z}/{x}/{y}.png`` or
   ``file:///local_path/{z}/{x}/{y}.png``
 * the :ref:`authentication <authentication>` configuration if necessary
 * the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
@@ -1622,11 +1622,11 @@ ArcGIS REST Servers can be added via the
 #. Expand the tree to find and select the layers of interest.
    Their :guilabel:`Coordinate Reference System` is displayed at the bottom of the dialog.
 #. For raster-based layers, you can select the :guilabel:`Image encoding` to use
-   among a number of image formats advertized by the target service
+   among a number of image formats advertised by the target service
    ( e.g., ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... ).
 
 #. To add the selected layers to the map canvas, press :guilabel:`Add` button.
-   
+
    Because layers can sometimes load and render slowly on the client side,
    applying a filter to restrict the features retrieved from the service
    can significantly improve performance, since only the filtered features are requested from the server.

@@ -11,7 +11,7 @@ and `GDAL vector programs <https://gdal.org/en/latest/programs/index.html#vector
 
 .. toctree::
      :maxdepth: 2
-     
+
      miscellaneous
      rasteranalysis
      rasterconversion

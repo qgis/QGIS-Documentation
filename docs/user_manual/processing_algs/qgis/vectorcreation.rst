@@ -105,7 +105,7 @@ Advanced parameters
        * 0 --- Round
        * 1 --- Miter
        * 2 --- Bevel
-  
+
        .. figure:: img/buffer_join_style.png
           :align: center
           :width: 100%
@@ -120,11 +120,11 @@ Advanced parameters
        when creating a mitered join as a factor of the offset distance (only applicable for miter
        join styles).
        Minimum: 1.0
-              
+
        .. figure:: img/buffer_miter_limit.png
           :align: center
           :width: 100%
-         
+
           A 10m buffer with a limit of 2 and a 10m buffer with a limit of 1
 
 Outputs
@@ -388,7 +388,7 @@ Outputs
        line or polygon) depends on the :guilabel:`Grid type`.
        Features are created from top to bottom, left to right.
        The attribute table is filled with:
-       
+
        * an ``id``
        * coordinates on the ``left``, ``right``, ``top`` and ``bottom`` sides
        * and their placement in the grid: ``row_index`` and ``column_index``
@@ -1123,9 +1123,9 @@ Random points in extent
 Creates a new point layer with a given number of random points, all
 of them within a given extent.
 
-A distance factor can be specified, to avoid points being too close to each 
-other. If the minimum distance between points makes it impossible to create new 
-points, either distance can be decreased or the maximum number of attempts may 
+A distance factor can be specified, to avoid points being too close to each
+other. If the minimum distance between points makes it impossible to create new
+points, either distance can be decreased or the maximum number of attempts may
 be increased.
 
 **Default menu**: :menuselection:`Vector --> Research Tools`
@@ -1309,7 +1309,7 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-        
+
 .. _qgisrandompointsinpolygons:
 
 Random points in polygons
@@ -1467,11 +1467,11 @@ Outputs
    * - **Number of features with empty or no geometry**
      - ``FEATURES_WITH_EMPTY_OR_NO_GEOMETRY``
      - [numeric: integer]
-     - 
+     -
    * - **Total number of points generated**
      - ``OUTPUT_POINTS``
      - [numeric: integer]
-     - 
+     -
    * - **Number of missed points**
      - ``POINTS_MISSED``
      - [numeric: integer]
@@ -1748,7 +1748,7 @@ Outputs
    * - **Number of features with empty or no geometry**
      - ``FEATURES_WITH_EMPTY_OR_NO_GEOMETRY``
      - [numeric: integer]
-     - 
+     -
    * - **Number of features with missed points**
      - ``LINES_WITH_MISSED_POINTS``
      - [numeric: integer]
@@ -1756,7 +1756,7 @@ Outputs
    * - **Total number of points generated**
      - ``POINTS_GENERATED``
      - [numeric: integer]
-     - 
+     -
    * - **Number of missed points**
      - ``POINTS_MISSED``
      - [numeric: integer]

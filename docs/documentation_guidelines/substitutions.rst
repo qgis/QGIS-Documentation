@@ -35,7 +35,7 @@ If no replacement exists:
 
      .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
         :width: 1.5em
-     .. |splitLayer| image:: /static/common/split_layer.png
+     .. |stackedDiagram| image:: /static/common/stacked-diagram.png
         :width: 1.5em
 
 #. Update the target section(s) of the docs, using your new substitution.
@@ -99,7 +99,7 @@ Manage Layers and overview
   ==============================  ==================================  ==============================  ==================================
   Icon                            Substitution                        Icon                            Substitution
   ==============================  ==================================  ==============================  ==================================
-  |dataSourceManager|             ``|dataSourceManager|``             \                               \
+  |dataSourceManager|             ``|dataSourceManager|``             |addGeoPackageLayer|            ``|addGeoPackageLayer|``
   |addOgrLayer|                   ``|addOgrLayer|``                   |addSensorThingsLayer|          ``|addSensorThingsLayer|``
   |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
   |addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
@@ -705,6 +705,8 @@ Grass integration
 .. |addExpression| image:: /static/common/mActionAddExpression.png
    :width: 1.5em
 .. |addGeometryAttributes| image:: /static/common/mAlgorithmAddGeometryAttributes.png
+   :width: 1.5em
+.. |addGeoPackageLayer| image:: /static/common/mActionAddGeoPackageLayer.png
    :width: 1.5em
 .. |addGpsLayer| image:: /static/common/mActionAddGpsLayer.png
    :width: 1.5em

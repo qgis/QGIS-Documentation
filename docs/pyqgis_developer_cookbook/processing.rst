@@ -193,8 +193,8 @@ Here's a simple example of a custom buffer algorithm:
 Customizing the algorithm dialog
 --------------------------------
 
-Custom dialogs are especially useful when working with nested or dynamic inputs, 
-when parameters depend on external data sources such as APIs (e.g. dynamically populated dropdowns), 
+Custom dialogs are especially useful when working with nested or dynamic inputs,
+when parameters depend on external data sources such as APIs (e.g. dynamically populated dropdowns),
 or when you need advanced validation and custom layout behavior that isn’t supported by the default Processing dialog.
 To override the default UI (e.g. for complex parameter types or dynamic logic),
 subclass :class:`QgsProcessingAlgorithmDialogBase <qgis.gui.QgsProcessingAlgorithmDialogBase>`.
@@ -307,9 +307,9 @@ To launch the custom dialog for a given algorithm, simply instantiate
 Managing Qt Signals
 -------------------
 
-When building reactive dialogs, manage signal connections carefully. 
-The above pattern uses a QTimer_ to debounce input from the text field, preventing rapid repeated calls. 
-This is especially useful when fetching metadata or updating UI elements based on user input. 
+When building reactive dialogs, manage signal connections carefully.
+The above pattern uses a QTimer_ to debounce input from the text field, preventing rapid repeated calls.
+This is especially useful when fetching metadata or updating UI elements based on user input.
 Always connect signals once (typically in ``__init__``) and use ``singleShot=True``
 to ensure the slot is triggered only once after a delay.
 

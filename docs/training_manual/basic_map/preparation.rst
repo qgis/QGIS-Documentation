@@ -44,7 +44,7 @@ Let's get started right away!
       :width: 100 %
 
 #. Load the :file:`protected_areas.shp` vector dataset:
-   
+
    #. Click on the :guilabel:`Vector` tab.
    #. Enable the |radioButtonOn|:guilabel:`File` source type.
    #. Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`.

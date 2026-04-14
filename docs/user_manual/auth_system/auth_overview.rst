@@ -41,7 +41,7 @@ Custom authentication databases
 -------------------------------
 
 QGIS can be configured to use a custom authentication database instead of the above
-mentioned default SQLite one: any database suppported by the Qt SQL module can be
+mentioned default SQLite one: any database supported by the Qt SQL module can be
 used (e.g. PostgreSQL, MySQL, etc), provided that the corresponding Qt SQL driver is
 available in the system.
 
@@ -374,8 +374,8 @@ The Microsoft Planetary Computer authentication method allows QGIS to access Mic
    Microsoft Planetary Computer authentication configs
 
 
-This method can be applied to STAC connections or directly to individual GDAL or point cloud layers. 
-When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests. 
+This method can be applied to STAC connections or directly to individual GDAL or point cloud layers.
+When a layer is added, the authentication configuration is appended to its URI so QGIS uses it for network requests.
 Support for encoding/decoding this configuration is also available for point cloud layers.
 
 Master Password and Auth Config Utilities
@@ -441,7 +441,7 @@ When using the selector, :guilabel:`No authentication` is displayed in the
 pop-up menu control when nothing is selected, when there are no configurations
 to choose from, or when a previously assigned configuration can no longer be
 found in the database. Use the drop-down menu to select an existing authentication
-configuration or press |symbologyAdd| :sup:`Create a new autentication configuration`
+configuration or press |symbologyAdd| :sup:`Create a new authentication configuration`
 to create a configuration you could use.
 More details at :ref:`authentication`.
 

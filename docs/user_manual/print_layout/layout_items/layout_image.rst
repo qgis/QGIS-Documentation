@@ -167,7 +167,7 @@ The main differences are:
   :guilabel:`Sync with map` property is the map over which the north
   arrow item is drawn.
   If none, it falls back to the :ref:`reference map <reference_map>`.
-   
+
 .. note::
 
    Many of the north arrows do not have an 'N' added in the north

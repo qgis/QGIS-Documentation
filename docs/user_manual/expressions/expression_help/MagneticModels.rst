@@ -113,4 +113,3 @@ Returns the rate of change of the inclination of a magnetic field at a point, in
 
 
 .. end_magnetic_inclination_rate_of_change_section
-

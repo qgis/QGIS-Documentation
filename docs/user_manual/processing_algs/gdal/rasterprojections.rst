@@ -123,13 +123,12 @@ Outputs
       - ``WORLD_FILE``
       - [file]
       - Text file with extension :file:`.wld` containing
-	transformation parameters for the raster file.
+        transformation parameters for the raster file.
    *  - **ESRI Shapefile prj file**
       - ``PRJ_FILE``
       - [file]
       - Text file with :file:`.prj` extension that describes the CRS.
-        Will be ``None`` if :guilabel:`Create also .prj file` is
-	False.
+        Will be ``None`` if :guilabel:`Create also .prj file` is False.
 
 Python code
 ...........

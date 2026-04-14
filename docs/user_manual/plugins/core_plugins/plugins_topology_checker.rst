@@ -29,14 +29,14 @@ are hard to find. This plugin helps you find such errors through a list of rules
 To enable the :guilabel:`Topology checker` plugin:
 
 #. Go to :guilabel:`Plugins` menu
-#. Open |showPluginManager| :guilabel:`Manage and Install plugins` and choose 
+#. Open |showPluginManager| :guilabel:`Manage and Install plugins` and choose
    |pluginInstalled| :guilabel:`Installed`
 #. Enable |checkbox| |topologyChecker| :guilabel:`Topology checker`
 #. Close the :guilabel:`Plugin manager` dialog.
-   A |topologyChecker| :guilabel:`Topology checker` entry is added to the 
+   A |topologyChecker| :guilabel:`Topology checker` entry is added to the
    :guilabel:`Vector` menu.
 
-After you enabled |topologyChecker| :guilabel:`Topology checker` 
+After you enabled |topologyChecker| :guilabel:`Topology checker`
 open it and choose |options| :guilabel:`Configure` to create your topology rules.
 
 On **point layers** the following rules are available:

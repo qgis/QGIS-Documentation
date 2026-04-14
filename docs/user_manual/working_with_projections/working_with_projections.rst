@@ -38,6 +38,7 @@ Custom, user-created CRSs are stored in a user CRS database. See
 section :ref:`sec_custom_projections` for information on managing your custom
 coordinate reference systems.
 
+.. index:: WKT
 .. _layer_crs:
 
 Layer Coordinate Reference Systems
@@ -49,7 +50,7 @@ to manually assign the correct CRS to the layer. For PostgreSQL layers, QGIS use
 the spatial reference identifier that was specified when that PostgreSQL layer was
 created. For data supported by GDAL, QGIS relies on the presence of a
 recognized means of specifying the CRS. For instance, for the Shapefile format
-this is a file containing an ESRI Well-Known Text (:index:`WKT`)
+this is a file containing an ESRI Well-Known Text (WKT)
 representation of the layer's CRS. This projection file has the same base name
 as the :file:`.shp` file and a :file:`.prj` extension. For example,
 :file:`alaska.shp` would have a corresponding projection file named
@@ -76,7 +77,7 @@ layer:
 
    * |radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`:
      there will be no prompt to select a CRS when a layer without CRS is loaded,
-     defering CRS choice to a later time. Convenient when loading a lot of
+     deferring CRS choice to a later time. Convenient when loading a lot of
      layers at once. Such layers will be identifiable in the :guilabel:`Layers`
      panel by the |indicatorNoCRS| icon next to them.
      They'll also be un-referenced, with coordinates from the layer treated as
@@ -199,7 +200,7 @@ in the :guilabel:`General` tab of the :menuselection:`Project --> Properties…`
    The project's CRS is redefined using the layer's CRS. Map canvas extent,
    coordinates display are updated accordingly and all the layers in
    the project are on-the-fly translated to the new project CRS.
-   
+
 
 .. index:: CRS Selection
 .. _crs_selector:
@@ -212,7 +213,7 @@ Coordinate Reference System Selector
 .. figure:: img/crs_selector.png
    :align: center
 
-   CRS Selector 
+   CRS Selector
 
 This dialog helps you assign a Coordinate Reference System to a project or a
 layer, provided a set of projection databases. Items in the dialog are:
@@ -231,16 +232,16 @@ layer, provided a set of projection databases. Items in the dialog are:
   engine. This text is read-only and provided for informational purposes.
 
 
-If you want to remove a recently used CRS from the list that can be done in 
+If you want to remove a recently used CRS from the list that can be done in
 several ways:
 
-* Press |clearItem| :sup:`Remove from recently used CRS` button on the right 
+* Press |clearItem| :sup:`Remove from recently used CRS` button on the right
   side.
 * Press :kbd:`Del` after selecting CRS that you want to remove.
 * Right-click on used CRS and choose
-  |clearItem| :guilabel:`Remove selected CRS from recently used CRS` to remove 
+  |clearItem| :guilabel:`Remove selected CRS from recently used CRS` to remove
   selected CRS
-  or |clearConsole| :guilabel:`Clear all recently used CRS` to remove all used 
+  or |clearConsole| :guilabel:`Clear all recently used CRS` to remove all used
   CRS.
 
 The CRS selector also shows a rough preview of the geographic

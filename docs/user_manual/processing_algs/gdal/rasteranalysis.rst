@@ -980,7 +980,7 @@ Basic parameters
      - [numeric: double]
 
        Default: -1.0
-     - In case the point to be interpolated does not fit into a 
+     - In case the point to be interpolated does not fit into a
        triangle of the Delaunay triangulation, use that maximum
        distance to search a nearest neighbour, or use NoData
        otherwise.
@@ -1492,13 +1492,13 @@ Basic parameters
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Multidirectional shading**
      - ``MULTIDIRECTIONAL``
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Hillshade**
      - ``OUTPUT``
      - [raster]
@@ -2039,7 +2039,7 @@ Basic parameters
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Validity mask**
 
        Optional
@@ -2110,7 +2110,7 @@ Python code
 Slope
 -----
 Generates a slope map from any GDAL-supported elevation raster.
-Slope is the angle of inclination to the horizontal. 
+Slope is the angle of inclination to the horizontal.
 You have the option of specifying the type of slope value you want:
 degrees or percent slope.
 

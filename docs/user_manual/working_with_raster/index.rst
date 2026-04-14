@@ -5,7 +5,7 @@ Working with Raster Data
 *************************
 
 .. toctree::
-	:maxdepth: 2
+   :maxdepth: 2
 
-	raster_properties
-	raster_analysis
+   raster_properties
+   raster_analysis

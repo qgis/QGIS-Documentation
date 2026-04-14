@@ -41,7 +41,7 @@ functionalities:
 * |viewExtentInCanvas| :sup:`View current map extent in main canvas`
 * |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
 * |viewScaleInCanvas| :sup:`Set main canvas to match current map scale`
-* |layers| :sup:`Set map extent to layer extent`: sets the map item extent to match 
+* |layers| :sup:`Set map extent to layer extent`: sets the map item extent to match
   the full extent of a selected layer from the project's layers
 * |showBookmarks| :sup:`Set map extent to bookmark extent`: sets the map item extent to match the extent of
   an existing spatial bookmark
@@ -90,7 +90,7 @@ functionalities:
       their geometry.
 
     You can |checkbox| :guilabel:`Force labels inside atlas feature`.
-    You can also |checkbox| :guilabel:`Clip item frame to match atlas feature`.  
+    You can also |checkbox| :guilabel:`Clip item frame to match atlas feature`.
     When enabled, this option reshapes the map frame to follow the atlas feature’s
     polygon shape. This can be useful for vector tile or vector-based maps where the
     background color is part of the design.
@@ -321,7 +321,7 @@ As grid type, you can specify to use a:
 * **Markers**: only displays customizable markers symbol at grid lines intersection;
 * or **Frame and annotations only**.
 
-Other than the grid type, you can define: 
+Other than the grid type, you can define:
 
 * the :guilabel:`CRS` of the grid: by default, it will follow the map item CRS.
   Press |setProjection| :sup:`Select CRS` button to set it to a different CRS.
@@ -499,7 +499,7 @@ of the overview on the selected map frame. You can customize it with:
 * The |checkbox| :guilabel:`Center on overview` pans the map item content so
   that the overview frame is displayed at the center of the map. You can only
   use one overview item to center, when you have several overviews.
-  
+
 .. _`overview_stack_position`:
 
 * The :guilabel:`Position` controls exactly where in the map item's layer stack

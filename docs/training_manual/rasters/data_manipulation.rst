@@ -66,9 +66,9 @@ To make a catalog we will use the
    next to the :guilabel:`Input layers` parameter and check all the
    layers or use the :guilabel:`Select All` button;
 #. Uncheck :guilabel:`Place each input file into a separate band`.
-   Notice the code that is generated at the bottom of the dialog under 
-   :guilabel:`GDAL/OGR console call`. This is the command that will be executed 
-   when you click :guilabel:`Run`. The text updates as you change different 
+   Notice the code that is generated at the bottom of the dialog under
+   :guilabel:`GDAL/OGR console call`. This is the command that will be executed
+   when you click :guilabel:`Run`. The text updates as you change different
    options in the dialog.
 
    .. note:: Keep in mind that you can copy and paste the text in the
@@ -83,8 +83,8 @@ To make a catalog we will use the
 #. Finally click on :guilabel:`Run`.
 
 .. note:: As you know from the previous modules,
-   :guilabel:`Processing` creates temporary layers by default. 
-   To save the file, click on the :guilabel:`...` button under 
+   :guilabel:`Processing` creates temporary layers by default.
+   To save the file, click on the :guilabel:`...` button under
    :guilabel:`Virtual`.
 
 .. figure:: img/build_virtual_raster.png
@@ -109,7 +109,7 @@ take some time to set up initially.
 Reprojecting rasters
 ......................................................................
 
-Open :guilabel:`Warp (reproject)` from 
+Open :guilabel:`Warp (reproject)` from
 :menuselection:`GDAL --> Raster projections`.
 
 You can also reproject virtual rasters (catalogs), enable

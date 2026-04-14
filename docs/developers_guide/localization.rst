@@ -9,7 +9,7 @@ user interface language which was automatically detected
 from the operating system.
 
 The representation of numbers, currency and dates varies
-according to the country and it is also overrideable in
+according to the country and it is also overridable in
 the settings.
 
 Another option in the settings allows to define if the

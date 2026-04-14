@@ -1816,7 +1816,7 @@ Basic parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-  
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that you want to process.
    * - **Blur radius (pixels)**
@@ -3279,7 +3279,7 @@ Parameters
 
        Default: 0 (Minimum and Maximum)
      - Choose which extrema to extract:
-     
+
        - 0: Minimum and Maximum
        - 1: Minimum only
        - 2: Maximum only
@@ -3332,6 +3332,11 @@ the rank of a sorted list of overlapping cell values from input layers.
 The output raster will be multi-band if multiple ranks are provided.
 If multiband rasters are used in the data raster stack,
 the algorithm will always perform the analysis on the first band of the rasters.
+
+.. figure:: img/raster_rank.png
+  :align: center
+
+  Raster rank result for rank 1 (minimum value). NoData cells in any input raster result in a NoData output cell.
 
 .. seealso:: :ref:`qgiscellstackpercentrankfromvalue`, :ref:`qgiscellstackpercentile`, :ref:`qgiscellstackpercentrankfromrasterlayer`, :ref:`qgiscellstatistics`, :ref:`qgisrastercalc`
 
@@ -3504,15 +3509,14 @@ Parameters
        Options:
 
        * 0 --- Count Only Above Base Level: only pixels above the base
-	 level will add to the volume.
+         level will add to the volume.
        * 1 --- Count Only Below Base Level: only pixels below the base
-	 level will add to the volume.
+         level will add to the volume.
        * 2 --- Subtract Volumes Below Base level: pixels above the
-	 base level will add to the volume, pixels below the base
-	 level will subtract from the volume.
+         base level will add to the volume, pixels below the base
+         level will subtract from the volume.
        * 3 --- Add Volumes Below Base level: Add the volume
-         regardless whether the pixel is above or below the base
-	 level.
+         regardless whether the pixel is above or below the base level.
          This is equivalent to sum the absolute values of the
          difference between the pixel value and the base level.
    * - **Surface volume report**
@@ -3887,13 +3891,12 @@ Python code
 
 Rescale raster
 --------------
-Rescales raster layer to a new value range, while preserving the shape 
-(distribution) of the raster's histogram (pixel values). Input values 
-are mapped using a linear interpolation from the source raster's 
-minimum and maximum pixel values to the destination minimum and miximum 
-pixel range.
+Rescales raster layer to a new value range, while preserving the shape
+(distribution) of the raster's histogram (pixel values). Input values
+are mapped using a linear interpolation from the source raster's
+minimum and maximum pixel values to the destination minimum and maximum pixel range.
 
-By default the algorithm preserves the original NoData value, but there 
+By default the algorithm preserves the original NoData value, but there
 is an option to override it.
 
 .. figure:: img/rescale_raster.png
@@ -3938,11 +3941,11 @@ Basic parameters
        Default value: 255.0
      - Maximum pixel value to use in the rescaled layer
    * - **New NoData value**
-   
+
        Optional
      - ``NODATA``
      - [numeric: double]
-     
+
        Default value: Not set
      - Value to assign to the NoData pixels.
        If unset, original NoData values are preserved.
@@ -4329,35 +4332,35 @@ The created point layer will be in the same spatial reference system as the sele
  This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
-..........   
+..........
 
-.. list-table::  
-   :header-rows: 1  
-   :widths: 20 20 20 40  
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
-   * - Label  
-     - Name  
-     - Type  
-     - Description  
-   * - **Input Layer**  
-     - ``INPUT``  
-     - [vector: polygon]  
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: polygon]
      - Polygon layer defining the zones.
-   * - **Raster Layer**  
-     - ``RASTER``  
-     - [raster]  
+   * - **Raster Layer**
+     - ``RASTER``
+     - [raster]
      - Raster layer to extract the minimum and maximum values from.
-   * - **Raster Band**  
-     - ``BAND``  
-     - [raster band]  
-       
-       Default: The first band of the raster layer  
+   * - **Raster Band**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
      - If the raster has multiple bands, select the band to process.
-   * - **Zonal extrema**  
-     - ``OUTPUT``  
+   * - **Zonal extrema**
+     - ``OUTPUT``
      - [vector: point]
-     
-       Default: ``[Create temporary layer]``  
+
+       Default: ``[Create temporary layer]``
      - Specification of the output layer. :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -4366,23 +4369,23 @@ Parameters
 
 
 Outputs
-.......  
+.......
 
-.. list-table::  
-   :header-rows: 1  
-   :widths: 20 20 20 40  
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
 
-   * - Label  
-     - Name  
-     - Type  
-     - Description  
-   * - **Zonal extrema**  
-     - ``OUTPUT``  
-     - [vector: point]  
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Zonal extrema**
+     - ``OUTPUT``
+     - [vector: point]
      - Output layer containing the minimum and maximum points for each zone.
 
 Python code
-...........  
+...........
 
 **Algorithm ID**: ``native:zonalminmaxpoint``
 
@@ -4645,6 +4648,7 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. |344| replace:: ``NEW in 3.44``
 .. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
@@ -4665,5 +4669,4 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |344| replace:: ``NEW in 3.44``
 .. |400| replace:: ``NEW in 4.0``

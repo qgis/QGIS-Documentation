@@ -1,4 +1,4 @@
-.. Purpose: This chapter aims to describe the general interaction one can have with a 
+.. Purpose: This chapter aims to describe the general interaction one can have with a
  project file that does not belong to another particular section.
 
 .. index:: Projects
@@ -31,7 +31,7 @@ or
 
 .. note::
 
-  If the project has been modified the ``*`` symbol will appear in the title bar 
+  If the project has been modified the ``*`` symbol will appear in the title bar
   and QGIS will, by default, ask you if you would like to save the changes.
   This behavior is controlled by the |checkbox|
   :guilabel:`Prompt to save project and data source changes when required`
@@ -51,14 +51,14 @@ At startup, a list of :guilabel:`Project Templates` and
 names and file paths (for up to ten projects).
 The :guilabel:`Recent Projects` list is handy to access recently used
 projects.
-Double-click an entry to open the project or project template. 
-Right-click an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...` 
-or :guilabel:`Remove from List`. If you see your project on the 
-:guilabel:`Recent Projects` list but can't find it in your file manager use 
-the :guilabel:`Open Directory...` option to help you locate projects that may 
-be missing, moved or renamed. You can also go to :guilabel:`Clear List` if 
-you want to remove all projects from the :guilabel:`Recent Projects` list. 
-If you have pinned projects, the :guilabel:`Clear List` action will be followed 
+Double-click an entry to open the project or project template.
+Right-click an entry to :guilabel:`Pin to List`, :guilabel:`Open Directory...`
+or :guilabel:`Remove from List`. If you see your project on the
+:guilabel:`Recent Projects` list but can't find it in your file manager use
+the :guilabel:`Open Directory...` option to help you locate projects that may
+be missing, moved or renamed. You can also go to :guilabel:`Clear List` if
+you want to remove all projects from the :guilabel:`Recent Projects` list.
+If you have pinned projects, the :guilabel:`Clear List` action will be followed
 by message box asking whether the pinned projects should also be removed.
 You can also add a layer to create a new project automatically.
 The lists will then disappear, giving way to the map canvas.
@@ -75,8 +75,8 @@ save it.
 
 .. figure:: img/new_project.png
    :align: center
- 
-   Starting a new project in QGIS 
+
+   Starting a new project in QGIS
 
 The information saved in a project file includes:
 
@@ -227,7 +227,7 @@ Other ways to produce output files are:
   rendering to an image format (PNG, JPG, TIFF...) at custom scale,
   resolution and size. Including georeference information in the
   exported image is possible, simply enable
-  |checkbox| :guilabel:`Append georeference information (embedded or via world file)`. 
+  |checkbox| :guilabel:`Append georeference information (embedded or via world file)`.
   See :ref:`exportingmapcanvas` for more details.
 * Exporting to PDF files:
   :menuselection:`Project --> Import/Export --> Export Map to PDF...`

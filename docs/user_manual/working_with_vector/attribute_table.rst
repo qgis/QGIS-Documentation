@@ -79,7 +79,9 @@ following functionality:
    "|multiEdit|", "Toggle multi edit mode", "Update multiple fields of many features"
    "|saveEdits|", "Save Edits", "Save current modifications"
    "|refresh|", "Reload the table"
-   "|newTableRow|", "Add feature", "Add new geometryless feature"
+   "|newTableRow| :menuselection:`-->` ([1]_)", "Add feature", "Add new geometryless feature"
+   ":menuselection:`-->` |newTableRow|", "Add feature via attribute table", "Inserts a new empty row in the attribute table to be filled in"
+   ":menuselection:`-->` |formSelect|", "Add feature via attribute form", "Opens the feature attributes form for data entry"
    "|deleteSelectedFeatures|", "Delete selected features", "Remove selected features from the layer"
    "|editCut|", "Cut selected features to clipboard", "", ":kbd:`Ctrl+X`"
    "|copySelected|", "Copy selected features to clipboard", "", ":kbd:`Ctrl+C`"
@@ -100,6 +102,7 @@ following functionality:
    "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
    "|actionRun|", "Actions", "Lists the actions related to the layer"
 
+.. [1] Press and hold to select whether to add the feature via the attribute table or form.
 
 .. attention:: Depending on the format of the data and the GDAL library built with
    your QGIS version, some tools may not be available.
@@ -132,7 +135,7 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   in a first panel and displays only the attributes of the clicked identifier in the second one.
   There is a pull-down menu at the top of the first panel where the "identifier"
   can be specified using an attribute (:menuselection:`Columns -->`) or an :guilabel:`Expression`.
-  The pull-down also includes the last 10 expressions for re-use.
+  The pull-down also includes the last 10 expressions for reuse.
   Form view uses the layer fields configuration (see :ref:`vector_attributes_menu`).
 
   You can browse through the feature identifiers with the arrows on the bottom
@@ -193,7 +196,7 @@ the next opening of the attribute table.
 
 In the :ref:`Data Source Settings <datasources_options>`, you can choose to
 |checkbox| :guilabel:`Autosize all columns by default when opening attribute table`,
-which will make "Autosize All Columns" the default view every time attribute tables are opened in QGIS. 
+which will make "Autosize All Columns" the default view every time attribute tables are opened in QGIS.
 
 .. _organize_columns:
 
@@ -212,7 +215,7 @@ In the new dialog, you can:
   disappear from every instance of the attribute table dialog until it is
   actively restored. It is also possible to:
 
-  * choose :guilabel:`Show All` to display all the fields (columns) and actions in the table 
+  * choose :guilabel:`Show All` to display all the fields (columns) and actions in the table
   * choose :guilabel:`Hide All` to hide all the fields (columns) and actions in the table
   * use the :guilabel:`Toggle selection` to invert visibility of the current selection of columns.
     You can use :ref:`keyboard combination <interacting_features_table>`
@@ -286,7 +289,7 @@ Adding new rule opens a form to define:
 
 * the name of the rule;
 * a condition using any of the :ref:`expression builder <vector_expressions>` functions;
-* the formatting: it can be choosen from a list of predefined formats or created
+* the formatting: it can be chosen from a list of predefined formats or created
   based on properties like:
 
   * background and text colors;
@@ -475,7 +478,7 @@ Right-click in a cell and you can:
 
 * :guilabel:`Select All` (:kbd:`Ctrl+A`) the features;
 * Copy the content of a cell to the clipboard with :guilabel:`Copy Cell Content`;
-* :guilabel:`Copy Raw Value`: copies the underlying, unformatted value of the cell 
+* :guilabel:`Copy Raw Value`: copies the underlying, unformatted value of the cell
   to the clipboard. Useful when the displayed value differs from the stored value.
   For example, a number stored as ``11000.5`` may appear as ``11.000,5`` depending on the user's locale settings.
   Hover your mouse over the cell to see the tooltip showing the displayed and raw values (in brackets);
@@ -548,9 +551,8 @@ to a new field (that can be a :ref:`virtual <virtual_field>` one).
 
 The field calculator is available on any layer that supports edit.
 When you click on the field calculator icon the dialog opens (see
-:numref:`figure_field_calculator`). If the layer is not in edit mode, a warning is
-displayed and using the field calculator will cause the layer to be put in
-edit mode before the calculation is made.
+:numref:`figure_field_calculator`). The layer will be put in
+edit mode (if not already) after the calculation is made.
 
 Based on the :ref:`Expression Builder <expression_builder>` dialog,
 the field calculator dialog offers a complete interface to define an expression
@@ -559,6 +561,11 @@ To use the field calculator dialog, you must select whether you want to:
 
 #. apply calculation on the whole layer or on selected features only
 #. create a new field for the calculation or update an existing one.
+
+You can also access the field calculator by right-clicking on a column header
+to directly edit that field.
+The field calculator dialog will open with the :guilabel:`Update existing field` option
+already checked and the selected column automatically chosen in the field dropdown.
 
 .. _figure_field_calculator:
 
@@ -588,7 +595,7 @@ A short example illustrates how field calculator works when using the
 #. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision` to ``3``
 #. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
    of the geometry into the Field calculator expression box (you will begin to see
-   a preview of the output, up to 60 characters, below the expression box updating 
+   a preview of the output, up to 60 characters, below the expression box updating
    in real-time as the expression is assembled).
 #. Complete the expression by typing ``/ 1000`` in the Field calculator expression box
    and click :guilabel:`OK`.

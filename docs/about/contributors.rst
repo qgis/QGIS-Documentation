@@ -9,7 +9,8 @@
    .. contents::
       :local:
 
-QGIS is an open source project developed by a team of dedicated volunteers and
+QGIS is an open source project under the Open Source Geospatial Foundation (OSGeo)
+developed by a team of dedicated volunteers and
 organisations. We strive to be a welcoming community for people of all race, creed,
 gender and walks of life.
 At any moment, you can `get involved <https://qgis.org/community/involve/>`_.
@@ -25,7 +26,7 @@ Below are listed people who dedicate their time and energy to write, review,
 and update the whole QGIS documentation.
 
 .. csv-table::
-   :widths: auto       
+   :widths: auto
 
    "Tim Sutton", "Yves Jacolin", "Jacob Lanstorp", "Gary E. Sherman", "Richard Duivenvoorde"
    "Tara Athan", "Anita Graser", "Arnaud Morvan",  "Gavin Macaulay", "Luca Casagrande"
@@ -60,7 +61,7 @@ and update the whole QGIS documentation.
    "Jakob Miksch", "Nicolas Boisteault", "Bertrand Rix", "Jorge Rosales", "Selma Vidimlic"
 
 
-.. index:: 
+.. index::
    single: Contributors; Translators
 .. _doc_translators:
 
@@ -77,7 +78,7 @@ The current translations are made possible thanks to:
 
 .. csv-table::
    :header: "Language", "Contributors"
-   :widths: 15, 80              
+   :widths: 15, 80
 
    "Bahasa Indonesia", "Emir Hartato, I Made Anombawa, Januar V. Simarmata,
    Muhammad Iqnaul Haq Siregar, Trias Aditya"

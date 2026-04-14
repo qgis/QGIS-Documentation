@@ -49,7 +49,7 @@ You can sort the results by the values of more than one column:
 
 .. code-block:: sql
 
-	select name, house_no from people order by name, house_no;
+  select name, house_no from people order by name, house_no;
 
 Result:
 

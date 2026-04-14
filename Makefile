@@ -97,7 +97,7 @@ site: html zip
 
 full: html zip
 	make LANG=$(LANG) pdf;
-	
+
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
 all: springclean
@@ -129,16 +129,15 @@ tx_force_pull_translations:
 doctest-gh:
 	# --system-site-packages needed to keep QGIS libs in python path
 	export PYTHONPATH=$(PYTHONPATH):/usr/lib/python3/dist-packages && \
-	. /docsenv/bin/activate --system-site-packages && LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so $(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
+	. /docsenv/bin/activate --system-site-packages && SEGFAULT_SIGNALS=all $(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 doctest:
-	LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so $(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
+	SEGFAULT_SIGNALS=all $(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 
 linkcheck:
 	$(SPHINXBUILD) -b linkcheck $(SOURCEDIR) $(BUILDDIR)/linkcheck
 	@echo "Check finished. Report is in $(BUILDDIR)/linkcheck/output.txt."
-

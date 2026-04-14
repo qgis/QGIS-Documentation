@@ -293,7 +293,7 @@ Basic parameters
      - ``MAX_EDGE_LENGTH``
      - [numeric: double]
      - Maximum length of triangle edges. Edges longer than this value will be ignored during interpolation.
-     
+
        .. attention:: Using this option requires QGIS installed with PDAL_ >= 2.6.0 (see :guilabel:`Help --> About` menu).
    * - **Exported**
      - ``OUTPUT``

@@ -13,7 +13,7 @@ First, calculate statistics of the flow accumulation layer using the :guilabel:`
 
 .. figure:: img/modeler_hydro_calculator/stats.png
 
-This will generate a set of statistical values that will now be available for all numeric fields in other algorithms. 
+This will generate a set of statistical values that will now be available for all numeric fields in other algorithms.
 
 If you edit the :guilabel:`Channel network` algorithm, as we did in the last lesson, you will see now that you have other options apart from the numeric input that you added.
 

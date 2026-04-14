@@ -22,50 +22,50 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Harden Runner
-      uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
-      with:
-        disable-sudo-and-containers: true
-        egress-policy: block
-        allowed-endpoints: >
-          files.pythonhosted.org:443
-          github.com:443
-          pypi.org:443
-          qgis.org:443
+      - name: Harden Runner
+        uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
+        with:
+          disable-sudo-and-containers: true
+          egress-policy: block
+          allowed-endpoints: >
+            files.pythonhosted.org:443
+            github.com:443
+            pypi.org:443
+            qgis.org:443
 
-    - name: checkout
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      with:
-        ref: release_3.44
+      - name: checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: release_3.44
 
-    - name: Set up Python 3.12
-      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
-      with:
-        python-version: '3.12'
+      - name: Set up Python 3.12
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.12'
 
-    - name: Install dependencies
-      run: |
+      - name: Install dependencies
+        run: |
           python -m pip install --upgrade pip
-          pip install sphinx sphinx-intl sphinxext.rediraffe pyYAML sphinx_togglebutton sphinx_copybutton
+          pip install -r REQUIREMENTS.txt
 
-    - name: Generate English PO files
-      id: "generate-po-files"
-      run: |
+      - name: Generate English PO files
+        id: "generate-po-files"
+        run: |
           make gettext
           sphinx-intl update -p build/gettext -l en
           # Remove obsolete strings from the generated *.po files
           find locale/en/LC_MESSAGES/ -type f -name '*.po' -exec sed -i '/^#~ /,/^$/d' {} \;
 
-    - name: Commit the changes in the PO files      
-      id: "auto-commit-action"
-      uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
-      with:
-        commit_message: Update English PO files
+      - name: Commit the changes in the PO files
+        id: "auto-commit-action"
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
+        with:
+          commit_message: Update English PO files
 
-    - name: "Inform that changes have been made"
-      if: steps.auto-commit-action.outputs.changes_detected == 'true'
-      run: echo "Changes committed!"
+      - name: "Inform that changes have been made"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "Changes committed!"
 
-    - name: "Inform that no changes were performed"
-      if: steps.auto-commit-action.outputs.changes_detected == 'false'
-      run: echo "No Changes detected!"
+      - name: "Inform that no changes were performed"
+        if: steps.auto-commit-action.outputs.changes_detected == 'false'
+        run: echo "No Changes detected!"

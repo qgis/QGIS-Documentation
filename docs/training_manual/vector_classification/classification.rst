@@ -164,7 +164,7 @@ problem: they don't have a size field, so we'll have to make one.
 #. Enter edit mode by clicking the |toggleEditing|  :sup:`Toggle editing`
    button
 #. Add a new column of decimal type, called ``AREA``, using the
-   |newAttribute| :sup:`New field` button: 
+   |newAttribute| :sup:`New field` button:
 
    .. figure:: img/add_area_column.png
       :align: center
@@ -334,7 +334,7 @@ Let's now add our custom rules.
 #. Repeat the steps above to add the following rules:
 
    #. **Other residential** label with the criterion
-      ``"landuse" = 'residential' AND "name" <> 'Swellendam'``. 
+      ``"landuse" = 'residential' AND "name" <> 'Swellendam'``.
       Choose a pale blue-grey :guilabel:`Fill color`
    #. **Big non residential areas** label with the criterion
       ``"landuse" <> 'residential' AND "AREA" >= 605000``.

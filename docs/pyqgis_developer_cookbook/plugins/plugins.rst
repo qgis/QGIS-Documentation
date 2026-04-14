@@ -35,10 +35,10 @@ The main steps for creating a plugin are:
 Getting started
 ===============
 
-Before starting to write a new plugin, have a look at the 
+Before starting to write a new plugin, have a look at the
 :ref:`official_pyqgis_repository`.
-The source code of existing plugins can help you to learn more about programming. 
-You may also find that a similar plugin already exists and you may be able to 
+The source code of existing plugins can help you to learn more about programming.
+You may also find that a similar plugin already exists and you may be able to
 extend it or at least build on it to develop your own.
 
 .. _plugin_files_architecture:
@@ -53,15 +53,15 @@ There are two plugin template resources that can help get you started:
 * For educational purposes or whenever a minimalist approach is desired, the
   `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
   provides the basic files (skeleton) necessary to create a valid QGIS Python plugin.
-* For a more fully feature plugin template, the 
-  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create 
-  templates for multiple different plugin types, including features such as 
-  localization (translation) and testing. 
+* For a more fully feature plugin template, the
+  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create
+  templates for multiple different plugin types, including features such as
+  localization (translation) and testing.
 
 A typical plugin directory includes the following files:
 
 * :file:`metadata.txt` - *required* - Contains general info, version, name and some other
-  metadata used by plugins website and plugin infrastructure.  
+  metadata used by plugins website and plugin infrastructure.
 * :file:`__init__.py` - *required* - The starting point of the plugin. It has to have the
   :func:`classFactory` method and may have any other initialisation code.
 * :file:`mainPlugin.py` - *core code* - The main working code of the plugin. Contains all
@@ -70,10 +70,10 @@ A typical plugin directory includes the following files:
 * :file:`form.py` - *compiled GUI* - The translation of the form.ui described above to Python.
 * :file:`resources.qrc` - *optional* - An .xml document created by Qt Designer. Contains
   relative paths to resources used in the GUI forms.
-* :file:`resources.py` - *compiled resources, optional* - The translation of the .qrc file 
+* :file:`resources.py` - *compiled resources, optional* - The translation of the .qrc file
   described above to Python.
-* :file:`LICENSE` - *required* if plugin is to be published or updated in the 
-  QGIS Plugins Directory, otherwise *optional*. File should be a plain text file 
+* :file:`LICENSE` - *required* if plugin is to be published or updated in the
+  QGIS Plugins Directory, otherwise *optional*. File should be a plain text file
   with no file extension in the filename.
 
 .. warning::
@@ -100,8 +100,7 @@ metadata.txt
 First, the Plugin Manager needs to retrieve some basic information about the
 plugin such as its name, description etc. This information is stored in :file:`metadata.txt`.
 
-.. note::
-   All metadata must be in UTF-8 encoding.
+.. note:: All metadata must be in UTF-8 encoding.
 
 .. _plugin_metadata_table:
 
@@ -127,15 +126,15 @@ homepage               False     a valid URL pointing to the homepage of your pl
 repository             True      a valid URL for the source code repository
 tracker                False     a valid URL for tickets and bug reports
 icon                   False     a file name or a relative path (relative to
-                                 the base folder of the plugin's compressed
-                                 package) of a web friendly image (PNG, JPEG)
+                                 the base folder of the plugin's compressed package)
+                                 of a web friendly image (PNG, JPEG)
 category               False     one of ``Raster``, ``Vector``, ``Database``, ``Mesh`` and ``Web``
-plugin_dependencies    False     PIP-like comma separated list of other plugins to install, use
-                                 plugin names coming from their metadata's name field
-server                 False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin has a server interface
-hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`, determines if
-                                 the plugin provides processing algorithms
+plugin_dependencies    False     PIP-like comma separated list of other plugins to install,
+                                 use plugin names coming from their metadata's name field
+server                 False     boolean flag, :const:`True` or :const:`False`,
+                                 determines if the plugin has a server interface
+hasProcessingProvider  False     boolean flag, :const:`True` or :const:`False`,
+                                 determines if the plugin provides processing algorithms
 =====================  ========  =============================================================
 
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
@@ -344,7 +343,7 @@ Don't forget to set :class:`QAction` and :class:`QMenu` ``objectName`` to a name
 specific to your plugin so that it can be customized.
 
 While help and about actions can also be added to your custom menu,
-a convenient place to make them available is in the 
+a convenient place to make them available is in the
 QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
 :meth:`pluginHelpMenu() <qgis.gui.QgisInterface.pluginHelpMenu>` method.
 
@@ -361,7 +360,7 @@ QGIS main :menuselection:`Help --> Plugins` menu. This is done using the
         self.iface.pluginHelpMenu().addAction(self.help_action)
 
         self.help_action.triggered.connect(self.show_help)
-        
+
     @staticmethod
     def show_help():
         """ Open the online help. """
@@ -469,9 +468,9 @@ languages you want.
 
 .. warning::
 
-   Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
-   otherwise the language loading will fail! Use the 2 letter shortcut for the
-   language (**it** for Italian, **de** for German, etc...)
+  Be sure to name the ``ts`` file like ``your_plugin_`` + ``language`` + ``.ts``
+  otherwise the language loading will fail! Use the 2 letter shortcut for the
+  language (**it** for Italian, **de** for German, etc...)
 
 .ts file
 ........
@@ -507,24 +506,24 @@ Alternatively you can use the makefile to extract messages from python code and
 Qt dialogs, if you created your plugin with Plugin Builder.
 At the beginning of the Makefile there is a LOCALES variable::
 
-	LOCALES = en
+    LOCALES = en
 
 Add the abbreviation of the language to this variable, for example for
 Hungarian language::
 
-	LOCALES = en hu
+    LOCALES = en hu
 
 Now you can generate or update the :file:`hu.ts` file (and the :file:`en.ts` too)
 from the sources by::
 
-	make transup
+    make transup
 
 After this, you have updated ``.ts`` file for all languages set in the LOCALES
 variable.
 Use **Qt Linguist** to translate the program messages.
 Finishing the translation the ``.qm`` files can be created by the transcompile::
 
-	make transcompile
+    make transcompile
 
 You have to distribute ``.ts`` files with your plugin.
 
@@ -538,9 +537,9 @@ You should see your plugin in the correct language.
 
 .. warning::
 
-   If you change something in your plugin (new UIs, new menu, etc..) you have to
-   **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
-   again the command of above.
+  If you change something in your plugin (new UIs, new menu, etc..) you have to
+  **generate again** the update version of both ``.ts`` and ``.qm`` file, so run
+  again the command of above.
 
 Sharing your plugin
 ===================
@@ -574,7 +573,7 @@ or using continuous integration
 like `GitHub workflows`_ or `Gitlab-CI`_
 as well as `Transifex`_ for translation.
 
-It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions. 
+It allows releasing, translating, publishing or generating an XML plugin repository file via CLI or in CI actions.
 
 Accessing Plugins
 -----------------
@@ -584,7 +583,7 @@ which can be handy for debugging purposes.
 
 .. code-block:: python
 
-	my_plugin = qgis.utils.plugins['My Plugin']
+    my_plugin = qgis.utils.plugins['My Plugin']
 
 Log Messages
 ------------
@@ -598,13 +597,13 @@ Resource File
 -------------
 
 Some plugins use resource files, for example :file:`resources.qrc` which define
-resources for the GUI, such as icons:     
+resources for the GUI, such as icons:
 
 .. code-block:: xml
 
   <RCC>
     <qresource prefix="/plugins/testplug" >
-       <file>icon.png</file>
+      <file>icon.png</file>
     </qresource>
   </RCC>
 
@@ -623,7 +622,7 @@ It's done with Qt :command:`rcc` command:
     Command Prompt or Powershell will probably result in the error "Windows
     cannot access the specified device, path, or file [...]".  The easiest
     solution is probably to use the OSGeo4W Shell but if you are comfortable
-    modifying the PATH environment variable or specifiying the path to the
+    modifying the PATH environment variable or specifying the path to the
     executable explicitly you should be able to find it at
     :file:`<Your QGIS Install Directory>\\apps\\Qt6\\bin\\rcc.exe`.
 

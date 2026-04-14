@@ -79,7 +79,7 @@ generate a rectangular grid of points. But you are only interested on those
 points that are actually inside your forest area (see the images below):
 
 .. figure:: img/grid_full_and_clip.png
-   :align: center	
+   :align: center
 
 #. From the Processing toolbox, open |gdal| :menuselection:`GDAL --> Vector
    geoprocessing --> Clip vector by mask layer`.
@@ -114,7 +114,7 @@ created and numbered first West to East and then North to South. If you look
 at the attribute table again, you will notice that the order in the table is
 following also that pattern. Unless you would have a reason to name the sample
 plots in a different way, naming them in a West-East/North-South fashion follows
-a logical order and is a good option. 
+a logical order and is a good option.
 
 Nevertheless, the number values in the ``id`` field are not so good.
 It would be better if the naming would be something like ``p_1, p_2...``.

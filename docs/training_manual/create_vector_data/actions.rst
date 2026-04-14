@@ -323,7 +323,7 @@ In Conclusion
 
 Actions allow you to give your map extra functionality, useful to the
 end-user who views the same map in QGIS.
-Due to the fact that processes called can be shell commands for any 
+Due to the fact that processes called can be shell commands for any
 operating system, as well as Python, the sky is the limit in terms of
 the functions you could incorporate!
 

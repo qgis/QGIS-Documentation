@@ -1,7 +1,7 @@
 name: Translation statistics
 # Pull statistics of translation in Transifex
 
-on: 
+on:
   schedule:
     # runs tuesday at 6:00 UTC
     - cron: '0 6 * * 2'
@@ -26,41 +26,41 @@ jobs:
       LABELS: "Translation, backport release_3.44"
 
     steps:
-    - name: Harden Runner
-      uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
-      with:
-        disable-sudo-and-containers: true
-        egress-policy: block
-        allowed-endpoints: >
-          api.github.com:443
-          files.pythonhosted.org:443
-          github.com:443
-          pypi.org:443
-          rest.api.transifex.com:443
+      - name: Harden Runner
+        uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
+        with:
+          disable-sudo-and-containers: true
+          egress-policy: block
+          allowed-endpoints: >
+            api.github.com:443
+            files.pythonhosted.org:443
+            github.com:443
+            pypi.org:443
+            rest.api.transifex.com:443
 
-    - name: Check out repository
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      with:
-        fetch-depth: 1
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
 
-    - name: Set up Python 3.12
-      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
-      with:
-        python-version: '3.12'
+      - name: Set up Python 3.12
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.12'
 
-    - name: Install dependencies
-      run: python3 -m pip install requests
+      - name: Install dependencies
+        run: python3 -m pip install requests
 
-    - name: Report statistics
-      run: python3 ./scripts/load_tx_stats.py $TRANSIFEX_PASSWORD
+      - name: Report statistics
+        run: python3 ./scripts/load_tx_stats.py $TRANSIFEX_PASSWORD
 
-    - id: create_pr
-      name: Create Pull Request for master
-      uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
-      with:
-        token: ${{ secrets.GH_PAT }}
-        push-to-fork: geo-ninja/QGIS-Documentation
-        commit-message: Update statistics of translation
-        title: Update statistics of translation
-        delete-branch: true
-        labels: ${{ env.LABELS }}
+      - id: create_pr
+        name: Create Pull Request for master
+        uses: peter-evans/create-pull-request@c0f553fe549906ede9cf27b5156039d195d2ece0 # v8.1.0
+        with:
+          token: ${{ secrets.GH_PAT }}
+          push-to-fork: geo-ninja/QGIS-Documentation
+          commit-message: Update statistics of translation
+          title: Update statistics of translation
+          delete-branch: true
+          labels: ${{ env.LABELS }}

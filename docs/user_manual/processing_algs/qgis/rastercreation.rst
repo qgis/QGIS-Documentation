@@ -297,7 +297,7 @@ with exponentially distributed random values.
 
 By default, the values will be chosen given a lambda of 1.0.
 This can be overridden by using the advanced parameter for lambda.
-The raster data type is set to Float32 by default as the exponential 
+The raster data type is set to Float32 by default as the exponential
 distribution random values are floating point numbers.
 
 Parameters
@@ -1255,4 +1255,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-

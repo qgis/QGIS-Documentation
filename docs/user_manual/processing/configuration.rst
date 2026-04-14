@@ -122,7 +122,7 @@ or for :ref:`individual parameters <alg_parameter_types>`.
 * :guilabel:`Warn before executing if parameter CRS's do not match`: By default, QGIS native algorithms
   (i.e. the ones listed under the |menu| :menuselection:`Menus --> QGIS (native C++)` group)
   transparently reproject the input layers to the first one's CRS before execution.
-  Check this option to get a notification from the other tools that do not suppport reprojection,
+  Check this option to get a notification from the other tools that do not support reprojection,
   when the inputs CRS are not identical.
   Third-party providers are not concerned.
 
@@ -138,7 +138,7 @@ For each item of each provider, you can:
   :guilabel:`Processing Algorithms` toolbar
 * assign an :guilabel:`Icon` to the algorithm
 * set a :guilabel:`Menu path`: the algorithm will then be available through
-  an existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms`` will add a shortcut 
+  an existing or a custom menu, e.g. ``Vect&or/MyTopAlgorithms`` will add a shortcut
   in a :menuselection:`MyTopAlgorithms` sub-menu of the default :menuselection:`Vector` menu.
 
 Restart QGIS to apply the settings.
@@ -177,7 +177,7 @@ By default, QGIS is installed with two algorithm providers:
   * |checkbox| :guilabel:`Log console output`
   * |checkbox| :guilabel:`Log execution commands`
 
-Installed plugins that provide Processing algorithms may also have their provider 
+Installed plugins that provide Processing algorithms may also have their provider
 listed in this group, with custom settings.
 
 

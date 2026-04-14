@@ -129,7 +129,7 @@ panel:
 * |hideSelectedLayers| :guilabel:`Hide Selected Layers`
 * |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: changes the visibility of
   the first selected layer in the panel, and applies that state to the other selected
-  layers. Also accesible through :kbd:`Space` shortcut.
+  layers. Also accessible through :kbd:`Space` shortcut.
 * :guilabel:`Toggle Selected Layers Independently`: changes the visibility status
   of each selected layer
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
@@ -267,6 +267,8 @@ Some of these entries are not available when multiple selections are made
   :menuselection:`--> Paste Style`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :menuselection:`--> Add...`                                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Rename Current...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Load Style`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Save Style`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Edit symbol...`                                             |checkbox|
   :menuselection:`--> Copy Symbol`                                                |checkbox|
   :menuselection:`--> Paste Symbol`                                               |checkbox|
@@ -429,16 +431,17 @@ Editing layer style
 
 From the :guilabel:`Layers` panel, you have shortcuts to change the layer rendering quickly and easily.
 
-Right-click on a layer and select :menuselection:`Styles -->` in the list in order to:
+Right-click on a layer and select :menuselection:`Styles -->`.
+See :ref:`manage_styles_from_layer_context_menu`
+for the list of available actions to manage layer styles.
 
-* see the :ref:`styles <manage_custom_style>` currently available for the layer.
-  If you defined many styles for the layer, you can switch from one to another
-  and your layer rendering will automatically be updated on the map canvas.
-* copy part or all of the current style, and when applicable, paste a copied
-  style from another layer
-* :guilabel:`Rename current...` style
-* :guilabel:`Add` a new style (which is actually a copy of the current one)
-* or :guilabel:`Remove current` style (only when multiple styles are available).
+From this menu you can:
+
+* see the :ref:`styles <manage_custom_style>` currently available for the layer
+  and switch between them. When you select another style, the layer rendering
+  is automatically updated on the map canvas.
+* copy part or all of the current style and, when applicable, paste a copied
+  style from another layer.
 
   .. tip:: **Quickly share a layer style**
 
@@ -697,7 +700,7 @@ Available tools are organized under following tabs:
   in order to detect causes of slow down
 
 .. note:: Plugin authors can extend the panel with custom tabs
- for debugging and developping their own plugins.
+ for debugging and developing their own plugins.
  This is done using :meth:`registerDevToolWidgetFactory
  <qgis.gui.QgisInterface.registerDevToolWidgetFactory>` method.
 
@@ -1235,7 +1238,7 @@ For example, depending on the layer type, you can:
   * :guilabel:`Toggle Feature Selection`: adds or removes identified feature to/from the selection
   * :guilabel:`Copy Attribute Value`: copies the value in the :guilabel:`Value` column
     of the tree item you click on
-  * :guilabel:`Copy Raw Value`: copies the underlying, unformatted value of the cell 
+  * :guilabel:`Copy Raw Value`: copies the underlying, unformatted value of the cell
     to the clipboard. Useful when the displayed value differs from the stored value.
     For example, a number stored as ``11000.5`` may appear as ``11.000,5`` depending on the user's locale settings
   * :guilabel:`Copy Feature Attributes`: copies the attribute names and values of the identified item
@@ -1368,7 +1371,7 @@ Manage styles from layer context menu
 ---------------------------------------
 
 Right-click on the layer in the :guilabel:`Layers` panel and select :guilabel:`Styles`
-to copy, paste, add, remove or rename layer styles.
+to copy, paste, add, remove, rename, load or save layer styles.
 
 * :guilabel:`Copy Current Style`: copies all the settings of the active style to the clipboard.
 
@@ -1387,6 +1390,20 @@ to copy, paste, add, remove or rename layer styles.
   You can then right-click another layer and select :guilabel:`Paste All Styles`
   to apply the copied styles.
   Saved styles are listed in the layer context menu, allowing quick switching between them.
+
+* :guilabel:`Add...`: creates a new style based on the current one.
+
+* :guilabel:`Remove Current`: removes the currently active style
+  (available only when multiple styles exist).
+
+* :guilabel:`Rename Current...`: renames the currently active style.
+
+* :guilabel:`Load Style...`: loads a style from an external style file
+  and applies it to the layer.
+
+* :guilabel:`Save Style...`: saves the current layer style to an
+  external style file for reuse.
+
 
 .. _store_style:
 
@@ -1554,8 +1571,8 @@ and for loading/saving metadata in the "Default" location.
    Metadata load/save options
 
 
-The "Default" location used by :guilabel:`Save to Default Location` and 
-:guilabel:`Restore from Default Location` changes depending on the underlying 
+The "Default" location used by :guilabel:`Save to Default Location` and
+:guilabel:`Restore from Default Location` changes depending on the underlying
 data source and on its configuration:
 
 .. _`savemetadatatodb`:
@@ -1572,7 +1589,7 @@ data source and on its configuration:
   become available for search and filtering in the browser and in
   the :ref:`layer metadata search panel <layer_metadata_search_panel>`.
 
-* For all other file based data sources :guilabel:`Save to Default Location` 
+* For all other file based data sources :guilabel:`Save to Default Location`
   saves the metadata in a :file:`.qmd` file alongside the file.
 
 * In all other cases :guilabel:`Save to Default Location` saves the metadata
@@ -2255,7 +2272,7 @@ When the |dataDefine| :sup:`Data-defined override` button is associated with a
 size, a width, a rotation, an opacity or a color property, it has an :guilabel:`Assistant...`
 option that helps you change how the data is applied to the parameter for each feature.
 Basically, QGIS will scale a range of input values over a range of output values,
-and render each feature with their corresponding ouput value.
+and render each feature with their corresponding output value.
 
 The assistant allows you to:
 
@@ -2391,7 +2408,7 @@ authentication configuration.
 You can save any or both of the ``User name`` and ``Password`` parameters, in
 which case they will be used by default each time you need to connect to this
 database or service. If not saved, you'll be prompted to supply the credentials to
-connect to the database or service in next QGIS sessions. 
+connect to the database or service in next QGIS sessions.
 You can cancel the prompt, in which case the connection will fail.
 Click the :guilabel:`Ignore for session` button to avoid being prompted again during
 the current QGIS session. It is also possible to :guilabel:`Ignore for 10 seconds`. This will

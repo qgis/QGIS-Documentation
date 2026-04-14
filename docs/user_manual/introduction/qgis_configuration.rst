@@ -305,7 +305,7 @@ CRS and Transforms Settings
 CRS Handling
 ............
 
-In the |crs| :guilabel:`CRS Handling` tab you can configure which CRS will 
+In the |crs| :guilabel:`CRS Handling` tab you can configure which CRS will
 be used for a new project or layer.
 
 .. _figure_crs_options:
@@ -409,7 +409,7 @@ User Defined CRS
 ................
 
 The |customProjection| :guilabel:`User Defined CRS` tab helps you to define a custom CRS
-which must conform to a WKT or Proj string format. 
+which must conform to a WKT or Proj string format.
 
 .. _figure_defined_crs:
 
@@ -418,7 +418,7 @@ which must conform to a WKT or Proj string format.
 
    User Defined CRS
 
-Set a :guilabel:`Name` and use |symbologyAdd| :sup:`Add new CRS`. 
+Set a :guilabel:`Name` and use |symbologyAdd| :sup:`Add new CRS`.
 If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove CRS`.
 
 **Definition**
@@ -433,7 +433,7 @@ If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove
 
 **Test**
 
-Here you can test your created CRS definition by Latitude and Longitude. 
+Here you can test your created CRS definition by Latitude and Longitude.
 Use a known coordinate to control if your definition is accurate.
 
 
@@ -667,7 +667,7 @@ for rendering vector layers.
   display more quickly. Be aware that this can cause rendering inconsistencies.
   Available settings are:
 
-  * :guilabel:`Simplification threshold (higher values result in more simplification)` 
+  * :guilabel:`Simplification threshold (higher values result in more simplification)`
   * :guilabel:`Simplification algorithm`: This option performs a local
     "on-the-fly" simplification on feature's and speeds up geometry rendering. It
     doesn't change the geometry fetched from the data providers. This is important
@@ -795,24 +795,24 @@ These properties let you set:
     to control symbol size display in the :guilabel:`Layers` panel
 * the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` display
 * Whether QGIS should |checkbox| :guilabel:`Respect screen DPI`: If enabled,
-  QGIS will attempt to display the canvas with physically 
-  accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified 
-  display size will also be rendered accurately, e.g., a 10mm 
-  symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in 
-  QGIS' UI or other applications. If this setting is turned off, QGIS will use the operating 
-  system's logical DPI, which will be consistent with other applications on the system. However, 
-  canvas scale and symbology size may be physically inaccurate on screen. In particular, on 
+  QGIS will attempt to display the canvas with physically
+  accurate scale on screen, depending on the monitor's physical DPI. Symbology with specified
+  display size will also be rendered accurately, e.g., a 10mm
+  symbol will show as 10mm on screen. However, label font sizes on canvas may differ from those in
+  QGIS' UI or other applications. If this setting is turned off, QGIS will use the operating
+  system's logical DPI, which will be consistent with other applications on the system. However,
+  canvas scale and symbology size may be physically inaccurate on screen. In particular, on
   high-dpi screens, symbology is likely to appear too small.
 
-  For best experience, it is recommended to enable |checkbox| :guilabel:`Respect screen DPI`, 
-  especially when using multiple or different monitors and preparing visually high-quality maps. 
+  For best experience, it is recommended to enable |checkbox| :guilabel:`Respect screen DPI`,
+  especially when using multiple or different monitors and preparing visually high-quality maps.
   Disabling |checkbox| :guilabel:`Respect screen DPI` will generate output that
-  may be more suitable for mapping intended for on-screen use only, especially 
+  may be more suitable for mapping intended for on-screen use only, especially
   where font sizes should match other applications.
 
 .. note:: Rendering in layouts is not affected by the :guilabel:`Respect screen DPI`
   setting; it always respects the specified DPI for the target output device.
-  Also note that this setting uses the physical screen DPI as 
+  Also note that this setting uses the physical screen DPI as
   reported by the operating system, which may not be accurate for all displays.
 
 .. index:: Map tools
@@ -885,8 +885,8 @@ in the |measure| :sup:`Measure Line` window. You can choose to
 select :guilabel:`Separator` of your choice. You can also choose
 |checkbox| :guilabel:`Always use decimal point` to keep your coordinates copied
 to the clipboard with a dot as a decimal separator, even if your language settings
-in QGIS options are set up to use a comma. In this case, if you don't have the 
-:guilabel:`Always use decimal point` 
+in QGIS options are set up to use a comma. In this case, if you don't have the
+:guilabel:`Always use decimal point`
 option checked, you will be unable to select comma as a field separator.
 
 **Panning and zooming**
@@ -928,8 +928,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 * |checkbox| :guilabel:`Suppress attribute form pop-up after feature creation`:
   this choice can be overridden in each layer properties dialog.
-* |checkbox| :guilabel:`Reuse last entered attribute values`: remember the last 
-  used value of every attribute and use it as default for the next feature being digitized. 
+* |checkbox| :guilabel:`Reuse last entered attribute values`: remember the last
+  used value of every attribute and use it as default for the next feature being digitized.
   Works per layer. This behavior can also be controlled on a per-field basis
   (see :ref:`configure_field`).
 * :guilabel:`Validate geometries`. Editing complex lines and polygons with many
@@ -942,6 +942,17 @@ This tab helps you configure general settings when :ref:`editing vector layer
   Note that depending on the selection, reports of geometry errors may differ
   (see :ref:`typesofgeomerrors`)
 * :guilabel:`Default Z value` to use when creating new 3D features.
+
+**Measurements**
+
+* :guilabel:`Show feature area in status bar while digitizing`: sets whether
+  the feature area is displayed in the status bar during digitizing.
+  Available options are :guilabel:`Hidden`
+  and :guilabel:`Show Ellipsoidal Area`.
+* :guilabel:`Show feature perimeter/total length in status bar while digitizing`:
+  sets whether the feature perimeter or total length is displayed in the status bar
+  during digitizing. Available options are :guilabel:`Hidden`
+  and :guilabel:`Show Ellipsoidal Distances`.
 
 **Rubberband**
 
@@ -1013,7 +1024,7 @@ Elevation settings
 In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific color
 to use as the :guilabel:`Background color` for :ref:`elevation profiles <label_elevation_profile_view>`.
 This can make the chart more readable for certain datasets, e.g., point clouds with RGB coloring,
-where the default background color is too similar to point colors to be easily discernable.
+where the default background color is too similar to point colors to be easily discernible.
 If unchanged, the elevation profiles will continue to display using the standard system background color.
 
 
@@ -1156,10 +1167,16 @@ Layouts settings
    Layouts settings
 
 
-**Composition defaults**
+**Layout defaults**
 
-You can define the :guilabel:`Default font` used within the :ref:`print layout
-<label_printlayout>`.
+* Define the :guilabel:`Default font` used within the :ref:`print layout <label_printlayout>`
+* Define the :guilabel:`Legend mode` for controlling layers listed by default
+  in newly created :ref:`legends <legend_items>` in the print layout.
+  Available options are:
+
+  * :guilabel:`Synchronize to All Project Layers`
+  * :guilabel:`Synchronize to Visible Layers`
+  * :guilabel:`Manual`
 
 **Grid appearance**
 
@@ -1369,8 +1386,8 @@ You can specify:
 GPSBabel
 ........
 
-`GPSBabel <https://www.gpsbabel.org/>`_ converts waypoints, tracks, and routes between popular GPS receivers 
-such as Garmin or Magellan and mapping programs like Google Earth or Basecamp. 
+`GPSBabel <https://www.gpsbabel.org/>`_ converts waypoints, tracks, and routes between popular GPS receivers
+such as Garmin or Magellan and mapping programs like Google Earth or Basecamp.
 Literally hundreds of GPS receivers and programs are supported.
 QGIS relies on GPSBabel to interact with these devices
 and :ref:`manipulate their data <gps_algorithms>`.
@@ -1457,7 +1474,7 @@ OpenCL acceleration settings.
 
    Acceleration settings
 
-Depending on your hardware and software, you may have to install additional 
+Depending on your hardware and software, you may have to install additional
 libraries to enable OpenCL acceleration.
 
 
@@ -1641,7 +1658,7 @@ Advanced settings
 
 All the settings related to QGIS (UI, tools, data providers, Processing
 configurations, default values and paths, plugins options, expressions,
-geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
+geometry checks...) are saved in a :file:`QGIS/QGIS4.ini` file under the active
 :ref:`user profile <user_profiles>` directory.
 Configurations can be shared by copying this file to other installations.
 
@@ -1650,8 +1667,8 @@ settings through the :guilabel:`Advanced Settings Editor`.
 After you promise to be careful, the widget is populated with a tree of all
 the existing settings, and you can edit their value.
 Right-click over a setting or a group and you can delete it
-(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
-Changes are automatically saved in the :file:`QGIS3.ini` file.
+(to add a setting or group, you have to edit the :file:`QGIS4.ini` file).
+Changes are automatically saved in the :file:`QGIS4.ini` file.
 
 .. warning:: **Avoid using the Advanced tab settings blindly**
 
@@ -1692,9 +1709,9 @@ But you can create as many user profiles as you want:
      something like :file:`C:\\Users\\<username>`.
    * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
 
-     * |nix| :file:`.local/share/QGIS/QGIS3/profiles/`
-     * |win| :file:`%AppData%\\Roaming\\QGIS\\QGIS3\\profiles\\`
-     * |osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`
+     * |nix| :file:`.local/share/QGIS/QGIS4/profiles/`
+     * |win| :file:`%AppData%\\Roaming\\QGIS\\QGIS4\\profiles\\`
+     * |osx| :file:`Library/Application Support/QGIS/QGIS4/profiles/`
 
    The user profile folder can be opened from within QGIS using the
    :guilabel:`Open Active Profile Folder`.
@@ -1720,7 +1737,7 @@ User Profiles` menu. You can also run QGIS with a specific user profile from the
  If the bug prevents you to create a new user profile from within the :menuselection:`Settings --> User Profiles` menu,
  you can either:
 
- * Rename in the file explorer, the "broken" user profile folder in the :file:`QGIS3/profiles` folder
+ * Rename in the file explorer, the "broken" user profile folder in the :file:`QGIS4/profiles` folder
    and restart QGIS.
    A new ``default`` user profile will be created and executed.
  * Start QGIS from the command line, using the new :ref:`profile name <profile_commandline>` argument:
@@ -1870,7 +1887,7 @@ You can indeed choose:
   * New layout scale bars will default to the project's scale calculation method
   * The scale calculations for the status bar widget and map renders will be changed
     (including flow on impacts like the value of ``@map_scale`` variable,
-    scale based visibility of layers and symbols) 
+    scale based visibility of layers and symbols)
   * This also affects QGIS server map rendering
   * Processing algorithms which render maps will respect the project's scale calculation method
 
@@ -2091,7 +2108,7 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
 
 .. tip:: **Use project colors to quickly assign and update color widgets**
 
-  Project colors can be refered to using their label and the color widgets
+  Project colors can be referred to using their label and the color widgets
   they are used in are bound to them. This means that instead of repeatedly
   setting the same color for many properties and, to avoid a cumbersome update
   you can:
@@ -2116,17 +2133,17 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
 
 * :guilabel:`Transaction mode`, defines how edits are sent to the data provider:
 
-  * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider 
+  * :guilabel:`Local Edit Buffer`: edits are buffered locally and sent to the provider
     when toggling layer editing mode or clicking :guilabel:`Save edits`.
   * :guilabel:`Automatic Transaction Groups`:
-    on supported datasources (postgres and geopackage databases) the edit state 
-    of all tables that originate from the same database are synchronized and executed 
-    in a server side transaction. Also, instead of buffering edit changes locally, they 
-    are directly sent to a transaction in the database which gets committed when toggling 
+    on supported datasources (postgres and geopackage databases) the edit state
+    of all tables that originate from the same database are synchronized and executed
+    in a server side transaction. Also, instead of buffering edit changes locally, they
+    are directly sent to a transaction in the database which gets committed when toggling
     layer editing mode or clicking :guilabel:`Save edits`.
   * :guilabel:`Buffered Transaction Groups`:
-    all editable layers, disregarding from which provider, are toggled synchronously and 
-    all edits are saved in a local edit buffer. Saving changes is executed within a single 
+    all editable layers, disregarding from which provider, are toggled synchronously and
+    all edits are saved in a local edit buffer. Saving changes is executed within a single
     transaction on all layers (per provider).
 
   Note that you can change this option only if no layer is being edited in the project.
@@ -2138,7 +2155,7 @@ In the |openTable| :guilabel:`Data Sources` tab, you can:
   in the :guilabel:`Add Feature` form will display expected value (e.g., ``25``).
 * |unchecked| :guilabel:`Remember editable layer status between sessions`:
   makes sure that all layers that are editable
-  in a project will be remembered as such when saving the project, as well as 
+  in a project will be remembered as such when saving the project, as well as
   making sure that those layers are immediately made editable whenever the project
   is restored.
 
@@ -2683,9 +2700,9 @@ only the first found file will be used:
   and does not require any additional setup like passing commandline parameters
   or settings environment variable. Depending on the OS, it is:
 
-  * |nix| :file:`$HOME/.local/share/QGIS/QGIS3/`
-  * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS3\\`
-  * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`
+  * |nix| :file:`$HOME/.local/share/QGIS/QGIS4/`
+  * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS4\\`
+  * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS4/`
 * the installation directory, i.e., :file:`your_QGIS_package_path/resources/qgis_global_settings.ini`.
 
 Presently, there's no way to specify a file to write settings to; therefore,

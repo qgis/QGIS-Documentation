@@ -4,7 +4,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
-on: 
+on:
   push:
     paths-ignore:
       - 'locale/**'
@@ -25,50 +25,50 @@ jobs:
         format: [html, pdf]
 
     steps:
-    - name: Harden Runner
-      uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
-      with:
-        egress-policy: block
-        allowed-endpoints: >
-          api.ipify.org:443
-          archive.ubuntu.com:443
-          azure.archive.ubuntu.com:80
-          cdn.fwupd.org:443
-          esm.ubuntu.com:443
-          files.pythonhosted.org:443
-          github.com:443
-          motd.ubuntu.com:443
-          motd.ubuntu.com:80
-          packages.microsoft.com:443
-          ppa.launchpadcontent.net:443
-          pypi.org:443
-          qgis.org:443
-          raw.githubusercontent.com:443
-          security.ubuntu.com:443
+      - name: Harden Runner
+        uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
+        with:
+          egress-policy: block
+          allowed-endpoints: >
+            api.ipify.org:443
+            archive.ubuntu.com:443
+            azure.archive.ubuntu.com:80
+            cdn.fwupd.org:443
+            esm.ubuntu.com:443
+            files.pythonhosted.org:443
+            github.com:443
+            motd.ubuntu.com:443
+            motd.ubuntu.com:80
+            packages.microsoft.com:443
+            ppa.launchpadcontent.net:443
+            pypi.org:443
+            qgis.org:443
+            raw.githubusercontent.com:443
+            security.ubuntu.com:443
 
-    - name: Check out repository
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      with:
-        fetch-depth: 1
-    - name: Set up Python 3.12
-      uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
-      with:
-        python-version: '3.12'
-    - name: Install Requirements
-      run: |
-        if [[ ${{ matrix.format }} != "html" ]]; then
-          sudo apt-get update && sudo apt-get install -y texlive-xetex fonts-freefont-otf
-        fi
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+      - name: Set up Python 3.12
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.12'
+      - name: Install Requirements
+        run: |
+          if [[ ${{ matrix.format }} != "html" ]]; then
+            sudo apt-get update && sudo apt-get install -y texlive-xetex fonts-freefont-otf
+          fi
 
-        python -m pip install --upgrade pip
-        pip install -r REQUIREMENTS.txt
+          python -m pip install --upgrade pip
+          pip install -r REQUIREMENTS.txt
 
-    - name: Build English ${{ matrix.format }} documentation
-      run: |
-          make ${{ matrix.format }}
-    - name: Upload ${{ matrix.format }} build artifact
-      uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
-      with:
-        name: ${{ matrix.format }} build
-        path: build/${{ matrix.format }}
-        retention-days: 15
+      - name: Build English ${{ matrix.format }} documentation
+        run: |
+            make ${{ matrix.format }}
+      - name: Upload ${{ matrix.format }} build artifact
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: ${{ matrix.format }} build
+          path: build/${{ matrix.format }}
+          retention-days: 15

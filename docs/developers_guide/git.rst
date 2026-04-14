@@ -172,7 +172,7 @@ Procedure
 
       pre-commit install
 
-    The spell checker script can also be run alone with: 
+    The spell checker script can also be run alone with:
 
     .. code-block:: bash
 
@@ -298,7 +298,7 @@ Best practice for creating a pull request
 * You may do a git rebase like in the last line repeatedly without doing any
   damage (as long as the only purpose of your branch is to get merged into
   master).
-* Attention: After a rebase you need to ``git push -f`` to your forked repo. 
+* Attention: After a rebase you need to ``git push -f`` to your forked repo.
   **CORE DEVS: DO NOT DO THIS ON THE QGIS PUBLIC REPOSITORY!**
 
 
@@ -312,7 +312,7 @@ feature deserves such a label.
 
 Moreover, you can add special tags to your commit messages to provide more information
 to documenters. The commit message is then added to the generated issue report:
-  
+
 * ``[needs-docs]`` to instruct doc writers to please add some extra documentation
   after a fix or addition to an already existing functionality.
 * ``[feature]`` in case of new functionality. Filling a good description in your

@@ -208,7 +208,7 @@ def find_img_path(anchor):
         # For image files in the expression help img folder
         temp_path = path.join(output_folder, 'img', anchor['img']+'.*')
         if glob.glob(temp_path):
-            img_path = temp_path.split('..')[-1]
+            img_path = 'expression_help/img/' + anchor['img']+'.*'
         else:
             # For image files from the algorithm folder
             temp_path = path.join(algorithm_folder, '**', anchor['img']+'.*')

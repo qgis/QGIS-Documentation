@@ -214,7 +214,7 @@ Parameters
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
-       
+
        Default: True
      - Specifies whether to create a spatial index or not
    * - **Convert field names to lowercase**
@@ -334,8 +334,8 @@ Basic parameters
        Optional
      - ``EXTENT``
      - [extent]
-     - Limit the exported features to those with geometries that intersect the provided 
-       extent. If none of the features from a specific input layer intersect the extent, 
+     - Limit the exported features to those with geometries that intersect the provided
+       extent. If none of the features from a specific input layer intersect the extent,
        the layer will still be created in the GeoPackage file, but it will be empty.
    * - **Destination GeoPackage**
      - ``OUTPUT``
@@ -645,7 +645,7 @@ Parameters
    * - **Database**
      - ``DATABASE``
      - [enumeration]
-       
+
        Default: not set
      - Select a SQLite/SpatiaLite database connected to the current session
    * - **SQL query**

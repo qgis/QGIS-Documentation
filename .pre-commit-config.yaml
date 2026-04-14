@@ -1,14 +1,88 @@
+# Pre-commit hooks for QGIS Documentation
+# Install: pre-commit install
+# Run manually: pre-commit run --all-files
+# Update hooks: pre-commit autoupdate
 
 repos:
 
+  # Standard pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+        exclude: ^(locale/|_dummy/)
+      - id: end-of-file-fixer
+        exclude: ^(locale/|_dummy/)
+      - id: check-yaml
+        args: [--unsafe]
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ['--maxkb=1024']
+      - id: mixed-line-ending
+        args: [--fix=lf]
+        exclude: ^(locale/|_dummy/)
+
+  # YAML formatting
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.33.0
+    hooks:
+      - id: yamllint
+        args: [-d, "{extends: relaxed, rules: {line-length: {max: 200}}}"]
+        exclude: ^(locale/|_dummy/|build/)
+
+  # RST linting with rstcheck
+  - repo: https://github.com/rstcheck/rstcheck
+    rev: v6.2.0
+    hooks:
+      - id: rstcheck
+        args:
+          - --report-level=warning
+          - --ignore-directives=toctree,include,only,ifconfig,literalinclude,index,glossary,substitution-definitions,highlight,todo,todolist,deprecated,versionadded,versionchanged,seealso,productionlist,centered,testcleanup,testcode,testoutput,testsetup,tabs,tab,code-block,toggle
+          - --ignore-roles=menuselection,guilabel,file,kbd,ref,doc,term,command,program,option,envvar,index,abbr,dfn,numref,eq,download,py:mod,py:obj,py:class,py:meth,py:attr,py:func,py:exc,pyqgis,api,source,sup,sub,raw,math,green,purple,blue,turquoise,kaki,slate,darkgray,midgray
+          - --ignore-languages=python,bash,sql,json,xml,yaml
+          - --ignore-substitutions=version,rarr,srtmFileName
+        exclude: ^(locale/|_dummy/|build/)
+        additional_dependencies:
+          - sphinx
+
+  # RST style checker (doc8)
+  - repo: https://github.com/PyCQA/doc8
+    rev: v1.1.1
+    hooks:
+      - id: doc8
+        args:
+          - --max-line-length=300
+          - --ignore=D001,D002,D004
+        exclude: ^(locale/|_dummy/|build/)
+
+  # Spell checking
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        args:
+          - --skip=*.po,*.pot,*.mo,*.svg,*.png,*.jpg,*.gif,*.ico,*.pyc,*.js,*.css,*.map,*.qgs,*.qgz
+          - --ignore-words-list=tripel,linz,parameteras,lightening,clos,januar,claus,sist,pixelx
+        exclude: ^(locale/|_dummy/|build/|scripts/)
+
+  # Check for broken internal references (local script)
   - repo: local
     hooks:
-      - id: find_set_subst
-        name: find_set_subst
-        entry: ./scripts/find_set_subst.py
-        language: system
-        always_run: true
-        pass_filenames: false
+      # - id: find_set_subst
+      #   name: find_set_subst
+      #   entry: ./scripts/find_set_subst.py
+      #   language: system
+      #   always_run: true
+      #   pass_filenames: false
+
+      - id: check-image-refs
+        name: Check image references exist
+        entry: ./scripts/check_image_refs.sh
+        language: script
+        files: \.(rst)$
+        exclude: ^(locale/|_dummy/|build/)
 
 ci:
   autofix_prs: true

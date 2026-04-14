@@ -47,7 +47,7 @@ Returns a matching layer property or metadata value.
      - * **layer** - a string, representing either a layer name or layer ID
        * **property** - a string corresponding to the property to return. Valid options are:
 
-         
+
 
          * name: layer name
          * id: layer ID
@@ -102,4 +102,3 @@ Loads a layer by source URI and provider name.
 
 
 .. end_load_layer_section
-

@@ -360,7 +360,7 @@ Basic parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the ouput raster corresponding to the depression-free DEM.
+     - Specify the output raster corresponding to the depression-free DEM.
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
@@ -438,7 +438,7 @@ Outputs
    * - **Output layer (filled DEM)**
      - ``OUTPUT_FILLED_DEM``
      - [raster]
-     - Ouput raster corresponding to the depression-free digital elevation model.
+     - Output raster corresponding to the depression-free digital elevation model.
    * - **Output layer (flow directions)**
      - ``OUTPUT_FLOW_DIRECTIONS``
      - [raster]
@@ -1182,11 +1182,14 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+
+.. |344| replace:: ``NEW in 3.44``
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |344| replace:: ``NEW in 3.44``
 .. |400| replace:: ``NEW in 4.0``

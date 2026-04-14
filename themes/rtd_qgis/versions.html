@@ -29,7 +29,7 @@ with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_
         {% endfor %}
       </dl>
 
-      {% if version_downloads %} 
+      {% if version_downloads %}
        <dl>
         <dt>{{ _('Downloads') }}</dt>
         {% for type, url in downloads %}
@@ -39,7 +39,7 @@ with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_
       {% endif %}
 
       {# Hide contribute to docs fields for obsolete documents. #}
-      {% if not outdated %} 
+      {% if not outdated %}
       <dl>
         <dt>{{ _('Contribute to Docs') }}</dt>
           <dd>

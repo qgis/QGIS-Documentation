@@ -201,7 +201,7 @@ should be done in a manner similar to the Qt source code e.g.
        */
       bool somethingHappenedBetter();
   }
-  
+
 SIP Bindings
 ============
 
@@ -229,7 +229,7 @@ header file. Some macros are available for such definition:
   * ``SIP_KEEPREFERENCE``: ``/KeepReference/``
   * ``SIP_TRANSFERTHIS``: ``/TransferThis/``
   * ``SIP_TRANSFERBACK``: ``/TransferBack/``
-  
+
 * ``private`` sections are not displayed, except if you use a ``#ifdef SIP_RUN``
   statement in this block.
 * ``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default
@@ -250,7 +250,7 @@ The SIP file can be generated using a dedicated script. For instance:
 ::
 
     scripts/sipify.pl src/core/qgsvectorlayer.h > python/core/qgsvectorlayer.sip
-    
+
 To automatically generate the SIP file of a newly added C++ file
 :source:`sip_include.sh <scripts/sip_include.sh>` needs to be executed.
 
@@ -323,7 +323,7 @@ Consider:
 .. code-block:: cpp
 
   if (foo) bar();
-  
+
   baz(); bar();
 
 It's very easy to miss part of what the flow of control.
@@ -333,7 +333,7 @@ Instead use
 
   if (foo)
     bar();
-    
+
   baz();
   bar();
 
@@ -357,13 +357,13 @@ Credits for contributions
 Contributors of new functions are encouraged to let people know about their
 contribution by:
 
-* adding a note to the changelog for the first version where 
+* adding a note to the changelog for the first version where
   the code has been incorporated, of the type::
 
     This feature was funded by: Olmiomland https://olmiomland.ol
     This feature was developed by: Chuck Norris https://chucknorris.kr
 
-* writing an article about the new feature on a blog, 
+* writing an article about the new feature on a blog,
   and add it to `QGIS Planet <https://planet.qgis.org/>`_
 * adding their name to:
 
