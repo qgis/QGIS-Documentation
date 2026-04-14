@@ -134,14 +134,17 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 * The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>`
   in a first panel and displays only the attributes of the clicked identifier in the second one.
   There is a pull-down menu at the top of the first panel where the "identifier"
-  can be specified using an attribute (:menuselection:`Columns -->`) or an :guilabel:`Expression`.
+  can be updated using an attribute (:menuselection:`Columns -->`) or an :guilabel:`Expression`.
+  A :menuselection:`Sort... -->` menu allows you to sort the returned identifiers
+  :guilabel:`By display name (ascending)`, :guilabel:`By display name (descending)`
+  or :guilabel:`By custom expression`.
   The pull-down also includes the last 10 expressions for reuse.
   Form view uses the layer fields configuration (see :ref:`vector_attributes_menu`).
 
   You can browse through the feature identifiers with the arrows on the bottom
-  of the first panel. The features attributes update in the second panel as you
-  go. It's also possible to identify or move to the active feature in the map
-  canvas with pushing down any of the button at the bottom:
+  of the first panel. The features attributes update in the second panel as you go.
+  It's also possible to identify or move to the active feature in the map canvas
+  with pushing down any of the button at the bottom:
 
   * |highlightFeature| :sup:`Highlight current feature` if visible in the map canvas
   * |panTo| :sup:`Automatically pan to current feature`
