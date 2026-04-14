@@ -97,7 +97,7 @@ Basic parameters
        (extent, CRS, pixel dimensions)
    * - **Output layer**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -276,7 +276,7 @@ Basic parameters
        (extent, CRS, pixel dimensions)
    * - **Output layer**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -457,7 +457,7 @@ Basic parameters
        (extent, CRS, pixel dimensions)
    * - **Output layer**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -643,7 +643,7 @@ Basic parameters
        from (extent, CRS, pixel dimensions)
    * - **Output layer**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -802,7 +802,7 @@ Basic parameters
        will result in a NoData cell in the output raster
    * - **Output layer**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -973,7 +973,7 @@ Basic parameters
      - Spread of the gaussian function
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -1024,7 +1024,7 @@ Outputs
      - Description
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
      - Output raster layer containing the result
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
@@ -1116,7 +1116,7 @@ Basic parameters
      - Spread of the large function
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -1167,7 +1167,7 @@ Outputs
      - Description
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
      - Output raster layer containing the result
 
    * - **CRS authority identifier**
@@ -1265,7 +1265,7 @@ Basic parameters
      - High bound of the linear function
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -1316,7 +1316,7 @@ Outputs
      - Description
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
      - Output raster layer containing the result
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
@@ -1408,7 +1408,7 @@ Basic parameters
      - Spread of the near function
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -1459,7 +1459,7 @@ Outputs
      - Description
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
      - Output raster layer containing the result
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
@@ -1560,7 +1560,7 @@ Basic parameters
      - Exponent of the power function
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -1611,7 +1611,7 @@ Outputs
      - Description
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
      - Output raster layer containing the result
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
@@ -1702,7 +1702,7 @@ Basic parameters
      - Spread of the small function
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster. :ref:`One of <output_parameter_widget>`:
@@ -1753,7 +1753,7 @@ Outputs
      - Description
    * - **Fuzzified raster**
      - ``OUTPUT``
-     - [same as input]
+     - [raster]
      - Output raster layer containing the result
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
