@@ -642,6 +642,19 @@ guidelines:
 
   To find out the algorithm name you can just hover the mouse on the algorithm in
   the Processing toolbox.
+* Mention the QGIS version in which the algorithm was introduced:
+
+  .. code-block:: rst
+
+    ``Added in 3.44``
+
+  Likewise, mention if the algorithm requires a specific optional dependency (and version).
+
+  .. code-block:: rst
+
+    .. attention:: Running this algorithm requires QGIS installed with <library> >= min_value
+     (see :menuselection:`Help --> About` menu).
+
 * Avoid using "This algorithm does this and that..." as the first sentence in the
   algorithm description. Try to use more general expressions like:
 
@@ -668,8 +681,7 @@ guidelines:
 * Avoid duplicating detailed description of algorithm options. Add this information
   in the parameter description.
 * Avoid adding information about the vector geometry type in the algorithm or parameter
-  description, as this information is already available
-  in the parameter descriptions.
+  description, as this information is already available in the parameter descriptions.
 * Add the default value of the parameter, e.g.:
 
   .. code-block:: rst
@@ -681,6 +693,9 @@ guidelines:
         Default: 1
       - Number of points to create
 
+* When a parameter or a parameter's value is added to an already existing algorithm,
+  indicate the QGIS version in which it is introduced.
+  If it requires a specific library, also indicate its minimal requirements.
 * Describe the *type* of input supported the parameters. There are several types
   available you can pick one from:
 
