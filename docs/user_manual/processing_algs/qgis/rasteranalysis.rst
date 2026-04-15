@@ -918,7 +918,7 @@ membership value to each pixel, using a Gaussian membership function.
 Membership values range from 0 to 1.
 In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
-The gaussian membership function is defined as |gaussian_formula|,
+The gaussian membership function is defined as :math:`\mu(x)=e^{−f_1*(x−f_2)^2}`,
 where *f1* is the spread and *f2* the midpoint.
 
 .. figure:: img/gaussianimage.png
@@ -1067,7 +1067,7 @@ membership value to each pixel, using a Large membership function.
 Membership values range from 0 to 1.
 In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
-The large membership function is defined as |fuzzy_large_formula|,
+The large membership function is defined as :math:`\mu(x)={1}/({1+{(x/f_2)}^{-f_1}})`
 where *f1* is the spread and *f2* the midpoint.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
@@ -1210,9 +1210,9 @@ Transforms an input raster to a fuzzified raster by assigning a
 membership value to each pixel, using a Linear membership function.
 Membership values range from 0 to 1. In the fuzzified raster, a value
 of 0 implies no membership of the defined fuzzy set, whereas a value
-of 1 means full membership.
-The linear function is defined as |fuzzy_linear_formula|, where *a*
-is the low bound and *b* the high bound. This equation assigns
+of 1 means full membership. The linear function is defined as
+:math:`\mu(x)=\begin{cases}0&\text{x≤a}\\(x-a)/(b-a)&\text{a<x<b}\\1&\text{x≥b}\end{cases}`,
+where *a* is the low bound and *b* the high bound. This equation assigns
 membership values using a linear transformation for pixel values
 between the low and high bounds.
 Pixels values smaller than the low bound are given 0 membership
@@ -1359,8 +1359,8 @@ membership value to each pixel, using a Near membership function.
 Membership values range from 0 to 1.
 In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
-The near membership function is defined as |near_formula|, where
-*f1* is the spread and *f2* the midpoint.
+The near membership function is defined as :math:`\mu(x)={1}/(1+f_1*({x-f_2})²)`,
+where *f1* is the spread and *f2* the midpoint.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
@@ -1502,8 +1502,9 @@ membership value to each pixel, using a Power membership function.
 Membership values range from 0 to 1.
 In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
-The power function is defined as |power_formula|, where *a* is the
-low bound, *b* is the high bound, and *f1* the exponent.
+The power function is defined as
+:math:`\mu(x)=\begin{cases}0&\text{x≤a}\\{(({x-a})/({b-a}))}^{f_1}&\text{a<x<b}\\1&\text{x≥b}\end{cases}`,
+where *a* is the low bound, *b* is the high bound, and *f1* the exponent.
 This equation assigns membership values using the power transformation
 for pixel values between the low and high bounds.
 Pixels values smaller than the low bound are given 0 membership
@@ -1654,11 +1655,11 @@ membership value to each pixel, using a Small membership function.
 Membership values range from 0 to 1.
 In the fuzzified raster, a value of 0 implies no membership of the
 defined fuzzy set, whereas a value of 1 means full membership.
-The small membership function is defined as |small_formula|, where
-*f1* is the spread and *f2* the midpoint.
+The small membership function is defined as :math:`\mu(x)=1/({1+{(x/f_2)}^{f_1}})`,
+where *f1* is the spread and *f2* the midpoint.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
-  :ref:`qgisfuzzifyrasterlargemembership`
+  :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
   :ref:`qgisfuzzifyrasterpowermembership`
@@ -4649,18 +4650,6 @@ Python code
 
 
 .. |344| replace:: ``NEW in 3.44``
-.. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
-   :height: 1.5em
-.. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
-   :height: 3.2em
-.. |fuzzy_linear_formula| image:: img/fuzzy_linear_formula.png
-   :height: 3.8em
-.. |near_formula| image:: img/fuzzy_near_formula.png
-   :height: 2.5em
-.. |power_formula| image:: img/fuzzy_power_formula.png
-   :height: 4.4em
-.. |small_formula| image:: img/fuzzy_small_formula.png
-   :height: 3.2em
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
