@@ -2266,7 +2266,7 @@ Raster boolean OR
 Calculates the boolean ``OR`` for a set of input rasters.
 If all of the input rasters have a zero value for a pixel, that
 pixel will be set to ``0`` in the output raster.
-If any of the input rasters have ``1`` values for the pixel it will
+If any of the input rasters have non-zero values for the pixel it will
 be set to ``1`` in the output raster.
 
 The reference layer parameter specifies an existing raster layer to
@@ -2277,7 +2277,7 @@ as this layer.
 By default, a NoData pixel in ANY of the input layers will result in a
 NoData pixel in the output raster.
 If the :guilabel:`Treat NoData values as false` option is checked,
-then NoData inputs will be treated the same as a ``0`` input value.
+then NoData output will be set to ``0``.
 
 .. figure:: img/rasterbooleanOR.png
   :align: center
