@@ -465,6 +465,14 @@ layer types:
     of the marker line symbols.
   * :guilabel:`Line offset`: the marker symbols can also be offset from the line
     feature.
+  * :guilabel:`Trim lines` from :guilabel:`Start` and/or :guilabel:`End`:
+    allows for the line rendering to trim off the first x mm and last y mm
+    from the actual line string when drawing the line.
+    It supports a range of :ref:`units <unit_selector>`, including percentage
+    of the overall line length, and can be data defined for extra control.
+    The start/end trim distance can be used e.g. when creating complex symbols
+    where a line layer should not overlap marker symbol layers placed at
+    the start and end of the line.
 
 .. _hashed_line_symbol:
 
