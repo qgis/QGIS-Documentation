@@ -2262,10 +2262,12 @@ For better performance, data from vector layers are loaded in the background,
 using multithreading, and rendered in tiles whose size can be controlled from
 the :guilabel:`Layer rendering` section of the tab:
 
-* :guilabel:`Zoom levels count`: determines how deep the quadtree will be.
-  For example, one zoom level means there will be a single tile for the whole layer.
-  Three zoom levels means there will be 16 tiles at the leaf level (every extra
-  zoom level multiplies that by 4). The default is ``3`` and the maximum is ``8``.
+* :guilabel:`Maximum Features per Chunk`: determines how many features are loaded per tile at each zoom level.
+  The quadtree depth is dynamic, if a tile contains more features than this limit,
+  it will automatically subdivide into a deeper level,
+  requiring you to zoom in further to load those features.
+  This allows very large layers to be rendered efficiently without loading
+  all their features at once when zoomed out. Default value is ``1000``.
 * |checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if
   there are issues with tiles not showing up when they should.
 
