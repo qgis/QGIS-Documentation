@@ -459,6 +459,39 @@ Rounds a number to number of decimal places. The rounding is done to the nearest
 
 .. end_round_section
 
+.. _expression_function_Math_scale_cubic_bezier:
+
+scale_cubic_bezier
+..................
+
+Transforms a given value from an input domain to an output range using a cubic Bézier curve. This function can be used to ease values in or out of the specified output range using custom control points.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - scale_cubic_bezier(value, domain_min, domain_max, range_min, range_max, x1, y1, x2, y2)
+   * - Arguments
+     - * **value** - A value in the input domain. The function will return a corresponding scaled value in the output range.
+       * **domain_min** - Specifies the minimum value in the input domain, the smallest value the input value should take.
+       * **domain_max** - Specifies the maximum value in the input domain, the largest value the input value should take.
+       * **range_min** - Specifies the minimum value in the output range, the smallest value which should be output by the function.
+       * **range_max** - Specifies the maximum value in the output range, the largest value which should be output by the function.
+       * **x1** - The x-coordinate of the first control point. Must be a value between 0 and 1.
+       * **y1** - The y-coordinate of the first control point. Must be a value between 0 and 1.
+       * **x2** - The x-coordinate of the second control point. Must be a value between 0 and 1.
+       * **y2** - The y-coordinate of the second control point. Must be a value between 0 and 1.
+   * - Examples
+     - * ``scale_cubic_bezier(5, 0, 10, 0, 100, 0.42, 0.0, 0.58, 1.0)`` → 50.0
+
+         easing in and out using a symmetrical cubic Bézier curve
+       * ``scale_cubic_bezier(5, 0, 10, 0, 100, 0.25, 0.1, 0.25, 1.0)`` → 80.24034
+
+         a standard ease curve, accelerating quickly before decelerating gradually
+
+
+.. end_scale_cubic_bezier_section
+
 .. _expression_function_Math_scale_exponential:
 
 scale_exponential
