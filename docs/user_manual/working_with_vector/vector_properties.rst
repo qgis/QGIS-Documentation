@@ -2220,6 +2220,7 @@ either :ref:`mask symbol layers <mask_marker_symbol>` or :ref:`mask labels
 
 .. figure:: img/masks_properties.png
    :align: center
+   :width: 70%
 
    Layer properties - Masks tab
 
@@ -2247,6 +2248,7 @@ To display a layer in 3D, select from the combobox at the top of the tab, either
 
 .. figure:: img/3d_view_properties.png
    :align: center
+   :width: 50%
 
    3D properties of a point layer
 
