@@ -73,7 +73,6 @@ Basic parameters
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
-``Added in 4.0``
 
 .. list-table::
    :header-rows: 1
@@ -85,6 +84,8 @@ Advanced parameters
      - Type
      - Description
    * - **Output NoData value**
+
+       ``Added in 4.0``
      - ``NODATA``
      - [numeric: double]
 
@@ -93,6 +94,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 4.0``
      - ``CREATION_OPTIONS``
      - [string]
 
@@ -554,7 +557,6 @@ Basic parameters
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
-``Added in 4.0``
 
 .. list-table::
    :header-rows: 1
@@ -566,6 +568,8 @@ Advanced parameters
      - Type
      - Description
    * - **Output NoData value**
+
+       ``Added in 4.0``
      - ``NODATA``
      - [numeric: double]
 
@@ -574,6 +578,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 4.0``
      - ``CREATION_OPTIONS``
      - [string]
 
@@ -896,7 +902,6 @@ Basic parameters
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
-``Added in 4.0``
 
 .. list-table::
    :header-rows: 1
@@ -908,6 +913,8 @@ Advanced parameters
      - Type
      - Description
    * - **Output NoData value**
+
+       ``Added in 4.0``
      - ``NODATA``
      - [numeric: double]
 
@@ -916,6 +923,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 4.0``
      - ``CREATION_OPTIONS``
      - [string]
 
@@ -1011,7 +1020,6 @@ Basic parameters
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
-``Added in 4.0``
 
 .. list-table::
    :header-rows: 1
@@ -1023,6 +1031,8 @@ Advanced parameters
      - Type
      - Description
    * - **Output NoData value**
+
+       ``Added in 4.0``
      - ``NODATA``
      - [numeric: double]
 
@@ -1031,6 +1041,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 4.0``
      - ``CREATION_OPTIONS``
      - [string]
 
