@@ -413,8 +413,8 @@ part of it!!
 Summary Rules for translation
 -----------------------------
 
-#. Do not change text between two ``|`` characters like ``|bronze|``, ``|checkbox|``,
-   ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These are special tags
+#. Do not change text between two ``|`` characters like ``|logo|``, ``|checkbox|``,
+   ``|label|``, ``|selectString|``, ``|addLayer|``,... These are special tags
    used to replace images
 #. Do not change references that start with roles like ``:ref:``, ``:file:``,
    ``:numref:`` unless they include a title. In that case, you can translate the title
@@ -462,6 +462,8 @@ For any question, please contact the `QGIS Community Team
    :width: 1.3em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
 .. |linguist_done_next| image:: /static/common/linguist_done_next.png
    :width: 2em
 .. |linguist_next| image:: /static/common/linguist_next.png
@@ -472,5 +474,7 @@ For any question, please contact the `QGIS Community Team
    :width: 2em
 .. |linguist_previous_todo| image:: /static/common/linguist_previous_todo.png
    :width: 2em
+.. |logo| image:: /static/common/logo.png
+   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em

@@ -691,7 +691,7 @@ The :guilabel:`Debugging/Development Tools` panel (:kbd:`F12`) provides
 a unified place for handling and debugging actions within QGIS.
 Available tools are organized under following tabs:
 
-* |HelpContents| :guilabel:`API Documentation`: embeds developer oriented documentation
+* |helpContents| :guilabel:`API Documentation`: embeds developer oriented documentation
 * |networkAndProxy| :guilabel:`Network Logger`: records and displays network requests
   and interactions
 * |dbManager| :guilabel:`Query Logger`: logs SQL commands issued by data providers
@@ -708,12 +708,12 @@ Available tools are organized under following tabs:
 API Documentation
 .................
 
-The |HelpContents| :guilabel:`API Documentation` tab can display either
+The |helpContents| :guilabel:`API Documentation` tab can display either
 the |logo| :sup:`PyQGIS API documentation` or the |qt| :sup:`Qt API documentation`.
 These are embedded in the widget, allowing you to browse and search the docs without leaving QGIS.
 It is also the place you can display specific help page for objects or classes in your code sample;
 from the Python interactive console or text editor dialog, select or hover a text
-and press :kbd:`F1` or right-click and select |HelpContents| :sup:`Contextual help` to get its API help.
+and press :kbd:`F1` or right-click and select |helpContents| :sup:`Contextual help` to get its API help.
 If you wish to read the active page in the system web browser, then press |wms| :sup:`Open in web browser`.
 
 Read :ref:`contextual help <python_contextual_help>` for details on the widget configuration.
