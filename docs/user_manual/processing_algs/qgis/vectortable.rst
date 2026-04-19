@@ -210,7 +210,6 @@ Parameters
        Optional
 
        ``Added in 3.32``
-
      - ``FIELD_COMMENT``
      - [string]
      - Store a comment describing the field. Not supported by all format types.
