@@ -435,6 +435,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -634,6 +636,8 @@ Advanced parameters
    * - **Leaflet HTML output title**
 
        Optional
+
+       ``Added in 3.30``
      - ``HTML_TITLE``
      - [string]
 
@@ -642,6 +646,8 @@ Advanced parameters
    * - **Leaflet HTML output attribution**
 
        Optional
+
+       ``Added in 3.30``
      - ``HTML_ATTRIBUTION``
      - [string]
 
@@ -649,6 +655,8 @@ Advanced parameters
      - Custom map attribution used for the Leaflet HTML output file.
        HTML links are possible.
    * - **Include OpenStreetMap basemap in Leaflet HTML output**
+
+       ``Added in 3.30``
      - ``HTML_OSM``
      - [boolean]
 

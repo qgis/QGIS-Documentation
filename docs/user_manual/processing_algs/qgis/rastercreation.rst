@@ -103,6 +103,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -246,6 +248,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -378,6 +382,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -516,6 +522,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -653,6 +661,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -796,6 +806,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -934,6 +946,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1071,6 +1085,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1216,6 +1232,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 

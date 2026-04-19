@@ -12,6 +12,7 @@ Vector coverage
 
 Dissolve coverage
 -----------------
+``Added in 3.36``
 
 Operates on a coverage (represented as a set of polygon features with exactly matching edge geometry)
 to dissolve (union) the geometries.
@@ -77,6 +78,7 @@ Python code
 
 Simplify coverage
 -----------------
+``Added in 3.36``
 
 Operates on a coverage (represented as a set of polygon features with exactly matching edge geometry)
 to apply a Visvalingam–Whyatt simplification to the edges, reducing complexity in proportion with the provided tolerance,
@@ -162,6 +164,7 @@ Python code
 
 Validate coverage
 -----------------
+``Added in 3.36``
 
 Analyzes a coverage (represented as a set of polygon features with exactly matching edge geometry)
 to find places where the assumption of exactly matching edges is not met.

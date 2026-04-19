@@ -12,6 +12,7 @@ Metadata tools
 
 Add history metadata
 --------------------
+``Added in 3.42``
 
 Adds a new history entry to the layer's metadata.
 
@@ -68,6 +69,7 @@ Python code
 
 Copy Layer Metadata
 -------------------
+``Added in 3.42``
 
 Copies metadata from a source layer to a target layer.
 Any existing metadata in the target layer will be replaced with the metadata from the source layer.
@@ -133,6 +135,7 @@ Python code
 
 Export Layer Metadata
 ---------------------
+``Added in 3.42``
 
 Exports the metadata of a layer to a QMD file.
 
@@ -195,6 +198,7 @@ Python code
 
 Set Layer Metadata
 ------------------
+``Added in 3.42``
 
 Applies metadata to a layer from a :file:`.qmd` file.
 
@@ -257,6 +261,8 @@ Python code
 
 Set Metadata Fields
 -------------------
+``Added in 3.42``
+
 Sets various metadata fields for a layer.
 
 Parameters
@@ -368,6 +374,8 @@ Python code
 
 Update Layer Metadata
 ---------------------
+``Added in 3.42``
+
 Copies all non-empty metadata fields from a source layer to a target layer.
 Leaves empty input fields unchanged in the target.
 

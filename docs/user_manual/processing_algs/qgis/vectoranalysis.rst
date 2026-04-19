@@ -46,6 +46,8 @@ Parameters
    * - **Statistics**
 
        Optional
+
+       ``Added in 3.40``
      - ``OUTPUT``
      - [vector: table]
 
@@ -82,6 +84,8 @@ Outputs
      - Type
      - Description
    * - **Statistics**
+
+       ``Added in 3.40``
      - ``OUTPUT``
      - [vector: table]
      - Table containing the calculated statistics
