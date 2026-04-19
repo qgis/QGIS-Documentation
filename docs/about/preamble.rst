@@ -58,7 +58,7 @@ What is new in QGIS |version|
 -----------------------------
 
 This release of QGIS includes hundreds of bug fixes and many new
-features and enhancements, compared to |QGIS_CURRENT|_.
+features and enhancements, compared to QGIS |previous_docs|.
 For a list of new features, visit the `visual changelogs
 <https://qgis.org/project/visual-changelogs/>`_.
 
@@ -66,5 +66,11 @@ For a list of new features, visit the `visual changelogs
 
   We recommend that you use this version over previous releases.
 
-.. |QGIS_CURRENT| replace:: QGIS 3.40
-.. _QGIS_CURRENT: https://docs.qgis.org/3.40/en/docs/
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |previous_docs| replace:: 3.44
