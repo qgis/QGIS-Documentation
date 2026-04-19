@@ -46,9 +46,9 @@ Parameters
    * - **Title**
 
        Optional
-     - ``TITLE``
 
        ``Added in 3.42``
+     - ``TITLE``
      - [string]
 
        Default: ""
@@ -798,10 +798,9 @@ Parameters
        Default: False
      - When enabled, uses logarithmic scale for the x-axis
    * - **Use logarithmic scale for y-axis**
-     - ``YAXIS_LOG``
 
        ``Added in 3.42``
-
+     - ``YAXIS_LOG``
      - [boolean]
 
        Default: False
