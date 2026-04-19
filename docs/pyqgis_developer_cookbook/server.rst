@@ -56,11 +56,11 @@ There are a few different ways you can alter the behavior of QGIS Server or exte
 capabilities to offer new custom services or APIs, these are the main scenarios you
 may face:
 
-* EMBEDDING |rarr| Use QGIS Server API from another Python application
-* STANDALONE |rarr| Run QGIS Server as a standalone WSGI/HTTP service
-* FILTERS |rarr| Enhance/Customize QGIS Server with filter plugins
-* SERVICES |rarr| Add a new *SERVICE*
-* OGC APIs |rarr| Add a new *OGC API*
+* ``EMBEDDING`` :menuselection:`-->` Use QGIS Server API from another Python application
+* ``STANDALONE`` :menuselection:`-->` Run QGIS Server as a standalone WSGI/HTTP service
+* ``FILTERS`` :menuselection:`-->` Enhance/Customize QGIS Server with filter plugins
+* ``SERVICES`` :menuselection:`-->` Add a new *SERVICE*
+* ``OGC APIs`` :menuselection:`-->` Add a new *OGC API*
 
 Embedding and standalone applications require using the QGIS Server Python API directly from
 another Python script or application. The remaining options are better suited for when
