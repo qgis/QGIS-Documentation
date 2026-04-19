@@ -592,7 +592,7 @@ The GRASS plugin provides a user-friendly toolbox with about 200 of the availabl
 GRASS modules and functionalities.
 
 A complete list of GRASS modules available in the graphical Toolbox in QGIS
-version |CURRENT| is available in the GRASS wiki at
+is available in the GRASS wiki at
 https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
 
 It is also possible to customize the GRASS Toolbox content. This procedure is
@@ -843,7 +843,6 @@ you select the module.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.44
 .. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
 .. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png
