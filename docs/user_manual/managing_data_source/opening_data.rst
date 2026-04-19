@@ -1733,6 +1733,7 @@ or :guilabel:`Load Connection` from an XML file.
 .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 .. _`ArcGIS REST Server`: https://enterprise.arcgis.com/en/server/latest/publish-services/windows/what-types-of-services-can-you-publish.htm
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
