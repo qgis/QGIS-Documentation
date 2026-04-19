@@ -12,6 +12,7 @@
 
 Convert B3DM to GLTF
 --------------------
+``Added in 3.34``
 
 Converts files from the legacy :file:`.B3DM` format to :file:`.GLTF` or :file:`.GLB`.
 
@@ -73,6 +74,7 @@ Python code
 
 Convert GLTF to vector features
 -------------------------------
+``Added in 3.34``
 
 Converts :file:`.GLTF` or :file:`.GLB` file contents to standard vector layer formats.
 

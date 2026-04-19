@@ -13,6 +13,7 @@ Fix Geometry
 
 Add missing vertices along borders
 ----------------------------------
+``Added in 3.42``
 
 Adds the missing vertices along polygons borders,
 based on an error layer from the :ref:`qgischeckgeometrymissingvertex` algorithm.
@@ -163,6 +164,7 @@ Python code
 
 Convert to strictly multipart
 ------------------------------
+``Added in 3.42``
 
 Converts multipart geometries that consists of only one geometry into singlepart geometries,
 based on an error layer from the :ref:`qgischeckgeometrymultipart` algorithm.
@@ -292,6 +294,7 @@ Python code
 
 Delete duplicated vertices
 --------------------------
+``Added in 3.42``
 
 Deletes duplicated vertices from the input geometries,
 based on errors reported by the :ref:`qgischeckgeometryduplicatenodes` algorithm.
@@ -438,6 +441,7 @@ Python code
 
 Delete features
 ---------------
+``Added in 3.42``
 
 Deletes error features based on an error layer from some check geometry algorithms, such as:
 
@@ -554,6 +558,7 @@ Python code
 
 Delete overlaps
 ---------------
+``Added in 3.42``
 
 Deletes overlapping areas based on an error layer from the :ref:`qgischeckgeometryoverlap` algorithm.
 
@@ -696,6 +701,7 @@ Python code
 
 Delete small angles
 --------------------
+``Added in 3.42``
 
 Deletes vertices based on an error layer from the :ref:`qgischeckgeometryangle` algorithm.
 When deletion of a vertex results in a duplicate vertex (when a spike vertex is deleted),
@@ -850,6 +856,7 @@ Python code
 
 Fill gaps
 --------------------
+``Added in 3.42``
 
 Fills the gaps based on a gap and neighbors layer from the :ref:`qgischeckgeometrygap` algorithm.
 Three different fixing methods are available.
@@ -1005,6 +1012,7 @@ Python code
 
 Fill holes
 --------------------
+``Added in 3.42``
 
 Deletes holes in polygon geometries based on an error layer from the
 :ref:`qgischeckgeometryhole` algorithm.
@@ -1155,6 +1163,7 @@ Python code
 
 Fix small polygons
 --------------------
+``Added in 3.42``
 
 Merges neighboring polygons according to the chosen method,
 based on an error layer from the :ref:`qgischeckgeometryarea` or :ref:`qgischeckgeometrysliverpolygon` algorithm.
@@ -1326,6 +1335,7 @@ Python code
 
 Split self-intersecting geometries
 ----------------------------------
+``Added in 3.42``
 
 Splits self-intersecting geometries based on an error layer from the
 :ref:`qgischeckgeometryselfintersection` algorithm.

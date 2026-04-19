@@ -704,7 +704,7 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
-       * 2 - Prefer exporting texts as text objects
+       * 2 - Prefer exporting texts as text objects --- ``Added in 3.40``
    * - **Image compression**
      - ``IMAGE_COMPRESSION``
      - [enumeration]
@@ -880,7 +880,7 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
-       * 2 - Prefer exporting texts as text objects
+       * 2 - Prefer exporting texts as text objects --- ``Added in 3.40``
    * - **Image compression**
      - ``IMAGE_COMPRESSION``
      - [enumeration]
@@ -1137,7 +1137,7 @@ Advanced parameters
 
        * 0 - Always export text as paths (recommended)
        * 1 - Always export texts as text objects
-       * 2 - Prefer exporting texts as text objects
+       * 2 - Prefer exporting texts as text objects --- ``Added in 3.40``
    * - **Image compression**
      - ``IMAGE_COMPRESSION``
      - [enumeration]

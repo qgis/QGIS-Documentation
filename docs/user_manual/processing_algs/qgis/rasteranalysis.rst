@@ -127,6 +127,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -306,6 +308,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -487,6 +491,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -675,6 +681,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -834,6 +842,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -997,6 +1007,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1140,6 +1152,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1289,6 +1303,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1432,6 +1448,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1585,6 +1603,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1727,6 +1747,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -1790,6 +1812,7 @@ Python code
 
 Gaussian blur
 ----------------------
+``Added in 4.0```
 
 Applies a Gaussian blur filter to an input raster layer.
 The radius parameter controls the strength of the blur.
@@ -2024,6 +2047,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -2263,6 +2288,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -2433,6 +2460,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -2651,6 +2680,7 @@ Python code
 
 Raster calculator (virtual)
 ---------------------------
+``Added in 3.34``
 
 Performs algebraic operations using raster layers and generates in-memory result.
 
@@ -3326,7 +3356,7 @@ Python code
 
 Raster rank
 ----------------
-|344|
+``Added in 3.44``
 
 Performs a cell-by-cell analysis in which output values match
 the rank of a sorted list of overlapping cell values from input layers.
@@ -3703,6 +3733,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -3848,6 +3880,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -3977,6 +4011,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -4116,6 +4152,8 @@ Advanced parameters
    * - **Creation options**
 
        Optional
+
+       ``Added in 3.40``
      - ``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``CREATE_OPTIONS``)
      - [string]
 
@@ -4323,6 +4361,8 @@ Python code
 
 Zonal Minimum/Maximum Point
 ---------------------------
+``Added in 3.42``
+
 Extracts point features corresponding to the minimum and maximum pixel values within polygon zones.
 
 The output will contain one point feature for the minimum and one for the maximum raster value
@@ -4497,7 +4537,7 @@ Python code
 
 Feature preserving DEM smoothing
 --------------------------------
-|400|
+``Added in 4.0``
 
 Can be used to remove surface roughness from digital elevation model without significantly altering sharp
 features such as breaks-in-slope, stream banks, or terrace scarps. This makes this algorithm superior to
@@ -4647,15 +4687,3 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-
-.. |344| replace:: ``NEW in 3.44``
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |400| replace:: ``NEW in 4.0``

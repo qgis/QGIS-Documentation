@@ -11,12 +11,17 @@ Network analysis
 
 Extract network end points
 ----------------------------
+``Added in 4.0``
 
 Extracts the end points (nodes) from a network line layer.
 Two definitions are available for identifying end points:
 
-#. Nodes with only all incoming or all outgoing edges: Identifies 'Source' or 'Sink' nodes based on the direction of flow. These are nodes where flow can start (only outgoing) or stop (only incoming).
-#. Nodes connected to a single edge: Identifies topological 'dead-ends' or 'dangles', regardless of directionality. This checks if the node is connected to only one other distinct node.
+#. Nodes with only all incoming or all outgoing edges:
+   Identifies 'Source' or 'Sink' nodes based on the direction of flow.
+   These are nodes where flow can start (only outgoing) or stop (only incoming).
+#. Nodes connected to a single edge: Identifies topological 'dead-ends'
+   or 'dangles', regardless of directionality.
+   This checks if the node is connected to only one other distinct node.
 
 Parameters
 ..........
@@ -236,6 +241,8 @@ Basic parameters
           :end-before: **end_layer_output_types_skip**
 
    * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
@@ -360,6 +367,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -390,7 +399,9 @@ Outputs
      - [vector: line]
      - Line layer representing the parts of the network
        that can be serviced by the start points, for the given cost.
-   * - **Non routable features**
+   * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
      - An optional output which will be used to store any input features
@@ -503,6 +514,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -617,6 +630,8 @@ Basic parameters
    * - **Non-routable features**
 
        Optional
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
@@ -642,6 +657,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -669,7 +686,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
-   * - **Non routable features**
+   * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
      - An optional output layer which will be used to store any input features
@@ -752,6 +771,8 @@ Basic parameters
    * - **Non-routable features**
 
        Optional
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
 
@@ -778,6 +799,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -805,7 +828,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
-   * - **Non routable features**
+   * - **Non-routable features**
+
+       ``Added in 3.38``
      - ``OUTPUT_NON_ROUTABLE``
      - [vector: point]
      - An optional output layer which will be used to store any input features
@@ -896,6 +921,8 @@ Advanced parameters
    * - **Maximum point distance from network**
 
        Optional
+
+       ``Added in 3.38``
      - ``POINT_TOLERANCE``
      - [numeric: double]
 
@@ -936,6 +963,7 @@ Python code
 
 Validate network
 ---------------------
+``Added in 4.0``
 
 Analyzes a network vector layer to identify data and topology errors that may affect network analysis tools (like shortest path).
 Optional checks include:

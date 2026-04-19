@@ -12,6 +12,7 @@ Raster conversion
 
 Create Cloud Optimized GeoTIFF
 -------------------------------
+``Added in 4.0``
 
 Creates a Cloud Optimized GeoTIFF (COG) from the input raster layers.
 

@@ -46,6 +46,8 @@ Parameters
    * - **Statistics**
 
        Optional
+
+       ``Added in 3.40``
      - ``OUTPUT``
      - [vector: table]
 
@@ -82,6 +84,8 @@ Outputs
      - Type
      - Description
    * - **Statistics**
+
+       ``Added in 3.40``
      - ``OUTPUT``
      - [vector: table]
      - Table containing the calculated statistics
@@ -621,7 +625,7 @@ Python code
 
 Distance to nearest hub
 -----------------------
-|400|
+``Added in 4.0``
 
 Computes the distance between features from the source layer to the closest feature from the destination layer.
 Distance calculations are based on the feature's bounding box center.
@@ -2094,6 +2098,5 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |400| replace:: ``NEW in 4.0``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

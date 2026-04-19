@@ -15,6 +15,7 @@ Point Cloud Data Management
 
 Assign projection
 -----------------
+``Added in 3.32``
 
 Assigns a Coordinate Reference System to a point cloud layer, if it is missing or wrong.
 A new layer is created.
@@ -69,7 +70,7 @@ Advanced parameters
      - Description
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -118,6 +119,7 @@ Python code
 
 Build virtual point cloud (VPC)
 -------------------------------
+``Added in 3.32``
 
 Creates a :ref:`virtual point cloud (VPC) <virtual_point_cloud>` from input point cloud data.
 
@@ -173,7 +175,7 @@ Parameters
        for example, for :file:`mydata.vpc`, the overview point cloud would be named :file:`mydata-overview.copc.laz`.
    * - **Convert individual files to COPC format**
 
-       |400|
+       ``Added in 4.0``
      - ``CONVERT_COPC``
      - [boolean]
 
@@ -225,7 +227,7 @@ Python code
 
 Classify ground points
 ------------------------
-|400|
+``Added in 4.0``
 
 Classifies ground points using the
 `Simple Morphological Filter (SMRF) <https://pdal.io/en/stable/stages/filters.smrf.html>`_ algorithm.
@@ -358,6 +360,7 @@ Python code
 
 Clip point cloud
 ----------------
+``Added in 3.32``
 
 Clips a point cloud layer by a polygon layer
 so that the resulting point cloud contains only points within the polygons.
@@ -432,7 +435,7 @@ Advanced parameters
 
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -479,8 +482,7 @@ Python code
 
 Compare point clouds
 --------------------
-
-|400|
+``Added in 4.0``
 
 Compares two point clouds using an M3C2 (Multiscale Model-to-Model Cloud Comparison)
 algorithm and outputs a subset (filtered using Poisson sampling, based on Subsampling
@@ -652,6 +654,7 @@ Python code
 
 Create COPC
 -----------
+``Added in 3.32``
 
 Creates the index for all the input point cloud files in a batch mode.
 
@@ -715,6 +718,7 @@ Python code
 
 Create tiles from point cloud
 -----------------------------
+``Added in 3.32``
 
 Creates tiles from input point cloud files,
 recommended for best performance (in display or analysis) with such datasets in QGIS.
@@ -777,7 +781,7 @@ Advanced parameters
      - The CRS to apply to the layer
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -824,7 +828,7 @@ Python code
 
 Filter noise
 --------------
-|400|
+``Added in 4.0``
 
 Filters noise in a point cloud using a statistical outlier removal algorithm.
 For each point, the algorithm computes the mean distance to its K nearest neighbors.
@@ -941,7 +945,7 @@ Python code
 
 Filter noise (using radius)
 -----------------------------
-|400|
+``Added in 4.0``
 
 Filters noise in a point cloud using radius algorithm.
 Points are marked as noise if they have fewer than the
@@ -1054,7 +1058,7 @@ Python code
 
 Height above ground
 -----------------------------
-|400|
+``Added in 4.0``
 
 Calculates the height of points above the ground surface in a point cloud using a nearest neighbor algorithm.
 For each point, the algorithm finds the specified number of nearest ground-classified points
@@ -1173,7 +1177,7 @@ Python code
 
 Height above ground (using triangulation)
 ----------------------------------------------
-|400|
+``Added in 4.0``
 
 Calculates the height of points above the ground surface in a point cloud using a
 `Delaunay triangulation <https://gwlucastrig.github.io/TinfourDocs/DelaunayIntro/index.html>`_ algorithm.
@@ -1284,6 +1288,7 @@ Python code
 
 Merge point cloud
 -----------------
+``Added in 3.32``
 
 Merges multiple point cloud files into a single one.
 
@@ -1379,6 +1384,7 @@ Python code
 
 Point cloud information
 -----------------------
+``Added in 3.32``
 
 Outputs basic metadata from an input point cloud file.
 
@@ -1469,6 +1475,7 @@ Python code
 
 Reproject point cloud
 ---------------------
+``Added in 3.32``
 
 Reprojects a point cloud to a different Coordinate Reference System (CRS).
 
@@ -1526,7 +1533,7 @@ Advanced parameters
        between the origin and target systems.
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -1573,6 +1580,7 @@ Python code
 
 Thin (by sampling radius)
 -------------------------
+``Added in 3.32``
 
 Creates a thinned version of the point cloud by performing sampling by distance point
 (reduces the number of points within a certain radius).
@@ -1653,7 +1661,7 @@ Advanced parameters
 
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -1700,6 +1708,7 @@ Python code
 
 Thin (by skipping points)
 -------------------------
+``Added in 3.32``
 
 Creates a thinned version of the point cloud by keeping only every N-th point
 (reduces the number of points by skipping nearby points).
@@ -1773,7 +1782,7 @@ Advanced parameters
 
    * - **VPC Output Format**
 
-       |400|
+       ``Added in 4.0``
      - ``VPC_OUTPUT_FORMAT``
      - [enumeration]
 
@@ -1819,7 +1828,7 @@ Python code
 
 Transform point cloud
 ------------------------
-|400|
+``Added in 4.0``
 
 Transforms point cloud coordinates using translation, rotation, and scaling operations using a 4x4 transformation matrix.
 Applies transformations in the following order: scaling, rotation (using Euler angles), then translation.
@@ -1962,12 +1971,3 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 .. _PDAL: https://pdal.io/en/stable/
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |400| replace:: ``NEW in 4.0``

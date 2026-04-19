@@ -18,6 +18,7 @@ Modeler tools
 
 Calculate expression
 --------------------
+``Added in 3.34``
 
 It calculates the result of a QGIS expression and eliminates
 the need to use the same expression multiple times throughout
