@@ -163,6 +163,7 @@ The :guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in
 
 .. figure:: img/editNewSpatialite.png
    :align: center
+   :width: 70%
 
    Creating a New SpatiaLite layer dialog
 
@@ -318,6 +319,7 @@ The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
 
 .. figure:: img/editNewTemporaryLayer.png
    :align: center
+   :width: 70%
 
    Creating a new Temporary Scratch layer dialog
 
