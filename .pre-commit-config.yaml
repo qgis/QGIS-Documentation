@@ -70,19 +70,18 @@ repos:
   # Check for broken internal references (local script)
   - repo: local
     hooks:
-      # - id: find_set_subst
-      #   name: find_set_subst
-      #   entry: ./scripts/find_set_subst.py
-      #   language: system
-      #   always_run: true
-      #   pass_filenames: false
-
       - id: check-image-refs
         name: Check image references exist
         entry: ./scripts/check_image_refs.sh
         language: script
         files: \.(rst)$
         exclude: ^(locale/|_dummy/|build/)
+
+      - id: find_set_subst
+        name: Check and apply text or image substitutions
+        entry: ./scripts/find_set_subst.py
+        language: python
+
 
 ci:
   autofix_prs: true
