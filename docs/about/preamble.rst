@@ -73,4 +73,4 @@ For a list of new features, visit the `visual changelogs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |previous_docs| replace:: 3.44
+.. |previous_docs| replace:: 3.40
