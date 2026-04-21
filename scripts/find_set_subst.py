@@ -20,8 +20,8 @@ def get_subst_from_file(file):
     """
 
     # defines a pattern for a substitution
-    # anything inside || except is preceded by ..
-    s_pattern = re.compile(r"(?<!\.\. )\|([\w\d-]+)\|")
+    # i.e., anything inside || except is preceded by .. and/or not surrounded by a character
+    s_pattern = re.compile(r"(?<!\.\. )(?<!\w)\|([\w\d-]+)\|(?![\w-])")
     s_title = re.compile(r"\.\. Substitutions definitions - AVOID EDITING "
                          r"PAST THIS LINE\n")
     subs = []

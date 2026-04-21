@@ -496,7 +496,7 @@ Print Layout
   |addChart|               ``|addChart|``
   |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
   |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
-  |layers|                 ``|Layers|``
+  |layers|                 ``|layers|``
   |setToCanvasScale|       ``|setToCanvasScale|``       |setToCanvasExtent|      ``|setToCanvasExtent|``
   |viewScaleInCanvas|      ``|viewScaleInCanvas|``      |viewExtentInCanvas|     ``|viewExtentInCanvas|``
   |raiseItems|             ``|raiseItems|``             |lowerItems|             ``|lowerItems|``

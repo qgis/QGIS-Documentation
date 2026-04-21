@@ -125,7 +125,7 @@ The current translations are made possible thanks to:
   Statistics of translation
   =========================
 
-  Efforts of translation for QGIS |CURRENT| Long Term Release are provided below.
+  Efforts of translation for QGIS |ltr| Long Term Release are provided below.
   Official documentation is published in only the languages that reached 5% of translation.
 
   .. include:: translation_stats.rst
@@ -138,4 +138,4 @@ The current translations are made possible thanks to:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 3.44
+.. |ltr| replace:: 3.44

@@ -39,7 +39,6 @@ This usually happens from the October release.
 Following changes have to be done in `master` branch before you create the new release branch.
 Otherwise, you will have to do the changes twice: in master and in the new branch.
 
-- [ ] In [substitutions.txt](substitutions.txt) file, replace |CURRENT| value with the new version number
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add the new release number to the `version_list` parameter
 - [ ] In [dependabot.yml](.github/dependabot.yml) file: Add label for backporting dependencies update to the new branch
 
@@ -47,6 +46,7 @@ You can now create the `release_x.y` branch in the [repository](https://github.c
 
 #### After the new branch is created
 
+- [ ] In [substitutions.txt](substitutions.txt) file, replace |previous_docs| value with the new version number
 - [ ] In [substitutions.txt](substitutions.txt) file:
   - [ ] Remove intermediate versions substitutions and their occurrences in the rst files
   - [ ] Add substitutions for the versions of the next LTR cycle that starts
@@ -127,6 +127,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 <details>
 
 - [ ] In [conf.py](conf.py) file: set the html_context `isLtr` to `True`
+- [ ] In [substitutions.txt](substitutions.txt) file, replace |ltr| value with the new LTR version number
 - [ ] In [docs_conf.yml](docs_conf.yml) file: add target languages to the `supported_languages` parameter.
   These are the languages that will be published in the documentation.
   A threshold of 5% is currently applied to candidates.
@@ -158,6 +159,7 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 
 <details>
 
+- [ ] In [substitutions.txt](substitutions.txt) file, replace |ltr| value with the new LTR version number
 - [ ] In [fix_versions.sh](scripts/fix_versions.sh) file:
   - [ ] add the old LTR number to the `DEPRECATED` parameter
   - [ ] add the new LTR number to the `DOCVERSIONS` parameter

@@ -118,7 +118,7 @@ You can use tags to emphasize items.
 
   .. code-block:: rst
 
-     |icon| :sup:`popup_text`
+     |iconView| :sup:`popup_text`
 
   (see `image`_ below).
 
@@ -860,6 +860,8 @@ to help you with the layout and the description:
 .. |fieldFloat| image:: /static/common/mIconFieldFloat.png
    :width: 1.5em
 .. |fieldText| image:: /static/common/mIconFieldText.png
+   :width: 1.5em
+.. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
