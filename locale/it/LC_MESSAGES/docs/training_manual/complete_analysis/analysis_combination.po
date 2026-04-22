@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -74,6 +74,14 @@ msgstr ""
 msgid "In the :guilabel:`Layers` panel, enable these layers:"
 msgstr "Nel pannello :guilabel:`Layers`, abilita questi layer:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid "``hillshade``,"
+msgstr "``hillshade``,"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid "``solution`` (or ``buildings_over_100``)"
+msgstr "``solution`` (o ``buildings_over_100``)"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
 msgid ""
 "In addition to these layers, which should already be loaded in the map from "
@@ -92,6 +100,18 @@ msgstr ""
 "Se ti mancano alcuni layer, dovresti trovarli in "
 ":file:`exercise_data/residential_development/`"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the ``suitable_terrain`` layer."
+msgstr ""
+"Usa lo strumento :guilabel:`Intersezione...` (:menuselection:`Vettore --> "
+"Strumenti di Geoprocessing`) per creare un nuovo layer vettoriale chiamato "
+":file:`new_solution.shp` che contiene solo gli edifici che intersecano il "
+"layer :guilabel:`suitable_terrain`."
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
 msgid ""
 "You should now have a layer showing certain buildings as your solution, for "
@@ -104,10 +124,40 @@ msgstr ""
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results"
 msgstr ":abbr:`★★☆ (Livello Intermedio)` Prova Tu: Controllare i risultati"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your ``new_solution`` layer. Compare them "
+"with the ``suitable_terrain`` layer by changing the symbology for the "
+"``new_solution`` layer so that it has outlines only. What do you notice "
+"about some of the buildings? Are they all suitable just because they "
+"intersect with the ``suitable_terrain`` layer? Why or why not? Which ones "
+"would you deem to be unsuitable?"
+msgstr ""
+"Osserva ciascuno degli edifici presenti nel layer ``new_solution``. "
+"Confrontali con il layer ``suitable_terrain`` modificando la simbologia del "
+"layer ``new_solution`` in modo che siano visualizzati solo i contorni. Cosa "
+"noti riguardo ad alcuni degli edifici? Sono tutti idonei solo perché si "
+"intersecano con il layer ``suitable_terrain``? Perché sì o perché no? Quali "
+"considereresti non idonei?"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
 msgid "Answer"
 msgstr "Soluzione"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your ``new_solution`` layer "
+"have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"Potresti notare che alcuni degli edifici nel tuo layer ``new_solution`` sono"
+" stati “tagliati” dallo strumento :guilabel:`Intersection`. Ciò indica che "
+"solo una parte dell'edificio – e quindi solo una parte dell'immobile – si "
+"trova su un terreno idoneo. Possiamo quindi tranquillamente eliminare tali "
+"edifici dal nostro set di dati."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis"
@@ -120,6 +170,19 @@ msgid ""
 msgstr ""
 "Puoi vedere dai risultati che alcuni edifici sono stati inclusi ma non sono "
 "veramente adatti, quindi possiamo affinare l'analisi."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the ``suitable_terrain`` layer. How would you achieve this? "
+"Use one or more Vector Analysis tools and remember that our buildings are "
+"all over 100m squared in size."
+msgstr ""
+"Vogliamo assicurarci che la nostra analisi restituisca solo gli edifici che "
+"ricadono interamente all'interno del layer ``suitable_terrain``. Come "
+"potresti ottenere questo risultato? Utilizza uno o più strumenti di analisi "
+"vettoriale e tieni presente che i nostri edifici hanno tutti una superficie "
+"superiore a 100 metri quadrati."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
 msgid "At the moment, your analysis should look something like this:"
@@ -141,6 +204,18 @@ msgstr ""
 "sua estensione (da tutte le direzioni) si otterrà che una parte di essa sarà"
 " lasciata al centro."
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+"``suitable_terrain`` vector layer. In the output of the buffer function, "
+"whatever remains of the original layer will represent areas where there is "
+"suitable terrain for 100 meters beyond."
+msgstr ""
+"Pertanto, puoi applicare un *buffer interno* di 100 metri al layer "
+"vettoriale esistente denominato ``suitable_terrain``. Nel risultato della "
+"funzione buffer, la parte del layer originale che rimane rappresenterà le "
+"aree in cui il terreno è idoneo per 100 metri oltre il limite."
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
 msgid "To demonstrate:"
 msgstr "Per dimostrarlo:"
@@ -157,6 +232,16 @@ msgstr ""
 msgid "Set it up like this:"
 msgstr "Impostalo come questo:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the ``suitable_terrain`` layer with ``10`` segments and a buffer "
+"distance of ``-100``. (The distance is automatically in meters because your "
+"map is using a projected CRS.)"
+msgstr ""
+"Utilizza il layer ``suitable_terrain`` con ``10`` segmenti e una distanza di"
+" buffer pari a ``-100``. (La distanza è espressa automaticamente in metri "
+"poiché la mappa utilizza un Sistema di Riferimento proiettato.)"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
 msgid ""
 "Save the output in :file:`exercise_data/residential_development/` as "
@@ -164,6 +249,14 @@ msgid ""
 msgstr ""
 "Salva il risultato in :file:`exercise_data/residential_development/` come "
 ":file:`suitable_terrain_continuous100m.shp`."
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original ``suitable_terrain`` "
+"layer."
+msgstr ""
+"Se necessario, sposta il nuovo layer sopra il layer originale "
+"``suitable_terrain``."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
 msgid "Your results will look like something like this:"
@@ -181,9 +274,29 @@ msgstr ""
 msgid "Set up like this:"
 msgstr "Imposta in questo modo:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in ``new_solution`` that intersect features in "
+"``suitable_terrain_continuous100m.shp``."
+msgstr ""
+"Seleziona gli elementi presenti in ``new_solution`` che si intersecano con "
+"quelli presenti in ``suitable_terrain_continuous100m.shp``."
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
 msgid "This is the result:"
 msgstr "Questo è il risultato:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new ``suitable_terrain_continuous100m`` layer, they lie "
+"well within the original ``suitable_terrain`` layer and therefore meet all "
+"of our requirements."
+msgstr ""
+"Sono stati selezionati gli edifici contrassegnati in giallo. Sebbene alcuni "
+"di essi si trovino in parte al di fuori del nuovo layer "
+"``suitable_terrain_continuous100m``, essi rientrano pienamente nel layer "
+"originale ``suitable_terrain`` e soddisfano quindi tutti i nostri requisiti."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
 msgid ""
