@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -80,6 +81,15 @@ msgstr ""
 "elemento vettoriale descrivono le sue **proprietà** (colore, dimensioni, "
 "età, ecc.)."
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:21
+msgid ""
+"In this section we will look more closely at the process of creating and "
+"editing vector data --- both the geometry and attributes of vector features."
+msgstr ""
+"In questa sezione esamineremo più da vicino il processo di creazione e "
+"modifica dei dati vettoriali, sia per quanto riguarda la geometria che gli "
+"attributi degli elementi vettoriali."
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:25
 msgid "How does GIS digital data get stored?"
 msgstr "Come vengono memorizzati i dati digitali nei GIS?"
@@ -100,6 +110,28 @@ msgstr ""
 ":file:`.jpg` immagine JPEG, Word Processor consentono di salvare il "
 "documento come :file:`.odt` OpenDocument o :file:`.doc` documento di Word, e"
 " così via. "
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:33
+msgid ""
+"Just like these other applications, GIS Applications can store their data in"
+" files on the computer hard disk. There are a number of different file "
+"formats for GIS data, but the most common one is probably the 'shape file'. "
+"The name is a little odd in that although we call it a shape file "
+"(singular), it actually consists of at least three different files that work"
+" together to store your digital vector data, as shown in "
+":numref:`table_shapefile`."
+msgstr ""
+"Proprio come le altre applicazioni, anche le applicazioni GIS possono "
+"memorizzare i propri dati in file sul disco rigido del computer. Esistono "
+"diversi formati di file per i dati GIS, ma il più comune è probabilmente lo "
+"'shape file'. Il nome è un po’ strano, in quanto, sebbene lo chiamiamo shape"
+" file (al singolare), in realtà è costituito da almeno tre file diversi che "
+"collaborano per memorizzare i dati vettoriali digitali, come illustrato "
+"nella :numref:`tabella_shapefile`."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:42
+msgid "The Basic Files that make up a 'Shapefile'"
+msgstr "I file di base che compongono uno 'Shapefile'"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:45
 msgid "Extension"
@@ -301,6 +333,20 @@ msgstr ""
 " punti. L'uso della geometria di punto ha senso qui perché ogni campione "
 "preso rappresenta le condizioni in un luogo molto specifico."
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:134
+msgid ""
+"For the attributes we would want a **field** for each thing that describes "
+"the sample site. So we may end up with an attribute table that looks "
+"something like :numref:`table_river_attributes`."
+msgstr ""
+"Per gli attributi, vorremmo un **campo** per ogni elemento che descrive il "
+"sito di campionamento. Potremmo quindi ottenere una tabella degli attributi "
+"simile a :numref:`table_river_attributes`."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:140
+msgid "River Attributes"
+msgstr "Attributi River"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:143
 msgid "SampleNo"
 msgstr "Esempio 2"
@@ -401,6 +447,19 @@ msgstr "Alta"
 msgid "Victor"
 msgstr "Victor"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:152
+msgid ""
+"Drawing a table like :numref:`table_river_attributes` before you create your"
+" vector layer will let you decide what attribute fields (columns) you will "
+"need. Note that the geometry (positions where samples were taken) is not "
+"shown in the attribute table --- the GIS Application stores it separately!"
+msgstr ""
+"Creare una tabella come :numref:`table_river_attributes` prima di creare il "
+"layer vettoriale ti consentirà di decidere quali campi per gli attributi "
+"(colonne) ti serviranno. Tieni presente che la geometria (le posizioni in "
+"cui sono stati prelevati i campioni) non viene visualizzata nella tabella "
+"degli attributi: l'applicazione GIS la memorizza separatamente!"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:158
 msgid "Creating an empty shapefile"
 msgstr "Creazione di uno shapefile vuoto"
@@ -438,6 +497,23 @@ msgstr ""
 "modulo. Prima scegli il tipo di geometria e poi aggiungi i campi della "
 "tabella degli attributi."
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:178
+msgid ""
+"Next you will add fields to the attribute table. Normally we give field "
+"names that are short, have no spaces and indicate what type of information "
+"is being stored in that field. Example field names may be 'pH', "
+"'RoofColour', 'RoadType' and so on. As well as choosing a name for each "
+"field, you need to indicate how the information should be stored in that "
+"field --- i.e. is it a number, a word or a sentence, or a date?"
+msgstr ""
+"Successivamente aggiungerai dei campi alla tabella degli attributi. Di norma"
+" si assegnano nomi brevi ai campi, senza spazi, che indichino il tipo di "
+"informazione memorizzata in quel campo. Esempi di nomi di campi possono "
+"essere “pH”, ‘ColoreTetto’, “TipoStrada” e così via. Oltre a scegliere un "
+"nome per ciascun campo, devi indicare come le informazioni debbano essere "
+"memorizzate in quel campo, ovvero se si tratta di un numero, una parola o "
+"una frase, oppure una data."
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:185
 msgid ""
 "Computer programs usually call information that is made up of words or "
@@ -448,6 +524,18 @@ msgstr ""
 "parole o frasi '**stringhe**', quindi se è necessario memorizzare qualcosa "
 "come il nome di una via o il nome di un fiume, è necessario utilizzare "
 "'String' per il tipo di campo."
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:189
+msgid ""
+"The shapefile format allows you to store the numeric field information as "
+"either a whole number (**integer**) or a decimal number (**floating point**)"
+" --- so you need to think before hand whether the numeric data you are going"
+" to capture will have decimal places or not."
+msgstr ""
+"Il formato Shapefile consente di memorizzare i dati dei campi numerici sia "
+"come numeri interi (**integer**) sia come numeri decimali (**floating "
+"point**) --- pertanto devi prliminarmente valutare in anticipo se i dati "
+"numerici che intendi acquisire conterranno o meno cifre decimali."
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:194
 msgid ""
