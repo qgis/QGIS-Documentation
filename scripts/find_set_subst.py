@@ -78,9 +78,15 @@ def get_subst_definition(subst_list, s_dict):
                                                              s['unicode'])
             s_count += 1
         else:
-            print("\033[91m\033[1m|{}|\033[0m is not available in "
-                  "substitution.txt file, please add it before use it in "
-                  "\033[93m\033[1m{}\033[0m".format(subst, path.relpath(file)))
+            # |version| is a Sphinx global substitution undefined in substitutions.txt,
+            # |stats_...| are custom dynamically generated substitutions for Transifex stats
+            # They are unknown in substitutions.txt file so we want the script to ignore them
+            if subst == 'version' or subst.startswith('stats_'):
+                continue
+            else:
+                print("\033[91m\033[1m|{}|\033[0m is not available in "
+                    "substitution.txt file, please add it before use it in "
+                    "\033[93m\033[1m{}\033[0m".format(subst, path.relpath(file)))
     if s_count == 0:
     # No substitution found in dict
         s_def = None

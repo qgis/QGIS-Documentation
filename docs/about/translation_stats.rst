@@ -6,7 +6,7 @@
 Statistics of translation
 ===========================
 
-*Last update:* |today|
+*Last update:* |stats_today|
 
 .. list-table::
    :widths: auto
@@ -14,9 +14,9 @@ Statistics of translation
    * - Number of strings
      - Number of target languages
      - Overall Translation ratio
-   * - |total_strings|
-     - |nb_languages|
-     - |global_percentage|
+   * - |stats_total_strings|
+     - |stats_nb_languages|
+     - |stats_global_percentage|
 
 
 
@@ -159,10 +159,10 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |today| replace:: *2026-04-21*
-.. |total_strings| replace:: **32848**
-.. |nb_languages| replace:: **61**
-.. |global_percentage| replace:: **15.64%**
+.. |stats_today| replace:: *2026-04-21*
+.. |stats_total_strings| replace:: **32848**
+.. |stats_nb_languages| replace:: **61**
+.. |stats_global_percentage| replace:: **15.64%**
 
 .. |stats_ar| replace:: 3.36
 .. |stats_az| replace:: 0.1
@@ -225,4 +225,3 @@ Statistics of translation
 .. |stats_vi| replace:: 1.65
 .. |stats_zh-Hans| replace:: 26.32
 .. |stats_zh-Hant| replace:: 2.81
-
