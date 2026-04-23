@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Tomas Straupis, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -243,7 +243,7 @@ msgstr ""
 msgid ""
 "By default, when creating a GeoPackage layer, QGIS generates a "
 ":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
-"of the layer. The name can be changed. The geometry field, if availabe, is "
+"of the layer. The name can be changed. The geometry field, if available, is "
 "named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
 " on it. These options can be found under the :guilabel:`Advanced Options` "
 "together with the :guilabel:`Layer identifier` (short human readable name of"
@@ -515,7 +515,7 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:239
 msgid ""
 "and select either a :guilabel:`Mesh from the current project` or "
-":guilabel:`Mesh from a file`. Informations on the selected mesh file are "
+":guilabel:`Mesh from a file`. Information on the selected mesh file are "
 "displayed for checkup."
 msgstr ""
 "parinkite arba :guilabel:`Tinklelis iš dabartinio projekto` ar "
@@ -612,7 +612,7 @@ msgid ""
 "geoprocessing operations."
 msgstr ""
 "Laikini juodraštiniai sluoksniai yra atmintyje laikomi sluoksniai, tai "
-"reiškia, kkad jie neįrašomi į diską ir bus išmesti, kai QGIS bus uždarytas. "
+"reiškia, kad jie neįrašomi į diską ir bus išmesti, kai QGIS bus uždarytas. "
 "Jie gali būti patogūs laikyti geoobjektus, kurie reikalingi tik trumpai, ar "
 "kaip tarpiniai sluoksniai tarp veiksmų."
 
@@ -1834,6 +1834,439 @@ msgstr ""
 msgid "Query History"
 msgstr "Užklausų istoriją"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:749
+msgid ""
+"The :guilabel:`Query History` dialog displays all the previously run "
+"queries, sorted by date and data provider type. It is accessible from the "
+":menuselection:`Database -->` |queryHistory| :guilabel:`Query History…` "
+"menu, or pressing the |queryHistory| :sup:`History` button from the "
+":guilabel:`Execute SQL` dialog."
+msgstr ""
+":guilabel:`Užklausų istorijos` dialogas rodo visas anksčiau vykdytas "
+"užklausas, išrikiuotas pagal datą ir duomenų tiekėjo tipą. Jį galima "
+"pasiekti per meniu :menuselection:`Duomenų bazė -->` |queryHistory| "
+":guilabel:`Užklausų istorija…` arba paspaudus mygtuką |queryHistory| "
+":sup:`Istorija` dialoge :guilabel:`Vykdyti SQL`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:759
+msgid "History of the executed SQL queries"
+msgstr "Vykdytų SQL užklausų istorija"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:762
+msgid ""
+"At the top of the dialog, a search box can be used to filter out the "
+"queries. The search is done through every strings displayed in the query "
+"history. If the dialog is opened from within the :guilabel:`Execute SQL` "
+"dialog, the search box is preceded by the :ref:`Execute SQL toolbar "
+"<execute_sql_toolbar>`."
+msgstr ""
+"Dialogo viršuje yra paieškos eilutė, kurią galima naudoti užklausų "
+"filtravimui. Paieška vykdoma visuose užklausų istorijoje rodomų užklausų "
+"tekstuose. Jei dialogas atidaromas iš dialogo :guilabel:`Vykdyti SQL`, prieš"
+" paieškos lauką pridedama :ref:`Vykdyti SQL įrankinė <execute_sql_toolbar>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:767
+msgid ""
+"Below, collapsible and sorted date entries list their related queries. Each "
+"query is identifiable by its SQL command, and when expanded, reveals:"
+msgstr ""
+"Žemiau sutraukiami ir išrikiuoti datų įrašai rodo atitinkamas jų užklausas. "
+"Kiekviena užklausa identifikuojama jos SQL komanda, o išskleidus, parodo:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:770
+msgid ""
+"The :guilabel:`Connection`: the source of the data the query is based on"
+msgstr ":guilabel:`Jungtį`: šaltinį duomenų, kuriais remiasi užklausa"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:771
+msgid "The :guilabel:`Row count`: number of returned features"
+msgstr ":guilabel:`Eilučių skaičių`: grąžintų geoobjektų skaičių"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:772
+msgid "The :guilabel:`Execution time`"
+msgstr ":guilabel:`Vykdymo laiką`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:774
+msgid ""
+"Hover over an entry and a tooltip displays the full query. Likewise, "
+"selecting an entry also displayed it in the bottom part of the dialog. You "
+"can interact with the text, copying all or part of it."
+msgstr ""
+"Užveskite pelę virš įrašo ir iššokančioje žymoje bus parodyta pilna "
+"užklausa. Analogiškai, pažymėjus įrašą ji bus parodyta apatinėje dialogo "
+"dalyje. Jūs galite sąveikauti su tekstu, kopijuoti jį visą ar tik dalį."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:778
+msgid ""
+"Double-click the SQL command entry and the :guilabel:`Execute SQL` dialog "
+"opens, filled with the clicked query. Any query being written is "
+"overwritten. Right-click the SQL command entry and you can either:"
+msgstr ""
+"Du kartus paspauskite SQL komandos įrašą - bus atidarytas dialogas "
+":guilabel:`Vykdyti SQL` su užpildyta paspausta užklausa. Bet kokia rašoma "
+"užklausa bus perrašyta. Spauskite dešinį pelės mygtuką ant SQL komandos, ir "
+"jūs galėsite:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:782
+msgid ""
+":guilabel:`Load SQL Command…`, loads the target command into the "
+":guilabel:`Execute SQL` dialog, replacing any existing query. It is the same"
+" as double clicking the entry."
+msgstr ""
+":guilabel:`Įkelti SQL komandą…`, įkelia paskirties komandą į dialogą "
+":guilabel:`Vykdyti SQL`, pakeičiant bet kokią ten esančią užklausą. Tai tas "
+"pats, kas du kartus paspausti įrašą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:785
+msgid ":guilabel:`Copy SQL Command` and paste it wherever you want."
+msgstr ":guilabel:`Kopijuoti SQL komandą` ir įkelti kur tik norite."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:792
+msgid "Creating virtual layers"
+msgstr "Virtualių sluoksnių kūrimas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:794
+msgid ""
+"A virtual layer is a special kind of vector layer. It allows you to define a"
+" layer as the result of an SQL query involving any number of other vector "
+"layers that QGIS is able to open. Virtual layers do not carry data by "
+"themselves and can be seen as views."
+msgstr ""
+"Virtualus sluoksnis yra ypatinga vektorinių sluoksnių rūšis. Jis leidžia "
+"jums apibrėžti sluoksnį kaip SQL užklausos rezultatą naudojant bet kokį "
+"skaičių vektorinių sluoksnių, kuriuos gali atverti QGIS. Virtualūs "
+"sluoksniai patys duomenų neturi ir į juos galima žiūrėti kaip į vaizdus."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:800
+msgid "To create a virtual layer, open the virtual layer creation dialog by:"
+msgstr ""
+"Kad sukurtumėte virtualų sluoksnį, atverkite virtualaus sluoksnio kūrimo "
+"dialogą:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:802
+msgid ""
+"choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry in "
+"the :menuselection:`Layer --> Add Layer -->` menu;"
+msgstr ""
+"parinkdami  įrašą |addVirtualLayer| :guilabel:`Pridėti/keisti virtualų "
+"sluoksnį` meniu :menuselection:`Sluoksnis --> Pridėti sluoksnį -->`;"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:985
 msgid "addVirtualLayer"
 msgstr "addVirtualLayer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:804
+msgid ""
+"enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the "
+":guilabel:`Data Source Manager` dialog;"
+msgstr ""
+"įjungdami kortelę |addVirtualLayer| :guilabel:`Pridėti virtualų sluoksnį` "
+"dialoge :guilabel:`Duomenų šaltinių tvarkyklė`;"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:806
+msgid "or using the :guilabel:`DB Manager` dialog tree."
+msgstr "ar naudodami :guilabel:`DB tvarkyklės` dialogo medį."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:808
+msgid ""
+"The dialog allows you to specify a :guilabel:`Layer name` and an SQL "
+":guilabel:`Query`. The query can use the name (or id) of loaded vector "
+"layers as tables, as well as their field names as columns."
+msgstr ""
+"Dialogas leidžia jums nurodyti :guilabel:`Sluoksnio pavadinimą` ir SQL "
+":guilabel:`Užklausą`. Užklausa gali naudoti įkeltų vektorinių sluoksnių "
+"pavadinimus (ar id) kaip lenteles ir jų laukų pavadinimus kaip stulpelius."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:812
+msgid ""
+"For example, if you have a layer called ``airports``, you can create a new "
+"virtual layer called ``public_airports`` with an SQL query like:"
+msgstr ""
+"Pavyzdžiui, jei turite sluoksnį, pavadintą ``airports``, jūs galite sukurti "
+"naują virtualų sluoksnį vardu ``public_airports`` su tokia SQL užklausa:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:821
+msgid ""
+"The SQL query will be executed, regardless of the underlying provider of the"
+" ``airports`` layer, even if this provider does not directly support SQL "
+"queries."
+msgstr ""
+"SQL užklausa bus įvykdyta nepriklausomai nuo ``airports`` sluoksnio tiekėjo,"
+" net jei šis tiekėjas tiesiogiai nepalaiko SQL užklausų."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:828
+msgid "Create virtual layers dialog"
+msgstr "Virtualių sluoksnių kūrimo dialogas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:830
+msgid ""
+"Joins and complex queries can also be created, for example, to join airports"
+" and country information:"
+msgstr ""
+"Taipogi galima kurti ir jungtis bei sudėtingas užklausas. Pavyzdžiui jungti "
+"oro uostus su šalių informacija:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:842
+msgid ""
+"It's also possible to create virtual layers using the SQL window of "
+":ref:`dbmanager`."
+msgstr ""
+"Virtualius sluoksnius taipogi galima kurti naudojant :ref:`dbmanager` SQL "
+"langą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:846
+msgid "Embedding layers for use in queries"
+msgstr "Įtraukti sluoksniai naudojimui užklausose"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:848
+msgid ""
+"Besides the vector layers available in the map canvas, the user can add "
+"layers to the :guilabel:`Embedded layers` list, which can be used in queries"
+" without the need to have them showing in the map canvas or Layers panel."
+msgstr ""
+"Be vektorinių sluoksnių, esančių žemėlapio drobėje, naudotojas gali pridėti "
+"sluoksnius į :guilabel:`Įtrauktų sluoksnių` sąrašą, kurį galima naudoti "
+"užklausose be poreikio juos rodyti žemėlapio drobėje ar sluoksnių skydelyje."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:852
+msgid ""
+"To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local "
+"name`, :guilabel:`Provider`, :guilabel:`Encoding` and the path to the "
+":guilabel:`Source`."
+msgstr ""
+"Kad įtrauktumėte sluoksnį, spauskite :guilabel:`Pridėti` ir pateikite "
+":guilabel:`Vietinį pavadinimą`, :guilabel:`Tiekėją`, :guilabel:`Koduotę` ir "
+"kelią iki :guilabel:`Šaltinio`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:856
+msgid ""
+"The :guilabel:`Import` button allows adding layers in the map canvas into "
+"the Embedded layers list. Those layers can then be removed from the Layers "
+"panel without breaking existent queries."
+msgstr ""
+"Mygtukas :guilabel:`Importuoti` leidžia pridėti sluoksnius žemėlapio drobės "
+"sluoksnius į įtraukiamų sluoksnių sąrašą. Šiuos sluoksnius tada galima "
+"išimti iš sluoksnių skydelio nesugadinant jau esamų užklausų."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:861
+msgid "Supported query language"
+msgstr "Palaikoma užklausų kalba"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:863
+msgid "The underlying engine uses SQLite and SpatiaLite to operate."
+msgstr "Vykdymui naudojami SQLite ir SpatiaLite."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:865
+msgid ""
+"It means you can use all of the SQL your local installation of SQLite "
+"understands."
+msgstr ""
+"Tai reiškia, kad jūs galite naudoti naudoti visą SQL, kurį supranta jūsų "
+"vietinė SQLite."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:868
+msgid ""
+"Functions from SQLite and spatial functions from SpatiaLite can also be used"
+" in a virtual layer query. For instance, creating a point layer out of an "
+"attribute-only layer can be done with a query similar to:"
+msgstr ""
+"Virtualaus sluoksnio užklausoje galima naudot ir SQLite bei SpatiaLite "
+"erdvines funkcijas. Pavyzdžiui kurti taškų sluoksnį iš sluoksnio, kuriame "
+"yra tik atributai, galima užklausa, panašia į šią:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:877
+msgid ""
+":ref:`Functions of QGIS expressions <functions_list>` can also be used in a "
+"virtual layer query."
+msgstr ""
+":ref:`QGIS išraiškų funkcijas <functions_list>` taipogi galima naudoti "
+"virtualių sluoksnių užklausose."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:880
+msgid "To refer the geometry column of a layer, use the name ``geometry``."
+msgstr ""
+"Jei norite naudoti sluoksnio geometrijos stulpelį, naudokite pavadinimą "
+"``geometry``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:882
+msgid ""
+"Contrary to a pure SQL query, all the fields of a virtual layer query must "
+"be named. Don't forget to use the ``as`` keyword to name your columns if "
+"they are the result of a computation or a function call."
+msgstr ""
+"Priešingai nei grynose SQL užklausose, virtualių sluoksnių užklausose "
+"visiems stulpeliams privalo būti nurodyti pavadinimai. Nepamirškite naudoti "
+"raktinio žodžio ``as`` nurodant pavadinimus stulpeliams, jei jie yra "
+"skaičiavimo ar funkcijų kvietimo rezultatai."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:887
+msgid "Performance issues"
+msgstr "Greitaveikos problemos"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:889
+msgid ""
+"With default parameters, the virtual layer engine will try its best to "
+"detect the type of the different columns of the query, including the type of"
+" the geometry column if one is present."
+msgstr ""
+"Su numatytais parametrais virtualaus sluoksnio variklis bandys aptikti "
+"užklausos stulpelių tipus, įskaitant ir geometrijos lauko tipą, jei toks "
+"laukas yra."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:893
+msgid ""
+"This is done by introspecting the query when possible or by fetching the "
+"first row of the query (LIMIT 1) as a last resort. Fetching the first row of"
+" the result just to create the layer may be undesirable for performance "
+"reasons."
+msgstr ""
+"Tai daroma kur įmanoma tiriant pačią užklausą arba, kaip kraštutinę "
+"priemonę, ištraukiant pirmą užklausos rezultato įrašą (LIMIT 1). Pirmo įrašo"
+" ištraukimas tik tam, kad būtų sukurtas sluoksnis, kartais gali būti "
+"nepageidaujama dėl greitaveikos."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:898
+msgid "The creation dialog parameters:"
+msgstr "Sukūrimo dialogo parametrai:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:900
+msgid ""
+":guilabel:`Unique identifier column`: specifies a field of the query that "
+"represents unique integer values that QGIS can use as row identifiers. By "
+"default, an autoincrementing integer value is used. Defining a unique "
+"identifier column speeds up the selection of rows by id."
+msgstr ""
+":guilabel:`Unikalaus identifikatoriaus stulpelis`: nurodo užklausos lauką, "
+"kuris reprezentuoja unikalias reikšmes, kurias QGIS gali naudoti kaip įrašų "
+"identifikatorius. Pagal nutylėjimą naudojama automatiškai didėjanti sveiko "
+"skaičiaus reikšmė. Unikalaus identifikatoriaus stulpelio nurodymas "
+"pagreitina įrašų parinkimą pagal id."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:907
+msgid ""
+":guilabel:`No geometry`: forces the virtual layer to ignore any geometry "
+"field. The resulting layer is an attribute-only layer."
+msgstr ""
+":guilabel:`Be geometrijos`: priverčia virtualų sluoksnį ignoruoti "
+"geometrijos lauką. Bus gautas tik atributų sluoksnis."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:910
+msgid ""
+"Geometry :guilabel:`Column`: specifies the name of the geometry column."
+msgstr ""
+"Geometrijos :guilabel:`Stulpelis`: nurodo geometrijos stulpelio pavadinimą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:912
+msgid "Geometry :guilabel:`Type`: specifies the type of the geometry."
+msgstr "Geometrijos :guilabel:`Tipas`: nurodo geometrijos tipą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:914
+msgid ""
+"Geometry :guilabel:`CRS`: specifies the coordinate reference system of the "
+"virtual layer."
+msgstr ""
+"Geometrijos :guilabel:`CRS`: nurodo virtualaus sluoksnio koordinačių "
+"atskaitos sistemą."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:918
+msgid "Special comments"
+msgstr "Specialūs komentarai"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:920
+msgid ""
+"The virtual layer engine tries to determine the type of each column of the "
+"query. If it fails, the first row of the query is fetched to determine "
+"column types."
+msgstr ""
+"Virtualaus sluoksnio variklis bando nustatyti kiekvieno užklausos stulpelio "
+"tipą. Jei jam tai nepavyksta, ištraukiamas pirmas užklausos grąžinamas "
+"įrašas, kad iš jo būtų galima nustatyti stulpelių tipus."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:924
+msgid ""
+"The type of a particular column can be specified directly in the query by "
+"using some special comments."
+msgstr ""
+"Konkretaus stulpelio tipą galima nurodyti tiesiogiai užklausoje, naudojant "
+"specialiai parašytus komentarus."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:927
+msgid ""
+"The syntax is the following: ``/*:type*/``. It has to be placed just after "
+"the name of a column. ``type`` can be either ``int`` for integers, ``real`` "
+"for floating point numbers or ``text``."
+msgstr ""
+"Sintaksė yra tokia: ``/*:tipas*/``. Komentaras turi būti parašytas iš karto "
+"po stulpelio pavadinimo. ``tipas`` gali būti ``int`` sveikiems skaičiams, "
+"``real`` slankaus kablelio skaičiams arba ``text``."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:931
+msgid "For instance:"
+msgstr "Pavyzdžiui:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:938
+msgid ""
+"The type and coordinate reference system of the geometry column can also be "
+"set thanks to special comments with the following syntax ``/*:gtype:srid*/``"
+" where ``gtype`` is the geometry type (``point``, ``linestring``, "
+"``polygon``, ``multipoint``, ``multilinestring`` or ``multipolygon``) and "
+"``srid`` an integer representing the EPSG code of a coordinate reference "
+"system."
+msgstr ""
+"Geometrijos stulpelio tipą ir koordinačių atskaitos sistemą galima nurodyti "
+"naudojant specialius komentarus su tokia sintakse ``/*:gtipas:srid*/``, kur "
+"``gtipas`` yra geometrijos tipas (``point``, ``linestring``, ``polygon``, "
+"``multipoint``, ``multilinestring`` arba ``multipolygon``), o ``srid`` - "
+"sveikas skaičius - koordinačių atskaitos sistemos EPSG kodas."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:945
+msgid "Use of indexes"
+msgstr "Indeksų naudojimas"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:947
+msgid ""
+"When requesting a layer through a virtual layer, the source layer indices "
+"will be used in the following ways:"
+msgstr ""
+"Kai sluoksnis prašomas per virtualų sluoksnį, šaltinio sluoksnio indeksai "
+"bus naudojami tokiais būdais:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:950
+msgid ""
+"if an ``=`` predicate is used on the primary key column of the layer, the "
+"underlying data provider will be asked for a particular id (FilterFid)"
+msgstr ""
+"jei predikatas ``=`` naudojamas su sluoksnio pirminiu raktu, atitinkamo "
+"duomenų tiekėjo bus paprašyti konkretaus id (FilterFid)"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:953
+msgid ""
+"for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
+"without a primary key, a request built from an expression will be used to "
+"request the underlying vector data provider. It means indexes may be used on"
+" database providers if they exist."
+msgstr ""
+"bet kokiems kitiems predikatams (``>``, ``<=``, ``!=`` ir pan.) arba "
+"naudojant ne su pirminio rakto stulpeliu, iš išraiškos sukurta užklausa bus "
+"naudojama prašant atitinkamo vektorinių duomenų tiekėjo. Tai reiškia, kad "
+"indeksus duomenų tiekėjas gali panaudoti, jei jie yra."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:958
+msgid ""
+"A specific syntax exists to handle spatial predicates in requests and "
+"triggers the use of a spatial index: a hidden column named "
+"``_search_frame_`` exists for each virtual layer. This column can be "
+"compared for equality to a bounding box. Example:"
+msgstr ""
+"Yra speciali sintaksė, skirta valdyti erdvinius predikatus užklausose ir jie"
+" inicijuoja erdvinių indeksų naudojimą: kiekviename virtualiame sluoksnyje "
+"yra paslėptas stulpelis pavadinimu ``_search_frame_``. Šį stulpelį galima "
+"lyginti su apimties stačiakampiu. Pavyzdžiui:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:969
+msgid ""
+"Spatial binary predicates like ``ST_Intersects`` are sped up significantly "
+"when used in conjunction with this spatial index syntax."
+msgstr ""
+"Erdviniai dvejetainiai predikatai, tokie kaip ``ST_Intersects`` stipriai "
+"pagreitinami, kai naudojami kartu su šia erdvinių indeksų sintakse."
