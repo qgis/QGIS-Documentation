@@ -207,10 +207,10 @@ def load_lang_substitutions(target_langs):
     """
 
     text = (f".. list of substitutions for the statistics:\n\n"
-            f".. |today| replace:: *{date.today()}*\n"
-            f".. |total_strings| replace:: **{target_langs['en']['total_strings']}**\n"
-            f".. |nb_languages| replace:: **{target_langs['en']['nb_languages']}**\n"
-            f".. |global_percentage| replace:: **{target_langs['en']['percentage']}%**\n\n"
+            f".. |stats_today| replace:: *{date.today()}*\n"
+            f".. |stats_total_strings| replace:: **{target_langs['en']['total_strings']}**\n"
+            f".. |stats_nb_languages| replace:: **{target_langs['en']['nb_languages']}**\n"
+            f".. |stats_global_percentage| replace:: **{target_langs['en']['percentage']}%**\n\n"
             )
 
     for lang in sorted(target_langs):
