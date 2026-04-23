@@ -2416,12 +2416,11 @@ table's :guilabel:`Last value` column.
 Customization
 =============
 
-The :guilabel:`Customization` dialog lets you (de)activate almost every element in the QGIS
-user interface. This can be very useful if you want to provide your end-users with a
-'light' version of QGIS, containing only the icons, menus or panels they need.
+The :guilabel:`Interface Customization` dialog lets you (de)activate almost every element in the QGIS
+user interface, and create your own custom toolbars and menus. This can be very useful if you
+want to provide your end-users with a 'light' version of QGIS, containing only the icons, menus
+or panels they need, or a focused workspace built around a specific set of actions.
 
-.. note::
-   Before your changes are applied, you need to restart QGIS.
 
 .. _figure_customization:
 
@@ -2447,13 +2446,28 @@ can click on an item in QGIS interface that you want to be hidden and
 QGIS automatically unchecks the corresponding entry in the Customization dialog.
 You can also use the :guilabel:`Search` box to find items by their name or label.
 
-Once you setup your configuration, click :guilabel:`Apply` or :guilabel:`OK` to validate your
-changes. This configuration becomes the one used by default by QGIS at the next startup.
+In addition to showing or hiding existing interface elements, you can also create
+user-defined toolbars and menus. To do so, follow these steps:
 
-The modifications can also be saved in a ``.ini`` file using |fileSave|
+#. Select the :guilabel:`Menus` or :guilabel:`Toolbars` item in the customization tree.
+#. Click the |add| :sup:`Add a user defined menu or toolbar` button.
+   Alternatively, right-click the :guilabel:`Menus` or :guilabel:`Toolbars` item and select
+   |add| :sup:`Add user item`.
+#. To populate it with actions, open the action panel by clicking the
+   |listActions| button, search for the desired actions and drag and drop them onto
+   the user-defined menu or toolbar in the customization tree.
+#. To remove a user-defined toolbar or menu, select it and click the |deleteSelected|
+   :sup:`Delete selected items` button, or right-click it and select
+   |deleteSelected| :sup:`Delete user item` from the context menu.
+
+Once you set up your configuration, click :guilabel:`Apply` or :guilabel:`OK` to validate your
+changes. This configuration becomes the one used by default by QGIS at the next startup.
+Use the :guilabel:`Reset` button to revert any changes made in the dialog since the last saved or applied configuration.
+
+The modifications can also be saved in a :file:`.xml` file using |fileSave|
 :sup:`Save To File` button. This is a handy way to share a common QGIS
 interface among multiple users. Just click on |fileOpen| :sup:`Load from File`
-from the destination computer in order to import the ``.ini`` file.
+from the destination computer in order to import the :file:`.xml` file.
 You can also run :ref:`command line tools <custom_commandline>` and save various
 setups for different use cases as well.
 
@@ -2472,8 +2486,6 @@ setups for different use cases as well.
    * setting to ``false`` the value of :menuselection:`UI --> Customization -->
      Enabled` variable under :menuselection:`Settings --> Options` menu,
      :guilabel:`Advanced` tab (see the :ref:`warning <optionsadvanced>`).
-
-   In most cases, you need to restart QGIS in order to have the change applied.
 
 .. index:: Keyboard shortcuts
 .. _shortcuts:
@@ -2935,6 +2947,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |action| image:: /static/common/action.png
    :width: 2em
+.. |add| image:: /static/common/mActionAdd.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
@@ -2979,6 +2993,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |keyboardShortcuts| image:: /static/common/mActionKeyboardShortcuts.png
    :width: 1.5em
+.. |listActions| image:: /static/common/mActionListActions.png
+   :width: 2.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |measureBearing| image:: /static/common/mActionMeasureBearing.png
