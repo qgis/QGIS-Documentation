@@ -49,6 +49,13 @@ Point Layers
     Models can be a file on disk, a remote URL or :ref:`embedded in the project
     <embedded_file_selector>`. Community-created models are shared on the `QGIS Hub
     <https://hub.qgis.org/wavefronts>`_.
+    When placing 3D model symbol, QGIS needs to know the axis conventions used when the model
+    was created. Two settings control this:
+
+     * :guilabel:`Up axis` defines the axis that is considered as vertical (i.e., the one
+       used for height). Default is Z.
+     * :guilabel:`Forward axis` defines the axis that is considered as forward (i.e., the one
+       used for orientation). Default is Y.
   * :guilabel:`Billboard`, defined by the :guilabel:`Billboard height` and
     the :guilabel:`Billboard symbol` (usually based on a :ref:`marker symbol
     <vector_marker_symbols>`). The symbol will have a stable size.
