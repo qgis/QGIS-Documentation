@@ -1,0 +1,79 @@
+name:  Pre-commit Checks
+
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+      - release_*
+    paths-ignore:
+      - 'locale/**'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # ============================================================================
+  # Pre-commit checks (linting, formatting, etc.)
+  # ============================================================================
+  pre-commit:
+    name: Pre-commit Checks
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+      issues: write 
+
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@fe104658747b27e96e4f7e80cd0a94068e53901d # v2.16.1
+        with:
+          egress-policy: audit
+
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 200
+          persist-credentials: true  # We need to persist credentials because of later git push
+
+      - name: Set up Python
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+            python-version: '3.12'
+
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run pre-commit checks
+        run: |
+            if [ "${{ github.event_name }}" == "pull_request" ]; then
+              git fetch origin ${GITHUB_EVENT_PULL_REQUEST_BASE_REF}
+              git fetch origin pull/${{ github.event.pull_request.number }}/head:pr-head
+              git checkout pr-head
+              MERGE_BASE=$(git merge-base origin/${GITHUB_EVENT_PULL_REQUEST_BASE_REF} pr-head)
+              MODIFIED_FILES=($(git diff --name-only $MERGE_BASE pr-head))
+            elif [ "${{ github.event_name }}" == "push" ]; then
+              MODIFIED_FILES=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }}))
+            else
+              echo "Unsupported event: ${{ github.event_name }}"
+              exit 1
+            fi
+            echo "Modified files: ${MODIFIED_FILES[@]}"
+            pre-commit run --files ${MODIFIED_FILES[@]} || (echo "Differences:" && git diff && echo "pre-commit failed. Attempting to auto-fix..." && exit 1)
+        env:
+          GITHUB_EVENT_PULL_REQUEST_BASE_REF: ${{ github.event.pull_request.base.ref }}
+
+      - name: Commit fixes
+        if: failure()
+        run: |
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "auto-fix pre-commit issues" || echo "No changes to commit"
+
+      - name: Auto-commit fixes
+        if: failure() && github.event_name == 'push'
+        run: git push || echo "Failed to push changes. Please check permissions or conflicts."
