@@ -17,7 +17,7 @@ Returns an aggregate value calculated using features from another layer.
    :widths: 15 85
 
    * - Syntax
-     - aggregate(layer, aggregate, expression, [filter], [concatenator=''], [order_by])
+     - aggregate(layer, aggregate, expression, [filter], [concatenator:=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -539,7 +539,7 @@ Returns an aggregate value calculated using all matching child features from a l
    :widths: 15 85
 
    * - Syntax
-     - relation_aggregate(relation, aggregate, expression, [concatenator=''], [order_by])
+     - relation_aggregate(relation, aggregate, expression, [concatenator:=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
