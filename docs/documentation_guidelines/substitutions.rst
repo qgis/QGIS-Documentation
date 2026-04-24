@@ -193,6 +193,8 @@ Identify result
   |identifyByFreehand|            ``|identifyByFreehand|``            |identifyByRadius|              ``|identifyByRadius|``
   ==============================  ==================================  ==============================  ==================================
 
+testing if sone checks 
+work corectly
 
 Digitizing and Advanced Digitizing
 ..................................
