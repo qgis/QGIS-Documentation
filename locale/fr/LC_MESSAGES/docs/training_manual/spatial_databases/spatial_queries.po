@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Emilie ELLONG-KOTTO, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Emilie ELLONG-KOTTO, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -169,6 +170,44 @@ msgstr ""
 msgid "Remember to install the postgis extensions:"
 msgstr "Rappelez-vous d'installer les extensions PostGIS::"
 
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:125
+msgid ""
+"Next, import the data provided in the :file:`exercise_data/postgis/` "
+"directory. Refer back to the previous lesson for instructions, but remember "
+"that you'll need to create a new PostGIS connection to the new database. You"
+" can import from the terminal or via DB Manager. Import the files into the "
+"following database tables:"
+msgstr ""
+"Ensuite, importez les données fournies dans le répertoire "
+":file:`exercise_data/postgis/`. Référez-vous à la leçon précédente mais "
+"souvenez-vous que vous devez créer une nouvelle connexion PostGIS à la "
+"nouvelle base de données. Vous pouvez importer depuis le terminal ou via DB "
+"Manager. Importez les fichiers dans les tables suivantes de la base :"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:131
+msgid ":file:`points.shp` into ``building``"
+msgstr ":file:`points.shp` en ``building``"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:132
+msgid ":file:`lines.shp` into ``road``"
+msgstr ":file:`lines.shp` en ``road``"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:133
+msgid ":file:`polygons.shp` into ``region``"
+msgstr ":file:`polygons.shp` en ``region``"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:135
+msgid ""
+"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
+"Layers` dialog, as usual. When you open their attribute tables, you'll note "
+"that they have both an ``id`` field and a ``gid`` field created by the "
+"PostGIS import."
+msgstr ""
+"Chargez ces trois couches dans QGIS via la boîte de dialogue "
+":guilabel:`Ajouter des couches PostGIS`, comme d'habitude. Lorsque vous "
+"ouvrez les tables d'attributs, vous pouvez remarquer qu'elles ont un champ "
+"``id`` et un autre ``gid``, créés lors de l'import PostGIS."
+
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:140
 msgid ""
 "Now that the tables are imported, we can use PostGIS to query the data. Go "
@@ -247,6 +286,21 @@ msgstr "La surface la plus sombre est le tampon:"
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid "Select using the buffer:"
 msgstr "Sélection à l'aide du tampon:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_queries.rst:260
+msgid ""
+"In this query, the original buffer view is used as any other table would be."
+" It is given the alias ``a``, and its geometry field, ``a.geom``, is used to"
+" select any polygon in the ``region`` table (alias ``b``) that intersects "
+"it. However, Hokkaido itself is excluded from this select statement, because"
+" we don't want it; we only want the regions adjoining it."
+msgstr ""
+"Dans cette requête, la vue originelle du tampon est utilisée comme n'importe"
+" quelle autre table. Elle dispose d'un alias ``a`` et son champ de "
+"géométrie, ``a.geom``, est utilisé pour sélectionner un polygone dans la "
+"table ``region`` (alias ``b``) qui l'intersecte. Néanmoins, Hokkaido est "
+"exclue de cette sélection car nous n'en voulons pas, nous voulons seulement "
+"les régions qui la touchent."
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:271
 msgid ""
