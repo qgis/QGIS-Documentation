@@ -324,7 +324,7 @@ Converts a given value to a boolean. The function will return false if the value
 to_date
 .......
 
-Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-6/qdate.html#fromString-2>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
+Converts a string into a date object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-6/qdate.html#fromString>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
 
 .. list-table::
    :widths: 15 85
@@ -350,7 +350,7 @@ Converts a string into a date object. An optional format string can be provided 
 to_datetime
 ...........
 
-Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-6/qdate.html#fromString-2>`_, `QTime::fromString <https://doc.qt.io/qt-6/qtime.html#fromString-1>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
+Converts a string into a datetime object. An optional format string can be provided to parse the string; see `QDate::fromString <https://doc.qt.io/qt-6/qdate.html#fromString>`_, `QTime::fromString <https://doc.qt.io/qt-6/qtime.html#fromString>`_ or the documentation of the format_date function for additional documentation on the format. By default the current QGIS user locale is used.
 
 .. list-table::
    :widths: 15 85
@@ -532,7 +532,7 @@ Converts a number to string. The conversion is not locale-aware, see 'format_num
 to_time
 .......
 
-Converts a string into a time object. An optional format string can be provided to parse the string; see `QTime::fromString <https://doc.qt.io/qt-6/qtime.html#fromString-1>`_ for additional documentation on the format.
+Converts a string into a time object. An optional format string can be provided to parse the string; see `QTime::fromString <https://doc.qt.io/qt-6/qtime.html#fromString>`_ for additional documentation on the format.
 
 .. list-table::
    :widths: 15 85
