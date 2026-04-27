@@ -8,22 +8,22 @@
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
 # 藤本理弘 <mfujimot@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
-# tomoya miyoshi, 2026
 # Transifex Bot <>, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-23 13:04+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -333,6 +333,17 @@ msgstr ""
 "**最も簡単で推奨される方法** "
 "であり、上記のプロセスを透明に行い、翻訳者のために翻訳可能なテキストをすべて1か所に集めます。欲しいファイルを選択して翻訳するだけです。翻訳されたファイルは、次のリリースが公開されるまでプラットフォームに保存されます。"
 
+#: ../../docs/documentation_guidelines/do_translations.rst:143
+msgid ""
+"`Qt Linguist <https://doc.qt.io/archives/qt-5.15/qtlinguist-index.html>`_, a"
+" Qt development tool, requires the translator to pull locally the "
+":file:`.po` (or :file:`.ts`) files from the source code, translate and then "
+"push back."
+msgstr ""
+"`Qt Linguist <https://doc.qt.io/archives/qt-5.15/qtlinguist-index.html>`_ は "
+"Qt の開発ツールです。翻訳者は :file:`.po` (もしくは :file:`.ts`) "
+"ファイルをソースコードからローカル環境にpullし、翻訳し、pushする必要があります。"
+
 #: ../../docs/documentation_guidelines/do_translations.rst:148
 msgid ""
 "Note that whatever tool you choose, rules of translations are the same."
@@ -548,7 +559,7 @@ msgstr ""
 "|linguist_done_next| [翻訳を完了して次へ] "
 "ボタンは、最も重要なボタンです。翻訳が必要な項目では、テキストフィールドに翻訳を入力してこのボタンを押してください。翻訳を必要としない項目では、テキストフィールドは空のままでこのボタンを押してください。これで翻訳完了となり、次の項目に進みます。"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:464
+#: ../../docs/documentation_guidelines/do_translations.rst:466
 msgid "linguist_done_next"
 msgstr "linguist_done_next"
 
@@ -558,7 +569,7 @@ msgid ""
 "previous translation item."
 msgstr "|linguist_previous| [前へ行く] ボタンで、その前の翻訳項目に移動することができます。"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:470
+#: ../../docs/documentation_guidelines/do_translations.rst:472
 msgid "linguist_previous"
 msgstr "linguist_previous"
 
@@ -568,7 +579,7 @@ msgid ""
 "translation item."
 msgstr "|linguist_next| [次へ行く] ボタンで、その次の翻訳項目に移動することができます。"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:466
+#: ../../docs/documentation_guidelines/do_translations.rst:468
 msgid "linguist_next"
 msgstr "linguist_next"
 
@@ -581,7 +592,7 @@ msgstr ""
 "|linguist_next_todo| [次のするべき] "
 "ボタンは、翻訳が必要な次の翻訳項目にジャンプします。ソースファイルの変更によって追加や修正が行われた文だけを翻訳する必要があるときに便利です。"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:468
+#: ../../docs/documentation_guidelines/do_translations.rst:470
 msgid "linguist_next_todo"
 msgstr "linguist_next_todo"
 
@@ -592,9 +603,17 @@ msgid ""
 msgstr ""
 "|linguist_previous_todo| [前のするべき] ボタンは逆方向に検索を行い、最初に見つかった未翻訳の項目にジャンプします。"
 
-#: ../../docs/documentation_guidelines/do_translations.rst:472
+#: ../../docs/documentation_guidelines/do_translations.rst:474
 msgid "linguist_previous_todo"
 msgstr "linguist_previous_todo"
+
+#: ../../docs/documentation_guidelines/do_translations.rst:285
+msgid ""
+"For further information on the use of Qt Linguist, see "
+"https://doc.qt.io/archives/qt-5.15/linguist-translators.html"
+msgstr ""
+"Qt Linguist の使い方についての詳しい情報は、 https://doc.qt.io/archives/qt-5.15/linguist-"
+"translators.html を参照してください"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:290
 msgid ""
@@ -764,13 +783,12 @@ msgstr "翻訳ルールのまとめ"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:418
 msgid ""
-"Do not change text between two ``|`` characters like ``|bronze|``, "
-"``|checkbox|``, ``|labels|``, ``|selectString|``, ``|addLayer|`` ... These "
+"Do not change text between two ``|`` characters like ``|logo|``, "
+"``|checkbox|``, ``|label|``, ``|selectString|``, ``|addLayer|``,... These "
 "are special tags used to replace images"
 msgstr ""
-"``|bronze|`` 、 ``|checkbox|`` 、``|labels|`` 、``|selectString|`` "
-"、``|addLayer|`` ... のような、2つの ``|`` "
-"の文字に挟まれたテキストは変更しないでください。これらは、画像に置換するために使用される特殊なタグです"
+"``|logo|`` 、 ``|checkbox|`` 、``|label|`` 、``|selectString|`` 、``|addLayer|``"
+" ... のような、2つの ``|`` の文字に挟まれたテキストは変更しないでください。これらは、画像に置換するために使用される特殊なタグです"
 
 #: ../../docs/documentation_guidelines/do_translations.rst:421
 msgid ""
