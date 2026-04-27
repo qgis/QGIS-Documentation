@@ -171,6 +171,7 @@ regardless it's of marker, line or fill sub-type:
 * the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering
   <draw_effects>`.
 
+
 .. note::
 
  While the description below assumes that the symbol layer type is bound to the
@@ -473,6 +474,32 @@ layer types:
     The start/end trim distance can be used e.g. when creating complex symbols
     where a line layer should not overlap marker symbol layers placed at
     the start and end of the line.
+  * :guilabel:`Blank Segments`: allows defining blank sections along a feature.
+    This option is useful when repeated marker pattern would otherwise
+    result in undesirable result. For instance, when markers overlap with
+    other symbols or when parts of a line need to be kept empty for other map elements.
+
+    Blank segments are defined by distances from the start of the line and are stored
+    as a data-defined property. This lets you set blank sections for each feature.
+    Note that this tool affects symbol rendering only and does not modify
+    the underlying feature geometry.
+
+    In order to create blank segments on a marker line symbol:
+
+    #. From the :guilabel:`Layer Styling` panel, open the symbol properties dialog.
+       Creating blank segments requires some interaction with the map canvas,
+       thus can't be done from the modal :guilabel:`Layer Properties` dialog.
+    #. Enable the data-defined property next to the property, to store the blank segment distances
+       (using either an existing field or an :ref:`auxiliary storage field <vector_auxiliary_storage>`).
+    #. Select the unit to apply to the blank segment distances
+    #. Then, click on the |showAllLayers| tool to enable the interactive map tool.
+       You can:
+
+       * Click directly on the line to define the start of a blank segment,
+         and click again to define its end.
+       * Drag the start or end of an existing blank segment along the line to resize it.
+       * Drag the entire blank segment to move it along the line.
+       * Select a blank segment and press :kbd:`Del` to remove it.
 
 .. _hashed_line_symbol:
 
@@ -1117,6 +1144,8 @@ There are two ways to handle animated symbols:
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
