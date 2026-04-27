@@ -934,8 +934,7 @@ where *f1* is the spread and *f2* the midpoint.
 .. figure:: img/gaussianimage.png
   :align: center
 
-  Fuzzify raster (gaussian membership) example. Input raster source: Land Tirol -
-  data.tirol.gv.at.
+  Fuzzify raster (gaussian membership) example (midpoint=300, spread=0.00001).
 
 .. seealso:: :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`,
