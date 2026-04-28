@@ -63,10 +63,8 @@ def get_subst_definition(subst_list, s_dict):
     global file
 
     s_def = (
-        "\n\n.. Substitutions definitions - AVOID EDITING PAST THIS "
-        "LINE\n"
-        "   This will be automatically updated by the find_set_subst.py "
-        "script.\n"
+        "\n\n.. Substitutions definitions - AVOID EDITING PAST THIS LINE\n"
+        "   This will be automatically updated by the find_set_subst.py script.\n"
         "   If you need to create a new substitution manually,\n"
         "   please add it also to the substitutions.txt file in the\n"
         "   source folder.\n\n"
