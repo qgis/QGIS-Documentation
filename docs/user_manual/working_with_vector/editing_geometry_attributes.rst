@@ -498,10 +498,13 @@ adding new vertices:
   click and the ending right click are necessary in this mode.
 * The |digitizeShape| :sup:`Digitize Shape`: triggers tools on the
   :ref:`Shape Digitizing Toolbar <shape_edit>` to draw a polygon of a regular shape.
+* The |digitizeWithBezier| :sup:`Digitize with Bézier Curve`: draws smooth curves using Bézier control points.
+* The |digitizeWithNURBS| :sup:`Digitize with NURBS Curve`: draws smooth curves using NURBS control points, allowing more flexible and precise curve shaping.
 
 The selected technique remains while switching among the digitizing tools.
 You can combine any of the first three methods while drawing the same geometry.
-
+However, |digitizeWithSegment| :sup:`Digitize with Segment` can be followed
+by |digitizeWithNURBS| :sup:`Digitize with NURBS Curve`, but not the other way around.
 
 .. index:: Adding features, Rubber band
 .. _add_feature:
@@ -544,8 +547,12 @@ geometry then enter its attributes. To digitize the geometry:
 
    .. note::
     While digitizing line or polygon geometries, you can switch back and forth
-    between the geometry drawing methods, allowing you to create features
+    between |digitizeWithSegment| :sup:`Digitize with Segment`,
+    |digitizeWithCurve| :sup:`Digitize with Curve` and
+    |streamingDigitize| :sup:`Stream Digitizing`, allowing you to create features
     mixing straight segments, free-hand ones and curved parts.
+    However, |digitizeWithSegment| :sup:`Digitize with Segment` can be followed
+    by |digitizeWithNURBS| :sup:`Digitize with NURBS Curve`, but not the other way around.
 
 #. Press :kbd:`Delete` or :kbd:`Backspace` key to revert the last node(s) you
    may wrongly add.
@@ -581,6 +588,35 @@ geometry then enter its attributes. To digitize the geometry:
 
    Enter Attribute Values Dialog after digitizing a new vector feature
 
+Digitizing with Bézier and NURBS Curves
+........................................
+
+For line and polygon geometry, the following digitizing tools can be used:
+
+* |digitizeWithBezier| :sup:`Digitize with Bézier Curve`:
+
+  - Click and drag on an empty area to place a new anchor point. Dragging
+    creates two symmetric handles: the right handle follows the mouse, and
+    the left handle mirrors it on the opposite side.
+  - :kbd:`Alt` + click and drag on an existing anchor to reposition its
+    handles symmetrically, without moving the anchor itself.
+  - Click and drag on a handle to adjust it independently, affecting only
+    one side of the curve at that anchor.
+  - Right-click to finish the curve.
+
+* |digitizeWithNURBS| :sup:`Digitize with NURBS Curve`:
+
+  - Click to place control points to form a curve.
+  - Press :kbd:`W` + scroll the mouse wheel to adjust the weight of a
+    control point. Use :kbd:`Ctrl` + :kbd:`W` + scroll for fine adjustment
+    and :kbd:`Shift` + :kbd:`W` + scroll for coarse adjustment.
+    A higher weight pulls the curve closer to that point,
+    while a lower weight pushes it away.
+
+.. note::
+   When working on a :guilabel:`NurbsCurve` layer, only the
+   |digitizeWithNURBS| :sup:`Digitize with NURBS Curve` method is supported.
+   Using other digitizing techniques on a NurbsCurve layer will produce no result.
 
 .. index:: Vertex tool
 .. _vertex_tool:
@@ -2405,7 +2441,11 @@ To edit features in-place:
    :width: 1.5em
 .. |digitizeShape| image:: /static/common/mActionDigitizeShape.png
    :width: 1.5em
+.. |digitizeWithBezier| image:: /static/common/mActionDigitizeWithBezier.png
+   :width: 1.5em
 .. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
+.. |digitizeWithNURBS| image:: /static/common/mActionDigitizeWithNURBS.png
    :width: 1.5em
 .. |digitizeWithSegment| image:: /static/common/mActionDigitizeWithSegment.png
    :width: 1.5em
