@@ -494,20 +494,18 @@ You can control how the VPC is displayed when zoomed out using the available opt
 You can also choose to |checkbox| :guilabel:`Show tile labels` to display the tile names and set the label format.
 
 Use the :guilabel:`Overview Switching Scale` combobox to control at what zoom level
-QGIS transitions from rendering the overview to loading the full detail of individual
-point clouds. Four options are available:
+QGIS transitions from rendering the tile extent or overview point cloud
+to loading the full detail of individual point clouds linked from the VPC,
+allowing you to balance visual detail against performance.
+The following options are available:
 
-* :guilabel:`Later`: Detail loads only when zoomed well into the data.
-  Keeps the overview visible longer; best for large datasets or slower hardware.
 * :guilabel:`Normal` (default): A balanced threshold suitable for most datasets and hardware.
 * :guilabel:`Earlier`: Detail loads sooner, while still at a broader zoom level.
   Useful when overview quality is insufficient and hardware can handle the extra load.
 * :guilabel:`Much Earlier`: Detail loads aggressively even when zoomed out significantly.
   Highest visual fidelity, but most demanding on memory and GPU resources.
-
-.. note::
-   In the :guilabel:`3D Map` view, once all detailed tiles are fully loaded for the
-   current view, the overview is automatically disabled to conserve GPU resources.
+* :guilabel:`Later`: Detail loads only when zoomed well into the data.
+  Keeps the overview visible longer; best for large datasets or slower hardware.
 
 .. tip:: **When to change the default overview switching scale?**
 
@@ -524,6 +522,10 @@ point clouds. Four options are available:
    * you need full-resolution data visible earlier
    * working with smaller, well-indexed VPC files
    * you have plenty of RAM and a capable GPU
+
+.. note::
+   In the :guilabel:`3D Map` view, once all detailed tiles are fully loaded for the
+   current view, the overview is automatically disabled to conserve GPU resources.
 
 Layer Rendering
 ...............
