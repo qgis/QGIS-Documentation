@@ -772,7 +772,7 @@ Tests whether two geometries are point-by-point exactly equal. Note that the ord
    * - Arguments
      - * **geometry1** - a geometry
        * **geometry2** - a geometry
-       * **backend** - Geometry backend implementation: 'QGIS' or 'GEOS'. Both internal implementation uses fuzzy comparison with very low (1e-8) tolerance. 
+       * **backend** - Geometry backend implementation: 'QGIS' or 'GEOS'. Both internal implementation uses fuzzy comparison with very low (1e-8) tolerance.
 
          * 'QGIS' works on 2D, 3D and 4D
          * 'GEOS' works only on 2D components (Z or M components are ignored)
@@ -2569,7 +2569,7 @@ Returns whether the current feature's geometry is point-by-point exactly equal t
        * **filter** - an optional expression to filter the target features to check. If not set, all the features will be checked.
        * **limit** - an optional integer to limit the number of matching features. If not set, all the matching features will be returned.
        * **cache** - set this to true to build a local spatial index (most of the time, this is unwanted, unless you are working with a particularly slow data provider)
-       * **backend** - Geometry backend implementation: 'QGIS' or 'GEOS'. Both internal implementation uses fuzzy comparison with very low (1e-8) tolerance. 
+       * **backend** - Geometry backend implementation: 'QGIS' or 'GEOS'. Both internal implementation uses fuzzy comparison with very low (1e-8) tolerance.
 
          * 'QGIS' works on 2D, 3D and 4D
          * 'GEOS' works only on 2D components (Z or M components are ignored)
