@@ -133,36 +133,36 @@ Statistics of translation
      - |stats_sl|
    * - Spanish
      - |stats_es|
+     - Swahili
+     - |stats_sw|
      - Swedish
      - |stats_sv|
-     - Tagalog
+   * - Tagalog
      - |stats_tl|
-   * - Tamil
+     - Tamil
      - |stats_ta|
      - Telugu
      - |stats_te|
-     - Thai
+   * - Thai
      - |stats_th|
-   * - Turkish
+     - Turkish
      - |stats_tr|
      - Ukrainian
      - |stats_uk|
-     - Urdu
+   * - Urdu
      - |stats_ur|
-   * - Vietnamese
+     - Vietnamese
      - |stats_vi|
-     -
-     -
      -
      -
 
 
 .. list of substitutions for the statistics:
 
-.. |stats_today| replace:: *2026-04-21*
-.. |stats_total_strings| replace:: **32848**
-.. |stats_nb_languages| replace:: **61**
-.. |stats_global_percentage| replace:: **15.64%**
+.. |stats_today| replace:: *2026-04-28*
+.. |stats_total_strings| replace:: **32850**
+.. |stats_nb_languages| replace:: **62**
+.. |stats_global_percentage| replace:: **15.13%**
 
 .. |stats_ar| replace:: 3.36
 .. |stats_az| replace:: 0.1
@@ -171,29 +171,29 @@ Statistics of translation
 .. |stats_ca| replace:: 1.15
 .. |stats_cs| replace:: 5.42
 .. |stats_da| replace:: 0.68
-.. |stats_de| replace:: 54.93
+.. |stats_de| replace:: 54.91
 .. |stats_el| replace:: 1.66
-.. |stats_es| replace:: 91.82
+.. |stats_es| replace:: 91.78
 .. |stats_et| replace:: 3.84
 .. |stats_eu| replace:: 1.15
 .. |stats_fa| replace:: 0.76
 .. |stats_fi| replace:: 1.28
-.. |stats_fr| replace:: 77.62
+.. |stats_fr| replace:: 77.89
 .. |stats_gl| replace:: 0.58
 .. |stats_he| replace:: 0.79
 .. |stats_hi| replace:: 0.35
 .. |stats_hr| replace:: 0.21
 .. |stats_ht| replace:: 0.28
-.. |stats_hu| replace:: 21.95
+.. |stats_hu| replace:: 21.94
 .. |stats_id| replace:: 3.75
 .. |stats_ig| replace:: 0.09
-.. |stats_it| replace:: 91.89
-.. |stats_ja| replace:: 89.94
+.. |stats_it| replace:: 92.28
+.. |stats_ja| replace:: 89.96
 .. |stats_ka| replace:: 0.21
 .. |stats_kab| replace:: 0.21
-.. |stats_ko| replace:: 86.93
+.. |stats_ko| replace:: 86.89
 .. |stats_ku| replace:: 0.16
-.. |stats_lt| replace:: 34.03
+.. |stats_lt| replace:: 34.13
 .. |stats_mi| replace:: 0.28
 .. |stats_mk| replace:: 0.23
 .. |stats_ml| replace:: 0.21
@@ -206,22 +206,23 @@ Statistics of translation
 .. |stats_nl| replace:: 100.0
 .. |stats_nqo| replace:: 1.67
 .. |stats_pl| replace:: 12.42
-.. |stats_pt_BR| replace:: 57.37
+.. |stats_pt_BR| replace:: 57.34
 .. |stats_pt_PT| replace:: 7.75
-.. |stats_ro| replace:: 30.34
-.. |stats_ru| replace:: 25.21
+.. |stats_ro| replace:: 30.33
+.. |stats_ru| replace:: 25.2
 .. |stats_sk| replace:: 1.31
 .. |stats_sl| replace:: 2.47
 .. |stats_sq| replace:: 0.58
 .. |stats_sr| replace:: 0.21
-.. |stats_sv| replace:: 91.42
+.. |stats_sv| replace:: 91.38
+.. |stats_sw| replace:: -16.12
 .. |stats_ta| replace:: 1.79
 .. |stats_te| replace:: 0.05
 .. |stats_th| replace:: 0.22
 .. |stats_tl| replace:: 1.48
-.. |stats_tr| replace:: 3.36
+.. |stats_tr| replace:: 3.35
 .. |stats_uk| replace:: 3.04
 .. |stats_ur| replace:: 0.08
 .. |stats_vi| replace:: 1.65
-.. |stats_zh-Hans| replace:: 26.32
+.. |stats_zh-Hans| replace:: 26.31
 .. |stats_zh-Hant| replace:: 2.81
