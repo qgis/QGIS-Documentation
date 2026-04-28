@@ -475,18 +475,32 @@ Further reading: :ref:`expression_function_GeometryGroup_start_point`,
    :start-after: .. end_end_point_section
    :end-before: .. end_equals_section
 
-Further reading: :ref:`expression_function_GeometryGroup_exactly_equals`,
+Further reading: :ref:`expression_function_GeometryGroup_equals_exact`,
 :ref:`expression_function_GeometryGroup_overlay_equals`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_equals_section
-   :end-before: .. end_exactly_equals_section
+   :end-before: .. end_equals_exact_section
 
 Further reading: :ref:`expression_function_GeometryGroup_equals`,
 :ref:`expression_function_GeometryGroup_overlay_equals`
 
 .. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_exactly_equals_section
+   :start-after: .. end_equals_exact_section
+   :end-before: .. end_equals_fuzzy_section
+
+Further reading: :ref:`expression_function_GeometryGroup_overlay_equals_fuzzy`,
+:ref:`expression_function_GeometryGroup_equals_exact`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_equals_fuzzy_section
+   :end-before: .. end_equals_topological_section
+
+Further reading: :ref:`expression_function_GeometryGroup_equals_exact`,
+:ref:`expression_function_GeometryGroup_overlay_equals_topological`
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_equals_topological_section
    :end-before: .. end_extend_section
 
 Further reading: :ref:`qgisextendlines` algorithm
@@ -530,13 +544,6 @@ Further reading: :ref:`qgisforcerhr` algorithm,
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_force_rhr_section
-   :end-before: .. end_fuzzy_equals_section
-
-Further reading: :ref:`expression_function_GeometryGroup_overlay_fuzzy_equals`,
-:ref:`expression_function_GeometryGroup_exactly_equals`
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_fuzzy_equals_section
    :end-before: .. end_interior_ring_n_section
 
 Further reading: :ref:`expression_function_GeometryGroup_exterior_ring`
@@ -650,28 +657,36 @@ algorithm
    :start-after: .. end_overlay_disjoint_section
    :end-before: .. end_overlay_equals_section
 
-Further reading: :ref:`expression_function_GeometryGroup_overlay_exactly_equals`,
+Further reading: :ref:`expression_function_GeometryGroup_overlay_equals_exact`,
 :ref:`expression_function_GeometryGroup_equals`,
 :ref:`array manipulation <array_functions>`
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_equals_section
-   :end-before: .. end_overlay_exactly_equals_section
+   :end-before: .. end_overlay_equals_exact_section
 
 Further reading: :ref:`expression_function_GeometryGroup_overlay_equals`,
-:ref:`expression_function_GeometryGroup_exactly_equals`,
+:ref:`expression_function_GeometryGroup_equals_exact`,
 :ref:`array manipulation <array_functions>`
 
 .. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_overlay_exactly_equals_section
-   :end-before: .. end_overlay_fuzzy_equals_section
+   :start-after: .. end_overlay_equals_exact_section
+   :end-before: .. end_overlay_equals_fuzzy_section
 
-Further reading: :ref:`expression_function_GeometryGroup_fuzzy_equals`,
-:ref:`expression_function_GeometryGroup_overlay_exactly_equals`,
+Further reading: :ref:`expression_function_GeometryGroup_equals_fuzzy`,
+:ref:`expression_function_GeometryGroup_overlay_equals_exact`,
 :ref:`array manipulation <array_functions>`
 
 .. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_overlay_fuzzy_equals_section
+   :start-after: .. end_overlay_equals_fuzzy_section
+   :end-before: .. end_overlay_equals_topological_section
+
+Further reading: :ref:`expression_function_GeometryGroup_overlay_equals_exact`,
+:ref:`expression_function_GeometryGroup_equals_topological`,
+:ref:`array manipulation <array_functions>`,
+
+.. include:: expression_help/GeometryGroup.rst
+   :start-after: .. end_overlay_equals_topological_section
    :end-before: .. end_overlay_intersects_section
 
 Further reading: :ref:`expression_function_GeometryGroup_intersects`,
@@ -687,14 +702,6 @@ Further reading: :ref:`array manipulation <array_functions>`,
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_overlay_nearest_section
-   :end-before: .. end_overlay_topologically_equals_section
-
-Further reading: :ref:`expression_function_GeometryGroup_overlay_exactly_equals`,
-:ref:`expression_function_GeometryGroup_topologically_equals`,
-:ref:`array manipulation <array_functions>`,
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_overlay_topologically_equals_section
    :end-before: .. end_overlay_touches_section
 
 Further reading: :ref:`expression_function_GeometryGroup_touches`,
@@ -802,13 +809,6 @@ Further reading: :ref:`qgistaperedbuffer` algorithm
 
 .. include:: expression_help/GeometryGroup.rst
    :start-after: .. end_tapered_buffer_section
-   :end-before: .. end_topologically_equals_section
-
-Further reading: :ref:`expression_function_GeometryGroup_exactly_equals`,
-:ref:`expression_function_GeometryGroup_overlay_topologically_equals`
-
-.. include:: expression_help/GeometryGroup.rst
-   :start-after: .. end_topologically_equals_section
    :end-before: .. end_touches_section
 
 Further reading: :ref:`expression_function_GeometryGroup_overlay_touches`
