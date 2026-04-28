@@ -78,6 +78,23 @@ msgstr ""
 "d'identifier facilement les zones les plus productives et celles où la "
 "production pourrait être optimisée. "
 
+#: ../../docs/training_manual/processing/interpolation.rst:22
+msgid ""
+"The first thing to do is to clean--up the layer, since it contains redundant"
+" points. These are caused by the movement of the harvester, in places where "
+"it has to do a turn or it changes its speed for some reason. The "
+":guilabel:`Points filter` algorithm will be useful for this. We will use it "
+"twice, to remove points that can be considered outliers both in the upper "
+"and lower part of the distribution."
+msgstr ""
+"La première chose à faire est de nettoyer la couche car certains points sont"
+" redondants. Cela est dû à la conduite de la moissonneuse : pour une raison "
+"ou une autre elle a dû tourner ou changer de vitesse à certains endroits. "
+"L'algorithme :guilabel:`Filtrer les points` sera utile pour ceci. Nous "
+"l'utiliserons deux fois afin de supprimer à la fois les points qui peuvent "
+"être considérés comme aberrants car sortant de la norme par le haut ou par "
+"le bas."
+
 #: ../../docs/training_manual/processing/interpolation.rst:28
 msgid "For the first execution, use the following parameter values."
 msgstr ""
@@ -105,9 +122,47 @@ msgstr ""
 "pour seule différence un nombre réduit de points. Vous pouvez vérifier cela "
 "en comparant leurs tables d'attributs. "
 
+#: ../../docs/training_manual/processing/interpolation.rst:43
+msgid ""
+"Now let's rasterize the layer using the :guilabel:`Rasterize` algorithm."
+msgstr ""
+"Transformons maintenant la couche en raster au moyen de l'algorithme "
+":guilabel:`Rasteriser`."
+
+#: ../../docs/training_manual/processing/interpolation.rst:47
+msgid ""
+"The ``Filtered points`` layer refers to the resulting one of the second "
+"filter. It has the same name as the one produced by the first filter, since "
+"the name is assigned by the algorithm, but you should not use the first one."
+" Since we will not be using it for anything else, you can safely remove it "
+"from your project to avoid confusion, and leave just the last filtered "
+"layer."
+msgstr ""
+"La couche ``Points filtrés`` réfère à celle résultant de l'application du "
+"second filtre. Attention, étant donné que le nom est assigné par "
+"l'algorithme, elle a le même nom que celle produite suite à l'application du"
+" premier filtre. Il faut utiliser la seconde couche produite. Afin d'éviter "
+"toute confusion et étant donné que nous n'allons pas utiliser la première "
+"couche produite, vous pouvez la supprimer de votre projet et ne garder que "
+"la dernière couche."
+
 #: ../../docs/training_manual/processing/interpolation.rst:53
 msgid "The resulting raster layer looks like this."
 msgstr "La couche raster résultante devrait ressembler à ceci :"
+
+#: ../../docs/training_manual/processing/interpolation.rst:57
+msgid ""
+"It is already a raster layer, but it is missing data in some of its cells. "
+"It only contain valid values in those cells that contained a point from the "
+"vector layer that we have just rasterized, and a no--data value in all the "
+"other ones. To fill the missing values, we can use the :guilabel:`Close "
+"gaps` algorithm."
+msgstr ""
+"Il s'agit déjà une couche raster, mais certaines de ses cellules manquent de"
+" données. Elle ne contient des données que dans les cellules où se trouvait "
+"un point. Toutes les autres cellules ont été attribuées la valeur \"pas de "
+"donnée\". Afin de compléter les valeurs manquantes, nous pouvons utiliser "
+"l'algorithme :guilabel:`Combler les écarts`. "
 
 #: ../../docs/training_manual/processing/interpolation.rst:64
 msgid "The layer without no--data values looks like this."
@@ -121,6 +176,16 @@ msgstr ""
 "Afin de restreindre la couche uniquement à la zone où les rendements "
 "agricoles ont été effectivement mesurés, nous pouvons ne garder de la couche"
 " raster que ce qui correspond  à la couche \"limits\" fournie."
+
+#: ../../docs/training_manual/processing/interpolation.rst:73
+msgid ""
+"And for a smoother result (less accurate but better for rendering in the "
+"background as a support layer), we can apply a :guilabel:`Gaussian filter` "
+"to the layer."
+msgstr ""
+"Et pour un résultat plus lissé (moins précis mais plus adéquat pour être "
+"utilisé comme couche de fond) nous pouvons appliquer à la couche un "
+":guilabel:`Filtre Gaussien`."
 
 #: ../../docs/training_manual/processing/interpolation.rst:78
 msgid "With the above parameters you will get the following result"
