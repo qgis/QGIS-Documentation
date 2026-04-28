@@ -57,6 +57,13 @@ repos:
           - --ignore=D001,D002,D004
         exclude: ^(locale/|_dummy/|build/)
 
+  # Sort Python imports
+  - repo: https://github.com/pyCQA/isort
+    rev: 8.0.1
+    hooks:
+      - id: isort
+        name: isort (python)
+
   # Spell checking
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.6
@@ -66,6 +73,12 @@ repos:
           - --skip=*.po,*.pot,*.mo,*.svg,*.png,*.jpg,*.gif,*.ico,*.pyc,*.js,*.css,*.map,*.qgs,*.qgz
           - --ignore-words-list=tripel,linz,parameteras,lightening,clos,januar,claus,sist,pixelx
         exclude: ^(locale/|_dummy/|build/|scripts/)
+
+  # Python code formatting
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 26.3.1
+    hooks:
+      - id: black
 
   # Check for broken internal references (local script)
   - repo: local
