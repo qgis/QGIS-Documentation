@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from pathlib import Path
 from os import path, walk
 import glob
 from sys import argv
@@ -238,7 +239,7 @@ for file in filenames:
     with open(filepath) as f:
         data = json.load(f)
     #print(data)
-    data['filename'] = file.replace('op_', '')
+    data['filename'] = Path(filepath).stem.replace('op_', '')
     if data['type'] == 'group':
         groups[data['name']] = {'description': data['description'], 'func_list': {}}
     elif data['type'] in ['function', 'expression', 'operator', 'value']:
