@@ -38,6 +38,24 @@ msgstr ""
 msgid "DB Manager Plugin"
 msgstr "Plugin DB Manager"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:7
+msgid ""
+"The DB Manager Plugin is intended to be the main tool to integrate and "
+"manage spatial database formats supported by QGIS (PostgreSQL, SpatiaLite, "
+"GeoPackage, Oracle Spatial, Virtual layers) in one user interface. The "
+"|dbManager| :sup:`DB Manager` Plugin provides several features. You can drag"
+" layers from the QGIS Browser into the DB Manager, and it will import your "
+"layer into your spatial database. You can drag and drop tables between "
+"spatial databases and they will get imported."
+msgstr ""
+"Il plugin DB Manager è stato progettato per essere lo strumento principale "
+"per integrare e gestire i formati di database spaziali supportati da QGIS "
+"(PostgreSQL, SpatiaLite, GeoPackage, Oracle Spatial, livelli virtuali) in "
+"un'unica interfaccia utente. Il plugin |dbManager| :sup:`DB Manager` offre "
+"diverse funzionalità. Puoi trascinare i layer dal Browser di QGIS nel DB "
+"Manager, che provvederà a importarli nel database spaziale. Puoi trascinare "
+"e rilasciare le tabelle tra i database spaziali e queste verranno importate."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:189
 msgid "dbManager"
 msgstr "dbManager"
@@ -45,6 +63,20 @@ msgstr "dbManager"
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:22
 msgid "DB Manager dialog"
 msgstr "La finestra di dialogo DB Manager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:25
+msgid ""
+"The :menuselection:`Database` menu allows you to connect to an existing "
+"database, to start the SQL window and to exit the DB Manager Plugin. Once "
+"you are connected to an existing database, the menus :menuselection:`Schema`"
+" (relevant for DBMSs, such as PostgreSQL) and :menuselection:`Table` will "
+"appear."
+msgstr ""
+"Il menu :menuselection:`Database` consente di connettersi a un database "
+"esistente, di aprire la finestra SQL e di uscire dal plugin DB Manager. Una "
+"volta stabilita la connessione a un database esistente, appariranno i menu "
+":menuselection:`Schema` (rilevante per i DBMS, come PostgreSQL) e "
+":menuselection:`Tabella`."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:32
 msgid ""
@@ -140,6 +172,23 @@ msgstr ""
 "possibile evidenziare una parte dell'SQL per eseguire solo quella parte "
 "quando si preme :kbd:`Ctrl+R` o si clicca il pulsante :guilabel:`Esegui`."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:84
+msgid ""
+"QGIS also adds support for the ``REGEXP`` function in some providers. This "
+"allows users to use regular expressions in SQL filters or expressions, for "
+"example:"
+msgstr ""
+"QGIS aggiunge inoltre il supporto per la funzione ``REGEXP`` in alcuni "
+"provider. Ciò consente agli utenti di utilizzare espressioni regolari nei "
+"filtri o nelle espressioni SQL, ad esempio:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:91
+msgid ""
+"This returns all features where the ``name`` field starts with the letter A."
+msgstr ""
+"Questo restituisce tutti gli elementi in cui il campo ``nome`` inizia con la"
+" lettera A."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:93
 msgid ""
 "After executing your query, you can select specific cells in the result set."
@@ -182,6 +231,193 @@ msgstr ""
 "sotto **Layer Virtuali** prima di aprire la finestra SQL. Per istruzioni "
 "sulla sintassi SQL da utilizzare vedi :ref:`vector_virtual_layers`. "
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:121
+msgid "Import Vector Layer"
+msgstr "Importare Layer Vettoriali"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:123
+msgid ""
+"You can import layer or file into your database. Here are the parameters you"
+" can set for the import process:"
+msgstr ""
+"Puoi importare un livello o un file nel tuo database. Ecco i parametri che "
+"puoi impostare per il processo di importazione:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:126
+msgid ""
+":guilabel:`Input`: Select the layer or file to import. Using the dropdown "
+"menu, select from the list of loaded layers in QGIS or click on the "
+":guilabel:`...` button to select a file from disk. Check the |checkbox| "
+":guilabel:`Import only selected features` to import only the selected "
+"features of the layer."
+msgstr ""
+":guilabel:`Ingresso`: Seleziona il layer o il file da importare. Utilizza il"
+" menu a tendina per selezionare un elemento dall'elenco dei layer caricati "
+"in QGIS oppure clicca sul pulsante :guilabel:`...` per selezionare un file "
+"dal disco. Spunta la |checkbox| :guilabel:`Importa solo gli elementi "
+"selezionati` per importare solo gli elementi selezionati del layer."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:187
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:131
+msgid ""
+":guilabel:`Output table`: Choose the :guilabel:`Schema` and provide a name "
+"for the new table."
+msgstr ""
+":guilabel:`Tabella in uscita`: Scegli lo :guilabel:`Schema` e inserisci un "
+"nome per la nuova tabella."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:132
+msgid ":guilabel:`Options`: Here are some options for the import process:"
+msgstr ""
+":guilabel:`Opzioni`: Di seguito sono riportate alcune opzioni relative al "
+"processo di importazione:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:134
+msgid ""
+"|checkbox| :guilabel:`Primary key`: Provide naming for the primary key "
+"field. By default, it is named ``id``."
+msgstr ""
+"|checkbox| :guilabel:`Chiave primaria`: Assegna un nome al campo della "
+"chiave primaria. Per impostazione predefinita, il nome è ``id``."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:136
+msgid ""
+"|checkbox| :guilabel:`Geometry column`: Provide naming for the geometry "
+"column. By default, it is named ``geom``."
+msgstr ""
+"|checkbox| :guilabel:`Colonna geometria`: Assegna un nome alla colonna "
+"geometria. Per impostazione predefinita, il nome è ``geom``."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:138
+msgid ""
+"|checkbox| :guilabel:`Source SRID`: Define the SRID for the geometry column."
+" By default, it uses the layer's CRS."
+msgstr ""
+"|checkbox| :guilabel:`SR sorgente`: Definisci l'SR per la colonna geometria."
+" Per impostazione predefinita, viene utilizzato il SR del layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:140
+msgid ""
+"|checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject the "
+"geometries during the import process. By default, it uses the layer's CRS."
+msgstr ""
+"|checkbox| :guilabel:`SR di destinazione`: Definisci l'SR di destinazione "
+"per la riproiezione delle geometrie durante il processo di importazione. Per"
+" impostazione predefinita, viene utilizzato il SR del layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:142
+msgid ""
+"|checkbox| :guilabel:`Encoding`: Define the encoding of the source data. By "
+"default, it uses ``Automatic``. It is QGIS's automatic detection mode that "
+"attempts to guess the file's character encoding based on available metadata "
+"or system locale."
+msgstr ""
+"|checkbox| :guilabel:`Codifica`: Definisci la codifica dei dati di origine. "
+"Per impostazione predefinita, viene utilizzata l'opzione ``Automatica``. Si "
+"tratta della modalità di rilevamento automatico di QGIS che cerca di "
+"individuare la codifica dei caratteri del file in base ai metadati "
+"disponibili o alle impostazioni di lingua del sistema."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:144
+msgid ""
+"|checkbox| :guilabel:`Replace destination table (if exists)`: If a table "
+"with the same name already exists in the selected schema, it will be "
+"replaced."
+msgstr ""
+"|checkbox| :guilabel:`Sostituisci la tabella di destinazione (se esiste)`: "
+"Se nello schema selezionato esiste già una tabella con lo stesso nome, "
+"questa verrà sostituita."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:146
+msgid ""
+"|checkbox| :guilabel:`Do not promote to multi-part`: Geometries will be "
+"imported as single-part geometries."
+msgstr ""
+"|checkbox| :guilabel:`Non trasformare in parti multiple`: Le geometrie "
+"verranno importate come geometrie a parte singola."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:147
+msgid ""
+"|checkbox| :guilabel:`Convert field names to lower case`: All field names "
+"will be converted to lower case."
+msgstr ""
+"|checkbox| :guilabel:`Converti nome campo in minuscolo`: Tutti i nomi dei "
+"campi verranno convertiti in minuscolo."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:148
+msgid ""
+"|checkbox| :guilabel:`Create spatial index`: A spatial index will be created"
+" on the geometry column after import."
+msgstr ""
+"|checkbox| :guilabel:`Crea indice spaziale`: Dopo l'importazione verrà "
+"creato un indice spaziale sulla colonna della geometria."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:149
+msgid ""
+"|checkbox| :guilabel:`Comment`: Add comments to table. Only available for "
+"PostgreSQL databases."
+msgstr ""
+"|checkbox| :guilabel:`Commento`: Aggiungi commenti alla tabella. Disponibile"
+" solo per i database PostgreSQL."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:155
+msgid "Importing a vector layer into a spatial database using DB Manager"
+msgstr ""
+"Importazione di un layer vettoriale in un database spaziale tramite DB "
+"Manager"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:159
+msgid "Export to Vector File"
+msgstr "Esportare in File Vettoriale"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:161
+msgid ""
+"To export a table from your database to a vector file, select the desired "
+":guilabel:`Format` and :guilabel:`Save as` location. Under "
+":guilabel:`Options`, you can set the following parameters:"
+msgstr ""
+"Per esportare una tabella dal database in un file vettoriale, seleziona il "
+":guilabel:`Formato` desiderato e la posizione in cui eseguire :`Salva con "
+"nome`. Nella sezione :guilabel:`Opzioni`, puoi impostare i seguenti "
+"parametri:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:165
+msgid ""
+"|checkbox| :guilabel:`Source SRID`: Define the source SRID of the geometry "
+"column. By default, it uses the layer's CRS."
+msgstr ""
+"|checkbox| :guilabel:`SR sorgente`: Definisci l'SR di origine della colonna "
+"della geometria. Per impostazione predefinita, viene utilizzato il SR del "
+"layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:167
+msgid ""
+"|checkbox| :guilabel:`Target SRID`: Define the target SRID to reproject the "
+"geometries during the export process. By default, it uses the layer's CRS."
+msgstr ""
+"|checkbox| :guilabel:`SR di destinazione`: Definisci l'SR di destinazione "
+"per la riproiezione delle geometrie durante il processo di esportazione. Per"
+" impostazione predefinita, viene utilizzato il SR del layer."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:169
+msgid ""
+"|checkbox| :guilabel:`Encoding`: Define the encoding of the output data."
+msgstr ""
+"|checkbox| :guilabel:`Codifica`: definisci la codifica dei dati in uscita."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:170
+msgid ""
+"|checkbox| :guilabel:`Replace destination table (if exists)`: If a table "
+"with the same name already exists at the selected location, it will be "
+"replaced."
+msgstr ""
+"|checkbox| :guilabel:`Sostituisci file di destinazione (se esiste)`: Se "
+"nella posizione selezionata esiste già una tabella con lo stesso nome, "
+"questa verrà sostituita."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_db_manager.rst:177
+msgid "Exporting a table to a vector file using DB Manager"
+msgstr "Esportazione di una tabella in un file vettoriale tramite DB Manager"
