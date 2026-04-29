@@ -3525,6 +3525,11 @@ Reclassify by layer
 Reclassifies a raster band by assigning new class values based on the
 ranges specified in a vector table.
 
+.. figure:: img/reclassifyby_layer.png
+  :align: center
+
+  Reclassified raster by layer.
+
 Parameters
 ..........
 
