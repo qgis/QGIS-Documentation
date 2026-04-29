@@ -2,6 +2,7 @@
 
 [![Docs Builds](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml/badge.svg?branch=master&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/builds.yml)
 [![Doctest Build](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml/badge.svg?branch=master&event=push)](https://github.com/qgis/QGIS-Documentation/actions/workflows/doctest.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 [![Read the documentation](https://img.shields.io/badge/Read-the%20docs-green.svg)](https://docs.qgis.org/testing/)
 
 
