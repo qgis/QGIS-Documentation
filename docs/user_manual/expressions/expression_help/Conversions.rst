@@ -228,7 +228,7 @@ Converts a coordinate to degree, minute.
    :widths: 15 85
 
    * - Syntax
-     - to_dm(coordinate, axis, precision, [formatting=])
+     - to_dm(coordinate, axis, precision, [formatting:=])
 
        [] marks optional arguments
    * - Arguments
@@ -255,7 +255,7 @@ Converts a coordinate to degree, minute, second.
    :widths: 15 85
 
    * - Syntax
-     - to_dms(coordinate, axis, precision, [formatting=])
+     - to_dms(coordinate, axis, precision, [formatting:=])
 
        [] marks optional arguments
    * - Arguments
