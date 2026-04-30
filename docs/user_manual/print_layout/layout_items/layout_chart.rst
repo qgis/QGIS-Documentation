@@ -55,6 +55,11 @@ Available types are:
 Modify the chart through the :guilabel:`Modify Chart Properties...` button.
 Depending on the selected type, available options may vary.
 
+The :guilabel:`Flip Axes` option allows reversing the direction of the X or Y axis
+for charts such as bar charts, line charts, and XY plots. This can be useful
+when creating horizontal bar charts or when a reversed axis orientation is
+needed for data visualization.
+
 .. _layout_chart_ranges:
 
 Chart Ranges
