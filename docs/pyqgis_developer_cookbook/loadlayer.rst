@@ -28,7 +28,7 @@ Loading Layers
 
  .. testcode:: loadlayer
 
-  import os # This is is needed in the pyqgis console also
+  import os # This is needed in the pyqgis console also
   from qgis.core import (
       QgsVectorLayer
   )
