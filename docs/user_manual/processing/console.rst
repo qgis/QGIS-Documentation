@@ -43,9 +43,9 @@ with the following line:
 
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
-:meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method, which
-takes the name of the algorithm to execute
-as its first parameter, and then a variable number of additional
+:func:`run() <qgis.processing.run>` method,
+which takes the id of the algorithm to execute as its first parameter,
+and then a variable number of additional
 parameters depending on the requirements of the algorithm. So the
 first thing you need to know is the name of the algorithm to
 execute. That is not the name you see in the toolbox, but rather a
@@ -82,14 +82,15 @@ That's a list of all the available algorithm IDs, sorted by provider
 name and algorithm name, along with their corresponding names.
 
 Once you know the command-line name of the algorithm, the next thing
-to do is to determine the right syntax to execute it. That means
-knowing which parameters are needed when calling the ``run()`` method.
+to do is to determine the right syntax to execute it.
+That means knowing which parameters are needed
+when calling the :func:`run() <qgis.processing.run>` method.
 
 There is a method to describe an algorithm in detail, which can be
 used to get a list of the parameters that an algorithm requires and
 the outputs that it will generate. To get this information, you can
-use the ``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of
-the algorithm, not the full descriptive name.
+use the :func:`algorithmHelp() <qgis.processing.algorithmHelp>` method.
+Pass as parameter the ID of the algorithm, not the full descriptive name.
 
 Calling the method with ``native:buffer`` as parameter
 (``qgis:buffer`` is an alias for ``native:buffer`` and will also
@@ -220,7 +221,7 @@ work), you get the following description:
 
 
 Now you have everything you need to run any algorithm. As we have
-already mentioned, algorithms can be run using: ``run()``.
+already mentioned, algorithms can be run using: :func:`run() <qgis.processing.run>`.
 Its syntax is as follows:
 
 .. code-block:: python
@@ -229,7 +230,7 @@ Its syntax is as follows:
 
 Where parameters is a dictionary of parameters that depend on the
 algorithm you want to run, and is exactly the list that the
-``algorithmHelp()`` method gives you.
+:func:`algorithmHelp() <qgis.processing.algorithmHelp>` method gives you.
 
 .. code-block:: python
    :linenos:
@@ -259,7 +260,7 @@ list gives a quick review of how to introduce values for each type of input para
   object representing the layer, you can also pass it as parameter.
 * Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
-  options, you can use the ``algorithmHelp()`` command, as above.
+  options, you can use the :func:`algorithmHelp() <qgis.processing.algorithmHelp>` command, as above.
   For instance, the ``native:buffer`` algorithm has an enumeration called JOIN_STYLE:
 
   .. code-block:: text
@@ -280,7 +281,7 @@ list gives a quick review of how to introduce values for each type of input para
 
   In this case, the parameter has three options.
   Notice that ordering is zero-based.
-* Boolean.  Use ``True`` or ``False``.
+* Boolean.  Use :const:`True` or :const:`False`.
 * Multiple input. The value is a string with input descriptors separated by
   semicolons (``;``). As in the case of single layers or tables, each input
   descriptor can be the data object name, or its file path.
@@ -309,7 +310,7 @@ appended to the given file path.
 
 Unlike when an algorithm is executed from the toolbox, outputs are not
 added to the map canvas if you execute that same algorithm from the
-Python console using the :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` method.
+Python console using the :func:`run() <qgis.processing.run>` method.
 That method returns a dictionary with one or more output names
 (the ones shown in the algorithm description) as keys
 and the file paths of those outputs as values:
@@ -337,7 +338,8 @@ You can then load the output in the project as any common layer:
     >>> QgsProject.instance().addMapLayer(buffered_layer)
 
 To immediately load the processing outputs in the project,
-you can use the ``runAndLoadResults()`` method instead of ``run()``.
+you can use the :func:`runAndLoadResults() <qgis.processing.runAndLoadResults>` method
+instead of :func:`run() <qgis.processing.run>`.
 
 .. code-block:: python
    :linenos:
@@ -346,8 +348,9 @@ you can use the ``runAndLoadResults()`` method instead of ``run()``.
 
 
 If you want to open an algorithm dialog from the console you can use the
-``createAlgorithmDialog`` method. The only mandatory parameter is the algorithm
-name, but you can also define the dictionary of parameters so that the dialog
+:func:`createAlgorithmDialog <qgis.processing.createAlgorithmDialog>` method.
+The only mandatory parameter is the algorithm id,
+but you can also define the dictionary of parameters so that the dialog
 will be filled automatically:
 
 .. code-block:: python
