@@ -7,20 +7,21 @@
 # Translators:
 # Joern G <j.gutzeit@umwelt-it.de>, 2026
 # Harrissou Sant-anna, 2026
+# Transifex Bot <>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -77,19 +78,6 @@ msgstr ""
 "muss in einen Graphen konvertiert werden. Alle weiteren Aktionen verwenden "
 "diesen Graphen und nicht den Vektorlayer."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
-msgid ""
-"As a source we can use any polyline vector layer. Nodes of the polylines "
-"become graph vertexes, and segments of the polylines are graph edges. If "
-"several nodes have the same coordinates then they are the same graph vertex."
-" So two lines that have a common node become connected to each other."
-msgstr ""
-"Als Quelle können wir jeden Polylinienvektorlayer verwenden. Vertices der "
-"Polylinien werden zu Knoten des Graphen und Segmente der Polylinien werden "
-"zu Kanten des Graphen. Wenn mehrere Vertices die gleichen Koordinaten haben,"
-" dann repräsentieren sie den selben Knoten. So werden zwei Kanten, die einen"
-" gemeinsamen Knoten haben, miteinander verbunden."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
 msgid ""
 "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
@@ -131,35 +119,10 @@ msgstr "und der Director über diese Strategie informiert werden "
 msgid "Graph analysis"
 msgstr "Graphenanalyse"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:194
-msgid ""
-"Networks analysis is used to find answers to two questions: which vertexes "
-"are connected and how to find a shortest path. To solve these problems the "
-"network analysis library provides Dijkstra's algorithm."
-msgstr ""
-"Die Netzwerkanalyse wird verwendet, um Antworten auf zwei Fragen zu finden: "
-"Welche Knoten sind verbunden und wie findet man einen kürzesten Pfad? Um "
-"diese Probleme zu lösen, stellt die Netzwerkanalyse-Bibliothek den Dijkstra-"
-"Algorithmus zur Verfügung."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:198
-msgid ""
-"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
-"the graph to all the others and the values of the optimization parameters. "
-"The results can be represented as a shortest path tree."
-msgstr ""
-"Dijkstras Algorithmus findet den kürzesten Pfad von einem der Knoten des "
-"Graphen zu allen anderen und die Werte der Optimierungsparameter. Die "
-"Ergebnisse können als ein Baum für die kürzesten Pfade dargestellt werden."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:205
 msgid "only one vertex has no incoming edges — the root of the tree"
 msgstr ""
 "Genau ein Knoten besitzt keine ankommende Kante — Die Wurzel des Baumes"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:206
-msgid "all other vertexes have only one incoming edge"
-msgstr "Alle anderen Knoten haben genau eine ankommende Kante"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:207
 msgid ""
@@ -169,33 +132,23 @@ msgstr ""
 "Wenn Knoten B von Knoten A aus erreichbar ist, dann ist der Pfad von A nach "
 "B der einzige verfügbare und optimale (kürzeste) auf diesem Graph"
 
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:252
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:371
+msgid "shortestTree()"
+msgstr "shortestTree()"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:290
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:432
+msgid "dijkstra()"
+msgstr "dijkstra()"
+
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:339
 msgid "Finding shortest paths"
 msgstr "Kürzeste Pfade ermitteln"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
-msgid ""
-"At this point we have the path, in the form of the inverted list of vertexes"
-" (vertexes are listed in reversed order from end point to start point) that "
-"will be visited during traveling by this path."
-msgstr ""
-"Nun verfügen wir über den Pfad in Form der umgekehrten Liste von Konten "
-"(Knoten sind in umgekehrter Reihenfolge vom Endknoten zum Startknoten "
-"aufgelistet), die beim Durchlaufen des Pfades besucht werden. "
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:490
 msgid "Areas of availability"
 msgstr "Erreichbarkeitsgebiete"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:492
-msgid ""
-"The area of availability for vertex A is the subset of graph vertexes that "
-"are accessible from vertex A and the cost of the paths from A to these "
-"vertexes are not greater that some value."
-msgstr ""
-"Das Erreichbarkeitsgebiet für den Knoten A ist die Teilmenge der "
-"Graphknoten, die von dem Knoten A aus erreichbar sind, und die Kosten der "
-"Pfade von A zu diesen Knoten einen bestimmten Wert nicht überschreiten."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
 msgid ""
@@ -208,20 +161,3 @@ msgstr ""
 " Teile der Stadt kann ein Feuerwehrauto in 5 Minuten erreichen? 10 Minuten? "
 "15 Minuten?\". Die Antworten auf diese Fragen sind die "
 "Erreichbarkeitsgebiete der Feuerwache."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
-msgid ""
-"A more difficult problem is to get the borders of the area of availability. "
-"The bottom border is the set of vertexes that are still accessible, and the "
-"top border is the set of vertexes that are not accessible. In fact this is "
-"simple: it is the availability border based on the edges of the shortest "
-"path tree for which the source vertex of the edge is accessible and the "
-"target vertex of the edge is not."
-msgstr ""
-"Ein schwierigeres Problem besteht darin, die Begrenzung des "
-"Erreichbarkeitsgebietes zu ermitteln. Die untere Begrenzung ist die Gruppe "
-"von Knoten, die noch erreichbar sind, und die obere Begrenzung die Gruppe "
-"von Knoten, welche nicht mehr erreichbar sind. Tatsächlich ist dies einfach:"
-" Es ist die Grenze der Erreichbarkeit basierend auf den Kanten des kürzesten"
-" Pfadbaums, für den der Quellknoten der Kante erreichbar ist, und der "
-"Zielknoten der Kante nicht."

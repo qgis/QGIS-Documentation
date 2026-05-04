@@ -7,20 +7,21 @@
 # Translators:
 # Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Transifex Bot <>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -95,19 +96,6 @@ msgstr ""
 "vettoriale in un grafo. Tutte le azioni successive utilizzeranno questo "
 "grafo, non il layer."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
-msgid ""
-"As a source we can use any polyline vector layer. Nodes of the polylines "
-"become graph vertexes, and segments of the polylines are graph edges. If "
-"several nodes have the same coordinates then they are the same graph vertex."
-" So two lines that have a common node become connected to each other."
-msgstr ""
-"Come sorgente possiamo utilizzare qualsiasi layer vettoriale di polilinee. I"
-" nodi delle polilinee diventano vertici del grafo e i segmenti delle "
-"polilinee sono bordi del grafo. Se più nodi hanno le stesse coordinate, "
-"allora sono lo stesso vertice del grafo. Quindi due linee che hanno un nodo "
-"in comune diventano collegate tra loro."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
 msgid ""
 "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
@@ -179,27 +167,6 @@ msgstr "E informare il director di questa strategia"
 msgid "Graph analysis"
 msgstr "Analisi grafo"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:194
-msgid ""
-"Networks analysis is used to find answers to two questions: which vertexes "
-"are connected and how to find a shortest path. To solve these problems the "
-"network analysis library provides Dijkstra's algorithm."
-msgstr ""
-"L'analisi di rete viene utilizzata per trovare le risposte a due domande: "
-"quali vertici sono connessi e come trovare il percorso più breve. Per "
-"risolvere questi problemi, la libreria di analisi di rete fornisce "
-"l'algoritmo di Dijkstra."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:198
-msgid ""
-"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
-"the graph to all the others and the values of the optimization parameters. "
-"The results can be represented as a shortest path tree."
-msgstr ""
-"L'algoritmo di Dijkstra trova il percorso più breve da un vertice del grafo "
-"a tutti gli altri e i valori dei parametri di ottimizzazione. I risultati "
-"possono essere rappresentati come un albero del percorso più breve."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:202
 msgid ""
 "The shortest path tree is a directed weighted graph (or more precisely a "
@@ -211,10 +178,6 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:205
 msgid "only one vertex has no incoming edges — the root of the tree"
 msgstr "solo un vertice non ha bordi in entrata: la radice dell'albero."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:206
-msgid "all other vertexes have only one incoming edge"
-msgstr "tutti gli altri vertici hanno un solo bordo in entrata"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:207
 msgid ""
@@ -291,6 +254,16 @@ msgstr ""
 ":class:`QgsRubberBand <qgis.gui.QgsRubberBand>` e può essere lento su grandi"
 " insiemi di dati."
 
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:252
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:371
+msgid "shortestTree()"
+msgstr "shortestTree()"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:290
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:432
+msgid "dijkstra()"
+msgstr "dijkstra()"
+
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:339
 msgid "Finding shortest paths"
 msgstr "Trovare i percorsi più brevi"
@@ -315,29 +288,9 @@ msgstr ""
 "trova anche il punto finale B e si inizia a percorrere l'albero dal punto B "
 "al punto A. L'intero algoritmo può essere scritto come:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
-msgid ""
-"At this point we have the path, in the form of the inverted list of vertexes"
-" (vertexes are listed in reversed order from end point to start point) that "
-"will be visited during traveling by this path."
-msgstr ""
-"A questo punto abbiamo il percorso, sotto forma di elenco invertito di "
-"vertici (i vertici sono elencati in ordine inverso, dal punto finale al "
-"punto iniziale) che saranno visitati durante il percorso."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:490
 msgid "Areas of availability"
 msgstr "Zone di disponibilità"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:492
-msgid ""
-"The area of availability for vertex A is the subset of graph vertexes that "
-"are accessible from vertex A and the cost of the paths from A to these "
-"vertexes are not greater that some value."
-msgstr ""
-"La zona di disponibilità per il vertice A è il sottoinsieme dei vertici del "
-"grafo che sono accessibili dal vertice A e il costo dei percorsi da A a "
-"questi vertici non è superiore a un certo valore."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
 msgid ""
@@ -366,19 +319,3 @@ msgstr ""
 "confrontare gli elementi dell'array cost con un valore predefinito. Se "
 "cost[i] è minore o uguale a un valore predefinito, allora il vertice i è "
 "all'interno della zona di disponibilità, altrimenti è fuori."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
-msgid ""
-"A more difficult problem is to get the borders of the area of availability. "
-"The bottom border is the set of vertexes that are still accessible, and the "
-"top border is the set of vertexes that are not accessible. In fact this is "
-"simple: it is the availability border based on the edges of the shortest "
-"path tree for which the source vertex of the edge is accessible and the "
-"target vertex of the edge is not."
-msgstr ""
-"Un problema più difficile è quello di ottenere i confini della zona di "
-"disponibilità. Il confine inferiore è l'insieme dei vertici ancora "
-"accessibili, mentre il confine superiore è l'insieme dei vertici non "
-"accessibili. In realtà è semplice: si tratta del confine di disponibilità "
-"basato sui bordi dell'albero del cammino più breve per i quali il vertice di"
-" origine del bordo è accessibile e il vertice di destinazione del bordo no."

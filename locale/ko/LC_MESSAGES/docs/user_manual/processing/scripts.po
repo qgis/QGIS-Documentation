@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -112,7 +112,7 @@ msgstr "버퍼 레이어, 래스터 레이어, 그리고 피처의 개수를 반
 msgid "Processing algorithm standard functions:"
 msgstr "공간 처리 알고리즘 표준 함수:"
 
-#: ../../docs/user_manual/processing/scripts.rst:235
+#: ../../docs/user_manual/processing/scripts.rst:238
 msgid "createInstance (mandatory)"
 msgstr "createInstance (필수)"
 
@@ -124,7 +124,7 @@ msgstr ""
 "사용자 알고리즘의 새 복사본을 반환해야만 합니다. 클래스명을 변경할 경우, 이 함수가 반환하는 값도 일치하도록 업데이트하는 것을 잊지 "
 "마세요!"
 
-#: ../../docs/user_manual/processing/scripts.rst:240
+#: ../../docs/user_manual/processing/scripts.rst:241
 msgid "name (mandatory)"
 msgstr "name (필수)"
 
@@ -132,7 +132,7 @@ msgstr "name (필수)"
 msgid "Returns the unique algorithm name, used for identifying the algorithm."
 msgstr "알고리즘을 식별하는 데 사용되는 유일한 알고리즘명을 반환합니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:243
+#: ../../docs/user_manual/processing/scripts.rst:244
 msgid "displayName (mandatory)"
 msgstr "displayName (필수)"
 
@@ -140,7 +140,7 @@ msgstr "displayName (필수)"
 msgid "Returns the translated algorithm name."
 msgstr "변형된(translated) 알고리즘명을 반환합니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:246
+#: ../../docs/user_manual/processing/scripts.rst:247
 msgid "group"
 msgstr "group"
 
@@ -148,7 +148,7 @@ msgstr "group"
 msgid "Returns the name of the group this algorithm belongs to."
 msgstr "이 알고리즘이 종속된 그룹의 이름을 반환합니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:249
+#: ../../docs/user_manual/processing/scripts.rst:250
 msgid "groupId"
 msgstr "groupId"
 
@@ -156,7 +156,7 @@ msgstr "groupId"
 msgid "Returns the unique ID of the group this algorithm belongs to."
 msgstr "이 알고리즘이 종속된 그룹의 유일한 ID를 반환합니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:252
+#: ../../docs/user_manual/processing/scripts.rst:253
 msgid "shortHelpString"
 msgstr "shortHelpString"
 
@@ -164,7 +164,7 @@ msgstr "shortHelpString"
 msgid "Returns a localised short help string for the algorithm."
 msgstr "알고리즘을 위한, 번역된(localized) 짧은 도움말 문자열을 반환합니다."
 
-#: ../../docs/user_manual/processing/scripts.rst:255
+#: ../../docs/user_manual/processing/scripts.rst:263
 msgid "initAlgorithm (mandatory)"
 msgstr "initAlgorithm (필수)"
 
@@ -187,7 +187,7 @@ msgstr ""
 "파라미터가 다른 파라미터를 의존하는 경우, 해당 관계를 지정하기 위해 ``parentParameterName`` 을 사용합니다. "
 "(레이어의 필드/밴드 또는 레이어의 거리 단위일 수 있습니다.)"
 
-#: ../../docs/user_manual/processing/scripts.rst:265
+#: ../../docs/user_manual/processing/scripts.rst:292
 msgid "processAlgorithm (mandatory)"
 msgstr "processAlgorithm (필수)"
 
@@ -222,15 +222,6 @@ msgstr ""
 "은 알고리즘에 실행 환경 및 사용자와의 (취소 요청을 받거나, 진행 과정을 보고하거나, 텍스트 피드백을 제공하는 등) 통신 채널에 대해 "
 "알려줍니다. \"자식\" 알고리즘이 받는 파라미터로 (부모) 알고리즘의 파라미터를 사용하는 경우, 원본 파라미터 값을 사용해야 합니다. "
 "(예: ``parameters['OUTPUT']``)"
-
-#: ../../docs/user_manual/processing/scripts.rst:283
-msgid ""
-"It is good practice to check the feedback object for cancelation as much as "
-"is sensibly possible! Doing so allows for responsive cancelation, instead of"
-" forcing users to wait for unwanted processing to occur."
-msgstr ""
-"취소에 대해 논리적으로 가능한만큼 자주 피드백 객체를 확인하는 편이 좋습니다! 이렇게 하면 사용자가 원하지 않는 공간 처리 과정을 "
-"기다리는 대신 즉각 취소할 수 있으니까요."
 
 #: ../../docs/user_manual/processing/scripts.rst:288
 msgid ""
@@ -329,13 +320,6 @@ msgstr "@alg.input 장식자를 사용해서 알고리즘의 입력물을 정의
 msgid ""
 "The @alg.output decorator is used to define the outputs of the algorithm."
 msgstr "@alg.output 장식자를 사용해서 알고리즘의 산출물을 정의합니다."
-
-#: ../../docs/user_manual/processing/scripts.rst:403
-msgid ""
-"For existing parameters and their correspondance, read "
-":ref:`processing_algs_input_output`."
-msgstr ""
-"기존 파라미터와 그에 대응하는 문자열을 알고 싶다면 :ref:`processing_algs_input_output` 을 읽어보십시오."
 
 #: ../../docs/user_manual/processing/scripts.rst:407
 msgid "Handing algorithm output"

@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -43,15 +43,7 @@ msgid ""
 " you can get more familiar with the processing framework elements."
 msgstr "このレッスンでは、プロセシング・フレームワークの要素により精通できるよう、ツールボックスだけを使用していくつかの実際の分析を実行します。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:7
-msgid ""
-"Now that everything is configured and we can use external algorithms, we "
-"have a very powerful tool to perform spatial analysis. It is time to work "
-"out a larger exercise with some real--world data."
-msgstr ""
-"今やすべて設定されていて外部アルゴリズムを使用できますので、空間分析を実行するための非常に強力なツールを持っています。何か実世界のデータでより大規模な練習に取り掛かる時です。"
-
-#: ../../docs/training_manual/processing/john_snow.rst:9
+#: ../../docs/training_manual/processing/john_snow.rst:12
 msgid ""
 "We will be using the well-known dataset that John Snow used in 1854, in his "
 "groundbreaking work "
@@ -64,7 +56,7 @@ msgstr ""
 "我々は、John "
 "Snowが1854年に彼の画期的な仕事(https://en.wikipedia.org/wiki/John_Snow_%28physician%29)で使用した有名なデータセットを使用し、いくつかの興味深い結果を得ることになります。このデータセットの分析は非常に明白であり、良い結果と結論に至るために高度なGIS技術を必要としませんが、このような空間的問題が、異なる処理ツールを使うことによってどのように分析され解決されるかを示す良い方法であるといえるでしょう。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:11
+#: ../../docs/training_manual/processing/john_snow.rst:19
 msgid ""
 "The dataset contains shapefiles with cholera deaths and pump locations, and "
 "an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
@@ -72,19 +64,19 @@ msgid ""
 msgstr ""
 "データセットには、コレラによる死者の位置とポンプの位置のシェープファイル、およびTIFFフォーマットでのOSMレンダリングされた地図が含まれています。このレッスンのための対応QGISプロジェクトを開きます。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:22
+#: ../../docs/training_manual/processing/john_snow.rst:31
 msgid "Pretty easy, but it will already give us interesting information."
 msgstr "かなり簡単ですが、それですでに興味深い情報が得られます。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:26
+#: ../../docs/training_manual/processing/john_snow.rst:35
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "明らかに、ほとんどの患者がポリゴンの1つの範囲内にあります"
 
-#: ../../docs/training_manual/processing/john_snow.rst:40
+#: ../../docs/training_manual/processing/john_snow.rst:56
 msgid "The result looks like this:"
 msgstr "これの結果は次の通りです:"
 
-#: ../../docs/training_manual/processing/john_snow.rst:44
+#: ../../docs/training_manual/processing/john_snow.rst:60
 msgid ""
 "Although the number of lines is larger in the case of the central pump, do "
 "not forget that this does not represent the number of deaths, but the number"
@@ -94,7 +86,7 @@ msgid ""
 msgstr ""
 "線の数は中央のポンプの方が多いですが、これは死者数ではなくコレラ患者が発見された場所の数を表していることを忘れないでください。それは代表的なパラメータですが、ある場所では他の場所よりも多くの患者が発生している可能性が考慮されていません。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:54
+#: ../../docs/training_manual/processing/john_snow.rst:77
 msgid ""
 "Select the streets raster layer and its extent will be automatically added "
 "to the text field. You must do the same with the cellsize, selecting the "
@@ -102,7 +94,7 @@ msgid ""
 msgstr ""
 "街路ラスタレイヤを選択すると、その範囲が自動的にテキストフィールドに追加されます。セルサイズでも同じことを行い、そのレイヤのセルサイズを選択する必要があります。"
 
-#: ../../docs/training_manual/processing/john_snow.rst:56
+#: ../../docs/training_manual/processing/john_snow.rst:80
 msgid ""
 "Combining with the pumps layer, we see that there is one pump clearly in the"
 " hotspot where the maximum density of death cases is found."

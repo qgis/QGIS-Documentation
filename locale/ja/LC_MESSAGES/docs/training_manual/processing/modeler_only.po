@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -42,7 +42,7 @@ msgid ""
 "modeler, to provide additional functionality to models."
 msgstr "このレッスンでは、モデルに追加機能を提供するために、モデラーでのみ利用可能ないくつかのアルゴリズムを使用する方法を示しています。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:6
+#: ../../docs/training_manual/processing/modeler_only.rst:7
 msgid ""
 "The goal of this lesson is to use the modeler to create an interpolation "
 "algorithm that takes into account the current selection, not just to use "
@@ -51,7 +51,7 @@ msgid ""
 msgstr ""
 "このレッスンの目標は、モデラーを使用して現在の選択を考慮に入れる補間アルゴリズムを作成すること、選択地物だけを使用するのではなく、その選択の範囲を使用して補間されるラスタレイヤを作成することです。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:8
+#: ../../docs/training_manual/processing/modeler_only.rst:11
 msgid ""
 "The interpolation process involves two steps, as it has been already "
 "explained in previous lessons: rasterizing the points layer and fill the no-"
@@ -65,7 +65,7 @@ msgstr ""
 "補間処理には、先のレッスンで既に説明したように、2つのステップが含まれます。ポイントレイヤーをラスタ化し、ラスタ化されたレイヤに表示されるno-"
 "data（データなし）値を埋めます。ポイントレイヤに選択範囲がある場合、選択されたポイントのみが使用されますが、出力範囲が自動的に調整されるように設定されている場合は、レイヤの全範囲が使用されます。つまり、レイヤの範囲は、選択されたものから計算されたものではなく、常にすべての地物の完全な範囲とみなされます。私たちのモデルにいくつかの追加ツールを使うことによってそれを修正してみます。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:10
+#: ../../docs/training_manual/processing/modeler_only.rst:19
 msgid ""
 "Open the modeler and start the model by adding the required inputs. In this "
 "case we need a vector layer (restricted to points) and an attribute from it,"
@@ -73,15 +73,15 @@ msgid ""
 msgstr ""
 "モデラーを開き、必要な入力を追加することによって、モデルを開始します。この場合は、ベクタレイヤ（ポイントに制限）と、ラスタ化に使う値を持ったその属性が必要です。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:26
+#: ../../docs/training_manual/processing/modeler_only.rst:46
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "次に示すようにアルゴリズムのパラメータを入力します："
 
-#: ../../docs/training_manual/processing/modeler_only.rst:30
+#: ../../docs/training_manual/processing/modeler_only.rst:50
 msgid "The canvas should now look like."
 msgstr "キャンバスはこのようになる筈です。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:38
+#: ../../docs/training_manual/processing/modeler_only.rst:58
 msgid ""
 "The algorithm is now ready to be saved and added to the toolbox. You can run"
 " it and it will generate a raster layer from interpolating the selected "
@@ -90,17 +90,7 @@ msgid ""
 msgstr ""
 "これでアルゴリズムは保存して、ツールボックスに追加する準備が整いました。それを実行すると、入力レイヤで選択されたポイントを補間することでラスタレイヤが作成され、そのレイヤは選択と同じ範囲になります。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:40
-msgid ""
-"Here's an improvement to the algorithm. We have used a harcoded value for "
-"the cellsize when rasterizing. This value is fine for our test input layer, "
-"but might not be for other cases. We could add a new parameter, so the user "
-"enters the desired value, but a much better approach would be to have that "
-"value automatically computed."
-msgstr ""
-"ここでアルゴリズムの改善があります。ラスタ化する時、セルサイズはハードコードされた値を使いました。この値は、ここでのテスト入力レイヤーにとっては良いですが、他の場合ではそうではないかもしれません。新しいパラメータを追加してユーザーが希望する値を入力することもできますが、より良いアプローチは、その値を自動的に計算させることでしょう。"
-
-#: ../../docs/training_manual/processing/modeler_only.rst:42
+#: ../../docs/training_manual/processing/modeler_only.rst:67
 msgid ""
 "We can use the modeler-only calculator, and compute that value from the "
 "extent coordinates. For instance, to create a layer with a fixed width of "
@@ -108,12 +98,12 @@ msgid ""
 msgstr ""
 "モデラー専用計算機を使用し、範囲座標からその値を計算できます。例えば、固定幅の100ピクセルのレイヤーを作成するには、計算機で次の式を使用できます。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:46
+#: ../../docs/training_manual/processing/modeler_only.rst:72
 msgid ""
 "Now we have to edit the rasterize algorithm, so it uses the output of the "
 "calculator instead of the hardcoded value."
 msgstr "ここでラスター化アルゴリズムを、ハードコード値の代わりに計算機の出力を使用するように編集する必要があります。"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:48
+#: ../../docs/training_manual/processing/modeler_only.rst:74
 msgid "The final algorithm should look like this:"
 msgstr "最終的なアルゴリズムはこうなるはずです："

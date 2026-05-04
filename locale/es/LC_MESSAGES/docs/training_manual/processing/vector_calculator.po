@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -45,7 +45,7 @@ msgstr ""
 "En esta lección veremos cómo agregar nuevos atributos a una capa vectorial "
 "basado en una expresión matemática, utilizando la calculadora de vectores. "
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:11
+#: ../../docs/training_manual/processing/vector_calculator.rst:15
 msgid ""
 "In newer versions of Processing the interface has changed considerably, it's"
 " more powerful and easier to use."
@@ -53,35 +53,16 @@ msgstr ""
 "En las versiones más recientes de Procesamiento de la interfaz ha cambiado "
 "considerablemente, es más potente y fácil de usar. "
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:13
+#: ../../docs/training_manual/processing/vector_calculator.rst:17
 msgid "Here are a few examples of using that algorithm."
 msgstr "Aquí hay algunos ejemplos del uso de este algoritmo."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:15
-msgid ""
-"First, let's calculate the population density of white people in each "
-"polygon, which represents a census. We have two fields in the attributes "
-"table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just"
-" have to divide them and multiply by one million (to have density per square"
-" km), so we can use the following formula in the corresponding field"
-msgstr ""
-"En primer lugar, vamos a calcular la densidad de población blanca en cada "
-"polígono, lo que representa un censo. Tenemos dos campos en la tabla "
-"atributos que podemos utilizar para eso, llamados, ``WHITE`` y "
-"``SHAPE_AREA``. Sólo tenemos que dividirlos y multiplicar por un millón "
-"(para tener la densidad por kilómetro cuadrado), por lo que podemos utilizar"
-" la siguiente fórmula en el campo correspondiente"
-
-#: ../../docs/training_manual/processing/vector_calculator.rst:21
+#: ../../docs/training_manual/processing/vector_calculator.rst:26
 msgid "The parameters dialog should be filled as shown below."
 msgstr ""
 "El diálogo de parámetros debe ser llenado como se muestra a continuación. "
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:25
-msgid "This will generate a new field named ``WHITE_DENS``"
-msgstr "Esto generará un nuevo campo llamado ``WHITE_DENS`` "
-
-#: ../../docs/training_manual/processing/vector_calculator.rst:27
+#: ../../docs/training_manual/processing/vector_calculator.rst:32
 msgid ""
 "Now let's calculate the ratio between the ``MALES`` and ``FEMALES`` fields "
 "to create a new one that indicates if male population is numerically "
@@ -91,11 +72,7 @@ msgstr ""
 "para crear uno nuevo que indique si la población masculina es numéricamente "
 "predominante sobre población femenina. "
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:29
-msgid "Enter the following formula"
-msgstr "Introduzca la siguiente fórmula "
-
-#: ../../docs/training_manual/processing/vector_calculator.rst:40
+#: ../../docs/training_manual/processing/vector_calculator.rst:44
 msgid ""
 "In earlier version, since both fields are of type integer, the result would "
 "be truncated to an integer. In this case the formula should be: ``1.0 *  "
@@ -107,7 +84,7 @@ msgstr ""
 "\"MACHOS\" / \"MUJERES\"``, para indicar que queremos un resultado de número"
 " punto flotante."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:42
+#: ../../docs/training_manual/processing/vector_calculator.rst:47
 msgid ""
 "We can use conditional functions to have a new field with ``male`` or "
 "``female`` text strings instead of those ratio value, using the following "
@@ -117,6 +94,6 @@ msgstr ""
 "cadenas de texto ``male`` o  ``female`` en lugar de los valor de la "
 "relación, mediante la siguiente fórmula:: "
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:46
+#: ../../docs/training_manual/processing/vector_calculator.rst:52
 msgid "The parameters window should look like this."
 msgstr "La ventana de parámetros debería tener este aspecto. "

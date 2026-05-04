@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: zh-Hans\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -81,11 +81,11 @@ msgstr ""
 "自定义的、用户创建的坐标参照系存储在用户坐标参照系数据库中。有关管理自定义坐标参照系统的信息，请参阅 "
 ":ref:`sec_custom_projections` 部分。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:45
 msgid "Layer Coordinate Reference Systems"
 msgstr "图层坐标参照系"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:59
 msgid ""
 "Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
 "determine the correct CRS for that layer. In some cases this is not "
@@ -97,52 +97,36 @@ msgstr ""
 "都会尝试自动确定该图层的正确坐标参照系。在某些情况下可能无法成功，例如当提供了一个不包含坐标系信息的图层时。当 QGIS "
 "无法自动确定图层的正确坐标参照系时，您可以手动配置 QGIS ："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:65
 msgid ""
 "Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
 "CRS`"
 msgstr "打开 :menuselection:`设置 -->` |options| :menuselection:`选项... --> CRS`"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:437
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:438
 msgid "options"
 msgstr "options"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:72
 msgid "The CRS tab in the QGIS Options Dialog"
 msgstr "QGIS选项对话框中的CRS选项卡"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:74
 msgid ""
 "Under the :guilabel:`CRS for layers` group, set the action to do "
 ":guilabel:`when a new layer is created, or when a layer is loaded that has "
 "no CRS`. One of:"
 msgstr "在:guilabel:`图层CRS` 选项组中，设置 :guilabel:`当创建新图层或加载没有CRS的图层时`的操作。从以下选择其一："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
-msgid ""
-"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
-"will be no prompt to select a CRS when a layer without CRS is loaded, "
-"defering CRS choice to a later time. Convenient when loading a lot of layers"
-" at once. Such layers will be identifiable in the :guilabel:`Layers` panel "
-"by the |indicatorNoCRS| icon next to them. They'll also be un-referenced, "
-"with coordinates from the layer treated as purely numerical, non-earth "
-"values, i.e. the same behavior as all layers get when :ref:`a project is set"
-" to have no CRS <project_crs>`."
-msgstr ""
-"|radioButtonOn| :guilabel:`保留未知CRS (无动作)`：加载没有 CRS 的图层时，将不会提示选择 CRS，将 CRS "
-"选择推迟到以后。一次加载很多图层时很方便。在 :guilabel:`图层` 面板中这些图层旁边将会显示 |indicatorNoCRS| "
-"图标。它们也将是无参照的，来自该图层的坐标被视为纯数字的、非地球的值，也就是说，当 :ref:`一个项目被设置为没有CRS时<project_crs> "
-"` ，所有图层的行为都是一样的。"
-
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:441
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:442
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:435
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:436
 msgid "indicatorNoCRS"
 msgstr "indicatorNoCRS"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:86
 msgid ""
 "|radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to manually "
 "select the CRS. Selecting the correct choice is crucial, as a wrong choice "
@@ -154,32 +138,32 @@ msgstr ""
 "|radioButtonOff| :guilabel:`提示CRS` "
 "：它将提示您手动选择CRS。选择正确的选择是至关重要的，因为一个错误的选择将把你的层放在地球表面的错误位置！有时，随附的元数据将描述层的正确CRS，在其他情况下，您需要联系数据的原始作者以确定要使用的正确CRS。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:439
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:440
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
 msgstr "|radioButtonOff| :guilabel:`使用工程CRS`"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:93
 msgid ""
 "|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
 ":guilabel:`Default CRS for layers` combobox above."
 msgstr ""
 "|radioButtonOff| :guilabel:`使用默认图层 CRS`, 就像设置上面的 :guilabel:`默认CRS 图层` 组合框"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:98
 msgid ""
 "To assign the same CRS to multiple layers that have no crs or have a wrong "
 "one in one operation:"
 msgstr "将相同的CRS分配给多个没有CRS或在一次操作中有错误CRS的层："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
 msgid "Select the layers in the :guilabel:`Layers` panel"
 msgstr "在图层面板中选择图层"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:102
 msgid ""
 "Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
 "selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
@@ -187,35 +171,35 @@ msgstr ""
 "使用快捷键 :kbd:`Ctrl+Shift+C` ，或者右键单击选中图层以进入CRS选择选菜单 :menuselection:`图层CRS --> "
 "设置图层CRS`"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
 msgid "Find and select the right CRS to use"
 msgstr "找到并选择正确的CRS"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:105
 msgid ""
 "And press :guilabel:`OK`. You can confirm that it has been set correctly in "
 "the :guilabel:`Source` tab of the layers' properties dialog."
 msgstr "点击 :guilabel:`OK` 现在检查图层属性对话框下的 :guilabel:`源` 标签页的信息，图层的CRS已被正确地设置"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:108
 msgid ""
 "Note that changing the CRS in this setting does not alter the underlying "
 "data source in any way, rather it just changes how QGIS interprets the raw "
 "coordinates from the layer in the current QGIS project."
 msgstr "请注意，在此设置中更改CRS并不会修改原始数据源，而只是改变了当前QGIS工程下QGIS对该图层原始坐标的解释。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:118
 msgid "Project Coordinate Reference Systems"
 msgstr "投影坐标参照系"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:120
 msgid ""
 "Every project in QGIS also has an associated Coordinate Reference System. "
 "The project CRS determines how data is projected from its underlying raw "
 "coordinates to the flat map rendered within your QGIS map canvas."
 msgstr "QGIS中的每个项目都有一个相关的坐标参考系。项目CRS决定如何将数据从底层原始坐标投影到QGIS地图画布中呈现的平面地图。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:124
 msgid ""
 "QGIS supports \"on the fly\" CRS transformation for both raster and vector "
 "data. This means that regardless of the underlying CRS of particular map "
@@ -227,7 +211,7 @@ msgid ""
 msgstr ""
 "QGIS支持光栅和矢量数据的“实时动态”CRS转换。这意味着，无论项目中特定映射层的底层CRS如何，它们总是会自动转换为为项目定义的公共CRS。在幕后，QGIS透明地将项目中包含的所有图层重新投影到项目的CRS中，这样它们就会在彼此相关的正确位置上呈现！"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:132
 msgid ""
 "It is important to make an appropriate choice of CRS for your QGIS projects."
 " Choosing an inappropriate CRS can cause your maps to look distorted, and "
@@ -242,7 +226,7 @@ msgstr ""
 "并且很难反映地貌的实际大小和位置。通常，在较小的地理区域内工作时，会有多个 "
 "在特定国家或行政区内使用的标准CRS。针对你正在绘制的区域，研究哪些CRS是合适或标准选择，并确保您的QGIS项目遵循这些标准，这一点非常重要。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:141
 msgid ""
 "By default, QGIS starts each new project using a global default projection. "
 "This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
@@ -262,7 +246,7 @@ msgstr ""
 ":numref:`figure_projection_options`）。您可以选择在将第一个图层加载到新工程时自动将工程 CRS 设置为该图层的 "
 "CRS，也可以选择另一个 CRS 作为所有新建工程的默认 CRS。此选择将被保存，并在后续的 QGIS 会话中继续使用。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:152
 msgid ""
 "The project CRS can also be set through the :guilabel:`CRS` tab of the "
 ":menuselection:`Project --> Properties...` dialog. It will also be shown in "
@@ -271,15 +255,15 @@ msgstr ""
 "工程的 :guilabel:`CRS` 也可以通过:menuselection:`工程--> 工程属性...` 的 :guilabel:`CRS` "
 "选项卡来设置。也会显示在QGIS状态栏的最右下方。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:161
 msgid "Project Properties Dialog"
 msgstr "工程属性对话框"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:163
 msgid "Available options are:"
 msgstr "可用的选项包括："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:165
 msgid ""
 "|unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`: Checking "
 "this setting will disable ALL projection handling within the QGIS project, "
@@ -292,28 +276,28 @@ msgstr ""
 "|unchecked| :guilabel:`无CRS (或未知/非地球投影))` "
 "：勾选此设置将禁用QGIS项目中的所有投影处理，导致所有图层和地图坐标被视为简单的二维笛卡尔坐标，与地球表面的位置无关。它可以用来猜测一个层的CRS（基于其原始坐标），或者当QGIS用于非地球用途时，如角色扮演游戏地图，建筑地图或微观的东西。在这种情况下："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:451
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:452
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:173
 msgid ""
 "No reprojection is done while rendering the layers: features are just drawn "
 "using their raw coordinates."
 msgstr "在渲染层时不进行重投影：只是使用原始坐标绘制特征。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
 msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
 msgstr "椭球体被锁定并被迫“没有/平面” ``None/Planimetric`` 。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:176
 msgid ""
 "The distance and area units, and the coordinate display are locked out and "
 "forced to \"unknown units\"; all measurements are done in unknown map units,"
 " and no conversion is possible."
 msgstr "距离、面积单位、坐标显示被锁定，强制为“未知单位”；所有的测量都以未知的地图单位进行，不可能进行转换。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:180
 msgid ""
 "or an existing coordinate reference system that can be *geographic*, "
 "*projected* or *user-defined*. A preview of the CRS extent on earth is "
@@ -324,53 +308,53 @@ msgid ""
 msgstr ""
 "或现有的坐标参考系统，可以是地理的、投影的或用户定义的。显示地球上CRS范围的预览，以帮助您选择合适的CRS范围。添加到项目中的图层被实时转换到这个CRS，以便覆盖它们，而不管它们的原始CRS是什么。使用单位和椭球体设置是有意义的，你可以执行相应的计算。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:191
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:192
 msgid "**Setting the project CRS from a layer**"
 msgstr "**从图层设置工程CRS**"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:194
 msgid "You can assign a CRS to the project using a layer CRS:"
 msgstr "你可以使用图层的CRS为工程分配一个CRS："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:196
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
 "the CRS"
 msgstr "在 :guilabel:`图层` 面板，右键单击要选择CRS的图层"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:198
 msgid "Select :guilabel:`Set project CRS from Layer`."
 msgstr "选择 :guilabel:`图层CRS->将图层的CRS设为工程CRS` 。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:200
 msgid ""
 "The project's CRS is redefined using the layer's CRS. Map canvas extent, "
 "coordinates display are updated accordingly and all the layers in the "
 "project are on-the-fly translated to the new project CRS."
 msgstr "使用图层的CRS重新定义工程的CRS，地图画布范围，坐标显示相应更新，工程中的所有图层都实时转换为新的工程CRS。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:208
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:209
 msgid "Coordinate Reference System Selector"
 msgstr "坐标参照系选择器"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:215
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:216
 msgid "CRS Selector"
 msgstr "CRS选择器"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:217
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
 msgid ""
 "This dialog helps you assign a Coordinate Reference System to a project or a"
 " layer, provided a set of projection databases. Items in the dialog are:"
 msgstr "此对话框可帮助您为工程或图层分配坐标参照系统，并提供一组投影数据库。对话框中的元素有："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:220
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:221
 msgid ""
 "**Filter**: If you know the EPSG code, the identifier, or the name for a "
 "Coordinate Reference System, you can use the search feature to find it. "
 "Enter the EPSG code, the identifier or the name."
 msgstr "**过滤**: 如果你知道 EPSG 代码、标识符或坐标参照系的名称，您可以使用搜索功能来查找它。输入EPSG代码、标识符或名称。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:223
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:224
 msgid ""
 "**Recently used coordinate reference systems**: If you have certain CRSs "
 "that you frequently use in your everyday GIS work, these will be displayed "
@@ -378,7 +362,7 @@ msgid ""
 msgstr ""
 "**最近使用的坐标参照系** ：如果您在日常GIS工作中经常使用某些CRS，这些CRS将显示在此列表中。点击其中一个项目，选择相关的CRS。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:226
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:227
 msgid ""
 "**Coordinate reference systems of the world**: This is a list of all CRSs "
 "supported by QGIS, including Geographic, Projected and Custom coordinate "
@@ -388,33 +372,33 @@ msgstr ""
 "**预定义坐标参照系** "
 "：这是QGIS支持的所有CRS的列表，包括地理、投影和自定义坐标参考系统。请展开列表中适当的节点并选择CRS，已预选活跃的CRS。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:230
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:231
 msgid ""
 "**PROJ text**: This is the CRS string used by the PROJ projection engine. "
 "This text is read-only and provided for informational purposes."
 msgstr "**PROJ文本** ：左下角是PROJ投影引擎使用的CRS字符串。此文本为只读，仅供参考。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:234
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:235
 msgid ""
 "If you want to remove a recently used CRS from the list that can be done in "
 "several ways:"
 msgstr "如果你想从列表中删除最近使用的CRS，可以通过以下几种方式完成："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:237
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:238
 msgid ""
 "Press |clearItem| :sup:`Remove from recently used CRS` button on the right "
 "side."
 msgstr "按右侧的 |clearItem| :sup:`从最近使用的CRS中移除` 按钮。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:431
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:432
 msgid "clearItem"
 msgstr "clearItem"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:239
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:240
 msgid "Press :kbd:`Del` after selecting CRS that you want to remove."
 msgstr "选择要移除的CRS后，按 :kbd:`Del` 键。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:240
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
 msgid ""
 "Right-click on used CRS and choose |clearItem| :guilabel:`Remove selected "
 "CRS from recently used CRS` to remove selected CRS or |clearConsole| "
@@ -423,11 +407,11 @@ msgstr ""
 "在用过的CRS上鼠标右键单击，并选择 |clearItem| :guilabel:`从最近使用的CRS中移除选定的CRS` 来移除单个记录，或者  "
 "|clearConsole| :guilabel:`清除所有最近使用的CRS` 来移除所有曾用记录。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:429
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:430
 msgid "clearConsole"
 msgstr "clearConsole"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:246
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:247
 msgid ""
 "The CRS selector also shows a rough preview of the geographic area for which"
 " a selected CRS is valid for use. Many CRSs are designed only for use in "
@@ -438,11 +422,11 @@ msgid ""
 msgstr ""
 "CRS选择器还显示所选CRS有效使用的地理区域的粗略预览。许多CRS的设计仅用于小地理区域，您不应该在设计区域之外使用这些CRS。每当从列表中选择CRS时，预览地图就会显示大致的使用区域（红色）。此外，此预览图还显示了当前主画布地图范围的指示器（紫色）。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:259
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:260
 msgid "Custom Coordinate Reference System"
 msgstr "自定义坐标参照系"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:261
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:262
 msgid ""
 "If QGIS does not provide the coordinate reference system you need, you can "
 "define a custom CRS. To define a CRS, select |customProjection| "
@@ -454,11 +438,11 @@ msgstr ""
 "|customProjection| :guilabel:`自定义投影...` "
 ".自定义的CRS存储在QGIS用户数据库中。除了自定义CRS之外，该数据库还包含空间书签和其他自定义数据。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:433
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:434
 msgid "customProjection"
 msgstr "customProjection"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:268
 msgid ""
 "Defining a custom CRS in QGIS requires a good understanding of the PROJ "
 "projection library. To begin, refer to \"Cartographic Projection Procedures "
@@ -472,7 +456,7 @@ msgstr ""
 "Report 90-284, 1990 (可在 https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf"
 " 找到)。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:273
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:274
 msgid ""
 "This manual describes the use of ``proj`` and related command line "
 "utilities. The cartographic parameters used with ``proj`` are described in "
@@ -480,50 +464,50 @@ msgid ""
 msgstr ""
 "本手册描述了 ``proj`` 和相关命令行实用程序的使用。与 ``proj`` 一起使用的制图参数在用户手册中有描述，与QGIS使用的参数相同。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:277
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:278
 msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
 msgstr ":guilabel:`用户自定义CRS`` 对话框只需要两个参数定义用户CRS："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:280
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:281
 msgid "A descriptive name"
 msgstr "描述性名称"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:281
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:282
 msgid "The cartographic parameters in PROJ or WKT format"
 msgstr "使用PROJ或WKT格式的制图参数"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:283
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:284
 msgid "To create a new CRS:"
 msgstr "要创建一个新的CRS："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:286
 msgid "Click the |symbologyAdd| :sup:`Add new CRS` button"
 msgstr "单击 |symbologyAdd| :sup:`添加新的CRS` 按钮"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:445
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:446
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:286
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
 msgid "Enter a descriptive name"
 msgstr "输入描述性名称"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
 msgid ""
 "Select the format: it can be :guilabel:`Proj String` or :guilabel:`WKT`"
 msgstr "选择格式，它可能是 :guilabel:`Proj字符串` 或 :guilabel:`WKT`"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:288
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
 msgid "Add the CRS :guilabel:`Parameters`."
 msgstr "输入CRS :guilabel:`参数`。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:290
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
 msgid "**Prefer storing the CRS definition in WKT format**"
 msgstr "**首选以WKT格式存储CRS定义**"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:292
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:293
 msgid ""
 "Although both ``Proj String`` and ``WKT`` formats are supported, it's highly"
 " recommended to store projection definitions in the WKT format. Therefore, "
@@ -534,17 +518,17 @@ msgstr ""
 "虽然都支持 ``Proj String`` 和 ``WKT`` "
 "格式，但强烈建议以WKT格式存储投影定义。因此，如果可用的定义是proj格式，请选择该格式，输入参数，然后切换到WKT格式。QGIS将把定义转换为稍后可以保存的WKT格式。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:298
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:299
 msgid ""
 "Click :guilabel:`Validate` to test whether the CRS definition is an "
 "acceptable projection definition."
 msgstr "点击 :guilabel:`验证` 按钮以测试CRS定义是否为有效的投影定义。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:306
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:307
 msgid "Custom CRS Dialog"
 msgstr "自定义CRS对话框界面"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:309
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:310
 msgid ""
 "You can test your CRS parameters to see if they give sane results. To do "
 "this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
@@ -555,16 +539,16 @@ msgstr ""
 "您可以测试CRS参数，看看它们是否给出相同的结果。为此，分别在 :guilabel:`纬度` and :guilabel:`经度` "
 "字段中输入已知的WGS 84纬度和经度值。单击 :guilabel:`计算`，并将结果与坐标参考系中的已知值进行比较。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:315
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:316
 msgid "Integrate an NTv2-transformation in QGIS"
 msgstr "在QGIS中集成NTv2-变换"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:317
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:318
 msgid ""
 "To integrate an NTv2 transformation file in QGIS you need one more step:"
 msgstr "要在QGIS中集成NTv2变换文件，您还需要一个步骤："
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:319
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:320
 msgid ""
 "Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
 ":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
@@ -572,7 +556,7 @@ msgstr ""
 "将NTv2文件（.gsb）放在QGIS使用的CRS/Proj文件夹中 例如Windows的 "
 ":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` 路径)"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:321
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:322
 msgid ""
 "Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
 " the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
@@ -582,15 +566,15 @@ msgstr ""
 "添加 **nadgrids** (``+nadgrids=nameofthefile.gsb``)到工程定义 :guilabel:`参数` 字段of "
 "the :guilabel:`自定义坐标参照系定义` (:menuselection:`设置--> Custom Projections...`)."
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:330
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:331
 msgid "Setting an NTv2 transformation"
 msgstr "设置NTv2变换"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:337
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:338
 msgid "Datum Transformations"
 msgstr "基准变换"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:340
 msgid ""
 "In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
 " whenever you use layers with different coordinate systems QGIS "
@@ -600,7 +584,7 @@ msgstr ""
 "在QGIS中，默认启用了“实时动态” "
 "CRS转换功能。这意味着，当你使用具有不同坐标系统的图层时，QGIS会透明地将它们重新投影到项目CRS。对于某些CRS，存在多种可能的转换方式来重新投影到项目的CRS！"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:344
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:345
 msgid ""
 "By default, QGIS will attempt to use the most accurate transformation "
 "available. However, in some cases this may not be possible, e.g. whenever "
@@ -615,7 +599,7 @@ msgstr ""
 "默认情况下，QGIS将尝试使用最准确的可用变换。然而，在某些情况下，这可能是不可能的，例如，每当需要额外的支持文件来使用变换时。每当有更精确的变换可用，但目前无法使用时，QGIS将显示一条信息丰富的警告消息，建议您使用更精确的转换，以及如何在系统上启用它。通常，这需要下载一个变换支持文件的外部包，并将它们解压缩到QGIS"
 " :ref:`用户配置 <user_profiles>` 文件夹下的 :file:`proj` 文件夹。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:354
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:355
 msgid ""
 "If desired, QGIS can also prompt you whenever multiple possible "
 "transformations can be made between two CRSs, and allow you to make an "
@@ -623,7 +607,7 @@ msgid ""
 "for your data."
 msgstr "如果需要，QGIS还可以在两个CRS之间进行多种可能的转换时提示您，并允许您做出明智的选择，选择最适合您的数据的转换。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:358
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
 msgid ""
 "This customization is done in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab menu under the "
@@ -632,7 +616,7 @@ msgstr ""
 "此自定义设置位于 :menuselection:`设置-->` |options| :menuselection:`选项--> 坐标转换` 选项卡中的 "
 ":guilabel:`默认基准面变换` 组中： "
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:362
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:363
 msgid ""
 "using |checkbox| :guilabel:`Ask for datum transformation if several are "
 "available`: when more than one appropriate datum transformation exist for a "
@@ -646,48 +630,48 @@ msgstr ""
 "的组合存在多个适用的基准面转换时，系统将自动弹出对话框，提示用户选择在当前工程中使用哪一个基准面转换。如果在该对话框中选择转换时勾选了 "
 ":guilabel:`设为默认` 复选框，则此选择将被记住，并自动应用于所有后续新建的 QGIS 工程。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:427
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:428
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:369
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:370
 msgid ""
 "or defining a list of appropriate datum transformations to use as defaults "
 "when loading a layer to a project or reprojecting a layer."
 msgstr "或者定义一个适当的基准变换列表，以便在将图层加载到工程或重投影图层时作为默认值使用。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:372
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:373
 msgid ""
 "Use the |symbologyAdd| button to open the :guilabel:`Select Datum "
 "Transformations` dialog. Then:"
 msgstr "使用 |symbologyAdd| 按钮打开 :guilabel:`选择基准面变换`的对话框。然后:"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:375
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:376
 msgid ""
 "Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
 "the |setProjection| :sup:`Select CRS` widget."
 msgstr "指定图层的 :guilabel:`源CRS` ，使用下拉菜单或 |setProjection| :sup:`选择CRS` 控件。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:443
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:444
 msgid "setProjection"
 msgstr "setProjection"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
 msgstr "以同样的方式提供 :guilabel:`目标CRS` 。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:378
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:379
 msgid ""
 "A list of available transformations from source to destination will be shown"
 " in the table. Clicking a row shows details on the settings applied and the "
 "corresponding accuracy and area of use of the transformation."
 msgstr "表中将显示从源到目标的可用变换列表。单击一行显示应用的设置的详细信息，以及相应的变换使用的准确性和区域。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:388
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:389
 msgid "Selecting a preferred default datum transformation"
 msgstr "选择首选的默认基准面变换"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:390
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:391
 msgid ""
 "In some cases a transformation may not be available for use on your system. "
 "In this case, the transformation will still be shown (greyed) in this list "
@@ -699,21 +683,21 @@ msgstr ""
 "在某些情况下，您的系统可能无法使用某些转换功能。此时，该转换仍会显示在此列表中（灰色状态），但需安装所需的转换支持包后才能选择。通常会提供一个按钮用于下载并安装相应的网格文件，该文件将存储在"
 " :ref:`user profile <user_profiles>` 目录下的 :file:`proj` 文件夹。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:397
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:398
 msgid "Find your preferred transformation and select it"
 msgstr "找到你喜欢的变换，选择它"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:398
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:399
 msgid ""
 "Set whether you |checkbox| :guilabel:`Allow fallback transforms if preferred"
 " operation fails`"
 msgstr "设置右下角的勾选 |checkbox| :guilabel:`如果首选操作失败，允许回退转换` "
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:400
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:401
 msgid "Click :guilabel:`OK`."
 msgstr "单击 :guilabel:`确定` 。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:402
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:403
 msgid ""
 "A row is added to the table under :guilabel:`Default Datum Transformations` "
 "with information about the :guilabel:`Source CRS`, the "
@@ -723,7 +707,7 @@ msgstr ""
 "在 :guilabel:`默认基准面变换` 下的表中添加一行，其中包含有 :guilabel:`源CRS` 、 :guilabel:`目标CRS` 、 "
 "为转换应用的:guilabel:`操作` 和是否启用了 :guilabel:`允许回退转换` 的信息。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:407
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:408
 msgid ""
 "From now, QGIS automatically uses the selected datum transformations for "
 "further transformation between these two CRSs until you remove it "
@@ -733,15 +717,15 @@ msgstr ""
 "从现在开始，QGIS将自动使用所选的数据转换在这两个CRS之间进一步转换，直到您将它从列表中移除 (|symbologyRemove|) 或更改条目 "
 "(|toggleEditing|)。"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:447
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:448
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:449
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:450
 msgid "toggleEditing"
 msgstr "toggleEditing"
 
-#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:412
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:413
 msgid ""
 "Datum transformations set in the :menuselection:`Settings -->` |options| "
 ":menuselection:`Options --> Transformations` tab will be inherited by all "

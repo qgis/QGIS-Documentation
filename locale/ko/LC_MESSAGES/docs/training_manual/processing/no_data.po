@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
 "Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -145,7 +145,7 @@ msgstr ""
 ":guilabel:`Run` 을 클릭해서 알고리즘을 실행하십시오. 입력 레이어와 동일한 모양이지만 값이 다른 레이어를 얻게 됩니다. "
 "우리가 사용한 입력 레이어가 모든 셀에 유효한 값을 담고 있으므로, 마지막 파라미터는 어떤 영향도 끼치지 못 합니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:39
+#: ../../docs/training_manual/processing/no_data.rst:40
 msgid ""
 "Let's now perform another calculation, this time on the *accflow* layer. "
 "This layer contains values of accumulated flow, a hydrological parameter. It"
@@ -160,7 +160,7 @@ msgstr ""
 "값입니다. 값들이 분포되어 있는 방식 때문에 렌더링된 레이어에서 정보를 얻기가 힘든 것을 볼 수 있습니다. 누적 수량의 로그를 쓰면 훨씬"
 " 유익하게 표현할 수 있습니다. 래스터 계산기를 써서 로그를 계산해보겠습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:41
+#: ../../docs/training_manual/processing/no_data.rst:47
 msgid ""
 "Open the algorithm dialog again, select the *accflow* layer as the only "
 "input layer, and enter the following formula: ``log(a)``."
@@ -168,11 +168,11 @@ msgstr ""
 "알고리즘 대화창을 다시 열고, 입력 레이어에 :guilabel:`accflow` 레이어만 선택한 다음, :kbd:`log(a)` 라는 "
 "공식을 입력하십시오."
 
-#: ../../docs/training_manual/processing/no_data.rst:43
+#: ../../docs/training_manual/processing/no_data.rst:50
 msgid "Here is the layer that you will get."
 msgstr "다음과 같은 레이어를 얻게 될 것입니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:47
+#: ../../docs/training_manual/processing/no_data.rst:54
 msgid ""
 "If you select the *Identify* tool to know the value of a layer at a given "
 "point, select the layer that we have just created, and click on a point "
@@ -181,7 +181,7 @@ msgstr ""
 "레이어의 어떤 포인트의 값을 알기 위해 :guilabel:`Identify` 도구를 선택할 경우, 방금 생성한 레이어를 선택한 다음 유역"
 " 바깥의 아무 포인트나 클릭해보십시오. NODATA 값을 담고 있다는 것을 알 수 있습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:51
+#: ../../docs/training_manual/processing/no_data.rst:60
 msgid ""
 "For the next exercise we are going to use two layers instead of one, and we "
 "are going to get a DEM with valid elevation values only within the basin "
@@ -193,7 +193,7 @@ msgstr ""
 "DEM을 얻어보겠습니다. 래스터 계산기 대화창을 열고 :guilabel:`Raster layers` 필드에 프로젝트의 두 레이어를 모두 "
 "선택하십시오. :guilabel:`Formula` 필드에 다음 공식을 입력하십시오:"
 
-#: ../../docs/training_manual/processing/no_data.rst:57
+#: ../../docs/training_manual/processing/no_data.rst:69
 msgid ""
 "``a`` refers to the accumulated flow layer (since it is the first one to "
 "appear in the list) and ``b`` refers to the DEM. What we are doing in the "
@@ -208,11 +208,11 @@ msgstr ""
 "DEM으로 곱하면 유역 안의 셀에 표고값이 (``DEM * 1 = DEM``) 생성되고, 바깥의 셀에 NODATA 값이 (``DEM * "
 "no_data = no_data``) 생성됩니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:59
+#: ../../docs/training_manual/processing/no_data.rst:75
 msgid "Here is the resulting layer."
 msgstr "다음과 같은 레이어가 산출됩니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:64
+#: ../../docs/training_manual/processing/no_data.rst:80
 msgid ""
 "This technique is used frequently to *mask* values in a raster layer, and is"
 " useful whenever you want to perform calculations for a region other that "
@@ -227,21 +227,7 @@ msgstr ""
 "유역에 해당하는 값만을 사용해서 (앞의 경우와 같이) 계산할 경우 얻게 되는 것은 실제로 유역의 지형에 대한 정보를 제공하는 의미 있는 "
 "결과입니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:66
-msgid ""
-"There are other interesting things about this algorithm that we have just "
-"run, apart from the no--data values and how they are handled. If you have a "
-"look at the extents of the layers that we have multiplied (you can do it "
-"double--clicking on their names of the layer in the table of contents and "
-"looking at their properties), you will see that they are not the same, since"
-" the extent covered by the flow accumulation layer is smaller that the "
-"extent of the full DEM."
-msgstr ""
-"방금 실행한 이 알고리즘에는 NODATA 값과 이를 다루는 방식 외에도 또다른 흥미로운 점이 있습니다. 방금 계산에 사용한 두 레이어의 "
-"범위를 살펴보면 (레이어 목록에서 레이어명을 더블클릭해서 속성을 보면 됩니다) 두 레이어의 범위가 다르다는 것을 알 수 있습니다. 누적 "
-"수량 레이어가 커버하는 범위가 전체 DEM의 범위보다 작기 때문입니다."
-
-#: ../../docs/training_manual/processing/no_data.rst:68
+#: ../../docs/training_manual/processing/no_data.rst:93
 msgid ""
 "That means that those layers do not match, and that they cannot be "
 "multiplied directly without homogenizing those sizes and extents by "
@@ -254,7 +240,7 @@ msgstr ""
 "의미입니다. 그런데 우리는 아무 일도 하지 않았습니다. QGIS가 이 상황을 처리해서, 필요할 경우 자동적으로 입력 레이어들을 "
 "리샘플링하는 것입니다. 산출물의 범위는 입력 레이어들로부터 계산된 최소 범위이며, 셀 크기는 두 레이어의 최소 셀 크기가 됩니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:70
+#: ../../docs/training_manual/processing/no_data.rst:98
 msgid ""
 "In this case (and in most cases), this produces the desired results, but you"
 " should always be aware of the additional operations that are taking place, "
@@ -268,39 +254,39 @@ msgstr ""
 "리샘플링 작업을 해놓아야 합니다. 이후 다른 수업들에서 복수의 래스터 레이어를 사용할 때 알고리즘이 어떻게 동작하는지에 대해 자세히 배울"
 " 것입니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:73
+#: ../../docs/training_manual/processing/no_data.rst:104
 msgid ""
 "Let's finish this lesson with another masking exercise. We are going to "
 "calculate the slope in all areas with an elevation between 1000 and 1500 "
 "meters."
 msgstr "다른 마스킹 예제로 이 수업을 끝내겠습니다. 표고가 1000에서 1500미터 사이인 모든 영역의 경사도를 계산해보겠습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:75
+#: ../../docs/training_manual/processing/no_data.rst:107
 msgid ""
 "In this case, we do not have a layer to use as a mask, but we can create it "
 "using the calculator."
 msgstr "이 경우 마스킹 레이어로 사용할 레이어가 없지만, 래스터 레이어를 이용해서 계산할 수 있습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:77
+#: ../../docs/training_manual/processing/no_data.rst:109
 msgid ""
 "Run the calculator using the DEM as only input layer and the following "
 "formula"
 msgstr "입력 레이어에 DEM만 선택하고, 다음 공식을 써서 래스터 계산기를 실행하십시오."
 
-#: ../../docs/training_manual/processing/no_data.rst:83
+#: ../../docs/training_manual/processing/no_data.rst:115
 msgid ""
 "As you can see, we can use the calculator not only to do simple algebraic "
 "operations, but also to run more complex calculation involving conditional "
 "sentences, like the one above."
 msgstr "이와 같이 래스터 계산기는 간단한 산술적인 작업만이 아니라 조건문을 이용하는 좀 더 복잡한 계산도 실행할 수 있습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:85
+#: ../../docs/training_manual/processing/no_data.rst:118
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and no-"
 "data in cells outside of it."
 msgstr "우리가 작업하고자 하는 영역 내부의 셀은 1, 외부 셀은 NODATA 값을 가지는 결과물이 생성됩니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:89
+#: ../../docs/training_manual/processing/no_data.rst:122
 msgid ""
 "The no-data value comes from the 0/0 expression. Since that is an "
 "undetermined value, SAGA will add a NaN (Not a Number) value, which is "
@@ -312,13 +298,13 @@ msgstr ""
 "Number) 값을 추가해서 실제 NODATA 값인 것처럼 처리합니다. 이런 방법으로 셀의 NODATA 값이 실제로 어떤 값인지 알 필요"
 " 없이 NODATA 값을 설정할 수 있습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:91
+#: ../../docs/training_manual/processing/no_data.rst:126
 msgid ""
 "Now you just have to multiply it by the slope layer included in the project,"
 " and you will get the desired result."
 msgstr "이제 이 결과물 레이어를 프로젝트에 포함된 경사도 레이어와 곱하기만 하면 원하던 결과를 얻을 수 있습니다."
 
-#: ../../docs/training_manual/processing/no_data.rst:93
+#: ../../docs/training_manual/processing/no_data.rst:128
 msgid ""
 "All that can be done in a single operation with the calculator. We leave "
 "that as an exercise for the reader."

@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -43,7 +43,7 @@ msgid ""
 msgstr ""
 "이 수업에서는 모델 설계자에서만 사용할 수 있는 몇몇 알고리즘을 사용해서 어떻게 모델에 추가 기능을 제공할 수 있는지 알려줄 것입니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:6
+#: ../../docs/training_manual/processing/modeler_only.rst:7
 msgid ""
 "The goal of this lesson is to use the modeler to create an interpolation "
 "algorithm that takes into account the current selection, not just to use "
@@ -53,7 +53,7 @@ msgstr ""
 "이 수업의 목표는 모델 설계자를 사용해서 보간된 래스터 레이어를 생성하기 위해 현재 선택 집합을 입력받아 선택한 피처들만이 아니라 해당 "
 "선택 집합의 영역을 사용하는 보간 알고리즘을 생성하는 것입니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:8
+#: ../../docs/training_manual/processing/modeler_only.rst:11
 msgid ""
 "The interpolation process involves two steps, as it has been already "
 "explained in previous lessons: rasterizing the points layer and fill the no-"
@@ -69,7 +69,7 @@ msgstr ""
 " 설정했다면 레이어 전체 영역을 사용할 것입니다. 즉 레이어 영역은 언제나 모든 피처의 전체 영역으로 간주되지 선택된 피처들만으로 계산된"
 " 영역으로 간주되지는 않는다는 뜻입니다. 우리 모델에 추가 도구 몇 개를 사용해서 이 문제를 해결해보도록 하겠습니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:10
+#: ../../docs/training_manual/processing/modeler_only.rst:19
 msgid ""
 "Open the modeler and start the model by adding the required inputs. In this "
 "case we need a vector layer (restricted to points) and an attribute from it,"
@@ -78,15 +78,15 @@ msgstr ""
 "모델 설계자를 열고 필수 입력물을 추가해서 모델을 실행하십시오. 이 경우 (포인트만으로 제한된) 벡터 레이어 하나와, 래스터화 작업에 "
 "사용할 값들을 가진 해당 레이어의 속성이 필요합니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:26
+#: ../../docs/training_manual/processing/modeler_only.rst:46
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "이 알고리즘의 파라미터를 다음과 같이 채워 넣으십시오:"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:30
+#: ../../docs/training_manual/processing/modeler_only.rst:50
 msgid "The canvas should now look like."
 msgstr "이제 캔버스가 다음과 같이 보일 것입니다:"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:38
+#: ../../docs/training_manual/processing/modeler_only.rst:58
 msgid ""
 "The algorithm is now ready to be saved and added to the toolbox. You can run"
 " it and it will generate a raster layer from interpolating the selected "
@@ -96,19 +96,7 @@ msgstr ""
 "이제 알고리즘을 저장하고 툴박스에 추가할 준비가 끝났습니다. 이 알고리즘을 실행하면 입력 레이어에서 선택된 포인트들을 보간한 래스터 "
 "레이어를 생성할 것입니다. 이 산출 레이어는 입력된 선택 집합과 동일한 영역을 가지고 있을 겁니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:40
-msgid ""
-"Here's an improvement to the algorithm. We have used a harcoded value for "
-"the cellsize when rasterizing. This value is fine for our test input layer, "
-"but might not be for other cases. We could add a new parameter, so the user "
-"enters the desired value, but a much better approach would be to have that "
-"value automatically computed."
-msgstr ""
-"이제 이 알고리즘을 향상시켜 봅시다. 우리는 방금 예제에서 래스터화 도중 셀 크기 값을 직접 입력했습니다. 이 값은 이번 입력 레이어에 "
-"대해서는 괜찮았지만, 다른 경우에도 괜찮을 거란 보장은 없습니다. 사용자가 새 파라미터를 추가해서 적당한 값을 직접 입력해도 되지만, 이"
-" 값을 자동적으로 계산하게 하는 것이 더 나은 방법이겠죠."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:42
+#: ../../docs/training_manual/processing/modeler_only.rst:67
 msgid ""
 "We can use the modeler-only calculator, and compute that value from the "
 "extent coordinates. For instance, to create a layer with a fixed width of "
@@ -117,12 +105,12 @@ msgstr ""
 "모델 설계자 전용 계산기를 사용해서 영역 좌표로부터 이 값을 계산하면 됩니다. 예를 들면 계산기에 다음과 같은 공식을 사용하면 레이어를 "
 "고정 너비 100픽셀로 생성할 수 있습니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:46
+#: ../../docs/training_manual/processing/modeler_only.rst:72
 msgid ""
 "Now we have to edit the rasterize algorithm, so it uses the output of the "
 "calculator instead of the hardcoded value."
 msgstr "이제 직접 입력한 값이 아니라 계산기가 산출한 값을 사용하도록 래스터화 알고리즘을 편집해야 합니다."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:48
+#: ../../docs/training_manual/processing/modeler_only.rst:74
 msgid "The final algorithm should look like this:"
 msgstr "최종 알고리즘은 다음처럼 보일 것입니다:"

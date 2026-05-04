@@ -14,14 +14,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -105,15 +105,6 @@ msgstr ""
 "사용자가 연결하고자 시도하는 가장 가까운 꼭짓점 또는 선분을 검색하는 데 스냅 허용 오차 거리를 사용합니다. 스냅 허용 오차 거리 안에 "
 "다른 꼭짓점 또는 선분이 없다면, QGIS는 기존 꼭짓점 또는 선분에 스냅시키는 대신 사용자가 마우스 버튼을 놓은 위치에 꼭짓점을 배치할"
 " 것입니다."
-
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:60
-msgid ""
-"The tolerance setting affects all tools that work with snapping and applies "
-"by default to new layers and projets. It can however be overridden at layer "
-"level (see :ref:`snapping_options`)."
-msgstr ""
-"허용 오차 설정은 스냅 작업에 쓰이는 모든 도구에 영향을 미치며, 새 레이어 및 프로젝트에 기본적으로 적용됩니다. 하지만 레이어 수준에서"
-" (:ref:`snapping_options` 참조) 무시할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:66
 msgid ""
@@ -1468,17 +1459,6 @@ msgstr ""
 msgid "**Feature selection bounds vertex tool**"
 msgstr "**피처 선택에 속박된 꼭짓점 도구**"
 
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:662
-msgid ""
-"Vertices can be selected accross different features (or layers). If you are "
-"looking for vertices of a specific feature in a crowded place, first select "
-"that feature. Then draw the rectangle or polygon selector with the vertex "
-"tool around the vertices: only the selected feature's vertices are selected."
-msgstr ""
-"서로 다른 피처에 (또는 레이어에) 걸쳐 있는 꼭짓점들을 동시에 선택할 수 있습니다. 피처들이 많이 모여 있는 위치에 있는 특정 피처의 "
-"꼭짓점을 찾고 있다면 먼저 해당 피처를 선택하십시오. 그 다음 꼭짓점 도구를 이용해서 꼭짓점 주위에 직사각형 또는 폴리곤 선택기를 "
-"그리십시오. 선택한 피처의 꼭짓점만 선택될 것입니다."
-
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:668
 msgid ""
 "This is also the case if you display the feature in the :ref:`vertex editor "
@@ -2724,21 +2704,6 @@ msgstr ""
 "|reshape| :sup:`Reshape Features` 도구를 이용해서 기존 라인의 첫 번째 또는 마지막 꼭짓점에 스냅한 다음 새 "
 "라인을 그리면 기존 라인스트링 도형을 늘릴 수 있습니다. 새 라인을 승인하면 피처 도형이 두 라인의 결합체로 변합니다."
 
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1346
-msgid ""
-"For polygons, it will reshape the polygon's boundary. For it to work, the "
-"reshape tool's line must cross the polygon's boundary at least twice. To "
-"draw the line, click on the map canvas to add vertexes. To finish it, just "
-"right-click. Like with the lines, only the segment between the first and the"
-" last intersections is considered. The reshape line's segments that are "
-"inside the polygon will result in cropping it, where the ones outside the "
-"polygon will extend it."
-msgstr ""
-"폴리곤의 경우, 이 도구는 폴리곤의 경계선을 재형성합니다. 제대로 동작하려면, 재형성 도구의 라인이 폴리곤 경계선과 최소한 두 번 "
-"교차해야만 합니다. 라인을 그리려면, 맵 캔버스를 클릭해서 꼭짓점을 추가하십시오. 그리기를 마치려면, 오른쪽 클릭만 하면 됩니다. 라인의"
-" 경우와 마찬가지로, 첫 번째와 마지막 교차점 사이에 있는 선분만 처리됩니다. 폴리곤 내부에 있는 재형성 라인의 선분은 폴리곤을 "
-"잘라내고, 외부에 있는 선분은 폴리곤을 확장시킬 것입니다."
-
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1359
 msgid "Reshape polygon"
 msgstr "폴리곤 재형성하기"
@@ -3532,14 +3497,6 @@ msgid ""
 "The tools are not enabled if the map view is in geographic coordinates."
 msgstr "맵 뷰가 지리 좌표인 경우 이 도구들을 활성화할 수 없습니다."
 
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1860
-msgid ""
-"The aim of the Advanced Digitizing tool is to lock coordinates, lengths, and"
-" angles when moving the mouse during the digitalizing in the map canvas."
-msgstr ""
-"고급 다지타이즈 작업 도구의 목적은 맵 캔버스에서 디지타이즈 작업 도중 마우스를 이동시킬 때 좌표, 길이 그리고 각도를 고정하는 "
-"것입니다."
-
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1863
 msgid ""
 "You can also create constraints with relative or absolute reference. "
@@ -3912,12 +3869,6 @@ msgstr "Z 좌표 또는 M 값 옵션은 레이어 도형 차원과 호환되는 
 msgid "Absolute reference digitizing"
 msgstr "절대 참조 디지타이즈 작업"
 
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1979
-msgid ""
-"When drawing a new geometry from scratch, it is very useful to have the "
-"possibility to start digitizing vertexes at given coordinates."
-msgstr "아무것도 없는 상태에서 새 도형을 그리는 경우, 지정한 좌표에서 꼭짓점 디지타이즈를 시작할 수 있다면 매우 편리합니다."
-
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:1982
 msgid ""
 "For example, to add a new feature to a polygonal layer, click the "
@@ -4118,17 +4069,6 @@ msgstr ""
 msgid "Continuous lock"
 msgstr "지속 고정"
 
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2075
-msgid ""
-"Both in absolute or relative reference digitizing, angle, distance, X, Y, Z "
-"and M constraints can be locked continuously by clicking the |lockRepeating|"
-" :guilabel:`Continuous lock` buttons. Using continuous lock allows you to "
-"digitize several points or vertexes using the same constraints."
-msgstr ""
-"절대 참조 또는 상대 참조 디지타이즈 작업 모두, |lockRepeating| :guilabel:`Continuous lock` 버튼을 "
-"누르면 각도, 거리, X, Y, Z 및 M 제약조건을 계속 고정 상태로 만들 수 있습니다. 지속 고정을 사용하면 포인트 또는 꼭짓점 여러"
-" 개를 동일한 제약조건을 사용해서 디지타이즈할 수 있습니다."
-
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2356
 msgid "lockRepeating"
 msgstr "lockRepeating"
@@ -4136,19 +4076,6 @@ msgstr "lockRepeating"
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2084
 msgid "Construction mode"
 msgstr "작성 모드"
-
-#: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2086
-msgid ""
-"You can enable and disable *construction mode* by clicking on the "
-"|cadConstruction| :sup:`Construction mode` icon or with the :kbd:`C` "
-"keyboard shortcut. While in construction mode, clicking the map canvas won't"
-" add new vertexes, but will capture the clicks' positions so that you can "
-"use them as reference points to then lock distance, angle or X, Y, Z, M "
-"relative values."
-msgstr ""
-"|cadConstruction| :sup:`Construction mode` 아이콘을 클릭하거나 :kbd:`C` 키보드 단축키를 누르면 "
-"*작성 모드* 를 켜고 끌 수 있습니다. 작성 모드에서는 맵 캔버스를 클릭해도 새 꼭짓점을 추가하지 않을 것입니다. 대신 클릭한 위치를 "
-"캡처한 다음 해당 위치를 거리, 각도, 또는 X, Y, Z, M 상대값을 고정시키기 위한 참조 포인트로 사용할 수 있게 해줍니다."
 
 #: ../../docs/user_manual/working_with_vector/editing_geometry_attributes.rst:2106
 msgid ""

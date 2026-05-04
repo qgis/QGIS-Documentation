@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -45,7 +45,7 @@ msgstr ""
 "Esta lección muestra cómo usar algunos algoritmos que solo están disponibles"
 " en el modelador, para proporcionar funcionalidad adicional a los modelos."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:6
+#: ../../docs/training_manual/processing/modeler_only.rst:7
 msgid ""
 "The goal of this lesson is to use the modeler to create an interpolation "
 "algorithm that takes into account the current selection, not just to use "
@@ -57,7 +57,7 @@ msgstr ""
 "solo las entidades seleccionadas, sino para usar la extensión de esa "
 "selección para crear la capa ráster interpolada."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:8
+#: ../../docs/training_manual/processing/modeler_only.rst:11
 msgid ""
 "The interpolation process involves two steps, as it has been already "
 "explained in previous lessons: rasterizing the points layer and fill the no-"
@@ -78,7 +78,7 @@ msgstr ""
 " calcula solo a partir de las seleccionadas. Intentaremos solucionarlo "
 "utilizando algunas herramientas adicionales en nuestro modelo."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:10
+#: ../../docs/training_manual/processing/modeler_only.rst:19
 msgid ""
 "Open the modeler and start the model by adding the required inputs. In this "
 "case we need a vector layer (restricted to points) and an attribute from it,"
@@ -88,15 +88,15 @@ msgstr ""
 "este caso necesitamos una capa vectorial (restringida a puntos) y un "
 "atributo de ella, con los valores que usaremos para rasterizar."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:26
+#: ../../docs/training_manual/processing/modeler_only.rst:46
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "Complete los parámetros del algoritmo como se muestra a continuación:"
 
-#: ../../docs/training_manual/processing/modeler_only.rst:30
+#: ../../docs/training_manual/processing/modeler_only.rst:50
 msgid "The canvas should now look like."
 msgstr "El lienzo debería ahora parecer así."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:38
+#: ../../docs/training_manual/processing/modeler_only.rst:58
 msgid ""
 "The algorithm is now ready to be saved and added to the toolbox. You can run"
 " it and it will generate a raster layer from interpolating the selected "
@@ -108,21 +108,7 @@ msgstr ""
 "interpolación de los puntos seleccionados en la capa de entrada, y la capa "
 "tendrá la misma extensión que la selección."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:40
-msgid ""
-"Here's an improvement to the algorithm. We have used a harcoded value for "
-"the cellsize when rasterizing. This value is fine for our test input layer, "
-"but might not be for other cases. We could add a new parameter, so the user "
-"enters the desired value, but a much better approach would be to have that "
-"value automatically computed."
-msgstr ""
-"Aquí hay una mejora del algoritmo. Hemos utilizado un valor codificado para "
-"el tamaño de celda al rasterizar. Este valor está bien para nuestra capa de "
-"entrada de prueba, pero podría no serlo para otros casos. Podríamos agregar "
-"un nuevo parámetro, para que el usuario ingrese el valor deseado, pero un "
-"enfoque mucho mejor sería tener ese valor calculado automáticamente."
-
-#: ../../docs/training_manual/processing/modeler_only.rst:42
+#: ../../docs/training_manual/processing/modeler_only.rst:67
 msgid ""
 "We can use the modeler-only calculator, and compute that value from the "
 "extent coordinates. For instance, to create a layer with a fixed width of "
@@ -133,7 +119,7 @@ msgstr ""
 " un ancho fijo de 100 píxeles, podemos usar la siguiente fórmula en la "
 "calculadora."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:46
+#: ../../docs/training_manual/processing/modeler_only.rst:72
 msgid ""
 "Now we have to edit the rasterize algorithm, so it uses the output of the "
 "calculator instead of the hardcoded value."
@@ -141,6 +127,6 @@ msgstr ""
 "Ahora tenemos que editar el algoritmo de rasterización, por lo que usa la "
 "salida de la calculadora en lugar del valor codificado."
 
-#: ../../docs/training_manual/processing/modeler_only.rst:48
+#: ../../docs/training_manual/processing/modeler_only.rst:74
 msgid "The final algorithm should look like this:"
 msgstr "El algoritmo final debería verse así:"

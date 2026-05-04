@@ -6,20 +6,21 @@
 # 
 # Translators:
 # Daniel Nylander <po@danielnylander.se>, 2026
+# Transifex Bot <>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>, 2026\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -93,18 +94,6 @@ msgstr ""
 "konvertera ett vektorlager till en graf. Alla ytterligare åtgärder kommer "
 "att använda denna graf, inte lagret."
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:52
-msgid ""
-"As a source we can use any polyline vector layer. Nodes of the polylines "
-"become graph vertexes, and segments of the polylines are graph edges. If "
-"several nodes have the same coordinates then they are the same graph vertex."
-" So two lines that have a common node become connected to each other."
-msgstr ""
-"Som källa kan vi använda vilket polylinjevektorlager som helst. "
-"Polylinjernas noder blir grafvertexer och polylinjernas segment blir "
-"grafkanter. Om flera noder har samma koordinater är de samma grafvertex. Två"
-" linjer som har en gemensam nod blir alltså kopplade till varandra."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:57
 msgid ""
 "Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
@@ -175,26 +164,6 @@ msgstr "Och berätta för chefen om denna strategi"
 msgid "Graph analysis"
 msgstr "Grafisk analys"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:194
-msgid ""
-"Networks analysis is used to find answers to two questions: which vertexes "
-"are connected and how to find a shortest path. To solve these problems the "
-"network analysis library provides Dijkstra's algorithm."
-msgstr ""
-"Nätverksanalys används för att hitta svar på två frågor: vilka toppar som är"
-" anslutna och hur man hittar den kortaste vägen. För att lösa dessa problem "
-"tillhandahåller biblioteket för nätverksanalys Dijkstras algoritm."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:198
-msgid ""
-"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
-"the graph to all the others and the values of the optimization parameters. "
-"The results can be represented as a shortest path tree."
-msgstr ""
-"Dijkstras algoritm hittar den kortaste vägen från en av grafens hörnpunkter "
-"till alla de andra och värdena på optimeringsparametrarna. Resultaten kan "
-"representeras som ett träd med kortaste vägen."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:202
 msgid ""
 "The shortest path tree is a directed weighted graph (or more precisely a "
@@ -206,10 +175,6 @@ msgstr ""
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:205
 msgid "only one vertex has no incoming edges — the root of the tree"
 msgstr "endast ett toppunkt har inga inkommande kanter - trädets rot"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:206
-msgid "all other vertexes have only one incoming edge"
-msgstr "alla andra toppar har bara en inkommande kant"
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:207
 msgid ""
@@ -283,6 +248,16 @@ msgstr ""
 ":class:`QgsRubberBand <qgis.gui.QgsRubberBand>`-objekt och kan vara långsam "
 "på stora datamängder."
 
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:252
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:371
+msgid "shortestTree()"
+msgstr "shortestTree()"
+
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:290
+#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:432
+msgid "dijkstra()"
+msgstr "dijkstra()"
+
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:339
 msgid "Finding shortest paths"
 msgstr "Hitta de kortaste vägarna"
@@ -307,29 +282,9 @@ msgstr ""
 "slutpunkten B och börjar gå genom trädet från punkt B till punkt A. Hela "
 "algoritmen kan skrivas som:"
 
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:360
-msgid ""
-"At this point we have the path, in the form of the inverted list of vertexes"
-" (vertexes are listed in reversed order from end point to start point) that "
-"will be visited during traveling by this path."
-msgstr ""
-"Vid denna punkt har vi vägen, i form av den inverterade listan över vertex "
-"(vertex listas i omvänd ordning från slutpunkt till startpunkt) som kommer "
-"att besökas under resan med denna väg."
-
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:490
 msgid "Areas of availability"
 msgstr "Tillgängliga områden"
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:492
-msgid ""
-"The area of availability for vertex A is the subset of graph vertexes that "
-"are accessible from vertex A and the cost of the paths from A to these "
-"vertexes are not greater that some value."
-msgstr ""
-"Tillgänglighetsområdet för toppunkt A är den delmängd av grafens toppunkter "
-"som är tillgängliga från toppunkt A och där kostnaden för vägarna från A "
-"till dessa toppunkter inte är större än ett visst värde."
 
 #: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:496
 msgid ""
@@ -358,19 +313,3 @@ msgstr ""
 "jämföra elementen i kostnadsarrayen med ett fördefinierat värde. Om cost[i] "
 "är mindre än eller lika med ett fördefinierat värde, ligger vertex i inom "
 "tillgänglighetsområdet, annars ligger det utanför."
-
-#: ../../docs/pyqgis_developer_cookbook/network_analysis.rst:507
-msgid ""
-"A more difficult problem is to get the borders of the area of availability. "
-"The bottom border is the set of vertexes that are still accessible, and the "
-"top border is the set of vertexes that are not accessible. In fact this is "
-"simple: it is the availability border based on the edges of the shortest "
-"path tree for which the source vertex of the edge is accessible and the "
-"target vertex of the edge is not."
-msgstr ""
-"Ett svårare problem är att få fram gränserna för tillgänglighetsområdet. Den"
-" nedre gränsen är den uppsättning vertex som fortfarande är tillgängliga, "
-"och den övre gränsen är den uppsättning vertex som inte är tillgängliga. I "
-"själva verket är detta enkelt: det är tillgänglighetsgränsen baserad på "
-"kanterna i trädet med den kortaste vägen för vilken källvertexen för kanten "
-"är tillgänglig och målvertexen för kanten inte är det."

@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -46,7 +46,7 @@ msgstr ""
 "basierend auf einem mathematischen Ausdruck mit Hilfe des Vektorrechners "
 "hinzufügt."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:11
+#: ../../docs/training_manual/processing/vector_calculator.rst:15
 msgid ""
 "In newer versions of Processing the interface has changed considerably, it's"
 " more powerful and easier to use."
@@ -54,33 +54,15 @@ msgstr ""
 "In neueren Versionen hat sich die Eingabeschnittstelle stark verändert. Sie "
 "ist umfangreicher und einfacher zu nutzen."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:13
+#: ../../docs/training_manual/processing/vector_calculator.rst:17
 msgid "Here are a few examples of using that algorithm."
 msgstr "Es folgen einige Beispiele zur Nutzung des Algorithmus."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:15
-msgid ""
-"First, let's calculate the population density of white people in each "
-"polygon, which represents a census. We have two fields in the attributes "
-"table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just"
-" have to divide them and multiply by one million (to have density per square"
-" km), so we can use the following formula in the corresponding field"
-msgstr ""
-"Wir werden zuerst den Anteil der weißen Menschen in jedem Polygon, d.h. in "
-"einem Zensusgebiet, bestimmen. Wir können dazu die Felder ``WHITE`` und "
-"``SHAPE_AREA`` aus der Attributtabelle verwenden. Wir dividieren die Werte "
-"und multiplizieren sie anschließend mit einer Million (um auf die Dichte je "
-"Quadratkilometer zu kommen). Wir können die folgende Formel verwenden."
-
-#: ../../docs/training_manual/processing/vector_calculator.rst:21
+#: ../../docs/training_manual/processing/vector_calculator.rst:26
 msgid "The parameters dialog should be filled as shown below."
 msgstr "Der Dialog zur Paramtereingabe sollte wie folgt ausgefüllt sein."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:25
-msgid "This will generate a new field named ``WHITE_DENS``"
-msgstr "Dadurch wird ein neues Feld ``WHITE_DENS`` erstellt."
-
-#: ../../docs/training_manual/processing/vector_calculator.rst:27
+#: ../../docs/training_manual/processing/vector_calculator.rst:32
 msgid ""
 "Now let's calculate the ratio between the ``MALES`` and ``FEMALES`` fields "
 "to create a new one that indicates if male population is numerically "
@@ -90,11 +72,7 @@ msgstr ""
 "einem neuen Feld. Wir ermitteln damit inwieweit die männliche Bevölkerung "
 "gegenüber der weiblichen vorwiegt."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:29
-msgid "Enter the following formula"
-msgstr "Geben Sie die folgende Formel ein"
-
-#: ../../docs/training_manual/processing/vector_calculator.rst:40
+#: ../../docs/training_manual/processing/vector_calculator.rst:44
 msgid ""
 "In earlier version, since both fields are of type integer, the result would "
 "be truncated to an integer. In this case the formula should be: ``1.0 *  "
@@ -106,7 +84,7 @@ msgstr ""
 " verwenden: ``1.0 *  \"MALES\"  /  \"FEMALES\"``. Damit wird angezeigt, dass"
 " das Ergebnis eine Fließkommazahl sein soll."
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:42
+#: ../../docs/training_manual/processing/vector_calculator.rst:47
 msgid ""
 "We can use conditional functions to have a new field with ``male`` or "
 "``female`` text strings instead of those ratio value, using the following "
@@ -116,6 +94,6 @@ msgstr ""
 " anstelle des Verhältnisses mit ``male`` oder ``female`` gefüllt wird. Das "
 "kann mit der folgenden Formel erfolgen:"
 
-#: ../../docs/training_manual/processing/vector_calculator.rst:46
+#: ../../docs/training_manual/processing/vector_calculator.rst:52
 msgid "The parameters window should look like this."
 msgstr "Das Parameterfenster sollte wie folgt aussehen."

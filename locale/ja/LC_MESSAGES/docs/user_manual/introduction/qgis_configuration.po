@@ -7,20 +7,21 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -471,6 +472,18 @@ msgstr "**環境**"
 msgid "System environment variables"
 msgstr "システム環境変数"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:211
+msgid ""
+"System environment variables can be viewed, and many configured, in the "
+"**Environment** group. This is useful for platforms, such as Mac, where a "
+"GUI application does not necessarily inherit the user's shell environment. "
+"It's also useful for setting and viewing environment variables for the "
+"external tool sets controlled by the Processing toolbox (e.g., GRASS), and "
+"for turning on debugging output for specific sections of the source code."
+msgstr ""
+"**環境** "
+"グループでは、システム環境変数を表示し、多くの設定を行うことができます。これはMacなど、GUIアプリケーションが必ずしもユーザのシェル環境を継承しないプラットフォームで役立ちます。また、Processingツールボックス（GRASSなど）によって制御される外部ツールセットの環境変数を設定および表示したり、ソースコードの特定のセクションのデバッグ出力をオンにしたりする場合にも役立ちます。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:219
 msgid ""
 "Check |checkbox| :guilabel:`Use custom variables (restart required - include"
@@ -646,6 +659,16 @@ msgstr "|radioButtonOff| :guilabel:`デフォルトCRSを使う`"
 msgid "**Accuracy Warnings**"
 msgstr "**精度に関する警告**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:304
+msgid ""
+":guilabel:`Only show CRS accuracy warnings for inaccuracies which exceed` a "
+"given distance: occurs when you are explicitly creating or modifying a "
+"dataset and select a CRS based on a datum ensemble with lower accuracy. The "
+"default is to ``Always show`` the warning if any inaccuracy."
+msgstr ""
+"指定した距離の :guilabel:`精度警告の閾値` : "
+"データセットを明示的に作成または変更する際に、精度の低いデータムアンサンブルに基づくCRSを選択したときに発生します。デフォルトでは、不正確な場合は警告を「常に表示」するようになっています。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:309
 msgid ""
 "|unchecked| :guilabel:`Show CRS accuracy warning for layers in project "
@@ -669,8 +692,8 @@ msgid ""
 "fields where inaccuracies of meter/submeter level are potentially very "
 "dangerous or expensive!"
 msgstr ""
-"これは、エンジニアリングやBIM、アセットマネジメントなど、メートル級 / "
-"サブメートル級の不正確さが非常に危険または高価になる可能性のある分野での使用を想定しています。"
+"これは、エンジニアリングやBIM、資産管理など、メートル級 / "
+"サブメートル級の不正確さが非常に危険または不経済になる可能性のある分野での使用を想定しています。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:318
 msgid ""
@@ -769,7 +792,7 @@ msgstr ""
 msgid "**Definition**"
 msgstr "**定義**"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:375
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:377
 msgid ":guilabel:`Format`"
 msgstr ":guilabel:`形式`"
 
@@ -781,7 +804,7 @@ msgstr "WKT（推奨）"
 msgid "Proj String (Legacy - Not Recommended)"
 msgstr "Proj文字列（非推奨）"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:379
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:381
 msgid ":guilabel:`Parameters`"
 msgstr ":guilabel:`パラメータ`"
 
@@ -1075,6 +1098,18 @@ msgid ""
 "support read and write access:"
 msgstr "このフレームでは、読み取りおよび書き込みアクセスをサポートするラスタドライバの動作をカスタマイズする方法を提供します。"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:524
+msgid ""
+":guilabel:`Edit create options`: allows you to edit or add different "
+"profiles of file transformation, i.e., a set of predefined combinations of "
+"parameters (type and level of compression, BIGTIFF support, blocks size, "
+"overview, colorimetry, alpha...) to use when outputting raster files. The "
+"parameters depend on the driver."
+msgstr ""
+":guilabel:`作成オプションを編集`: "
+"ファイル変換の際に使う様々なプロファイルを編集または追加することができます。すなわち、ラスタファイルを出力する際に使用するパラメータ（圧縮の種類と圧縮レベル、BIGTIFF対応、ブロックサイズ、全体図、測色、アルファ..."
+" ）の事前に定義された組み合わせのセットを編集・追加できます。パラメータはドライバに依存します。"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:534
 msgid "Sample of create options profile (for GeoTiff)"
 msgstr "オプションプロファイルの作成サンプル（GeoTiff ドライバ）"
@@ -1232,6 +1267,15 @@ msgid ""
 msgstr ""
 ":guilabel:`簡素化アルゴリズム`: このオプションは、地物のローカルな簡素化を \"オンザフライ\" "
 "で実行し、ジオメトリのレンダリングを高速化します。この簡素化は、データプロバイダからフェッチされたジオメトリを変更することはしません。この違いは地物ジオメトリを使用する式（面積の計算など）を使用する場合に重要です。地物ジオメトリを使用する計算は、簡素化されたジオメトリではなく元のジオメトリに対して行われることが保証されます。地物の簡素化のためにQGISでは「距離」（デフォルトの設定）、「グリッドにスナップ」、そして「Visvalingam」の3つのアルゴリズムを提供しています。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:627
+msgid ""
+"|unchecked| :guilabel:`Simplify on provider side if possible`: the "
+"geometries are simplified by the provider (PostgreSQL, Oracle...) and unlike"
+" the local-side simplification, geometry-based calculations may be affected"
+msgstr ""
+"|unchecked| :guilabel:`可能であればプロバイダ側で簡素化する`: "
+"ジオメトリはプロバイダ（PostgreSQL、Oracle...）によって簡素化されます。ローカル側での簡素化と異なり、ジオメトリに関連する計算は簡素化の影響を受けます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:630
 msgid ""
@@ -1505,11 +1549,19 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:771
 msgid "Map tools Settings"
-msgstr "ツールの設定"
+msgstr "地図ツールの設定"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:778
 msgid "Map tools settings"
-msgstr "ツールの設定"
+msgstr "地図ツールの設定"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:782
+msgid "**Measurements, Coordinate and Bearing Display**"
+msgstr "**計測・座標・方位表示**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:784
+msgid "This section provides ways to configure default units parameters:"
+msgstr "このセクションでは、デフォルトの単位パラメータを設定することができます:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:786
 msgid "Define :guilabel:`Decimal places`"
@@ -1530,6 +1582,27 @@ msgid ""
 msgstr ""
 ":guilabel:`優先する角度の単位`: "
 "選択肢は、「度」、「ラジアン」、「グラード」、「弧の分」、「弧の秒」、「Turns/revolutions」、「ミリラジアン（SI定義）」、「ミル（NATO定義）」です"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:792
+msgid ""
+":guilabel:`Default distance units for new projects`: options are 'Meters', "
+"'Kilometers', 'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', "
+"'Millimeters', 'Inches', 'Degrees' or 'Map Units' (automatically matches the"
+" project’s CRS units)"
+msgstr ""
+":guilabel:`新規プロジェクトのデフォルト距離単位`: "
+"選択肢は「メートル」「キロメートル」「フィート」「ヤード」「マイル」「海里」「センチメートル」「ミリメートル」「インチ」「度」又は「地図上の単位」（自動的にプロジェクトCRSの単位に合わせる）です"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:795
+msgid ""
+":guilabel:`Preferred area units for new projects`: options are 'Square "
+"meters', 'Square kilometers', 'Square feet', 'Square yards', 'Square miles',"
+" 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters', 'Square"
+" millimeters', 'Square inches', 'Square degrees' or 'Map Units' "
+"(automatically matches the project’s CRS units)"
+msgstr ""
+":guilabel:`新規プロジェクトのデフォルト面積単位`: "
+"選択肢は「平方メートル」、「平方キロメートル」、「平方フィート」、「平方ヤード」、「平方マイル」、「ヘクタール」、「エーカー」、「平方海里」、「平方センチメートル」、「平方ミリメートル」、「平方インチ」、「平方度」、「地図上の単位」（自動的にプロジェクトCRSの単位に合わせる）です"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:799
 msgid ""
@@ -1558,6 +1631,25 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2914
 msgid "measureBearing"
 msgstr "measureBearing"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:805
+msgid ""
+"The global options can be overridden at the project level, :ref:`here "
+"<measurements_ellipsoid>` for measurement units and :ref:`here "
+"<coordinate_and_bearing>` for coordinate and bearing formatting."
+msgstr ""
+"グローバルなオプションはプロジェクトのレベルで上書きされます。計測単位は :ref:`ここ "
+"<measurements_ellipsoid>`、座標と方位は :ref:`ここ <coordinate_and_bearing>` です。"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:809
+msgid "**Identify tool**"
+msgstr "**地物情報を表示**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:811
+msgid ""
+"This group offers some options regarding the behavior of the :ref:`Identify "
+"tool <identify>`."
+msgstr "このグループには :ref:`地物情報表示ツール <identify>` の動作に関するいくつかのオプションがあります。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:813
 msgid ""
@@ -1861,20 +1953,6 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:960
 msgid "Elevation settings"
 msgstr "標高の設定"
-
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:962
-msgid ""
-"In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific "
-"color to use as the :guilabel:`Background color` for :ref:`elevation "
-"profiles <label_elevation_profile_view>`. This can make the chart more "
-"readable for certain datasets, e.g., point clouds with RGB coloring, where "
-"the default background color is too similar to point colors to be easily "
-"discernable. If unchanged, the elevation profiles will continue to display "
-"using the standard system background color."
-msgstr ""
-"|elevationProfile| :guilabel:`標高` メニューでは、:ref:`標高断面図 "
-"<label_elevation_profile_view>` の :guilabel:`背景色` "
-"として使用する特定の色を設定することができます。これにより、例えばRGBカラーリングの点群など、デフォルトの背景色が点の色に似ていて簡単に認識できないようなデータセットに対して、チャートを見やすくすることができます。もし変更しなければ、標高断面図は標準のシステム背景色で表示されるままです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2886
 msgid "elevationProfile"
@@ -3874,15 +3952,6 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2040
 msgid "**Use project colors to quickly assign and update color widgets**"
 msgstr "**プロジェクトの色を使用して、カラーウィジェットを素早く割り当てて更新する**"
-
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:2042
-msgid ""
-"Project colors can be refered to using their label and the color widgets "
-"they are used in are bound to them. This means that instead of repeatedly "
-"setting the same color for many properties and, to avoid a cumbersome update"
-" you can:"
-msgstr ""
-"プロジェクトの色はそのラベルを使って参照することができ、それらが使用されているカラーウィジェットはそれらにバインドされます。これによって、多くのプロパティに同じ色を繰り返し設定したり面倒な更新を避けるために、以下のようにすることができます："
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2047
 msgid "Define the color as a project color"

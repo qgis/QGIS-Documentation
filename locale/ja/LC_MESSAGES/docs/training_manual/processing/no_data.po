@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
 "Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -138,7 +138,7 @@ msgstr ""
 "*実行* "
 "をクリックしてアルゴリズムを実行してください。入力レイヤの同じ外観ですが、異なった値を持つレイヤが得られます。使用した入力レイヤは、その全てのセルに有効な値を持っているので、最後のパラメータはまったく効果がありません。"
 
-#: ../../docs/training_manual/processing/no_data.rst:39
+#: ../../docs/training_manual/processing/no_data.rst:40
 msgid ""
 "Let's now perform another calculation, this time on the *accflow* layer. "
 "This layer contains values of accumulated flow, a hydrological parameter. It"
@@ -153,17 +153,17 @@ msgstr ""
 "no--data "
 "値です。見ての通り、値が分散しているため、レンダリングはあまり有益ではありません。流量の蓄積の対数を使用すると、より情報量の多い表現になります。ラスタ計算機を使ってそれを計算することができます。"
 
-#: ../../docs/training_manual/processing/no_data.rst:41
+#: ../../docs/training_manual/processing/no_data.rst:47
 msgid ""
 "Open the algorithm dialog again, select the *accflow* layer as the only "
 "input layer, and enter the following formula: ``log(a)``."
 msgstr "再びアルゴリズムダイアログを開き、入力レイヤとして *accflow* レイヤだけを選択し、次の式を入力します： ``log(a)`` 。"
 
-#: ../../docs/training_manual/processing/no_data.rst:43
+#: ../../docs/training_manual/processing/no_data.rst:50
 msgid "Here is the layer that you will get."
 msgstr "これが得られるレイヤです。"
 
-#: ../../docs/training_manual/processing/no_data.rst:47
+#: ../../docs/training_manual/processing/no_data.rst:54
 msgid ""
 "If you select the *Identify* tool to know the value of a layer at a given "
 "point, select the layer that we have just created, and click on a point "
@@ -172,7 +172,7 @@ msgstr ""
 "与えられた点でのレイヤの値を知るために *識別* ツールを選択し、たった今作成したレイヤを選択し、流域の外でポイントをクリックすると、no--data "
 "値が含まれていることがわかるでしょう。"
 
-#: ../../docs/training_manual/processing/no_data.rst:51
+#: ../../docs/training_manual/processing/no_data.rst:60
 msgid ""
 "For the next exercise we are going to use two layers instead of one, and we "
 "are going to get a DEM with valid elevation values only within the basin "
@@ -182,7 +182,7 @@ msgid ""
 msgstr ""
 "次の練習では、1つのレイヤの代わりに2つのレイヤを使用し、2番目のレイヤで定義された盆地内のみ有効な標高値を持つDEMを取得するつもりです。計算機ダイアログを開き、入力レイヤフィールドでプロジェクトの両方のレイヤを選択します。対応するフィールドに次の数式を入力します:"
 
-#: ../../docs/training_manual/processing/no_data.rst:57
+#: ../../docs/training_manual/processing/no_data.rst:69
 msgid ""
 "``a`` refers to the accumulated flow layer (since it is the first one to "
 "appear in the list) and ``b`` refers to the DEM. What we are doing in the "
@@ -196,11 +196,11 @@ msgstr ""
 "ここで式の最初の部分でしていることはそれ自体で積算流量レイヤを割ることです。この結果は流域内で値1、外でデータなし値です。それからDEMを掛け、流域内でそれらのセルの標高値"
 " （ ``DEM * 1 = DEM`` ）、外でデータなし値（ ``DEM * no_data = no_data`` ）を得ます"
 
-#: ../../docs/training_manual/processing/no_data.rst:59
+#: ../../docs/training_manual/processing/no_data.rst:75
 msgid "Here is the resulting layer."
 msgstr "結果のレイヤはこれです。"
 
-#: ../../docs/training_manual/processing/no_data.rst:64
+#: ../../docs/training_manual/processing/no_data.rst:80
 msgid ""
 "This technique is used frequently to *mask* values in a raster layer, and is"
 " useful whenever you want to perform calculations for a region other that "
@@ -213,19 +213,7 @@ msgstr ""
 "この技術は、ラスタレイヤ内で値を *マスク* "
 "するために頻繁に使用され、ラスタレイヤによって使用される任意の矩形領域でない領域のための計算を実行したいときはいつでも有用です。例えば、ラスタレイヤの標高ヒストグラムはあまり意味を持ちません。代わりそれが流域に対応する値のみを使用して（上記の場合のように）計算される場合、得られる結果は実際に流域の構成についての情報を与える有意味なものです。"
 
-#: ../../docs/training_manual/processing/no_data.rst:66
-msgid ""
-"There are other interesting things about this algorithm that we have just "
-"run, apart from the no--data values and how they are handled. If you have a "
-"look at the extents of the layers that we have multiplied (you can do it "
-"double--clicking on their names of the layer in the table of contents and "
-"looking at their properties), you will see that they are not the same, since"
-" the extent covered by the flow accumulation layer is smaller that the "
-"extent of the full DEM."
-msgstr ""
-"実行してきたこのアルゴリズムについては、「データなし」値とそれらがどのように処理されるかを別にしても、他に興味深いものがあります。私たちが掛け算しているレイヤの範囲を見る場合（それは目次のレイヤの自分の名前をダブルクリックしてそのプロパティを見ることで行うことができます）、同じでないことがわかります、流量蓄積レイヤによって覆われる範囲は完全DEMの範囲より小さいので。"
-
-#: ../../docs/training_manual/processing/no_data.rst:68
+#: ../../docs/training_manual/processing/no_data.rst:93
 msgid ""
 "That means that those layers do not match, and that they cannot be "
 "multiplied directly without homogenizing those sizes and extents by "
@@ -236,7 +224,7 @@ msgid ""
 msgstr ""
 "それが意味するのは、これらのレイヤが一致しないこと、1つまたは両方のレイヤをリサンプリングすることでそれらのサイズと範囲を同じに揃えなければ直接掛け算はできないことです。しかし、私たちは何もしませんでした。QGISではこのような状況の面倒を見てくれて、必要なときに自動的に入力レイヤをリサンプリングします。出力範囲は、入力レイヤから計算された最小の被覆範囲、およびそれらセルサイズの最小セルサイズです。"
 
-#: ../../docs/training_manual/processing/no_data.rst:70
+#: ../../docs/training_manual/processing/no_data.rst:98
 msgid ""
 "In this case (and in most cases), this produces the desired results, but you"
 " should always be aware of the additional operations that are taking place, "
@@ -247,7 +235,7 @@ msgid ""
 msgstr ""
 "この場合（そしてほとんどの場合）、これは所望の結果を生成しますが、どんな操作が追加で行われているかには常に注意しておく必要があります。なぜならそれらは結果に影響を与える可能性があるからです。この動作が希望されない場合がある場合には、手動のリサンプリングが事前に適用されるべきです。後の章では、複数のラスタレイヤを使用したときのアルゴリズムの動作について詳細に見るでしょう。"
 
-#: ../../docs/training_manual/processing/no_data.rst:73
+#: ../../docs/training_manual/processing/no_data.rst:104
 msgid ""
 "Let's finish this lesson with another masking exercise. We are going to "
 "calculate the slope in all areas with an elevation between 1000 and 1500 "
@@ -255,32 +243,32 @@ msgid ""
 msgstr ""
 "このレッスンを別のマスク作成の練習で終えましょう。私たちは標高が1000メートルと1500メートルの間のすべての地域で傾きを計算しようとしています。"
 
-#: ../../docs/training_manual/processing/no_data.rst:75
+#: ../../docs/training_manual/processing/no_data.rst:107
 msgid ""
 "In this case, we do not have a layer to use as a mask, but we can create it "
 "using the calculator."
 msgstr "この場合は、マスクとして使用するレイヤはありませんが、計算機を使用して作成できます。"
 
-#: ../../docs/training_manual/processing/no_data.rst:77
+#: ../../docs/training_manual/processing/no_data.rst:109
 msgid ""
 "Run the calculator using the DEM as only input layer and the following "
 "formula"
 msgstr "唯一の入力レイヤとしてDEMを、そして次式を使用して計算を実行します"
 
-#: ../../docs/training_manual/processing/no_data.rst:83
+#: ../../docs/training_manual/processing/no_data.rst:115
 msgid ""
 "As you can see, we can use the calculator not only to do simple algebraic "
 "operations, but also to run more complex calculation involving conditional "
 "sentences, like the one above."
 msgstr "おわかりのように、簡単な代数演算を行うためだけでなく、計算機を使用でき、また上記のような条件文を含むより複雑な計算を実行します。"
 
-#: ../../docs/training_manual/processing/no_data.rst:85
+#: ../../docs/training_manual/processing/no_data.rst:118
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and no-"
 "data in cells outside of it."
 msgstr "結果は、私たちが作業をしたい範囲内で値1、およびそれ以外のセルでデータなしを持っています。"
 
-#: ../../docs/training_manual/processing/no_data.rst:89
+#: ../../docs/training_manual/processing/no_data.rst:122
 msgid ""
 "The no-data value comes from the 0/0 expression. Since that is an "
 "undetermined value, SAGA will add a NaN (Not a Number) value, which is "
@@ -290,13 +278,13 @@ msgid ""
 msgstr ""
 "データなし値は0/0の式から来ています。それは未定の値であるので、SAGAは、実際にはデータ値として扱うNaN（非数）の値を、追加します。この小さなトリックを使えば、セルのデータなし値が何か知らなくても、データなし値を設定できます。"
 
-#: ../../docs/training_manual/processing/no_data.rst:91
+#: ../../docs/training_manual/processing/no_data.rst:126
 msgid ""
 "Now you just have to multiply it by the slope layer included in the project,"
 " and you will get the desired result."
 msgstr "今、プロジェクトに含まれる傾斜レイヤを掛ける必要があるだけで、希望の結果が得られるでしょう。"
 
-#: ../../docs/training_manual/processing/no_data.rst:93
+#: ../../docs/training_manual/processing/no_data.rst:128
 msgid ""
 "All that can be done in a single operation with the calculator. We leave "
 "that as an exercise for the reader."
