@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:94
 msgid "Master password"
-msgstr "Password master"
+msgstr "Password Principale"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:96
 msgid ""
@@ -245,15 +245,15 @@ msgid ""
 "configuration (such as when adding a WMS layer)."
 msgstr ""
 "Per memorizzare o accedere ad informazioni sensibili all'interno del "
-"database, un utente deve definire una `master password`. Una nuova master "
-"password viene richiesta e verificata quando si memorizzano inizialmente "
-"tutti i dati crittografati nel database. Quando si accede ad informazioni "
-"sensibili, viene richiesta all'utente la master password. La password viene "
-"quindi memorizzata nella cache per il resto della sessione (fino a quando "
-"l'applicazione viene chiusa), a meno che l'utente scelga manualmente "
-"un'azione per cancellare il suo valore memorizzato nella cache. Alcune "
-"istanze di utilizzo del sistema di autenticazione non richiedono "
-"l'immissione della master password, ad esempio quando si seleziona una "
+"database, un utente deve definire una `password principale`. Una nuova "
+"password principale viene richiesta e verificata quando si memorizzano "
+"inizialmente tutti i dati crittografati nel database. Quando si accede ad "
+"informazioni sensibili, viene richiesta all'utente la master password. La "
+"password viene quindi memorizzata nella cache per il resto della sessione "
+"(fino a quando l'applicazione viene chiusa), a meno che l'utente scelga "
+"manualmente un'azione per cancellare il suo valore memorizzato nella cache. "
+"Alcune istanze di utilizzo del sistema di autenticazione non richiedono "
+"l'immissione della password principale, ad esempio quando si seleziona una "
 "configurazione di autenticazione esistente o si applica una configurazione "
 "ad una configurazione del server (ad esempio quando si aggiunge un livello "
 "WMS)."
@@ -268,19 +268,20 @@ msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:114
 msgid "Input new master password"
-msgstr "Inserisci la nuova master password"
+msgstr "Inserisci la nuova password principale"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:118
 msgid ""
 "A path to a file containing the master password can be set using the "
 "following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
 msgstr ""
-"Un percorso di un file contenente la master password può essere impostato "
-"utilizzando la seguente variabile d'ambiente, ``QGIS_AUTH_PASSWORD_FILE``."
+"Un percorso di un file contenente la password principale può essere "
+"impostato utilizzando la seguente variabile d'ambiente, "
+"``QGIS_AUTH_PASSWORD_FILE``."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:122
 msgid "Managing the master password"
-msgstr "Gestione della master password"
+msgstr "Gestione della password principale"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:124
 msgid ""
@@ -288,14 +289,14 @@ msgid ""
 " be needed prior to resetting. During this process, there is an option to "
 "generate a complete backup of the current database."
 msgstr ""
-"Una volta impostata, la master password può essere reimpostata; la master "
-"password attuale sarà necessaria prima di reimpostarla. Durante questo "
-"processo, c'è un'opzione per generare un backup completo del database "
-"attuale."
+"Una volta impostata, la password principale può essere reimpostata; la "
+"password principale attuale sarà necessaria prima di reimpostarla. Durante "
+"questo processo, c'è un'opzione per generare un backup completo del database"
+" attuale."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:133
 msgid "Resetting master password"
-msgstr "Ripristino della master password"
+msgstr "Ripristino della password principale"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:135
 msgid ""
@@ -303,9 +304,9 @@ msgid ""
 "override it. There is also no means of retrieving encrypted information "
 "without knowing the master password."
 msgstr ""
-"Se l'utente dimentica la master password, non c'è modo di recuperarla o "
+"Se l'utente dimentica la password principale, non c'è modo di recuperarla o "
 "sovrascriverla. Non vi è inoltre alcun mezzo per recuperare informazioni "
-"criptate senza conoscere la master password."
+"criptate senza conoscere la password principale."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:139
 msgid ""
@@ -317,7 +318,7 @@ msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:147
 msgid "Password prompt after three invalid attempts"
-msgstr "Richiesta di password dopo tre tentativi non validi"
+msgstr "Richiesta della password dopo tre tentativi non validi"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:152
 msgid "Authentication Configurations"
@@ -345,7 +346,7 @@ msgstr "Per creare una nuova configurazione di autenticazione:"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:167
 msgid "Press the |symbologyAdd| :sup:`Add a new authentication configuration`"
 msgstr ""
-"Premi il pulsante |symbologyAdd| :sup:`Aggiungi una nuova configurazione di "
+"Premi il pulsante |symbologyAdd| :sup:`Aggiungi nuova configurazione di "
 "autenticazione`"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:460
@@ -377,8 +378,8 @@ msgid ""
 "Select the :ref:`target method <authentication_methods>` and fill the "
 "corresponding connection details"
 msgstr ""
-"Seleziona il :ref:`metodo <authentication_methods>` e inserisci i dati di "
-"connessione corrispondenti"
+"Seleziona il :ref:`target method <authentication_methods>` e inserisci i "
+"dati di connessione corrispondenti"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:173
 msgid ""
@@ -428,9 +429,9 @@ msgstr ""
 "autenticazione (Aggiungi, Modifica e Rimuovi) possono essere eseguite "
 "durante la configurazione di una determinata connessione di servizio, come "
 "ad esempio la configurazione di una connessione di servizio OWS. A tal fine,"
-" sono disponibili pulsanti di azione all'interno del :ref:`selettore di "
-"configurazione <authentication>` per gestire completamente le configurazioni"
-" presenti nel database di autenticazione. In questo caso, non è necessario "
+" sono disponibili pulsanti di azione all'interno del :ref:`configuration "
+"selector <authentication>` per gestire completamente le configurazioni "
+"presenti nel database di autenticazione. In questo caso, non è necessario "
 "accedere alle :guilabel:`configurazioni` nella scheda "
 ":guilabel:`Autenticazione` delle opzioni di QGIS, a meno che non sia "
 "necessaria una gestione più completa delle configurazioni."
@@ -524,9 +525,54 @@ msgstr ""
 "intestazione (ad es. ``X-API-KEY``), puoi utilizzare questo metodo per "
 "fornirla."
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:243
+msgid ""
+"You can add one or more headers with the |symbologyAdd| button; provide a "
+":guilabel:`Header Name` and :guilabel:`Header Value` for each entry. Use "
+"|symbologyRemove| to delete the selected header or the :guilabel:`Clear` "
+"button to remove all entries."
+msgstr ""
+"Puoi aggiungere una o più intestazioni tramite il pulsante |symbologyAdd|; "
+"specifica :guilabel:`Chiave Header` e :guilabel:`Valore intestazione` per "
+"ciascuna voce. Utilizza |symbologyRemove| per eliminare l'intestazione "
+"selezionata oppure il pulsante :guilabel:`Cancella` per rimuovere tutte le "
+"voci."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:253
+msgid "API Header authentication configs"
+msgstr "Configurazioni dell'autenticazione tramite API Header"
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:256
 msgid "AWS S3 Authentication"
 msgstr "Autenticazione AWS S3"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:258
+msgid ""
+"The AWS S3 authentication method allows you to connect to Amazon S3 "
+"resources by providing a :guilabel:`Name`, :guilabel:`Resource`, "
+":guilabel:`Username`, :guilabel:`Password`, and :guilabel:`Region`."
+msgstr ""
+"Il metodo di autenticazione AWS S3 consente di connettersi alle risorse "
+"Amazon S3 specificando :guilabel:`Nome`, :guilabel:`Risorsa`, "
+":guilabel:`Nome utente`, :guilabel:`Password` e :guilabel:`Regione`."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:266
+msgid "AWS S3 authentication configs"
+msgstr "Configurazioni di autenticazione AWS S3"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:269
+msgid "Basic Authentication"
+msgstr "Autenticazione Base"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:271
+msgid ""
+"The Basic authentication method is used for services that require standard "
+"HTTP authentication with a :guilabel:`Username`, :guilabel:`Password` and "
+":guilabel:`Realm`."
+msgstr ""
+"Il metodo di autenticazione Base viene utilizzato per i servizi che "
+"richiedono l'autenticazione HTTP standard con :guilabel:`Nome utente`, "
+":guilabel:`Password` e :guilabel:`Dominio`."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:279
 msgid "Basic HTTP authentication configs"
@@ -536,17 +582,85 @@ msgstr "Configurazione di autenticazione HTTP di base"
 msgid "ESRI Token Authentication"
 msgstr "Autenticazione ESRI Token"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:284
+msgid ""
+"The ESRI token authentication method is used for :ref:`ArcGIS REST Servers "
+"<arcgis_rest>` that require token-based authentication."
+msgstr ""
+"Il metodo di autenticazione tramite token ESRI viene utilizzato per "
+":ref:`ArcGIS REST Server <arcgis_rest>` che richiedono l'autenticazione "
+"basata su token."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:291
 msgid "ESRI Token authentication configs"
 msgstr "Configurazioni di autenticazione token ESRI"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:294
+msgid "Identity certificate authentication"
+msgstr "Autenticazione tramite certificato di identità"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:296
+msgid ""
+"The Identity certificate authentication method allows you to connect using a"
+" client :ref:`identity certificate <authentication_identities>`."
+msgstr ""
+"Il metodo di autenticazione tramite certificato di identità consente di "
+"connettersi utilizzando un :ref:`identity certificate "
+"<authentication_identities>` del client."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+msgid "Identity-cert authentication configs"
+msgstr "Configurazioni di autenticazione con certificato di identità"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:306
 msgid "MapTiler HMAC-SHA256 Authentication"
 msgstr "Autenticazione MapTiler HMAC-SHA256"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:308
+msgid ""
+"The MapTiler HMAC-SHA256 authentication method is used to connect to "
+"MapTiler services that require HMAC-SHA256 authorization."
+msgstr ""
+"Il metodo di autenticazione HMAC-SHA256 di MapTiler viene utilizzato per "
+"connettersi ai servizi MapTiler che richiedono l'autorizzazione HMAC-SHA256."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:315
+msgid "MapTiler HmacSha256 authentication configs"
+msgstr "Configurazioni di autenticazione HMAC-SHA256 per MapTiler"
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:318
 msgid "OAuth2 Authentication"
 msgstr "Autenticazione OAuth2"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:320
+msgid ""
+"The OAuth2 authentication method is used to connect to services that require"
+" OAuth2 2.0 authorization, allowing secure access using client credential "
+"and token-based authentication."
+msgstr ""
+"Il metodo di autenticazione OAuth 2.0 viene utilizzato per connettersi a "
+"servizi che richiedono l'autorizzazione OAuth 2.0, consentendo un accesso "
+"sicuro tramite credenziali del client e autenticazione basata su token."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:323
+msgid ""
+"It supports using ``localhost`` as the redirect host, providing "
+"compatibility with services that do not accept ``http://127.0.0.1`` "
+"redirects (for example, Microsoft SharePoint)."
+msgstr ""
+"Supporta l'uso di ``localhost`` come host di reindirizzamento, garantendo la"
+" compatibilità con i servizi che non accettano reindirizzamenti "
+"``http://127.0.0.1`` (ad esempio, Microsoft SharePoint)."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:326
+msgid ""
+"An advanced OAuth2 configuration option, :guilabel:`Extra token header(s)`, "
+"allows attaching additional tokens returned by the OAuth2 token endpoint as "
+"HTTP(S) request headers."
+msgstr ""
+"Un'opzione di configurazione avanzata di OAuth2, :guilabel:`Extra token "
+"header(s)`, consente di allegare come intestazioni di richiesta HTTP(S) i "
+"token aggiuntivi restituiti dall'endpoint dei token OAuth2."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:334
 msgid "OAuth2 authentication configs"
@@ -556,6 +670,14 @@ msgstr "Configurazioni di autenticazione Oauth2"
 msgid "PKI-Paths Authentication"
 msgstr "Autenticazione PKI-Paths"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:339
+msgid ""
+"The PKI-Paths authentication method allows you to connect using separate "
+"certificate and key files stored on your system."
+msgstr ""
+"Il metodo di autenticazione PKI-Paths consente di connettersi utilizzando "
+"file di certificato e chiave separati memorizzati sul tuo sistema."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:346
 msgid "PKI paths authentication configs"
 msgstr "Percorso delle configurazioni di autenticazione PKI"
@@ -564,13 +686,23 @@ msgstr "Percorso delle configurazioni di autenticazione PKI"
 msgid "PKI-PKCS#12 Authentication"
 msgstr "Autenticazione PKI-PKCS#12"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:351
+msgid ""
+"The PKI-PKCS#12 authentication method allows you to connect using a single "
+"bundle file containing both the certificate and private key, with an "
+"optional passphrase for the key."
+msgstr ""
+"Il metodo di autenticazione PKI-PKCS#12 ti consente di connetterti "
+"utilizzando un unico file bundle contenente sia il certificato che la chiave"
+" privata, con una passphrase opzionale per la chiave."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:359
 msgid "PKI PKCS#12 file paths authentication configs"
 msgstr "Configurazioni dei percorsi del file PKI PKCS#12 di autenticazione"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:363
 msgid "Master Password and Auth Config Utilities"
-msgstr "Master Password ed Utilità di Auth Config"
+msgstr "Password Principale e Strumenti Configurazione Autorizzazione"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:365
 msgid ""
@@ -584,7 +716,142 @@ msgstr ""
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:374
 msgid "Utilities menu"
-msgstr "Menu utilità"
+msgstr "Menu Utilità"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:376
+msgid ""
+":guilabel:`Input master password…`: opens the master password input dialog, "
+"independent of performing any authentication database command"
+msgstr ""
+":guilabel:`Inserisci la Password Principale…`: apre la finestra di dialogo "
+"per l'inserimento della password principale, indipendentemente "
+"dall'esecuzione di qualsiasi comando relativo al database di autenticazione"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:378
+msgid ""
+":guilabel:`Clear cached master password`: unsets the master password if it "
+"has been set"
+msgstr ""
+":guilabel:`Cancella la Password Principale memorizzata in cache`: annulla "
+"l'impostazione della password principale, se è stata impostata"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:380
+msgid ""
+":guilabel:`Reset master password…`: opens a dialog to change the master "
+"password (the current password must be known) and optionally back up the "
+"current database"
+msgstr ""
+":guilabel:`Ripristina Password Principale…`: apre una finestra di dialogo "
+"per modificare la password principale (è necessario conoscere la password "
+"attuale) e, facoltativamente, eseguire il backup del database corrente"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:382
+msgid ""
+":guilabel:`Clear network authentication access cache`: clears the "
+"authentication cache of all connections"
+msgstr ""
+":guilabel:`Svuota la Cache di Accesso dell'Autenticazione di Rete`: svuota "
+"la cache di autenticazione di tutte le connessioni"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:384
+msgid ""
+":guilabel:`Automatically clear network authentication access cache on SSL "
+"errors`: the connection cache stores all authentication data for "
+"connections, also when the connection fails. If you change authentication "
+"configurations or certification authorities, you should clear the "
+"authentication cache or restart QGIS. When this option is checked, the "
+"authentication cache will be automatically cleared every time an SSL error "
+"occurs and you choose to abort the connection"
+msgstr ""
+":guilabel:`Svuota automaticamente la Cache di Accesso per l'Autenticazione "
+"di Rete quando si verificano Errori SSL`: la cache delle connessioni "
+"memorizza tutti i dati di autenticazione relativi alle connessioni, anche "
+"quando la connessione non va a buon fine. Se si modificano le configurazioni"
+" di autenticazione o le autorità di certificazione, devi svuotare la cache "
+"di autenticazione o riavviare QGIS. Quando questa opzione è selezionata, la "
+"cache di autenticazione verrà svuotata automaticamente ogni volta che si "
+"verifica un errore SSL e scegli di interrompere la connessione"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:391
+msgid ""
+":guilabel:`Integrate master password with the Wallet`: adds the master "
+"password to your personal Wallet/Keyring"
+msgstr ""
+":guilabel:`Integra la password principale con il tuo Password Manager`: "
+"aggiunge la password principale al tuo Wallet/Keyring personale"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:393
+msgid ""
+":guilabel:`Clear the master password from the Wallet…`: deletes the master "
+"password from your Wallet/Keyring"
+msgstr ""
+":guilabel:`Cancella la Password Principale dal tuo Password Manager…`: "
+"elimina la password principale dal tuo Wallet/Keyring"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:395
+msgid ""
+":guilabel:`Enable password helper debug log`: enables a debug tool that will"
+" contain all the log information of the authentication methods"
+msgstr ""
+":guilabel:`Abilita il Log di Debug per l'Aiuto per la Password`: abilita uno"
+" strumento di debug che conterrà tutte le informazioni di log relative ai "
+"metodi di autenticazione"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:397
+msgid ""
+":guilabel:`Clear cached authentication configurations`: clears the internal "
+"lookup cache for configurations, used to speed up network connections. This "
+"does not clear QGIS’s core network access manager’s cache, which requires a "
+"relaunch of QGIS."
+msgstr ""
+":guilabel:`Cancella le Configurazioni di Autenticazione salvate in Cache`: "
+"cancella la cache interna di ricerca delle configurazioni, utilizzata per "
+"velocizzare le connessioni di rete. Questa operazione non cancella la cache "
+"del gestore di accesso alla rete principale di QGIS, per cui è necessario "
+"riavviare QGIS."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:400
+msgid ""
+":guilabel:`Remove all authentication configurations…`: clears the database "
+"of all configuration records, without removing other stored records."
+msgstr ""
+":guilabel:`Rimuovi tutte le Configurazioni di Autenticazione…`: cancella dal"
+" database tutti i record di configurazione, senza eliminare gli altri record"
+" memorizzati."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:402
+msgid ""
+":guilabel:`Import authentication configurations from file…`: imports from an"
+" :file:`.XML` file details for creating custom authentication "
+"configurations."
+msgstr ""
+":guilabel:`Importa Configurazioni di Autenticazione da File…`: importa da un"
+" file :file:`.XML` i dettagli necessari per creare configurazioni di "
+"autenticazione personalizzate."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:404
+msgid ""
+":guilabel:`Export selected authentication configurations to file…`: exports "
+"the selected items to a possibly encrypted :file:`.XML` file."
+msgstr ""
+":guilabel:`Esporta le Configurazioni di Autenticazione Selezionate si "
+"File…`: esporta gli elementi selezionati in un file :file:`.XML`, "
+"eventualmente crittografato."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:406
+msgid ""
+":guilabel:`Erase authentication database…`: schedules a backup of the "
+"current database and complete rebuild of the database table structure. The "
+"actions are scheduled for a later time, to ensure that other operations, "
+"like project loading, do not interrupt the operation or cause errors due to "
+"a temporarily missing database."
+msgstr ""
+":guilabel:`Cancella il Database di Autenticazione…`: pianifica un backup del"
+" database corrente e una ricostruzione completa della struttura delle "
+"tabelle del database. Le operazioni vengono pianificate per un momento "
+"successivo, per garantire che altre operazioni, come il caricamento dei "
+"progetti, non interrompano il processo né causino errori dovuti alla "
+"temporanea assenza del database."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:414
 msgid "Using authentication configurations"
@@ -603,6 +870,25 @@ msgstr ""
 "necessaria l'autenticazione o in funzionalità non-core, come in PyQGIS o "
 "plugin C++ di terze parti."
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:421
+msgid ""
+"When using the selector, :guilabel:`No authentication` is displayed in the "
+"pop-up menu control when nothing is selected, when there are no "
+"configurations to choose from, or when a previously assigned configuration "
+"can no longer be found in the database. Use the drop-down menu to select an "
+"existing authentication configuration or press |symbologyAdd| :sup:`Create a"
+" new authentication configuration` to create a configuration you could use. "
+"More details at :ref:`authentication`."
+msgstr ""
+"Quando si utilizza il selettore, nel menu a comparsa viene visualizzata "
+"l'opzione :guilabel:`Nessuna autenticazione` se non è selezionato nulla, se "
+"non sono presenti configurazioni tra cui scegliere o se una configurazione "
+"assegnata in precedenza non è più reperibile nel database. Utilizzare il "
+"menu a discesa per selezionare una configurazione di autenticazione "
+"esistente oppure premere |symbologyAdd| :sup:`Crea una nuova configurazione "
+"di autenticazione` per crearne una da utilizzare. Maggiori dettagli su "
+":ref:`authentication`."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:434
 msgid "Authentication configuration selector with selected config"
 msgstr ""
@@ -613,6 +899,19 @@ msgstr ""
 msgid "Python bindings"
 msgstr "Collegamenti Python"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:439
+msgid ""
+"All classes and public functions have sip bindings, except "
+":api:`QgsAuthCrypto <classQgsAuthCrypto.html>`, since management of the "
+"master password hashing and auth database encryption should be handled by "
+"the main app, and not via Python."
+msgstr ""
+"Tutte le classi e le funzioni pubbliche dispongono di binding SIP, ad "
+"eccezione di :api:`QgsAuthCrypto <classQgsAuthCrypto.html>`, poiché la "
+"gestione dell'hash della password principale e della crittografia del "
+"database di autenticazione deve essere gestita dall'applicazione principale "
+"e non tramite Python."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:443
 msgid ""
 "Once the master password is entered, the API is open to access "
@@ -621,7 +920,7 @@ msgid ""
 " may lead to issues where a user downloads/installs a malicious PyQGIS "
 "plugin or standalone app that gains access to authentication credentials."
 msgstr ""
-"Una volta inserita la master password, l'API è aperta per accedere alle "
+"Una volta inserita la password principale, l'API è aperta per accedere alle "
 "configurazioni di autenticazione nel database di autenticazione, in modo "
 "simile a come funziona Firefox. Tuttavia, non è stato definito alcun blocco "
 "contro l'accesso a PyQGIS. Questo può portare a problemi nel caso in cui un "
