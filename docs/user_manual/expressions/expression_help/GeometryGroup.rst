@@ -775,9 +775,9 @@ Tests whether two geometries are point-by-point exactly equal. Note that the ord
        * **backend** - Geometry backend implementation: 'QGIS' or 'GEOS'. Both internal implementation uses fuzzy comparison with very low (1e-8) tolerance.
 
          * 'QGIS' works on 2D, 3D and 4D
-         * 'GEOS' works only on 2D components (Z or M components are ignored)
+         * 'GEOS' works only on 2D components (Z or M components are ignored).
 
-.
+
    * - Examples
      - * ``equals_exact( geom_from_wkt( 'POINT( 0 0 )' ), geom_from_wkt( 'POINT( 0 0 )' ), 'GEOS' )`` → TRUE
 
@@ -2572,9 +2572,9 @@ Returns whether the current feature's geometry is point-by-point exactly equal t
        * **backend** - Geometry backend implementation: 'QGIS' or 'GEOS'. Both internal implementation uses fuzzy comparison with very low (1e-8) tolerance.
 
          * 'QGIS' works on 2D, 3D and 4D
-         * 'GEOS' works only on 2D components (Z or M components are ignored)
+         * 'GEOS' works only on 2D components (Z or M components are ignored).
 
-.
+
    * - Examples
      - * ``overlay_equals_exact('regions')`` → TRUE if the current feature's geometry is exactly the same as the geometry of a region
        * ``overlay_equals_exact('regions', filter:= population > 10000)`` → TRUE if the current feature's geometry is exactly the same as the geometry of a region whose population is greater than 10000

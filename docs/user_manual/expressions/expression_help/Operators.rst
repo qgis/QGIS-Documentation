@@ -490,7 +490,7 @@ Returns TRUE if a is not the same as b.
 LIKE
 ....
 
-Returns TRUE if the first parameter matches the supplied pattern. Works with numbers also.
+Returns TRUE if the first parameter matches case-sensitive the supplied pattern. ILIKE can be used instead of LIKE to make the match case-insensitive. Works with numbers also.
 
 .. list-table::
    :widths: 15 85
