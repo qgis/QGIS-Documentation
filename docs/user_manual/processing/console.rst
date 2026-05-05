@@ -42,13 +42,13 @@ with the following line:
     >>> from qgis import processing
 
 Now, there is basically just one (interesting) thing you can do with
-that from the console: execute an algorithm. That is done using the
+that from the console: ute an algorithm. That is done using the
 :func:`run() <qgis.processing.run>` method,
-which takes the id of the algorithm to execute as its first parameter,
+which takes the id of the algorithm to ute as its first parameter,
 and then a variable number of additional
 parameters depending on the requirements of the algorithm. So the
 first thing you need to know is the name of the algorithm to
-execute. That is not the name you see in the toolbox, but rather a
+ute. That is not the name you see in the toolbox, but rather a
 unique command–line name. To find the right name for your algorithm,
 you can use the :class:`processingRegistry <qgis.core.QgsProcessingRegistry>`.
 Type the following line in your console:
@@ -82,7 +82,7 @@ That's a list of all the available algorithm IDs, sorted by provider
 name and algorithm name, along with their corresponding names.
 
 Once you know the command-line name of the algorithm, the next thing
-to do is to determine the right syntax to execute it.
+to do is to determine the right syntax to ute it.
 That means knowing which parameters are needed
 when calling the :func:`run() <qgis.processing.run>` method.
 
@@ -308,8 +308,8 @@ file extension not supported by the algorithm, the default
 file format for that output type will be used, and its corresponding extension
 appended to the given file path.
 
-Unlike when an algorithm is executed from the toolbox, outputs are not
-added to the map canvas if you execute that same algorithm from the
+Unlike when an algorithm is uted from the toolbox, outputs are not
+added to the map canvas if you ute that same algorithm from the
 Python console using the :func:`run() <qgis.processing.run>` method.
 That method returns a dictionary with one or more output names
 (the ones shown in the algorithm description) as keys
@@ -367,7 +367,7 @@ will be filled automatically:
                   'OUTPUT': '/data/buffers.shp'})
     >>> my_dialog.show()
 
-The ``execAlgorithmDialog`` method opens the dialog immediately:
+The :func:`execAlgorithmDialog <qgis.processing.execAlgorithmDialog>` method opens the dialog immediately:
 
 .. code-block:: python
    :linenos:
