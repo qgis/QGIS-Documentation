@@ -163,6 +163,27 @@ In this section, select and configure the layer and fields you want to display i
 
    Chart Data Source group
 
+.. _layout_chart_Clip to Item:
+
+Clip to item
+------------ 
+
+In this section, configure how a picture item is clipped using another layout item.
+
+#. Check the |checkbox| :guilabel:Clip to Item option to enable clipping.
+#. Select a layout item (e.g., polygon or shape) to use as the clipping mask.
+#. When enabled, the picture will be automatically clipped to the selected shape.
+
+.. note::
+
+   Available from QGIS 4.2 onwards.
+
+
+.. figure:: img/chart_cliptoitem.png
+   :align: center
+   :width: 20em
+
+   Chart Clip to Item
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
