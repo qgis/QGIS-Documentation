@@ -166,7 +166,7 @@ In this section, select and configure the layer and fields you want to display i
 .. _layout_chart_Clip to Item:
 
 Clip to item
------------- 
+------------
 
 In this section, configure how a picture item is clipped using another layout item.
 
