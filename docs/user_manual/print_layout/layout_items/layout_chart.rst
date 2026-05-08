@@ -178,7 +178,7 @@ In this section, configure how a picture item is clipped using another layout it
    :align: center
    :width: 20em
 
-   Chart Clip to Item
+   Chart Clip to Item option
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
