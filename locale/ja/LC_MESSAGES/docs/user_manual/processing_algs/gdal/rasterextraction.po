@@ -6,8 +6,8 @@
 # 
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -44,7 +44,15 @@ msgstr "範囲を指定して切り抜く"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:15
 msgid "Clips any GDAL-supported raster file to a given extent."
-msgstr "GDALがサポートする任意のラスタファイルを、指定された範囲に切り抜きます。"
+msgstr "GDALでサポートされているラスタファイルを、指定された範囲に切り抜きます。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:17
+msgid ""
+"This algorithm is derived from the `GDAL translate utility "
+"<https://gdal.org/en/latest/programs/gdal_translate.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL translate utility "
+"<https://gdal.org/en/latest/programs/gdal_translate.html>`_ から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:20
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:164
@@ -367,6 +375,11 @@ msgstr "詳細パラメータ"
 msgid "**Additional creation options**"
 msgstr "**追加の生成オプション**"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:94
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:293
+msgid "``CREATION_OPTIONS`` (for QGIS <= 3.42, this was ``OPTIONS``)"
+msgstr "``CREATION_OPTIONS`` (QGIS <= 3.42 では ``OPTIONS`` でした)"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:95
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:123
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:294
@@ -550,7 +563,7 @@ msgstr "マスクレイヤで切り抜く"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:159
 msgid "Clips any GDAL-supported raster by a vector mask layer."
-msgstr "GDALがサポートする任意のラスタをベクタマスクレイヤで切り抜きます。"
+msgstr "GDALでサポートされているラスタをベクタマスクレイヤで切り抜きます。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:161
 msgid ""
@@ -732,7 +745,16 @@ msgstr "等高線"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:359
 msgid "Extracts contour lines from any GDAL-supported elevation raster."
-msgstr "GDALがサポートしているあらゆる標高ラスタから等高線を抽出します"
+msgstr "GDALでサポートされている標高ラスタから等高線を抽出します。"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:361
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:504
+msgid ""
+"This algorithm is derived from the `GDAL contour utility "
+"<https://gdal.org/en/latest/programs/gdal_contour.html>`_."
+msgstr ""
+"このアルゴリズムは `GDAL contour utility "
+"<https://gdal.org/en/latest/programs/gdal_contour.html>`_ から派生したものです。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:384
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:525
@@ -863,6 +885,11 @@ msgstr "**全ラスタ値を有効とみなす**"
 msgid "``IGNORE_NODATA``"
 msgstr "``IGNORE_NODATA``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:450
+#: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:603
+msgid "Ignores any NoData values in the dataset."
+msgstr "データセットのあらゆるNoData値を無視します。"
+
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:451
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:604
 msgid "**Input pixel value to treat as \"NoData\"**"
@@ -889,7 +916,7 @@ msgstr "等高線ポリゴン"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:502
 msgid "Extracts contour polygons from any GDAL-supported elevation raster."
-msgstr "GDALがサポートしているあらゆる標高ラスタから等高線ポリゴンを抽出します"
+msgstr "GDALでサポートされている標高ラスタから等高線ポリゴンを抽出します。"
 
 #: ../../docs/user_manual/processing_algs/gdal/rasterextraction.rst:547
 msgid "**Attribute name for minimum elevation of contour polygon**"
