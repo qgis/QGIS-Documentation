@@ -446,7 +446,7 @@ and a drop-down :menuselection:`...` button for additional options
 
 * :guilabel:`Skip Output`: if you are not interested in a given output of the algorithm
 * :guilabel:`Create Temporary Layer` (``TEMPORARY_OUTPUT``): the output is stored in a vector :ref:`temporary scratch layer <vector_new_scratch_layer>`.
-  Users can assign a custom name to the temporary output layer directly from the output widget while keeping the output temporary. 
+  Users can assign a custom name to the temporary output layer directly from the output widget while keeping the output temporary.
   The layer is not permanently saved to disk.
 * :guilabel:`Save to File…`: you will be prompted with a save file dialog,
   where you can select the desired file path.
