@@ -197,7 +197,7 @@ Custom dialogs are especially useful when working with nested or dynamic inputs,
 when parameters depend on external data sources such as APIs (e.g. dynamically populated dropdowns),
 or when you need advanced validation and custom layout behavior that isn’t supported by the default Processing dialog.
 To override the default UI (e.g. for complex parameter types or dynamic logic),
-subclass :class:`QgsProcessingAlgorithmDialogBase <qgis.gui.QgsProcessingAlgorithmDialogBase>`.
+subclass :class:`QgsProcessingAlgorithmWidgetBase <qgis.gui.QgsProcessingAlgorithmWidgetBase>`.
 To render your custom UI in the standard Processing dialog window, you must call ``self.setMainWidget(panel)``,
 where ``panel`` is a :class:`QgsPanelWidget <qgis.gui.QgsPanelWidget>` containing your custom layout.
 This ensures your interface is correctly displayed and interacts properly with the Processing framework.
@@ -219,7 +219,7 @@ Here is an example that integrates signal management using QTimer_ for debounced
     from typing import Dict, Optional
     from osgeo import gdal
 
-    class CustomAlgorithmDialog(gui.QgsProcessingAlgorithmDialogBase):
+    class CustomAlgorithmDialog(gui.QgsProcessingAlgorithmWidgetBase):
         def __init__(
             self,
             algorithm: QgsProcessingAlgorithm,
@@ -229,7 +229,7 @@ Here is an example that integrates signal management using QTimer_ for debounced
             super().__init__(
                 parent,
                 flags=Qt.WindowFlags(),
-                mode=gui.QgsProcessingAlgorithmDialogBase.DialogMode.Single,
+                mode=gui.QgsProcessingAlgorithmWidgetBase.DialogMode.Single,
             )
             self.context = QgsProcessingContext()
             self.setAlgorithm(algorithm)
