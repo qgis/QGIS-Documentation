@@ -504,16 +504,16 @@ and the second is the description of the parameter (for the user
 interface).
 The rest of the constructor parameters are parameter type specific.
 
-The input can be turned into QGIS classes using the ``parameterAs`` functions
+The input can be turned into QGIS classes using the ``parameterAs…`` functions
 of :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 For instance to get the number provided for the buffer distance as a double::
 
   self.parameterAsDouble(parameters, self.INPUT_BUFFERDIST, context)).
 
-The ``processAlgorithm`` function should return a dictionary
-containing values for every output defined by the algorithm. This
-allows access to these outputs from other algorithms, including other
-algorithms contained within the same model.
+The :meth:`processAlgorithm() <qgis.core.QgsProcessingAlgorithm.processAlgorithm>` function
+should return a dictionary containing values for every output defined by the algorithm.
+This allows access to these outputs from other algorithms,
+including other algorithms contained within the same model.
 
 Well behaved algorithms should define and return as many outputs as
 makes sense. Non-feature outputs, such as numbers and strings, are very
