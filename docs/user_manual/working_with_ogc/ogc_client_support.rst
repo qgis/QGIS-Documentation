@@ -908,8 +908,6 @@ you can install the QGIS plugin :guilabel:`Data Plotly`.
 
 .. |addSensorThingsLayer| image:: /static/common/mActionAddSensorThingsLayer.png
    :width: 1.5em
-.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
-   :width: 1.5em
 .. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
