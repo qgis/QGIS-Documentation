@@ -137,6 +137,8 @@ Under the |general| :guilabel:`General` tab, you can:
   when pressing the |zoomFullExtent| :sup:`Zoom full` button in 3D map view.
 * Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
   a rubberband corresponding to the current extent of the 3D scene.
+* Set a :guilabel:`Background` for the 3D scene, choosing between a :guilabel:`Gradient`
+  (defined by a top and bottom color blended across the scene) or a textured :guilabel:`Skybox`.
 
 Terrain
 -------
