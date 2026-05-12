@@ -76,7 +76,7 @@ Applies a dash pattern to a geometry, returning a MultiLineString geometry which
    :widths: 15 85
 
    * - Syntax
-     - apply_dash_pattern(geometry, pattern, [start_rule:=no_rule], [end_rule:=no_rule], [adjustment:=both], [pattern_offset:=0])
+     - apply_dash_pattern(geometry, pattern, [start_rule:='no_rule'], [end_rule:='no_rule'], [adjustment:='both'], [pattern_offset:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -472,7 +472,7 @@ Returns a possibly concave polygon that contains all the points in the geometry
    :widths: 15 85
 
    * - Syntax
-     - concave_hull(geometry, target_percent, [allow_holes:=False])
+     - concave_hull(geometry, target_percent, [allow_holes:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -1106,13 +1106,8 @@ Returns the Hausdorff distance between two geometries. This is basically a measu
 
 The function can be executed with an optional densify fraction argument. If not specified, an approximation to the standard Hausdorff distance is used. This approximation is exact or close enough for a large subset of useful cases. Examples of these are:
 
-
-
 * computing distance between Linestrings that are roughly parallel to each other, and roughly equal in length. This occurs in matching linear networks.
 * Testing similarity of geometries.
-
-
-
 
 If the default approximate provided by this method is insufficient, specify the optional densify fraction argument. Specifying this argument performs a segment densification before computing the discrete Hausdorff distance. The parameter sets the fraction by which to densify each segment. Each segment will be split into a number of equal-length subsegments, whose fraction of the total length is closest to the given fraction. Decreasing the densify fraction parameter will make the distance returned approach the true Hausdorff distance for the geometries.
 
@@ -1120,7 +1115,7 @@ If the default approximate provided by this method is insufficient, specify the 
    :widths: 15 85
 
    * - Syntax
-     - hausdorff_distance(geometry1, geometry2, [densify_fraction])
+     - hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])
 
        [] marks optional arguments
    * - Arguments
@@ -1128,7 +1123,7 @@ If the default approximate provided by this method is insufficient, specify the 
        * **geometry2** - a geometry
        * **densify_fraction** - densify fraction amount
    * - Examples
-     - * ``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 2
+     - * ``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1
        * ``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 150)'),geom_from_wkt('LINESTRING (10 10, 10 150, 130 10)'))`` → 14.142135623
        * ``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 150)'),geom_from_wkt('LINESTRING (10 10, 10 150, 130 10)'),0.5)`` → 70.0
 
@@ -1894,8 +1889,8 @@ Creates a rectangle from 3 points.
        * **point3** - Third point.
        * **option** - An optional argument to construct the rectangle. By default this value is 0. Value can be 0 (distance) or 1 (projected). Option distance: Second distance is equal to the distance between 2nd and 3rd point. Option projected: Second distance is equal to the distance of the perpendicular projection of the 3rd point on the segment or its extension.
    * - Examples
-     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
-       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(3, 3), 0))`` → 'Polygon ((0 0, 0 5, 3.60555128 5, 3.60555128 0, 0 0))'
+       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(3, 3), 1))`` → 'Polygon ((0 0, 0 5, 3 5, 3 0, 0 0))'
 
 
 .. end_make_rectangle_3points_section
@@ -1982,7 +1977,7 @@ Returns a valid geometry or an empty geometry if the geometry could not be made 
    :widths: 15 85
 
    * - Syntax
-     - make_valid(geometry, [method:=structure], [keep_collapsed:=false])
+     - make_valid(geometry, [method:='structure'], [keep_collapsed:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2819,7 +2814,7 @@ Returns a scaled version of a geometry. Calculations are in the Spatial Referenc
    :widths: 15 85
 
    * - Syntax
-     - scale(geometry, x_scale, y_scale, [center])
+     - scale(geometry, x_scale, y_scale, [center:=NULL])
 
        [] marks optional arguments
    * - Arguments
@@ -3041,7 +3036,7 @@ Constructs square/rectangular waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - square_wave(geometry, wavelength, amplitude, [strict:=False])
+     - square_wave(geometry, wavelength, amplitude, [strict:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -3051,6 +3046,8 @@ Constructs square/rectangular waves along the boundary of a geometry.
        * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of square waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
    * - Examples
      - * ``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves with wavelength 3 and amplitude 1 along the linestring
+       * ``geom_to_wkt(square_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, false))`` → 'LineString (0 0, 0 1, 1.25 1, 1.25 -1, 2.5 -1, 2.5 1, 3.75 1, 3.75 -1, 5 -1, 5 0)'
+       * ``geom_to_wkt(square_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, true))`` → 'LineString (0 0, 0 1, 1.5 1, 1.5 -1, 3 -1, 3 1, 4.5 1, 5 0)'
 
 
 .. figure:: expression_help/img/square_wave.*
@@ -3271,7 +3268,7 @@ Constructs triangular waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - triangular_wave(geometry, wavelength, amplitude, [strict:=False])
+     - triangular_wave(geometry, wavelength, amplitude, [strict:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -3281,6 +3278,8 @@ Constructs triangular waves along the boundary of a geometry.
        * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of triangular waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
    * - Examples
      - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
+       * ``geom_to_wkt(triangular_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, false))`` → 'LineString (0 0, 0.625 1, 1.875 -1, 3.125 1, 4.375 -1, 5 0)'
+       * ``geom_to_wkt(triangular_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, true))`` → 'LineString (0 0, 0.75 1, 2.25 -1, 3.75 1, 5 0)'
 
 
 .. figure:: expression_help/img/triangular_wave.*
@@ -3354,7 +3353,7 @@ Constructs rounded (sine-like) waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - wave(geometry, wavelength, amplitude, [strict:=False])
+     - wave(geometry, wavelength, amplitude, [strict:=false])
 
        [] marks optional arguments
    * - Arguments

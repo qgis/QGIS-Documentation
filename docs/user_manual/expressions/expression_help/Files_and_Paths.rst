@@ -42,7 +42,7 @@ Retrieves exif tag values from an image file.
        [] marks optional arguments
    * - Arguments
      - * **path** - An image file path or a map layer value. If a map layer value is specified then the file source of the layer will be used.
-       * **tag** - The tag to return. If empty, a map with all exif tag values will be returned.
+       * **tag** - The tag to return. If empty, a map with all possible Exif `tag values <https://exiftool.org/TagNames/EXIF.html>`_ will be returned.
    * - Examples
      - * ``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0
 

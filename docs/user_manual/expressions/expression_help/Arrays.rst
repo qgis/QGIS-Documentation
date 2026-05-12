@@ -358,14 +358,12 @@ Returns the most common values in an array.
    :widths: 15 85
 
    * - Syntax
-     - array_majority(array, [option='all'])
+     - array_majority(array, [option:='all'])
 
        [] marks optional arguments
    * - Arguments
      - * **array** - an array
-       * **option='all'** - a string specifying the return values handling. Valid options are:
-
-
+       * **option** - a string specifying the return values handling. Valid options are:
 
          * all: Default, all most common values are returned in an array.
          * any: Returns one of the most common values.
@@ -478,14 +476,12 @@ Returns the less common values in an array.
    :widths: 15 85
 
    * - Syntax
-     - array_minority(array, [option='all'])
+     - array_minority(array, [option:='all'])
 
        [] marks optional arguments
    * - Arguments
      - * **array** - an array
-       * **option='all'** - a string specifying the return values handling. Valid options are:
-
-
+       * **option** - a string specifying the return values handling. Valid options are:
 
          * all: Default, all less common values are returned in an array.
          * any: Returns one of the less common values.
@@ -738,13 +734,13 @@ Concatenates array elements into a string separated by a delimiter and using opt
    :widths: 15 85
 
    * - Syntax
-     - array_to_string(array, [delimiter:=','], [empty_value:=''])
+     - array_to_string(array, [delimiter:=','], [emptyvalue:=''])
 
        [] marks optional arguments
    * - Arguments
      - * **array** - the input array
        * **delimiter** - the string delimiter used to separate concatenated array elements
-       * **empty_value** - the optional string to use as replacement for empty (zero length) matches
+       * **emptyvalue** - the optional string to use as replacement for empty (zero length) matches
    * - Examples
      - * ``array_to_string(array('1','2','3'))`` → '1,2,3'
        * ``array_to_string(array(1,2,3),'-')`` → '1-2-3'
@@ -812,13 +808,13 @@ Returns an array of all strings captured by capturing groups, in the order the g
    :widths: 15 85
 
    * - Syntax
-     - regexp_matches(string, regex, [empty_value:=''])
+     - regexp_matches(string, regex, [emptyvalue:=''])
 
        [] marks optional arguments
    * - Arguments
      - * **string** - the string to capture groups from against the regular expression
        * **regex** - the regular expression used to capture groups
-       * **empty_value** - the optional string to use as replacement for empty (zero length) matches
+       * **emptyvalue** - the optional string to use as replacement for empty (zero length) matches
    * - Examples
      - * ``regexp_matches('QGIS=>rocks','(.*)=>(.*)')`` → [ 'QGIS', 'rocks' ]
        * ``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty value' ]
@@ -837,13 +833,13 @@ Splits string into an array using supplied delimiter and optional string for emp
    :widths: 15 85
 
    * - Syntax
-     - string_to_array(string, [delimiter:=','], [empty_value:=''])
+     - string_to_array(string, [delimiter:=','], [emptyvalue:=''])
 
        [] marks optional arguments
    * - Arguments
      - * **string** - the input string
        * **delimiter** - the string delimiter used to split the input string
-       * **empty_value** - the optional string to use as replacement for empty (zero length) matches
+       * **emptyvalue** - the optional string to use as replacement for empty (zero length) matches
    * - Examples
      - * ``string_to_array('1,2,3',',')`` → [ '1', '2', '3' ]
        * ``string_to_array('1,,3',',','0')`` → [ '1', '0', '3' ]
