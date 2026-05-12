@@ -22,15 +22,15 @@ def get_subst_from_file(file):
     # defines a pattern for a substitution
     # i.e., anything inside || except is preceded by .. and/or not surrounded by a character
     s_pattern = re.compile(r"(?<!\.\. )(?<!\w)\|([\w\d-]+)\|(?![\w-])")
-    s_title = re.compile(r"\.\. Substitutions definitions - AVOID EDITING "
-                         r"PAST THIS LINE\n")
+    s_title = re.compile(
+        r"\.\. Substitutions definitions - AVOID EDITING PAST THIS LINE\n")
     subs = []
-    with open(file, 'r+') as f:
+    with open(file, "r+", newline="\n") as f:
         pos = f.tell()
         line = f.readline()
         while line != "":
             if s_title.match(line) is not None:
-                f.seek(pos-2)
+                f.seek(pos - 2)
                 f.truncate()
                 break
             else:
@@ -38,8 +38,8 @@ def get_subst_from_file(file):
                 pos = f.tell()
                 line = f.readline()
                 # Making sure there is a newline at the end of the file
-                if line == "" and len(subs)>0:
-                    f.seek(pos-1)
+                if line == "" and len(subs) > 0:
+                    f.seek(pos - 1)
                     if f.read() != "\n":
                         f.write("\n")
     list_subs = list(set(subs))
