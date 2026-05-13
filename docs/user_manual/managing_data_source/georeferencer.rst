@@ -248,7 +248,7 @@ There are several options that need to be defined for the georeferenced output
 raster.
 
 * The |checkbox| :guilabel:`Create world file` checkbox is only available if you
-  decide to use the linear transformation type, because this means that the
+  decide to use the Linear or Helmert transformation type, because this means that the
   raster image actually won't be transformed. In this case, the
   :guilabel:`Output raster` field is not activated, because only a new world file will
   be created.
