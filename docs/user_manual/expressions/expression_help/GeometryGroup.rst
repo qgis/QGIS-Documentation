@@ -17,7 +17,7 @@ Returns the geometry after an affine transformation. Calculations are in the Spa
    :widths: 15 85
 
    * - Syntax
-     - affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, [delta_z=0], [delta_m=0], [scale_z=1], [scale_m=1])
+     - affine_transform(geometry, delta_x, delta_y, rotation_z, scale_x, scale_y, [delta_z:=0], [delta_m:=0], [scale_z:=1], [scale_m:=1])
 
        [] marks optional arguments
    * - Arguments
@@ -76,7 +76,7 @@ Applies a dash pattern to a geometry, returning a MultiLineString geometry which
    :widths: 15 85
 
    * - Syntax
-     - apply_dash_pattern(geometry, pattern, [start_rule=no_rule], [end_rule=no_rule], [adjustment=both], [pattern_offset=0])
+     - apply_dash_pattern(geometry, pattern, [start_rule:='no_rule'], [end_rule:='no_rule'], [adjustment:='both'], [pattern_offset:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -284,7 +284,7 @@ Returns a geometry that represents all points whose distance from this geometry 
    :widths: 15 85
 
    * - Syntax
-     - buffer(geometry, distance, [segments=8], [cap='round'], [join='round'], [miter_limit=2])
+     - buffer(geometry, distance, [segments:=8], [cap:='round'], [join:='round'], [miter_limit:=2])
 
        [] marks optional arguments
    * - Arguments
@@ -316,7 +316,7 @@ Creates a buffer along a line geometry where the buffer diameter varies accordin
    :widths: 15 85
 
    * - Syntax
-     - buffer_by_m(geometry, [segments=8])
+     - buffer_by_m(geometry, [segments:=8])
 
        [] marks optional arguments
    * - Arguments
@@ -472,7 +472,7 @@ Returns a possibly concave polygon that contains all the points in the geometry
    :widths: 15 85
 
    * - Syntax
-     - concave_hull(geometry, target_percent, [allow_holes=False])
+     - concave_hull(geometry, target_percent, [allow_holes:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -999,7 +999,7 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
    :widths: 15 85
 
    * - Syntax
-     - geom_to_wkt(geometry, [precision=8])
+     - geom_to_wkt(geometry, [precision:=8])
 
        [] marks optional arguments
    * - Arguments
@@ -1106,13 +1106,8 @@ Returns the Hausdorff distance between two geometries. This is basically a measu
 
 The function can be executed with an optional densify fraction argument. If not specified, an approximation to the standard Hausdorff distance is used. This approximation is exact or close enough for a large subset of useful cases. Examples of these are:
 
-
-
 * computing distance between Linestrings that are roughly parallel to each other, and roughly equal in length. This occurs in matching linear networks.
 * Testing similarity of geometries.
-
-
-
 
 If the default approximate provided by this method is insufficient, specify the optional densify fraction argument. Specifying this argument performs a segment densification before computing the discrete Hausdorff distance. The parameter sets the fraction by which to densify each segment. Each segment will be split into a number of equal-length subsegments, whose fraction of the total length is closest to the given fraction. Decreasing the densify fraction parameter will make the distance returned approach the true Hausdorff distance for the geometries.
 
@@ -1120,7 +1115,7 @@ If the default approximate provided by this method is insufficient, specify the 
    :widths: 15 85
 
    * - Syntax
-     - hausdorff_distance(geometry1, geometry2, [densify_fraction])
+     - hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])
 
        [] marks optional arguments
    * - Arguments
@@ -1128,7 +1123,7 @@ If the default approximate provided by this method is insufficient, specify the 
        * **geometry2** - a geometry
        * **densify_fraction** - densify fraction amount
    * - Examples
-     - * ``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 2
+     - * ``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1
        * ``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 150)'),geom_from_wkt('LINESTRING (10 10, 10 150, 130 10)'))`` → 14.142135623
        * ``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 150)'),geom_from_wkt('LINESTRING (10 10, 10 150, 130 10)'),0.5)`` → 70.0
 
@@ -1498,7 +1493,7 @@ Returns the point interpolated by a matching M value along a linestring geometry
    :widths: 15 85
 
    * - Syntax
-     - line_interpolate_point_by_m(geometry, m, [use_3d_distance=false])
+     - line_interpolate_point_by_m(geometry, m, [use_3d_distance:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -1522,7 +1517,7 @@ Returns the distance along a linestring corresponding to the first matching inte
    :widths: 15 85
 
    * - Syntax
-     - line_locate_m(geometry, m, [use_3d_distance=false])
+     - line_locate_m(geometry, m, [use_3d_distance:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -1718,7 +1713,7 @@ Creates a circular polygon.
    :widths: 15 85
 
    * - Syntax
-     - make_circle(center, radius, [segments=36])
+     - make_circle(center, radius, [segments:=36])
 
        [] marks optional arguments
    * - Arguments
@@ -1744,7 +1739,7 @@ Creates an elliptical polygon.
    :widths: 15 85
 
    * - Syntax
-     - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, [segments=36])
+     - make_ellipse(center, semi_major_axis, semi_minor_axis, azimuth, [segments:=36])
 
        [] marks optional arguments
    * - Arguments
@@ -1885,7 +1880,7 @@ Creates a rectangle from 3 points.
    :widths: 15 85
 
    * - Syntax
-     - make_rectangle_3points(point1, point2, point3, [option=0])
+     - make_rectangle_3points(point1, point2, point3, [option:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -1894,8 +1889,8 @@ Creates a rectangle from 3 points.
        * **point3** - Third point.
        * **option** - An optional argument to construct the rectangle. By default this value is 0. Value can be 0 (distance) or 1 (projected). Option distance: Second distance is equal to the distance between 2nd and 3rd point. Option projected: Second distance is equal to the distance of the perpendicular projection of the 3rd point on the segment or its extension.
    * - Examples
-     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 5), 0))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
-       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(5, 3), 1))`` → 'Polygon ((0 0, 0 5, 5 5, 5 0, 0 0))'
+     - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(3, 3), 0))`` → 'Polygon ((0 0, 0 5, 3.60555128 5, 3.60555128 0, 0 0))'
+       * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(3, 3), 1))`` → 'Polygon ((0 0, 0 5, 3 5, 3 0, 0 0))'
 
 
 .. end_make_rectangle_3points_section
@@ -1911,7 +1906,7 @@ Creates a regular polygon.
    :widths: 15 85
 
    * - Syntax
-     - make_regular_polygon(center, radius, number_sides, [circle=0])
+     - make_regular_polygon(center, radius, number_sides, [circle:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -1982,7 +1977,7 @@ Returns a valid geometry or an empty geometry if the geometry could not be made 
    :widths: 15 85
 
    * - Syntax
-     - make_valid(geometry, [method=structure], [keep_collapsed=false])
+     - make_valid(geometry, [method:='structure'], [keep_collapsed:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2009,7 +2004,7 @@ Returns the minimal enclosing circle of a geometry. It represents the minimum ci
    :widths: 15 85
 
    * - Syntax
-     - minimal_circle(geometry, [segments=36])
+     - minimal_circle(geometry, [segments:=36])
 
        [] marks optional arguments
    * - Arguments
@@ -2038,7 +2033,7 @@ Returns a multipoint geometry consisting of every node in the input geometry.
    :widths: 15 85
 
    * - Syntax
-     - nodes_to_points(geometry, [ignore_closing_nodes=false])
+     - nodes_to_points(geometry, [ignore_closing_nodes:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2148,7 +2143,7 @@ Returns a geometry formed by offsetting a linestring geometry to the side. Dista
    :widths: 15 85
 
    * - Syntax
-     - offset_curve(geometry, distance, [segments=8], [join=1], [miter_limit=2.0])
+     - offset_curve(geometry, distance, [segments:=8], [join:=1], [miter_limit:=2.0])
 
        [] marks optional arguments
    * - Arguments
@@ -2182,7 +2177,7 @@ Orders the parts of a MultiGeometry by a given criteria
    :widths: 15 85
 
    * - Syntax
-     - order_parts(geometry, orderby, [ascending=true])
+     - order_parts(geometry, orderby, [ascending:=true])
 
        [] marks optional arguments
    * - Arguments
@@ -2258,7 +2253,7 @@ Read more on the underlying GEOS "Contains" predicate, as described in PostGIS `
    :widths: 15 85
 
    * - Syntax
-     - overlay_contains(layer, [expression], [filter], [limit], [cache=false])
+     - overlay_contains(layer, [expression], [filter], [limit], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2293,7 +2288,7 @@ Read more on the underlying GEOS "Crosses" predicate, as described in PostGIS `S
    :widths: 15 85
 
    * - Syntax
-     - overlay_crosses(layer, [expression], [filter], [limit], [cache=false])
+     - overlay_crosses(layer, [expression], [filter], [limit], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2328,7 +2323,7 @@ Read more on the underlying GEOS "Disjoint" predicate, as described in PostGIS `
    :widths: 15 85
 
    * - Syntax
-     - overlay_disjoint(layer, [expression], [filter], [limit], [cache=false])
+     - overlay_disjoint(layer, [expression], [filter], [limit], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2359,7 +2354,7 @@ Returns whether the current feature's geometry is exactly equal to at least one 
    :widths: 15 85
 
    * - Syntax
-     - overlay_equals(layer, [expression], [filter], [limit], [cache=false])
+     - overlay_equals(layer, [expression], [filter], [limit], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2396,7 +2391,7 @@ Read more on the underlying GEOS "Intersects" predicate, as described in PostGIS
    :widths: 15 85
 
    * - Syntax
-     - overlay_intersects(layer, [expression], [filter], [limit], [cache=false], [min_overlap], [min_inscribed_circle_radius], [return_details], [sort_by_intersection_size])
+     - overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], [min_overlap], [min_inscribed_circle_radius], [return_details], [sort_by_intersection_size])
 
        [] marks optional arguments
    * - Arguments
@@ -2448,7 +2443,7 @@ Note: This function can be slow and consume a lot of memory for large layers.
    :widths: 15 85
 
    * - Syntax
-     - overlay_nearest(layer, [expression], [filter], [limit=1], [max_distance], [cache=false])
+     - overlay_nearest(layer, [expression], [filter], [limit:=1], [max_distance], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2485,7 +2480,7 @@ Read more on the underlying GEOS "Touches" predicate, as described in PostGIS `S
    :widths: 15 85
 
    * - Syntax
-     - overlay_touches(layer, [expression], [filter], [limit], [cache=false])
+     - overlay_touches(layer, [expression], [filter], [limit], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2520,7 +2515,7 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
    :widths: 15 85
 
    * - Syntax
-     - overlay_within(layer, [expression], [filter], [limit], [cache=false])
+     - overlay_within(layer, [expression], [filter], [limit], [cache:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2767,7 +2762,7 @@ Returns a rotated version of a geometry. Calculations are in the Spatial Referen
    :widths: 15 85
 
    * - Syntax
-     - rotate(geometry, rotation, [center=NULL], [per_part=false])
+     - rotate(geometry, rotation, [center:=NULL], [per_part:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -2819,7 +2814,7 @@ Returns a scaled version of a geometry. Calculations are in the Spatial Referenc
    :widths: 15 85
 
    * - Syntax
-     - scale(geometry, x_scale, y_scale, [center])
+     - scale(geometry, x_scale, y_scale, [center:=NULL])
 
        [] marks optional arguments
    * - Arguments
@@ -2955,7 +2950,7 @@ Returns a geometry formed by buffering out just one side of a linestring geometr
    :widths: 15 85
 
    * - Syntax
-     - single_sided_buffer(geometry, distance, [segments=8], [join=1], [miter_limit=2.0])
+     - single_sided_buffer(geometry, distance, [segments:=8], [join:=1], [miter_limit:=2.0])
 
        [] marks optional arguments
    * - Arguments
@@ -3010,7 +3005,7 @@ Smooths a geometry by adding extra nodes which round off corners in the geometry
    :widths: 15 85
 
    * - Syntax
-     - smooth(geometry, [iterations=1], [offset=0.25], [min_length=-1], [max_angle=180])
+     - smooth(geometry, [iterations:=1], [offset:=0.25], [min_length:=-1], [max_angle:=180])
 
        [] marks optional arguments
    * - Arguments
@@ -3041,7 +3036,7 @@ Constructs square/rectangular waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - square_wave(geometry, wavelength, amplitude, [strict=False])
+     - square_wave(geometry, wavelength, amplitude, [strict:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -3051,6 +3046,8 @@ Constructs square/rectangular waves along the boundary of a geometry.
        * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of square waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
    * - Examples
      - * ``square_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Square waves with wavelength 3 and amplitude 1 along the linestring
+       * ``geom_to_wkt(square_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, false))`` → 'LineString (0 0, 0 1, 1.25 1, 1.25 -1, 2.5 -1, 2.5 1, 3.75 1, 3.75 -1, 5 -1, 5 0)'
+       * ``geom_to_wkt(square_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, true))`` → 'LineString (0 0, 0 1, 1.5 1, 1.5 -1, 3 -1, 3 1, 4.5 1, 5 0)'
 
 
 .. figure:: expression_help/img/square_wave.*
@@ -3071,7 +3068,7 @@ Constructs randomized square/rectangular waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - square_wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed=0])
+     - square_wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -3170,7 +3167,7 @@ Creates a buffer along a line geometry where the buffer diameter varies evenly o
    :widths: 15 85
 
    * - Syntax
-     - tapered_buffer(geometry, start_width, end_width, [segments=8])
+     - tapered_buffer(geometry, start_width, end_width, [segments:=8])
 
        [] marks optional arguments
    * - Arguments
@@ -3271,7 +3268,7 @@ Constructs triangular waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - triangular_wave(geometry, wavelength, amplitude, [strict=False])
+     - triangular_wave(geometry, wavelength, amplitude, [strict:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -3281,6 +3278,8 @@ Constructs triangular waves along the boundary of a geometry.
        * **strict** - By default the wavelength argument is treated as a "maximum wavelength", where the actual wavelength will be dynamically adjusted so that an exact number of triangular waves are created along the boundaries of the geometry. If the strict argument is set to true then the wavelength will be used exactly and an incomplete pattern may be used for the final waveform.
    * - Examples
      - * ``triangular_wave(geom_from_wkt('LineString(0 0, 10 0)'), 3, 1)`` → Triangular waves with wavelength 3 and amplitude 1 along the linestring
+       * ``geom_to_wkt(triangular_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, false))`` → 'LineString (0 0, 0.625 1, 1.875 -1, 3.125 1, 4.375 -1, 5 0)'
+       * ``geom_to_wkt(triangular_wave(geom_from_wkt('LineString(0 0, 5 0)'), 3, 1, true))`` → 'LineString (0 0, 0.75 1, 2.25 -1, 3.75 1, 5 0)'
 
 
 .. figure:: expression_help/img/triangular_wave.*
@@ -3301,7 +3300,7 @@ Constructs randomized triangular waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - triangular_wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed=0])
+     - triangular_wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -3354,7 +3353,7 @@ Constructs rounded (sine-like) waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - wave(geometry, wavelength, amplitude, [strict=False])
+     - wave(geometry, wavelength, amplitude, [strict:=false])
 
        [] marks optional arguments
    * - Arguments
@@ -3384,7 +3383,7 @@ Constructs randomized curved (sine-like) waves along the boundary of a geometry.
    :widths: 15 85
 
    * - Syntax
-     - wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed=0])
+     - wave_randomized(geometry, min_wavelength, max_wavelength, min_amplitude, max_amplitude, [seed:=0])
 
        [] marks optional arguments
    * - Arguments
@@ -3416,7 +3415,7 @@ Returns a wedge shaped buffer originating from a point geometry.
    :widths: 15 85
 
    * - Syntax
-     - wedge_buffer(center, azimuth, width, outer_radius, [inner_radius=0.0])
+     - wedge_buffer(center, azimuth, width, outer_radius, [inner_radius:=0.0])
 
        [] marks optional arguments
    * - Arguments

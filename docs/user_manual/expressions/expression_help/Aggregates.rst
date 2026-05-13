@@ -17,14 +17,12 @@ Returns an aggregate value calculated using features from another layer.
    :widths: 15 85
 
    * - Syntax
-     - aggregate(layer, aggregate, expression, [filter], [concatenator=''], [order_by])
+     - aggregate(layer, aggregate, expression, [filter], [concatenator:=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
        * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
-
-
 
          * count
          * count_distinct
@@ -127,7 +125,7 @@ Returns all aggregated strings from a field or expression joined by a delimiter.
    :widths: 15 85
 
    * - Syntax
-     - concatenate(expression, [group_by], [filter], [concatenator], [order_by])
+     - concatenate(expression, [group_by], [filter], [concatenator:=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -153,7 +151,7 @@ Returns all unique strings from a field or expression joined by a delimiter.
    :widths: 15 85
 
    * - Syntax
-     - concatenate_unique(expression, [group_by], [filter], [concatenator], [order_by])
+     - concatenate_unique(expression, [group_by], [filter], [concatenator:=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
@@ -539,14 +537,12 @@ Returns an aggregate value calculated using all matching child features from a l
    :widths: 15 85
 
    * - Syntax
-     - relation_aggregate(relation, aggregate, expression, [concatenator=''], [order_by])
+     - relation_aggregate(relation, aggregate, expression, [concatenator:=''], [order_by])
 
        [] marks optional arguments
    * - Arguments
      - * **relation** - a string, representing a relation ID
        * **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:
-
-
 
          * count
          * count_distinct

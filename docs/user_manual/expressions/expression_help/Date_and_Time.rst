@@ -15,8 +15,6 @@ Returns the difference between two dates or datetimes.
 
 The difference is returned as an ``Interval`` and needs to be used with one of the following functions in order to extract useful information:
 
-
-
 * ``year``
 * ``month``
 * ``week``
@@ -309,7 +307,7 @@ Creates an interval value from year, month, weeks, days, hours, minute and secon
    :widths: 15 85
 
    * - Syntax
-     - make_interval([years=0], [months=0], [weeks=0], [days=0], [hours=0], [minutes=0], [seconds=0])
+     - make_interval([years:=0], [months:=0], [weeks:=0], [days:=0], [hours:=0], [minutes:=0], [seconds:=0])
 
        [] marks optional arguments
    * - Arguments
