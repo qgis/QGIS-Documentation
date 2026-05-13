@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -233,7 +233,7 @@ msgid ""
 "parameters as used in QGIS and listed in the :guilabel:`CRS` dialog."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:722
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:770
 msgid "setProjection"
 msgstr ""
 
@@ -672,7 +672,7 @@ msgid ""
 "local evaluation."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:762
 msgid "checkbox"
 msgstr ""
 
@@ -709,7 +709,7 @@ msgid ""
 ":ref:`dbmanager` for more information."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:764
 msgid "dbManager"
 msgstr ""
 
@@ -773,7 +773,7 @@ msgid ""
 "typing (in |nix|)::"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
 msgstr ""
 
@@ -784,7 +784,7 @@ msgid ""
 "variable (at least available on |nix| and |osx|)::"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:768
 msgid "osx"
 msgstr ""
 
@@ -1009,11 +1009,128 @@ msgid ""
 "``INTEGER`` column."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+msgid "Field domain"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:661
+msgid ""
+"Field domains are rules that define acceptable values for a field in a "
+"database table. This is applicable when working with data sources that "
+"support field domains, such as GeoPackage and ESRI File Geodatabase. "
+"Field domains can be managed from the contextual menu of a field in the "
+":guilabel:`Browser` panel. The following types are available:"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:667
+msgid ""
+":guilabel:`New Range Domain...`: creates a new domain to restrict field "
+"values to a specified numeric range."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:669
+msgid ""
+":guilabel:`New Coded Values Domain...`: creates a new domain to restrict "
+"field values to a predefined list of acceptable values."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:671
+msgid ""
+":guilabel:`New Glob Domain...`: creates a new domain to restrict field "
+"values to matching a regular expression pattern."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:674
+msgid ""
+"When creating a field domain, following options are provided in the "
+"dialog:"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:676
+msgid ":guilabel:`Name`: set the name of the new field domain."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:677
+msgid ":guilabel:`Description`: provide a description for the new field domain."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:678
+msgid ""
+":guilabel:`Field type`: select the data type of the field domain (e.g., "
+"Boolean, Text, Integer, Decimal)."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:680
+msgid ""
+"Additional :ref:`Policies <policies>`, only available for ESRI File "
+"Geodatabase format:"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:682
+msgid ":guilabel:`Split policy`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:683
+msgid ":guilabel:`Merge policy`"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:685
+msgid "Under :guilabel:`Range`, you can set the following options:"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:687
+msgid ":guilabel:`Minimum`: set the minimum acceptable value for the field."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:688
+msgid ":guilabel:`Maximum`: set the maximum acceptable value for the field."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:689
+msgid ""
+"Check the |checkbox| :guilabel:`Inclusive` if you want to include the "
+"boundary values in the acceptable range."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
+msgid ""
+":guilabel:`Values`: click the |symbologyAdd| :sup:`Add row` or "
+"|symbologyRemove| :sup:`Remove row` to manage the list of acceptable "
+"values for the field."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:774
+msgid "symbologyAdd"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:776
+msgid "symbologyRemove"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid ""
+":guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard "
+"characters."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:696
+msgid ""
+"When loading vector layers into QGIS, fields with |sourceFields| "
+":guilabel:`Field Domains` (such as those defined in a GeoPackage or ESRI "
+"File Geodatabase) are automatically detected. These domains are database-"
+"level constraints, meaning they are enforced by the database itself and "
+"apply across different applications, not just QGIS."
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:772
+msgid "sourceFields"
+msgstr ""
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:705
 msgid "Layers crossing 180° longitude"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:707
 msgid ""
 "Many GIS packages don't wrap layers with a geographic reference system "
 "(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
@@ -1023,15 +1140,15 @@ msgid ""
 "within the grid, to the right of the New Zealand main islands."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:672
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:675
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:723
 msgid "Solving in PostgreSQL"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:677
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:725
 msgid ""
 "A work-around is to transform the longitude values using PostgreSQL and "
 "the `ST_ShiftLongitude "
@@ -1043,21 +1160,21 @@ msgid ""
 "data and a -180..180° representation of a 0..360° data."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:690
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:738
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:741
 msgid ""
 "Import data into PostgreSQL (:ref:`vector_import_data_in_postgis`) using,"
 " for example, the DB Manager plugin."
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:695
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:743
 msgid "Use the PostgreSQL command line interface to issue the following command:"
 msgstr ""
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:750
 msgid ""
 "If everything went well, you should receive a confirmation about the "
 "number of features that were updated. Then you'll be able to load the map"
