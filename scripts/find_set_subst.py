@@ -31,7 +31,7 @@ def get_subst_from_file(file):
         r"\.\. Substitutions definitions - AVOID EDITING " r"PAST THIS LINE\n"
     )
     subs = []
-    with open(file, "r+", newline="\n") as f:
+    with open(file, "r+", newline="\n", encoding="utf-8") as f:
         pos = f.tell()
         line = f.readline()
         while line != "":

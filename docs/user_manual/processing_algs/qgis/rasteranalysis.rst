@@ -1812,11 +1812,16 @@ Python code
 
 Gaussian blur
 ----------------------
-``Added in 4.0```
+``Added in 4.0``
 
 Applies a Gaussian blur filter to an input raster layer.
 The radius parameter controls the strength of the blur.
 A larger radius results in a smoother output, at the cost of execution time.
+
+.. figure:: img/gaussianblur.png
+  :align: center
+
+  Gaussian blur applied to input raster with blur radius 2 pixels and 4 pixels.
 
 Parameters
 ..........
