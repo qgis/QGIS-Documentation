@@ -120,6 +120,26 @@ disabled.
 :guilabel:`Placement` lets you select the position of the image
 inside its frame (top/middle/bottom and left/center/right).
 
+
+Clip to item
+.............
+
+In this section, configure how a picture item is clipped using another layout item.
+
+#. Check the |checkbox| :guilabel:`Clip to Item` option to enable clipping.
+#. Select a layout item (e.g., polygon or shape) to use as the clipping mask.
+#. When enabled, the picture will be automatically clipped to the selected shape.
+
+.. note::
+
+   Available from QGIS 4.2 onwards.
+
+.. figure:: img/picture_cliptoitem.png
+   :align: center
+
+   Layout pictures clip to item properties
+
+
 .. _layout_images_rotation:
 
 Image rotation
