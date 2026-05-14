@@ -46,8 +46,6 @@ Returns statistics from a raster layer.
        * **band** - integer representing the band number from the raster layer, starting at 1
        * **property** - a string corresponding to the property to return. Valid options are:
 
-
-
          * min: minimum value
          * max: maximum value
          * avg: average (mean) value

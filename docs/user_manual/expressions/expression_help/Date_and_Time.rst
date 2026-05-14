@@ -15,8 +15,6 @@ Returns the difference between two dates or datetimes.
 
 The difference is returned as an ``Interval`` and needs to be used with one of the following functions in order to extract useful information:
 
-
-
 * ``year``
 * ``month``
 * ``week``

@@ -156,7 +156,7 @@ Concatenates all but first arguments with separators into a single string. The f
    :widths: 15 85
 
    * - Syntax
-     - concat_ws(separator, string, string2, ...)
+     - concat_ws(separator, string1, string2, ...)
    * - Arguments
      - * **separator** - separator to use when concatenating non-null values
        * **string** - a string value
@@ -712,7 +712,7 @@ Counts the number of occurrences of a substring within a string. By default, the
    :widths: 15 85
 
    * - Syntax
-     - substr_count(string, substring, [overlapping:=False])
+     - substr_count(string, substring, [overlapping:=false])
 
        [] marks optional arguments
    * - Arguments

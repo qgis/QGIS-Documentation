@@ -44,7 +44,7 @@ Extracts the integer number of degrees from a decimal degrees value. The minutes
      - * **value** - A decimal degrees value.
    * - Examples
      - * ``extract_degrees(135.334)`` → 135
-       * ``extract_degrees(-135.998)`` → 135
+       * ``extract_degrees(135.998)`` → 135
        * ``extract_degrees(-135.334)`` → -135
        * ``extract_degrees(-135.998)`` → -135
 
@@ -402,7 +402,7 @@ Converts a coordinate to degree, minute.
    :widths: 15 85
 
    * - Syntax
-     - to_dm(coordinate, axis, precision, [formatting:=])
+     - to_dm(coordinate, axis, precision, [formatting:=NULL])
 
        [] marks optional arguments
    * - Arguments
@@ -429,7 +429,7 @@ Converts a coordinate to degree, minute, second.
    :widths: 15 85
 
    * - Syntax
-     - to_dms(coordinate, axis, precision, [formatting:=])
+     - to_dms(coordinate, axis, precision, [formatting:=NULL])
 
        [] marks optional arguments
    * - Arguments
