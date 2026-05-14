@@ -608,8 +608,8 @@ For line and polygon geometry, the following digitizing tools can be used:
 
   - Click to place control points to form a curve.
   - Press :kbd:`W` + scroll the mouse wheel to adjust the weight of a
-    control point. Use :kbd:`Ctrl` + :kbd:`W` + scroll for fine adjustment
-    and :kbd:`Shift` + :kbd:`W` + scroll for coarse adjustment.
+    control point. Use :kbd:`Ctrl+W` + scroll for fine adjustment
+    and :kbd:`Shift+W` + scroll for coarse adjustment.
     A higher weight pulls the curve closer to that point,
     while a lower weight pushes it away.
 
