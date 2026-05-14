@@ -289,10 +289,13 @@ The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
 #. Provide the :guilabel:`Layer name`
 #. Select the :guilabel:`Geometry type`. Here you can create a:
 
-   * ``No geometry`` type layer, served as simple table,
+   * ``No Geometry`` type layer, served as simple table,
    * ``Point`` or ``MultiPoint`` layer,
-   * ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
-   * ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
+   * ``LineString`` or ``MultiLine`` layer,
+   * ``CompoundCurve``, ``MultiCurve`` or ``NurbsCurve`` layer,
+   * ``Polygon`` or ``MultiPolygon`` layer,
+   * ``CurvePolygon`` or ``MultiSurface`` layer,
+   * ``Triangle``, ``PolyhedralSurface`` or ``TIN`` layer.
 #. For geometric types, specify the dimensions of the dataset: check whether
    it should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`
 #. Specify the coordinate reference system using the |setProjection| button.
