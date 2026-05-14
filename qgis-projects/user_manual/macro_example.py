@@ -1,13 +1,17 @@
+from qgis.core import Qgis
+from qgis.utils import iface
+
+
 def openProject():
     pass
 
 
 def saveProject():
     msgbar = iface.messageBar()
-    msgbar.PushMessage(
+    msgbar.pushMessage(
         "WARNING",
-        "Project contains sensitive data." " Do not publish.",
-        QgsMessageBar.WARNING,
+        "Project contains sensitive data. Do not publish.",
+        Qgis.Warning,
         10,
     )
     pass
