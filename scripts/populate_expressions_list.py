@@ -316,11 +316,10 @@ for g_name in groups:
         for f_name in func_list:
             f_description = sphynxify_html(functions[f_name]["description"])
             f.write(
-                f".. _{func_list[f_name]}:\n\n"
+                f"\n.. _{func_list[f_name]}:\n\n"
                 f"{escape_colliding_functions(f_name)}\n"
                 f"{'.'* (len(escape_colliding_functions(f_name)))}\n\n"
-                f"{f_description}\n"
-                f"\n"
+                f"{f_description}\n\n"
             )
             text = format_function(functions[f_name])
             f.write(text)
@@ -333,4 +332,4 @@ for g_name in groups:
                         f"   {img_data[func_list[f_name]]['caption']}\n\n"
                     )
 
-            f.write(f".. end_{f_name.replace(' ', '_')}_section\n\n")
+            f.write(f".. end_{f_name.replace(' ', '_')}_section\n")
