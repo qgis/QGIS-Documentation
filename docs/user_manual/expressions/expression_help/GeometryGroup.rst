@@ -2060,7 +2060,7 @@ Creates a rectangle from 3 points, the first two of which define its first side.
          * 0 (distance): The length of the second size is equal to the distance between the 2nd and 3rd points.
          * 1 (projected): The length of the second size is equal to the distance of the perpendicular projection of the 3rd point on the first segment or its extension.
 
-The second segment is always drawn on the side covering the third point.
+         The second segment is always drawn on the side covering the third point.
    * - Examples
      - * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(3, 3), 0))`` → 'Polygon ((0 0, 0 5, 3.60555128 5, 3.60555128 0, 0 0))'
        * ``geom_to_wkt(make_rectangle_3points(make_point(0, 0), make_point(0,5), make_point(3, 3), 1))`` → 'Polygon ((0 0, 0 5, 3 5, 3 0, 0 0))'
