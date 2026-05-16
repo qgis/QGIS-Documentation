@@ -78,21 +78,28 @@ The following tools are provided at the top of the 3D map view panel:
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
   * :guilabel:`Show visible camera area in 2D map view`: shows shaded triangular area
-    (in the map canvas and 2D map overlay) that represents the direction of the camera.
+    (in the map canvas and :ref:`2D map overlay <2d_map_overlay>`) that represents the direction of the camera.
   * :guilabel:`Show 2D map overlay`: displays 2D map overlay in the 3D view
     to indicate the current location of the 3D camera and provide spatial context.
   * :guilabel:`Set 3D scene on 2D map view`: allows to clip the 3D scene
     and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
     More options are available in the :ref:`General configuration <scene_extent>` tab.
   * :guilabel:`Camera controls`: allows you to control camera looking at XYZ in 3D map CRS coordinates.
-    This following options are shown in the dialog:
+    This following options are shown in the modeless dialog:
 
-    * :guilabel:`Looking at X`: set the camera position by entering X values
-    * :guilabel:`Looking at Y`: set the camera position by entering Y values
-    * :guilabel:`Looking at Z`: set the camera position by entering Z values
+    * :guilabel:`Looking at X`: set the X coordinate of the point the camera is looking at
+    * :guilabel:`Looking at Y`: set the Y coordinate of the point the camera is looking at
+    * :guilabel:`Looking at Z`: set the Z coordinate of the point the camera is looking at
     * :guilabel:`Distance from center`: controls how far the camera is from central point
     * :guilabel:`Pitch`: controls how steep camera looks up and down
     * :guilabel:`Heading`: controls the direction the camera faces
+
+    .. figure:: img/cameracontrolsdialog.png
+       :align: center
+       :width: 40%
+
+       Camera controls dialog.
+
 
     If you check |unchecked| :guilabel:`Live update`, any changes will instantly be shown.
     Otherwise, you will need to click :guilabel:`Apply` button to see changes you have made.
@@ -378,8 +385,6 @@ synchronization and skybox.
 
      The 3D Axis context menu
 
-.. _3d_mapview_settings_camera_nav_sync:
-
 * The :guilabel:`Navigation Synchronization` parameter group adds options to
   synchronize 2D view with 3D camera position or 3D camera position with
   2D view or bi directional synchronization. The last option displays the extent
@@ -395,13 +400,14 @@ synchronization and skybox.
   Texture image files of the skybox can be files on the disk, remote URLs or
   embedded in the project (:ref:`more details <embedded_file_selector>`).
 
-* Check |Unchecked|:guilabel:`Show 2D Map Overlay` to display a 2D map indicating
+.. _2d_map_overlay:
+
+* Check |unchecked|:guilabel:`Show 2D Map Overlay` to display a 2D map indicating
   the current position of the 3D camera.
   A 2D map with the camera frustum centered on it will appear in the left corner of the 3D view.
   The shaded triangular area that shows where the 3D camera is currently looking at
-  is also displayed if :guilabel:`Show visible camera area in 2D map view` is enabled
-  (see :ref:`camera menu <3d_mapview_cameramenu>` and
-  :ref:`navigation synchronization<3d_mapview_settings_camera_nav_sync>`).
+  is also displayed if :guilabel:`Show visible camera area in 2D map view` is enabled.
+  The options are also available in the :ref:`camera menu <3d_mapview_cameramenu>` as shortcuts.
   To move the camera, drag the mouse until the view matches your desired perspective.
 
   .. figure:: img/2dmap_overlay.png
