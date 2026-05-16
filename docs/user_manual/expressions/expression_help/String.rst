@@ -226,7 +226,6 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
 
          These expressions may be used for the time part of the format string:
 
-
          .. csv-table::
             :header-rows: 1
             :widths: 20, 80
@@ -841,12 +840,12 @@ Common use cases include normalizing text for search operations, creating ASCII-
 
 .. note:: This function is particularly useful when:
 
-* Searching or filtering data where accents should be ignored (e.g., 'Jose' matches 'José')
-* Creating URL-safe or filename-safe strings from internationalized text
-* Normalizing user input for consistent storage or comparison
-* Preparing text for systems with limited Unicode support
+   * Searching or filtering data where accents should be ignored (e.g., 'Jose' matches 'José')
+   * Creating URL-safe or filename-safe strings from internationalized text
+   * Normalizing user input for consistent storage or comparison
+   * Preparing text for systems with limited Unicode support
 
-The function uses Unicode NFC normalization internally to ensure consistent handling of composed and decomposed characters.
+   The function uses Unicode NFC normalization internally to ensure consistent handling of composed and decomposed characters.
 
 
 .. end_unaccent_section

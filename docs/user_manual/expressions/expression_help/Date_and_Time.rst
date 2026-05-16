@@ -202,7 +202,6 @@ Formats a date type or string into a custom string format. Uses Qt date/time for
 
          These expressions may be used for the time part of the format string:
 
-
          .. csv-table::
             :header-rows: 1
             :widths: 20, 80

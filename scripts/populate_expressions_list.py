@@ -43,11 +43,15 @@ def sphynxify_html(text, base_indent=0):
     # Format paragraphs and breaks
     text = text.replace("<p>", "\n\n" + filler)
     text = text.replace("</p>", "\n")
-    text = re.sub(r"<br\s?\/?>", "\n\n" + filler, text)
+    # Ignore <br> when followed by <ul> to avoid unnecessary additional break lines
+    text = re.sub(r"\s?<br\s?\/?><ul>", "<ul>", text)
+    text = re.sub(r"\s?<br\s?\/?>", "\n\n" + filler, text)
 
     # Format unsorted lists
     text = text.replace("<ul>", "\n\n")
-    text = text.replace("</ul>", "\n")
+    # Handle indentation when there is text after a list block
+    text = re.sub("</ul>$", "\n", text)
+    text = re.sub("</ul>", "\n" + filler, text)
     text = text.replace("<li>", filler + "* ")
     text = text.replace("</li>", "\n")
 
@@ -63,7 +67,7 @@ def sphynxify_html(text, base_indent=0):
     text = text.replace("</pre>", "\n\n")
 
     # Format tables
-    text = text.replace("<table>", "\n\n" + filler + ".. csv-table::\n")
+    text = re.sub(r"\s*<table>", "\n\n" + filler + ".. csv-table::\n", text)
     text = text.replace(
         "<thead>", filler + "   :header-rows: 1\n" + filler + "   :widths: 20, 80\n\n"
     )
@@ -192,7 +196,7 @@ def format_variant(function_dict, f_name):
         v_description = ""
 
     if "notes" in function_dict:
-        notes = f"\n\n.. note:: {sphynxify_html(function_dict['notes'])}"
+        notes = f"\n\n.. note:: {sphynxify_html(function_dict['notes'], 3)}"
     else:
         notes = ""
 
