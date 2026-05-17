@@ -6,10 +6,10 @@
 # 
 # Translators:
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
 # Transifex Bot <>, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -383,6 +383,10 @@ msgid ""
 "specify only **three** points."
 msgstr "または、先ほどと同じランダム点群生成方法で、**3** 点だけ指定します。"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:180
+msgid "Save your new layer as ``distance_points`` in the format you prefer."
+msgstr "新しいレイヤを ``distance_points`` という名前で、お好みのフォーマットで保存します。"
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:183
 msgid ""
 "To generate statistics on the distances between points in the two layers:"
@@ -423,6 +427,15 @@ msgstr "必要に応じて、出力レイヤをファイルとして保存する
 msgid "Click :guilabel:`Run` to generate the distance matrix layer."
 msgstr ":guilabel:`実行` をクリックすると、距離行列レイヤが生成されます。"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:199
+msgid ""
+"Open the attribute table of the generated layer: values refer to the "
+"distances between the ``distance_points`` features and their two nearest "
+"points in the ``Sampled Points`` layer:"
+msgstr ""
+"生成されたレイヤの属性テーブルを開きます。値は、 ``distance_points`` 地物と ``SampledPoints`` "
+"レイヤ内の2つの最も近いポイントの間の距離を参照します："
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:206
 msgid ""
 "With these parameters, the *Distance Matrix* tool calculates distance "
@@ -454,6 +467,12 @@ msgstr "ポイントレイヤの再近傍解析をするには:"
 msgid "Choose :menuselection:`Vector analysis --> Nearest neighbor analysis`."
 msgstr ":menuselection:`ベクタ解析 --> 最近傍解析` を選びます。"
 
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:222
+msgid ""
+"In the dialog that appears, select the ``Random points`` layer and click "
+":guilabel:`Run`."
+msgstr "表示されたダイアログで ``ランダム点群出力`` レイヤを選択し、 :guilabel:`実行` をクリックします。"
+
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:224
 msgid ""
 "The results will appear in the Processing :guilabel:`Result Viewer` Panel."
@@ -474,6 +493,13 @@ msgstr "データセットの平均座標を取得するために:"
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:240
 msgid "Start :menuselection:`Vector analysis --> Mean coordinate(s)`"
 msgstr ":menuselection:`ベクタ解析 --> 加重平均座標（重心の平均）`"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:241
+msgid ""
+"In the dialog that appears, specify ``Random points`` as :guilabel:`Input "
+"layer`, and leave the optional choices unchanged."
+msgstr ""
+"表示されたダイアログで、 :guilabel:`入力レイヤ` に ``ランダム点群出力`` を指定し、オプションの選択はそのままにしておきます。"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:243
 msgid "Click :guilabel:`Run`."
@@ -592,6 +618,16 @@ msgstr "ヒストグラムは、値の分布を示すものであり、必ずし
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:312
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Spatial Interpolation"
 msgstr ":abbr:`★☆☆ （初級レベル）` 理解しよう: 空間補間"
+
+#: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:314
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the ``Sampled "
+"points`` dataset we created earlier, and would like to have some idea of "
+"what the terrain looks like."
+msgstr ""
+"データを推定したい標本点のコレクションがあるとしましょう。たとえば、前に作成した ``Sampled points`` "
+"データセットにアクセスでき、地形がどのように見えるかを知りたいとします。"
 
 #: ../../docs/training_manual/vector_analysis/spatial_statistics.rst:320
 msgid ""
