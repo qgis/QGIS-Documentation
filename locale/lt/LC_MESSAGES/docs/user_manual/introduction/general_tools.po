@@ -6212,6 +6212,87 @@ msgstr ""
 "Taipogi galima nurodyti plotį, kurį reikia naudoti simboliams su NULL "
 "reikšmėmis."
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2285
+msgid ""
+"for size (point symbols): an interpolation is done over a range of minimum "
+"and maximum values in order to assign each symbol the correct size "
+"\"diameter\". The :guilabel:`Scale method` field controls how the "
+"interpolation is done and what the output value represents."
+msgstr ""
+"dydžiui (taškų simbolių): interpoliacija vykdoma intervale nuo minimalios "
+"iki maksimalios reikšmės, kad kiekvienam simboliui būtų priskirtas teisingas"
+" „diametro“ dydis. Laukas :guilabel:`Mastelio metodas` nurodo, kaip vykdoma "
+"interpoliacija ir ką reprezentuoja išvesties reikšmė."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2290
+msgid ""
+"**Radius**: linearly interpolates the diameter of the symbol between the "
+":guilabel:`Size from` and the :guilabel:`Size to` when the "
+":guilabel:`Source` expression value varies from :guilabel:`value from` to "
+":guilabel:`value to`. Symbols diameter are proportional."
+msgstr ""
+"**Spindulys**: tiesiškai interpoliuoja simbolio spindulį tarp "
+":guilabel:`Dydis nuo` ir :guilabel:`Dydis iki`, kai :guilabel:`Šaltinio` "
+"išraiškos reikšmė kinta tarp :guilabel:`reikšmė nuo` iki :guilabel:`reikšmė "
+"iki`. Simbolių spindulys yra proporcionalus."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2294
+msgid ""
+"**Surface**: scales the symbol diameter according to the square root (power "
+"of ``0.5``) of the :guilabel:`Source` expression value to linearly "
+"interpolate the area of the symbol between the :guilabel:`Size from` and the"
+" :guilabel:`Size to` when the :guilabel:`Source` expression value varies "
+"from :guilabel:`value from` to :guilabel:`value to`. Symbols area are "
+"proportional. This method reflects human perception of size variation better"
+" than the **radius** one."
+msgstr ""
+"**Paviršius**: keičia simbolio spindulį pagal kvadratinę šaknį (laipsnis "
+"``0.5``), taikomą :guilabel:`Šaltinio` išraiškos reikšmei tiesioginiam "
+"simbolio ploto interpoliavimui tarp :guilabel:`Dydis nuo` ir "
+":guilabel:`Dydis iki`, kai :guilabel:`Šaltinio` išraiškos reikšmės kinta nuo"
+" :guilabel:`reikšmė nuo` iki :guilabel:`reikšmė iki`. Simbolių plotas yra "
+"propocingas. Šis metodas geriau atspindi žmogaus dydžio suvokimą, nei "
+"**spindulio**."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2300
+msgid ""
+"**Flannery**: Applies a compensation factor (power of ``0.57``) to the area "
+"interpolation, in order to mitigate the eyes' perceptual underestimation of "
+"proportional areas. Maybe relevant only for circular symbols."
+msgstr ""
+"**Flannery**: taiko interpoliacijos plotui kompensavimo faktorių (laipsnį "
+"``0.57``), kad sumažintų akių suvokimo nesugebėjimą įvertinti santykinių "
+"plotų. Galbūt tinka tik apskritiems simboliams."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2303
+msgid ""
+"**Exponential**: Also interpolates the area, but allows to control the exact"
+" power used for scaling through the :guilabel:`Exponent` field. Power values"
+" greater than ``1`` will cause the output values distribution to start "
+"slowly before accelerating as the source values approach their maximum. "
+"Smaller exponents (less than ``1``) will do the opposite."
+msgstr ""
+"**Eksponentinis**: taipogi interpoliuoja plotą, bet leidžia valdyti konkretų"
+" laipsnį, kuris naudojamas keičiant pagal lauką :guilabel:`Eksponentė`. "
+"Laipsnio reikšmės, didesnės už ``1`` reikš išvesties reikšmių pasiskirstymą,"
+" kuris pradžioje didėja lėtai, o tada greitėja, šaltinio reikšmėms artėjant "
+"prie jų maksimumo. Mažesnės eksponentės (mažesnės už ``1``) veiks "
+"atvirkščiai."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2309
+msgid "The size to use for symbols with NULL values can also be given."
+msgstr ""
+"Taipogi galima nurodyti dydį, kurį reikia naudoti simboliams su NULL "
+"reikšmėmis."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2316
+msgid ""
+"Scaling values using different methods (from left to right): Radius - "
+"Surface - Flannery - Exponential of 2"
+msgstr ""
+"Reikšmių perskaičiavimas naudojant skirtingus metodus (iš kariės į dešinę): "
+"Spindulys - Paviršius - Flannery - 2 laipsnis"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2319
 msgid ""
 "When compatible with the property, a live-update preview is displayed in the"
@@ -6224,14 +6305,183 @@ msgstr ""
 msgid "Scaling feature size based on passengers field's value"
 msgstr "Geoobjekto dydžio keitimas priklausomai nuo keleivių lauko reikšmės"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2329
+msgid ""
+"The values presented in the varying size assistant above will set the size "
+"'Data-defined override' with the editable formula below:"
+msgstr ""
+"Reikšmės, rodomos kintamo dydžio asistente aukščiau, nustatys „Nuo duomenų "
+"priklausantį permušimą“ žemiau pateikta formule:"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2341
 msgid "Authentication"
 msgstr "Autentifikacija"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2343
+msgid ""
+"Many data providers in QGIS (such as databases, web services or file-based "
+"services) require credentials in order to connect. The authentication widget"
+" in QGIS helps users supply these credentials securely, and it offers two "
+"ways to do so:"
+msgstr ""
+"Daug duomenų QGIS tiekėjų (tokių kaip duomenų bazės, žiniatinklio paslaugos "
+"ar failais paremtos paslaugos) reikalauja prisijungimo duomenų. QGIS "
+"autentifikacijos valdiklis padeda naudotojams saugiai pateikti šiuos "
+"duomenis ir leidžia tai padaryti dviem būdais:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2348
+msgid "entering basic credentials directly,"
+msgstr "tiesiogiai įvesti bazinius prisijungimo duomenis,"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2349
+msgid ""
+"or selecting an existing authentication configuration stored in the "
+"encrypted authentication database."
+msgstr ""
+"ar parinkti esamą autentifikacijos konfigūraciją, kuri saugoma užkoduotoje "
+"autentifikacijos duomenų bazėje."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2355
+msgid "Authentication widget"
+msgstr "Autentifikacijos valdiklis"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2358
+msgid "Basic"
+msgstr "Paprastas"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2360
+msgid ""
+"When setting authentication credentials, the :guilabel:`Basic` tab allows "
+"you to set:"
+msgstr ""
+"Siunčiant prisijungimo duomenis, kortelė :guilabel:`Paprastas` leidžia jums "
+"nurodyti:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2363
+msgid ":guilabel:`User name`: User name used to connect to the data source."
+msgstr ""
+":guilabel:`Naudotojo vardą`: vardas naudotojo, kuriuo reikia jungtis prie "
+"duomenų šaltinio."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2364
+msgid ":guilabel:`Password`: Password used to connect to the data source."
+msgstr ""
+":guilabel:`Slaptažodis`: prisijungimui prie duomenų šaltinio naudojamas "
+"slaptažodis."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2366
+msgid ""
+":guilabel:`Convert to configuration` will save the user name and password in"
+" a new authentication configuration."
+msgstr ""
+":guilabel:`Keisti į konfigūraciją` įrašys naudotojo vardą ir slaptažodį į "
+"naują autentifikacijos konfigūraciją."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2369
+msgid ""
+"You can save any or both of the ``User name`` and ``Password`` parameters, "
+"in which case they will be used by default each time you need to connect to "
+"this database or service. If not saved, you'll be prompted to supply the "
+"credentials to connect to the database or service in next QGIS sessions. You"
+" can cancel the prompt, in which case the connection will fail. Click the "
+":guilabel:`Ignore for session` button to avoid being prompted again during "
+"the current QGIS session. It is also possible to :guilabel:`Ignore for 10 "
+"seconds`. This will cancel the prompt but you need to wait 10 seconds before"
+" you can attempt to connect again. The connection parameters you entered are"
+" stored in a temporary internal cache and returned whenever a "
+"username/password for the same database or service is requested, until you "
+"end the current QGIS session."
+msgstr ""
+"Jūs galite įrašyti bet kurį ar abu parametrus - ``Naudotojo vardą`` ir "
+"``Slaptažodį``, tokiu atveju jie bus naudojami pagal nutylėjimą kiekvieną "
+"kartą, kai jums reikės prisijungti prie šios duomenų bazės ar paslaugos. Jei"
+" jų neįrašysite, jums reikės juos įvesti jungiantis prie duomenų bazės ar "
+"paslaugos kitose QGIS sesijose. Jūs galite nutraukti įvedimą, tokiu atveju "
+"prisijungimas nepavyks. Spauskite mygtuką :guilabel:`ignoruoti šioje "
+"sesijoje`, kad jūsų daugiau nebeklaustų šioje QGIS sesijoje. Taipogi galima "
+":guilabel:`ignoruoti 10 sekundžių`. Tai nutrauks įvedimą, bet jums reikės "
+"palaukti 10 sekundžių prieš tai, kai galėsite bandyti iš naujo prisijungti. "
+"Jūsų įvesti prisijungimo parametrai laikomi laikiname vidiniame podėlyje ir "
+"grąžinami, kai prireikia tos pačios duomenų bazės naudotojo/slaptažodžio, "
+"kol jūs baigiate dabartinę QGIS sesiją."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2381
 msgid "**QGIS User Settings and Security**"
 msgstr "**QGIS naudotojo nustatymai ir saugumas**"
 
+#: ../../docs/user_manual/introduction/general_tools.rst:2383
+msgid ""
+"In the :guilabel:`Authentication` tab, saving **username** and **password** "
+"will keep unprotected credentials in the connection configuration. Those "
+"**credentials will be visible** if, for instance, you share the project file"
+" with someone. Therefore, it is advisable to save your credentials in an "
+"*Authentication configuration* instead (:guilabel:`Configurations` tab - See"
+" :ref:`authentication_index` for more details) or in a service connection "
+"file (see :ref:`PostgreSQL Service connection file <pg-service-file>` for "
+"example)."
+msgstr ""
+"Kortelėje :guilabel:`Autentifikacija` išsaugojus **naudotoją** ir "
+"**slaptažodį** neapsaugoti prisijungimo duomenys bus laikomi jungties "
+"konfigūracijoje. Šie **prisijungimo duomenys bus matomi** jei, pavyzdžiui, "
+"pasidalinsite projektu su kuo nors kitu. Taigi patariama vietoje to įrašyti "
+"jūsų prisijungimo duomenis į *Autentifikacijos konfigūraciją*, (kortelė "
+":guilabel:`Konfigūracijos` - daugiau informacijos rasite skyriuje "
+":ref:`authentication_index`) arba paslaugos jungties faile (pavyzdį rasite "
+":ref:`PostgreSQL Paslaugos prisijungimo faile <pg-service-file>`)."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2393
+msgid "Configurations"
+msgstr "Konfigūracijos"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2395
+msgid ""
+"QGIS can store credentials under :ref:`authentication configurations "
+"<authentication_methods>`. Each configuration safely saves your login "
+"details in a portable encrypted database, so you can use them again without "
+"typing them every time. These configurations can be safely referenced by "
+"their ID tokens in projects and settings."
+msgstr ""
+"QGIS gali įrašyti prisijungimo duomenis kaip :ref:`autentifikavimo "
+"konfigūracijas <authentication_methods>`. Kiekviena konfigūracija saugiai "
+"įrašo jūsų prisijungimo detalas į perkeliamą užšifruotą duomenų bazę, kad "
+"galėtumėte juos vėl naudoti neįvedant iš naujo kiekvieną kartą. Šias "
+"konfigūracijas galima saugiai naudoti projektuose ir nustatymuose su jų ID "
+"žetonais."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2400
+msgid ""
+"The authentication configuration selector allows users to choose from "
+"existing authentication configurations or create new ones. It provides "
+"options to:"
+msgstr ""
+"Autentifikacijos konfigūracijos parinkėjas leidžia naudotojas pasirinkti "
+"vieną iš esamų konfigūracijų arba sukurti naujas. Jis teikia parinktis, "
+"skirtas:"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2403
+msgid "Select an existing authentication configuration from a drop-down list."
+msgstr "Parinkti esamą autentifikacijos konfigūraciją iškrentančiame sąraše."
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2404
+msgid "|symbologyAdd| :sup:`Create a new authentication configuration`"
+msgstr "|symbologyAdd| :sup:`Sukurti naują autentifikacijos konfigūraciją`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2405
+msgid "|symbologyRemove| :sup:`Delete selected configuration`"
+msgstr "|symbologyRemove| :sup:`Ištrinti parinktą konfigūraciją`"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2406
+msgid "|projectProperties| :sup:`Edit selected configuration`"
+msgstr "|projectProperties| :sup:`Keisti parinktą konfigūraciją`"
+
 #: ../../docs/user_manual/introduction/general_tools.rst:2569
 msgid "projectProperties"
 msgstr "projectProperties"
+
+#: ../../docs/user_manual/introduction/general_tools.rst:2408
+msgid ""
+"For more information on the authentication system, see "
+":ref:`authentication_index`."
+msgstr ""
+"Daugiau informacijos apie autentifikacijos sistemą rasite skyriuje "
+":ref:`authentication_index`."
