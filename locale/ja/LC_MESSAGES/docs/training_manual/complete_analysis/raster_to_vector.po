@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -67,6 +67,15 @@ msgid ""
 "Tool"
 msgstr ":abbr:`★★☆ （中級レベル）` 理解しよう: :guilabel:`ラスタのベクタ化` ツール"
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:20
+msgid ""
+"Start with the map from the last module, :file:`raster_analysis.qgs`. There "
+"you should have the ``all_conditions_simple.tif`` calculated during the "
+"previous exercises."
+msgstr ""
+"直前のモジュール :file:`raster_analysis.qgs` の地図から始めます。前の演習で "
+":kbd:`all_conditions_simple.tif` が計算されているはずです。"
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:24
 msgid ""
 "Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to "
@@ -78,6 +87,11 @@ msgstr ""
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:26
 msgid "Set it up like this:"
 msgstr "このように設定します:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:31
+msgid ""
+"Change the field name (describing the values of the raster) to ``suitable``."
+msgstr "フィールド名（ラスタの値を記述）を ``suitable`` に変更します。"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:33
 msgid ""
@@ -123,6 +137,15 @@ msgstr ""
 msgid "Answer"
 msgstr "答え"
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:56
+msgid ""
+"Open the :guilabel:`Query Builder` by right-clicking on the ``all_terrain`` "
+"layer in the :guilabel:`Layers` panel, and selecting the "
+":menuselection:`Properties --> Source` tab."
+msgstr ""
+":guilabel:`レイヤ` パネルにある ``all_terrain`` レイヤを右クリックして :menuselection:`プロパティ -->"
+" ソース` タブを選択し、 :guilabel:`クエリビルダ` を起動します。"
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:59
 msgid "Then build the query ``\"suitable\" = 1``."
 msgstr "``\"suitable\" = 1`` というクエリを作ります。"
@@ -135,6 +158,15 @@ msgid ""
 msgstr ""
 ":guilabel:`OK` "
 "をクリックすると、この条件を満たさないポリゴンがすべてフィルタリングされます。元のラスターの上に表示すると、領域が完全に重なっているはずです:"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:67
+msgid ""
+"You can save this layer by right-clicking on the ``all_terrain`` layer in "
+"the :guilabel:`Layers` panel and choosing :guilabel:`Save As...`, then "
+"continue as per the instructions."
+msgstr ""
+"このレイヤを保存するには、 :guilabel:`レイヤ` パネルで ``all_terrain`` レイヤを右クリックして、 "
+":guilabel:`Save As...` を選び、指示に従って続けます。"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:72
 msgid ""
@@ -159,6 +191,10 @@ msgstr ""
 ":menuselection:`ラスタ --> 変換 --> ベクタのラスタ化(rasterize)` "
 "をクリックしてツールを起動し、その後、下のスクリーンショットのようにそれを設定します:"
 
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:84
+msgid ":guilabel:`Input layer` is ``all_terrain``."
+msgstr ":guilabel:`入力レイヤ` は ``all_terrain`` です。"
+
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:85
 msgid "Field name is :guilabel:`suitable`."
 msgstr "フィールド名は :guilabel:`suitable` です。"
@@ -172,6 +208,10 @@ msgid ""
 ":guilabel:`Width` and :guilabel:`Height` are ``837`` and ``661``, "
 "respectively."
 msgstr ":guilabel:`幅` と :guilabel:`高さ` は、それぞれ ``837`` と ``661``。"
+
+#: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:89
+msgid "Get the :guilabel:`Output extent` from the ``all_terrain`` layer."
+msgstr "``all_terrain`` レイヤから :guilabel:`出力範囲` を取得します。"
 
 #: ../../docs/training_manual/complete_analysis/raster_to_vector.rst:90
 msgid ""
