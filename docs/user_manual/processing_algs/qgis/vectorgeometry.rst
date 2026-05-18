@@ -1261,9 +1261,11 @@ Python code
 Concave hull (by feature)
 ---------------------------
 
-Calculates the concave hull for each feature in an input layer.
+``Added in 3.44``
+
+Calculates the concave hull for each multipoint feature in an input layer.
 See the :ref:`qgisconcavehull` algorithm for a concave hull calculation
-which covers the whole layer or grouped subsets of features.
+which covers the whole layer.
 
 .. figure:: img/concave_hull_byfeature.png
     :align: center
@@ -1288,13 +1290,19 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: point]
-     - Input point vector layer
+     - Input vector layer with multipoint features
    * - **Threshold**
      - ``ALPHA``
      - [numeric: double]
 
        Default: 0.3
      - Number from 0 (maximum concave hull) to 1 (convex hull).
+
+       .. figure:: img/concave_hull_threshold.png
+          :align: center
+          :width: 100%
+
+          Concave hulls with different thresholds (0.3, 0.6, 0.9)
    * - **Allow holes**
      - ``HOLES``
      - [boolean]
@@ -1328,7 +1336,8 @@ Outputs
    * - **Concave hulls**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output vector layer
+     - The output vector layer with polygons covering individual multipoint features.
+       Area and perimeter fields are added.
 
 Python code
 ...........
@@ -1348,10 +1357,10 @@ Computes the concave hull covering all features from an input point layer.
 See the :ref:`qgisconcavehullbyfeature` algorithm for a concave hull calculation
 which covers individual features from a layer.
 
-.. figure:: img/concave_hull_bylayer.png
+.. figure:: img/concave_hull_threshold.png
     :align: center
 
-    Concave hull by layer
+    Concave hull by layer with different thresholds (0.3, 0.6, 0.9)
 
 
 .. seealso:: :ref:`qgisconvexhull`
@@ -1378,6 +1387,12 @@ Parameters
 
        Default: 0.3
      - Number from 0 (maximum concave hull) to 1 (convex hull).
+
+       .. figure:: img/concave_hull_threshold.png
+          :align: center
+          :width: 100%
+
+          Concave hulls with different thresholds (0.3, 0.6, 0.9)
    * - **Allow holes**
      - ``HOLES``
      - [boolean]
@@ -1418,7 +1433,7 @@ Outputs
    * - **Concave hull**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output vector layer
+     - The output vector layer covering all features from an input point layer.
 
 Python code
 ...........
