@@ -1651,6 +1651,22 @@ Depending on the node, you can also:
   a preview of the data provided by the service.
   More settings are available when the layer has been loaded into the project.
 
+When a service is exposed as both a Map Service (raster) and a Feature
+Service (vector), the Browser displays only the Feature Service item to
+avoid duplication. The following additional options are available via the
+right-click context menu:
+
+* Right-clicking a **service node** (globe icon):
+
+  * :guilabel:`Add Raster with All MapServer Layers`: loads all layers
+    from the Map Service combined as a single raster layer.
+
+* Right-clicking an **individual layer**:
+
+  * :guilabel:`Add Vector Layer (FeatureServer) to Project`: loads the
+    layer as a vector layer via the Feature Service endpoint.
+  * :guilabel:`Add Raster Layer (MapServer) to Project`: loads the same
+    layer as a raster via the Map Service endpoint.
 
 .. index:: 3D Tiles services
 .. _3d_tiles:
