@@ -6,8 +6,8 @@
 # 
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -62,6 +62,12 @@ msgid ""
 "Let's start to explore some of its features."
 msgstr ""
 "QuickMapServicesプラグインは、QGISプロジェクトにベースマップを追加するシンプルで使い勝手の良いプラグインです。様々なオプションや設定があるので、その機能の一部をご紹介します。"
+
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:19
+msgid ""
+"Start a new map and add the ``roads`` layer from the :file:`training_data` "
+"GeoPackage."
+msgstr "新しいマップを開始し、 :file:`training_data` Geopackageから ``roads`` レイヤを追加します。"
 
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:21
 msgid "Install the **QuickMapServices** plugin."
@@ -116,6 +122,10 @@ msgid ""
 "Choose the one that best fits your needs, and load the data in the project!"
 msgstr "あなたのニーズに最も適したものを選択し、プロジェクトにデータを読み込みます！"
 
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:47
+msgid "It is also possible to search through the now available data providers"
+msgstr "また、現在利用可能なデータプロバイダを使って検索することもできます"
+
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:49
 msgid ""
 "Open the plugin's search tab by clicking on :menuselection:`Web --> "
@@ -161,6 +171,13 @@ msgstr ""
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Using the Quick Query"
 msgstr ":abbr:`★☆☆ （初級レベル）` 理解しよう: Quick Queryを使う"
 
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:72
+msgid ""
+"Start a new empty project and add the ``roads`` layer from the "
+":file:`training_data` GeoPackage."
+msgstr ""
+"新しい空のプロジェクトを開始し、 :file:`training_data` GeoPackage から ``roads`` レイヤを追加します。"
+
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:74
 msgid ""
 "Install the **QuickOSM** plugin. The plugin adds two new buttons in the QGIS"
@@ -183,7 +200,7 @@ msgid ""
 " be more specific and choose a specific :guilabel:`Key` and "
 ":guilabel:`Value` pair."
 msgstr ""
-"一般的な :guilabel:`Key` を選択して特定の機能をダウンロードすることもできますし、より具体的に :guilabel:`Key` と "
+"一般的な :guilabel:`Key` を選択して特定の地物をダウンロードすることもできますし、より具体的に :guilabel:`Key` と "
 ":guilabel:`Value` のペアを選択することも可能です。"
 
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:82
@@ -196,6 +213,21 @@ msgstr ""
 ":guilabel:`Help with key/value` "
 "ボタンをクリックしてみてください。OpenStreetMapのこのコンセプトの完全な解説のウェブページが開きます。"
 
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:86
+msgid ""
+"Look for ``railway`` in the :guilabel:`Key` menu and let the "
+":guilabel:`Value` be empty: so we are downloading all the ``railway`` "
+"features without specifying any values."
+msgstr ""
+":guilabel:`Key` メニューから ``railway`` を探し、 :guilabel:`Value` "
+"を空にします。つまり、値を指定せずに全ての ``railway`` 地物をダウンロードすることになります。"
+
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:89
+msgid ""
+"Select :guilabel:`Layer Extent` in the next drop-down menu and choose "
+"``roads``."
+msgstr "次のドロップダウンメニューで :guilabel:`Layer Extent` を選択し、 ``roads`` を選択します。"
+
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:90
 msgid "Click on the :guilabel:`Run query` button."
 msgstr ":guilabel:`Run query` ボタンをクリックします。"
@@ -205,13 +237,13 @@ msgid ""
 "After some seconds the plugin will download all the features tagged in "
 "OpenStreetMap as ``railway`` and load them directly into the map."
 msgstr ""
-"数秒後、プラグインはOpenStreetMapで ``railway`` としてタグ付けされたすべての地物をダウンロードし、直接マップにロードします。"
+"数秒後、プラグインはOpenStreetMapで ``railway`` としてタグ付けされた全ての地物をダウンロードし、マップに直接読み込みます。"
 
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:98
 msgid ""
 "Nothing more! All the layers are loaded in the legend and are shown in the "
 "map canvas."
-msgstr "これだけです! すべてのレイヤは凡例に読み込まれ、マップキャンバスに表示されます。"
+msgstr "これだけです! 全てのレイヤは凡例に読み込まれ、マップキャンバスに表示されます。"
 
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:105
 msgid ""
@@ -327,6 +359,12 @@ msgstr ""
 msgid "Start a new project"
 msgstr "新しいプロジェクトを開始します"
 
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:187
+msgid ""
+"Load the ``sample_points`` layer from the :file:`exercise_data/plugins` "
+"folder"
+msgstr ":file:`exercise_data/plugins` フォルダから ``sample_points`` レイヤを読み込みます"
+
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:189
 msgid ""
 "Install the plugin following the guidelines described in "
@@ -342,6 +380,22 @@ msgid ""
 msgstr ""
 "ツールバーの新しいアイコンをクリックするか、 :menuselection:`Plugins --> Data Plotly` "
 "メニューから、プラグインを開きます"
+
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:194
+msgid ""
+"In the following example we are creating a simple ``Scatter Plot`` of two "
+"fields of the ``sample_points`` layer. In the DataPlotly Panel:"
+msgstr ""
+"次の例では、 ``sample_points`` レイヤの2つのフィールドの簡単な ``Scatter Plot`` "
+"を作成します。DataPlotlyパネルでは:"
+
+#: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:198
+msgid ""
+"Choose ``sample_points`` in the Layer filter, :guilabel:`cl` for the "
+":guilabel:`X Field` and :guilabel:`mg` for the :guilabel:`Y Field`:"
+msgstr ""
+"レイヤフィルタで ``sample_points`` を選択し、 :guilabel:`X Field` には :guilabel:`cl` を、 "
+":guilabel:`Y Field` には :guilabel:`mg` を設定します:"
 
 #: ../../docs/training_manual/qgis_plugins/plugin_examples.rst:204
 msgid ""
