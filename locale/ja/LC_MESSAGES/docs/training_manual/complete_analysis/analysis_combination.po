@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -41,13 +41,13 @@ msgstr "レッスン: 分析を組み合わせる"
 msgid ""
 "Using the vectorized results of the raster analysis will allow you to select"
 " only those buildings on suitable terrain."
-msgstr "ベクタ化されたラスタ解析の結果を使うと、適当な地形の上の建物のみを選択することができます。"
+msgstr "ラスタ解析の結果をベクタ化したものを使うと、適した地形にある建物だけを選択することができます。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:7
 msgid ""
 "**The goal for this lesson:** To use the vectorized terrain results to "
 "select suitable plots."
-msgstr "**このレッスンの目標:** 適当な小地所を選び出すためにベクタ化された地形の結果を使う。"
+msgstr "**このレッスンの目標:** 適した小区画の地所を選び出すためにベクタ化した地形の結果を使う。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:11
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
@@ -67,6 +67,14 @@ msgstr "以前にベクタ解析中に作成した地図を開きます（ファ
 msgid "In the :guilabel:`Layers` panel, enable these layers:"
 msgstr ":guilabel:`レイヤ` パネルで次のレイヤを有効にします:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
+msgid "``hillshade``,"
+msgstr "``hillshade``、"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:19
+msgid "``solution`` (or ``buildings_over_100``)"
+msgstr "``solution`` (又は ``buildings_over_100``)"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:21
 msgid ""
 "In addition to these layers, which should already be loaded in the map from "
@@ -83,6 +91,17 @@ msgid ""
 msgstr ""
 "もし、レイヤが足りない場合は、 :file:`exercise_data/residential_development/` にあるはずです"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:26
+msgid ""
+"Use the :guilabel:`Intersection` tool (:menuselection:`Vector --> "
+"Geoprocessing Tools`) to create a new vector layer called "
+":file:`new_solution.shp` which contains only those buildings which intersect"
+" the ``suitable_terrain`` layer."
+msgstr ""
+":guilabel:`交差(intersect)` ツール（ :menuselection:` ベクタ --> 空間演算ツール` ）を使って、 "
+":file:`new_solution.shp` という新しいベクタレイヤを作成し、 ``suitable_terrain`` "
+"レイヤと交差する建物のみを格納します。"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
 msgid ""
 "You should now have a layer showing certain buildings as your solution, for "
@@ -93,10 +112,35 @@ msgstr "あなたは解として特定の建物を示すレイヤを持ってい
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Inspecting the Results"
 msgstr ":abbr:`★★☆ （中級レベル）` やってみよう: 結果を検査する"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:40
+msgid ""
+"Look at each of the buildings in your ``new_solution`` layer. Compare them "
+"with the ``suitable_terrain`` layer by changing the symbology for the "
+"``new_solution`` layer so that it has outlines only. What do you notice "
+"about some of the buildings? Are they all suitable just because they "
+"intersect with the ``suitable_terrain`` layer? Why or why not? Which ones "
+"would you deem to be unsuitable?"
+msgstr ""
+"``new_solution`` レイヤの建物をそれぞれ見てください。 ``new_solution`` "
+"レイヤのシンボロジがアウトラインだけになるように変更し、それらを ``suitable_terrain`` "
+"レイヤと比較してください。建物のいくつかについて何に気づきましたか? それらは ``suitable_terrain`` "
+"レイヤと交差しているからといって全て適当ですか? その理由は? どれが不適当だと考えますか?"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:68
 msgid "Answer"
 msgstr "答え"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:50
+msgid ""
+"You may notice that some of the buildings in your ``new_solution`` layer "
+"have been \"sliced\" by the :guilabel:`Intersection` tool. This shows that "
+"only part of the building - and therefore only part of the property - lies "
+"on suitable terrain. We can therefore sensibly eliminate those buildings "
+"from our dataset."
+msgstr ""
+"``new_solution`` レイヤの一部の建物が :guilabel:`交差(intersection)` "
+"ツールによって「スライス」されていることに気付いたでしょうか。これは、建物の一部のみ、つまり地所の一部のみが適切な地形にあることを示しています。したがって、これらの建物をデータセットから適切に削除できます。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:58
 msgid ":abbr:`★★☆ (Moderate level)` Try Yourself: Refining the Analysis"
@@ -108,20 +152,40 @@ msgid ""
 "not really suitable, so we can now refine the analysis."
 msgstr "結果に含まれていた建物の中には本当には適していないものがありましたので解析を改良しましょう。"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:63
+msgid ""
+"We want to ensure that our analysis returns only those buildings which fall "
+"entirely within the ``suitable_terrain`` layer. How would you achieve this? "
+"Use one or more Vector Analysis tools and remember that our buildings are "
+"all over 100m squared in size."
+msgstr ""
+"私たちの解析が完全に ``suitable_terrain`` レイヤ内にある建物のみを返すようにしたいです。そのためにはどうすればよいでしょうか？ "
+"ひとつまたは複数のベクタ解析ツールを使うことと、建物は大きさが全て100m四方を超えていることを覚えておいてください。"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:71
 msgid "At the moment, your analysis should look something like this:"
 msgstr "現時点では、このような解析ができるはずです:"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:76
 msgid "Consider a circular area, continuous for 100 meters in all directions."
-msgstr "四方100mに渡って連続する円形の区域を考えてみましょう。"
+msgstr "全方向で100mに渡っている円形の区域を考えてみましょう。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:81
 msgid ""
 "If it is greater than 100 meters in radius, then subtracting 100 meters from"
 " its size (from all directions) will result in a part of it being left in "
 "the middle."
-msgstr "半径100m以上の場合、その大きさから（全方向から）100mを引くと、真ん中に一部が残ることになります。"
+msgstr "半径が100mより大きいとき、その大きさから（全方向から）100mを引くと、真ん中にその一部が残ることになります。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:88
+msgid ""
+"Therefore, you can run an *interior buffer* of 100 meters on your existing "
+"``suitable_terrain`` vector layer. In the output of the buffer function, "
+"whatever remains of the original layer will represent areas where there is "
+"suitable terrain for 100 meters beyond."
+msgstr ""
+"したがって、既存の ``suitable_terrain`` ベクタレイヤで100メートルの *内側バッファ* "
+"を実行できます。バッファ関数の出力では、元のレイヤに残っているものは全て、100メートル先の適切な地形がある領域を表します。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:93
 msgid "To demonstrate:"
@@ -137,6 +201,15 @@ msgstr ":menuselection:`ベクタ --> 空間演算ツール --> バッファ(buf
 msgid "Set it up like this:"
 msgstr "このように設定します:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:102
+msgid ""
+"Use the ``suitable_terrain`` layer with ``10`` segments and a buffer "
+"distance of ``-100``. (The distance is automatically in meters because your "
+"map is using a projected CRS.)"
+msgstr ""
+"``suitable_terrain`` レイヤを使用して、``10`` のセグメントと ``-100`` のバッファ距離を設定します。（地図が投影型 "
+"CRS を使用しているため、距離は自動的にメートルで表示されます。）"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:105
 msgid ""
 "Save the output in :file:`exercise_data/residential_development/` as "
@@ -144,6 +217,12 @@ msgid ""
 msgstr ""
 "出力結果を :file:`exercise_data/residential_development/` に "
 ":file:`suitable_terrain_continuous100m.shp` として保存してください。"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:107
+msgid ""
+"If necessary, move the new layer above your original ``suitable_terrain`` "
+"layer."
+msgstr "必要であれば、新しいレイヤを元の ``suitable_terrain`` レイヤの上に移動させます。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:110
 msgid "Your results will look like something like this:"
@@ -161,9 +240,27 @@ msgstr ""
 msgid "Set up like this:"
 msgstr "次のように設定します:"
 
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:122
+msgid ""
+"Select features in ``new_solution`` that intersect features in "
+"``suitable_terrain_continuous100m.shp``."
+msgstr ""
+"``new_solution`` にある地物のうち、 ``suitable_terrain_continuous100m.shp`` "
+"にある地物と交差するものを選択します。"
+
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:125
 msgid "This is the result:"
 msgstr "これがその結果です:"
+
+#: ../../docs/training_manual/complete_analysis/analysis_combination.rst:130
+msgid ""
+"The yellow buildings are selected. Although some of the buildings fall "
+"partly outside the new ``suitable_terrain_continuous100m`` layer, they lie "
+"well within the original ``suitable_terrain`` layer and therefore meet all "
+"of our requirements."
+msgstr ""
+"黄色い建物が選択されています。一部の建物は部分的に新しい ``suitable_terrain_continuous100m`` "
+"レイヤの外側にありますが、元の `suitable_terrain` レイヤ内に十分に収まっているため、全ての要件を満たしています。"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:135
 msgid ""
