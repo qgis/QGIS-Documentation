@@ -161,14 +161,14 @@ msgstr "Premi :kbd:`Q` per uscire."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:118
 msgid "Create a database"
-msgstr "Crea un database"
+msgstr "Creare un database"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:120
 msgid ""
 "The ``createdb`` command is used to create a new database. It should be run "
 "from the bash shell prompt:"
 msgstr ""
-"Puoi usare il comando``createdb`` per creare un nuovo database. Dovrebbe "
+"Puoi usare il comando ``createdb`` per creare un nuovo database. Dovrebbe "
 "essere eseguito dal prompt della shell bash:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:127
@@ -179,7 +179,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:133
 msgid "Which should return something like this:"
-msgstr "Che dovrebbe tornare qualcosa di simile:"
+msgstr "Che dovrebbe restituire qualcosa di simile:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:148
 msgid "Starting a database shell session"
@@ -215,7 +215,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:173
 msgid "Make Tables in SQL"
-msgstr "Crea tabelle in SQL"
+msgstr "Creare tabelle in SQL"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:175
 msgid ""
@@ -224,6 +224,51 @@ msgid ""
 msgstr ""
 "Inizia a fare alcune tabelle! Usa il diagramma ER come guida. Innanzitutto, "
 "connettiti al database address:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:182
+msgid "Then create a ``streets`` table:"
+msgstr "Quindi crea una tabella denominata ``streets``:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:188
+msgid ""
+"``serial`` and ``varchar`` are **data types**. ``serial`` tells PostgreSQL "
+"to start an integer sequence (auto-number) to populate the ``id`` "
+"automatically for every new record. ``varchar(50)`` tells PostgreSQL to "
+"create a character field of 50 characters in length."
+msgstr ""
+"``serial`` e ``varchar`` sono i **tipi di dati**. ``serial`` indica a "
+"PostgreSQL di avviare una sequenza di numeri interi (numero automatico) per "
+"popolare automaticamente il campo ``id`` per ogni nuovo record. "
+"``varchar(50)`` indica a PostgreSQL di creare un campo di tipo carattere "
+"della lunghezza di 50 caratteri."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:193
+msgid ""
+"You will notice that the command ends with a ``;`` - all SQL commands should"
+" be terminated this way. When you press :kbd:`Enter`, psql will report "
+"something like this:"
+msgstr ""
+"Noterai che il comando termina con un ``;``: tutti i comandi SQL devono "
+"terminare in questo modo. Quando premi :kbd:`Enter`, psql visualizzerà un "
+"messaggio simile a questo:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:205
+msgid ""
+"That means your table was created successfully, with a primary key "
+"``streets_pkey`` using ``streets.id``."
+msgstr ""
+"Ciò significa che la tabella è stata creata correttamente, con una chiave "
+"primaria denominata ``streets_pkey`` che utilizza ``streets.id``."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:208
+msgid ""
+"Note: If you hit return without entering a ``;``, then you will get a prompt"
+" like this: ``address-#``. This is because PostgreSQL is expecting you to "
+"enter more. Enter ``;`` to run your command."
+msgstr ""
+"Nota: se premi Invio senza inserire un ``;``, ti apparirà un prompt del "
+"tipo: ``address-#``. Questo accade perché PostgreSQL si aspetta che tu "
+"inserisca altro. Inserisci ``;`` per eseguire il comando."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:212
 msgid "To view your table schema, you can do this:"
@@ -244,7 +289,7 @@ msgstr "Come puoi vedere, la tabella è attualmente vuota"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:248
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
-msgstr "Prova Tu: :abbr:`★★☆ (Livello Intermedio)`"
+msgstr "Prova Tu: :abbr:`★★☆ (Moderate level)`"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:250
 msgid "Use the approach shown above to make a table called people:"
@@ -311,6 +356,14 @@ msgstr " Definisci la chiave quando crei la tabella"
 msgid "Our table has already been created, so let's do it the first way:"
 msgstr "La tabella è già stata creata, quindi fallo nel primo modo:"
 
+#: ../../docs/training_manual/database_concepts/data_model.rst:308
+msgid ""
+"That tells the ``people`` table that its ``street_id`` fields must match a "
+"valid street ``id`` from the ``streets`` table."
+msgstr ""
+"Questo indica che i campi ``street_id`` della tabella ``people`` devono "
+"corrispondere agli ``id`` della tabella ``streets``."
+
 #: ../../docs/training_manual/database_concepts/data_model.rst:311
 msgid ""
 "The more usual way to create a constraint is to do it when you create the "
@@ -340,13 +393,59 @@ msgstr "Che risulta:"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:375
 msgid "Dropping Tables in SQL"
-msgstr "Elimina tabelle in SQL"
+msgstr "Eliminare tabelle in SQL"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:377
+msgid "If you want to get rid of a table you can use the ``DROP`` command:"
+msgstr "Se vuoi sbarazzarti di una tabella puoi usare il comando ``DROP`` :"
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:383
 msgid "In our current example, the above command would not work. Why not?"
 msgstr ""
 "Nel nostro esempio attuale, il comando di cui sopra non funzionerebbe. "
 "Perché no?"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:388
+msgid ""
+"The reason the DROP command would not work in this case is because the "
+"``people`` table has a Foreign Key constraint to the ``streets`` table. This"
+" means that dropping (or deleting) the ``streets`` table would leave the "
+"``people`` table with references to non-existent ``streets`` data."
+msgstr ""
+"Il motivo per cui il comando DROP non funzionerebbe in questo caso è che la "
+"tabella ``people`` presenta un vincolo di chiave esterna rispetto alla "
+"tabella ``streets``. Ciò significa che l'eliminazione (o la cancellazione) "
+"della tabella ``streets`` lascerebbe la tabella``people`` con riferimenti a "
+"dati relativi a strade inesistenti."
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:393
+msgid ""
+"It is possible to 'force' the ``streets`` table to be deleted by using the "
+"``CASCADE`` command, but this would also delete the ``people`` and any other"
+" table which had a relationship to the ``streets`` table. Use with caution!"
+msgstr ""
+"È possibile “forzare” l'eliminazione della tabella streets utilizzando il "
+"comando ``CASCADE`` , ma ciò comporterebbe anche l'eliminazione della "
+"tabella ``people`` e di qualsiasi altra tabella che abbia una relazione con "
+"la tabella ``streets``. Da usare con cautela!"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:398
+msgid ""
+"If you used the same ``drop table`` command on the ``people`` table, it "
+"would be successful:"
+msgstr ""
+"Se hai usato lo stesso comando ``drop table`` sulla tabella ``people``, "
+"sarebbe riuscito:"
+
+#: ../../docs/training_manual/database_concepts/data_model.rst:406
+msgid ""
+"If you actually did enter that command and dropped the ``people`` table, now"
+" would be a good time to rebuild it, as you will need it in the next "
+"exercises."
+msgstr ""
+"Se hai digitato tale comando ed eliminato la tabella ``people``, ora sarebbe"
+" il momento giusto per ricostruirlo, poiché ne avrai bisogno nei prossimi "
+"esercizi."
 
 #: ../../docs/training_manual/database_concepts/data_model.rst:411
 msgid "A word on pgAdmin III"
