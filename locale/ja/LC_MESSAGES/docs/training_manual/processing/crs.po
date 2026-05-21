@@ -60,7 +60,7 @@ msgid ""
 "Notice that the CRS of input layers is shown along with its name in the "
 "parameters dialog."
 msgstr ""
-"入力レイヤが複数存在する場合は、最初のレイヤのCRSが使用されます。全ての入力レイヤのCRSは同じ必要があり、これがそのCRSであると想定されます。CRSが一致していないレイヤを使うと、QGISがそれを警告します。入力レイヤのCRSはパラメータダイアログ中にその名前と一緒に表示されていることに注意してください。"
+"入力レイヤが複数ある場合は、最初のレイヤのCRSが使用されます。全ての入力レイヤのCRSは同じはずなので、これがそれらのCRSであると想定されます。CRSが一致しないレイヤを使うと、QGISはそれを警告します。入力レイヤのCRSはパラメータダイアログ中にその名前と一緒に表示されていることに注意してください。"
 
 #: ../../docs/training_manual/processing/crs.rst:19
 msgid ""
@@ -69,6 +69,22 @@ msgid ""
 "with the graticule algorithm)"
 msgstr ""
 "入力レイヤがない場合はプロジェクトのCRSが使用されますが、アルゴリズムに具体的なCRSフィールドが含まれていれば、（経緯線網アルゴリズムを使った前回のレッスンのように）それが使われます"
+
+#: ../../docs/training_manual/processing/crs.rst:23
+msgid ""
+"Open the project corresponding to this lesson and you will see two layers "
+"named ``23030`` and ``4326``. They both contain the same points, but in "
+"different CRSs (``EPSG:23030`` and ``EPSG:4326``). They appear in the same "
+"place because QGIS is reprojecting on the fly to the project CRS "
+"(``EPSG:4326``), but they are not actually the same layer."
+msgstr ""
+"このレッスンに対応するプロジェクトを開くと、``23030`` と``4326`` "
+"という名前の2つのレイヤが表示されます。その両方は同じ点が含んでいますが、CRSは異なっています（``EPSG:23030`` と "
+"``EPSG:4326``）。それらは全く同じ場所に表示されますが、QGISがプロジェクトCRS（``EPSG:4326``）にオンザフライで再投影しているためであり、実際には同じレイヤではありません。"
+
+#: ../../docs/training_manual/processing/crs.rst:29
+msgid "Open the :guilabel:`Add geometry attributes` algorithm."
+msgstr ":guilabel:`ジオメトリ属性を追加` アルゴリズムを開きます。"
 
 #: ../../docs/training_manual/processing/crs.rst:33
 msgid ""
@@ -87,6 +103,17 @@ msgid ""
 "differently. Select the 4326 layer."
 msgstr ""
 "入力レイヤのフィールドにある使用可能なレイヤのリストには、各レイヤとそれに対応するCRSが表示されています。それは、キャンバスの同じ場所に表示されても異なる方法で処理されることを意味します。4326レイヤを選択してください。"
+
+#: ../../docs/training_manual/processing/crs.rst:43
+msgid ""
+"The other parameter of the algorithm allows to set how the algorithm uses "
+"coordinates to calculate the new value that it will add to the resulting "
+"layers. Most algorithms do not have an option like that, and just use the "
+"coordinates directly. Select the :guilabel:`Layer CRS` option to just use "
+"coordinates as they are. This is how almost all geoalgorithms work."
+msgstr ""
+"アルゴリズムのもうひとつのパラメータは、アルゴリズムが結果レイヤに追加する新たな値を計算するために、どのように座標を使用するかを設定できます。ほとんどのアルゴリズムにはこのようなオプションはなく、座標を直接使うだけです。座標をそのまま使用する場合は、:guilabel:`レイヤCRS`"
+" オプションを選択します。これは、ほぼ全ての地理アルゴリズムの動作です。"
 
 #: ../../docs/training_manual/processing/crs.rst:49
 msgid ""
@@ -122,7 +149,7 @@ msgid ""
 "resulting layer rendered exactly in the same place as the other ones, and it"
 " will have the EPSG:23030 CRS, since that was the one of the input layer."
 msgstr ""
-"もう一方のレイヤを使って、同じ計算をしてみてください。出来上がったレイヤは他のレイヤと全く同じ場所にレンダリングされ、入力レイヤと同じ "
+"もう一方のレイヤを使って、同じ計算をしてみてください。でき上がったレイヤは他のレイヤと全く同じ場所にレンダリングされ、入力レイヤと同じ "
 "EPSG:23030 CRS を持つはずです。"
 
 #: ../../docs/training_manual/processing/crs.rst:72
@@ -165,3 +192,22 @@ msgid ""
 "reproject), but it will not use its CRS for the output one."
 msgstr ""
 "CRSを扱う興味深いモジュールのひとつが再投影モジュールです。それが特殊なケースを代表するのは、入力レイヤ（再投影の対象となるもの）を持つが、そのCRSを出力レイヤに使わないからです。"
+
+#: ../../docs/training_manual/processing/crs.rst:97
+msgid "Open the :guilabel:`Reproject layer` algorithm."
+msgstr ":guilabel:`レイヤを再投影` アルゴリズムを開く。"
+
+#: ../../docs/training_manual/processing/crs.rst:101
+msgid ""
+"Select any of the layers as input, and select EPSG:23029 as the destination "
+"CRS. Run the algorithm and you will get a new layer, identical to the input "
+"one, but with a different CRS. It will appear on the same region of the "
+"canvas, like the other ones, since QGIS will reproject it on the fly, but "
+"its original coordinates are different. You can see that by running the "
+":guilabel:`Add geometry attributes` algorithm using this new layer as input,"
+" and verifying that the added coordinates are different to the ones in the "
+"attribute tables of both of the two layers that we had computed before."
+msgstr ""
+"入力として、レイヤのいずれかを選択し、出力CRSとしてEPSG:23029を選択します。アルゴリズムを実行すると、入力レイヤと同じで、異なるCRSを持つ新しいレイヤが生成されます。QGISではそれをオンザフライで再投影するので、他のものと同様にキャンバスの同じ領域に表示されますが、元にしている座標は異なっています。この新しいレイヤを入力として"
+" :guilabel:`ジオメトリ属性を追加` "
+"アルゴリズムを実行すると、追加された座標が前に計算した2つのレイヤの属性テーブルのものと異なっていることを確認することができます。"
