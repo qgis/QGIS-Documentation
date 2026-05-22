@@ -441,6 +441,12 @@ Parameters
      - ``INPUT``
      - [vector: polygon]
      - Input polygon vector layer
+   * - **Extend endpoints to the polygon boundary**
+     - ``EXTEND_TO_EDGES``
+     - [boolean]
+
+       Default: False
+     - Extends the medial axis so that its endpoints reach the boundary of the input polygon
    * - **Medial axis**
      - ``OUTPUT``
      - [vector: line]
