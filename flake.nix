@@ -33,6 +33,7 @@
       devShells.${system}.default = pkgs.mkShell {
         packages = [
           pkgs.gum
+          pkgs.jq
           pkgs.gource
           pkgs.ffmpeg
           pkgs.chafa
