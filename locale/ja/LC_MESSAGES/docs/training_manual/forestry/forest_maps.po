@@ -49,7 +49,7 @@ msgid ""
 "You can use the Atlas tool to automatically generate a number of maps with a"
 " common format."
 msgstr ""
-"体系的なサンプリングの設計が準備でき、野外チームがナビゲーションデバイスにGPS座標をロードしました。彼らはまた、すべてのサンプルプロットで測定された情報を収集するための野外データフォームを持っています。野外チームは、すべてのサンプルプロットへ行く道が簡単に見つかるよう、いくつかの地上情報がサンプルプロットのより小さいサブセットや地図エリアに関する情報と一緒にはっきり見える大量の詳細地図を要求してきました。地図帳ツールを使用することで、大量の地図を共通のフォーマットで自動的に作成できます。"
+"体系的なサンプリングの設計が準備でき、野外チームがナビゲーションデバイスにGPS座標をロードしました。彼らはまた、すべての標本地で測定された情報を収集するための野外データフォームを持っています。野外チームは、すべての標本地へ行く道が簡単に見つかるよう、いくつかの地上情報が標本地のより小さいサブセットや地図エリアに関する情報と一緒にはっきり見える大量の詳細地図を要求してきました。地図帳ツールを使用することで、大量の地図を共通のフォーマットで自動的に作成できます。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:12
 msgid ""
@@ -78,6 +78,20 @@ msgid ""
 msgstr ""
 "前回のレッスンで作成したQGISプロジェクト :file:`forest_inventory.qgs` "
 "を開いてください。少なくとも以下のレイヤがあるはずです："
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:27
+msgid ""
+"``forest_stands_2012`` (with a 50% transparency, green fill and darker green"
+" border lines)"
+msgstr "``forest_stands_2012`` （透過率50％、緑色の塗りつぶし、濃い緑色の枠線）"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:29
+msgid "``systematic_plots_clip``"
+msgstr "``systematic_plots_clip``"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:30
+msgid "``rautjarvi_aerial``"
+msgstr "``rautjarvi_aerial``"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:32
 msgid "Save the project with a new name, :file:`map_creation.qgs`."
@@ -265,11 +279,11 @@ msgstr ""
 msgid ""
 "Now zoom to your sample plots, so that you can see only about four or five "
 "lines of plots."
-msgstr "今、プロットの約4または5行を見ることができるようにサンプルプロットにズームします。"
+msgstr "今、プロットの約4または5行を見ることができるように標本地にズームします。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:103
 msgid "The current styling of the sample plots is not the best:"
-msgstr "サンプルプロットの現在のスタイルは最良ではありません:"
+msgstr "標本地の現在のスタイルは最良ではありません:"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:108
 msgid ""
@@ -349,6 +363,10 @@ msgid ""
 msgstr ""
 "後で ``forest_stands_2012`` "
 "レイヤの緑色のスタイリングを使うことになります。これを維持したまま、林分の境界線だけを表示するビジュアライゼーションにするためです:"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:141
+msgid "Right click on ``forest_stands_2012`` and select :guilabel:`Duplicate`"
+msgstr "``forest_stands_2012`` を右クリックして :guilabel:`複製` を選びます"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:142
 msgid ""
@@ -442,7 +460,7 @@ msgid ""
 "in there. For the purposes of our map, a legend is not really necessary, but"
 " an overview map and some text boxes could add value to the map."
 msgstr ""
-"提案された地図テンプレート画像でおそらくお気づきのように、キャンバスの右側には余白がたくさんあります。他に何をそこに置けるか見てみましょう。この地図の目的に本来凡例は必要ありませんが、全体図といくつかのテキストボックスで、地図に価値を加えることができます。"
+"提案された地図テンプレート画像でおそらくお気づきのように、キャンバスの右側には余白がたくさんあります。他に何をそこに置けるか見てみましょう。この地図の目的に本来凡例は必要ありませんが、全体図といくつかテキストボックスがあると地図に価値が加わります。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:194
 msgid ""
@@ -486,11 +504,22 @@ msgid ""
 msgstr ""
 "この全体図では本当に望んでいる森林地域の概観になっていないことに注意してください。やりたいことは、この地図が森林地域全体を表現し、それが背景地図と "
 ":kbd:`forest_stands_2012` "
-"レイヤだけを表示して、サンプルプロットを表示しないことです。そして、もうレイヤの可視性や順序を変更しても変更されないよう、そのビューをロックすることです。"
+"レイヤだけを表示して、標本地を表示しないことです。そして、もうレイヤの可視性や順序を変更しても変更されないよう、そのビューをロックすることです。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:215
 msgid "Go back to the map, but don't close the :guilabel:`Print Layout`."
 msgstr "地図に戻りますが、 :guilabel:`印刷レイアウト` は閉じないでください。"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:216
+msgid ""
+"Right click the ``forest_stands_2012`` layer and click on :guilabel:`Zoom to"
+" Layer Extent`."
+msgstr "``forest_stands_2012`` レイヤを右クリックし、 :guilabel:`レイヤの領域にズーム` をクリックします。"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:218
+msgid ""
+"Deactivate all layers except for ``basic_map`` and ``forest_stands_2012``."
+msgstr "``basic_map`` と ``forest_stands_2012`` を除く全てのレイヤを無効にします。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:219
 msgid ""
@@ -531,7 +560,7 @@ msgid ""
 " anymore. But, of course, now your detail map is not showing anymore the "
 "stand borders nor the sample plots. Let's fix that:"
 msgstr ""
-"これで、全体図は期待通りのものになり、そのビューはもう変わることはないでしょう。しかし、当然ながら、詳細地図には林分境界線もサンプルプロットも表示されなくなりました。これを修正しましょう："
+"これで、全体図は期待通りのものになり、そのビューはもう変わることはないでしょう。しかし、当然ながら、詳細地図には林分境界線も標本地も表示されなくなりました。これを修正しましょう："
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:232
 msgid ""
@@ -543,7 +572,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:234
 msgid "Zoom again to have only a few lines of sample plots visible."
-msgstr "サンプルプロットの数ラインだけ見えるように再び拡大します。"
+msgstr "標本地の数ラインだけ見えるように再び拡大します。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:235
 msgid "Go back to the :guilabel:`Print Layout` window."
@@ -711,7 +740,7 @@ msgid ""
 "prepared to contain detail views of the sample plots, that is the bigger map"
 " element in your canvas:"
 msgstr ""
-"もうひとつしておくことがあります。すべての出力地図に対してどの地図要素が更新されるかを地図帳ツールに伝える必要があります。もうお分かりだと思いますが、地物ごとに変更する地図は、サンプルプロットの詳細ビューを含むように準備したもの、つまりキャンバス内の大きい方の地図要素です："
+"もうひとつしておくことがあります。すべての出力地図に対してどの地図要素が更新されるかを地図帳ツールに伝える必要があります。もうお分かりだと思いますが、地物ごとに変更する地図は、標本地の詳細ビューを含むように準備したもの、つまりキャンバス内の大きい方の地図要素です："
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:323
 msgid "Select the bigger map element (``Map 0``)."
@@ -720,6 +749,16 @@ msgstr "大きい方の地図要素(``Map 0``)を選択します。"
 #: ../../docs/training_manual/forestry/forest_maps.rst:325
 msgid "In the list, check :guilabel:`Controlled by atlas`."
 msgstr "リストで、:guilabel:`地図帳による制御` をチェックします。"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:326
+#, python-format
+msgid ""
+"And set the :guilabel:`Margin around feature` to ``10%``. The view extent "
+"will be 10% bigger than the polygons, which means that your detail maps will"
+" have a 10% overlap."
+msgstr ""
+"そして :guilabel:`地物周りの余白` を ``10%`` "
+"に設定します。ビューの範囲はポリゴンより10%大きくなり、詳細地図は10%重なることになります。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:333
 msgid ""
@@ -768,6 +807,10 @@ msgstr ""
 msgid "Go back to the map view."
 msgstr "地図ビューに戻ります。"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:354
+msgid "Enable editing for the ``atlas_coverage`` layer."
+msgstr "``atlas_coverage`` レイヤの編集を有効にします。"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:355
 msgid "Select the polygons that are selected (in yellow) in the image below."
 msgstr "下の画像に（黄色で）選択されたポリゴンを選択します。"
@@ -795,6 +838,10 @@ msgid ""
 "account:"
 msgstr ""
 "使用しているカバレッジレイヤは、まだ地図内のラベルの内容をカスタマイズするために使用できる有用な情報を持っていません。最初のステップはそれらを作成すること、たとえばポリゴン領域のゾーンコードや野外チームが考慮すべき備考を記載したフィールドを追加することができます："
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:370
+msgid "Open the :guilabel:`Attribute table` for the ``atlas_coverage`` layer."
+msgstr "``atlas_coverage`` レイヤの :guilabel:`属性テーブル` を開きます。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:371
 msgid "Enable editing."
@@ -833,11 +880,30 @@ msgid ""
 " the default value for all the polygons."
 msgstr ":guilabel:`式` ボックスに ``'No remarks.'`` と書きます。これですべてのポリゴンに規定値を設定します。"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:380
+msgid ""
+"The forest manager will have some information about the area that might be "
+"useful when visiting the area. For example, the existence of a bridge, a "
+"swamp or the location of a protected species. The ``atlas_coverage`` layer "
+"is probably in edit mode still, add the following text in the "
+":guilabel:`Remarks` field to the corresponding polygons (double click the "
+"cell to edit it):"
+msgstr ""
+"森林管理者は、その区域を訪れる際に役立つような情報を持っているはずです。例えば、橋や沼地の存在、保護種の位置などです。``atlas_coverage``"
+" レイヤはまだ編集モードになっているはずなので、対応するポリゴンの :guilabel:`Remarks` "
+"フィールドに以下のテキストを追加します（編集するにはセルをダブルクリックします）:"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:387
 msgid ""
 "For the :guilabel:`Zone` 2: ``Bridge to the North of plot 19. Siberian "
 "squirrel between p_13 and p_14.``"
 msgstr ":guilabel:`Zone` 2: ``plot 19の北に橋。P_13とp_14の間にエゾモモンガ。``"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:389
+msgid ""
+"For the :guilabel:`Zone` 6: ``Difficult to transit in swamp to the North of "
+"the lake.``"
+msgstr ":guilabel:`Zone` 6: ``湖の北にある沼の通過は難しい。``"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:390
 msgid ""
@@ -847,6 +913,15 @@ msgstr ":guilabel:`Zone` 7: ``p_94の南東にエゾモモンガ。``"
 #: ../../docs/training_manual/forestry/forest_maps.rst:391
 msgid "Disable editing and save your edits."
 msgstr "編集を無効にして、編集内容を保存します。"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:393
+msgid ""
+"Almost ready, now you have to tell the Atlas tool that you want some of the "
+"text labels to use the information from the ``atlas_coverage`` layer's "
+"attribute table."
+msgstr ""
+"ほぼ準備ができたので、次は地図帳ツールに、テキストラベルの一部に ``atlas_coverage`` "
+"レイヤの属性テーブルの情報を使用するよう指示する必要があります。"
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:396
 msgid "Go back to the :guilabel:`Print Layout`."
@@ -884,11 +959,32 @@ msgstr ""
 msgid "Click :guilabel:`OK`."
 msgstr ":guilabel:`OK` をクリックします。"
 
+#: ../../docs/training_manual/forestry/forest_maps.rst:405
+msgid ""
+"The text inside the box in the :guilabel:`Item properties` should show "
+"``Detail map inventory zone: [% \"Zone\" %]``. Note that the ``[% \"Zone\" "
+"%]`` will be substituted by the value of the field ``Zone`` for the "
+"corresponding feature from the layer ``atlas_coverage``."
+msgstr ""
+":guilabel:`アイテムプロパティ` にあるボックスの中のテキストは ``詳細地図ゾーン: [% \"Zone\" %]`` "
+"になっているはずです。その ``[% \"Zone\" %]`` が ``atlas_coverage`` レイヤの対応する地物の ``Zone`` "
+"フィールドの値に置き換わることに注意してください。"
+
 #: ../../docs/training_manual/forestry/forest_maps.rst:410
 msgid ""
 "Test the contents of the label by looking at the different Atlas preview "
 "maps."
 msgstr "異なる地図帳プレビュー地図を見て、ラベルの内容をテストします。"
+
+#: ../../docs/training_manual/forestry/forest_maps.rst:411
+msgid ""
+"Do the same for the labels with the text ``Remarks:`` using the field with "
+"the zone information. You can leave a break line before you enter the "
+"expression. You can see the result for the preview of zone 2 in the image "
+"below:"
+msgstr ""
+"ゾーン情報を持つフィールドを使用して、 ``Remarks:`` "
+"というテキストを持つラベルにも同じことをします。式を入力する前に改行を入れておくとよいでしょう。ゾーン2のプレビューの結果は、下の画像で見ることができます："
 
 #: ../../docs/training_manual/forestry/forest_maps.rst:418
 msgid ""
