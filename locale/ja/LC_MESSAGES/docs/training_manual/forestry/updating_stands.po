@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -135,6 +136,10 @@ msgid ""
 "Set the symbology for the layer so that you can see through your polygons:"
 msgstr "ポリゴンを透過して見えるようにレイヤのシンボロジを設定する:"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:47
+msgid "Right click ``forest_stands_1994``"
+msgstr "``forest_stands_1994`` を右クリックする"
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:48
 msgid "Select :guilabel:`Properties`"
 msgstr ":guilabel:`プロパティ` を選ぶ"
@@ -173,7 +178,7 @@ msgid ""
 "Zoom and pan around the area. You probably will notice that some of the old "
 "forest stands might be still corresponding with the image but others are "
 "not."
-msgstr "ズームとパンしてください。古い林分でなお静止画に対応するものとしないものがあることに気づくででしょう。"
+msgstr "その区域の周囲でズームとパンしてください。古い林分でなお静止画に対応するものとしないものがあることに気づくでしょう。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:58
 msgid ""
@@ -184,7 +189,7 @@ msgid ""
 "in different ways. It is also possible that that forest inventory priorities"
 " back then were different from those of today."
 msgstr ""
-"20年ほどが経過しており、また、様々な森林施業（伐採、間伐...）が行われたため、これは通常の状況です。また、1992年当時にデジタイズしたときには林分が均質に見えていたが、時間が経過するにつれ、いくつかの森は異なる形で成長した可能性もあります。あるいは当時の森林目録の優先順位が現在のそれとは異なっていた可能性もあります。"
+"20年ほどが経過しており、また、様々な森林施業（伐採、間伐...）が行われたため、これは通常の状況です。また、1992年当時にデジタイズしたときには林分が均質に見えていたが、時間が経過するにつれ、いくつかの森は異なる形で成長した可能性もあります。あるいは当時の森林調査の優先順位が現在のそれとは異なっていた可能性もあります。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:64
 msgid ""
@@ -204,6 +209,10 @@ msgid ""
 " most of the forest stands."
 msgstr ""
 "道路や湖によって制限される、古い調査でカバーされていた同じ地域を、デジタイズしてみましょう。前の演習のようにすでに林分のほとんどが含まれているベクタファイルを使って始められるので、地域全体をデジタイズする必要はありません。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:76
+msgid "Remove the layer |polygonLayer| ``forest_stands_1994``"
+msgstr "レイヤ |polygonLayer| ``forest_stands_1994`` を削除する"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:307
 msgid "polygonLayer"
@@ -233,7 +242,7 @@ msgstr ":guilabel:`ストローク色` を緑に設定する"
 msgid ""
 "You can see that the northern section of the inventory area is still "
 "missing. Your task is to digitize the missing forest stands."
-msgstr "目録エリアの北側がまだ欠けていることがわかります。あなたの仕事は、この欠けている林分をデジタイズすることです。"
+msgstr "調査区域の北側がまだ欠けていることがわかります。あなたの仕事は、この欠けている林分をデジタイズすることです。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:94
 msgid ""
@@ -325,6 +334,10 @@ msgstr "|snapping| :sup:`スナップを有効にする` を押し、:guilabel:`
 msgid "snapping"
 msgstr "snapping"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:134
+msgid "Check the |checkbox| ``forest_stands_2012`` layer"
+msgstr "|checkbox| ``forest_stands_2012`` レイヤをチェックします"
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:301
 msgid "checkbox"
 msgstr "checkbox"
@@ -366,10 +379,14 @@ msgstr "avoidIntersectionsLayers"
 msgid "Close the pop-up"
 msgstr "ポップアップを閉じます"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:147
+msgid "Select the ``forest_stands_2012`` layer on the Layers list"
+msgstr "レイヤリストの ``forest_stands_2012`` レイヤを選ぶ"
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:148
 msgid ""
 "Click the |toggleEditing| :sup:`Toggle Editing` button to enable editing"
-msgstr "|toggleEditing| :sup:`編集モード切り替え` をクリックして編集を有効にします"
+msgstr "|toggleEditing| :sup:`編集モード切り替え` ボタンをクリックして編集を有効にします"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:313
 msgid "toggleEditing"
@@ -398,7 +415,7 @@ msgid ""
 "each of the forest stands. You will see how to do that in the next lesson."
 msgstr ""
 "これで、CIR 画像から解釈された、2012 "
-"年のさまざまな森林を示すポリゴンの新しい集合ができあがりました。しかし、森林目録のデータがありません。そのため、森林を訪問し、各林分の森林属性を推定するために使用するサンプルデータを入手する必要があります。その方法は次のレッスンで説明します。"
+"年のさまざまな林分を示すポリゴンの新しい集合ができあがりました。しかし、森林調査のデータがありません。そのため、森林を訪問し、各林分の森林属性を推定するために使用するサンプルデータを入手する必要があります。その方法は次のレッスンで説明します。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:164
 msgid ""
@@ -477,6 +494,10 @@ msgstr "保護する区域をより正確に区切りましょう。保護距離
 msgid "Open :menuselection:`Vector --> Geoprocessing Tools --> Buffer`."
 msgstr ":menuselection:`ベクタ --> 空間演算ツール --> バッファ` を開く。"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:192
+msgid "Set :guilabel:`Input layer` to |pointLayer| ``squirrel``"
+msgstr ":guilabel:`入力レイヤ` に |pointLayer| ``squirrel`` を設定する"
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:305
 msgid "pointLayer"
 msgstr "pointLayer"
@@ -492,6 +513,11 @@ msgid ""
 msgstr ""
 ":guilabel:`出力レイヤ` に :file:`exercise_data\\\\forestry\\\\squirrel_15m.shp` "
 "を設定する"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:195
+#: ../../docs/training_manual/forestry/updating_stands.rst:228
+msgid "Check |checkbox| :guilabel:`Open output file after running algorithm`"
+msgstr "|checkbox| :guilabel:`アルゴリズムの終了後に出力ファイルを開く` をチェックする"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:196
 #: ../../docs/training_manual/forestry/updating_stands.rst:229
@@ -533,10 +559,19 @@ msgid ""
 " location`."
 msgstr ":menuselection:`ベクタ --> データ管理ツール --> 属性の空間結合` を開く。"
 
+#: ../../docs/training_manual/forestry/updating_stands.rst:222
+msgid ""
+"Set :guilabel:`Join to features in` to |polygonLayer| ``forest_stands_2012``"
+msgstr ":guilabel:`地物を結合するレイヤ` に |polygonLayer| ``forest_stands_2012`` を設定する"
+
 #: ../../docs/training_manual/forestry/updating_stands.rst:223
 msgid ""
 "In :guilabel:`Geometric predicate`, check |checkbox| :guilabel:`intersect`"
 msgstr ":guilabel:`空間的関係` は |checkbox| :guilabel:`交差する` をチェックする"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:224
+msgid "Set :guilabel:`By comparing to` to |polygonLayer| ``squirrel_15m``"
+msgstr ":guilabel:`比較対象` に |polygonLayer| ``squirrel_15m`` を設定する"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:225
 msgid ""
@@ -575,6 +610,20 @@ msgid ""
 "Sort the table by clicking on :guilabel:`point_pr` field in the table "
 "header."
 msgstr "テーブルヘッダの :guilabel:`point_pr` フィールドをクリックして、テーブルを並べ替える。"
+
+#: ../../docs/training_manual/forestry/updating_stands.rst:244
+msgid ""
+"You can see that there are some forest stands that have the information "
+"about the protection locations. The information in the forest stands data "
+"will indicate to the forest manager that there are protection considerations"
+" to be taken into account. Then he or she can get the location from the "
+"``squirrel`` dataset, and visit the area to mark the corresponding buffer "
+"around the location so that the operators in the field can avoid disturbing "
+"the squirrels environment."
+msgstr ""
+"保護指定区域の情報を持つ林分があることがわかります。林分データにあるこの情報によって、森林管理者は保護に配慮する必要があることがわかります。そうすれば、森林管理者は"
+" ``squirrel`` "
+"データセットからその指定区域を取得し、その区域を訪問して指定区域の周囲に対応する緩衝地帯に印をつけ、現場の作業者がリスの環境を乱さないようにすることができます。"
 
 #: ../../docs/training_manual/forestry/updating_stands.rst:257
 msgid ""
