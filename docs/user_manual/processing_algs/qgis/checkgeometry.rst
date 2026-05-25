@@ -690,6 +690,8 @@ Basic parameters
        Optional
      - ``AREA_THRESHOLD``
      - [numeric: double]
+
+       Default: Not set
      - Minimum area of a hole to be considered valid, in selected units.
        Any holes with an area below this threshold is reported as error.
        If not set, all holes are errors.
