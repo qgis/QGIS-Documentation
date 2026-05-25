@@ -83,6 +83,17 @@ msgstr ""
 msgid "Custom authentication databases"
 msgstr "사용자 정의 인증 데이터베이스"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:43
+msgid ""
+"QGIS can be configured to use a custom authentication database instead of "
+"the above mentioned default SQLite one: any database supported by the Qt SQL"
+" module can be used (e.g. PostgreSQL, MySQL, etc), provided that the "
+"corresponding Qt SQL driver is available in the system."
+msgstr ""
+"QGIS가 앞에서 이야기한 기본 SQLite 데이터베이스 대신 사용자 정의 인증 데이터베이스를 사용하도록 환경설정할 수 있습니다. Qt "
+"SQL 모듈이 지원하는 모든 데이터베이스(예: PostgreSQL, MySQL 등등)를 사용할 수 있습니다. 물론 시스템 상에 해당 "
+"데이터베이스의 Qt SQL 드라이버가 설치되어 있어야 하겠죠."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:48
 msgid ""
 "This can be useful in scenarios where a user wants to share the same "
@@ -292,13 +303,61 @@ msgstr ""
 msgid "Configurations editor"
 msgstr "환경 설정 편집기"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:165
+msgid "To create a new authentication configuration:"
+msgstr "새 인증 환경 설정을 생성하려면:"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:167
+msgid "Press the |symbologyAdd| :sup:`Add a new authentication configuration`"
+msgstr "|symbologyAdd| :sup:`Add a new authentication configuration` 을 누르십시오."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:460
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:168
+msgid "Provide a :guilabel:`Name` and optional :guilabel:`Resource` URL"
+msgstr ":guilabel:`Name` 과 부가적인 :guilabel:`Resource` URL을 입력하십시오."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:169
+msgid ""
+"A seven-characters :guilabel:`ID` will be assigned to the configuration for "
+"identification purpose. It can be customized after you pressed the |locked| "
+":sup:`Unlock to edit ID` button. Be aware that updating that ID may break "
+"things."
+msgstr ""
+"새로운 환경 설정을 식별하기 위해 7 글자의 :guilabel:`ID` 가 할당될 것입니다. 사용자가 |locked| "
+":sup:`Unlock to edit ID` 버튼을 눌러 변경할 수 있습니다. ID를 업데이트하면 에러가 발생할 수도 있으니 "
+"주의하십시오."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:456
 msgid "locked"
 msgstr "locked"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:172
+msgid ""
+"Select the :ref:`target method <authentication_methods>` and fill the "
+"corresponding connection details"
+msgstr ""
+":ref:`대상 메소드 <authentication_methods>` 를 선택한 다음 해당하는 연결 상세 정보를 입력하십시오."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:173
+msgid ""
+"Once done, click :guilabel:`Save` to save the configuration. The saved "
+"configuration appears in the list of authentication configurations and can "
+"be used with supported connections."
+msgstr ""
+"입력이 끝나면 :guilabel:`Save` 를 클릭해서 환경 설정을 저장하십시오. 인증 환경 설정 목록에 저장한 환경 설정이 추가되어 "
+"지원하는 연결과 함께 사용할 수 있게 됩니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:177
+msgid ""
+"The saved configuration can later be edited using |symbologyEdit| :sup:`Edit"
+" selected configuration` or removed using |symbologyRemove| :sup:`Delete "
+"selected configuration`."
+msgstr ""
+"저장한 환경 설정은 이후 |symbologyEdit| :sup:`Edit selected configuration` 으로 편집하거나 "
+"|symbologyRemove| :sup:`Delete selected configuration` 으로 제거할 수 있습니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:462
 msgid "symbologyEdit"
@@ -311,6 +370,27 @@ msgstr "symbologyRemove"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:185
 msgid "Adding config from within Configuration editor"
 msgstr "환경 설정 편집기 안에서 환경 설정 추가하기"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:187
+msgid ""
+"The same type of operations for authentication configuration management "
+"(Add, Edit and Remove) can be done when configuring a given service "
+"connection, such as configuring an OWS service connection. For that, there "
+"are action buttons within the :ref:`configuration selector <authentication>`"
+" for fully managing configurations found within the authentication database."
+" In this case, there is no need to go to the :guilabel:`configurations` in "
+":guilabel:`Authentication` tab of QGIS options unless you need to do more "
+"comprehensive configuration management."
+msgstr ""
+"OWS 서비스 연결과 같은 지정한 서비스 연결을 환경 설정할 때, 인증 환경 설정 관리에 대해 세 가지 유형의 작업(추가, 편집 및 "
+"제거)을 할 수 있습니다. 이를 위해, :ref:`환경 설정 선택기 <authentication>` 안에 인증 데이터베이스에서 찾은 환경"
+" 설정을 완전히 관리할 수 있는 액션 버튼들이 있습니다. 이런 경우, 환경 설정을 좀 더 종합적으로 관리해야 할 필요가 없는 한, "
+"QGIS 옵션 대화창의 :guilabel:`Authentication` 탭에 있는 :guilabel:`configurations`환경설정"
+" 부분으로 갈 필요가 없습니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:200
+msgid "WMS connection dialog showing authentication configuration widget"
+msgstr "인증 환경 설정 위젯을 보여주는 WMS 연결 대화창"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:202
 msgid ""
@@ -367,25 +447,183 @@ msgstr ""
 "때문에, 새로 추가한 플러그인을 사용하려면 QGIS를 재시작해야 합니다. 기존 QGIS 설치본에 플러그인을 추가할 생각이라면, 사용자 "
 "플러그인이 기존 설치본과 동일한 버전을 대상으로 컴파일됐는지 확인하십시오."
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:237
+msgid "API Header Authentication"
+msgstr "API 헤더 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:238
+msgid ""
+"The API Header authentication method allows you to connect to services that "
+"require custom HTTP headers, such as API keys. For example, if a WMS service"
+" requires an API key sent as a header (e.g. ``X-API-KEY``), you can use this"
+" method to provide it."
+msgstr ""
+"API 헤더 인증 메소드는 API 키 같은 사용자 지정 HTTP 헤더를 필수로 요구하는 서비스에 연결할 수 있게 해줍니다. 예를 들어 "
+"WMS 서비스가 API 키를 헤더로 (예: ``X-API-KEY``) 전송할 것을 요구할 경우 이 메소드를 사용해서 제공하면 됩니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:243
+msgid ""
+"You can add one or more headers with the |symbologyAdd| button; provide a "
+":guilabel:`Header Name` and :guilabel:`Header Value` for each entry. Use "
+"|symbologyRemove| to delete the selected header or the :guilabel:`Clear` "
+"button to remove all entries."
+msgstr ""
+"|symbologyAdd| 버튼으로 하나 이상의 헤더를 추가할 수 있습니다. 각 항목마다 :guilabel:`Header Name` 과 "
+":guilabel:`Header Value` 를 입력하십시오. 선택한 헤더를 제거하려면 |symbologyRemove| 버튼을, 모든 "
+"항목을 한번에 제거하려면 :guilabel:`Clear` 버튼을 사용하십시오."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:253
+msgid "API Header authentication configs"
+msgstr "API 헤더 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:256
+msgid "AWS S3 Authentication"
+msgstr "AWS S3 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:258
+msgid ""
+"The AWS S3 authentication method allows you to connect to Amazon S3 "
+"resources by providing a :guilabel:`Name`, :guilabel:`Resource`, "
+":guilabel:`Username`, :guilabel:`Password`, and :guilabel:`Region`."
+msgstr ""
+"AWS S3 인증 메소드는 :guilabel:`Name`, :guilabel:`Resource`, :guilabel:`Username`,"
+" :guilabel:`Password`, 그리고 :guilabel:`Region` 정보를 제공하여 아마존 S3 리소스에 연결할 수 있게 "
+"해줍니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:266
+msgid "AWS S3 authentication configs"
+msgstr "AWS S3 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:269
+msgid "Basic Authentication"
+msgstr "기본 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:271
+msgid ""
+"The Basic authentication method is used for services that require standard "
+"HTTP authentication with a :guilabel:`Username`, :guilabel:`Password` and "
+":guilabel:`Realm`."
+msgstr ""
+"기본 인증 메소드는 표준 HTTP 인증을 요구하는 서비스에 :guilabel:`Username`, :guilabel:`Password` "
+"와 :guilabel:`Realm` 정보로 연결할 수 있게 해줍니다."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:279
 msgid "Basic HTTP authentication configs"
 msgstr "HTTP 기본 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:282
+msgid "ESRI Token Authentication"
+msgstr "ESRI 토큰 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:284
+msgid ""
+"The ESRI token authentication method is used for :ref:`ArcGIS REST Servers "
+"<arcgis_rest>` that require token-based authentication."
+msgstr ""
+"ESRI 토큰 인증 메소드는 토큰 기반 인증을 요구하는 :ref:`ArcGIS REST 서버 <arcgis_rest>` 에 연결할 수 "
+"있게 해줍니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:291
 msgid "ESRI Token authentication configs"
 msgstr "ESRI 토큰 인증 환경 설정"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:294
+msgid "Identity certificate authentication"
+msgstr "신원 인증서 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:296
+msgid ""
+"The Identity certificate authentication method allows you to connect using a"
+" client :ref:`identity certificate <authentication_identities>`."
+msgstr ""
+"신원 인증서(Identity certificate) 인증 메소드는 클라이언트 :ref:`신원 인증서 "
+"<authentication_identities>` 를 사용해서 연결할 수 있게 해줍니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:303
+msgid "Identity-cert authentication configs"
+msgstr "신원 인증서 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:306
+msgid "MapTiler HMAC-SHA256 Authentication"
+msgstr "MapTiler HMAC-SHA256 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:308
+msgid ""
+"The MapTiler HMAC-SHA256 authentication method is used to connect to "
+"MapTiler services that require HMAC-SHA256 authorization."
+msgstr ""
+"MapTiler HMAC-SHA256 인증 메소드는 HMAC-SHA256 인증을 요구하는 MapTiler 서비스에 연결할 수 있게 "
+"해줍니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:315
+msgid "MapTiler HmacSha256 authentication configs"
+msgstr "MapTiler HMAC-SHA256 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:318
+msgid "OAuth2 Authentication"
+msgstr "OAuth2 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:320
+msgid ""
+"The OAuth2 authentication method is used to connect to services that require"
+" OAuth2 2.0 authorization, allowing secure access using client credential "
+"and token-based authentication."
+msgstr ""
+"OAuth2 인증 메소드는 클라이언트 인증 정보 및 토큰 기반 인증으로 보안 접속을 가능하게 해주는 OAuth2 2.0 인증을 요구하는 "
+"서비스에 연결할 수 있게 해줍니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:323
+msgid ""
+"It supports using ``localhost`` as the redirect host, providing "
+"compatibility with services that do not accept ``http://127.0.0.1`` "
+"redirects (for example, Microsoft SharePoint)."
+msgstr ""
+"이 메소드는 리다이렉트 호스트로 ``localhost`` 를 사용하는 것을 지원합니다. 즉 (예를 들면 마이크로소프트 셰어포인트 같은) "
+"``http://127.0.0.1`` 리다이렉트를 허용하지 않는 서비스와 호환됩니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:326
+msgid ""
+"An advanced OAuth2 configuration option, :guilabel:`Extra token header(s)`, "
+"allows attaching additional tokens returned by the OAuth2 token endpoint as "
+"HTTP(S) request headers."
+msgstr ""
+"고급 OAuth2 환경 설정 옵션인 :guilabel:`Extra token header(s)` 에서 OAuth2 토큰 엔드포인트가 "
+"HTTP(S) 요청 헤더로 반환하는 추가 토큰을 첨부할 수 있습니다."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:334
 msgid "OAuth2 authentication configs"
 msgstr "OAuth2 인증 환경 설정"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:337
+msgid "PKI-Paths Authentication"
+msgstr "PKI-경로 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:339
+msgid ""
+"The PKI-Paths authentication method allows you to connect using separate "
+"certificate and key files stored on your system."
+msgstr "PKI-경로 인증 메소드는 사용자 시스템 상에 저장된 개별 인증서 및 키 파일을 사용해서 연결할 수 있게 해줍니다."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:346
 msgid "PKI paths authentication configs"
-msgstr "PKI 경로 인증 환경 설정"
+msgstr "PKI-경로 인증 환경 설정"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:349
+msgid "PKI-PKCS#12 Authentication"
+msgstr "PKI-PKCS#12 인증"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:351
+msgid ""
+"The PKI-PKCS#12 authentication method allows you to connect using a single "
+"bundle file containing both the certificate and private key, with an "
+"optional passphrase for the key."
+msgstr ""
+"PKI-PKCS#12 인증 메소드는 인증서와 비공개 키 둘 다 담고 있는 단일 번들 파일을 사용해서 연결할 수 있게 해줍니다. 이 번들 "
+"파일은 키에 대한 비밀구절(passphrase)을 담고 있을 수도 있습니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:359
 msgid "PKI PKCS#12 file paths authentication configs"
-msgstr "PKI PKCS#12 파일 경로 인증 환경 설정"
+msgstr "PKI-PKCS#12 파일 경로 인증 환경 설정"
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:363
 msgid "Master Password and Auth Config Utilities"
@@ -404,6 +642,125 @@ msgstr ""
 msgid "Utilities menu"
 msgstr "유틸리티 목록"
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:376
+msgid ""
+":guilabel:`Input master password…`: opens the master password input dialog, "
+"independent of performing any authentication database command"
+msgstr ""
+":guilabel:`Input master password…`: 인증 데이터베이스 명령어 수행과는 무관하게 마스터 비밀번호 입력 대화창을"
+" 엽니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:378
+msgid ""
+":guilabel:`Clear cached master password`: unsets the master password if it "
+"has been set"
+msgstr ""
+":guilabel:`Clear cached master password`: 마스터 비밀번호가 입력 대화창에 설정되어 있다면 이를 "
+"해제합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:380
+msgid ""
+":guilabel:`Reset master password…`: opens a dialog to change the master "
+"password (the current password must be known) and optionally back up the "
+"current database"
+msgstr ""
+":guilabel:`Reset master password…`: 마스터 비밀번호를 바꾸기 위한 (현재 비밀번호를 알고 있어야만 합니다) "
+"대화창을 열고, 선택적으로 현재 데이터베이스를 백업합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:382
+msgid ""
+":guilabel:`Clear network authentication access cache`: clears the "
+"authentication cache of all connections"
+msgstr ""
+":guilabel:`Clear network authentication access cache`: 모든 연결의 인증 캐시를 삭제합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:384
+msgid ""
+":guilabel:`Automatically clear network authentication access cache on SSL "
+"errors`: the connection cache stores all authentication data for "
+"connections, also when the connection fails. If you change authentication "
+"configurations or certification authorities, you should clear the "
+"authentication cache or restart QGIS. When this option is checked, the "
+"authentication cache will be automatically cleared every time an SSL error "
+"occurs and you choose to abort the connection"
+msgstr ""
+":guilabel:`Automatically clear network authentication access cache on SSL "
+"errors`: 연결 캐시는 연결이 실패하더라도 연결에 대한 모든 인증 데이터를 저장합니다. 사용자가 인증 환경 설정이나 인증서 기관을 "
+"변경하는 경우, 인증 캐시를 삭제하거나 QGIS를 재시작해야 합니다. 이 옵션을 체크하면, SSL 오류가 발생해서 사용자가 연결을 "
+"중지하도록 선택할 때마다 인증 캐시를 자동적으로 삭제할 것입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:391
+msgid ""
+":guilabel:`Integrate master password with the Wallet`: adds the master "
+"password to your personal Wallet/Keyring"
+msgstr ""
+":guilabel:`Integrate master password with the Wallet`: 사용자 개인 월렛/키링에 마스터 "
+"비밀번호를 추가합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:393
+msgid ""
+":guilabel:`Clear the master password from the Wallet…`: deletes the master "
+"password from your Wallet/Keyring"
+msgstr ""
+":guilabel:`Clear the master password from the Wallet…`: 사용자 월렛/키링에서 마스터 "
+"비밀번호를 삭제합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:395
+msgid ""
+":guilabel:`Enable password helper debug log`: enables a debug tool that will"
+" contain all the log information of the authentication methods"
+msgstr ""
+":guilabel:`Enable password helper debug log`: 인증 방법의 모든 로그 정보를 담게 될 디버그 도구를 "
+"활성화합니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:397
+msgid ""
+":guilabel:`Clear cached authentication configurations`: clears the internal "
+"lookup cache for configurations, used to speed up network connections. This "
+"does not clear QGIS’s core network access manager’s cache, which requires a "
+"relaunch of QGIS."
+msgstr ""
+":guilabel:`Clear cached authentication configurations`: 네트워크 연결 속도를 높이는데 "
+"사용되는 환경 설정용 내부 조회 캐시를 지웁니다. QGIS의 핵심 네트워크 접근 관리자의 캐시는 지워지지 않습니다. QGIS를 다시 "
+"시작해야 하기 때문입니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:400
+msgid ""
+":guilabel:`Remove all authentication configurations…`: clears the database "
+"of all configuration records, without removing other stored records."
+msgstr ""
+":guilabel:`Remove all authentication configurations…`: 저장된 다른 레코드는 삭제하지 않은 "
+"채, 모든 환경 설정 레코드의 데이터베이스를 지웁니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:402
+msgid ""
+":guilabel:`Import authentication configurations from file…`: imports from an"
+" :file:`.XML` file details for creating custom authentication "
+"configurations."
+msgstr ""
+":guilabel:`Import authentication configurations from file…`: :file:`.XML` "
+"파일에서 사용자 지정 인증 환경 설정을 생성하기 위한 상세 정보를 가져옵니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:404
+msgid ""
+":guilabel:`Export selected authentication configurations to file…`: exports "
+"the selected items to a possibly encrypted :file:`.XML` file."
+msgstr ""
+":guilabel:`Export selected authentication configurations to file…`: 선택한 항목을 "
+"암호화되어 있을 수도 있는 :file:`.XML` 파일로 내보냅니다."
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:406
+msgid ""
+":guilabel:`Erase authentication database…`: schedules a backup of the "
+"current database and complete rebuild of the database table structure. The "
+"actions are scheduled for a later time, to ensure that other operations, "
+"like project loading, do not interrupt the operation or cause errors due to "
+"a temporarily missing database."
+msgstr ""
+":guilabel:`Erase authentication database…`: 현재 데이터베이스의 백업과 데이터베이스 테이블 구조의 "
+"완전한 리빌딩을 예약합니다. 이런 작업들은 나중에 실행되도록 예약됩니다. 프로젝트 불러오기와 같은 다른 작업이 이를 방해하지 않도록 "
+"하거나 일시적으로 누락된 데이터베이스로 인해 오류가 발생하지 않도록 하기 위해서입니다."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:414
 msgid "Using authentication configurations"
 msgstr "인증 환경 설정 사용하기"
@@ -418,6 +775,22 @@ msgstr ""
 "일반적으로, (WMS 같은) 네트워크 서비스 용 환경 설정 대화창에서 인증 환경 설정을 선택합니다. 하지만 인증이 필요한 곳이라면 "
 "어디든, 또는 제3자 PyQGIS 또는 C++ 플러그인 같은 비핵심 기능에 선택기 위젯을 내장시킬 수 있습니다."
 
+#: ../../docs/user_manual/auth_system/auth_overview.rst:421
+msgid ""
+"When using the selector, :guilabel:`No authentication` is displayed in the "
+"pop-up menu control when nothing is selected, when there are no "
+"configurations to choose from, or when a previously assigned configuration "
+"can no longer be found in the database. Use the drop-down menu to select an "
+"existing authentication configuration or press |symbologyAdd| :sup:`Create a"
+" new authentication configuration` to create a configuration you could use. "
+"More details at :ref:`authentication`."
+msgstr ""
+"선택기 위젯을 사용할 때, 아무것도 선택하지 않았거나 선택할 인증 환경 설정이 없거나 또는 데이터베이스에서 이전에 할당한 환경 설정을 "
+"찾을 수 없는 경우 팝업 메뉴의 콤보박스에 :guilabel:`No authentication` 이라고 표시됩니다. 드롭다운 메뉴를 "
+"사용해서 기존 인증 환경 설정을 선택하거나, |symbologyAdd| :sup:`Create a new authentication "
+"configuration` 버튼을 눌러 사용할 수 있는 환경 설정을 생성하십시오. 더 자세한 내용은 "
+":ref:`authentication` 을 참조하세요."
+
 #: ../../docs/user_manual/auth_system/auth_overview.rst:434
 msgid "Authentication configuration selector with selected config"
 msgstr "선택한 환경 설정을 표시한 인증 환경 설정 선택기"
@@ -425,6 +798,18 @@ msgstr "선택한 환경 설정을 표시한 인증 환경 설정 선택기"
 #: ../../docs/user_manual/auth_system/auth_overview.rst:437
 msgid "Python bindings"
 msgstr "파이썬 바인딩"
+
+#: ../../docs/user_manual/auth_system/auth_overview.rst:439
+msgid ""
+"All classes and public functions have sip bindings, except "
+":api:`QgsAuthCrypto <classQgsAuthCrypto.html>`, since management of the "
+"master password hashing and auth database encryption should be handled by "
+"the main app, and not via Python."
+msgstr ""
+"모든 클래스 및 공개 함수는 `SIP <https://en.wikipedia.org/wiki/SIP_(software)>`_ 바인딩을 "
+"보유하고 있습니다. :api:`QgsAuthCrypto <classQgsAuthCrypto.html>` 를 제외하고 말이죠. 왜냐하면 "
+"파이썬을 통해서가 아니라 주 응용 프로그램이 마스터 비밀번호 `해싱 <http://www.terms.co.kr/hashing.htm>`_"
+" 및 인증 데이터베이스를 관리해야 하기 때문입니다."
 
 #: ../../docs/user_manual/auth_system/auth_overview.rst:443
 msgid ""
