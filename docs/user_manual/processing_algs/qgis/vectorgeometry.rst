@@ -3153,6 +3153,98 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisextrude:
+
+Extrude
+--------------------------
+
+Generates 3D geometries by extruding 2D polygon features along a specified direction.
+Each feature is displaced according to the X, Y, and Z extrusion parameters: X and Y control the horizontal displacement,
+while Z controls the vertical elevation. Setting only the Z parameter produces vertical extrusions,
+whereas combining X, Y, and Z allows the creation of non-vertical extrusions.
+Negative values are supported, enabling extrusions in the opposite direction.
+If the input features already carry Z values, those values are preserved and used as the base elevation of the extruded geometry.
+For MultiPolygon geometries, each part is extruded separately, producing one output feature per part.
+Output geometries are of type PolyhedralSurfaceZ, representing the extruded surface of each input feature.
+
+.. figure:: img/extrude.png
+   :align: center
+
+   The left image shows a 2D polygon, while the right image shows the polygon extruded along the Z direction.
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Extrusion (x-axis)**
+     - ``EXTRUDE_X``
+     - [numeric: double] |dataDefine|
+
+       Default: 0
+     - Specify the X-axis as the stretch direction
+   * - **Extrusion (y-axis)**
+     - ``EXTRUDE_Y``
+     - [numeric: double] |dataDefine|
+
+       Default: 0
+     - Specify the Y-axis as the stretch direction
+   * - **Extrusion (z-axis)**
+     - ``EXTRUDE_Z``
+     - [numeric: double] |dataDefine|
+
+       Default: 0
+     - Specify the Z-axis as the stretch direction
+   * - **Extrusion**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types_append**
+          :end-before: **end_layer_output_types_append**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extrusion**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output layer containing the extruded polygon features.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:extrude``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisfilterverticesbym:
 
 Filter vertices by M value
