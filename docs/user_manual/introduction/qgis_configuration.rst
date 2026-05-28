@@ -1079,6 +1079,10 @@ for any :guilabel:`3D Map view`. These can refer to:
   lets you set the GPU memory limit configuration on each layer.
   This is useful for users utilizing large 3D scenes which exhaust the available GPU memory resources.
   When a limit is hit, a warning is also displayed, which should assist in troubleshooting large scenes.
+* Under :guilabel:`Rendering`, check |checkbox| :guilabel:`Enable multisample anti-aliasing (MSAA)`
+  to smooth the jagged edges of 3D objects.
+  Enabling this option improves the visual quality of 3D rendering,
+  but may impact performance on less powerful graphics hardware.
 
 
 .. index:: Colors
