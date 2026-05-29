@@ -7961,6 +7961,7 @@ Python code
 
 Transect (fixed distance)
 -------------------------
+``Added in 4.0``
 
 Creates transects at fixed distance intervals along (multi)linestrings.
 
@@ -8044,8 +8045,8 @@ Parameters
        :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
-          :start-after: **file_output_types**
-          :end-before: **end_file_output_types**
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
 
 Outputs
 .......
