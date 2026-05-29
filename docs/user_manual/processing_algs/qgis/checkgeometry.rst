@@ -688,6 +688,8 @@ Basic parameters
    * - **Area threshold**
 
        Optional
+
+       ``Added in 4.2``
      - ``AREA_THRESHOLD``
      - [numeric: double]
 
