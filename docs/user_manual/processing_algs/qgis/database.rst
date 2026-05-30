@@ -342,7 +342,7 @@ Basic parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specify where to store the GeoPackage file. One of
+     - Specify where to store the GeoPackage file. One of:
 
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
