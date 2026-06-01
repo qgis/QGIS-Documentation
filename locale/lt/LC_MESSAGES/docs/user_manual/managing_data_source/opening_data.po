@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
-# Tomas Straupis, 2026
 # Transifex Bot <>, 2026
+# Tomas Straupis, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Tomas Straupis, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -76,6 +76,14 @@ msgstr ""
 "ArcInfo Binary Grid, ArcInfo ASCII Grid ir daug kitų... Skaitykite pilną "
 "`palaikomų rastro formatų sąrašą "
 "<https://gdal.org/en/latest/drivers/raster/index.html>`__."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:32
+msgid ""
+"Database formats include PostgreSQL, SQLite/SpatiaLite, Oracle, MS SQL "
+"Server, SAP HANA, MySQL..."
+msgstr ""
+"Duomenų bazės formatai tai PostgreSQL, SQLite/SpatiaLite, Oracle, MS SQL "
+"Server, SAP HANA, MySQL..."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:34
 msgid ""
@@ -809,6 +817,20 @@ msgstr ""
 msgid "The DB Manager"
 msgstr "DB tvarkyklė"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:295
+msgid ""
+"The :guilabel:`DB Manager` Plugin is another tool for integrating and "
+"managing spatial database formats supported by QGIS (PostgreSQL, SpatiaLite,"
+" GeoPackage, Oracle Spatial, MS SQL Server, Virtual layers). It can be "
+"activated from the :menuselection:`Plugins --> Manage and Install "
+"Plugins...` menu."
+msgstr ""
+"Priedas :guilabel:`DB tvarkyklė` yra dar vienas įrankis, QGIS palaikomų "
+"erdvinių duomenų bazių formatų integravimui ir tvarkymui (PostgreSQL, "
+"SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtualūs "
+"sluoksniai). Jį galima aktyvuoti per meniu :menuselection:`Priedai --> "
+"Tvarkyti ir įdiegti priedus...`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:301
 msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
 msgstr "|dbManager| :sup:`DB tvarkyklės` priedas teikia kelias savybes:"
@@ -974,6 +996,26 @@ msgstr ""
 "Spauskite :guilabel:`Atidaryti`, kad įkeltumėte parinktą failą į "
 ":guilabel:`Duomenų šaltinių tvarkymo` dialogą."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:381
+msgid ""
+"Depending on the selected layer type, additional :guilabel:`Options` "
+"(encoding, geometry type, table filtering, file locking, data formatting "
+"...) are available for configuring. These options are described in detail in"
+" the specific GDAL `vector <https://gdal.org/en/latest/drivers/vector/>`__ "
+"or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver "
+"documentation. At the top of the options, a text with hyperlink will "
+"directly lead to the documentation of the appropriate driver for the "
+"selected file format."
+msgstr ""
+"Priklausomai nuo parinkto sluoksnio tipo, konfigūravimui bus prieinami "
+"papildomos :guilabel:`Parinktys` (koduotė, geometrijos tipas, lentelės "
+"filtravimas, failų rakinimas, duomenų formatavimas ...). Šios parinktys "
+"detaliai aprašomos konkrečiuose GDAL `vektorių "
+"<https://gdal.org/en/latest/drivers/vector/>`__ ar `rastro "
+"<https://gdal.org/en/latest/drivers/raster>`__ tvarkyklių dokumentacijose. "
+"Parinkčių viršuje esantis hypertekstas jus nuves tiesiai į parinkto failo "
+"formato atitinkamos tvarkyklės dokumentaciją."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:395
 msgid "Loading a Shapefile with open options"
 msgstr "Shape failo įkėlimas su atvertomis parinktimis"
@@ -1069,6 +1111,18 @@ msgstr ""
 "parinkti esamą duomenų bazės jungtį ar sukurti parinkto tipo naują. Kelios "
 "galimos duomenų bazės yra ``ODBC``, ``Esri Personal Geodatabase``, ``MS SQL "
 "Server`` kaip ir ``PostgreSQL`` ar ``MySQL`` ."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:440
+msgid ""
+"Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR "
+"Database Connection` dialog whose parameters are among the ones you can find"
+" in :ref:`vector_create_stored_connection`. Pressing :guilabel:`Open` lets "
+"you select from the available tables."
+msgstr ""
+"Paspaudus mygtuką :guilabel:`Naujas`, atveriamas dialogas :guilabel:`Kurti "
+"naują OGR duomenų bazės jungtį` su parametrais, kuriuos galite rasti "
+"skyriuje :ref:`vector_create_stored_connection`. Paspaudę "
+":guilabel:`Atverti` jūs parenkate iš galimų lentelių."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:444
 msgid ""
@@ -1516,6 +1570,21 @@ msgstr ""
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:621
+msgid ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial "
+"information is represented as WKT: select the :guilabel:`Geometry field` "
+"containing the WKT geometry and choose the appropriate :guilabel:`Geometry "
+"field` or let QGIS auto-detect it. Provide the appropriate "
+":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"|radioButtonOn|:guilabel:`Gerai žinomo teksto (WKT)` parinktį, jei erdvinė "
+"informacija išreikšta kaip WKT: parinkite :guilabel:`Geometrijos lauką`, "
+"kuriame yra WKT geometrija ir parinkite atitinkamą :guilabel:`Geometrijos "
+"tipą` arba leiskite QGIS jį aptikti automatiškai. Pateikite atitinkamą "
+":guilabel:`Geometrijos CRS` naudojant valdiklį |setProjection| "
+":sup:`Parinkti CRS`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:627
 msgid ""
 "If the file contains non-spatial data, activate |radioButtonOn| "
@@ -1914,6 +1983,28 @@ msgstr "Su duomenų baze susiję įrankiai"
 msgid "Creating a stored Connection"
 msgstr "Įrašytos jungties kūrimas"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:815
+msgid ""
+"In order to read and write tables from a database format QGIS supports you "
+"have to create a connection to that database. While :ref:`QGIS Browser Panel"
+" <browser_panel>` is the simplest and recommended way to connect to and use "
+"databases, QGIS provides other tools to connect to each of them and load "
+"their tables:"
+msgstr ""
+"Norint skaityti ir rašyti QGIS palaikomų duomenų bazių formatų lenteles, "
+"jums reikia sukurti jungti į tą duomenų bazę. Nors :ref:`QGIS naršyklės "
+"skydelis <browser_panel>` yra paprasčiausias ir rekomenduojamas būdas "
+"prisijungti ir naudoti duomenų bazes, QGIS teikia ir kitus įrankius "
+"prisijungimui ir jų lentelių įkėlimui:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:821
+msgid ""
+"|addPostgisLayer| :menuselection:`Add PostgreSQL Layer...` or by typing "
+":kbd:`Ctrl+Shift+D`"
+msgstr ""
+"|addPostgisLayer| :menuselection:`Pridėti PostgreSQL sluoksnį...` ar "
+"paspaudus :kbd:`Ctrl+Shift+D`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1758
 msgid "addPostgisLayer"
 msgstr "addPostgisLayer"
@@ -1993,6 +2084,26 @@ msgstr ""
 msgid "Connecting to PostgreSQL"
 msgstr "Prisijungimas prie PostgreSQL"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:849
+msgid ""
+"The first time you use a PostgreSQL data source, you must create a "
+"connection to a database that contains the data. Press the appropriate "
+"button as exposed above, opening the :guilabel:`PostgreSQL` tab of the "
+":guilabel:`Data Source Manager` dialog. To access the connection manager, "
+"click on the :guilabel:`New` button to display the :guilabel:`Create a New "
+"PostgreSQL Connection` dialog."
+msgstr ""
+"Kai pirmą kartą naudojate PostgreSQL duomenų šaltinį, jūs turite sukurti "
+"jungtį į duomenų bazę, kurioje yra duomenys. Spauskite atitinkamą mygtuką, "
+"kaip parodyta aukščiau, atidarius kortelę :guilabel:`PostgreSQL` dialoge "
+":guilabel:`Duomenų šaltinių tvarkyklė`. Kad pasiektumėte jungčių tvarkyklę, "
+"spauskite mygtuką :guilabel:`Naujas`, bus parodytas dialogas "
+":guilabel:`Sukurti naują PostreSQL jungtį`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:861
+msgid "Create a New PostgreSQL Connection Dialog"
+msgstr "Naujos PostgreSQL jungties kūrimo dialogas"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:863
 msgid ""
 ":guilabel:`Name`: A name for this connection. It can be the same as "
@@ -2000,6 +2111,18 @@ msgid ""
 msgstr ""
 ":guilabel:`Pavadinimas`: Šios jungties pavadinimas. Jis gali būti toks pat "
 "kaip :guilabel:`Duomenų bazė`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:864
+msgid ""
+":guilabel:`Service`: Service parameter to be used alternatively to "
+"hostname/port (and potentially database). This can be defined in "
+":file:`pg_service.conf`. Check the :ref:`PostgreSQL Service connection file "
+"<pg-service-file>` section for more details."
+msgstr ""
+":guilabel:`Paslauga`: Paslaugos parametras, kurį galima naudoti kaip "
+"alternatyvą mašinai/prievadui (ir potencialiai duomenų bazei). Jis gali būti"
+" apibrėžtas faile :file:`pg_service.conf`. Daugiau informacijos rasite "
+"skyriuje :ref:`PostgreSQL paslaugų jungties failas <pg-service-file>`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:867
 msgid ""
@@ -2011,6 +2134,14 @@ msgstr ""
 "išsispręsti ir tikti atverti TCP/IP jungtį ar nusiųsti patikrinimo signalą į"
 " serverį. Jei duomenų bazė yra tame pačiame kompiuteryje kaip QGIS, tiesiog "
 "įveskite *localhost*."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:870
+msgid ""
+":guilabel:`Port`: Port number the PostgreSQL database server listens on. The"
+" default port for PostgreSQL is ``5432``."
+msgstr ""
+":guilabel:`Prievadas`: PostgreSQL duomenų bazės prievadas, kuriuo ji "
+"klausosi. Numatytasis PostreSQL prievadas yra ``5432``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:872
 msgid ":guilabel:`Database`: Name of the database."
@@ -2092,6 +2223,16 @@ msgstr ""
 "nariais. Daugiau apie tai skaitykite "
 "<https://www.postgresql.org/docs/current/sql-set-role.html>`_."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:894
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1035
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1190
+msgid ""
+":guilabel:`Authentication`: For general details about the authentication "
+"dialog behavior, see :ref:`authentication`."
+msgstr ""
+":guilabel:`Autentifikacija`: bendrą informaciją apie autentifikacijos "
+"dialogo elgseną rasite skyriuje :ref:`authentication`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:897
 msgid ""
 "Optionally, depending on the type of database, you can activate the "
@@ -2157,6 +2298,10 @@ msgstr ""
 "|checkbox| :guilabel:`Leisti įrašyti/įkelti QGIS sluoksnių metaduomenis "
 "duomenų bazėje` - daugiau informacijos :ref:`čia <savemetadatatodb>`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:918
+msgid "|checkbox| :guilabel:`Also list raster overview tables`"
+msgstr "|checkbox| :guilabel:`Rodyti rastro apžvalgos lenteles`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:919
 msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
 msgstr "|checkbox| :guilabel:`Žiūrėti tik schemoje „public“`"
@@ -2185,6 +2330,10 @@ msgstr ""
 "Nustačius visus parametrus ir parinktis galite patikrinti jungtį paspausdami"
 " mygtuką :guilabel:`Bandyti jungtį` arba pritaikyti spausdami mygtuką "
 ":guilabel:`Gerai`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:932
+msgid "**PostgreSQL Service connection file**"
+msgstr "**PostgreSQL paslaugų jungties failas**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:934
 msgid ""
@@ -2347,6 +2496,10 @@ msgstr ""
 msgid "Connecting to Oracle Spatial"
 msgstr "Prisijungimas prie Oracle Spatial"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
+msgid "Create a New Oracle Connection Dialog"
+msgstr "Naujos Oracle jungties kūrimo dialogas"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid ""
 "The spatial features in Oracle Spatial aid users in managing geographic and "
@@ -2356,6 +2509,46 @@ msgstr ""
 "Oracle Spatial erdvinės savybės padeda naudotojams valdyti geografinius ir "
 "vietos duomenis naudojant savus tipus Oracle duomenų bazėje. Šis jungties "
 "dialogas siūlo:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1026
+msgid ""
+":guilabel:`Name`: A name for this connection. It can be the same as "
+":guilabel:`Database`;"
+msgstr ""
+":guilabel:`Pavadinimas`: Šios jungties pavadinimas. Jis gali būti toks pat "
+"kaip :guilabel:`Duomenų bazė`;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1027
+msgid ":guilabel:`Database`: SID or SERVICE_NAME of the Oracle instance;"
+msgstr ""
+":guilabel:`Duomenų bazė`: Oracle egzemplioriaus SID arba SERVICE_NAME;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1028
+msgid ":guilabel:`Host`: The name of the database host;"
+msgstr ":guilabel:`Serveris`: Duomenų bazės serverio pavadinimas;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1029
+msgid ""
+":guilabel:`Port`: Port number the Oracle database server listens on. The "
+"default port is ``1521``;"
+msgstr ""
+":guilabel:`Prievadas`: Prievado numeris, kuriuo klausosi Oracle duomenų "
+"bazė. Numatytasis prievadas yra ``1521``;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1031
+msgid ""
+":guilabel:`Options`: Oracle connection specific options (e.g. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). The format of the options"
+" string is a semicolon separated list of option names or option=value pairs;"
+msgstr ""
+":guilabel:`Parinktys`: specifinės Oracle jungties parinktys (pvz. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). Parinkčių eilutės "
+"formatas yra kabliataškiais atskirtas sąrašas parinkčių pavadinimų ar porų "
+"parinktis=reikšmė;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1034
+msgid ":guilabel:`Workspace`: Workspace to switch to;"
+msgstr ":guilabel:`Darbo erdvė`: darbo erdvė, į kurią reikia persijungti;"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1037
 msgid "Optionally, you can activate the following checkboxes:"
@@ -2826,6 +3019,20 @@ msgstr ""
 msgid "Loading a Database Layer"
 msgstr "Duomenų bazės sluoksnio įkėlimas"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1244
+msgid ""
+"Once you have one or more connections defined to a database (see section "
+":ref:`vector_create_stored_connection`), you can load layers from it. Of "
+"course, this requires that data are available. See section "
+":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
+" a PostgreSQL database."
+msgstr ""
+"Kai turite apsibrėžę vieną ar daugiau jungčių į duomenų baze (žr. skiltį "
+":ref:`vector_create_stored_connection`), jūs galite iš jų įkelti sluoksnius."
+" Žinoma, tam reikia, kad duomenys būtų pasiekiami. Daugiau informacijos apie"
+" tai, kaip įkelti duomenis į PostgreSQL duomenų bazę rasite skiltyje "
+":ref:`vector_import_data_in_postgis`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1250
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr ""
@@ -2847,6 +3054,14 @@ msgid ""
 msgstr ""
 "Iškrentančiame sąraše parinkite jungties pavadinimą ir spauskite "
 ":guilabel:`Prisijungti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1254
+msgid ""
+"The table below will be filled with your data grouped by schema, with a "
+"number of metadata information helpful for loading."
+msgstr ""
+"Žemiau esanti lentelė bus užpildyta jūsų duomenis, sugrupuotais pagal "
+"schemą, su įkėlimui naudingais meta duomenimis."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1256
 msgid ""
@@ -2881,9 +3096,61 @@ msgstr ""
 "Parinkite jį paspaudimu. Jūs galite parinkti kelis sluoksnius, parinkdami "
 "laikydami mygtuką :kbd:`Shift` ar :kbd:`Ctrl`."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1265
+msgid ""
+"Layers can be selected only if they have no |warning| warning icon at the "
+"left-hand side of their first column. This may indicate an issue to detect:"
+msgstr ""
+"Sluoksnius galima parinkti tik jei jie neturi |warning| įspėjimo piktogramos"
+" jų pirmo stulpelio kairėje pusėje. Tai gali nurodyti aptinkamą problemą:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1814
 msgid "warning"
 msgstr "warning"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1269
+msgid ""
+"features geometry type: in which case you can select the appropriate one in "
+"the drop-down list of the :guilabel:`Spatial Type` column"
+msgstr ""
+"geoobjekto geometrijos tipas: tokiu atveju jūs galite parinkti reikiamą "
+"iškrentančiame sąraše, kurį rasite stulpelyje :guilabel:`erdvinis tipas`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1271
+msgid ""
+"layer CRS: you can enter the correct code in the :guilabel:`SRID` column"
+msgstr ""
+"sluoksnio CRS: jūs galite įvesti tinkamą kodą stulpelyje :guilabel:`SRID`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1272
+msgid ""
+"layer's primary key, in order to unequivocally identify each feature: this "
+"can be fixed by selecting one or more attributes in the drop-down list at "
+"the corresponding :guilabel:`Feature id` column."
+msgstr ""
+"sluoksnio pirminis raktas, kad būtų galima vienareikšmiškai identifikuoti "
+"kiekvieną geoobjektą: šitą galima pataisyti parenkant iškrentančiame sąraše "
+"vieną ar daugiau atributų stulpelyje :guilabel:`Geoobjekto id`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1276
+msgid "**Use the first column to store \"primary keys\" for views**"
+msgstr "**Naudoti pirmą stulpelį vaizdų „pirminiams raktams“**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1278
+msgid ""
+"Since PostgreSQL views don't support primary keys, a unique attribute or "
+"combination of attributes should always be selected. To help users to speed-"
+"up workflows, QGIS automatically selects the first attribute in the view. "
+"Therefore, users can define their views in a way that a unique column is in "
+"the first position of the view's definition. In this way, the view will be "
+"loaded with no extra interaction and the warning icon will never appear."
+msgstr ""
+"Kadangi PostgreSQL vaizdai nepalaiko pirminių raktų, visada reikia parinkti "
+"unikalų atributą ar jų rinkinį. Siekiant padėti naudotojui, QGIS "
+"automatiškai parenka pirmą vaizdo atributą. Taigi naudotojai gali savo "
+"vaizdus apibrėžti taip, kad unikalus stulpelis būtų pirmoje vaizdo "
+"apibrėžimo pozicijoje. Tokiu būdu vaizdai bus įkeliami nereikalaujant jokio "
+"papildomo veiksmo ir įspėjimo piktograma niekada nebus rodoma."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1285
 msgid ""
@@ -2915,6 +3182,10 @@ msgstr ""
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
 msgstr ""
 "Spauskite mygtuką :guilabel:`Pridėti`, kad pridėtumėte sluoksnį į žemėlapį."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1302
+msgid "Add PostgreSQL Table(s) Dialog"
+msgstr "PostgreSQL lentelės(ių) pridėjimo dialogas"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1304
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
@@ -3172,6 +3443,12 @@ msgstr ""
 "Merkatoriaus projekcijai (kurią naudoja OpenStreetMap vektorinės kaladėlės) "
 "mastelio lygis 0 reprezentuoja visą pasaulį masteliu 1:500.000.000. Lygis 14"
 " reprezentuoja mastelį 1:35.000."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1420
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1480
+msgid "the :ref:`authentication <authentication>` configuration if necessary"
+msgstr ""
+"the :ref:`autentifikacijos <authentication>` konfigūracija, jei reikia"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1421
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1482
@@ -3447,9 +3724,78 @@ msgstr ""
 msgid "Using ArcGIS REST Servers"
 msgstr "ArcGIS REST serverių naudojimas"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1559
+msgid ""
+"An `ArcGIS REST Server`_ can host many different types of web services "
+"(feature service, map service, image service, ...). ArcGIS REST Servers can "
+"be added via the |addAfsLayer| :guilabel:`ArcGIS REST Server` tab of the "
+":guilabel:`Data Source Manager` dialog or the contextual menu of the "
+":guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel:"
+msgstr ""
+"`ArcGIS REST Serveris`_ gali teikti daug skirtingų žiniatinklio paslaugų "
+"tipų (geoobjektų paslaugą, žemėlapių paslaugą, vaizdų pasaulgą, ...). ArcGIS"
+" REST Serversius galima pridėti kortelėje |addAfsLayer| :guilabel:`ArcGIS "
+"REST Serveris`, kurį rasite dialoge :guilabel:`Duomenų šaltinio tvarkyklė` "
+"arba :guilabel:`ArcGIS REST Serversio` įrašo kontekstiniame meniu skydelyje "
+":guilabel:`Naršyklė`:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1742
 msgid "addAfsLayer"
 msgstr "addAfsLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1566
+msgid ""
+"Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:"
+msgstr ""
+"Spauskite :guilabel:`Naujas` (atitinkamai :guilabel:`Nauja jungtis`) ir "
+"pateikite:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1568
+msgid "a :guilabel:`Name`: A name for the connection."
+msgstr ":guilabel:`Pavadinimą`: jungties pavadinimą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1569
+msgid "the :guilabel:`URL`: Main address of the ArcGIS REST Server."
+msgstr ":guilabel:`URL`: pagrindinį ArcGIS REST Serverio adresą."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1570
+msgid ""
+"a :guilabel:`Prefix`: Used to specify the proxy prefix in the URL, which is "
+"necessary for some ArcGIS servers that use web proxy prefixes."
+msgstr ""
+":guilabel:`Priešdėlį`: naudojamas nurodant URL proxy priešdėlį, kuris "
+"reikalingas kai kuriems ArcGIS serveriams, naudojantiems žiniatinklio proxy "
+"priešdėlius."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1572
+msgid ""
+"a :guilabel:`Community endpoint URL`: Endpoint URL for ArcGIS Online or "
+"Portal for ArcGIS, used to access content groups."
+msgstr ""
+":guilabel:`Bendruomenės prieigos URL`: ArcGIS Online ar Portal for ArcGIS "
+"prieigos URL, kuris naudojamas prieigai prie turinio grupių."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1574
+msgid ""
+"a :guilabel:`Content endpoint URL`: Endpoint URL for the content service. "
+"This is used to access items in ArcGIS Online or Portal for ArcGIS."
+msgstr ""
+":guilabel:`Turinio prieigos URL`: turinio paslaugos prieigos URL. Tai "
+"naudojama prieigai prie ArcGIS Online ar Portal for ArcGIS elementų."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1576
+msgid "the :ref:`authentication <authentication>` credentials if necessary."
+msgstr ":ref:`autentifikacijos <authentication>` duomenys, jei reikia."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1577
+msgid ""
+"a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when "
+"making requests to the server. This may be required by some servers for "
+"authentication purposes."
+msgstr ""
+":guilabel:`Besikreipiantis`: besikreipiančio URL, kuris bus siunčiamas HTTP "
+"antraštėse siunčiant užklausas serveriui. Šito gali prireikti kai kuriems "
+"serveriams autentifikacijos tikslams."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1582
 msgid ""
@@ -3475,6 +3821,21 @@ msgstr ""
 "turinio grupių, kurių narys yra prisijungęs naudotojas, kiekvieną iš jų "
 "galima išskleisti ir pamatyti tai grupei priklausančius paslaugų elementus."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1591
+msgid ""
+"Then press :guilabel:`OK` to validate the configuration settings. These "
+"configurations can be saved to :file:`.XML` file (:guilabel:`Save`). "
+"Likewise, they can be added from a file (:guilabel:`Load`)."
+msgstr ""
+"Tada spauskite :guilabel:`Gerai`, kad patvirtintumėte konfigūracijos "
+"nustatymus. Šias konfigūracijas galima įrašyti į :file:`.XML` failą "
+"(:guilabel:`Įrašyti`). Analogiškai, jas galima pridėti iš failo "
+"(:guilabel:`Įkelti`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1595
+msgid "Once a connection to an ArcGIS REST Server is set, it is possible to:"
+msgstr "Kai jungtis su ArcGIS REST Serveriu nustatyta, galima:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1597
 msgid ":guilabel:`Edit` the ArcGIS REST Server connection settings"
 msgstr ":guilabel:`Keisti` ArcGIS REST Serverio jungties nustatymus"
@@ -3482,6 +3843,117 @@ msgstr ":guilabel:`Keisti` ArcGIS REST Serverio jungties nustatymus"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1599
 msgid ":guilabel:`Refresh` the connection"
 msgstr ":guilabel:`Atnaujinti` jungtį"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1601
+msgid ""
+"Press :guilabel:`Connect` to request the server and display its contents. "
+"They are organized in a tree structure whose nodes depend on the "
+"connection's endpoint."
+msgstr ""
+"Spauskite :guilabel:`Prisijungti`, kad paprašytumėte serverio parodyti savo "
+"turinį. Jis organizuojamas medžio struktūra, kurio šakos priklauso nuo "
+"jungties taško."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1609
+msgid "Data Source Manager - ArcGIS REST Server"
+msgstr "Duomenų šaltinių tvarkyklė - ArcGIS REST Serveris"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1615
+msgid ""
+"Expand the tree to find and select the layers of interest. Their "
+":guilabel:`Coordinate Reference System` is displayed at the bottom of the "
+"dialog."
+msgstr ""
+"Išplėskite medį, kad rastumėte ir parinktumėte jus dominančius sluoksnius. "
+"Jų :guilabel:`Koordinačių atskaitos sistema` rodoma dialogo apačioje."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1617
+msgid ""
+"For raster-based layers, you can select the :guilabel:`Image encoding` to "
+"use among a number of image formats advertised by the target service ( e.g.,"
+" ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... )."
+msgstr ""
+"Rastro sluoksniams jūs galite parinkti :guilabel:`piešinių koduotę` iš kelių"
+" paslaugos siūlomų piešinių formatų (pvz., ``PNG``, ``JPG``, ``GIF``, "
+"``SVG``, ``SVGZ``, ... )."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1621
+msgid ""
+"To add the selected layers to the map canvas, press :guilabel:`Add` button."
+msgstr ""
+"Norėdami pridėti parinktus sluoksnius į žemėlapio drobę, spauskite mygtuką "
+":guilabel:`Pridėti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1623
+msgid ""
+"Because layers can sometimes load and render slowly on the client side, "
+"applying a filter to restrict the features retrieved from the service can "
+"significantly improve performance, since only the filtered features are "
+"requested from the server. This can be done by:"
+msgstr ""
+"Kadangi sluoksniai kartais gali būti įkeliami ir braižomi lėtai kliento "
+"pusėje, pritaikydami filtrą, ribojantį iš paslaugos atsiunčiamus "
+"geoobjektus, galite stipriai pagerinti greitaveiką, kadangi iš serverio "
+"siunčiami tik filtruoti geoobjektai. Tai galite padaryti:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1628
+msgid ""
+"checking |checkbox| :guilabel:`Only request features overlapping the current"
+" view extent`"
+msgstr ""
+"įjungdami parinktį |checkbox| :guilabel:`Siųsti tik geoobjektus, "
+"patenkančius į dabartinio vaizdo apimtį`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1629
+msgid ""
+"for vector layers (feature service), pressing :guilabel:`Add with filter` to"
+" apply attribute-based filters to the layer with :ref:`expression_builder` "
+"functions."
+msgstr ""
+"vektoriniams sluoksniams (geoobjektų paslaugose), spausdami "
+":guilabel:`Pridėti su filtru`, kad pritaikytumėte sluoksniui nuo atributų "
+"priklausančius filtrus naudodami funkcijas, kurias teikia "
+":ref:`expression_builder`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1632
+msgid ""
+"In the :guilabel:`Browser` panel, right-click the ArcGIS REST Server layer "
+"and select :guilabel:`Add Filtered Layer to Project` will also open the "
+"builder dialog."
+msgstr ""
+"Skydelyje :guilabel:`Naršyklė` dešiniu pelės mygtuku spauskite ArcGIS REST "
+"Serverio sluoksnį ir parinkite :guilabel:`Pridėti filtruotą sluoksnį į "
+"projektą`, taip irgi bus atidarytas kūrėjo dialogas."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1636
+msgid ""
+"Most of the above tools to connect and access layers on an ArcGIS REST "
+"Server are also available from the :guilabel:`Browser` panel, within the "
+"contextual menu of the target node item. Depending on the node, you can "
+"also:"
+msgstr ""
+"Dauguma aukščiau išvardintų įrankių, skirtų jungtis ir pasiekti ArcGIS REST "
+"Serverio sluoksnius, taipogi pasiekiami ir skydelyje :guilabel:`Naršyklė` "
+"paskirties mazgo elemento kontekstiniame meniu. Priklausomai nuo mazgo jūs "
+"taipogi galite:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1641
+msgid ""
+":guilabel:`View Service Info` which will open the default web browser and "
+"display information on the requested service."
+msgstr ""
+":guilabel:`Peržiūrėti paslaugos informaciją`, kuri atvers numatytąją "
+"žiniatinklio naršyklę ir parodys prašomos paslaugos informaciją."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1643
+msgid ""
+"View the :guilabel:`Layer Properties...` and get access to the metadata and "
+"a preview of the data provided by the service. More settings are available "
+"when the layer has been loaded into the project."
+msgstr ""
+"Žiūrėti :guilabel:`Sluoksnio savybes...` ir gauti prieigą prie metaduomenų "
+"bei peržiūrėti paslaugos teikiamus duomenis. Daugiau nustatymų rasite įkėlus"
+" sluoksnį į projektą."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1652
 msgid "Using 3D tiled scene services"
@@ -3538,6 +4010,10 @@ msgstr ""
 "URL gali būti nutolęs (pvz. ``http://example.com/tileset.json``) arba "
 "vietinis (t.y. ``file:///path/to/tiles/tileset.json``)."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1676
+msgid "The :ref:`authentication <authentication>` configuration if necessary."
+msgstr ":ref:`Autentifikacijos <authentication>` konfigūracija, jei reikia."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1683
 msgid "Tiled Scene Connection"
 msgstr "Scenos kaladėlių jungtis"
@@ -3587,6 +4063,10 @@ msgstr ""
 ":guilabel:`Nauja jungtis`. Jūs pamatysite galimų debesijos paslaugų "
 "iškrentantį sąrašą. Parinkite jums reikiamą paslaugą, prie kurios norite "
 "prisijungti, ir užpildykite reikiamus laukus:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1774
+msgid "cloud"
+msgstr "cloud"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1723
 msgid "Cloud Connection Dialog"
