@@ -18,7 +18,7 @@ jobs:
     name: Backport
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@8d3c67de8e2fe68ef647c8db1e6a09f647780f40 # v2.19.0
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
         with:
           disable-sudo-and-containers: true
           egress-policy: block
@@ -28,6 +28,6 @@ jobs:
 
       - name: Backport Bot
         id: backport
-        uses: m-kuhn/backport@7f3cab83e4b3b26aefcffda21851c3dc3d389f45  #v1.2.7
+        uses: m-kuhn/backport@b136a03dc85314c06e342394a581d30b65018916  #v1.2.8
         with:
           github_token: ${{ env.BACKPORT_TOKEN }}
