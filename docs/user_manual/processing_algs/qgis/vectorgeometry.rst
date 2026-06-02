@@ -442,6 +442,9 @@ Parameters
      - [vector: polygon]
      - Input polygon vector layer
    * - **Extend endpoints to the polygon boundary**
+
+
+       ``Added in 4.2``
      - ``EXTEND_TO_EDGES``
      - [boolean]
 
