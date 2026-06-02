@@ -1298,7 +1298,7 @@ Parameters
        Default: 0.3
      - Number from 0 (maximum concave hull) to 1 (convex hull).
 
-       .. figure:: img/concave_hull_threshold.png
+       .. figure:: img/concave_hull_byfeature_threshold.png
           :align: center
           :width: 100%
 
@@ -1356,12 +1356,6 @@ Concave hull (by layer)
 Computes the concave hull covering all features from an input point layer.
 See the :ref:`qgisconcavehullbyfeature` algorithm for a concave hull calculation
 which covers individual features from a layer.
-
-.. figure:: img/concave_hull_threshold.png
-    :align: center
-
-    Concave hull by layer with different thresholds (0.3, 0.6, 0.9)
-
 
 .. seealso:: :ref:`qgisconvexhull`
 
