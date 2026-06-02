@@ -446,7 +446,7 @@ and a drop-down :menuselection:`...` button for additional options
 
 * :guilabel:`Skip Output`: if you are not interested in a given output of the algorithm
 * :guilabel:`Create Temporary Layer` (``TEMPORARY_OUTPUT``):
-  the output is stored in a vector :ref:`temporary scratch layer <vector_new_scratch_layer>`, using a default name. 
+  the output is stored in a vector :ref:`temporary scratch layer <vector_new_scratch_layer>`, using a default name.
   You can assign a custom name to the temporary output layer directly from the output widget.
   Enter a name, without file extension and file path.
   A valid name is indicated by the |createMemory| icon displayed next to it.
@@ -521,6 +521,8 @@ By default, the files are opened.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
