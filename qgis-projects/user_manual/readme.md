@@ -44,3 +44,7 @@ The following list
 ## Processing
 
 * `modeldesigner.qgz`
+
+## 3D
+
+* `3d_example_project_luxembourg.qgz`
