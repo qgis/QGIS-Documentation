@@ -1651,22 +1651,34 @@ Depending on the node, you can also:
   a preview of the data provided by the service.
   More settings are available when the layer has been loaded into the project.
 
-When a service is exposed as both a Map Service (raster) and a Feature
-Service (vector), the Browser displays only the Feature Service item to
-avoid duplication. The following additional options are available via the
-right-click context menu:
+ArcGIS REST services are exposed as a |ams| Map Service (raster) and a |afs| Feature
+Service (vector). Both items are listed separately in the :ref:`Browser <label_browserpanel>` and in
+the |dataSourceManager| :sup:`Data Source Manager` dialog. An |imageServer| Image Server
+item is also available, but only in the :guilabel:`Browser`.
 
-* Right-clicking a **service node** (globe icon):
+The following additional options are available via the right-click
+context menu in the :guilabel:`Browser`:
+
+* Right-clicking a **service node**:
 
   * :guilabel:`Add Raster with All MapServer Layers`: loads all layers
     from the Map Service combined as a single raster layer.
+  * :guilabel:`View Service Info`: opens the REST service endpoint
+    description in the default web browser.
 
-* Right-clicking an **individual layer**:
+* Right-clicking a |ams| **MapServer (raster) layer**:
 
-  * :guilabel:`Add Vector Layer (FeatureServer) to Project`: loads the
-    layer as a vector layer via the Feature Service endpoint.
-  * :guilabel:`Add Raster Layer (MapServer) to Project`: loads the same
+  * :guilabel:`Add Raster Layer (MapServer) to Project`: loads the
     layer as a raster via the Map Service endpoint.
+  * :guilabel:`Add Vector Layer (FeatureServer) to Project`: loads the
+    layer as a vector via the Feature Service endpoint.
+
+* Right-clicking a |afs| **FeatureServer (vector) layer**:
+
+  * :guilabel:`Add Layer to Project`: loads the layer as a vector layer.
+  * :guilabel:`Add Filtered Layer to Project...`: opens the expression
+    builder to apply an attribute filter before loading.
+
 
 .. index:: 3D Tiles services
 .. _3d_tiles:
@@ -1793,6 +1805,8 @@ or :guilabel:`Load Connection` from an XML file.
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
+.. |ams| image:: /static/common/mIconAms.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |cloud| image:: /static/common/mIconCloud.png
@@ -1808,6 +1822,8 @@ or :guilabel:`Load Connection` from an XML file.
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
+   :width: 1.5em
+.. |imageServer| image:: /static/common/mIconImageServer.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
