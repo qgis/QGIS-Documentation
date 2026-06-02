@@ -685,6 +685,18 @@ Basic parameters
      - ``UNIQUE_ID``
      - [tablefield: any]
      - Field storing unique values for feature identification
+   * - **Area threshold**
+
+       Optional
+
+       ``Added in 4.2``
+     - ``AREA_THRESHOLD``
+     - [numeric: double]
+
+       Default: Not set
+     - Minimum area of a hole to be considered valid, in selected units.
+       Any holes with an area below this threshold is reported as error.
+       If not set, all holes are errors.
    * - **Holes errors**
      - ``ERRORS``
      - [vector: point]
