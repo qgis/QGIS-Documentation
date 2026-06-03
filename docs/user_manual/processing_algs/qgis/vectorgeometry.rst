@@ -450,6 +450,9 @@ Parameters
 
        Default: False
      - Extends the medial axis so that its endpoints reach the boundary of the input polygon
+
+       .. attention:: Using this method requires QGIS installed with SFCGAL_ >= 2.3
+         (see :menuselection:`Help --> About` menu).
    * - **Medial axis**
      - ``OUTPUT``
      - [vector: line]
