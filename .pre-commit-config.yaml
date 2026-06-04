@@ -5,6 +5,22 @@
 
 repos:
 
+  # Check for broken internal references (local script)
+  - repo: local
+    hooks:
+      - id: check-image-refs
+        name: Check image references exist
+        entry: ./scripts/check_image_refs.sh
+        language: script
+        files: \.(rst)$
+        exclude: ^(locale/|_dummy/|build/)
+
+      - id: find_set_subst
+        name: Check and apply text or image substitutions
+        entry: ./scripts/find_set_subst.py
+        language: python
+        pass_filenames: false
+
   # Standard pre-commit hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
@@ -80,21 +96,7 @@ repos:
     hooks:
       - id: black
 
-  # Check for broken internal references (local script)
-  - repo: local
-    hooks:
-      - id: check-image-refs
-        name: Check image references exist
-        entry: ./scripts/check_image_refs.sh
-        language: script
-        files: \.(rst)$
-        exclude: ^(locale/|_dummy/|build/)
 
-      - id: find_set_subst
-        name: Check and apply text or image substitutions
-        entry: ./scripts/find_set_subst.py
-        language: python
-        pass_filenames: false
 
 
 ci:
