@@ -1181,17 +1181,21 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgisconcavehullbyfeature:
 
-.. _qgisconcavehull:
+Concave hull (by feature)
+---------------------------
 
-Concave hull
-------------
-Computes the concave hull of the features from an input point layer.
+``Added in 3.44``
 
-.. figure:: img/concave_hull_threshold.png
+Calculates the concave hull for each multipoint feature in an input layer.
+See the :ref:`qgisconcavehull` algorithm for a concave hull calculation
+which covers the whole layer.
+
+.. figure:: img/concave_hull_byfeature.png
     :align: center
 
-    Concave hulls with different thresholds (0.3, 0.6, 0.9)
+    Concave hulls by feature
 
 
 .. seealso:: :ref:`qgisconvexhull`
@@ -1208,7 +1212,91 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input point layer**
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input vector layer with multipoint features
+   * - **Threshold**
+     - ``ALPHA``
+     - [numeric: double]
+
+       Default: 0.3
+     - Number from 0 (maximum concave hull) to 1 (convex hull).
+
+       .. figure:: img/concave_hull_byfeature_threshold.png
+          :align: center
+          :width: 100%
+
+          Concave hulls with different thresholds (0.3, 0.6, 0.9)
+   * - **Allow holes**
+     - ``HOLES``
+     - [boolean]
+
+       Default: True
+     - Choose whether to allow holes in the final concave hull
+   * - **Concave hulls**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Concave hulls**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer with polygons covering individual multipoint features.
+       Area and perimeter fields are added.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:concavehullbyfeature``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+.. _qgisconcavehull:
+
+Concave hull (by layer)
+---------------------------
+
+Computes the concave hull covering all features from an input point layer.
+See the :ref:`qgisconcavehullbyfeature` algorithm for a concave hull calculation
+which covers individual features from a layer.
+
+.. seealso:: :ref:`qgisconvexhull`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
@@ -1218,6 +1306,12 @@ Parameters
 
        Default: 0.3
      - Number from 0 (maximum concave hull) to 1 (convex hull).
+
+       .. figure:: img/concave_hull_threshold.png
+          :align: center
+          :width: 100%
+
+          Concave hulls with different thresholds (0.3, 0.6, 0.9)
    * - **Allow holes**
      - ``HOLES``
      - [boolean]
@@ -1258,7 +1352,7 @@ Outputs
    * - **Concave hull**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output vector layer
+     - The output vector layer covering all features from an input point layer.
 
 Python code
 ...........
@@ -1268,7 +1362,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
 
 .. _qgisconvertgeometrytype:
 
