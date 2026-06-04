@@ -3158,14 +3158,23 @@ Python code
 Extrude
 --------------------------
 
+``Added in 4.2``
+
 Generates 3D geometries by extruding 2D polygon features along a specified direction.
+
 Each feature is displaced according to the X, Y, and Z extrusion parameters: X and Y control the horizontal displacement,
 while Z controls the vertical elevation. Setting only the Z parameter produces vertical extrusions,
 whereas combining X, Y, and Z allows the creation of non-vertical extrusions.
 Negative values are supported, enabling extrusions in the opposite direction.
+
 If the input features already carry Z values, those values are preserved and used as the base elevation of the extruded geometry.
+
 For MultiPolygon geometries, each part is extruded separately, producing one output feature per part.
+
 Output geometries are of type PolyhedralSurfaceZ, representing the extruded surface of each input feature.
+
+.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
+   (see :menuselection:`Help --> About` menu).
 
 .. figure:: img/extrude.png
    :align: center
@@ -3194,22 +3203,22 @@ Parameters
      - [numeric: double] |dataDefine|
 
        Default: 0
-     - Specify the X-axis as the stretch direction
+     - Specify the extrusion value along the X-axis
    * - **Extrusion (y-axis)**
      - ``EXTRUDE_Y``
      - [numeric: double] |dataDefine|
 
        Default: 0
-     - Specify the Y-axis as the stretch direction
+     - Specify the extrusion value along the Y-axis
    * - **Extrusion (z-axis)**
      - ``EXTRUDE_Z``
      - [numeric: double] |dataDefine|
 
        Default: 0
-     - Specify the Z-axis as the stretch direction
+     - Specify the extrusion value along the Z-axis
    * - **Extrusion**
      - ``OUTPUT``
-     - [vector: polygon]
+     - [vector: 3D polygon]
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
@@ -3232,7 +3241,7 @@ Outputs
      - Description
    * - **Extrusion**
      - ``OUTPUT``
-     - [vector: polygon]
+     - [vector: 3D polygon]
      - The output layer containing the extruded polygon features.
 
 Python code
