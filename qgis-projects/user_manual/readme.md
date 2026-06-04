@@ -47,4 +47,4 @@ The following list
 
 ## 3D
 
-* `3d_example_project_luxembourg.qgz`
+* `3d_lux_clipped_project_3.44.qgz`
