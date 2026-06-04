@@ -3636,10 +3636,15 @@ Python code
 
 Reclassify by layer
 -------------------
+
 Reclassifies a raster band by assigning new class values based on the
 ranges specified in a vector table.
 
-.. figure:: img/reclassifyby_layer.png
+For example, if a pixel value falls in
+range 100-200 (range boundaries: min <= value < max), it will be assigned
+to the new class value 1, labeled as "Very Low".
+
+.. figure:: img/reclassify_by_layer.png
   :align: center
 
   Reclassified raster by layer.
