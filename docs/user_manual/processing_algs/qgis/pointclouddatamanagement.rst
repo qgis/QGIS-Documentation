@@ -138,6 +138,9 @@ With any of the optional parameters set, the algorithm will read all points whic
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -196,6 +199,33 @@ Parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types**
           :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Maximum width/height of tiled overviews**
+
+       Optional
+
+       ``Added in 4.2``
+     - ``OVERVIEW_LENGTH``
+     - [numeric: integer]
+
+       Default: Not set
+     - When set, the overview point cloud is split into multiple tiled files
+       using a tiling scheme, rather than being written as a single file for
+       the whole VPC. Each tile will cover a maximum width and height of this
+       value in layer CRS units. Tiled overviews are intended for very large
+       point clouds where a single overview file would be too large.
 
 Outputs
 .......
