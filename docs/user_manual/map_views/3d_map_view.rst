@@ -93,11 +93,11 @@ The following tools are provided at the top of the 3D map view panel:
     The direction (left or right) is determined by the orientation of the drawn line.
   * Use |editCutDisabled| :sup:`Disable Cross Section` to remove the cross section.
 * |shadow| :sup:`Effects` adds visual effects to the 3D rendering,
-  such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`
-  or :ref:`ambient occlusion <ambient_occlusion>`.
+  such as showing :ref:`shadows <shadows>`, :ref:`eye dome lighting <eye_dome_lighting>`,
+  :ref:`ambient occlusion <ambient_occlusion>` or :ref:`bloom lighting effect <bloom_lighting_effect>`.
 * The |options| :sup:`Configure...` button opens the dialog to configure
   the 3D map view :ref:`settings <scene_configuration>`.
-* |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window
+* |dock| :sup:`Dock 3D Map View`: switch from docked widget to top level window.
 
 .. _`scene_configuration`:
 
@@ -239,6 +239,7 @@ Effects
 
 .. figure:: img/3dmapconfiguration_effects.png
    :align: center
+   :width: 70%
 
    The 3D Map Effects Configuration dialog
 
@@ -290,6 +291,34 @@ Effects
    Rendering Point clouds in 3D map using Eye Dome Lighting (EDL) and/or Screen-Space Ambient Occlusion (SSAO)
 
    From top, left to right: No effect -- SSAO only -- EDL only -- SSAO and EDL
+
+.. _bloom_lighting_effect:
+
+* |unchecked| :guilabel:`Show Bloom Lighting Effect`:
+  to brighten the 3D scene, particularly for self-lit objects, making them appear to emit light.
+  Adjust the :guilabel:`Strength` value to increase or decrease the brightness. You can also adjust
+  :guilabel:`Radius` to set how far the light spreads.
+
+.. figure:: img/3dmap_bloom_lighting_effect.png
+   :align: center
+   :width: 70%
+
+
+   Before and after enabling bloom lighting effect.
+
+.. _color_grading:
+
+* :guilabel:`Color Grading`: to balance exposure and enhance the details.
+  These parameters can be controlled:
+  
+  * :guilabel:`Tone Mapping`: determines how extremely bright, High Dynamic Range (HDR)
+    colors are displayed on a standard monitor.
+    :guilabel:`Clamp HDR to SDR` converts High Dynamic Range (super bright light) to 
+    Standard Dynamic Range (normal light). To make it look cinematic, select
+    :guilabel:`ACES (Film Look)`. This will add more contrast to the 3D scene.
+  * :guilabel:`Exposure Adjustment`: adjusts the overall brightness of the 3D scene.
+    A value of 0.0 leaves the original brightness unchanged. Positive values will
+    brighten the scene, while negative values will darken it.
 
 
 Camera & Skybox
