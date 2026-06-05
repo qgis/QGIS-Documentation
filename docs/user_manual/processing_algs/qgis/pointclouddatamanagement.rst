@@ -227,9 +227,6 @@ Advanced parameters
        value in layer CRS units. Tiled overviews are intended for very large
        point clouds where a single overview file would be too large.
 
-.. attention:: Running this parameter requires pdal_wrench >= 1.5.0
-   (see :menuselection:`Help --> About` menu).
-
 Outputs
 .......
 
