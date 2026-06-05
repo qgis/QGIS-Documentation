@@ -310,10 +310,10 @@ Effects
 
 * :guilabel:`Color Grading`: to balance exposure and enhance the details.
   These parameters can be controlled:
-  
+
   * :guilabel:`Tone Mapping`: determines how extremely bright, High Dynamic Range (HDR)
     colors are displayed on a standard monitor.
-    :guilabel:`Clamp HDR to SDR` converts High Dynamic Range (super bright light) to 
+    :guilabel:`Clamp HDR to SDR` converts High Dynamic Range (super bright light) to
     Standard Dynamic Range (normal light). To make it look cinematic, select
     :guilabel:`ACES (Film Look)`. This will add more contrast to the 3D scene.
   * :guilabel:`Exposure Adjustment`: adjusts the overall brightness of the 3D scene.
