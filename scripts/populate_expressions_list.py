@@ -325,6 +325,7 @@ for g_name in groups:
                 f"{'.'* (len(escape_colliding_functions(f_name)))}\n\n"
                 f"{f_description}\n\n"
             )
+
             text = format_function(functions[f_name])
             f.write(text)
             # Insert reference to image if any correct one filled
