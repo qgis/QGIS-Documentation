@@ -3522,8 +3522,15 @@ Python code
 
 Reclassify by layer
 -------------------
+
 Reclassifies a raster band by assigning new class values based on the
 ranges specified in a vector table.
+
+
+.. figure:: img/reclassify_by_layer.png
+  :align: center
+
+  Reclassified raster by layer (range boundaries: min <= value < max).
 
 Parameters
 ..........
@@ -3682,6 +3689,11 @@ Reclassify by table
 -------------------
 Reclassifies a raster band by assigning new class values based on the
 ranges specified in a fixed table.
+
+.. figure:: img/reclassify_by_table.png
+  :align: center
+
+  Reclassified raster by table (range boundaries: min <= value < max).
 
 Parameters
 ..........
