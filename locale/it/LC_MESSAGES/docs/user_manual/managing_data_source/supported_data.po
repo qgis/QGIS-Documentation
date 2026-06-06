@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
@@ -283,7 +283,7 @@ msgstr ""
 "proiezione completi come usati in QGIS ed elencati nella finestra di dialogo"
 " :guilabel:`SR`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:722
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:770
 msgid "setProjection"
 msgstr "setProjection"
 
@@ -791,7 +791,7 @@ msgstr ""
 "che usano operatori o funzioni non supportate saranno restituita alla "
 "esecuzione in locale."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:762
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -827,7 +827,7 @@ msgstr ""
 "utilizzare per caricare dati, e include il supporto per gli schemi. Vedi la "
 "sezione :ref:`dbmanager` per ulteriori informazioni."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:764
 msgid "dbManager"
 msgstr "dbManager"
 
@@ -864,7 +864,7 @@ msgstr ""
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
 msgstr "nix"
 
@@ -878,7 +878,7 @@ msgstr ""
 "predefinito **INSERT INTO**, puoi esportare la seguente variabile d'ambiente"
 " (disponibile solo su |nix| e |osx|):"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:768
 msgid "osx"
 msgstr "osx"
 
@@ -1178,11 +1178,37 @@ msgstr ""
 "colonna :guilabel:`Feature id`. Per ottenere prestazioni ottimali, il valore"
 " :guilabel:`Feature id` dovrebbe essere una singola colonna ``INTEGER``."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:774
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:776
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:696
+msgid ""
+"When loading vector layers into QGIS, fields with |sourceFields| "
+":guilabel:`Field Domains` (such as those defined in a GeoPackage or ESRI "
+"File Geodatabase) are automatically detected. These domains are database-"
+"level constraints, meaning they are enforced by the database itself and "
+"apply across different applications, not just QGIS."
+msgstr ""
+"Quando si caricano i layer vettoriali in QGIS, i campi con |sourceFields| "
+":guilabel:`Domini di campo` (come quelli definiti in un GeoPackage o in un "
+"File Geodatabase ESRI) vengono rilevati automaticamente. Questi domini sono "
+"vincoli a livello di database, cioè sono applicati dal database stesso e si "
+"applicano a diverse applicazioni, non solo a QGIS."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:772
+msgid "sourceFields"
+msgstr "sourceFields"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:705
 msgid "Layers crossing 180° longitude"
 msgstr "Layer che attraversano 180° di longitudine"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:707
 msgid ""
 "Many GIS packages don't wrap layers with a geographic reference system "
 "(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
@@ -1199,17 +1225,17 @@ msgstr ""
 "della mappa (Isole Chatham) dovrebbe trovarsi all'interno della griglia, a "
 "destra delle isole principali della Nuova Zelanda."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:672
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr "Mappa in lat/lon che attraversa la linea di 180° di longitudine"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:690
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:738
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr ""
 "Attraversamento del 180° di longitudine applicando la funzione "
 "**ST_ShiftLongitude**."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:750
 msgid ""
 "If everything went well, you should receive a confirmation about the number "
 "of features that were updated. Then you'll be able to load the map and see "

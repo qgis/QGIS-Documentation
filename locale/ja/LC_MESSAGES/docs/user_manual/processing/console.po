@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:58+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -87,24 +87,6 @@ msgid ""
 "the following line:"
 msgstr "最初にやるべきことは、次のコードでプロセシングの機能をインポートすることです。"
 
-#: ../../docs/user_manual/processing/console.rst:44
-msgid ""
-"Now, there is basically just one (interesting) thing you can do with that "
-"from the console: execute an algorithm. That is done using the :meth:`run() "
-"<qgis.core.QgsProcessingAlgorithm.run>` method, which takes the name of the "
-"algorithm to execute as its first parameter, and then a variable number of "
-"additional parameters depending on the requirements of the algorithm. So the"
-" first thing you need to know is the name of the algorithm to execute. That "
-"is not the name you see in the toolbox, but rather a unique command–line "
-"name. To find the right name for your algorithm, you can use the "
-":class:`processingRegistry <qgis.core.QgsProcessingRegistry>`. Type the "
-"following line in your console:"
-msgstr ""
-"さて、基本的にコンソールからできる（興味深い）ことはただ一つ、アルゴリズムの実行です。これは :meth:`run() "
-"<qgis.core.QgsProcessingAlgorithm.run>` "
-"メソッドを使って実行します。このメソッドは最初のパラメータとして実行するアルゴリズムの名前を取り、アルゴリズムの要求に応じて追加のパラメータを可変個数取ります。つまり、最初に知る必要があるのは、実行するアルゴリズムの名前です。これはツールボックスに表示される名前ではなく、一意のコマンドライン名です。あなたのアルゴリズムに適した名前を見つけるには、:class:`processingRegistry"
-" <qgis.core.QgsProcessingRegistry>` を使います。コンソールに以下の行を入力してください："
-
 #: ../../docs/user_manual/processing/console.rst:61
 msgid ""
 "You will see something like this (with some extra dashes added to improve "
@@ -117,27 +99,7 @@ msgid ""
 "and algorithm name, along with their corresponding names."
 msgstr "これはすべての利用可能なアルゴリズムのIDと対応する名前のリストです。プロバイダ名とアルゴリズム名でソートされています。"
 
-#: ../../docs/user_manual/processing/console.rst:84
-msgid ""
-"Once you know the command-line name of the algorithm, the next thing to do "
-"is to determine the right syntax to execute it. That means knowing which "
-"parameters are needed when calling the ``run()`` method."
-msgstr ""
-"アルゴリズムのコマンドラインでの名前が分かったら、次にすべきことはアルゴリズムを実行するための正しいシンタックスを確認することです。これは "
-"``run()`` メソッドを呼ぶ際に必要なパラメータを確認するということです。"
-
-#: ../../docs/user_manual/processing/console.rst:88
-msgid ""
-"There is a method to describe an algorithm in detail, which can be used to "
-"get a list of the parameters that an algorithm requires and the outputs that"
-" it will generate. To get this information, you can use the "
-"``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of the algorithm, "
-"not the full descriptive name."
-msgstr ""
-"アルゴリズムを詳細に説明してくれるメソッドがあって、アルゴリズムが必要とするパラメータのリストと、生成される結果を記述してくれます。``algorithmHelp(id_of_the_algorithm)``"
-" メソッドを使うとこの情報を得ることができます。アルゴリズムの説明用の名前ではなく、IDを使ってください。"
-
-#: ../../docs/user_manual/processing/console.rst:94
+#: ../../docs/user_manual/processing/console.rst:95
 msgid ""
 "Calling the method with ``native:buffer`` as parameter (``qgis:buffer`` is "
 "an alias for ``native:buffer`` and will also work), you get the following "
@@ -146,41 +108,24 @@ msgstr ""
 "例えば ``native:buffer`` をパラメータとしてこのメソッドを呼び出すと（``qgis:buffer`` は "
 "``native:buffer`` のエイリアスなので同様に使えます）、以下のような説明が表示されます。"
 
-#: ../../docs/user_manual/processing/console.rst:222
-msgid ""
-"Now you have everything you need to run any algorithm. As we have already "
-"mentioned, algorithms can be run using: ``run()``. Its syntax is as follows:"
-msgstr ""
-"これでアルゴリズムの実行に必要なことはすべて分かりました。すでに触れたように、アルゴリズムは ``run()`` "
-"を使って実行することができます。シンタックスは次のとおりです:"
-
-#: ../../docs/user_manual/processing/console.rst:230
-msgid ""
-"Where parameters is a dictionary of parameters that depend on the algorithm "
-"you want to run, and is exactly the list that the ``algorithmHelp()`` method"
-" gives you."
-msgstr ""
-"パラメータの箇所には実行したいアルゴリズムに応じたパラメータの辞書がきます。``algorithmHelp()`` "
-"メソッドでリストアップされていたものをここで使います。"
-
-#: ../../docs/user_manual/processing/console.rst:247
+#: ../../docs/user_manual/processing/console.rst:248
 msgid ""
 "If a parameter is optional and you do not want to use it, then don't include"
 " it in the dictionary."
 msgstr "パラメータが任意のもので、それを使いたくない時は、そのパラメータを辞書に含めないでください。"
 
-#: ../../docs/user_manual/processing/console.rst:250
+#: ../../docs/user_manual/processing/console.rst:251
 msgid "If a parameter is not specified, the default value will be used."
 msgstr "パラメータが指定されなかった時はデフォルト値が使われます。"
 
-#: ../../docs/user_manual/processing/console.rst:252
+#: ../../docs/user_manual/processing/console.rst:253
 msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next list gives a quick review of how to introduce values for each type of "
 "input parameter:"
 msgstr "パラメータの種別により値を指定する方法は様々です。次に入力パラメータの種別ごとにその値を指定する方法を簡単に見ていきましょう。"
 
-#: ../../docs/user_manual/processing/console.rst:255
+#: ../../docs/user_manual/processing/console.rst:256
 msgid ""
 "Raster Layer, Vector Layer or Table. Simply use a string with the name that "
 "identifies the data object to use (the name it has in the QGIS Table of "
@@ -191,29 +136,13 @@ msgstr ""
 "ラスタレイヤ、ベクタレイヤ、テーブル。これらは単純に、使いたいデータオブジェクトの識別名（QGIS "
 "TOCが保持している名前）か、もしくはファイル名を文字列で指定してください。ファイル名を指定した場合、対応するレイヤがまだ読み込まれていない場合はファイルを開いて読み込みますが、マップキャンバスには追加されません。レイヤのQGISオブジェクトインスタンスをすでに取得している場合は、これをパラメータとして渡すこともできます。"
 
-#: ../../docs/user_manual/processing/console.rst:260
-msgid ""
-"Enumeration. If an algorithm has an enumeration parameter, the value of that"
-" parameter should be entered using an integer value. To know the available "
-"options, you can use the ``algorithmHelp()`` command, as above. For "
-"instance, the ``native:buffer`` algorithm has an enumeration called "
-"JOIN_STYLE:"
-msgstr ""
-"列挙。アルゴリズムに列挙パラメータがある場合、そのパラメータの値は整数値で入力する必要があります。利用可能なオプションを知るには、上記のように "
-"``algorithmHelp()`` コマンドを使用することができます。例えば、 ``native:buffer`` アルゴリズムには "
-"JOIN_STYLE という列挙があります："
-
-#: ../../docs/user_manual/processing/console.rst:281
+#: ../../docs/user_manual/processing/console.rst:282
 msgid ""
 "In this case, the parameter has three options. Notice that ordering is zero-"
 "based."
 msgstr "この例では、パラメータは3つの選択肢を持ちます。値は0始まりであることに注意してください。"
 
-#: ../../docs/user_manual/processing/console.rst:283
-msgid "Boolean.  Use ``True`` or ``False``."
-msgstr "真偽値。``True`` か ``False`` を使用してください。"
-
-#: ../../docs/user_manual/processing/console.rst:284
+#: ../../docs/user_manual/processing/console.rst:285
 msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons (``;``). As in the case of single layers or tables, each input "
@@ -222,13 +151,13 @@ msgstr ""
 "複数の入力。値は入力を記述したものをセミコロン (``;``) "
 "で区切った文字列です。各入力が単一レイヤやテーブルの場合はデータオブジェクト名やファイルパスが使えます。"
 
-#: ../../docs/user_manual/processing/console.rst:287
+#: ../../docs/user_manual/processing/console.rst:288
 msgid ""
 "Table Field from XXX. Use a string with the name of the field to use. This "
 "parameter is case-sensitive."
 msgstr "XXX のテーブル項目名。利用する項目名の文字列を使ってください。このパラメータは大文字小文字を区別します。"
 
-#: ../../docs/user_manual/processing/console.rst:289
+#: ../../docs/user_manual/processing/console.rst:290
 msgid ""
 "Fixed Table. Type the list of all table values separated by commas (``,``) "
 "and enclosed between quotes (``\"``). Values start on the upper row and go "
@@ -238,11 +167,11 @@ msgstr ""
 "固定テーブル。テーブルのすべての値のリストを、各値をカンマ (``,``) で区切った上で、全体を引用符 (``\"``) "
 "で囲んで入力します。値は最上位列から始まり、左から右に進みます。テーブルを表す2次元の配列も使えます。"
 
-#: ../../docs/user_manual/processing/console.rst:292
+#: ../../docs/user_manual/processing/console.rst:293
 msgid "CRS. Enter the EPSG code number of the desired CRS."
 msgstr "CRS。使いたいCRSのEPSGコード番号を入力します。"
 
-#: ../../docs/user_manual/processing/console.rst:293
+#: ../../docs/user_manual/processing/console.rst:294
 msgid ""
 "Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
 " values separated by commas (``,``)."
@@ -250,20 +179,20 @@ msgstr ""
 "範囲。``xmin``, ``xmax``, ``ymin`` および ``ymax`` の値を、カンマ ( ``,`` ) "
 "で区切って、文字列で指定しなければなりません。"
 
-#: ../../docs/user_manual/processing/console.rst:296
+#: ../../docs/user_manual/processing/console.rst:297
 msgid ""
 "Boolean, file, string and numerical parameters do not need any additional "
 "explanations."
 msgstr "真偽値、ファイル、文字列および数値パラメータには特に付け加える説明はありません。"
 
-#: ../../docs/user_manual/processing/console.rst:299
+#: ../../docs/user_manual/processing/console.rst:300
 msgid ""
 "Input parameters such as strings, booleans, or numerical values have default"
 " values. The default value is used if the corresponding parameter entry is "
 "missing."
 msgstr "文字列、真偽値、数値などの入力パラメータはデフォルト値を持ちます。デフォルト値は対応するパラメータの入力が欠けていた時に使われます。"
 
-#: ../../docs/user_manual/processing/console.rst:302
+#: ../../docs/user_manual/processing/console.rst:303
 msgid ""
 "For output data objects, type the file path to be used to save it, just as "
 "it is done from the toolbox. If the output object is not specified, the "
@@ -275,25 +204,11 @@ msgid ""
 msgstr ""
 "出力データオブジェクトには、ツールボックスから実行される時と同様に、それを保存するために使うファイルパスを入力してください。出力オブジェクトが指定されない時は、結果は一時ファイルに保存されます（もしくは出力が任意の時はスキップされます）。ファイルの拡張子はファイルフォーマットから決定されます。アルゴリズムでサポートされていないファイル拡張子を入力した場合は、その出力タイプのデフォルトファイルフォーマットが使われ、それに対応する拡張子が与えられたファイルパスに付加されます。"
 
-#: ../../docs/user_manual/processing/console.rst:348
-msgid ""
-"If you want to open an algorithm dialog from the console you can use the "
-"``createAlgorithmDialog`` method. The only mandatory parameter is the "
-"algorithm name, but you can also define the dictionary of parameters so that"
-" the dialog will be filled automatically:"
-msgstr ""
-"コンソールからアルゴリズムダイアログを開きたい場合は、 ``createAlgorithmDialog`` "
-"メソッドを使います。必須パラメータはアルゴリズム名だけですが、パラメータの辞書を定義することで、ダイアログを自動的に埋めることもできます："
-
-#: ../../docs/user_manual/processing/console.rst:367
-msgid "The ``execAlgorithmDialog`` method opens the dialog immediately:"
-msgstr "``execAlgorithmDialog`` メソッドはダイアログをすぐに開きます:"
-
-#: ../../docs/user_manual/processing/console.rst:384
+#: ../../docs/user_manual/processing/console.rst:387
 msgid "Creating scripts and running them from the toolbox"
 msgstr "スクリプトを作成してツールボックスから実行する"
 
-#: ../../docs/user_manual/processing/console.rst:386
+#: ../../docs/user_manual/processing/console.rst:389
 msgid ""
 "You can create your own algorithms by writing Python code. Processing "
 "scripts extend :class:`QgsProcessingAlgorithm "
@@ -318,13 +233,13 @@ msgstr ""
 ":file:`scripts` フォルダ（スクリプトを保存ダイアログを開いたときのデフォルトフォルダ）に :file:`.py` "
 "拡張子でアルゴリズムとして保存されます。"
 
-#: ../../docs/user_manual/processing/console.rst:401
+#: ../../docs/user_manual/processing/console.rst:404
 msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is defined "
 "within the code."
 msgstr "アルゴリズムの名前（ツールボックスに表示されるもの）はコードの中で定義されます。"
 
-#: ../../docs/user_manual/processing/console.rst:404
+#: ../../docs/user_manual/processing/console.rst:407
 msgid ""
 "Let's have a look at the following code, which defines a Processing "
 "algorithm that performs a buffer operation with a user defined buffer "
@@ -333,7 +248,7 @@ msgid ""
 msgstr ""
 "プロセシングアルゴリズムを定義する次のコード例を見てみましょう。このアルゴリズムは、最初のレイヤ平滑化の後に、ユーザによって指定されたベクタレイヤに対する、ユーザ定義のバッファ距離によるバッファ操作を行うアルゴリズムとして機能するものです。"
 
-#: ../../docs/user_manual/processing/console.rst:469
+#: ../../docs/user_manual/processing/console.rst:472
 msgid ""
 "After doing the necessary imports, the following "
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` functions"
@@ -342,14 +257,14 @@ msgstr ""
 "必要なインポートを行った後に、続いて :class:`QgsProcessingAlgorithm "
 "<qgis.core.QgsProcessingAlgorithm>` の諸関数が定義されます。"
 
-#: ../../docs/user_manual/processing/console.rst:473
+#: ../../docs/user_manual/processing/console.rst:476
 msgid ""
 ":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: The id of the "
 "algorithm (lowercase)."
 msgstr ""
 ":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: アルゴリズムのid（小文字）。"
 
-#: ../../docs/user_manual/processing/console.rst:475
+#: ../../docs/user_manual/processing/console.rst:478
 msgid ""
 ":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: A "
 "human readable name for the algorithm."
@@ -357,7 +272,7 @@ msgstr ""
 ":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: "
 "アルゴリズムの人が読む名前。"
 
-#: ../../docs/user_manual/processing/console.rst:477
+#: ../../docs/user_manual/processing/console.rst:480
 msgid ""
 ":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
 "Create a new instance of the algorithm class."
@@ -365,7 +280,7 @@ msgstr ""
 ":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
 "アルゴリズムクラスの新しいインスタンスを作る。"
 
-#: ../../docs/user_manual/processing/console.rst:479
+#: ../../docs/user_manual/processing/console.rst:482
 msgid ""
 ":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
 "Configure the parameterDefinitions and outputDefinitions."
@@ -373,7 +288,7 @@ msgstr ""
 ":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
 "parameterDefinitionsと outputDefinitionsを設定する。"
 
-#: ../../docs/user_manual/processing/console.rst:482
+#: ../../docs/user_manual/processing/console.rst:485
 msgid ""
 "Here you describe the parameters and output of the algorithm.  In this case,"
 " a feature source for the input, a feature sink for the result and a number "
@@ -382,7 +297,7 @@ msgstr ""
 "ここでアルゴリズムのパラメータと出力を記述します。この例では、入力のためには feature source を、出力結果のためには feature "
 "sink とバッファ距離用の数値を定義しています。"
 
-#: ../../docs/user_manual/processing/console.rst:485
+#: ../../docs/user_manual/processing/console.rst:488
 msgid ""
 ":meth:`processAlgorithm() "
 "<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Do the work."
@@ -390,7 +305,7 @@ msgstr ""
 ":meth:`processAlgorithm() "
 "<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: 処理を行う。"
 
-#: ../../docs/user_manual/processing/console.rst:488
+#: ../../docs/user_manual/processing/console.rst:491
 msgid ""
 "Here we first run the ``smoothgeometry`` algorithm to smooth the geometry, "
 "and then we run the ``buffer`` algorithm on the smoothed output. To be able "
@@ -404,14 +319,14 @@ msgstr ""
 ":const:`True` に設定する必要があります。入力パラメータと出力パラメータが ``smoothgeometry`` と ``buffer`` "
 "アルゴリズムのパラメータとしてどのように使用されているかを見ることができます。"
 
-#: ../../docs/user_manual/processing/console.rst:496
+#: ../../docs/user_manual/processing/console.rst:499
 msgid ""
 "There are a number of different parameter types available for input and "
 "output. You can find the full list at :ref:`processing_algs_input_output`."
 msgstr ""
 "入力と出力で利用可能なパラメータ型は数多くあります。完全なリストは :ref:`processing_algs_input_output` にあります。"
 
-#: ../../docs/user_manual/processing/console.rst:499
+#: ../../docs/user_manual/processing/console.rst:502
 msgid ""
 "The first parameter to the constructors is the name of the parameter, and "
 "the second is the description of the parameter (for the user interface). The"
@@ -419,28 +334,7 @@ msgid ""
 msgstr ""
 "コンストラクタの最初のパラメータはパラメータ名です。2番目はユーザインターフェイス用のパラメータの説明です。それ以外のパラメータは、パラメータの種別に依存します。"
 
-#: ../../docs/user_manual/processing/console.rst:504
-msgid ""
-"The input can be turned into QGIS classes using the ``parameterAs`` "
-"functions of :class:`QgsProcessingAlgorithm "
-"<qgis.core.QgsProcessingAlgorithm>`. For instance to get the number provided"
-" for the buffer distance as a double::"
-msgstr ""
-"入力は :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` クラスの "
-"``parameterAs`` 関数によってQGISクラスに変換されます。例えばバッファ距離のために数値を double "
-"で取得するには次のようにします。"
-
-#: ../../docs/user_manual/processing/console.rst:510
-msgid ""
-"The ``processAlgorithm`` function should return a dictionary containing "
-"values for every output defined by the algorithm. This allows access to "
-"these outputs from other algorithms, including other algorithms contained "
-"within the same model."
-msgstr ""
-"``processAlgorithm`` "
-"関数は、アルゴリズムで定義されたすべての出力値を含む辞書を返さなければなりません。これによって、同一モデル内の別のアルゴリズムを含む他のアルゴリズムから、これらの出力にアクセスすることが可能になります。"
-
-#: ../../docs/user_manual/processing/console.rst:515
+#: ../../docs/user_manual/processing/console.rst:518
 msgid ""
 "Well behaved algorithms should define and return as many outputs as makes "
 "sense. Non-feature outputs, such as numbers and strings, are very useful "
@@ -453,11 +347,11 @@ msgid ""
 msgstr ""
 "行儀のよいアルゴリズムは、意味のある限りより多くの出力を定義し返さなければなりません。取り立てて特色のない数値や文字列などの出力は、アルゴリズムをより大きなモデルの一部として実行する時に役立ちます。これらの値は、モデル中で続くアルゴリズムの入力パラメータとして使うことができるからです。処理された地物の数や、処理中に見つかった不正な地物の数、出力される地物の数のような数値を、出力に加えることを検討してください。より多くの出力を返せば返すほど、そのアルゴリズムはより役立つものになります。"
 
-#: ../../docs/user_manual/processing/console.rst:525
+#: ../../docs/user_manual/processing/console.rst:528
 msgid "Feedback"
 msgstr "フィードバック"
 
-#: ../../docs/user_manual/processing/console.rst:527
+#: ../../docs/user_manual/processing/console.rst:530
 msgid ""
 "The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to "
 ":meth:`processAlgorithm() "
@@ -476,7 +370,7 @@ msgstr ""
 "<qgis.core.QgsFeedback.setProgress>` "
 "関数を使うことで、プログレスバー(0から100)を更新してアルゴリズムの進捗をユーザに知らせることができます。これはアルゴリズムが完了するまでに時間がかかる場合にとても便利です。"
 
-#: ../../docs/user_manual/processing/console.rst:543
+#: ../../docs/user_manual/processing/console.rst:546
 msgid ""
 "Algorithms should avoid using other forms of providing feedback to users, "
 "such as print statements or logging to :class:`QgsMessageLog "
@@ -489,11 +383,11 @@ msgstr ""
 "<qgis.core.QgsMessageLog>` "
 "へのロギングのような、他の形式の使用を避け、常にフィードバックオブジェクトを使うべきです。これはアルゴリズムに対する冗長なロギングを可能にし、スレッドセーフでもあります(これはアルゴリズムが通常バックグラウンドスレッドで実行されることを考えると重要です)。"
 
-#: ../../docs/user_manual/processing/console.rst:552
+#: ../../docs/user_manual/processing/console.rst:555
 msgid "Handling errors"
 msgstr "エラーハンドリング"
 
-#: ../../docs/user_manual/processing/console.rst:554
+#: ../../docs/user_manual/processing/console.rst:557
 msgid ""
 "If your algorithm encounters an error which prevents it from executing, such"
 " as invalid input values or some other condition from which it cannot or "
@@ -504,7 +398,7 @@ msgstr ""
 ":class:`QgsProcessingException <qgis.core.QgsProcessingException>` "
 "を発生させるべきです。例．::"
 
-#: ../../docs/user_manual/processing/console.rst:563
+#: ../../docs/user_manual/processing/console.rst:566
 msgid ""
 "Try to avoid raising :class:`QgsProcessingException "
 "<qgis.core.QgsProcessingException>` for non-fatal errors (e.g. when a "
@@ -518,17 +412,17 @@ msgstr ""
 "``feedback.reportError()`` "
 "によってこれらのエラーを報告し、その地物をスキップするようにして下さい。これにより、致命的でないエラーに遭遇した際にアルゴリズム全体の実行を停止する必要がなくなるため、アルゴリズムを「モデルフレンドリ」にすることができます。"
 
-#: ../../docs/user_manual/processing/console.rst:573
+#: ../../docs/user_manual/processing/console.rst:576
 msgid "Documenting your scripts"
 msgstr "スクリプトのドキュメントを作成する"
 
-#: ../../docs/user_manual/processing/console.rst:575
+#: ../../docs/user_manual/processing/console.rst:578
 msgid ""
 "As in the case of models, you can create additional documentation for your "
 "scripts, to explain what they do and how to use them."
 msgstr "モデルの場合と同様に、スクリプトの追加ドキュメントを作成して、スクリプトの動作や使用方法を説明することができます。 "
 
-#: ../../docs/user_manual/processing/console.rst:578
+#: ../../docs/user_manual/processing/console.rst:581
 msgid ""
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` provides "
 "the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`, "
@@ -543,7 +437,7 @@ msgstr ""
 "<qgis.core.QgsProcessingAlgorithm.helpUrl>` "
 "関数を使います。ユーザにより多くのヘルプを提供するために、これらを指定/オーバーライドして下さい。"
 
-#: ../../docs/user_manual/processing/console.rst:584
+#: ../../docs/user_manual/processing/console.rst:587
 msgid ""
 ":meth:`shortDescription() "
 "<qgis.core.QgsProcessingAlgorithm.shortDescription>` is used in the tooltip "
@@ -553,11 +447,11 @@ msgstr ""
 "<qgis.core.QgsProcessingAlgorithm.shortDescription>` "
 "は、ツールボックスでアルゴリズムにカーソルを合わせた時のツールチップで使用されます。"
 
-#: ../../docs/user_manual/processing/console.rst:588
+#: ../../docs/user_manual/processing/console.rst:591
 msgid "Pre- and post-execution script hooks"
 msgstr "実行前後のスクリプトのフック"
 
-#: ../../docs/user_manual/processing/console.rst:590
+#: ../../docs/user_manual/processing/console.rst:593
 msgid ""
 "Scripts can also be used as pre- and post-execution hooks that are run "
 "before and after an algorithm is run, respectively. This can be used to "
@@ -566,7 +460,7 @@ msgstr ""
 "スクリプトは、アルゴリズムが実行される前と後にそれぞれ実行される実行前フックと実行後フックとしても使用できます。これは、アルゴリズムが実行されるたびに実行されるべきタスクを自動化するために使用できます。"
 " "
 
-#: ../../docs/user_manual/processing/console.rst:594
+#: ../../docs/user_manual/processing/console.rst:597
 msgid ""
 "The syntax is identical to the syntax explained above, but an additional "
 "global variable named ``alg`` is available, representing the algorithm that "
@@ -575,7 +469,7 @@ msgstr ""
 "文法は上述のものと同様ですが、 ``alg`` "
 "という名前のグローバル変数を追加で使用でき、これはたった今(あるいはまさにこれから)実行されるアルゴリズムを表します。"
 
-#: ../../docs/user_manual/processing/console.rst:598
+#: ../../docs/user_manual/processing/console.rst:601
 msgid ""
 "In the :guilabel:`General` group of the processing options dialog, you will "
 "find two entries named :guilabel:`Pre-execution script` and :guilabel:`Post-"

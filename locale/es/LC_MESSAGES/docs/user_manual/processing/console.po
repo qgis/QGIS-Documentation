@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:58+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
@@ -105,31 +105,6 @@ msgstr ""
 "Lo primero que tiene que hacer es importar las funciones de procesamiento "
 "con la siguiente línea:"
 
-#: ../../docs/user_manual/processing/console.rst:44
-msgid ""
-"Now, there is basically just one (interesting) thing you can do with that "
-"from the console: execute an algorithm. That is done using the :meth:`run() "
-"<qgis.core.QgsProcessingAlgorithm.run>` method, which takes the name of the "
-"algorithm to execute as its first parameter, and then a variable number of "
-"additional parameters depending on the requirements of the algorithm. So the"
-" first thing you need to know is the name of the algorithm to execute. That "
-"is not the name you see in the toolbox, but rather a unique command–line "
-"name. To find the right name for your algorithm, you can use the "
-":class:`processingRegistry <qgis.core.QgsProcessingRegistry>`. Type the "
-"following line in your console:"
-msgstr ""
-"Ahora, básicamente hay una cosa (interesante) que puedes hacer con eso desde"
-" la consola: ejecutar un algoritmo. Eso se hace usando el método "
-":meth:`run()<qgis.core.QgsProcessingAlgorithm.run>`, que toma el nombre del "
-"algoritmo a ejecutar como su primer parámetro, y luego un número variable de"
-" parámetros adicionales dependiendo de los requisitos del algoritmo. "
-"Entonces, lo primero que necesita saber es el nombre del algoritmo a "
-"ejecutar. Ese no es el nombre que ve en la caja de herramientas, sino un "
-"nombre de línea de comandos único. Para encontrar el nombre correcto para su"
-" algoritmo, puede usar :class:`processingRegistry "
-"<qgis.core.QgsProcessingRegistry>`. Escriba la siguiente línea en su "
-"consola:"
-
 #: ../../docs/user_manual/processing/console.rst:61
 msgid ""
 "You will see something like this (with some extra dashes added to improve "
@@ -147,32 +122,7 @@ msgstr ""
 "nombre de proveedor y nombre de algoritmo, junto con sus nombres "
 "correspondientes."
 
-#: ../../docs/user_manual/processing/console.rst:84
-msgid ""
-"Once you know the command-line name of the algorithm, the next thing to do "
-"is to determine the right syntax to execute it. That means knowing which "
-"parameters are needed when calling the ``run()`` method."
-msgstr ""
-"Una vez que conozca el nombre de la línea de comandos del algoritmo, lo "
-"siguiente que debe hacer es determinar la sintaxis correcta para ejecutarlo."
-" Eso significa saber qué parámetros se necesitan al llamar al método "
-"``run()``."
-
-#: ../../docs/user_manual/processing/console.rst:88
-msgid ""
-"There is a method to describe an algorithm in detail, which can be used to "
-"get a list of the parameters that an algorithm requires and the outputs that"
-" it will generate. To get this information, you can use the "
-"``algorithmHelp(id_of_the_algorithm)`` method. Use the ID of the algorithm, "
-"not the full descriptive name."
-msgstr ""
-"Existe un método para describir un algoritmo en detalle, que se puede "
-"utilizar para obtener una lista de los parámetros que requiere un algoritmo "
-"y las salidas que generará. Para obtener esta información, puede utilizar el"
-" método ``algorithmHelp(id_of_the_algorithm)``. Utilice el ID del algoritmo,"
-" no el nombre descriptivo completo."
-
-#: ../../docs/user_manual/processing/console.rst:94
+#: ../../docs/user_manual/processing/console.rst:95
 msgid ""
 "Calling the method with ``native:buffer`` as parameter (``qgis:buffer`` is "
 "an alias for ``native:buffer`` and will also work), you get the following "
@@ -182,26 +132,7 @@ msgstr ""
 "un alias para ``native:buffer`` y también funcionará), obtienes la siguiente"
 " descripción:"
 
-#: ../../docs/user_manual/processing/console.rst:222
-msgid ""
-"Now you have everything you need to run any algorithm. As we have already "
-"mentioned, algorithms can be run using: ``run()``. Its syntax is as follows:"
-msgstr ""
-"Ahora tienes todo lo que necesitas para ejecutar cualquier algoritmo. Como "
-"ya hemos mencionado, los algoritmos se pueden ejecutar usando: ``run()``. Su"
-" sintaxis es la siguiente:"
-
-#: ../../docs/user_manual/processing/console.rst:230
-msgid ""
-"Where parameters is a dictionary of parameters that depend on the algorithm "
-"you want to run, and is exactly the list that the ``algorithmHelp()`` method"
-" gives you."
-msgstr ""
-"Donde parámetros es un diccionario de parámetros que dependen del algoritmo "
-"que desea ejecutar, y es exactamente la lista que le proporciona el método "
-"``algorithmHelp()``."
-
-#: ../../docs/user_manual/processing/console.rst:247
+#: ../../docs/user_manual/processing/console.rst:248
 msgid ""
 "If a parameter is optional and you do not want to use it, then don't include"
 " it in the dictionary."
@@ -209,12 +140,12 @@ msgstr ""
 "Si un parámetro es opcional y no desea utilizarlo, no lo incluya en el "
 "diccionario."
 
-#: ../../docs/user_manual/processing/console.rst:250
+#: ../../docs/user_manual/processing/console.rst:251
 msgid "If a parameter is not specified, the default value will be used."
 msgstr ""
 "Si no se especifica un parámetro, se utilizará el valor predeterminado."
 
-#: ../../docs/user_manual/processing/console.rst:252
+#: ../../docs/user_manual/processing/console.rst:253
 msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next list gives a quick review of how to introduce values for each type of "
@@ -224,7 +155,7 @@ msgstr ""
 "diferente. La siguiente lista da una rápida revisión de cómo introducir los "
 "valores para cada tipo de parámetro de entrada."
 
-#: ../../docs/user_manual/processing/console.rst:255
+#: ../../docs/user_manual/processing/console.rst:256
 msgid ""
 "Raster Layer, Vector Layer or Table. Simply use a string with the name that "
 "identifies the data object to use (the name it has in the QGIS Table of "
@@ -239,21 +170,7 @@ msgstr ""
 " mapa) . Si tiene una instancia de un objeto QGIS que representa la capa, "
 "también puede pasarla como parámetro."
 
-#: ../../docs/user_manual/processing/console.rst:260
-msgid ""
-"Enumeration. If an algorithm has an enumeration parameter, the value of that"
-" parameter should be entered using an integer value. To know the available "
-"options, you can use the ``algorithmHelp()`` command, as above. For "
-"instance, the ``native:buffer`` algorithm has an enumeration called "
-"JOIN_STYLE:"
-msgstr ""
-"Enumeración. Si un algoritmo tiene un parámetro de enumeración, el valor de "
-"ese parámetro debe ingresarse usando un valor entero. Para conocer las "
-"opciones disponibles, puede usar el comando ``algorithmHelp()``, como "
-"arriba. Por ejemplo, el algoritmo ``native:buffer`` tiene una enumeración "
-"llamada JOIN_STYLE:"
-
-#: ../../docs/user_manual/processing/console.rst:281
+#: ../../docs/user_manual/processing/console.rst:282
 msgid ""
 "In this case, the parameter has three options. Notice that ordering is zero-"
 "based."
@@ -261,11 +178,7 @@ msgstr ""
 "En este caso, el parámetro tiene tres opciones. Tenga en cuenta que el orden"
 " parte de cero."
 
-#: ../../docs/user_manual/processing/console.rst:283
-msgid "Boolean.  Use ``True`` or ``False``."
-msgstr "Boolean.  Use ``True`` o ``False``."
-
-#: ../../docs/user_manual/processing/console.rst:284
+#: ../../docs/user_manual/processing/console.rst:285
 msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons (``;``). As in the case of single layers or tables, each input "
@@ -276,7 +189,7 @@ msgstr ""
 "tablas, cada descriptor de entrada se puede el nombre del objeto de datos, o"
 " su ruta de archivo."
 
-#: ../../docs/user_manual/processing/console.rst:287
+#: ../../docs/user_manual/processing/console.rst:288
 msgid ""
 "Table Field from XXX. Use a string with the name of the field to use. This "
 "parameter is case-sensitive."
@@ -284,7 +197,7 @@ msgstr ""
 "El campo de la tabla de XXX. Utilice una cadena con el nombre del campo a "
 "usar. Este parámetro es sensible a mayúsculas y minúsculas."
 
-#: ../../docs/user_manual/processing/console.rst:289
+#: ../../docs/user_manual/processing/console.rst:290
 msgid ""
 "Fixed Table. Type the list of all table values separated by commas (``,``) "
 "and enclosed between quotes (``\"``). Values start on the upper row and go "
@@ -296,11 +209,11 @@ msgstr ""
 "la fila superior y van de izquierda a derecha. También se puede utilizar un "
 "arreglo 2-D de valores que representen la tabla."
 
-#: ../../docs/user_manual/processing/console.rst:292
+#: ../../docs/user_manual/processing/console.rst:293
 msgid "CRS. Enter the EPSG code number of the desired CRS."
 msgstr "SRC. Introduzca el número del código EPSG  del SRC deseado."
 
-#: ../../docs/user_manual/processing/console.rst:293
+#: ../../docs/user_manual/processing/console.rst:294
 msgid ""
 "Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
 " values separated by commas (``,``)."
@@ -308,7 +221,7 @@ msgstr ""
 "Extensión. Se debe utilizar una cadena con valores de ``xmin``, ``xmax``, "
 "``ymin`` y ``ymax` separados por comas (``,``)."
 
-#: ../../docs/user_manual/processing/console.rst:296
+#: ../../docs/user_manual/processing/console.rst:297
 msgid ""
 "Boolean, file, string and numerical parameters do not need any additional "
 "explanations."
@@ -316,7 +229,7 @@ msgstr ""
 "Los parámetros boolean, archivo, cadena y numéricos no necesitan alguna "
 "explicación adicional."
 
-#: ../../docs/user_manual/processing/console.rst:299
+#: ../../docs/user_manual/processing/console.rst:300
 msgid ""
 "Input parameters such as strings, booleans, or numerical values have default"
 " values. The default value is used if the corresponding parameter entry is "
@@ -326,7 +239,7 @@ msgstr ""
 " valores predeterminados. El valor predeterminado se utiliza si falta la "
 "entrada de parámetro correspondiente."
 
-#: ../../docs/user_manual/processing/console.rst:302
+#: ../../docs/user_manual/processing/console.rst:303
 msgid ""
 "For output data objects, type the file path to be used to save it, just as "
 "it is done from the toolbox. If the output object is not specified, the "
@@ -345,58 +258,17 @@ msgstr ""
 " para ese tipo de salida y su extensión correspondiente se agregará a la "
 "ruta de archivo dada."
 
-#: ../../docs/user_manual/processing/console.rst:310
-msgid ""
-"Unlike when an algorithm is executed from the toolbox, outputs are not added"
-" to the map canvas if you execute that same algorithm from the Python "
-"console using the :meth:`run() <qgis.core.QgsProcessingAlgorithm.run>` "
-"method. That method returns a dictionary with one or more output names (the "
-"ones shown in the algorithm description) as keys and the file paths of those"
-" outputs as values:"
-msgstr ""
-"A diferencia de cuando se ejecuta un algoritmo desde la caja de "
-"herramientas, las salidas no se añaden al lienzo del mapa si ejecutas ese "
-"mismo algoritmo desde la consola de Python usando el método :meth:`run() "
-"<qgis.core.QgsProcessingAlgorithm.run>`. Ese método devuelve un diccionario "
-"con uno o más nombres de salida (los que se muestran en la descripción del "
-"algoritmo) como claves y las rutas de los archivos de esas salidas como "
-"valores:"
-
-#: ../../docs/user_manual/processing/console.rst:331
+#: ../../docs/user_manual/processing/console.rst:332
 msgid "You can then load the output in the project as any common layer:"
 msgstr ""
 "A continuación, puede cargar la salida en el proyecto como cualquier capa "
 "común:"
 
-#: ../../docs/user_manual/processing/console.rst:339
-msgid ""
-"To immediately load the processing outputs in the project, you can use the "
-"``runAndLoadResults()`` method instead of ``run()``."
-msgstr ""
-"Para cargar inmediatamente los resultados del procesamiento en el proyecto, "
-"puede utilizar el método ``runAndLoadResults()`` en lugar de ``run()``."
-
-#: ../../docs/user_manual/processing/console.rst:348
-msgid ""
-"If you want to open an algorithm dialog from the console you can use the "
-"``createAlgorithmDialog`` method. The only mandatory parameter is the "
-"algorithm name, but you can also define the dictionary of parameters so that"
-" the dialog will be filled automatically:"
-msgstr ""
-"Si desea abrir un diálogo de algoritmo desde la consola, puede usar el "
-"método ``createAlgorithmDialog``. El único parámetro obligatorio es el "
-"nombre del algoritmo, pero también puedes definir el diccionario de "
-"parámetros para que el diálogo se llene automáticamente:"
-
-#: ../../docs/user_manual/processing/console.rst:367
-msgid "The ``execAlgorithmDialog`` method opens the dialog immediately:"
-msgstr "El método ``execAlgorithmDialog`` abre el diálogo inmediatamente:"
-
-#: ../../docs/user_manual/processing/console.rst:384
+#: ../../docs/user_manual/processing/console.rst:387
 msgid "Creating scripts and running them from the toolbox"
 msgstr "Crear scripts y ejecurarlos desde le Caja de Herramientas"
 
-#: ../../docs/user_manual/processing/console.rst:386
+#: ../../docs/user_manual/processing/console.rst:389
 msgid ""
 "You can create your own algorithms by writing Python code. Processing "
 "scripts extend :class:`QgsProcessingAlgorithm "
@@ -426,7 +298,7 @@ msgstr ""
 "para guardar el archivo) con una extensión :file:`.py` debería crear el "
 "algoritmo correspondiente."
 
-#: ../../docs/user_manual/processing/console.rst:401
+#: ../../docs/user_manual/processing/console.rst:404
 msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is defined "
 "within the code."
@@ -434,7 +306,7 @@ msgstr ""
 "El nombre del algoritmo (el que verá en la caja de herramientas) se define "
 "dentro del código."
 
-#: ../../docs/user_manual/processing/console.rst:404
+#: ../../docs/user_manual/processing/console.rst:407
 msgid ""
 "Let's have a look at the following code, which defines a Processing "
 "algorithm that performs a buffer operation with a user defined buffer "
@@ -446,7 +318,7 @@ msgstr ""
 "definida por el usuario en una capa vectorial especificada por el usuario, "
 "después de suavizar primero la capa."
 
-#: ../../docs/user_manual/processing/console.rst:469
+#: ../../docs/user_manual/processing/console.rst:472
 msgid ""
 "After doing the necessary imports, the following "
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` functions"
@@ -456,7 +328,7 @@ msgstr ""
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` son "
 "especificadas:"
 
-#: ../../docs/user_manual/processing/console.rst:473
+#: ../../docs/user_manual/processing/console.rst:476
 msgid ""
 ":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: The id of the "
 "algorithm (lowercase)."
@@ -464,7 +336,7 @@ msgstr ""
 ":meth:`name() <qgis.core.QgsProcessingAlgorithm.name>`: La id del algoritmo "
 "(minúsculas)."
 
-#: ../../docs/user_manual/processing/console.rst:475
+#: ../../docs/user_manual/processing/console.rst:478
 msgid ""
 ":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: A "
 "human readable name for the algorithm."
@@ -472,7 +344,7 @@ msgstr ""
 ":meth:`displayName() <qgis.core.QgsProcessingAlgorithm.displayName>`: Un "
 "nombre de algoritmo legible por humanos"
 
-#: ../../docs/user_manual/processing/console.rst:477
+#: ../../docs/user_manual/processing/console.rst:480
 msgid ""
 ":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
 "Create a new instance of the algorithm class."
@@ -480,7 +352,7 @@ msgstr ""
 ":meth:`createInstance() <qgis.core.QgsProcessingAlgorithm.createInstance>`: "
 "Crear una nueva instancia de la clase del algoritmo."
 
-#: ../../docs/user_manual/processing/console.rst:479
+#: ../../docs/user_manual/processing/console.rst:482
 msgid ""
 ":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
 "Configure the parameterDefinitions and outputDefinitions."
@@ -488,7 +360,7 @@ msgstr ""
 ":meth:`initAlgorithm() <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`: "
 "Comfigurar las definiciones de Parámetro y Definiciones de Salida."
 
-#: ../../docs/user_manual/processing/console.rst:482
+#: ../../docs/user_manual/processing/console.rst:485
 msgid ""
 "Here you describe the parameters and output of the algorithm.  In this case,"
 " a feature source for the input, a feature sink for the result and a number "
@@ -498,7 +370,7 @@ msgstr ""
 "fuente de objetos para la entrada, una salida de objetos para el resultado y"
 " un número para la distancia del búfer."
 
-#: ../../docs/user_manual/processing/console.rst:485
+#: ../../docs/user_manual/processing/console.rst:488
 msgid ""
 ":meth:`processAlgorithm() "
 "<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Do the work."
@@ -506,7 +378,7 @@ msgstr ""
 ":meth:`processAlgorithm() "
 "<qgis.core.QgsProcessingAlgorithm.processAlgorithm>`: Hacer el trabajo."
 
-#: ../../docs/user_manual/processing/console.rst:488
+#: ../../docs/user_manual/processing/console.rst:491
 msgid ""
 "Here we first run the ``smoothgeometry`` algorithm to smooth the geometry, "
 "and then we run the ``buffer`` algorithm on the smoothed output. To be able "
@@ -522,7 +394,7 @@ msgstr ""
 "cómo los parámetros de entrada y salida se utilizan como parámetros para los"
 " algoritmos ``smoothgeometry`` y ``buffer``."
 
-#: ../../docs/user_manual/processing/console.rst:496
+#: ../../docs/user_manual/processing/console.rst:499
 msgid ""
 "There are a number of different parameter types available for input and "
 "output. You can find the full list at :ref:`processing_algs_input_output`."
@@ -530,7 +402,7 @@ msgstr ""
 "Existen varios tipos de parámetros de entrada y salida. Puede consultar la "
 "lista completa en :ref:`processing_algs_input_output`."
 
-#: ../../docs/user_manual/processing/console.rst:499
+#: ../../docs/user_manual/processing/console.rst:502
 msgid ""
 "The first parameter to the constructors is the name of the parameter, and "
 "the second is the description of the parameter (for the user interface). The"
@@ -541,31 +413,7 @@ msgstr ""
 "resto de los parámetros del constructor son específicos del tipo de "
 "parámetro."
 
-#: ../../docs/user_manual/processing/console.rst:504
-msgid ""
-"The input can be turned into QGIS classes using the ``parameterAs`` "
-"functions of :class:`QgsProcessingAlgorithm "
-"<qgis.core.QgsProcessingAlgorithm>`. For instance to get the number provided"
-" for the buffer distance as a double::"
-msgstr ""
-"La entrada se puede convertir en clases QGIS usando las funciones "
-"``parameterAs`` de :class:`QgsProcessingAlgorithm "
-"<qgis.core.QgsProcessingAlgorithm>`. Por ejemplo, para obtener el número "
-"proporcionado para la distancia del búfer como un doble:"
-
-#: ../../docs/user_manual/processing/console.rst:510
-msgid ""
-"The ``processAlgorithm`` function should return a dictionary containing "
-"values for every output defined by the algorithm. This allows access to "
-"these outputs from other algorithms, including other algorithms contained "
-"within the same model."
-msgstr ""
-"La función ``processAlgorithm`` debe devolver un diccionario que contenga "
-"valores para cada salida definida por el algoritmo. Esto permite el acceso a"
-" estas salidas de otros algoritmos, incluidos otros algoritmos contenidos "
-"dentro del mismo modelo."
-
-#: ../../docs/user_manual/processing/console.rst:515
+#: ../../docs/user_manual/processing/console.rst:518
 msgid ""
 "Well behaved algorithms should define and return as many outputs as makes "
 "sense. Non-feature outputs, such as numbers and strings, are very useful "
@@ -585,11 +433,11 @@ msgstr ""
 "objetos no válidos encontrados, la cantidad de objetos de salida, etc. "
 "¡Cuantas más salidas devuelva, más útil se volverá su algoritmo!"
 
-#: ../../docs/user_manual/processing/console.rst:525
+#: ../../docs/user_manual/processing/console.rst:528
 msgid "Feedback"
 msgstr "Revisión"
 
-#: ../../docs/user_manual/processing/console.rst:527
+#: ../../docs/user_manual/processing/console.rst:530
 msgid ""
 "The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to "
 ":meth:`processAlgorithm() "
@@ -609,7 +457,7 @@ msgstr ""
 " de progreso (0 a 100) para informar el usuario sobre el progreso del "
 "algoritmo. Esto es muy útil si su algoritmo tarda mucho en completarse."
 
-#: ../../docs/user_manual/processing/console.rst:543
+#: ../../docs/user_manual/processing/console.rst:546
 msgid ""
 "Algorithms should avoid using other forms of providing feedback to users, "
 "such as print statements or logging to :class:`QgsMessageLog "
@@ -626,11 +474,11 @@ msgstr ""
 " importante, dado que los algoritmos generalmente se ejecutan en un "
 "subproceso en segundo plano)."
 
-#: ../../docs/user_manual/processing/console.rst:552
+#: ../../docs/user_manual/processing/console.rst:555
 msgid "Handling errors"
 msgstr "Manejo de errores"
 
-#: ../../docs/user_manual/processing/console.rst:554
+#: ../../docs/user_manual/processing/console.rst:557
 msgid ""
 "If your algorithm encounters an error which prevents it from executing, such"
 " as invalid input values or some other condition from which it cannot or "
@@ -642,7 +490,7 @@ msgstr ""
 "recuperarse, entonces debe generar un :class:`QgsProcessingException "
 "<qgis.core.QgsProcessingException>`. P.Ejemplo ::"
 
-#: ../../docs/user_manual/processing/console.rst:563
+#: ../../docs/user_manual/processing/console.rst:566
 msgid ""
 "Try to avoid raising :class:`QgsProcessingException "
 "<qgis.core.QgsProcessingException>` for non-fatal errors (e.g. when a "
@@ -659,11 +507,11 @@ msgstr ""
 " detener la ejecución de un algoritmo completo cuando se encuentra un error "
 "no fatal."
 
-#: ../../docs/user_manual/processing/console.rst:573
+#: ../../docs/user_manual/processing/console.rst:576
 msgid "Documenting your scripts"
 msgstr "Documentación de las secuencias de comandos"
 
-#: ../../docs/user_manual/processing/console.rst:575
+#: ../../docs/user_manual/processing/console.rst:578
 msgid ""
 "As in the case of models, you can create additional documentation for your "
 "scripts, to explain what they do and how to use them."
@@ -671,7 +519,7 @@ msgstr ""
 "Como en el caso de los modelos, puede crear documentación adicional para sus"
 " scripts, para explicar qué hacen y cómo usarlos."
 
-#: ../../docs/user_manual/processing/console.rst:578
+#: ../../docs/user_manual/processing/console.rst:581
 msgid ""
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` provides "
 "the :meth:`helpString() <qgis.core.QgsProcessingAlgorithm.helpString>`, "
@@ -686,7 +534,7 @@ msgstr ""
 "<qgis.core.QgsProcessingAlgorithm.helpUrl>` para ese propósito. Especificar "
 "/ suplantar estos para proporcionar mas ayuda al usuario."
 
-#: ../../docs/user_manual/processing/console.rst:584
+#: ../../docs/user_manual/processing/console.rst:587
 msgid ""
 ":meth:`shortDescription() "
 "<qgis.core.QgsProcessingAlgorithm.shortDescription>` is used in the tooltip "
@@ -697,11 +545,11 @@ msgstr ""
 "información sobre herramientas al pasar el cursor sobre el algoritmo en la "
 "caja de herramientas."
 
-#: ../../docs/user_manual/processing/console.rst:588
+#: ../../docs/user_manual/processing/console.rst:591
 msgid "Pre- and post-execution script hooks"
 msgstr "Pre y post-ejecución de la secuencia de comandos hooks"
 
-#: ../../docs/user_manual/processing/console.rst:590
+#: ../../docs/user_manual/processing/console.rst:593
 msgid ""
 "Scripts can also be used as pre- and post-execution hooks that are run "
 "before and after an algorithm is run, respectively. This can be used to "
@@ -712,7 +560,7 @@ msgstr ""
 "algoritmo, respectivamente. Esto se puede utilizar para automatizar tareas "
 "que deben realizarse cada vez que se ejecuta un algoritmo."
 
-#: ../../docs/user_manual/processing/console.rst:594
+#: ../../docs/user_manual/processing/console.rst:597
 msgid ""
 "The syntax is identical to the syntax explained above, but an additional "
 "global variable named ``alg`` is available, representing the algorithm that "
@@ -722,7 +570,7 @@ msgstr ""
 "variable global adicional llamada  ``alg`` está disponible, lo que "
 "representa el algoritmo que acaba de ser (o está a punto de ser) ejecutado."
 
-#: ../../docs/user_manual/processing/console.rst:598
+#: ../../docs/user_manual/processing/console.rst:601
 msgid ""
 "In the :guilabel:`General` group of the processing options dialog, you will "
 "find two entries named :guilabel:`Pre-execution script` and :guilabel:`Post-"

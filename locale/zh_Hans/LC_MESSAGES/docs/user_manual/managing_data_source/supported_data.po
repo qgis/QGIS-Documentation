@@ -5,18 +5,19 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Harrissou Sant-anna, 2026
 # 徐保才 <1302638819@qq.com>, 2026
 # Transifex Bot <>, 2026
+# bc G, 2026
+# Harrissou Sant-anna, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -234,7 +235,7 @@ msgstr ""
 "按钮，手动定义正确的投影。这是因为 :file:`.prj` 文件通常不提供在QGIS中使用的完整投影参数，并在 :guilabel:`CRS` "
 "对话框中列出。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:722
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:770
 msgid "setProjection"
 msgstr "setProjection"
 
@@ -650,7 +651,7 @@ msgstr ""
 "QGIS允许过滤服务器端已有的要素，为此请勾选 :menuselection:`设置 --> 选项 --> 数据源 -->` |checkbox| "
 ":menuselection:`如果允许，在服务器端执行表达式` 。仅支持的表达式才会发送到数据库，使用不受支持的运算符或函数的表达式将回退到本地执行。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:762
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -684,7 +685,7 @@ msgstr ""
 "QGIS自带了一个名为 |dbManager| :sup:`数据库管理器` 的核心插件。可用于加载数据，以及对架构的支持。请参阅 "
 ":ref:`dbmanager` 章节了解更多信息。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:764
 msgid "dbManager"
 msgstr "dbManager"
 
@@ -716,7 +717,7 @@ msgstr ""
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
 msgstr "nix"
 
@@ -729,7 +730,7 @@ msgstr ""
 "如果您更喜欢使用PostgreSQL的 **COPY** 命令而不是默认的 **INSERT INTO** 方法，则可以导出以下环境变量 (至少在 "
 "|nix| 和 |osx| 中可用)::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:768
 msgid "osx"
 msgstr "osx"
 
@@ -934,11 +935,35 @@ msgstr ""
 "HANA 空间图层` 给定列，然后选择 :guilabel:`要素ID` 列中的列。为了获得最佳性能， :guilabel:`要素ID` 值应该是单 "
 "``整数`` 列。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:774
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:776
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:696
+msgid ""
+"When loading vector layers into QGIS, fields with |sourceFields| "
+":guilabel:`Field Domains` (such as those defined in a GeoPackage or ESRI "
+"File Geodatabase) are automatically detected. These domains are database-"
+"level constraints, meaning they are enforced by the database itself and "
+"apply across different applications, not just QGIS."
+msgstr ""
+"当矢量层加载到QGIS中时，将自动检测具有 |sourceFields| :guilabel:`Field Domains` "
+"的字段（例如在geoppackage或ESRI File "
+"Geodatabase中定义的字段）。这些域是数据库级别的约束，这意味着它们由数据库本身强制执行，并应用于不同的应用程序，而不仅仅是QGIS。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:772
+msgid "sourceFields"
+msgstr "sourceFields"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:705
 msgid "Layers crossing 180° longitude"
 msgstr "图层横渡 180° 经度"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:707
 msgid ""
 "Many GIS packages don't wrap layers with a geographic reference system "
 "(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
@@ -951,15 +976,15 @@ msgstr ""
 "围绕图层。因此，如果在QGIS打开这样的图层，可以看到彼此位置相距甚远，它们应该相互靠近。在 "
 ":numref:`Figure_vector_crossing` 中，地图画布最左侧的小点 (查塔姆群岛) 应该在新西兰主要岛屿右侧的网格内。"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:672
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr "经纬度地图横渡 180° 经度线"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:690
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:738
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr "应用 **ST_ShiftLongitude** 函数横渡 180° 经度"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:750
 msgid ""
 "If everything went well, you should receive a confirmation about the number "
 "of features that were updated. Then you'll be able to load the map and see "

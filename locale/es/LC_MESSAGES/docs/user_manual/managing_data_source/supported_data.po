@@ -7,15 +7,16 @@
 # Translators:
 # Eric Armijo, 2026
 # Harrissou Sant-anna, 2026
+# Andrés Betancourt, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Andrés Betancourt, 2026\n"
 "Language-Team: Spanish (https://app.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -284,7 +285,7 @@ msgstr ""
 "parámetros de proyección completos que se utilizan en QGIS y que se enumeran"
 " en el diálogo :guilabel:`CRS`."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:722
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:770
 msgid "setProjection"
 msgstr "setProjection"
 
@@ -787,7 +788,7 @@ msgstr ""
 " de datos. Las expresiones que utilicen operadores o funciones no admitidas "
 "recurrirán con gracia a la evaluación local."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:762
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -824,7 +825,7 @@ msgstr ""
 "incluye soporte para esquemas. Consulte la sección :ref:`dbmanager` para "
 "obtener más información."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:764
 msgid "dbManager"
 msgstr "dbManager"
 
@@ -862,7 +863,7 @@ msgstr ""
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
 msgstr "nix"
 
@@ -876,7 +877,7 @@ msgstr ""
 "**INSERT INTO** predeterminado, puede exportar la siguiente variable de "
 "entorno (al menos disponible en |nix| y |osx|):"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:768
 msgid "osx"
 msgstr "osx"
 
@@ -1172,11 +1173,38 @@ msgstr ""
 ":guilabel:`Feature id`. Para un mejor rendimiento, el valor "
 ":guilabel:`Feature id` debe ser una única columna ``INTEGER``."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:774
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:776
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:696
+msgid ""
+"When loading vector layers into QGIS, fields with |sourceFields| "
+":guilabel:`Field Domains` (such as those defined in a GeoPackage or ESRI "
+"File Geodatabase) are automatically detected. These domains are database-"
+"level constraints, meaning they are enforced by the database itself and "
+"apply across different applications, not just QGIS."
+msgstr ""
+"Al cargar capas vectoriales en QGIS, los campos con |sourceFields| "
+":guilabel:`Dominios de campo` (como los definidos en un GeoPackage o en una "
+"Geodatabase de archivos ESRI) se detectan automáticamente. Estos dominios "
+"son restricciones a nivel de base de datos, lo que significa que son "
+"impuestas por la propia base de datos y se aplican a través de diferentes "
+"aplicaciones, no sólo QGIS."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:772
+msgid "sourceFields"
+msgstr "sourceFields"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:705
 msgid "Layers crossing 180° longitude"
 msgstr "Capas que cruzan los 180° de longitud"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:707
 msgid ""
 "Many GIS packages don't wrap layers with a geographic reference system "
 "(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
@@ -1193,15 +1221,15 @@ msgstr ""
 "del lienzo del mapa (Islas Chatham) debería estar dentro de la cuadrícula, a"
 " la derecha de las islas principales de Nueva Zelanda."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:672
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr "Mapa en lat/lon cruzando la línea de longitud de 180"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:690
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:738
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr "Cruce de 180° de longitud aplicando la función **ST_ShiftLongitude**."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:750
 msgid ""
 "If everything went well, you should receive a confirmation about the number "
 "of features that were updated. Then you'll be able to load the map and see "

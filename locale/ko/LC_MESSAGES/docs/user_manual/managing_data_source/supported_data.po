@@ -5,17 +5,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Kwon.Yongchan <ruvyn@naver.com>, 2026
 # Harrissou Sant-anna, 2026
+# Kwon.Yongchan <ruvyn@naver.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 21:12+0000\n"
+"POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2026\n"
 "Language-Team: Korean (https://app.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -251,7 +251,7 @@ msgstr ""
 " :sup:`Select CRS` 버튼을 클릭한 다음 적절한 투영체를 직접 정의해줘야 합니다. :file:`.prj` 파일이 QGIS에서"
 " 사용되는, :guilabel:`CRS` 대화창 목록에 있는 완전한 투영체 파라미터를 제공하지 못 하는 경우가 많기 때문입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:722
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:770
 msgid "setProjection"
 msgstr "setProjection"
 
@@ -694,7 +694,7 @@ msgstr ""
 "side if possible` 체크박스를 활성화하면 됩니다. 이 옵션을 활성화하면 데이터베이스에 지원하는 표현식만 전송할 것입니다. "
 "지원하지 않는 연산자 또는 함수를 이용한 표현식은 자연스럽게 폴백(fallback)되어 로컬에서 평가될 것입니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:714
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:762
 msgid "checkbox"
 msgstr "checkbox"
 
@@ -729,7 +729,7 @@ msgstr ""
 "QGIS는 |dbManager| :sup:`DB Manager` 라는 핵심 플러그인을 내장하고 있습니다. 이 도구는 데이터를 불러오는 데"
 " 쓸 수 있으며, 스키마를 지원하기도 합니다. 더 자세한 내용은 :ref:`dbmanager` 을 참조하세요."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:716
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:764
 msgid "dbManager"
 msgstr "dbManager"
 
@@ -763,7 +763,7 @@ msgstr ""
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:718
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
 msgstr "nix"
 
@@ -776,7 +776,7 @@ msgstr ""
 "PostgreSQL의 기본 메소드인 **INSERT INTO** 대신 **COPY** 명령어를 더 선호하는 경우, 다음 명령어로 (적어도"
 " |nix| 와 |osx| 에서는) 다음 환경 변수를 내보낼 수 있습니다::"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:768
 msgid "osx"
 msgstr "osx"
 
@@ -995,11 +995,36 @@ msgstr ""
 ":guilabel:`Feature id` 열에 있는 열을 선택하면 열을 지정할 수 있습니다. 최고의 성능을 바란다면, "
 ":guilabel:`Feature id` 값이 단일 ``INTEGER`` 열이어야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:657
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:774
+msgid "symbologyAdd"
+msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:776
+msgid "symbologyRemove"
+msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:696
+msgid ""
+"When loading vector layers into QGIS, fields with |sourceFields| "
+":guilabel:`Field Domains` (such as those defined in a GeoPackage or ESRI "
+"File Geodatabase) are automatically detected. These domains are database-"
+"level constraints, meaning they are enforced by the database itself and "
+"apply across different applications, not just QGIS."
+msgstr ""
+"QGIS에 벡터 레이어를 불러올 때, (GeoPackage 또는 ESRI 파일 지오데이터베이스에서 정의하는 필드들처럼) "
+"|sourceFields| :guilabel:`Field Domains` 를 가진 필드들을 자동으로 감지합니다. 이런 도메인은 "
+"데이터베이스 수준의 제약조건으로, 다시 말해 데이터베이스 자체가 강제하는 도메인이기 때문에 QGIS만이 아니라 서로 다른 응용 프로그램들"
+" 전반에 적용됩니다."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:772
+msgid "sourceFields"
+msgstr "sourceFields"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:705
 msgid "Layers crossing 180° longitude"
 msgstr "경도 180° 선을 가로지르는 레이어"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:707
 msgid ""
 "Many GIS packages don't wrap layers with a geographic reference system "
 "(lat/lon) crossing the 180 degrees longitude line. As result, if we open "
@@ -1013,15 +1038,15 @@ msgstr ""
 ":numref:`figure_vector_crossing` 에서, 맵 캔버스 왼쪽 구석에 있는 작은 점들(채텀 제도)은 그리드 내부, "
 "뉴질랜드 본도의 오른쪽에 있어야 합니다."
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:672
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:720
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr "경도 180° 선을 가로지르는 위도/경도 맵"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:690
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:738
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr "경도 180° 선을 가로지르는 데이터에 **ST_ShiftLongitude** 함수를 적용"
 
-#: ../../docs/user_manual/managing_data_source/supported_data.rst:702
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:750
 msgid ""
 "If everything went well, you should receive a confirmation about the number "
 "of features that were updated. Then you'll be able to load the map and see "
