@@ -42,7 +42,9 @@ Returns a matching layer property or metadata value.
    :widths: 15 85
 
    * - Syntax
-     - layer_property(layer, property)
+     - layer_property(layer, property, [translate:=true])
+
+       [] marks optional arguments
    * - Arguments
      - * **layer** - a string, representing either a layer name or layer ID
        * **property** - a string corresponding to the property to return. Valid options are:
@@ -72,6 +74,7 @@ Returns a matching layer property or metadata value.
          * path: File path to the layer data source. Only available for file based layers.
 
 
+       * **translate** - whether to return translated string. Currently affects only 'type' property. By default translated strings are returned. Setting this to false will disable translation, always returning English strings.
    * - Examples
      - * ``layer_property('streets','title')`` → 'Basemap Streets'
        * ``layer_property('airports','feature_count')`` → 120
