@@ -32,6 +32,13 @@ following :ref:`items creation instructions <create_layout_item>`.
 Then you can manipulate it, as explained in
 :ref:`interact_layout_item`.
 
+.. _figure_layout_image:
+
+.. figure:: img/picture_properties.png
+   :align: center
+
+   Layout pictures Item Properties panel
+
 .. index:: Picture database, Rotated north arrow
 
 When using |addImage| :sup:`Add Picture`, the picture item will be a
@@ -43,12 +50,12 @@ this feature has the following functionalities:
 Main properties
 ...............
 
-.. _figure_layout_image:
+.. _figure_layout_image_svgproperties:
 
-.. figure:: img/picture_mainproperties.png
+.. figure:: img/picture_svgproperties.png
    :align: center
 
-   Picture Item Properties panel
+   Layout pictures SVG Properties
 
 The picture item supports two types of images:
 
@@ -114,9 +121,8 @@ displayed when the frame is resized:
 * ``Resize frame to image size``: sets the size of the frame to match
   the original size of the image (no scaling)
 
-Depending on the selected :guilabel:`Resize mode`, the
-:guilabel:`Placement` and :guilabel:`Image rotation` options may be
-disabled.
+Depending on the selected :guilabel:`Resize mode`,
+the :guilabel:`Placement` and :guilabel:`Image rotation` options may be disabled.
 :guilabel:`Placement` lets you select the position of the image
 inside its frame (top/middle/bottom and left/center/right).
 
@@ -124,15 +130,15 @@ inside its frame (top/middle/bottom and left/center/right).
 Clip to item
 .............
 
-In this section, configure how a picture item is clipped using another layout item.
+In this section, you can configure whether and how a picture item is clipped
+using another layout item.
 
 #. Check the |checkbox| :guilabel:`Clip to Item` option to enable clipping.
-#. Select a layout item (e.g., polygon or shape) to use as the clipping mask.
-#. When enabled, the picture will be automatically clipped to the selected shape.
+#. Select a layout item (a :ref:`node-based polygon <layout_node_based_shape_item>`
+   or :ref:`regular shape <layout_basic_shape_item>`) to use as the clipping mask.
+   The picture will be automatically clipped to the selected shape.
 
-.. note::
-
-   Available from QGIS 4.2 onwards.
+.. _figure_layout_image_cliptoitem:
 
 .. figure:: img/picture_cliptoitem.png
    :align: center
