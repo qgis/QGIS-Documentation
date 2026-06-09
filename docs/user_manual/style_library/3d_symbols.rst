@@ -135,8 +135,8 @@ Polygon Layers
   * :guilabel:`Front`
   * or :guilabel:`Back`
 * The :guilabel:`Rendered facade` determines the faces to display. Possible values
-  are :guilabel:`Walls`,
-  :guilabel:`Walls and Roof`, or :guilabel:`Walls, Roof and Floor`
+  are |checkbox| :guilabel:`Walls`,
+  |checkbox| :guilabel:`Roof`, and |checkbox| :guilabel:`Floor`.
 * |checkbox| :guilabel:`Add back faces`: for each triangle, creates both front and
   back face with correct normals - at the expense of increased number of vertex data.
   This option can be used to fix shading issues (e.g., due to data with inconsistent
