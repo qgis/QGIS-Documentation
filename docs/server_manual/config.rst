@@ -106,7 +106,7 @@ several ways to define these variables. This is fully described in
      - All
 
    * - QGIS_SERVER_CACHE_SIZE
-        Sets the network cache size in MB.
+        Sets the network cache size in bytes.
      - 50 MB
      - All
 
