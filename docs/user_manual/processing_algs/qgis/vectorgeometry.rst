@@ -7688,8 +7688,6 @@ Python code
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |remove| image:: /static/common/mActionRemove.png
-   :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
 .. |taskCancel| image:: /static/common/mTaskCancel.png
