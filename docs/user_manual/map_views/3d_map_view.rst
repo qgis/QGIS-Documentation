@@ -410,10 +410,10 @@ synchronization and skybox.
   The options are also available in the :ref:`camera menu <3d_mapview_cameramenu>` as shortcuts.
   To move the camera, drag the mouse until the view matches your desired perspective.
 
-  .. .. figure:: img/2dmap_overlay.png
-  ..    :align: center
+  .. figure:: img/2dmap_overlay.png
+     :align: center
 
-  ..    The 2D Map Overlay view
+     The 2D Map Overlay view
 
 
 Advanced
