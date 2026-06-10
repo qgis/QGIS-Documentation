@@ -1084,8 +1084,7 @@ where *f1* is the spread and *f2* the midpoint.
 .. figure:: img/largemembershipimage.png
   :align: center
 
-  Fuzzify raster (large membership) example. Input raster source: Land Tirol -
-  data.tirol.gv.at.
+  Fuzzify raster (large membership) example (midpoint=300, spread=10).
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`,
@@ -1241,8 +1240,7 @@ membership.
 .. figure:: img/linearmembershipimage.png
   :align: center
 
-  Fuzzify raster (linear membership) example. Input raster source: Land Tirol -
-  data.tirol.gv.at.
+  Fuzzify raster (linear membership) example (low bound=100, high bound=590).
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
@@ -1392,8 +1390,8 @@ where *f1* is the spread and *f2* the midpoint.
 .. figure:: img/nearmembershipimage.png
   :align: center
 
-  Fuzzify raster (near membership) example. Input raster source: Land Tirol -
-  data.tirol.gv.at.
+  Fuzzify raster (near membership) example (midpoint=300, spread=0.00001).
+
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
@@ -1549,8 +1547,7 @@ membership.
 .. figure:: img/powermembershipimage.png
   :align: center
 
-  Fuzzify raster (power membership) example. Input raster source: Land Tirol -
-  data.tirol.gv.at.
+  Fuzzify raster (power membership) example (low bound=100, high bound=590, membership exponent=2).
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`, :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`, :ref:`qgisfuzzifyrasternearmembership`,
@@ -1704,8 +1701,7 @@ where *f1* is the spread and *f2* the midpoint.
 .. figure:: img/smallmembershipimage.png
   :align: center
 
-  Fuzzify raster (small membership) example. Input raster source: Land Tirol -
-  data.tirol.gv.at.
+  Fuzzify raster (small membership) example (midpoint=300, spread=10).
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
   :ref:`qgisfuzzifyrasterlargemembership`,
