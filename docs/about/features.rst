@@ -223,5 +223,5 @@ need to log in again before any changes take effect.
 
 More info:
 
-https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
-https://linuxaria.com/article/open-files-in-linux
+* https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
+* https://linuxaria.com/article/open-files-in-linux
