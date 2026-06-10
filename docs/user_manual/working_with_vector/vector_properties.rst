@@ -2248,7 +2248,7 @@ To display a layer in 3D, select from the combobox at the top of the tab, either
 
 .. figure:: img/3d_view_properties.png
    :align: center
-   :width: 50%
+   :width: 80%
 
    3D properties of a point layer
 
