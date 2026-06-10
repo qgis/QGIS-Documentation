@@ -1366,9 +1366,11 @@ To use these variables in an expression, they should be preceded by the
    "atlas_layername", "The current atlas coverage layer name"
    "atlas_pagename", "The current atlas page name"
    "atlas_totalfeatures", "The total number of features in atlas"
+   "Blue", "Point cloud attribute: Blue"
    "band", "The number of the band in the raster layer"
    "band_description", "The description of the band in the raster layer"
    "band_name", "The name of the band in the raster layer"
+   "Classification", "Point cloud attribute: Classification"
    "canvas_cursor_point", "The last cursor position on the canvas in the
    project's geographical coordinates"
    "chart_category", "The chart item category, e.g. 'fruit' or 'june'."
@@ -1384,6 +1386,7 @@ To use these variables in an expression, they should be preceded by the
    edited in the parent form. Only usable in an embedded form context."
    "current_parent_geometry", "represents the geometry of the feature currently being
    edited in the parent form. Only usable in an embedded form context."
+   "EdgeOfFlightLine", "Point cloud attribute: EdgeOfFlightLine"
    "form_mode", "What the form is used for, like AddFeatureMode, SingleEditMode, MultiEditMode,
    SearchMode, AggregateSearchMode or IdentifyMode as string."
    "feature", "The current feature being evaluated. This can be used with the 'attribute'
@@ -1395,6 +1398,8 @@ To use these variables in an expression, they should be preceded by the
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
    "fullextent_miny", "Minimum y value from full canvas extent (including all layers)"
+   "GpsTime", "Point cloud attribute: GpsTime"
+   "Green", "Point cloud attribute: Green"
    "geometry", "The geometry of the current feature being evaluated"
    "geometry_part_count", "The number of parts in rendered feature's geometry"
    "geometry_part_num", "The current geometry part number for feature being rendered"
@@ -1406,9 +1411,11 @@ To use these variables in an expression, they should be preceded by the
    "grid_count", "The number of grid lines visible on the current grid axis"
    "grid_index", "The index of the grid line being drawn, starting at 1, and relative to the current grid axis"
    "grid_number", "The current grid annotation value"
+   "Intensity", "Point cloud attribute: Intensity"
    "id", "The ID of the current feature being evaluated"
    "item_id", "The layout item user ID (not necessarily unique)"
    "item_uuid", "The layout item unique ID"
+   "KeyPoint", "Point cloud attribute: KeyPoint"
    "layer", "The current layer"
    "layer_crs", "The Coordinate Reference System Authority ID of the current layer"
    "layer_crs_ellipsoid", "The ellipsoid Authority ID of the current layer CRS"
@@ -1483,8 +1490,11 @@ To use these variables in an expression, they should be preceded by the
    if model is embedded in a project)."
    "model_name", "Name of current model"
    "model_group", "Group for current model"
+   "NumberOfReturns", "Point cloud attribute: NumberOfReturns"
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
+   "Overlap", "Point cloud attribute: Overlap"
+   "PointSourceId", "Point cloud attribute: PointSourceId"
    "parent", "Refers to the current feature in the parent layer, providing access to
    its attributes and geometry when filtering an :ref:`aggregate <aggregates_function>` function"
    "plot_axis", "The associated plot axis, e.g. 'x' or 'y'."
@@ -1528,7 +1538,13 @@ To use these variables in an expression, they should be preceded by the
    "qgis_short_version", "The current QGIS version short string"
    "qgis_version", "The current QGIS version string"
    "qgis_version_no", "The current QGIS version number"
+   "Red", "Point cloud attribute: Red"
+   "ReturnNumber", "Point cloud attribute: ReturnNumber"
    "row_number", "Stores the number of the current row"
+   "ScanAngleRank", "Point cloud attribute: ScanAngleRank"
+   "ScanDirectionFlag", "Point cloud attribute: ScanDirectionFlag"
+   "ScannerChannel", "Point cloud attribute: ScannerChannel"
+   "Synthetic", "Point cloud attribute: Synthetic"
    "snapping_results", "Gives access to snapping results while digitizing a
    feature (only available in add feature)"
    "scale_value", "The current scale bar distance value"
@@ -1545,6 +1561,7 @@ To use these variables in an expression, they should be preceded by the
    "symbol_layer_index", "Current symbol layer index"
    "symbol_marker_column", "Column number for marker (valid for point pattern fills only)."
    "symbol_marker_row", "Row number for marker (valid for point pattern fills only)."
+   "UserData", "Point cloud attribute: UserData"
    "user_account_name", "The current user's operating system account name"
    "user_full_name", "The current user's operating system user name"
    "value", "The current value"
@@ -1552,8 +1569,12 @@ To use these variables in an expression, they should be preceded by the
    (derived from the current map scale). Normally in interval [0, 20]. Unlike @zoom_level,
    this variable is a floating point value which can be used to interpolate values
    between two integer zoom levels."
+   "Withheld", "Point cloud attribute: Withheld"
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
+   "X", "Point cloud attribute: X"
+   "Y", "Point cloud attribute: Y"
+   "Z", "Point cloud attribute: Z"
    "zoom_level", "Vector tile zoom level of the map that is being rendered
    (derived from the current map scale). Normally in interval [0, 20]."
 
