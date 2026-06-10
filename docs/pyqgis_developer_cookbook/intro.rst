@@ -161,7 +161,7 @@ The path in the user's home directory usually is found under:
 
 The default system paths depend on the operating system. To find the
 paths that work for you, open the Python Console and run
-``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)``
+``QStandardPaths.standardLocations(QStandardPaths.StandardLocation.AppDataLocation)``
 to see the list of default directories.
 
 The ``startup.py`` script is executed immediately upon initializing
