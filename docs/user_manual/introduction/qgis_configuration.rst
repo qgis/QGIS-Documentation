@@ -1714,7 +1714,7 @@ But you can create as many user profiles as you want:
    * and ``<UserProfiles>`` represents the main profiles folder, i.e.:
 
      * |nix| :file:`.local/share/QGIS/QGIS4/profiles/`
-     * |win| :file:`%AppData%\\Roaming\\QGIS\\QGIS4\\profiles\\`
+     * |win| :file:`AppData\\Roaming\\QGIS\\QGIS4\\profiles\\`
      * |osx| :file:`Library/Application Support/QGIS/QGIS4/profiles/`
 
    The user profile folder can be opened from within QGIS using the
@@ -2717,7 +2717,7 @@ only the first found file will be used:
   or settings environment variable. Depending on the OS, it is:
 
   * |nix| :file:`$HOME/.local/share/QGIS/QGIS4/`
-  * |win| :file:`C:\\Users\\<username>\\%AppData%\\Roaming\\QGIS\\QGIS4\\`
+  * |win| :file:`C:\\Users\\<username>\\AppData\\Roaming\\QGIS\\QGIS4\\`
   * |osx| :file:`$HOME/Library/Application Support/QGIS/QGIS4/`
 * the installation directory, i.e., :file:`your_QGIS_package_path/resources/qgis_global_settings.ini`.
 
