@@ -483,7 +483,8 @@ Color Modification
 
 The :guilabel:`Color Modification` allows you to apply an expression to adjust
 the colors of the point cloud renderer. Any point cloud attribute can be used in the
-expression, and the base color from the active renderer is available as ``@value``.
+expression as a variable (e.g., ``@Green``, ``@Intensity``, ``@NumberOfReturns``)
+and the base color from the active renderer is available as ``@value``.
 Use the |expression| button to open the :guilabel:`Expression Builder` for help
 building your expression.
 
