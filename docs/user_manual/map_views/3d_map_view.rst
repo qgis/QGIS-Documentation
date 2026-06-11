@@ -140,6 +140,49 @@ Under the |general| :guilabel:`General` tab, you can:
 * Set a :guilabel:`Background` for the 3D scene, choosing between a :guilabel:`Gradient`
   (defined by a top and bottom color blended across the scene) or a textured :guilabel:`Skybox`.
 
+  If you choose :guilabel:`Skybox` as your background, the
+  :guilabel:`Distinct faces` skybox type allows you to assign a separate
+  texture image to each of the six sides of the box surrounding the scene
+  (:guilabel:`Left (-X)`, :guilabel:`Right (+X)`, :guilabel:`Front (+Y)`,
+  :guilabel:`Back (-Y)`, :guilabel:`Top (+Z)`, and :guilabel:`Down (-Z)`).
+
+  The :guilabel:`Convention` setting defines how the textures are mapped
+  to coordinate axes and oriented for compatibility with different 3D
+  engines and rendering frameworks. The following table describes the
+  available skybox coordinate conventions.
+
+  .. list-table:: Available skybox coordinate conventions
+     :widths: 40, 60
+     :header-rows: 1
+
+     * - Convention
+       - Axis orientation
+
+     * - Native (Z-Up)
+       - +X Right, +Y Forward, +Z Up
+
+     * - OpenGL / WebGL (Y-Up)
+       - +X Right, +Y Up, -Z Forward
+
+     * - Godot (Y-Up)
+       - +X Right, +Y Up, -Z Forward
+
+     * - Unreal Engine (Z-Up)
+       - +X Forward, +Y Right, +Z Up
+
+     * - Left-Handed Y-Up (Mirrored)
+       - +X Right, +Y Up, +Z Forward
+
+
+  Texture image files of the skybox can be local files, remote URLs, or
+  embedded in the project (:ref:`more details <embedded_file_selector>`).
+
+  Check |unchecked|:guilabel:`Enable environmental lighting effects` to enable environmental lighting
+  from the skybox textures and apply it to physically based rendered materials.
+  Use the :guilabel:`Strength` slider to control the intensity of the environmental
+  lighting. Environmental lighting is only available when a skybox background is
+  used and is not applied to gradient backgrounds.
+
 Terrain
 -------
 
@@ -323,8 +366,8 @@ Effects
     brighten the scene, while negative values will darken it.
 
 
-Camera & Skybox
----------------
+Camera
+------
 
 In this tab, you can control different parameters like camera, 3D axis, navigation
 synchronization and skybox.
@@ -362,15 +405,6 @@ synchronization and skybox.
   2D view or bi directional synchronization. The last option displays the extent
   visible from the 3D camera over the 2D map view.
 
-* Check |unchecked| :guilabel:`Show skybox` to enable skybox rendering
-  in the scene. The skybox type can be:
-
-  * :guilabel:`Panoramic texture`, with a single file providing sight on 360\°
-  * :guilabel:`Distinct faces`, with a texture file for each of the six sides
-    of a box containing the scene
-
-  Texture image files of the skybox can be files on the disk, remote URLs or
-  embedded in the project (:ref:`more details <embedded_file_selector>`).
 
 Advanced
 --------
