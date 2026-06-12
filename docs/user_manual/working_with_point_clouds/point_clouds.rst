@@ -476,6 +476,18 @@ identify actual holes in the data.
 
    Rendering data as a surface with map shading (left) and with map shading, filtering large triangles (right)
 
+.. _color_mod_pointcloud:
+
+Color Modification
+..................
+
+The :guilabel:`Color Modification` allows you to apply an expression to adjust
+the colors of the point cloud renderer. Any point cloud attribute can be used in the
+expression as a variable (e.g., ``@Green``, ``@Intensity``, ``@NumberOfReturns``)
+and the base color from the active renderer is available as ``@value``.
+Use the |expression| button to open the :guilabel:`Expression Builder` for help
+building your expression.
+
 .. _vpc_render:
 
 Virtual Point Cloud Options
@@ -951,6 +963,8 @@ After setting the attribute, value, and optional filter, digitize a selection us
 .. |editMetadata| image:: /static/common/editmetadata.png
    :width: 1.2em
 .. |elevationscale| image:: /static/common/elevationscale.png
+   :width: 1.5em
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
