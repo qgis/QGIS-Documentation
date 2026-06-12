@@ -178,7 +178,7 @@ on the geometry type of the symbol:
   of light that is scattered about the entire scene.
   Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
   Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model>`_.
-* :guilabel:`Legacy Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
+* :guilabel:`Legacy Textured (Phong)`: same as the :guilabel:`Legacy (Phong)`
   except that an image is used as :guilabel:`Diffuse Texture`.
   The image can be a file on disk, a remote URL or :ref:`embedded in the project
   <embedded_file_selector>`.
@@ -236,6 +236,7 @@ on the geometry type of the symbol:
      :width: 50%
 
      Physically based (with textures) configuration.
+
 
 Application example
 ===================
