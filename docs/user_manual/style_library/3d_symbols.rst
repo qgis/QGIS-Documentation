@@ -171,18 +171,19 @@ in order to visualise features.
 Various techniques of shading are used in QGIS and their availability depends
 on the geometry type of the symbol:
 
-* :guilabel:`Realistic (Phong)`: describes the way a surface reflects light as
+* :guilabel:`Legacy (Phong)`: describes the way a surface reflects light as
   a combination of the :guilabel:`Diffuse` reflection of rough surfaces with
   the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
   It also includes an :guilabel:`Ambient` option to account for the small amount
   of light that is scattered about the entire scene.
   Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
   Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model>`_.
-* :guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
+* :guilabel:`Legacy Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
   except that an image is used as :guilabel:`Diffuse Texture`.
   The image can be a file on disk, a remote URL or :ref:`embedded in the project
   <embedded_file_selector>`.
-  The :guilabel:`Texture scale` and :guilabel:`Texture rotation` are required.
+  The :guilabel:`Texture scale`, :guilabel:`Texture rotation` and :guilabel:`Texture offset` are required,
+  Adjust the values manually or use |dataDefine| for dynamic control.
   Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
 * :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
   so that edge lines and highlights remain visually prominent. Along with the
@@ -192,12 +193,49 @@ on the geometry type of the symbol:
   Also, the relative contributions to the cool and warm colors by the diffuse color
   are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
   See also `Gooch shading <https://en.wikipedia.org/wiki/Gooch_shading>`_.
-* :guilabel:`Metal Roughness`: a physically based rendering material
-  that provides an accurate representation of how light interacts with surfaces.
-  Options are available for setting the material :guilabel:`Base color`,
-  :guilabel:`Metalness` and :guilabel:`Roughness`.
-* :guilabel:`Embedded Textures` with 3D models shape
+* :guilabel:`Physically Based`: renders materials that respond naturally to light, making objects look 
+  like real-world materials. Options are available:
+  
+  * :guilabel:`Base color`: allows users to put base color on surface.
+  * :guilabel:`Metalness`: sets how metallic the surface appears.
+  * :guilabel:`Roughness`: controls how rough or smooth the surface is.
+  * :guilabel:`Reflectance`: controls how much light the surface reflects.
+  * :guilabel:`Anisotropy`: creates directional reflections that align with 
+    the direction specified in :guilabel:`Anisotropy direction`.
+  * :guilabel:`Clear coat strength`: controls the intensity of the clear coat layer. Higher values
+    create a stronger glossy appearance, lower values create a more subtle protective layer.
+  * :guilabel:`Clear coat roughness`: controls the roughness of the clear coat surface. Higher values
+    create a matte clear coat, lower values create a shiny, glossy clear coat.
+  * :guilabel:`Emission`: an optional setting where users can select solid emission color for metal rough material.
+    Useful for creating emissive solid color material. Adjust the :guilabel:`Emission strength` value
+    to control the intensity of the light.
 
+  Use the :guilabel:`Opacity` slider to adjust transparency. For :guilabel:`Base color`
+  and :guilabel:`Emission`, users can enable |dataDefine| to control the
+  appearance based on data/attribute.
+* :guilabel:`Physically Based (with textures)`: same as the :guilabel:`Physically Based`, but users can
+  input more complex texture maps. These following textures are available:
+
+  * :guilabel:`Base color texture`: represents color, pattern, visual detail of the material.
+  * :guilabel:`Metalness texture`: applies metallic material to the surface.
+  * :guilabel:`Roughness texture`: defines surface roughness.
+  * :guilabel:`Normal texture`: adds details to the material. For example: bumps, grooves, scratch and grain.
+  * :guilabel:`Height (displacement) texture`: displaces geometry to add surface depth, making it appear more realistic.
+    Set the :guilabel:`Height texture strength` to modify the depth effect as needed.
+  * :guilabel:`Ambient occlusion texture`: a grayscale image that adds soft shadows to corners, gaps, and areas where objects
+    are close together, making it look more realistic.
+  * :guilabel:`Emission texture`: adds emissive objects to the surface. To brighten
+    the objects, increase the :guilabel:`Emission strength`.
+
+  Set the desired transparency with the :guilabel:`Opacity` slider.
+  To transform the texture, adjust :guilabel:`Texture scale`
+  and :guilabel:`Texture rotation` as desired.
+
+  .. figure:: img/physicallybased_withtextures.png
+     :align: center
+     :width: 50%
+
+     Physically based (with textures) configuration.
 
 Application example
 ===================

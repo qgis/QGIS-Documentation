@@ -323,14 +323,14 @@ Effects
 * Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
   given:
 
-  * a :guilabel:`Directional light`
+  * a :guilabel:`Light source`
   * a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
     of too distant objects, particularly when the camera looks up along the horizon
   * a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
     some areas darker than others, due to differences between map sizes.
     The lower the better
-  * a :guilabel:`Shadow map resolution`: to make shadows look sharper.
-    It may result in less performance if the resolution parameter is too high.
+  .. * a :guilabel:`Shadow map resolution`: to make shadows look sharper.
+  ..   It may result in less performance if the resolution parameter is too high.
 
 .. _eye_dome_lighting:
 
