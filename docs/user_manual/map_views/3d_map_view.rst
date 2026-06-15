@@ -178,11 +178,11 @@ Under the |general| :guilabel:`General` tab, you can:
     Texture image files of the skybox can be local files, remote URLs, or
     embedded in the project (:ref:`more details <embedded_file_selector>`).
 
-    Check |unchecked|:guilabel:`Enable environmental lighting effects` to enable environmental lighting
-    from the skybox textures and apply it to physically based rendered materials.
-    Use the :guilabel:`Strength` slider to control the intensity of the environmental
-    lighting. Environmental lighting is only available when a skybox background is
-    used and is not applied to gradient backgrounds.
+    Check |unchecked|:guilabel:`Enable environmental lighting effects` to derive
+    the scene's lighting from the skybox's appearance, applying it to physically
+    based rendered materials. This option is only available when a skybox
+    background is used, and has no effect with gradient backgrounds. Use the
+    :guilabel:`Strength` slider to control its intensity.
 
 Terrain
 -------
