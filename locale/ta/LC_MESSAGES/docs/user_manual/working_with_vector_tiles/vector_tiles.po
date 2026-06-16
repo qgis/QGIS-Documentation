@@ -7,20 +7,21 @@
 # Translators:
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2026\n"
 "Language-Team: Tamil (https://app.transifex.com/qgis/teams/6144/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -34,41 +35,375 @@ msgstr ""
 "சேரலாம். இந்தப் பக்கம் தற்போது |மொழிபெயர்ப்பு முன்னேற்றம்| இல் "
 "மொழிபெயர்க்கப்பட்டுள்ளது."
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:6
+msgid "Working with Vector Tiles"
+msgstr "வெக்டர் டைல்ச் உடன் பணிபுரிதல்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:14
+msgid "What are Vector Tiles?"
+msgstr "வெக்டர் டைல்ச் என்றால் என்ன?"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:16
+msgid ""
+"Vector tiles are packets of geographic data, packaged into pre-defined "
+"roughly-square shaped \"tiles\" for transfer over the web. They combine pre-"
+"rendered raster map tiles and vector map tiles. The vector tile server "
+"returns vector map data, which has been clipped to the boundaries of each "
+"tile, instead of a pre-rendered map image. The clipped tiles represent the "
+"zoom-levels of the vector tile service, derived from a pyramid approach. "
+"Using this structure, the data-transfer is reduced in comparison to un-tiled"
+" vector maps. Only data within the current map view, and at the current zoom"
+" level need to be transferred. Also, compared to a tiled raster map, data "
+"transfer is also greatly reduced, as vector data is typically much smaller "
+"than a rendered bitmap. Vector tiles do not have any styling information "
+"assigned so QGIS needs to apply a cartographic style in order to display the"
+" data."
+msgstr ""
+"வெக்டர் டைல்ச் என்பது புவியியல் தரவுகளின் பாக்கெட்டுகள் ஆகும், அவை "
+"இணையத்தில் பரிமாற்றம் செய்ய முன் வரையறுக்கப்பட்ட தோராயமாக-சதுர வடிவ "
+"\"டைல்களில்\" தொகுக்கப்பட்டுள்ளன. அவை முன்-ரெண்டர் செய்யப்பட்ட ராச்டர் மேப் "
+"டைல்ச் மற்றும் வெக்டர் மேப் டைல்ச் ஆகியவற்றை இணைக்கின்றன. வெக்டர் டைல் "
+"சர்வர் வெக்டார் வரைபடத் தரவை வழங்குகிறது, இது முன்-ரெண்டர் செய்யப்பட்ட "
+"வரைபடப் படத்திற்குப் பதிலாக, ஒவ்வொரு ஓடுகளின் எல்லைகளுக்கும் கிளிப் "
+"செய்யப்பட்டுள்ளது. வெட்டப்பட்ட ஓடுகள், பிரமிடு அணுகுமுறையிலிருந்து பெறப்பட்ட"
+" வெக்டார் டைல் சேவையின் சூம்-லெவல்களைக் குறிக்கின்றன. இந்த கட்டமைப்பைப் "
+"பயன்படுத்தி, டைல் இல்லாத திசையன் வரைபடங்களுடன் ஒப்பிடுகையில் தரவு பரிமாற்றம்"
+" குறைக்கப்படுகிறது. தற்போதைய வரைபடக் காட்சியிலும் தற்போதைய சூம் மட்டத்திலும்"
+" உள்ள தரவு மட்டுமே மாற்றப்பட வேண்டும். மேலும், டைல்டு ராச்டர் வரைபடத்துடன் "
+"ஒப்பிடும்போது, ​​தரவு பரிமாற்றமும் வெகுவாகக் குறைக்கப்படுகிறது, ஏனெனில் "
+"வெக்டார் தரவு பொதுவாக வழங்குதல் செய்யப்பட்ட பிட்மேப்பை விட மிகச் சிறியதாக "
+"இருக்கும். வெக்டார் டைல்ச் எந்த ச்டைலிங் தகவலும் ஒதுக்கப்படவில்லை, எனவே "
+"தரவைக் காண்பிக்க QGIS கார்ட்டோகிராஃபிக் பாணியைப் பயன்படுத்த வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:36
+msgid "Pyramid structure of vector tiles with zoom-levels"
+msgstr "சூம்-லெவல்கள் கொண்ட திசையன் ஓடுகளின் பிரமிடு அமைப்பு"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:40
+msgid "Supported Formats"
+msgstr "ஆதரிக்கப்படும் வடிவங்கள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:42
+msgid "There is support for vector tiles through:"
+msgstr "திசையன் ஓடுகளுக்கு உதவி உள்ளது:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:44
+#, python-brace-format
+msgid ""
+"remote sources (HTTP/S) - with XYZ template - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+msgstr ""
+"தொலைநிலை மூலங்கள் (HTTP/S) - XYZ டெம்ப்ளேட்டுடன் - "
+"``type=xyz&url=http://example.com/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:45
+#, python-brace-format
+msgid ""
+"local files - with XYZ template - e.g. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+msgstr ""
+"உள்ளக கோப்புகள் - XYZ டெம்ப்ளேட்டுடன் - எ.கா. "
+"``type=xyz&url=file:///path/to/tiles/{z}/{x}/{y}.pbf``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:46
+msgid ""
+"local MBTiles database - e.g. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+msgstr ""
+"உள்ளக MBTiles தரவுத்தளம் - எ.கா. "
+"``type=mbtiles&url=file:///path/to/file.mbtiles``"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:48
+msgid ""
+"To load a vector tiles dataset into QGIS, use the |addVectorTileLayer| "
+":guilabel:`Vector Tile` tab in the :guilabel:`Data Source Manager` dialog. "
+"Read :ref:`vector_tiles` for more details."
+msgstr ""
+"QGIS இல் வெக்டர் டைல்ச் தரவுத்தொகுப்பை ஏற்ற, |addVectorTileLayer| "
+":guilabel:`Data மூலம் Manager` உரையாடலில் :guilabel:`Vector Tile` தாவல். "
+"மேலும் விவரங்களுக்கு :ref:`vector_tiles` படிக்கவும்."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:260
 msgid "addVectorTileLayer"
 msgstr "addVectorTileLayer"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:55
+msgid "Vector Tiles Dataset Properties"
+msgstr "வெக்டர் டைல்ச் டேட்டாசெட் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:57
+msgid ""
+"The vector tiles :guilabel:`Layer Properties` dialog provides the following "
+"sections:"
+msgstr ""
+"திசையன் ஓடுகள் :guilabel:`லேயர் பண்புகள்` உரையாடல் பின்வரும் பிரிவுகளை "
+"வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:61
+msgid "|metadata| :ref:`Information <vectortilesinformationmenu>`"
+msgstr "|மெட்டாடேட்டா| :ref:`தகவல் <vectortilesinformationmenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:268
 msgid "metadata"
 msgstr "metadata"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:62
+msgid "|system| :ref:`Source <vectortilessourcemenu>`"
+msgstr "|அமைப்பு| :ref:`மூலம் <vectortilessourcemenu>`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:286
 msgid "system"
 msgstr "system"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:63
+msgid "|symbology| :ref:`Symbology <vectortilesstylesmenu>` ([1]_)"
+msgstr "|சிம்பலாசி| :ref:`சிம்பலாசி <vectortilesstylesmenu>` ([1]_)"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:278
 msgid "symbology"
 msgstr "symbology"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:64
+msgid "|labelingSingle| :ref:`Labels <vectortilesstylesmenu>` ([1]_)"
+msgstr "|லேபிளிங் சிங்கிள்| :ref:`Labels <vectortilesstylesmenu>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:264
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:65
+msgid "|rendering| :ref:`Rendering <vectortilesrenderingmenu>`"
+msgstr "|ரெண்டரிங்| :ref:`ரெண்டரிங் <vectortilesrenderingmenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:272
 msgid "rendering"
 msgstr "rendering"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:66
+msgid "|editMetadata| :ref:`Metadata <vectortilesmetadatamenu>`"
+msgstr "|editMetadata| :ref:`மெட்டாடேட்டா <vectortilesmetadatamenu>`"
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:262
 msgid "editMetadata"
 msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:67
+msgid "|overlay| :ref:`QGIS Server <vectortilesservermenu>`"
+msgstr "| மேலடுக்கு| :ref:`QGIS சர்வர் <vectortilesservermenu>`"
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:270
 msgid "overlay"
 msgstr "overlay"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:71
+msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
+msgstr ":ref:`லேயர் ச்டைலிங் பேனலிலும் <layer_styling_panel>` கிடைக்கும்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:77
+msgid "Information Properties"
+msgstr "செய்தி பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:79
+msgid ""
+"The :guilabel:`Information` tab is read-only and represents an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. Provided information are:"
+msgstr ""
+":guilabel:`தகவல்` தாவல் படிக்க மட்டுமே மற்றும் தற்போதைய லேயரில் "
+"சுருக்கப்பட்ட செய்தி மற்றும் மெட்டாடேட்டாவை விரைவாகப் பிடிக்க ஒரு சுவையான "
+"இடத்தைக் குறிக்கிறது. வழங்கப்பட்ட தகவல்கள்:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:83
+msgid ""
+"based on the provider of the layer: name, URI, source type and path, number "
+"of zoom levels"
+msgstr ""
+"அடுக்கு வழங்குநரின் அடிப்படையில்: பெயர், URI, மூல வகை மற்றும் பாதை, சூம் "
+"நிலைகளின் எண்ணிக்கை"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:85
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. More properties can be created and managed "
+"using PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"தனிப்பயன் பண்புகள், லேயர் பற்றிய கூடுதல் தகவல்களை செயலில் உள்ள திட்டத்தில் "
+"சேமிக்கப் பயன்படுகிறது. PyQGIS ஐப் பயன்படுத்தி, குறிப்பாக "
+":pyqgis:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` முறை"
+" மூலம் கூடுதல் பண்புகளை உருவாக்கி நிர்வகிக்கலாம்."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:88
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e., whether it is static or dynamic)"
+msgstr ""
+"ஒருங்கிணைப்பு குறிப்பு அமைப்பு: பெயர், அலகுகள், முறை, துல்லியம், குறிப்பு "
+"(அதாவது, அது நிலையான அல்லது மாறும்)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:90
+msgid ""
+"picked from the :ref:`filled metadata <vectortilesmetadatamenu>`: access, "
+"extents, links, contacts, history..."
+msgstr ""
+":ref:`filled மேனிலை தரவு <vectortilesmetadatamenu>` இலிருந்து "
+"எடுக்கப்பட்டது: அணுகல், அளவுகள், இணைப்புகள், தொடர்புகள், வரலாறு..."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:96
+msgid "Source Properties"
+msgstr "மூல பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:98
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected vector tile, including:"
+msgstr ""
+"தி |அமைப்பு| :guilabel:`Source` தாவல் தேர்ந்தெடுக்கப்பட்ட திசையன் ஓடு பற்றிய"
+" அடிப்படைத் தகவலைக் காட்டுகிறது, இதில் அடங்கும்:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:101
+msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
+msgstr ":guilabel:`Layer name`:guilabel:`Layers Panel` இல் காட்ட;"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:102
+msgid ""
+"the :guilabel:`Coordinate Reference System`: Displays the layer's "
+":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
+"layer's CRS, by selecting a recently used one in the drop-down list or "
+"clicking on the |setProjection| :sup:`Select CRS` button (see "
+":ref:`crs_selector`). Use this process only if the layer CRS is wrong or not"
+" specified."
+msgstr ""
+":guilabel:`Coordinate குறிப்பு System`: லேயரின் :ref:`Coordinate குறிப்பு "
+"மண்டலம் (CRS) <layer_crs>` ஐக் காட்டுகிறது. கீழ்தோன்றும் பட்டியலில் அண்மைக் "
+"காலத்தில் பயன்படுத்தப்பட்ட ஒன்றைத் தேர்ந்தெடுப்பதன் மூலம் அல்லது "
+"|setProjection| என்பதைக் சொடுக்கு செய்வதன் மூலம் லேயரின் CRS ஐ மாற்றலாம். "
+":sup:`தேர்ந்தெடு CRS` பொத்தானை (பார்க்க :ref:`crs_selector`). அடுக்கு CRS "
+"தவறாக இருந்தால் அல்லது குறிப்பிடப்படவில்லை என்றால் மட்டுமே இந்த "
+"செயல்முறையைப் பயன்படுத்தவும்."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:276
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:108
+msgid ""
+"For file based vector tiles (:file:`.vtpk` or :file:`.mbtiles`), a "
+":guilabel:`Layer source` group indicates the path to the source of the "
+"dataset and allows for replacing the loaded layer. Edit the path shown in "
+"the text box or press :guilabel:`...` :sup:`Browse` to select another file "
+"on the disk."
+msgstr ""
+"கோப்பு அடிப்படையிலான வெக்டர் டைல்களுக்கு (:file:`.vtpk` அல்லது "
+":file:`.mbtiles`), ஒரு :guilabel:`Layer source` குழுவானது தரவுத்தொகுப்பின் "
+"மூலத்திற்கான பாதையைக் குறிக்கிறது மற்றும் ஏற்றப்பட்ட லேயரை மாற்ற "
+"அனுமதிக்கிறது. உரைப் பெட்டியில் காட்டப்பட்டுள்ள பாதையைத் திருத்தவும் அல்லது "
+"வட்டில் உள்ள மற்றொரு கோப்பைத் தேர்ந்தெடுக்க :guilabel:`...` :sup:`Browse` "
+"என்பதை அழுத்தவும்."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:119
+msgid "Vector Tiles Properties - Source Dialog"
+msgstr "வெக்டர் டைல்ச் பண்புகள் - மூல உரையாடல்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:125
+msgid "Symbology and Labels Properties"
+msgstr "சின்னங்கள் மற்றும் லேபிள்கள் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:133
+msgid "Vector Tile Layer Symbology"
+msgstr "வெக்டர் டைல் லேயர் சிம்பாலாசி"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:136
+msgid "Setting rules"
+msgstr "விதிகளை அமைத்தல்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:138
+msgid ""
+"As vector tiles consist of point, line and polygon geometries, the "
+"respective symbols are available. To apply a cartographic style (with "
+"symbology and/or labels), you can either:"
+msgstr ""
+"திசையன் ஓடுகள் புள்ளி, கோடு மற்றும் பலகோண வடிவவியலைக் கொண்டிருப்பதால், "
+"அந்தந்த குறியீடுகள் கிடைக்கின்றன. கார்ட்டோகிராஃபிக் பாணியைப் "
+"பயன்படுத்துவதற்கு (சின்னவியல் மற்றும்/அல்லது லேபிள்களுடன்), நீங்கள்:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:141
+msgid ""
+"Use a :guilabel:`Style URL` when creating the :ref:`Vector Tiles Connection "
+"<vector_tiles>`. The symbology will be shown immediately in the |symbology| "
+":guilabel:`Symbology` tab after the layer is loaded in QGIS."
+msgstr ""
+":ref:`Vector Tiles இணைப்பை <vector_tiles>` உருவாக்கும் போது :guilabel:`Style"
+" URL` ஐப் பயன்படுத்தவும். குறியீட்டு முறை உடனடியாக |சிம்பாலசி| இல் "
+"காட்டப்படும் :guilabel:`சிம்பாலாசி` தாவல் QGIS இல் லேயர் ஏற்றப்பட்ட பிறகு."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:144
+msgid ""
+"Or build your own symbology and labeling in the corresponding tabs of the "
+"layer properties. By default, QGIS assigns an identical symbol to the "
+"features based on their geometry type."
+msgstr ""
+"அல்லது லேயர் பண்புகளின் தொடர்புடைய தாவல்களில் உங்கள் சொந்த குறியீட்டு "
+"மற்றும் லேபிளிங்கை உருவாக்கவும். இயல்பாக, QGIS அவற்றின் வடிவியல் வகையின் "
+"அடிப்படையில் அம்சங்களுக்கு ஒரே மாதிரியான குறியீட்டை வழங்குகிறது."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:147
+msgid ""
+"In both cases, setting a style for a vector tile relies on a set of "
+":ref:`rules <rule_based_rendering>` applied to the features, indicating:"
+msgstr ""
+"இரண்டு சந்தர்ப்பங்களிலும், வெக்டார் டைலுக்கான பாணியை அமைப்பது "
+"அம்சங்களுக்குப் பயன்படுத்தப்படும் :ref:`rules <விதி அடிப்படையிலான "
+"ரெண்டரிங்>` தொகுப்பின் மீது சார்ந்துள்ளது, இது குறிக்கிறது:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:150
+msgid "a vector :ref:`symbol <symbol-selector>` or :ref:`label <showlabels>`"
+msgstr ""
+"ஒரு திசையன் :ref:`symbol <symbol-selector>` அல்லது :ref:`label <showlabels>`"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:151
+msgid ""
+"a :guilabel:`Label`, a title for comprehensive identification of the rule"
+msgstr "a :guilabel:`Label`, விதியின் விரிவான அடையாளத்திற்கான தலைப்பு"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:152
+msgid ""
+"the name of a particular :guilabel:`Layer` the rule should apply to, if not "
+"applied to ``(all layers)``"
+msgstr ""
+"ஒரு குறிப்பிட்ட :guilabel:`Layer`ன் பெயர் ``(அனைத்து அடுக்குகளும்)`` க்கு "
+"பயன்படுத்தப்படாவிட்டால், விதி பொருந்தும்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:153
+msgid ""
+"a :guilabel:`Min. Zoom` and a :guilabel:`Max. Zoom`, for the range of "
+"display. Symbology and labeling can be dependent on the zoom level."
+msgstr ""
+"a :guilabel:`நிமிடம். பெரிதாக்கு` மற்றும் ஒரு :guilabel:`அதிகபட்சம். காட்சி "
+"வரம்பிற்கு பெரிதாக்கு`. சிம்பாலாசி மற்றும் லேபிளிங் சூம் அளவைப் பொறுத்தது."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:155
+msgid ""
+"a :guilabel:`Filter`, a QGIS expression to identify the features to apply "
+"the style to"
+msgstr ""
+"a :guilabel:`Filter`, பாணியைப் பயன்படுத்துவதற்கான அம்சங்களைக் கண்டறியும் "
+"QGIS வெளிப்பாடு"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:157
+msgid ""
+"Each rule is added pressing the |symbologyAdd| :sup:`Add rule` button and "
+"selecting the type of symbols (:guilabel:`Marker`, :guilabel:`Line`, "
+":guilabel:`Fill`) corresponding to the features geometry type. You can as "
+"well |symbologyRemove| :sup:`Remove selected rules` or |symbologyEdit| "
+":sup:`Edit current rule`."
+msgstr ""
+"ஒவ்வொரு விதியும் |சிம்பலாசி சேர்| அழுத்தி சேர்க்கப்படுகிறது :sup:`விதியைச் "
+"சேர்` பொத்தான் மற்றும் அம்சங்களின் வடிவியல் வகையுடன் தொடர்புடைய "
+"குறியீடுகளின் வகையைத் தேர்ந்தெடுக்கவும் (:guilabel:`Marker`, "
+":guilabel:`Line`, :guilabel:`Fill`). உங்களால் முடியும் |symbolologyRemove| "
+":sup:`தேர்ந்தெடுக்கப்பட்ட விதிகளை அகற்று` அல்லது |சிம்பலாசிஎடிட்| "
+":sup:`தற்போதைய விதியைத் திருத்து`."
 
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:280
 msgid "symbologyAdd"
@@ -82,6 +417,24 @@ msgstr "symbologyRemove"
 msgid "symbologyEdit"
 msgstr "symbologyEdit"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:162
+msgid ""
+"At the bottom the :guilabel:`Current Zoom` is shown. Check the |unchecked| "
+":guilabel:`Visible rules only` option at the top of the dialog to filter the"
+" list of rules to only those that are visible at the current zoom level. "
+"This makes it easier to work with complex vector styling and to locate "
+"troublesome rules. The |search| :guilabel:`Filter rules` text box also helps"
+" you easily find a rule, by searching the :guilabel:`Label`, "
+":guilabel:`Layer` and :guilabel:`Filter` fields."
+msgstr ""
+"கீழே :guilabel:`தற்போதைய பெரிதாக்கு` காட்டப்பட்டுள்ளது. | சரிபார்க்கப்படாத| "
+":guilabel: தற்போதைய சூம் மட்டத்தில் தெரியும் விதிகளின் பட்டியலை மட்டும் "
+"வடிகட்ட, உரையாடலின் மேற்பகுதியில் `தெரியும் விதிகள் மட்டும்' விருப்பம். இது "
+"சிக்கலான வெக்டார் ச்டைலிங்குடன் வேலை செய்வதையும், பிரச்சனைக்குரிய விதிகளைக் "
+"கண்டறிவதையும் எளிதாக்குகிறது. |தேடல்| :guilabel:`Label`, :guilabel:`Layer` "
+"மற்றும் :guilabel:`Filter` புலங்களைத் தேடுவதன் மூலம் விதியை எளிதாகக் கண்டறிய"
+" :guilabel:`Filter rules` உரைப்பெட்டி உதவுகிறது."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:288
 msgid "unchecked"
 msgstr "unchecked"
@@ -90,6 +443,175 @@ msgstr "unchecked"
 msgid "search"
 msgstr "search"
 
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:169
+msgid ""
+"In :numref:`figure_vector_tile_symbology` we set up style for the "
+"OpenStreetMap ``landuse`` layer. For better visibility most of the rules are"
+" deselected."
+msgstr ""
+":numref:`figure_vector_tile_symbology` இல் OpenStreetMap ``landuse`` "
+"லேயருக்கு ச்டைலை அமைக்கிறோம். சிறந்த தெரிவுநிலைக்காக, பெரும்பாலான விதிகள் "
+"தேர்வு நீக்கப்பட்டன."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:173
+msgid "Layer rendering"
+msgstr "லேயர் வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:175
+msgid ""
+"From the :guilabel:`Symbology` tab, you can also set some options that "
+"invariably act on all features of the layer:"
+msgstr ""
+":guilabel:`Symbology` தாவலில் இருந்து, லேயரின் அனைத்து அம்சங்களிலும் மாறாமல்"
+" செயல்படும் சில விருப்பங்களையும் நீங்கள் அமைக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:178
+msgid ""
+":guilabel:`Opacity`: You can make the underlying layer in the map canvas "
+"visible with this tool. Use the slider to adapt the visibility of your "
+"vector layer to your needs. You can also make a precise definition of the "
+"percentage of visibility in the menu beside the slider."
+msgstr ""
+":guilabel:`Opacity`: இந்தக் கருவியின் மூலம் வரைபட கேன்வாசில் உள்ள அடிப்படை "
+"லேயரை நீங்கள் பார்க்க முடியும். உங்கள் தேவைக்கேற்ப உங்கள் திசையன் லேயரின் "
+"தெரிவுநிலையை மாற்றியமைக்க ச்லைடரைப் பயன்படுத்தவும். ச்லைடருக்கு அடுத்துள்ள "
+"பட்டியலில் தெரிவுநிலையின் சதவீதத்தின் துல்லியமான வரையறையையும் நீங்கள் "
+"செய்யலாம்."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:181
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"these tools that you may previously only know from graphics programs. The "
+"pixels of your overlaying and underlying layers are mixed through the "
+"settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`பிளெண்டிங் பயன்முறை`: கிராபிக்ச் நிரல்களில் இருந்து மட்டுமே "
+"நீங்கள் அறிந்திருக்கக்கூடிய சிறப்பு வழங்குதல் விளைவுகளை இந்தக் கருவிகள் "
+"மூலம் அடையலாம். :ref:`blend-modes` இல் விவரிக்கப்பட்டுள்ள அமைப்புகளின் மூலம்"
+" உங்கள் மேலடுக்கு மற்றும் அடிப்படை அடுக்குகளின் படப்புள்ளிகள் "
+"கலக்கப்படுகின்றன."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:187
+msgid "Styles"
+msgstr "பாணிகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:189
+msgid ""
+"Available at the bottom of most of the tabs, the :menuselection:`Styles -->`"
+" menu provides shortcuts to save, load, create, switch styles to apply to "
+"the vector tiles. Vector tiles can have their style saved from QGIS as "
+":guilabel:`QML` files and they can be imported as:"
+msgstr ""
+"பெரும்பாலான தாவல்களின் கீழே கிடைக்கும், :menuselection:`Styles -->` "
+"பட்டியல், வெக்டார் டைல்களுக்குப் பயன்படுத்த, சேமிக்க, ஏற்ற, உருவாக்க, "
+"ச்டைல்களை மாற்ற குறுக்குவழிகளை வழங்குகிறது. வெக்டர் டைல்ச் அவற்றின் பாணியை "
+"QGIS இலிருந்து :guilabel:`QML` கோப்புகளாகச் சேமிக்கலாம் மேலும் அவற்றை "
+"இவ்வாறு இறக்குமதி செய்யலாம்:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:194
+msgid ":guilabel:`QML` files (:ref:`qgisstylefile`)"
+msgstr ":guilabel:`QML` கோப்புகள் (:ref:`qgisstylefile`)"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:195
+msgid ":guilabel:`MapBox GL Json` style configuration files"
+msgstr ":guilabel:`MapBox GL Json` பாணி உள்ளமைவு கோப்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:197
+msgid "More details at :ref:`save_layer_property`."
+msgstr "மேலும் விவரங்கள் :ref:`save_layer_property` இல்."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:202
+msgid "Rendering Properties"
+msgstr "வழங்குதல் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:204
+msgid ""
+"Under |unchecked| :guilabel:`Scale dependent visibility`, you can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which features will be visible. Out of this "
+"range, they are hidden. The |mapIdentification| :sup:`Set to current canvas "
+"scale` button helps you use the current map canvas scale as boundary of the "
+"range visibility. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"கீழ் |தணிக்கப்படாத| :guilabel:`அளவிலை சார்ந்து தெரிவுநிலை`, நீங்கள் "
+":guilabel:`அதிகபட்சம் (உள்ளடக்கப்பட்டது)` மற்றும் :guilabel:`குறைந்தபட்சம் "
+"(பிரத்தியேகமானது)` அளவுகோல்களை அமைக்கலாம், இதில் நற்பொருத்தங்கள் தெரியும். "
+"இந்த வரம்பிற்கு வெளியே, அவை மறைக்கப்பட்டுள்ளன. |வரைபட அடையாளம்| "
+":sup:`தற்போதைய கேன்வாச் அளவுகோலுக்கு அமை` பொத்தான் தற்போதைய வரைபட கேன்வாச் "
+"அளவை வரம்புத் தெரிவுநிலையின் எல்லையாகப் பயன்படுத்த உதவுகிறது. மேலும் "
+"தகவலுக்கு :ref:`label_scaledepend` ஐப் பார்க்கவும்."
+
 #: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:266
 msgid "mapIdentification"
 msgstr "mapIdentification"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:218
+msgid "Vector Tiles Properties - Rendering Dialog"
+msgstr "வெக்டர் டைல்ச் பண்புகள் - வழங்குதல் டயலாக்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:225
+msgid "Metadata Properties"
+msgstr "மேனிலை தரவு பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:227
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"தி |editMetadata| :guilabel:`மெட்டாடேட்டா` தாவல் உங்கள் லேயரில் மேனிலை தரவு "
+"அறிக்கையை உருவாக்க மற்றும் திருத்துவதற்கான விருப்பங்களை வழங்குகிறது. மேலும் "
+"தகவலுக்கு :ref:`metadatamenu` ஐப் பார்க்கவும்."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:235
+msgid "QGIS Server Properties"
+msgstr "QGIS சேவையக பண்புகள்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:237
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab helps you configure settings of "
+"the data when published by :ref:`QGIS Server <QGIS-Server-manual>`. The "
+"configuration concerns:"
+msgstr ""
+"| மேலடுக்கு| :guilabel:`QGIS சர்வர்` தாவல் :ref:`QGIS சேவையகம் <QGIS-Server-"
+"manual>` மூலம் வெளியிடப்படும் போது தரவின் அமைப்புகளை உள்ளமைக்க உதவுகிறது. "
+"கட்டமைப்பு கவலைகள்:"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:241
+msgid ""
+":guilabel:`Description`: provides information to describe the data, such as "
+":guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Abstract`, a "
+":guilabel:`Keyword list`,  and a :guilabel:`Data URL` whose "
+":guilabel:`Format` can be in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+msgstr ""
+":guilabel:`விளக்கம்`: :guilabel:`குறுகிய பெயர்`, :guilabel:`Title`, "
+":guilabel:`சுருக்கம்`, ஒரு :guilabel:`முக்கிய சொல் பட்டியல்`, மற்றும் ஒரு "
+":guilabel:`தரவு URL` போன்ற தரவை விவரிப்பதற்கான தகவல்களை வழங்குகிறது. அல்லது "
+"``பயன்பாடு/pdf``."
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:245
+msgid ""
+":guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL` to identify"
+" who provides the data"
+msgstr ""
+":guilabel:`Attribution`: a :guilabel:`Title` மற்றும் :guilabel:`URL` தரவை "
+"யார் வழங்குகிறார்கள் என்பதைக் கண்டறிய"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:247
+msgid ""
+":guilabel:`Metadata URL`: a list of :guilabel:`URL` for the metadata that "
+"can be of ``FGDC`` or ``TC211`` :guilabel:`Type`, and in ``text/plain`` or "
+"``text/xml`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`மெட்டாடேட்டா URL`: `FGDC` அல்லது ``TC211`` :guilabel:`Type` "
+"மற்றும் ``text/plain`` அல்லது ``text/xml`` :guilabel:`Format` ஆக "
+"இருக்கக்கூடிய மெட்டாடேட்டாவிற்கான :guilabel:`URL` பட்டியல்"
+
+#: ../../docs/user_manual/working_with_vector_tiles/vector_tiles.rst:250
+msgid ""
+":guilabel:`Legend URL`: a :guilabel:`URL` for the legend, in either "
+"``image/png`` or ``image/jpeg`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`Legend URL`: a :guilabel:`URL` புராணத்திற்கான, ``image/png`` "
+"அல்லது ``image/jpeg`` :guilabel:`Format`"
