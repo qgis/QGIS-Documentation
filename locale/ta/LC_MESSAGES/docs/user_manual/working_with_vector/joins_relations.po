@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2026\n"
 "Language-Team: Tamil (https://app.transifex.com/qgis/teams/6144/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -34,65 +35,750 @@ msgstr ""
 "சேரலாம். இந்தப் பக்கம் தற்போது |மொழிபெயர்ப்பு முன்னேற்றம்| இல் "
 "மொழிபெயர்க்கப்பட்டுள்ளது."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
+msgid "Connecting and Editing Data Across Layers"
+msgstr "அடுக்குகள் முழுவதும் தரவை இணைத்தல் மற்றும் திருத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
+msgid ""
+"Ability to connect data from different layers is one of the duties of a GIS "
+"software. Such a connection can be based on the spatial relationship between"
+" the features, or on their shared attributes. QGIS provides tools to handle "
+"any of these associations, such as:"
+msgstr ""
+"வெவ்வேறு அடுக்குகளிலிருந்து தரவை இணைக்கும் திறன் GIS மென்பொருளின் கடமைகளில் "
+"ஒன்றாகும். அத்தகைய இணைப்பு அம்சங்களுக்கிடையேயான இடஞ்சார்ந்த உறவின் "
+"அடிப்படையில் அல்லது அவற்றின் பகிரப்பட்ட பண்புகளின் அடிப்படையில் இருக்கலாம். "
+"QGIS இந்த சங்கங்களில் ஏதேனும் ஒன்றைக் கையாளும் கருவிகளை வழங்குகிறது, அவை:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:18
+msgid ""
+"Processing algorithms that can create a new layer as a result of the "
+"connection, namely :ref:`qgisjoinattributesbylocation`, "
+":ref:`qgisjoinbynearest`, :ref:`qgisjoinattributestable`, ..."
+msgstr ""
+"இணைப்பின் விளைவாக ஒரு புதிய லேயரை உருவாக்கக்கூடிய செயலாக்க வழிமுறைகள், "
+"அதாவது :ref:`qgisjoinattributesbylocation`, :ref:`qgisjoinbynearest`, "
+":ref:`qgisjoinattributestable`, ..."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:21
+msgid ""
+"SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>` or "
+"as a :ref:`virtual layer <vector_virtual_layers>`"
+msgstr ""
+":ref:`DB மேலாளர் <dbmanager>` அல்லது ஒரு :ref:`virtual layer "
+"<vector_virtual_layers>` இலிருந்து புதிய லேயரை உருவாக்க கவிமொ வினவுகிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:23
+msgid ""
+":ref:`Joins properties <sec_joins>` or :ref:`relations settings "
+"<vector_relations>` that temporarily extend attributes of features in a "
+"given layer, with those of features in another layer based on some matching "
+"attribute(s)."
+msgstr ""
+":ref:`Joins பண்புகள் <sec_joins>` அல்லது :ref:`relations அமைப்புகள் "
+"<vector_relations>` இது கொடுக்கப்பட்ட லேயரில் உள்ள அம்சங்களின் பண்புகளை "
+"தற்காலிகமாக நீட்டிக்கும், சில பொருந்தக்கூடிய பண்புக்கூறுகளின் அடிப்படையில் "
+"மற்றொரு அடுக்கில் உள்ள அம்சங்களுடன்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:27
+msgid ""
+"Joins and relations are technical concepts borrowed from databases to get "
+"the most out of data stored in tables by combining their contents. The idea "
+"is that features (rows) of different layers (tables) can be associated to "
+"each other. The number of rows which are matching each other can be of any "
+"value (zero, one, many)."
+msgstr ""
+"இணைப்புகள் மற்றும் உறவுகள் என்பது தரவுத்தளங்களிலிருந்து கடன் வாங்கிய "
+"தொழில்நுட்பக் கருத்துக்கள், அவற்றின் உள்ளடக்கங்களை இணைப்பதன் மூலம் "
+"அட்டவணையில் சேமிக்கப்பட்ட தரவை அதிகம் பெறலாம். வெவ்வேறு அடுக்குகளின் "
+"(அட்டவணைகள்) நற்பொருத்தங்கள் (வரிசைகள்) ஒன்றோடொன்று இணைக்கப்படலாம் என்பது "
+"சிந்தனை. ஒன்றுக்கொன்று பொருந்தக்கூடிய வரிசைகளின் எண்ணிக்கை எந்த மதிப்பிலும் "
+"இருக்கலாம் (பூச்சியம், ஒன்று, பல)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:37
+msgid "Joining features between two layers"
+msgstr "இரண்டு அடுக்குகளுக்கு இடையில் இணைக்கும் நற்பொருத்தங்கள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:39
+msgid ""
+"**Joins** in QGIS allow you to associate features of the current layer to "
+"features from another loaded vector layer. Whether they are spatially "
+"enabled and the type of geometry do not matter. The join is based on an "
+"attribute that is shared by the layers, in a one-to-one relationship."
+msgstr ""
+"QGIS இல் ** இணைகிறது** தற்போதைய லேயரின் அம்சங்களை மற்றொரு ஏற்றப்பட்ட "
+"வெக்டார் லேயரின் அம்சங்களுடன் இணைக்க உங்களை அனுமதிக்கிறது. அவை இடஞ்சார்ந்த "
+"முறையில் இயக்கப்பட்டதா மற்றும் வடிவவியலின் வகை முக்கியமில்லை. ஒன்றுக்கு "
+"ஒன்று உறவில் அடுக்குகளால் பகிரப்படும் பண்புக்கூறின் அடிப்படையில் சேர்வது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:44
+msgid "To create a join on a layer (identified below as ``target layer``):"
+msgstr ""
+"ஒரு லேயரில் ஒரு சேர்வை உருவாக்க (கீழே ``இலக்கு அடுக்கு`` என அடையாளம் "
+"காணப்பட்டுள்ளது):"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:46
+msgid ""
+"Go to the layer :menuselection:`Properties -->` |join| :guilabel:`Joins` tab"
+msgstr ""
+"அடுக்கு :menuselection:`Properties -->` |join| என்பதற்குச் செல்லவும் "
+":guilabel:`Joins` தாவல்"
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:828
 msgid "join"
 msgstr "join"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:47
+msgid ""
+"Click the |symbologyAdd| :sup:`Add new join` button. The :guilabel:`Add "
+"vector join` dialog appears."
+msgstr ""
+"|சிம்பலாசி சேர்| என்பதைக் சொடுக்கு செய்யவும் :sup:`புதிய சேர்` பொத்தான். "
+":guilabel:`வெக்டரைச் சேர்` உரையாடல் தோன்றும்."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:846
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:49
+msgid ""
+"Select the :guilabel:`Join layer` you want to connect with the target vector"
+" layer"
+msgstr ""
+"இலக்கு வெக்டார் லேயருடன் நீங்கள் இணைக்க விரும்பும் :guilabel:`Join layer` "
+"ஐத் தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:50
+msgid ""
+"Specify the :guilabel:`Join field` (from the ``join layer``) and the "
+":guilabel:`Target field` (from the ``target layer``). These are the fields "
+"that are used to find matching feature in both layers hence they should have"
+" values in common."
+msgstr ""
+":guilabel:`Join field` (``join layer`` இலிருந்து) மற்றும் :guilabel:`Target "
+"field` (``target layer`` இலிருந்து) ஆகியவற்றைக் குறிப்பிடவும். இவை இரண்டு "
+"அடுக்குகளிலும் பொருந்தக்கூடிய அம்சத்தைக் கண்டறியப் பயன்படும் புலங்களாகும், "
+"எனவே அவை பொதுவான மதிப்புகளைக் கொண்டிருக்க வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:54
+msgid ""
+"Press :guilabel:`OK` and a summary of selected parameters is added to the "
+":guilabel:`Join` panel."
+msgstr ""
+":guilabel:`OK` ஐ அழுத்தவும் மற்றும் தேர்ந்தெடுக்கப்பட்ட அளவுருக்களின் "
+"சுருக்கம் :guilabel:`Join` பேனலில் சேர்க்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:61
+msgid "Join an attribute table to an existing vector layer"
+msgstr "ஏற்கனவே உள்ள வெக்டார் லேயரில் ஒரு பண்புக்கூறு அட்டவணையை இணைக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:63
+msgid ""
+"The steps above will create a join, where **ALL** the attributes of the "
+"**first matching feature** in the join layer is added to the target layer's "
+"feature. The following logic is used to pair features during a join process:"
+msgstr ""
+"மேலே உள்ள படிகள் ஒரு இணைப்பை உருவாக்கும், இதில் **எல்லாம்** சேர லேயரில் உள்ள"
+" **முதல் பொருந்தும் அம்சத்தின்** பண்புக்கூறுகள் இலக்கு லேயரின் அம்சத்தில் "
+"சேர்க்கப்படும். சேரும் செயல்பாட்டின் போது அம்சங்களை இணைக்க பின்வரும் வழக்கு "
+"பயன்படுத்தப்படுகிறது:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:68
+msgid ""
+"All the features in the target layer are returned, regardless they have a "
+"match"
+msgstr ""
+"டார்கெட் லேயரில் உள்ள அனைத்து அம்சங்களும் பொருத்தம் இல்லாமல் திரும்பும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:69
+msgid ""
+"If the target field contains duplicate values, these features are assigned "
+"the same feature from the join layer."
+msgstr ""
+"இலக்கு புலத்தில் நகல் மதிப்புகள் இருந்தால், இந்த அம்சங்களுக்கு சாயின் "
+"லேயரில் இருந்து அதே நற்பொருத்தம் ஒதுக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:71
+msgid ""
+"If the join field contains duplicate matching values, only the first fetched"
+" feature is picked."
+msgstr ""
+"சேரும் புலத்தில் நகல் பொருந்தக்கூடிய மதிப்புகள் இருந்தால், முதலில் பெறப்பட்ட"
+" நற்பொருத்தம் மட்டுமே தேர்ந்தெடுக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:73
+msgid ""
+"Joins in QGIS are based on a single field matching so most of the times, you"
+" would want to make sure that values in the matchable fields are unique."
+msgstr ""
+"QGIS இல் சேர்வது ஒரு புலப் பொருத்தத்தை அடிப்படையாகக் கொண்டது, எனவே "
+"பெரும்பாலான நேரங்களில், பொருந்தக்கூடிய புலங்களில் உள்ள மதிப்புகள் "
+"தனித்துவமானவை என்பதை உறுதிப்படுத்த வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:76
+msgid "QGIS provides some more options to tweak the join:"
+msgstr "QGIS சேர்வதை மாற்றுவதற்கு மேலும் சில விருப்பங்களை வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:78
+msgid ""
+"|checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to "
+"cache values in memory (without geometries) from the joined layer in order "
+"to speed up lookups."
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`மெய்நிகர் நினைவகத்தில் கேச் சேர் லேயர்`: தேடுதல்களை "
+"விரைவுபடுத்துவதற்காக இணைந்த லேயரில் இருந்து நினைவகத்தில் மதிப்புகளை "
+"(வடிவவியல் இல்லாமல்) தேக்குவதற்கு உங்களை அனுமதிக்கிறது."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:820
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:80
+msgid ""
+"|unchecked| :guilabel:`Create attribute index on the join field` to speed up"
+" lookups"
+msgstr ""
+"|தணிக்கை செய்யப்படவில்லை| :guilabel:தேடல்களை விரைவுபடுத்த, `சேர்தல் "
+"புலத்தில் பண்புக் குறியீட்டை உருவாக்கவும்`"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:854
 msgid "unchecked"
 msgstr "unchecked"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:81
+msgid ""
+"|unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on "
+"the fly, according to the :guilabel:`Target field`. This way, constraints "
+"for join fields are also correctly updated. Note that it's deactivated by "
+"default because it may be very time consuming if you have a lot of features "
+"or a myriad of joins."
+msgstr ""
+"|தணிக்கை செய்யப்படவில்லை| :guilabel:`டைனமிக் ஃபார்ம்`: :guilabel:`Target "
+"field`ன் படி, பறக்கும்போது சேரும் புலங்களை ஒத்திசைக்க உதவுகிறது. இந்த "
+"வழியில், சேரும் துறைகளுக்கான கட்டுப்பாடுகளும் சரியாகப் "
+"புதுப்பிக்கப்படுகின்றன. இது முன்னிருப்பாக செயலிழக்கப்பட்டது என்பதை நினைவில் "
+"கொள்ளவும், ஏனெனில் உங்களிடம் நிறைய நற்பொருத்தங்கள் அல்லது எண்ணற்ற இணைப்புகள்"
+" இருந்தால் அது அதிக நேரத்தை எடுத்துக்கொள்ளும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:86
+msgid ""
+"If the target layer is editable, then some icons will be displayed in the "
+"attribute table next to fields, in order to inform about their status:"
+msgstr ""
+"இலக்கு அடுக்கு திருத்தக்கூடியதாக இருந்தால், சில ஐகான்கள் அவற்றின் நிலையைப் "
+"பற்றி தெரிவிக்க, புலங்களுக்கு அடுத்துள்ள பண்புக்கூறு அட்டவணையில் "
+"காண்பிக்கப்படும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:89
+msgid ""
+"|joinNotEditable|: the join layer is not configured to be editable. If you "
+"want to be able to edit join features from the target attribute table, then "
+"you have to check the option |checkbox| :guilabel:`Editable join layer`."
+msgstr ""
+"|joinNotEditable|: சேரும் அடுக்கு திருத்தக்கூடியதாக உள்ளமைக்கப்படவில்லை. "
+"இலக்கு பண்புக்கூறு அட்டவணையில் இருந்து சேரும் அம்சங்களை நீங்கள் திருத்த "
+"விரும்பினால், நீங்கள் |செக்பாக்ச்| என்ற விருப்பத்தை சரிபார்க்க வேண்டும். "
+":guilabel:`Editable join layer`."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:832
 msgid "joinNotEditable"
 msgstr "joinNotEditable"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:92
+msgid ""
+"|joinedLayerNotEditable|: the join layer is well configured to be editable, "
+"but its current status is read only."
+msgstr ""
+"|joinedLayerNotEditable|: சாயின் லேயர் திருத்தக்கூடியதாக "
+"உள்ளமைக்கப்பட்டுள்ளது, ஆனால் அதன் தற்போதைய நிலை படிக்க மட்டுமே."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:834
 msgid "joinedLayerNotEditable"
 msgstr "joinedLayerNotEditable"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:94
+msgid ""
+"|joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization "
+"mechanisms are not activated. If you want to automatically add a feature in "
+"the join layer when a feature is created in the target layer, then you have "
+"to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, "
+"the option |checkbox| :guilabel:`Delete cascade` may be activated if you  "
+"want to automatically delete join features."
+msgstr ""
+"|joinHasNotUpsertOnEdit|: சேரும் அடுக்கு திருத்தக்கூடியது, ஆனால் ஒத்திசைவு "
+"வழிமுறைகள் செயல்படுத்தப்படவில்லை. டார்கெட் லேயரில் ஒரு நற்பொருத்தம் "
+"உருவாக்கப்படும் போது, ​​சாயின் லேயரில் தானாகவே ஒரு அம்சத்தைச் சேர்க்க "
+"விரும்பினால், நீங்கள் |செக்பாக்ச்| என்ற விருப்பத்தைச் சரிபார்க்க வேண்டும். "
+":guilabel:`அப்சர்ட் ஆன் எடிட்`. சமச்சீர், விருப்பம் |செக்பாக்ச்| "
+":guilabel:`நீக்கு அடுக்கை` நீங்கள் தானாக சேரும் அம்சங்களை நீக்க விரும்பினால்"
+" செயல்படுத்தப்படலாம்."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:830
 msgid "joinHasNotUpsertOnEdit"
 msgstr "joinHasNotUpsertOnEdit"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:101
+msgid ""
+"|unchecked| :guilabel:`Joined fields`: instead of adding all the fields from"
+" the joined layer, you can specify a subset."
+msgstr ""
+"|தணிக்கை செய்யப்படவில்லை| :guilabel:`இணைந்த புலங்கள்`: இணைக்கப்பட்ட "
+"அடுக்கிலிருந்து அனைத்து புலங்களையும் சேர்ப்பதற்குப் பதிலாக, நீங்கள் ஒரு "
+"துணைக்குழுவைக் குறிப்பிடலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:103
+msgid ""
+"|unchecked| :guilabel:`Custom field name prefix` for joined fields, in order"
+" to avoid name collision"
+msgstr ""
+"|தணிக்கை செய்யப்படவில்லை| :guilabel:'தனிப்பயன் புலம் பெயர் முன்னொட்டு', "
+"இணைந்த புலங்களுக்கு, பெயர் மோதலைத் தவிர்ப்பதற்காக"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:111
+msgid "Setting relations between multiple layers"
+msgstr "பல அடுக்குகளுக்கு இடையே உறவுகளை அமைத்தல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:113
+msgid ""
+"Unlike joins that define a one-to-one link between features across two "
+"layers, relations help you build interconnections between multiple features "
+"across two or more layers. As such, relations are project level settings and"
+" are set in :menuselection:`Project --> Properties -->` |relations| "
+":guilabel:`Relations` tab. From there, you can:"
+msgstr ""
+"இரண்டு அடுக்குகளில் உள்ள அம்சங்களுக்கிடையில் ஒன்றிலிருந்து ஒன்று இணைப்பை "
+"வரையறுக்கும் இணைப்புகளைப் போலன்றி, இரண்டு அல்லது அதற்கு மேற்பட்ட "
+"அடுக்குகளில் பல அம்சங்களுக்கிடையில் தொடர்புகளை உருவாக்க உறவுகள் உங்களுக்கு "
+"உதவுகின்றன. எனவே, உறவுகள் திட்ட நிலை அமைப்புகளாகும் மற்றும் அவை "
+":menuselection:`Project --> பண்புகள் -->` |relations| :guilabel:`உறவுகள்` "
+"தாவல். அங்கிருந்து, உங்களால் முடியும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:842
+msgid "relations"
+msgstr "உறவுகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:119
+msgid "|symbologyAdd| :guilabel:`Add relation` whose type can be:"
+msgstr "|சிம்பலாசி சேர்| :guilabel:`தொடர்பைச் சேர்` அதன் வகை:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:121
+msgid ":ref:`one to many relation <one_to_many_relation>`"
+msgstr ":ref:`ஒன்றிலிருந்து பல உறவு <one_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:122
+msgid ":ref:`many to many relation <many_to_many_relation>`"
+msgstr ":ref:`பலர் பல உறவுகள் <many_to_many_relation>`"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:123
+msgid ""
+":ref:`polymorphic relation <polymorphic_relation>` that you can add or edit "
+"with the dedicated tools in the action drop-down menu."
+msgstr ""
+":ref:`polymorphic relation <polymorphic_relation>` செயல் கீழ்தோன்றும் "
+"பட்டியலில் பிரத்யேக கருவிகளை நீங்கள் சேர்க்கலாம் அல்லது திருத்தலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:126
+msgid ""
+"There is no simple way yet to edit a non-polymorphic relation once it has "
+"been created. Only the name can be edited with a double-click. For any other"
+" parameters of such a relation you will have to remove and recreate it."
+msgstr ""
+"பாலிமார்பிக் அல்லாத உறவை உருவாக்கியவுடன் அதைத் திருத்த இன்னும் எளிய வழி "
+"இல்லை. இருமுறை சொடுக்கு செய்வதன் மூலம் பெயரை மட்டுமே திருத்த முடியும். "
+"அத்தகைய உறவின் வேறு எந்த அளவுருக்களுக்கும் நீங்கள் அதை அகற்றி மீண்டும் "
+"உருவாக்க வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:130
+msgid ""
+"|symbologyAdd| :guilabel:`Discover relations`: QGIS is able to discover "
+"existing relations from supported database formats (PostgreSQL, GeoPackage, "
+"ESRI File Geodatabase, ...). This can be a good way to ease the relations "
+"definition."
+msgstr ""
+"|சிம்பலாசி சேர்| :guilabel:`டிச்கவர் ரிலேசன்ச்`: ஆதரிக்கப்படும் தரவுத்தள "
+"வடிவங்களிலிருந்து (PostgreSQL, GeoPackage, ESRI கோப்பு Geodatabase, ...) "
+"இருக்கும் உறவுகளை QGIS கண்டறிய முடியும். உறவுகளின் வரையறையை எளிதாக்க இது ஒரு"
+" சிறந்த வழியாகும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:133
+msgid "|symbologyRemove| :guilabel:`Remove relation`"
+msgstr "|சிம்பலாசிஅகற்று| :guilabel:`உறவை அகற்று`"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:848
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:140
+msgid "Relations tab"
+msgstr "உறவுகள் தாவல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:148
+msgid "One to many (1-N) relations"
+msgstr "ஒன்று முதல் பல (1-N) உறவுகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:150
+msgid ""
+"As an example you have a layer with all regions of Alaska (polygon) which "
+"provides some attributes about its name and region type and a unique id "
+"(which acts as primary key)."
+msgstr ""
+"உதாரணமாக, அலாச்காவின் அனைத்துப் பகுதிகளிலும் (பலகோணம்) ஒரு அடுக்கு உள்ளது, "
+"இது அதன் பெயர் மற்றும் பிராந்திய வகை மற்றும் தனிப்பட்ட அடையாளம் (முதன்மை "
+"விசையாக செயல்படுகிறது) பற்றிய சில பண்புகளை வழங்குகிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:154
+msgid ""
+"Then you get another point layer or table with information about airports "
+"that are located in the regions and you also want to keep track of these. If"
+" you want to add them to the regions layer, you need to create a one to many"
+" relation using foreign keys, because there are several airports in most "
+"regions."
+msgstr ""
+"பிராந்தியங்களில் அமைந்துள்ள விமான நிலையங்களைப் பற்றிய தகவலுடன் மற்றொரு "
+"புள்ளி அடுக்கு அல்லது அட்டவணையைப் பெறுவீர்கள், மேலும் இவற்றைக் "
+"கண்காணிக்கவும் விரும்புகிறீர்கள். பிராந்தியங்களின் அடுக்கில் அவற்றைச் "
+"சேர்க்க விரும்பினால், வெளிநாட்டு விசைகளைப் பயன்படுத்தி பல உறவுகளை உருவாக்க "
+"வேண்டும், ஏனெனில் பெரும்பாலான பிராந்தியங்களில் பல விமான நிலையங்கள் உள்ளன."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:165
+msgid "Alaska region with airports"
+msgstr "விமான நிலையங்களுடன் அலாச்கா பகுதி"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:168
+msgid "Layers and keys"
+msgstr "அடுக்குகள் மற்றும் விசைகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:170
+msgid ""
+"QGIS makes no difference between a table and a vector layer. Basically, a "
+"vector layer is a table with a geometry. So you can add your table as a "
+"vector layer. To demonstrate the 1-n relation, you can load the "
+":file:`regions` and :file:`airports` layers in the sample dataset. In "
+"practice, each airport belongs to exactly one region while each region can "
+"have any number of airports (a typical one to many relation)."
+msgstr ""
+"QGIS ஒரு அட்டவணைக்கும் திசையன் அடுக்குக்கும் இடையில் எந்த வித்தியாசத்தையும் "
+"ஏற்படுத்தாது. அடிப்படையில், திசையன் அடுக்கு என்பது வடிவவியலுடன் கூடிய "
+"அட்டவணை. எனவே உங்கள் அட்டவணையை வெக்டர் லேயராக சேர்க்கலாம். 1-n தொடர்பைக் "
+"காட்ட, மாதிரி தரவுத்தொகுப்பில் :file:`regions` மற்றும் :file:`airports` "
+"லேயர்களை ஏற்றலாம். நடைமுறையில், ஒவ்வொரு விமான நிலையமும் சரியாக ஒரு "
+"பிராந்தியத்தைச் சேர்ந்தது, ஒவ்வொரு பிராந்தியமும் எத்தனை விமான நிலையங்களைக் "
+"கொண்டிருக்கலாம் (ஒரு பொதுவான ஒன்றுக்கு பல உறவுகள்)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:178
+msgid ""
+"In addition to the attributes describing the airports, the aiports layer has"
+" another field ``fk_region`` which acts as a foreign key (if you have a "
+"database, you will probably want to define a constraint on it). This "
+"``fk_region`` field will always contain an id of a region. It can be seen "
+"like a pointer to the region it belongs to."
+msgstr ""
+"விமான நிலையங்களை விவரிக்கும் பண்புக்கூறுகளுக்கு மேலதிகமாக, ஏபோர்ட்ச் லேயரில்"
+" மற்றொரு புலம் ``fk_region`` உள்ளது, இது ஒரு வெளிநாட்டு விசையாக "
+"செயல்படுகிறது (உங்களிடம் தரவுத்தளம் இருந்தால், அதில் ஒரு தடையை நீங்கள் "
+"வரையறுக்க விரும்பலாம்). இந்த ``fk_region`` புலத்தில் எப்போதும் ஒரு "
+"பிராந்தியத்தின் அடையாளம் இருக்கும். இது அது சார்ந்த பகுதிக்கு ஒரு சுட்டி "
+"போல் பார்க்க முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:184
+msgid ""
+"All you have to do is to tell QGIS the relation between the layers so that "
+"you can design a custom edit form for editing and QGIS takes care of the "
+"setup. It works with different providers (so you can also use it with shape "
+"and csv files)."
+msgstr ""
+"நீங்கள் செய்ய வேண்டியதெல்லாம், அடுக்குகளுக்கு இடையேயான தொடர்பை QGIS ஐச் "
+"சொல்ல வேண்டும், இதன் மூலம் நீங்கள் திருத்துவதற்கான தனிப்பயன் திருத்த "
+"படிவத்தை வடிவமைக்க முடியும் மற்றும் QGIS அமைப்பை கவனித்துக்கொள்கிறது. இது "
+"வெவ்வேறு வழங்குநர்களுடன் வேலை செய்கிறது (எனவே நீங்கள் அதை வடிவம் மற்றும் "
+"காபிம கோப்புகளுடன் பயன்படுத்தலாம்)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:189
+msgid "Defining 1-N relations"
+msgstr "1-N உறவுகளை வரையறுத்தல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:191
+msgid ""
+"The first thing we are going to do is to let QGIS know about the relations "
+"between the layers. This is done in :menuselection:`Project --> "
+"Properties...`. Open the :guilabel:`Relations` tab and click on "
+"|symbologyAdd| :guilabel:`Add Relation`."
+msgstr ""
+"நாம் செய்யப் போகும் முதல் சேதி, அடுக்குகளுக்கு இடையிலான உறவுகளைப் பற்றி "
+"QGISஐத் தெரியப்படுத்துவதாகும். இது :menuselection:`Project --> "
+"Properties...` என்பதில் செய்யப்படுகிறது. :guilabel:`Relations` தாவலைத் "
+"திறந்து, |symbologyAdd| என்பதைக் சொடுக்கு செய்யவும் :guilabel:`உறவுகளைச் "
+"சேர்`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:195
+msgid ""
+"**Name** is going to be used as a title. It should be a human readable "
+"string describing what the relation is used for. We will just call say "
+"**airport_relation** in this case."
+msgstr ""
+"**பெயர்** ஒரு தலைப்பாகப் பயன்படுத்தப்படும். உறவு எதற்காகப் "
+"பயன்படுத்தப்படுகிறது என்பதை விவரிக்கும் மனிதனால் படிக்கக்கூடிய சரமாக இது "
+"இருக்க வேண்டும். இந்த வழக்கில் **விமான நிலையம்_தொடர்பு** என்று மட்டும் "
+"அழைப்போம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:198
+msgid ""
+"**Referenced Layer (Parent)** also considered as parent layer, is the one "
+"with the primary key, pointed to, so here it is the ``regions`` layer. You "
+"need to define the primary key of the referenced layer, so it is ``ID``."
+msgstr ""
+"**குறிப்பிடப்பட்ட அடுக்கு (பெற்றோர்)** பெற்றோர் அடுக்காகவும் கருதப்படுகிறது,"
+" இது முதன்மை விசையுடன் சுட்டிக்காட்டப்படுகிறது, எனவே இங்கே இது ``பகுதிகள்`` "
+"லேயர் ஆகும். குறிப்பிடப்பட்ட லேயரின் முதன்மை விசையை நீங்கள் வரையறுக்க "
+"வேண்டும், எனவே அது ``ID``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:201
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``airports`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``fk_region``."
+msgstr ""
+"**குறிப்பு அடுக்கு (குழந்தை)** குழந்தை அடுக்கு என்றும் கருதப்படுகிறது, இது "
+"வெளிநாட்டு விசை புலத்துடன் உள்ளது. எங்கள் விசயத்தில், இது ``விமான "
+"நிலையங்கள்`` அடுக்கு. இந்த லேயருக்கு நீங்கள் மற்ற லேயரைக் குறிக்கும் ஒரு "
+"குறிப்பு புலத்தைச் சேர்க்க வேண்டும், எனவே இது ``fk_region``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:207
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:585
+msgid ""
+"Sometimes, you need more than a single field to uniquely identify features "
+"in a layer. Creating a relation with such a layer requires a **composite "
+"key**, i.e. more than a single pair of matching fields. Use the "
+"|symbologyAdd| :sup:`Add new field pair as part of a composite foreign key` "
+"button to add as many pairs as necessary."
+msgstr ""
+"சில நேரங்களில், லேயரில் உள்ள அம்சங்களைத் தனித்துவமாக அடையாளம் காண, "
+"உங்களுக்கு ஒரு புலத்திற்கு மேல் தேவை. அத்தகைய அடுக்குடன் ஒரு தொடர்பை "
+"உருவாக்குவதற்கு **கலவை விசை** தேவைப்படுகிறது, அதாவது ஒரு இணை பொருந்தக்கூடிய "
+"புலங்களுக்கு மேல். |சிம்பலாசி சேர்| பயன்படுத்தவும் :sup:\"ஒரு கூட்டு "
+"வெளிநாட்டு விசையின் ஒரு பகுதியாக புதிய புல சோடியைச் சேர்\" பொத்தான் தேவையான "
+"பல சோடிகளைச் சேர்க்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:213
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:574
+msgid ""
+"**Id** will be used for internal purposes and has to be unique. You may need"
+" it to build :ref:`custom forms <customize_form>`. If you leave it empty, "
+"one will be generated for you but you can assign one yourself to get one "
+"that is easier to handle"
+msgstr ""
+"**ஐடி** உள் நோக்கங்களுக்காகப் பயன்படுத்தப்படும் மற்றும் தனிப்பட்டதாக இருக்க "
+"வேண்டும். :ref:`தனிப்பயன் படிவங்களை < customize_form>` உருவாக்க உங்களுக்கு "
+"இது தேவைப்படலாம். நீங்கள் அதை காலியாக விட்டால், உங்களுக்காக ஒன்று "
+"உருவாக்கப்படும், ஆனால் கையாளுவதற்கு எளிதான ஒன்றைப் பெற நீங்களே ஒன்றை "
+"ஒதுக்கலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:217
+msgid ""
+"**Relationship strength** sets the strength of the relation between the "
+"parent and the child layer. The default :guilabel:`Association` type means "
+"that the parent layer is *simply* linked to the child one while the "
+":guilabel:`Composition` type allows you to duplicate also the child features"
+" when duplicating the parent ones and on deleting a feature the children are"
+" deleted as well, resulting in cascade over all levels (means children of "
+"children of... are deleted as well)."
+msgstr ""
+"**உறவு வலிமை** பெற்றோர் மற்றும் குழந்தை அடுக்குக்கு இடையிலான உறவின் வலிமையை "
+"அமைக்கிறது. இயல்புநிலை :guilabel:`Association` வகை என்பது, பெற்றோர் அடுக்கு "
+"குழந்தையுடன் *எளிமையாக* இணைக்கப்பட்டிருப்பதைக் குறிக்கிறது, அதே நேரத்தில் "
+":guilabel:`Composition` வகையானது, பெற்றோரை நகலெடுக்கும் போது குழந்தை "
+"அம்சங்களையும் நகலெடுக்க அனுமதிக்கிறது மற்றும் ஒரு அம்சத்தை நீக்கும் போது "
+"குழந்தைகளும் நீக்கப்படுவார்கள், இதன் விளைவாக குழந்தைகள் எல்லா நிலைகளிலும் "
+"நீக்கப்படுவார்கள்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:228
+msgid "Adding a relation between regions and airports layers"
+msgstr ""
+"பிராந்தியங்கள் மற்றும் விமான நிலைய அடுக்குகளுக்கு இடையே ஒரு தொடர்பைச் "
+"சேர்த்தல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:230
+msgid ""
+"From the :guilabel:`Relations` tab, you can also press the |symbologyAdd| "
+":guilabel:`Discover Relation` button to fetch the relations available from "
+"the providers of the loaded layers. This is possible for layers stored in "
+"data providers like PostgreSQL or SpatiaLite."
+msgstr ""
+":guilabel:`Relations` தாவலில் இருந்து, நீங்கள் |symbologyAdd| "
+":guilabel:'டிச்கவர் ரிலேசன்' பொத்தான் ஏற்றப்பட்ட அடுக்குகளின் "
+"வழங்குநர்களிடமிருந்து கிடைக்கும் உறவுகளைப் பெற. PostgreSQL அல்லது SpatiaLite"
+" போன்ற தரவு வழங்குநர்களில் சேமிக்கப்பட்ட அடுக்குகளுக்கு இது சாத்தியமாகும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:238
+msgid "Forms for 1-N relations"
+msgstr "1-N உறவுகளுக்கான படிவங்கள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:240
+msgid ""
+"Now that QGIS knows about the relation, it will be used to improve the forms"
+" it generates. As we did not change the default form method (autogenerated),"
+" it will just add a new widget in our form. So let's select the layer region"
+" in the legend and use the identify tool. Depending on your settings, the "
+"form might open directly or you will have to choose to open it in the "
+"identification dialog under actions."
+msgstr ""
+"இப்போது QGIS உறவைப் பற்றி அறிந்திருப்பதால், அது உருவாக்கும் படிவங்களை "
+"மேம்படுத்த இது பயன்படுத்தப்படும். நாங்கள் இயல்புநிலை படிவ முறையை (தானியங்கு "
+"உருவாக்கியது) மாற்றாததால், அது எங்கள் வடிவத்தில் ஒரு புதிய விட்செட்டைச் "
+"சேர்க்கும். எனவே லெசண்டில் லேயர் பகுதியைத் தேர்ந்தெடுத்து அடையாளம் கருவியைப்"
+" பயன்படுத்துவோம். உங்கள் அமைப்புகளைப் பொறுத்து, படிவம் நேரடியாகத் "
+"திறக்கப்படலாம் அல்லது செயல்களின் கீழ் அடையாள உரையாடலில் அதைத் திறக்க நீங்கள்"
+" தேர்வு செய்ய வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:251
+msgid "Identification dialog regions with relation to airports"
+msgstr "விமான நிலையங்கள் தொடர்பான அடையாள உரையாடல் பகுதிகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:253
+msgid ""
+"As you can see, the airports assigned to this particular region are all "
+"shown in a table. And there are also some buttons available. Let's review "
+"them shortly:"
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, இந்த குறிப்பிட்ட பிராந்தியத்திற்கு ஒதுக்கப்பட்ட"
+" விமான நிலையங்கள் அனைத்தும் அட்டவணையில் காட்டப்பட்டுள்ளன. மேலும் சில "
+"பொத்தான்களும் உள்ளன. அவற்றை விரைவில் மதிப்பாய்வு செய்வோம்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:256
+msgid ""
+"The |toggleEditing| button is for toggling the edit mode. Be aware that it "
+"toggles the edit mode of the airport layer, although we are in the feature "
+"form of a feature from the region layer. But the table is representing "
+"features of the airport layer."
+msgstr ""
+"தி |டாக்கிள் எடிட்டிங்| பொத்தான் தொகு பயன்முறையை மாற்றுவதற்கானது. நாங்கள் "
+"பிராந்திய லேயரில் இருந்து அம்சத்தின் அம்ச வடிவத்தில் இருந்தாலும், இது விமான "
+"நிலைய லேயரின் திருத்து பயன்முறையை மாற்றுகிறது என்பதை நினைவில் கொள்ளவும். "
+"ஆனால் அட்டவணை விமான நிலைய அடுக்கின் அம்சங்களைக் குறிக்கிறது."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:852
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:260
+msgid ""
+"The |saveEdits| button is for saving all the edits in the child layer "
+"(airport)."
+msgstr ""
+"தி |சேவ் எடிட்ச்| குழந்தை அடுக்கில் (விமான நிலையம்) அனைத்து திருத்தங்களையும்"
+" சேமிப்பதற்கான பொத்தான்."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:844
 msgid "saveEdits"
 msgstr "saveEdits"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:261
+msgid ""
+"The |capturePoint| button lets you digitize the airport geometry in the map "
+"canvas and assigns the new feature to the current region by default. Note "
+"that the icon will change according to the geometry type."
+msgstr ""
+"தி |capturePoint| பொத்தான் வரைபட கேன்வாசில் விமான நிலைய வடிவவியலை டிசிட்டல் "
+"மயமாக்க உதவுகிறது மற்றும் இயல்புநிலையாக தற்போதைய பகுதிக்கு புதிய அம்சத்தை "
+"ஒதுக்குகிறது. வடிவவியலின் வகைக்கு ஏற்ப படவுரு மாறும் என்பதை நினைவில் கொள்க."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:818
 msgid "capturePoint"
 msgstr "capturePoint"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:264
+msgid ""
+"The |newTableRow| button adds a new record to the airport layer attribute "
+"table and assigns the new feature to the current region by default. The "
+"geometry can be drawn later with the :guilabel:`Add part` digitizing tool."
+msgstr ""
+"தி |புதிய அட்டவணை வரிசை| பொத்தான் விமான நிலைய அடுக்கு பண்பு அட்டவணையில் ஒரு "
+"புதிய பதிவைச் சேர்க்கிறது மற்றும் இயல்புநிலையாக தற்போதைய பகுதிக்கு புதிய "
+"அம்சத்தை ஒதுக்குகிறது. வடிவவியலை பின்னர் :guilabel:`Add part` டிசிட்டல் டூல்"
+" மூலம் வரையலாம்."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:838
 msgid "newTableRow"
 msgstr "newTableRow"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:267
+msgid ""
+"The |duplicateFeature| button allows you to copy and paste one or more child"
+" features within the child layer. They can later be assigned to a different "
+"parent feature or have their attributes modified."
+msgstr ""
+"தி |டூப்ளிகேட் அம்சம்| குழந்தை லேயரில் ஒன்று அல்லது அதற்கு மேற்பட்ட குழந்தை "
+"அம்சங்களை நகலெடுத்து ஒட்டுவதற்கு பொத்தான் உங்களை அனுமதிக்கிறது. அவர்கள் "
+"பின்னர் வேறு பெற்றோர் அம்சத்திற்கு ஒதுக்கப்படலாம் அல்லது அவற்றின் பண்புகளை "
+"மாற்றியமைக்கலாம்."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:824
 msgid "duplicateFeature"
 msgstr "duplicateFeature"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:270
+msgid ""
+"The |deleteSelectedFeatures| button deletes the selected airport(s) "
+"permanently."
+msgstr ""
+"The |deleteSelected Features| பட்டன் தேர்ந்தெடுக்கப்பட்ட விமான நிலையத்தை "
+"(களை) நிரந்தரமாக நீக்குகிறது."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:822
 msgid "deleteSelectedFeatures"
 msgstr "deleteSelectedFeatures"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:271
+msgid ""
+"The |link| symbol opens a new dialog where you can select any existing "
+"airport which will then be assigned to the current region. This may be handy"
+" if you created the airport on the wrong region by accident."
+msgstr ""
+"தி |இணைப்பு| அடையாளம் ஒரு புதிய உரையாடலைத் திறக்கிறது, அங்கு நீங்கள் "
+"இருக்கும் விமான நிலையத்தைத் தேர்ந்தெடுக்கலாம், அது தற்போதைய "
+"பிராந்தியத்திற்கு ஒதுக்கப்படும். நீங்கள் தற்செயலாக தவறான பகுதியில் விமான "
+"நிலையத்தை உருவாக்கியிருந்தால் இது எளிதாக இருக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:836
+msgid "link"
+msgstr "இணைப்பு"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:274
+msgid ""
+"The |unlink| symbol unlinks the selected airport(s) from the current region,"
+" leaving them unassigned (the foreign key is set to NULL) effectively."
+msgstr ""
+"தி |இணைப்புநீக்கு| தேர்ந்தெடுக்கப்பட்ட விமான நிலையத்தை தற்போதைய பகுதியில் "
+"இருந்து அடையாளம் நீக்குகிறது, அவற்றை ஒதுக்காமல் விட்டுவிடுகிறது (வெளிநாட்டு "
+"விசை NULL ஆக அமைக்கப்பட்டுள்ளது)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:856
+msgid "unlink"
+msgstr "இணைப்பை துண்டிக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:276
+msgid ""
+"With the |zoomToSelected| button you can zoom the map to the selected child "
+"features."
+msgstr ""
+"|zoomToSelected| உடன் பட்டனை நீங்கள் தேர்ந்தெடுத்த குழந்தை அம்சங்களுக்கு "
+"வரைபடத்தை பெரிதாக்கலாம்."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:860
 msgid "zoomToSelected"
 msgstr "zoomToSelected"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:277
+msgid ""
+"The two buttons |formView| and |openTable| to the right switch between the "
+":ref:`table view and form view <attribute_table_view>` of the related child "
+"features."
+msgstr ""
+"இரண்டு பொத்தான்கள் |formView| மற்றும் |ஓப்பன் டேபிள்| தொடர்புடைய குழந்தை "
+"அம்சங்களின் :ref:`table பார்வை மற்றும் form பார்வை <attribute_table_view>` "
+"இடையே வலதுபுறம் மாறவும்."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:826
 msgid "formView"
@@ -102,9 +788,923 @@ msgstr "formView"
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:280
+msgid ""
+"If you use the :ref:`Drag and Drop Designer <customize_form>` for the "
+"regions feature, you can select which tools are available. You can even "
+"decide whether to open a new form when a new feature is added using "
+":guilabel:`Force hide form on add feature` option. Be aware that this option"
+" implies that not null attributes must take a valid default value to work "
+"correctly."
+msgstr ""
+"பிராந்திய அம்சத்திற்காக நீங்கள் :ref:`Drag and Drop Designer "
+"<customize_form>` ஐப் பயன்படுத்தினால், எந்தெந்த கருவிகள் உள்ளன என்பதை "
+"நீங்கள் தேர்ந்தெடுக்கலாம். புதிய நற்பொருத்தம் சேர்க்கப்படும் போது புதிய "
+"படிவத்தைத் திறக்க வேண்டுமா என்பதை நீங்கள் முடிவு செய்யலாம் :guilabel:`Force "
+"மறை form on கூட்டு feature` விருப்பத்தைப் பயன்படுத்தி. சுழிய பண்புக்கூறுகள் "
+"சரியாக வேலை செய்ய சரியான இயல்புநிலை மதிப்பை எடுக்க வேண்டும் என்பதை இந்த "
+"விருப்பம் குறிக்கிறது என்பதை நினைவில் கொள்ளவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:292
+msgid "Drag and Drop Designer for configure regions-airports relation tools"
+msgstr ""
+"பகுதிகள்-விமான நிலையங்கள் தொடர்பான கருவிகளை உள்ளமைக்க டிசைனரை இழுத்து "
+"விடவும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:294
+msgid ""
+"In the above example the referencing layer has geometries (so it isn't just "
+"an alphanumeric table) so the above steps will create an entry in the layer "
+"attribute table that has no corresponding geometric feature. To add the "
+"geometry:"
+msgstr ""
+"மேலே உள்ள எடுத்துக்காட்டில், குறிப்பு அடுக்கு வடிவவியலைக் கொண்டுள்ளது (எனவே "
+"இது ஒரு எண்ணெழுத்து அட்டவணை அல்ல) எனவே மேலே உள்ள படிகள் அடுக்கு பண்புக்கூறு "
+"அட்டவணையில் பொருத்தமான வடிவியல் நற்பொருத்தம் இல்லாத ஒரு உள்ளீட்டை "
+"உருவாக்கும். வடிவவியலைச் சேர்க்க:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:299
+msgid ""
+"Choose |openTable| :menuselection:`Open Attribute Table` for the referencing"
+" layer."
+msgstr ""
+"|openTable| என்பதைத் தேர்ந்தெடுக்கவும் :menuselection:'குறிப்பு அடுக்குக்கான"
+" பண்புக்கூறு அட்டவணையைத் திற."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:300
+msgid ""
+"Select the record that has been added previously within the feature form of "
+"the referenced layer."
+msgstr ""
+"குறிப்பிடப்பட்ட லேயரின் அம்சப் படிவத்தில் முன்பு சேர்க்கப்பட்ட பதிவைத் "
+"தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:301
+msgid ""
+"Use the |addPart| :sup:`Add Part` digitizing tool to attach a geometry to "
+"the selected attributes table record."
+msgstr ""
+"|addPart| ஐப் பயன்படுத்தவும் தேர்ந்தெடுக்கப்பட்ட பண்புக்கூறுகள் அட்டவணைப் "
+"பதிவில் வடிவவியலை இணைக்க :sup:`பகுதியைச் சேர்` டிசிட்டல்மயமாக்கும் கருவி."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:816
 msgid "addPart"
 msgstr "addPart"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:304
+msgid ""
+"If you work on the airport table, the widget Relation Reference is "
+"automatically set up for the ``fk_region`` field (the one used to create the"
+" relation), see :ref:`Relation Reference widget <configure_field>`."
+msgstr ""
+"நீங்கள் விமான நிலைய அட்டவணையில் பணிபுரிந்தால், விட்செட் தொடர்பு குறிப்பு "
+"தானாகவே ``fk_region`` புலத்திற்கு அமைக்கப்படும் (தொடர்பை உருவாக்கப் "
+"பயன்படும் ஒன்று), பார்க்கவும் :ref:`Relation குறிப்பு widget "
+"<configure_field>`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:310
+msgid ""
+"In the airport form you will see the |formView| button at the right side of "
+"the ``fk_region`` field: if you click on the button the form of the region "
+"layer will be opened. This widget allows you to easily and quickly open the "
+"forms of the linked parent features."
+msgstr ""
+"விமானநிலைய படிவத்தில் நீங்கள் |formView| ``fk_region`` புலத்தின் வலது "
+"பக்கத்தில் உள்ள பொத்தான்: நீங்கள் பொத்தானைக் சொடுக்கு செய்தால், மண்டல "
+"அடுக்கின் வடிவம் திறக்கப்படும். இணைக்கப்பட்ட பெற்றோர் அம்சங்களின் படிவங்களை "
+"எளிதாகவும் விரைவாகவும் திறக்க இந்த விட்செட் உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:319
+msgid "Identification dialog airport with relation to regions"
+msgstr "பிராந்தியங்கள் தொடர்பான அடையாள உரையாடல் விமான நிலையம்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:321
+msgid ""
+"The Relation Reference widget has also an option to embed the form of the "
+"parent layer within the child one. It is available in  the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer: "
+"select the ``fk_region`` field and check the ``Show embedded form`` option."
+msgstr ""
+"குழந்தை ஒன்றுக்குள் பெற்றோர் அடுக்கின் வடிவத்தை உட்பொதிக்க உறவு குறிப்பு "
+"விட்செட்டில் ஒரு விருப்பமும் உள்ளது. இது விமான நிலைய அடுக்கின் "
+":menuselection:`Properties --> Attributes Form` பட்டியலில் கிடைக்கும்: "
+"``fk_region`` புலத்தைத் தேர்ந்தெடுத்து, ``உட்பொதிக்கப்பட்ட படிவத்தைக் "
+"காட்டு`` விருப்பத்தைச் சரிபார்க்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:325
+msgid ""
+"If you look at the feature dialog now, you will see that the form of the "
+"region is embedded inside the airports form and will even have a combobox, "
+"which allows you to assign the current airport to another region."
+msgstr ""
+"நீங்கள் இப்போது அம்ச உரையாடலைப் பார்த்தால், பிராந்தியத்தின் வடிவம் விமான "
+"நிலையப் படிவத்தில் உட்பொதிக்கப்பட்டிருப்பதைக் காண்பீர்கள், மேலும் ஒரு "
+"காம்போபாக்ச் கூட இருக்கும், இது தற்போதைய விமான நிலையத்தை வேறொரு "
+"பிராந்தியத்திற்கு ஒதுக்க உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:334
+msgid ""
+"Moreover if you toggle the editing mode of the airport layer, the "
+"``fk_region`` field has also an autocompleter function: while typing you "
+"will see all the values of the ``id`` field of the region layer. Here it is "
+"possible to digitize a polygon for the region layer using the |symbologyAdd|"
+" button if you chose the option ``Allow adding new features`` in the "
+":menuselection:`Properties --> Attributes Form` menu of the airport layer."
+msgstr ""
+"மேலும் விமான நிலைய லேயரின் திருத்துதல் பயன்முறையை நீங்கள் மாற்றினால், "
+"``fk_region`` புலத்தில் ஒரு தன்னியக்க நிரப்பி செயல்பாடும் உள்ளது: தட்டச்சு "
+"செய்யும் போது, ​​பிராந்திய அடுக்கின் ``id`` புலத்தின் அனைத்து மதிப்புகளையும்"
+" நீங்கள் காண்பீர்கள். இங்கே |symbologyAdd| ஐப் பயன்படுத்தி பிராந்திய "
+"அடுக்குக்கான பலகோணத்தை டிசிட்டல் மயமாக்க முடியும் விமான நிலைய அடுக்கின் "
+":menuselection:`Properties --> Attributes Form` பட்டியலில் ``புதிய "
+"அம்சங்களைச் சேர்ப்பதை அனுமதி`` என்ற விருப்பத்தைத் தேர்வுசெய்தால் பொத்தான்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:341
+msgid ""
+"The child layer can also be used in the :ref:`select_by_value` tool in order"
+" to select features of the parent layer based on attributes of their "
+"children."
+msgstr ""
+"குழந்தை அடுக்கு அவர்களின் குழந்தைகளின் பண்புகளின் அடிப்படையில் பெற்றோர் "
+"அடுக்கின் அம்சங்களைத் தேர்ந்தெடுக்க :ref:`select_by_value` கருவியிலும் "
+"பயன்படுத்தப்படலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:344
+msgid ""
+"In :numref:`figure_select_by_value`, all the regions where the mean altitude"
+" of the airports is greater than 500 meters above sea level are selected."
+msgstr ""
+":numref:`figure_select_by_value` இல், விமான நிலையங்களின் சராசரி உயரம் கடல் "
+"மட்டத்திலிருந்து 500 மீட்டருக்கு மேல் இருக்கும் அனைத்துப் பகுதிகளும் "
+"தேர்ந்தெடுக்கப்படுகின்றன."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:347
+msgid ""
+"You will find that many different aggregation functions are available in the"
+" form."
+msgstr ""
+"பல்வேறு திரட்டல் செயல்பாடுகள் படிவத்தில் இருப்பதை நீங்கள் காண்பீர்கள்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:354
+msgid "Select parent features with child values"
+msgstr "குழந்தை மதிப்புகளுடன் பெற்றோர் அம்சங்களைத் தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:361
+msgid "Many-to-many (N-M) relations"
+msgstr "பல-பல (N-M) உறவுகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:363
+msgid ""
+"N-M relations are many-to-many relations between two tables. For instance, "
+"the ``airports`` and ``airlines`` layers: an airport receives several "
+"airline companies and an airline company flies to several airports."
+msgstr ""
+"N-M உறவுகள் இரண்டு அட்டவணைகளுக்கு இடையே உள்ள பல-பல உறவுகள். உதாரணமாக, "
+"``விமான நிலையங்கள்`` மற்றும் ``விமான நிறுவனங்கள்`` அடுக்குகள்: ஒரு விமான "
+"நிலையம் பல விமான நிறுவனங்களைப் பெறுகிறது மற்றும் ஒரு விமான நிறுவனம் பல விமான"
+" நிலையங்களுக்கு பறக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:368
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostgreSQL or external tools "
+"such as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airline table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"இந்த கவிமொ குறியீடு, *இடங்கள்* என்ற PostgreSQL திட்டத்தில் N-M உறவுக்கு "
+"தேவையான மூன்று அட்டவணைகளை உருவாக்குகிறது. PostgreSQL க்கான "
+":menuselection:`Database --> DB Manager...` அல்லது `pgAdmin "
+"<https://www.pgadmin.org>`_ போன்ற வெளிப்புறக் கருவிகளைப் பயன்படுத்தி "
+"குறியீட்டை இயக்கலாம். விமான நிலைய அட்டவணை ``விமான நிலையங்கள்`` லேயரையும், "
+"ஏர்லைன் அட்டவணை ``ஏர்லைன்ச்`` லேயரையும் சேமிக்கிறது. இரண்டு அட்டவணைகளிலும் "
+"சில புலங்கள் தெளிவுக்காகப் பயன்படுத்தப்படுகின்றன. *தந்திரமான* பகுதி ``விமான "
+"நிலையங்கள்_ஏர்லைன்ச்`` அட்டவணை. அனைத்து விமான நிலையங்களுக்கும் (அல்லது "
+"நேர்மாறாக) அனைத்து விமான நிறுவனங்களையும் பட்டியலிட எங்களுக்கு இது தேவை. இந்த"
+" வகையான அட்டவணை ஒரு *பிவோட் அட்டவணை* என்று அழைக்கப்படுகிறது. இந்த "
+"அட்டவணையில் உள்ள *கட்டுப்பாடுகள்* ஒரு விமான நிலையத்தை அவற்றின் அடுக்குகளில் "
+"ஏற்கனவே இருந்தால் மட்டுமே விமான நிறுவனத்துடன் தொடர்புபடுத்த முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:422
+msgid ""
+"Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
+"tables can be created manually using the :menuselection:`Database --> DB "
+"Manager…`. In GeoPackage there are no schemas so the *locations* prefix is "
+"not needed."
+msgstr ""
+"PostgreSQL க்கு பதிலாக நீங்கள் GeoPackage ஐயும் பயன்படுத்தலாம். இந்த "
+"வழக்கில், மூன்று அட்டவணைகளை கைமுறையாக :menuselection:`Database --> DB "
+"Manager...` ஐப் பயன்படுத்தி உருவாக்கலாம். சியோபேக்கேசில் ச்கீமாக்கள் இல்லை "
+"எனவே *இருப்பிடங்கள்* முன்னொட்டு தேவையில்லை."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:427
+msgid ""
+"Foreign key constraints in ``airports_airlines`` table can´t be created "
+"using :menuselection:`Table --> Create Table…` or :menuselection:`Table --> "
+"Edit Table…` so they should be created using :menuselection:`Database --> "
+"SQL Window…`. GeoPackage doesn't support *ADD CONSTRAINT* statements so the "
+"``airports_airlines`` table should be created in two steps:"
+msgstr ""
+"``airports_airlines`` அட்டவணையில் உள்ள வெளிநாட்டு விசைக் கட்டுப்பாடுகளை "
+":menuselection:`Table --> Create Table...` அல்லது :menuselection:`Table --> "
+"தொகு Table...` ஐப் பயன்படுத்தி உருவாக்க முடியாது. GeoPackage ஆனது "
+"*கட்டுப்பாடு சேர்* அறிக்கைகளை ஆதரிக்காது, எனவே ``airports_airlines`` அட்டவணை"
+" இரண்டு படிகளில் உருவாக்கப்பட வேண்டும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:433
+msgid ""
+"Set up the table only with the ``id`` field using :menuselection:`Table --> "
+"Create Table…`"
+msgstr ""
+":menuselection:`Table --> Create Table...` ஐப் பயன்படுத்தி ``id`` புலத்துடன்"
+" அட்டவணையை மட்டும் அமைக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:434
+msgid ""
+"Using :menuselection:`Database --> SQL Window…`, type and execute this SQL "
+"code:"
+msgstr ""
+":menuselection:`Database --> கவிமொ Window...` ஐப் பயன்படுத்தி, இந்த கவிமொ "
+"குறியீட்டை டைப் செய்து இயக்கவும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:452
+msgid ""
+"Then in QGIS, you should set up two :ref:`one-to-many relations "
+"<one_to_many_relation>` as explained above:"
+msgstr ""
+"பின்னர் QGIS இல், மேலே விளக்கப்பட்டுள்ளபடி <one_to_many_relation>` என இரண்டு"
+" :ref:`one-to-Many உறவுகளை அமைக்க வேண்டும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:455
+msgid "a relation between ``airlines`` table and the pivot table;"
+msgstr "``ஏர்லைன்ச்`` அட்டவணைக்கும் பைவட் அட்டவணைக்கும் இடையே உள்ள தொடர்பு;"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:456
+msgid "and a second one between ``airports`` table and the pivot table."
+msgstr ""
+"மற்றும் ``விமான நிலையங்கள்`` அட்டவணை மற்றும் பைவட் அட்டவணை இடையே இரண்டாவது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:458
+msgid ""
+"An easier way to do it (only for PostgreSQL) is using the "
+":guilabel:`Discover Relations` in :menuselection:`Project --> Properties -->"
+" Relations`. QGIS will automatically read all relations in your database and"
+" you only have to select the two you need. Remember to load the three tables"
+" in the QGIS project first."
+msgstr ""
+"அதைச் செய்வதற்கான எளிதான வழி (PostgreSQL க்கு மட்டும்) :guilabel:`Discover "
+"Relations` என்பதில் :menuselection:`Project --> பண்புகள் --> Relations`. "
+"QGIS உங்கள் தரவுத்தளத்தில் உள்ள அனைத்து உறவுகளையும் தானாகவே படிக்கும், "
+"மேலும் உங்களுக்கு தேவையான இரண்டை மட்டும் நீங்கள் தேர்ந்தெடுக்க வேண்டும். "
+"முதலில் QGIS திட்டத்தில் மூன்று அட்டவணைகளை ஏற்ற நினைவில் கொள்ளுங்கள்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:469
+msgid "Relations and autodiscover"
+msgstr "உறவுகள் மற்றும் தன்வய கண்டுபிடிப்பு"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:471
+msgid ""
+"In case you want to remove an ``airport`` or an ``airline``, QGIS won't "
+"remove the associated record(s) in ``airports_airlines`` table. This task "
+"will be made by the database if we specify the right *constraints* in the "
+"pivot table creation as in the current example."
+msgstr ""
+"நீங்கள் ``விமான நிலையம்`` அல்லது ```விமானம்`` அகற்ற விரும்பினால், "
+"```airports_airlines`` அட்டவணையில் உள்ள தொடர்புடைய பதிவை(களை) QGIS அகற்றாது."
+" தற்போதைய எடுத்துக்காட்டில் உள்ள பிவோட் அட்டவணை உருவாக்கத்தில் சரியான "
+"*கட்டுப்பாடுகளை* குறிப்பிட்டால், இந்த பணி தரவுத்தளத்தால் செய்யப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:476
+msgid "**Combining N-M relation with automatic transaction group**"
+msgstr "** தானியங்கி பரிவர்த்தனை குழுவுடன் N-M உறவை இணைத்தல்**"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:478
+msgid ""
+"You should enable the transaction mode in :menuselection:`Project Properties"
+" --> Data Sources -->` when working on such context. QGIS should be able to "
+"add or update row(s) in all tables (airlines, airports and the pivot "
+"tables)."
+msgstr ""
+"அத்தகைய சூழலில் பணிபுரியும் போது :menuselection:`Project பண்புகள் --> "
+"தகவல்கள் மூலங்கள் -->` இல் பரிவர்த்தனை பயன்முறையை இயக்க வேண்டும். QGIS ஆனது "
+"அனைத்து அட்டவணைகளிலும் (விமான நிறுவனங்கள், விமான நிலையங்கள் மற்றும் பிவோட் "
+"அட்டவணைகள்) வரிசை(களை) சேர்க்க அல்லது புதுப்பிக்க முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:482
+msgid ""
+"Finally we have to select the right cardinality in the :menuselection:`Layer"
+" Properties --> Attributes Form` for the ``airports`` and ``airlines`` "
+"layers. For the first one we should choose the **airlines (id)** option and "
+"for the second one the **airports (id)** option."
+msgstr ""
+"இறுதியாக நாம் ``விமான நிலையங்கள்`` மற்றும் ```விமானங்கள்`` அடுக்குகளுக்கான "
+":menuselection:`Layer பண்புகள் --> Attributes Form` இல் சரியான "
+"கார்டினாலிட்டியைத் தேர்ந்தெடுக்க வேண்டும். முதலில் நாம் ** Airlines (id)** "
+"விருப்பத்தையும், இரண்டாவதாக ** airports (id)** விருப்பத்தையும் தேர்ந்தெடுக்க"
+" வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:493
+msgid "Set relationship cardinality"
+msgstr "உறவுகளின் கார்டினலிட்டியை அமைக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:495
+msgid ""
+"Now you can associate an airport with an airline (or an airline with an "
+"airport) using :guilabel:`Add child feature` or :guilabel:`Link existing "
+"child feature` in the subforms. A record will automatically be inserted in "
+"the ``airports_airlines`` table."
+msgstr ""
+"துணைப் படிவங்களில் :guilabel:`குழந்தை அம்சத்தைச் சேர்` அல்லது "
+":guilabel:`தற்போதுள்ள குழந்தை அம்சத்தை இணைக்கவும்` என்பதைப் பயன்படுத்தி "
+"இப்போது நீங்கள் விமான நிலையத்தை (அல்லது விமான நிலையத்துடன் கூடிய விமான "
+"நிறுவனத்துடன்) இணைக்கலாம். ``விமான நிலையங்கள்_விமானங்கள்`` அட்டவணையில் ஒரு "
+"பதிவு தானாகச் செருகப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:504
+msgid "N-M relationship between airports and airlines"
+msgstr "விமான நிலையங்களுக்கும் விமான நிறுவனங்களுக்கும் இடையிலான N-M உறவு"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:506
+msgid "Using **Many to one relation** cardinality"
+msgstr "**ஒரு உறவுக்கு பல** கார்டினாலிட்டியைப் பயன்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:508
+msgid ""
+"Sometimes hiding the pivot table in an N-M relationship is not desirable. "
+"Mainly because there are attributes in the relationship that can only have "
+"values when a relationship is established. If your tables have a geometry "
+"field, it could be interesting to activate the :guilabel:`On map "
+"identification` option (:menuselection:`Layer Properties --> Attributes Form"
+" --> Available widgets --> Fields`) for the foreign key fields in the pivot "
+"table."
+msgstr ""
+"சில நேரங்களில் பிவோட் டேபிளை N-M உறவில் மறைப்பது விரும்பத்தகாதது. "
+"முக்கியமாக, உறவில் பண்புக்கூறுகள் இருப்பதால், ஒரு உறவை நிறுவும் போது மட்டுமே"
+" மதிப்புகள் இருக்க முடியும். உங்கள் அட்டவணையில் வடிவியல் புலம் இருந்தால், "
+"பைவட் டேபிளில் உள்ள வெளிநாட்டு விசை புலங்களுக்கு :guilabel:`On map "
+"identification` விருப்பத்தை (:menuselection:`Layer பண்புகள் --> Attributes "
+"Form --> Available நிரல்பலகை --> Fields`) செயல்படுத்துவது சுவாரச்யமாக "
+"இருக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:515
+msgid "**Pivot table primary key**"
+msgstr "**பிவோட் டேபிள் முதன்மை விசை**"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:517
+msgid ""
+"Avoid using multiple fields in the primary key in a pivot table. QGIS "
+"assumes a single  primary key so a constraint like ``constraint "
+"airports_airlines_pkey primary key (airport_fk, airline_fk)`` will not work."
+msgstr ""
+"பிவோட் அட்டவணையில் முதன்மை விசையில் பல புலங்களைப் பயன்படுத்துவதைத் "
+"தவிர்க்கவும். QGIS ஒற்றை முதன்மை விசையை எடுத்துக்கொள்கிறது, எனவே `` "
+"constraint airports_airlines_pkey முதன்மை விசை (airport_fk, airline_fk)`` "
+"போன்ற கட்டுப்பாடு வேலை செய்யாது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:526
+msgid "Polymorphic relations"
+msgstr "பாலிமார்பிக் உறவுகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:529
+msgid "The purpose"
+msgstr "நோக்கம்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:531
+msgid ""
+"Polymorphic relations are special case of 1-N relations, where a single "
+"referencing (document) layer contains the features for multiple referenced "
+"layers. This differs from normal relations which require different "
+"referencing layer for each referenced layer. A single referencing (document)"
+" layer is achieved by adding an adiditonal ``layer_field`` column in the "
+"referencing (document) layer that stores information to identify the "
+"referenced layer. In its most simple form, the referencing (document) layer "
+"will just insert the layer name of the referenced layer into this field."
+msgstr ""
+"பாலிமார்பிக் உறவுகள் 1-N உறவுகளின் சிறப்பு நிகழ்வாகும், இதில் ஒரு ஒற்றை "
+"குறிப்பு (ஆவணம்) அடுக்கு பல குறிப்பிடப்பட்ட அடுக்குகளுக்கான அம்சங்களைக் "
+"கொண்டுள்ளது. ஒவ்வொரு குறிப்பிடப்பட்ட அடுக்குக்கும் வெவ்வேறு குறிப்பு அடுக்கு"
+" தேவைப்படும் சாதாரண உறவுகளிலிருந்து இது வேறுபடுகிறது. குறிப்பிடப்பட்ட லேயரை "
+"அடையாளம் காண தகவலைச் சேமிக்கும் குறிப்பு (ஆவணம்) லேயரில் அடிடிடோனல் "
+"``லேயர்_ஃபீல்டு`` நெடுவரிசையைச் சேர்ப்பதன் மூலம் ஒற்றை குறிப்பு (ஆவணம்) "
+"அடுக்கு அடையப்படுகிறது. அதன் மிக எளிமையான வடிவத்தில், குறிப்பிடும் (ஆவணம்) "
+"அடுக்கு, இந்த புலத்தில் குறிப்பிடப்பட்ட லேயரின் லேயர் பெயரைச் செருகும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:539
+msgid ""
+"To be more precise, a polymorphic relation is a set of normal relations "
+"having the same referencing layer but having the referenced layer "
+"dynamically defined. The polymorphic setting of the layer is solved by using"
+" an expression which has to match some properties of the referenced layer "
+"like the table name, layer id, layer name."
+msgstr ""
+"இன்னும் துல்லியமாகச் சொல்வதென்றால், பாலிமார்பிக் உறவு என்பது ஒரே மாதிரியான "
+"அடுக்குகளைக் கொண்ட சாதாரண உறவுகளின் தொகுப்பாகும், ஆனால் குறிப்பிடப்பட்ட "
+"அடுக்கு மாறும் வகையில் வரையறுக்கப்படுகிறது. அட்டவணையின் பெயர், லேயர் "
+"அடையாளம், லேயர் பெயர் போன்ற குறிப்பிடப்பட்ட லேயரின் சில பண்புகளுடன் பொருந்த "
+"வேண்டிய வெளிப்பாட்டைப் பயன்படுத்தி அடுக்கின் பாலிமார்பிக் அமைப்பு "
+"தீர்க்கப்படுகிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:544
+msgid ""
+"Imagine we are going to the park and want to take pictures of different "
+"species of ``plants`` and ``animals`` we see there. Each plant or animal has"
+" multiple pictures associated with it, so if we use the normal 1:N relations"
+" to store pictures, we would need two separate tables, ``animal_images`` and"
+" ``plant_images``. This might not be a problem for 2 tables, but imagine if "
+"we want to take separate pictures for mushrooms, birds etc."
+msgstr ""
+"நாம் பூங்காவிற்குச் செல்கிறோம் என்று கற்பனை செய்து பாருங்கள், அங்கு நாம் "
+"காணும் பல்வேறு வகையான ``தாவரங்கள்` மற்றும் ```விலங்குகள்`` ஆகியவற்றைப் படம் "
+"எடுக்க விரும்புகிறோம். ஒவ்வொரு செடி அல்லது விலங்கினமும் அதனுடன் தொடர்புடைய "
+"பல படங்களைக் கொண்டுள்ளன, எனவே படங்களைச் சேமிக்க சாதாரண 1:N உறவுகளைப் "
+"பயன்படுத்தினால், ``animal_images`` மற்றும் ```plant_images`` என இரண்டு "
+"தனித்தனி அட்டவணைகள் தேவைப்படும். 2 அட்டவணைகளுக்கு இது ஒரு பிரச்சனையாக "
+"இருக்காது, ஆனால் காளான்கள், பறவைகள் போன்றவற்றுக்கு தனித்தனியாக படங்களை "
+"எடுக்க வேண்டுமா என்று கற்பனை செய்து பாருங்கள்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:552
+msgid ""
+"Polymorphic relations solve this problem as all the referencing features are"
+" stored in the same table ``documents``. For each feature the referenced "
+"layer is stored in the ``referenced_layer`` field and the referenced feature"
+" id in the ``referenced_id`` field."
+msgstr ""
+"அனைத்து குறிப்பு அம்சங்களும் ஒரே அட்டவணை ``ஆவணங்கள்`` இல் சேமிக்கப்படுவதால் "
+"பாலிமார்பிக் உறவுகள் இந்தச் சிக்கலைத் தீர்க்கின்றன. ஒவ்வொரு அம்சத்திற்கும், "
+"குறிப்பிடப்பட்ட அடுக்கு ``referenced_layer`` புலத்திலும், குறிப்பிடப்பட்ட "
+"அம்ச அடையாளம் ``referenced_id`` புலத்திலும் சேமிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:558
+msgid "Defining polymorphic relations"
+msgstr "பாலிமார்பிக் உறவுகளை வரையறுத்தல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:560
+msgid ""
+"First, let QGIS know about the polymorphic relations between the layers. "
+"This is done in :menuselection:`Project --> Properties...`. Open the "
+":guilabel:`Relations` tab and click on the little down arrow next to the "
+"|symbologyAdd| :guilabel:`Add Relation` button, so you can select the "
+":guilabel:`Add Polymorphic Relation` option from the newly appeared "
+"dropdown."
+msgstr ""
+"முதலில், அடுக்குகளுக்கு இடையிலான பாலிமார்பிக் உறவுகளைப் பற்றி QGIS க்கு "
+"தெரியப்படுத்துங்கள். இது :menuselection:`Project --> Properties...` என்பதில்"
+" செய்யப்படுகிறது. :guilabel:`Relations` தாவலைத் திறந்து, |symbologyAdd|க்கு "
+"அடுத்துள்ள சிறிய கீழ் அம்புக்குறியைக் சொடுக்கு செய்யவும். "
+":guilabel:`தொடர்பைச் சேர்` பொத்தான், புதிதாக தோன்றிய கீழ்தோன்றலில் இருந்து "
+":guilabel:`பாலிமார்பிக் உறவைச் சேர்` விருப்பத்தைத் தேர்ந்தெடுக்கலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:571
+msgid ""
+"Adding a polymorphic relation using ``documents`` layer as referencing and "
+"``animals`` and ``plants`` as referenced layers."
+msgstr ""
+"``ஆவணங்கள்`` லேயரைக் குறிப்பதாகவும், ``விலங்குகள்`` மற்றும் ``தாவரங்கள்`` "
+"ஆகியவற்றைக் குறிப்பிடப்பட்ட அடுக்குகளாகவும் பயன்படுத்தி பாலிமார்பிக் உறவைச் "
+"சேர்த்தல்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:579
+msgid ""
+"**Referencing Layer (Child)** also considered as child layer, is the one "
+"with the foreign key field on it. In our case, this is the ``documents`` "
+"layer. For this layer you need to add a referencing field which points to "
+"the other layer, so this is ``referenced_id``."
+msgstr ""
+"**குறிப்பு அடுக்கு (குழந்தை)** குழந்தை அடுக்கு என்றும் கருதப்படுகிறது, இது "
+"வெளிநாட்டு விசை புலத்துடன் உள்ளது. எங்கள் விசயத்தில், இது ``ஆவணங்கள்`` "
+"லேயர். இந்த லேயருக்கு, மற்ற லேயரைச் சுட்டிக்காட்டும் ஒரு குறிப்பு புலத்தைச் "
+"சேர்க்க வேண்டும், எனவே இது ``referenced_id``."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:591
+msgid ""
+"**Layer Field** is the field in the referencing table that stores the result"
+" of the evaluated layer expression which is the referencing table that this "
+"feature belongs to. In our example, this would be the ``referenced_layer`` "
+"field."
+msgstr ""
+"**லேயர் ஃபீல்ட்** என்பது இந்த அம்சத்தைச் சேர்ந்த குறிப்பு அட்டவணையான "
+"மதிப்பிடப்பட்ட அடுக்கு வெளிப்பாட்டின் முடிவைச் சேமிக்கும் குறிப்பு "
+"அட்டவணையில் உள்ள புலமாகும். எங்கள் எடுத்துக்காட்டில், இது "
+"``referenced_layer`` புலமாக இருக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:595
+msgid ""
+"**Layer expression** evaluates to a unique identifier of the layer. This can"
+" be the layer name ``@layer_name``, the layer id ``@layer_id``, the layer's "
+"table name ``decode_uri(@layer, 'table')`` or anything that can uniquely "
+"identifies a layer."
+msgstr ""
+"**அடுக்கு வெளிப்பாடு** லேயரின் தனிப்பட்ட அடையாளங்காட்டியை மதிப்பிடுகிறது. "
+"இது லேயர் பெயர் ``@layer_name``, லேயர் அடையாளம் ``@layer_id``, லேயரின் "
+"டேபிள் பெயர் ``decode_uri(@layer, 'table')`` அல்லது லேயரைத் தனித்துவமாக "
+"அடையாளம் காணக்கூடிய எதுவும் இருக்கலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:600
+msgid ""
+"**Relationship strength** sets the strength of the generated relations "
+"between the parent and the child layer. The default :guilabel:`Association` "
+"type means that the parent layer is *simply* linked to the child one while "
+"the :guilabel:`Composition` type allows you to duplicate also the child "
+"features when duplicating the parent ones and on deleting a feature the "
+"children are deleted as well, resulting in cascade over all levels (means "
+"children of children of... are deleted as well)."
+msgstr ""
+"**உறவு வலிமை** பெற்றோர் மற்றும் குழந்தை அடுக்கு இடையே உருவாக்கப்பட்ட "
+"உறவுகளின் வலிமையை அமைக்கிறது. இயல்புநிலை :guilabel:`Association` வகை என்பது,"
+" பெற்றோர் அடுக்கு குழந்தையுடன் *எளிமையாக* இணைக்கப்பட்டிருப்பதைக் "
+"குறிக்கிறது, அதே நேரத்தில் :guilabel:`Composition` வகையானது, பெற்றோரை "
+"நகலெடுக்கும் போது குழந்தை அம்சங்களையும் நகலெடுக்க அனுமதிக்கிறது மற்றும் ஒரு "
+"அம்சத்தை நீக்கும் போது குழந்தைகளும் நீக்கப்படுவார்கள், இதன் விளைவாக "
+"குழந்தைகள் எல்லா நிலைகளிலும் நீக்கப்படுவார்கள்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:606
+msgid ""
+"**Referenced Layers** also considered as parent layers, are those with the "
+"primary key, pointed to, so here they would be ``plants`` and ``animals`` "
+"layers. You need to define the primary key of the referenced layers from the"
+" dropdown, so it is ``fid``. Note that the definition of a valid primary key"
+" requires all the referenced layers to have a field with that name. If there"
+" is no such field you cannot save a polymorphic relation."
+msgstr ""
+"**குறிப்பிடப்பட்ட அடுக்குகள்** பெற்றோர் அடுக்குகளாகவும் கருதப்படுகிறது, "
+"முதன்மை விசையுடன் சுட்டிக்காட்டப்பட்டவை, எனவே இங்கே அவை ``தாவரங்கள்`` "
+"மற்றும் ```விலங்குகள்`` அடுக்குகளாக இருக்கும். கீழ்தோன்றலில் இருந்து "
+"குறிப்பிடப்பட்ட அடுக்குகளின் முதன்மை விசையை நீங்கள் வரையறுக்க வேண்டும், எனவே"
+" அது ``fid``. செல்லுபடியாகும் முதன்மை விசையின் வரையறைக்கு அனைத்து "
+"குறிப்பிடப்பட்ட அடுக்குகளும் அந்தப் பெயருடன் ஒரு புலத்தைக் கொண்டிருக்க "
+"வேண்டும் என்பதை நினைவில் கொள்ளவும். அத்தகைய புலம் இல்லை என்றால், நீங்கள் ஒரு"
+" பாலிமார்பிக் உறவை சேமிக்க முடியாது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:613
+msgid ""
+"Once added, the polymorphic relation can be edited via the :guilabel:`Edit "
+"Polymorphic Relation` menu entry."
+msgstr ""
+"சேர்க்கப்பட்டதும், பாலிமார்பிக் உறவை :guilabel:`Edit Polymorphic Relation` "
+"பட்டியல் உள்ளீடு மூலம் திருத்தலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:621
+msgid ""
+"Preview of the newly created polymorphic relation and its child relations "
+"for animals and plants."
+msgstr ""
+"புதிதாக உருவாக்கப்பட்ட பாலிமார்பிக் உறவு மற்றும் விலங்குகள் மற்றும் "
+"தாவரங்களுக்கான அதன் குழந்தை உறவுகளின் முன்னோட்டம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:624
+msgid "The example above uses the following database schema:"
+msgstr ""
+"மேலே உள்ள எடுத்துக்காட்டு பின்வரும் தரவுத்தள திட்டத்தைப் பயன்படுத்துகிறது:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:659
+msgid ""
+"Once relations are established, the :ref:`Identify Features "
+"<identify_features_vector>` result panel will display related features, "
+"allowing you to view associated data directly."
+msgstr ""
+"உறவுகள் நிறுவப்பட்டதும், :ref:`அடையாளங்கள் <identify_features_vector>` "
+"முடிவு குழு தொடர்புடைய அம்சங்களைக் காண்பிக்கும், இது தொடர்புடைய தரவை "
+"நேரடியாகப் பார்க்க உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:666
+msgid "Dataset-stored Relationships"
+msgstr "தரவுத்தொகுப்பில் சேமிக்கப்பட்ட உறவுகள்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
+msgid ""
+"Other than the above mentioned relationships that are created in the project"
+" properties and apply only in the active project, QGIS can also read "
+"database-level relations, i.e., connections defined between layers in the "
+"dataset. This is supported for database providers such as PostgreSQL, "
+"SpatiaLite, GeoPackage, ESRI FileGeodatabase. When such parent and child "
+"layers are loaded in a project, QGIS can automatically detect the relation "
+"settings and fill appropriately the :menuselection:`Project --> Project "
+"properties --> Relations` tab. This can also be triggered using the "
+"|symbologyAdd| :guilabel:`Discover relations` button."
+msgstr ""
+"திட்ட பண்புகளில் உருவாக்கப்பட்ட மற்றும் செயலில் உள்ள திட்டத்தில் மட்டுமே "
+"பயன்படுத்தப்படும் மேலே குறிப்பிடப்பட்ட உறவுகளைத் தவிர, QGIS தரவுத்தள-நிலை "
+"உறவுகளையும் படிக்க முடியும், அதாவது தரவுத்தொகுப்பில் உள்ள அடுக்குகளுக்கு "
+"இடையில் வரையறுக்கப்பட்ட இணைப்புகள். PostgreSQL, SpatiaLite, GeoPackage, ESRI"
+" FileGeodatabase போன்ற தரவுத்தள வழங்குநர்களுக்கு இது துணைபுரிகிறது. அத்தகைய "
+"பெற்றோர் மற்றும் குழந்தை அடுக்குகள் ஒரு திட்டத்தில் ஏற்றப்படும் போது, ​​QGIS"
+" தானாகவே உறவு அமைப்புகளைக் கண்டறிந்து, :menuselection:`Project --> Project "
+"பண்புகள் --> Relations` தாவலைத் தகுந்த முறையில் நிரப்ப முடியும். இது "
+"|symbologyAdd| ஐப் பயன்படுத்தியும் தூண்டப்படலாம் :guilabel:`உறவுகளைக் "
+"கண்டுபிடி` பொத்தான்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:677
+msgid ""
+"For some data types (e.g., GeoPackage, SpatiaLite or ESRI FileGeodatabase), "
+"QGIS also allows to create and edit the relations between the tables in the "
+"database. This can be managed through the :guilabel:`Browser Panel`. From "
+"the :guilabel:`Browser panel`, right-click on the database entry, select "
+":guilabel:`New relationship...`, and in the new dialog, fill the following "
+"options:"
+msgstr ""
+"சில தரவு வகைகளுக்கு (எ.கா., GeoPackage, SpatiaLite அல்லது ESRI "
+"FileGeodatabase), தரவுத்தளத்தில் உள்ள அட்டவணைகளுக்கு இடையேயான உறவுகளை "
+"உருவாக்கவும் திருத்தவும் QGIS அனுமதிக்கிறது. இதை :guilabel:`Browser Panel` "
+"மூலம் நிர்வகிக்கலாம். :guilabel:`Browser panel` என்பதிலிருந்து, தரவுத்தள "
+"உள்ளீட்டில் வலது சொடுக்கு செய்து, :guilabel:`புதிய உறவு...` என்பதைத் "
+"தேர்ந்தெடுத்து, புதிய உரையாடலில், பின்வரும் விருப்பங்களை நிரப்பவும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:683
+msgid ":guilabel:`Name`: set the name of the new relationship."
+msgstr ":guilabel:`பெயர்`: புதிய உறவின் பெயரை அமைக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
+msgid ":guilabel:`Cardinality`: define the cardinality of the relationship."
+msgstr ":guilabel:`கார்டினாலிட்டி`: உறவின் கார்டினாலிட்டியை வரையறுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:685
+msgid ":guilabel:`Strength`: specify the strength of the relationship."
+msgstr ":guilabel:`Strength`: உறவின் வலிமையைக் குறிப்பிடவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
+msgid ""
+"Under the :guilabel:`Tables` group, set your :guilabel:`Parent` and "
+":guilabel:`Child` tables."
+msgstr ""
+":guilabel:`Tables` குழுவின் கீழ், உங்கள் :guilabel:`Parent` மற்றும் "
+":guilabel:`Child` அட்டவணைகளை அமைக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:687
+msgid ""
+"Under the :guilabel:`Fields` group, set your :guilabel:`Parent field` and "
+":guilabel:`Child field`."
+msgstr ""
+":guilabel:`Fields` குழுவின் கீழ், உங்கள் :guilabel:`Parent field` மற்றும் "
+":guilabel:`Child field` ஆகியவற்றை அமைக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+msgid ""
+"Under the :guilabel:`Advanced` section, depending on the database type, you "
+"can set:"
+msgstr ""
+":guilabel:`மேம்பட்ட` பிரிவின் கீழ், தரவுத்தள வகையைப் பொறுத்து, நீங்கள் "
+"அமைக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
+msgid ":guilabel:`Related table type`:"
+msgstr ":guilabel:`தொடர்புடைய அட்டவணை வகை`:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
+msgid ":guilabel:`features`: for standard feature tables."
+msgstr ":guilabel:`features`: நிலையான அம்ச அட்டவணைகளுக்கு."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:693
+msgid ":guilabel:`media`: for tables storing media files."
+msgstr ":guilabel:`media`: மீடியா கோப்புகளை சேமிக்கும் அட்டவணைகளுக்கு."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
+msgid ":guilabel:`simple_attributes`: for tables with simple attribute data."
+msgstr ""
+":guilabel:`simple_attributes`: எளிய பண்புக்கூறு தரவு கொண்ட அட்டவணைகளுக்கு."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:695
+msgid ":guilabel:`attributes`: for tables with complex attribute data."
+msgstr ""
+":guilabel:`attributes`: சிக்கலான பண்புக்கூறு தரவு கொண்ட அட்டவணைகளுக்கு."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
+msgid ":guilabel:`tiles`: for tables storing tile data."
+msgstr ":guilabel:`tiles`: ஓடு தரவைச் சேமிக்கும் அட்டவணைகளுக்கு."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
+msgid ""
+":guilabel:`Forward label`: a name to uniquely identify the relationship when"
+" navigating from the parent table to the child table."
+msgstr ""
+":guilabel:`Forward label`: பெற்றோர் அட்டவணையில் இருந்து குழந்தை அட்டவணைக்கு "
+"செல்லும்போது உறவை தனித்துவமாக அடையாளம் காண்பதற்கான பெயர்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:699
+msgid ""
+":guilabel:`Reverse label`:  a name to uniquely identify the relationship "
+"when navigating from the child table to the parent table."
+msgstr ""
+":guilabel:`தலைகீழ் லேபிள்`: குழந்தை அட்டவணையில் இருந்து பெற்றோர் அட்டவணைக்கு"
+" செல்லும்போது உறவை தனித்துவமாக அடையாளம் காண்பதற்கான பெயர்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:701
+msgid ""
+"Applying the dialog will add a :guilabel:`Relationships` node under the "
+"database entry, with the new relationship as child item."
+msgstr ""
+"உரையாடலைப் பயன்படுத்தினால், தரவுத்தள உள்ளீட்டின் கீழ் ஒரு "
+":guilabel:`Relationships` முனை சேர்க்கப்படும், புதிய உறவானது குழந்தை "
+"உருப்படியாக இருக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
+msgid ""
+"Editing or deleting existing relationships can be done by right-clicking on "
+"the relationship in the Browser Panel."
+msgstr ""
+"பிரவுசர் பேனலில் உள்ள உறவில் வலது சொடுக்கு செய்வதன் மூலம் ஏற்கனவே உள்ள "
+"உறவுகளைத் திருத்துவது அல்லது நீக்குவது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:711
+msgid "Managing dataset-stored relationships in the Browser Panel"
+msgstr "உலாவி பேனலில் தரவுத்தொகுப்பு-சேமிக்கப்பட்ட உறவுகளை நிர்வகித்தல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:718
+msgid "Storing and fetching an external resource"
+msgstr "வெளிப்புற வளத்தை சேமித்தல் மற்றும் பெறுதல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:720
+msgid ""
+"A field may target a resource stored on an external storage system. "
+"Attribute forms can be configured so they act as a client to an external "
+"storage system in order to store and fetch those resources, on users demand,"
+" directly from the forms."
+msgstr ""
+"ஒரு புலம் வெளிப்புற சேமிப்பக அமைப்பில் சேமிக்கப்பட்ட வளத்தை குறிவைக்கலாம். "
+"பண்புக்கூறு படிவங்கள் கட்டமைக்கப்படலாம், எனவே அவை வெளிப்புற சேமிப்பக "
+"அமைப்பிற்கு கிளையண்டாக செயல்படுகின்றன, இதனால் அந்த வளங்களை பயனர்களின் "
+"தேவைக்கேற்ப நேரடியாக படிவங்களிலிருந்து சேமித்து பெறலாம்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:727
+msgid "Configuring an external storage"
+msgstr "வெளிப்புற சேமிப்பிடத்தை உள்ளமைக்கிறது"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:729
+msgid ""
+"In order to setup an external storage, you have to first configure it from "
+"the vector :ref:`attribute form properties <edit_widgets>` and select the "
+":guilabel:`Attachment` widget."
+msgstr ""
+"வெளிப்புற சேமிப்பிடத்தை அமைக்க, நீங்கள் முதலில் அதை திசையன் :ref:`attribute "
+"form பண்புகள் <edit_widgets>` இலிருந்து கட்டமைத்து :guilabel:`Attachment` "
+"விட்செட்டைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:737
+msgid "Editing a WebDAV external storage for a given field"
+msgstr ""
+"கொடுக்கப்பட்ட புலத்திற்கான WebDAV வெளிப்புற சேமிப்பிடத்தைத் திருத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:739
+msgid ""
+"From the :guilabel:`Attachment` widget, you have to first select the "
+":guilabel:`Storage type`:"
+msgstr ""
+":guilabel:`Attachment` விட்செட்டில் இருந்து, நீங்கள் முதலில் "
+":guilabel:`Storage வகை` என்பதைத் தேர்ந்தெடுக்க வேண்டும்:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:741
+msgid ""
+":guilabel:`Select Existing File`: The target URL already exists. When you "
+"select a resource, no store operation is achieved, the attribute is simply "
+"updated with the URL."
+msgstr ""
+":guilabel:`இருக்கும் கோப்பைத் தேர்ந்தெடு`: இலக்கு முகவரி ஏற்கனவே உள்ளது. "
+"நீங்கள் ஒரு ஆதாரத்தைத் தேர்ந்தெடுக்கும்போது, ​​எந்த கடை செயல்பாடும் "
+"அடையப்படவில்லை, பண்புக்கூறு முகவரி உடன் புதுப்பிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:744
+msgid ""
+":guilabel:`Simple Copy`: Stores a copy of the resource on a file disk "
+"destination (which could be a local or network shared file system) and the "
+"attribute is updated with the path to the copy."
+msgstr ""
+":guilabel:`எளிய நகல்`: ஆதாரத்தின் நகலை ஒரு கோப்பு வட்டு இலக்கில் (உள்ளூர் "
+"அல்லது பிணைய பகிரப்பட்ட கோப்பு முறைமையாக இருக்கலாம்) சேமித்து, நகலுக்கான "
+"பாதையுடன் பண்புக்கூறு புதுப்பிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:748
+msgid ""
+":guilabel:`WebDAV Storage`: The resource is pushed to a HTTP server "
+"supporting the `WebDAV <https://en.wikipedia.org/wiki/WebDAV>`_ protocol and"
+" the attribute is updated with its URL. `Nextcloud "
+"<https://nextcloud.com/>`_, `Pydio <https://pydio.com>`_ or other file "
+"hosting software support this protocol."
+msgstr ""
+":guilabel:`WebDAV சேமிப்பகம்`: `WebDAV "
+"<https://en.wikipedia.org/wiki/WebDAV>`_ நெறிமுறையை ஆதரிக்கும் HTTP "
+"சேவையகத்திற்கு சான்று தள்ளப்படுகிறது மற்றும் பண்புக்கூறு அதன் முகவரி உடன் "
+"புதுப்பிக்கப்படுகிறது. `Nextcloud <https://nextcloud.com/>`_, `Pydio "
+"<https://pydio.com>`_ அல்லது பிற கோப்பு ஓச்டிங் மென்பொருள் இந்த நெறிமுறையை "
+"ஆதரிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:753
+msgid ""
+":guilabel:`AWS S3`: The resource is pushed to a server supporting `AWS "
+"Simple Storage Service <https://en.wikipedia.org/wiki/Amazon_S3>`_ protocol "
+"and the attribute is updated with its URL. Amazon Web Service and `MinIO "
+"<https://en.wikipedia.org/wiki/MinIO>`_ hosting software support this "
+"protocol."
+msgstr ""
+":guilabel:`AWS S3`: ஆதாரமானது `AWS எளிய சேமிப்பக பணி "
+"<https://en.wikipedia.org/wiki/Amazon_S3>`_ நெறிமுறையை ஆதரிக்கும் "
+"சேவையகத்திற்குத் தள்ளப்பட்டது மற்றும் பண்புக்கூறு அதன் முகவரி உடன் "
+"புதுப்பிக்கப்படுகிறது. Amazon விரலிடைத் தோல் பணி மற்றும் `MinIO "
+"<https://en.wikipedia.org/wiki/MinIO>`_ ஓச்டிங் மென்பொருள் இந்த நெறிமுறையை "
+"ஆதரிக்கின்றன."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:758
+msgid ""
+"Then, you have to set up the :guilabel:`Store URL` parameter, which provides"
+" the URL to be used when a new resource needs to be stored. It's possible to"
+" set up an expression using the :ref:`data defined override widget "
+"<data_defined>` in order to have specific values according to feature "
+"attributes."
+msgstr ""
+"பின்னர், நீங்கள் :guilabel:`Store URL` அளவுருவை அமைக்க வேண்டும், இது ஒரு "
+"புதிய ஆதாரத்தை சேமிக்க வேண்டியிருக்கும் போது பயன்படுத்த முகவரி ஐ "
+"வழங்குகிறது. அம்ச பண்புகளின்படி குறிப்பிட்ட மதிப்புகளைப் பெற :ref:`data "
+"defined override widget <data_defined>` ஐப் பயன்படுத்தி ஒரு வெளிப்பாட்டை "
+"அமைக்க முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:763
+msgid ""
+"The variable **@selected_file_path** could be used in that expression and "
+"represent the absolute file path of the user selected file (using the file "
+"selector or drag'n drop)."
+msgstr ""
+"**@selected_file_path** என்ற மாறி அந்த வெளிப்பாட்டில் பயன்படுத்தப்படலாம் "
+"மற்றும் பயனர் தேர்ந்தெடுத்த கோப்பின் முழுமையான கோப்பு பாதையைக் குறிக்கும் "
+"(கோப்புத் தேர்வி அல்லது இழுவை டிராப் பயன்படுத்தி)."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:768
+msgid ""
+"Using the **WebDAV** or **AWS S3** external storage, if the URL ends with a "
+"\"/\", it is considered as a folder and the selected file name will be "
+"appended to get the final URL."
+msgstr ""
+"**WebDAV** அல்லது **AWS S3** வெளிப்புற சேமிப்பகத்தைப் பயன்படுத்தி, முகவரி "
+"\"/\" உடன் முடிவடைந்தால், அது ஒரு கோப்புறையாகக் கருதப்பட்டு, இறுதி முகவரி "
+"ஐப் பெற தேர்ந்தெடுக்கப்பட்ட கோப்பு பெயர் சேர்க்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:772
+msgid ""
+"If the external storage system needs to, it's possible to configure an "
+":ref:`authentication <authentication>`."
+msgstr ""
+"வெளிப்புற சேமிப்பக அமைப்புக்கு தேவைப்பட்டால், ஒரு :ref:`அங்கீகாரம் "
+"<அங்கீகாரம்>` கட்டமைக்க முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:777
+msgid ""
+"To use the **AWS S3** external storage, you must use an **AWS S3** "
+"authentication type."
+msgstr ""
+"**AWS S3** வெளிப்புற சேமிப்பிடத்தைப் பயன்படுத்த, நீங்கள் **AWS S3** அங்கீகார"
+" வகையைப் பயன்படுத்த வேண்டும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:782
+msgid "Using an external storage"
+msgstr "வெளிப்புற சேமிப்பகத்தைப் பயன்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:784
+msgid ""
+"Once configured, you can select a local file using the button "
+":guilabel:`...` when editing a feature's attribute. Depending on the "
+"configured :ref:`storage type <external_storage_configuration>`, the file "
+"will be stored on the external storage system (except if :guilabel:`Select "
+"existing file` has been selected) and the field will be updated with the new"
+" resource URL."
+msgstr ""
+"கட்டமைத்தவுடன், ஒரு அம்சத்தின் பண்புக்கூறைத் திருத்தும்போது, ​​பொத்தானைப் "
+"பயன்படுத்தி உள்ளக கோப்பைத் தேர்ந்தெடுக்கலாம் :guilabel:`...`. "
+"உள்ளமைக்கப்பட்ட :ref:`storage வகை <external_storage_configuration>` ஐப் "
+"பொறுத்து, கோப்பு வெளிப்புற சேமிப்பக அமைப்பில் சேமிக்கப்படும் "
+"(:guilabel:`தற்போதுள்ள கோப்பைத் தேர்ந்தெடு` தேர்ந்தெடுக்கப்பட்டிருந்தால் "
+"தவிர) மற்றும் புலம் புதிய ஆதார முகவரி உடன் புதுப்பிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:794
+msgid "Storing a file to a WebDAV external storage"
+msgstr "WebDAV வெளிப்புற சேமிப்பகத்தில் கோப்பைச் சேமிக்கிறது"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:798
+msgid ""
+"User can also achieve the same result if he drags and drops a file on the "
+"whole attachment widget."
+msgstr ""
+"முழு இணைப்பு விட்செட்டில் ஒரு கோப்பை இழுத்து விட்டுவிட்டால், பயனர் அதே "
+"முடிவை அடைய முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:801
+msgid ""
+"Use the |taskCancel| :sup:`Cancel` button to abort the storing process. It's"
+" possible to configure a viewer using the :guilabel:`Integrated document "
+"viewer` so the resource will be automatically fetched from the external "
+"storage system and displayed directly below the URL. The above |warning| "
+"icon indicates that the resource cannot be fetched from the external storage"
+" system. In that case, more details might appear in the "
+":ref:`log_message_panel`."
+msgstr ""
+"|taskCancel| ஐப் பயன்படுத்தவும் :sup:`ரத்துசெய்` பொத்தான் சேமிப்பு "
+"செயல்முறையை நிறுத்தும். :guilabel:`Integrated ஆவணம் viewer` ஐப் பயன்படுத்தி "
+"பார்வையாளரை உள்ளமைக்க முடியும், எனவே ஆதாரமானது வெளிப்புற சேமிப்பக "
+"அமைப்பிலிருந்து தானாகவே பெறப்பட்டு முகவரி க்கு கீழே நேரடியாகக் காட்டப்படும்."
+" மேலே உள்ள |எச்சரிக்கை| படவுரு வெளிப்புற சேமிப்பக அமைப்பிலிருந்து வளத்தைப் "
+"பெற முடியாது என்பதைக் குறிக்கிறது. அப்படியானால், மேலும் விவரங்கள் "
+":ref:`log_message_panel` இல் தோன்றும்."
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:850
 msgid "taskCancel"
