@@ -3178,7 +3178,6 @@ Output geometries are of type PolyhedralSurfaceZ, representing the extruded surf
 
 .. figure:: img/extrude.png
    :align: center
-   :width: 70%
 
    The left image shows a 2D polygon, while the right image shows the polygon extruded along the Z direction.
 
