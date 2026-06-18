@@ -171,47 +171,47 @@ Under the |general| :guilabel:`General` tab, you can:
   * a :guilabel:`Gradient`, defined by a top and bottom color blended across the scene
   * or a textured :guilabel:`Skybox`.
 
-   The :guilabel:`Distinct faces` skybox type allows you to assign a separate
-   texture image to each of the six sides of the box surrounding the scene
-   (:guilabel:`Left (-X)`, :guilabel:`Right (+X)`, :guilabel:`Front (+Y)`,
-   :guilabel:`Back (-Y)`, :guilabel:`Top (+Z)`, and :guilabel:`Down (-Z)`).
+    The :guilabel:`Distinct faces` skybox type allows you to assign a separate
+    texture image to each of the six sides of the box surrounding the scene
+    (:guilabel:`Left (-X)`, :guilabel:`Right (+X)`, :guilabel:`Front (+Y)`,
+    :guilabel:`Back (-Y)`, :guilabel:`Top (+Z)`, and :guilabel:`Down (-Z)`).
 
-   The :guilabel:`Convention` setting defines how the textures are mapped
-   to coordinate axes and oriented for compatibility with different 3D
-   engines and rendering frameworks. The following table describes the
-   available skybox coordinate conventions.
+    The :guilabel:`Convention` setting defines how the textures are mapped
+    to coordinate axes and oriented for compatibility with different 3D
+    engines and rendering frameworks. The following table describes the
+    available skybox coordinate conventions.
 
-    .. list-table:: Available skybox coordinate conventions
-      :widths: 40, 60
-      :header-rows: 1
+      .. list-table:: Available skybox coordinate conventions
+        :widths: 40, 60
+        :header-rows: 1
 
-      * - Convention
-        - Axis orientation
+        * - Convention
+          - Axis orientation
 
-      * - Native (Z-Up)
-        - +X Right, +Y Forward, +Z Up
+        * - Native (Z-Up)
+          - +X Right, +Y Forward, +Z Up
 
-      * - OpenGL / WebGL (Y-Up)
-        - +X Right, +Y Up, -Z Forward
+        * - OpenGL / WebGL (Y-Up)
+          - +X Right, +Y Up, -Z Forward
 
-      * - Godot Engine (Y-Up)
-        - +X Right, +Y Up, -Z Forward
+        * - Godot Engine (Y-Up)
+          - +X Right, +Y Up, -Z Forward
 
-      * - Unreal Engine (Z-Up)
-        - +X Forward, +Y Right, +Z Up
+        * - Unreal Engine (Z-Up)
+          - +X Forward, +Y Right, +Z Up
 
-      * - Unity Engine/Left-Handed (Y-Up)
-        - +X Right, +Y Up, +Z Forward
+        * - Unity Engine/Left-Handed (Y-Up)
+          - +X Right, +Y Up, +Z Forward
 
 
-    Texture image files of the skybox can be local files, remote URLs, or
-    embedded in the project (:ref:`more details <embedded_file_selector>`).
+      Texture image files of the skybox can be local files, remote URLs, or
+      embedded in the project (:ref:`more details <embedded_file_selector>`).
 
-    Check |unchecked|:guilabel:`Enable environmental lighting effects` to derive
-    the scene's lighting from the skybox's appearance, applying it to physically
-    based rendered materials. This option is only available when a skybox
-    background is used, and has no effect with gradient backgrounds. Use the
-    :guilabel:`Strength` slider to control its intensity.
+      Check |unchecked|:guilabel:`Enable environmental lighting effects` to derive
+      the scene's lighting from the skybox's appearance, applying it to physically
+      based rendered materials. This option is only available when a skybox
+      background is used, and has no effect with gradient backgrounds. Use the
+      :guilabel:`Strength` slider to control its intensity.
 
 Terrain
 -------
