@@ -1737,6 +1737,10 @@ Select the service you want to connect to and fill in the required fields:
 You can also choose to :guilabel:`Save Connection` to an XML file
 or :guilabel:`Load Connection` from an XML file.
 
+Once a cloud connection is set up, you can right-click on the |cloud| :guilabel:`Cloud` entry
+in the :guilabel:`Browser` panel and select :guilabel:`Refresh` to reload the connection and
+update all its sub-elements (e.g. buckets, folders and files).
+
 .. _GeoCSV specification: https://giswiki.ch/GeoCSV#CSVT_file_format_specification
 .. _`ArcGIS REST Server`: https://enterprise.arcgis.com/en/server/latest/publish-services/windows/what-types-of-services-can-you-publish.htm
 
