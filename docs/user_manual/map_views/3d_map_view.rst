@@ -181,37 +181,37 @@ Under the |general| :guilabel:`General` tab, you can:
     engines and rendering frameworks. The following table describes the
     available skybox coordinate conventions.
 
-      .. list-table:: Available skybox coordinate conventions
-        :widths: 40, 60
-        :header-rows: 1
+    .. list-table:: Available skybox coordinate conventions
+       :widths: 40, 60
+       :header-rows: 1
 
-        * - Convention
-          - Axis orientation
+       * - Convention
+         - Axis orientation
 
-        * - Native (Z-Up)
-          - +X Right, +Y Forward, +Z Up
+       * - Native (Z-Up)
+         - +X Right, +Y Forward, +Z Up
 
-        * - OpenGL / WebGL (Y-Up)
-          - +X Right, +Y Up, -Z Forward
+       * - OpenGL / WebGL (Y-Up)
+         - +X Right, +Y Up, -Z Forward
 
-        * - Godot Engine (Y-Up)
-          - +X Right, +Y Up, -Z Forward
+       * - Godot Engine (Y-Up)
+         - +X Right, +Y Up, -Z Forward
 
-        * - Unreal Engine (Z-Up)
-          - +X Forward, +Y Right, +Z Up
+       * - Unreal Engine (Z-Up)
+         - +X Forward, +Y Right, +Z Up
 
-        * - Unity Engine/Left-Handed (Y-Up)
-          - +X Right, +Y Up, +Z Forward
+       * - Unity Engine/Left-Handed (Y-Up)
+         - +X Right, +Y Up, +Z Forward
 
 
-      Texture image files of the skybox can be local files, remote URLs, or
-      embedded in the project (:ref:`more details <embedded_file_selector>`).
+    Texture image files of the skybox can be local files, remote URLs, or
+    embedded in the project (:ref:`more details <embedded_file_selector>`).
 
-      Check |unchecked|:guilabel:`Enable environmental lighting effects` to derive
-      the scene's lighting from the skybox's appearance, applying it to physically
-      based rendered materials. This option is only available when a skybox
-      background is used, and has no effect with gradient backgrounds. Use the
-      :guilabel:`Strength` slider to control its intensity.
+    Check |unchecked|:guilabel:`Enable environmental lighting effects` to derive
+    the scene's lighting from the skybox's appearance, applying it to physically
+    based rendered materials. This option is only available when a skybox
+    background is used, and has no effect with gradient backgrounds. Use the
+    :guilabel:`Strength` slider to control its intensity.
 
 Terrain
 -------
@@ -508,10 +508,10 @@ Advanced
     and docked in a :guilabel:`Corner`.
   * :guilabel:`Show camera info`:
 
-     * |unchecked| :guilabel:`Far plane`: controls how far from the camera rendering stops
-     * |unchecked| :guilabel:`Near plane`: controls how close to the camera rendering starts
-     * |unchecked| :guilabel:`Camera X/Y/Z pos`: sets the camera’s position in 3D space
-     * |unchecked| :guilabel:`Looking at X/Y/Z`: sets the target point the camera is looking at
+    * |unchecked| :guilabel:`Far plane`: controls how far from the camera rendering stops
+    * |unchecked| :guilabel:`Near plane`: controls how close to the camera rendering starts
+    * |unchecked| :guilabel:`Camera X/Y/Z pos`: sets the camera’s position in 3D space
+    * |unchecked| :guilabel:`Looking at X/Y/Z`: sets the target point the camera is looking at
 
 .. note:: When your 3D map view is open in a standalone window, you can
    use :kbd:`Ctrl+Shift+d` keyboard shortcut to access the debug panel.
