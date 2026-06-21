@@ -6,8 +6,8 @@
 # 
 # Translators:
 # fairtommy <fairtommy@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -165,7 +165,7 @@ msgid ""
 "data. By 'deal with', we mean store, retrieve, query and manipulate. In "
 "order to do this, a number of functions are installed into the database."
 msgstr ""
-"PostGISは、空間データを扱えるようにPostgreSQLのコア機能を拡張する、データベース機能の集まりと考えることができます。「扱える」とは、格納、検索、クエリおよび操作を意味します。これを行うために、多数の機能が、データベースにインストールされています。"
+"PostGISは、空間データを扱えるようにPostgreSQLのコア機能を拡張する、データベース機能の集まりと考えることができます。「扱える」とは、格納、取得、クエリおよび操作を意味します。これを行うために、多数の機能が、データベースにインストールされています。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:87
 msgid ""
@@ -179,6 +179,15 @@ msgstr ""
 "私たちのPostgreSQLの ``address住所`` "
 "データベースはPostGISのおかげで地理空間的に有効になりました。次のセクションではこれについてもっと深く掘り下げていきますが、ここでちょっと味見しましょう。テキストからポイントを作成したいとしましょう。最初に、psqlコマンドを使ってポイントに関連する関数を見つけます。``address住所``"
 " データベースにまだ接続していない場合は、今すぐ実行してください。次に、"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:97
+msgid ""
+"This is the command we're looking for: ``st_pointfromtext``.  To page "
+"through the list, use the down arrow, then press :kbd:`Q` to quit back to "
+"the psql shell."
+msgstr ""
+"これが探しているコマンドです: ``st_pointfromtext`` 。 リストをページ送りするには、下矢印を使用し、 :kbd:`Q` を押して "
+"psql シェルに戻ります。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:100
 msgid "Try running this command:"
@@ -194,11 +203,17 @@ msgstr "結果:"
 msgid "Three things to note:"
 msgstr "注目すべき３点:"
 
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:117
+msgid ""
+"We defined a point at position 1,1 (EPSG:4326 is assumed) using ``POINT(1 "
+"1)``,"
+msgstr "``POINT(1 1)`` を使って、ポイントの位置を 1,1 (EPSG:4326 を想定)と定義しました"
+
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:119
 msgid ""
 "We ran an sql statement, but not on any table, just on data entered from the"
 " SQL prompt,"
-msgstr "SQL文を実行しましたが、どのテーブル上でもなく、SQLプロンプトから入力されたデータで,"
+msgstr "どのテーブル上でもなく、SQLプロンプトから入力されたデータでSQL文を実行しました"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:121
 msgid "The resulting row does not make much sense."
@@ -209,30 +224,40 @@ msgid ""
 "The resulting row is in the OGC format called 'Well Known Binary' (WKB). We "
 "will look at this format in detail in the next section."
 msgstr ""
-"得られた行は、「よく知られているバイナリ」（WKB）と呼ばれるOGCフォーマットです。私たちは、次のセクションで詳細にこのフォーマットを見ていきます。"
+"得られた行は、'Well Known Binary' (WKB) "
+"と呼ばれるOGCフォーマットで記述されています。次のセクションではこのフォーマットを詳細に見ていきます。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:126
 msgid ""
 "To get the results back as text, we can do a quick scan through the function"
 " list for something that returns text:"
-msgstr "結果をテキストとして戻すために、テキストを返す何かを探して関数リストをすばやくスキャンできます："
+msgstr "結果をテキストに戻すため、関数リストをすばやくスキャンしてテキストを返す何かを探します："
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:133
 msgid ""
 "The query we're looking for now is ``st_astext``. Let's combine it with the "
 "previous query:"
-msgstr "私たちが探しているクエリは ``st_astext`` です。以前のクエリと組み合わせてみましょう："
+msgstr "私たちが探しているクエリは ``st_astext`` です。先のクエリと組み合わせてみましょう："
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:149
+msgid ""
+"Here, we entered the string ``POINT(1,1)``, turned it into a point using "
+"``st_pointfromtext()``, and turned it back into a human-readable form with "
+"``st_astext()``, which gave us back our original string."
+msgstr ""
+"文字列 ``POINT(1,1)`` を入力し、 ``st_pointfromtext()`` を使用してポイントに変え、 "
+"``st_astext()`` で人が読める形式に戻すと、元の文字列が返ってきました。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:154
 msgid ""
 "One last example before we really get into the detail of using PostGIS:"
-msgstr "実際にPostGISの使い方の詳細に入る前の最後の例は："
+msgstr "PostGISの使い方の詳細に入る前の最後の例です："
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:160
 msgid ""
 "What did that do? It created a buffer of 1 degree around our point, and "
 "returned the result as text."
-msgstr "それは何をしましたか？それは私たちのポイントを中心に1度のバッファを作成し、テキストとして結果を返しました。"
+msgstr "これは何をしたでしょうか？それはポイントを中心に1度のバッファを作成し、結果をテキストとして返しました。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:164
 msgid "Spatial Reference Systems"
@@ -245,13 +270,13 @@ msgid ""
 "Petroleum Survey Group (EPSG). These are used during operations such as "
 "coordinate reference system (CRS) conversions."
 msgstr ""
-"PostGISの機能だけでなく、この拡張は欧州石油調査グループ（EPSG）によって定義された空間参照システム（SRS）の定義のコレクションを含んでいます。これらは、座標参照系（CRS）変換などの操作中に使用されます。"
+"この拡張は、PostGISの関数だけでなく、欧州石油調査グループ（EPSG）によって定義された空間参照システム（SRS）の定義のコレクションを含んでいます。これらは、座標参照系（CRS）変換などの操作に使用されます。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:171
 msgid ""
 "We can inspect these SRS definitions in our database as they are stored in "
 "normal database tables."
-msgstr "通常のデータベーステーブルに格納されているので、データベース中のこれらのSRSの定義を調べることができます。"
+msgstr "これらのSRSの定義は通常のデータベーステーブルに格納されているので、データベースの中にそれを調べることができます。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:174
 msgid ""
@@ -270,13 +295,21 @@ msgid ""
 " update or delete any records unless you know what you are doing."
 msgstr ""
 "このテーブルを表示および操作するために、（入門セクションから学んだように）標準のSQLクエリを使用できます - "
-"何をしているのか分からなければ、任意のレコードを更新または削除するのは良いアイデアではありません。"
+"ただし何をしているのか分からなければ、任意のレコードを更新または削除するのは良い考えではありません。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:200
 msgid ""
 "One SRID you may be interested in is EPSG:4326 - the geographic / lat lon "
 "reference system using the WGS 84 ellipsoid. Let's take a look at it:"
-msgstr "興味のあるSRIDは、EPSG：4326  -  WGS 84楕円体を使用した地理/緯度経度参照系です。それを見てみましょう："
+msgstr "興味のあるSRIDは、EPSG：4326  -  WGS 84楕円体を使用した地理/緯度経度参照系でしょう。それを見てみましょう："
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:221
+msgid ""
+"The ``srtext`` is the projection definition in well known text (you may "
+"recognise this from .prj files in your shapefile collection)."
+msgstr ""
+"``srtext`` はwell known "
+"text（WKT）で記述された投影法の定義です（シェープファイルの集まりにある.prjファイルからこれを認識できるでしょう）。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:225
 msgid "In Conclusion"
@@ -287,7 +320,7 @@ msgid ""
 "You now have PostGIS functions installed in your copy of PostgreSQL. With "
 "this you'll be able to make use of PostGIS' extensive spatial functions."
 msgstr ""
-"今PostGISの機能はPostgreSQLのコピーにインストールされています。これによりPostGISのさまざまな空間関数を使用できるでしょう。"
+"これでPostGISの関数はPostgreSQLのコピーにインストールされました。これによりPostGISの豊富な空間関数を利用できるようになります。"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:231
 msgid "What's Next?"
