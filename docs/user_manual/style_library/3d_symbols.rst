@@ -259,7 +259,5 @@ https://app.merginmaps.com/projects/saber/luxembourg/tree.
    :width: 1.3em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |materials| image:: /static/common/materials.png
-   :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
