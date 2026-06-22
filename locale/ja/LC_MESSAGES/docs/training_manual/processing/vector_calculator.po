@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -34,27 +35,55 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:2
 msgid "Vector calculator"
-msgstr "ベクター計算機"
+msgstr "ベクタ計算機"
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:5
 msgid ""
 "In this lesson we will see how to add new attributes to a vector layer based"
 " on a mathematical expression, using the vector calculator."
-msgstr "このレッスンでは、ベクター演算を使用して、数式に基づいてベクターレイヤーに新しい属性を追加する方法について説明します。"
+msgstr "このレッスンでは、ベクタ計算機を使用して、数式に基づいてベクタレイヤに新しい属性を追加する方法について説明します。"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:8
+msgid ""
+"We already know how to use the raster calculator to create new raster layers"
+" using mathematical expressions. A similar algorithm is available for vector"
+" layers, and generates a new layer with the same attributes of the input "
+"layer, plus an additional one with the result of the expression entered. The"
+" algorithm is called :guilabel:`Field calculator` and has the following "
+"parameters dialog."
+msgstr ""
+"数式を使用して新しいラスタレイヤを作成するためにラスタ計算機を使用する方法はすでに知っています。同様のアルゴリズムがベクタレイヤに対して利用でき、入力レイヤと同じ属性に加え、入力された式の結果による追加の属性も持つ新しいレイヤを生成します。このアルゴリズムは、:guilabel:`フィールド計算機`"
+" と呼ばれ、以下のパラメータダイアログボックスを持っています。"
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:15
 msgid ""
 "In newer versions of Processing the interface has changed considerably, it's"
 " more powerful and easier to use."
-msgstr "インターフェイスが大幅に変更されたプロセッシングの新しいバージョンでは、より強力で使いやすいです。"
+msgstr "プロセシングの新しいバージョンではインターフェイスが大幅に変更され、使うのにより強力で簡単です。"
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:17
 msgid "Here are a few examples of using that algorithm."
-msgstr "ここでは、そのアルゴリズムを使用してのいくつかの例があります。"
+msgstr "これはそのアルゴリズムを使ったいくつかの例です。"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:19
+msgid ""
+"First, let's calculate the population density of white people in each "
+"polygon, which represents a census. We have two fields in the attributes "
+"table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just"
+" have to divide them and multiply by one million (to have density per square"
+" km), so we can use the following formula in the corresponding field::"
+msgstr ""
+"まずは、国勢調査を表し、各ポリゴン中の白人の人口密度を計算してみましょう。属性テーブルにはそのために使用できる二つのフィールド、つまり "
+"``WHITE`` と ``SHAPE_AREA`` "
+"があります。（平方キロメートルあたりの密度にするためには）それらを割り算して、百万を掛ける必要があるだけなので、対応するフィールドに次の式を使用できます::"
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:26
 msgid "The parameters dialog should be filled as shown below."
 msgstr "以下に示すようにパラメーターダイアログが満たされる必要があります。"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:30
+msgid "This will generate a new field named ``WHITE_DENS``."
+msgstr "これは ``WHITE_DENS`` という名前の新しいフィールドを生成します。"
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:32
 msgid ""
@@ -65,6 +94,16 @@ msgstr ""
 "今度は、男性人口が女性人口に比して数値的に優位にあるかどうかを示す新しいものを作成するために、 ``MALES`` と ``FEMALES`` "
 "フィールド間の比率を計算してみましょう。"
 
+#: ../../docs/training_manual/processing/vector_calculator.rst:35
+msgid "Enter the following formula::"
+msgstr "次の式を入力します::"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:39
+msgid ""
+"This time the parameters window should look like this before pressing the "
+":guilabel:`OK` button."
+msgstr "今回 :guilabel:`OK` ボタンを押す前のパラメータウィンドウは次のようになります。"
+
 #: ../../docs/training_manual/processing/vector_calculator.rst:44
 msgid ""
 "In earlier version, since both fields are of type integer, the result would "
@@ -72,7 +111,7 @@ msgid ""
 "\"MALES\"  /  \"FEMALES\"``, to indicate that we want floating point number "
 "a result."
 msgstr ""
-"両方のフィールドが整数型であるため、以前のバージョンでは、結果が整数に切り捨てられることになります。この場合、式は次のようになります。私たちは浮動小数点数に結果を望んでいることを示すために"
+"以前のバージョンでは、両方のフィールドが整数型であるため、結果が整数に切り捨てられることになります。今回は結果を浮動小数点数にすることを示すため、式は次のようになります:"
 " ``1.0 * \"MALES\" / \"FEMALES\"`` 。"
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:47
@@ -87,3 +126,9 @@ msgstr ""
 #: ../../docs/training_manual/processing/vector_calculator.rst:52
 msgid "The parameters window should look like this."
 msgstr "パラメーターウィンドウは、次のようになります。"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:56
+msgid ""
+"A python field calculator is available in the :guilabel:`Advanced Python "
+"field calculator`, which will not be detailed here."
+msgstr "Pythonフィールド計算機は :guilabel:`高度なPythonのフィールド計算機` で利用できますがここでは詳述しません。"
