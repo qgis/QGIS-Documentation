@@ -1,15 +1,15 @@
 .. _`3dsymbols`:
 
-*********************
- Creating 3D Symbols
-*********************
+************************************
+ Creating 3D Symbols and Materials
+************************************
 
 .. only:: html
 
    .. contents::
       :local:
 
-The :guilabel:`Style Manager` helps you create and store 3D symbols for every geometry type
+The :guilabel:`Style Manager` helps you create and store 3D symbols and materials for every geometry type
 to render in the :ref:`3D map view <label_3dmapview>`.
 
 As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand the |symbologyAdd|
@@ -18,6 +18,9 @@ button menu to create:
 * :ref:`3D point symbols <3d_pointlayers>`
 * :ref:`3D line symbols <3d_linelayers>`
 * :ref:`3D polygon symbols <3d_polygonlayers>`
+
+Or click the :guilabel:`Materials` tab and expand the |symbologyAdd|
+button to select a material type.
 
 
 .. _`3d_pointlayers`:
@@ -182,8 +185,8 @@ on the geometry type of the symbol:
   except that an image is used as :guilabel:`Diffuse Texture`.
   The image can be a file on disk, a remote URL or :ref:`embedded in the project
   <embedded_file_selector>`.
-  The :guilabel:`Texture scale`, :guilabel:`Texture rotation` and :guilabel:`Texture offset` are required,
-  Adjust the values manually or use |dataDefine| for dynamic control.
+  To transform the texture, adjust the :guilabel:`Texture scale`, :guilabel:`Texture rotation` or
+  :guilabel:`Texture offset` as needed.
   Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
 * :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
   so that edge lines and highlights remain visually prominent. Along with the
@@ -193,14 +196,14 @@ on the geometry type of the symbol:
   Also, the relative contributions to the cool and warm colors by the diffuse color
   are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
   See also `Gooch shading <https://en.wikipedia.org/wiki/Gooch_shading>`_.
-* :guilabel:`Physically Based`: renders materials that respond naturally to light, making objects look 
-  like real-world materials. Options are available:
-  
+* :guilabel:`Physically Based`: renders materials that respond naturally to light, making objects look
+  like real-world materials. Available options are:
+
   * :guilabel:`Base color`: allows users to put base color on surface.
   * :guilabel:`Metalness`: sets how metallic the surface appears.
   * :guilabel:`Roughness`: controls how rough or smooth the surface is.
   * :guilabel:`Reflectance`: controls how much light the surface reflects.
-  * :guilabel:`Anisotropy`: creates directional reflections that align with 
+  * :guilabel:`Anisotropy`: creates directional reflections that align with
     the direction specified in :guilabel:`Anisotropy direction`.
   * :guilabel:`Clear coat strength`: controls the intensity of the clear coat layer. Higher values
     create a stronger glossy appearance, lower values create a more subtle protective layer.
@@ -210,11 +213,9 @@ on the geometry type of the symbol:
     Useful for creating emissive solid color material. Adjust the :guilabel:`Emission strength` value
     to control the intensity of the light.
 
-  Use the :guilabel:`Opacity` slider to adjust transparency. For :guilabel:`Base color`
-  and :guilabel:`Emission`, users can enable |dataDefine| to control the
-  appearance based on data/attribute.
+  Use the :guilabel:`Opacity` slider to adjust transparency.
 * :guilabel:`Physically Based (with textures)`: same as the :guilabel:`Physically Based`, but users can
-  input more complex texture maps. These following textures are available:
+  input more complex texture maps. Available options are:
 
   * :guilabel:`Base color texture`: represents color, pattern, visual detail of the material.
   * :guilabel:`Metalness texture`: applies metallic material to the surface.
@@ -236,6 +237,7 @@ on the geometry type of the symbol:
      :width: 50%
 
      Physically based (with textures) configuration.
+* :guilabel:`Embedded Textures` with 3D models shape.
 
 
 Application example
@@ -256,6 +258,8 @@ https://app.merginmaps.com/projects/saber/luxembourg/tree.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |materials| image:: /static/common/materials.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em

@@ -323,7 +323,7 @@ Effects
 * Check |unchecked| :guilabel:`Show shadows` to display shadows within your scene,
   given:
 
-  * a :guilabel:`Light source`
+  * a :guilabel:`Light source`: can be directional or sun light
   * a :guilabel:`Shadow rendering maximum distance`: to avoid rendering shadow
     of too distant objects, particularly when the camera looks up along the horizon
   * a :guilabel:`Shadow bias`: to avoid self-shadowing effects that could make
