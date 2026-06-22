@@ -126,6 +126,8 @@ previewed items organized into tabs:
 * |legend| :guilabel:`Legend Patch Shapes` to manage custom legend patch
   shapes, which include :guilabel:`Marker`, :guilabel:`Line` and
   :guilabel:`Fill` geometries.
+* |materials| :guilabel:`Materials` to manage :ref:`shading textures <shading_texture>`
+  by adjusting predefined options or import textures from external sources.
 * |3d| :guilabel:`3D Symbols` to configure symbols with :ref:`3D properties
   <3dsymbols>` (extrusion, shading, altitude, ...) for the features to render
   in a :ref:`3D Map view <label_3dmapview>`
@@ -422,6 +424,8 @@ back to the :guilabel:`New Legend Patch Shape` dialog to keep creating new shape
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
+   :width: 1.5em
+.. |materials| image:: /static/common/materials.png
    :width: 1.5em
 .. |newPage| image:: /static/common/mActionNewPage.png
    :width: 1.5em
