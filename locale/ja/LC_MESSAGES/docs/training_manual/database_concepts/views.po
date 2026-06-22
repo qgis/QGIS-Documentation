@@ -43,7 +43,7 @@ msgid ""
 "formulating it. With views, you can save the definition of an SQL query in a"
 " reusable 'virtual table'."
 msgstr ""
-"クエリを記述するときはそれを考案するのに多くの時間と労力が必要です。ビューを使えばSQLクエリの定義を再利用可能な「仮想テーブル」に保存できます。"
+"クエリを記述するときは、それを考案するのに多くの時間と労力が必要です。ビューを使えばそのSQLクエリの定義を再利用可能な「仮想テーブル」に保存できます。"
 
 #: ../../docs/training_manual/database_concepts/views.rst:8
 msgid "**The goal for this lesson:** To save a query as a view."
@@ -51,7 +51,7 @@ msgstr "**このレッスンの目標:** クエリをビューとして保存し
 
 #: ../../docs/training_manual/database_concepts/views.rst:11
 msgid "Creating a View"
-msgstr "ビューの作成"
+msgstr "ビューを作成する"
 
 #: ../../docs/training_manual/database_concepts/views.rst:13
 msgid ""
@@ -59,13 +59,20 @@ msgid ""
 "query. Let's make a simple view based on the above:"
 msgstr "ビューはテーブルのように扱うことができますが、そのデータはクエリから供給されます。上記に基いて単純なビューを作りましょう:"
 
+#: ../../docs/training_manual/database_concepts/views.rst:23
+msgid ""
+"As you can see the only change is the ``create view roads_count_v as`` part "
+"at the beginning. We can now select data from that view:"
+msgstr ""
+"ご覧のとおり、はじめの ``create view roads_count_v as`` の部分だけが異なります。そのビューからデータを選択できます:"
+
 #: ../../docs/training_manual/database_concepts/views.rst:30
 msgid "Result:"
 msgstr "結果:"
 
 #: ../../docs/training_manual/database_concepts/views.rst:42
 msgid "Modifying a View"
-msgstr "ビューの変更"
+msgstr "ビューを変更する"
 
 #: ../../docs/training_manual/database_concepts/views.rst:44
 msgid ""
@@ -79,9 +86,15 @@ msgid ""
 "for all SQL keywords.)"
 msgstr "(また、この例はすべてのSQLキーワードには大文字を使用する最良慣行を示しています。)"
 
+#: ../../docs/training_manual/database_concepts/views.rst:58
+msgid ""
+"You will see that we have added an ``ORDER BY`` clause so that our view rows"
+" are nicely sorted:"
+msgstr "``ORDER BY`` 句を追加したのでビューの行はきれいに並べ替えられています:"
+
 #: ../../docs/training_manual/database_concepts/views.rst:73
 msgid "Dropping a View"
-msgstr "ビューの削除"
+msgstr "ビューを削除する"
 
 #: ../../docs/training_manual/database_concepts/views.rst:75
 msgid "If you no longer need a view, you can delete it like this:"
