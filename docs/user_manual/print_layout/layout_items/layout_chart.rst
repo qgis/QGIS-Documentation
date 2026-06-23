@@ -55,10 +55,15 @@ Available types are:
 Modify the chart through the :guilabel:`Modify Chart Properties...` button.
 Depending on the selected type, available options may vary.
 
-The :guilabel:`Flip Axes` option allows reversing the direction of the X or Y axis
+The |checkbox| :guilabel:`Flip Axes` option allows reversing the direction of the X or Y axis
 for charts such as bar charts, line charts, and XY plots. This can be useful
 when creating horizontal bar charts or when a reversed axis orientation is
 needed for data visualization.
+
+The |checkbox| :guilabel:`Apply layer symbology colors` option allows the color
+of each chart series to be taken from the symbol assigned to the corresponding
+class in the source layer's renderer, keeping the chart visually consistent
+with the map and legend.
 
 .. _layout_chart_ranges:
 
@@ -149,7 +154,19 @@ In this section, select and configure the layer and fields you want to display i
    and choose the sort direction (ascending or descending).
 #. Use the |symbologyAdd| and |symbologyRemove| buttons to add or delete series from the chart.
 #. Double-click a series name to rename it.
-#. Click :guilabel:`Modify Series...` button and define the :guilabel:`X-axis` and :guilabel:`Y-axis` fields using the drop-down lists.
+#. Check the |checkbox| :guilabel:`Generate categories from layer symbology` option to automatically
+   derive the chart's X axis categories from the
+   :ref:`categorized <categorized_renderer>`, :ref:`graduated <graduated_renderer>`,
+   or :ref:`rule-based <rule_based_rendering>` renderer applied to the source layer,
+   matching the layer's legend entries. For each category, the Y axis value can be
+   left blank to count the number of matching features, or set to a field or
+   expression to compute an aggregated value per class
+   (e.g. the sum of a numeric attribute or the total length of line features).
+#. Click :guilabel:`Modify Series...` button and define the fields using the drop-down lists.
+   When :guilabel:`Generate categories from layer symbology` is enabled, only the
+   :guilabel:`Y-axis` field and an optional filter expression are available,
+   the X axis is driven by the renderer classes.
+   Otherwise, define both the :guilabel:`X-axis` and :guilabel:`Y-axis` fields.
    Optionally, add a filter expression to display only specific data in the chart.
 #. Check the |checkbox| :guilabel:`Use only features visible within a map` option to include only features that are currently visible
    in a layout map item. From the :guilabel:`Linked map` drop-down list, select the map to link the chart to.
