@@ -7,15 +7,16 @@
 # Translators:
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-31 16:35+0000\n"
+"POT-Creation-Date: 2026-05-13 19:45+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2026\n"
 "Language-Team: Tamil (https://app.transifex.com/qgis/teams/6144/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -34,203 +35,566 @@ msgstr ""
 "சேரலாம். இந்தப் பக்கம் தற்போது |மொழிபெயர்ப்பு முன்னேற்றம்| இல் "
 "மொழிபெயர்க்கப்பட்டுள்ளது."
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:863
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:6
+msgid "Working with the Attribute Table"
+msgstr "பண்பு அட்டவணையுடன் பணிபுரிதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:8
+msgid ""
+"The attribute table displays information on features of a selected layer. "
+"Each row in the table represents a feature (with or without geometry), and "
+"each column contains a particular piece of information about the feature. "
+"Features in the table can be searched, selected, moved or even edited."
+msgstr ""
+"பண்புக்கூறு அட்டவணை தேர்ந்தெடுக்கப்பட்ட அடுக்கின் அம்சங்களைப் பற்றிய தகவலைக்"
+" காட்டுகிறது. அட்டவணையில் உள்ள ஒவ்வொரு வரிசையும் ஒரு அம்சத்தைக் குறிக்கிறது "
+"(வடிவவியலோடு அல்லது இல்லாமலோ), மேலும் ஒவ்வொரு நெடுவரிசையிலும் அம்சத்தைப் "
+"பற்றிய ஒரு குறிப்பிட்ட செய்தி உள்ளது. அட்டவணையில் உள்ள அம்சங்களைத் தேடலாம், "
+"தேர்ந்தெடுக்கலாம், நகர்த்தலாம் அல்லது திருத்தலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:22
+msgid "Foreword: Spatial and non-spatial tables"
+msgstr "முன்னுரை: இடஞ்சார்ந்த மற்றும் இடஞ்சார்ந்த அட்டவணைகள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:24
+msgid ""
+"QGIS allows you to load spatial and non-spatial layers. This currently "
+"includes tables supported by GDAL and delimited text, as well as the "
+"PostgreSQL, MS SQL Server, SpatiaLite and Oracle providers. All loaded "
+"layers are listed in the :guilabel:`Layers` panel. Whether a layer is "
+"spatially enabled or not determines whether you can interact with it on the "
+"map."
+msgstr ""
+"இடஞ்சார்ந்த மற்றும் இடஞ்சார்ந்த அடுக்குகளை ஏற்றுவதற்கு QGIS உங்களை "
+"அனுமதிக்கிறது. இது தற்போது GDAL மற்றும் வரையறுக்கப்பட்ட உரை மற்றும் "
+"PostgreSQL, MS SQL Server, SpatiaLite மற்றும் Oracle வழங்குநர்களால் "
+"ஆதரிக்கப்படும் அட்டவணைகளை உள்ளடக்கியது. ஏற்றப்பட்ட அனைத்து அடுக்குகளும் "
+":guilabel:`Layers` பேனலில் பட்டியலிடப்பட்டுள்ளன. ஒரு லேயர் இடஞ்சார்ந்த "
+"இயக்கத்தில் உள்ளதா இல்லையா என்பதை நீங்கள் வரைபடத்தில் தொடர்பு கொள்ள முடியுமா"
+" என்பதை தீர்மானிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
+msgid ""
+"Non-spatial tables can be browsed and edited using the attribute table view."
+" Furthermore, they can be used for field lookups. For example, you can use "
+"columns of a non-spatial table to define attribute values, or a range of "
+"values that are allowed, to be added to a specific vector layer during "
+"digitizing. Have a closer look at the edit widget in section "
+":ref:`vector_attributes_menu` to find out more."
+msgstr ""
+"பண்புக்கூறு அட்டவணைக் காட்சியைப் பயன்படுத்தி இடஞ்சார்ந்த அட்டவணைகளை உலாவலாம்"
+" மற்றும் திருத்தலாம். மேலும், அவை களத் தேடலுக்குப் பயன்படுத்தப்படலாம். "
+"எடுத்துக்காட்டாக, டிசிட்டலைச் செய்யும் போது குறிப்பிட்ட வெக்டார் லேயரில் "
+"சேர்க்கப்படும் பண்புக்கூறு மதிப்புகள் அல்லது அனுமதிக்கப்படும் மதிப்புகளின் "
+"வரம்பை வரையறுக்க இடஞ்சார்ந்த அட்டவணையின் நெடுவரிசைகளைப் பயன்படுத்தலாம். "
+"மேலும் அறிய:ref:`vector_attributes_menu` பிரிவில் உள்ள திருத்து விட்செட்டைக்"
+" கூர்ந்து பாருங்கள்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
+msgid "Introducing the attribute table interface"
+msgstr "பண்பு அட்டவணை இடைமுகத்தை அறிமுகப்படுத்துகிறது"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
+msgid ""
+"To open the attribute table for a vector layer, activate the layer by "
+"clicking on it in the :ref:`label_legend`. Then, from the main "
+":menuselection:`Layer` menu, choose |openTable| :menuselection:`Open "
+"Attribute Table`. It is also possible to right-click on the layer and choose"
+" |openTable| :menuselection:`Open Attribute Table` from the drop-down menu, "
+"or to click on the |openTable| :guilabel:`Open Attribute Table` button in "
+"the Attributes toolbar. If you prefer shortcuts, :kbd:`F6` will open the "
+"attribute table. :kbd:`Shift+F6` will open the attribute table filtered to "
+"selected features and :kbd:`Ctrl+F6` will open the attribute table filtered "
+"to visible features."
+msgstr ""
+"வெக்டார் லேயருக்கான பண்புக்கூறு அட்டவணையைத் திறக்க, :ref:`label_legend` "
+"என்பதில் சொடுக்கு செய்வதன் மூலம் லேயரைச் செயல்படுத்தவும். பின்னர், முக்கிய "
+":menuselection:`Layer` மெனுவிலிருந்து, |openTable| என்பதைத் "
+"தேர்ந்தெடுக்கவும் :menuselection:`Open பண்புக்கூறு Table`. லேயரில் வலது "
+"சொடுக்கு செய்து, |openTable| என்பதைத் தேர்ந்தெடுக்கவும் முடியும் "
+":menuselection:`பண்பு அட்டவணையைத் திற` கீழ்தோன்றும் மெனுவிலிருந்து, அல்லது "
+"|openTable| :guilabel:`பண்புக் கருவிப்பட்டியில் பண்புக்கூறு அட்டவணையைத் திற`"
+" பொத்தான். நீங்கள் குறுக்குவழிகளை விரும்பினால், :kbd:`F6` பண்புக்கூறு "
+"அட்டவணையைத் திறக்கும். :kbd:`Shift+F6` தேர்ந்தெடுக்கப்பட்ட அம்சங்களுக்கு "
+"வடிகட்டப்பட்ட பண்புக்கூறு அட்டவணையைத் திறக்கும் மற்றும் :kbd:`Ctrl+F6` "
+"பண்புக்கூறு அட்டவணையைத் திறக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:865
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:53
+msgid ""
+"This will open a new window that displays the feature attributes for the "
+"layer (figure_attributes_table_). According to the setting in "
+":menuselection:`Settings --> Options --> Data sources` menu, the attribute "
+"table will open in a docked window or a regular window. The total number of "
+"features in the layer and the number of currently selected/filtered features"
+" are shown in the attribute table title, as well as if the layer is "
+"spatially limited."
+msgstr ""
+"இது அடுக்குக்கான அம்ச பண்புகளைக் காண்பிக்கும் புதிய சாளரத்தைத் திறக்கும் "
+"(figure_attributes_table_). :menuselection:`Settings --> Options --> "
+"தகவல்கள் sources` பட்டியலில் உள்ள அமைப்பின் படி, பண்பு அட்டவணை நறுக்கப்பட்ட "
+"சாளரத்தில் அல்லது வழக்கமான சாளரத்தில் திறக்கும். லேயரில் உள்ள மொத்த "
+"அம்சங்களின் எண்ணிக்கையும், தற்போது தேர்ந்தெடுக்கப்பட்ட/வடிகட்டப்பட்ட "
+"அம்சங்களின் எண்ணிக்கையும் பண்புக்கூறு அட்டவணையின் தலைப்பில் காட்டப்படும், "
+"அதே போல் லேயர் இடஞ்சார்ந்த அளவில் குறைவாக இருந்தால்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:66
+msgid "Attribute Table for regions layer"
+msgstr "பண்புக்கூறு Table க்கு பகுதிகள் layer"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:68
+msgid ""
+"The buttons at the top of the attribute table window provide the following "
+"functionality:"
+msgstr ""
+"பண்பு அட்டவணை சாளரத்தின் மேலே உள்ள பொத்தான்கள் பின்வரும் செயல்பாட்டை "
+"வழங்குகின்றன:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
+msgid "Available Tools"
+msgstr "கிடைக்கும் கருவிகள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Icon"
+msgstr "படவுரு"
+
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Label"
-msgstr "Label"
+msgstr "சிட்டை"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Purpose"
+msgstr "நோக்கம்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Default Shortcut"
+msgstr "இயல்புநிலை குறுக்குவழி"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|toggleEditing|"
 msgstr "|toggleEditing|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:893
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
 msgid "toggleEditing"
 msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Toggle editing mode"
+msgstr "திருத்துதல் பயன்முறையை நிலைமாற்று"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Enable editing functionalities"
+msgstr "திருத்துதல் செயல்பாடுகளை இயக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+E`"
+msgstr ":kbd:`Ctrl+E`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|multiEdit|"
 msgstr "|multiEdit|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:851
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:853
 msgid "multiEdit"
 msgstr "multiEdit"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Toggle multi edit mode"
+msgstr "பல திருத்தப் பயன்முறையை நிலைமாற்று"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Update multiple fields of many features"
+msgstr "பல அம்சங்களின் பல துறைகளைப் புதுப்பிக்கவும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|saveEdits|"
 msgstr "|saveEdits|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:883
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:885
 msgid "saveEdits"
 msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Save Edits"
+msgstr "திருத்தங்களைச் சேமிக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Save current modifications"
+msgstr "தற்போதைய மாற்றங்களைச் சேமிக்கவும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|refresh|"
 msgstr "|refresh|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:881
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:883
 msgid "refresh"
 msgstr "refresh"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:861
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Reload the table"
+msgstr "அட்டவணையை மீண்டும் ஏற்றவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|newTableRow| :menuselection:`-->` ([1]_)"
+msgstr "|புதிய அட்டவணை வரிசை| :menuselection:`-->` ([1]_)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:863
 msgid "newTableRow"
 msgstr "newTableRow"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:837
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature"
+msgstr "அம்சத்தைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add new geometryless feature"
+msgstr "புதிய வடிவியல் இல்லாத அம்சத்தைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":menuselection:`-->` |newTableRow|"
+msgstr ":menuselection:`-->` |newTableRow|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature via attribute table"
+msgstr "பண்பு அட்டவணை வழியாக அம்சத்தைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Inserts a new empty row in the attribute table to be filled in"
+msgstr ""
+"நிரப்ப வேண்டிய பண்புக்கூறு அட்டவணையில் புதிய வெற்று வரிசையைச் செருகும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":menuselection:`-->` |formSelect|"
+msgstr ":menuselection:`-->` |formSelect|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
 msgid "formSelect"
 msgstr "formSelect"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature via attribute form"
+msgstr "பண்புக்கூறு படிவத்தின் மூலம் அம்சத்தைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Opens the feature attributes form for data entry"
+msgstr "தரவு உள்ளீட்டிற்கான அம்ச பண்புக்கூறு படிவத்தைத் திறக்கும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deleteSelectedFeatures|"
 msgstr "|deleteSelectedFeatures|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:821
 msgid "deleteSelectedFeatures"
 msgstr "deleteSelectedFeatures"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Delete selected features"
+msgstr "தேர்ந்தெடுக்கப்பட்ட அம்சங்களை நீக்கு"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Remove selected features from the layer"
+msgstr "லேயரில் இருந்து தேர்ந்தெடுக்கப்பட்ட அம்சங்களை அகற்றவும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|editCut|"
 msgstr "|editCut|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:827
 msgid "editCut"
 msgstr "editCut"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Cut selected features to clipboard"
+msgstr "தேர்ந்தெடுக்கப்பட்ட அம்சங்களை இடைநிலைப்பலகைக்கு வெட்டுங்கள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+X`"
+msgstr ":kbd:`Ctrl+X`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|copySelected|"
 msgstr "|copySelected|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:817
 msgid "copySelected"
 msgstr "copySelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Copy selected features to clipboard"
+msgstr "தேர்ந்தெடுக்கப்பட்ட அம்சங்களை இடைநிலைப்பலகைக்கு நகலெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+C`"
+msgstr ":kbd:`Ctrl+C`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|editPaste|"
 msgstr "|editPaste|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:827
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:829
 msgid "editPaste"
 msgstr "editPaste"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Paste features from clipboard"
+msgstr "கிளிப்போர்டிலிருந்து அம்சங்களை ஒட்டவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Insert new features from copied ones"
+msgstr "நகலெடுக்கப்பட்டவற்றிலிருந்து புதிய அம்சங்களைச் செருகவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+V`"
+msgstr ":kbd:`Ctrl+V`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|expressionSelect|"
 msgstr "|expressionSelect|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
 msgid "expressionSelect"
 msgstr "expressionSelect"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select features using an Expression"
+msgstr "எக்ச்பிரசனைப் பயன்படுத்தி அம்சங்களைத் தேர்ந்தெடுக்கவும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|selectAll|"
 msgstr "|selectAll|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:885
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:887
 msgid "selectAll"
 msgstr "selectAll"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select All"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select all features in the layer"
+msgstr "அடுக்கில் உள்ள அனைத்து அம்சங்களையும் தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+A`"
+msgstr ":kbd:`Ctrl+A`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|invertSelection|"
 msgstr "|invertSelection|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:849
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:851
 msgid "invertSelection"
 msgstr "invertSelection"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Invert selection"
+msgstr "தலைகீழாக தேர்வு"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Invert the current selection in the layer"
+msgstr "லேயரில் தற்போதைய தேர்வைத் தலைகீழாக மாற்றவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+R`"
+msgstr ":kbd:`Ctrl+R`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deselectActiveLayer|"
 msgstr "|deselectActiveLayer|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:821
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:823
 msgid "deselectActiveLayer"
 msgstr "deselectActiveLayer"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Deselect all"
+msgstr "அனைத்தையும் தேர்வுநீக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Deselect all features in the current layer"
+msgstr "தற்போதைய லேயரில் உள்ள அனைத்து அம்சங்களையும் தேர்வுநீக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+Shift+A`"
+msgstr ":kbd:`Ctrl+Shift+A`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|filterMap|"
 msgstr "|filterMap|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:837
 msgid "filterMap"
 msgstr "filterMap"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Filter/Select features using form"
+msgstr "படிவத்தைப் பயன்படுத்தி அம்சங்களை வடிகட்டவும்/தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+F`"
+msgstr ":kbd:`Ctrl+F`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|selectedToTop|"
 msgstr "|selectedToTop|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:887
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:889
 msgid "selectedToTop"
 msgstr "selectedToTop"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Move selected to top"
+msgstr "தேர்ந்தெடுத்ததை மேலே நகர்த்தவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Move selected rows to the top of the table"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரிசைகளை அட்டவணையின் மேலே நகர்த்தவும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|panToSelected|"
 msgstr "|panToSelected|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:875
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:877
 msgid "panToSelected"
 msgstr "panToSelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Pan map to the selected rows"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரிசைகளுக்கு வரைபடத்தை மாற்றவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+P`"
+msgstr ":kbd:`Ctrl+P`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|zoomToSelected|"
 msgstr "|zoomToSelected|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:899
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:901
 msgid "zoomToSelected"
 msgstr "zoomToSelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Zoom map to the selected rows"
+msgstr "தேர்ந்தெடுக்கப்பட்ட வரிசைகளுக்கு வரைபடத்தை பெரிதாக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+J`"
+msgstr ":kbd:`Ctrl+J`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|newAttribute|"
 msgstr "|newAttribute|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:859
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:861
 msgid "newAttribute"
 msgstr "newAttribute"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "New field"
+msgstr "புதிய களம்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add a new field to the data source"
+msgstr "தரவு மூலத்தில் புதிய புலத்தைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+W`"
+msgstr ":kbd:`Ctrl+W`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deleteAttribute|"
 msgstr "|deleteAttribute|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:817
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
 msgid "deleteAttribute"
 msgstr "deleteAttribute"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Delete field"
+msgstr "புலத்தை நீக்கு"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Remove a field from the data source"
+msgstr "தரவு மூலத்திலிருந்து ஒரு புலத்தை அகற்றவும்"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|editTable|"
 msgstr "|editTable|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:829
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:831
 msgid "editTable"
 msgstr "editTable"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Organize columns"
+msgstr "நெடுவரிசைகளை ஒழுங்கமைக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Show/hide fields from the attribute table"
+msgstr "பண்புக்கூறு அட்டவணையில் இருந்து புலங்களைக் காட்டு/மறை"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|calculateField|"
 msgstr "|calculateField|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:809
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:811
 msgid "calculateField"
 msgstr "calculateField"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Open field calculator"
+msgstr "புல கால்குலேட்டரைத் திறக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Update field for many features in a row"
+msgstr "ஒரு வரிசையில் பல அம்சங்களுக்கான புலத்தைப் புதுப்பிக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+I`"
+msgstr ":kbd:`Ctrl+I`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|conditionalFormatting|"
 msgstr "|conditionalFormatting|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:813
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
 msgid "conditionalFormatting"
 msgstr "conditionalFormatting"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Conditional formatting"
+msgstr "நிபந்தனை வடிவமைத்தல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Enable table formatting"
+msgstr "அட்டவணை வடிவமைப்பை இயக்கு"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|dock|"
 msgstr "|dock|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:823
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
 msgid "dock"
 msgstr "dock"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Dock attribute table"
+msgstr "டாக் பண்பு அட்டவணை"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Allows to dock/undock the attribute table"
+msgstr "பண்பு அட்டவணையை இணைக்க/தவிர்க்க அனுமதிக்கிறது"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|actionRun|"
 msgstr "|actionRun|"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:807
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:809
 msgid "actionRun"
 msgstr "actionRun"
 
@@ -238,86 +602,1746 @@ msgstr "actionRun"
 msgid "Actions"
 msgstr "Actions"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Lists the actions related to the layer"
+msgstr "அடுக்கு தொடர்பான செயல்களை பட்டியலிடுங்கள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:105
+msgid ""
+"Press and hold to select whether to add the feature via the attribute table "
+"or form."
+msgstr ""
+"பண்புக்கூறு அட்டவணை அல்லது படிவம் வழியாக அம்சத்தைச் சேர்க்க வேண்டுமா "
+"என்பதைத் தேர்ந்தெடுக்க அழுத்திப் பிடிக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:107
+msgid ""
+"Depending on the format of the data and the GDAL library built with your "
+"QGIS version, some tools may not be available."
+msgstr ""
+"உங்கள் QGIS பதிப்பைக் கொண்டு உருவாக்கப்பட்ட தரவு மற்றும் GDAL லைப்ரரியின் "
+"வடிவமைப்பைப் பொறுத்து, சில கருவிகள் கிடைக்காமல் போகலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:110
+msgid ""
+"Below these buttons is the Quick Field Calculation bar (enabled only in "
+":ref:`edit mode <sec_edit_existing_layer>`), which allows to quickly apply "
+"calculations to all or part of the features in the layer. This bar uses the "
+"same :ref:`expressions <vector_expressions>` as the |calculateField| "
+":sup:`Field Calculator` (see :ref:`calculate_fields_values`)."
+msgstr ""
+"இந்தப் பொத்தான்களுக்குக் கீழே விரைவுக் களக் கணக்கீட்டுப் பட்டி உள்ளது "
+"(:ref:`edit பயன்முறை <sec_edit_existing_layer>` இல் மட்டும் இயக்கப்பட்டது), "
+"இது அடுக்கில் உள்ள அனைத்து அல்லது பகுதி அம்சங்களுக்கும் கணக்கீடுகளை "
+"விரைவாகப் பயன்படுத்த அனுமதிக்கிறது. இந்தப் பட்டியில் அதே :ref:`expressions "
+"<vector_expressions>` |calculateField| :sup:`ஃபீல்ட் கால்குலேட்டர்` (பார்க்க"
+" :ref:`calculate_fields_values`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:120
+msgid "Table view vs Form view"
+msgstr "அட்டவணைக் காட்சி மற்றும் படிவக் காட்சி"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:122
+msgid ""
+"QGIS provides two view modes to easily manipulate data in the attribute "
+"table:"
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் தரவை எளிதாகக் கையாள QGIS இரண்டு பார்வை முறைகளை "
+"வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:124
+msgid ""
+"The |openTable| :sup:`Table view`, displays values of multiple features in a"
+" tabular mode, each row representing a feature and each column a field. A "
+"right-click on the column header allows you to :ref:`configure the table "
+"display <configure_table_columns>` while a right-click on a cell provides "
+":ref:`interaction with the feature <interacting_features_table>`."
+msgstr ""
+"தி |ஓப்பன் டேபிள்| :sup:`டேபிள் வியூ`, டேபிள் பயன்முறையில் பல அம்சங்களின் "
+"மதிப்புகளைக் காட்டுகிறது, ஒவ்வொரு வரிசையும் ஒரு அம்சத்தையும் ஒவ்வொரு "
+"நெடுவரிசையும் ஒரு புலத்தையும் குறிக்கும். நெடுவரிசைத் தலைப்பில் வலது "
+"சொடுக்கு செய்தால், அட்டவணைக் காட்சியை <configure_table_columns>` கட்டமைக்க "
+":ref:`அட்டவணையை அனுமதிக்கிறது, அதே நேரத்தில் கலத்தில் வலது சொடுக்கு செய்தால்"
+" <interacting_features_table>` அம்சத்துடன் :ref:`interaction கிடைக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:130
+msgid ""
+"The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in table "
+"view mode to switch between vertical and horizontal scrolling movements. "
+"This can also be achieved replacing the mouse with the trackpad on macOS."
+msgstr ""
+"செங்குத்து மற்றும் கிடைமட்ட ச்க்ரோலிங் இயக்கங்களுக்கு இடையில் மாற, டேபிள் "
+"வியூ பயன்முறையில் ச்க்ரோலிங் :kbd:`Shift+Mouse Wheel`ஐ பண்பு அட்டவணை "
+"ஆதரிக்கிறது. MacOS இல் சுட்டியை டிராக்பேடுடன் மாற்றுவதன் மூலமும் இதை அடைய "
+"முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:133
+msgid ""
+"The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>` "
+"in a first panel and displays only the attributes of the clicked identifier "
+"in the second one. There is a pull-down menu at the top of the first panel "
+"where the \"identifier\" can be updated using an attribute "
+"(:menuselection:`Columns -->`) or an :guilabel:`Expression`. A "
+":menuselection:`Sort... -->` menu allows you to sort the returned "
+"identifiers :guilabel:`By display name (ascending)`, :guilabel:`By display "
+"name (descending)` or :guilabel:`By custom expression`. The pull-down also "
+"includes the last 10 expressions for reuse. Form view uses the layer fields "
+"configuration (see :ref:`vector_attributes_menu`)."
+msgstr ""
+"தி |ஃபார்ம் வியூ| :sup:`Form view` முதல் பேனலில் <maptips>` :ref:`அம்ச "
+"அடையாளங்காட்டிகளைக் காட்டுகிறது மற்றும் இரண்டாவது பேனலில் சொடுக்கு "
+"செய்யப்பட்ட அடையாளங்காட்டியின் பண்புகளை மட்டும் காட்டுகிறது. முதல் பேனலின் "
+"மேற்புறத்தில் இழுக்கும் பட்டியல் உள்ளது, அங்கு \"அடையாளங்காட்டி\" ஒரு "
+"பண்புக்கூறு (:menuselection:`Columns -->`) அல்லது :guilabel:`Expression` ஐப்"
+" பயன்படுத்தி புதுப்பிக்கப்படும். A :menuselection:`Sort... -->` பட்டியல், "
+"திரும்பிய அடையாளங்காட்டிகளை வரிசைப்படுத்த அனுமதிக்கிறது :guilabel:`டிச்ப்ளே "
+"பெயர் (ஏறும்)`, :guilabel:`காட்சி பெயர் (இறங்கும்)` அல்லது "
+":guilabel:`தனிப்பயன் வெளிப்பாடு மூலம்`. மீண்டும் பயன்படுத்துவதற்கான கடைசி 10"
+" வெளிப்பாடுகளும் புல்-டவுனில் அடங்கும். படிவக் காட்சி அடுக்கு புலங்களின் "
+"உள்ளமைவைப் பயன்படுத்துகிறது (பார்க்க :ref:`vector_attributes_menu`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:841
 msgid "formView"
 msgstr "formView"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:845
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:145
+msgid ""
+"You can browse through the feature identifiers with the arrows on the bottom"
+" of the first panel. The features attributes update in the second panel as "
+"you go. It's also possible to identify or move to the active feature in the "
+"map canvas with pushing down any of the button at the bottom:"
+msgstr ""
+"முதல் பேனலின் அடிப்பகுதியில் உள்ள அம்புக்குறிகளைக் கொண்டு அம்ச "
+"அடையாளங்காட்டிகள் மூலம் உலாவலாம். நீங்கள் செல்லும்போது நற்பொருத்தங்கள் "
+"பண்புக்கூறுகள் இரண்டாவது பேனலில் புதுப்பிக்கப்படும். வரைபட கேன்வாசில் கீழே "
+"உள்ள எந்த பட்டனையும் கீழே அழுத்துவதன் மூலம் செயலில் உள்ள அம்சத்தை அடையாளம் "
+"காணவும் அல்லது நகர்த்தவும் முடியும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:150
+msgid ""
+"|highlightFeature| :sup:`Highlight current feature` if visible in the map "
+"canvas"
+msgstr ""
+"|ஐலைட் அம்சம்| :sup:'ஐலைட் தற்போதைய நற்பொருத்தம்' வரைபட கேன்வாசில் "
+"தெரிந்தால்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:847
 msgid "highlightFeature"
 msgstr "highlightFeature"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:873
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:152
+msgid "|panTo| :sup:`Automatically pan to current feature`"
+msgstr "|panTo| :sup:`தற்போதைய அம்சத்திற்கு தானாக மாற்றவும்`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:875
 msgid "panTo"
 msgstr "panTo"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:897
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:153
+msgid "|zoomTo| :sup:`Zoom to current feature`"
+msgstr "|zoomTo| :sup:`தற்போதைய அம்சத்திற்கு பெரிதாக்கு`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:899
 msgid "zoomTo"
 msgstr "zoomTo"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:811
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:155
+msgid ""
+"You can switch from one mode to the other by clicking the corresponding icon"
+" at the bottom right of the dialog."
+msgstr ""
+"உரையாடலின் கீழ் வலதுபுறத்தில் உள்ள தொடர்புடைய ஐகானைக் சொடுக்கு செய்வதன் "
+"மூலம் நீங்கள் ஒரு பயன்முறையிலிருந்து மற்றொன்றுக்கு மாறலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:158
+msgid ""
+"You can also specify the :guilabel:`Default view` mode at the opening of the"
+" attribute table in :menuselection:`Settings --> Options --> Data Sources` "
+"menu. It can be 'Remember last view', 'Table view' or 'Form view'."
+msgstr ""
+":menuselection:`Settings --> விருப்பங்கள் --> தகவல்கள் Sources` பட்டியலில் "
+"உள்ள பண்புக்கூறு அட்டவணையின் தொடக்கத்தில் :guilabel:`Default view` "
+"பயன்முறையையும் குறிப்பிடலாம். இது 'கடைசி காட்சியை நினைவில் கொள்ளுங்கள்', "
+"'டேபிள் காட்சி' அல்லது 'படிவக் காட்சி' என இருக்கலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:167
+msgid "Attribute table in table view (top) vs form view (bottom)"
+msgstr ""
+"அட்டவணைக் காட்சியில் பண்புக்கூறு அட்டவணை (மேல்) மற்றும் படிவக் காட்சி (கீழ்)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:175
+msgid "Configuring the columns"
+msgstr "நெடுவரிசைகளை கட்டமைத்தல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:177
+msgid ""
+"Right-click in a column header when in table view to have access to tools "
+"that help you control:"
+msgstr ""
+"நீங்கள் கட்டுப்படுத்த உதவும் கருவிகளுக்கான அணுகலைப் பெற அட்டவணைக் காட்சியில்"
+" இருக்கும் போது நெடுவரிசைத் தலைப்பில் வலது சொடுக்கு செய்யவும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:180
+msgid "the :ref:`column(s) size <resize_columns>`"
+msgstr ":ref:`column(s) அளவு <resize_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:181
+msgid "the :ref:`column(s) visibility and order <organize_columns>`"
+msgstr ":ref:`நெடுவரிசை(கள்) தெரிவுநிலை மற்றும் <organize_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:182
+msgid "the :ref:`sort order of the data <sort_columns>`"
+msgstr "தரவின் :ref:`வரிசை வரிசை <sort_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:187
+msgid "Resizing columns widths"
+msgstr "நெடுவரிசைகளின் அகலத்தை மறுஅளவிடுதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:189
+msgid ""
+"Columns width can be set through a right-click on the column header and "
+"select either:"
+msgstr ""
+"நெடுவரிசைகளின் அகலத்தை நெடுவரிசையின் தலைப்பில் வலது சொடுக்கு செய்து ஒன்றைத் "
+"தேர்ந்தெடுக்கவும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:192
+msgid ""
+":guilabel:`Set width...` to enter the desired value. By default, the current"
+" value is displayed in the widget"
+msgstr ""
+":guilabel:'அகலத்தை அமைக்கவும்...' விரும்பிய மதிப்பை உள்ளிடவும். "
+"முன்னிருப்பாக, தற்போதைய மதிப்பு விட்செட்டில் காட்டப்படும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:194
+msgid ":guilabel:`Set all column widths...` to the same value"
+msgstr ""
+":guilabel:`அனைத்து நெடுவரிசை அகலங்களையும் அமைக்கவும்...` அதே மதிப்பிற்கு"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:195
+msgid ":guilabel:`Autosize` to resize at the best fit the column."
+msgstr ":guilabel:நெடுவரிசைக்கு மிகவும் பொருத்தமாக அளவை மாற்ற, `தானியங்கு'."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:196
+msgid ":guilabel:`Autosize all columns`"
+msgstr ":guilabel:`அனைத்து நெடுவரிசைகளையும் தானாக மாற்றவும்`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:198
+msgid ""
+"A column size can also be changed by dragging the boundary on the right of "
+"its heading. The new size of the column is maintained for the layer, and "
+"restored at the next opening of the attribute table."
+msgstr ""
+"ஒரு நெடுவரிசை அளவை அதன் தலைப்பின் வலதுபுறத்தில் உள்ள எல்லையை இழுப்பதன் "
+"மூலமும் மாற்றலாம். நெடுவரிசையின் புதிய அளவு அடுக்குக்காக பராமரிக்கப்பட்டு, "
+"பண்பு அட்டவணையின் அடுத்த திறப்பில் மீட்டமைக்கப்படுகிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:202
+msgid ""
+"In the :ref:`Data Source Settings <datasources_options>`, you can choose to "
+"|checkbox| :guilabel:`Autosize all columns by default when opening attribute"
+" table`, which will make \"Autosize All Columns\" the default view every "
+"time attribute tables are opened in QGIS."
+msgstr ""
+":ref:`தரவு மூல அமைப்புகளில் <datasources_options>`, நீங்கள் |செக்பாக்ச்| "
+":guilabel:`பண்பு அட்டவணையைத் திறக்கும் போது முன்னிருப்பாக அனைத்து "
+"நெடுவரிசைகளையும் தானாக மாற்றவும்`, இது QGIS இல் பண்புக்கூறு அட்டவணைகள் "
+"திறக்கப்படும் ஒவ்வொரு முறையும் \"அனைத்து நெடுவரிசைகளையும் தானியங்குபடுத்து\""
+" என்பதை இயல்புநிலைக் காட்சியாக மாற்றும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:813
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:889
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:209
+msgid "Hiding and organizing columns and enabling actions"
+msgstr ""
+"நெடுவரிசைகளை மறைத்தல் மற்றும் ஒழுங்கமைத்தல் மற்றும் செயல்களை இயக்குதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:211
+msgid ""
+"By right-clicking in a column header, you can choose to :guilabel:`Hide "
+"column` from the attribute table (in \"table view\" mode). For more advanced"
+" controls, press the |editTable| :sup:`Organize columns...` button from the "
+"dialog toolbar or choose :guilabel:`Organize columns...` in a column header "
+"contextual menu."
+msgstr ""
+"நெடுவரிசைத் தலைப்பில் வலது சொடுக்கு செய்வதன் மூலம், பண்புக்கூறு அட்டவணையில் "
+"(\"டேபிள் வியூ\" பயன்முறையில்) :guilabel:`நெடுவரிசையை மறை` என்பதைத் "
+"தேர்ந்தெடுக்கலாம். மேலும் மேம்பட்ட கட்டுப்பாடுகளுக்கு, |editTable| ஐ "
+"அழுத்தவும் :sup:`நெடுவரிசைகளை ஒழுங்கமைக்கவும்...` என்ற பொத்தானை உரையாடல் "
+"கருவிப்பட்டியில் இருந்து அல்லது நெடுவரிசை தலைப்பு சூழல் பட்டியலில் "
+":guilabel:`நெடுவரிசைகளை ஒழுங்கமைக்கவும்...` என்பதைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:217
+msgid "In the new dialog, you can:"
+msgstr "புதிய உரையாடலில், நீங்கள்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:219
+msgid ""
+"check/uncheck columns you want to show or hide: a hidden column will "
+"disappear from every instance of the attribute table dialog until it is "
+"actively restored. It is also possible to:"
+msgstr ""
+"நீங்கள் காட்ட அல்லது மறைக்க விரும்பும் நெடுவரிசைகளைச் சரிபார்க்கவும்/தேர்வு "
+"செய்யவும்: பண்புக்கூறு அட்டவணை உரையாடலின் ஒவ்வொரு நிகழ்விலிருந்தும் "
+"மறைக்கப்பட்ட நெடுவரிசை செயலில் மீட்டமைக்கப்படும் வரை மறைந்துவிடும். இதுவும் "
+"சாத்தியம்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:223
+msgid ""
+"choose :guilabel:`Show All` to display all the fields (columns) and actions "
+"in the table"
+msgstr ""
+"அட்டவணையில் உள்ள அனைத்து புலங்கள் (நெடுவரிசைகள்) மற்றும் செயல்களைக் "
+"காட்ட:guilabel:`அனைத்தையும் காட்டு` என்பதைத் தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:224
+msgid ""
+"choose :guilabel:`Hide All` to hide all the fields (columns) and actions in "
+"the table"
+msgstr ""
+"அட்டவணையில் உள்ள அனைத்து புலங்கள் (நெடுவரிசைகள்) மற்றும் செயல்களை மறைக்க "
+":guilabel:`அனைத்தையும் மறை` என்பதைத் தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:225
+msgid ""
+"use the :guilabel:`Toggle selection` to invert visibility of the current "
+"selection of columns. You can use :ref:`keyboard combination "
+"<interacting_features_table>` for selecting multiple columns."
+msgstr ""
+"நெடுவரிசைகளின் தற்போதைய தேர்வின் தெரிவுநிலையைத் தலைகீழாக மாற்ற "
+":guilabel:`தேர்வை மாற்று` என்பதைப் பயன்படுத்தவும். பல நெடுவரிசைகளைத் "
+"தேர்ந்தெடுக்க நீங்கள் :ref:`keyboard கலவை <interacting_features_table>` ஐப் "
+"பயன்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:229
+msgid ""
+"drag-and-drop items to reorder the columns in the attribute table. Note that"
+" this change is for the table rendering and does not alter the fields order "
+"in the layer datasource"
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் உள்ள நெடுவரிசைகளை மறுவரிசைப்படுத்த உருப்படிகளை "
+"இழுத்து விடவும். இந்த மாற்றம் டேபிள் ரெண்டரிங்கிற்கானது மற்றும் அடுக்கு "
+"தரவுமூலத்தில் புலங்களின் வரிசையை மாற்றாது என்பதை நினைவில் கொள்ளவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:232
+msgid ""
+"add a new virtual :guilabel:`Actions` column that displays in each row a "
+"drop-down box or a button list of enabled actions. See :ref:`actions_menu` "
+"for more information about actions."
+msgstr ""
+"ஒரு புதிய மெய்நிகர் :guilabel:`Actions` நெடுவரிசையைச் சேர்க்கவும், அது "
+"ஒவ்வொரு வரிசையிலும் ஒரு கீழ்தோன்றும் பெட்டி அல்லது இயக்கப்பட்ட செயல்களின் "
+"பொத்தான் பட்டியலைக் காட்டுகிறது. செயல்கள் பற்றிய கூடுதல் தகவலுக்கு "
+":ref:`actions_menu` ஐப் பார்க்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
+msgid "Sorting rows"
+msgstr "வரிசைகளை வரிசைப்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
+msgid ""
+"The rows can be sorted by any column, by clicking on the column header. A "
+"small arrow indicates the sort order (downward pointing means descending "
+"values from the top row down, upward pointing means ascending values from "
+"the top row down). You can also choose to sort the rows with the "
+":guilabel:`Sort...` option of the column header context menu and write an "
+"expression. E.g. to sort the rows using multiple columns you can write "
+"``concat(col0, col1)``."
+msgstr ""
+"நெடுவரிசையின் தலைப்பைக் சொடுக்கு செய்வதன் மூலம் வரிசைகளை எந்த "
+"நெடுவரிசையிலும் வரிசைப்படுத்தலாம். ஒரு சிறிய அம்புக்குறி வரிசை வரிசையைக் "
+"குறிக்கிறது (கீழ்நோக்கிச் சுட்டி என்பது மேல் வரிசையிலிருந்து கீழுள்ள "
+"மதிப்புகளைக் குறிக்கிறது, மேல்நோக்கிச் சுட்டி என்பது மேல் வரிசையிலிருந்து "
+"கீழே ஏறும் மதிப்புகளைக் குறிக்கிறது). நெடுவரிசை தலைப்பு சூழல் மெனுவின் "
+":guilabel:`Sort...` விருப்பத்துடன் வரிசைகளை வரிசைப்படுத்தவும் மற்றும் ஒரு "
+"வெளிப்பாட்டை எழுதவும் நீங்கள் தேர்வு செய்யலாம். எ.கா. பல நெடுவரிசைகளைப் "
+"பயன்படுத்தி வரிசைகளை வரிசைப்படுத்த நீங்கள் ``concat(col0, col1)`` என "
+"எழுதலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:250
+msgid ""
+"In form view, features identifier can be sorted using the |sort| "
+":guilabel:`Sort by preview expression` option."
+msgstr ""
+"படிவக் காட்சியில், நற்பொருத்தங்கள் அடையாளங்காட்டியை |sort| ஐப் பயன்படுத்தி "
+"வரிசைப்படுத்தலாம் :guilabel:`முன்பார்வை வெளிப்பாடு மூலம் வரிசைப்படுத்து` "
+"விருப்பம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
 msgid "sort"
 msgstr "sort"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:879
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:253
+msgid ""
+"Note that sorting the rows only affects the table rendering and does not "
+"alter the features order in the layer datasource."
+msgstr ""
+"வரிசைகளை வரிசைப்படுத்துவது டேபிள் ரெண்டரிங்கை மட்டுமே பாதிக்கிறது மற்றும் "
+"லேயர் டேட்டாசோர்சில் உள்ள அம்சங்களின் வரிசையை மாற்றாது என்பதை நினைவில் "
+"கொள்ளவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:258
+msgid "**Sorting based on columns of different types**"
+msgstr "**பல்வேறு வகைகளின் நெடுவரிசைகளின் அடிப்படையில் வரிசைப்படுத்துதல்**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:260
+msgid ""
+"Trying to sort an attribute table based on columns of string and numeric "
+"types may lead to unexpected result because of the ``concat(\"USE\", "
+"\"ID\")`` expression returning string values (ie, ``'Borough105' < "
+"'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
+"lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
+msgstr ""
+"சரம் மற்றும் எண் வகைகளின் நெடுவரிசைகளின் அடிப்படையில் பண்புக்கூறு அட்டவணையை "
+"வரிசைப்படுத்த முயல்வது எதிர்பாராத விளைவுக்கு வழிவகுக்கும், ஏனெனில் "
+"``concat(\"USE\", \"ID\")`` வெளிப்பாடு string மதிப்புகளை வழங்கும் (அதாவது, "
+"``'Borough105' < 'Borough6'``). எ.கா. ``concat(\"USE\", lpad(\"ID\", 3, "
+"0))`` ஐப் பயன்படுத்தி இதைச் சரிசெய்யலாம், இது ``'Borough105' > "
+"'Borough006'`` என்பதை வழங்குகிறது"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:270
+msgid "Formatting of table cells using conditions"
+msgstr "நிபந்தனைகளைப் பயன்படுத்தி அட்டவணை செல்களை வடிவமைத்தல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:272
+msgid ""
+"Conditional formatting settings can be used to highlight in the attribute "
+"table features you may want to put a particular focus on, using custom "
+"conditions on feature's:"
+msgstr ""
+"அம்சங்களின் தனிப்பயன் நிபந்தனைகளைப் பயன்படுத்தி, நீங்கள் குறிப்பிட்ட கவனம் "
+"செலுத்த விரும்பும் பண்புக்கூறு அட்டவணை அம்சங்களை முன்னிலைப்படுத்த நிபந்தனை "
+"வடிவமைப்பு அமைப்புகளைப் பயன்படுத்தலாம்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:276
+msgid ""
+"geometry (e.g., identifying multi-parts features, small area ones or in a "
+"defined map extent...);"
+msgstr ""
+"வடிவியல் (எ.கா., பல பாகங்கள் நற்பொருத்தங்கள், சிறிய பகுதிகள் அல்லது "
+"வரையறுக்கப்பட்ட வரைபட அளவில்...);"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:278
+msgid ""
+"or field value (e.g., comparing values to a threshold, identifying empty "
+"cells, duplicates, ...)."
+msgstr ""
+"அல்லது புல மதிப்பு (எ.கா., மதிப்புகளை வரம்புடன் ஒப்பிடுதல், வெற்று செல்களை "
+"அடையாளம் காணுதல், நகல், ...)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:281
+msgid ""
+"You can enable the conditional formatting panel clicking on "
+"|conditionalFormatting| :sup:`Conditional formatting` button at the top "
+"right of the attributes window in table view (not triggered in form view)."
+msgstr ""
+"நீங்கள் |conditionalFormatting| என்பதைக் சொடுக்கு செய்வதன் மூலம் நிபந்தனை "
+"வடிவமைப்பு பேனலை இயக்கலாம் :sup:'நிபந்தனை வடிவமைத்தல்' பொத்தான் அட்டவணைக் "
+"காட்சியில் பண்புக்கூறுகள் சாளரத்தின் மேல் வலதுபுறத்தில் (படிவக் காட்சியில் "
+"தூண்டப்படவில்லை)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:285
+msgid ""
+"The new panel allows user to add new rules to format rendering of "
+"|radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`. "
+"Adding new rule opens a form to define:"
+msgstr ""
+"|radioButtonOn|:guilabel:`Field` அல்லது |radioButtonOff|:guilabel:`Full "
+"row`ஐ வடிவமைக்க புதிய விதிகளைச் சேர்க்க புதிய பேனல் பயனரை அனுமதிக்கிறது. "
+"புதிய விதியைச் சேர்ப்பது வரையறுக்க ஒரு படிவத்தைத் திறக்கிறது:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:881
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:877
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:879
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:869
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:289
+msgid "the name of the rule;"
+msgstr "விதியின் பெயர்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:290
+msgid ""
+"a condition using any of the :ref:`expression builder <vector_expressions>` "
+"functions;"
+msgstr ""
+"எந்த ஒரு நிபந்தனை :ref:`expression builder <vector_expressions>` "
+"செயல்பாடுகள்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:291
+msgid ""
+"the formatting: it can be chosen from a list of predefined formats or "
+"created based on properties like:"
+msgstr ""
+"வடிவமைப்பு: இது முன் வரையறுக்கப்பட்ட வடிவங்களின் பட்டியலிலிருந்து "
+"தேர்ந்தெடுக்கப்படலாம் அல்லது இது போன்ற பண்புகளின் அடிப்படையில் "
+"உருவாக்கப்படலாம்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:294
+msgid "background and text colors;"
+msgstr "பின்னணி மற்றும் உரை வண்ணங்கள்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:295
+msgid "use of icon;"
+msgstr "ஐகானின் பயன்பாடு;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:296
+msgid "bold, italic, underline, or strikeout;"
+msgstr "தடித்த, சாய்வு, அடிக்கோடிட்டு அல்லது ச்ட்ரைக்அவுட்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:297
+msgid "font."
+msgstr "எழுத்துரு."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:304
+msgid "Conditional Formatting of an attribute table"
+msgstr "பண்பு அட்டவணையின் நிபந்தனை வடிவமைப்பு"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:311
+msgid "Interacting with features in an attribute table"
+msgstr "பண்புக்கூறு அட்டவணையில் உள்ள அம்சங்களுடன் ஊடாடுதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:314
+msgid "Selecting features"
+msgstr "அம்சங்களைத் தேர்ந்தெடுப்பது"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:316
+msgid ""
+"In table view, each row in the attribute table displays the attributes of a "
+"unique feature in the layer. Selecting a row selects the feature and "
+"likewise, selecting a feature in the map canvas (in case of geometry enabled"
+" layer) selects the row in the attribute table. If the set of features "
+"selected in the map canvas (or attribute table) is changed, then the "
+"selection is also updated in the attribute table (or map canvas) "
+"accordingly."
+msgstr ""
+"அட்டவணைக் காட்சியில், பண்புக்கூறு அட்டவணையில் உள்ள ஒவ்வொரு வரிசையும் "
+"அடுக்கில் உள்ள தனித்துவமான அம்சத்தின் பண்புகளைக் காட்டுகிறது. ஒரு வரிசையைத் "
+"தேர்ந்தெடுப்பது அம்சத்தைத் தேர்ந்தெடுக்கிறது, அதேபோல, வரைபட கேன்வாசில் ஒரு "
+"அம்சத்தைத் தேர்ந்தெடுப்பது (வடிவவியல் இயக்கப்பட்ட லேயராக இருந்தால்) "
+"பண்புக்கூறு அட்டவணையில் உள்ள வரிசையைத் தேர்ந்தெடுக்கிறது. வரைபட கேன்வாசில் "
+"(அல்லது பண்புக்கூறு அட்டவணை) தேர்ந்தெடுக்கப்பட்ட அம்சங்களின் தொகுப்பு "
+"மாற்றப்பட்டால், அதற்கேற்ப பண்புக்கூறு அட்டவணையில் (அல்லது வரைபட கேன்வாச்) "
+"தேர்வு புதுப்பிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:323
+msgid ""
+"Rows can be selected by clicking on the row number on the left side of the "
+"row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key. A "
+"**continuous selection** can be made by holding the :kbd:`Shift` key and "
+"clicking on several row headers on the left side of the rows. All rows "
+"between the current cursor position and the clicked row are selected. Moving"
+" the cursor position in the attribute table, by clicking a cell in the "
+"table, does not change the row selection. Changing the selection in the main"
+" canvas does not move the cursor position in the attribute table."
+msgstr ""
+"வரிசையின் இடது பக்கத்தில் உள்ள வரிசை எண்ணைக் சொடுக்கு செய்வதன் மூலம் "
+"வரிசைகளைத் தேர்ந்தெடுக்கலாம். **பல வரிசைகள்** :kbd:`Ctrl` விசையைப் "
+"பிடித்துக் குறிக்கலாம். ஒரு **தொடர்ச்சியான தேர்வை** :kbd:`Shift` விசையை "
+"அழுத்திப் பிடித்து, வரிசைகளின் இடது பக்கத்தில் உள்ள பல வரிசை தலைப்புகளைக் "
+"சொடுக்கு செய்வதன் மூலம் செய்யலாம். தற்போதைய கர்சர் நிலைக்கும் சொடுக்கு செய்த"
+" வரிசைக்கும் இடையே உள்ள அனைத்து வரிசைகளும் தேர்ந்தெடுக்கப்பட்டன. பண்புக்கூறு"
+" அட்டவணையில் கர்சர் நிலையை நகர்த்துவது, அட்டவணையில் உள்ள கலத்தை சொடுக்கு "
+"செய்வதன் மூலம், வரிசை தேர்வை மாற்றாது. முதன்மையான கேன்வாசில் தேர்வை "
+"மாற்றுவது பண்பு அட்டவணையில் கர்சர் நிலையை நகர்த்தாது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:332
+msgid ""
+"In form view of the attribute table, features are by default identified in "
+"the left panel by the value of their displayed field (see :ref:`maptips`). "
+"This identifier can be replaced using the drop-down list at the top of the "
+"panel, either by selecting an existing field or using a custom expression. "
+"You can also choose to sort the list of features from the drop-down menu."
+msgstr ""
+"பண்புக்கூறு அட்டவணையின் படிவக் காட்சியில், நற்பொருத்தங்கள் காட்டப்படும் "
+"புலத்தின் மதிப்பின் மூலம் இடது பேனலில் இயல்பாக அடையாளம் காணப்படுகின்றன "
+"(பார்க்க :ref:`maptips`). பேனலின் மேலே உள்ள கீழ்தோன்றும் பட்டியலைப் "
+"பயன்படுத்தி, ஏற்கனவே உள்ள புலத்தைத் தேர்ந்தெடுப்பதன் மூலம் அல்லது தனிப்பயன் "
+"வெளிப்பாட்டைப் பயன்படுத்தி இந்த அடையாளங்காட்டியை மாற்றலாம். கீழ்தோன்றும் "
+"மெனுவிலிருந்து அம்சங்களின் பட்டியலை வரிசைப்படுத்தவும் நீங்கள் தேர்வு "
+"செய்யலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
+msgid ""
+"Click a value in the left panel to display the feature's attributes in the "
+"right one. To select a feature, you need to click inside the square symbol "
+"at the left of the identifier. By default, the symbol turns into yellow. "
+"Like in the table view, you can perform multiple feature selection using the"
+" keyboard combinations previously exposed."
+msgstr ""
+"அம்சத்தின் பண்புகளை வலதுபுறத்தில் காட்ட இடது பேனலில் உள்ள மதிப்பைக் சொடுக்கு"
+" செய்யவும். ஒரு அம்சத்தைத் தேர்ந்தெடுக்க, அடையாளங்காட்டியின் இடதுபுறத்தில் "
+"உள்ள சதுரக் குறியீட்டின் உள்ளே சொடுக்கு செய்ய வேண்டும். இயல்பாக, அடையாளம் "
+"மஞ்சள் நிறமாக மாறும். அட்டவணைக் காட்சியைப் போலவே, முன்பு வெளிப்படுத்தப்பட்ட "
+"விசைப்பலகை சேர்க்கைகளைப் பயன்படுத்தி பல அம்சத் தேர்வைச் செய்யலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:347
+msgid ""
+"Beyond selecting features with the mouse, you can perform automatic "
+"selection based on feature's attribute using tools available in the "
+"attribute table toolbar, such as (see section :ref:`automatic_selection` and"
+" subsequent for more information and use case):"
+msgstr ""
+"மவுச் மூலம் அம்சங்களைத் தேர்ந்தெடுப்பதற்கு அப்பால், பண்புக்கூறு அட்டவணை "
+"கருவிப்பட்டியில் உள்ள கருவிகளைப் பயன்படுத்தி அம்சத்தின் பண்புக்கூறுகளின் "
+"அடிப்படையில் தானியங்குத் தேர்வைச் செய்யலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:352
+msgid "|expressionSelect| :guilabel:`Select By Expression...`"
+msgstr "|expressionSelect| :guilabel:`வெளிப்பாடு மூலம் தேர்ந்தெடு...`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:353
+msgid "|formSelect| :guilabel:`Select Features By Value...`"
+msgstr "|formSelect| :guilabel:`அம்சங்களை மதிப்பின்படி தேர்ந்தெடு...`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:354
+msgid "|deselectActiveLayer| :guilabel:`Deselect All Features from the Layer`"
+msgstr ""
+"|செலக்ட் ஆக்டிவ் லேயர்| :guilabel:`அடுக்கிலிருந்து அனைத்து அம்சங்களையும் "
+"தேர்வுநீக்கு`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:355
+msgid "|selectAll| :guilabel:`Select All Features`"
+msgstr "|அனைத்தையும் தேர்ந்தெடு| :guilabel:`அனைத்து அம்சங்களையும் தேர்ந்தெடு`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:356
+msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
+msgstr "|invertSelection| :guilabel:`தலைகீழ் அம்சத் தேர்வு`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:358
+msgid ""
+"It is also possible to :ref:`select features using forms "
+"<filter_select_form>`."
+msgstr ""
+"<filter_select_form>` படிவங்களைப் பயன்படுத்தி :ref:` அம்சங்களைத் "
+"தேர்ந்தெடுக்கவும் முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:364
+msgid "Filtering features"
+msgstr "வடிகட்டுதல் நற்பொருத்தங்கள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:366
+msgid ""
+"Once you have selected features in the attribute table, you may want to "
+"display only these records in the table. This can be easily done using the "
+":guilabel:`Show Selected Features` item from the drop-down list at the "
+"bottom left of the attribute table dialog. This list offers the following "
+"filters:"
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் அம்சங்களைத் தேர்ந்தெடுத்த பிறகு, இந்த பதிவுகளை "
+"மட்டும் அட்டவணையில் காட்ட விரும்பலாம். பண்புக்கூறு அட்டவணை உரையாடலின் கீழ் "
+"இடதுபுறத்தில் உள்ள கீழ்தோன்றும் பட்டியலில் இருந்து "
+":guilabel:'தேர்ந்தெடுக்கப்பட்ட அம்சங்களைக் காண்பி' உருப்படியைப் பயன்படுத்தி "
+"இதை எளிதாகச் செய்யலாம். இந்த பட்டியல் பின்வரும் வடிப்பான்களை வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:371
+msgid "|openTable| :guilabel:`Show All Features`"
+msgstr "|ஓப்பன் டேபிள்| :guilabel:`அனைத்து அம்சங்களையும் காட்டு`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
+msgid ""
+"|openTableSelected| :guilabel:`Show Selected Features` - same as using "
+":guilabel:`Open Attribute Table (Selected Features)` from the "
+":guilabel:`Layer` menu or the :guilabel:`Attributes Toolbar` or pressing "
+":kbd:`Shift+F6`"
+msgstr ""
+"|openTableSelected| :guilabel:`தேர்ந்தெடுக்கப்பட்ட அம்சங்களைக் காண்பி` - "
+":guilabel:`Layer` மெனுவிலிருந்து அல்லது :guilabel:`Attributes Toolbar` "
+"அல்லது :kbd:`Shift+F6` ஐ அழுத்துவதன் மூலம் :guilabel:`பண்பு அட்டவணையைத் "
+"திறக்கவும் (தேர்ந்தெடுக்கப்பட்ட அம்சங்கள்)`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:871
 msgid "openTableSelected"
 msgstr "openTableSelected"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:871
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:375
+msgid ""
+"|openTableVisible| :guilabel:`Show Features visible on map` - same as using "
+":guilabel:`Open Attribute Table (Visible Features)` from the "
+":guilabel:`Layer` menu or the :guilabel:`Attributes Toolbar` or pressing "
+":kbd:`Ctrl+F6`"
+msgstr ""
+"|openTableVisible| :guilabel:`Layer` பட்டியல் அல்லது :guilabel:`Attributes "
+"Toolbar` அல்லது :kbd:`Ctrl+F6` ஐ அழுத்துவதன் மூலம் :guilabel:`அம்சங்களை "
+"வரைபடத்தில் காண்பி` - :guilabel:`திறந்த பண்புக்கூறு அட்டவணை (தெரியும் "
+"அம்சங்கள்)`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:873
 msgid "openTableVisible"
 msgstr "openTableVisible"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:867
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:378
+msgid ""
+"|openTableInvalid| :guilabel:`Show Features with Failing Constraints` - "
+"features will be filtered to only show the ones which have failing "
+":ref:`constraints <constraints>`. Depending on whether the unmet constraint "
+"is hard or soft, failing field values are displayed in respectively dark or "
+"light orange cells."
+msgstr ""
+"|openTableInvalid| :guilabel:`தோல்வியுற்ற கட்டுப்பாடுகளுடன் அம்சங்களைக் "
+"காட்டு` - தோல்வியுற்றவற்றை மட்டும் காண்பிக்க நற்பொருத்தங்கள் வடிகட்டப்படும் "
+":ref:`constraints <constraints>`. சந்திக்காத கட்டுப்பாடு கடினமானதா அல்லது "
+"மென்மையானதா என்பதைப் பொறுத்து, தோல்வியடைந்த புல மதிப்புகள் முறையே இருண்ட "
+"அல்லது வெளிர் ஆரஞ்சு கலங்களில் காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:869
 msgid "openTableInvalid"
 msgstr "openTableInvalid"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:865
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:382
+msgid ""
+"|openTableEdited| :guilabel:`Show Edited and New Features` - same as using "
+":guilabel:`Open Attribute Table (Edited and New Features)` from the "
+":guilabel:`Layer` menu or the :guilabel:`Attributes Toolbar`"
+msgstr ""
+"|openTableEdited| :guilabel:`Layer` பட்டியல் அல்லது :guilabel:`Attributes "
+"Toolbar` என்பதிலிருந்து :guilabel:`திறந்த பண்புக்கூறு அட்டவணை (திருத்தப்பட்ட"
+" மற்றும் புதிய அம்சங்கள்)` -ஐப் பயன்படுத்துவதைப் போலவே "
+":guilabel:`திருத்தப்பட்ட மற்றும் புதிய அம்சங்களைக் காட்டு`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:867
 msgid "openTableEdited"
 msgstr "openTableEdited"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:841
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:385
+msgid ""
+":guilabel:`Field Filter` - allows the user to filter based on value of a "
+"field: choose a column from a list, type or select a value and press "
+":kbd:`Enter` to filter. Then, only the features matching ``num_field = "
+"value`` or ``string_field ilike '%value%'`` expression are shown in the "
+"attribute table. You can check |checkbox| :guilabel:`Case sensitive` to be "
+"less permissive with strings."
+msgstr ""
+":guilabel:`Field Filter` - புலத்தின் மதிப்பின் அடிப்படையில் வடிகட்ட பயனரை "
+"அனுமதிக்கிறது: பட்டியலிலிருந்து ஒரு நெடுவரிசையைத் தேர்வுசெய்து, தட்டச்சு "
+"செய்யவும் அல்லது மதிப்பைத் தேர்ந்தெடுத்து வடிகட்ட :kbd:`Enter` ஐ அழுத்தவும்."
+" பிறகு, ``num_field = value`` அல்லது ``string_field போன்ற '%value%'`` "
+"வெளிப்பாடு பொருந்தக்கூடிய நற்பொருத்தங்கள் மட்டுமே பண்புக்கூறு அட்டவணையில் "
+"காட்டப்படும். நீங்கள் |செக்பாக்ச்| சரிபார்க்கலாம் :guilabel:`கேச் "
+"சென்சிட்டிவ்` சரங்களுடன் குறைவாக அனுமதிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
+msgid ""
+"|filterMap| :guilabel:`Advanced filter (Expression)` - Opens the expression "
+"builder dialog. Within it, you can create :ref:`complex expressions "
+"<vector_expressions>` to match table rows. For example, you can filter the "
+"table using more than one field. When applied, the filter expression will "
+"show up at the bottom of the form."
+msgstr ""
+"|வடிகட்டி வரைபடம்| :guilabel:`மேம்பட்ட வடிகட்டி (வெளிப்பாடு)` - எக்ச்பிரசன் "
+"பில்டர் உரையாடலைத் திறக்கிறது. அதற்குள், அட்டவணை வரிசைகளை பொருத்துவதற்கு "
+"நீங்கள் :ref:`complex expressions <vector_expressions>` உருவாக்கலாம். "
+"எடுத்துக்காட்டாக, ஒன்றுக்கும் மேற்பட்ட புலங்களைப் பயன்படுத்தி அட்டவணையை "
+"வடிகட்டலாம். பயன்படுத்தப்படும் போது, ​​வடிகட்டி வெளிப்பாடு படிவத்தின் கீழே "
+"காண்பிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:395
+msgid ""
+"|handleStoreFilterExpressionChecked| :menuselection:`Stored filter "
+"expressions -->`: a shortcut to :ref:`saved expressions <store_filter>` "
+"frequently used for filtering your attribute table."
+msgstr ""
+"|handleStoreFilterExpressionChecked| :menuselection:`Stored filter "
+"expressions -->`: :ref:`save expressions <store_filter>` என்பதற்கான "
+"குறுக்குவழி உங்கள் பண்புக்கூறு அட்டவணையை வடிகட்ட அடிக்கடி "
+"பயன்படுத்தப்படுகிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:843
 msgid "handleStoreFilterExpressionChecked"
 msgstr "handleStoreFilterExpressionChecked"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:843
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:398
+msgid ""
+"It is also possible to :ref:`filter features using forms "
+"<filter_select_form>`."
+msgstr ""
+"<filter_select_form>` படிவங்களைப் பயன்படுத்தி :ref:` அம்சங்களை வடிகட்டவும் "
+"முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:402
+msgid ""
+"Filtering records out of the attribute table does not filter features out of"
+" the layer; they are simply momentaneously hidden from the table and can be "
+"accessed from the map canvas or by removing the filter. For filters that do "
+"hide features from the layer, use the :ref:`Query Builder "
+"<vector_query_builder>`."
+msgstr ""
+"பண்புக்கூறு அட்டவணைக்கு வெளியே பதிவுகளை வடிகட்டுவது, அடுக்குக்கு வெளியே "
+"அம்சங்களை வடிகட்டாது; அவை அட்டவணையில் இருந்து உடனடியாக மறைக்கப்பட்டு, வரைபட "
+"கேன்வாசிலிருந்து அல்லது வடிகட்டியை அகற்றுவதன் மூலம் அணுகலாம். லேயரில் "
+"இருந்து அம்சங்களை மறைக்கும் வடிப்பான்களுக்கு, :ref:`Query Builder "
+"<vector_query_builder>` ஐப் பயன்படுத்தவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:408
+msgid "**Update datasource filtering with** ``Show Features Visible on Map``"
+msgstr ""
+"** தரவுமூல வடிகட்டலைப் புதுப்பிக்கவும்** ``மேப்பில் தெரியும் அம்சங்களைக் "
+"காட்டு``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:410
+msgid ""
+"When for performance reasons, features shown in attribute table are "
+"spatially limited to the canvas extent at its opening (see :ref:`Data Source"
+" Options <tip_table_filtering>` for a how-to), selecting :guilabel:`Show "
+"Features Visible on Map` on a new canvas extent updates the spatial "
+"restriction."
+msgstr ""
+"செயல்திறன் காரணங்களுக்காக, பண்புக்கூறு அட்டவணையில் காட்டப்படும் "
+"நற்பொருத்தங்கள் அதன் தொடக்கத்தில் உள்ள கேன்வாச் அளவிற்கு வரம்புக்குட்பட்டதாக"
+" இருக்கும் போது (எப்படி செய்ய வேண்டும் என்பதற்கு :ref:`Data மூலம் "
+"விருப்பங்கள் <tip_table_filtering>` ஐப் பார்க்கவும்), :guilabel:`Show "
+"நற்பொருத்தங்கள் on Map`ஐத் தேர்ந்தெடுப்பது, புதிய கேன்வாச் அளவில் மேப்பில் "
+"காணக்கூடிய அம்சங்களைப் புதுப்பிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:419
+msgid "Storing filter expressions"
+msgstr "வடிகட்டி வெளிப்பாடுகளை சேமிக்கிறது"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:421
+msgid ""
+"Expressions you use for attribute table filtering can be saved for further "
+"calls. When using :guilabel:`Field Filter` or :guilabel:`Advanced Filter "
+"(expression)` entries, the expression used is displayed in a text widget in "
+"the bottom of the attribute table dialog. Press the "
+"|handleStoreFilterExpressionUnchecked| :sup:`Save expression with text as "
+"name` next to the box to save the expression in the project. Pressing the "
+"drop-down menu next to the button allows to save the expression with a "
+"custom name (:guilabel:`Save expression as...`). Once a saved expression is "
+"displayed, the |handleStoreFilterExpressionChecked| button is triggered and "
+"its drop-down menu allows you to :guilabel:`Edit the expression` and name if"
+" any, or :guilabel:`Delete stored expression`."
+msgstr ""
+"பண்புக்கூறு அட்டவணையை வடிகட்டுவதற்கு நீங்கள் பயன்படுத்தும் வெளிப்பாடுகள் "
+"மேலும் அழைப்புகளுக்குச் சேமிக்கப்படும். :guilabel:`Field Filter` அல்லது "
+":guilabel:`Advanced வடிப்பி (expression)` உள்ளீடுகளைப் பயன்படுத்தும் போது, "
+"​​பயன்படுத்தப்படும் வெளிப்பாடு பண்பு அட்டவணை உரையாடலின் கீழே உள்ள உரை "
+"விட்செட்டில் காட்டப்படும். |handleStoreFilterExpressionUnchecked| ஐ "
+"அழுத்தவும் :sup: திட்டத்தில் வெளிப்பாட்டைச் சேமிக்க பெட்டிக்கு அடுத்துள்ள "
+"`உரையை பெயராகச் சேமி'. பொத்தானுக்கு அடுத்துள்ள கீழ்தோன்றும் மெனுவை "
+"அழுத்துவது தனிப்பயன் பெயருடன் வெளிப்பாட்டை சேமிக்க அனுமதிக்கிறது "
+"(:guilabel:`வெளிப்பாட்டை இவ்வாறு சேமி...`). சேமிக்கப்பட்ட வெளிப்பாடு "
+"காட்டப்பட்டதும், |handleStoreFilterExpressionChecked| பொத்தான் தூண்டப்பட்டது"
+" மற்றும் அதன் கீழ்தோன்றும் பட்டியல் உங்களை :guilabel:`வெளிப்பாட்டைத் "
+"திருத்தவும்` மற்றும் ஏதேனும் இருந்தால் பெயரிடவும் அல்லது "
+":guilabel:`சேமிக்கப்பட்ட வெளிப்பாட்டை நீக்கவும்` அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:845
 msgid "handleStoreFilterExpressionUnchecked"
 msgstr "handleStoreFilterExpressionUnchecked"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:432
+msgid ""
+"Saved filter expressions are saved in the project and available through the "
+":guilabel:`Stored filter expressions` menu of the attribute table. They are "
+"different from the :ref:`user expressions <user_expressions_functions>`, "
+"shared by all projects of the active user profile."
+msgstr ""
+"சேமிக்கப்பட்ட வடிகட்டி வெளிப்பாடுகள் திட்டத்தில் சேமிக்கப்பட்டு, பண்பு "
+"அட்டவணையின் :guilabel:`சேமிக்கப்பட்ட வடிகட்டி வெளிப்பாடுகள்` பட்டியல் மூலம் "
+"கிடைக்கும். அவை செயலில் உள்ள பயனர் சுயவிவரத்தின் அனைத்து திட்டங்களாலும் "
+"பகிரப்படும் :ref:`user வெளிப்பாடுகள் <user_expressions_functions>` இலிருந்து"
+" வேறுபட்டவை."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:440
+msgid "Filtering and selecting features using forms"
+msgstr "படிவங்களைப் பயன்படுத்தி அம்சங்களை வடிகட்டுதல் மற்றும் தேர்ந்தெடுப்பது"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:442
+msgid ""
+"Clicking the |filterMap| :sup:`Filter/Select features using form` or "
+"pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
+"view and replace each widget with its search variant."
+msgstr ""
+"|filterMap| ஐ சொடுக்கு செய்க :sup:`வடிவத்தைப் பயன்படுத்தி அம்சங்களை "
+"வடிகட்டி/தேர்ந்தெடு` அல்லது :kbd:`Ctrl+F` ஐ அழுத்தினால், பண்புக்கூறு அட்டவணை"
+" உரையாடலை படிவக் காட்சிக்கு மாற்றி ஒவ்வொரு விட்செட்டையும் அதன் தேடல் "
+"மாறுபாட்டுடன் மாற்றும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:446
+msgid ""
+"From this point onwards, this tool functionality is similar to the one "
+"described in :ref:`select_by_value`, where you can find descriptions of all "
+"operators and selecting modes."
+msgstr ""
+"இந்த கட்டத்தில் இருந்து, இந்த கருவி செயல்பாடு :ref:`select_by_value` இல் "
+"விவரிக்கப்பட்டுள்ளதைப் போலவே உள்ளது, அங்கு நீங்கள் அனைத்து ஆபரேட்டர்கள் "
+"மற்றும் தேர்ந்தெடுக்கும் முறைகளின் விளக்கங்களைக் காணலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:455
+msgid "Attribute table filtered by the filter form"
+msgstr "வடிகட்டி படிவத்தால் வடிகட்டப்பட்ட பண்பு அட்டவணை"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:457
+msgid ""
+"When selecting / filtering features from the attribute table, there is a "
+":guilabel:`Filter features` button that allows defining and refining "
+"filters. Its use triggers the :guilabel:`Advanced filter (Expression)` "
+"option and displays the corresponding filter expression in an editable text "
+"widget at the bottom of the form."
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் இருந்து அம்சங்களைத் தேர்ந்தெடுக்கும்போது / "
+"வடிகட்டும்போது, ​​வடிப்பான்களை வரையறுத்து சுத்திகரிக்க அனுமதிக்கும் "
+":guilabel:`Filter features` பொத்தான் உள்ளது. அதன் பயன்பாடு "
+":guilabel:`மேம்பட்ட வடிகட்டி (எக்ச்பிரசன்)` விருப்பத்தைத் தூண்டுகிறது "
+"மற்றும் படிவத்தின் கீழே உள்ள திருத்தக்கூடிய உரை விட்செட்டில் தொடர்புடைய "
+"வடிகட்டி வெளிப்பாட்டைக் காட்டுகிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:462
+msgid ""
+"If there are already filtered features, you can refine the filter using the "
+"drop-down list next to the :guilabel:`Filter features` button. The options "
+"are:"
+msgstr ""
+"ஏற்கனவே வடிகட்டப்பட்ட நற்பொருத்தங்கள் இருந்தால், :guilabel:`Filter features`"
+" பொத்தானுக்கு அடுத்துள்ள கீழ்தோன்றும் பட்டியலைப் பயன்படுத்தி வடிப்பானைச் "
+"செம்மைப்படுத்தலாம். விருப்பங்கள்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:465
+msgid ":guilabel:`Filter within (\"AND\")`"
+msgstr ":guilabel:`உள் வடிகட்டி (\"AND\")`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:466
+msgid ":guilabel:`Extend filter (\"OR\")`"
+msgstr ":guilabel:`வடிப்பானை நீட்டிக்கவும் (\"OR\")`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:468
+msgid ""
+"To clear the filter, either select the :guilabel:`Show all features` option "
+"from the bottom left pull-down menu, or clear the expression and click "
+":guilabel:`Apply` or press :kbd:`Enter`."
+msgstr ""
+"வடிப்பானை அழிக்க, கீழே இடதுபுறம் இழுக்கும் மெனுவிலிருந்து :guilabel:`அனைத்து"
+" அம்சங்களையும் காட்டு` என்ற விருப்பத்தைத் தேர்ந்தெடுக்கவும் அல்லது "
+"வெளிப்பாட்டை அழித்து :guilabel:`Apply` என்பதைக் சொடுக்கு செய்யவும் அல்லது "
+":kbd:`Enter` ஐ அழுத்தவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
+msgid "More actions on features"
+msgstr "அம்சங்களில் கூடுதல் நடவடிக்கைகள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:475
+msgid ""
+"Users have several possibilities to manipulate feature in an attribute "
+"table. Right-click in a cell and you can:"
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் அம்சத்தை கையாள பயனர்களுக்கு பல வாய்ப்புகள் உள்ளன. "
+"ஒரு கலத்தில் வலது சொடுக்கு செய்து நீங்கள்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:478
+msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
+msgstr ":guilabel:`அனைத்தையும் தேர்ந்தெடு` (:kbd:`Ctrl+A`) அம்சங்கள்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:479
+msgid ""
+"Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
+"content`;"
+msgstr ""
+"கிளிப்போர்டில் உள்ள கலத்தின் உள்ளடக்கத்தை :guilabel:`செல் உள்ளடக்கத்தை "
+"நகலெடு`;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:480
+msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
+msgstr ":guilabel:`அம்சத்திற்கு பெரிதாக்கு` என்பதை முன்பே தேர்ந்தெடுக்காமல்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:481
+msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
+msgstr ":guilabel:'Pan to feature` என்பதை முன்பே தேர்ந்தெடுக்காமல்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:482
+msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
+msgstr ":guilabel:`ஃப்ளாச் அம்சம்`, அதை வரைபட கேன்வாசில் முன்னிலைப்படுத்த;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:483
+msgid ""
+":guilabel:`Open form`: it toggles attribute table into form view with a "
+"focus on the clicked feature."
+msgstr ""
+":guilabel:`திறந்த படிவம்`: சொடுக்கு செய்யப்பட்ட அம்சத்தை மையமாகக் கொண்டு "
+"பண்புக்கூறு அட்டவணையை படிவக் காட்சியாக மாற்றுகிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:485
+msgid ""
+"Display a :ref:`list of actions <actions_menu>`, previously enabled in the "
+":menuselection:`Layer properties --> Actions` tab."
+msgstr ""
+"முன்பு :menuselection:`Layer பண்புகள் --> Actions` தாவலில் இயக்கப்பட்ட, "
+":ref:`செயல்களின் பட்டியல் <actions_menu>` என்பதைக் காண்பி."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:493
+msgid "Copy cell content button"
+msgstr "செல் உள்ளடக்கத்தை நகலெடு பொத்தான்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:497
+msgid ""
+"If you want to use attribute data in external programs (such as Excel, "
+"LibreOffice, or a custom web application), select one or more row(s) and use"
+" the |copySelected| :sup:`Copy selected rows to clipboard` button or press "
+":kbd:`Ctrl+C`. Moreover, in :menuselection:`Settings --> Options --> Data "
+"Sources` menu you can define the format to paste to with the :guilabel:`Copy"
+" features as` option. More details at :ref:`datasources_options`."
+msgstr ""
+"வெளிப்புற நிரல்களில் (எக்செல், லிப்ரே ஆபிச் அல்லது தனிப்பயன் இணைய பயன்பாடு "
+"போன்றவை) பண்புக்கூறு தரவைப் பயன்படுத்த விரும்பினால், ஒன்று அல்லது அதற்கு "
+"மேற்பட்ட வரிசை(களை) தேர்ந்தெடுத்து, |copySelected| :sup:`தேர்ந்தெடுக்கப்பட்ட"
+" வரிசைகளை இடைநிலைப்பலகைக்கு நகலெடு` பொத்தானை அல்லது :kbd:`Ctrl+C` "
+"அழுத்தவும். மேலும், :menuselection:`Settings --> விருப்பங்கள் --> Data "
+"Sources` பட்டியலில், :guilabel:`copy நற்பொருத்தங்கள் as` விருப்பத்துடன் ஒட்ட"
+" வேண்டிய வடிவமைப்பை நீங்கள் வரையறுக்கலாம். மேலும் விவரங்கள் "
+":ref:`datasources_options` இல்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:510
+msgid "Editing attribute values"
+msgstr "பண்புக்கூறு மதிப்புகளைத் திருத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:512
+msgid ""
+"In order to modify data in an attribute table, you should first toggle the "
+"layer into edit. Press the |toggleEditing| :sup:`Toggle Editing` button. "
+"Depending on the layer geometry type and the clipboard state, a few more "
+"tools are enabled in the attribute table top toolbar."
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் தரவை மாற்ற, நீங்கள் முதலில் லேயரை திருத்தமாக மாற்ற "
+"வேண்டும். |toggleEditing| ஐ அழுத்தவும் :sup:`Toggle Editing` பொத்தான். "
+"அடுக்கு வடிவவியல் வகை மற்றும் இடைநிலைப்பலகை நிலையைப் பொறுத்து, பண்புக்கூறு "
+"அட்டவணை மேல் கருவிப்பட்டியில் இன்னும் சில கருவிகள் இயக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
+msgid "Editing attribute values can then be done by:"
+msgstr "Editing பண்புக்கூறு values can then be முடிந்தது by:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:519
+msgid ""
+"typing the new value directly in the cell, whether the attribute table is in"
+" table or form view. Changes are hence done cell by cell, feature by "
+"feature;"
+msgstr ""
+"பண்புக்கூறு அட்டவணை அட்டவணை அல்லது படிவக் காட்சியில் இருந்தாலும், புதிய "
+"மதிப்பை நேரடியாக கலத்தில் தட்டச்சு செய்கிறது. மாற்றங்கள் எனவே செல் மூலம் "
+"செல், நற்பொருத்தம் மூலம் நற்பொருத்தம் செய்யப்படுகிறது;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:521
+msgid ""
+"using the :ref:`field calculator <vector_field_calculator>`: update in a row"
+" a field that may already exist or to be created but for multiple features. "
+"It can be used to create virtual fields;"
+msgstr ""
+":ref:`field கால்குலேட்டரைப் பயன்படுத்தி <vector_field_calculator>`: பல "
+"அம்சங்களுக்காக ஏற்கனவே இருக்கும் அல்லது உருவாக்கப்பட வேண்டிய புலத்தை ஒரு "
+"வரிசையில் புதுப்பிக்கவும். மெய்நிகர் புலங்களை உருவாக்க இதைப் பயன்படுத்தலாம்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:524
+msgid ""
+"using the quick field :ref:`calculation bar <quick_field_calculation_bar>`: "
+"same as above but for only existing field;"
+msgstr ""
+"விரைவு புலத்தைப் பயன்படுத்துதல் :ref:`கணக்கீட்டுப் பட்டி "
+"<quick_field_calculation_bar>`: மேலே உள்ளதைப் போலவே ஆனால் ஏற்கனவே உள்ள "
+"புலத்திற்கு மட்டுமே;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:526
+msgid ""
+"or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row "
+"multiple fields for multiple features."
+msgstr ""
+"அல்லது :ref:`multi தொகு <multi_edit_fields>` பயன்முறையைப் பயன்படுத்தி: பல "
+"அம்சங்களுக்காக ஒரு வரிசையில் பல புலங்களை புதுப்பிக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:529
+msgid ""
+"Putting the layer into edit mode will also allow you to |editPaste| "
+":sup:`Paste features from clipboard` (:kbd:`Ctrl+V`) |editCut| :sup:`Cut "
+"selected rows to clipboard` (:kbd:`Ctrl+X`) or |deleteSelectedFeatures| "
+":sup:`Delete selected features`. More details at :ref:`clipboard_feature`."
+msgstr ""
+"லேயரை திருத்து பயன்முறையில் வைப்பது உங்களை |editPaste| செய்ய அனுமதிக்கும் "
+":sup:`கிளிப்போர்டிலிருந்து அம்சங்களை ஒட்டவும்` (:kbd:`Ctrl+V`) |editCut| "
+":sup:`தேர்ந்தெடுக்கப்பட்ட வரிசைகளை இடைநிலைப்பலகைக்கு வெட்டு` (:kbd:`Ctrl+X`)"
+" அல்லது |deleteSelectedFeatures| :sup:`தேர்ந்தெடுக்கப்பட்ட அம்சங்களை "
+"நீக்கு`. மேலும் விவரங்கள் :ref:`clipboard_feature` இல்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:538
+msgid "Using the Field Calculator"
+msgstr "புல கால்குலேட்டரைப் பயன்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:540
+msgid ""
+"The |calculateField| :sup:`Field Calculator` button in the attribute table "
+"allows you to perform calculations on the basis of existing attribute values"
+" or defined functions, for instance, to calculate length or area of geometry"
+" features. The results can be used to update an existing field, or written "
+"to a new field (that can be a :ref:`virtual <virtual_field>` one)."
+msgstr ""
+"தி |கணக்கீடு களம்| :sup:'ஃபீல்ட் கால்குலேட்டர்' பொத்தான், பண்புக்கூறு "
+"அட்டவணையில் உள்ள பண்புக்கூறு மதிப்புகள் அல்லது வரையறுக்கப்பட்ட "
+"செயல்பாடுகளின் அடிப்படையில் கணக்கீடுகளைச் செய்ய உங்களை அனுமதிக்கிறது, "
+"உதாரணமாக, வடிவியல் அம்சங்களின் நீளம் அல்லது பகுதியைக் கணக்கிட. ஏற்கனவே உள்ள "
+"புலத்தைப் புதுப்பிக்க அல்லது புதிய புலத்திற்கு எழுதப்பட்ட முடிவுகளைப் "
+"பயன்படுத்தலாம் (அது :ref:`virtual <virtual_field>` ஆக இருக்கலாம்)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:546
+msgid ""
+"The field calculator is available on any layer that supports edit. When you "
+"click on the field calculator icon the dialog opens (see "
+":numref:`figure_field_calculator`). If the layer is not in edit mode, a "
+"warning is displayed and using the field calculator will cause the layer to "
+"be put in edit mode before the calculation is made."
+msgstr ""
+"புல கால்குலேட்டர் திருத்தத்தை ஆதரிக்கும் எந்த அடுக்கிலும் கிடைக்கிறது. புல "
+"கால்குலேட்டர் ஐகானைக் சொடுக்கு செய்தால், உரையாடல் திறக்கும் (பார்க்க "
+":numref:`figure_field_calculator`). லேயர் திருத்து பயன்முறையில் இல்லை "
+"என்றால், ஒரு முன்னறிவிப்பு காட்டப்படும் மற்றும் ஃபீல்ட் கால்குலேட்டரைப் "
+"பயன்படுத்தினால், கணக்கீடு செய்வதற்கு முன் லேயர் திருத்து மோடில் "
+"வைக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:552
+msgid ""
+"Based on the :ref:`Expression Builder <expression_builder>` dialog, the "
+"field calculator dialog offers a complete interface to define an expression "
+"and apply it to an existing or a newly created field. To use the field "
+"calculator dialog, you must select whether you want to:"
+msgstr ""
+":ref:`Expression Builder <expression_builder>` உரையாடலின் அடிப்படையில், புல "
+"கால்குலேட்டர் உரையாடல் ஒரு வெளிப்பாட்டை வரையறுத்து, ஏற்கனவே உள்ள அல்லது "
+"புதிதாக உருவாக்கப்பட்ட புலத்திற்குப் பயன்படுத்துவதற்கு முழுமையான இடைமுகத்தை "
+"வழங்குகிறது. புல கால்குலேட்டர் உரையாடலைப் பயன்படுத்த, நீங்கள் "
+"விரும்புகிறீர்களா என்பதைத் தேர்ந்தெடுக்க வேண்டும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:557
+msgid "apply calculation on the whole layer or on selected features only"
+msgstr ""
+"முழு அடுக்கு அல்லது தேர்ந்தெடுக்கப்பட்ட அம்சங்களில் மட்டுமே கணக்கீடு "
+"பயன்படுத்தவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:558
+msgid "create a new field for the calculation or update an existing one."
+msgstr ""
+"கணக்கீட்டிற்காக ஒரு புதிய புலத்தை உருவாக்கவும் அல்லது ஏற்கனவே உள்ள ஒன்றை "
+"புதுப்பிக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:565
+msgid "Field Calculator"
+msgstr "புல கால்குலேட்டர்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:567
+msgid ""
+"If you choose to add a new field, you need to enter a field name, a field "
+"type (integer, real, date or string) and if needed, the total field length "
+"and the field precision. For example, if you choose a field length of 10 and"
+" a field precision of 3, it means you have 7 digits before the dot, and 3 "
+"digits for the decimal part."
+msgstr ""
+"புதிய புலத்தைச் சேர்க்க நீங்கள் தேர்வுசெய்தால், புலத்தின் பெயர், புல வகை "
+"(முழு எண், உண்மையான, தேதி அல்லது சரம்) மற்றும் தேவைப்பட்டால், மொத்த புல "
+"நீளம் மற்றும் புலத் துல்லியத்தை உள்ளிட வேண்டும். எடுத்துக்காட்டாக, புலத்தின்"
+" நீளம் 10 மற்றும் புலத் துல்லியம் 3 என நீங்கள் தேர்வுசெய்தால், புள்ளிக்கு "
+"முன் 7 இலக்கங்களும், தசமப் பகுதிக்கு 3 இலக்கங்களும் உள்ளன."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:573
+msgid ""
+"A short example illustrates how field calculator works when using the "
+":guilabel:`Expression` tab. We want to calculate the length in km of the "
+"``railroads`` layer from the QGIS sample dataset:"
+msgstr ""
+":guilabel:`Expression` தாவலைப் பயன்படுத்தும் போது புல கால்குலேட்டர் எவ்வாறு "
+"செயல்படுகிறது என்பதை ஒரு சிறிய எடுத்துக்காட்டு விளக்குகிறது. QGIS மாதிரி "
+"தரவுத்தொகுப்பிலிருந்து ``ரயில் பாதைகள்`` லேயரின் நீளத்தை கிமீயில் கணக்கிட "
+"விரும்புகிறோம்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:577
+msgid ""
+"Load the shapefile :file:`railroads.shp` in QGIS and press |openTable| "
+":sup:`Open Attribute Table`."
+msgstr ""
+"QGIS இல் சேப்ஃபைலை ஏற்றவும் :file:`railroads.shp` மற்றும் |openTable|ஐ "
+"அழுத்தவும் :sup:`பண்பு அட்டவணையைத் திற`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:579
+msgid ""
+"Click on |toggleEditing| :sup:`Toggle editing mode` and open the "
+"|calculateField| :sup:`Field Calculator` dialog."
+msgstr ""
+"|toggleEditing| என்பதைக் சொடுக்கு செய்யவும் :sup:`எடிட்டிங் பயன்முறையை "
+"மாற்று` மற்றும் |calculateField|ஐத் திறக்கவும் :sup:`ஃபீல்ட் கால்குலேட்டர்` "
+"உரையாடல்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:581
+msgid ""
+"Select the |checkbox| :guilabel:`Create a new field` checkbox to save the "
+"calculations into a new field."
+msgstr ""
+"|செக்பாக்சை| தேர்ந்தெடுக்கவும் :guilabel:`ஒரு புதிய புலத்தை உருவாக்கு` "
+"தேர்வுப்பெட்டி கணக்கீடுகளை ஒரு புதிய புலத்தில் சேமிக்க."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:583
+msgid "Set :guilabel:`Output field name` to  ``length_km``"
+msgstr "அமை :guilabel:`வெளியீட்டு புலத்தின் பெயர்` ``நீளம்_கிமீ``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:584
+msgid "Select ``Decimal number (real)`` as :guilabel:`Output field type`"
+msgstr ""
+"``தசம எண் (உண்மையான)`` என :guilabel:`வெளியீட்டு புல வகை` என்பதைத் "
+"தேர்ந்தெடுக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:585
+msgid ""
+"Set the :guilabel:`Output field length` to ``10`` and the "
+":guilabel:`Precision` to ``3``"
+msgstr ""
+":guilabel:`வெளியீட்டு புலம் நீளத்தை ``10`` ஆகவும், :guilabel:`Precision` ஐ "
+"``3`` ஆகவும் அமைக்கவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:586
+msgid ""
+"Double click on ``$length`` in the :guilabel:`Geometry` group to add the "
+"length of the geometry into the Field calculator expression box (you will "
+"begin to see a preview of the output, up to 60 characters, below the "
+"expression box updating in real-time as the expression is assembled)."
+msgstr ""
+"புல கால்குலேட்டர் வெளிப்பாடு பெட்டியில் வடிவவியலின் நீளத்தைச் சேர்க்க "
+":guilabel:`Geometry` குழுவில் உள்ள ``$length`` ஐ இருமுறை சொடுக்கு செய்யவும் "
+"(வெளியீட்டின் மாதிரிக்காட்சியை, 60 எழுத்துகள் வரை, வெளிப்பாடு பெட்டிக்குக் "
+"கீழே நிகழ்நேரத்தில் புதுப்பிக்கப்படும், வெளிப்பாடு ஒருங்கிணைக்கப்படும்போது)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:590
+msgid ""
+"Complete the expression by typing ``/ 1000`` in the Field calculator "
+"expression box and click :guilabel:`OK`."
+msgstr ""
+"ஃபீல்ட் கால்குலேட்டர் எக்ச்பிரசன் பாக்சில் ``/ 1000`` என டைப் செய்து "
+"எக்ச்ப்ரெசனை முடித்து :guilabel:`OK` என்பதைக் சொடுக்கு செய்யவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:592
+msgid ""
+"You can now find a new :guilabel:`length_km` field in the attribute table."
+msgstr ""
+"பண்பு அட்டவணையில் இப்போது புதிய :guilabel:`length_km` புலத்தைக் காணலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:597
+msgid "Creating a Virtual Field"
+msgstr "ஒரு மெய்நிகர் புலத்தை உருவாக்குதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:599
+msgid ""
+"A virtual field is a field based on an expression calculated on the fly, "
+"meaning that its value is automatically updated as soon as an underlying "
+"parameter changes. The expression applies to all the features in the layer "
+"and is set once; you no longer need to recalculate the field each time "
+"underlying values change. For example, you may want to use a virtual field "
+"if you need area to be evaluated as you digitize features or to "
+"automatically calculate a duration between dates that may change (e.g., "
+"using ``now()`` function)."
+msgstr ""
+"மெய்நிகர் புலம் என்பது பறக்கும்போது கணக்கிடப்பட்ட வெளிப்பாட்டின் "
+"அடிப்படையில் ஒரு புலமாகும், அதாவது அடிப்படை அளவுரு மாறியவுடன் அதன் மதிப்பு "
+"தானாகவே புதுப்பிக்கப்படும். வெளிப்பாடு அடுக்கில் உள்ள அனைத்து "
+"அம்சங்களுக்கும் பொருந்தும் மற்றும் ஒரு முறை அமைக்கப்படுகிறது; ஒவ்வொரு "
+"முறையும் அடிப்படை மதிப்புகள் மாறும் போது நீங்கள் புலத்தை மீண்டும் கணக்கிட "
+"வேண்டியதில்லை. எடுத்துக்காட்டாக, நீங்கள் அம்சங்களை டிசிட்டல் மயமாக்கும்போது "
+"பகுதி மதிப்பீடு செய்யப்பட வேண்டும் அல்லது மாறக்கூடிய தேதிகளுக்கு இடையே உள்ள "
+"கால அளவை தானாகக் கணக்கிட வேண்டும் என்றால், நீங்கள் ஒரு மெய்நிகர் புலத்தைப் "
+"பயன்படுத்த விரும்பலாம் (எ.கா. ``இப்போது()`` செயல்பாட்டைப் பயன்படுத்தி)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:607
+msgid ""
+"Creating a virtual field is done through the |calculateField| "
+":guilabel:`Field calculator` dialog and follows the :ref:`same procedure "
+"<vector_field_calculator>` as for regular fields. Simply remember to check "
+"the |checkbox| :guilabel:`Create virtual field` option and use a field type "
+"compatible with the data your expression would generate."
+msgstr ""
+"மெய்நிகர் புலத்தை உருவாக்குவது |calculateField| மூலம் செய்யப்படுகிறது "
+":guilabel:`Field calculator` உரையாடல் மற்றும் வழக்கமான புலங்களைப் போலவே "
+":ref:`அதே நடைமுறை <vector_field_calculator>`. |செக்பாக்ச்|ஐ சரிபார்க்க "
+"நினைவில் கொள்ளுங்கள் :guilabel:`மெய்நிகர் புலத்தை உருவாக்கு` விருப்பம் "
+"மற்றும் உங்கள் வெளிப்பாடு உருவாக்கும் தரவுகளுடன் இணக்கமான புல வகையைப் "
+"பயன்படுத்தவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:612
+msgid ""
+"Editing a virtual field is done through the |sourceFields| "
+":guilabel:`Fields` tab of the layer properties dialog (see "
+":ref:`vector_fields_menu`). The expression defining the field is exposed in "
+"the :guilabel:`Comment` column, and pressing the |expression| button next to"
+" it opens an expression editor window for update."
+msgstr ""
+"மெய்நிகர் புலத்தைத் திருத்துவது |sourceFields| மூலம் செய்யப்படுகிறது அடுக்கு"
+" பண்புகள் உரையாடலின் :guilabel:`Fields` தாவல் (பார்க்க "
+":ref:`vector_fields_menu`). புலத்தை வரையறுக்கும் வெளிப்பாடு "
+":guilabel:`Comment` நெடுவரிசையில் வெளிப்படுத்தப்பட்டு, |expression|ஐ "
+"அழுத்தவும். அதற்கு அடுத்துள்ள பொத்தான் புதுப்பித்தலுக்கான எக்ச்ப்ரெசன் "
+"எடிட்டர் சாளரத்தைத் திறக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:893
 msgid "sourceFields"
 msgstr "sourceFields"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:831
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
 msgid "expression"
 msgstr "expression"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:855
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:618
+msgid "**Use of Virtual Fields**"
+msgstr "**மெய்நிகர் புலங்களின் பயன்பாடு**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:620
+msgid "A field can be set virtual only at its creation."
+msgstr "ஒரு புலத்தை அதன் உருவாக்கத்தில் மட்டுமே மெய்நிகர் அமைக்க முடியும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:621
+msgid ""
+"Virtual fields are not permanent in the layer attributes, meaning that "
+"they're only saved and available in the project file they've been created."
+msgstr ""
+"அடுக்கு பண்புக்கூறுகளில் மெய்நிகர் புலங்கள் நிரந்தரமானவை அல்ல, அதாவது அவை "
+"உருவாக்கப்பட்ட திட்டக் கோப்பில் மட்டுமே சேமிக்கப்பட்டு கிடைக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:628
+msgid "Using the Quick Field Calculation Bar"
+msgstr "விரைவு புல கணக்கீடு பட்டியைப் பயன்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:630
+msgid ""
+"While Field calculator is always available, the quick field calculation bar "
+"on top of the attribute table is only visible if the layer is in edit mode. "
+"Thanks to the expression engine, it offers a quicker access to edit an "
+"already existing field:"
+msgstr ""
+"ஃபீல்டு கால்குலேட்டர் எப்பொழுதும் கிடைக்கும் போது, ​​அடுக்கு திருத்த "
+"பயன்முறையில் இருந்தால் மட்டுமே பண்புக்கூறு அட்டவணையின் மேல் உள்ள விரைவு "
+"புலக் கணக்கீட்டுப் பட்டி தெரியும். எக்ச்பிரசன் எஞ்சினுக்கு நன்றி, ஏற்கனவே "
+"இருக்கும் புலத்தைத் திருத்துவதற்கான விரைவான அணுகலை இது வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:635
+msgid "Select the field to update in the drop-down list."
+msgstr "கீழ்தோன்றும் பட்டியலில் புதுப்பிக்க புலத்தைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:636
+msgid ""
+"Fill the textbox with a value, an expression you directly write or build "
+"using the |expression| expression button."
+msgstr ""
+"உரைப்பெட்டியை மதிப்புடன் நிரப்பவும், நீங்கள் நேரடியாக எழுதும் அல்லது "
+"|expression| ஐப் பயன்படுத்தி உருவாக்கப்படும் வெளிப்பாடு வெளிப்பாடு பொத்தான்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:638
+msgid ""
+"Click on :guilabel:`Update All`, :guilabel:`Update Selected` or "
+":guilabel:`Update Filtered` button according to your need."
+msgstr ""
+"உங்கள் தேவைக்கேற்ப :guilabel:`Update All`, :guilabel:`Update Selected` "
+"அல்லது :guilabel:`Update Filtered` பொத்தானைக் சொடுக்கு செய்யவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:646
+msgid "Quick Field Calculation Bar"
+msgstr "விரைவு களக் கணக்கீட்டுப் பட்டி"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:653
+msgid "Editing multiple fields"
+msgstr "பல புலங்களைத் திருத்துகிறது"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:655
+msgid ""
+"Unlike the previous tools, multi edit mode allows multiple attributes of "
+"different features to be edited simultaneously. When the layer is toggled to"
+" edit, multi edit capabilities are accessible:"
+msgstr ""
+"முந்தைய கருவிகளைப் போலன்றி, பல திருத்து பயன்முறையானது பல்வேறு அம்சங்களின் பல"
+" பண்புகளை ஒரே நேரத்தில் திருத்த அனுமதிக்கிறது. லேயர் திருத்துவதற்கு "
+"நிலைமாற்றப்பட்டால், பல திருத்தும் திறன்களை அணுக முடியும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:659
+msgid ""
+"using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar "
+"inside the attribute table dialog;"
+msgstr ""
+"பயன்படுத்தி |multiEdit| :sup:பண்பு அட்டவணை உரையாடலில் உள்ள கருவிப்பட்டியில் "
+"இருந்து `பல திருத்து பயன்முறையை மாற்று` பொத்தான்;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:661
+msgid ""
+"or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify "
+"attributes of selected features` menu."
+msgstr ""
+"அல்லது :menuselection:`Edit -->` |multiEdit| "
+":menuselection:`தேர்ந்தெடுக்கப்பட்ட அம்சங்களின் பண்புகளை மாற்றவும்` "
+"பட்டியல்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:666
+msgid ""
+"Unlike the tool from the attribute table, hitting the :menuselection:`Edit "
+"--> Modify Attributes of Selected Features` option provides you with a modal"
+" dialog to fill attributes changes. Hence, features selection is required "
+"before execution."
+msgstr ""
+"பண்புக்கூறு அட்டவணையில் உள்ள கருவியைப் போலல்லாமல், :menuselection:`Edit --> "
+"Modify Attributes of தேர்ந்தெடுக்கப்பட்டது Features' விருப்பத்தை "
+"அழுத்தினால், பண்புக்கூறு மாற்றங்களை நிரப்ப மாதிரி உரையாடல் உங்களுக்கு "
+"வழங்குகிறது. எனவே, செயல்படுத்துவதற்கு முன் அம்சங்களைத் தேர்ந்தெடுப்பது தேவை."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:671
+msgid "In order to edit multiple fields in a row:"
+msgstr "ஒரு வரிசையில் பல புலங்களைத் திருத்துவதற்கு:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:673
+msgid "Select the features you want to edit."
+msgstr "நீங்கள் திருத்த விரும்பும் அம்சங்களைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:674
+msgid ""
+"From the attribute table toolbar, click the |multiEdit| button. This will "
+"toggle the dialog to its form view. Feature selection could also be made at "
+"this step."
+msgstr ""
+"பண்புக்கூறு அட்டவணை கருவிப்பட்டியில் இருந்து, |multiEdit| என்பதைக் சொடுக்கு "
+"செய்யவும் பொத்தான். இது உரையாடலை அதன் படிவக் காட்சிக்கு மாற்றும். இந்த "
+"கட்டத்தில் அம்சத் தேர்வையும் செய்யலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:677
+msgid ""
+"At the right side of the attribute table, fields (and values) of selected "
+"features are shown. New widgets appear next to each field allowing for "
+"display of the current multi edit state:"
+msgstr ""
+"பண்புக்கூறு அட்டவணையின் வலது பக்கத்தில், தேர்ந்தெடுக்கப்பட்ட அம்சங்களின் "
+"புலங்கள் (மற்றும் மதிப்புகள்) காட்டப்படும். தற்போதைய மல்டி திருத்து நிலையைக்"
+" காண்பிக்க அனுமதிக்கும் ஒவ்வொரு புலத்திற்கும் அடுத்ததாக புதிய விட்செட்டுகள் "
+"தோன்றும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:681
+msgid ""
+"|multiEditMixedValues| The field contains different values for selected "
+"features. It's shown empty and each feature will keep its original value. "
+"You can reset the value of the field from the drop-down list of the widget."
+msgstr ""
+"|multiEditMixedValues| தேர்ந்தெடுக்கப்பட்ட அம்சங்களுக்கான புலத்தில் வெவ்வேறு"
+" மதிப்புகள் உள்ளன. இது காலியாகக் காட்டப்பட்டுள்ளது, மேலும் ஒவ்வொரு அம்சமும் "
+"அதன் அசல் மதிப்பை வைத்திருக்கும். விட்செட்டின் கீழ்தோன்றும் பட்டியலில் "
+"இருந்து புலத்தின் மதிப்பை மீட்டமைக்கலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:857
 msgid "multiEditMixedValues"
 msgstr "multiEditMixedValues"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:857
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:684
+msgid ""
+"|multiEditSameValues| All selected features have the same value for this "
+"field and the value displayed in the form will be kept."
+msgstr ""
+"|multiEditSameValues| தேர்ந்தெடுக்கப்பட்ட அனைத்து அம்சங்களும் இந்த "
+"புலத்திற்கு ஒரே மதிப்பைக் கொண்டுள்ளன, மேலும் படிவத்தில் காட்டப்படும் மதிப்பு"
+" சேமிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:859
 msgid "multiEditSameValues"
 msgstr "multiEditSameValues"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:853
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:686
+msgid ""
+"|multiEditChangedValues| The field has been edited and the entered value "
+"will be applied to all the selected features. A message appears at the top "
+"of the dialog, inviting you to either apply or reset your modification."
+msgstr ""
+"|multiEditChangedValues| புலம் திருத்தப்பட்டது மற்றும் உள்ளிடப்பட்ட மதிப்பு "
+"தேர்ந்தெடுக்கப்பட்ட அனைத்து அம்சங்களுக்கும் பயன்படுத்தப்படும். உரையாடலின் "
+"மேற்புறத்தில் ஒரு செய்தி தோன்றும், உங்கள் மாற்றத்தை விண்ணப்பிக்க அல்லது "
+"மீட்டமைக்க உங்களை அழைக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:855
 msgid "multiEditChangedValues"
 msgstr "multiEditChangedValues"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:690
+msgid ""
+"Clicking any of these widgets allows you to either set the current value for"
+" the field or reset to original value, meaning that you can roll back "
+"changes on a field-by-field basis."
+msgstr ""
+"இந்த விட்செட்களில் ஏதேனும் ஒன்றைக் சொடுக்கு செய்வதன் மூலம் புலத்திற்கான "
+"தற்போதைய மதிப்பை அமைக்கலாம் அல்லது அசல் மதிப்பிற்கு மீட்டமைக்கலாம், அதாவது "
+"புலம் வாரியாக மாற்றங்களை நீங்கள் திரும்பப் பெறலாம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:699
+msgid "Editing fields of multiple features"
+msgstr "பல அம்சங்களின் புலங்களைத் திருத்துதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:701
+msgid "Make the changes to the fields you want."
+msgstr "நீங்கள் விரும்பும் புலங்களில் மாற்றங்களைச் செய்யுங்கள்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:702
+msgid ""
+"Click on **Apply changes** in the upper message text or any other feature in"
+" the left panel."
+msgstr ""
+"மேல் செய்தி உரையில் உள்ள **மாற்றங்களைப் பயன்படுத்து** என்பதைக் சொடுக்கு "
+"செய்யவும் அல்லது இடது பேனலில் உள்ள வேறு ஏதேனும் நற்பொருத்தம்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:705
+msgid ""
+"Changes will apply to **all selected features**. If no feature is selected, "
+"the whole table is updated with your changes. Modifications are made as a "
+"single edit command. So pressing |undo| :sup:`Undo` will rollback the "
+"attribute changes for all selected features at once."
+msgstr ""
+"**தேர்ந்தெடுக்கப்பட்ட அனைத்து அம்சங்களுக்கும்** மாற்றங்கள் பொருந்தும். எந்த "
+"அம்சமும் தேர்ந்தெடுக்கப்படவில்லை என்றால், உங்கள் மாற்றங்களுடன் முழு "
+"அட்டவணையும் புதுப்பிக்கப்படும். ஒரே திருத்த கட்டளையாக மாற்றங்கள் "
+"செய்யப்படுகின்றன. எனவே அழுத்தி |தவிர்| :sup:`செயல்தவிர்` ஆனது அனைத்து "
+"தேர்ந்தெடுக்கப்பட்ட அம்சங்களுக்கான பண்பு மாற்றங்களை ஒரே நேரத்தில் "
+"திரும்பப்பெறும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:897
 msgid "undo"
 msgstr "undo"
 
-#: ../../docs/user_manual/working_with_vector/attribute_table.rst:847
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:712
+msgid ""
+"Multi edit mode is only available for auto generated and drag and drop forms"
+" (see :ref:`customize_form`); it is not supported by custom ui forms."
+msgstr ""
+"மல்டி திருத்து பயன்முறை தானாக உருவாக்கப்பட்ட மற்றும் இழுத்து விடுவதற்கு "
+"மட்டுமே கிடைக்கும் (பார்க்க :ref:`customize_form`); இது தனிப்பயன் இடைமுகம் "
+"படிவங்களால் ஆதரிக்கப்படவில்லை."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:719
+msgid "Exploring features attributes through the Identify Tool"
+msgstr "அடையாளக் கருவி மூலம் அம்ச பண்புகளை ஆராய்தல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:721
+msgid ""
+"The |identify| :ref:`Identify features <identify>` tool can be used to "
+"display all attributes of a feature in the map canvas. It is a quick way to "
+"view and verify all data without having to search for it in the attribute "
+"table."
+msgstr ""
+"தி |அடையாளம்| :ref:`அடையாளங்களை அடையாளம் காணவும் <அடையாளம்>` கருவியை வரைபட "
+"கேன்வாசில் ஒரு அம்சத்தின் அனைத்து பண்புக்கூறுகளையும் காட்ட பயன்படுத்தலாம். "
+"பண்புக்கூறு அட்டவணையில் தேடாமல் எல்லா தரவையும் பார்க்கவும் சரிபார்க்கவும் "
+"இது ஒரு விரைவான வழியாகும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:849
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:725
+msgid ""
+"To use the :guilabel:`Identify features` tool for vector layers, follow "
+"these steps:"
+msgstr ""
+"வெக்டார் லேயர்களுக்கான :guilabel:`அடையாளங்களை அடையாளம் காணுதல்` கருவியைப் "
+"பயன்படுத்த, இந்தப் படிகளைப் பின்பற்றவும்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:727
+msgid "Select the vector layer in the Layers panel."
+msgstr "லேயர்கள் பேனலில் வெக்டர் லேயரைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:728
+msgid ""
+"Click on the :guilabel:`Identify features` tool in the toolbar or press "
+":kbd:`Ctrl+Shift+I`."
+msgstr ""
+"கருவிப்பட்டியில் உள்ள :guilabel:`அடையாளங்களை அடையாளம் காணவும்` கருவியைக் "
+"சொடுக்கு செய்யவும் அல்லது :kbd:`Ctrl+Shift+I` அழுத்தவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:729
+msgid "Click on a feature in the map view."
+msgstr "வரைபடக் காட்சியில் ஒரு அம்சத்தைக் சொடுக்கு செய்யவும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+msgid "Identify Results dialog"
+msgstr "முடிவுகள் உரையாடலைக் கண்டறியவும்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:738
+msgid ""
+"The :guilabel:`Identify results` panel will display different features "
+"information in a tree view. There are two columns in the panel: "
+":guilabel:`Feature` and :guilabel:`Value`. The first item is the name of the"
+" layer and its children are its identified feature(s). Each feature is "
+"identified by the :ref:`display name <maptips>` field along with its value. "
+"Other information about the feature follows:"
+msgstr ""
+":guilabel:`முடிவுகளை அடையாளம் காண்பது` பேனல் ஒரு ட்ரீ வியூவில் வெவ்வேறு "
+"நற்பொருத்தங்கள் தகவல்களைக் காண்பிக்கும். பேனலில் இரண்டு நெடுவரிசைகள் உள்ளன: "
+":guilabel:`Feature` மற்றும் :guilabel:`Value`. முதல் உருப்படி லேயரின் பெயர் "
+"மற்றும் அதன் குழந்தைகள் அதன் அடையாளம் காணப்பட்ட அம்சம்(கள்). ஒவ்வொரு "
+"அம்சமும் அதன் மதிப்புடன் :ref:`display பெயர் <maptips>` புலத்தால் அடையாளம் "
+"காணப்படுகிறது. நற்பொருத்தம் பற்றிய பிற தகவல்கள் பின்வருமாறு:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:745
+msgid ""
+"**Derived** section - those are the information calculated or derived from "
+"other information in the layer. For example, the area of a polygon or the "
+"length of a line. General information that can be found in this section:"
+msgstr ""
+"**பெறப்பட்ட** பிரிவு - அவை அடுக்கில் உள்ள பிற தகவல்களிலிருந்து கணக்கிடப்பட்ட"
+" அல்லது பெறப்பட்ட தகவல்கள். எடுத்துக்காட்டாக, பலகோணத்தின் பரப்பளவு அல்லது "
+"ஒரு கோட்டின் நீளம். இந்த பிரிவில் காணக்கூடிய பொதுவான தகவல்கள்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:749
+msgid ""
+"Depending on the geometry type, the cartesian measurements of length, "
+"perimeter or area in the layer's CRS units. For 3D line vectors, the "
+"cartesian line length is available."
+msgstr ""
+"வடிவவியலின் வகையைப் பொறுத்து, அடுக்கின் CRS அலகுகளில் நீளம், சுற்றளவு அல்லது"
+" பகுதியின் கார்ட்டீசியன் அளவீடுகள். 3D வரி திசையன்களுக்கு, கார்ட்டீசியன் வரி"
+" நீளம் கிடைக்கிறது."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:752
+msgid ""
+"Depending on the geometry type and if an ellipsoid is set in the "
+":guilabel:`Project Properties` dialog (:menuselection:`General --> "
+"Measurements`), ellipsoidal values of length, perimeter, or area using the "
+"specified units."
+msgstr ""
+"வடிவியல் வகையைப் பொறுத்து மற்றும் :guilabel:`Project Properties` உரையாடலில் "
+"(:menuselection:`General --> Measurements`), குறிப்பிட்ட அலகுகளைப் "
+"பயன்படுத்தி நீளம், சுற்றளவு அல்லது பகுதியின் நீள்வட்ட மதிப்புகள் "
+"அமைக்கப்பட்டால்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:755
+msgid ""
+"The count of geometry parts in the feature and the number of the part "
+"clicked."
+msgstr ""
+"அம்சத்தில் உள்ள வடிவியல் பகுதிகளின் எண்ணிக்கை மற்றும் சொடுக்கு செய்யப்பட்ட "
+"பகுதியின் எண்ணிக்கை."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
+msgid "The count of vertices in the feature."
+msgstr "அம்சத்தில் உள்ள முனைகளின் எண்ணிக்கை."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
+msgid ""
+"Coordinate information, using the project properties :guilabel:`Coordinates "
+"display` settings:"
+msgstr ""
+"திட்டப் பண்புகளைப் பயன்படுத்தி தகவலை ஒருங்கிணைக்கவும் :guilabel:`Coordinates"
+" display` அமைப்புகள்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:761
+msgid "``X`` and ``Y`` coordinate values of the clicked point"
+msgstr ""
+"சொடுக்கு செய்யப்பட்ட புள்ளியின் ``X`` மற்றும் ``Y`` ஒருங்கிணைப்பு மதிப்புகள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
+msgid "the number of the closest vertex to the clicked point"
+msgstr "சொடுக்கு செய்யப்பட்ட புள்ளிக்கு மிக நெருக்கமான உச்சியின் எண்ணிக்கை"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:763
+msgid ""
+"``X`` and ``Y`` coordinate values of the closest vertex (and ``Z``/``M`` if "
+"applicable)"
+msgstr ""
+"``X`` மற்றும் ``Y`` நெருங்கிய உச்சியின் ஒருங்கிணைப்பு மதிப்புகள் (மற்றும் "
+"``Z``/``M`` பொருந்தினால்)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:765
+msgid ""
+"if you click on a curved segment, the radius of that section is also "
+"displayed."
+msgstr ""
+"நீங்கள் ஒரு வளைந்த பிரிவில் சொடுக்கு செய்தால், அந்த பிரிவின் ஆரம் "
+"காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:766
+msgid ""
+"if both the vector layer and the project have vertical datums set and they "
+"differ, the ``Z`` value will be displayed for both datums."
+msgstr ""
+"வெக்டார் லேயர் மற்றும் ப்ராசெக்ட் இரண்டும் செங்குத்து தரவுகள் அமைக்கப்பட்டு "
+"அவை வேறுபட்டால், இரண்டு டேட்டங்களுக்கும் ``Z`` மதிப்பு காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:769
+msgid ""
+"**Actions**: Actions can be added to the identify feature windows. The "
+"action is run by clicking on the action label. By default, only one action "
+"is added, namely ``View feature form`` for editing. You can define more "
+"actions in the layer's properties dialog (see :ref:`actions_menu`)."
+msgstr ""
+"**செயல்கள்**: அடையாளம் அம்ச சாளரங்களில் செயல்களைச் சேர்க்கலாம். செயல் "
+"லேபிளைக் சொடுக்கு செய்வதன் மூலம் செயல் இயக்கப்படும். இயல்பாக, ஒரே ஒரு செயல் "
+"மட்டுமே சேர்க்கப்படும், அதாவது திருத்துவதற்கு ``அம்சப் படிவத்தைப் "
+"பார்க்கவும்``. லேயரின் பண்புகள் உரையாடலில் கூடுதல் செயல்களை நீங்கள் "
+"வரையறுக்கலாம் (பார்க்க :ref:`actions_menu`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:773
+msgid ""
+"**Data attributes**: This is the list of attribute fields and values for the"
+" feature that has been clicked."
+msgstr ""
+"**தரவு பண்புக்கூறுகள்**: இது சொடுக்கு செய்யப்பட்ட அம்சத்திற்கான பண்புக்கூறு "
+"புலங்கள் மற்றும் மதிப்புகளின் பட்டியல்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:776
+msgid ""
+"Links in the feature's attributes are clickable from the :guilabel:`Identify"
+" Results` panel and will open in your default web browser."
+msgstr ""
+"அம்சத்தின் பண்புக்கூறுகளில் உள்ள இணைப்புகள் :guilabel:`முடிவுகளை அடையாளம் "
+"காணுதல்` பேனலில் இருந்து சொடுக்கு செய்யக்கூடியவை மற்றும் உங்கள் இயல்புநிலை "
+"இணைய உலாவியில் திறக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:780
+msgid ""
+"When a vector layer has defined :ref:`relations <vector_relations>`, the "
+":guilabel:`Identify Results` panel can display both **referenced** and "
+"**referencing** related features. To view these relations, ensure that the "
+":guilabel:`Show relations` option is enabled in the :ref:`Identify Settings "
+"<identify_toolbar>`. Available information for each related feature include:"
+msgstr ""
+"ஒரு திசையன் அடுக்கு :ref:`relations <vector_relations>` என "
+"வரையறுக்கப்பட்டால், :guilabel:`முடிவுகளை அடையாளம் காணுதல்` பேனல் "
+"**குறிப்பிடப்பட்ட** மற்றும் **குறிப்பு** தொடர்பான அம்சங்களைக் காண்பிக்கும். "
+"இந்த உறவுகளைப் பார்க்க, :ref:`Identify அமைப்புகள் <identify_toolbar>` "
+"என்பதில் :guilabel:`Show relationship' விருப்பம் இயக்கப்பட்டிருப்பதை "
+"உறுதிசெய்யவும். ஒவ்வொரு தொடர்புடைய அம்சத்திற்கும் கிடைக்கக்கூடிய தகவல்கள்:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:787
+msgid "the name of the relation and the linked layer"
+msgstr "உறவின் பெயர் மற்றும் இணைக்கப்பட்ட அடுக்கு"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:788
+msgid ""
+"the entry in the referenced or referencing field, identifying the feature"
+msgstr ""
+"குறிப்பிடப்பட்ட அல்லது குறிப்பிடும் புலத்தில் உள்ளீடு, அம்சத்தை அடையாளம் "
+"காணுதல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:789
+msgid "the activated actions"
+msgstr "செயல்படுத்தப்பட்ட செயல்கள்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:790
+msgid "the list of attribute fields and values"
+msgstr "பண்புக்கூறு புலங்கள் மற்றும் மதிப்புகளின் பட்டியல்"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:792
+msgid ""
+"You can expand related features to explore connected records through "
+"multiple levels, including many-to-many (n:m) and polymorphic relations. "
+"Only nodes you explicitly expand are loaded, preventing excessive nesting."
+msgstr ""
+"பல முதல் பல (n:m) மற்றும் பாலிமார்பிக் உறவுகள் உட்பட பல நிலைகள் மூலம் "
+"இணைக்கப்பட்ட பதிவுகளை ஆராய தொடர்புடைய அம்சங்களை நீங்கள் விரிவாக்கலாம். "
+"நீங்கள் வெளிப்படையாக விரிவாக்கும் முனைகள் மட்டுமே ஏற்றப்படும், அதிகப்படியான "
+"கூடுகளைத் தடுக்கும்."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:796
+msgid ""
+"To focus on a specific related record, right-click it and choose "
+":guilabel:`Identify Feature`. This re-centers the identify results on the "
+"selected feature, starting a new identification tree from it and effectively"
+" limiting the visible nesting depth. Features already shown in ancestor "
+"nodes are automatically omitted to avoid duplicates or circular relations."
+msgstr ""
+"குறிப்பிட்ட தொடர்புடைய பதிவில் கவனம் செலுத்த, அதை வலது சொடுக்கு செய்து, "
+":guilabel:`அடையாளம் அடையாளம்` என்பதைத் தேர்ந்தெடுக்கவும். இது "
+"தேர்ந்தெடுக்கப்பட்ட அம்சத்தின் அடையாள முடிவுகளை மீண்டும் மையப்படுத்துகிறது, "
+"அதிலிருந்து ஒரு புதிய அடையாள மரத்தைத் தொடங்கி, புலப்படும் கூடுகளின் ஆழத்தை "
+"திறம்பட கட்டுப்படுத்துகிறது. முன்னோர் முனைகளில் ஏற்கனவே காட்டப்பட்டுள்ள "
+"நற்பொருத்தங்கள் நகல் அல்லது வட்ட உறவுகளைத் தவிர்க்க தானாகவே தவிர்க்கப்படும்."
