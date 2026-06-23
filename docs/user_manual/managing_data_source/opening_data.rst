@@ -1651,8 +1651,8 @@ Depending on the node, you can also:
   a preview of the data provided by the service.
   More settings are available when the layer has been loaded into the project.
 
-ArcGIS REST services are exposed as a |ams| Map Service (raster) and a |afs| Feature
-Service (vector). Both items are listed separately in the :ref:`Browser <label_browserpanel>` and in
+ArcGIS REST services may expose both a |ams| Map Service and a |afs| Feature
+Service. Both items are listed separately in the :ref:`Browser <label_browserpanel>` and in
 the |dataSourceManager| :sup:`Data Source Manager` dialog. An |imageServer| Image Server
 item is also available, but only in the :guilabel:`Browser`.
 
@@ -1663,19 +1663,22 @@ context menu in the :guilabel:`Browser`:
 
   * :guilabel:`Add Raster with All MapServer Layers`: loads all layers
     from the Map Service combined as a single raster layer.
+
   * :guilabel:`View Service Info`: opens the REST service endpoint
     description in the default web browser.
 
-* Right-clicking a |ams| **MapServer (raster) layer**:
+* Right-clicking a |ams| **MapServer layer**:
 
   * :guilabel:`Add Raster Layer (MapServer) to Project`: loads the
     layer as a raster via the Map Service endpoint.
+
   * :guilabel:`Add Vector Layer (FeatureServer) to Project`: loads the
     layer as a vector via the Feature Service endpoint.
 
-* Right-clicking a |afs| **FeatureServer (vector) layer**:
+* Right-clicking a |afs| **FeatureServer layer**:
 
   * :guilabel:`Add Layer to Project`: loads the layer as a vector layer.
+
   * :guilabel:`Add Filtered Layer to Project...`: opens the expression
     builder to apply an attribute filter before loading.
 
