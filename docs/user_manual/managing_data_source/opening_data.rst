@@ -1682,6 +1682,9 @@ context menu in the :guilabel:`Browser`:
   * :guilabel:`Add Filtered Layer to Project...`: opens the expression
     builder to apply an attribute filter before loading.
 
+For |imageServer| Image Server layers, the image format used when requesting
+images from the server can be configured in
+:menuselection:`Layer Properties --> Source --> Layer Source --> Image format`.
 
 .. index:: 3D Tiles services
 .. _3d_tiles:
