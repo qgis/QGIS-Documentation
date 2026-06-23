@@ -7,20 +7,21 @@
 # Translators:
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# தமிழ் நேரம் <tamilneram247@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: தமிழ் நேரம் <tamilneram247@gmail.com>, 2026\n"
 "Language-Team: Tamil (https://app.transifex.com/qgis/teams/6144/ta/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: ta\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -34,93 +35,1215 @@ msgstr ""
 "சேரலாம். இந்தப் பக்கம் தற்போது |மொழிபெயர்ப்பு முன்னேற்றம்| இல் "
 "மொழிபெயர்க்கப்பட்டுள்ளது."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:6
+msgid "Raster Properties Dialog"
+msgstr "ராச்டர் பண்புகள் உரையாடல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:13
+msgid ""
+"Raster data is made up of pixels (or cells), and each pixel has a value. It "
+"is commonly used to store various types of data, including:"
+msgstr ""
+"ராச்டர் தரவு பிக்சல்களால் (அல்லது செல்கள்) உருவாக்கப்படுகிறது, மேலும் "
+"ஒவ்வொரு பிக்சலுக்கும் ஒரு மதிப்பு இருக்கும். இது பொதுவாக பல்வேறு வகையான "
+"தரவுகளைச் சேமிக்கப் பயன்படுகிறது, அவற்றுள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:16
+msgid ""
+"Imagery, such as satellite images, digital aerial photographs, scanned maps"
+msgstr ""
+"செயற்கைக்கோள் படங்கள், டிசிட்டல் வான்வழி புகைப்படங்கள், வருடு செய்யப்பட்ட "
+"வரைபடங்கள் போன்ற படங்கள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:17
+msgid ""
+"Elevation data, such as digital elevation models (DEMs), digital terrain "
+"models (DTMs)"
+msgstr ""
+"டிசிட்டல் எலிவேசன் மாடல்கள் (டிஇஎம்கள்), டிசிட்டல் டெரெய்ன் மாடல்கள் "
+"(டிடிஎம்கள்) போன்ற உயரத் தரவு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:18
+msgid ""
+"Other types of data, such as land cover, soil types, rainfall and many "
+"others."
+msgstr ""
+"நிலப்பரப்பு, மண் வகைகள், மழைப்பொழிவு மற்றும் பல போன்ற பிற வகையான தரவு."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:20
+msgid ""
+"Raster data can be stored in several supported formats, including GeoTIFF, "
+"ERDAS Imagine, ArcInfo ASCII GRID, PostgreSQL Raster and others. See more at"
+" :ref:`opening_data`."
+msgstr ""
+"GeoTIFF, ERDAS Imagine, ArcInfo ASCII GRID, PostgreSQL Raster மற்றும் "
+"பலவற்றை உள்ளடக்கிய பல உதவி வடிவங்களில் ராச்டர் தரவு சேமிக்கப்படும். மேலும் "
+"பார்க்க :ref:`opening_data`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:24
+msgid ""
+"To view and set the properties for a raster layer, double click on the layer"
+" name in the map legend, or right click on the layer name and choose "
+":guilabel:`Properties` from the context menu. This will open the "
+":guilabel:`Raster Layer Properties` dialog."
+msgstr ""
+"ராச்டர் லேயருக்கான பண்புகளைப் பார்க்கவும் அமைக்கவும், வரைபட லெசெண்டில் உள்ள "
+"லேயர் பெயரில் இருமுறை சொடுக்கு செய்யவும் அல்லது லேயர் பெயரில் வலது சொடுக்கு "
+"செய்து சூழல் மெனுவிலிருந்து :guilabel:`Properties` என்பதைத் "
+"தேர்ந்தெடுக்கவும். இது :guilabel:`Raster Layer Properties` உரையாடலைத் "
+"திறக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:29
+msgid "There are several tabs in the dialog:"
+msgstr "உரையாடலில் பல தாவல்கள் உள்ளன:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:33
+msgid "|metadata| :ref:`Information <raster_information>`"
+msgstr "|மெட்டாடேட்டா| :ref:`தகவல் <raster_information>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1439
 msgid "metadata"
 msgstr "metadata"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:34
+msgid "|system| :ref:`Source <raster_sourcetab>`"
+msgstr "|அமைப்பு| :ref:`மூலம் <raster_sourcetab>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1473
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:35
+msgid "|symbology| :ref:`Symbology <raster_symbology>` ([1]_)"
+msgstr "|சிம்பாலாசி| :ref:`சிம்பலாசி <raster_symbology>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1467
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:36
+msgid "|transparency| :ref:`Transparency <raster_transparency>` ([1]_)"
+msgstr ""
+"|வெளிப்படைத்தன்மை| :ref:`வெளிப்படைத்தன்மை <raster_transparency>` ([1]_)"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1479
 msgid "transparency"
 msgstr "transparency"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:37
+msgid "|labelingSingle| :ref:`Labels <raster_labels>` ([1]_)"
+msgstr "|லேபிளிங் சிங்கிள்| :ref:`Labels <raster_labels>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1427
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:38
+msgid "|rasterHistogram| :ref:`Histogram <raster_histogram>` ([1]_)"
+msgstr "|ராச்டர் இச்டோகிராம்| :ref:`இச்டோகிராம் <raster_histogram>` ([1]_)"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1455
 msgid "rasterHistogram"
 msgstr "rasterHistogram"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:39
+msgid "|rendering| :ref:`Rendering <raster_rendering>`"
+msgstr "|ரெண்டரிங்| :ref:`ரெண்டரிங் <raster_rendering>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1461
 msgid "rendering"
 msgstr "rendering"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:40
+msgid "|temporal| :ref:`Temporal <raster_temporal>`"
+msgstr "|தற்காலிக| :ref:`Temporal <raster_temporal>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1475
 msgid "temporal"
 msgstr "temporal"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:41
+msgid "|pyramids| :ref:`Pyramids <raster_pyramids>`"
+msgstr "|பிரமிடுகள்| :of:`பிரமிடுகள் <ராச்டர் பிரமிடுகள்>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1449
 msgid "pyramids"
 msgstr "pyramids"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:42
+msgid "|elevationscale| :ref:`Elevation <raster_elevation>`"
+msgstr "|எலிவேசன்ச்கேல்| :ref:`Elevation <raster_elevation>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1405
 msgid "elevationscale"
 msgstr "elevationscale"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:43
+msgid "|editMetadata| :ref:`Metadata <raster_metadata>`"
+msgstr "|editMetadata| :ref:`மெட்டாடேட்டா <raster_metadata>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1401
 msgid "editMetadata"
 msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:44
+msgid "|legend| :ref:`Legend <raster_legend>`"
+msgstr "|புராணக்கதை| :ref:`Legend <raster_legend>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1433
 msgid "legend"
 msgstr "legend"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:45
+msgid "|display| :ref:`Display <raster_display>`"
+msgstr "|காட்சி| :ref:`Display <raster_display>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1399
 msgid "display"
 msgstr "display"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:46
+msgid "|openTable| :ref:`Attribute Tables <raster_attribute_tables>`"
+msgstr "|ஓப்பன் டேபிள்| :ref:`பண்பு அட்டவணைகள் <raster_attribute_tables>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1445
 msgid "openTable"
 msgstr "openTable"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:47
+msgid "|overlay| :ref:`QGIS Server <raster_server>`"
+msgstr "| மேலடுக்கு| :ref:`QGIS சேவையகம் <raster_server>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1447
 msgid "overlay"
 msgstr "overlay"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:48
+msgid ":ref:`External plugins <plugins>` ([2]_) tabs"
+msgstr ":ref:`வெளிப்புற செருகுநிரல்கள் <plugins>` ([2]_) தாவல்கள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:53
+msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
+msgstr ":ref:`லேயர் ச்டைலிங் பேனலிலும் <layer_styling_panel>` கிடைக்கும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:55
+msgid ""
+":ref:`External plugins <plugins>` you install can optionally add tabs to "
+"this dialog. Those are not presented in this document. Refer to their "
+"documentation."
+msgstr ""
+":ref:`நீங்கள் நிறுவும் வெளிப்புற செருகுநிரல்கள் <plugins>` இந்த உரையாடலில் "
+"தாவல்களைச் சேர்க்கலாம். அவை இந்த ஆவணத்தில் குறிப்பிடப்படவில்லை. அவர்களின் "
+"ஆவணங்களைப் பார்க்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:59
+msgid "**Live update rendering**"
+msgstr "**நேரடி புதுப்பிப்பு ரெண்டரிங்**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:61
+msgid ""
+"The :ref:`layer_styling_panel` provides you with some of the common features"
+" of the Layer properties dialog and is a good modeless widget that you can "
+"use to speed up the configuration of the layer styles and view your changes "
+"on the map canvas."
+msgstr ""
+":ref:`layer_styling_panel` லேயர் பண்புகள் உரையாடலின் சில பொதுவான அம்சங்களை "
+"உங்களுக்கு வழங்குகிறது, மேலும் இது லேயர் ச்டைல்களின் உள்ளமைவை "
+"விரைவுபடுத்தவும், வரைபட கேன்வாசில் உங்கள் மாற்றங்களைக் காணவும் நீங்கள் "
+"பயன்படுத்தக்கூடிய ஒரு நல்ல மாதிரியற்ற விட்செட்டாகும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:68
+msgid ""
+"Because properties (symbology, label, actions, default values, forms...) of "
+"embedded layers (see :ref:`nesting_projects`) are pulled from the original "
+"project file, and to avoid changes that may break this behavior, the layer "
+"properties dialog is made unavailable for these layers."
+msgstr ""
+"உட்பொதிக்கப்பட்ட அடுக்குகளின் பண்புகள் (சிம்பாலாசி, சிட்டை, செயல்கள், "
+"இயல்புநிலை மதிப்புகள், படிவங்கள்...) அசல் திட்டக் கோப்பிலிருந்து "
+"இழுக்கப்படுவதால் (பார்க்க :ref:`nesting_projects`), மேலும் இந்த நடத்தையை "
+"உடைக்கக்கூடிய மாற்றங்களைத் தவிர்க்க, அடுக்கு பண்புகள் உரையாடல் இந்த "
+"அடுக்குகளுக்கு கிடைக்காது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:77
+msgid "Information Properties"
+msgstr "செய்தி பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:79
+msgid ""
+"The |metadata| :guilabel:`Information` tab is read-only and represents an "
+"interesting place to quickly grab summarized information and metadata for "
+"the current layer. Provided information are:"
+msgstr ""
+"தி |மெட்டாடேட்டா| :guilabel:`தகவல்` தாவல் படிக்க மட்டுமே மற்றும் தற்போதைய "
+"லேயருக்கான சுருக்கமான செய்தி மற்றும் மெட்டாடேட்டாவை விரைவாகப் பெறுவதற்கான "
+"ஒரு சுவையான இடத்தைக் குறிக்கிறது. வழங்கப்பட்ட தகவல்கள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:84
+msgid ""
+"general such as name in the project, source path, list of auxiliary files, "
+"last save time and size, the used provider"
+msgstr ""
+"திட்டத்தில் பெயர், மூலப் பாதை, துணைக் கோப்புகளின் பட்டியல், கடைசியாகச் "
+"சேமிக்கும் நேரம் மற்றும் அளவு, பயன்படுத்திய வழங்குநர் போன்ற பொதுவானவை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:86
+msgid ""
+"custom properties, used to store in the active project additional "
+"information about the layer. Default custom properties include "
+":guilabel:`Identify/format`, which influences how the results from using the"
+" |identify| :ref:`Identify features <raster_identify>` tool over a raster "
+"layer are formatted. More properties can be created and managed using "
+"PyQGIS, specifically through the :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` method."
+msgstr ""
+"தனிப்பயன் பண்புகள், லேயர் பற்றிய கூடுதல் தகவல்களை செயலில் உள்ள திட்டத்தில் "
+"சேமிக்கப் பயன்படுகிறது. இயல்புநிலை தனிப்பயன் பண்புகளில் அடங்கும் "
+":guilabel:`Identify/format`, இது |அடையாளம்| :ref:`அடையாளங்களை அடையாளம் "
+"காண்பது <raster_identify>` கருவியானது ராச்டர் லேயரில் வடிவமைக்கப்பட்டுள்ளது."
+" குறிப்பாக :pyqgis:`setCustomProperty() "
+"<qgis.core.QgsMapLayer.setCustomProperty>` முறை மூலம் PyQGIS ஐப் பயன்படுத்தி"
+" மேலும் பண்புகளை உருவாக்கி நிர்வகிக்கலாம்."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1415
 msgid "identify"
 msgstr "identify"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:91
+msgid ""
+"based on the provider of the layer: extent, width and height, data type, "
+"GDAL driver, bands statistics"
+msgstr ""
+"அடுக்கு வழங்குநரின் அடிப்படையில்: அளவு, அகலம் மற்றும் உயரம், தரவு வகை, GDAL "
+"இயக்கி, பட்டைகள் புள்ளிவிவரங்கள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:93
+msgid ""
+"the Coordinate Reference System: name, units, method, accuracy, reference "
+"(i.e. whether it's static or dynamic)"
+msgstr ""
+"ஒருங்கிணைப்பு குறிப்பு அமைப்பு: பெயர், அலகுகள், முறை, துல்லியம், குறிப்பு "
+"(அதாவது அது நிலையான அல்லது மாறும்)"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:95
+msgid ""
+"read from layer properties: data type, extent, width/height, compression, "
+"pixel size, statistics on bands, number of columns, rows and no-data values "
+"of the raster..."
+msgstr ""
+"அடுக்கு பண்புகளிலிருந்து படிக்கவும்: தரவு வகை, அளவு, அகலம்/உயரம், சுருக்கம்,"
+" படப்புள்ளி அளவு, பட்டைகளின் புள்ளிவிவரங்கள், நெடுவரிசைகளின் எண்ணிக்கை, "
+"வரிசைகள் மற்றும் ராச்டரின் தரவு இல்லாத மதிப்புகள்..."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:98
+msgid ""
+"picked from the :ref:`filled metadata <raster_metadata>`: access, extents, "
+"links, contacts, history..."
+msgstr ""
+":ref:`filled மேனிலை தரவு <raster_metadata>` இலிருந்து எடுக்கப்பட்டது: "
+"அணுகல், அளவுகள், இணைப்புகள், தொடர்புகள், வரலாறு..."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:104
+msgid "Source Properties"
+msgstr "மூல பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:106
+msgid ""
+"The |system| :guilabel:`Source` tab displays basic information about the "
+"selected raster, including:"
+msgstr ""
+"தி |அமைப்பு| :guilabel:`Source` தாவல் தேர்ந்தெடுக்கப்பட்ட ராச்டரைப் பற்றிய "
+"அடிப்படைத் தகவலைக் காட்டுகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:109
+msgid "the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;"
+msgstr ":guilabel:`Layer name`:guilabel:`Layers Panel` இல் காட்ட;"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:110
+msgid ""
+"the :guilabel:`Coordinate Reference System`: Displays the layer's "
+":ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the "
+"layer's CRS, by selecting a recently used one in the drop-down list or "
+"clicking on the |setProjection| :sup:`Select CRS` button (see "
+":ref:`crs_selector`). Use this process only if the layer CRS is a wrong or "
+"not specified. If you wish to reproject your data, use a reprojection "
+"algorithm from Processing or :ref:`Save it as new dataset <general_saveas>`."
+msgstr ""
+":guilabel:`Coordinate குறிப்பு System`: லேயரின் :ref:`Coordinate குறிப்பு "
+"மண்டலம் (CRS) <layer_crs>` ஐக் காட்டுகிறது. கீழ்தோன்றும் பட்டியலில் அண்மைக் "
+"காலத்தில் பயன்படுத்தப்பட்ட ஒன்றைத் தேர்ந்தெடுப்பதன் மூலம் அல்லது "
+"|setProjection| என்பதைக் சொடுக்கு செய்வதன் மூலம் லேயரின் CRS ஐ மாற்றலாம். "
+":sup:`தேர்ந்தெடு CRS` பொத்தானை (பார்க்க :ref:`crs_selector`). அடுக்கு CRS "
+"தவறாக இருந்தால் அல்லது குறிப்பிடப்படவில்லை என்றால் மட்டுமே இந்த "
+"செயல்முறையைப் பயன்படுத்தவும். உங்கள் தரவை மறுதிட்டமிட விரும்பினால், "
+"செயலாக்கத்தில் இருந்து மறுதிட்டமிடல் அல்காரிதத்தைப் பயன்படுத்தவும் அல்லது "
+":ref:`புதிய தரவுத்தொகுப்பாக சேமிக்கவும் <general_saveas>`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1465
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:120
+msgid ""
+"Depending on the data provider, a :guilabel:`Layer source` group indicates "
+"the path to the source of the dataset and allows for replacing the loaded "
+"layer:"
+msgstr ""
+"தரவு வழங்குநரைப் பொறுத்து, :guilabel:`Layer source` குழுவானது "
+"தரவுத்தொகுப்பின் மூலத்திற்கான பாதையைக் குறிக்கிறது மற்றும் ஏற்றப்பட்ட "
+"அடுக்கை மாற்ற அனுமதிக்கிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:123
+msgid ""
+"When the layer is stored as file on disk, edit the path shown in the text "
+"box or press :guilabel:`...` :sup:`Browse` to select another file on the "
+"disk"
+msgstr ""
+"அடுக்கு கோப்பாக வட்டில் சேமிக்கப்படும் போது, ​​உரைப்பெட்டியில் "
+"காட்டப்பட்டுள்ள பாதையைத் திருத்தவும் அல்லது வட்டில் உள்ள மற்றொரு கோப்பைத் "
+"தேர்ந்தெடுக்க :guilabel:`...` :sup:`Browse` என்பதை அழுத்தவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:125
+msgid ""
+"When the layer is provided by an ArcGIS MapServer service, it is possible to"
+" modify its :ref:`authentication settings <authentication>`, while keeping "
+"unchanged the details for connecting to the service."
+msgstr ""
+"ArcGIS MapServer சேவையால் லேயர் வழங்கப்படும் போது, ​​அதன் :ref:`அங்கீகார "
+"அமைப்புகளை <அங்கீகாரம்>`, சேவையுடன் இணைப்பதற்கான விவரங்களை மாற்றாமல் "
+"வைத்திருக்க முடியும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:128
+msgid ""
+"For an XYZ remote layer, it is possible to modify at the layer level any of "
+"its :ref:`connection details <xyz_tile>` (URL, authentication settings, zoom"
+" levels, resolution, ...). Modifications are applied to the layer without "
+"altering the original connection settings."
+msgstr ""
+"XYZ ரிமோட் லேயருக்கு, லேயர் மட்டத்தில் அதன் :ref:`இணைப்பு விவரங்கள் "
+"<xyz_tile>` (URL, அங்கீகார அமைப்புகள், சூம் நிலைகள், தீர்மானம், ...) "
+"ஆகியவற்றை மாற்றலாம். அசல் இணைப்பு அமைப்புகளை மாற்றாமல் லேயரில் மாற்றங்கள் "
+"பயன்படுத்தப்படுகின்றன."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:140
+msgid "Raster Layer Properties - Source Dialog"
+msgstr "ராச்டர் லேயர் பண்புகள் - மூல உரையாடல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:149
+msgid "Symbology Properties"
+msgstr "குறியீட்டு பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:151
+msgid "The raster layer symbology tab is made of three different sections:"
+msgstr "ராச்டர் லேயர் சிம்பாலாசி தாவல் மூன்று வெவ்வேறு பிரிவுகளால் ஆனது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:153
+msgid ""
+"The :guilabel:`Band rendering` where you can control the renderer type to "
+"use"
+msgstr ""
+"பயன்படுத்த வேண்டிய ரெண்டரர் வகையை நீங்கள் கட்டுப்படுத்தக்கூடிய "
+":guilabel:`பேண்ட் ரெண்டரிங்`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:154
+msgid "The :guilabel:`Layer rendering` to apply effects on rendered data"
+msgstr ""
+"வழங்குதல் செய்யப்பட்ட தரவுகளில் விளைவுகளைப் பயன்படுத்துவதற்கு "
+":guilabel:`லேயர் ரெண்டரிங்`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:155
+msgid "The :guilabel:`Resampling` methods to optimize rendering on map"
+msgstr ""
+"வரைபடத்தில் ரெண்டரிங்கை மேம்படுத்துவதற்கான :guilabel:`Resampling` முறைகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:158
+msgid "Band rendering"
+msgstr "பேண்ட் வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:160
+msgid ""
+"QGIS offers many different :guilabel:`Render types`. The choice of renderer "
+"depends on the data type and the information you'd like to highlight."
+msgstr ""
+"QGIS பலவிதமான :guilabel:`ரெண்டர் வகைகளை` வழங்குகிறது. ரெண்டரரின் தேர்வு தரவு"
+" வகை மற்றும் நீங்கள் முன்னிலைப்படுத்த விரும்பும் தகவலைப் பொறுத்தது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:164
+msgid ""
+":ref:`Multiband color <multiband_color>` - if the file comes with several "
+"bands (e.g. a satellite image with several bands)."
+msgstr ""
+":ref:`மல்டிபேண்ட் வண்ணம் <multiband_color>` - கோப்பு பல பட்டைகளுடன் வந்தால் "
+"(எ.கா. பல பட்டைகள் கொண்ட செயற்கைக்கோள் படம்)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:166
+msgid ""
+":ref:`Paletted/Unique values <paletted>` - for single band files that come "
+"with an indexed palette (e.g. a digital topographic map) or for general use "
+"of palettes for rendering raster layers."
+msgstr ""
+":ref:`Paletted/Unique மதிப்புகள் <paletted>` - அட்டவணைப்படுத்தப்பட்ட "
+"தட்டுடன் வரும் ஒற்றை இசைக்குழு கோப்புகளுக்கு (எ.கா. டிசிட்டல் டோபோகிராஃபிக் "
+"வரைபடம்) அல்லது ராச்டர் லேயர்களை வழங்குவதற்கான தட்டுகளின் பொதுவான "
+"பயன்பாட்டிற்காக."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:169
+msgid ""
+":ref:`Singleband gray <singleband_gray>` - (one band of) the image will be "
+"rendered as gray. QGIS will choose this renderer if the file is neither "
+"multiband nor paletted (e.g. a shaded relief map)."
+msgstr ""
+":ref:`Singleband grey <singleband_gray>` - (ஒரு பேண்ட்) படம் சாம்பல் நிறமாக "
+"வழங்கப்படும். கோப்பு மல்டிபேண்ட் அல்லது பேலட்டாக இல்லாவிட்டால் (எ.கா. சேடட் "
+"ரிலீஃப் மேப்) QGIS இந்த ரெண்டரரைத் தேர்ந்தெடுக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:173
+msgid ""
+":ref:`Singleband pseudocolor <label_colormaptab>` - this renderer can be "
+"used for files with a continuous palette or color map (e.g. an elevation "
+"map)."
+msgstr ""
+":ref:`Singleband pseudocolor <label_colormaptab>` - இந்த ரெண்டரரை "
+"தொடர்ச்சியான தட்டு அல்லது வண்ண வரைபடம் (எ.கா. உயர வரைபடம்) கொண்ட "
+"கோப்புகளுக்குப் பயன்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:176
+msgid ""
+":ref:`Single color <singlecolor>` - the raster layer will be rendered with a"
+" single color."
+msgstr ""
+":ref:`Single color <singlecolor>` - ராச்டர் லேயர் ஒற்றை நிறத்தில் வழங்குதல் "
+"செய்யப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:178
+msgid ":ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band."
+msgstr ""
+":ref:`Hillshade <hillshade_renderer>` - ஒரு இசைக்குழுவிலிருந்து இல்சேடை "
+"உருவாக்குகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:180
+msgid ""
+":ref:`Contours <raster_contours>` - Generates contours on the fly for a "
+"source raster band."
+msgstr ""
+":ref:`Contours <raster_contours>` - ஒரு மூல ராச்டர் இசைக்குழுவுக்காக "
+"பறக்கும்போது வரையறைகளை உருவாக்குகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:187
+msgid "Multiband color"
+msgstr "மல்டிபேண்ட் நிறம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:189
+msgid ""
+"With the multiband color renderer, three selected bands from the image will "
+"be used as the red, green or blue component of the color image. QGIS "
+"automatically fetches :guilabel:`Min` and :guilabel:`Max` values for each "
+"band of the raster and scales the coloring accordingly. You can control the "
+"value ranges in the :ref:`Min/Max Value Settings <minmaxvalues>` section."
+msgstr ""
+"மல்டிபேண்ட் வண்ண ரெண்டரருடன், படத்தில் இருந்து தேர்ந்தெடுக்கப்பட்ட மூன்று "
+"பட்டைகள் வண்ணப் படத்தின் சிவப்பு, பச்சை அல்லது நீல கூறுகளாகப் "
+"பயன்படுத்தப்படும். QGIS ஆனது ராச்டரின் ஒவ்வொரு பேண்டிற்கும் தானாக "
+":guilabel:`Min` மற்றும் :guilabel:`Max` மதிப்புகளைப் பெற்று அதற்கேற்ப "
+"வண்ணத்தை அளவிடுகிறது. நீங்கள் மதிப்பு வரம்புகளை :ref:`Min/Max மதிப்பு "
+"அமைப்புகள் <minmaxvalues>` பிரிவில் கட்டுப்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:196
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:276
+msgid ""
+"A :guilabel:`Contrast enhancement` method can be applied to the values: 'No "
+"enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to"
+" min max'."
+msgstr ""
+"A :guilabel:'கான்ட்ராச்ட் மேம்பாடு' முறையானது மதிப்புகளுக்குப் "
+"பயன்படுத்தப்படலாம்: 'மேம்பாடு இல்லை', 'மின்மேக்சுக்கு நீட்டு', 'நீட்டிவிட்டு"
+" மினிமேக்சில் கிளிப்' மற்றும் 'கிளிப் டு மினிமாக்ச்'."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:202
+msgid "**Contrast enhancement**"
+msgstr "**கான்ட்ராச்ட் மேம்பாடு**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:204
+msgid ""
+"When adding GRASS rasters, the option *Contrast enhancement* will always be "
+"set automatically to *stretch to min max*, even if this is set to another "
+"value in the QGIS general options."
+msgstr ""
+"GRASS ராச்டர்களைச் சேர்க்கும் போது, ​​QGIS பொது விருப்பங்களில் வேறொரு "
+"மதிப்பிற்கு அமைக்கப்பட்டாலும், *மாறுபாடு மேம்பாடு* விருப்பம் தானாகவே "
+"*அதிகபட்சம் அதிகபட்சம் வரை* அமைக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:213
+msgid "Raster Symbology - Multiband color rendering"
+msgstr "ராச்டர் சிம்பாலாசி - மல்டிபேண்ட் வண்ண வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:216
+msgid "**Viewing a Single Band of a Multiband Raster**"
+msgstr "**மல்டிபேண்ட் ராச்டரின் ஒற்றை இசைக்குழுவைப் பார்க்கிறது**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:218
+msgid ""
+"If you want to view a single band of a multiband image (for example, Red), "
+"you might think you would set the Green and Blue bands to :guilabel:`Not "
+"Set`. But the preferred way of doing this is to set the image type to "
+":ref:`Singleband gray <singleband_gray>`, and then select Red as the "
+":guilabel:`Gray band` to use."
+msgstr ""
+"மல்டிபேண்ட் படத்தின் ஒற்றை இசைக்குழுவை நீங்கள் பார்க்க விரும்பினால் "
+"(எடுத்துக்காட்டாக, சிவப்பு), பச்சை மற்றும் நீல பட்டைகளை :guilabel:`Not Set` "
+"என அமைக்கலாம். ஆனால் இதைச் செய்வதற்கான விருப்பமான வழி, பட வகையை "
+":ref:`Singleband சாம்பல் <singleband_gray>` என அமைக்கவும், பின்னர் "
+"பயன்படுத்துவதற்கு சிவப்பு நிறத்தை :guilabel:`Gray band` ஆக "
+"தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:229
+msgid "Paletted/Unique values"
+msgstr "தட்டுப்பட்ட/தனித்துவ மதிப்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:231
+msgid ""
+"This is the standard render option for singleband files that include a color"
+" table, where a certain color is assigned to each pixel value. In that case,"
+" the palette is rendered automatically."
+msgstr ""
+"ஒவ்வொரு படப்புள்ளி மதிப்புக்கும் ஒரு குறிப்பிட்ட வண்ணம் ஒதுக்கப்படும் வண்ண "
+"அட்டவணையை உள்ளடக்கிய சிங்கிள்பேண்ட் கோப்புகளுக்கான நிலையான வழங்குதல் "
+"விருப்பமாகும். அந்த வழக்கில், தட்டு தானாக வழங்கப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:235
+msgid ""
+"It can be used for all kinds of raster bands, assigning a color to each "
+"unique raster value."
+msgstr ""
+"இது அனைத்து வகையான ராச்டர் பேண்டுகளுக்கும் பயன்படுத்தப்படலாம், ஒவ்வொரு "
+"தனித்துவமான ராச்டர் மதிப்புக்கும் ஒரு வண்ணத்தை ஒதுக்குகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:238
+msgid ""
+"If you want to change a color, just double-click on the color and the "
+":guilabel:`Select color` dialog appears."
+msgstr ""
+"நீங்கள் ஒரு நிறத்தை மாற்ற விரும்பினால், வண்ணத்தில் இருமுறை சொடுக்கு "
+"செய்யவும் மற்றும் :guilabel:`Select color` உரையாடல் தோன்றும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:241
+msgid ""
+"It is also possible to assign labels to the colors. The label will then "
+"appear in the legend of the raster layer."
+msgstr ""
+"வண்ணங்களுக்கு லேபிள்களை ஒதுக்குவதும் சாத்தியமாகும். சிட்டை பின்னர் ராச்டர் "
+"லேயரின் புராணக்கதையில் தோன்றும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:244
+msgid ""
+"Right-clicking over selected rows in the color table shows a contextual menu"
+" to:"
+msgstr ""
+"வண்ண அட்டவணையில் தேர்ந்தெடுக்கப்பட்ட வரிசைகள் மீது வலது சொடுக்கு செய்வது "
+"சூழல் மெனுவைக் காட்டுகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:247
+msgid ":guilabel:`Change Color...` for the selection"
+msgstr ":guilabel:'நிறத்தை மாற்று...' தேர்வுக்கு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:248
+msgid ":guilabel:`Change Opacity...` for the selection"
+msgstr ":guilabel:`தேர்வுக்கான ஒளிபுகாநிலையை மாற்று...`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:249
+msgid ":guilabel:`Change Label...` for the selection"
+msgstr ":guilabel:'லேபிளை மாற்று...' தேர்வுக்கு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:256
+msgid "Raster Symbology - Paletted unique value rendering"
+msgstr "ராச்டர் சிம்பாலாசி - பேலட் செய்யப்பட்ட தனித்துவமான மதிப்பு வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:258
+msgid ""
+"The pulldown menu, that opens when clicking the :guilabel:`...` "
+"(:sup:`Advanced options`) button below the color map to the right, offers "
+"color map loading (:guilabel:`Load Color Map from File...`) and exporting "
+"(:guilabel:`Export Color Map to File...`), and loading of classes "
+"(:guilabel:`Load Classes from Layer`)."
+msgstr ""
+"புல்டவுன் பட்டியல், வலதுபுறத்தில் உள்ள வண்ண வரைபடத்தின் கீழே உள்ள "
+":guilabel:`...` (:sup:`மேம்பட்ட விருப்பங்கள்`) பொத்தானைக் சொடுக்கு செய்யும் "
+"போது திறக்கும், வண்ண வரைபடத்தை ஏற்றுதல் (:guilabel:`கோப்பிலிருந்து வண்ண "
+"வரைபடத்தை ஏற்று...`) மற்றும் ஏற்றுமதி (:guilabel:`கோப்புக்கு வண்ண வரைபடத்தை "
+"ஏற்று...`) மற்றும் வகுப்புகளில் இருந்து ஏற்றுதல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:268
+msgid "Singleband gray"
+msgstr "சிங்கிள்பேண்ட் சாம்பல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:270
+msgid ""
+"This renderer allows you to render a layer using only one band with a "
+":guilabel:`Color gradient`: 'Black to white' or 'White to black'. You can "
+"change the range of values to color (:guilabel:`Min` and :guilabel:`Max`) in"
+" the :ref:`Min/Max Value Settings <minmaxvalues>`."
+msgstr ""
+"இந்த ரெண்டரர் :guilabel:`வண்ண சாய்வு`: 'கருப்பு முதல் வெள்ளை' அல்லது "
+"'வெள்ளையிலிருந்து கருப்பு' என்ற ஒரே ஒரு பேண்டைப் பயன்படுத்தி லேயரை வழங்குதல்"
+" செய்ய அனுமதிக்கிறது. மதிப்புகளின் வரம்பை :ref:`Min/Max மதிப்பு அமைப்புகளில்"
+" <minmaxvalues>` இல் வண்ணத்திற்கு (:guilabel:`Min` மற்றும் :guilabel:`Max`) "
+"மாற்றலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:285
+msgid "Raster Symbology - Singleband gray rendering"
+msgstr "ராச்டர் சிம்பாலாசி - சிங்கிள்பேண்ட் சாம்பல் வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:287
+msgid ""
+"Pixels are assigned a color based on the selected color gradient and the "
+"layer's legend (in the :guilabel:`Layers` panel and the layout :ref:`legend "
+"item <layout_legend_item>`) is displayed using a continuous color ramp. "
+"Press :guilabel:`Legend settings...` if you wish to tweak the settings. More"
+" details at :ref:`raster_legend_settings`."
+msgstr ""
+"பிக்சல்களுக்கு தேர்ந்தெடுக்கப்பட்ட வண்ண சாய்வு மற்றும் லேயரின் லெசெண்டின் "
+"அடிப்படையில் ஒரு வண்ணம் ஒதுக்கப்படும் (:guilabel:`Layers` பேனல் மற்றும் "
+"தளவமைப்பு :ref:`legend உருப்படி <layout_legend_item>`) தொடர்ச்சியான வண்ண "
+"வளைவைப் பயன்படுத்தி காட்டப்படும். அமைப்புகளை மாற்ற விரும்பினால் "
+":guilabel:`Legend settings...` என்பதை அழுத்தவும். மேலும் விவரங்கள் "
+":ref:`raster_legend_settings` இல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:298
+msgid "Singleband pseudocolor"
+msgstr "சிங்கிள்பேண்ட் சூடோகலர்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:300
+msgid ""
+"This is a render option for single-band files that include a continuous "
+"palette. You can also create color maps for a band of a multiband raster."
+msgstr ""
+"இது தொடர்ச்சியான தட்டுகளை உள்ளடக்கிய ஒற்றை-இசைக்குழு கோப்புகளுக்கான "
+"வழங்குதல் விருப்பமாகும். மல்டிபேண்ட் ராச்டரின் இசைக்குழுவிற்கான வண்ண "
+"வரைபடங்களையும் நீங்கள் உருவாக்கலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:309
+msgid "Raster Symbology - Singleband pseudocolor rendering"
+msgstr "ராச்டர் சிம்பாலாசி - சிங்கிள்பேண்ட் சூடோகலர் வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:312
+msgid ""
+"Using a :guilabel:`Band` of the layer and a :ref:`values range "
+"<minmaxvalues>`, you can now interpolate and assign representation color to "
+"pixels within classes. More at :ref:`color_ramp_shader`."
+msgstr ""
+"லேயரின் :guilabel:`Band` மற்றும் :ref:`values ​​வரம்பு <minmaxvalues>` "
+"ஆகியவற்றைப் பயன்படுத்தி, நீங்கள் இப்போது வகுப்புகளுக்குள் உள்ள "
+"பிக்சல்களுக்குப் பிரதிநிதித்துவ வண்ணத்தை இடைக்கணித்து ஒதுக்கலாம். மேலும் "
+"இங்கு :ref:`color_ramp_shader`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:316
+msgid ""
+"Pixels are assigned a color based on the selected color ramp and the layer's"
+" legend (in the :guilabel:`Layers` panel and the layout :ref:`legend item "
+"<layout_legend_item>`) is displayed using a continuous color ramp. Press "
+":guilabel:`Legend settings...` if you wish to tweak the settings or instead "
+"use a legend with separated classes (and colors). More details at "
+":ref:`raster_legend_settings`."
+msgstr ""
+"தேர்ந்தெடுக்கப்பட்ட வண்ணப் பாதையின் அடிப்படையில் பிக்சல்களுக்கு ஒரு வண்ணம் "
+"ஒதுக்கப்பட்டு, லேயரின் லெசண்ட் (:guilabel:`Layers` பேனல் மற்றும் தளவமைப்பு "
+":ref:`legend உருப்படி <layout_legend_item>`) தொடர்ச்சியான வண்ணப் பாதையைப் "
+"பயன்படுத்தி காட்டப்படும். நீங்கள் அமைப்புகளை மாற்ற விரும்பினால் அல்லது "
+"அதற்கு பதிலாக பிரிக்கப்பட்ட வகுப்புகள் (மற்றும் வண்ணங்கள்) கொண்ட லெசண்டைப் "
+"பயன்படுத்த விரும்பினால் :guilabel:`Legend settings...` என்பதை அழுத்தவும். "
+"மேலும் விவரங்கள் :ref:`raster_legend_settings` இல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:326
+msgid "Single color"
+msgstr "ஒற்றை நிறம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:328
+msgid ""
+"This renderer allows you to render a raster layer using :guilabel:`Single "
+"color`. This type of renderer is useful when you want to display a raster "
+"layer uniformly, without any variation in color based on pixel values."
+msgstr ""
+"இந்த ரெண்டரர் :guilabel:`Single color` ஐப் பயன்படுத்தி ராச்டர் லேயரை "
+"வழங்குதல் செய்ய அனுமதிக்கிறது. படப்புள்ளி மதிப்புகளின் அடிப்படையில் "
+"நிறத்தில் எந்த மாறுபாடும் இல்லாமல், ராச்டர் லேயரை ஒரே மாதிரியாகக் காட்ட "
+"விரும்பினால், இந்த வகை ரெண்டரர் பயனுள்ளதாக இருக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:332
+msgid ""
+"The single color renderer can be used with both single-band and multiband "
+"raster layers. When used with multiband rasters, you can select which band "
+"to apply the single color to, effectively displaying that specific band "
+"uniformly across the entire layer."
+msgstr ""
+"ஒற்றை நிற ரெண்டரரை ஒற்றை-பேண்ட் மற்றும் மல்டிபேண்ட் ராச்டர் லேயர்கள் "
+"இரண்டிலும் பயன்படுத்தலாம். மல்டிபேண்ட் ராச்டர்களுடன் பயன்படுத்தும் போது, "
+"​​எந்த பேண்டிற்கு ஒற்றை நிறத்தைப் பயன்படுத்த வேண்டும் என்பதை நீங்கள் "
+"தேர்ந்தெடுக்கலாம், அந்த குறிப்பிட்ட இசைக்குழுவை முழு அடுக்கு முழுவதும் ஒரே "
+"மாதிரியாகக் காண்பிக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:341
+msgid "Raster Symbology - Single color rendering"
+msgstr "ராச்டர் சிம்பாலாசி - ஒற்றை நிற வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:347
+msgid "Hillshade"
+msgstr "இல்சேட்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:349
+msgid "Render a band of the raster layer using hillshading."
+msgstr ""
+"இல் சேடிங்கைப் பயன்படுத்தி ராச்டர் லேயரின் பேண்டை வழங்குதல் செய்யவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:356
+msgid "Raster Symbology - Hillshade rendering"
+msgstr "ராச்டர் சிம்பாலாசி - இல்சேட் வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:358
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:386
+msgid "Options:"
+msgstr "விருப்பங்கள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:360
+msgid ":guilabel:`Band`: The raster band to use."
+msgstr ":guilabel:`பேண்ட்`: பயன்படுத்த வேண்டிய ராச்டர் பேண்ட்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:361
+msgid ""
+":guilabel:`Altitude`: The elevation angle of the light source (default is "
+"``45°``)."
+msgstr ":guilabel:`Altitude`: ஒளி மூலத்தின் உயரக் கோணம் (இயல்புநிலை ``45°``)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:363
+msgid ""
+":guilabel:`Azimuth`: The azimuth of the light source (default is ``315°``)."
+msgstr ":guilabel:`Azimuth`: ஒளி மூலத்தின் அசிமுத் (இயல்புநிலை ``315°``)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:365
+msgid ""
+":guilabel:`Z Factor`: Scaling factor for the values of the raster band "
+"(default is ``1``)."
+msgstr ""
+":guilabel:`Z காரணி`: ராச்டர் பேண்டின் மதிப்புகளுக்கான அளவிடுதல் காரணி "
+"(இயல்புநிலை ``1``)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:367
+msgid ""
+"|checkbox| :guilabel:`Multidirectional`: Specify if multidirectional "
+"hillshading is to be used (default is ``off``)."
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`Multidirectional`: மல்டி டைரக்சனல் இல்சேடிங் "
+"பயன்படுத்த வேண்டுமா என்பதைக் குறிப்பிடவும் (இயல்புநிலை ``ஆஃப்``)."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1391
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:373
+msgid "Contours"
+msgstr "வரையறைகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:375
+msgid ""
+"This renderer draws contour lines that are calculated on the fly from the "
+"source raster band."
+msgstr ""
+"இந்த ரெண்டரர் மூல ராச்டர் பேண்டில் இருந்து பறக்கும்போது கணக்கிடப்படும் "
+"விளிம்பு கோடுகளை வரைகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:384
+msgid "Raster Symbology - Contours rendering"
+msgstr "ராச்டர் சிம்பாலாசி - வரையறைகளை வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:388
+msgid ":guilabel:`Input band`: the raster band to use."
+msgstr ":guilabel:`Input band`: பயன்படுத்த வேண்டிய ராச்டர் பேண்ட்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:389
+msgid ""
+":guilabel:`Contour interval`: the distance between two consecutive contour "
+"lines"
+msgstr ""
+":guilabel:` விளிம்பு இடைவெளி`: இரண்டு தொடர்ச்சியான விளிம்பு கோடுகளுக்கு "
+"இடையே உள்ள தூரம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:390
+msgid ""
+":guilabel:`Contour symbol`: the :ref:`symbol <vector_line_symbols>` to apply"
+" to the common contour lines."
+msgstr ""
+":guilabel:`Contour symbol`: :ref:`symbol <vector_line_symbols>` பொதுவான "
+"விளிம்பு கோடுகளுக்கு பொருந்தும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:392
+msgid ""
+":guilabel:`Index contour interval`: the distance between two consecutive "
+"**index contours**, that is the lines shown in a distinctive manner for ease"
+" of identification, being commonly printed more heavily than other contour "
+"lines and generally labeled with a value along its course."
+msgstr ""
+":guilabel:`இன்டெக்ச் காண்டூர் இடைவெளி`: இரண்டு தொடர்ச்சியான **இண்டெக்ச் "
+"வரையறைகளுக்கு இடையே உள்ள தூரம்**, இது அடையாளம் காணும் வசதிக்காக ஒரு "
+"தனித்துவமான முறையில் காட்டப்படும் கோடுகள், பொதுவாக மற்ற விளிம்பு கோடுகளை விட"
+" அதிகமாக அச்சிடப்பட்டு பொதுவாக அதன் போக்கில் மதிப்புடன் லேபிளிடப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:396
+msgid ""
+":guilabel:`Index contour symbol`: the symbol to apply to the index contour "
+"lines"
+msgstr ""
+":guilabel:`இன்டெக்ச் காண்டூர் சின்னம்`: குறியீட்டு விளிம்பு கோடுகளுக்கு "
+"பொருந்தும் அடையாளம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:397
+msgid ""
+":guilabel:`Input downscaling`: Indicates by how much the renderer will scale"
+" down the request to the data provider (default is ``4.0``)."
+msgstr ""
+":guilabel:`Input downscaling`: தரவு வழங்குநருக்கான கோரிக்கையை ரெண்டரர் "
+"எவ்வளவு குறைப்பார் என்பதைக் குறிக்கிறது (இயல்புநிலை ``4.0``)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:400
+msgid ""
+"For example, if you generate contour lines on input raster block with the "
+"same size as the output raster block, the generated lines would contain too "
+"much detail. This detail can be reduced by the \"downscale\" factor, "
+"requesting lower resolution of the source raster. For a raster block "
+"1000x500 with downscale 10, the renderer will request raster 100x50 from "
+"provider. Higher downscale makes contour lines more simplified (at the "
+"expense of losing some detail)."
+msgstr ""
+"எடுத்துக்காட்டாக, அவுட்புட் ராச்டர் பிளாக்கின் அதே அளவுள்ள உள்ளீட்டு ராச்டர்"
+" பிளாக்கில் விளிம்பு கோடுகளை உருவாக்கினால், உருவாக்கப்பட்ட கோடுகள் அதிக "
+"விவரங்களைக் கொண்டிருக்கும். மூல ராச்டரின் குறைந்த தெளிவுத்திறனைக் கோரும் "
+"\"குறைந்த\" காரணி மூலம் இந்த விவரத்தை குறைக்கலாம். ராச்டர் பிளாக் "
+"1000x500க்கு, கீழ்நிலை 10 உடன், ரெண்டரர் வழங்குநரிடமிருந்து ராச்டர் "
+"100x50ஐக் கோருவார். அதிக தாழ்வானது விளிம்பு கோடுகளை மிகவும் எளிமையாக்குகிறது"
+" (சில விவரங்களை இழக்கும் செலவில்)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:411
+msgid "Setting the min and max values"
+msgstr "குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளை அமைத்தல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:413
+msgid ""
+"By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of "
+"the band(s) of the raster. A few very low and/or high values can have a "
+"negative impact on the rendering of the raster. The :guilabel:`Min/Max Value"
+" Settings` frame helps you control the rendering."
+msgstr ""
+"இயல்பாக, QGIS ஆனது ராச்டரின் பேண்ட்(களின்) மதிப்புகளை :guilabel:`Min` "
+"மற்றும் :guilabel:`Max` எனப் புகாரளிக்கிறது. சில மிகக் குறைந்த "
+"மற்றும்/அல்லது அதிக மதிப்புகள் ராச்டரின் ரெண்டரிங்கில் எதிர்மறையான தாக்கத்தை"
+" ஏற்படுத்தும். :guilabel:`குறைந்தபட்சம்/அதிகபட்ச மதிப்பு அமைப்புகள்` பிரேம் "
+"ரெண்டரிங்கைக் கட்டுப்படுத்த உதவுகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:425
+msgid "Raster Symbology - Min and Max Value Settings"
+msgstr "ராச்டர் சிம்பாலாசி - குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்பு அமைப்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:428
+msgid "Available options are:"
+msgstr "கிடைக்கக்கூடிய விருப்பங்கள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:430
+msgid ""
+"|radioButtonOff| :guilabel:`User defined`: The default :guilabel:`Min` and "
+":guilabel:`Max` values of the band(s) can be overridden"
+msgstr ""
+"|ரேடியோ பட்டன்ஆஃப்| :guilabel:`User defined`: பேண்ட்(களின்) இயல்புநிலை "
+":guilabel:`Min` மற்றும் :guilabel:`Max` மதிப்புகள் மேலெழுதப்படலாம்"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1451
 msgid "radioButtonOff"
 msgstr "radioButtonOff"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:433
+msgid ""
+"|radioButtonOff| :guilabel:`Cumulative count cut`: Removes outliers. The "
+"standard range of values is ``2%`` to ``98%``, but it can be adapted "
+"manually."
+msgstr ""
+"|ரேடியோ பட்டன்ஆஃப்| :guilabel:`ஒட்டுமொத்த எண்ணிக்கை குறைப்பு`: "
+"புறம்போக்குகளை நீக்குகிறது. மதிப்புகளின் நிலையான வரம்பு ``2%`` முதல் ``98%``"
+" ஆகும், ஆனால் அதை கைமுறையாக மாற்றியமைக்க முடியும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:436
+msgid ""
+"|radioButtonOn| :guilabel:`Min / max`: Uses the whole range of values in the"
+" image band."
+msgstr ""
+"|ரேடியோ பட்டன்ஆன்| :guilabel:`Min / max`: படக் குழுவில் உள்ள மதிப்புகளின் "
+"முழு வரம்பையும் பயன்படுத்துகிறது."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1453
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:438
+msgid ""
+"|radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates a color "
+"table that only considers values within the standard deviation or within "
+"multiple standard deviations. This is useful when you have one or two cells "
+"with abnormally high values in a raster layer that impact the rendering of "
+"the raster negatively."
+msgstr ""
+"|ரேடியோ பட்டன்ஆஃப்| :guilabel:`சராசரி +/- நிலையான விலகல் x`: நிலையான விலகல் "
+"அல்லது பல நிலையான விலகல்களுக்குள் மதிப்புகளை மட்டுமே கருத்தில் கொள்ளும் வண்ண"
+" அட்டவணையை உருவாக்குகிறது. ராச்டர் லேயரில் அசாதாரணமாக அதிக மதிப்புகளைக் "
+"கொண்ட ஒன்று அல்லது இரண்டு செல்கள் ராச்டரின் ரெண்டரிங்கை எதிர்மறையாக "
+"பாதிக்கும் போது இது பயனுள்ளதாக இருக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:445
+msgid ""
+"Calculations of the min and max values of the bands are made based on the:"
+msgstr ""
+"பட்டைகளின் குறைந்தபட்ச மற்றும் அதிகபட்ச மதிப்புகளின் கணக்கீடுகள் இதன் "
+"அடிப்படையில் செய்யப்படுகின்றன:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:448
+msgid ""
+":guilabel:`Statistics extent`: it can be :guilabel:`Whole raster`, "
+":guilabel:`Current canvas` or :guilabel:`Updated canvas`. :guilabel:`Updated"
+" canvas` means that min/max values used for the rendering will change with "
+"the canvas extent (dynamic stretching)."
+msgstr ""
+":guilabel:`புள்ளிவிவர அளவு`: அது :guilabel:`முழு ராச்டர்`, "
+":guilabel:`தற்போதைய கேன்வாச்` அல்லது :guilabel:`புதுப்பிக்கப்பட்ட கேன்வாச்`."
+" :guilabel:`புதுப்பிக்கப்பட்ட கேன்வாச்` என்பது, ரெண்டரிங்கிற்குப் "
+"பயன்படுத்தப்படும் குறைந்தபட்சம்/அதிகபட்ச மதிப்புகள், கேன்வாச் அளவுடன் "
+"(டைனமிக் ச்ட்ரெச்சிங்) மாறும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:452
+msgid ""
+":guilabel:`Accuracy`, which can be either :guilabel:`Estimate (faster)` or "
+":guilabel:`Actual (slower)`."
+msgstr ""
+":guilabel:`துல்லியம்`, இது :guilabel:`மதிப்பீடு (வேகமாக)` அல்லது "
+":guilabel:`உண்மையான (மெதுவான)`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:455
+msgid ""
+"For some settings, you may need to press the :guilabel:`Apply` button of the"
+" layer properties dialog in order to display the actual min and max values "
+"in the widgets."
+msgstr ""
+"சில அமைப்புகளுக்கு, விட்செட்களில் உண்மையான மணித்துளி மற்றும் அதிகபட்ச "
+"மதிப்புகளைக் காண்பிக்க, அடுக்கு பண்புகள் உரையாடலின் :guilabel:`Apply` "
+"பொத்தானை அழுத்த வேண்டியிருக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:462
+msgid "Color ramp shader classification"
+msgstr "வண்ண சாய்வு நிழல் வகைப்பாடு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:464
+msgid ""
+"This method can be used to classify and represent scalar dataset (raster or "
+"mesh contour) based on their values. Given a :ref:`color ramp <color-ramp>` "
+"and a number of classes, it generates intermediate color map entries for "
+"class limits. Each color is mapped with a value interpolated from a range of"
+" values and according to a classification mode. The scalar dataset elements "
+"are then assigned their color based on their class."
+msgstr ""
+"இந்த முறையானது அவற்றின் மதிப்புகளின் அடிப்படையில் ச்கேலார் தரவுத்தொகுப்பை "
+"(ராச்டர் அல்லது மெச் காண்டூர்) வகைப்படுத்தவும் பிரதிநிதித்துவப்படுத்தவும் "
+"பயன்படுத்தப்படலாம். :ref:`color ramp <color-ramp>` மற்றும் பல வகுப்புகள் "
+"கொடுக்கப்பட்டால், இது வகுப்பு வரம்புகளுக்கு இடைநிலை வண்ண வரைபட உள்ளீடுகளை "
+"உருவாக்குகிறது. ஒவ்வொரு நிறமும் மதிப்புகளின் வரம்பிலிருந்து மற்றும் ஒரு "
+"வகைப்பாடு முறையில் இடைக்கணிக்கப்பட்ட மதிப்புடன் மேப் செய்யப்படுகிறது. "
+"ச்கேலர் தரவுத்தொகுப்பு கூறுகள் அவற்றின் வகுப்பின் அடிப்படையில் அவற்றின் "
+"நிறத்தை ஒதுக்குகின்றன."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:476
+msgid "Classifying a dataset with a color ramp shader"
+msgstr "கலர் ராம்ப் சேடருடன் தரவுத்தொகுப்பை வகைப்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:478
+msgid ""
+"A :guilabel:`Min` and :guilabel:`Max` values must be defined and used to "
+"interpolate classes bounds. By default QGIS detects them from the dataset "
+"but they can be modified."
+msgstr ""
+"A :guilabel:`Min` மற்றும் :guilabel:`Max` மதிப்புகள் வரையறுக்கப்பட்டு "
+"வகுப்புகளின் வரம்புகளை இடைக்கணிக்கப் பயன்படுத்தப்பட வேண்டும். முன்னிருப்பாக "
+"QGIS தரவுத்தொகுப்பில் இருந்து அவற்றைக் கண்டறியும் ஆனால் அவற்றை மாற்றியமைக்க "
+"முடியும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:481
+msgid ""
+"The :guilabel:`Interpolation` entry defines how scalar elements are assigned"
+" their color :"
+msgstr ""
+":guilabel:`Interpolation` நுழைவு அளவிடல் கூறுகள் அவற்றின் நிறத்தை எவ்வாறு "
+"ஒதுக்குகின்றன என்பதை வரையறுக்கிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:484
+msgid ""
+":guilabel:`Discrete` (a ``<=`` symbol appears in the header of the "
+":guilabel:`Value` column): The color is taken from the closest color map "
+"entry with equal or higher value"
+msgstr ""
+":guilabel:`Discrete` (ஒரு ``<=`` அடையாளம் :guilabel:`Value` நெடுவரிசையின் "
+"தலைப்பில் தோன்றும்): நிறம் சமமான அல்லது அதிக மதிப்புடன் நெருங்கிய வண்ண வரைபட"
+" உள்ளீட்டிலிருந்து எடுக்கப்பட்டது"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:487
+msgid ""
+":guilabel:`Linear`: The color is linearly interpolated from the color map "
+"entries above and below the pixel value, meaning that to each dataset value "
+"corresponds a unique color"
+msgstr ""
+":guilabel:`Linear`: படப்புள்ளி மதிப்புக்கு மேலேயும் கீழேயும் உள்ள வண்ண வரைபட"
+" உள்ளீடுகளிலிருந்து வண்ணம் நேரியல் முறையில் இடைக்கணிக்கப்படுகிறது, அதாவது "
+"ஒவ்வொரு தரவுத்தொகுப்பு மதிப்புக்கும் ஒரு தனித்துவமான வண்ணம் பொருந்தும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:490
+msgid ""
+":guilabel:`Exact` (a ``=`` symbol appears in the header of the "
+":guilabel:`Value` column): Only pixels with value equal to a color map entry"
+" are applied a color; others are not rendered."
+msgstr ""
+":guilabel:`Exact` (:guilabel:`Value` நெடுவரிசையின் தலைப்பில் ``=`` அடையாளம் "
+"தோன்றும்): வண்ண வரைபட உள்ளீட்டிற்குச் சமமான மதிப்பைக் கொண்ட படப்புள்ளிகள் "
+"மட்டுமே வண்ணத்தைப் பயன்படுத்துகின்றன; மற்றவை வழங்கப்படவில்லை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:493
+msgid ""
+"The :guilabel:`Color ramp` widget helps you select the color ramp to assign "
+"to the dataset. As usual with :ref:`this widget <color_ramp_widget>`, you "
+"can create a new one and edit or save the currently selected one. The name "
+"of the color ramp will be saved in the configuration."
+msgstr ""
+":guilabel:`Color ramp` விட்செட், தரவுத்தொகுப்புக்கு ஒதுக்க வண்ணப் பாதையைத் "
+"தேர்ந்தெடுக்க உதவுகிறது. வழக்கம் போல் :ref:`இந்த விட்செட் "
+"<color_ramp_widget>`, நீங்கள் புதிய ஒன்றை உருவாக்கலாம் மற்றும் தற்போது "
+"தேர்ந்தெடுத்ததைத் திருத்தலாம் அல்லது சேமிக்கலாம். வண்ண சாய்வின் பெயர் "
+"உள்ளமைவில் சேமிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:497
+msgid ""
+"The :guilabel:`Label unit suffix` adds a label after the value in the "
+"legend, and the :guilabel:`Label precision` controls the number of decimals "
+"to display."
+msgstr ""
+":guilabel:`Label யூனிட் பின்னொட்டு` என்பது லெசெண்டில் உள்ள மதிப்புக்குப் "
+"பிறகு ஒரு லேபிளைச் சேர்க்கிறது, மேலும் :guilabel:`Label துல்லியம்` காட்ட "
+"வேண்டிய தசமங்களின் எண்ணிக்கையைக் கட்டுப்படுத்துகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:500
+msgid ""
+"The classification :guilabel:`Mode` helps you define how values are "
+"distributed across the classes:"
+msgstr ""
+"வகைப்பாடு :guilabel:`Mode` என்பது வகுப்புகள் முழுவதும் மதிப்புகள் எவ்வாறு "
+"விநியோகிக்கப்படுகின்றன என்பதை வரையறுக்க உதவுகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:503
+msgid ""
+":guilabel:`Equal interval`: Provided the :guilabel:`Number of classes`, "
+"limits values are defined so that the classes all have the same magnitude."
+msgstr ""
+":guilabel:`சம இடைவெளி`: :guilabel:`வகுப்புகளின் எண்ணிக்கை` வழங்கப்படும், "
+"வரம்புகள் மதிப்புகள் வரையறுக்கப்படுகின்றன, இதனால் வகுப்புகள் அனைத்தும் ஒரே "
+"அளவைக் கொண்டிருக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:505
+msgid ""
+":guilabel:`Continuous`: Classes number and color are fetched from the color "
+"ramp stops; limits values are set following stops distribution in the color "
+"ramp."
+msgstr ""
+":guilabel:`தொடர்ச்சியான`: வகுப்புகளின் எண் மற்றும் வண்ணம் வண்ண சாய்வு "
+"நிறுத்தங்களில் இருந்து பெறப்படுகிறது; வரம்புகள் மதிப்புகள் வண்ண வளைவில் "
+"நிறுத்தங்களின் விநியோகத்தைத் தொடர்ந்து அமைக்கப்படுகின்றன."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:508
+msgid ""
+":guilabel:`Quantile`: Provided the :guilabel:`Number of classes`, limits "
+"values are defined so that the classes have the same number of elements. Not"
+" available with :ref:`mesh layers <mesh_symbology_contours>`."
+msgstr ""
+":guilabel:`Quantile`: :guilabel:`வகுப்புகளின் எண்ணிக்கை` வழங்கப்பட்டால், "
+"வகுப்புகள் ஒரே எண்ணிக்கையிலான உறுப்புகளைக் கொண்டிருக்கும் வகையில் வரம்புகள் "
+"மதிப்புகள் வரையறுக்கப்படுகின்றன. :ref:`mesh அடுக்குகள் "
+"<mesh_symbology_contours>` உடன் கிடைக்கவில்லை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:511
+msgid "You can then :guilabel:`Classify` or tweak the classes:"
+msgstr ""
+"பின்னர் நீங்கள் :guilabel:`வகைப்படுத்தலாம்` அல்லது வகுப்புகளை மாற்றலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:513
+msgid ""
+"The button |symbologyAdd| :sup:`Add values manually` adds a value to the "
+"table."
+msgstr ""
+"பொத்தான் |சிம்பலாசி சேர்| :sup:`மதிப்புகளை கைமுறையாகச் சேர்` என்பது "
+"அட்டவணையில் மதிப்பைச் சேர்க்கிறது."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1469
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:514
+msgid ""
+"The button |symbologyRemove| :sup:`Remove selected row` deletes selected "
+"values from the table."
+msgstr ""
+"பொத்தான் |சிம்பலாசிஅகற்று| :sup:`தேர்ந்தெடுக்கப்பட்ட வரிசையை அகற்று` "
+"அட்டவணையில் இருந்து தேர்ந்தெடுக்கப்பட்ட மதிப்புகளை நீக்குகிறது."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1471
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:516
+msgid ""
+"Double clicking in the :guilabel:`Value` column lets you modify the class "
+"value."
+msgstr ""
+":guilabel:`Value` நெடுவரிசையில் இருமுறை சொடுக்கு செய்வதன் மூலம் வகுப்பு "
+"மதிப்பை மாற்றலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:517
+msgid ""
+"Double clicking in the :guilabel:`Color` column opens the dialog "
+":guilabel:`Change color`, where you can select a color to apply for that "
+"value."
+msgstr ""
+":guilabel:`Color` நெடுவரிசையில் இருமுறை சொடுக்கு செய்வதன் மூலம் "
+":guilabel:`நிறத்தை மாற்று` என்ற உரையாடல் திறக்கும், அந்த மதிப்புக்கு "
+"விண்ணப்பிக்க வண்ணத்தைத் தேர்ந்தெடுக்கலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:520
+msgid ""
+"Double clicking in the :guilabel:`Label` column to modify the label of the "
+"class, but this value won't be displayed when you use the identify feature "
+"tool."
+msgstr ""
+"வகுப்பின் லேபிளை மாற்ற :guilabel:`Label` நெடுவரிசையில் இருமுறை சொடுக்கு "
+"செய்யவும், ஆனால் நீங்கள் அடையாளம் காணும் அம்சக் கருவியைப் பயன்படுத்தும் போது"
+" இந்த மதிப்பு காட்டப்படாது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:523
+msgid ""
+"Right-clicking over selected rows in the color table shows a contextual menu"
+" to :guilabel:`Change Color...` and :guilabel:`Change Opacity...` for the "
+"selection."
+msgstr ""
+"வண்ண அட்டவணையில் தேர்ந்தெடுக்கப்பட்ட வரிசைகளில் வலது சொடுக்கு செய்தால், "
+"தேர்வுக்கான சூழல் மெனுவை :guilabel:`நிறத்தை மாற்று...` மற்றும் "
+":guilabel:`ஒளிபுகாநிலையை மாற்று...` எனக் காட்டுகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:527
+msgid ""
+"You can use the buttons |fileOpen| :sup:`Load color map from file` or "
+"|fileSaveAs| :sup:`Export color map to file` to load an existing color table"
+" or to save the color table for later use."
+msgstr ""
+"நீங்கள் |fileOpen| பொத்தான்களைப் பயன்படுத்தலாம் :sup:`கோப்பில் இருந்து வண்ண "
+"வரைபடத்தை ஏற்றவும்` அல்லது |fileSaveAs| :sup:'கோப்பில் வண்ண வரைபடத்தை "
+"ஏற்றுமதி செய்யுங்கள்' ஏற்கனவே இருக்கும் வண்ண அட்டவணையை ஏற்ற அல்லது பின்னர் "
+"பயன்படுத்த வண்ண அட்டவணையை சேமிக்க."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1409
 msgid "fileOpen"
@@ -130,73 +1253,1645 @@ msgstr "fileOpen"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:531
+msgid "With linear :guilabel:`Interpolation`, you can also configure:"
+msgstr "நேரியல் :guilabel:`Interpolation` உடன், நீங்கள் கட்டமைக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:533
+msgid ""
+"|checkbox| :guilabel:`Clip out of range values`: By default, the linear "
+"method assigns the first class (respectively the last class) color to values"
+" in the dataset that are lower than the set :guilabel:`Min` (respectively "
+"greater than the set :guilabel:`Max`) value. Check this setting if you do "
+"not want to render those values."
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`கிளிப் அவுட் ஆஃப் ரேஞ்ச் மதிப்புகள்`: இயல்பாக, "
+"லீனியர் முறையானது தரவுத்தொகுப்பில் உள்ள மதிப்புகளுக்கு முதல் வகுப்பு (முறையே"
+" கடைசி வகுப்பு) நிறத்தை ஒதுக்குகிறது. அந்த மதிப்புகளை நீங்கள் வழங்க "
+"விரும்பவில்லை என்றால், இந்த அமைப்பைச் சரிபார்க்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:538
+msgid ""
+":guilabel:`Legend settings`, for display in the :guilabel:`Layers` panel and"
+" the layout :ref:`legend item <layout_legend_item>`. More details at "
+":ref:`raster_legend_settings`."
+msgstr ""
+":guilabel:`Legend settings`, :guilabel:`Layers` பேனல் மற்றும் தளவமைப்பு "
+":ref:`legend உருப்படி <layout_legend_item>`. மேலும் விவரங்கள் "
+":ref:`raster_legend_settings` இல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:545
+msgid "Customize raster legend"
+msgstr "ராச்டர் புராணத்தைத் தனிப்பயனாக்கு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:547
+msgid ""
+"When applying a color ramp to a raster or a mesh layer, you may want to "
+"display a legend showing the classification. By default, QGIS displays a "
+"continuous color ramp with min and max values in the :guilabel:`Layers` "
+"panel and the layout :ref:`legend item <layout_legend_item>`. This can be "
+"customized using the :guilabel:`Legend settings` button in the "
+"classification widget."
+msgstr ""
+"ராச்டர் அல்லது மெச் லேயருக்கு வண்ணச் சரிவைப் பயன்படுத்தும்போது, "
+"​​வகைப்படுத்தலைக் காட்டும் ஒரு புராணக்கதையை நீங்கள் காட்ட விரும்பலாம். "
+"இயல்பாக, QGIS ஆனது :guilabel:`Layers` பேனல் மற்றும் தளவமைப்பு :ref:`legend "
+"உருப்படி <layout_legend_item>` இல் குறைந்தபட்ச மற்றும் அதிகபட்ச "
+"மதிப்புகளுடன் தொடர்ச்சியான வண்ண சாய்வைக் காட்டுகிறது. வகைப்படுத்தல் "
+"விட்செட்டில் உள்ள :guilabel:`Legend settings` பொத்தானைப் பயன்படுத்தி இதைத் "
+"தனிப்பயனாக்கலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:558
+msgid "Modifying a raster legend"
+msgstr "ராச்டர் புராணத்தை மாற்றியமைத்தல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:560
+msgid ""
+"In this dialog, you can set whether to |checkbox|:guilabel:`Use continuous "
+"legend`: if unchecked, the legend displays separated colors corresponding to"
+" the different classes applied. This option is not available for raster "
+":ref:`singleband gray <singleband_gray>` symbology."
+msgstr ""
+"இந்த உரையாடலில், |செக்பாக்ச்|:guilabel:`தொடர்ச்சியான லெசண்டைப் "
+"பயன்படுத்தலாமா` என்பதை அமைக்கலாம்: தேர்வு செய்யாவிட்டால், லெசண்ட் "
+"பயன்படுத்தப்படும் வெவ்வேறு வகுப்புகளுக்குத் தொடர்புடைய தனித்த நிறங்களைக் "
+"காட்டுகிறது. இந்த விருப்பம் raster :ref:`singleband சாம்பல் "
+"<singleband_gray>` சிம்பாலாசிக்கு கிடைக்கவில்லை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:565
+msgid ""
+"Checking the :guilabel:`Use continuous legend` allows you to configure both "
+"the labels and layout properties of the legend."
+msgstr ""
+":guilabel:`தொடர்ச்சியான லெசண்டைப் பயன்படுத்து` என்பதைச் சரிபார்ப்பது, "
+"லெசண்டின் லேபிள்கள் மற்றும் தளவமைப்பு பண்புகள் இரண்டையும் உள்ளமைக்க உங்களை "
+"அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:568
+msgid "**Labels**"
+msgstr "**லேபிள்கள்**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:570
+msgid "Add a :guilabel:`Prefix` and a :guilabel:`Suffix` to the labels"
+msgstr ""
+"லேபிள்களில் ஒரு :guilabel:`Prefix` மற்றும் ஒரு :guilabel:`Suffix` "
+"ஆகியவற்றைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:571
+msgid ""
+"Modify the :guilabel:`Minimum` and a :guilabel:`Maximum` values to show in "
+"the legend"
+msgstr ""
+"புராணக்கதையில் காண்பிக்க :guilabel:`குறைந்தபட்சம்` மற்றும் ஒரு "
+":guilabel:`அதிகபட்ச` மதிப்புகளை மாற்றவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:573
+msgid ":ref:`Customize <number_formatting>` the :guilabel:`Number format`"
+msgstr ":ref:`தனிப்பயனாக்கு <number_formatting>` :guilabel:`Number format`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:574
+msgid ""
+":ref:`Customize <text_format>` the :guilabel:`Text format` to use in the "
+"print layout legend."
+msgstr ""
+":ref:`அச்சு தளவமைப்பு லெசெண்டில் பயன்படுத்த <text_format>` :guilabel:`உரை "
+"வடிவம்` என்பதைத் தனிப்பயனாக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:577
+msgid "**Layout**"
+msgstr "**தளவமைப்பு**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:579
+msgid ""
+"Control the :guilabel:`Orientation` of the legend color ramp; it can be "
+"**Vertical** or **Horizontal**"
+msgstr ""
+"லெசண்ட் வண்ண சாய்வின் :guilabel:`Orientation` ஐக் கட்டுப்படுத்தவும்; அது "
+"**செங்குத்து** அல்லது **கிடைமட்ட**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:581
+msgid ""
+"Control the :guilabel:`Direction` of the values depending on the "
+"orientation:"
+msgstr ""
+"நோக்குநிலையைப் பொறுத்து மதிப்புகளின் :guilabel:`திசை`யைக் கட்டுப்படுத்தவும்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:583
+msgid ""
+"If vertical, you can display the **Maximum on top** or the **Minimum on "
+"top**"
+msgstr ""
+"செங்குத்தாக இருந்தால், **மேலே அதிகபட்சம்** அல்லது **குறைந்தபட்சம் மேல்**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:584
+msgid ""
+"If horizontal, you can display the **Maximum on right** or the **Minimum on "
+"right**"
+msgstr ""
+"கிடைமட்டமாக இருந்தால், **அதிகபட்சம் வலது** அல்லது **குறைந்தபட்சம் வலது**"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:588
+msgid "Layer rendering"
+msgstr "லேயர் வழங்குதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:590
+msgid ""
+"Over the symbology type applied to the layer band(s), you can achieve "
+"special rendering effects for the whole raster file(s):"
+msgstr ""
+"லேயர் பேண்ட்(களுக்கு) பயன்படுத்தப்படும் சிம்பாலாசி வகைக்கு மேல், முழு "
+"ராச்டர் கோப்பு(களுக்கு) சிறப்பு வழங்குதல் விளைவுகளை நீங்கள் அடையலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:593
+msgid "Use one of the blending modes (see :ref:`blend-modes`)"
+msgstr "கலப்பு முறைகளில் ஒன்றைப் பயன்படுத்தவும் (பார்க்க :ref:`blend-modes`)"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:594
+msgid ""
+"Set custom :guilabel:`Brightness`, :guilabel:`Saturation`, :guilabel:`Gamma`"
+" and :guilabel:`Contrast` to colors."
+msgstr ""
+"தனிப்பயன் :guilabel:`Brightness`, :guilabel:`Saturation`, :guilabel:`Gamma` "
+"மற்றும் :guilabel:`கான்ட்ராச்ட்` ஆகியவற்றை வண்ணங்களுக்கு அமைக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:596
+msgid ""
+"With the |checkbox|:guilabel:`Invert colors`, the layer is rendered with "
+"opposite colors. Handy, for example, to switch out-of-the box OpenStreetMap "
+"tiles to dark mode."
+msgstr ""
+"|செக்பாக்ச்|:guilabel:`நிறங்களைத் தலைகீழாக மாற்றவும்` உடன், அடுக்கு எதிர் "
+"வண்ணங்களுடன் வழங்கப்படுகிறது. எடுத்துக்காட்டாக, ஓப்பன்ச்ட்ரீட்மேப் டைல்களை "
+"டார்க் மோடுக்கு மாற்றுவது எளிது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:599
+msgid ""
+"Turn the layer to :guilabel:`Grayscale` option either 'By lightness', 'By "
+"luminosity' or 'By average'."
+msgstr ""
+"லேயரை :guilabel:`Grayscale` விருப்பத்திற்கு மாற்றவும். 'இளர்ச்சியால்', "
+"'ஒளிர்வினால்' அல்லது 'சராசரியால்'."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:601
+msgid ""
+":guilabel:`Colorize` and adjust the :guilabel:`Strength` of :guilabel:`Hue` "
+"in the color table"
+msgstr ""
+":guilabel:`நிறமாக்கு` மற்றும் வண்ண அட்டவணையில் :guilabel:`Hue` இன் "
+":guilabel:`Strength` ஐ சரிசெய்யவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:604
+msgid ""
+"Press :guilabel:`Reset` to remove any custom changes to the layer rendering."
+msgstr ""
+"லேயர் ரெண்டரிங்கில் ஏதேனும் தனிப்பயன் மாற்றங்களை அகற்ற :guilabel:`Reset` ஐ "
+"அழுத்தவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:611
+msgid "Raster Symbology - Layer rendering and Resampling settings"
+msgstr "ராச்டர் சிம்பாலாசி - லேயர் வழங்குதல் மற்றும் மறு மாதிரி அமைப்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:615
+msgid "Resampling"
+msgstr "மறு மாதிரியாக்கம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:617
+msgid ""
+"The :guilabel:`Resampling` option has effect when you zoom in and out of an "
+"image. Resampling modes can optimize the appearance of the map. They "
+"calculate a new gray value matrix through a geometric transformation."
+msgstr ""
+":guilabel:`Resampling` விருப்பம் ஒரு படத்தை பெரிதாக்கும்போதும், "
+"பெரிதாக்கும்போதும் விளைவை ஏற்படுத்துகிறது. மறு மாதிரி முறைகள் வரைபடத்தின் "
+"தோற்றத்தை மேம்படுத்தலாம். அவர்கள் ஒரு புதிய சாம்பல் மதிப்பு அணியை வடிவியல் "
+"மாற்றம் மூலம் கணக்கிடுகின்றனர்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:623
+msgid ""
+"When applying the 'Nearest neighbour' method, the map can get a pixelated "
+"structure when zooming in. This appearance can be improved by using the "
+"'Bilinear (2x2 kernel)' or 'Cubic (4x4 kernel)' method, which cause sharp "
+"edges to be blurred. The effect is a smoother image. This method can be "
+"applied to for instance digital topographic raster maps."
+msgstr ""
+"'அருகிலுள்ள அண்டை' முறையைப் பயன்படுத்தும்போது, ​​பெரிதாக்கும்போது வரைபடம் "
+"ஒரு பிக்சலேட்டட் கட்டமைப்பைப் பெறலாம். இந்த தோற்றத்தை 'பைலினியர் (2x2 "
+"கர்னல்)' அல்லது 'கியூபிக் (4x4 கர்னல்)' முறையைப் பயன்படுத்தி மேம்படுத்தலாம்,"
+" இதனால் கூர்மையான விளிம்புகள் மங்கலாகின்றன. விளைவு ஒரு மென்மையான படம். "
+"எடுத்துக்காட்டாக டிசிட்டல் டோபோகிராஃபிக் ராச்டர் வரைபடங்களுக்கு இந்த "
+"முறையைப் பயன்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:630
+msgid ""
+"|checkbox| :guilabel:`Early resampling`: allows to calculate the raster "
+"rendering at the provider level where the resolution of the source is known,"
+" and ensures a better zoom in rendering with QGIS custom styling. Really "
+"convenient for tile rasters loaded using an :ref:`interpretation method "
+"<interpretation>`."
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`Early resampling`: மூலத்தின் தெளிவுத்திறன் "
+"அறியப்பட்ட வழங்குநர் மட்டத்தில் ராச்டர் ரெண்டரிங்கைக் கணக்கிட அனுமதிக்கிறது,"
+" மேலும் QGIS தனிப்பயன் ச்டைலிங் மூலம் வழங்குதல் செய்வதில் சிறந்த சூமை உறுதி "
+"செய்கிறது. டைல் ராச்டர்களுக்கு மிகவும் வசதியானது :ref:`interpretation method"
+" <interpretation>`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:641
+msgid "Transparency Properties"
+msgstr "வெளிப்படைத்தன்மை பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:643
+msgid ""
+"QGIS provides capabilities to set the |transparency| "
+":guilabel:`Transparency` level of a raster layer."
+msgstr ""
+"QGIS ஆனது |வெளிப்படைத்தன்மையை அமைப்பதற்கான திறன்களை வழங்குகிறது "
+":guilabel:`வெளிப்படைத்தன்மை` ஒரு ராச்டர் லேயரின் நிலை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:646
+msgid ""
+"Use the :guilabel:`Global opacity` slider to set to what extent the "
+"underlying layers (if any) should be visible through the current raster "
+"layer. This is very useful if you overlay raster layers (e.g., a shaded "
+"relief map overlaid by a classified raster map). This will make the look of "
+"the map more three dimensional. The opacity of the raster can be data-"
+"defined, and vary e.g. depending on the visibility of another layer, by "
+"temporal variables, on different pages of an atlas, ..."
+msgstr ""
+"தற்போதைய ராச்டர் லேயர் மூலம் அடிப்படை அடுக்குகள் (ஏதேனும் இருந்தால்) எந்த "
+"அளவிற்குத் தெரிய வேண்டும் என்பதை அமைக்க :guilabel:`Global opacity` ச்லைடரைப்"
+" பயன்படுத்தவும். நீங்கள் ராச்டர் லேயர்களை மேலெழுதினால் இது மிகவும் "
+"பயனுள்ளதாக இருக்கும் (எ.கா., வகைப்படுத்தப்பட்ட ராச்டர் வரைபடத்தால் "
+"மேலெழுதப்பட்ட நிழல் நிவாரண வரைபடம்). இது வரைபடத்தின் தோற்றத்தை மேலும் "
+"முப்பரிமாணமாக்கும். ராச்டரின் ஒளிபுகாநிலை தரவு-வரையறுக்கப்படலாம் மற்றும் "
+"மாறுபடும் எ.கா. மற்றொரு அடுக்கின் தெரிவுநிலையைப் பொறுத்து, தற்காலிக மாறிகள் "
+"மூலம், அட்லசின் வெவ்வேறு பக்கங்களில், ..."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:662
+msgid "Raster Transparency"
+msgstr "ராச்டர் வெளிப்படைத்தன்மை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:664
+msgid ""
+"With |checkbox| :guilabel:`No data value` QGIS reports the original source "
+"no data value (if defined) which you can consider as is in the rendering. "
+"Additionally, you can enter a raster value that should be treated as an "
+":guilabel:`Additional no data value`. The :guilabel:`Display no data as` "
+"color selector allows you to apply a custom color to no data pixels, instead"
+" of the default transparent rendering."
+msgstr ""
+"|செக்பாக்ச்| உடன் :guilabel:`தரவு மதிப்பு இல்லை` QGIS அசல் மூலத்தை எந்த தரவு"
+" மதிப்பையும் தெரிவிக்கவில்லை (வரையறுக்கப்பட்டிருந்தால்) அதை நீங்கள் "
+"வழங்குதல் செய்வதில் உள்ளபடியே கருதலாம். கூடுதலாக, நீங்கள் ஒரு ராச்டர் "
+"மதிப்பை உள்ளிடலாம், அது :guilabel:`கூடுதல் தரவு மதிப்பு இல்லை` எனக் கருதப்பட"
+" வேண்டும். :guilabel:`Display no தகவல்கள் as` வண்ணத் தேர்வியானது, இயல்புநிலை"
+" வெளிப்படையான ரெண்டரிங்கிற்குப் பதிலாக, தரவு படப்புள்ளிகள் இல்லாத தனிப்பயன் "
+"வண்ணத்தைப் பயன்படுத்த உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:671
+msgid ""
+"An even more flexible way to customize the transparency is available in the "
+":guilabel:`Custom transparency options` section:"
+msgstr ""
+"வெளிப்படைத்தன்மையைத் தனிப்பயனாக்க இன்னும் நெகிழ்வான வழி :guilabel:`தனிப்பயன்"
+" வெளிப்படைத்தன்மை விருப்பங்கள்` பிரிவில் உள்ளது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:674
+msgid ""
+"Use :guilabel:`Transparency band` to apply transparency for an entire band."
+msgstr ""
+"முழு இசைக்குழுவிற்கும் வெளிப்படைத்தன்மையைப் பயன்படுத்த "
+":guilabel:`வெளிப்படைத்தன்மை பேண்ட்` ஐப் பயன்படுத்தவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:676
+msgid ""
+"Provide a list of pixels to make transparent with corresponding levels of "
+"transparency:"
+msgstr "பிக்சல்களின் பட்டியலை வழங்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:679
+msgid ""
+"Click the |symbologyAdd| :sup:`Add values manually` button. A new row will "
+"appear in the pixel list."
+msgstr ""
+"|சிம்பலாசி சேர்| என்பதைக் சொடுக்கு செய்யவும் :sup:`மதிப்புகளை கைமுறையாகச் "
+"சேர்` பொத்தான். படப்புள்ளி பட்டியலில் புதிய வரிசை தோன்றும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:681
+msgid ""
+"For single-band based symbology (e.g. DEMs), enter the **From** and **To** "
+"values and adjust the **Percent Transparent** to apply."
+msgstr ""
+"சிங்கிள்-பேண்ட் அடிப்படையிலான சிம்பாலாசிக்கு (எ.கா. டிஇஎம்கள்), **இருந்து** "
+"மற்றும் **இடு** மதிப்புகளை உள்ளிட்டு, **சதவீதம் வெளிப்படை**யைப் "
+"பயன்படுத்துவதற்குச் சரிசெய்யவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:683
+msgid ""
+"For multiband based symbology (e.g. RGB images) enter the **Red**, **Green**"
+" and **Blue** values of the pixel and adjust the **Percent Transparent** to "
+"apply. QGIS supports **Tolerance** for pixel values, when defining "
+"transparency. This means that pixels with color close to the specified RGB "
+"values can also be made transparent. Note that this feature applies only to "
+"multiband rasters."
+msgstr ""
+"மல்டிபேண்ட் அடிப்படையிலான சிம்பாலாசிக்கு (எ.கா. RGB படங்கள்) பிக்சலின் "
+"**சிவப்பு**, **பச்சை** மற்றும் **நீலம்** மதிப்புகளை உள்ளிட்டு, **சதவீதம் "
+"வெளிப்படையான**ஐப் பயன்படுத்துவதற்குச் சரிசெய்யவும். QGIS வெளிப்படைத்தன்மையை "
+"வரையறுக்கும் போது, ​​பிக்சல் மதிப்புகளுக்கு **சகிப்புத்தன்மை** ஆதரிக்கிறது. "
+"அதாவது, குறிப்பிட்ட RGB மதிப்புகளுக்கு நெருக்கமான வண்ணம் கொண்ட "
+"பிக்சல்களையும் வெளிப்படையானதாக மாற்றலாம். இந்த நற்பொருத்தம் மல்டிபேண்ட் "
+"ராச்டர்களுக்கு மட்டுமே பொருந்தும் என்பதை நினைவில் கொள்ளவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:688
+msgid ""
+"Alternatively, you can fetch the pixel values directly from the raster using"
+" the |contextHelp| :sup:`Add values from display` button. Then enter the "
+"transparency value."
+msgstr ""
+"மாற்றாக, நீங்கள் |contextHelp| ஐப் பயன்படுத்தி ராச்டரிலிருந்து நேரடியாக "
+"படப்புள்ளி மதிப்புகளைப் பெறலாம். :sup:`டிச்ப்ளேவிலிருந்து மதிப்புகளைச் சேர்`"
+" பொத்தான். பின்னர் வெளிப்படைத்தன்மை மதிப்பை உள்ளிடவும்."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1393
 msgid "contextHelp"
 msgstr "contextHelp"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:692
+msgid "Repeat the steps to adjust more values with custom transparency."
+msgstr ""
+"தனிப்பயன் வெளிப்படைத்தன்மையுடன் கூடுதல் மதிப்புகளைச் சரிசெய்ய படிகளை "
+"மீண்டும் செய்யவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:693
+msgid "Press the :guilabel:`Apply` button and have a look at the map."
+msgstr ":guilabel:`Apply` பொத்தானை அழுத்தி வரைபடத்தைப் பாருங்கள்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:695
+msgid ""
+"As you can see, it is quite easy to set custom transparency, but it can be "
+"quite a lot of work. Therefore, you can use the button |fileSave| "
+":sup:`Export to file` to save your transparency list to a file. The button "
+"|fileOpen| :sup:`Import from file` loads your transparency settings and "
+"applies them to the current raster layer."
+msgstr ""
+"நீங்கள் பார்க்க முடியும் என, தனிப்பயன் வெளிப்படைத்தன்மையை அமைப்பது மிகவும் "
+"எளிதானது, ஆனால் அது நிறைய வேலை செய்யலாம். எனவே, நீங்கள் |fileSave| "
+"பொத்தானைப் பயன்படுத்தலாம் :sup:உங்கள் வெளிப்படைத்தன்மை பட்டியலை ஒரு கோப்பில்"
+" சேமிக்க, `கோப்புக்கு ஏற்றுமதி செய்யுங்கள்`. பொத்தான் |fileOpen| "
+":sup:`கோப்பிலிருந்து இறக்குமதி` உங்கள் வெளிப்படைத்தன்மை அமைப்புகளை ஏற்றி, "
+"தற்போதைய ராச்டர் லேயருக்குப் பயன்படுத்துகிறது."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1411
 msgid "fileSave"
 msgstr "fileSave"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:708
+msgid "Using tolerances for multiband rasters"
+msgstr "மல்டிபேண்ட் ராச்டர்களுக்கான சகிப்புத்தன்மையைப் பயன்படுத்துதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:715
+msgid "Labels Properties"
+msgstr "லேபிள்கள் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:717
+msgid ""
+"The |labelingSingle| :guilabel:`Labels` properties provides you with all the"
+" needed and appropriate capabilities to configure smart labeling on raster "
+"layers. This dialog can also be accessed from the :guilabel:`Layer Styling` "
+"panel."
+msgstr ""
+"|லேபிளிங் சிங்கிள்| :guilabel:'Labels' பண்புகள் ராச்டர் லேயர்களில் அறிவுள்ள "
+"லேபிளிங்கை உள்ளமைக்க தேவையான மற்றும் பொருத்தமான அனைத்து திறன்களையும் "
+"உங்களுக்கு வழங்குகிறது. இந்த உரையாடலை :guilabel:`Layer Styling` பேனலில் "
+"இருந்தும் அணுகலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:721
+msgid "At the top of the dialog, you have:"
+msgstr "உரையாடலின் மேலே, உங்களிடம் உள்ளது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:723
+msgid ""
+"a combobox for selecting the appropriate labeling method for the active "
+"layer"
+msgstr ""
+"செயலில் உள்ள லேயருக்கு பொருத்தமான லேபிளிங் முறையைத் தேர்ந்தெடுப்பதற்கான "
+"காம்போபாக்ச்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:724
+msgid ""
+"the |labelingRules| :sup:`Configure project labeling rules` button: helps "
+"you control interactions between labels and features across the layers in "
+"the project. More details at :ref:`labeling_rules`."
+msgstr ""
+"|லேபிளிங் விதிகள்| :sup:'திட்ட லேபிளிங் விதிகளை உள்ளமைக்கவும்' பொத்தான்: "
+"திட்டத்தில் உள்ள லேயர்கள் முழுவதும் லேபிள்கள் மற்றும் அம்சங்களுக்கு இடையேயான"
+" தொடர்புகளை கட்டுப்படுத்த உதவுகிறது. மேலும் விவரங்கள் :ref:`labeling_rules` "
+"இல்."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1425
 msgid "labelingRules"
 msgstr "labelingRules"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:727
+msgid ""
+"the |autoPlacementSettings| :sup:`Automated placement settings (applies to "
+"all layers)` button: configure general properties on label placement and "
+"conflicts resolution. More details at :ref:`automated_placement`."
+msgstr ""
+"|autoPlacementSettings| :sup:`தானியங்கி வேலை வாய்ப்பு அமைப்புகள் (அனைத்து "
+"அடுக்குகளுக்கும் பொருந்தும்)` பொத்தான்: சிட்டை இடம் மற்றும் முரண்பாடுகள் "
+"தீர்மானத்தில் பொதுவான பண்புகளை உள்ளமைக்கவும். மேலும் விவரங்கள் "
+":ref:`automated_placement` இல்."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1389
 msgid "autoPlacementSettings"
 msgstr "autoPlacementSettings"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:732
+msgid ""
+"The first step is to choose the labeling method from the drop-down list. "
+"Available methods are:"
+msgstr ""
+"கீழ்தோன்றும் பட்டியலில் இருந்து லேபிளிங் முறையைத் தேர்ந்தெடுப்பது முதல் படி."
+" கிடைக்கக்கூடிய முறைகள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:735
+msgid ""
+"|labelingNone| :guilabel:`No labels`: the default value, showing no labels "
+"from the layer"
+msgstr ""
+"|labelingNone| :guilabel:`லேபிள்கள் இல்லை`: இயல்புநிலை மதிப்பு, லேயரில் "
+"இருந்து லேபிள்கள் இல்லை"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1423
 msgid "labelingNone"
 msgstr "labelingNone"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:737
+msgid ""
+"|labelingSingle| :guilabel:`Label with pixel values`: Show labels on the map"
+" using a band."
+msgstr ""
+"|லேபிளிங் சிங்கிள்| :guilabel:`பிக்சல் மதிப்புகள் கொண்ட லேபிள்`: பேண்ட்டைப் "
+"பயன்படுத்தி வரைபடத்தில் லேபிள்களைக் காட்டு."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:739
+msgid ""
+"Using the |labelingSingle| :guilabel:`Label with pixel values` option, the "
+"following dialog opens."
+msgstr ""
+"|labelingSingle| ஐப் பயன்படுத்துதல் :guilabel:`Label with படப்புள்ளி values`"
+" விருப்பம், பின்வரும் உரையாடல் திறக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:748
+msgid "Raster layer labeling settings"
+msgstr "ராச்டர் லேயர் லேபிளிங் அமைப்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:750
+msgid "At the top of the dialog:"
+msgstr "உரையாடலின் மேலே:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:752
+msgid ""
+"A :guilabel:`Value` drop-down list allows you to select the band to take the"
+" values from"
+msgstr ""
+"A :guilabel:`Value` கீழ்தோன்றும் பட்டியல், மதிப்புகளை எடுக்க இசைக்குழுவைத் "
+"தேர்ந்தெடுக்க உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:753
+msgid ""
+"Press :guilabel:`Customize` to configure a :ref:`proper number formatting "
+"<number_formatting>`"
+msgstr ""
+"ஒரு :ref:`சரியான எண் வடிவமைப்பை <number_formatting>` உள்ளமைக்க "
+":guilabel:`Customize` ஐ அழுத்தவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:754
+msgid ""
+"By default, the displayed value represents individual pixel band value. With"
+" :guilabel:`Resample over`, you can compute the  value from the neighbouring"
+" pixels (setting ``2`` means ``2*2=4`` pixels) using a statistical method "
+"set in the :guilabel:`Resample using` widget."
+msgstr ""
+"இயல்பாக, காட்டப்படும் மதிப்பு தனிப்பட்ட படப்புள்ளி பேண்ட் மதிப்பைக் "
+"குறிக்கிறது. :guilabel:`Resample over` உடன், நீங்கள் அருகிலுள்ள "
+"பிக்சல்களிலிருந்து மதிப்பைக் கணக்கிடலாம் (``2`` என்பது ``2*2=4`` பிக்சல்களை "
+"அமைப்பது) :guilabel:`Resample using` விட்செட்டில் அமைக்கப்பட்ட புள்ளிவிவர "
+"முறையைப் பயன்படுத்தி."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:764
+msgid "Pixels labeled using various resampling options"
+msgstr ""
+"பல்வேறு மறு மாதிரி விருப்பங்களைப் பயன்படுத்தி லேபிளிடப்பட்ட படப்புள்ளிகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:766
+msgid ""
+"Below are displayed options to customize the labels, under various tabs:"
+msgstr ""
+"பல்வேறு தாவல்களின் கீழ், லேபிள்களைத் தனிப்பயனாக்குவதற்கான விருப்பங்கள் கீழே "
+"காட்டப்பட்டுள்ளன:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:768
+msgid "|text| :ref:`Text <labels_text>`"
+msgstr "|உரை| :ref:`உரை <labels_text>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1477
 msgid "text"
 msgstr "text"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:769
+msgid "|labelformatting| :ref:`Formatting <labels_formatting>`"
+msgstr "|லேபிள் வடிவமைத்தல்| :ref:`வடிவமைத்தல் <labels_formatting>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1421
 msgid "labelformatting"
 msgstr "labelformatting"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:770
+msgid "|labelbuffer| :ref:`Buffer <labels_buffer>`"
+msgstr "|labelbuffer| :ref:`Buffer <labels_buffer>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1419
 msgid "labelbuffer"
 msgstr "labelbuffer"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:771
+msgid "|labelbackground| :ref:`Background <labels_background>`"
+msgstr "|லேபிள் பின்னணி| :ref:`பின்னணி <labels_background>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1417
 msgid "labelbackground"
 msgstr "labelbackground"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:772
+msgid "|labelshadow| :ref:`Shadow <labels_shadow>`"
+msgstr "|labelshadow| :ref:`Shadow <labels_shadow>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1431
 msgid "labelshadow"
 msgstr "labelshadow"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:773
+msgid "|labelplacement| :ref:`Placement <labels_placement>`"
+msgstr "|labelplacement| :ref:`Placement <labels_placement>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1429
 msgid "labelplacement"
 msgstr "labelplacement"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:774
+msgid "|render| :ref:`Rendering <labels_rendering>`"
+msgstr "|ரெண்டர்| :ref:`ரெண்டரிங் <labels_rendering>`"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1459
 msgid "render"
 msgstr "render"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:776
+msgid ""
+"Description of how to set each property is exposed at :ref:`showlabels`."
+msgstr ""
+"ஒவ்வொரு சொத்தையும் எவ்வாறு அமைப்பது என்பது பற்றிய விளக்கம் :ref:`showlabels`"
+" இல் வெளிப்படுத்தப்பட்டுள்ளது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:782
+msgid "Histogram Properties"
+msgstr "இச்டோகிராம் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:784
+msgid ""
+"The |rasterHistogram| :guilabel:`Histogram` tab allows you to view the "
+"distribution of the values in your raster. The histogram is generated when "
+"you press the :guilabel:`Compute Histogram` button. All existing bands will "
+"be displayed together. You can save the histogram as an image with the "
+"|fileSave| button."
+msgstr ""
+"தி |ராச்டர் இச்டோகிராம்| :guilabel:`இச்டோகிராம்` தாவல் உங்கள் ராச்டரில் உள்ள"
+" மதிப்புகளின் விநியோகத்தைப் பார்க்க உங்களை அனுமதிக்கிறது. நீங்கள் "
+":guilabel:`கம்ப்யூட் இச்டோகிராம்` பொத்தானை அழுத்தும்போது இச்டோகிராம் "
+"உருவாக்கப்படும். தற்போதுள்ள அனைத்து இசைக்குழுக்களும் ஒன்றாகக் காட்டப்படும். "
+"நீங்கள் |fileSave| மூலம் இச்டோகிராமை ஒரு படமாக சேமிக்கலாம் பொத்தான்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:791
+msgid ""
+"At the bottom of the histogram, you can select a raster band in the drop-"
+"down menu and :guilabel:`Set min/max style for` it. The |actionRun| "
+":guilabel:`Prefs/Actions` drop-down menu gives you advanced options to "
+"customize the histogram:"
+msgstr ""
+"இச்டோகிராமின் கீழே, கீழ்தோன்றும் பட்டியலில் ராச்டர் பேண்டைத் "
+"தேர்ந்தெடுக்கலாம் மற்றும் :guilabel:`அதற்கு நிமிடம்/அதிகபட்ச பாணியை "
+"அமைக்கவும்`. தி |ஆக்சன் ரன்| :guilabel:`Prefs/Actions` கீழ்தோன்றும் "
+"பட்டியல், இச்டோகிராமைத் தனிப்பயனாக்க மேம்பட்ட விருப்பங்களை வழங்குகிறது:"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1385
 msgid "actionRun"
 msgstr "actionRun"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:796
+msgid ""
+"With the :guilabel:`Visibility` option, you can display histograms for "
+"individual bands. You will need to select the option |radioButtonOff| "
+":guilabel:`Show selected band`."
+msgstr ""
+":guilabel:`Visibility` விருப்பத்துடன், நீங்கள் தனிப்பட்ட பட்டைகளுக்கான "
+"இச்டோகிராம்களைக் காட்டலாம். நீங்கள் |radioButtonOff| என்ற விருப்பத்தைத் "
+"தேர்ந்தெடுக்க வேண்டும் :guilabel:`தேர்ந்தெடுக்கப்பட்ட இசைக்குழுவைக் காட்டு`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:800
+msgid ""
+"The :guilabel:`Min/max options` allow you to 'Always show min/max markers', "
+"to 'Zoom to min/max' and to 'Update style to min/max'."
+msgstr ""
+":guilabel:`Min/max விருப்பங்கள்', 'எப்போதும் நிமிடம்/அதிகபட்ச "
+"குறிப்பான்களைக் காட்டுங்கள்', 'நிமிடத்திற்கு/அதிகபட்சமாக பெரிதாக்க' மற்றும் "
+"'உடைமையை நிமிடம்/அதிகபட்சமாகப் புதுப்பிக்கவும்' உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:803
+msgid ""
+"The :guilabel:`Actions` option allows you to 'Reset' or 'Recompute "
+"histogram' after you have changed the min or max values of the band(s)."
+msgstr ""
+":guilabel:`Actions` விருப்பமானது, நீங்கள் இசைக்குழுவின் குறைந்தபட்ச அல்லது "
+"அதிகபட்ச மதிப்புகளை மாற்றிய பின் 'மீட்டமை' அல்லது 'இச்டோகிராம் மறுகணிப்பு' "
+"செய்ய அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:813
+msgid "Raster Histogram"
+msgstr "ராச்டர் இச்டோகிராம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:820
+msgid "Rendering Properties"
+msgstr "வழங்குதல் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:822
+msgid "In the |rendering| :guilabel:`Rendering` tab, it's possible to:"
+msgstr "|ரெண்டரிங்| :guilabel:`ரெண்டரிங்` டேப், இது சாத்தியம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:824
+msgid ""
+"set :guilabel:`Scale dependent visibility` for the layer: You can set the "
+":guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)` scales, "
+"defining a range of scales in which the layer will be visible. It will be "
+"hidden outside this range. The |mapIdentification| :sup:`Set to current "
+"canvas scale` button helps you use the current map canvas scale as a "
+"boundary. See :ref:`label_scaledepend` for more information."
+msgstr ""
+"அடுக்குக்கு :guilabel:`அளவிலான சார்புத் தெரிவுநிலை`: நீங்கள் "
+":guilabel:`அதிகபட்சம் (உள்ளடக்கப்பட்டது)` மற்றும் :guilabel:`குறைந்தபட்சம் "
+"(பிரத்தியேகமானது)` அளவுகோல்களை அமைக்கலாம், இதில் லேயர் தெரியும் அளவுகளின் "
+"வரம்பை வரையறுக்கலாம். இது இந்த வரம்பிற்கு வெளியே மறைக்கப்படும். |வரைபட "
+"அடையாளம்| :sup:`தற்போதைய கேன்வாச் அளவுகோலுக்கு அமை` பொத்தான் தற்போதைய வரைபட "
+"கேன்வாச் அளவை எல்லையாகப் பயன்படுத்த உதவுகிறது. மேலும் தகவலுக்கு "
+":ref:`label_scaledepend` ஐப் பார்க்கவும்."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1435
 msgid "mapIdentification"
 msgstr "mapIdentification"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:834
+msgid ""
+"You can also activate scale dependent visibility on a layer from within the "
+":guilabel:`Layers` panel: right-click on the layer and in the contextual "
+"menu, select :guilabel:`Set Layer Scale Visibility`."
+msgstr ""
+"நீங்கள் :guilabel:`Layers` பேனலில் இருந்து ஒரு லேயரில் அளவை சார்ந்து "
+"தெரிவுநிலையை செயல்படுத்தலாம்: லேயரில் வலது சொடுக்கு செய்து சூழல் பட்டியலில்,"
+" :guilabel:`Layer Scale Visibilityஐ அமை` என்பதைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:838
+msgid ""
+"|checkbox| :guilabel:`Refresh layer at interval`: controls whether and how "
+"regular a layer can be refreshed. Available :guilabel:`Configuration` "
+"options are:"
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`இடைவெளியில் லேயரைப் புதுப்பிக்கவும்`: ஒரு லேயரை "
+"எப்படி வழக்கமான முறையில் புதுப்பிக்கலாம் என்பதைக் கட்டுப்படுத்துகிறது. "
+"கிடைக்கும் :guilabel:`Configuration` விருப்பங்கள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:841
+msgid ""
+":guilabel:`Reload data`: the layer will be completely refreshed. Any cached "
+"data will be discarded and refetched from the provider. This mode may result"
+" in slower map refreshes."
+msgstr ""
+":guilabel:`தரவை மீண்டும் ஏற்று`: அடுக்கு முழுமையாக புதுப்பிக்கப்படும். "
+"தேக்ககப்படுத்தப்பட்ட எந்தத் தரவும் நிராகரிக்கப்படும் மற்றும் "
+"வழங்குநரிடமிருந்து மீட்டெடுக்கப்படும். இந்த பயன்முறை மெதுவாக வரைபட "
+"புதுப்பிப்புகளை ஏற்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:844
+msgid ""
+":guilabel:`Redraw layer only`: this mode is useful for animation or when the"
+" layer's style will be updated at regular intervals. Canvas updates are "
+"deferred in order to avoid refreshing multiple times if more than one layer "
+"has an auto update interval set."
+msgstr ""
+":guilabel:`லேயரை மட்டும் மீண்டும் வரையவும்`: இந்த பயன்முறை அனிமேசனுக்கு "
+"அல்லது லேயரின் நடை சீரான இடைவெளியில் புதுப்பிக்கப்படும்போது பயனுள்ளதாக "
+"இருக்கும். ஒன்றுக்கும் மேற்பட்ட அடுக்குகளில் தானியங்கு புதுப்பிப்பு இடைவெளி "
+"அமைக்கப்பட்டிருந்தால், பல முறை புதுப்பிப்பதைத் தவிர்ப்பதற்காக கேன்வாச் "
+"புதுப்பிப்புகள் ஒத்திவைக்கப்படுகின்றன."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:851
+msgid ""
+"It is also possible to set the :guilabel:`Interval (seconds)` between "
+"consecutive refreshments."
+msgstr ""
+"தொடர்ச்சியான சிற்றுண்டிகளுக்கு இடையே :guilabel:`இடைவெளி (வினாடிகள்)` ஐ "
+"அமைக்கவும் முடியும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:859
+msgid "Raster Rendering Properties"
+msgstr "ராச்டர் வழங்குதல் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:866
+msgid "Temporal Properties"
+msgstr "தற்காலிக பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:868
+msgid ""
+"The |temporal| :guilabel:`Temporal` tab provides options to control the "
+"rendering of the layer over time. Such dynamic rendering requires the "
+":ref:`temporal navigation <maptimecontrol>` to be enabled over the map "
+"canvas."
+msgstr ""
+"தி |டெம்போரல்| :guilabel:`Temporal` தாவல் காலப்போக்கில் லேயரின் "
+"ரெண்டரிங்கைக் கட்டுப்படுத்துவதற்கான விருப்பங்களை வழங்குகிறது. இத்தகைய மாறும்"
+" ரெண்டரிங்கிற்கு :ref:`temporal வானோடல் <maptimecontrol>` வரைபட கேன்வாசில் "
+"செயல்படுத்தப்பட வேண்டும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:878
+msgid "Raster Temporal Properties"
+msgstr "ராச்டர் தற்காலிக பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:880
+msgid ""
+"Check the |checkbox| :guilabel:`Dynamic Temporal Control` option and set "
+"whether the layer redraw should be:"
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`டைனமிக் டெம்போரல் கண்ட்ரோல்` விருப்பம் மற்றும் லேயர்"
+" மீண்டும் வரைய வேண்டுமா என்பதை அமைக்கவும்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:883
+msgid ""
+":guilabel:`Automatic`: the rendering is controlled by the underlying data "
+"provider if it supports temporal data handling. E.g. this can be used with "
+"WMS-T layers or PostgreSQL rasters."
+msgstr ""
+":guilabel:`தானியங்கி`: வழங்குதல் தற்காலிக தரவு கையாளுதலை ஆதரித்தால், "
+"அடிப்படை தரவு வழங்குநரால் கட்டுப்படுத்தப்படும். எ.கா. இதை WMS-T லேயர்கள் "
+"அல்லது PostgreSQL ராச்டர்களுடன் பயன்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:890
+msgid ""
+":guilabel:`Fixed Date/Time`: only show the raster layer at a single, "
+"specific date/time. This avoids having to enter the same value for both the "
+"start and end of the temporal range."
+msgstr ""
+":guilabel:`நிலையான தேதி/நேரம்`: ராச்டர் லேயரை ஒரு குறிப்பிட்ட தேதி/நேரத்தில்"
+" மட்டும் காட்டு. இது தற்காலிக வரம்பின் தொடக்க மற்றும் முடிவு இரண்டிற்கும் "
+"ஒரே மதிப்பை உள்ளிடுவதைத் தவிர்க்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:892
+msgid ""
+":guilabel:`Fixed time range`: only show the raster layer if the animation "
+"time is within a :guilabel:`Start date` and :guilabel:`End date` range."
+msgstr ""
+":guilabel:`நிலையான நேர வரம்பு`: அனிமேசன் நேரம் :guilabel:`தொடக்க தேதி` "
+"மற்றும் :guilabel:`முடிவு தேதி` வரம்பிற்குள் இருந்தால் மட்டுமே ராச்டர் "
+"லேயரைக் காட்டு."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:894
+msgid ""
+":guilabel:`Fixed Time Range Per Band`: only shows a band when the current "
+"animation time is between its :guilabel:`Begin` and :guilabel:`End` date "
+"range. This option allows you to either manually set these time ranges for "
+"each band or use the |expression| button to automatically generate datetime "
+"values, enabling detailed temporal analysis and visualization. This mode is "
+"particularly useful for working with raster layers where each band "
+"corresponds to a specific time period, such as NetCDF files."
+msgstr ""
+":guilabel:`ஒரு இசைக்குழுவிற்கு நிலையான நேர வரம்பு`: தற்போதைய அனிமேசன் நேரம் "
+"அதன் :guilabel:`Begin` மற்றும் :guilabel:`End` தேதி வரம்பிற்கு இடையில் "
+"இருக்கும்போது மட்டுமே ஒரு இசைக்குழுவைக் காட்டுகிறது. ஒவ்வொரு "
+"இசைக்குழுவிற்கும் இந்த நேர வரம்புகளை கைமுறையாக அமைக்க அல்லது |expression| "
+"ஐப் பயன்படுத்த இந்த விருப்பம் உங்களை அனுமதிக்கிறது விரிவான தற்காலிக "
+"பகுப்பாய்வு மற்றும் காட்சிப்படுத்தலைச் செயல்படுத்தி, தேதிநேர மதிப்புகளை "
+"தானாக உருவாக்க பொத்தான். இந்த பயன்முறையானது ராச்டர் லேயர்களுடன் பணிபுரிய "
+"மிகவும் பயனுள்ளதாக இருக்கும், அங்கு ஒவ்வொரு இசைக்குழுவும் NetCDF கோப்புகள் "
+"போன்ற ஒரு குறிப்பிட்ட காலத்திற்கு ஒத்திருக்கும்."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1407
 msgid "expression"
 msgstr "expression"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:907
+msgid "Example of using the Fixed Time Range Per Band mode"
+msgstr ""
+"ஒரு பேண்ட் பயன்முறையில் நிலையான நேர வரம்பைப் பயன்படுத்துவதற்கான "
+"எடுத்துக்காட்டு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:909
+msgid ""
+":guilabel:`Represents Temporal Values`: interprets each pixel in the raster "
+"layer as a datetime value. When this temporal mode is active, pixels that do"
+" not fall within the temporal range specified in the render context will be "
+"hidden, ensuring that only temporally relevant data is displayed. This mode "
+"is effective for:"
+msgstr ""
+":guilabel:`தற்காலிக மதிப்புகளைக் குறிக்கிறது`: ராச்டர் லேயரில் உள்ள ஒவ்வொரு "
+"பிக்சலையும் தேதிநேர மதிப்பாக விளக்குகிறது. இந்த தற்காலிக பயன்முறை செயலில் "
+"இருக்கும்போது, ​​ரெண்டர் சூழலில் குறிப்பிடப்பட்டுள்ள தற்காலிக வரம்பிற்குள் "
+"வராத படப்புள்ளிகள் மறைக்கப்பட்டு, தற்காலிகமாக தொடர்புடைய தரவு மட்டுமே "
+"காட்டப்படுவதை உறுதி செய்யும். இந்த முறை இதற்கு பயனுள்ளதாக இருக்கும்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:914
+msgid "Analyzing land use changes, like observing deforestation patterns."
+msgstr ""
+"காடழிப்பு முறைகளை கவனிப்பது போன்ற நில பயன்பாட்டு மாற்றங்களை பகுப்பாய்வு "
+"செய்தல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:915
+msgid "Studying flooding by comparing water coverage across different times."
+msgstr ""
+"வெவ்வேறு காலகட்டங்களில் உள்ள நீர் கவரேசை ஒப்பிட்டு வெள்ளம் பற்றிய ஆய்வு."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:916
+msgid ""
+"Evaluating movement costs in terrain analysis, for example, using GRASS "
+"GIS's r.walk tool to calculate travel costs across a landscape."
+msgstr ""
+"நிலப்பரப்பு பகுப்பாய்வில் இயக்கச் செலவை மதிப்பீடு செய்தல், எடுத்துக்காட்டாக,"
+" GRASS GIS r.walk கருவியைப் பயன்படுத்தி நிலப்பரப்பு முழுவதும் பயணச் "
+"செலவுகளைக் கணக்கிடுதல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:925
+msgid ""
+"Application of the Represents Temporal Values mode - analyzing GLAD "
+"deforestation alerts"
+msgstr ""
+"டெம்போரல் வேல்யூச் பயன்முறையின் பயன்பாடு - மகிழ்ச்சியான காடழிப்பு "
+"எச்சரிக்கைகளை பகுப்பாய்வு செய்தல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:927
+msgid ""
+":guilabel:`Redraw layer only`: the layer is redrawn at each new animation "
+"frame. It's useful when the layer uses time-based expression values for "
+"renderer settings (e.g. data-defined renderer opacity, to fade in/out a "
+"raster layer)."
+msgstr ""
+":guilabel:`லேயரை மட்டும் மீண்டும் வரையவும்`: ஒவ்வொரு புதிய அனிமேசன் "
+"சட்டகத்திலும் அடுக்கு மீண்டும் வரையப்படும். ரெண்டரர் அமைப்புகளுக்கான நேர "
+"அடிப்படையிலான வெளிப்பாடு மதிப்புகளை லேயர் பயன்படுத்தும் போது இது பயனுள்ளதாக "
+"இருக்கும் (எ.கா. தரவு வரையறுக்கப்பட்ட ரெண்டரர் ஒளிபுகாநிலை, ஒரு ராச்டர் "
+"லேயரில் மங்குவதற்கு/வெளியேற)."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:937
+msgid "Pyramids Properties"
+msgstr "பிரமிடுகளின் பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:939
+msgid ""
+"High resolution raster layers can slow navigation in QGIS. By creating lower"
+" resolution copies of the data (pyramids), performance can be considerably "
+"improved, as QGIS selects the most suitable resolution to use depending on "
+"the zoom level."
+msgstr ""
+"உயர் தெளிவுத்திறன் கொண்ட ராச்டர் அடுக்குகள் QGIS இல் வழிசெலுத்தலை "
+"மெதுவாக்கும். தரவின் குறைந்த தெளிவுத்திறன் நகல்களை உருவாக்குவதன் மூலம் "
+"(பிரமிடுகள்), செயல்திறனை கணிசமாக மேம்படுத்தலாம், ஏனெனில் QGIS ஆனது பெரிதாக்க"
+" அளவைப் பொறுத்து பயன்படுத்த மிகவும் பொருத்தமான தீர்மானத்தை "
+"தேர்ந்தெடுக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:944
+msgid ""
+"You must have write access in the directory where the original data is "
+"stored to build pyramids."
+msgstr ""
+"பிரமிடுகளை உருவாக்க அசல் தரவு சேமிக்கப்பட்டுள்ள கோப்பகத்தில் எழுதும் அணுகல் "
+"உங்களுக்கு இருக்க வேண்டும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:947
+msgid ""
+"From the :guilabel:`Resolutions` list, select resolutions at which you want "
+"to create pyramid levels by clicking on them."
+msgstr ""
+":guilabel:`Resolutions` பட்டியலில் இருந்து, நீங்கள் பிரமிடு நிலைகளை உருவாக்க"
+" விரும்பும் தீர்மானங்களை சொடுக்கு செய்வதன் மூலம் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:950
+msgid ""
+"If you choose **Internal (if possible)** from the :guilabel:`Overview "
+"format` drop-down menu, QGIS tries to build pyramids internally."
+msgstr ""
+"நீங்கள் **உள் (முடிந்தால்)** என்பதை :guilabel:`Overview format` கீழ்தோன்றும்"
+" மெனுவிலிருந்து தேர்வுசெய்தால், QGIS உள்நாட்டில் பிரமிடுகளை உருவாக்க "
+"முயற்சிக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:956
+msgid ""
+"Please note that building pyramids may alter the original data file, and "
+"once created they cannot be removed. If you wish to preserve a 'non-"
+"pyramided' version of your raster, make a backup copy prior to pyramid "
+"building."
+msgstr ""
+"பிரமிடுகளை உருவாக்குவது அசல் தரவுக் கோப்பை மாற்றக்கூடும் என்பதையும், "
+"உருவாக்கிய பின் அவற்றை அகற்ற முடியாது என்பதையும் நினைவில் கொள்ளவும். உங்கள் "
+"ராச்டரின் 'பிரமிடு இல்லாத' பதிப்பைப் பாதுகாக்க விரும்பினால், பிரமிடு "
+"கட்டுவதற்கு முன் காப்புப் பிரதியை உருவாக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:961
+msgid ""
+"If you choose **External** and **External (Erdas Imagine)** the pyramids "
+"will be created in a file next to the original raster with the same name and"
+" a :file:`.ovr` extension."
+msgstr ""
+"**வெளிப்புறம்** மற்றும் **வெளிப்புறம் (எர்டாச் இமேசின்)** ஆகியவற்றைத் "
+"தேர்வுசெய்தால், பிரமிடுகள் அசல் ராச்டருக்கு அடுத்துள்ள கோப்பில் அதே "
+"பெயருடனும் :file:`.ovr` நீட்டிப்புடனும் உருவாக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:965
+msgid ""
+"Several :guilabel:`Resampling methods` can be used for pyramid calculation:"
+msgstr ""
+"பிரமிடு கணக்கீட்டிற்குப் பல :guilabel:`மறு மாதிரி முறைகள்` "
+"பயன்படுத்தப்படலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:968
+msgid "Nearest Neighbour"
+msgstr "அருகில் உள்ளவர்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:969
+msgid "Average"
+msgstr "சராசரி"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:970
+msgid "Gauss"
+msgstr "காச்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:971
+msgid "Cubic"
+msgstr "கன நாற்கை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:972
+msgid "Cubic Spline"
+msgstr "க்யூபிக் ச்ப்லைன்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:973
+msgid "Laczos"
+msgstr "லாக்சோச்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:974
+msgid "Mode"
+msgstr "பயன்முறை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:975
+msgid "None"
+msgstr "எதுவுமில்லை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:977
+msgid "Finally, click :guilabel:`Build Pyramids` to start the process."
+msgstr ""
+"இறுதியாக, செயல்முறையைத் தொடங்க:guilabel:`பிர்மிட்களை உருவாக்கு` என்பதைக் "
+"சொடுக்கு செய்யவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:985
+msgid "Raster Pyramids"
+msgstr "ராச்டர் பிரமிடுகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:992
+msgid "Elevation Properties"
+msgstr "உயரமான பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:994
+msgid ""
+"The |elevationscale| :guilabel:`Elevation` tab provides options to control "
+"the layer elevation properties within a :ref:`3D map view <label_3dmapview>`"
+" and its appearance in the :ref:`profile tool charts "
+"<label_elevation_profile_view>`. Specifically, you can choose to "
+":guilabel:`Disable` this configuration if the layer does not contain "
+"elevation data or you can set:"
+msgstr ""
+"தி |எலிவேசன்ச்கேல்| :guilabel:`Elevation` தாவல் :ref:`3D வரைபடக் காட்சி "
+"<label_3dmapview>` மற்றும் அதன் தோற்றம் :ref:`profile கருவி விளக்கப்படங்கள் "
+"<label_elevation_profile_view>` ஆகியவற்றில் லேயர் எலிவேசன் பண்புகளைக் "
+"கட்டுப்படுத்துவதற்கான விருப்பங்களை வழங்குகிறது. குறிப்பாக, லேயரில் எலிவேசன் "
+"டேட்டா இல்லை என்றால், இந்த உள்ளமைவை :guilabel:`முடக்கு` என்பதை நீங்கள் "
+"தேர்வு செய்யலாம் அல்லது நீங்கள் அமைக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1006
+msgid "Raster Elevation Properties"
+msgstr "ராச்டர் உயர பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1008
+msgid ""
+":guilabel:`Represents Elevation Surface`: whether the raster layer "
+"represents a height surface (e.g DEM) and the pixel values should be "
+"interpreted as elevations. Choose this option if you want to display a "
+"raster in an :ref:`elevation profile view <label_elevation_profile_view>`. "
+"You will also need to fill in the :guilabel:`Band` to pick values from and "
+"can apply a :guilabel:`Scale` factor and an :guilabel:`Offset`."
+msgstr ""
+":guilabel:`எலவேசன் மேற்பரப்பைக் குறிக்கிறது`: ராச்டர் லேயர் உயரமான "
+"மேற்பரப்பைக் குறிக்கிறதா (எ.கா. DEM) மற்றும் படப்புள்ளி மதிப்புகள் உயரங்களாக"
+" விளக்கப்பட வேண்டுமா. நீங்கள் :ref:`elevation சுயவிவரக் காட்சி "
+"<label_elevation_profile_view>` இல் ராச்டரைக் காட்ட விரும்பினால், இந்த "
+"விருப்பத்தைத் தேர்வு செய்யவும். மதிப்புகளைத் தேர்வுசெய்ய நீங்கள் "
+":guilabel:`Band` ஐ நிரப்ப வேண்டும், மேலும் :guilabel:`Scale` காரணி மற்றும் "
+":guilabel:`Offset` ஆகியவற்றைப் பயன்படுத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1014
+msgid ""
+":guilabel:`Fixed Elevation Range`: The raster layer (or selected raster "
+"band) is associated with a fixed elevation range. This mode can be used when"
+" a layer has a single fixed elevation or a range (slice) of elevation "
+"values. If a range is specified, pixels will be extruded over this range. "
+"You can set the :guilabel:`Lower` and :guilabel:`Upper` elevation range "
+"values for the layer, and specify whether the lower or upper "
+":guilabel:`Limits` are inclusive or exclusive."
+msgstr ""
+":guilabel:`நிலையான உயர வரம்பு`: ராச்டர் லேயர் (அல்லது தேர்ந்தெடுக்கப்பட்ட "
+"ராச்டர் பேண்ட்) நிலையான உயர வரம்புடன் தொடர்புடையது. ஒரு அடுக்கில் ஒரு "
+"நிலையான உயரம் அல்லது உயர மதிப்புகளின் வரம்பு (ச்லைச்) இருக்கும்போது இந்தப் "
+"பயன்முறையைப் பயன்படுத்தலாம். வரம்பு குறிப்பிடப்பட்டால், இந்த வரம்பில் "
+"படப்புள்ளிகள் வெளியேற்றப்படும். லேயருக்கு :guilabel:`Lower` மற்றும் "
+":guilabel:`மேல்` உயர வரம்பு மதிப்புகளை அமைக்கலாம், மேலும் கீழ் அல்லது மேல் "
+":guilabel:`Limits` உள்ளடக்கியதா அல்லது பிரத்தியேகமானதா என்பதைக் "
+"குறிப்பிடவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1020
+msgid ""
+":guilabel:`Fixed Elevation Range Per Band`: Each band in the raster can have"
+" a fixed elevation range associated with it. This is designed for data "
+"sources that expose elevation-related data in bands, such as NetCDF files. "
+"For example, a raster with temperature data at different ocean depths. When "
+"rendering, the uppermost matching band will be selected and used for the "
+"layer's data. This feature is exposed as a user-editable table for raster "
+"bands with lower and upper values. Users can either populate the lower and "
+"upper values manually or use an |expression| :guilabel:`Expression` to auto-"
+"fill all band values based on expression. The expression-based fill allows "
+"you to design expressions that extract useful information from band names. "
+"For example, extracting the depth value from a band name like \"Band 001: "
+"depth=-5500 (meters)\"."
+msgstr ""
+":guilabel:`ஒரு இசைக்குழுவிற்கு நிலையான உயர வரம்பு`: ராச்டரில் உள்ள ஒவ்வொரு "
+"இசைக்குழுவும் அதனுடன் தொடர்புடைய நிலையான உயர வரம்பைக் கொண்டிருக்கலாம். "
+"NetCDF கோப்புகள் போன்ற பேண்டுகளில் உள்ள உயரம் தொடர்பான தரவை வெளிப்படுத்தும் "
+"தரவு மூலங்களுக்காக இது வடிவமைக்கப்பட்டுள்ளது. எடுத்துக்காட்டாக, வெவ்வேறு "
+"கடல் ஆழங்களில் வெப்பநிலை தரவுகளைக் கொண்ட ராச்டர். வழங்குதல் செய்யும் போது, "
+"​​மேல் பொருந்தக்கூடிய பேண்ட் தேர்ந்தெடுக்கப்பட்டு லேயரின் தரவுக்காகப் "
+"பயன்படுத்தப்படும். இந்த நற்பொருத்தம் குறைந்த மற்றும் மேல் மதிப்புகள் கொண்ட "
+"ராச்டர் பேண்டுகளுக்கான பயனர் திருத்தக்கூடிய அட்டவணையாக வெளிப்படுகிறது. "
+"பயனர்கள் கீழ் மற்றும் மேல் மதிப்புகளை கைமுறையாக நிரப்பலாம் அல்லது "
+"|expression|ஐப் பயன்படுத்தலாம் வெளிப்பாட்டின் அடிப்படையில் அனைத்து பேண்ட் "
+"மதிப்புகளையும் தானாக நிரப்புவதற்கு :guilabel:`Expression`. பேண்ட் "
+"பெயர்களிலிருந்து பயனுள்ள தகவல்களைப் பிரித்தெடுக்கும் வெளிப்பாடுகளை "
+"வடிவமைக்க, வெளிப்பாடு அடிப்படையிலான நிரப்பு உங்களை அனுமதிக்கிறது. "
+"எடுத்துக்காட்டாக, \"பேண்ட் 001: ஆழம்=-5500 (மீட்டர்கள்)\" போன்ற பேண்ட் "
+"பெயரிலிருந்து ஆழ மதிப்பைப் பிரித்தெடுத்தல்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1029
+msgid ""
+":guilabel:`Dynamic Elevation Range Per Band`: This mode calculates elevation"
+" ranges for raster bands dynamically using QGIS expressions. It's ideal for "
+"datasets where elevation values follow a consistent pattern across bands "
+"(like equally spaced vertical layers), eliminating the need to manually "
+"assign fixed elevations. Instead of entering individual values for each "
+"band, you define expressions for the :guilabel:`Lower` and :guilabel:`Upper`"
+" elevation bounds. These expressions can use variables like ``@band``, "
+"``@band_name``, or ``@band_description`` automatically computing the "
+"elevation range based on each band's properties."
+msgstr ""
+":guilabel:`டைனமிக் எலிவேசன் ரேஞ்ச் பெர் பேண்ட்`: இந்த பயன்முறையானது ராச்டர் "
+"பேண்டுகளுக்கான உயர வரம்புகளை க்யூசிஐஎச் வெளிப்பாடுகளைப் பயன்படுத்தி மாறும் "
+"வகையில் கணக்கிடுகிறது. நிலையான உயரங்களை கைமுறையாக ஒதுக்க வேண்டிய தேவையை "
+"நீக்கி, பட்டைகள் முழுவதும் (சமமான இடைவெளி கொண்ட செங்குத்து அடுக்குகள் "
+"போன்றவை) உயர மதிப்புகள் நிலையான வடிவத்தைப் பின்பற்றும் தரவுத்தொகுப்புகளுக்கு"
+" இது சிறந்தது. ஒவ்வொரு இசைக்குழுவிற்கும் தனிப்பட்ட மதிப்புகளை "
+"உள்ளிடுவதற்குப் பதிலாக, :guilabel:`Lower` மற்றும் :guilabel:`மேல்` உயர "
+"வரம்புகளுக்கான வெளிப்பாடுகளை வரையறுக்கிறீர்கள். இந்த வெளிப்பாடுகள் "
+"``@band``, ``@band_name`` அல்லது ``@band_description`` போன்ற மாறிகளைப் "
+"பயன்படுத்தி ஒவ்வொரு இசைக்குழுவின் பண்புகளின் அடிப்படையில் உயர வரம்பைத் "
+"தானாகக் கணக்கிடலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1036
+msgid ""
+":guilabel:`Profile Chart Appearance`: controls the rendering of the raster "
+"elevation data in the profile chart. The profile :guilabel:`Style` can be "
+"set as:"
+msgstr ""
+":guilabel:`சுயவிவர விளக்கப்படம் தோற்றம்`: சுயவிவர விளக்கப்படத்தில் ராச்டர் "
+"உயரத் தரவின் ரெண்டரிங்கைக் கட்டுப்படுத்துகிறது. சுயவிவரம் :guilabel:`Style` "
+"இவ்வாறு அமைக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1040
+msgid ""
+"a :guilabel:`Line` with a specific :ref:`Line style <vector_line_symbols>`"
+msgstr ""
+"ஒரு :guilabel:`Line` ஒரு குறிப்பிட்ட :ref:`Line சூல் தண்டு "
+"<vector_line_symbols>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1041
+msgid ""
+"an elevation surface rendered using a fill symbol either above "
+"(:guilabel:`Fill above`) or below (:guilabel:`Fill below`) the elevation "
+"curve line. The surface symbology is represented using:"
+msgstr ""
+"உயரப் பரப்பு, உயர வளைவுக் கோட்டிற்கு மேலே (:guilabel:`Fill above`) அல்லது "
+"கீழே (:guilabel:`Fill below`) நிரப்பு குறியீட்டைப் பயன்படுத்தி "
+"வழங்கப்படுகிறது. மேற்பரப்பு குறியீடானது இதைப் பயன்படுத்தி "
+"குறிப்பிடப்படுகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1045
+msgid "a :ref:`Fill style <vector_fill_symbols>`"
+msgstr "a :href:`முழு நடை <வெக்டர் நிரப்பு சின்னங்கள்>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1046
+msgid ""
+"and a :guilabel:`Limit`: the maximum (respectively minimum) altitude "
+"determining how high the fill surface will be"
+msgstr ""
+"மற்றும் ஒரு :guilabel:`Limit`: நிரப்பு மேற்பரப்பு எவ்வளவு உயரமாக இருக்கும் "
+"என்பதை நிர்ணயிக்கும் அதிகபட்ச (முறையே குறைந்தபட்ச) உயரம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1054
+msgid "Metadata Properties"
+msgstr "மேனிலை தரவு பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1056
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your layer. See :ref:`metadatamenu` for"
+" more information."
+msgstr ""
+"தி |editMetadata| :guilabel:`மெட்டாடேட்டா` தாவல் உங்கள் லேயரில் மேனிலை தரவு "
+"அறிக்கையை உருவாக்க மற்றும் திருத்துவதற்கான விருப்பங்களை வழங்குகிறது. மேலும் "
+"தகவலுக்கு :ref:`metadatamenu` ஐப் பார்க்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1066
+msgid "Raster Metadata"
+msgstr "ராச்டர் மேனிலை தரவு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1073
+msgid "Legend Properties"
+msgstr "புராண பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1075
+msgid ""
+"The |legend| :guilabel:`Legend` tab provides you with advanced settings for "
+"the :ref:`Layers panel <label_legend>` and/or the :ref:`print layout legend "
+"<layout_legend_item>`. These options include:"
+msgstr ""
+"தி |புராணக்கதை| :guilabel:`Legend` தாவல் :ref:`Layers panel <label_legend>` "
+"மற்றும்/அல்லது :ref:`print மனையமைவு legend <layout_legend_item>`க்கான "
+"மேம்பட்ட அமைப்புகளை உங்களுக்கு வழங்குகிறது. இந்த விருப்பங்கள் அடங்கும்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1079
+msgid ""
+"Depending on the symbology applied to the layer, you may end up with several"
+" entries in the legend, not necessarily readable/useful to display. The "
+":guilabel:`Legend placeholder image` helps you :ref:`select an image "
+"<embedded_file_selector>` for replacement, displayed both in the "
+":guilabel:`Layers` panel and the print layout legend."
+msgstr ""
+"லேயருக்குப் பயன்படுத்தப்படும் குறியீட்டைப் பொறுத்து, நீங்கள் புராணக்கதையில் "
+"பல உள்ளீடுகளுடன் முடிவடையும், தேவை படிக்கக்கூடியது/காட்டுவதற்குப் பயன்படாது."
+" :guilabel:`Legend placeholder image` உங்களுக்கு உதவுகிறது :ref:`பதிலீடு "
+"செய்ய <embedded_file_selector>` படத்தைத் தேர்ந்தெடுக்கவும், "
+":guilabel:`Layers` பேனல் மற்றும் பிரிண்ட் லேஅவுட் லெசண்ட் இரண்டிலும் "
+"காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1084
+msgid ""
+"The |legend| :guilabel:`Embedded widgets in Legend` provides you with a list"
+" of widgets you can embed within the layer tree in the Layers panel. The "
+"idea is to have a way to quickly access some actions that are often used "
+"with the layer (setup transparency, filtering, selection, style or other "
+"stuff...)."
+msgstr ""
+"தி |புராணக்கதை| :guilabel:`Legend இல் உட்பொதிக்கப்பட்ட விட்செட்டுகள்`, லேயர்"
+" பேனலில் உள்ள லேயர் ட்ரீக்குள் நீங்கள் உட்பொதிக்கக்கூடிய விட்செட்களின் "
+"பட்டியலை வழங்குகிறது. லேயர் (அமைவு வெளிப்படைத்தன்மை, வடிகட்டுதல், தேர்வு, "
+"நடை அல்லது பிற விசயங்கள்...) அடிக்கடி பயன்படுத்தப்படும் சில செயல்களை விரைவாக"
+" அணுகுவதற்கான வழியை உருவாக்குவதே சிந்தனை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1090
+msgid ""
+"By default, QGIS provides a transparency widget but this can be extended by "
+"plugins that register their own widgets and assign custom actions to layers "
+"they manage."
+msgstr ""
+"முன்னிருப்பாக, QGIS ஒரு வெளிப்படைத்தன்மை விட்செட்டை வழங்குகிறது, ஆனால் இது "
+"தங்கள் சொந்த விட்செட்களைப் பதிவுசெய்து, அவர்கள் நிர்வகிக்கும் அடுக்குகளுக்கு"
+" தனிப்பயன் செயல்களை வழங்கும் செருகுநிரல்களால் நீட்டிக்கப்படலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1101
+msgid "Raster Legend"
+msgstr "ராச்டர் லெசண்ட்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1108
+msgid "Display Properties"
+msgstr "காட்சி பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1110
+msgid ""
+"The |display| :guilabel:`Display` tab helps you configure HTML map tips to "
+"use for pixels identification:"
+msgstr ""
+"தி |டிச்ப்ளே| :guilabel:`டிச்ப்ளே` தாவல் பிக்சல்களை அடையாளம் காண பயன்படுத்த "
+"உஉகுமொ வரைபட உதவிக்குறிப்புகளை உள்ளமைக்க உதவுகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1113
+msgid ""
+"|checkbox| :guilabel:`Enable Map Tips` controls whether to display map tips "
+"for the layer"
+msgstr ""
+"|செக்பாக்ச்| :guilabel:`வரைபட உதவிக்குறிப்புகளை இயக்கு` என்பது அடுக்குக்கான "
+"வரைபட உதவிக்குறிப்புகளைக் காட்ட வேண்டுமா என்பதைக் கட்டுப்படுத்துகிறது"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1114
+msgid ""
+"The :guilabel:`HTML Map Tip` provides a complex and full HTML text editor "
+"for map tips, mixing QGIS expressions and html styles and tags (multiline, "
+"fonts, images, hyperlink, tables, ...). You can check the result of your "
+"code sample in the :guilabel:`Preview` frame. You can also select and edit "
+"existing expressions using the :guilabel:`Insert/Edit Expression` button."
+msgstr ""
+":guilabel:`HTML Map Tip` ஆனது வரைபட குறிப்புகள், QGIS வெளிப்பாடுகள் மற்றும் "
+"உஉகுமொ பாணிகள் மற்றும் குறிச்சொற்கள் (மல்டிலைன், எழுத்துருக்கள், படங்கள், "
+"ஐப்பர்லிங்க், அட்டவணைகள், ...) ஆகியவற்றைக் கலந்து ஒரு சிக்கலான மற்றும் முழு "
+"உஉகுமொ உரை திருத்தியை வழங்குகிறது. உங்கள் குறியீட்டு மாதிரியின் முடிவை "
+":guilabel:`Preview` சட்டகத்தில் பார்க்கலாம். :guilabel:`Insert/Edit "
+"Expression` பொத்தானைப் பயன்படுத்தி ஏற்கனவே உள்ள வெளிப்பாடுகளைத் "
+"தேர்ந்தெடுத்து திருத்தலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1119
+msgid ""
+"You might look for expressions located in :guilabel:`Rasters` group or the "
+"``@layer_cursor_point`` variable in the :guilabel:`Expressions` dialog."
+msgstr ""
+":guilabel:`Rasters` குழுவில் உள்ள வெளிப்பாடுகள் அல்லது "
+"``@layer_cursor_point`` மாறியை :guilabel:`Expressions` உரையாடலில் நீங்கள் "
+"தேடலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1122
+msgid ""
+"**Understanding the** :guilabel:`Insert/Edit Expression` **button behavior**"
+msgstr "** புரிந்து கொள்ளுதல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1124
+msgid ""
+"If you select some text within an expression (between \"[%\" and \"%]\"), or"
+" if no text is selected but the cursor is inside an expression, the whole "
+"expression will be automatically selected for editing. If the cursor or a "
+"selected text is outside an expression, the dialog opens with the selection."
+msgstr ""
+"நீங்கள் ஒரு வெளிப்பாட்டிற்குள் (\"[%\" மற்றும் \"%]\" க்கு இடையில்) சில "
+"உரையைத் தேர்ந்தெடுத்தால் அல்லது உரை எதுவும் தேர்ந்தெடுக்கப்படாமல் கர்சர் ஒரு"
+" வெளிப்பாட்டிற்குள் இருந்தால், முழு வெளிப்பாடும் தானாகவே திருத்துவதற்குத் "
+"தேர்ந்தெடுக்கப்படும். கர்சர் அல்லது தேர்ந்தெடுக்கப்பட்ட உரை வெளிப்பாட்டிற்கு"
+" வெளியே இருந்தால், தேர்வுடன் உரையாடல் திறக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1134
+msgid "Map tips with raster layer"
+msgstr "ராச்டர் லேயருடன் வரைபட குறிப்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1137
+msgid "To display map tips:"
+msgstr "வரைபட உதவிக்குறிப்புகளைக் காட்ட:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1139
+msgid ""
+"Select the menu option :menuselection:`View --> Show Map Tips` or click on "
+"the |mapTips| :sup:`Show Map Tips` icon of the :guilabel:`Attributes "
+"Toolbar`."
+msgstr ""
+"பட்டியல் விருப்பத்தைத் தேர்ந்தெடுக்கவும் :menuselection:`View --> காட்டு Map"
+" Tips` அல்லது |mapTips| :sup:`Show Map Tips` படவுரு :guilabel:`Attributes "
+"Toolbar`."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1437
 msgid "mapTips"
 msgstr "mapTips"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1141
+msgid ""
+"Make sure that the layer you target is active and has the |checkbox| "
+":guilabel:`Enable Map Tips` property checked."
+msgstr ""
+"நீங்கள் குறிவைக்கும் லேயர் செயலில் உள்ளதா மற்றும் |செக்பாக்ச்| உள்ளதா என்பதை"
+" உறுதிப்படுத்தவும் :guilabel:`வரைபட உதவிக்குறிப்புகளை இயக்கு` சொத்து "
+"சரிபார்க்கப்பட்டது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1143
+msgid ""
+"Move over a pixel, and the corresponding information will be displayed over."
+msgstr ""
+"ஒரு பிக்சலுக்கு மேல் நகர்த்தவும், அதனுடன் தொடர்புடைய செய்தி காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1145
+msgid ""
+"Map tip is a cross-layer feature meaning that once activated, it stays on "
+"and applies to any map tip enabled layer in the project until it is toggled "
+"off."
+msgstr ""
+"வரைபட உதவிக்குறிப்பு என்பது குறுக்கு-அடுக்கு அம்சமாகும், அதாவது ஒருமுறை "
+"செயல்படுத்தப்பட்டால், அது செயல்பாட்டில் இருக்கும் மற்றும் அது மாற்றப்படும் "
+"வரை திட்டத்தில் எந்த வரைபட முனை இயக்கப்பட்ட லேயருக்கும் பொருந்தும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1153
+msgid "QGIS Server Properties"
+msgstr "QGIS சேவையக பண்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1155
+msgid ""
+"The |overlay| :guilabel:`QGIS Server` tab helps you configure settings of "
+"the data when published by :ref:`QGIS Server <QGIS-Server-manual>`. The "
+"configuration concerns:"
+msgstr ""
+"| மேலடுக்கு| :guilabel:`QGIS சர்வர்` தாவல் :ref:`QGIS சேவையகம் <QGIS-Server-"
+"manual>` மூலம் வெளியிடப்படும் போது தரவின் அமைப்புகளை உள்ளமைக்க உதவுகிறது. "
+"கட்டமைப்பு கவலைகள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1159
+msgid ""
+":guilabel:`Description`: provides information to describe the data, such as "
+":guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Abstract`, a "
+":guilabel:`Keyword list`,  and a :guilabel:`Data URL` whose "
+":guilabel:`Format` can be in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+msgstr ""
+":guilabel:`விளக்கம்`: :guilabel:`குறுகிய பெயர்`, :guilabel:`Title`, "
+":guilabel:`சுருக்கம்`, ஒரு :guilabel:`முக்கிய சொல் பட்டியல்`, மற்றும் ஒரு "
+":guilabel:`தரவு URL` போன்ற தரவை விவரிப்பதற்கான தகவல்களை வழங்குகிறது. அல்லது "
+"``பயன்பாடு/pdf``."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1163
+msgid ""
+":guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL` to identify"
+" who provides the data"
+msgstr ""
+":guilabel:`Attribution`: a :guilabel:`Title` மற்றும் :guilabel:`URL` தரவை "
+"யார் வழங்குகிறார்கள் என்பதைக் கண்டறிய"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1165
+msgid ""
+":guilabel:`Metadata URL`: a list of :guilabel:`URL` for the metadata that "
+"can be of ``FGDC`` or ``TC211`` :guilabel:`Type`, and in ``text/plain`` or "
+"``text/xml`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`மெட்டாடேட்டா URL`: `FGDC` அல்லது ``TC211`` :guilabel:`Type` "
+"மற்றும் ``text/plain`` அல்லது ``text/xml`` :guilabel:`Format` ஆக "
+"இருக்கக்கூடிய மெட்டாடேட்டாவிற்கான :guilabel:`URL` பட்டியல்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1168
+msgid ""
+":guilabel:`Legend URL`: a :guilabel:`URL` for the legend, in either "
+"``image/png`` or ``image/jpeg`` :guilabel:`Format`"
+msgstr ""
+":guilabel:`Legend URL`: a :guilabel:`URL` புராணத்திற்கான, ``image/png`` "
+"அல்லது ``image/jpeg`` :guilabel:`Format`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1172
+msgid ""
+"When the raster layer you want to publish is already provided by a web "
+"service, further :ref:`properties <wms_server_properties>` are available for"
+" setting."
+msgstr ""
+"நீங்கள் வெளியிட விரும்பும் ராச்டர் லேயர் ஏற்கனவே ஒரு இணைய சேவையால் "
+"வழங்கப்பட்டிருந்தால், மேலும் :ref:`properties <wms_server_properties>` "
+"அமைப்பதற்குக் கிடைக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1181
+msgid "QGIS Server in Raster Properties"
+msgstr "ராச்டர் பண்புகளில் QGIS சேவையகம்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1189
+msgid "Attribute Tables"
+msgstr "பண்பு அட்டவணைகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1191
+msgid ""
+"Similar to vector layers, raster layers in QGIS can have associated Raster "
+"Attribute Tables (RATs) that store additional information about raster pixel"
+" values."
+msgstr ""
+"வெக்டார் லேயர்களைப் போலவே, QGIS இல் உள்ள ராச்டர் லேயர்களும் ராச்டர் "
+"படப்புள்ளி மதிப்புகளைப் பற்றிய கூடுதல் தகவல்களைச் சேமிக்கும் ராச்டர் "
+"பண்புக்கூறு அட்டவணைகளை (RATs) இணைக்கலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1195
+msgid ""
+"A Raster Attribute Table links raster values (or value ranges) to "
+"descriptive attributes such as class names, pixel counts, and colors. RATs "
+"are commonly used for classified rasters, color tables, and histogram "
+"information, helping QGIS interpret how raster values should be displayed "
+"and classified."
+msgstr ""
+"வகுப்புப் பெயர்கள், படப்புள்ளி எண்ணிக்கைகள் மற்றும் வண்ணங்கள் போன்ற "
+"விளக்கமான பண்புக்கூறுகளுடன் ராச்டர் பண்புக்கூறு அட்டவணை ராச்டர் மதிப்புகளை "
+"(அல்லது மதிப்பு வரம்புகள்) இணைக்கிறது. RATகள் பொதுவாக வகைப்படுத்தப்பட்ட "
+"ராச்டர்கள், வண்ண அட்டவணைகள் மற்றும் இச்டோகிராம் தகவல்களுக்குப் "
+"பயன்படுத்தப்படுகின்றன, இது ராச்டர் மதிப்புகள் எவ்வாறு காட்டப்பட வேண்டும் "
+"மற்றும் வகைப்படுத்தப்பட வேண்டும் என்பதை QGIS விளக்க உதவுகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1201
+msgid ""
+"The :guilabel:`Attribute Tables` tab allows you to view and edit raster "
+"attribute data. To access the attribute table of a raster layer, right-click"
+" the layer in the layers panel, open :guilabel:`Properties...` and select "
+":guilabel:`Attribute Tables`."
+msgstr ""
+":guilabel:`Attribute Tables` தாவல், ராச்டர் பண்புக்கூறு தரவைப் பார்க்கவும் "
+"திருத்தவும் உங்களை அனுமதிக்கிறது. ராச்டர் லேயரின் பண்புக்கூறு அட்டவணையை "
+"அணுக, லேயர் பேனலில் உள்ள லேயரை வலது சொடுக்கு செய்து, "
+":guilabel:`Properties...` என்பதைத் திறந்து :guilabel:`Attribute Tables` "
+"என்பதைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1209
+msgid "Accessing the raster attribute table"
+msgstr "ராச்டர் பண்பு அட்டவணையை அணுகுகிறது"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1211
+msgid ""
+"When opening the :guilabel:`Attribute Tables` for a raster layer that does "
+"not have an associated Raster Attribute Table, QGIS displays a notice "
+"informing that no attribute table is currently linked to the data source. In"
+" this state, the interface provides two options to define and associate a "
+"new attribute table:"
+msgstr ""
+"தொடர்புடைய ராச்டர் பண்பு அட்டவணை இல்லாத ராச்டர் லேயருக்கான "
+":guilabel:`Attribute Tables`ஐத் திறக்கும் போது, ​​QGIS ஆனது தற்போது தரவு "
+"மூலத்துடன் எந்த ஒரு பண்புக்கூறு அட்டவணையும் இணைக்கப்படவில்லை என்று "
+"தெரிவிக்கும் அறிவிப்பைக் காட்டுகிறது. இந்த நிலையில், ஒரு புதிய பண்புக்கூறு "
+"அட்டவணையை வரையறுக்கவும் இணைக்கவும் இடைமுகம் இரண்டு விருப்பங்களை வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1216
+msgid ""
+":guilabel:`New attribute table from current symbology`: will appear if your "
+"raster layer has a classified symbology applied. Otherwise, this option is "
+"disabled. Applying classified symbology also triggers an option in the layer"
+" context menu to |createTable|:guilabel:`Create Raster Attribute Table`. "
+"Click this button and set the following options in the :guilabel:`New Raster"
+" Attribute Table` dialog."
+msgstr ""
+":guilabel:`தற்போதைய குறியீட்டிலிருந்து புதிய பண்புக்கூறு அட்டவணை`: உங்கள் "
+"ராச்டர் லேயரில் வகைப்படுத்தப்பட்ட குறியீட்டு முறை பயன்படுத்தப்பட்டால் "
+"தோன்றும். இல்லையெனில், இந்த விருப்பம் முடக்கப்படும். வகைப்படுத்தப்பட்ட "
+"சிம்பாலாசியைப் பயன்படுத்துவது லேயர் சூழல் பட்டியலில் "
+"|createTable|:guilabel:`Raster Attribute டேபிளை உருவாக்கு` என்ற "
+"விருப்பத்தையும் தூண்டுகிறது. இந்தப் பொத்தானைக் சொடுக்கு செய்து, பின்வரும் "
+"விருப்பங்களை :guilabel:`New Raster Attribute Table` உரையாடலில் அமைக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1395
+msgid "createTable"
+msgstr "உருவாக்க அட்டவணை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1221
+msgid ""
+":guilabel:`Managed by the data provider`: the attribute table will be saved "
+"and managed by the data provider (if supported), overwriting any existing "
+"table for the raster band used by the current style. Depending on the data "
+"provider, the attribute table will be embedded in the main raster file or "
+"saved into a sidecar file managed by the data provider."
+msgstr ""
+":guilabel:`தரவு வழங்குநரால் நிர்வகிக்கப்படுகிறது`: பண்புக்கூறு அட்டவணை தரவு "
+"வழங்குநரால் சேமிக்கப்பட்டு நிர்வகிக்கப்படும் (ஆதரிக்கப்பட்டால்), தற்போதைய "
+"பாணியால் பயன்படுத்தப்படும் ராச்டர் பேண்டிற்கு ஏற்கனவே உள்ள அட்டவணையை "
+"மேலெழுதும். தரவு வழங்குநரைப் பொறுத்து, பண்புக்கூறு அட்டவணை முதன்மையான "
+"ராச்டர் கோப்பில் உட்பொதிக்கப்படும் அல்லது தரவு வழங்குநரால் நிர்வகிக்கப்படும்"
+" சைட்கார் கோப்பில் சேமிக்கப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1226
+msgid ""
+":guilabel:`Sidecar VAT.DBF file`: saves the attribute table into a sidecar "
+"VAT.DBF file. The resulting file will not be associated with any particular "
+"band."
+msgstr ""
+":guilabel:`Sidecar VAT.DBF கோப்பு`: பண்புக்கூறு அட்டவணையை பக்கவாட்டு VAT.DBF"
+" கோப்பில் சேமிக்கிறது. இதன் விளைவாக வரும் கோப்பு எந்த குறிப்பிட்ட "
+"இசைக்குழுவுடன் இணைக்கப்படாது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1234
+msgid "Create new attribute table from current symbology"
+msgstr "தற்போதைய குறியீட்டிலிருந்து புதிய பண்புக்கூறு அட்டவணையை உருவாக்கவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1236
+msgid ""
+":guilabel:`Load attribute table from VAT.DBF file`: retrieves the attribute "
+"table from an external DBF file. :guilabel:`Load Raster Attribute Table` "
+"dialog will appear to let you browse and select the DBF file and associate "
+"it with the raster band. The action also can be done by right-clicking the "
+"raster layer in the layers panel and selecting |addTable|:guilabel:`Load "
+"Raster Attribute Table from VAT.DBF`. |checkbox| :guilabel:`Open the newly "
+"loaded attribute table` allows you to directly open the attribute table "
+"editor after loading the table."
+msgstr ""
+":guilabel:`Load attribute table இருந்து VAT.DBF file`: retrieves the "
+"பண்புக்கூறு table இருந்து an external DBF file. :guilabel:`Load Raster "
+"பண்புக்கூறு Table` dialog will appear பெறுநர் let you browse and தேர்ந்தெடு "
+"the DBF கோப்பு and associate it with the raster band. The செயல் also can be"
+" முடிந்தது by right-clicking the raster layer in the layers panel and "
+"selecting |addTable|:guilabel:`Load Raster Attribute Table இருந்து VAT.DBF`."
+" |checkbox| :guilabel:`Open the newly loaded attribute table` allows you "
+"பெறுநர் directly திற the பண்புக்கூறு table திருத்தி after loading the table."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1387
 msgid "addTable"
 msgstr "addTable"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1249
+msgid "Load attribute table from VAT.DBF file"
+msgstr "Load பண்புக்கூறு table இருந்து VAT.DBF கோப்பு"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1252
+msgid "Editing raster attribute tables"
+msgstr "ராச்டர் பண்பு அட்டவணைகளைத் திருத்துகிறது"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1254
+msgid ""
+"When set, a raster attribute table can be accessed from the "
+":guilabel:`Attribute tables` tab of the layer properties dialog or by "
+"selecting :guilabel:`Open raster attribute table` from the layer contextual "
+"menu in :guilabel:`Layers` panel. This dialog shows a table whose rows "
+"correspond to the different pixel values or value ranges classified in a "
+"given band of the raster layer. Depending on the type of classification, a "
+"row is described by:"
+msgstr ""
+"When set, a raster பண்புக்கூறு table can be accessed இருந்து the "
+":guilabel:`Attribute tables` தாவல் of the layer பண்புகள் dialog or by "
+"selecting :guilabel:`Open raster பண்புக்கூறு table` இருந்து the layer "
+"contextual பட்டியல் in :guilabel:`Layers` panel. This dialog shows a table "
+"whose rows correspond பெறுநர் the different படப்புள்ளி values or மதிப்பு "
+"ranges classified in a given பட்டை of the raster layer. Depending on the வகை"
+" of classification, a row is described by:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1261
+msgid ""
+"for an exact values classification (e.g., paletted/unique values): the band "
+"name and the applied :guilabel:`Color`. Additional fields of the "
+":guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` and :guilabel:`Opacity`"
+" of the color are displayed."
+msgstr ""
+"சரியான மதிப்புகள் வகைப்பாட்டிற்கு (எ.கா., தட்டு/தனிப்பட்ட மதிப்புகள்): "
+"இசைக்குழு பெயர் மற்றும் பயன்படுத்தப்பட்ட :guilabel:`Color`. வண்ணத்தின் "
+":guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` மற்றும் "
+":guilabel:`Opacity` ஆகியவற்றின் கூடுதல் புலங்கள் காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1264
+msgid ""
+"for range values classification (e.g., singleband pseudocolor): the range of"
+" values defined by their :guilabel:`Min`,  :guilabel:`Max`, the associated "
+"label (:guilabel:`Class`) and color ramp interpolated over the values "
+"(:guilabel:`Color`). Additional fields of the minimum and maximum of  "
+":guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` and :guilabel:`Opacity`"
+" of the color ramp are displayed."
+msgstr ""
+"வரம்பு மதிப்புகளின் வகைப்பாட்டிற்கு (எ.கா., சிங்கிள்பேண்ட் சூடோகலர்): "
+"அவற்றின் :guilabel:`Min`, :guilabel:`Max`, தொடர்புடைய சிட்டை "
+"(:guilabel:`Class`) மற்றும் மதிப்புகள் (:guilabel:`Color`) ஆகியவற்றால் "
+"இடைக்கணிக்கப்பட்ட மதிப்புகளின் வரம்பு. வண்ண சாய்வின் குறைந்தபட்ச மற்றும் "
+"அதிகபட்சம் :guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` மற்றும் "
+":guilabel:`Opacity` ஆகியவற்றின் கூடுதல் புலங்கள் காட்டப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1270
+msgid ""
+"You can also customize the raster attribute table by adding new fields for "
+"classification and group different value ranges accordingly, modifying value"
+" ranges and their associated colors or labels, adding new rows, ... The new "
+"attribute table can be used to update the current layer symbology."
+msgstr ""
+"வகைப்படுத்தலுக்கான புதிய புலங்களைச் சேர்ப்பதன் மூலமும், அதற்கேற்ப வெவ்வேறு "
+"மதிப்பு வரம்புகளைக் குழுவாக்குவதன் மூலமும் நீங்கள் ராச்டர் பண்புக்கூறு "
+"அட்டவணையைத் தனிப்பயனாக்கலாம், மதிப்பு வரம்புகள் மற்றும் அவற்றுடன் தொடர்புடைய"
+" வண்ணங்கள் அல்லது லேபிள்களை மாற்றியமைத்தல், புதிய வரிசைகளைச் சேர்ப்பது, ... "
+"புதிய பண்புக்கூறு அட்டவணை தற்போதைய லேயர் சிம்பாலாசியைப் புதுப்பிக்கப் "
+"பயன்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1280
+msgid "Raster Attribute Table"
+msgstr "ராச்டர் பண்பு அட்டவணை"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1282
+msgid ""
+"At the top of the dialog, a set of tools allows to edit and save changes to "
+"the attribute table:"
+msgstr ""
+"உரையாடலின் மேற்புறத்தில், பண்புக்கூறு அட்டவணையில் மாற்றங்களைத் திருத்தவும் "
+"சேமிக்கவும் கருவிகளின் தொகுப்பு அனுமதிக்கிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1284
+msgid ""
+"|editTable| :sup:`Edit Attribute Table` turns the table into edit mode. If "
+"no specific row or field is selected, only the |newAttribute| :sup:`Add "
+"Column…` option is available."
+msgstr ""
+"|தொகு அட்டவணை| :sup:`பண்பு அட்டவணையைத் திருத்து` என்பது அட்டவணையைத் "
+"திருத்தும் பயன்முறையாக மாற்றுகிறது. குறிப்பிட்ட வரிசை அல்லது புலம் எதுவும் "
+"தேர்ந்தெடுக்கப்படவில்லை எனில், |newAttribute| :sup:`நெடுவரிசையைச் சேர்...` "
+"விருப்பம் உள்ளது."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1403
 msgid "editTable"
@@ -206,10 +2901,296 @@ msgstr "editTable"
 msgid "newAttribute"
 msgstr "newAttribute"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1286
+msgid ""
+"|newAttribute| :sup:`Add Column...` opens the :guilabel:`Add Column` dialog "
+"to add a new column to the raster attribute table. The dialog lets you "
+"define:"
+msgstr ""
+"|புதிய பண்புக்கூறு| :sup:`நெடுவரிசையைச் சேர்...` என்பது ராச்டர் பண்புக்கூறு "
+"அட்டவணையில் புதிய நெடுவரிசையைச் சேர்க்க :guilabel:`நெடுவரிசையைச் சேர்` "
+"உரையாடலைத் திறக்கும். உரையாடல் உங்களை வரையறுக்க உதவுகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1289
+msgid ":guilabel:`Column Type`, which can be:"
+msgstr ":guilabel:`நெடுவரிசை வகை`, இது இருக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1291
+msgid "|radioButtonOff| :guilabel:`Standard column`"
+msgstr "|ரேடியோ பட்டன்ஆஃப்| :guilabel:`நிலையான நெடுவரிசை`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1292
+msgid "|radioButtonOff| :guilabel:`Color RGBA`"
+msgstr "|ரேடியோ பட்டன்ஆஃப்| :guilabel:`கலர் RGBA`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1293
+msgid ""
+"|radioButtonOff| :guilabel:`Color ramp (RGBA minimum and RGBA maximum)`"
+msgstr ""
+"|ரேடியோ பட்டன்ஆஃப்| :guilabel:`வண்ண சாய்வு (RGBA குறைந்தபட்சம் மற்றும் RGBA "
+"அதிகபட்சம்)`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1295
+msgid ":guilabel:`Column Definition`, including:"
+msgstr ":guilabel:`நெடுவரிசை வரையறை`, உட்பட:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1297
+msgid ":guilabel:`Name` of the column (mandatory)"
+msgstr ":guilabel:நெடுவரிசையின் `பெயர்` (கட்டாயம்)"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1298
+msgid ":guilabel:`Usage`, which can be:"
+msgstr ":guilabel:`பயன்பாடு`, இது இருக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1300
+msgid ""
+":guilabel:`Pixel Count`: stores the number of pixels belonging to a given "
+"value or value range."
+msgstr ""
+":guilabel:`பிக்சல் எண்ணிக்கை`: கொடுக்கப்பட்ட மதிப்பு அல்லது மதிப்பு வரம்பைச்"
+" சேர்ந்த பிக்சல்களின் எண்ணிக்கையைச் சேமிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1301
+msgid ""
+":guilabel:`Generic`: general-purpose column with no predefined meaning."
+msgstr ""
+":guilabel:`Generic`: முன் வரையறுக்கப்பட்ட பொருள் இல்லாத பொது-நோக்க "
+"நெடுவரிசை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1302
+msgid ""
+":guilabel:`Name`: stores the class name or label associated with a raster "
+"value or range."
+msgstr ""
+":guilabel:`Name`: ராச்டர் மதிப்பு அல்லது வரம்புடன் தொடர்புடைய வகுப்பின் "
+"பெயர் அல்லது லேபிளைச் சேமிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1304
+msgid ":guilabel:`Data type`, which can be:"
+msgstr ":guilabel:`தரவு வகை`, இது இருக்கலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1306
+msgid ":guilabel:`String`"
+msgstr ":guilabel:`சரம்`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1307
+msgid ":guilabel:`Integer`"
+msgstr ":guilabel:`Integer`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1308
+msgid ":guilabel:`Long Integer`"
+msgstr ":guilabel:`நீண்ட முழு எண்`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1309
+msgid ":guilabel:`Double`"
+msgstr ":guilabel:`இரட்டை`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1311
+msgid ""
+":guilabel:`Insertion point`, defining whether the new column is inserted "
+"|radioButtonOff| :guilabel:`Before` or |radioButtonOff| :guilabel:`After` a "
+"selected existing column."
+msgstr ""
+":guilabel:`Insertion point`, புதிய நெடுவரிசை செருகப்பட்டதா என்பதை "
+"வரையறுக்கிறது |radioButtonOff| :guilabel:`முன்` அல்லது |radioButtonOff| "
+":guilabel:`பிறகு` தேர்ந்தெடுக்கப்பட்ட ஏற்கனவே உள்ள நெடுவரிசை."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1319
+msgid "Add Column dialog"
+msgstr "நெடுவரிசை உரையாடலைச் சேர்க்கவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1321
+msgid ""
+"|newTableRow|:guilabel:`Add Row...` opens the :guilabel:`Add Row` dialog to "
+"add a new row to the raster attribute table. Choose the :guilabel:`Insertion"
+" point` as |radioButtonOff|:guilabel:`Before current row` or "
+"|radioButtonOff|:guilabel:`After current row`."
+msgstr ""
+"|newTableRow|:guilabel:`வரிசையைச் சேர்...` என்பது ராச்டர் பண்புக்கூறு "
+"அட்டவணையில் புதிய வரிசையைச் சேர்க்க :guilabel:`வரிசையைச் சேர்` உரையாடலைத் "
+"திறக்கும். :guilabel:`Insertion point` ஐ |radioButtonOff|:guilabel:`தற்போதைய"
+" வரிசைக்கு முன்` அல்லது |radioButtonOff|:guilabel:`தற்போதைய வரிசைக்குப் "
+"பின்` எனத் தேர்ந்தெடுக்கவும்."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1443
 msgid "newTableRow"
 msgstr "newTableRow"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1325
+msgid ""
+"|removeSelectedFeature|:sup:`Remove Row` removes the selected row from the "
+"raster attribute table."
+msgstr ""
+"|removeSelectedFeature|:sup:`வரிசையை அகற்று` தேர்ந்தெடுக்கப்பட்ட வரிசையை "
+"ராச்டர் பண்பு அட்டவணையில் இருந்து நீக்குகிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1457
+msgid "removeSelectedFeature"
+msgstr "தேர்ந்தெடுக்கப்பட்ட அம்சங்களை நீக்கவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1326
+msgid ""
+"|deleteAttribute|:sup:`Remove Column` removes the selected column from the "
+"raster attribute table."
+msgstr ""
+"|deleteAttribute|:sup:`நெடுவரிசையை அகற்று` என்பது ராச்டர் பண்புக்கூறு "
+"அட்டவணையில் இருந்து தேர்ந்தெடுக்கப்பட்ட நெடுவரிசையை நீக்குகிறது."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1397
 msgid "deleteAttribute"
 msgstr "deleteAttribute"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1327
+msgid ""
+"|saveAllEdits|:sup:`Save Changes` saves any modifications made to the raster"
+" attribute table."
+msgstr ""
+"|saveAllEdits|:sup:`மாற்றங்களைச் சேமி` என்பது ராச்டர் பண்புக்கூறு "
+"அட்டவணையில் செய்யப்பட்ட எந்த மாற்றங்களையும் சேமிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1463
+msgid "saveAllEdits"
+msgstr "அனைத்து திருத்தங்களையும் சேமிக்கவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1329
+msgid ""
+"The next row provides options for controlling the displayed information in "
+"the table:"
+msgstr ""
+"அட்டவணையில் காட்டப்படும் தகவலைக் கட்டுப்படுத்துவதற்கான விருப்பங்களை அடுத்த "
+"வரிசை வழங்குகிறது:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1331
+msgid ""
+":guilabel:`Raster band`: allows selecting which raster band the attribute "
+"table applies to. Raster layers may contain multiple bands (e.g., "
+"multispectral data). Each band can have its own Raster Attribute Table."
+msgstr ""
+":guilabel:`Raster band`: பண்புக்கூறு அட்டவணை எந்த ராச்டர் பேண்டிற்குப் "
+"பொருந்தும் என்பதைத் தேர்ந்தெடுக்க அனுமதிக்கிறது. ராச்டர் அடுக்குகளில் பல "
+"பட்டைகள் இருக்கலாம் (எ.கா. மல்டிச்பெக்ட்ரல் தரவு). ஒவ்வொரு இசைக்குழுவும் "
+"அதன் சொந்த ராச்டர் பண்பு அட்டவணையை வைத்திருக்கலாம்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1334
+msgid ""
+":guilabel:`Classification`: allows selecting the fields used for classifying"
+" the raster layer. Keep in mind that the existing symbology for the raster "
+"will be replaced by a new symbology from the attribute table and any unsaved"
+" changes to the current symbology will be lost. Make sure to save your "
+"symbology style if needed before applying a classification."
+msgstr ""
+":guilabel:`வகைப்படுத்தல்`: ராச்டர் லேயரை வகைப்படுத்துவதற்குப் "
+"பயன்படுத்தப்படும் புலங்களைத் தேர்ந்தெடுக்க அனுமதிக்கிறது. ராச்டருக்கான "
+"தற்போதுள்ள சின்னங்கள் பண்பு அட்டவணையில் இருந்து புதிய குறியீட்டால் "
+"மாற்றப்படும் மற்றும் தற்போதைய குறியீட்டில் சேமிக்கப்படாத மாற்றங்கள் "
+"இழக்கப்படும் என்பதை நினைவில் கொள்ளவும். வகைப்பாட்டைப் பயன்படுத்துவதற்கு "
+"முன், தேவைப்பட்டால், உங்கள் குறியீட்டு பாணியைச் சேமிக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1342
+msgid "Identify raster cells"
+msgstr "ராச்டர் செல்களை அடையாளம் காணவும்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1344
+msgid ""
+"The |identify| :ref:`identify features <identify>` tool allows you to get "
+"information about specific points in a raster layer."
+msgstr ""
+"தி |அடையாளம்| :ref:`identify நற்பொருத்தங்கள் <identify>` கருவியானது ராச்டர் "
+"லேயரில் குறிப்பிட்ட புள்ளிகள் பற்றிய தகவலைப் பெற உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1347
+msgid "To use the |identify|:guilabel:`Identify features` tool:"
+msgstr ""
+"|அடையாளம்|:guilabel:`அடையாளங்களை அடையாளப்படுத்து` கருவியைப் பயன்படுத்த:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1349
+msgid "Select the raster layer in the Layers panel."
+msgstr "லேயர்கள் பேனலில் ராச்டர் லேயரைத் தேர்ந்தெடுக்கவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1350
+msgid ""
+"Click on the :guilabel:`Identify features` tool in the toolbar or press "
+":kbd:`Ctrl+Shift+I`."
+msgstr ""
+"கருவிப்பட்டியில் உள்ள :guilabel:`அடையாளங்களை அடையாளம் காணவும்` கருவியைக் "
+"சொடுக்கு செய்யவும் அல்லது :kbd:`Ctrl+Shift+I` அழுத்தவும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1351
+msgid ""
+"Click on the point in the raster layer that you want to identify. The pixel "
+"will get highlighted."
+msgstr ""
+"நீங்கள் அடையாளம் காண விரும்பும் ராச்டர் லேயரில் உள்ள புள்ளியைக் சொடுக்கு "
+"செய்யவும். படப்புள்ளி ஐலைட் செய்யப்படும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1354
+msgid ""
+"The Identify Results panel will open in its default ``Tree`` view and "
+"display information about the clicked point. Formatting of the results vary "
+"depending on the provider of the layer. For example:"
+msgstr ""
+"முடிவுகளை அடையாளம் காணும் குழு அதன் இயல்புநிலை ``Tree`` காட்சியில் "
+"திறக்கப்பட்டு சொடுக்கு செய்யப்பட்ட புள்ளி பற்றிய தகவலைக் காண்பிக்கும். "
+"அடுக்கு வழங்குநரைப் பொறுத்து முடிவுகளின் வடிவமைப்பு மாறுபடும். உதாரணமாக:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1358
+msgid ""
+"For a local raster layer: below the name of the layer, you have on the left "
+"the band(s) of the clicked pixel, and on the right their respective value."
+msgstr ""
+"உள்ளக ராச்டர் லேயருக்கு: லேயரின் பெயருக்குக் கீழே, இடதுபுறத்தில் சொடுக்கு "
+"செய்த பிக்சலின் பேண்ட்(கள்) மற்றும் வலதுபுறத்தில் அவற்றின் மதிப்பு "
+"இருக்கும்."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1361
+msgid ""
+"For a remote layer such as WMS, a :guilabel:`Format` menu allows you to "
+"select whether the information should be displayed as :guilabel:`HTML`, "
+":guilabel:`Feature` or :guilabel:`Text`."
+msgstr ""
+"WMS போன்ற ரிமோட் லேயருக்கு, செய்தி :guilabel:`HTML`, :guilabel:`Feature` "
+"அல்லது :guilabel:`Text` எனக் காட்டப்பட வேண்டுமா என்பதைத் தேர்ந்தெடுக்க "
+":guilabel:`Format` பட்டியல் உங்களை அனுமதிக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1365
+msgid ""
+"These values can also be rendered (from the :guilabel:`View` menu located at"
+" the bottom of the panel) in:"
+msgstr ""
+"இந்த மதிப்புகள் (பேனலின் கீழே அமைந்துள்ள :guilabel:`View` மெனுவிலிருந்து) "
+"இதில் வழங்கப்படலாம்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1367
+msgid ""
+"a ``Table`` view - organizes the information about the identified features "
+"and their values in a table."
+msgstr ""
+"ஒரு ``டேபிள்`` பார்வை - அடையாளம் காணப்பட்ட நற்பொருத்தங்கள் மற்றும் அவற்றின் "
+"மதிப்புகள் பற்றிய தகவலை அட்டவணையில் ஒழுங்கமைக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1369
+msgid ""
+"a ``Graph`` view - organizes the information about the identified features "
+"and their values in a graph."
+msgstr ""
+"ஒரு ``வரைபடம்`` பார்வை - ஒரு வரைபடத்தில் அடையாளம் காணப்பட்ட நற்பொருத்தங்கள் "
+"மற்றும் அவற்றின் மதிப்புகள் பற்றிய தகவலை ஒழுங்கமைக்கிறது."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1372
+msgid ""
+"Under the pixel attributes, you will find the :guilabel:`Derived` "
+"information, such as:"
+msgstr ""
+"படப்புள்ளி பண்புக்கூறுகளின் கீழ், நீங்கள் :guilabel:`பெறப்பட்ட` தகவலைக் "
+"காண்பீர்கள்:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1375
+msgid "``X`` and ``Y`` coordinate values of the point clicked"
+msgstr ""
+"சொடுக்கு செய்யப்பட்ட புள்ளியின் ``X`` மற்றும் ``Y`` ஒருங்கிணைப்பு மதிப்புகள்"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1376
+msgid "Column and row of the point clicked (pixel) when compatible"
+msgstr ""
+"நெடுவரிசை மற்றும் புள்ளியின் வரிசை இணக்கமாக இருக்கும் போது சொடுக்கு "
+"(பிக்சல்)."
