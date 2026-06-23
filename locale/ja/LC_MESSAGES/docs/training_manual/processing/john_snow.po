@@ -43,6 +43,14 @@ msgid ""
 " you can get more familiar with the processing framework elements."
 msgstr "このレッスンでは、プロセシング・フレームワークの要素により精通できるよう、ツールボックスだけを使用していくつかの実際の分析を実行します。"
 
+#: ../../docs/training_manual/processing/john_snow.rst:8
+msgid ""
+"Now that everything is configured and we can use external algorithms, we "
+"have a very powerful tool to perform spatial analysis. It is time to work "
+"out a larger exercise with some real world data."
+msgstr ""
+"全てが設定され、外部アルゴリズムを使用でき、これで空間分析を実行するための非常に強力なツールを手に入れました。何か実世界のデータでより大規模な演習に取りかかる時が来ました。"
+
 #: ../../docs/training_manual/processing/john_snow.rst:12
 msgid ""
 "We will be using the well-known dataset that John Snow used in 1854, in his "
@@ -53,8 +61,8 @@ msgid ""
 "results and conclusions, but it is a good way of showing how these spatial "
 "problems can be analyzed and solved by using different processing tools."
 msgstr ""
-"我々は、John "
-"Snowが1854年に彼の画期的な仕事(https://en.wikipedia.org/wiki/John_Snow_%28physician%29)で使用した有名なデータセットを使用し、いくつかの興味深い結果を得ることになります。このデータセットの分析は非常に明白であり、良い結果と結論に至るために高度なGIS技術を必要としませんが、このような空間的問題が、異なる処理ツールを使うことによってどのように分析され解決されるかを示す良い方法であるといえるでしょう。"
+"John "
+"Snowが1854年に彼の画期的な仕事(https://en.wikipedia.org/wiki/John_Snow_%28physician%29)で使用した有名なデータセットを使って、いくつかの興味深い結果を得てみます。このデータセットの分析はとても明白で、良い結果と結論に至るために高度なGIS技術を必要としませんが、このような空間的問題が、様々な処理ツールを使うことによってどのように分析され解決されるかを示す良い方法であるといえるでしょう。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:19
 msgid ""
@@ -62,15 +70,56 @@ msgid ""
 "an OSM rendered map in TIFF format. Open the corresponding QGIS project for "
 "this lesson."
 msgstr ""
-"データセットには、コレラによる死者の位置とポンプの位置のシェープファイル、およびTIFFフォーマットでのOSMレンダリングされた地図が含まれています。このレッスンのための対応QGISプロジェクトを開きます。"
+"データセットには、コレラによる死者の位置とポンプの位置のシェープファイル、およびOSMレンダリングされたTIFF形式の地図が含まれています。このレッスンに対応しているQGISプロジェクトを開いてください。"
+
+#: ../../docs/training_manual/processing/john_snow.rst:24
+msgid ""
+"The first thing to do is to calculate the Voronoi diagram (a.k.a. Thiessen "
+"polygons) of the pumps layer, to get the influence zone of each pump. The "
+":guilabel:`Voronoi polygons` algorithm can be used for that."
+msgstr ""
+"最初にすることは、ポンプレイヤのボロノイ図（別名：ティーセン多角形）を計算し、各ポンプの影響範囲を得ることです。 :guilabel:`ボロノイ多角形`"
+" アルゴリズムが、それに使用できます。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:31
 msgid "Pretty easy, but it will already give us interesting information."
-msgstr "かなり簡単ですが、それですでに興味深い情報が得られます。"
+msgstr "かなり簡単ですが、それで早くも興味深い情報が得られます。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:35
 msgid "Clearly, most cases are within one of the polygons"
 msgstr "明らかに、ほとんどの患者がポリゴンの1つの範囲内にあります"
+
+#: ../../docs/training_manual/processing/john_snow.rst:37
+msgid ""
+"To get a more quantitative result, we can count the number of deaths in each"
+" polygon. Since each point represents a building where deaths occurred, and "
+"the number of deaths is stored in an attribute, we cannot just count the "
+"points. We need a weighted count, so we will use the :guilabel:`Count points"
+" in polygon` tool."
+msgstr ""
+"より定量的な結果を得るためには、各ポリゴンにおける死者数をカウントできます。各ポイントは死者が発生した建物を表し、死者数は属性に格納されているので、ポイントをカウントするだけではできません。重み付けされたカウントを必要とするので、"
+" :guilabel:`ポリゴン内の点の数` ツールを使用します。"
+
+#: ../../docs/training_manual/processing/john_snow.rst:44
+msgid ""
+"The new field will be called ``DEATHS``, and we use the ``COUNT`` field as "
+"weighting field. The resulting table clearly reflects that the number of "
+"deaths in the polygon corresponding to the first pump is much larger than "
+"the other ones."
+msgstr ""
+"新しいフィールドは ``DEATH（死亡）`` と呼ばれ、そして ``COUNT`` "
+"フィールドを重みフィールドとして使用します。得られたテーブルは、明らかに第一のポンプに対応するポリゴンにおける死者数が他のものよりもはるかに大きいことを反映しています。"
+
+#: ../../docs/training_manual/processing/john_snow.rst:50
+msgid ""
+"Another good way of visualizing the dependence of each point in the "
+"``Cholera_deaths`` layer with a point in the ``Pumps`` layer is to draw a "
+"line to the closest one. This can be done with the :guilabel:`Distance to "
+"nearest hub` tool, and using the configuration shown next."
+msgstr ""
+"``Pumps（ポンプ）`` レイヤのあるポイントと ``Cholera_deaths（コレラ死者）`` "
+"レイヤの各ポイントとの依存関係を視覚化するもう一つの良い方法は、最も近いものへ線を描くことです。これは、:guilabel:`最寄のハブの距離（ハブへの線）`"
+" ツールで次のような設定を使って行うことができます。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:56
 msgid "The result looks like this:"
@@ -85,6 +134,27 @@ msgid ""
 "cases than other."
 msgstr ""
 "線の数は中央のポンプの方が多いですが、これは死者数ではなくコレラ患者が発見された場所の数を表していることを忘れないでください。それは代表的なパラメータですが、ある場所では他の場所よりも多くの患者が発生している可能性が考慮されていません。"
+
+#: ../../docs/training_manual/processing/john_snow.rst:65
+msgid ""
+"A density layer will also give us a very clear view of what is happening. We"
+" can create it with the :guilabel:`Heatmap (Kernel density estimation)` "
+"algorithm. Using the ``Cholera_deaths`` layer, its ``COUNT`` field as weight"
+" field, with a radius of 100, the extent and cell size of the streets raster"
+" layer, we get something like this."
+msgstr ""
+"密度レイヤはまた、何が起きているかを非常に明確に示してくれます。それは :guilabel:`ヒートマップ（カーネル密度推定）` "
+"アルゴリズムで作成できます。 ``Cholera_deaths`` レイヤ、重みフィールドとしてその ``COUNT`` "
+"フィールド、半径を100、街路ラスタレイヤの範囲とセルサイズを使用すると、次のようになります。"
+
+#: ../../docs/training_manual/processing/john_snow.rst:72
+msgid ""
+"Remember that, to get the output extent, you do not have to type it. Click "
+"on the button on the right-hand side and select :guilabel:`Use layer/canvas "
+"extent`."
+msgstr ""
+"出力範囲の設定に入力する必要がないことを思い出してください。右側のボタンをクリックし、 :guilabel:`レイヤ/キャンバス範囲を使用` "
+"を選択します。"
 
 #: ../../docs/training_manual/processing/john_snow.rst:77
 msgid ""
