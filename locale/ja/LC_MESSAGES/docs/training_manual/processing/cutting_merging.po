@@ -35,7 +35,7 @@ msgstr ""
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:2
 msgid "Clipping and merging raster layers"
-msgstr "ラスタレイヤをクリップしてマージする"
+msgstr "ラスタレイヤをクリッピングしてマージする"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:4
 msgid ""
@@ -52,7 +52,7 @@ msgid ""
 "you open the project corresponding to this lesson, you will see something "
 "like this."
 msgstr ""
-"このレッスンでは、ポリゴン１つだけのベクタレイヤによって与えられる市街地を囲む領域に対して傾斜レイヤを計算しようとしています。ベースDEMは2つのラスタレイヤに分割され、併せると作業したい都市の周りのものよりはるかに大きい領域をカバーしています。このレッスンに対応したプロジェクトを開くと、次のように表示されます。"
+"このレッスンでは、市街地を囲む領域の傾斜レイヤを計算します。領域は単独のポリゴンを持ったベクタレイヤで与えられます。ベースDEMは2つのラスタレイヤに分割されており、合わせると作業したい都市の周りよりはるかに大きい領域をカバーしています。このレッスンに対応したプロジェクトを開くと、次のように表示されます。"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:16
 msgid "These layers have two problems:"
@@ -62,14 +62,13 @@ msgstr "これらのレイヤには二つの問題があります。"
 msgid ""
 "They cover an area that is too large for what we want (we are interested in "
 "a smaller region around the city center)"
-msgstr "それらは希望するよりずっと大きい領域をカバーしています（興味があるのは市内中心部の周りのより小さな領域）"
+msgstr "それらは欲しいものより広過ぎる領域をカバーしています（興味があるのは市の中心部周辺のより小さな領域です）"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:20
 msgid ""
 "They are in two different files (the city limits fall into just one single "
 "raster layer, but, as it's been said, we want some extra area around it)."
-msgstr ""
-"それらは2つの異なるファイルにあります（市域は1つだけのラスタレイヤに入るが、言われているように、その周りにいくつかの余分な面積が欲しい）。"
+msgstr "それらは2つの異なるファイルにあります（市域は1つだけのラスタレイヤに入るが、言った通り、その周りにいくつかの余分な面積が欲しい）。"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:23
 msgid "Both of them are easily solvable with the appropriate geoalgorithms."
@@ -82,7 +81,19 @@ msgid ""
 "the city area, and then we buffer it, so as to have a raster layer that "
 "covers a bit more that the strictly necessary."
 msgstr ""
-"まず、望む領域を定義する矩形を作成します。これを行うには、市の面積の限界を有するレイヤのバウンディングボックスを含むレイヤを作成し、それから厳密に必要であるよりもう少しカバーするラスタレイヤを有するように、それをバッファリングします。"
+"まず、欲しい領域を定義する矩形を作成します。これを行うには、市の領域の際を有するレイヤのバウンディングボックスを含むレイヤを作成し、次にそれをバッファリングして、厳密に必要であるより少し大きくカバーするラスタレイヤが得られるようにします。"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:30
+msgid ""
+"To calculate the bounding box , we can use the :guilabel:`Extract layer "
+"extent` algorithm"
+msgstr "バウンディングボックスを計算するために、 :guilabel:`レイヤ範囲を抽出` アルゴリズムを使用できます"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:34
+msgid ""
+"To buffer it, we use the :guilabel:`Buffer` algorithm, with the following "
+"parameter values."
+msgstr "それをバッファリングするために、以下のパラメータ値で :guilabel:`バッファ` アルゴリズムを使用します。"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:38
 msgid ""
@@ -94,11 +105,46 @@ msgid ""
 "Here is the resulting bounding box obtained using the parameters shown above"
 msgstr "これが上に示したパラメーターを用いて得られた結果のバウンディングボックスです"
 
+#: ../../docs/training_manual/processing/cutting_merging.rst:44
+msgid ""
+"It is a rounded box, but we can easily get the equivalent box with square "
+"angles, by running the :guilabel:`Extract layer extent` algorithm on it. We "
+"could have buffered the city limits first, and then calculate the extent "
+"rectangle, saving one step."
+msgstr ""
+"これは丸みを帯びたボックスですが、それに :guilabel:`レイヤ範囲を抽出` "
+"アルゴリズムを実行することで、正方形の角度での同等のボックスを簡単に取得できます。市の境界を先にバッファリングして、範囲矩形を計算することでひとつのステップを省略できたでしょう。"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:50
+msgid ""
+"You will notice that the rasters has a different projection from the vector."
+" We should therefore reproject them before proceeding further, using the "
+":guilabel:`Warp (reproject)` tool."
+msgstr ""
+"そのラスタはベクタと異なる投影法を有していることに気づきます。したがって先に進む前に、 :guilabel:`ワープ（再投影）` "
+"ツールを使って、それらを再投影する必要があります。"
+
 #: ../../docs/training_manual/processing/cutting_merging.rst:56
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
 "compression method is selected."
 msgstr "最近のバージョンではより複雑なインターフェイスになっています。少なくとも1つの圧縮方式が選択されていることを確認します。"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:59
+msgid ""
+"With this layer that contains the bounding box of the raster layer that we "
+"want to obtain, we can crop both of the raster layers, using the "
+":guilabel:`Clip raster by mask layer` algorithm."
+msgstr ""
+"入手したいラスタレイヤのバウンディングボックスを含んでいるこのレイヤを、 :guilabel:`ポリゴンでラスタをクリップ` "
+"アルゴリズムに使用して、両方のラスタレイヤを切り出すことができます。"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:64
+msgid ""
+"Once the layers have been cropped, they can be merged using the SAGA "
+":guilabel:`Mosaic raster layers` algorithm."
+msgstr ""
+"レイヤを切り出したら、SAGA :guilabel:`Mosaic raster layers` アルゴリズムを使ってレイヤをマージすることができます。"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:68
 msgid ""
@@ -111,7 +157,7 @@ msgid ""
 "automate that operation. In this example, we just have two layers, so you "
 "shouldn't worry about that now."
 msgstr ""
-"最初にマージしてからトリミングすると時間を節約でき、二回クリッピングアルゴリズムを呼び出さずにすむでしょう。しかしながら、マージする複数のレイヤがあってそれらがかなり大きなサイズを持っている場合、それが後工程に処理が困難であるよりも大きなレイヤになってしまいます。その場合はクリッピングアルゴリズムを数回呼び出す必要があります。時間がかかるかもしれませんが、心配しないで。その操作を自動化するためにいくつかの追加のツールがあることがすぐにわかりますから。この例では、レイヤは2つだけなので、今それを心配することはありません。"
+"最初にマージしてから切り出しすると時間を節約でき、クリッピングアルゴリズムを二回呼び出さずにすみます。しかしながら、マージするレイヤが複数あってそれらがかなり大きなサイズの場合、それが後工程に処理が困難であるよりも大きなレイヤになってしまいます。その場合はクリッピングアルゴリズムを複数回呼び出す必要があるかもしれず、それには時間がかかるかもしれません。でも心配しないでください。その操作を自動化するためのいくつかの追加のツールがあることがすぐに分かりますから。この例ではレイヤは二つだけなので、今それを心配することはありません。"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:76
 msgid "With that, we get the final DEM we want."
@@ -121,6 +167,21 @@ msgstr "それによって、私たちが望む最後のDEMが得られます。
 msgid "Now it is time to compute the slope layer."
 msgstr "では傾斜レイヤを計算しましょう。"
 
+#: ../../docs/training_manual/processing/cutting_merging.rst:82
+msgid ""
+"A slope layer can be computed with the :guilabel:`Slope` algorithm, but the "
+"DEM obtained in the last step is not suitable as input, since elevation "
+"values are in meters but cellsize is not expressed in meters (the layer uses"
+" a CRS with geographic coordinates). A reprojection is needed. To reproject "
+"a raster layer, the :guilabel:`Warp (reproject)` algorithm can be used "
+"again. We reproject into a CRS with meters as units (e.g. 3857), so we can "
+"then correctly calculate the slope, with either SAGA or GDAL."
+msgstr ""
+"傾斜レイヤは :guilabel:`傾斜` "
+"アルゴリズムを用いて計算できますが、最後の工程で得られたDEMは、標高値はメートル単位でもセルサイズはメートル単位で表現されていないため、入力として適していません（レイヤは地理座標を持つCRSを使用しています）。再投影が必要です。ラスタレイヤを再投影するために、再び"
+" :guilabel:`ワープ（再投影）` "
+"アルゴリズムが使用できます。単位にメートルを持つCRS（例えば3857）に再投影し、その後、SAGAかGDALのどちらかで傾斜を正しく計算できます。"
+
 #: ../../docs/training_manual/processing/cutting_merging.rst:90
 msgid "With the new DEM, slope can now be computed."
 msgstr "新DEMでは、傾きが計算できるようになりました。"
@@ -128,6 +189,26 @@ msgstr "新DEMでは、傾きが計算できるようになりました。"
 #: ../../docs/training_manual/processing/cutting_merging.rst:94
 msgid "And here is the resulting slope layer."
 msgstr "そして、これが結果の傾斜レイヤです。"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:98
+msgid ""
+"The slope produced by the :guilabel:`Slope` algorithm can be expressed in "
+"degrees or radians; degrees are a more practical and common unit. In case "
+"you calculated it in radians, the :guilabel:`Metric conversions` algorithm "
+"will help us to do the conversion (but in case you didn't know that "
+"algorithm existed, you could use the raster calculator that we have already "
+"used)."
+msgstr ""
+":guilabel:`傾斜` "
+"アルゴリズムによって作成された傾斜は、度またはラジアンで表現できます。度は、より実用的で一般的な単位です。ラジアンで計算した場合は、 "
+":guilabel:`メトリック変換` "
+"アルゴリズムが変換するのに役立ちます（しかし、そのアルゴリズムが存在していることを知らなかった場合は、すでに使ったラスタ計算機を使用できたでしょう）。"
+
+#: ../../docs/training_manual/processing/cutting_merging.rst:106
+msgid ""
+"Reprojecting the converted slope layer back with the :guilabel:`Reproject "
+"raster layer`, we get the final layer we wanted."
+msgstr ":guilabel:`ラスタレイヤ再投影` を使って変換された斜面レイヤを再投影して戻すと、望んでいた最終レイヤが得られます。"
 
 #: ../../docs/training_manual/processing/cutting_merging.rst:110
 msgid ""
