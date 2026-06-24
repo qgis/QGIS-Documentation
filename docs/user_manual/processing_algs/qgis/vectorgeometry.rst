@@ -30,10 +30,10 @@ dimension of the input layer:
   distance (``straightdis``)
 * for **polygon** layers: ``perimeter`` and ``area``
 
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
+
 .. note:: This algorithm uses ellipsoid based measurements
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
-**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -3774,12 +3774,12 @@ this breakpoint.
 If the input geometry contains M or Z values, these will be linearly
 interpolated for the new vertices created at the antimeridian.
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of line features
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........
