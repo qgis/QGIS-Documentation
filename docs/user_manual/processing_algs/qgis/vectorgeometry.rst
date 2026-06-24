@@ -417,13 +417,13 @@ of each polygon, preserving main topology while ignoring small variations.
 Z values are ignored; the medial axis is calculated from the 2D projection
 of input geometries.
 
-.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
-   (see :menuselection:`Help --> About` menu).
-
 .. figure:: img/approxmedialaxis.png
    :align: center
 
    Medial axis (red line) of a polygon layer
+
+.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
@@ -3175,14 +3175,13 @@ For MultiPolygon geometries, each part is extruded separately, producing one out
 
 Output geometries are of type PolyhedralSurfaceZ, representing the extruded surface of each input feature.
 
-.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
-   (see :menuselection:`Help --> About` menu).
-
 .. figure:: img/extrude.png
    :align: center
 
    The left image shows a 2D polygon, while the right image shows the polygon extruded along the Z direction.
 
+.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
