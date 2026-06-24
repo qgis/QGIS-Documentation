@@ -1301,7 +1301,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: point]
+     - [vector: geometry]
      - Input vector layer with multipoint features
    * - **Threshold**
      - ``ALPHA``
@@ -3252,6 +3252,107 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+.. _qgistightconcavehullofpolygons:
+
+Fill gaps between polygons
+---------------------------
+
+``Added in 4.2``
+
+Calculates a concave hull for each multi-polygon feature in an input layer.
+
+Unlike the standard Concave Hull algorithm, a tight concave hull is a (possibly)
+non-convex polygon containing all the input polygons.
+The computed hull fills the gaps between the polygons without intersecting their interiors.
+It strictly follows the outer boundaries of the input polygons, allowing you to fill gaps between
+them without distorting their original shapes.
+
+It is particularly useful for cases such as generalizing groups of building outlines,
+creating 'district' polygons around blocks, or removing gaps and joining disjoint sets of polygons.
+
+The algorithm works by creating a constrained Delaunay Triangulation of the space between
+the polygons and removing the longest outer edges until a target criterion is reached.
+
+The input geometry must be a valid Polygon or MultiPolygon (i.e., the individual polygons must not overlap).
+
+.. figure:: img/fill_gaps_between_polygons.png
+    :align: center
+
+    Filling gaps between polygons using ratio values of 0, 0.3 and 1.
+
+
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisconcavehullbyfeature`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer with multipolygon features
+   * - **Ratio**
+     - ``RATIO``
+     - [numeric: double]
+
+       Default: 0.3
+     - Specifies the maximum edge length as a fraction of the difference between the longest and shortest edge
+       lengths between the polygons. This normalizes the maximum edge length to be scale-free.
+       A value of 1 produces the convex hull; a value of 0 produces the original polygons.
+   * - **Allow holes**
+     - ``HOLES``
+     - [boolean]
+
+       Default: True
+     - Controls whether the computed concave hull is allowed to contain holes.
+   * - **Tight concave hulls**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tight concave hulls**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer containing the tight concave hull
+       for each input multipolygon feature.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:tightconcavehullofpolygons``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 
 .. _qgisfilterverticesbym:
