@@ -11,6 +11,7 @@
 # tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# hirabayashi kino, 2026
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: hirabayashi kino, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -925,6 +926,32 @@ msgstr "同じ名前のブックマークを複数持てることに注意して
 msgid "Working with Bookmarks"
 msgstr "ブックマークを操作する"
 
+#: ../../docs/user_manual/map_views/map_view.rst:376
+msgid ""
+"To use and manage bookmarks, you can either use the :guilabel:`Spatial "
+"Bookmarks` panel or :guilabel:`Browser`:"
+msgstr ""
+"ブックマークを利用・管理するには、 :guilabel:`空間ブックマーク` パネル もしくは :guilabel:`ブラウザ` パネルを使用できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:379
+msgid ""
+"Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show "
+"Spatial Bookmark Manager` or press :kbd:`Ctrl+7` to open the "
+":guilabel:`Spatial Bookmark Manager` panel."
+msgstr ""
+":menuselection:`ビュー -->` |showBookmarks| :menuselection:`空間ブックマーク・マネージャを表示` "
+"を選択するか、 :kbd:`Ctrl+7` を押して :guilabel:`空間ブックマーク・マネージャ` パネルを開きます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:381
+msgid ""
+"Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show "
+"Spatial Bookmarks` or press :kbd:`Ctrl+Shift+B` to show the |showBookmarks| "
+":guilabel:`Spatial Bookmarks` entry in the :guilabel:`Browser` panel."
+msgstr ""
+":menuselection:`ビュー -->` |showBookmarks| :menuselection:`空間ブックマークを表示` "
+"を選択するか、 :kbd:`Ctrl+Shift+B` を押して :guilabel:`ブラウザ` パネル内の |showBookmarks| "
+":guilabel:`空間ブックマーク` エントリを表示します。"
+
 #: ../../docs/user_manual/map_views/map_view.rst:385
 msgid "You can perform the following tasks:"
 msgstr "以下の作業を行うことができます："
@@ -1161,6 +1188,12 @@ msgstr ""
 #: ../../docs/user_manual/map_views/map_view.rst:474
 msgid "The interval and offset parameters can be set based on the:"
 msgstr "間隔とオフセットのパラメータは、以下に基づいて設定することもできます："
+
+#: ../../docs/user_manual/map_views/map_view.rst:476
+msgid ""
+":guilabel:`Canvas Extents`: generates a grid with an interval that is "
+"approximately 1/5 of the canvas width"
+msgstr ":guilabel:`キャンバスの領域`: キャンバス幅のおおよそ1/5の間隔でグリッドを生成します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:478
 msgid ":guilabel:`Active Raster Layer` resolution"
@@ -1745,6 +1778,10 @@ msgstr "createAnnotationLayer"
 msgid "Create a new layer to store annotations"
 msgstr "注記を保存するための新しいレイヤを作成します"
 
+#: ../../docs/user_manual/map_views/map_view.rst:778
+msgid ":ref:`Feature annotations <annotation_layer>`"
+msgstr ":ref:`地物の注記 <annotation_layer>`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:780
 msgid ":sup:`Main Annotation Layer Properties`"
 msgstr ":sup:`メイン注記レイヤの属性`"
@@ -1813,6 +1850,10 @@ msgstr "|actionText| :sup:`点上の注記を作成`"
 msgid "actionText"
 msgstr "actionText"
 
+#: ../../docs/user_manual/map_views/map_view.rst:790
+msgid "Create an annotation as a text label anchored at a point"
+msgstr "点に固定されたテキストラベルの注記を作成します"
+
 #: ../../docs/user_manual/map_views/map_view.rst:792
 #: ../../docs/user_manual/map_views/map_view.rst:907
 msgid "|textAlongLine| :sup:`Create Text Annotation along Line`"
@@ -1826,14 +1867,26 @@ msgstr "textAlongLine"
 msgid "Create an annotation as a curved text along a line feature"
 msgstr "線地物に沿った曲線テキストとして注記を作成します。"
 
+#: ../../docs/user_manual/map_views/map_view.rst:794
+msgid "|textInsideRect| :sup:`Create Text Annotation in Rectangle`"
+msgstr "|textInsideRect| :sup:`四角の注記を作成`"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1477
 msgid "textInsideRect"
 msgstr "textInsideRect"
+
+#: ../../docs/user_manual/map_views/map_view.rst:794
+msgid "Create an annotation as a text label in a rectangular text box"
+msgstr "長方形のテキストボックス内にテキストラベルの注記を作成します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:796
 #: ../../docs/user_manual/map_views/map_view.rst:914
 msgid "|addImage| :sup:`Create Picture Annotation`"
 msgstr "|addImage| :sup:`画像注記を作成します`"
+
+#: ../../docs/user_manual/map_views/map_view.rst:796
+msgid "Create an annotation representing an :file:`.SVG` or raster image"
+msgstr ":file:`.SVG` またはラスタ画像を表示する注記を作成します"
 
 #: ../../docs/user_manual/map_views/map_view.rst:798
 msgid "|htmlAnnotation| :sup:`HTML Annotation`"
@@ -1842,6 +1895,14 @@ msgstr "|htmlAnnotation| :sup:`HTML注記`"
 #: ../../docs/user_manual/map_views/map_view.rst:1406
 msgid "htmlAnnotation"
 msgstr "htmlAnnotation"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid "Select and create annotation with a :file:`HTML` formatted text"
+msgstr ":file:`HTML` 形式のテキストを含む注記の選択と作成ができます"
+
+#: ../../docs/user_manual/map_views/map_view.rst:798
+msgid ":ref:`Balloon annotations <balloon_annotations>`"
+msgstr ":ref:`吹き出しの注記 <balloon_annotations>`"
 
 #: ../../docs/user_manual/map_views/map_view.rst:800
 msgid "|formAnnotation| :sup:`Form Annotation`"
@@ -2378,6 +2439,29 @@ msgstr ""
 "バルーン注記は :menuselection:`編集 --> 注記を追加 -->` メニューか、 :guilabel:`注記ツールバー` "
 "から追加できます:"
 
+#: ../../docs/user_manual/map_views/map_view.rst:1025
+msgid ""
+"|htmlAnnotation| :sup:`HTML Annotation` to display a HTML-formatted string "
+"or a whole :file:`HTML` file as an annotation."
+msgstr ""
+"|htmlAnnotation| :sup:`HTML注記` HTML形式の文字列、または :file:`HTML` "
+"ファイル全体を注記として表示します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1027
+msgid ""
+"|formAnnotation| :sup:`Form Annotation`: useful to display attributes of a "
+"vector layer in a customized :file:`.ui` file. This is similar to the "
+":ref:`custom attribute forms <provide_ui_file>`, but displayed in an "
+"annotation item."
+msgstr ""
+"|formAnnotation| :sup:`注記フォーム` : カスタマイズされた "
+":file:`.ui`ファイルでベクタレイヤの属性を表示するのに便利です。これは  :ref:`カスタム属性フォーム "
+"<provide_ui_file>` に似ていますが、注記アイテム内に表示されます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1037
+msgid "Example of a HTML balloon annotation"
+msgstr "バルーン注記の例"
+
 #: ../../docs/user_manual/map_views/map_view.rst:1040
 msgid ""
 "To add a balloon annotation, select the corresponding tool and click on the "
@@ -2386,6 +2470,32 @@ msgid ""
 " types:"
 msgstr ""
 "バルーン注記を追加するには、対応するツールを選択してマップキャンバスをクリックします。空のバルーンが追加されます。これをダブルクリックすると、さまざまなオプションを含むダイアログが開きます。このダイアログは、すべての注記タイプでほぼ同じです。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1044
+msgid ""
+":guilabel:`File`: Fill it with the path to a :file:`.html` or :file:`.ui` "
+"file, depending on the type of annotation, to serve as contents of the "
+"annotation."
+msgstr ""
+":guilabel:`ファイル` ：注記の種類に応じて、注記の内容として機能する :file:`.html` または :file:`.ui` "
+"ファイルへのPATHを入力します。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1046
+msgid ""
+":guilabel:`Source`: Only available for HTML annotations, it allows to serve "
+"the annotation with a plain or HTML-formatted text instead of a file."
+msgstr ""
+":guilabel:`ソース` "
+"：HTML注記でのみ利用可能で、ファイルの代わりにプレーンテキストまたはHTML形式のテキストを注記の内容として表示できます。"
+
+#: ../../docs/user_manual/map_views/map_view.rst:1048
+msgid ""
+"|checkbox| :guilabel:`Fixed map position`: when unchecked, the balloon "
+"placement is based on a screen position (instead of the map), meaning that "
+"it's always shown regardless of the map canvas extent."
+msgstr ""
+"|checkbox| "
+":guilabel:`地図の固定位置`：チェックを外すと、バルーンの配置は（地図ではなく）画面の位置に基づきます。つまり、注記はマップキャンバスの範囲に関係なく常に表示されます。"
 
 #: ../../docs/user_manual/map_views/map_view.rst:1051
 msgid ""
