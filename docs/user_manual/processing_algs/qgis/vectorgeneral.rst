@@ -1395,14 +1395,14 @@ related child feature. This master feature contains all the
 attributes for the related features.
 This allows to have the relation as a plain table that can be e.g. exported to CSV.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
 .. figure:: img/flatten_relationship.png
   :align: center
   :width: 100%
 
   Form of a region with related children (left) - A duplicate region feature for each related child, with joined attributes (right)
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........

@@ -2589,7 +2589,6 @@ the output layer will be of the same type and contain only single curve segments
 
 .. note::
 
- * This algorithm drops existing primary keys or FID values and regenerates them in output layers.
  * This algorithm does not require valid geometries as input.
 
 .. figure:: img/explode_lines.png
@@ -2600,6 +2599,9 @@ the output layer will be of the same type and contain only single curve segments
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of line features
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
@@ -7754,13 +7756,13 @@ to the input polylines (at vertices).
 
 The output transect layer includes the original feature fields along with new transect fields.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
 .. figure:: img/transect.png
    :align: center
 
    Dashed red lines represent the transect of the input line layer
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgistransectfixeddistance`
 
@@ -7869,13 +7871,13 @@ to the input polylines at regular intervals.
 
 The output transect layer includes the original feature fields along with new transect fields.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
 .. figure:: img/transect_fixed_distance.png
    :align: center
 
    Transects (red lines) created at fixed intervals along the input line layer (blue lines)
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgistransect`
 
