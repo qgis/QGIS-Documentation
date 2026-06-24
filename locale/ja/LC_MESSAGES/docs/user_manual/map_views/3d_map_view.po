@@ -11,6 +11,7 @@
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# hirabayashi kino, 2026
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: hirabayashi kino, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -138,9 +139,27 @@ msgstr ""
 msgid "identify"
 msgstr "identify"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:45
+msgid ""
+"|measure| :sup:`Measurement Line`: measures the horizontal, vertical, and "
+"total 3D distance between points"
+msgstr "|measure| :sup:`計測ライン` ：ポイント間の水平距離、垂直距離、および3Dの総距離を測定します。"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:516
 msgid "measure"
 msgstr "measure"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:47
+msgid "Click to add points"
+msgstr "クリックして点を追加します"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:48
+msgid "Right-click to finish the measurement"
+msgstr "右クリックして計測を終了します"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:49
+msgid "Right-clicking twice or pressing :guilabel:`New` will reset the table"
+msgstr "右クリックを2回行うか :guilabel:`新規` を押すとテーブルがリセットされます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:50
 msgid ""
@@ -267,9 +286,32 @@ msgstr ""
 "2Dマップキャンバス上で描画した範囲に基づいて、3Dシーンを切り取り、その範囲と交差する地形や特徴のみを表示することができます. より詳細なオプションは"
 " :ref:`General configuration <scene_extent>` タブで利用できます。"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:79
+msgid ""
+"|editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene by "
+"defining an area on the terrain in the 2D map canvas. Click to set the start"
+" point, move the mouse to define the line direction and click again to set "
+"the end point. You can adjust the size of the section by moving the mouse "
+"after selecting the start and end points. Press :kbd:`Esc` or right-click to"
+" reset the selection."
+msgstr ""
+"|editCut| :sup:`断面図ツール` "
+"は、2Dマップキャンバス上の地形の範囲を定義することで、3Dシーン内に断面図を作成します。クリックして始点を設定し、マウスを動かして線の方向を決めたら、もう一度クリックして終点を設定します。始点と終点を選択した後にマウスを動かすことで、断面のサイズを調整できます。選択をリセットするには"
+" Press :kbd:`Esc` キーを押すか右クリックします。"
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:506
 msgid "editCut"
 msgstr "editCut"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:83
+msgid ""
+"Use |editCutDisabled| :sup:`Disable Cross Section` to remove the cross "
+"section."
+msgstr "|editCutDisabled| :sup:`断面図ツールを無効化` を使用して断面図を削除します。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:508
+msgid "editCutDisabled"
+msgstr "editCutDisabled"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:84
 msgid ""
@@ -284,6 +326,14 @@ msgstr ""
 #: ../../docs/user_manual/map_views/3d_map_view.rst:528
 msgid "shadow"
 msgstr "shadow"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:87
+msgid ""
+"The |options| :sup:`Configure...` button opens the dialog to configure the "
+"3D map view :ref:`settings <scene_configuration>`."
+msgstr ""
+"|options| :sup:`設定...` ボタンをクリックすると、3Dマップビューの設定ダイアログが開きます :ref:`settings "
+"<scene_configuration>`"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:520
 msgid "options"
@@ -302,6 +352,15 @@ msgstr "dock"
 #: ../../docs/user_manual/map_views/3d_map_view.rst:94
 msgid "Scene Configuration"
 msgstr "シーン設定"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:96
+msgid ""
+"The 3D map view opens with some default settings you can customize. To do "
+"so, press the |options| :sup:`Configure...` button at the top of the 3D "
+"canvas panel to open the :guilabel:`3D configuration` window."
+msgstr ""
+"3Dマップビューはデフォルトの設定で開かれますが、設定のいくつかはカスタマイズが可能です。設定を変更するには、3Dキャンバスパネルの上部にある "
+"|options| :sup:`設定...` ボタンをクリックし、 :guilabel:`3Dコンフィグレーション` ウィンドウを開きます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:100
 msgid ""
@@ -794,6 +853,15 @@ msgstr "|unchecked| :guilabel:`ラベルを表示`: マップラベルのオン/
 msgid "|unchecked| :guilabel:`Show frames per second (FPS)`"
 msgstr "|unchecked| :guilabel:`FPSを表示`"
 
+#: ../../docs/user_manual/map_views/3d_map_view.rst:363
+msgid ""
+"|unchecked| :guilabel:`Show debug panel`: allows to show or hide a panel "
+"next to the 3D map view displaying options to better control map navigation "
+"and debug information:"
+msgstr ""
+"|unchecked| :guilabel:`デバッグパネルを表示` "
+"：3Dマップビューの横に、マップナビゲーションをより適切に制御するためのオプションやデバッグ情報を表示するパネルを表示または非表示にできます："
+
 #: ../../docs/user_manual/map_views/3d_map_view.rst:367
 msgid ""
 "|unchecked| :guilabel:`Show map tile info`: Include border and tile numbers "
@@ -824,7 +892,20 @@ msgid ""
 "origins, allowing easier repositioning and placement of light sources "
 "relative to the scene contents"
 msgstr ""
-"|unchecked| :guilabel:`ライト源を表示` ：光源の原点に球体を表示し、シーンコンテンツに対する光源の移動や配置を容易にします"
+"|unchecked| :guilabel:`光源を表示` ：光源の原点に球体を表示し、シーンコンテンツに対する光源の移動や配置を容易にします"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:375
+msgid "|unchecked| :guilabel:`Stop scene updates`"
+msgstr "|unchecked| :guilabel:`シーンの更新を停止`"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:376
+msgid ""
+"|unchecked| :guilabel:`Show debug overlay`: visual overlay which displays "
+"some useful debugging and profiling information. This allows in particular "
+"to quickly see the frame graph and the scene graph"
+msgstr ""
+"|unchecked| :guilabel:`デバッグオーバーレイを表示` "
+"：デバッグとプロファイルに関する便利な情報を表示するビジュアルオーバーレイです。これによって特にフレームグラフやシーングラフを素早く確認できます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:378
 msgid ""
@@ -847,6 +928,42 @@ msgstr ""
 "|unchecked| :guilabel:`深度マップのデバッグ`: "
 "シーンの深度マップをカメラに近いピクセルは暗い色の画像としてレンダリングします（トラブルシューティング用）。ウィジェットは3Dマップビューに比例した "
 ":guilabel:`大きさ` に設定され、指定した :guilabel:`コーナー` にドッキングされます。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:386
+msgid ":guilabel:`Show camera info`:"
+msgstr ":guilabel:`カメラ情報を表示` ："
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:388
+msgid ""
+"|unchecked| :guilabel:`Far plane`: controls how far from the camera "
+"rendering stops"
+msgstr "|unchecked| :guilabel:`ファークリップ` ： カメラからどのくらい離れた位置でレンダリングを停止するかを調整します"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:389
+msgid ""
+"|unchecked| :guilabel:`Near plane`: controls how close to the camera "
+"rendering starts"
+msgstr "|unchecked| :guilabel:`ニアクリップ` ：カメラからどのくらい近い位置からレンダリングを開始するかを調整します"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:390
+msgid ""
+"|unchecked| :guilabel:`Camera X/Y/Z pos`: sets the camera’s position in 3D "
+"space"
+msgstr "|unchecked| :guilabel:`カメラ位置のX/Y/Z座標 ` ：3D空間内でのカメラの位置を設定します"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:391
+msgid ""
+"|unchecked| :guilabel:`Looking at X/Y/Z`: sets the target point the camera "
+"is looking at"
+msgstr "|unchecked| :guilabel:`焦点のX/Y/Z座標` ： カメラが向いているターゲット位置を設定します"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:393
+msgid ""
+"When your 3D map view is open in a standalone window, you can use "
+":kbd:`Ctrl+Shift+d` keyboard shortcut to access the debug panel."
+msgstr ""
+"3Dマップビューが独立したウィンドウで開く場合、 :kbd:`Ctrl+Shift+d` "
+"のキーボードショートカットを使用してデバッグパネルにアクセスできます。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:399
 msgid "Navigation options"
@@ -1031,6 +1148,22 @@ msgid ""
 "Repeat the previous steps to add as many keyframes (with time and position) "
 "as necessary."
 msgstr "上の手順を繰り返して、必要な数のキーフレーム（時間とカメラ位置）を追加します。"
+
+#: ../../docs/user_manual/map_views/3d_map_view.rst:465
+msgid ""
+"Click the |play| button to preview the animation. QGIS will generate scenes "
+"using the camera positions/rotations at set times, and interpolating them in"
+" between these keyframes. Various :guilabel:`Interpolation` modes for "
+"animations are available (eg, linear, inQuad, outQuad, inCirc... -- more "
+"details at "
+"https://doc.qt.io/archives/qt-5.15/qeasingcurve.html#EasingFunction-"
+"typedef)."
+msgstr ""
+"|play| "
+"ボタンをクリックするとアニメーションをプレビューできます。QGISは、設定された時間におけるカメラの位置と回転を使用してシーンを生成し、これらのキーフレーム間を補間します。アニメーションには、さまざまな"
+" :guilabel:`内挿` モードが利用可能です （例：linear, inQuad, outQuad, inCirc... ―― 詳細については "
+"https://doc.qt.io/archives/qt-5.15/qeasingcurve.html#EasingFunction-typedef "
+"を参照してください）。"
 
 #: ../../docs/user_manual/map_views/3d_map_view.rst:471
 msgid ""
