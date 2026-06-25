@@ -637,13 +637,13 @@ Two types of output are possible:
 * The resulting point layer contains each origin feature's center point with additional fields
   indicating the identifier of the nearest destination feature and the distance to it.
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 .. figure:: img/distance_hub.png
   :align: center
 
   Display the nearest hub for the red input features
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 .. seealso:: :ref:`qgisjoinbynearest`
 
@@ -961,13 +961,13 @@ rendering of the lines.
 Additionally, the distance between vertices can be specified.
 A smaller distance results in a denser, more accurate line.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
 .. figure:: img/join_lines.png
   :align: center
 
   Join points based on a common field / attribute
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........
@@ -1399,8 +1399,7 @@ Nearest neighbour analysis
 Performs nearest neighbor analysis for a point layer. The output tells you
 how your data are distributed (clustered, randomly or distributed).
 
-Output is generated as an HTML file with the computed statistical
-values:
+Output is generated as an HTML file with the computed statistical values:
 
 * Observed mean distance
 * Expected mean distance
@@ -1412,14 +1411,14 @@ values:
   spatially random process, while a high Z-Score means that your data
   are likely to be a result of a spatially random process.
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 .. figure:: img/normal_distribution.png
    :align: center
 
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 .. seealso:: :ref:`qgisjoinbynearest`
 
@@ -2012,14 +2011,14 @@ The resulting layer has the same features as the input polygon layer,
 but with two additional attributes containing the length and count of
 the lines across each polygon.
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of polygon features
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........

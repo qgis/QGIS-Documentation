@@ -30,10 +30,10 @@ dimension of the input layer:
   distance (``straightdis``)
 * for **polygon** layers: ``perimeter`` and ``area``
 
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
+
 .. note:: This algorithm uses ellipsoid based measurements
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
-**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -417,13 +417,13 @@ of each polygon, preserving main topology while ignoring small variations.
 Z values are ignored; the medial axis is calculated from the 2D projection
 of input geometries.
 
-.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
-   (see :menuselection:`Help --> About` menu).
-
 .. figure:: img/approxmedialaxis.png
    :align: center
 
    Medial axis (red line) of a polygon layer
+
+.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
@@ -2578,19 +2578,16 @@ Python code
 Explode lines
 -------------
 Takes a lines layer and creates a new one in which each line layer is
-replaced by a set of lines representing the segments in the original
-line.
+replaced by a set of lines representing the segments in the original line.
 
-Each line in the resulting layer contains only a start and an end
-point, with no intermediate vertices between them.
+Each line in the resulting layer contains only a start and an end point,
+with no intermediate vertices between them.
 
 If the input layer consists of CircularStrings or CompoundCurves,
 the output layer will be of the same type and contain only single curve segments.
 
 .. note::
-
- * This algorithm drops existing primary keys or FID values and regenerates them in output layers.
- * This algorithm does not require valid geometries as input.
+ This algorithm does not require valid geometries as input.
 
 .. figure:: img/explode_lines.png
    :align: center
@@ -2598,8 +2595,10 @@ the output layer will be of the same type and contain only single curve segments
    The original line layer and the exploded one
 
 |checkbox| Allows
-:ref:`features in-place modification <processing_inplace_edit>`
-of line features
+:ref:`features in-place modification <processing_inplace_edit>` of line features
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
@@ -3173,14 +3172,13 @@ For MultiPolygon geometries, each part is extruded separately, producing one out
 
 Output geometries are of type PolyhedralSurfaceZ, representing the extruded surface of each input feature.
 
-.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
-   (see :menuselection:`Help --> About` menu).
-
 .. figure:: img/extrude.png
    :align: center
 
    The left image shows a 2D polygon, while the right image shows the polygon extruded along the Z direction.
 
+.. attention:: Running this algorithm requires QGIS installed with SFCGAL_ >= 2.0
+   (see :menuselection:`Help --> About` menu).
 
 Parameters
 ..........
@@ -3774,12 +3772,12 @@ this breakpoint.
 If the input geometry contains M or Z values, these will be linearly
 interpolated for the new vertices created at the antimeridian.
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 of line features
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........
@@ -7754,13 +7752,13 @@ to the input polylines (at vertices).
 
 The output transect layer includes the original feature fields along with new transect fields.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
 .. figure:: img/transect.png
    :align: center
 
    Dashed red lines represent the transect of the input line layer
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgistransectfixeddistance`
 
@@ -7869,13 +7867,13 @@ to the input polylines at regular intervals.
 
 The output transect layer includes the original feature fields along with new transect fields.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
 .. figure:: img/transect_fixed_distance.png
    :align: center
 
    Transects (red lines) created at fixed intervals along the input line layer (blue lines)
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 .. seealso:: :ref:`qgistransect`
 

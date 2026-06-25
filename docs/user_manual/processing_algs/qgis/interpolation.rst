@@ -397,14 +397,14 @@ summing all the line segments intersecting the circular neighbourhood
 and dividing this sum by the area of such neighbourhood.
 A weighting factor can be applied to the line segments.
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 .. figure:: img/linedensity.png
   :align: center
 
   Line density example. Input layer source: Roads Overijssel - The
   Netherlands (OSM).
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 
 Parameters
