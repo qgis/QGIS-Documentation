@@ -506,9 +506,15 @@ and current value being passed downstream.
    A complete model
 
 The model designer can display the number of features flowing through
-the connections between algorithms. Feature counts are shown on the links
-between algorithm inputs and outputs, and apply to vector layers only.
-The model must be run at least once before feature counts can be displayed.
+the connections between algorithms. Feature counts are shown as badges
+on the links between algorithm inputs and outputs, and apply to vector
+layers only. Badges also display the values of non-feature outputs,
+such as numeric results passed between algorithms and they inherit the
+color of their associated arrow.
+As the model runs, badges update dynamically to reflect the current
+feature count. Note that not all algorithms report progress dynamically;
+in such cases the badge updates with the final count only once the
+model has finished executing.
 Feature counts can be toggled on or off via :menuselection:`View --> Show Feature Count`.
 
 With the :menuselection:`Edit --> Add Group Box` tool, you can add a draggable
