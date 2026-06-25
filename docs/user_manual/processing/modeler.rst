@@ -33,6 +33,9 @@ The model designer interface
 
 In its main part, the modeler has a working canvas where the structure
 of the model and the workflow it represents can be constructed.
+On the right-hand side, a :guilabel:`Configuration` dock allows editing
+of model components without modal dialogs, making it possible to
+interact with other parts of QGIS while doing so.
 
 At the top of the dialog, different menus and the :guilabel:`Navigation`
 toolbar give access to a variety of tools.
