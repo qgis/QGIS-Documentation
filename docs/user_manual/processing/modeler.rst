@@ -204,9 +204,9 @@ View menu
    * - |checkbox| :guilabel:`Show Feature Count`
      -
      -
-     - Displays the number of features on the links between algorithms,
-       for vector layer connections. The model must be run at least once
-       to populate the feature counts.
+     - Displays badges on the links between algorithms showing the number of features
+       flowing through vector layer connections, as well as values of non-feature outputs
+       such as numeric results. Badges update dynamically as the model runs.
    * - |unchecked| :guilabel:`Enable Snapping`
      -
      -
@@ -579,7 +579,7 @@ Your model can be run in various ways:
   will have the dialog prefilled with those values on any subsequent run.
 * You can select elements of the model and run only that subset of the model:
   press the |runSelected| :guilabel:`Run Selected Steps...` option
-  from the :menuselection:`Models -->` menu or from the contextual menu of a selected algorithm.
+  from the :menuselection:`Model -->` menu or from the contextual menu of a selected algorithm.
   The initial state will be taken from any previous executions of the model through the editor,
   so results from previous steps in the model are available for the selected steps.
   This makes it possible to fix parts of a large model,
