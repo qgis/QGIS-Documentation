@@ -591,6 +591,15 @@ Your model can be run in various ways:
 * In order to use the algorithm from the Processing Toolbox, it has to be saved
   and the modeler dialog closed, to allow the toolbox to refresh its contents.
 
+When only a portion of the model is run, any results that depend on the re-run steps
+are flagged as potentially out of date: they are shaded in orange, and a message bar
+warning is displayed when viewing them to indicate that they may not reflect
+the current state of the model.
+
+.. figure:: img/model_dependent_results.png
+   :align: center
+
+   Flagged dependent results
 
 Documenting your model
 ......................
