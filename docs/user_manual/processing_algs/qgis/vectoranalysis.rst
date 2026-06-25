@@ -1399,8 +1399,7 @@ Nearest neighbour analysis
 Performs nearest neighbor analysis for a point layer. The output tells you
 how your data are distributed (clustered, randomly or distributed).
 
-Output is generated as an HTML file with the computed statistical
-values:
+Output is generated as an HTML file with the computed statistical values:
 
 * Observed mean distance
 * Expected mean distance
