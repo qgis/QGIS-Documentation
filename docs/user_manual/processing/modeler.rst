@@ -223,7 +223,9 @@ Panels
 ......
 
 The left part of the window is a section with five panels that can be used
-to add new elements to the model:
+to add new elements to the model. Most of these panels are docked by default,
+but you can choose to open or close them by right-clicking on the navigation bar
+and checking or unchecking them.
 
 
 #. :guilabel:`Inputs`: all the :ref:`input parameters <processing_inputs>` that could shape
