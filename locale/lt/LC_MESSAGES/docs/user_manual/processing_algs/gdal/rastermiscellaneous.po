@@ -1516,9 +1516,50 @@ msgstr "Išvesties (pasodrintas) rastro sluoksnis"
 msgid "**Algorithm ID**: ``gdal:pansharp``"
 msgstr "**Algoritmo ID**: ``gdal:pansharp``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:787
+msgid "Raster calculator"
+msgstr "Rastro skaičiuotuvas"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:788
+msgid ""
+"Command line raster calculator with numpy syntax. Use any basic arithmetic "
+"supported by numpy arrays, such as +, -, \\*, and / along with logical "
+"operators, such as >. Note that all input rasters must have the same "
+"dimensions, but no projection checking is performed."
+msgstr ""
+"Komandinės eilutės rastro skaičiuotuvas su numpy sintakse. Naudokite bet "
+"kokią bazinę aritmetiką, kurią palaiko numpy masyvai, tokią kaip +, -, \\* "
+"ir / kartu su loginiais operatoriais, tokiais kaip >. Pastebėtina, kad visi "
+"įvesties rastrai turi turėti tokius pačius matmenis, neatliekami jokie "
+"projekcijų tikrinimai."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:795
+msgid ""
+"See the `GDAL Raster Calculator utility docs "
+"<https://gdal.org/en/latest/programs/gdal_calc.html>`_."
+msgstr ""
+"Žr. `GDAL rastro skaičiuotuvo įrankių dokumentaciją "
+"<https://gdal.org/en/latest/programs/gdal_calc.html>`_."
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:798
+msgid ":ref:`qgisrastercalc`, :ref:`qgisvirtualrastercalc`"
+msgstr ":ref:`qgisrastercalc`, :ref:`qgisvirtualrastercalc`"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:815
+msgid "**Input layer A**"
+msgstr "**Įvesties sluoksnis A**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:816
 msgid "``INPUT_A``"
 msgstr "``INPUT_A``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:818
+msgid "First input raster layer (mandatory)"
+msgstr "Pirmas įvesties rastro sluoksnis (privalomas)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:819
+msgid "**Number of raster band for A**"
+msgstr "**A rastro juostų skaičius**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:820
 msgid "``BAND_A``"
@@ -1534,45 +1575,129 @@ msgstr "``BAND_A``"
 msgid "[raster band]"
 msgstr "[rastro juosta]"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:822
+msgid "Band for input layer A (mandatory)"
+msgstr "Įvesties sluoksnio A juosta (privaloma)"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:823
+msgid "**Input layer B**"
+msgstr "**Įvesties sluoksnis B**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:826
 msgid "``INPUT_B``"
 msgstr "``INPUT_B``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:830
+msgid "Second input raster layer"
+msgstr "Antras įvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:831
+msgid "**Number of raster band for B**"
+msgstr "**B rastro juostų skaičius**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:834
 msgid "``BAND_B``"
 msgstr "``BAND_B``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:836
+msgid "Band for input layer B"
+msgstr "Įvesties sluoksnio B juosta"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:837
+msgid "**Input layer C**"
+msgstr "**Įvesties sluoksnis C**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:840
 msgid "``INPUT_C``"
 msgstr "``INPUT_C``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:844
+msgid "Third input raster layer"
+msgstr "Trečias įvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:845
+msgid "**Number of raster band for C**"
+msgstr "**C rastro juostų skaičius**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:848
 msgid "``BAND_C``"
 msgstr "``BAND_C``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:850
+msgid "Band for input layer C"
+msgstr "Įvesties sluoksnio C juosta"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:851
+msgid "**Input layer D**"
+msgstr "**Įvesties sluoksnis D**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:854
 msgid "``INPUT_D``"
 msgstr "``INPUT_D``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:858
+msgid "Fourth input raster layer"
+msgstr "Ketvirtas įvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:859
+msgid "**Number of raster band for D**"
+msgstr "**D rastro juostų skaičius**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:862
 msgid "``BAND_D``"
 msgstr "``BAND_D``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:864
+msgid "Band for input layer D"
+msgstr "Įvesties sluoksnio D juosta"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:865
+msgid "**Input layer E**"
+msgstr "**Įvesties sluoksnis E**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:868
 msgid "``INPUT_E``"
 msgstr "``INPUT_E``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:872
+msgid "Fifth input raster layer"
+msgstr "Penktas įvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:873
+msgid "**Number of raster band for E**"
+msgstr "**E rastro juostų skaičius**"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:876
 msgid "``BAND_E``"
 msgstr "``BAND_E``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:878
+msgid "Band for input layer E"
+msgstr "Įvesties sluoksnio E juosta"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:879
+msgid "**Input layer F**"
+msgstr "**Įvesties sluoksnis F**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:882
 msgid "``INPUT_F``"
 msgstr "``INPUT_F``"
 
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:884
+msgid "Sixth input raster layer"
+msgstr "Šeštas įvesties rastro sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:885
+msgid "**Number of raster band for F**"
+msgstr "**F rastro juostų skaičius**"
+
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:888
 msgid "``BAND_F``"
 msgstr "``BAND_F``"
+
+#: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:892
+msgid "Band for input layer F"
+msgstr "Įvesties sluoksnio F juosta"
 
 #: ../../docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:894
 msgid "``FORMULA``"
