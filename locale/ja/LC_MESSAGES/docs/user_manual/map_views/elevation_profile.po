@@ -7,6 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2026
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
+# hirabayashi kino, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2026\n"
+"Last-Translator: hirabayashi kino, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -398,6 +399,18 @@ msgstr "標高断面図内の距離をマップキャンバスの距離単位以
 msgid ":menuselection:`--> Tolerance`"
 msgstr ":menuselection:`--> 許容範囲`"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types. For some layer types"
+" (e.g. points, lines, polygons), a custom tolerance can be set in the "
+"layer's Elevation properties tab, which replaces the global tolerance and "
+"allows more control over feature inclusion based on distance to the profile "
+"line."
+msgstr ""
+"地物（ポイント、ライン、ポリゴン、点群などのベクターデータ）が標高断面図に表示されるための、実際の断面図ラインからの距離（許容範囲）を設定します。この設定には地図単位が使用され、他のレイヤやジオメトリタイプでは無視されます。一部のレイヤタイプ（ポイント、ライン、ポリゴンなど）では、レイヤの「標高」プロパティタブで独自の許容範囲を設定することも可能です。これによりグローバルな許容範囲が置き換えられ、断面図ラインからの距離に応じた表示・非表示をより細かくコントロールできます。"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:122
 msgid ":menuselection:`--> Rename Profile...`"
 msgstr ":menuselection:`--> プロファイル名を変更...`"
@@ -591,9 +604,39 @@ msgid ""
 msgstr ""
 "標高プロパティが設定されると、標高断面図ビューは設定したプロファイル曲線と交差するアクティブなレイヤの地形または地物のレンダリングを開始します。"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:202
+msgid "Under |options| :sup:`Options` drop-down menu, you can:"
+msgstr "|options| :sup:`オプション` ドロップダウンメニューでは、以下の操作が行えます。："
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:204
+msgid ""
+"set the :guilabel:`Tolerance` value. This value is used to create a flat "
+"buffer around the elevation profile line, visible in the main map canvas. "
+"Any visible feature (point, line, polygon, etc.) overlapping that buffer "
+"will be captured in the plot canvas."
+msgstr ""
+":guilabel:`許容範囲` "
+"の値を設定します。この値は、メインのマップキャンバスに表示される標高断面図ラインの周囲に平坦なバッファを作成するために使用されます。このバッファに重なる可視の地物（ポイント、ライン、ポリゴンなど）は、プロットキャンバスにキャプチャされます。"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:206
+msgid ""
+"select the |checkbox| :guilabel:`Show Subsections Indicator` to display "
+"vertical lines at the distance of the vertices of the profile curve. This "
+"highlights the position of the vertices of the curve on the Elevation "
+"Profile."
+msgstr ""
+"|checkbox| :guilabel:`サブセクションIndicatorを表示` "
+"を選択すると、断面曲線の頂点がある距離に垂直線が表示されます。これにより、標高断面図上での曲線の頂点の位置が強調表示されます。"
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:336
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:208
+msgid ""
+"select the :guilabel:`Subsections Symbology` to set the color, opacity, "
+"width and style of the Subsections Indicator lines."
+msgstr ":guilabel:`サブセクションのシンポロジ` を選択して、サブセクションインジケータ線の色、不透明度、幅、スタイルを設定します。"
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:210
 msgid "**Limitations with polygon extrusion**"
