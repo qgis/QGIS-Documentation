@@ -868,6 +868,11 @@ Displaying and manipulating virtual point cloud is much more fluent and easy.
 At the core, a virtual point cloud file is a simple JSON file with :file:`.vpc` extension,
 containing references to actual data files (e.g. :file:`.LAS`, :file:`.LAZ` or :file:`.COPC` files)
 and additional metadata extracted from the files.
+
+Alternatively, the :file:`.vpz` format stores the same content as a compressed (zipped)
+:file:`.vpc` file, resulting in a smaller file size.
+This is particularly useful when working with large surveys or accessing data remotely.
+
 Even though it is possible to write VPC files by hand,
 it is strongly recommended to create them using an automated tool, such as:
 
