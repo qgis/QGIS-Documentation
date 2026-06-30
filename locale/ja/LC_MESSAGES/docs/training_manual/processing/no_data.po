@@ -151,7 +151,7 @@ msgstr ""
 "今度は、*accflow* "
 "レイヤを使って、別の計算をしてみましょう。このレイヤは、水文学的なパラメータである累積流量の値を含んでいます。流域の範囲内にのみその値があり、その外は "
 "no--data "
-"値です。見ての通り、値が分散しているため、レンダリングはあまり有益ではありません。流量の蓄積の対数を使用すると、より情報量の多い表現になります。ラスタ計算機を使ってそれを計算することができます。"
+"値です。見ての通り、値が分散しているため、レンダリングはあまり有益ではありません。累積流量の対数を使用すると、より情報量の多い表現になります。ラスタ計算機を使ってそれを計算することができます。"
 
 #: ../../docs/training_manual/processing/no_data.rst:47
 msgid ""
@@ -225,7 +225,7 @@ msgid ""
 " of the full DEM."
 msgstr ""
 "実行したこのアルゴリズムには、no--data "
-"値とそれらがどのように処理されるか以外にも興味深い点がいくつかあります。乗算したレイヤの範囲を見てみると（目次にあるレイヤの名前をダブルクリックしてプロパティを見ることでできます）同じでないことがわかります。それは流量積算レイヤが覆う範囲がDEM全体の範囲より小さいためです。"
+"値とそれらがどのように処理されるか以外にも興味深い点がいくつかあります。乗算したレイヤの範囲を見てみると（目次にあるレイヤの名前をダブルクリックしてプロパティを見ることでできます）同じでないことが分かります。それは累積流量レイヤが覆う範囲がDEM全体の範囲より小さいためです。"
 
 #: ../../docs/training_manual/processing/no_data.rst:93
 msgid ""
@@ -247,7 +247,7 @@ msgid ""
 "chapters, we will see more about the behaviour of algorithms when using "
 "multiple raster layers."
 msgstr ""
-"この場合（そしてほとんどの場合）、これは所望の結果を生成しますが、どんな操作が追加で行われているかには常に注意しておく必要があります。なぜならそれらは結果に影響を与える可能性があるからです。この動作が希望されない場合がある場合には、手動のリサンプリングが事前に適用されるべきです。後の章では、複数のラスタレイヤを使用したときのアルゴリズムの動作について詳細に見るでしょう。"
+"この場合（そしてほとんどの場合）、これは所望の結果を生成しますが、どんな操作が追加で行われているかには常に注意しておく必要があります。なぜならそれらは結果に影響を与える可能性があるからです。この動作が所望されない場合は、手動のリサンプリングが事前に適用されるべきです。後の章では、複数のラスタレイヤを使用したときのアルゴリズムの動作について詳細に見るでしょう。"
 
 #: ../../docs/training_manual/processing/no_data.rst:104
 msgid ""
@@ -274,13 +274,13 @@ msgid ""
 "As you can see, we can use the calculator not only to do simple algebraic "
 "operations, but also to run more complex calculation involving conditional "
 "sentences, like the one above."
-msgstr "おわかりのように、簡単な代数演算を行うためだけでなく、計算機を使用でき、また上記のような条件文を含むより複雑な計算を実行します。"
+msgstr "ご覧のように計算機は、簡単な代数演算を行うためだけでなく、上記のような、条件文を含んだもっと複雑な計算を実行するのに使用できます。"
 
 #: ../../docs/training_manual/processing/no_data.rst:118
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and no-"
 "data in cells outside of it."
-msgstr "結果は、私たちが作業をしたい範囲内で値1、およびそれ以外のセルでデータなしを持っています。"
+msgstr "結果は、私たちが作業をしたい範囲内で値1、およびそれ以外のセルで no-data を持っています。"
 
 #: ../../docs/training_manual/processing/no_data.rst:122
 msgid ""
@@ -290,8 +290,8 @@ msgid ""
 "no-data value without needing to know what the no--data value of the cell "
 "is."
 msgstr ""
-"データなし値は0/0の式から来ています。それは未定の値であるので、SAGAは、実際にはデータ値として扱うNaN（非数）の値を、追加します。この小さなトリックを使えば、セルのデータなし値が何か知らなくても、no"
-"--data 値を設定できます。"
+"no-data 値は0/0の式から来ています。それは未定の値なので、SAGAはNaN（非数）値を追加しますが、実際には no-data "
+"値として扱われます。この小さなトリックを使えば、セルの no--data 値が何か知らなくても、no--data 値を設定できます。"
 
 #: ../../docs/training_manual/processing/no_data.rst:126
 msgid ""
