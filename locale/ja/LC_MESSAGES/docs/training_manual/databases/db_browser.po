@@ -45,13 +45,13 @@ msgid ""
 "section will dive deeper into how to effectively use spatial databases in "
 "QGIS."
 msgstr ""
-"前の2つのモジュールでは、リレーショナルデータベースの基本的な概念、特徴および機能だけでなく、保存、管理、クエリとリレーショナルデータベース内の空間データを操作できる機能拡張について見ました。このセクションでは、QGISで空間データベースを効果的に使用する方法について深掘りします。"
+"前の2つのモジュールでは、リレーショナルデータベースの基本的な概念、特徴及び機能だけでなく、空間データを保存、管理、クエリ及び操作するリレーショナルデータベースの機能拡張について見ました。このセクションでは、QGISで空間データベースを効果的に使用する方法について深掘りします。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:9
 msgid ""
 "**The goal for this lesson:** To learn how to interact with spatial "
 "databases using the QGIS Browser interface."
-msgstr "**このレッスンの目的：** QGISのブラウザのインタフェースを使って空間的なデータベースをどのように作用させるのかを学びます。"
+msgstr "**このレッスンの目的：** QGISブラウザのインターフェイスを使って空間データベースとやり取りする方法を学びます。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:13
 msgid ""
@@ -66,11 +66,29 @@ msgid ""
 " ways this can be done in QGIS. Lets start by looking at the new Browser "
 "interface."
 msgstr ""
-"すでにQGISレイヤとしてデータベースからテーブルを追加する方法を簡単に見てきました。これをもう少し詳細に見て、これがQGISで行うことができるさまざまな方法を見てみましょう。新しいブラウザ・インタフェースを見ることで開始できます。"
+"既にQGISレイヤとしてデータベースからテーブルを追加する方法は簡単に見てきました。ここではこれをもう少し詳細に見るとともに、QGISでこれを行う様々な方法を見てみましょう。新しいブラウザ・インターフェイスを見ることから始めましょう。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:20
 msgid "Start a new empty map in QGIS."
 msgstr "QGISで新しい空の地図を開きます。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:21
+msgid ""
+"Open the Browser by clicking the :guilabel:`Browser` tab. If you do not see "
+"this tab, you can enable it by going to :menuselection:`View --> Panels --> "
+"Browser`."
+msgstr ""
+":guilabel:`ブラウザ` タブをクリックしてブラウザを開きます。このタブが表示されていない場合は、:menuselection:`ビュー -->"
+" パネル --> ブラウザ` を選択して有効にすることができます。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:23
+msgid ""
+"Open the PostgreSQL portion of the tree and you should find your previously "
+"configured connection available (you may need to click the "
+":guilabel:`Refresh` button at the top of the browser window)."
+msgstr ""
+"ツリーのPostgreSQLの部分を開くと、前に設定した接続が利用可能になっているはずです（ブラウザウィンドウの上部にある "
+":guilabel:`再読み込み` ボタンをクリックする必要があるかもしれません）。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:30
 msgid ""
@@ -84,8 +102,17 @@ msgid ""
 "Click on the :guilabel:`Properties` item to look at the properties of the "
 "layer."
 msgstr ""
-"このビューでテーブル/レイヤを右クリックすると、いくつかのオプションを提供します。:guilabel:`プロパティ` "
-"項目をクリックしてレイヤのプロパティを見てください。"
+"このビューでテーブル/レイヤを右クリックすると、いくつかのオプションが提供されます。:guilabel:`プロパティ` "
+"項目をクリックしてそのレイヤのプロパティを見てください。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:40
+msgid ""
+"Of course you can also use this interface to connect to PostgreSQL databases"
+" hosted on a server external to your workstation. Right clicking on the "
+"PostgreSQL entry in the tree will allow you to specify connection parameters"
+" for a new connection."
+msgstr ""
+"もちろん、このインターフェイスを使って、自分のワークステーションの外にあるサーバーでホストされているPostgreSQLデータベースに接続することも可能です。ツリーのPostgreSQL項目を右クリックすると、新しい接続のための接続パラメータを指定することができます。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:47
 msgid ""
@@ -99,17 +126,48 @@ msgid ""
 " nice to learn how to add a filtered set of records from a table as a layer "
 "by using queries that we learned about in previous sections."
 msgstr ""
-"今、QGISレイヤーとしてテーブル全体を追加する方法を見てきたので、前のセクションで学んだクエリを使用して、レイヤーとしてテーブルからレコードのフィルタセットを追加する方法を学ぶのはいいかもしれません。"
+"テーブル全体をQGISレイヤとして追加する方法は見たので、ここでは前のセクションで学んだクエリを使い、テーブルからフィルタされたレコードの集合をレイヤとして追加する方法を学ぶのがよいでしょう。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:53
 msgid "Start a new empty map with no layers"
-msgstr "レイヤーなしで新しい空の地図を開始"
+msgstr "新しい空の地図をレイヤなしで開始する"
+
+#: ../../docs/training_manual/databases/db_browser.rst:54
+msgid ""
+"Click the :guilabel:`Add PostgreSQL Layers` button or select "
+":menuselection:`Layer --> Add PostgreSQL Layers` from the menu."
+msgstr ""
+":guilabel:`PostgreSQLレイヤを追加` ボタンをクリックするか、メニューから :menuselection:`レイヤ --> "
+"PostgreSQLレイヤを追加` を選択します。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:56
+msgid ""
+"In the :guilabel:`Add PostgreSQL Table(s)` dialog that comes up, connect to "
+"the :guilabel:`postgis_demo` connection."
+msgstr ""
+"表示される :guilabel:`PostgreSQLのテーブルを追加` ダイアログで、 :guilabel:`postgis_demo` "
+"接続に接続します。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:58
+msgid ""
+"Expand the :guilabel:`public schema` and you should find the three tables we"
+" were working with previously."
+msgstr ":guilabel:`パブリックスキーマ` を展開すると、以前に使用していた3つのテーブルが見つかるはずです。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:60
+msgid ""
+"Click the ``lines`` layer to select it, but instead of adding it, click the "
+":guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder` "
+"dialog."
+msgstr ""
+"``lines`` レイヤーをクリックして選択しますが、それを追加する代わりに、 :guilabel:`フィルタを設定` ボタンをクリックして、 "
+":guilabel:`クエリビルダー` ダイアログを起動してください。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:63
 msgid ""
 "Construct the following expression using the buttons or by entering it "
 "directly::"
-msgstr "それを直接入力してボタンを使用するか、次の式を構築する::"
+msgstr "ボタンを使用するか直接入力して次の式を構築してください::"
 
 #: ../../docs/training_manual/databases/db_browser.rst:71
 msgid ""
@@ -117,6 +175,10 @@ msgid ""
 ":guilabel:`Add` to add the filtered layer to your map."
 msgstr ""
 ":guilabel:`OK` をクリックしてフィルタの編集を完了し、 :guilabel:`追加` をクリックして地図にフィルタレイヤーを追加します。"
+
+#: ../../docs/training_manual/databases/db_browser.rst:73
+msgid "Rename the ``lines`` layer in the tree to ``roads_primary``."
+msgstr "ツリーの ``lines`` レイヤの名前を ``roads_primary`` に変更します。"
 
 #: ../../docs/training_manual/databases/db_browser.rst:75
 msgid ""
