@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
 # tomoya miyoshi, 2026
 # 
 #, fuzzy
@@ -318,7 +319,7 @@ msgid ""
 msgstr ""
 "**GISアプリケーション** がどのようなものかは、:numref:`figure_gis_application` "
 "の例をご覧ください。GISアプリケーションは通常、マウスやキーボードを使って操作できるグラフィカルユーザーインターフェイスを備えたプログラムです。アプリケーションは、ウィンドウの上部付近に"
-" **メニュー**（:guilabel:`プロジェクト`、:guilabel:`編集` など）を用意しており、マウスでクリックすると **機能** "
+" **メニュー** （ :guilabel:`プロジェクト`、:guilabel:`編集` など）を用意しており、マウスでクリックすると **機能** "
 "のパネルが表示されます。これらの機能を使うことで、GISアプリケーションに対して何をしたいかを指示することができます。例えば "
 ":numref:`figure_gis_menus` に示されているように、メニューを使って、表示出力に新しいレイヤを追加するよう GIS "
 "アプリケーションに指示することができます。"
@@ -335,8 +336,8 @@ msgid ""
 "pictures that can be clicked with the mouse) normally sit just below the "
 "menus and provide a quicker way to use frequently needed actions."
 msgstr ""
-":numref:`figure_gis_toolbars` "
-"に示されているように、**ツールバー**（マウスでクリックできる小さなアイコンが並んだ行）は通常、メニューのすぐ下に配置され、頻繁に使用する機能を素早く実行できるようにします。"
+":numref:`figure_gis_toolbars` に示されているように、 **ツールバー** "
+"（マウスでクリックできる小さなアイコンが並んだ行）は通常、メニューのすぐ下に配置され、頻繁に使用する機能を素早く実行できるようにします。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:115
 msgid ""
@@ -397,6 +398,29 @@ msgstr ""
 "マップビューの重要な機能として、ズームインして拡大表示したり、ズームアウトしてより広い範囲を表示したり、地図の中を移動（パン）したりすることが挙げられます。またGISソフトウェアでは、情報の表示方法であるシンボロジを簡単に変更することもできます。:numref:`figure_map_symbology`"
 " は、地図を横方向にパンし、レイヤのシンボロジを変更した後のマップビューを示しています。 "
 
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:174
+msgid "A map view after moving around (panning) and changing the symbology"
+msgstr "移動（パン）してシンボロジを変えた後のマップビュー"
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:176
+msgid ""
+"Another common feature of GIS Applications is the **map legend**. The map "
+"legend provides a list of layers that have been loaded in the GIS "
+"Application. Unlike a paper map legend, the map legend or 'layers list' in "
+"the GIS Application provides a way to re-order, hide, show and group layers."
+" Changing the layer order is done by clicking on a layer in the legend, "
+"holding the mouse button down and then dragging the layer to a new position."
+" In :numref:`figure_map_legend_before` and "
+":numref:`figure_map_legend_after`, the map legend is shown as the area to "
+"the left of the GIS Application window. By changing the layer order, the way"
+" that layers are drawn can be adjusted --- in this case so that rivers are "
+"drawn below the roads instead of over them."
+msgstr ""
+"GISアプリケーションのもう一つの一般的な機能は、**マップ凡例** "
+"です。マップ凡例は、GISアプリケーションに読み込まれたレイヤのリストを提供します。紙の地図の凡例とは異なり、GISアプリケーションのマップ凡例または「レイヤリスト」は、レイヤの順序変更、非表示、表示及びグループ化する手段を提供します。レイヤの順序変更は、凡例内のレイヤをクリックし、マウスボタンを押したまま、レイヤを新しい位置までドラッグすることで行われます。"
+" :numref:`figure_map_legend_before` と :numref:`figure_map_legend_after` "
+"では、マップ凡例はGISアプリケーションウィンドウの左側の領域に表示されています。レイヤの順序を変更することで、レイヤの描画方法を調整することができます。この場合、河川は道路の上にではなく、その下に描画されるようになります。"
+
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:194
 msgid ""
 "Changing the layer order allows to adjust the way that layers are drawn. "
@@ -455,11 +479,55 @@ msgid ""
 "and date columns hold **non-geographical data**."
 msgstr "経度と緯度の列は **地理的なデータ** を持っています。病気と診療日の列は **地理的ではないデータ** です。"
 
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:238
+msgid ""
+"A common feature of GIS is that they allow you to associate information "
+"(non-geographical data) with places (geographical data). In fact, the GIS "
+"Application can store many pieces of information which are associated with "
+"each place --- something that paper maps are not very good at. For example, "
+"our health care worker could store the person's age and gender on her table."
+" When the GIS Application draws the layer, you can tell it to draw the layer"
+" based on gender, or based on disease type, and so on. So, with a GIS "
+"Application we have a way to easily change the appearance of the maps we "
+"created based on the non-geographical data associated with places."
+msgstr ""
+"GISの一般的な機能のひとつは、情報（地理的ではないデータ）を場所（地理的なデータ）に関連付けられることです。事実、GISアプリケーションは、それぞれの場所に関連付けられたたくさんの情報の断片を保存すること－紙の地図があまり得意でないこと－ができます。例えば医療従事者たちは患者の年齢や性別といったデータを表に保存できるでしょう。GISアプリケーションがレイヤを描画するとき、性別に基づいたレイヤや病気の種類に基づいたレイヤなどを描画をするように指示することができます。このように、GISアプリケーションを使えば、作成した地図の外観を場所に関連付けられた地理的でないデータに基づいて簡単に変更することができるのです。"
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:248
+msgid ""
+"GIS Systems work with many different types of data. **Vector data** are "
+"stored as a series of ``X, Y`` coordinate pairs inside the computer's "
+"memory. Vector data are used to represent points, lines and areas. "
+":numref:`figure_vector_data` shows different types of vector data being "
+"viewed in a GIS application. In the tutorials that follow we will be "
+"exploring vector data in more detail."
+msgstr ""
+"GISシステムは様々な種類のデータを扱います。**ベクタデータ** "
+"は、コンピュータのメモリ内にX、Yの座標ペアの連続として格納されています。ベクタデータは、点、線、面を表現するために使用されます。イラスト "
+":numref:`figure_vector_data` "
+"はGISアプリケーションで表示される様々な種類のベクタデータを表しています。この後のチュートリアルでは、ベクタデータについてより詳しく説明します。"
+
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:260
 msgid ""
 "Vector data are used to represent points (e.g., towns), lines (e.g., rivers)"
 " and polygons (e.g., municipal boundaries)."
 msgstr "ベクタデータは、点 (例 町) , 線 (例 河川) , 面 (例 行政区) を表すのに使われます"
+
+#: ../../docs/gentle_gis_introduction/introducing_gis.rst:263
+msgid ""
+"**Raster data** are stored as a grid of values. There are many satellites "
+"circling the earth and the photographs they take are a kind of raster data "
+"that can be viewed in a GIS. One important difference between raster and "
+"vector data is that if you zoom in too much on a raster image, it will start"
+" to appear 'blocky' (see :numref:`figure_raster_data` and "
+":numref:`figure_raster_data_zoom`). In fact these blocks are the individual "
+"cells of the data grid that makes up the raster image. We will be looking at"
+" raster data in greater detail in later tutorials."
+msgstr ""
+"**ラスタデータ** "
+"は、格子状の数値として保存されています。地球を周回しているたくさんの人工衛星が撮影した写真は、GISで見ることのできるラスタデータの一種です。ラスタデータとベクタデータの重要な違いの一つは、ラスタ画像を拡大しすぎると「ブロック状」に見えてしまうことです（"
+" :numref:`figure_raster_data` および :numref:`figure_raster_data_zoom` "
+"を参照）。実際には、これらのブロックは、ラスタ画像を構成するデータグリッドの個々のセルです。ラスタデータについては、後のチュートリアルでさらに詳しく見ていきます。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:277
 msgid ""
@@ -475,7 +543,7 @@ msgstr "同じラスタデータを拡大したもの。データのグリッド
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:290
 msgid "What have we learned?"
-msgstr "わかりましたか?"
+msgstr "分かりましたか?"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:292
 msgid "Let's wrap up what we covered in this worksheet:"
@@ -524,8 +592,8 @@ msgid ""
 "this tutorial. Ask them to try to think of 3 reasons why it might be handy "
 "to use a GIS instead of paper maps. Here are some that we could think of:"
 msgstr ""
-"**地理学：** このチュートリアルで示すように、GISのコンセプトを示す概念です. なぜ紙地図よりGISの方が便利なのか, "
-"GISを学習する人たちに3つ理由を考えさせてみて下さい. 以下にはいくつかの例を示します:"
+"**地理学：** "
+"このチュートリアルで示したように、GISの概念を自分の学習者に言葉で説明してください。なぜ紙地図よりGISの方が便利なのか、学習者に3つ理由を考えさせてみて下さい。以下にいくつかの例を示します:"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:312
 msgid ""
@@ -564,7 +632,7 @@ msgid ""
 "impacted areas are. For example a recent satellite image taken during a "
 "flood can help to show where people may need rescuing."
 msgstr ""
-"災害発生時, 対象地域を見るのにラスタデータは便利で, 最新の洪水発生時の衛星画像をにより人々がどのあたりで救助を必要としているのか見ることができます."
+"災害発生時、ラスタデータは対象地域がどこかを示すのに便利です。例えば、洪水発生時に撮影された最新の衛星画像は、救助を必要としているかもしれない人々がどこにいるかを示すことができます。"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:328
 msgid ""
@@ -604,8 +672,8 @@ msgid ""
 "**Book:** Desktop GIS: Mapping the Planet with Open Source Tools. "
 "**Author:** Gary Sherman. **ISBN:** 9781934356067"
 msgstr ""
-"**書籍:** Desktop GIS: Mapping the Planet with Open Source "
-"Tools.（デスクトップGIS：オープンソースツールで地球を地図化する） **著者:** Gary Sherman. **ISBN:** "
+"**書籍:** Desktop GIS: Mapping the Planet with Open Source Tools. "
+"(デスクトップGIS：オープンソースツールで地球を地図化する)  **著者:** Gary Sherman. **ISBN:**  "
 "9781934356067"
 
 #: ../../docs/gentle_gis_introduction/introducing_gis.rst:348
