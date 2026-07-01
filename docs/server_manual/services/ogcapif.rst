@@ -405,6 +405,7 @@ the template:
 Custom template functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+- ``escape( string )``: escapes XHTML tag angle brackets
 - ``path_append( path )``: appends a directory path to the current url
 - ``path_chomp( n )``: removes the specified number "n" of directory
   components from the current url path
