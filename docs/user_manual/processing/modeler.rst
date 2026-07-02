@@ -33,6 +33,9 @@ The model designer interface
 
 In its main part, the modeler has a working canvas where the structure
 of the model and the workflow it represents can be constructed.
+On the right-hand side, a :guilabel:`Configuration` dock allows editing
+of model components without modal dialogs, making it possible to
+interact with other parts of QGIS while doing so.
 
 At the top of the dialog, different menus and the :guilabel:`Navigation`
 toolbar give access to a variety of tools.
@@ -201,9 +204,9 @@ View menu
    * - |checkbox| :guilabel:`Show Feature Count`
      -
      -
-     - Displays the number of features on the links between algorithms,
-       for vector layer connections. The model must be run at least once
-       to populate the feature counts.
+     - Displays badges on the links between algorithms showing the number of features
+       flowing through vector layer connections, as well as values of non-feature outputs
+       such as numeric results. Badges update dynamically as the model runs.
    * - |unchecked| :guilabel:`Enable Snapping`
      -
      -
@@ -220,7 +223,9 @@ Panels
 ......
 
 The left part of the window is a section with five panels that can be used
-to add new elements to the model:
+to add new elements to the model. Most of these panels are docked by default,
+but you can choose to open or close them by right-clicking on the navigation bar
+and checking or unchecking them.
 
 
 #. :guilabel:`Inputs`: all the :ref:`input parameters <processing_inputs>` that could shape
@@ -501,9 +506,15 @@ and current value being passed downstream.
    A complete model
 
 The model designer can display the number of features flowing through
-the connections between algorithms. Feature counts are shown on the links
-between algorithm inputs and outputs, and apply to vector layers only.
-The model must be run at least once before feature counts can be displayed.
+the connections between algorithms. Feature counts are shown as badges
+on the links between algorithm inputs and outputs, and apply to vector
+layers only. Badges also display the values of non-feature outputs,
+such as numeric results passed between algorithms and they inherit the
+color of their associated arrow.
+As the model runs, badges update dynamically to reflect the current
+feature count. Note that not all algorithms report progress dynamically;
+in such cases the badge updates with the final count only once the
+model has finished executing.
 Feature counts can be toggled on or off via :menuselection:`View --> Show Feature Count`.
 
 With the :menuselection:`Edit --> Add Group Box` tool, you can add a draggable
@@ -568,7 +579,7 @@ Your model can be run in various ways:
   will have the dialog prefilled with those values on any subsequent run.
 * You can select elements of the model and run only that subset of the model:
   press the |runSelected| :guilabel:`Run Selected Steps...` option
-  from the :menuselection:`Models -->` menu or from the contextual menu of a selected algorithm.
+  from the :menuselection:`Model -->` menu or from the contextual menu of a selected algorithm.
   The initial state will be taken from any previous executions of the model through the editor,
   so results from previous steps in the model are available for the selected steps.
   This makes it possible to fix parts of a large model,
@@ -580,6 +591,15 @@ Your model can be run in various ways:
 * In order to use the algorithm from the Processing Toolbox, it has to be saved
   and the modeler dialog closed, to allow the toolbox to refresh its contents.
 
+When only a portion of the model is run, any results that depend on the re-run steps
+are flagged as potentially out of date: they are shaded in orange, and a message bar
+warning is displayed when viewing them to indicate that they may not reflect
+the current state of the model.
+
+.. figure:: img/model_dependent_results.png
+   :align: center
+
+   Flagged dependent results
 
 Documenting your model
 ......................
