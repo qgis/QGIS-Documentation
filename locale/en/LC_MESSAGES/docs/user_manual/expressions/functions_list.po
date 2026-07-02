@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -466,6 +466,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:383
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:16
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:401
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:425
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:449
@@ -701,7 +702,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:23
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:38
@@ -805,7 +806,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:24
 #: ../../docs/user_manual/expressions/expression_help/General.rst:85
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:49
 msgid "**layer** - a string, representing either a layer name or layer ID"
 msgstr ""
 
@@ -1196,7 +1197,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:18
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:26
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:41
@@ -12227,119 +12228,127 @@ msgid "Returns a matching layer property or metadata value."
 msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:45
-msgid "layer_property(layer, property)"
+msgid "layer_property(layer, property, [translate:=true])"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:47
 msgid ""
 "**property** - a string corresponding to the property to return. Valid "
 "options are:"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
 msgid "name: layer name"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
 msgid "id: layer ID"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
 msgid "title: metadata title string"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
 msgid "abstract: metadata abstract string"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
 msgid "keywords: metadata keywords"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
 msgid "data_url: metadata URL"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
 msgid "attribution: metadata attribution string"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
 msgid "attribution_url: metadata attribution URL"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
 msgid "source: layer source"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
 msgid "min_scale: minimum display scale for layer"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
 msgid "max_scale: maximum display scale for layer"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
 msgid "is_editable: if layer is in edit mode"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
 msgid "crs: layer CRS"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
 msgid "crs_definition: layer CRS full definition"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
 msgid "crs_description: layer CRS description"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
 msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
 msgid "distance_units: layer distance units"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
 msgid "type: layer type, e.g., Vector or Raster"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
 msgid "storage_type: storage format (vector layers only)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
 msgid "geometry_type: geometry type, e.g., Point (vector layers only)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:73
 msgid "feature_count: approximate feature count for layer (vector layers only)"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:74
 msgid ""
 "path: File path to the layer data source. Only available for file based "
 "layers."
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+msgid ""
+"**translate** - whether to return translated string. Currently affects "
+"only 'type' property. By default translated strings are returned. Setting"
+" this to false will disable translation, always returning English "
+"strings."
+msgstr ""
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:80
 msgid "``layer_property('airports','feature_count')`` → 120"
 msgstr ""
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:81
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr ""
 
