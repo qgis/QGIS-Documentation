@@ -617,6 +617,15 @@ Those layers will always face the camera, making it easier to read them
 when navigating the 3D scene. Lines and polygons annotations are not supported
 in 3D map views. See :ref:`3D view layer properties <annotationslayer_3dview>` for more details.
 
+Elevation profile curve in 3D map view
+=======================================
+
+The elevation profile curve can be displayed in the 3D map view.
+The Z values are derived from the minimum and maximum Z values
+of the data along the curve.
+Line and polygon rubberbands follow the cursor position when
+hovering over the elevation profile panel.
+See :ref:`Elevation profile view<label_elevation_profile_view>` for more details.
 
 .. _`QEasingCurve`: https://doc.qt.io/qt-6/qeasingcurve.html#EasingFunction-typedef
 

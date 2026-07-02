@@ -155,6 +155,10 @@ At the top of the :guilabel:`Elevation Profile` panel, a toolbar provides you wi
      -
      - Displays vertical lines at the distance of the vertices of the profile curve,
        highlighting the position of the vertices of the curve on the Elevation Profile.
+   * - :menuselection:`-->` |unchecked|  :guilabel:`Show Profile in 3D Views`
+     -
+     - Displays elevation profile curve in :guilabel:`3D Map View`, along with polygon and line
+       rubberbands that track cursor position when hovering over the elevation profile panel.
    * - :menuselection:`--> Subsections Symbology...`
      -
      - Sets the :ref:`symbology <vector_line_symbols>` (color, opacity, width, style,...)
@@ -273,6 +277,7 @@ To create an elevation profile view:
      or navigating within the profile view.
    * |checkbox| :guilabel:`Show Subsections Indicator` to display vertical lines at the position of the vertices
      of the profile curve on the Elevation Profile, and configure their symbology.
+   * |checkbox| :guilabel:`Show Profile in 3D Views` to show elevation profile curve in the :guilabel:`3D Map View` panel.
 
 
 .. _`elevation_profile_interaction`:
