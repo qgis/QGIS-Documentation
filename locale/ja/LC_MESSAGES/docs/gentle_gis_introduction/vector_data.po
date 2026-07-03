@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -276,6 +276,24 @@ msgstr ""
 msgid "Polygon features in detail"
 msgstr "ポリゴン地物の詳細"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:159
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** --- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr ""
+"ポリゴン地物は、ダム、島、国境などの **囲まれた領域** "
+"です。ポリライン地物と同様に、ポリゴンは連続線で連結された一連の頂点から作成されます。しかし、ポリゴンは常に閉じた領域を記述しているので、最初と最後の頂点は常に同じ場所でなければなりません！ポリゴンは、多くの場合、"
+" **共有ジオメトリ** "
+"---隣接するポリゴンと共通している境界を有します。多くのGISアプリケーションには、隣接するポリゴンの境界が正確に一致することを確実にする能力があります。このチュートリアルの後の"
+" :ref:`gentle_gis_topology` トピックではこれについて見ていきます。"
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:168
 msgid ""
 "As with points and polylines, polygons have **attributes**. The attributes "
@@ -310,6 +328,23 @@ msgstr ""
 msgid "Editing vector data"
 msgstr "ベクタデータの編集"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:188
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --- a process called **digitising** --- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex --- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr ""
+"GISアプリケーションでは、レイヤのジオメトリデータを作成、修正すること --– このプロセスは **デジタイジング** と呼ばれます–-- "
+"ができます。デジタイジングについては、後のチュートリアルで詳しく説明します。あるレイヤ中にポリゴン (例. 農業用貯水池)がある場合, "
+"GISアプリケーションがそのレイヤに作成を許すのは新たなポリゴンだけです。同様に、地物の形状を変更したいとき、アプリケーションは変更された形状が正しいときだけそれを許します。例えば、1つの頂点しかない線を引くことはできません"
+" –-- 線は必ず2つ以上の頂点を有する必要があるということを思い出してください。"
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:197
 msgid ""
 "Creating and editing vector data is an important function of a GIS since it "
@@ -321,7 +356,7 @@ msgid ""
 "the river and digitise the places where you made these readings (as a point "
 "layer)."
 msgstr ""
-"ベクタデータの作成と編集は、興味のあるものに対して個人的なデータを作成できる主要な方法の一つであるため、GISの重要な機能です。たとえば、川での汚染を監視しているとします。GISを使用すると、雨水排水のためのすべての排水口を（ポイント地物として）デジタイズすることができます。また、川自体を（ポリライン地物として）デジタイズすることもできます。最後に、川の流路に沿ってpHレベルを読み取り、これらを読み取った場所を（ポイントレイヤとして）デジタイズできます。"
+"ベクタデータの作成と編集は、関心のあるものに対して個人的なデータを作成できる主要な方法の一つであるため、GISの重要な機能です。たとえば、川の汚染を監視しているとします。GISを使用すると、雨水排水設備の全てのはけ口を（ポイント地物として）デジタイズすることができます。また、川自体を（ポリライン地物として）デジタイズすることもできます。最後に、川の流路に沿ってpHレベルを読み取り、読み取った場所を（ポイントレイヤとして）デジタイズできます。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:205
 msgid ""
@@ -613,10 +648,25 @@ msgstr ""
 "お住まいの地域の地形図のコピー（ :numref:`figure_sample_map` "
 "に示されているものなど）を使用して、学習者がさまざまな種類のベクタデータの例を地図上で強調表示して識別できるかどうかを確認します。"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:390
+msgid ""
+"Think of how you would create vector features in a GIS to represent real "
+"world features on your school grounds. Create a table of different features "
+"in and around your school and then task your learners to decide whether they"
+" would be best represented in the GIS as a point, line or polygon. See "
+":numref:`table_vector_geometry` for an example."
+msgstr ""
+"学校の敷地にある現実世界の地物を表すために、GISでベクタ地物をどのように作成するか考えてください。学校の中および周りの様々な地物のテーブルを作成し、それから生徒に、それらはGISではポイント、ライン、ポリゴンのどれで表現するのが最善かを決める課題を与えてください。"
+" table_vector_1_ の例を参照してください。"
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:402
 msgid ""
 "Can you identify two point features and one polygon feature on this map?"
 msgstr "この地図上の2つのポイント地物と1つのポリゴン地物を識別できますか？"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:407
+msgid "Vector data and geometry types"
+msgstr "ベクタデータとジオメトリの型"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:410
 msgid "Real world feature"
@@ -645,6 +695,15 @@ msgstr "蛇口のある場所"
 #: ../../docs/gentle_gis_introduction/vector_data.rst:420
 msgid "Etc."
 msgstr "Etc."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:423
+msgid ""
+"Create a table like :numref:`table_vector_geometry` (leaving the \"geometry "
+"type\" column empty) and ask your learners to decide on suitable geometry "
+"types."
+msgstr ""
+"（「ジオメトリ型」の列を空白にした） :numref:`table_vector_geometry` "
+"のような表を作り、生徒たちに適切なジオメトリ型を決めるように問います。"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:428
 msgid "Something to think about"
