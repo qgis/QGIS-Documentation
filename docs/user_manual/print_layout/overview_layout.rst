@@ -427,6 +427,7 @@ Each of them is deeply described in :ref:`layout_items` chapter.
     |addTable| :guilabel:`Add Attribute Table`                :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
     |addManualTable| :guilabel:`Add Fixed Table`              :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
     |elevationProfile| :guilabel:`Add Elevation Profile`      :guilabel:`Toolbox`        :ref:`layout_elevation_profile_item`
+    |addChart| :guilabel:`Add Chart`                          :guilabel:`Toolbox`        :ref:`layout_chart_item`
    ========================================================= ======================== =====================================
 
 
@@ -818,6 +819,8 @@ all the actions done after the selected one will be removed.
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
 .. |addBasicTriangle| image:: /static/common/mActionAddBasicTriangle.png
+   :width: 1.5em
+.. |addChart| image:: /static/common/mActionAddChart.png
    :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
