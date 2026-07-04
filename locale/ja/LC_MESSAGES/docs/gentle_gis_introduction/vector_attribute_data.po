@@ -7,8 +7,8 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
 # Transifex Bot <>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -103,7 +103,22 @@ msgstr ""
 msgid ""
 "Every feature has characteristics that we can describe. These can be visible"
 " things, or things we know about the feature (e.g. year built)."
-msgstr "すべての地物は記述可能な特徴を持っています。それらは目に見えるものもあれば、その地物について知っていること（例. 建築年）もあります。"
+msgstr "全ての地物は記述可能な特徴を持っています。それらは目に見えるものもあれば、その地物について知っていること（例. 建築年）もあります。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --- they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see :numref:`figure_house_gis`)."
+msgstr ""
+"これらの家地物のジオメトリは（家の間取り図に基づいた）ポリゴンであり、記録した属性は屋根の色、バルコニーの有無、家が建てられた年です。属性は目に見えるものでなくてもよいこと"
+"---建てられた年など、その地物について知っていることが記述できることに注意してください。 "
+"GISアプリケーションでは、この地物型を家ポリゴンレイヤで表し、属性を属性テーブルで表すことができます（ "
+":numref:`figure_house_gis` 参照）。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
 msgid ""
@@ -208,6 +223,28 @@ msgstr "ベクタ地物について簡単に"
 msgid "Attributes in detail"
 msgstr "属性の詳細"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:128
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. :numref:`table_house_attributes` shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr ""
+"ベクタ地物の属性は、 **テーブル** に格納されます。テーブルとはスプレッドシートのようなものです。テーブルの各列は **フィールド** "
+"と呼ばれます。テーブルの各行は **レコード** です。テーブル :numref:`table_house_attributes` "
+"は、属性テーブルがGISでどのように見えるかの簡単な例を示しています。GISにおける属性テーブル内のレコードは、それぞれが一つの地物に対応しています。通常、属性テーブル内の情報は、ある種のデータベースに格納されます。GISアプリケーションは、属性レコードを地物ジオメトリとリンクしているので、地図上の地物を選択することでテーブル内のレコードを見つけ、テーブル上の地物を選択することで地図中の地物を見つけることができます。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:140
+msgid ""
+"House Attributes: An attribute table has fields (columns) and records (in "
+"rows)."
+msgstr "家の属性：属性テーブルはフィールド (列) とレコード (行) を持っています。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
 msgid "Attribute Table"
 msgstr "属性テーブル"
@@ -269,6 +306,17 @@ msgstr "2001"
 msgid "Silver"
 msgstr "銀色"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:152
+msgid ""
+"Each field in the attribute table contains a specific type of data --- text,"
+" numeric or date. Deciding what attributes to use for a feature requires "
+"some thought and planning. In our house example earlier on in this topic, we"
+" chose roof colour, presence of a balcony and year of construction as "
+"attributes of interest. We could just as easily have chosen other aspects of"
+" a house such as:"
+msgstr ""
+"属性テーブルの各フィールドには、特定のタイプのデータ（テキスト、数値、または日付）が含まれています。地物に使用する属性を決定するには、いくつか検討と計画が必要です。このトピックの前半の家の例では、関心のある属性として、屋根の色、バルコニーの有無、および建築年を選択しました。以下のような家の他の面を選択することも簡単にできるでしょう："
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:158
 msgid "number of levels"
 msgstr "階数"
@@ -310,7 +358,7 @@ msgid ""
 " government. In these cases it is usually not possible to request specific "
 "attributes and we have to make do with what we get."
 msgstr ""
-"それほど多くの選択肢があるのに、どの属性が地物のために必要かをどうしたらうまく選択できるのでしょうか？これは通常、データで何をする予定かに帰着します。年齢によって家屋を示す色分けされた地図を作成したい場合は、地物に「建築年」属性があると意味があります。このタイプの地図を使用することはないと確かに知っている場合、情報を格納しない方が良いです。不要な情報を収集し格納するのは、情報を調査し取り込むためにコストや時間が必要なので、悪い考えです。非常に多くの場合は、企業、友人や政府からベクタデータを取得します。これらの場合には、特定の属性を要求することは通常不可能であり、得られたもので何とかする必要があります。"
+"それほど多くの選択肢があるのに、どの属性が地物のために必要かをどうしたらうまく選択できるのでしょうか？これは通常、データで何をする予定かに帰着します。年齢によって家屋を示す色分けされた地図を作成したい場合は、地物に「建築年」属性があると意味があります。この種の地図を使うことはないと確信している場合はその情報を格納しない方が良いです。不要な情報を収集し格納することは、それを調査し取り込むために費用や時間がかかるので悪い考えです。ベクタデータは、しばしば企業、友人や政府からを取得します。これらの場合、特定の属性を要求することは通常不可能であり、得られたもので何とかする必要があります。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:178
 msgid "Single Symbols"
@@ -394,6 +442,25 @@ msgstr ""
 msgid "Our map after setting graduated colours for our contours."
 msgstr "等高線に段階色を設定した後の地図。"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:246
+msgid ""
+"Setting colours based on discrete groups of attribute values is called "
+"Graduated Symbology in QGIS. The process is shown in Illustrations "
+":numref:`figure_graduated_symbol` and :numref:`figure_graduated_symbol_map`."
+" **Graduated symbols** are most useful when you want to show clear "
+"differences between features with attribute values in different value "
+"ranges. The GIS Application will analyse the attribute data (e.g. height) "
+"and, based on the number of classes you request, create groupings for you. "
+"This process is illustrated in :numref:`table_graduated`: graduated colour "
+"breaks up the attribute value ranges into the number of classes you select; "
+"each class is represented by a different colour."
+msgstr ""
+"属性値の個別のグループに基づいて色を設定することは、QGISでは段階シンボロジと呼ばれます。このプロセスは、イラスト "
+":numref:`figure_graduated_symbol` および :numref:`figure_graduated_symbol_map` "
+"に示されています。 **段階シンボル** は、異なる値域の属性値を持つ地物間の違いを明確に示したい場合に最も役立ちます。 "
+"GISアプリケーションは、属性データ（高さなど）を分析し、要求された階級の数に基づいてグループを作ります。この手順は "
+":numref:`table_graduated`: に示されています。段階色は、属性値の範囲が選んだ階級の数に分割され、各階級は異なる色で表されます。"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:261
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:302
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:374
@@ -402,7 +469,7 @@ msgstr "属性値"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:261
 msgid "Class and Colour"
-msgstr "クラスと色"
+msgstr "階級と色"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:263
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:304
@@ -471,6 +538,28 @@ msgstr "9"
 msgid "Continuous Colour Symbols"
 msgstr "連続色シンボル"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:286
+msgid ""
+"In the previous section on Graduated Colour symbols we saw that we can draw "
+"features in discrete groups or classes. Sometimes it is useful to draw "
+"features in a **colour range** from one colour to another. The GIS "
+"Application will use a numerical attribute value from a feature (e.g. "
+"contour heights or pollution levels in a stream) to decide which colour to "
+"use. :numref:`table_continuous` shows how the attribute value is used to "
+"define a continuous range of colours. Continuous colour symbology uses a "
+"start colour (e.g. light orange shown here) and an end colour (e.g. dark "
+"brown shown here) and creates a series of shades between those colours."
+msgstr ""
+"前のセクションでは段階色シンボルについて、地物をグループや階級に分けて描画できることを見ました。場合によっては、ある色から別の色へと変化する "
+"**色範囲** "
+"内で地物を描くことが有用なこともあります。GISアプリケーションでは、地物の数値属性値（例えば、等高線の高さや小川の汚染レベル）に基づいて使用する色を決定します。:numref:`table_continuous`"
+" では、属性値を使って連続的な色の範囲を定義する方法を示しています。連続色シンボロジは最初の色（例 ここでは明るいオレンジ）と終りの色（例 "
+"ここでは暗い茶色）を使い、それらの色の間で一連のシェードを生成します。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:299
+msgid "Continuous colour symbology"
+msgstr "連続色シンボロジ"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:302
 msgid "Colour (no classes or grouping)"
 msgstr "カラー（クラスまたはグルーピングなし）"
@@ -518,6 +607,27 @@ msgstr "連続色シンボルを用いた等高線地図"
 msgid "Unique Value Symbols"
 msgstr "一意値シンボル"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:359
+msgid ""
+"Sometimes the attributes of features are not numeric, but instead "
+"**strings** are used. 'String' is a computer term meaning a group of "
+"letters, numbers and other writing symbols. Strings attributes are often "
+"used to classify things by name. We can tell the GIS Application to give "
+"each unique string or number its own colour and symbol. Road features may "
+"have different classes (e.g. 'street', 'secondary road', 'main road' etc.), "
+"each drawn in the map view of the GIS with different colours or symbols. "
+"This is illustrated in :numref:`table_unique`: unique attribute values for a"
+" feature type (e.g. roads) can each have their own symbol."
+msgstr ""
+"場合によっては、地物の属性が数値でなく、代わりに **文字列** "
+"が使われることがあります。「文字列」は文字、数字、その他の表記記号の集まりを意味するコンピュータ用語です。文字列の属性は、多くの場合、名前で物事を分類するために使用されます。一意の文字列又は数値のそれぞれに独自の色やシンボルを与えるようGISアプリケーションに指示することができます。道路の地物に様々な分類（例えば、「街路」、「周辺道路」、「主要道路」など）を持たせ、GISの地図ビュー内でそれぞれ異なる色又はシンボルで描くことができます。"
+" :numref:`table_unique` では、地物の種類（例 "
+"roads）に対応した一意の属性値がそれぞれ独自のシンボルを持っていることを示しています。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:371
+msgid "Unique values and symbols"
+msgstr "一意値とシンボル"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:374
 msgid "Colour class and symbol"
 msgstr "色クラスとシンボル"
@@ -547,12 +657,12 @@ msgid ""
 ":numref:`figure_unique_symbol`."
 msgstr ""
 "GISアプリケーション内で、レイヤに一意値シンボルを開く/使用することを選択できます。 "
-"GISは、属性フィールドのさまざまな文字列値をすべてスキャンし、一意の文字列または数値のリストを作成します。次に、それぞれの一意の値に色とスタイルを割り当てることができます。これは"
+"GISは、属性フィールドの様々な文字列値を全てスキャンし、一意の文字列又は数値のリストを作成します。次に、それぞれの一意の値に色とスタイルを割り当てることができます。これは"
 " :numref:`figure_unique_symbol` に示されています。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:396
 msgid "Defining unique value symbology for roads based on the road type."
-msgstr "道路の種類に基づいて、道路に対して一意値シンボルを定義します。"
+msgstr "道路に対して道路の種類に基づいた一意値シンボルを定義します。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:398
 msgid ""
@@ -567,7 +677,7 @@ msgstr ""
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:409
 msgid "A roads vector layer symbolised using a unique value per road type."
-msgstr "道路ベクタレイヤは道路の種別ごとに一意の値を用いてシンボル化されます。"
+msgstr "道路の種類による一意の値を用いてシンボル化された道路ベクタレイヤ。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:412
 msgid "Things to be aware of"
@@ -587,12 +697,12 @@ msgid ""
 " into how you symbolise your maps in order to make them easy to understand."
 msgstr ""
 "使用する属性とシンボロジを決定するときは、いくらか計画が必要です。何らかの **地理空間** "
-"データの収集を開始する前に、必要とされている属性が何で、それがどのように記号化されるかを知っているか確かめる必要があります。最初の頃に立てた計画が悪いと、前に戻ってデータを再収集することは非常に困難です。属性データを収集する目的は、空間情報を分析し、解釈できるようにすることであることも忘れないでください。どのようにこれをするかは答えようとしている質問に依存します。シンボロジは、人々が使用された色や記号に基づいて属性データを見て理解できるようにする視覚言語です。このため、理解しやすくするためには地図をどのようにシンボル化したらよいかに、思考の多くをつぎ込む必要があります。"
+"データの収集を開始する前に、必要とされている属性が何で、それをどのようにシンボル化するかをしっかり分かっている必要があります。最初の頃に立てた計画が悪いと、前に戻ってデータを再収集することは非常に困難です。属性データを収集する目的は、空間情報を分析し、解釈できるようにすることであることも忘れないでください。どのようにこれをするかは答えようとしている質問に依存します。シンボロジは、人々が使用された色や記号に基づいて属性データを見て理解できるようにする視覚言語です。このため、理解しやすくするためには地図をどのようにシンボル化したらよいかに、思考の多くをつぎ込む必要があります。"
 " "
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:426
 msgid "What have we learned?"
-msgstr "わかりましたか?"
+msgstr "分かりましたか?"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:428
 msgid "Let's wrap up what we covered in this worksheet:"
@@ -641,13 +751,13 @@ msgstr "地物の属性データはシンボルの設定に使用することが
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:439
 msgid "**Graduated colour** symbology groups the data into discrete classes"
-msgstr "**段階色** シンボルはデータをいくつかのクラスにまとめることができます"
+msgstr "**段階色** シンボロジはデータをいくつかのクラスにまとめることができます"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:440
 msgid ""
 "**Continuous colour** symbology assigns colours from a colour range to the "
 "features based on their attributes"
-msgstr "**連続色** シンボルは, 地物の属性情報に基づいてカラーレンジの色を割り当てることができます"
+msgstr "**連続色** シンボロジは, 地物の属性情報に基づいてカラーレンジの色を割り当てることができます"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:442
 msgid ""
@@ -667,17 +777,27 @@ msgstr "やってみよう"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:450
 msgid "Here are some ideas for you to try with your learners:"
-msgstr "ここでは人に教える際のアイデアいくつか述べていきます:"
+msgstr "ここでは生徒に教える際のアイデアをいくつか述べていきます:"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:452
+msgid ""
+"Using the table that you created in the last topic, add a new column for the"
+" symbology type you would use for each feature type and have the learners "
+"identify which symbology type they would use (see "
+":numref:`table_example_symbols` for an example)."
+msgstr ""
+"最後のトピックで作成したテーブルに新しい列を追加して、それぞれの地物タイプのシンボロジの種類に使用し、生徒たちに彼らならどのシンボロジの種類を使うかを特定させてください（例として"
+" table_example_symbols_ を参照）。"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:456
 msgid ""
 "Try to identify which symbology types you would use for the following types "
 "of vector features:"
-msgstr "ベクタ地物は、次のタイプで使用しているシンボロジの種類を特定するようにしてください："
+msgstr "あなたなら次のベクタ地物の種類にどのシンボロジ型を使うか見極めてみてください:"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:459
 msgid "points showing pH level of soil samples taken around your school"
-msgstr "学校のまわりで採集された土壌サンプルのpHレベルを示す点"
+msgstr "学校のまわりで採集された土壌サンプルのpHレベルを示すポイント"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:460
 msgid "lines showing a road network in a city"
@@ -688,6 +808,10 @@ msgid ""
 "polygons for houses with an attribute that shows whether it is made of "
 "brick, wood or 'other' material."
 msgstr "レンガ、木材、あるいは「他の」材料で作られているかどうかを示す属性をもつ住宅ポリゴン。"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:466
+msgid "Example Feature Types and Symbology"
+msgstr "地物の型とシンボロジの例"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
 msgid "Real world feature"
