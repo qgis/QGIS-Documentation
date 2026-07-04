@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -74,8 +74,14 @@ msgid ""
 "(colour, size, age etc.)."
 msgstr ""
 "先の二つのトピックでは、ベクタデータを見てきました。ベクタデータには， **ジオメトリ** と **属性** "
-"の２つの重要なコンセプトがあるのを見てきました。ベクタ地物のジオメトリは， **形状** と **位置** を示し、 **属性** は "
+"の２つの重要な概念があるのが分かりました。ベクタ地物のジオメトリは， **形状** と **位置** を示し、ベクタ地物の **属性** は "
 "**プロパティ** （色、大きさ、年齢など）を示します。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:21
+msgid ""
+"In this section we will look more closely at the process of creating and "
+"editing vector data --- both the geometry and attributes of vector features."
+msgstr "このセクションでは、ベクタデータ － ベクタ地物のジオメトリと属性の両方 － を作成し編集する過程を詳しく見ていきます。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:25
 msgid "How does GIS digital data get stored?"
@@ -93,6 +99,23 @@ msgstr ""
 "ワードプロセッサ、スプレッドシート、グラフィックパッケージはすべて、デジタルデータを作成し編集するプログラムです。それぞれのアプリケーションは、データを特定のファイル形式に保存します。例えば、グラフィックプログラムであれば図画を"
 " :file:`.jpg` JPEG画像として、ワードプロセッサであればドキュメントを :file:`.odt` OpenDocumentか "
 ":file:`.doc` ワード文書として保存することができます。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:33
+msgid ""
+"Just like these other applications, GIS Applications can store their data in"
+" files on the computer hard disk. There are a number of different file "
+"formats for GIS data, but the most common one is probably the 'shape file'. "
+"The name is a little odd in that although we call it a shape file "
+"(singular), it actually consists of at least three different files that work"
+" together to store your digital vector data, as shown in "
+":numref:`table_shapefile`."
+msgstr ""
+"これら他のアプリケーションと全く同様に、GISアプリケーションではコンピュータのハードディスク上のファイルにそのデータを保存できます。GISデータにはたくさんの種類のファイル形式がありますが、最も一般的なものは、おそらく「シェープファイル」です。この名前は少し奇妙で、シェープファイル（単数形）と呼びますが、実際には"
+" :numref:`table_shapefile` に示すように、デジタルベクタデータを保存する、少なくとも３つの異なるファイルで構成されています。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:42
+msgid "The Basic Files that make up a 'Shapefile'"
+msgstr "「シェープファイル」を構成する基本的なファイル"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:45
 msgid "Extension"
@@ -148,7 +171,7 @@ msgstr ""
 msgid ""
 "The files that make up a ’trees’ shapefile as seen in the computer’s file "
 "manager."
-msgstr "コンピュータのファイルマネージャで見られるような「木」シェープファイルを構成するファイル。"
+msgstr "'trees' シェープファイルを構成するファイルをコンピュータのファイルマネージャで見たところ。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:70
 msgid ""
@@ -161,9 +184,9 @@ msgid ""
 " shapefiles, so for this topic we will focus on creating and editing "
 "shapefiles."
 msgstr ""
-"多くのGISアプリケーションでは、 **データベース** "
-"内にもデジタルデータを保存できます。データベースにGISデータを保存することは、データベースは、 **大量** のデータを **効率的** "
-"に保存でき、迅速にGISアプリケーションにデータを提供できるため、一般的に良いソリューションです。データベースを使用すると、多くの人が同時に同じベクタデータレイヤで作業できます。GISデータを格納するデータベースを設定するのはシェープファイルを使用するよりも複雑ですので、このトピックでは、シェープファイルの作成および編集に焦点を当てます。"
+"多くのGISアプリケーションでは、 **データベース** の中にもデジタルデータを保存できます。データベースは **大量** のデータを **効率的**"
+" "
+"に保存でき、データをGISアプリケーションに迅速に提供できるため、データベースにGISデータを保存することは、一般的に良いソリューションです。データベースを使用すると、多くの人が同時に同じベクタデータレイヤで作業できます。GISデータを格納するデータベースを設定するのはシェープファイルを使用するよりも複雑ですので、このトピックでは、シェープファイルの作成と編集に焦点を当てます。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:79
 msgid "Planning before you begin"
@@ -177,11 +200,11 @@ msgid ""
 " will be. Let's look at a few examples and it will become clearer how to go "
 "about doing this."
 msgstr ""
-"新しいベクタレイヤ（シェープファイルに保存される）を作成する前に、そのレイヤの形状（ポイント、ポリラインまたはポリゴン）がどうか、そのレイヤの属性がどうなるか知っている必要があります。いくつかの例を見てみましょう、そうすればこれをやって行く方法がより明確になるでしょう。"
+"新しいベクタレイヤ（シェープファイルに保存される）を作成する前に、そのレイヤの形状（ポイント、ポリラインまたはポリゴン）がどうなるか、そしてそのレイヤの属性がどうなるかを分かっておく必要があります。いくつかの例を見て、これをする方法を明確にしましょう。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:87
 msgid "Example 1: Creating a tourism map"
-msgstr "例1：旅行地図の作成"
+msgstr "例1：観光地図の作成"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:89
 msgid ""
@@ -197,7 +220,7 @@ msgid ""
 "as a nature reserve or a cultural village, polygons might make a good "
 "choice."
 msgstr ""
-"お住まいの地域のために素敵な観光地図を作成したいと思っているとしましょう。最終的な地図に対するビジョンは、観光客への関心のサイトのためにオーバーレイマーカーと5万分の１のトポシートです。まずは、ジオメトリについて考えてみましょう。ベクタレイヤはポイント、ポリラインまたはポリゴンの地物を使用して表現できることはわかっています。この観光地図にはどれが最も理にかなっていますか？外を見るポイント、記念碑、古戦場などの特定の位置をマークしたい場合はポイントを使用できます。峠を通る風光明媚なルートなど、観光客にルートを案内したい場合は、ポリラインを使用しても意味があります。自然保護区や文化村など、全体が観光上関心のある領域がある場合は、ポリゴンを選択するのが良いかもしれません。"
+"自分の地域のために素敵な観光地図を作成したいと思っているとしましょう。思い描いた最終的な地図は、観光客が関心を持つ場所がマーカーでオーバーレイされた5万分の１の地形図です。まずは、ジオメトリについて考えてみましょう。ベクタレイヤはポイント、ポリライン又はポリゴン地物を使用して表現できることは知っています。この観光地図にはどれが最も理にかなっていますか？見晴らしの良い場所、記念碑、古戦場などの特定の位置をマークしたい場合はポイントを使用できるでしょう。峠を通る風光明媚なルートなど、観光客にルートを案内したい場合は、ポリラインを使うのが理にかなっています。自然保護区や文化村など、全体が観光上関心のある領域の場合は、ポリゴンを選択するのが良いかもしれません。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:100
 msgid ""
@@ -221,11 +244,11 @@ msgid ""
 "tourism data so that we can properly represent the different kinds of "
 "features needed for our visitors, giving them all the information they need."
 msgstr ""
-"観光レイヤーを有する地図。適切に彼らが必要なすべての情報を与え、訪問者のために必要な地物の種類を表すことができるよう、観光のデータのための3つの異なるジオメトリタイプを使用していました。"
+"観光レイヤーを有する地図。訪問客が必要な様々な種類の地物を適切に表し、必要な全ての情報を与えられるよう、観光データに3つの異なるジオメトリタイプを使用しました。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:120
 msgid "Example 2: Creating a map of pollution levels along a river"
-msgstr "例2：川に沿った汚染レベルの地図作成"
+msgstr "例2：川に沿った汚染レベルの地図を作る"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:122
 msgid ""
@@ -245,7 +268,20 @@ msgid ""
 "geometry makes sense here because each sample taken represents the "
 "conditions at a very specific place."
 msgstr ""
-"GISアプリケーションでは、このような実習から収集したデータを格納するためには、おそらく点ジオメトリを持つGISレイヤを作成します。撮影した各サンプルは非常に限られた場所での条件を表しているため、点ジオメトリを使用することはここでは意味があります。"
+"GISアプリケーションでは、このような実習から収集したデータを格納するためには、おそらくポイントジオメトリを持つGISレイヤを作成するでしょう。撮影した各サンプルは非常に限られた場所での条件を表しているため、ここではポイントジオメトリを使うことが理にかなっています。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:134
+msgid ""
+"For the attributes we would want a **field** for each thing that describes "
+"the sample site. So we may end up with an attribute table that looks "
+"something like :numref:`table_river_attributes`."
+msgstr ""
+"属性のために、サンプルサイトを説明する各々の物事に対して **フィールド** が欲しいです。そこで "
+":numref:`table_river_attributes` のような属性テーブルで終えましょう。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:140
+msgid "River Attributes"
+msgstr "River属性"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:143
 msgid "SampleNo"
@@ -347,6 +383,17 @@ msgstr "高い"
 msgid "Victor"
 msgstr "Victor"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:152
+msgid ""
+"Drawing a table like :numref:`table_river_attributes` before you create your"
+" vector layer will let you decide what attribute fields (columns) you will "
+"need. Note that the geometry (positions where samples were taken) is not "
+"shown in the attribute table --- the GIS Application stores it separately!"
+msgstr ""
+"ベクタレイヤを作成する前に :numref:`table_river_attributes` "
+"のような表を描くと、どのような属性フィールド（列）が必要になるかを決められます。ジオメトリ（サンプルが採取された位置）が属性テーブルに示されていないことに注意してください---"
+" GISアプリケーションではジオメトリは別に保存されます！"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:158
 msgid "Creating an empty shapefile"
 msgstr "空のシェープファイルを作成する"
@@ -378,6 +425,18 @@ msgid ""
 msgstr ""
 "新しいベクタレイヤを作成することは、フォームにいくつかの詳細に記入するのと同じくらい簡単です。まず、ジオメトリタイプを選択し、それから属性フィールドを追加します。"
 
+#: ../../docs/gentle_gis_introduction/data_capture.rst:178
+msgid ""
+"Next you will add fields to the attribute table. Normally we give field "
+"names that are short, have no spaces and indicate what type of information "
+"is being stored in that field. Example field names may be 'pH', "
+"'RoofColour', 'RoadType' and so on. As well as choosing a name for each "
+"field, you need to indicate how the information should be stored in that "
+"field --- i.e. is it a number, a word or a sentence, or a date?"
+msgstr ""
+"次は属性テーブルにフィールドを追加します。通常は、短くて空白を含まず、フィールドに格納されている情報の種類を示唆するフィールド名を与えます。フィールド名の例としては「pH」、「屋根色」、「道路種別」などでしょう。各フィールドの名前を選択するのと同様に、情報がそのフィールドにどう格納されるかを示す必要があります"
+"---つまりそれは数か、単語や文章か、または日付か？"
+
 #: ../../docs/gentle_gis_introduction/data_capture.rst:185
 msgid ""
 "Computer programs usually call information that is made up of words or "
@@ -386,6 +445,16 @@ msgid ""
 msgstr ""
 "コンピュータプログラムは、通常、言葉や文章の' **文字列** "
 "'で構成された情報を呼び出します。だから通りの名前や川の名前のようなものを保存する必要がある場合は、フィールドタイプに'文字列'を使用する必要があります。"
+
+#: ../../docs/gentle_gis_introduction/data_capture.rst:189
+msgid ""
+"The shapefile format allows you to store the numeric field information as "
+"either a whole number (**integer**) or a decimal number (**floating point**)"
+" --- so you need to think before hand whether the numeric data you are going"
+" to capture will have decimal places or not."
+msgstr ""
+"シェープファイル形式は、数値フィールド情報を整数（ **整数** ）又は小数（ **浮動小数点数** ）のいずれかとして保存できます --- "
+"取り込もうとしている数値データが小数以を持っているかどうかを事前に考えておく必要があります。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:194
 msgid ""
@@ -428,7 +497,7 @@ msgid ""
 "Next we need to start adding data. There are two steps we need to complete "
 "for each record we add to the shapefile:"
 msgstr ""
-"これまでのところは、空のシェープファイルを作成しただけです。今は、GISアプリケーションの「編集を有効」メニューオプションまたはツールバーのアイコンを使用してシェープファイルでの編集を有効にする必要があります。シェープファイルが誤って、それらに含まれるデータの変更や削除を防ぐために、デフォルトでは編集のために有効になっていません。次は、データの追加を開始する必要があります。シェープファイルに追加するレコードごとに、2つのステップを完了する必要があります。"
+"これまでのところは、空のシェープファイルを作成しただけです。今は、GISアプリケーションの「編集を有効」メニューオプションまたはツールバーのアイコンを使用してシェープファイルでの編集を有効にする必要があります。シェープファイルに含まれているデータが誤って変更されたり削除されたりしないよう、シェープファイルの編集はデフォルトで有効になっていません。次に、データの追加を始める必要があります。シェープファイルに追加するレコードごとに、2つのステップを完了する必要があります。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:223
 msgid "Capturing geometry"
@@ -442,7 +511,7 @@ msgstr "属性の入力"
 msgid ""
 "The process of capturing geometry is different for points, polylines and "
 "polygons."
-msgstr "ジオメトリの取得プロセスはポイント、ポリラインおよびポリゴンかによって異なります。"
+msgstr "ジオメトリの取得プロセスは、ポイント、ポリライン及びポリゴンによって異なります。"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:228
 msgid ""
@@ -713,7 +782,7 @@ msgstr "やってみよう"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:393
 msgid "Here are some ideas for you to try with your learners:"
-msgstr "ここでは人に教える際のアイデアいくつか述べていきます:"
+msgstr "ここでは生徒に教える際のアイデアをいくつか述べていきます:"
 
 #: ../../docs/gentle_gis_introduction/data_capture.rst:395
 msgid ""
