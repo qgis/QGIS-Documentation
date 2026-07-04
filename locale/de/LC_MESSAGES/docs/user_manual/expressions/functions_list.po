@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
@@ -483,6 +483,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:383
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:16
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:401
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:425
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:449
@@ -718,7 +719,7 @@ msgstr "[] kennzeichnet optionale Argumente"
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:23
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:38
@@ -822,7 +823,7 @@ msgstr "Argumente"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:24
 #: ../../docs/user_manual/expressions/expression_help/General.rst:85
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:49
 msgid "**layer** - a string, representing either a layer name or layer ID"
 msgstr ""
 "**layer** - eine Zeichenkette, die entweder einen Layernamen oder eine "
@@ -1228,7 +1229,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:18
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:26
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:41
@@ -4816,9 +4817,21 @@ msgstr "to_bool(value)"
 msgid "``to_bool('')`` → false"
 msgstr "``to_bool('')`` → false"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:139
+msgid "``to_bool('123')`` → true"
+msgstr "``to_bool('123')`` → true"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:140
 msgid "``to_bool('false')`` → true"
 msgstr "``to_bool('false')`` → true"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:141
+msgid "``to_bool(0)`` → false"
+msgstr "``to_bool(0)`` → false"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
+msgid "``to_bool(1)`` → true"
+msgstr "``to_bool(1)`` → true"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:143
 msgid "``to_bool(null)`` → false"
@@ -5158,6 +5171,11 @@ msgstr ""
 "**number** - Ganzzahl oder reeller Wert, der in eine Zeichenkette "
 "konvertiert werden soll"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/String.rst:18
+msgid "``to_string(1.23)`` → '1.23'"
+msgstr "``to_string(1.23)`` → '1.23'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:168
 #: ../../docs/user_manual/expressions/functions_list.rst:1240
 msgid "Further reading: :ref:`expression_function_String_format_number`"
@@ -5224,6 +5242,16 @@ msgstr "crs_to_authid"
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
+msgid ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
+msgstr ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:194
 msgid "Custom Functions"
@@ -9071,6 +9099,14 @@ msgstr "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 msgid "**densify_fraction** - densify fraction amount"
 msgstr "**densify_fraction** - densify-fraction-Anteil"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:218
+msgid ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+msgstr ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:219
 msgid ""
 "``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 "
@@ -11332,6 +11368,16 @@ msgstr ""
 "Lesen Sie mehr über das zugrundeliegende GEOS \"Intersects\" Prädikat, wie "
 "es in der PostGIS `ST_Intersects "
 "<https://postgis.net/docs/ST_Intersects.html>`_ Funktion beschrieben ist."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+msgstr ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "**min_overlap** - defines an optional exclusion filter:"
@@ -14004,10 +14050,10 @@ msgid "Returns a matching layer property or metadata value."
 msgstr "Gibt eine passende Layer-Eigenschaft oder einen Metadatenwert zurück."
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:45
-msgid "layer_property(layer, property)"
-msgstr "layer_property(layer, property)"
+msgid "layer_property(layer, property, [translate:=true])"
+msgstr "layer_property(layer, property, [translate:=true])"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:47
 msgid ""
 "**property** - a string corresponding to the property to return. Valid "
@@ -14016,97 +14062,97 @@ msgstr ""
 "**property** - eine Zeichenkette, die der zurückzugebenden Eigenschaft "
 "entspricht. Gültige Optionen sind:"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
 msgid "name: layer name"
 msgstr "name: Layer-Name"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
 msgid "id: layer ID"
 msgstr "id: Layer-ID"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
 msgid "title: metadata title string"
 msgstr "title: Metadaten Titelstring"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
 msgid "abstract: metadata abstract string"
 msgstr "abstract: Metadata Zusammenfassung"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
 msgid "keywords: metadata keywords"
 msgstr "keywords: Metadaten-Schlüsselwörter"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
 msgid "data_url: metadata URL"
 msgstr "data_url: Metadaten-URL"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
 msgid "attribution: metadata attribution string"
 msgstr "attribution: Metadaten-Attribut-String"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
 msgid "attribution_url: metadata attribution URL"
 msgstr "attribution_url: Metadaten-Attribut-URL"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
 msgid "source: layer source"
 msgstr "source: Layer-Quelle"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
 msgid "min_scale: minimum display scale for layer"
 msgstr "min_scale: minimaler Anzeigemaßstab für Layer"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
 msgid "max_scale: maximum display scale for layer"
 msgstr "max_scale: maximaler Anzeigemaßstab für Layer"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
 msgid "is_editable: if layer is in edit mode"
 msgstr "is_editable: ob sich der Layer im Bearbeitungsmodus befindet"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
 msgid "crs: layer CRS"
 msgstr "crs: Layer KBS"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
 msgid "crs_definition: layer CRS full definition"
 msgstr "crs_definition: Layer KBS vollständige Definition"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
 msgid "crs_description: layer CRS description"
 msgstr "crs_description: Layer KBS Beschreibung"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
 msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
 msgstr "crs_ellipsoid: Abkürzung des Layers KBS-Ellipsoid"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
 msgstr "extent: Ausdehnung des Layers (als Geometrieobjekt)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
 msgid "distance_units: layer distance units"
 msgstr "distance_units: Layer-Abstandseinheiten"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
 msgid "type: layer type, e.g., Vector or Raster"
 msgstr "type: Layer-Typ, z. B. Vektor oder Raster"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
 msgid "storage_type: storage format (vector layers only)"
 msgstr "storage_type: Speicherformat (nur Vektorlayer)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
 msgid "geometry_type: geometry type, e.g., Point (vector layers only)"
 msgstr "geometry_type: Geometrietyp, z. B. Punkt (nur Vektor-Layer)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:73
 msgid ""
 "feature_count: approximate feature count for layer (vector layers only)"
 msgstr ""
 "feature_count: ungefähre Anzahl der Objekte für Layer (nur Vektorlayer)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:74
 msgid ""
 "path: File path to the layer data source. Only available for file based "
 "layers."
@@ -14114,15 +14160,15 @@ msgstr ""
 "path: Pfad zur Datenquelle des Layers. Nur für dateibasierte Layer "
 "verfügbar."
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
 msgstr "``layer_property('streets','title')`` → 'Basemap Streets'"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:80
 msgid "``layer_property('airports','feature_count')`` → 120"
 msgstr "``layer_property('airports','feature_count')`` → 120"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:81
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
@@ -17993,6 +18039,14 @@ msgstr ""
 "formatiert ist. Standardmäßig wird das aktuelle QGIS-Benutzergebietsschema "
 "verwendet. Außerdem werden die Dezimalstellen auf die Anzahl der angegebenen"
 " Stellen gekürzt."
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+msgstr ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:107
 msgid "**number** - number to be formatted"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
@@ -476,6 +476,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:383
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:16
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:401
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:425
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:449
@@ -711,7 +712,7 @@ msgstr "記号[]は、オプションの引数を意味します。"
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:23
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:38
@@ -815,7 +816,7 @@ msgstr "引数"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:24
 #: ../../docs/user_manual/expressions/expression_help/General.rst:85
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:49
 msgid "**layer** - a string, representing either a layer name or layer ID"
 msgstr "**layer** - レイヤ名かレイヤIDのどちらかを表す文字列"
 
@@ -1212,7 +1213,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:18
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:26
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:41
@@ -4528,9 +4529,21 @@ msgstr "to_bool(value)"
 msgid "``to_bool('')`` → false"
 msgstr "``to_bool('')`` → false"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:139
+msgid "``to_bool('123')`` → true"
+msgstr "``to_bool('123')`` → true"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:140
 msgid "``to_bool('false')`` → true"
 msgstr "``to_bool('false')`` → true"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:141
+msgid "``to_bool(0)`` → false"
+msgstr "``to_bool(0)`` → false"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
+msgid "``to_bool(1)`` → true"
+msgstr "``to_bool(1)`` → true"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:143
 msgid "``to_bool(null)`` → false"
@@ -4791,7 +4804,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:112
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:18
 msgid "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
-msgstr "``to_interval('1 day 2 hours')`` → 間隔: 1.08333 日"
+msgstr "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:113
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:19
@@ -4848,6 +4861,11 @@ msgstr "to_string(number)"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:16
 msgid "**number** - Integer or real value. The number to convert to string."
 msgstr "**number** - 整数または実数値。文字列に変換する数値"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/String.rst:18
+msgid "``to_string(1.23)`` → '1.23'"
+msgstr "``to_string(1.23)`` → '1.23'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:168
 #: ../../docs/user_manual/expressions/functions_list.rst:1240
@@ -4911,6 +4929,16 @@ msgstr "crs_to_authid"
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
+msgid ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
+msgstr ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:194
 msgid "Custom Functions"
@@ -8421,6 +8449,14 @@ msgstr "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 msgid "**densify_fraction** - densify fraction amount"
 msgstr "**densify_fraction** - 稠密化比率"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:218
+msgid ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+msgstr ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:219
 msgid ""
 "``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 "
@@ -10502,6 +10538,16 @@ msgid ""
 msgstr ""
 "この関数の基礎となるGEOSの \"Intersects\" 述語については、PostGISの `ST_Intersects "
 "<https://postgis.net/docs/ST_Intersects.html>`_ 関数の説明を参照してください。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+msgstr ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "**min_overlap** - defines an optional exclusion filter:"
@@ -12916,120 +12962,120 @@ msgid "Returns a matching layer property or metadata value."
 msgstr "該当するレイヤのプロパティまたはメタデータの値を返します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:45
-msgid "layer_property(layer, property)"
-msgstr "layer_property(layer, property)"
+msgid "layer_property(layer, property, [translate:=true])"
+msgstr "layer_property(layer, property, [translate:=true])"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:47
 msgid ""
 "**property** - a string corresponding to the property to return. Valid "
 "options are:"
 msgstr "**property** - 戻り値となるプロパティに対応する文字列。有効なオプションは次のとおり： "
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
 msgid "name: layer name"
 msgstr "name: レイヤ名"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
 msgid "id: layer ID"
 msgstr "id: レイヤID"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
 msgid "title: metadata title string"
 msgstr "title: メタデータのタイトル文字列"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
 msgid "abstract: metadata abstract string"
 msgstr "abstract: メタデータの要約文字列"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
 msgid "keywords: metadata keywords"
 msgstr "keywords: メタデータのキーワード"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
 msgid "data_url: metadata URL"
 msgstr "data_url: メタデータのURL"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
 msgid "attribution: metadata attribution string"
 msgstr "attribution: メタデータの帰属文字列"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
 msgid "attribution_url: metadata attribution URL"
 msgstr "attribution_url: メタデータの帰属URL"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
 msgid "source: layer source"
 msgstr "source: レイヤのソース"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
 msgid "min_scale: minimum display scale for layer"
 msgstr "min_scale: レイヤの最小表示縮尺"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
 msgid "max_scale: maximum display scale for layer"
 msgstr "max_scale: レイヤの最大表示縮尺"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
 msgid "is_editable: if layer is in edit mode"
 msgstr "is_editable: レイヤが編集モードに入っているか否か"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
 msgid "crs: layer CRS"
 msgstr "crs: レイヤのCRS"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
 msgid "crs_definition: layer CRS full definition"
 msgstr "crs_definition: レイヤのCRSのProj4定義文字列"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
 msgid "crs_description: layer CRS description"
 msgstr "crs_description: レイヤのCRSの名前"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
 msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
 msgstr "crs_ellipsoid: レイヤCRS楕円体の頭字語"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
 msgstr "extent: レイヤの範囲（戻り値はジオメトリオブジェクト）"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
 msgid "distance_units: layer distance units"
 msgstr "distance_units: レイヤの距離単位"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
 msgid "type: layer type, e.g., Vector or Raster"
 msgstr "type: レイヤの種類、すなわち「ベクタ」または「ラスタ」"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
 msgid "storage_type: storage format (vector layers only)"
 msgstr "storage_type: 保存形式（ベクタレイヤのみ）"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
 msgid "geometry_type: geometry type, e.g., Point (vector layers only)"
 msgstr "geometry_type: ジオメトリの種類。例えば「Point 」など（ベクタレイヤのみ）"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:73
 msgid ""
 "feature_count: approximate feature count for layer (vector layers only)"
 msgstr "feature_count: レイヤの地物数の概算値（ベクタレイヤのみ）"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:74
 msgid ""
 "path: File path to the layer data source. Only available for file based "
 "layers."
 msgstr "path: レイヤのデータソースへのファイルパス。ファイル形式のレイヤのみ利用可"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
 msgstr "``layer_property('streets','title')`` → 'Basemap Streets'"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:80
 msgid "``layer_property('airports','feature_count')`` → 120"
 msgstr "``layer_property('airports','feature_count')`` → 120"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:81
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
@@ -16605,6 +16651,14 @@ msgid ""
 "places to the number of supplied places."
 msgstr ""
 "3桁毎にロケールの桁区切り文字で区切られた数字を返します。デフォルトでは、現在のQGISユーザーのロケールが使用されます。また、指定された桁数で小数点以下の桁数をそろえます。"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+msgstr ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:107
 msgid "**number** - number to be formatted"

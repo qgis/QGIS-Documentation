@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Tagalog (https://app.transifex.com/qgis/teams/6144/tl/)\n"
@@ -274,6 +274,14 @@ msgstr "array_all"
 msgid "array_all(array_a, array_b)"
 msgstr "array_all(array_a, array_b)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
+msgid "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+msgstr "``array_all(array(1,2,3),array(2,3))`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:47
+msgid "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
+msgstr "``array_all(array(1,2,3),array(1,2,4))`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_append"
 msgstr "array_append"
@@ -286,6 +294,10 @@ msgstr "array_append(array, value)"
 msgid "array_cat"
 msgstr "array_cat"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:84
+msgid "array_cat(array1, array2, ...)"
+msgstr "array_cat(array1, array2, ...)"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:96
 msgid "array_contains"
 msgstr "array_contains"
@@ -293,6 +305,10 @@ msgstr "array_contains"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "array_contains(array, value)"
 msgstr "array_contains(array, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:109
+msgid "``array_contains(array(1,2,3),2)`` → TRUE"
+msgstr "``array_contains(array(1,2,3),2)`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:117
 msgid "array_count"
@@ -310,6 +326,10 @@ msgstr "array_distinct"
 msgid "array_distinct(array)"
 msgstr "array_distinct(array)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:150
+msgid "``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]"
+msgstr "``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:158
 msgid "array_filter"
 msgstr "array_filter"
@@ -317,6 +337,10 @@ msgstr "array_filter"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:166
 msgid "array_filter(array, expression, [limit:=0])"
 msgstr "array_filter(array, expression, [limit:=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:174
+msgid "``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]"
+msgstr "``array_filter(array(1,2,3),@element < 3)`` → [ 1, 2 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:183
 msgid "array_find"
@@ -341,6 +365,10 @@ msgstr "array_foreach"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:233
 msgid "array_foreach(array, expression)"
 msgstr "array_foreach(array, expression)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:239
+msgid "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
+msgstr "``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:248
 msgid "array_get"
@@ -390,6 +418,14 @@ msgstr "array_majority"
 msgid "array_majority(array, [option:='all'])"
 msgstr "array_majority(array, [option:='all'])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:111
+msgid "``array_majority(array(0,1,42,42,43), 'all')`` → [ 42 ]"
+msgstr "``array_majority(array(0,1,42,42,43), 'all')`` → [ 42 ]"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:112
+msgid "``array_majority(array(0,1,42,42,43,1), 'all')`` → [ 42, 1 ]"
+msgstr "``array_majority(array(0,1,42,42,43,1), 'all')`` → [ 42, 1 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:125
 msgid "array_max"
 msgstr "array_max"
@@ -397,6 +433,10 @@ msgstr "array_max"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:133
 msgid "array_max(array)"
 msgstr "array_max(array)"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:137
+msgid "``array_max(array(0,42,4,2))`` → 42"
+msgstr "``array_max(array(0,42,4,2))`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:145
 msgid "array_mean"
@@ -462,6 +502,10 @@ msgstr "array_remove_at"
 msgid "array_remove_at(array, pos)"
 msgstr "array_remove_at(array, pos)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:320
+msgid "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+msgstr "``array_remove_at(array(1, 2, 3), 1)`` → [1, 3 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:329
 msgid "array_replace"
 msgstr "array_replace"
@@ -490,6 +534,10 @@ msgstr "array_slice"
 msgid "array_slice(array, start_pos, end_pos)"
 msgstr "array_slice(array, start_pos, end_pos)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:42
+msgid "``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]"
+msgstr "``array_slice(array(1,2,3,4,5),-5,-1)`` → [ 1, 2, 3, 4, 5 ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:55
 msgid "array_sort"
 msgstr "array_sort"
@@ -506,6 +554,10 @@ msgstr "array_sum"
 msgid "array_sum(array)"
 msgstr "array_sum(array)"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:90
+msgid "``array_sum(array(0,1,39.4,1.6,'a'))`` → 42.0"
+msgstr "``array_sum(array(0,1,39.4,1.6,'a'))`` → 42.0"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:98
 msgid "array_to_string"
 msgstr "array_to_string"
@@ -513,6 +565,10 @@ msgstr "array_to_string"
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:106
 msgid "array_to_string(array, [delimiter:=','], [emptyvalue:=''])"
 msgstr "array_to_string(array, [delimiter:=','], [emptyvalue:=''])"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:116
+msgid "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
+msgstr "``array_to_string(array('1','','3'),',','0')`` → '1,0,3'"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:6
 msgid "generate_series"
@@ -564,6 +620,10 @@ msgstr "color_cmyk"
 msgid "color_cmyk(cyan, magenta, yellow, black)"
 msgstr "color_cmyk(cyan, magenta, yellow, black)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:27
+msgid "``color_cmyk(100,50,0,10)`` → '0,115,230'"
+msgstr "``color_cmyk(100,50,0,10)`` → '0,115,230'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:35
 msgid "color_cmyka"
 msgstr "color_cmyka"
@@ -571,6 +631,10 @@ msgstr "color_cmyka"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:43
 msgid "color_cmyka(cyan, magenta, yellow, black, alpha)"
 msgstr "color_cmyka(cyan, magenta, yellow, black, alpha)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:51
+msgid "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
+msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:59
 msgid "color_cmykf"
@@ -692,6 +756,13 @@ msgstr "create_ramp"
 msgid "create_ramp(map, [discrete:=false])"
 msgstr "create_ramp(map, [discrete:=false])"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:415
+msgid ""
+"``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'"
+msgstr ""
+"``ramp_color(create_ramp(map(0,'0,0,0',1,'255,0,0')),1)`` → '255,0,0,255'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:423
 msgid "darker"
 msgstr "darker"
@@ -699,6 +770,10 @@ msgstr "darker"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:431
 msgid "darker(color, factor)"
 msgstr "darker(color, factor)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:442
+msgid "``darker('200,10,30', 200)`` → '100,5,15,255'"
+msgstr "``darker('200,10,30', 200)`` → '100,5,15,255'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "lighter"
@@ -708,6 +783,10 @@ msgstr "lighter"
 msgid "lighter(color, factor)"
 msgstr "lighter(color, factor)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:25
+msgid "``lighter('200,10,30', 200)`` → '255,158,168,255'"
+msgstr "``lighter('200,10,30', 200)`` → '255,158,168,255'"
+
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "project_color"
 msgstr "project_color"
@@ -715,6 +794,10 @@ msgstr "project_color"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:14
 msgid "project_color(name)"
 msgstr "project_color(name)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:18
+msgid "``project_color('Logo color')`` → '20,140,50'"
+msgstr "``project_color('Logo color')`` → '20,140,50'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:6
 msgid "project_color_object"
@@ -731,6 +814,10 @@ msgstr "ramp_color"
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:38
 msgid "ramp_color(ramp_name, value)"
 msgstr "ramp_color(ramp_name, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:43
+msgid "``ramp_color('Spectral',0.3)`` → '253,190,115,255'"
+msgstr "``ramp_color('Spectral',0.3)`` → '253,190,115,255'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:56
 msgid "ramp_color(ramp, value)"
@@ -756,6 +843,14 @@ msgstr "set_color_part"
 msgid "set_color_part(color, component, value)"
 msgstr "set_color_part(color, component, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Color.rst:81
+msgid ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
+msgstr ""
+"``set_color_part(color_cmykf(0.21,0,0.92,0.70),'black',100)`` → CMYKA: "
+"0.21,0.00,0.92,1.00,1.00"
+
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:12
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:18
 msgid "CASE"
@@ -772,6 +867,14 @@ msgstr "END"
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:49
 msgid "coalesce"
 msgstr "coalesce"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:63
+msgid "``coalesce(NULL, 2)`` → 2"
+msgstr "``coalesce(NULL, 2)`` → 2"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:65
+msgid "``coalesce(7, NULL, 3*2)`` → 7"
+msgstr "``coalesce(7, NULL, 3*2)`` → 7"
 
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:74
 msgid "if"
@@ -810,6 +913,14 @@ msgstr "try"
 #: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:155
 msgid "try(expression, [alternative])"
 msgstr "try(expression, [alternative])"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:162
+msgid "``try( to_int( '1' ), 0 )`` → 1"
+msgstr "``try( to_int( '1' ), 0 )`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Conditionals.rst:163
+msgid "``try( to_int( 'a' ), 0 )`` → 0"
+msgstr "``try( to_int( 'a' ), 0 )`` → 0"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:12
 msgid "from_base64"
@@ -983,9 +1094,21 @@ msgstr "to_bool(value)"
 msgid "``to_bool('')`` → false"
 msgstr "``to_bool('')`` → false"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:139
+msgid "``to_bool('123')`` → true"
+msgstr "``to_bool('123')`` → true"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:140
 msgid "``to_bool('false')`` → true"
 msgstr "``to_bool('false')`` → true"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:141
+msgid "``to_bool(0)`` → false"
+msgstr "``to_bool(0)`` → false"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
+msgid "``to_bool(1)`` → true"
+msgstr "``to_bool(1)`` → true"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:143
 msgid "``to_bool(null)`` → false"
@@ -1011,6 +1134,20 @@ msgstr "to_datetime"
 msgid "to_datetime(string, [format], [language])"
 msgstr "to_datetime(string, [format], [language])"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:22
+msgid "``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00"
+msgstr "``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:24
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:24
+msgid ""
+"``to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr')`` → "
+"2019-06-29T12:34"
+msgstr ""
+"``to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr')`` → "
+"2019-06-29T12:34"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:6
 msgid "to_decimal"
 msgstr "to_decimal"
@@ -1018,6 +1155,10 @@ msgstr "to_decimal"
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:14
 msgid "to_decimal(value)"
 msgstr "to_decimal(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:18
+msgid "``to_decimal('6°21\\'16.445')`` → 6.3545680555"
+msgstr "``to_decimal('6°21\\'16.445')`` → 6.3545680555"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:26
 msgid "to_dm"
@@ -1043,6 +1184,10 @@ msgstr "to_int"
 msgid "to_int(string)"
 msgstr "to_int(string)"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:92
+msgid "``to_int('123')`` → 123"
+msgstr "``to_int('123')`` → 123"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:100
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:6
 msgid "to_interval"
@@ -1053,6 +1198,21 @@ msgstr "to_interval"
 msgid "to_interval(string)"
 msgstr "to_interval(string)"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:112
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:18
+msgid "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
+msgstr "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:114
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid ""
+"``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → "
+"2012-05-04T10:00:00"
+msgstr ""
+"``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → "
+"2012-05-04T10:00:00"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:122
 msgid "to_real"
 msgstr "to_real"
@@ -1060,6 +1220,10 @@ msgstr "to_real"
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:130
 msgid "to_real(string)"
 msgstr "to_real(string)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:134
+msgid "``to_real('123.45')`` → 123.45"
+msgstr "``to_real('123.45')`` → 123.45"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
@@ -1070,6 +1234,11 @@ msgstr "to_string"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "to_string(number)"
 msgstr "to_string(number)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/String.rst:18
+msgid "``to_string(1.23)`` → '1.23'"
+msgstr "``to_string(1.23)`` → '1.23'"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:6
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:28
@@ -1096,6 +1265,16 @@ msgstr "crs_to_authid"
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
+msgid ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
+msgstr ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:12
 msgid "age"
@@ -1148,6 +1327,10 @@ msgstr "day"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:78
 msgid "day(date)"
 msgstr "day(date)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:82
+msgid "``day('2012-05-12')`` → 12"
+msgstr "``day('2012-05-12')`` → 12"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:93
 msgid "day(interval)"
@@ -1286,6 +1469,11 @@ msgstr "z"
 msgid "zzz"
 msgstr "zzz"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:203
+#: ../../docs/user_manual/expressions/expression_help/String.rst:84
+msgid "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
+msgstr "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:214
 msgid "hour"
 msgstr "hour"
@@ -1342,6 +1530,10 @@ msgstr "minute"
 msgid "minute(datetime)"
 msgstr "minute(datetime)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:370
+msgid "``minute( to_datetime('2012-07-22 13:24:57') )`` → 24"
+msgstr "``minute( to_datetime('2012-07-22 13:24:57') )`` → 24"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:381
 msgid "minute(interval)"
 msgstr "minute(interval)"
@@ -1374,6 +1566,10 @@ msgstr "second"
 msgid "second(datetime)"
 msgstr "second(datetime)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:469
+msgid "``second( to_datetime('2012-07-22 13:24:57') )`` → 57"
+msgstr "``second( to_datetime('2012-07-22 13:24:57') )`` → 57"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:480
 msgid "second(interval)"
 msgstr "second(interval)"
@@ -1390,6 +1586,14 @@ msgstr "week(date)"
 msgid "week(interval)"
 msgstr "week(interval)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:37
+msgid "``week(to_interval('3 weeks'))`` → 3"
+msgstr "``week(to_interval('3 weeks'))`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:38
+msgid "``week(age('2012-01-01','2010-01-01'))`` → 104.285"
+msgstr "``week(age('2012-01-01','2010-01-01'))`` → 104.285"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:46
 msgid "year"
 msgstr "year"
@@ -1398,9 +1602,17 @@ msgstr "year"
 msgid "year(date)"
 msgstr "year(date)"
 
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:62
+msgid "``year('2012-05-12')`` → 2012"
+msgstr "``year('2012-05-12')`` → 2012"
+
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:73
 msgid "year(interval)"
 msgstr "year(interval)"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:77
+msgid "``year(to_interval('3 years'))`` → 3"
+msgstr "``year(to_interval('3 years'))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:12
 #: ../../docs/user_manual/expressions/expression_help/Fields_and_Values.rst:20
@@ -1565,6 +1777,12 @@ msgstr "longest_common_substring"
 msgid "longest_common_substring(string1, string2)"
 msgstr "longest_common_substring(string1, string2)"
 
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:76
+msgid ""
+"``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'"
+msgstr ""
+"``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'"
+
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:84
 msgid "soundex"
 msgstr "soundex"
@@ -1572,6 +1790,10 @@ msgstr "soundex"
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:92
 msgid "soundex(string)"
 msgstr "soundex(string)"
+
+#: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:98
+msgid "``soundex('rubin')`` → 'R150'"
+msgstr "``soundex('rubin')`` → 'R150'"
 
 #: ../../docs/user_manual/expressions/expression_help/General.rst:12
 msgid "env"
@@ -1645,6 +1867,10 @@ msgstr "var"
 msgid "var(name)"
 msgstr "var(name)"
 
+#: ../../docs/user_manual/expressions/expression_help/General.rst:128
+msgid "``var('qgis_version')`` → '2.12'"
+msgstr "``var('qgis_version')`` → '2.12'"
+
 #: ../../docs/user_manual/expressions/expression_help/General.rst:6
 #: ../../docs/user_manual/expressions/functions_list.rst:1
 msgid "with_variable"
@@ -1691,6 +1917,10 @@ msgstr ""
 msgid "$area"
 msgstr "$area"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:109
+msgid "``$area`` → 42"
+msgstr "``$area`` → 42"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:117
 msgid "area"
 msgstr "area"
@@ -1706,6 +1936,14 @@ msgstr "azimuth"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:145
 msgid "azimuth(point_a, point_b)"
 msgstr "azimuth(point_a, point_b)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:150
+msgid ""
+"``degrees( azimuth( make_point(25, 45), make_point(75, 100) ) )`` → "
+"42.273689"
+msgstr ""
+"``degrees( azimuth( make_point(25, 45), make_point(75, 100) ) )`` → "
+"42.273689"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:159
 msgid "bearing"
@@ -1754,6 +1992,11 @@ msgstr "bounds_height"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "bounds_height(geometry)"
 msgstr "bounds_height(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1"
+msgstr ""
+"``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "bounds_width"
@@ -1815,6 +2058,14 @@ msgstr "collect_geometries"
 msgid "collect_geometries(array)"
 msgstr "collect_geometries(array)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:79
+msgid ""
+"``geom_to_wkt(collect_geometries(array(make_point(1,2), make_point(3,4), "
+"make_point(5,6))))`` → 'MultiPoint ((1 2),(3 4),(5 6))'"
+msgstr ""
+"``geom_to_wkt(collect_geometries(array(make_point(1,2), make_point(3,4), "
+"make_point(5,6))))`` → 'MultiPoint ((1 2),(3 4),(5 6))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "combine"
 msgstr "combine"
@@ -1822,6 +2073,16 @@ msgstr "combine"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "combine(geometry1, geometry2)"
 msgstr "combine(geometry1, geometry2)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → 'MULTILINESTRING((4 4, "
+"2 1), (3 3, 4 4), (4 4, 5 5))'"
+msgstr ""
+"``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → 'MULTILINESTRING((4 4, "
+"2 1), (3 3, 4 4), (4 4, 5 5))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "concave_hull"
@@ -1879,6 +2140,14 @@ msgstr "difference"
 msgid "difference(geometry1, geometry2)"
 msgstr "difference(geometry1, geometry2)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'"
+msgstr ""
+"``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
+"geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "disjoint"
 msgstr "disjoint"
@@ -1903,6 +2172,14 @@ msgstr "distance_to_vertex"
 msgid "distance_to_vertex(geometry, vertex)"
 msgstr "distance_to_vertex(geometry, vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid ""
+"``distance_to_vertex(geometry:=geom_from_wkt('LineString(0 0, 10 0, 10 "
+"10)'),vertex:=1)`` → 10.0"
+msgstr ""
+"``distance_to_vertex(geometry:=geom_from_wkt('LineString(0 0, 10 0, 10 "
+"10)'),vertex:=1)`` → 10.0"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
 msgid "end_point"
 msgstr "end_point"
@@ -1910,6 +2187,14 @@ msgstr "end_point"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:56
 msgid "end_point(geometry)"
 msgstr "end_point(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:60
+msgid ""
+"``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
+"'Point (0 2)'"
+msgstr ""
+"``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
+"'Point (0 2)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "exif_geotag"
@@ -2069,6 +2354,14 @@ msgstr "hausdorff_distance"
 msgid "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 msgstr "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:218
+msgid ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+msgstr ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:228
 msgid "inclination"
 msgstr "inclination"
@@ -2100,6 +2393,14 @@ msgstr "intersects"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "intersects(geometry1, geometry2)"
 msgstr "intersects(geometry1, geometry2)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
+")`` → FALSE"
+msgstr ""
+"``intersects( geom_from_wkt( 'POINT(4 5)' ), geom_from_wkt( 'POINT(5 5)' ) "
+")`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "intersects_bbox"
@@ -2169,6 +2470,10 @@ msgstr "is_valid"
 msgid "is_valid(geometry)"
 msgstr "is_valid(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:40
+msgid "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+msgstr "``is_valid(geom_from_wkt('LINESTRING(0 0)'))`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "$length"
@@ -2188,6 +2493,11 @@ msgstr "length(string)"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:33
 msgid "length(geometry)"
 msgstr "length(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
+#: ../../docs/user_manual/expressions/expression_help/String.rst:37
+msgid "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
+msgstr "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "length3D"
@@ -2229,6 +2539,14 @@ msgstr "line_locate_m"
 msgid "line_locate_m(geometry, m, [use_3d_distance:=false])"
 msgstr "line_locate_m(geometry, m, [use_3d_distance:=false])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid ""
+"``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
+"10)'),m:=5)`` → 7.07106"
+msgstr ""
+"``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
+"10)'),m:=5)`` → 7.07106"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 msgid "line_locate_point"
 msgstr "line_locate_point"
@@ -2245,6 +2563,14 @@ msgstr "line_merge"
 msgid "line_merge(geometry)"
 msgstr "line_merge(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:87
+msgid ""
+"``geom_to_wkt(line_merge(geom_from_wkt('MULTILINESTRING((0 0, 1 1),(1 1, 2 "
+"2))')))`` → 'LineString(0 0,1 1,2 2)'"
+msgstr ""
+"``geom_to_wkt(line_merge(geom_from_wkt('MULTILINESTRING((0 0, 1 1),(1 1, 2 "
+"2))')))`` → 'LineString(0 0,1 1,2 2)'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:96
 msgid "line_substring"
 msgstr "line_substring"
@@ -2256,6 +2582,10 @@ msgstr "line_substring(geometry, start_distance, end_distance)"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "m(geometry)"
 msgstr "m(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
+msgstr "``m( geom_from_wkt( 'POINTM(2 5 4)' ) )`` → 4"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
 msgid "m_at"
@@ -2281,6 +2611,10 @@ msgstr "m_max"
 msgid "m_max(geometry)"
 msgstr "m_max(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:59
+msgid "``m_max( make_point_m( 0,0,1 ) )`` → 1"
+msgstr "``m_max( make_point_m( 0,0,1 ) )`` → 1"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:68
 msgid "m_min"
 msgstr "m_min"
@@ -2288,6 +2622,10 @@ msgstr "m_min"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:76
 msgid "m_min(geometry)"
 msgstr "m_min(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:80
+msgid "``m_min( make_point_m( 0,0,1 ) )`` → 1"
+msgstr "``m_min( make_point_m( 0,0,1 ) )`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:89
 msgid "main_angle"
@@ -2305,6 +2643,14 @@ msgstr "make_circle"
 msgid "make_circle(center, radius, [segments:=36])"
 msgstr "make_circle(center, radius, [segments:=36])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:126
+msgid ""
+"``geom_to_wkt(make_circle(make_point(10,10,5), 5, 4))`` → 'PolygonZ ((10 15 "
+"5, 15 10 5, 10 5 5, 5 10 5, 10 15 5))'"
+msgstr ""
+"``geom_to_wkt(make_circle(make_point(10,10,5), 5, 4))`` → 'PolygonZ ((10 15 "
+"5, 15 10 5, 10 5 5, 5 10 5, 10 15 5))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:135
 msgid "make_ellipse"
 msgstr "make_ellipse"
@@ -2320,6 +2666,14 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:163
 msgid "make_line"
 msgstr "make_line"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:179
+msgid ""
+"``geom_to_wkt(make_line(make_point(2,4),make_point(3,5)))`` → 'LineString (2"
+" 4, 3 5)'"
+msgstr ""
+"``geom_to_wkt(make_line(make_point(2,4),make_point(3,5)))`` → 'LineString (2"
+" 4, 3 5)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:191
 msgid "make_line(array)"
@@ -2386,6 +2740,14 @@ msgstr "make_square"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:336
 msgid "make_square(point1, point2)"
 msgstr "make_square(point1, point2)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:341
+msgid ""
+"``geom_to_wkt(make_square( make_point(0,0), make_point(5,5)))`` → 'Polygon "
+"((0 0, -0 5, 5 5, 5 0, 0 0))'"
+msgstr ""
+"``geom_to_wkt(make_square( make_point(0,0), make_point(5,5)))`` → 'Polygon "
+"((0 0, -0 5, 5 5, 5 0, 0 0))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:350
 msgid "make_triangle"
@@ -2507,6 +2869,14 @@ msgstr "oriented_bbox"
 msgid "oriented_bbox(geometry)"
 msgstr "oriented_bbox(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:43
+msgid ""
+"``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) )"
+" )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'"
+msgstr ""
+"``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) )"
+" )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "overlaps"
 msgstr "overlaps"
@@ -2514,6 +2884,14 @@ msgstr "overlaps"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "overlaps(geometry1, geometry2)"
 msgstr "overlaps(geometry1, geometry2)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
+msgid ""
+"``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
+msgstr ""
+"``overlaps( geom_from_wkt( 'LINESTRING(0 0, 1 1)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
 msgid "overlay_contains"
@@ -2558,6 +2936,16 @@ msgstr ""
 msgid "overlay_intersects"
 msgstr "overlay_intersects"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+msgstr ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "overlay_nearest"
 msgstr "overlay_nearest"
@@ -2601,6 +2989,12 @@ msgstr "perimeter"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
 msgid "perimeter(geometry)"
 msgstr "perimeter(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:36
+msgid ""
+"``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12.0"
+msgstr ""
+"``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12.0"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 msgid "point_n"
@@ -2649,6 +3043,14 @@ msgstr "relate"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
 msgid "relate(geometry, geometry)"
 msgstr "relate(geometry, geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:23
+msgid ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ) )`` → 'FF1F00102'"
+msgstr ""
+"``relate( geom_from_wkt( 'LINESTRING(40 40,120 120)' ), geom_from_wkt( "
+"'LINESTRING(40 40,60 120)' ) )`` → 'FF1F00102'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:34
 msgid "relate(geometry, geometry, pattern)"
@@ -2753,6 +3155,14 @@ msgstr "sinuosity"
 msgid "sinuosity(geometry)"
 msgstr "sinuosity(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
+"1.265"
+msgstr ""
+"``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
+"1.265"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "smooth"
 msgstr "smooth"
@@ -2764,6 +3174,16 @@ msgid ""
 msgstr ""
 "smooth(geometry, [iterations:=1], [offset:=0.25], [min_length:=-1], "
 "[max_angle:=180])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
+msgid ""
+"``geom_to_wkt(smooth(geometry:=geom_from_wkt('LineString(0 0, 5 0, 5 "
+"5)'),iterations:=1,offset:=0.2,min_length:=-1,max_angle:=180))`` → "
+"'LineString (0 0, 4 0, 5 1, 5 5)'"
+msgstr ""
+"``geom_to_wkt(smooth(geometry:=geom_from_wkt('LineString(0 0, 5 0, 5 "
+"5)'),iterations:=1,offset:=0.2,min_length:=-1,max_angle:=180))`` → "
+"'LineString (0 0, 4 0, 5 1, 5 5)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "square_wave"
@@ -2847,6 +3267,14 @@ msgstr "touches"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "touches(geometry1, geometry2)"
 msgstr "touches(geometry1, geometry2)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
+msgstr ""
+"``touches( geom_from_wkt( 'LINESTRING(5 3, 4 4)' ), geom_from_wkt( "
+"'LINESTRING(3 3, 4 4, 5 5)' ) )`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "transform"
@@ -2951,6 +3379,10 @@ msgstr "within(geometry1, geometry2)"
 msgid "$x"
 msgstr "$x"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:16
+msgid "``$x`` → 42"
+msgstr "``$x`` → 42"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "x"
 msgstr "x"
@@ -3053,6 +3485,10 @@ msgstr "$z"
 msgid "z(geometry)"
 msgstr "z(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:97
+msgid "``z( geom_from_wkt( 'POINTZ(2 5 7)' ) )`` → 7"
+msgstr "``z( geom_from_wkt( 'POINTZ(2 5 7)' ) )`` → 7"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:105
 msgid "z_at"
 msgstr "z_at"
@@ -3074,6 +3510,11 @@ msgstr "z_max"
 msgid "z_max(geometry)"
 msgstr "z_max(geometry)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:141
+msgid "``z_max( geom_from_wkt( 'LINESTRING( 0 0 0, 1 0 2, 1 1 -1 )' ) )`` → 2"
+msgstr ""
+"``z_max( geom_from_wkt( 'LINESTRING( 0 0 0, 1 0 2, 1 1 -1 )' ) )`` → 2"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:150
 msgid "z_min"
 msgstr "z_min"
@@ -3081,6 +3522,16 @@ msgstr "z_min"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:158
 msgid "z_min(geometry)"
 msgstr "z_min(geometry)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:165
+msgid ""
+"``z_min( geom_from_wkt( 'LINESTRING( 0 0 0, 1 0 2, 1 1 -1 )' ) )`` → -1"
+msgstr ""
+"``z_min( geom_from_wkt( 'LINESTRING( 0 0 0, 1 0 2, 1 1 -1 )' ) )`` → -1"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:166
+msgid "``z_min( geom_from_wkt( 'POINT ( 0 0 )' ) )`` → NULL"
+msgstr "``z_min( geom_from_wkt( 'POINT ( 0 0 )' ) )`` → NULL"
 
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:12
 msgid "item_variables"
@@ -3137,10 +3588,10 @@ msgid "layer_property"
 msgstr "layer_property"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:45
-msgid "layer_property(layer, property)"
-msgstr "layer_property(layer, property)"
+msgid "layer_property(layer, property, [translate:=true])"
+msgstr "layer_property(layer, property, [translate:=true])"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:81
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
@@ -3180,6 +3631,10 @@ msgstr "map_akeys"
 msgid "map_akeys(map)"
 msgstr "map_akeys(map)"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:87
+msgid "``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]"
+msgstr "``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:95
 msgid "map_avals"
 msgstr "map_avals"
@@ -3191,6 +3646,10 @@ msgstr "map_avals(map)"
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:115
 msgid "map_concat"
 msgstr "map_concat"
+
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:123
+msgid "map_concat(map1, map2, ...)"
+msgstr "map_concat(map1, map2, ...)"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:135
 msgid "map_delete"
@@ -3264,6 +3723,10 @@ msgstr "to_json"
 msgid "to_json(value)"
 msgstr "to_json(value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Maps.rst:123
+msgid "``to_json(array(1,2,3))`` → [1,2,3]"
+msgstr "``to_json(array(1,2,3))`` → [1,2,3]"
+
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:131
 msgid "url_encode"
 msgstr "url_encode"
@@ -3289,6 +3752,10 @@ msgstr "abs"
 msgid "abs(value)"
 msgstr "abs(value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:24
+msgid "``abs(-2)`` → 2"
+msgstr "``abs(-2)`` → 2"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:32
 msgid "acos"
 msgstr "acos"
@@ -3296,6 +3763,10 @@ msgstr "acos"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:40
 msgid "acos(value)"
 msgstr "acos(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:44
+msgid "``acos(0.5)`` → 1.0471975511966"
+msgstr "``acos(0.5)`` → 1.0471975511966"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:52
 msgid "asin"
@@ -3305,6 +3776,10 @@ msgstr "asin"
 msgid "asin(value)"
 msgstr "asin(value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:64
+msgid "``asin(1.0)`` → 1.5707963267949"
+msgstr "``asin(1.0)`` → 1.5707963267949"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:72
 msgid "atan"
 msgstr "atan"
@@ -3312,6 +3787,10 @@ msgstr "atan"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:80
 msgid "atan(value)"
 msgstr "atan(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:84
+msgid "``atan(0.5)`` → 0.463647609000806"
+msgstr "``atan(0.5)`` → 0.463647609000806"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:92
 msgid "atan2"
@@ -3321,6 +3800,10 @@ msgstr "atan2"
 msgid "atan2(dy, dx)"
 msgstr "atan2(dy, dx)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:105
+msgid "``atan2(1.0, 1.732)`` → 0.523611477769969"
+msgstr "``atan2(1.0, 1.732)`` → 0.523611477769969"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:113
 msgid "ceil"
 msgstr "ceil"
@@ -3328,6 +3811,14 @@ msgstr "ceil"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:121
 msgid "ceil(value)"
 msgstr "ceil(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:125
+msgid "``ceil(4.9)`` → 5"
+msgstr "``ceil(4.9)`` → 5"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:126
+msgid "``ceil(-4.9)`` → -4"
+msgstr "``ceil(-4.9)`` → -4"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:134
 msgid "clamp"
@@ -3337,6 +3828,18 @@ msgstr "clamp"
 msgid "clamp(minimum, input, maximum)"
 msgstr "clamp(minimum, input, maximum)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:148
+msgid "``clamp(1,5,10)`` → 5"
+msgstr "``clamp(1,5,10)`` → 5"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:151
+msgid "``clamp(1,0,10)`` → 1"
+msgstr "``clamp(1,0,10)`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:154
+msgid "``clamp(1,11,10)`` → 10"
+msgstr "``clamp(1,11,10)`` → 10"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:164
 msgid "cos"
 msgstr "cos"
@@ -3344,6 +3847,10 @@ msgstr "cos"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:172
 msgid "cos(angle)"
 msgstr "cos(angle)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:176
+msgid "``cos(1.571)`` → 0.000796326710733263"
+msgstr "``cos(1.571)`` → 0.000796326710733263"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:184
 msgid "degrees"
@@ -3353,6 +3860,14 @@ msgstr "degrees"
 msgid "degrees(radians)"
 msgstr "degrees(radians)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:196
+msgid "``degrees(3.14159)`` → 180"
+msgstr "``degrees(3.14159)`` → 180"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:197
+msgid "``degrees(1)`` → 57.2958"
+msgstr "``degrees(1)`` → 57.2958"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:205
 msgid "exp"
 msgstr "exp"
@@ -3360,6 +3875,10 @@ msgstr "exp"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:213
 msgid "exp(value)"
 msgstr "exp(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:217
+msgid "``exp(1.0)`` → 2.71828182845905"
+msgstr "``exp(1.0)`` → 2.71828182845905"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:225
 msgid "floor"
@@ -3369,6 +3888,14 @@ msgstr "floor"
 msgid "floor(value)"
 msgstr "floor(value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:237
+msgid "``floor(4.9)`` → 4"
+msgstr "``floor(4.9)`` → 4"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:238
+msgid "``floor(-4.9)`` → -5"
+msgstr "``floor(-4.9)`` → -5"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:246
 msgid "ln"
 msgstr "ln"
@@ -3376,6 +3903,14 @@ msgstr "ln"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:254
 msgid "ln(value)"
 msgstr "ln(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:258
+msgid "``ln(1)`` → 0"
+msgstr "``ln(1)`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:259
+msgid "``ln(2.7182818284590452354)`` → 1"
+msgstr "``ln(2.7182818284590452354)`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:267
 msgid "log"
@@ -3385,6 +3920,14 @@ msgstr "log"
 msgid "log(base, value)"
 msgstr "log(base, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:280
+msgid "``log(2, 32)`` → 5"
+msgstr "``log(2, 32)`` → 5"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:281
+msgid "``log(0.5, 32)`` → -5"
+msgstr "``log(0.5, 32)`` → -5"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:289
 msgid "log10"
 msgstr "log10"
@@ -3392,6 +3935,14 @@ msgstr "log10"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:297
 msgid "log10(value)"
 msgstr "log10(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:301
+msgid "``log10(1)`` → 0"
+msgstr "``log10(1)`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:302
+msgid "``log10(100)`` → 2"
+msgstr "``log10(100)`` → 2"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:310
 msgid "max"
@@ -3401,6 +3952,14 @@ msgstr "max"
 msgid "max(value1, value2, ...)"
 msgstr "max(value1, value2, ...)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:322
+msgid "``max(2,10.2,5.5)`` → 10.2"
+msgstr "``max(2,10.2,5.5)`` → 10.2"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:323
+msgid "``max(20.5,NULL,6.2)`` → 20.5"
+msgstr "``max(20.5,NULL,6.2)`` → 20.5"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:331
 msgid "min"
 msgstr "min"
@@ -3408,6 +3967,14 @@ msgstr "min"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:339
 msgid "min(value1, value2, ...)"
 msgstr "min(value1, value2, ...)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:343
+msgid "``min(20.5,10,6.2)`` → 6.2"
+msgstr "``min(20.5,10,6.2)`` → 6.2"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:344
+msgid "``min(2,-10.3,NULL)`` → -10.3"
+msgstr "``min(2,-10.3,NULL)`` → -10.3"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:352
 msgid "pi"
@@ -3417,6 +3984,10 @@ msgstr "pi"
 msgid "pi()"
 msgstr "pi()"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:362
+msgid "``pi()`` → 3.14159265358979"
+msgstr "``pi()`` → 3.14159265358979"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:370
 msgid "radians"
 msgstr "radians"
@@ -3424,6 +3995,14 @@ msgstr "radians"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:378
 msgid "radians(degrees)"
 msgstr "radians(degrees)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:382
+msgid "``radians(180)`` → 3.14159"
+msgstr "``radians(180)`` → 3.14159"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:383
+msgid "``radians(57.2958)`` → 1"
+msgstr "``radians(57.2958)`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:391
 msgid "rand"
@@ -3433,6 +4012,10 @@ msgstr "rand"
 msgid "rand(min, max, [seed:=NULL])"
 msgstr "rand(min, max, [seed:=NULL])"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:407
+msgid "``rand(1, 10)`` → 8"
+msgstr "``rand(1, 10)`` → 8"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:415
 msgid "randf"
 msgstr "randf"
@@ -3441,6 +4024,10 @@ msgstr "randf"
 msgid "randf([min:=0.0], [max:=1.0], [seed:=NULL])"
 msgstr "randf([min:=0.0], [max:=1.0], [seed:=NULL])"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:431
+msgid "``randf(1, 10)`` → 4.59258286403147"
+msgstr "``randf(1, 10)`` → 4.59258286403147"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:439
 msgid "round"
 msgstr "round"
@@ -3448,6 +4035,18 @@ msgstr "round"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:447
 msgid "round(value, [places:=0])"
 msgstr "round(value, [places:=0])"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:454
+msgid "``round(1234.567, 2)`` → 1234.57"
+msgstr "``round(1234.567, 2)`` → 1234.57"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:455
+msgid "``round(1234.567)`` → 1235"
+msgstr "``round(1234.567)`` → 1235"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:456
+msgid "``round(1234.567, -1)`` → 1230"
+msgstr "``round(1234.567, -1)`` → 1230"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:464
 msgid "scale_exponential"
@@ -3461,6 +4060,14 @@ msgstr ""
 "scale_exponential(value, domain_min, domain_max, range_min, range_max, "
 "exponent)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:481
+msgid "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
+msgstr "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:484
+msgid "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
+msgstr "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:494
 msgid "scale_linear"
 msgstr "scale_linear"
@@ -3468,6 +4075,18 @@ msgstr "scale_linear"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:502
 msgid "scale_linear(value, domain_min, domain_max, range_min, range_max)"
 msgstr "scale_linear(value, domain_min, domain_max, range_min, range_max)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:510
+msgid "``scale_linear(5,0,10,0,100)`` → 50"
+msgstr "``scale_linear(5,0,10,0,100)`` → 50"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:511
+msgid "``scale_linear(0.2,0,1,0,360)`` → 72"
+msgstr "``scale_linear(0.2,0,1,0,360)`` → 72"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:514
+msgid "``scale_linear(1500,1000,10000,9,20)`` → 9.6111111"
+msgstr "``scale_linear(1500,1000,10000,9,20)`` → 9.6111111"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:524
 msgid "scale_polynomial"
@@ -3497,6 +4116,10 @@ msgstr "sin"
 msgid "sin(angle)"
 msgstr "sin(angle)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:566
+msgid "``sin(1.571)`` → 0.999999682931835"
+msgstr "``sin(1.571)`` → 0.999999682931835"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:574
 msgid "sqrt"
 msgstr "sqrt"
@@ -3504,6 +4127,10 @@ msgstr "sqrt"
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:582
 msgid "sqrt(value)"
 msgstr "sqrt(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:586
+msgid "``sqrt(9)`` → 3"
+msgstr "``sqrt(9)`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:594
 msgid "tan"
@@ -3513,76 +4140,244 @@ msgstr "tan"
 msgid "tan(angle)"
 msgstr "tan(angle)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:606
+msgid "``tan(1.0)`` → 1.5574077246549"
+msgstr "``tan(1.0)`` → 1.5574077246549"
+
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:12
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:20
 msgid "$face_area"
 msgstr "$face_area"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:22
+msgid "``$face_area`` → 42"
+msgstr "``$face_area`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:30
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:38
 msgid "$face_index"
 msgstr "$face_index"
 
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:40
+msgid "``$face_index`` → 4581"
+msgstr "``$face_index`` → 4581"
+
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:56
 msgid "$vertex_as_point"
 msgstr "$vertex_as_point"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:58
+msgid "``geom_to_wkt( $vertex_as_point )`` → 'POINT(800 1500 41)'"
+msgstr "``geom_to_wkt( $vertex_as_point )`` → 'POINT(800 1500 41)'"
 
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:66
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:74
 msgid "$vertex_index"
 msgstr "$vertex_index"
 
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:76
+msgid "``$vertex_index`` → 9874"
+msgstr "``$vertex_index`` → 9874"
+
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:84
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:92
 msgid "$vertex_x"
 msgstr "$vertex_x"
+
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:94
+msgid "``$vertex_x`` → 42.12"
+msgstr "``$vertex_x`` → 42.12"
 
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:102
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:110
 msgid "$vertex_y"
 msgstr "$vertex_y"
 
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:112
+msgid "``$vertex_y`` → 12.24"
+msgstr "``$vertex_y`` → 12.24"
+
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:120
 #: ../../docs/user_manual/expressions/expression_help/Meshes.rst:128
 msgid "$vertex_z"
 msgstr "$vertex_z"
 
+#: ../../docs/user_manual/expressions/expression_help/Meshes.rst:130
+msgid "``$vertex_z`` → 42"
+msgstr "``$vertex_z`` → 42"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:12
 msgid "%"
 msgstr "%"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "a % b"
+msgstr "a % b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``9 % 2`` → 1"
+msgstr "``9 % 2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``9 % -2`` → 1"
+msgstr "``9 % -2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``-9 % 2`` → -1"
+msgstr "``-9 % 2`` → -1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
+msgid "``5 % NULL`` → NULL"
+msgstr "``5 % NULL`` → NULL"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:36
 msgid "\\*"
 msgstr "\\*"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:44
+msgid "a * b"
+msgstr "a * b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:49
+msgid "``5 * 4`` → 20"
+msgstr "``5 * 4`` → 20"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:50
+msgid "``5 * NULL`` → NULL"
+msgstr "``5 * NULL`` → NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:58
 msgid "\\+"
 msgstr "\\+"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:66
+msgid "a + b"
+msgstr "a + b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
+msgid "``5 + 4`` → 9"
+msgstr "``5 + 4`` → 9"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
+msgid "``5 + NULL`` → NULL"
+msgstr "``5 + NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:73
+msgid "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
+msgstr "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
+msgid ""
+"``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
+"2020-08-02T14:00:00"
+msgstr ""
+"``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
+"2020-08-02T14:00:00"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "\\-"
 msgstr "\\-"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "a - b"
+msgstr "a - b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``5 - 4`` → 1"
+msgstr "``5 - 4`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``5 - NULL`` → NULL"
+msgstr "``5 - NULL`` → NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
 msgid "/"
 msgstr "/"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:37
+msgid "a / b"
+msgstr "a / b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
+msgid "``5 / 4`` → 1.25"
+msgstr "``5 / 4`` → 1.25"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+msgid "``5 / NULL`` → NULL"
+msgstr "``5 / NULL`` → NULL"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:51
 msgid "//"
 msgstr "//"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:59
+msgid "a // b"
+msgstr "a // b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:64
+msgid "``9 // 2`` → 4"
+msgstr "``9 // 2`` → 4"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:72
 msgid "<"
 msgstr "<"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:80
+msgid "a < b"
+msgstr "a < b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:85
+msgid "``5 < 4`` → FALSE"
+msgstr "``5 < 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:86
+msgid "``5 < 5`` → FALSE"
+msgstr "``5 < 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:87
+msgid "``4 < 5`` → TRUE"
+msgstr "``4 < 5`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:95
 msgid "<="
 msgstr "<="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:103
+msgid "a <= b"
+msgstr "a <= b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:108
+msgid "``5 <= 4`` → FALSE"
+msgstr "``5 <= 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:109
+msgid "``5 <= 5`` → TRUE"
+msgstr "``5 <= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:110
+msgid "``4 <= 5`` → TRUE"
+msgstr "``4 <= 5`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:118
 msgid "<>"
 msgstr "<>"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:126
+msgid "a <> b"
+msgstr "a <> b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:131
+msgid "``5 <> 4`` → TRUE"
+msgstr "``5 <> 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:132
+msgid "``4 <> 4`` → FALSE"
+msgstr "``4 <> 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:133
+msgid "``5 <> NULL`` → NULL"
+msgstr "``5 <> NULL`` → NULL"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
 msgid "``NULL <> NULL`` → NULL"
@@ -3592,6 +4387,22 @@ msgstr "``NULL <> NULL`` → NULL"
 msgid "="
 msgstr "="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:150
+msgid "a = b"
+msgstr "a = b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
+msgid "``5 = 4`` → FALSE"
+msgstr "``5 = 4`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:156
+msgid "``4 = 4`` → TRUE"
+msgstr "``4 = 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:157
+msgid "``5 = NULL`` → NULL"
+msgstr "``5 = NULL`` → NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:158
 msgid "``NULL = NULL`` → NULL"
 msgstr "``NULL = NULL`` → NULL"
@@ -3600,13 +4411,49 @@ msgstr "``NULL = NULL`` → NULL"
 msgid ">"
 msgstr ">"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:174
+msgid "a > b"
+msgstr "a > b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
+msgid "``5 > 4`` → TRUE"
+msgstr "``5 > 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:180
+msgid "``5 > 5`` → FALSE"
+msgstr "``5 > 5`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:181
+msgid "``4 > 5`` → FALSE"
+msgstr "``4 > 5`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:189
 msgid ">="
 msgstr ">="
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:197
+msgid "a >= b"
+msgstr "a >= b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:202
+msgid "``5 >= 4`` → TRUE"
+msgstr "``5 >= 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:203
+msgid "``5 >= 5`` → TRUE"
+msgstr "``5 >= 5`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:204
+msgid "``4 >= 5`` → FALSE"
+msgstr "``4 >= 5`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:212
 msgid "AND"
 msgstr "AND"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:220
+msgid "a AND b"
+msgstr "a AND b"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:225
 msgid "``TRUE AND TRUE`` → TRUE"
@@ -3616,6 +4463,14 @@ msgstr "``TRUE AND TRUE`` → TRUE"
 msgid "``TRUE AND FALSE`` → FALSE"
 msgstr "``TRUE AND FALSE`` → FALSE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:227
+msgid "``4 = 2+2 AND 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 AND 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:228
+msgid "``4 = 2+2 AND 1 = 2`` → FALSE"
+msgstr "``4 = 2+2 AND 1 = 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:236
 msgid "BETWEEN"
 msgstr "BETWEEN"
@@ -3624,29 +4479,213 @@ msgstr "BETWEEN"
 msgid "value BETWEEN lower_bound AND higher_bound"
 msgstr "value BETWEEN lower_bound AND higher_bound"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:249
+msgid "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:250
+msgid "``2 BETWEEN 1 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 1 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:251
+msgid "``2 BETWEEN 2 AND 3`` → TRUE"
+msgstr "``2 BETWEEN 2 AND 3`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:252
+msgid "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+msgstr "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:253
+msgid "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "ILIKE"
 msgstr "ILIKE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``'A' ILIKE 'A'`` → TRUE"
+msgstr "``'A' ILIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``'A' ILIKE 'a'`` → TRUE"
+msgstr "``'A' ILIKE 'a'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``'A' ILIKE 'B'`` → FALSE"
+msgstr "``'A' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'ABC' ILIKE 'b'`` → FALSE"
+msgstr "``'ABC' ILIKE 'b'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:23
+msgid "``'ABC' ILIKE 'B'`` → FALSE"
+msgstr "``'ABC' ILIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:24
+msgid "``'ABC' ILIKE '_b_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_b_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``'ABC' ILIKE '_B_'`` → TRUE"
+msgstr "``'ABC' ILIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``'ABCD' ILIKE '_b_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_b_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``'ABCD' ILIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' ILIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
+msgid "``'ABCD' ILIKE '_b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
+msgid "``'ABCD' ILIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:30
+msgid "``'ABCD' ILIKE '%b%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%b%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:31
+msgid "``'ABCD' ILIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' ILIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:32
+msgid "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+msgstr "``'ABCD%' ILIKE 'abcd\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:33
+msgid "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
+msgstr "``'ABCD' ILIKE '%B\\\\%'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
 msgid "IN"
 msgstr "IN"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:49
+msgid "a IN b"
+msgstr "a IN b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:54
+msgid "``'A' IN ('A','B')`` → TRUE"
+msgstr "``'A' IN ('A','B')`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:55
+msgid "``'A' IN ('C','B')`` → FALSE"
+msgstr "``'A' IN ('C','B')`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:63
 msgid "IS"
 msgstr "IS"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:71
+msgid "a IS b"
+msgstr "a IS b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:76
+msgid "``'A' IS 'A'`` → TRUE"
+msgstr "``'A' IS 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:77
+msgid "``'A' IS 'a'`` → FALSE"
+msgstr "``'A' IS 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:78
+msgid "``4 IS 4`` → TRUE"
+msgstr "``4 IS 4`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:79
+msgid "``4 IS 2+2`` → TRUE"
+msgstr "``4 IS 2+2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:80
+msgid "``4 IS 2`` → FALSE"
+msgstr "``4 IS 2`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:89
 msgid "IS NOT"
 msgstr "IS NOT"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
+msgid "a IS NOT b"
+msgstr "a IS NOT b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:102
+msgid "``'a' IS NOT 'b'`` → TRUE"
+msgstr "``'a' IS NOT 'b'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:103
+msgid "``'a' IS NOT 'a'`` → FALSE"
+msgstr "``'a' IS NOT 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:104
+msgid "``4 IS NOT 2+2`` → FALSE"
+msgstr "``4 IS NOT 2+2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:112
 msgid "LIKE"
 msgstr "LIKE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:125
+msgid "``'A' LIKE 'A'`` → TRUE"
+msgstr "``'A' LIKE 'A'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:126
+msgid "``'A' LIKE 'a'`` → FALSE"
+msgstr "``'A' LIKE 'a'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:127
+msgid "``'A' LIKE 'B'`` → FALSE"
+msgstr "``'A' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:128
+msgid "``'ABC' LIKE 'B'`` → FALSE"
+msgstr "``'ABC' LIKE 'B'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:129
+msgid "``'ABC' LIKE '_B_'`` → TRUE"
+msgstr "``'ABC' LIKE '_B_'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:130
+msgid "``'ABCD' LIKE '_B_'`` → FALSE"
+msgstr "``'ABCD' LIKE '_B_'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:131
+msgid "``'ABCD' LIKE '_B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '_B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:132
+msgid "``'ABCD' LIKE '%B%'`` → TRUE"
+msgstr "``'ABCD' LIKE '%B%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:133
+msgid "``'1%' LIKE '1\\\\%'`` → TRUE"
+msgstr "``'1%' LIKE '1\\\\%'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:134
+msgid "``'1_' LIKE '1\\\\%'`` → FALSE"
+msgstr "``'1_' LIKE '1\\\\%'`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:142
 msgid "NOT"
 msgstr "NOT"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:150
+msgid "NOT a"
+msgstr "NOT a"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:154
+msgid "``NOT 1`` → FALSE"
+msgstr "``NOT 1`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
+msgid "``NOT 0`` → TRUE"
+msgstr "``NOT 0`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:163
 msgid "NOT BETWEEN"
@@ -3656,13 +4695,73 @@ msgstr "NOT BETWEEN"
 msgid "value NOT BETWEEN lower_bound AND higher_bound"
 msgstr "value NOT BETWEEN lower_bound AND higher_bound"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:176
+msgid "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+msgstr "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:177
+msgid "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+msgstr "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:178
+msgid "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+msgstr "``2 NOT BETWEEN 2 AND 3`` → FALSE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
+msgid "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+msgstr "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:180
+msgid "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+msgstr "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "OR"
 msgstr "OR"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
+msgid "a OR b"
+msgstr "a OR b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``4 = 2+2 OR 1 = 1`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 1`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``4 = 2+2 OR 1 = 2`` → TRUE"
+msgstr "``4 = 2+2 OR 1 = 2`` → TRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
+msgid "``4 = 2   OR 1 = 2`` → FALSE"
+msgstr "``4 = 2   OR 1 = 2`` → FALSE"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:29
 msgid "[]"
 msgstr "[]"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:37
+msgid "[index]"
+msgstr "[index]"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:41
+msgid "``array(1,2,3)[0]`` → 1"
+msgstr "``array(1,2,3)[0]`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:42
+msgid "``array(1,2,3)[2]`` → 3"
+msgstr "``array(1,2,3)[2]`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:43
+msgid "``array(1,2,3)[-1]`` → 3"
+msgstr "``array(1,2,3)[-1]`` → 3"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:44
+msgid "``map('a',1,'b',2)['a']`` → 1"
+msgstr "``map('a',1,'b',2)['a']`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:45
+msgid "``map('a',1,'b',2)['b']`` → 2"
+msgstr "``map('a',1,'b',2)['b']`` → 2"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "^"
@@ -3672,6 +4771,14 @@ msgstr "^"
 msgid "a ^ b"
 msgstr "a ^ b"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
+msgid "``5 ^ 4`` → 625"
+msgstr "``5 ^ 4`` → 625"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
+msgid "``5 ^ NULL`` → NULL"
+msgstr "``5 ^ NULL`` → NULL"
+
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
 msgid "\\||"
 msgstr "\\||"
@@ -3679,6 +4786,18 @@ msgstr "\\||"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:40
 msgid "a || b"
 msgstr "a || b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
+msgid "``'Nothing' || NULL`` → NULL"
+msgstr "``'Nothing' || NULL`` → NULL"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
+msgid "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
+msgstr "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:48
+msgid "``1 || 2`` → '12'"
+msgstr "``1 || 2`` → '12'"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:6
 msgid "~"
@@ -3700,6 +4819,10 @@ msgstr "``'hello' ~ '^ll'`` → FALSE"
 msgid "``'hello' ~ 'llo$'`` → TRUE"
 msgstr "``'hello' ~ 'llo$'`` → TRUE"
 
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:22
+msgid "``'abc123' ~ '\\\\d+'`` → TRUE"
+msgstr "``'abc123' ~ '\\\\d+'`` → TRUE"
+
 #: ../../docs/user_manual/expressions/expression_help/Processing.rst:12
 msgid "parameter"
 msgstr "parameter"
@@ -3708,6 +4831,10 @@ msgstr "parameter"
 msgid "parameter(name)"
 msgstr "parameter(name)"
 
+#: ../../docs/user_manual/expressions/expression_help/Processing.rst:24
+msgid "``parameter('BUFFER_SIZE')`` → 5.6"
+msgstr "``parameter('BUFFER_SIZE')`` → 5.6"
+
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:12
 msgid "raster_attributes"
 msgstr "raster_attributes"
@@ -3715,6 +4842,24 @@ msgstr "raster_attributes"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:20
 msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:26
+#, python-brace-format
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:27
+#, python-brace-format
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
 
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:35
 msgid "raster_statistic"
@@ -3731,6 +4876,14 @@ msgstr "raster_value"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:75
 msgid "raster_value(layer, band, point)"
 msgstr "raster_value(layer, band, point)"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
+msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
+msgstr "``raster_value('dem', 1, make_point(1,1))`` → 25"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
+msgid "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
+msgstr "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:12
 msgid "attribute"
@@ -3809,6 +4962,10 @@ msgstr "get_feature_by_id(layer, feature_id)"
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "$id"
 msgstr "$id"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:16
+msgid "``$id`` → 42"
+msgstr "``$id`` → 42"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "is_attribute_valid"
@@ -3902,6 +5059,28 @@ msgstr ""
 "sqlite_fetch_and_increment(database, table, id_field, filter_attribute, "
 "filter_value, [default_values])"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:51
+msgid ""
+"``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', "
+"'sequence_id', 'global', map('last_change', 'date(''now'')', 'user', '''' ||"
+" @user_account_name || ''''))`` → 0"
+msgstr ""
+"``sqlite_fetch_and_increment(@layer, 'sequence_table', 'last_unique_id', "
+"'sequence_id', 'global', map('last_change', 'date(''now'')', 'user', '''' ||"
+" @user_account_name || ''''))`` → 0"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:52
+msgid ""
+"``sqlite_fetch_and_increment(layer_property(@layer, 'path'), "
+"'sequence_table', 'last_unique_id', 'sequence_id', 'global', "
+"map('last_change', 'date(''now'')', 'user', '''' || @user_account_name || "
+"''''))`` → 0"
+msgstr ""
+"``sqlite_fetch_and_increment(layer_property(@layer, 'path'), "
+"'sequence_table', 'last_unique_id', 'sequence_id', 'global', "
+"map('last_change', 'date(''now'')', 'user', '''' || @user_account_name || "
+"''''))`` → 0"
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "uuid"
 msgstr "uuid"
@@ -3943,6 +5122,10 @@ msgstr "ascii"
 msgid "ascii(string)"
 msgstr "ascii(string)"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:24
+msgid "``ascii('Q')`` → 81"
+msgstr "``ascii('Q')`` → 81"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:32
 msgid "char"
 msgstr "char"
@@ -3951,9 +5134,29 @@ msgstr "char"
 msgid "char(code)"
 msgstr "char(code)"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:44
+msgid "``char(81)`` → 'Q'"
+msgstr "``char(81)`` → 'Q'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:52
 msgid "concat"
 msgstr "concat"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:64
+msgid "``concat('sun', 'set')`` → 'sunset'"
+msgstr "``concat('sun', 'set')`` → 'sunset'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:65
+msgid "``concat('a','b','c','d','e')`` → 'abcde'"
+msgstr "``concat('a','b','c','d','e')`` → 'abcde'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:66
+msgid "``concat('Anno ', 1984)`` → 'Anno 1984'"
+msgstr "``concat('Anno ', 1984)`` → 'Anno 1984'"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:67
+msgid "``concat('The Wall', NULL)`` → 'The Wall'"
+msgstr "``concat('The Wall', NULL)`` → 'The Wall'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "format"
@@ -3962,6 +5165,18 @@ msgstr "format"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:95
 msgid "format_number"
 msgstr "format_number"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+msgstr ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:114
+msgid "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"
+msgstr "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:122
 msgid "left"
@@ -4007,6 +5222,10 @@ msgstr "regexp_replace"
 msgid "regexp_replace(input_string, regex, replacement)"
 msgstr "regexp_replace(input_string, regex, replacement)"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:21
+msgid "``regexp_replace('ABC123','\\\\d+','')`` → 'ABC'"
+msgstr "``regexp_replace('ABC123','\\\\d+','')`` → 'ABC'"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "regexp_substr"
 msgstr "regexp_substr"
@@ -4014,6 +5233,10 @@ msgstr "regexp_substr"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "regexp_substr(input_string, regex)"
 msgstr "regexp_substr(input_string, regex)"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:19
+msgid "``regexp_substr('abc123','(\\\\d+)')`` → '123'"
+msgstr "``regexp_substr('abc123','(\\\\d+)')`` → '123'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "repeat"
@@ -4060,6 +5283,10 @@ msgstr "rpad"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "rpad(string, width, fill)"
 msgstr "rpad(string, width, fill)"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:21
+msgid "``rpad('Hello', 3, 'x')`` → 'Hel'"
+msgstr "``rpad('Hello', 3, 'x')`` → 'Hel'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
 msgid "rtrim"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Romanian (https://app.transifex.com/qgis/teams/6144/ro/)\n"
@@ -604,7 +604,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:23
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:38
@@ -1004,7 +1004,7 @@ msgstr "majority"
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:18
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:26
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:41
@@ -3267,9 +3267,21 @@ msgstr "to_bool(value)"
 msgid "``to_bool('')`` → false"
 msgstr "``to_bool('')`` → false"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:139
+msgid "``to_bool('123')`` → true"
+msgstr "``to_bool('123')`` → true"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:140
 msgid "``to_bool('false')`` → true"
 msgstr "``to_bool('false')`` → true"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:141
+msgid "``to_bool(0)`` → false"
+msgstr "``to_bool(0)`` → false"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
+msgid "``to_bool(1)`` → true"
+msgstr "``to_bool(1)`` → true"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:143
 msgid "``to_bool(null)`` → false"
@@ -3398,6 +3410,11 @@ msgstr "to_interval"
 msgid "to_interval(string)"
 msgstr "to_interval(string)"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:112
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:18
+msgid "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
+msgstr "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:114
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:20
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:21
@@ -3435,6 +3452,11 @@ msgstr "to_string(number)"
 msgid "**number** - Integer or real value. The number to convert to string."
 msgstr ""
 "**number** - Număr întreg sau valoare reală. Numărul de convertit în șir."
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/String.rst:18
+msgid "``to_string(1.23)`` → '1.23'"
+msgstr "``to_string(1.23)`` → '1.23'"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:6
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:28
@@ -3476,6 +3498,16 @@ msgstr "crs_to_authid"
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
+msgid ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
+msgstr ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:194
 msgid "Custom Functions"
@@ -5446,6 +5478,14 @@ msgstr "hausdorff_distance"
 msgid "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 msgstr "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:218
+msgid ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+msgstr ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:219
 msgid ""
 "``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 "
@@ -5844,6 +5884,14 @@ msgstr "line_locate_m"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:38
 msgid "line_locate_m(geometry, m, [use_3d_distance:=false])"
 msgstr "line_locate_m(geometry, m, [use_3d_distance:=false])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:46
+msgid ""
+"``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
+"10)'),m:=5)`` → 7.07106"
+msgstr ""
+"``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
+"10)'),m:=5)`` → 7.07106"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 msgid "line_locate_point"
@@ -6619,6 +6667,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:6
 msgid "overlay_intersects"
 msgstr "overlay_intersects"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+msgstr ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:45
 msgid ""
@@ -7525,6 +7583,10 @@ msgstr "y_at"
 msgid "y_at(geometry, vertex)"
 msgstr "y_at(geometry, vertex)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
+msgid "``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5"
+msgstr "``y_at( geom_from_wkt( 'POINT(4 5)' ), 0 )`` → 5"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "y_max"
 msgstr "y_max"
@@ -7573,6 +7635,11 @@ msgstr "z_at"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:113
 msgid "z_at(geometry, vertex)"
 msgstr "z_at(geometry, vertex)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:118
+msgid "``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5"
+msgstr ""
+"``z_at(geom_from_wkt('LineStringZ(0 0 0, 10 10 5, 10 10 0)'), 1)`` → 5"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:126
 msgid "z_max"
@@ -7692,18 +7759,18 @@ msgid "layer_property"
 msgstr "layer_property"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:45
-msgid "layer_property(layer, property)"
-msgstr "layer_property(layer, property)"
+msgid "layer_property(layer, property, [translate:=true])"
+msgstr "layer_property(layer, property, [translate:=true])"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
 msgstr "``layer_property('streets','title')`` → 'Basemap Streets'"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:80
 msgid "``layer_property('airports','feature_count')`` → 120"
 msgstr "``layer_property('airports','feature_count')`` → 120"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:81
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
@@ -8373,6 +8440,14 @@ msgstr ""
 "scale_exponential(value, domain_min, domain_max, range_min, range_max, "
 "exponent)"
 
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:481
+msgid "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
+msgstr "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:484
+msgid "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
+msgstr "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
+
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:494
 msgid "scale_linear"
 msgstr "scale_linear"
@@ -8404,6 +8479,14 @@ msgid ""
 msgstr ""
 "scale_polynomial(value, domain_min, domain_max, range_min, range_max, "
 "exponent)"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:541
+msgid "``scale_polynomial(5,0,10,0,100,2)`` → 25"
+msgstr "``scale_polynomial(5,0,10,0,100,2)`` → 25"
+
+#: ../../docs/user_manual/expressions/expression_help/Math.rst:544
+msgid "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
+msgstr "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:554
 msgid "sin"
@@ -8525,6 +8608,18 @@ msgstr "%"
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:20
 msgid "a % b"
 msgstr "a % b"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:25
+msgid "``9 % 2`` → 1"
+msgstr "``9 % 2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:26
+msgid "``9 % -2`` → 1"
+msgstr "``9 % -2`` → 1"
+
+#: ../../docs/user_manual/expressions/expression_help/Operators.rst:27
+msgid "``-9 % 2`` → -1"
+msgstr "``-9 % 2`` → -1"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:28
 msgid "``5 % NULL`` → NULL"
@@ -9207,6 +9302,24 @@ msgstr "raster_attributes"
 msgid "raster_attributes(layer, band, value)"
 msgstr "raster_attributes(layer, band, value)"
 
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:26
+#, python-brace-format
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"make_point(1,1)))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:27
+#, python-brace-format
+msgid ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+msgstr ""
+"``raster_attributes('vegetation', 1, raster_value('vegetation', 1, "
+"@layer_cursor_point))`` → {'class': 'Vegetated', 'subclass': 'Trees'}"
+
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:35
 msgid "raster_statistic"
 msgstr "raster_statistic"
@@ -9226,6 +9339,10 @@ msgstr "raster_value(layer, band, point)"
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:81
 msgid "``raster_value('dem', 1, make_point(1,1))`` → 25"
 msgstr "``raster_value('dem', 1, make_point(1,1))`` → 25"
+
+#: ../../docs/user_manual/expressions/expression_help/Rasters.rst:82
+msgid "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
+msgstr "``raster_value('ndvi', 2, @layer_cursor_point)`` → 25"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:1012
 msgid "This group contains functions that operate on record identifiers."
@@ -9504,6 +9621,10 @@ msgstr "sensor_data"
 msgid "sensor_data(name, [expiration])"
 msgstr "sensor_data(name, [expiration])"
 
+#: ../../docs/user_manual/expressions/expression_help/Sensors.rst:27
+msgid "``sensor_data('geiger_1')`` → '2000'"
+msgstr "``sensor_data('geiger_1')`` → '2000'"
+
 #: ../../docs/user_manual/expressions/functions_list.rst:1108
 msgid "String Functions"
 msgstr "Funcții pentru Șiruri"
@@ -9579,6 +9700,14 @@ msgstr "``format('This %1 a %2','is', 'test')`` → 'This is a test'"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:95
 msgid "format_number"
 msgstr "format_number"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+msgstr ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:114
 msgid "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"

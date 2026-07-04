@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: Swedish (https://app.transifex.com/qgis/teams/6144/sv/)\n"
@@ -482,6 +482,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:383
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:16
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:22
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:401
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:425
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:449
@@ -717,7 +718,7 @@ msgstr "[] markerar valfria argument"
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:23
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:46
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:15
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:21
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:38
@@ -821,7 +822,7 @@ msgstr "Argument"
 
 #: ../../docs/user_manual/expressions/expression_help/Aggregates.rst:24
 #: ../../docs/user_manual/expressions/expression_help/General.rst:85
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:47
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:49
 msgid "**layer** - a string, representing either a layer name or layer ID"
 msgstr ""
 "**lager** - en sträng som representerar antingen ett lagernamn eller ett "
@@ -1224,7 +1225,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Layout.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:18
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:26
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:75
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:19
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:23
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:41
@@ -3141,7 +3142,7 @@ msgid ""
 "1, 3 2, 5 8))'"
 msgstr ""
 "``geom_to_wkt(geometries_to_array(geom_from_wkt('GeometryCollection (Polygon"
-" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))')[0])`` → 'Polygon ((5 8, 4 "
+" ((5 8, 4 1, 3 2, 5 8)),LineString (3 2, 4 2))'))[0])`` → 'Polygon ((5 8, 4 "
 "1, 3 2, 5 8))'"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:46
@@ -3305,7 +3306,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:27
 msgid "``color_cmyk(100,50,0,10)`` → '0,115,230'"
-msgstr "``färg_cmyk(100,50,0,10)`` → '0,115,230'"
+msgstr "``color_cmyk(100,50,0,10)`` → '0,115,230'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:35
 msgid "color_cmyka"
@@ -3335,7 +3336,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:51
 msgid "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
-msgstr "``färg_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
+msgstr "``color_cmyka(100,50,0,10,200)`` → '0,115,230,200'"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:59
 msgid "color_cmykf"
@@ -3929,7 +3930,7 @@ msgstr "om faktorn är 0 eller negativ är returvärdet ospecificerat."
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:442
 msgid "``darker('200,10,30', 200)`` → '100,5,15,255'"
-msgstr "``mörkare('200,10,30', 200)`` → '100,5,15,255'"
+msgstr "``darker('200,10,30', 200)`` → '100,5,15,255'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:103
 msgid "Further reading: :ref:`expression_function_Color_lighter`"
@@ -3997,7 +3998,7 @@ msgstr "**namn** - ett namn på en färg"
 
 #: ../../docs/user_manual/expressions/expression_help/Color.rst:18
 msgid "``project_color('Logo color')`` → '20,140,50'"
-msgstr "``project_color('Logofärg')`` → '20,140,50'"
+msgstr "``project_color('Logo color')`` → '20,140,50'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:115
 msgid "Further reading: :ref:`setting project colors <project_colors>`"
@@ -4769,9 +4770,21 @@ msgstr "to_bool(value)"
 msgid "``to_bool('')`` → false"
 msgstr "``to_bool('')`` → false"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:139
+msgid "``to_bool('123')`` → true"
+msgstr "``to_bool('123')`` → true"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:140
 msgid "``to_bool('false')`` → true"
 msgstr "``to_bool('false')`` → true"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:141
+msgid "``to_bool(0)`` → false"
+msgstr "``to_bool(0)`` → false"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
+msgid "``to_bool(1)`` → true"
+msgstr "``to_bool(1)`` → true"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:143
 msgid "``to_bool(null)`` → false"
@@ -4916,7 +4929,7 @@ msgstr "**värde** - En sträng med grader, minuter och sekunder."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:18
 msgid "``to_decimal('6°21\\'16.445')`` → 6.3545680555"
-msgstr "``till_decimal('6°21\\'16.445')`` → 6.3545680555"
+msgstr "``to_decimal('6°21\\'16.445')`` → 6.3545680555"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:26
 msgid "to_dm"
@@ -5046,7 +5059,7 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:112
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:18
 msgid "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
-msgstr "``to_interval('1 dag 2 timmar')`` → intervall: 1,08333 dagar"
+msgstr "``to_interval('1 day 2 hours')`` → interval: 1.08333 days"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:113
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:19
@@ -5060,7 +5073,7 @@ msgid ""
 "``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → "
 "2012-05-04T10:00:00"
 msgstr ""
-"``to_datetime('2012-05-05 12:00:00') - to_interval('1 dag 2 timmar')`` → "
+"``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → "
 "2012-05-04T10:00:00"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:122
@@ -5089,7 +5102,7 @@ msgstr "**sträng** - sträng som ska konverteras till reellt tal"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:134
 msgid "``to_real('123.45')`` → 123.45"
-msgstr "``till_verklig('123.45')`` → 123.45"
+msgstr "``to_real('123.45')`` → 123.45"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:142
 #: ../../docs/user_manual/expressions/expression_help/String.rst:6
@@ -5107,6 +5120,11 @@ msgid "**number** - Integer or real value. The number to convert to string."
 msgstr ""
 "**number** - Heltal eller verkligt värde. Det tal som ska konverteras till "
 "sträng."
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:154
+#: ../../docs/user_manual/expressions/expression_help/String.rst:18
+msgid "``to_string(1.23)`` → '1.23'"
+msgstr "``to_string(1.23)`` → '1.23'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:168
 #: ../../docs/user_manual/expressions/functions_list.rst:1240
@@ -5173,6 +5191,16 @@ msgstr "crs_to_authid"
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
+msgid ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
+msgstr ""
+"``crs_to_authid(crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 "
+"+lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext "
+"+no_defs +type=crs'))`` → 'EPSG:3857'"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:194
 msgid "Custom Functions"
@@ -5369,7 +5397,7 @@ msgstr "**date** - ett datum- eller datetime-värde"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:82
 msgid "``day('2012-05-12')`` → 12"
-msgstr "``dag('2012-05-12')`` → 12"
+msgstr "``day('2012-05-12')`` → 12"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:25
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:65
@@ -5731,7 +5759,7 @@ msgstr "``format_date('2012-05-15','dd.MM.åååå')`` → '15.05.2012'"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:203
 #: ../../docs/user_manual/expressions/expression_help/String.rst:84
 msgid "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
-msgstr "``format_date('2012-05-15','d MMMM åååå','fr')`` → '15 maj 2012'"
+msgstr "``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 mai 2012'"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:204
 #: ../../docs/user_manual/expressions/expression_help/String.rst:85
@@ -5983,7 +6011,7 @@ msgstr "minute(datetime)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:370
 msgid "``minute( to_datetime('2012-07-22 13:24:57') )`` → 24"
-msgstr "``minut( to_datetime('2012-07-22 13:24:57') )`` → 24"
+msgstr "``minute( to_datetime('2012-07-22 13:24:57') )`` → 24"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:375
 msgid "Calculates the length in minutes of an interval."
@@ -6098,7 +6126,7 @@ msgstr "second(datetime)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:469
 msgid "``second( to_datetime('2012-07-22 13:24:57') )`` → 57"
-msgstr "``sekund( to_datetime('2012-07-22 13:24:57') )`` → 57"
+msgstr "``second( to_datetime('2012-07-22 13:24:57') )`` → 57"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:474
 msgid "Calculates the length in seconds of an interval."
@@ -6158,11 +6186,11 @@ msgstr "week(interval)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:37
 msgid "``week(to_interval('3 weeks'))`` → 3"
-msgstr "``vecka(till_intervall('3 veckor'))`` → 3"
+msgstr "``week(to_interval('3 weeks'))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:38
 msgid "``week(age('2012-01-01','2010-01-01'))`` → 104.285"
-msgstr "``vecka(ålder('2012-01-01','2010-01-01'))`` → 104.285"
+msgstr "``week(age('2012-01-01','2010-01-01'))`` → 104.285"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:46
 msgid "year"
@@ -6184,7 +6212,7 @@ msgstr "year(date)"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:62
 msgid "``year('2012-05-12')`` → 2012"
-msgstr "``år('2012-05-12')`` → 2012"
+msgstr "``year('2012-05-12')`` → 2012"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:67
 msgid "Calculates the length in years of an interval."
@@ -6200,7 +6228,7 @@ msgstr "**interval** - intervallvärde för att returnera antal år från"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:77
 msgid "``year(to_interval('3 years'))`` → 3"
-msgstr "``år(to_interval('3 år'))`` → 3"
+msgstr "``year(to_interval('3 years'))`` → 3"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:78
 msgid "``year(age('2012-01-01','2010-01-01'))`` → 1.9986"
@@ -6727,7 +6755,7 @@ msgstr "``längsta_vanliga_substräng('abcDeF','abcdef')`` → 'abc'"
 msgid ""
 "``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'"
 msgstr ""
-"``längsta_vanliga_substräng(övre('abcDeF'),övre('abcdex'))`` → 'ABCDE'"
+"``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'"
 
 #: ../../docs/user_manual/expressions/expression_help/Fuzzy_Matching.rst:84
 msgid "soundex"
@@ -7340,7 +7368,8 @@ msgid ""
 "``degrees( azimuth( make_point(25, 45), make_point(75, 100) ) )`` → "
 "42.273689"
 msgstr ""
-"``grader( azimut( make_point(25, 45), make_point(75, 100) ) )`` → 42.273689"
+"``degrees( azimuth( make_point(25, 45), make_point(75, 100) ) )`` → "
+"42.273689"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:151
 msgid ""
@@ -7843,8 +7872,8 @@ msgid ""
 "2 1), (3 3, 4 4), (4 4, 5 5))'"
 msgstr ""
 "``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
-"geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → \"MULTILINESTRING((4 4,"
-" 2 1), (3 3, 4 4), (4 4, 5 5))"
+"geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → 'MULTILINESTRING((4 4, "
+"2 1), (3 3, 4 4), (4 4, 5 5))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
 msgid ""
@@ -8141,7 +8170,7 @@ msgid ""
 "geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'"
 msgstr ""
 "``geom_to_wkt( difference( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), "
-"geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → \"LINESTRING(4 4, 5 5)"
+"geom_from_wkt( 'LINESTRING(3 3, 4 4)' ) ) )`` → 'LINESTRING(4 4, 5 5)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
 msgid ""
@@ -8237,7 +8266,7 @@ msgid ""
 "``distance_to_vertex(geometry:=geom_from_wkt('LineString(0 0, 10 0, 10 "
 "10)'),vertex:=1)`` → 10.0"
 msgstr ""
-"``avstånd_till_vertex(geometri:=geom_from_wkt('LineString(0 0, 10 0, 10 "
+"``distance_to_vertex(geometry:=geom_from_wkt('LineString(0 0, 10 0, 10 "
 "10)'),vertex:=1)`` → 10.0"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:48
@@ -8269,7 +8298,7 @@ msgid ""
 "'Point (0 2)'"
 msgstr ""
 "``geom_to_wkt(end_point(geom_from_wkt('LINESTRING(4 0, 4 2, 0 2)')))`` → "
-"\"Punkt (0 2)"
+"'Point (0 2)'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:66
 msgid "End point of a line feature"
@@ -8953,6 +8982,14 @@ msgstr "hausdorff_distance(geometry1, geometry2, [densify_fraction:=1])"
 msgid "**densify_fraction** - densify fraction amount"
 msgstr "**densify_fraction** - mängd förtätningsfraktion"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:218
+msgid ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+msgstr ""
+"``hausdorff_distance( geometry1:= geom_from_wkt('LINESTRING (0 0, 2 "
+"1)'),geometry2:=geom_from_wkt('LINESTRING (0 0, 2 0)'))`` → 1"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:219
 msgid ""
 "``hausdorff_distance( geom_from_wkt('LINESTRING (130 0, 0 0, 0 "
@@ -9439,7 +9476,7 @@ msgstr "**geometry** - objekt för linjegeometri"
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:55
 #: ../../docs/user_manual/expressions/expression_help/String.rst:37
 msgid "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
-msgstr "``längd(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4,0"
+msgstr "``length(geom_from_wkt('LINESTRING(0 0, 4 0)'))`` → 4.0"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:557
 msgid ""
@@ -9621,7 +9658,7 @@ msgid ""
 "10)'),m:=5)`` → 7.07106"
 msgstr ""
 "``line_locate_m(geometry:=geom_from_wkt('LineStringM(0 0 0, 10 10 "
-"10)'),m:=5)`` → 7,07106"
+"10)'),m:=5)`` → 7.07106"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
 msgid "line_locate_point"
@@ -10773,7 +10810,7 @@ msgid ""
 " )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'"
 msgstr ""
 "``geom_to_wkt( oriented_bbox( geom_from_wkt( 'MULTIPOINT(1 2, 3 4, 3 2)' ) )"
-" )`` → \"Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))"
+" )`` → 'Polygon ((3 2, 3 4, 1 4, 1 2, 3 2))'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:49
 msgid "Oriented minimum bounding box"
@@ -11190,6 +11227,16 @@ msgstr ""
 "Läs mer om det underliggande GEOS \"Intersects\"-predikatet, som beskrivs i "
 "PostGIS `ST_Intersects "
 "<https://postgis.net/docs/ST_Intersects.html>`_-funktion."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
+msgstr ""
+"overlay_intersects(layer, [expression], [filter], [limit], [cache:=false], "
+"[min_overlap], [min_inscribed_circle_radius], [return_details], "
+"[sort_by_intersection_size])"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
 msgid "**min_overlap** - defines an optional exclusion filter:"
@@ -11756,7 +11803,7 @@ msgstr "perimeter(geometry)"
 msgid ""
 "``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12.0"
 msgstr ""
-"``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12,0"
+"``perimeter(geom_from_wkt('POLYGON((0 0, 4 0, 4 2, 0 2, 0 0))'))`` → 12.0"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:44
 msgid "point_n"
@@ -12450,8 +12497,8 @@ msgid ""
 "``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
 "1.265"
 msgstr ""
-"``rund(sinuositet(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
-"1,265"
+"``round(sinuosity(geom_from_wkt('LINESTRING(2 0, 2 2, 3 2, 3 3)')), 3)`` → "
+"1.265"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:19
 msgid "``sinuosity(geom_from_wkt('LINESTRING( 3 1, 5 1)'))`` → 1.0"
@@ -13836,10 +13883,10 @@ msgid "Returns a matching layer property or metadata value."
 msgstr "Returnerar ett matchande värde för lageregenskaper eller metadata."
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:45
-msgid "layer_property(layer, property)"
-msgstr "layer_property(layer, property)"
+msgid "layer_property(layer, property, [translate:=true])"
+msgstr "layer_property(layer, property, [translate:=true])"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:48
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
 #: ../../docs/user_manual/expressions/expression_help/Rasters.rst:47
 msgid ""
 "**property** - a string corresponding to the property to return. Valid "
@@ -13848,97 +13895,97 @@ msgstr ""
 "**property** - en sträng som motsvarar den egenskap som ska returneras. "
 "Giltiga alternativ är:"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:50
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
 msgid "name: layer name"
 msgstr "namn: lagrets namn"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:51
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
 msgid "id: layer ID"
 msgstr "id: lager-ID"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:52
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
 msgid "title: metadata title string"
 msgstr "title: titelsträng för metadata"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:53
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
 msgid "abstract: metadata abstract string"
 msgstr "abstrakt: metadata abstrakt sträng"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:54
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
 msgid "keywords: metadata keywords"
 msgstr "nyckelord: nyckelord för metadata"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:55
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
 msgid "data_url: metadata URL"
 msgstr "data_url: URL för metadata"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:56
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
 msgid "attribution: metadata attribution string"
 msgstr "attribution: attributionssträng för metadata"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:57
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
 msgid "attribution_url: metadata attribution URL"
 msgstr "attribution_url: URL för tilldelning av metadata"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:58
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
 msgid "source: layer source"
 msgstr "källa: lager källa"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:59
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
 msgid "min_scale: minimum display scale for layer"
 msgstr "min_scale: minsta visningsskala för lager"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:60
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
 msgid "max_scale: maximum display scale for layer"
 msgstr "max_scale: maximal visningsskala för lager"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:61
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
 msgid "is_editable: if layer is in edit mode"
 msgstr "is_editable: om lagret är i redigeringsläge"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:62
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
 msgid "crs: layer CRS"
 msgstr "crs: lager CRS"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:63
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
 msgid "crs_definition: layer CRS full definition"
 msgstr "crs_definition: lager CRS fullständig definition"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:64
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
 msgid "crs_description: layer CRS description"
 msgstr "crs_description: beskrivning av CRS-lager"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:65
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
 msgid "crs_ellipsoid: acronym of the layer CRS ellipsoid"
 msgstr "crs_ellipsoid: akronym för lagret CRS ellipsoid"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:66
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
 msgid "extent: layer extent (as a geometry object)"
 msgstr "extent: lagerutbredning (som ett geometriobjekt)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:67
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
 msgid "distance_units: layer distance units"
 msgstr "distance_units: lagrets avståndsenheter"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
 msgid "type: layer type, e.g., Vector or Raster"
 msgstr "type: typ av lager, t.ex. vektor eller raster"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:69
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
 msgid "storage_type: storage format (vector layers only)"
 msgstr "storage_type: lagringsformat (endast vektorlager)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:70
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
 msgid "geometry_type: geometry type, e.g., Point (vector layers only)"
 msgstr "geometry_type: geometrityp, t.ex. punkt (endast vektorlager)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:71
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:73
 msgid ""
 "feature_count: approximate feature count for layer (vector layers only)"
 msgstr ""
 "feature_count: ungefärligt antal funktioner för lagret (endast vektorlager)"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:72
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:74
 msgid ""
 "path: File path to the layer data source. Only available for file based "
 "layers."
@@ -13946,15 +13993,15 @@ msgstr ""
 "sökväg: Filsökväg till lagrets datakälla. Endast tillgängligt för "
 "filbaserade lager."
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:76
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
 msgstr "``layer_property('streets','title')`` → 'Basemap Streets'"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:80
 msgid "``layer_property('airports','feature_count')`` → 120"
 msgstr "``layer_property('airports','feature_count')`` → 120"
 
-#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:78
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:81
 msgid "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 msgstr "``layer_property('landsat','crs')`` → 'EPSG:4326'"
 
@@ -14109,7 +14156,7 @@ msgstr "**map** - en karta"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:87
 msgid "``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]"
-msgstr "``map_akeys(map('1','ett','2','två'))`` → [ '1', '2' ]"
+msgstr "``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]"
 
 #: ../../docs/user_manual/expressions/expression_help/Maps.rst:95
 msgid "map_avals"
@@ -14628,7 +14675,7 @@ msgstr "**vinkel** - vinkel i radianer"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:176
 msgid "``cos(1.571)`` → 0.000796326710733263"
-msgstr "``cos(1,571)`` → 0,000796326710733263"
+msgstr "``cos(1.571)`` → 0.000796326710733263"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:184
 msgid "degrees"
@@ -14648,11 +14695,11 @@ msgstr "**radianer** - numeriskt värde"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:196
 msgid "``degrees(3.14159)`` → 180"
-msgstr "``grader(3.14159)`` → 180"
+msgstr "``degrees(3.14159)`` → 180"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:197
 msgid "``degrees(1)`` → 57.2958"
-msgstr "``grader(1)`` → 57,2958"
+msgstr "``degrees(1)`` → 57.2958"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:205
 msgid "exp"
@@ -14672,7 +14719,7 @@ msgstr "**värde** - tal att returnera exponent för"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:217
 msgid "``exp(1.0)`` → 2.71828182845905"
-msgstr "``exp(1,0)`` → 2.71828182845905"
+msgstr "``exp(1.0)`` → 2.71828182845905"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:225
 msgid "floor"
@@ -14688,11 +14735,11 @@ msgstr "floor(value)"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:237
 msgid "``floor(4.9)`` → 4"
-msgstr "``golv(4,9)`` → 4"
+msgstr "``floor(4.9)`` → 4"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:238
 msgid "``floor(-4.9)`` → -5"
-msgstr "``golv(-4,9)`` → -5"
+msgstr "``floor(-4.9)`` → -5"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:246
 msgid "ln"
@@ -14716,7 +14763,7 @@ msgstr "``ln(1)`` → 0"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:259
 msgid "``ln(2.7182818284590452354)`` → 1"
-msgstr "``ln(2,7182818284590452354)`` → 1"
+msgstr "``ln(2.7182818284590452354)`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:267
 msgid "log"
@@ -14745,7 +14792,7 @@ msgstr "``log(2, 32)`` → 5"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:281
 msgid "``log(0.5, 32)`` → -5"
-msgstr "``log(0,5, 32)`` → -5"
+msgstr "``log(0.5, 32)`` → -5"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:289
 msgid "log10"
@@ -14781,7 +14828,7 @@ msgstr "max(value1, value2, ...)"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:322
 msgid "``max(2,10.2,5.5)`` → 10.2"
-msgstr "``max(2,10,2,5,5)`` → 10,2"
+msgstr "``max(2,10.2,5.5)`` → 10.2"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:323
 msgid "``max(20.5,NULL,6.2)`` → 20.5"
@@ -14841,11 +14888,11 @@ msgstr "**grader** - numeriskt värde"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:382
 msgid "``radians(180)`` → 3.14159"
-msgstr "``radianer(180)`` → 3,14159"
+msgstr "``radians(180)`` → 3.14159"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:383
 msgid "``radians(57.2958)`` → 1"
-msgstr "``radianer(57,2958)`` → 1"
+msgstr "``radians(57.2958)`` → 1"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:391
 msgid "rand"
@@ -14951,15 +14998,15 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:454
 msgid "``round(1234.567, 2)`` → 1234.57"
-msgstr "``rund(1234,567, 2)`` → 1234,57"
+msgstr "``round(1234.567, 2)`` → 1234.57"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:455
 msgid "``round(1234.567)`` → 1235"
-msgstr "``rund(1234,567)`` → 1235"
+msgstr "``round(1234.567)`` → 1235"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:456
 msgid "``round(1234.567, -1)`` → 1230"
-msgstr "``rund(1234,567, -1)`` → 1230"
+msgstr "``round(1234.567, -1)`` → 1230"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:464
 msgid "scale_exponential"
@@ -15053,7 +15100,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:481
 msgid "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
-msgstr "skalning exponentiell(5,0,10,0,100,2)→ 3,030"
+msgstr "``scale_exponential(5,0,10,0,100,2)`` → 3.030"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:483
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:543
@@ -15062,7 +15109,7 @@ msgstr "lätta på trycket, med en exponent på 2"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:484
 msgid "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
-msgstr "skala_exponentiell(3,0,10,0,100,0,5)`` → 87,585"
+msgstr "``scale_exponential(3,0,10,0,100,0.5)`` → 87.585"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:486
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:546
@@ -15087,11 +15134,11 @@ msgstr "scale_linear(value, domain_min, domain_max, range_min, range_max)"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:510
 msgid "``scale_linear(5,0,10,0,100)`` → 50"
-msgstr "skalning_linjär(5,0,10,0,100)`` → 50"
+msgstr "``scale_linear(5,0,10,0,100)`` → 50"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:511
 msgid "``scale_linear(0.2,0,1,0,360)`` → 72"
-msgstr "skalning_linjär(0,2,0,1,0,360)`` → 72"
+msgstr "``scale_linear(0.2,0,1,0,360)`` → 72"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:513
 msgid "scaling a value between 0 and 1 to an angle between 0 and 360"
@@ -15099,7 +15146,7 @@ msgstr "skalning av ett värde mellan 0 och 1 till en vinkel mellan 0 och 360"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:514
 msgid "``scale_linear(1500,1000,10000,9,20)`` → 9.6111111"
-msgstr "``skala_linjär(1500,1000,10000,9,20)`` → 9,6111111"
+msgstr "``scale_linear(1500,1000,10000,9,20)`` → 9.6111111"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:516
 msgid ""
@@ -15133,11 +15180,11 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:541
 msgid "``scale_polynomial(5,0,10,0,100,2)`` → 25"
-msgstr "``skala_polynom(5,0,10,0,100,2)`` → 25"
+msgstr "``scale_polynomial(5,0,10,0,100,2)`` → 25"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:544
 msgid "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
-msgstr "``skala_polynom(3,0,10,0,100,0,5)`` → 54,772"
+msgstr "``scale_polynomial(3,0,10,0,100,0.5)`` → 54.772"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:554
 msgid "sin"
@@ -15153,7 +15200,7 @@ msgstr "sin(angle)"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:566
 msgid "``sin(1.571)`` → 0.999999682931835"
-msgstr "``sin(1,571)`` → 0,999999682931835"
+msgstr "``sin(1.571)`` → 0.999999682931835"
 
 #: ../../docs/user_manual/expressions/expression_help/Math.rst:574
 msgid "sqrt"
@@ -15421,14 +15468,14 @@ msgstr "``5 + NULL`` → NULL"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:73
 msgid "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
-msgstr "``'QGIS ' + 'STENAR'`` → 'QGIS STENAR'"
+msgstr "``'QGIS ' + 'ROCKS'`` → 'QGIS ROCKS'"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:74
 msgid ""
 "``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
 "2020-08-02T14:00:00"
 msgstr ""
-"``to_datetime('2020-08-01 12:00:00') + '1 dag 2 timmar'`` → "
+"``to_datetime('2020-08-01 12:00:00') + '1 day 2 hours'`` → "
 "2020-08-02T14:00:00"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:938
@@ -15676,7 +15723,7 @@ msgstr "Returnerar TRUE när villkoren a och b är sanna."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:220
 msgid "a AND b"
-msgstr "a OCH b"
+msgstr "a AND b"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:16
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:152
@@ -15742,11 +15789,11 @@ msgstr "``'B' BETWEEN 'A' AND 'C'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:250
 msgid "``2 BETWEEN 1 AND 3`` → TRUE"
-msgstr "``2 MELLAN 1 OCH 3`` → SANT"
+msgstr "``2 BETWEEN 1 AND 3`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:251
 msgid "``2 BETWEEN 2 AND 3`` → TRUE"
-msgstr "``2 MELLAN 2 OCH 3`` → SANT"
+msgstr "``2 BETWEEN 2 AND 3`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:252
 msgid "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
@@ -15754,7 +15801,7 @@ msgstr "``'B' BETWEEN 'a' AND 'c'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:253
 msgid "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
-msgstr "``lower('B') MELLAN 'a' OCH 'b'`` → TRUE"
+msgstr "``lower('B') BETWEEN 'a' AND 'b'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:255
 msgid ""
@@ -15938,7 +15985,7 @@ msgstr "Returnerar TRUE om a inte är samma sak som b."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:97
 msgid "a IS NOT b"
-msgstr "a ÄR INTE b"
+msgstr "a IS NOT b"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:102
 msgid "``'a' IS NOT 'b'`` → TRUE"
@@ -16031,15 +16078,15 @@ msgstr "Negerar ett villkor."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:150
 msgid "NOT a"
-msgstr "INTE en"
+msgstr "NOT a"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:154
 msgid "``NOT 1`` → FALSE"
-msgstr "``INTE 1`` → FALSK"
+msgstr "``NOT 1`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:155
 msgid "``NOT 0`` → TRUE"
-msgstr "``INTE 0`` → SANT"
+msgstr "``NOT 0`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:163
 msgid "NOT BETWEEN"
@@ -16063,11 +16110,11 @@ msgstr "``'B' NOT BETWEEN 'A' AND 'C'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:177
 msgid "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
-msgstr "``1.0 INTE MELLAN 1.1 OCH 1.2`` → TRUE"
+msgstr "``1.0 NOT BETWEEN 1.1 AND 1.2`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:178
 msgid "``2 NOT BETWEEN 2 AND 3`` → FALSE"
-msgstr "``2 INTE MELLAN 2 OCH 3`` → FALSE"
+msgstr "``2 NOT BETWEEN 2 AND 3`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:179
 msgid "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
@@ -16075,7 +16122,7 @@ msgstr "``'B' NOT BETWEEN 'a' AND 'c'`` → TRUE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:180
 msgid "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
-msgstr "``lower('B') INTE MELLAN 'a' OCH 'b'`` → FALSE"
+msgstr "``lower('B') NOT BETWEEN 'a' AND 'b'`` → FALSE"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:182
 msgid ""
@@ -16099,7 +16146,7 @@ msgstr "Returnerar TRUE när villkor a eller b är sant."
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:14
 msgid "a OR b"
-msgstr "a ELLER b"
+msgstr "a OR b"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:19
 msgid "``4 = 2+2 OR 1 = 1`` → TRUE"
@@ -16204,7 +16251,7 @@ msgstr "```'Här' || ' och ' || 'där'`` → 'Här och där'"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:46
 msgid "``'Nothing' || NULL`` → NULL"
-msgstr "```Inget' || NULL`` → NULL"
+msgstr "``'Nothing' || NULL`` → NULL"
 
 #: ../../docs/user_manual/expressions/expression_help/Operators.rst:47
 msgid "``'Dia: ' || \"Diameter\"`` → 'Dia: 25'"
@@ -17623,6 +17670,10 @@ msgstr "ascii(string)"
 msgid "**string** - the string to convert to unicode code"
 msgstr "**sträng** - den sträng som ska konverteras till Unicode-kod"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:24
+msgid "``ascii('Q')`` → 81"
+msgstr "``ascii('Q')`` → 81"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:32
 msgid "char"
 msgstr "char"
@@ -17638,6 +17689,10 @@ msgstr "char(code)"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:42
 msgid "**code** - a unicode code number"
 msgstr "**code** - ett unicode-kodnummer"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:44
+msgid "``char(81)`` → 'Q'"
+msgstr "``char(81)`` → 'Q'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:52
 msgid "concat"
@@ -17661,7 +17716,7 @@ msgstr "**sträng** - ett strängvärde"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:64
 msgid "``concat('sun', 'set')`` → 'sunset'"
-msgstr "``concat('sun', 'set')`` → 'solnedgång'"
+msgstr "``concat('sun', 'set')`` → 'sunset'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:65
 msgid "``concat('a','b','c','d','e')`` → 'abcde'"
@@ -17772,6 +17827,14 @@ msgstr ""
 "standard används den aktuella QGIS-användarens locale. Decimalerna trunkeras"
 " också till det antal decimaler som anges."
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:103
+msgid ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+msgstr ""
+"format_number(number, [places:=0], [language], "
+"[omit_group_separators:=false], [trim_trailing_zeroes:=false])"
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:107
 msgid "**number** - number to be formatted"
 msgstr "**number** - nummer som ska formateras"
@@ -17822,7 +17885,7 @@ msgstr ""
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:114
 msgid "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"
-msgstr "``format_nummer(10000000.332,2,'fr')`` → '10 000 000,33'"
+msgstr "``format_number(10000000.332,2,'fr')`` → '10 000 000,33'"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:122
 msgid "left"

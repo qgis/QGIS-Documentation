@@ -11,6 +11,7 @@
 # Transifex Bot <>, 2026
 # tomoya miyoshi, 2026
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
+# hirabayashi kino, 2026
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2026\n"
+"Last-Translator: hirabayashi kino, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -297,6 +298,10 @@ msgstr "空間ブックマークにできる操作"
 #: ../../docs/user_manual/introduction/browser.rst:139
 msgid "Level"
 msgstr "レベル"
+
+#: ../../docs/user_manual/introduction/browser.rst:139
+msgid "Contextual menu"
+msgstr "コンテキストメニュー"
 
 #: ../../docs/user_manual/introduction/browser.rst:141
 msgid ":guilabel:`Spatial Bookmarks`"
@@ -650,6 +655,10 @@ msgstr ":menuselection:`管理`"
 msgid ":guilabel:`File Properties…`"
 msgstr ":guilabel:`ファイルプロパティ...`"
 
+#: ../../docs/user_manual/introduction/browser.rst:244
+msgid ":guilabel:`Open <file type> Externally…`"
+msgstr ":guilabel:`外部で <file type> を開く…`"
+
 #: ../../docs/user_manual/introduction/browser.rst:246
 msgid "**Layer**"
 msgstr "**入力レイヤ**"
@@ -687,6 +696,10 @@ msgid ""
 "entries of contextual menu at each level of the dataset tree."
 msgstr ""
 "QGISで利用できるデータベースの種類は、ご利用のOSとインストールされているドライバによって異なる場合があります。以下は、データセットツリーの各レベルにおけるコンテキストメニューの様々なエントリのリストです。"
+
+#: ../../docs/user_manual/introduction/browser.rst:272
+msgid "Available actions for database entries"
+msgstr "データベースエントリでできる操作"
 
 #: ../../docs/user_manual/introduction/browser.rst:277
 msgid "Type of database"
@@ -736,6 +749,10 @@ msgstr "|hana|"
 msgid "hana"
 msgstr "hana"
 
+#: ../../docs/user_manual/introduction/browser.rst:281
+msgid "SAP HANA"
+msgstr "SAP HANA"
+
 #: ../../docs/user_manual/introduction/browser.rst:279
 msgid "|mssql|"
 msgstr "|mssql|"
@@ -743,6 +760,10 @@ msgstr "|mssql|"
 #: ../../docs/user_manual/introduction/browser.rst:656
 msgid "mssql"
 msgstr "mssql"
+
+#: ../../docs/user_manual/introduction/browser.rst:281
+msgid "MS SQL Server"
+msgstr "MS SQL Server"
 
 #: ../../docs/user_manual/introduction/browser.rst:279
 msgid "|oracle|"
@@ -810,6 +831,10 @@ msgstr ":guilabel:`接続を複製...`"
 msgid ":guilabel:`Remove Connection…`"
 msgstr ":guilabel:`接続を消去…`"
 
+#: ../../docs/user_manual/introduction/browser.rst:308
+msgid ":guilabel:`Import Vector Layer…`"
+msgstr ":guilabel:`ベクタレイヤをインポート...`"
+
 #: ../../docs/user_manual/introduction/browser.rst:310
 msgid ":menuselection:`New Field Domain --> New Range Domain`"
 msgstr ":menuselection:`新規フィールドドメイン --> 新規レンジ範囲`"
@@ -821,6 +846,10 @@ msgstr ":menuselection:`新規フィールドドメイン --> 新規コード化
 #: ../../docs/user_manual/introduction/browser.rst:316
 msgid ":menuselection:`New Field Domain --> New Glob Domain`"
 msgstr ":menuselection:`新規フィールドドメイン --> 新規Glob範囲`"
+
+#: ../../docs/user_manual/introduction/browser.rst:319
+msgid ":guilabel:`New Relationship...`"
+msgstr ":guilabel:`新規リレーション...`"
 
 #: ../../docs/user_manual/introduction/browser.rst:321
 msgid ":guilabel:`Delete <database_name>`"
@@ -899,6 +928,10 @@ msgstr ":menuselection:`管理 --> レイヤをプロジェクトに追加する
 msgid ":menuselection:`Manage --> Add Selected Layers to Project`"
 msgstr ":menuselection:`管理 --> 選択されたレイヤをプロジェクトに追加する`"
 
+#: ../../docs/user_manual/introduction/browser.rst:372
+msgid ":menuselection:`Manage --> Move to Another Schema`"
+msgstr ":menuselection:`管理 --> 別のスキーマに移動`"
+
 #: ../../docs/user_manual/introduction/browser.rst:375
 msgid "Open :guilabel:`Layer Properties…` dialog"
 msgstr ":guilabel:`レイヤのプロパティ…` ダイアログを開く"
@@ -954,6 +987,10 @@ msgstr ""
 "<https://gdal.org/en/latest/drivers/vector/index.html>`_ 、たとえばESRI File "
 "Geodatabase、FlatGeobuf、GeoParquet、NetCDFなど、では互換性がある場合、異なるエントリも利用可能です"
 
+#: ../../docs/user_manual/introduction/browser.rst:401
+msgid "For PostgreSQL connections: only supported with ALTER TABLE privilege."
+msgstr "PostgreSQL接続の場合 : ALTER TABLE権限がある場合のみサポートされます。"
+
 #: ../../docs/user_manual/introduction/browser.rst:405
 msgid "Importing vector layers into databases using Browser panel"
 msgstr "ブラウザパネルを使ってベクタレイヤをデータベースにインポートする"
@@ -998,13 +1035,116 @@ msgid ""
 msgstr ""
 "複数のレイヤがデータベースにドラッグされたときは、追加のオプションなしに直ちにインポートされます。全てのインポートはバックグラウンドで行われ、そのプロセスの間もQGISインターフェイスは応答します。"
 
+#: ../../docs/user_manual/introduction/browser.rst:427
+msgid "Import Vector Layer dialog"
+msgstr "ベクタレイヤのインポートダイアログ"
+
+#: ../../docs/user_manual/introduction/browser.rst:429
+msgid ""
+"To add a layer using :guilabel:`Import Vector Layer...` follow these steps:"
+msgstr ":guilabel:`Import Vector Layer...` を使用してレイヤーを追加する手順は次のとおりです。:"
+
+#: ../../docs/user_manual/introduction/browser.rst:431
+msgid ""
+"Add :guilabel:`Source layer`: the layer to import, chosen from the current "
+"QGIS project. To import only selected features of the source layer use the "
+"|checkbox| :guilabel:`Selected features only` option."
+msgstr ""
+":guilabel:`レイヤソース`: を追加します。現在のQGISプロジェクトから選択したインポートするレイヤーです。ソース "
+"レイヤーの選択された地物のみをインポートするには |checkbox| :guilabel:`選択した地物のみ` オプションを使用します。"
+
+#: ../../docs/user_manual/introduction/browser.rst:433
+msgid ""
+"Set the :guilabel:`Table name`: the name of the destination table in the "
+"database. By default, it is taken from the source layer name but can be "
+"modified. You can also use the |checkbox| :guilabel:`Replace destination "
+"table (if exists)` to overwrite an existing table."
+msgstr ""
+":guilabel:`テーブル名` "
+"を設定します。これはデータベース内の出力先テーブルの名前です。デフォルトではソースのレイヤ名から取得されますが、変更することもできます。また、 "
+"|checkbox| :guilabel:`出力先テーブルを置き換える（すでに存在する場合）` を使用して、既存のテーブルを上書きすることもできます。"
+
+#: ../../docs/user_manual/introduction/browser.rst:437
+msgid ""
+"Define the :guilabel:`Output CRS`: the coordinate reference system of the "
+"destination table. By default, it is the CRS of the source layer, but it can"
+" be changed using the :ref:`CRS selector <crs_selector>`."
+msgstr ""
+":guilabel:`CRSを出力に割り当てる` ：を定義します。出力先のテーブルの座標参照系です。デフォルトではソースレイヤのCRSになりますが、 "
+":ref:`CRS selector <crs_selector>` を使用して変更することもできます。"
+
+#: ../../docs/user_manual/introduction/browser.rst:440
+msgid "Configure the :guilabel:`Attributes`:"
+msgstr ":guilabel:`属性`: を設定します。"
+
+#: ../../docs/user_manual/introduction/browser.rst:442
+msgid ""
+":guilabel:`Source expression`: expression used to populate the field. By "
+"default, this corresponds to the original source field."
+msgstr ""
+":guilabel:`ソースの式` ： フィールドに値を入力するために使用される式です。デフォルトでは、これは元のソースフィールドに対応します。"
+
+#: ../../docs/user_manual/introduction/browser.rst:444
+msgid ":guilabel:`Name`: name of the field in the destination table."
+msgstr ":guilabel:`名前` ：出力先テーブル内のフィールドの名前です。"
+
+#: ../../docs/user_manual/introduction/browser.rst:445
+msgid ":guilabel:`Type`: field data type (integer, text, real, etc.)."
+msgstr ":guilabel:`型` ： フィールドのデータ型（整数、テキスト、実数など）。"
+
+#: ../../docs/user_manual/introduction/browser.rst:446
+msgid ""
+":guilabel:`Length` and :guilabel:`Precision`: length and precision of the "
+"field, where applicable."
+msgstr ":guilabel:`長さ` および :guilabel:`精度` ：該当する場合における、フィールドの長さと精度です。"
+
+#: ../../docs/user_manual/introduction/browser.rst:448
+msgid ""
+":guilabel:`Constraints`: rules to enforce on the field values (e.g. NOT "
+"NULL, UNIQUE, DEFAULT). Support depends on the destination database."
+msgstr ""
+":guilabel:`制約` ：フィールド値に適用するルールです（例： NOT "
+"NULL、UNIQUE、DEFAULT）。サポート状況は出力先データベースによって異なります。"
+
+#: ../../docs/user_manual/introduction/browser.rst:450
+msgid ":guilabel:`Alias`: an alternate display name for the field."
+msgstr ":guilabel:`別名`: 属性の代替表示名です。"
+
+#: ../../docs/user_manual/introduction/browser.rst:451
+msgid ":guilabel:`Comment`: a description or note attached to the field."
+msgstr ":guilabel:`コメント`: 属性に添付された説明または注記です。"
+
+#: ../../docs/user_manual/introduction/browser.rst:453
+msgid "You can use buttons on the right side to:"
+msgstr "右側のボタンを使用して、以下の操作を行うことができます。："
+
+#: ../../docs/user_manual/introduction/browser.rst:455
+msgid ""
+"|newAttribute| :sup:`Add new field` to add a new field to the destination "
+"table."
+msgstr "出力先テーブルに新しいフィールドを追加するには、 |newAttribute| :sup:`新規フィールド` を追加を使用します。"
+
 #: ../../docs/user_manual/introduction/browser.rst:658
 msgid "newAttribute"
 msgstr "newAttribute"
 
+#: ../../docs/user_manual/introduction/browser.rst:456
+msgid ""
+"|deleteAttribute| :sup:`Delete selected field` to remove a field from the "
+"destination table."
+msgstr ""
+"出力先テーブルから属性を削除するには、 |deleteAttribute| :sup:`Delete selected field` を使用します。"
+
 #: ../../docs/user_manual/introduction/browser.rst:646
 msgid "deleteAttribute"
 msgstr "deleteAttribute"
+
+#: ../../docs/user_manual/introduction/browser.rst:457
+msgid ""
+"|arrowUp| :sup:`Move selected field up` or |arrowDown| :sup:`Move selected "
+"field down` to reorder fields."
+msgstr ""
+"|arrowUp| :sup:`選択属性を上へ` または |arrowDown| :sup:`選択属性を下へ` によりフィールドの順序を変更します。"
 
 #: ../../docs/user_manual/introduction/browser.rst:630
 msgid "arrowUp"
@@ -1018,9 +1158,36 @@ msgstr "arrowDown"
 msgid "clearText"
 msgstr "clearText"
 
+#: ../../docs/user_manual/introduction/browser.rst:459
+msgid ""
+"|settings| :sup:`Convert All Fields To Lowercase` or |settings| "
+":sup:`Convert All Fields To Uppercase`, to change the case of all field "
+"names."
+msgstr ""
+"|settings| :sup:`フィールド名を小文字に変換` または |settings| :sup:`フィールド名を大文字に変換` "
+"によりすべての属性名の大文字・小文字を変更します。"
+
 #: ../../docs/user_manual/introduction/browser.rst:668
 msgid "settings"
 msgstr "settings"
+
+#: ../../docs/user_manual/introduction/browser.rst:462
+msgid ""
+"Optionally, apply a spatial filter with :ref:`Filter by Extent "
+"<extent_selector>`. This restricts the import to features within a defined "
+"bounding box."
+msgstr ""
+"必要に応じて、 :ref:`範囲でフィルタリング <extent_selector>` "
+"を使用して、空間フィルタを適用します。これにより、インポートする地物を定義されたバウンディングボックス内に絞り込むことができます。"
+
+#: ../../docs/user_manual/introduction/browser.rst:465
+msgid ""
+"Optionally, apply an attribute filter with :ref:`Feature filter "
+"<expression_builder>`. This allows you to use an expression to select which "
+"features are imported."
+msgstr ""
+"必要に応じて、 :ref:`地物フィルタ<expression_builder>` "
+"を使用して属性フィルタを適用します。これにより、式を使用してインポートする地物を選択することができます。"
 
 #: ../../docs/user_manual/introduction/browser.rst:470
 msgid "Tiles and Web Services"
@@ -1091,6 +1258,10 @@ msgstr "|wfs|"
 msgid "wfs"
 msgstr "wfs"
 
+#: ../../docs/user_manual/introduction/browser.rst:481
+msgid "WFS / OGC API - Features"
+msgstr "WFS / OGC API - 地物"
+
 #: ../../docs/user_manual/introduction/browser.rst:484
 msgid "(:ref:`Reference <ogc-wfs>`)"
 msgstr "(:ref:`参照 <ogc-wfs>`)"
@@ -1102,6 +1273,10 @@ msgstr "|afs|"
 #: ../../docs/user_manual/introduction/browser.rst:626
 msgid "afs"
 msgstr "afs"
+
+#: ../../docs/user_manual/introduction/browser.rst:481
+msgid "ArcGIS REST Servers"
+msgstr "ArcGIS REST Servers"
 
 #: ../../docs/user_manual/introduction/browser.rst:484
 msgid "(:ref:`Reference <arcgis_rest>`)"
@@ -1131,6 +1306,10 @@ msgstr "ウェブブラウザで :guilabel:`サービス情報を見る`"
 #: ../../docs/user_manual/introduction/browser.rst:591
 msgid ":menuselection:`Export Layer --> To File…`"
 msgstr ":menuselection:`レイヤエクスポート --> To ファイルへ…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:513
+msgid ":guilabel:`Add Filtered Layer to Project…`"
+msgstr ":guilabel:`フィルタ済みレイヤをプロジェクトに追加...`"
 
 #: ../../docs/user_manual/introduction/browser.rst:515
 #: ../../docs/user_manual/introduction/browser.rst:565
@@ -1165,6 +1344,10 @@ msgstr "|tiledSceneLayer|"
 msgid "tiledSceneLayer"
 msgstr "tiledSceneLayer"
 
+#: ../../docs/user_manual/introduction/browser.rst:529
+msgid "Scene"
+msgstr "シーン"
+
 #: ../../docs/user_manual/introduction/browser.rst:531
 msgid "(:ref:`Reference <3d_tiles>`)"
 msgstr "(:ref:`参照 <3d_tiles>`)"
@@ -1184,6 +1367,10 @@ msgstr "|sensor|"
 #: ../../docs/user_manual/introduction/browser.rst:666
 msgid "sensor"
 msgstr "sensor"
+
+#: ../../docs/user_manual/introduction/browser.rst:529
+msgid "SensorThings"
+msgstr "センサーシングス"
 
 #: ../../docs/user_manual/introduction/browser.rst:531
 msgid "(:ref:`Reference <sensor_things>`)"
@@ -1213,14 +1400,35 @@ msgstr ":guilabel:`新規一般接続…` の作成"
 msgid "Create a :guilabel:`New ArcGIS Vector Tile Service Connection…`"
 msgstr ":guilabel:`新規ArcGIS Vector Tile Service接続…` の作成"
 
+#: ../../docs/user_manual/introduction/browser.rst:543
+msgid ":guilabel:`Save Connections…` details  to a file"
+msgstr "ファイルに :guilabel:`接続を保存…`"
+
+#: ../../docs/user_manual/introduction/browser.rst:553
+msgid ":guilabel:`Delete Connection…`"
+msgstr ":guilabel:`接続の削除...`"
+
 #: ../../docs/user_manual/introduction/browser.rst:555
 #: ../../docs/user_manual/introduction/browser.rst:567
 msgid ":guilabel:`Refresh`"
 msgstr ":guilabel:`再読み込み`"
 
+#: ../../docs/user_manual/introduction/browser.rst:557
+#: ../../docs/user_manual/introduction/browser.rst:571
+msgid ":guilabel:`Details…`"
+msgstr ":guilabel:`詳細...`"
+
+#: ../../docs/user_manual/introduction/browser.rst:569
+msgid ":guilabel:`Download assets…`"
+msgstr ":guilabel:`アセットをダウンロード...`"
+
 #: ../../docs/user_manual/introduction/browser.rst:575
 msgid "Project and supported file types"
 msgstr "プロジェクトと対応しているファイル型"
+
+#: ../../docs/user_manual/introduction/browser.rst:577
+msgid "Available actions for various supported files  :class: longtable"
+msgstr "サポートされているさまざまなファイルで利用可能なアクション  :class: longtable"
 
 #: ../../docs/user_manual/introduction/browser.rst:581
 msgid "File type"
