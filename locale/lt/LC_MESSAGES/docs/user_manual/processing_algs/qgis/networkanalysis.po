@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Tomas Straupis, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 21:53+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Tomas Straupis, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -424,6 +425,20 @@ msgstr ""
 msgid "**Non-routable features**"
 msgstr "**Nemaršrutizuojami geoobjektai**"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:217
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:250
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:364
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:480
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:507
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:537
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:621
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:649
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:679
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:771
+msgid "``Added in 3.38``"
+msgstr "``Pridėta versijoje 3.38``"
+
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:92
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:251
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:481
@@ -801,6 +816,10 @@ msgstr ""
 msgid "Python code"
 msgstr "Pythono kodas"
 
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:259
+msgid "**Algorithm ID**: ``native:serviceareafromlayer``"
+msgstr "**Algoritmo ID**: ``native:serviceareafromlayer``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -1046,3 +1065,53 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:688
 msgid "**Algorithm ID**: ``native:shortestpathpointtolayer``"
 msgstr "**Algoritmo ID**: ``native:shortestpathpointtolayer``"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:698
+msgid "Shortest path (point to point)"
+msgstr "Trumpiausias kelias (nuo taško iki taško)"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:699
+msgid ""
+"Computes the optimal (shortest or fastest) route between a given start point"
+" and a given end point."
+msgstr ""
+"Skaičiuoja optimalų (trumpiausią arba greičiausią) maršrutą tarp nurodyto "
+"pradžios taško ir nurodyto pabaigos taško."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:733
+msgid "**Start point (x, y)**"
+msgstr "**Pradžios taškas (x, y)**"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:736
+msgid "Point feature representing the start point of the routes."
+msgstr "Taško geoobjektas, reprezentuojantis maršrutų pradžios tašką."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:743
+msgid "Point feature representing the end point of the routes."
+msgstr "Taško geoobjektas, reprezentuojantis maršrutų pabaigos tašką."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:776
+msgid ""
+"Specifies an optional limit on the distance from the start and end points to"
+" the network layer. If either point is further from the network than this "
+"distance an error will be raised. If not set, points will be snapped to the "
+"nearest point on the network layer, regardless of how far away from the "
+"network they actually are."
+msgstr ""
+"Nurodo neprivalomą atstumo nuo pradžios ir pabaigos taškų iki tinklo "
+"sluoksnio ribą. Jei bet kuris taškas yra toliau nuo tinklo nei šis atstumas,"
+" bus rodoma klaida. Jei nenurodyta, taškai bus pritraukiami prie artimiausio"
+" tinklo sluoksnio taško, nepriklausomai nuo to, kaip toli jie yra nuo "
+"tinklo."
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:796
+msgid ""
+"Line layer of the shortest or fastest path from each of the start point to "
+"the end point"
+msgstr ""
+"Trumpiausio ar greičiausio kelio nuo kiekvieno pradžios taško iki pabaigos "
+"taško linijų sluoksnis"
+
+#: ../../docs/user_manual/processing_algs/qgis/networkanalysis.rst:802
+msgid "**Algorithm ID**: ``native:shortestpathpointtopoint``"
+msgstr "**Algoritmo ID**: ``native:shortestpathpointtopoint``"
