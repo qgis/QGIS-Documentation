@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -37,6 +37,19 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:5
 msgid "Setting a label"
 msgstr "Címkék beállítása"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:12
+msgid ""
+"Labels are textual information you can display on maps. They add details you"
+" could not necessarily represent using symbols, and may refer to vector "
+"features, raster cells, mesh elements, or simple annotations on the map... "
+"Two types of text-related items are available in QGIS:"
+msgstr ""
+"A címkék a térképen megjeleníthető szöveges információk. Olyan részletekkel "
+"szolgálnak, amelyeket nem feltétlenül tudna szimbólumokkal ábrázolni. "
+"Utalhatnak vektoros objektumokra, rasztercellákra, hálóelemekre vagy "
+"egyszerű térképi annotációkra. A QGIS-ben kétféle szöveggel kapcsolatos elem"
+" áll rendelkezésre:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:17
 msgid ""
@@ -95,6 +108,20 @@ msgstr ""
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:41
+msgid ""
+":guilabel:`Label Settings`: extend the text format settings with properties "
+"related to the location or the interaction with other texts or features "
+"(:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`, "
+":ref:`overlay, scale visibility <labels_rendering>`, :ref:`mask "
+"<labels_mask>` ...)."
+msgstr ""
+":guilabel:`Címkebeállítások`: kibővíti a szövegformázási beállításokat a "
+"helyhez vagy más szövegekkel és elemekkel való interakcióhoz kapcsolódó "
+"tulajdonságokkal (:ref:`kihúzások <labels_callouts>`, :ref:`elhelyezés "
+"<labels_placement>`, :ref:`átfedés, méretarány szerinti láthatóság, "
+":ref:`maszk <labels_mask>`…)."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:46
 msgid ""
 "They are used to configure smart labelling for vector and mesh layers "
@@ -147,6 +174,20 @@ msgstr ""
 msgid "Formatting the label text"
 msgstr "A címkeszöveg formázása"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:75
+msgid ""
+"Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label "
+"Settings` item, and depending on the type of layer you are configuring, you "
+"will be given the following options:"
+msgstr ""
+"Attól függően, hogy a formázott elem :guilabel:`Szövegformázás` vagy "
+":guilabel:`Címkebeállítás` típusú, valamint az adott réteg típusától, a "
+"következő kategóriák beállításai érhetőek el:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:78
+msgid "Label properties by data type"
+msgstr "Címketulajdonságok adattípusonként"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:82
 msgid "Properties tab"
 msgstr "Tulajdonságok lap"
@@ -158,6 +199,14 @@ msgstr "Szövegformázás"
 #: ../../docs/user_manual/style_library/label_settings.rst:84
 msgid "Label settings"
 msgstr "Címkebeállítás"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:85
+msgid "Vector or mesh layer"
+msgstr "Vektoros vagy hálóréteg"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:86
+msgid "raster layer"
+msgstr "raszterréteg"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:87
 msgid ":guilabel:`Text`"
@@ -231,6 +280,16 @@ msgstr ":guilabel:`Elhelyezés`"
 #: ../../docs/user_manual/style_library/label_settings.rst:127
 msgid ":guilabel:`Rendering`"
 msgstr ":guilabel:`Megjelenítés`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"While for legibility, \"feature\" is the name used below to indicate the "
+"item being labeled, depending on the underlying layer type, it can be "
+"replaced by \"pixel\", \"face\" or \"vertex\"."
+msgstr ""
+"Az érthetőség kedvéért az alábbiakban az „elem” kifejezést használjuk a "
+"címkézett elem jelölésére, azonban az alapul szolgáló réteg típusától "
+"függően ez helyettesíthető a „pixel”, „lap” vagy „csúcs” kifejezésekkel is."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:140
 msgid "Text tab"
@@ -313,6 +372,26 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:176
 msgid "Allow HTML Formatting"
 msgstr "HTML-formázás engedélyezése"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:178
+msgid ""
+"With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML"
+" code in the :guilabel:`Value` field. Use whitespaces instead of tabs for "
+"any kind of indentation. The expression is parsed and any supported HTML tag"
+" overrides its corresponding setting in the labels properties. Because it is"
+" impossible to list and detail every HTML tag and CSS property that QGIS "
+"currently supports, we invite you to explore and test in your labels `the "
+"ones supported <https://doc.qt.io/archives/qt-5.15/richtext-html-"
+"subset.html>`_ by the underlying Qt library."
+msgstr ""
+"Ha a :guilabel:`HTML-formázás engedélyezése` be van kapcsolva, a HTML-kódot "
+"az :guilabel:`Érték` mezőben kell megadni. Behúzáshoz használjon szóközöket "
+"a tabulátorok helyett. A kifejezés elemzésre kerül, és minden támogatott "
+"HTML-címke felülírja a címkék tulajdonságaiban megadott beállításokat. Mivel"
+" lehetetlen felsorolni és részletezni minden HTML-címkét és CSS-"
+"tulajdonságot, amelyet a QGIS jelenleg támogat, kérjük, próbálja ki és "
+"tesztelje a címkéiben azokat, amelyeket `az alapul szolgáló Qt könyvtár "
+"támogat <https://doc.qt.io/archives/qt-5.15/richtext-html-subset.html>`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:185
 msgid "**Examples of supported HTML tags:**"
@@ -405,6 +484,49 @@ msgstr ""
 "Szövegigazítás (``vertical-align``, ``text-align``). A vízszintes igazítás "
 "nem használható íves címkéken."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:236
+msgid ""
+"Line height, in ``points`` or ``percent`` unit, e.g. \"line-height: 40pt\" "
+"or \"line-height: 40%\""
+msgstr ""
+"Vonalmagasság, ``pontban`` vagy ``százalékban``, pl. \"line-height: 40pt\" "
+"vagy \"line-height: 40%\""
+
+#: ../../docs/user_manual/style_library/label_settings.rst:237
+msgid ""
+"Background properties such as ``background-color`` and ``background-image``."
+" They are supported for block type items (e.g. ``div``) or inline items "
+"(e.g. ``span``). For images, the CSS should be formatted as ``background-"
+"image: url(xx)`` and supports local file paths, HTTP links, or base64 "
+"embedded content."
+msgstr ""
+"Háttér tulajdonságai, mint ``background-color`` és ``background-image``. "
+"Ezek támogatottak a blokk típusú elemeken (pl. ``div``) és a beágyazott "
+"elemeken (pl. ``span``) is. Képeknél a CSS ``background-image: url(xx)`` "
+"formátumú kell legyen és helyi fájlok elérési útját, HTTP hivatkozásokat és "
+"beágyazott base64 tartalmat támogat."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:242
+msgid ""
+"Backgrounds are not supported for curved text and are always rendered above "
+"any background shape for the label, and below drop shadows/buffers "
+"properties."
+msgstr ""
+"Az ívelt szövegek esetében a háttér nem támogatott, és mindig a címke "
+"háttéralakzat felett, valamint az árnyékok és az övezet alatt jelenik meg."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:245
+msgid ""
+"Margin properties, available for block type items only, such as ``div``, "
+"``p``, ``h1``,... They can be specified in either the longhand or shorthand "
+"way, in ``points`` unit only. Negative values can be set for the bottom "
+"margin."
+msgstr ""
+"A margó tulajdonságai kizárólag blokktípusú elemeknél használhatók, például "
+"a „div”, „p”, „h1” stb. esetében. Megadhatók teljes vagy rövidített "
+"formában, kizárólag „pont” mértékegységben. Az alsó margóra negatív érték is"
+" beállítható."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:256
 msgid ""
 "CSS properties can be set on HTML tags with the ``style`` attribute. The "
@@ -469,6 +591,19 @@ msgstr ":guilabel:`Összes nagybetűs`"
 msgid ":guilabel:`All lowercase`"
 msgstr ":guilabel:`Összes kisbetűs`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:305
+msgid ":guilabel:`Small Caps`: renders lowercase characters as small caps."
+msgstr ""
+":guilabel:`Kiskapitális`: a kisbetűket kis méretű nagybetűként jeleníti meg."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:306
+msgid ""
+":guilabel:`All Small Caps`: renders all characters as small caps regardless "
+"of their original case."
+msgstr ""
+":guilabel:`Összes kiskapitális`: az összes karaktert kiskapitálisként "
+"jeleníti meg, függetlenül az eredeti méretüktől."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:308
 msgid ""
 ":guilabel:`Title case`: modifies the first letter of each word into capital,"
@@ -506,6 +641,20 @@ msgstr ""
 ":kbd:`Tabulátor` karakterek behelyettesítési távolságát bármely támogatott "
 "mértékegységben. Ez lehetővé teszi például a elrendezésekben lévő "
 "jelmagyarázat szövegének megfelelő elválasztását vagy függőleges igazítását."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:322
+msgid ""
+"Pressing the |options| :sup:`Configure tab stops` button on the right, you "
+"can add a list of tab positions, instead of a single distance. This allows "
+"e.g. the creation of table-like multiline labels, where texts are split over"
+" different \"columns\" and lined up nicely, based on the :kbd:`Tab` "
+"characters."
+msgstr ""
+"A jobb oldalon található |options| :sup:`Tabulátorpozíciók beállítása` gomb "
+"megnyomásával egyetlen távolság helyett megadhatja a tabulátorpozíciók "
+"listáját is. Ez lehetővé teszi például táblázatszerű, többsoros címkék "
+"létrehozását, ahol a szövegek különböző „oszlopokra” oszlanak, és a "
+":kbd:`Tab` karakterek alapján szépen egymás mellé rendeződnek."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1172
 msgid "options"
@@ -1963,6 +2112,59 @@ msgid ""
 "Some label placement settings are available for all layer geometry types:"
 msgstr ""
 "Néhány címkeelhelyezési beállítás az összes geometriatípusnál elérhető:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:890
+msgid "Label Spacing"
+msgstr "Címketérköz"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:892
+msgid ""
+"The :guilabel:`Label Spacing` option allows you to set the margin around the"
+" label, preventing all other labels from being placed within that area. You "
+"can dynamically control :guilabel:`Margin around label` using the "
+"|dataDefine| :sup:`Data-defined override` button. Choose unit from the unit "
+"selector, and there you can also :ref:`adjust scaling range "
+"<unit_selector>`."
+msgstr ""
+"A :guilabel:`Címketérköz` lehetővé teszi a címke körüli margó beállítását, "
+"ezzel megakadályozva, hogy bármely más címke ebbe a területbe kerüljön. A "
+":guilabel:`Címke körüli margó` értékét dinamikusan szabályozhatja at "
+"|dataDefine| :sup:`Adatvezérelt felülbírálás` gomb segítségével. Válassza ki"
+" a mértékegységet a legördülő menüből, ahol a :ref:`méretarány-tartomány "
+"beállítása <unit_selector>` is elvégezhető."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:898
+#: ../../docs/user_manual/style_library/label_settings.rst:910
+msgid ""
+"This option is only available on QGIS installed with GEOS_ >= 3.10 (see "
+":menuselection:`Help --> About` menu)."
+msgstr ""
+"Ez az opció csak a GEOS_ >= 3.10 verzióval telepített QGIS-ben érhető el "
+"(lásd: :menuselection:`Súgó --> Névjegy` menü)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:902
+msgid "Duplicate Labels"
+msgstr "Duplikált címkék"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:904
+msgid ""
+"Use |checkbox| :guilabel:`Avoid duplicate labels` to improve label "
+"appearance in situations like road networks, where features such as dual "
+"carriageways or service roads can result in many identical labels appearing "
+"close together. When active, it prevents placing labels with the exact same "
+"text (case-sensitive) closer than the minimum distance defined in the "
+":guilabel:`Settings...` option. The setting applies across layers, so "
+"duplicate text from any layer will be considered."
+msgstr ""
+"A |checkbox| :guilabel:`Duplikált címkék elkerülése` használatával "
+"javíthatja a címkék megjelenését olyan helyzetekben, mint például a "
+"közúthálózatok esetében, ahol olyan elemek, mint a kétsávos utak vagy "
+"szervizutak miatt számos azonos címke jelenhet meg egymás közvetlen "
+"közelében. Ha be van kapcsolva, megakadályozza, hogy pontosan ugyanolyan "
+"szövegű (nagy- és kisbetűk megkülönböztetésével) címkék a "
+":guilabel:`Beállítások...` opcióban megadott minimális távolságnál közelebb "
+"kerüljenek egymáshoz. A beállítás minden rétegre vonatkozik, így bármely "
+"rétegből származó ismétlődő szövegeket is figyelembe vesz."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:914
 msgid "Geometry Generator"
