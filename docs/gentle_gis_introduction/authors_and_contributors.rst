@@ -26,7 +26,7 @@ About the authors & contributors
      - Otto Dassau --- Assistant Author.
        Otto Dassau is the documentation maintainer and project steering committee
        member of the QGIS project.
-       Otto has considerable experience in using and trainin people
+       Otto has considerable experience in using and training people
        to use Free and Open Source GIS software.
        **Web**: http://www.nature-consult.de **Email**: otto.dassau@gmx.de
 
