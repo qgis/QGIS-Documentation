@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
-# Báthory Péter <bathory86p@gmail.com>, 2026
 # Transifex Bot <>, 2026
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -100,6 +100,32 @@ msgstr ""
 msgid "Layer Coordinate Reference Systems"
 msgstr "Réteg koordináta-rendszerek"
 
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:47
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostgreSQL "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostgreSQL layer was created. For data supported by GDAL, QGIS relies "
+"on the presence of a recognized means of specifying the CRS. For instance, "
+"for the Shapefile format this is a file containing an ESRI Well-Known Text "
+"(WKT) representation of the layer's CRS. This projection file has the same "
+"base name as the :file:`.shp` file and a :file:`.prj` extension. For "
+"example, :file:`alaska.shp` would have a corresponding projection file named"
+" :file:`alaska.prj`."
+msgstr ""
+"Az adatok helyes cél koordináta-rendszerbe vetítéséhez vagy az adatban kell "
+"tartalmazza az információt a koordináta-rendszerről, vagy Önnek kell a "
+"réteghez a helyes koordináta-rendszert hozzárendelnie. PostgreSQL rétegek "
+"esetében a QGIS a PostgreSQL réteg létrehozásakor megadott térbeli "
+"vonatkoztatási rendszert használja. A GDAL által támogatott formátumok "
+"esetében a QGIS a koordináta-rendszert meghatározó erőforrások meglétére "
+"támaszkodik. Például Shapefile formátumnál ez egy fájl, ami ESRI Well-Known "
+"Text (:index:`WKT`) ábrázolja a réteg koordináta-rendszerét. Ennek a "
+"vetületfájlnak a neve megegyezik az :file:`.shp` fájléval, csak a "
+"kiterjesztése :file:`.prj`. Például az :file:`alaska.shp` megfelelő "
+"vetületfájlja az :file:`alaska.prj`."
+
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:59
 msgid ""
 "Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
@@ -140,6 +166,20 @@ msgstr ""
 "A :guilabel:`Vetület a rétegekhez` csoport alatt válasszon egyet az "
 ":guilabel:`Amikor új réteget hoz létre vagy ha a betöltésnél ismeretlen a "
 "koordináta-rendszer`. lehetőségei közül:"
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:78
+msgid ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: there "
+"will be no prompt to select a CRS when a layer without CRS is loaded, "
+"deferring CRS choice to a later time. Convenient when loading a lot of "
+"layers at once. Such layers will be identifiable in the :guilabel:`Layers` "
+"panel by the |indicatorNoCRS| icon next to them. They'll also be un-"
+"referenced, with coordinates from the layer treated as purely numerical, "
+"non-earth values, i.e. the same behavior as all layers get when :ref:`a "
+"project is set to have no CRS <project_crs>`."
+msgstr ""
+"|radioButtonOn| :guilabel:`Koordináta-rendszer meghagyása ismeretlennek (ne tegyen semmit)`: nem fog rákérdezni a koordináta-rendszer kiválasztására, ha egy koordináta-rendszer nélküli réteget tölt be, így azt későbbi időpontra halasztja. Kényelmes, ha több réteget tölt be egyszerre. Az ilyen rétegek mellett a :guilabel:`Rétegek` panelen |indicatorNoCRS| ikon látható. Ezek a rétegek nem lesznek hivatkozva, a \n"
+"koordinátáikat pusztán számnak, Földtől független értéknek tekintjük, ami hasonló viselkedés, mint ami minden réteggel történik, ha :ref:`a projekt koordináta-rendszer nélkülinek van beállítva <project_crs>`."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:442
 msgid "radioButtonOn"
@@ -387,6 +427,20 @@ msgstr ""
 "rendszerre, hogy az eredeti koordináta-rendszerüktől függetlenül fedjék "
 "egymást. A mértékegységek használata és az ellipszoid beállítás elérhető és "
 "van is értelme, ezeknek megfelelően végezhet számításokat."
+
+#: ../../docs/user_manual/working_with_projections/working_with_projections.rst:187
+msgid ""
+"If you change your project's CRS and want the units (for distance and area) "
+"to match the units defined by the CRS, make sure you have selected "
+":guilabel:`Map units` in the relevant settings, in the :guilabel:`General` "
+"tab of the :menuselection:`Project --> Properties…` dialog."
+msgstr ""
+"Ha megváltoztatja a projekt koordináta-rendszerét, és szeretné, hogy a "
+"mértékegységek (távolság és terület) megegyezzenek a koordináta-rendszer "
+"által meghatározott mértékegységekkel, győződjön meg arról, hogy a "
+":menuselection:`Projekt --> Tulajdonságok…` párbeszédablak "
+":guilabel:`Általános` fülén a megfelelő beállítások között kiválasztotta a "
+":guilabel:`Térképi egység` opciót."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:192
 msgid "**Setting the project CRS from a layer**"
