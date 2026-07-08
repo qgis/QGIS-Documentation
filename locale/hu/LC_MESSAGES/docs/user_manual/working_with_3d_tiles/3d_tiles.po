@@ -73,9 +73,78 @@ msgstr ""
 "Az adatok QGIS-hez való hozzáadásának módjáról szóló útmutatóért lásd: "
 "ref:`3d_tiles`."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:33
+msgid "State of 3D Tiles Support"
+msgstr "A 3D-s csempék támogatásának állapota"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:35
 msgid "Currently, QGIS supports two formats of 3D tiles:"
 msgstr "Jelenleg a QGIS kétféle 3D csempeformátumot támogat:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:37
+msgid ""
+"`\"Cesium\" 3D Tiles <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ are "
+"used primarily for complex 3D models of buildings or whole cities. Such "
+"datasets can be provided by cloud-based platforms such as Cesium Ion or "
+"Google (*Photorealistic 3D Tiles*)."
+msgstr ""
+"`\"Cesium\" 3D csempéket <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ "
+"elsősorban épületek vagy egész városok komplex 3D-modelljeihez használják. "
+"Az ilyen adathalmazokat felhőalapú platformok, például a Cesium Ion vagy a "
+"Google (*Photorealistic 3D Tiles*) biztosíthatják."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:40
+msgid ""
+"`Quantized Mesh <https://github.com/CesiumGS/quantized-mesh>`_  tiles are "
+"used for terrain elevation data."
+msgstr ""
+"A `Kvantált hálók <https://github.com/CesiumGS/quantized-mesh>`_ "
+"terepmagassági adatokhoz használatos csempék."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:42
+msgid "Supported *3D Tiles* features:"
+msgstr "Támogatott *3D csempe* képességek:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:44
+msgid ""
+"QGIS currently has partial support for 3D Tiles 1.0 and partial support for "
+"3D Tiles 1.1."
+msgstr ""
+"A QGIS jelenleg részlegesen támogatja a 3D Tiles 1.0 és a 3D Tiles 1.1 "
+"szabványokat."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:46
+msgid ""
+"For 3D Tiles 1.0, the tile format Batched 3D Model (``b3dm``) is supported. "
+"The tile formats Instanced 3D Model (``i3dm``), Point Cloud (``pnts``) and "
+"Composite (``cmpt``) are not supported yet."
+msgstr ""
+"A 3D Tiles 1.0 verzióban a „Batched 3D Model” („b3dm”) csempefájl-formátum "
+"támogatott. Az „Instanced 3D Model” („i3dm”), a „Point Cloud” („pnts”) és a "
+"„Composite” („cmpt”) csempefájl-formátumok egyelőre nem támogatottak."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:49
+msgid ""
+"For 3D Tiles 1.1, the ``3DTILES_content_gltf`` extension is supported, so "
+"tile contents may also be encoded as glTF 2.0 (text or binary). The "
+"``EXT_mesh_gpu_instancing`` extension is not supported yet."
+msgstr ""
+"A 3D Tiles 1.1 verzióban támogatott a „3DTILES_content_gltf” kiterjesztés, "
+"így a csempe tartalma glTF 2.0 formátumban (szöveges vagy bináris) is "
+"kódolható. Az „EXT_mesh_gpu_instancing” kiterjesztés egyelőre nem "
+"támogatott."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:52
+msgid ""
+"Currently only explicit tiling is supported. Implicit tiling is not "
+"supported yet."
+msgstr ""
+"Jelenleg csak az explicit csempézés támogatott. Az implicit csempézés "
+"egyelőre nem támogatott."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
+msgid "Currently only tilesets using EPSG:4978 are supported."
+msgstr "Jelenleg csak az EPSG:4978-at használó csempekészletek támogatottak."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:60
 msgid "3D Tiles Properties"
@@ -105,9 +174,17 @@ msgstr "|system| :ref:`Forrás <3dtilessourcemenu>`"
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:68
+msgid "|symbology| :ref:`Symbology <3dtilessymbologymenu>` ([1]_)"
+msgstr "|symbology| :ref:`Jelrendszer <3dtilessymbologymenu>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:248
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:69
+msgid "|3d| :ref:`3D View <3dtiles3dviewmenu>` ([1]_)"
+msgstr "|3d| :ref:`3D nézet <3dtiles3dviewmenu>` ([1]_)"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:230
 msgid "3d"
@@ -121,6 +198,10 @@ msgstr "|rendering| :ref:`Megjelenítés <3dtilesrenderingmenu>`"
 msgid "rendering"
 msgstr "rendering"
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:71
+msgid "|elevationscale| :ref:`Elevation <3dtileselevationmenu>` ([1]_)"
+msgstr "|elevationscale| :ref:`Magasság <3dtileselevationmenu>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:236
 msgid "elevationscale"
 msgstr "elevationscale"
@@ -132,6 +213,10 @@ msgstr "|editMetadata| :ref:`Metaadatok <3dtilesmetadatamenu>`"
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:234
 msgid "editMetadata"
 msgstr "editMetadata"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:76
+msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
+msgstr "Elérhetőek a :ref:`Rétegstílus panelről <layer_styling_panel>` is"
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:82
 msgid "Information Properties"
@@ -284,9 +369,56 @@ msgstr ""
 " a renderelési folyamatot. A beállítások egyéni igényekre szabásához "
 "különböző mértékegységek választhatók."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:155
+msgid ""
+":guilabel:`Opacity`: Adjusts the visibility of the underlying layer on the "
+"map canvas using this tool. Use slider to tailor the visibility of your "
+"scene layer according to your preferences. Alternatively, specify the exact "
+"percentage of visibility through the menu next to the slider."
+msgstr ""
+":guilabel:`Átlátszatlanság`: Ezzel az eszközzel állíthatja be az alatta lévő"
+" rétegek láthatóságát a térképvásznon. A csúszkával a saját igényeinek "
+"megfelelően állíthatja be a jelenetréteg láthatóságát. Alternatív "
+"megoldásként a csúszka melletti mezőben adhatja meg a láthatóság pontos, "
+"százalékos értékét."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:159
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"these tools that you may previously only know from graphics programs. The "
+"pixels of your overlaying and underlying layers are mixed through the "
+"settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Keverési mód`: Ezekkel az eszközökkel olyan különleges "
+"megjelenítési hatásokat érhet el, amelyeket korábban csak a grafikus "
+"programokból ismerhetett. Az átfedő és az alatta lévő rétegek pixelei a "
+":ref:`blend-modes` pontban leírtak szerint lesznek keverve."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:167
 msgid "3D View Properties"
 msgstr "3D nézet tulajdonságai"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:169
+msgid ""
+":guilabel:`Maximum screen space error`: Determines the threshold for "
+"swapping terrain tiles with more detailed ones (and vice versa) - i.e. how "
+"soon the 3D view will use higher quality tiles. Lower numbers mean more "
+"details in the scene at the expenses of increased rendering complexity."
+msgstr ""
+"A :guilabel:`Maximális képernyőterületi hiba`: Meghatározza a terepcsempék "
+"részletesebbre cserélésének küszöbértékét (és fordítva), vagyis hogy a 3D "
+"nézet milyen hamar kezdjen nagyobb felbontású csempéket használni. Kisebb "
+"szám részletgazdagabb jelenetet eredményez az összetettebb megjelenítés "
+"rovására."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:174
+msgid ""
+"|unchecked| :guilabel:`Show bounding boxes`: Shows 3D bounding boxes of the "
+"terrain tiles (useful for troubleshooting terrain issues)."
+msgstr ""
+"|unchecked| :guilabel:`Befoglaló téglalapok megjelenítése`: Megjeleníti a "
+"terepcsempék 3D-s befoglaló téglalapjait (hasznos a terepproblémák "
+"elhárításához)."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:252
 msgid "unchecked"
