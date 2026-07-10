@@ -237,7 +237,6 @@ on the geometry type of the symbol:
      :width: 50%
 
      Physically based (with textures) configuration.
-* :guilabel:`Embedded Textures` with 3D models shape.
 
 
 Application example
