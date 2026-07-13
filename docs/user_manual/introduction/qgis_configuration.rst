@@ -2000,7 +2000,7 @@ to use in this project. It can be:
 * |checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`:
   layers are drawn based on their raw coordinates
 * or an existing coordinate reference system that can be *geographic*,
-  *projected* or *user-defined*. Layers added to the project are translated
+  *projected*, *user-defined* or *topocentric*. Layers added to the project are translated
   on-the-fly to this CRS in order to overlay them regardless their original CRS.
 
 Transformations Properties
