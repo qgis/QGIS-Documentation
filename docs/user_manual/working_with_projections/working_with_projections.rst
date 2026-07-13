@@ -177,8 +177,8 @@ Available options are:
     forced to "unknown units"; all measurements are done in unknown map units,
     and no conversion is possible.
 
-* or an existing coordinate reference system that can be *geographic*, *projected*
-  or *user-defined*. A preview of the CRS extent on earth is displayed to
+* or an existing coordinate reference system that can be *geographic*, *projected*,
+  *user-defined* or *topocentric*. A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
   Layers added to the project are translated on-the-fly to this CRS in order
   to overlay them regardless of their original CRS. Use of units and ellipsoid setting
