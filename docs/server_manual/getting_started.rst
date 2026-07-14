@@ -1042,6 +1042,11 @@ To configure metadata for a group of layers:
    * a :guilabel:`Metadata URL`: the URL of a metadata document for the layer group.
    * a :guilabel:`Legend URL`: the URL of a legend image for the layer group.
 
+#. :guilabel:`Group request mode` controls the visibility of child layers in WMS.
+   The default value is :guilabel:`Normal`, where child layers are listed and
+   can be requested individually. If set to :guilabel:`Opaque`, child layers are
+   hidden and cannot be requested directly, but are still rendered when the
+   group is requested.
 #. Optionally, you can check |checkbox| :guilabel:`Compute TIME dimension from children`
    to have QGIS Server compute the TIME dimension for the group
    based on the TIME dimensions of its child layers.

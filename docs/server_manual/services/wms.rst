@@ -675,6 +675,55 @@ Available values are:
 - ``application/vnd.ogc.gml``
 - ``application/json``
 
+When using ``application/vnd.ogc.gml``, NULL field values responses are 
+returned as ``xsi:nil="true"``.
+
+When using ``application/json`` as the ``INFO_FORMAT`` value, the response
+follows the `JSON-FG <https://docs.ogc.org/DRAFTS/21-045.html>`_ specification.
+Each feature in the response includes a ``featureType`` member indicating
+the name of the source layer:
+
+.. code-block:: json
+
+   {
+     "type": "FeatureCollection",
+     "features": [
+       {
+         "featureType": "continents",
+         "type": "Feature",
+         "id": "continents.1646",
+         "geometry": null,
+         "properties": {
+           "NAME_0": "Czech Republic",
+           "NAME_1": "Stredocesky"
+         }
+       }
+     ]
+   }
+
+If the request targets a layer group instead of an individual layer, an
+additional ``qgis:requestedWmsName`` member is included, indicating the
+name of the requested group:
+
+.. code-block:: json
+
+   {
+     "type": "FeatureCollection",
+     "features": [
+       {
+         "featureType": "continents",
+         "qgis:requestedWmsName": "grouptest",
+         "type": "Feature",
+         "id": "continents.1646",
+         "geometry": null,
+         "properties": {
+           "NAME_0": "Czech Republic",
+           "NAME_1": "Stredocesky"
+         }
+       }
+     ]
+   }
+
 .. _wms_querylayers:
 
 QUERY_LAYERS
@@ -2089,6 +2138,10 @@ The :ref:`GetMap <wms_getmap>` request is in the format:
  &HIGHLIGHT_LABELCOLOR=%23000000
  &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &HIGHLIGHT_LABELBUFFERSIZE=1.5
+ &HIGHLIGHT_LABELFRAMEBACKGROUNDCOLOR=%23FFFF00
+ &HIGHLIGHT_LABELFRAMEOUTLINECOLOR=%23FF0000
+ &HIGHLIGHT_LABELFRAMEOUTLINEWIDTH=2
+ &HIGHLIGHT_LABELFRAMESIZE=5
 
 
 The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that
@@ -2107,6 +2160,10 @@ The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that
  &map0:HIGHLIGHT_LABELCOLOR=%23000000
  &map0:HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
  &map0:HIGHLIGHT_LABELBUFFERSIZE=1.5
+ &map0:HIGHLIGHT_LABELFRAMEBACKGROUNDCOLOR=%23FFFF00
+ &map0:HIGHLIGHT_LABELFRAMEOUTLINECOLOR=%23FF0000
+ &map0:HIGHLIGHT_LABELFRAMEOUTLINEWIDTH=2
+ &map0:HIGHLIGHT_LABELFRAMESIZE=5
 
 Here is the image outputted by the above request in which a polygon and
 a label are drawn on top of the normal map:
@@ -2134,6 +2191,14 @@ the redlining feature. The full list includes:
   (e.g. point or line) and the label in mm
 * **HIGHLIGHT_LABELFONT**: This parameter controls the font of the
   label (e.g. Arial)
+* **HIGHLIGHT_LABELFRAMEBACKGROUNDCOLOR**: This parameter controls the
+  background color of the label frame.
+* **HIGHLIGHT_LABELFRAMEOUTLINECOLOR**: This parameter controls the
+  outline color of the label frame.
+* **HIGHLIGHT_LABELFRAMEOUTLINEWIDTH**: This parameter controls the
+  outline width of the label frame.
+* **HIGHLIGHT_LABELFRAMESIZE**: This parameter controls the size of
+  the label frame. A frame is only drawn if the value is greater than ``0``.
 * **HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally
   on a point using the specified alignment (e.g. 'left', 'center', 'right')
 * **HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees
