@@ -675,7 +675,7 @@ Available values are:
 - ``application/vnd.ogc.gml``
 - ``application/json``
 
-When using ``application/vnd.ogc.gml``, NULL field values responses are 
+When using ``application/vnd.ogc.gml``, NULL field values responses are
 returned as ``xsi:nil="true"``.
 
 When using ``application/json`` as the ``INFO_FORMAT`` value, the response
