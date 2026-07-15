@@ -1,4 +1,4 @@
-FROM qgis/qgis:latest
+FROM qgis/qgis:4.2
 
 # Install requirement first to use caching
 COPY REQUIREMENTS.txt /documentation/REQUIREMENTS.txt
