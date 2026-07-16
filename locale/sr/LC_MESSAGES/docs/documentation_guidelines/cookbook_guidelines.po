@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Vladimir Vukovic, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
+"Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti "
+"<translation_guidelines>`. Ova stranica je trenutno prevedena na "
+"|translation progress||."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:6
+msgid "Writing code in the PyQGIS Cookbook"
+msgstr "Pisanje koda u PyQGIS knjizi"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:13
+msgid ""
+"If you are planning to add or update some chapters of the :ref:`PyQGIS-"
+"Developer-Cookbook`, then you should follow some rules to enable automatic "
+"testing of the code snippets."
+msgstr ""
+"Ako planirate da dodate ili ažurirate neka poglavlja u :ref:`PyQGIS-"
+"Developer-Cookbook`, onda bi trebalo da sledite neka pravila kako biste "
+"omogućili automatsko testiranje isečaka koda."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:17
+msgid ""
+"Testing is really important because it allows automatic checking of the "
+"code. Code snippets with errors or code that uses outdated methods will fail"
+" and the notification will help you fix the problems."
+msgstr ""
+"Testiranje je zaista važno jer omogućava automatsku proveru koda. Isečci "
+"koda sa greškama ili kod koji koristi zastarele metode neće uspeti, a "
+"obaveštenje će vam pomoći da rešite probleme."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:21
+msgid ""
+"For testing, we use the `Sphinx doctest extension <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Refer to the extension "
+"documentation for more detailed information."
+msgstr ""
+"Za testiranje koristimo `Sphinx doctest ekstenziju <https://www.sphinx-"
+"doc.org/en/master/usage/extensions/doctest.html>`_. Za detaljnije "
+"informacije pogledajte dokumentaciju o ekstenziji."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:27
+msgid "How to write testable code snippets"
+msgstr "Kako napisati testirane fragmente koda"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:29
+msgid ""
+"Writing testable code snippets is not so different from the *old* method. "
+"Basically, you need to use a different Sphinx `directive`."
+msgstr ""
+"Pisanje testabilnih fragmenata koda se ne razlikuje toliko od *stare* "
+"metode. U osnovi, potrebno je da koristite drugačiju Sphinx `direktivu`."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:33
+msgid "Doctest sphinx directives"
+msgstr "Direktive Doctest sphinx-a"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:35
+msgid ""
+"Instead of embedding the code in a ``.. code-block:: python`` directive "
+"(which would highlight the code syntax automatically), you now need to embed"
+" it in a ``.. testcode::``. That is, instead of  this::"
+msgstr ""
+"Umesto ugrađivanja koda u direktivu „.. code-block::python“ (što bi "
+"automatski istaklo sintaksu koda), sada ga treba ugraditi u „.. "
+"testcode::``. To jest, umesto ovoga::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:44
+msgid "You now use this::"
+msgstr "Sada koristite ovo::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:51
+msgid ""
+"After you wrote the example code, you should add some *assertion* that will "
+"evaluate the code and that will be run automatically."
+msgstr ""
+"Nakon što ste napisali primer koda, trebalo bi da dodate *tvrdnju* koja će "
+"proceniti kod i koja će se automatski pokrenuti."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:54
+msgid ""
+"In the above example, you are creating a crs and with ``assert "
+"crs.isValid()`` you **test** if it is valid. If the code has a wrong python "
+"syntax or the ``crs.isValid()`` returns ``False``, this code snippet will "
+"fail during testing."
+msgstr ""
+"U gornjem primeru, kreirate crs i pomoću ``assert crs.isValid()`` "
+"**testirate** da li je validan. Ako kod ima pogrešnu sintaksu Pajtona ili "
+"``crs.isValid()`` vrati ``False``, ovaj isečak koda će biti neuspešan tokom"
+" testiranja."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:58
+msgid ""
+"To successfully run the tests on snippets, you must import all the classes "
+"and declare any variables used in the code snippets. You can include those "
+"in the code snippet itself (visible in the HTML pages) or you can add them "
+"to a ``.. testsetup::`` directive (hidden in the HTML pages). The ``.. "
+"testsetup::`` needs to be placed before the ``.. testcode::``::"
+msgstr ""
+"Da biste uspešno pokrenuli testove na fragmentima koda, morate da uvezete "
+"sve klase i deklarišete sve promenljive koje se koriste u fragmentima koda. "
+"Možete ih uključiti u sam fragment koda (vidljiv na HTML stranicama) ili ih "
+"možete dodati u direktivu ``.. testsetup::`` (skrivenu na HTML stranicama). "
+"``.. testsetup::`` mora biti postavljeno ispred ``.. testcode::``::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:73
+msgid ""
+"If the code snippet doesn't create objects (and therefore you cannot use "
+"something like ``assert object.isValid()``), you can test the code using the"
+" ``print()`` method, then add the expected results within a ``.. "
+"testoutput::`` directive to compare the expected output::"
+msgstr ""
+"Ako isečak koda ne kreira objekte (i stoga ne možete koristiti nešto poput "
+"``assert object.isValid()``), možete testirati kod koristeći metod "
+"``print()``, a zatim dodati očekivane rezultate unutar direktive ``.. "
+"testoutput::`` da biste uporedili očekivani izlaz::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:88
+msgid ""
+"By default, the content of ``.. testoutput::`` is shown in the HTML output. "
+"To hide it from the HTML use the `:hide:` option::"
+msgstr ""
+"Podrazumevano, sadržaj ``.. testoutput::`` se prikazuje u HTML izlazu. Da "
+"biste ga sakrili iz HTML-a, koristite opciju `:hide:`."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:99
+msgid ""
+"If the code snippet contains any print statements, you MUST add a "
+"``testoutput`` with the expected outputs; otherwise the test will fail."
+msgstr ""
+"Ako isečak koda sadrži bilo kakve naredbe za štampanje, MORATE dodati "
+"„testoutput“ sa očekivanim izlazima; u suprotnom test neće uspeti."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:103
+msgid "Grouping tests"
+msgstr "Grupisanje testova"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:105
+msgid ""
+"For each reST document, the code snippets are tested sequentially, which "
+"means you can use one ``.. testsetup::`` for all the following code snippets"
+" and that later snippets will have access to variables declared in earlier "
+"ones in the document."
+msgstr ""
+"Za svaki reST dokument, fragmenti koda se testiraju sekvencijalno, što znači"
+" da možete koristiti jedan ``.. testsetup::`` za sve sledeće fragmente koda"
+" i da će kasniji fragmenti imati pristup promenljivim deklarisanim u "
+"ranijim u dokumentu."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:109
+msgid ""
+"Alternatively, you can use groups to break down the examples on the same "
+"page in different tests."
+msgstr ""
+"Alternativno, možete koristiti grupe da biste razložili primere na istoj "
+"stranici u različitim testovima."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:112
+msgid ""
+"You add the code snippet to groups by adding one or more group names "
+"(separated by commas) in the respective directive::"
+msgstr ""
+"Isečak koda dodajete grupama dodavanjem jednog ili više imena grupa "
+"(odvojenih zarezima) u odgovarajućoj direktivi::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:120
+msgid ""
+"The ``doctest`` will pick each group snippets and run them independently."
+msgstr "„doctest“ će odabrati svaki fragment grupe i pokrenuti ih nezavisno."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:124
+msgid ""
+"Use group names that make sense with the related content. Use something "
+"similar to <chapter>_<subchapter>, for example: crs_intro, crs_fromwkt. In "
+"case of failures, this will help identifying where the failures occur."
+msgstr ""
+"Koristite imena grupa koja imaju smisla sa povezanim sadržajem. Koristite "
+"nešto slično kao <chapter>_<subchapter>, na primer: crs_intro, crs_fromwkt. "
+"U slučaju kvarova, ovo će pomoći da se identifikuje gde se kvarovi "
+"javljaju."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:129
+msgid ""
+"If you don't declare any group, the code snippet will be added to a group "
+"named ``default``. If instead, you use ``*`` as a group name, the snippet "
+"will be used in all testing groups, something normally useful to use in the "
+"test setup::"
+msgstr ""
+"Ako ne deklarišete nijednu grupu, isečak koda će biti dodat grupi pod "
+"nazivom „default“. Ako umesto toga koristite „*“ kao naziv grupe, isečak "
+"koda će se koristiti u svim grupama za testiranje, što je obično korisno za"
+" upotrebu u podešavanju testa:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:138
+msgid "How to test snippets on your local machine"
+msgstr "Kako testirati isečke koda na lokalnoj mašini"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:140
+msgid "Instructions are valid for Linux system."
+msgstr "Uputstva važe za Linux sistem."
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:142
+msgid ""
+"To test Python code snippets, you need a *QGIS* installation. For this, "
+"there are many options. You can:"
+msgstr ""
+"Da biste testirali fragmente Pajton koda, potrebna vam je instalacija "
+"*QGIS*. Za ovo postoji mnogo opcija. Možete:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:145
+msgid ""
+"Use your system *QGIS* installation with *Sphinx* from a Python virtual "
+"environment::"
+msgstr ""
+"Koristite instalaciju vašeg sistema *QGIS* sa *Sphinx* iz virtuelnog "
+"okruženja Python::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:150
+msgid "Use a manually built installation of *QGIS*. You'd need to:"
+msgstr "Koristite ručno izgrađenu instalaciju *QGIS*-a. Potrebno vam je:"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:152
+msgid ""
+"Create a custom ``Makefile`` extension on top of the :file:`venv.mk` file, "
+"for example a :file:`user.mk` file with the following content::"
+msgstr ""
+"Napravite prilagođenu ekstenziju ``Makefile`` preko datoteke "
+":file:`venv.mk`, na primer datoteku :file:`user.mk` sa sledećim sadržajem::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:160
+msgid "Or ::"
+msgstr "Ili ::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:167
+msgid "Then, use it to run target ``doctest``::"
+msgstr "Zatim, koristite ga za pokretanje cilja ``doctest``::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:171
+msgid "Run target ``doctest`` inside the official *QGIS* docker image::"
+msgstr ""
+"Pokrenite ciljnu komandu ``doctest`` unutar zvanične *QGIS* doker slike::"
+
+#: ../../docs/documentation_guidelines/cookbook_guidelines.rst:175
+msgid ""
+"You have to install `Docker <https://www.docker.com/>`_ first because this "
+"uses a docker image with QGIS in it."
+msgstr ""
+"Prvo morate instalirati `Docker <https://www.docker.com/>`_ jer on koristi "
+"Docker sliku sa QGIS-om u njoj."
