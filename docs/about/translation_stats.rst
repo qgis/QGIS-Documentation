@@ -103,66 +103,66 @@ Statistics of translation
      - |stats_ml|
    * - Maori
      - |stats_mi|
-     - Mara
-     - |stats_mrh|
      - Marathi
      - |stats_mr|
-   * - Mongolian
+     - Mongolian
      - |stats_mn|
-     - N'ko
+   * - N'ko
      - |stats_nqo|
      - Nepali
      - |stats_ne|
-   * - Norwegian Bokmål
+     - Norwegian Bokmål
      - |stats_nb|
-     - Persian
+   * - Persian
      - |stats_fa|
      - Polish
      - |stats_pl|
-   * - Portuguese (Brazil)
+     - Portuguese (Brazil)
      - |stats_pt_BR|
-     - Portuguese (Portugal)
+   * - Portuguese (Portugal)
      - |stats_pt_PT|
      - Romanian
      - |stats_ro|
-   * - Russian
+     - Russian
      - |stats_ru|
-     - Serbian
+   * - Serbian
      - |stats_sr|
      - Slovak
      - |stats_sk|
-   * - Slovenian
+     - Slovenian
      - |stats_sl|
-     - Spanish
+   * - Spanish
      - |stats_es|
      - Swahili
      - |stats_sw|
-   * - Swedish
+     - Swedish
      - |stats_sv|
-     - Tagalog
+   * - Tagalog
      - |stats_tl|
      - Tamil
      - |stats_ta|
-   * - Telugu
+     - Telugu
      - |stats_te|
-     - Thai
+   * - Thai
      - |stats_th|
      - Turkish
      - |stats_tr|
-   * - Ukrainian
+     - Ukrainian
      - |stats_uk|
-     - Urdu
+   * - Urdu
      - |stats_ur|
      - Vietnamese
      - |stats_vi|
+     -
+     -
 
 
 .. list of substitutions for the statistics:
 
-.. |stats_today| replace:: *2026-07-15*
+.. |stats_today| replace:: *2026-07-16*
 .. |stats_total_strings| replace:: **32585**
-.. |stats_nb_languages| replace:: **63**
-.. |stats_global_percentage| replace:: **15.46%**
+.. |stats_nb_languages| replace:: **62**
+.. |stats_global_percentage| replace:: **15.71%**
 
 .. |stats_ar| replace:: 4.87
 .. |stats_az| replace:: 0.11
@@ -199,7 +199,6 @@ Statistics of translation
 .. |stats_ml| replace:: 0.16
 .. |stats_mn| replace:: 0.16
 .. |stats_mr| replace:: 0.13
-.. |stats_mrh| replace:: 0.11
 .. |stats_ms| replace:: 0.08
 .. |stats_my| replace:: 0.16
 .. |stats_nb| replace:: 2.62
@@ -214,7 +213,7 @@ Statistics of translation
 .. |stats_sk| replace:: 1.32
 .. |stats_sl| replace:: 2.5
 .. |stats_sq| replace:: 0.55
-.. |stats_sr| replace:: 1.28
+.. |stats_sr| replace:: 1.37
 .. |stats_sv| replace:: 91.15
 .. |stats_sw| replace:: 0.24
 .. |stats_ta| replace:: 10.74
