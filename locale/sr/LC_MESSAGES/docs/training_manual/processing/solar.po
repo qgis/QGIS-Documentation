@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Transifex Bot <>, 2026
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
+"Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/training_manual/processing/solar.rst:2
+msgid "Planning a solar farm"
+msgstr "Planiranje solarne farme"
+
+#: ../../docs/training_manual/processing/solar.rst:4
+msgid "Module contributed by Paolo Cavallini - `Faunalia`_"
+msgstr "Modul doprineo Paolo Cavallini - `Faunalija`_"
+
+#: ../../docs/training_manual/processing/solar.rst:6
+msgid ""
+"This chapter shows how to use several criteria to locate the areas suitable "
+"for installing a photovoltaic power station"
+msgstr ""
+"Ovo poglavlje pokazuje kako koristiti nekoliko kriterijuma za lociranje "
+"područja pogodnih za instaliranje fotonaponske elektrane."
+
+#: ../../docs/training_manual/processing/solar.rst:8
+msgid "First of all, create an aspect map from DTM:"
+msgstr "Prvo, kreirajte mapu aspekata iz DTM-a:"
+
+#: ../../docs/training_manual/processing/solar.rst:10
+msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+
+#: ../../docs/training_manual/processing/solar.rst:12
+msgid ""
+"In GRASS, aspect is calculated in degrees, counterclockwise starting from "
+"East. To extract only South facing slopes (270 degrees +- 45), we can "
+"reclassify it:"
+msgstr ""
+"U GRASS-u, aspekt se izračunava u stepenima, suprotno od kazaljke na satu "
+"počevši od istoka. Da bismo izvukli samo padine okrenute ka jugu (270 "
+"stepeni +- 45), možemo ga preklasifikovati:"
+
+#: ../../docs/training_manual/processing/solar.rst:14
+msgid ":menuselection:`GRASS --> r.reclass`"
+msgstr ":menuselection:`GRASS --> r.reclass`"
+
+#: ../../docs/training_manual/processing/solar.rst:16
+msgid "with the following rules::"
+msgstr "sa sledećim pravilima::"
+
+#: ../../docs/training_manual/processing/solar.rst:21
+msgid ""
+"You can use the text file ``reclass_south.txt`` provided. Note that with "
+"these simple text files we can create also very complex reclassifications."
+msgstr ""
+"Možete koristiti priloženu tekstualnu datoteku ``reclass_south.txt``. Imajte"
+" na umu da pomoću ovih jednostavnih tekstualnih datoteka možemo kreirati i "
+"veoma složene reklasifikacije."
+
+#: ../../docs/training_manual/processing/solar.rst:23
+msgid ""
+"We want to build a large farm, so we select only large (> 100 ha) contiguous"
+" areas:"
+msgstr ""
+"Želimo da izgradimo veliku farmu, pa biramo samo velika (> 100 ha) susedna "
+"područja:"
+
+#: ../../docs/training_manual/processing/solar.rst:25
+msgid ":menuselection:`GRASS --> r.reclass.greater`"
+msgstr ":menuselection:`GRASS --> r.reclass.greater`"
+
+#: ../../docs/training_manual/processing/solar.rst:27
+msgid "Finally, we convert to a vector:"
+msgstr "Konačno, konvertujemo u vektor:"
+
+#: ../../docs/training_manual/processing/solar.rst:29
+msgid ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+msgstr ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+
+#: ../../docs/training_manual/processing/solar.rst:31
+msgid ""
+"**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
+"with analogous from other programs."
+msgstr ""
+"**Vežba za čitaoca**: ponovite analizu, zamenjujući GRASS komande analognim"
+" iz drugih programa."
