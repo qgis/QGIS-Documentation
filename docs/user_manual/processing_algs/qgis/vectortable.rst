@@ -930,13 +930,13 @@ The Refactor fields algorithm allows to:
 * Calculate new fields based on expressions
 * Load field list from another layer
 
-.. note:: This algorithm uses ellipsoid based measurements
-  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
-
 .. figure:: img/refactor_fields.png
   :align: center
 
   Refactor fields dialog
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 Parameters
 ..........
