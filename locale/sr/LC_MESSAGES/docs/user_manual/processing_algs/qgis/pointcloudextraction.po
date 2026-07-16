@@ -6,78 +6,512 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-19 21:53+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
 "Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:2
+msgid "Point Cloud Extraction"
+msgstr "Izdvajanje iz oblaka tačaka"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:10
+msgid ""
+"Running these algorithms requires QGIS installed with PDAL_ >= 2.5.0 (see "
+":menuselection:`Help --> About` menu)."
+msgstr ""
+"Pokretanje ovih algoritama zahteva QGIS instaliran sa PDAL_ >= 2.5.0 "
+"(pogledajte meni :menuselection:`Pomoć --> O programu`)."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:16
+msgid "Boundary"
+msgstr "Granica"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:17
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:130
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:255
+msgid "``Added in 3.32``"
+msgstr "``Dodato u 3.32``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:19
+msgid ""
+"Exports a polygon file containing point cloud layer boundary. It may contain"
+" holes and it may be a multi-part polygon."
+msgstr ""
+"Izvozi poligonsku datoteku koja sadrži granicu sloja oblaka tačaka. Može "
+"sadržati rupe i može biti višedelni poligon."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:25
+msgid ""
+"Extracting high vegetation and building polygons from an input point cloud "
+"layer"
+msgstr ""
+"Izdvajanje poligona visoke vegetacije i zgrada iz ulaznog sloja oblaka "
+"tačaka"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:28
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:141
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:265
+msgid "Parameters"
+msgstr "Parametri"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:31
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:144
+msgid "Basic parameters"
+msgstr "Osnovni parametri"
 
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:77
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:106
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:150
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:189
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:231
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:270
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:314
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:151
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:190
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:232
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:272
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:316
+msgid "Label"
+msgstr "Oznaka"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:78
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:107
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:152
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:191
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:273
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:317
 msgid "Name"
 msgstr "Назив"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:42
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:154
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:40
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:79
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:108
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:153
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:234
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:274
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:318
+msgid "Type"
+msgstr "Tip"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:41
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:80
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:109
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:154
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:193
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:235
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:319
+msgid "Description"
+msgstr "Opis"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:42
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:155
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:276
+msgid "**Input layer**"
+msgstr "**Ulazni sloj**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:43
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:156
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:277
 msgid "``INPUT``"
 msgstr "``INPUT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:157
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:322
+msgid "[point cloud]"
+msgstr "[oblak tačaka]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:45
+msgid "Input point cloud layer to calculate boundary for"
+msgstr "Ulazni sloj oblaka tačaka za koji se izračunava granica"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:46
+msgid "**Resolution of cells used to calculate boundary**"
+msgstr "**Rezolucija ćelija koje se koriste za izračunavanje granice**"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:48
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:158
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:83
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:89
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:196
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:202
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:213
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:219
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:282
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:288
+msgid "Optional"
+msgstr "Opciono"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:160
 msgid "``RESOLUTION``"
 msgstr "``RESOLUTION``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:54
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:50
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:161
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:215
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:221
+msgid "[numeric: double]"
+msgstr "[numerički: decimalni]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:51
+msgid "Resolution of cells used to calculate boundary"
+msgstr "Rezolucija ćelija koje se koriste za izračunavanje granice"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:52
+msgid "**Minimal number of points in a cell to consider cell occupied**"
+msgstr "**Najmanji broj tačaka u ćeliji da bi se ćelija smatrala zauzetom**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:55
 msgid "``THRESHOLD``"
 msgstr "``THRESHOLD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:56
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:167
+msgid "[numeric: integer]"
+msgstr "[numerički: ceo broj]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:57
+msgid "Minimal number of points in a cell to consider cell occupied"
+msgstr "Najmanji broj tačaka u ćeliji da bi se ćelija smatrala zauzetom"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:58
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:110
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:170
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:235
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:295
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:318
+msgid "**Boundary**"
+msgstr "**Granica**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:59
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:172
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:237
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:321
 msgid "``OUTPUT``"
 msgstr "``OUTPUT``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:83
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:195
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:60
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:112
+msgid "[vector: polygon]"
+msgstr "[vektor: poligon]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:175
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:301
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Podrazumevano: ``[Save to temporary file]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:63
+msgid ""
+"Specify the point cloud file to use as output. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Zadajte datoteku oblaka tačaka koja se koristi kao izlaz. :ref:`Jedno od "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Save to a Temporary File"
+msgstr "Sačuvaj u privremenu datoteku"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:4
+msgid "Save to File…"
+msgstr "Sačuvaj u datoteku…"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:70
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:183
+msgid "Advanced parameters"
+msgstr "Napredni parametri"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:81
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:194
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:280
+msgid "**Filter expression**"
+msgstr "**Izraz za filtriranje**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:84
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:197
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:283
 msgid "``FILTER_EXPRESSION``"
 msgstr "``FILTER_EXPRESSION``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:89
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:201
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:85
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:198
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:284
+msgid "[expression]"
+msgstr "[izraz]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:86
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:199
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:285
+msgid ""
+"A :ref:`PDAL expression <pdal_expressions>` for selecting a subset of "
+"features in the point cloud data"
+msgstr ""
+":ref:`PDAL izraz <pdal_expressions>` za izbor podskupa objekata u podacima "
+"oblaka tačaka"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:87
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:200
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:286
+msgid "**Cropping extent**"
+msgstr "**Obuhvat isecanja**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:90
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:203
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:289
 msgid "``FILTER_EXTENT``"
 msgstr "``FILTER_EXTENT``"
 
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:91
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:204
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:290
+msgid "[extent]"
+msgstr "[obuhvat]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:92
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:205
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:291
+msgid ""
+"A map extent for selecting a subset of features in the point cloud data"
+msgstr "Obuhvat karte za izbor podskupa objekata u podacima oblaka tačaka"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:3
+msgid "Available methods are:"
+msgstr "Dostupni metodi su:"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:5
+msgid ""
+"Calculate from layer…: uses extent of a layer loaded in the current project"
+msgstr ""
+"Izračunaj iz sloja…: koristi obuhvat sloja učitanog u tekućem projektu"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:6
+msgid ""
+"Calculate from layout map…: uses extent of a :ref:`layout map item "
+"<layout_map_item>` in the active project"
+msgstr ""
+"Izračunaj iz karte rasporeda…: koristi obuhvat :ref:`stavke karte u "
+"rasporedu <layout_map_item>` u aktivnom projektu"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"Calculate from bookmark…: uses extent of a saved :ref:`bookmark "
+"<sec_bookmarks>`"
+msgstr ""
+"Izračunaj iz obeleživača…: koristi obuhvat sačuvanog :ref:`obeleživača "
+"<sec_bookmarks>`"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:9
+msgid "Use map canvas extent"
+msgstr "Koristi obuhvat platna karte"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:10
+msgid ""
+"Draw on canvas: click and drag a rectangle delimiting the area to take into "
+"account"
+msgstr ""
+"Nacrtaj na platnu: klikom i prevlačenjem nacrtajte pravougaonik koji "
+"ograničava područje koje se uzima u obzir"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:11
+msgid "Enter the coordinates as ``xmin, xmax, ymin, ymax``"
+msgstr "Unesite koordinate kao ``xmin, xmax, ymin, ymax``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:99
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:225
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:309
+msgid "Outputs"
+msgstr "Izlazi"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:113
+msgid ""
+"Output polygon vector layer with the point cloud boundary. Currently "
+"supported format is :file:`.GPKG`."
+msgstr ""
+"Izlazni poligonski vektorski sloj sa granicom oblaka tačaka. Trenutno "
+"podržan format je :file:`.GPKG`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:243
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:327
+msgid "Python code"
+msgstr "Python kod"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:119
+msgid "**Algorithm ID**: ``pdal:boundary``"
+msgstr "**ID algoritma**: ``pdal:boundary``"
+
+#: ../../docs/user_manual/processing_algs/algs_include.rst:8
+msgid ""
+"The *algorithm id* is displayed when you hover over the algorithm in the "
+"Processing Toolbox. The *parameter dictionary* provides the parameter NAMEs "
+"and values. See :ref:`processing_console` for details on how to run "
+"processing algorithms from the Python console."
+msgstr ""
+"*ID algoritma* se prikazuje kada pređete mišem preko algoritma u kutiji sa "
+"alatkama Obrade. *Rečnik parametara* daje NAZIVe i vrednosti parametara. "
+"Pogledajte :ref:`processing_console` za detalje o pokretanju algoritama "
+"obrade iz Python konzole."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:129
+msgid "Density"
+msgstr "Gustina"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:132
+msgid ""
+"Exports a raster file based on the number of points within each raster cell "
+"- useful for quality checking of point cloud datasets."
+msgstr ""
+"Izvozi rastersku datoteku na osnovu broja tačaka unutar svake rasterske "
+"ćelije - korisno za proveru kvaliteta skupova podataka oblaka tačaka."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:138
+msgid "Point density (number of points per 2x2 m) as a raster"
+msgstr "Gustina tačaka (broj tačaka na 2x2 m) kao raster"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:158
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:279
+msgid "Input point cloud layer to export"
+msgstr "Ulazni sloj oblaka tačaka koji se izvozi"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:159
+msgid "**Resolution of the density raster**"
+msgstr "**Rezolucija rastera gustine**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:163
+msgid "Default: 1.0"
+msgstr "Podrazumevano: 1.0"
+
 #: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:164
+msgid "Cell size of the output raster"
+msgstr "Veličina ćelije izlaznog rastera"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:165
+msgid "**Tile size for parallel runs**"
+msgstr "**Veličina pločice za paralelna izvršavanja**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:166
 msgid "``TILE_SIZE``"
 msgstr "``TILE_SIZE``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:212
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:169
+msgid "Default: 1000"
+msgstr "Podrazumevano: 1000"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:170
+msgid "Size of the tiles to split the data into for parallel runs"
+msgstr "Veličina pločica na koje se podaci dele radi paralelnih izvršavanja"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:171
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:236
+msgid "**Density**"
+msgstr "**Gustina**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:173
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:238
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:176
+msgid ""
+"Specify the raster file to export the data to. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Zadajte rastersku datoteku u koju se izvoze podaci. :ref:`Jedno od "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:211
+msgid "**X origin of a tile for parallel runs**"
+msgstr "**X koordinata početka pločice za paralelna izvršavanja**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:214
 msgid "``ORIGIN_X``"
 msgstr "``ORIGIN_X``"
 
-#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:218
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:217
+msgid "**Y origin of a tile for parallel runs**"
+msgstr "**Y koordinata početka pločice za paralelna izvršavanja**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:220
 msgid "``ORIGIN_Y``"
 msgstr "``ORIGIN_Y``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:239
+msgid ""
+"Output raster layer with number of points within each cell. Currently "
+"supported format is :file:`.TIF`."
+msgstr ""
+"Izlazni rasterski sloj sa brojem tačaka unutar svake ćelije. Trenutno "
+"podržan format je :file:`.TIF`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:245
+msgid "**Algorithm ID**: ``pdal:density``"
+msgstr "**ID algoritma**: ``pdal:density``"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:254
+msgid "Filter"
+msgstr "Filter"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:257
+msgid ""
+"Extracts point from the input point cloud which match PDAL expression and/or"
+" are inside of a cropping rectangle."
+msgstr ""
+"Izdvaja tačke iz ulaznog oblaka tačaka koje odgovaraju PDAL izrazu i/ili se "
+"nalaze unutar pravougaonika za isecanje."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:262
+msgid "Filtering of high vegetation class from an input point cloud layer"
+msgstr "Filtriranje klase visoke vegetacije iz ulaznog sloja oblaka tačaka"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:297
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:320
+msgid "**Filtered**"
+msgstr "**Filtrirano**"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:302
+msgid ""
+"Specify the point cloud file to export the data to. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Zadajte datoteku oblaka tačaka u koju se izvoze podaci. :ref:`Jedno od "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:323
+msgid ""
+"Output point cloud layer with the filtered features of the input point cloud"
+" layer. Currently supported formats are :file:`.LAS`, :file:`.LAZ`, "
+":file:`.COPC.LAZ` and :file:`.VPC`."
+msgstr ""
+"Izlazni sloj oblaka tačaka sa filtriranim objektima ulaznog sloja oblaka "
+"tačaka. Trenutno podržani formati su :file:`.LAS`, :file:`.LAZ`, "
+":file:`.COPC.LAZ` i :file:`.VPC`."
+
+#: ../../docs/user_manual/processing_algs/qgis/pointcloudextraction.rst:329
+msgid "**Algorithm ID**: ``pdal:filter``"
+msgstr "**ID algoritma**: ``pdal:filter``"
