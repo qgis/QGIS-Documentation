@@ -1,0 +1,623 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
+"Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:2
+msgid "Lesson: Introduction to Databases"
+msgstr "Lekcija: Uvod u baze podataka"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:4
+msgid ""
+"Before using PostgreSQL, let's make sure of our ground by covering general "
+"database theory. You will not need to enter any of the example code; it's "
+"only there for illustration purposes."
+msgstr ""
+"Pre nego što počnemo sa PostgreSQL-om, utvrdimo osnove kroz opštu teoriju "
+"baza podataka. Nećete morati da unosite nijedan primer koda; on je tu samo "
+"radi ilustracije."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:8
+msgid ""
+"**The goal for this lesson:** To understand fundamental database concepts."
+msgstr "**Cilj ove lekcije:** Razumevanje osnovnih pojmova baza podataka."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:11
+msgid "What is a Database?"
+msgstr "Šta je baza podataka?"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:13
+msgid ""
+"A database consists of an organized collection of data for one or more uses,"
+" typically in digital form. *- Wikipedia*"
+msgstr ""
+"Baza podataka sastoji se od organizovane zbirke podataka za jednu ili više "
+"namena, obično u digitalnom obliku. *- Vikipedija*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:18
+msgid ""
+"A database management system (DBMS) consists of software that operates "
+"databases, providing storage, access, security, backup and other facilities."
+" *- Wikipedia*"
+msgstr ""
+"Sistem za upravljanje bazom podataka (DBMS) sastoji se od softvera koji "
+"upravlja bazama podataka, obezbeđujući skladištenje, pristup, bezbednost, "
+"rezervne kopije i druge mogućnosti. *- Vikipedija*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:23
+msgid "Tables"
+msgstr "Tabele"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:25
+msgid ""
+"In relational databases and flat file databases, a table is a set of data "
+"elements (values) that is organized using a model of vertical columns (which"
+" are identified by their name) and horizontal rows. A table has a specified "
+"number of columns, but can have any number of rows. Each row is identified "
+"by the values appearing in a particular column subset which has been "
+"identified as a candidate key. *- Wikipedia*"
+msgstr ""
+"U relacionim bazama podataka i bazama podataka sa ravnim datotekama, tabela "
+"je skup elemenata podataka (vrednosti) organizovan po modelu vertikalnih "
+"kolona (koje se prepoznaju po nazivu) i horizontalnih redova. Tabela ima "
+"zadati broj kolona, ali može imati bilo koji broj redova. Svaki red se "
+"identifikuje vrednostima koje se pojavljuju u određenom podskupu kolona koji"
+" je označen kao kandidat za ključ. *- Vikipedija*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:40
+msgid "In SQL databases a table is also known as a **relation.**"
+msgstr "U SQL bazama podataka tabela je poznata i kao **relacija.**"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:43
+msgid "Columns / Fields"
+msgstr "Kolone / polja"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:45
+msgid ""
+"A column is a set of data values of a particular simple type, one for each "
+"row of the table. The columns provide the structure according to which the "
+"rows are composed. The term field is often used interchangeably with column,"
+" although many consider it more correct to use field (or field value) to "
+"refer specifically to the single item that exists at the intersection "
+"between one row and one column. *- Wikipedia*"
+msgstr ""
+"Kolona je skup vrednosti podataka određenog prostog tipa, po jedna za svaki "
+"red tabele. Kolone daju strukturu prema kojoj se redovi sastavljaju. Termin "
+"polje često se koristi kao sinonim za kolonu, iako mnogi smatraju "
+"ispravnijim da se polje (ili vrednost polja) odnosi konkretno na jednu "
+"stavku koja postoji na preseku jednog reda i jedne kolone. *- Vikipedija*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:52
+msgid "A column:"
+msgstr "Kolona:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:61
+msgid "A field:"
+msgstr "Polje:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:68
+msgid "Records"
+msgstr "Zapisi"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:70
+msgid ""
+"A record is the information stored in a table row. Each record will have a "
+"field for each of the columns in the table."
+msgstr ""
+"Zapis je informacija sačuvana u redu tabele. Svaki zapis imaće polje za "
+"svaku kolonu u tabeli."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:78
+msgid "Datatypes"
+msgstr "Tipovi podataka"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:80
+msgid ""
+"Datatypes restrict the kind of information that can be stored in a column. "
+"*- Tim and Horst*"
+msgstr ""
+"Tipovi podataka ograničavaju vrstu informacija koje se mogu sačuvati u "
+"koloni. *- Tim i Horst*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:83
+msgid "There are many kinds of datatypes. Let's focus on the most common:"
+msgstr "Postoji mnogo vrsta tipova podataka. Usredsredimo se na najčešće:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:85
+msgid "``String`` - to store free-form text data"
+msgstr "``String`` - za čuvanje slobodnog teksta"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:86
+msgid "``Integer`` - to store whole numbers"
+msgstr "``Integer`` - za čuvanje celih brojeva"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:87
+msgid "``Real`` - to store decimal numbers"
+msgstr "``Real`` - za čuvanje decimalnih brojeva"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:88
+msgid "``Date`` - to store Horst's birthday so no one forgets"
+msgstr "``Date`` - za čuvanje Horstovog rođendana, da niko ne zaboravi"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:89
+msgid "``Boolean`` - to store simple true/false values"
+msgstr "``Boolean`` - za čuvanje prostih tačno/netačno vrednosti"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:91
+msgid ""
+"You can tell the database to allow you to also store nothing in a field. If "
+"there is nothing in a field, then the field content is referred to as a "
+"**'null' value**:"
+msgstr ""
+"Bazi podataka možete zadati da vam dozvoli i da u polje ne sačuvate ništa. "
+"Ako u polju nema ničega, sadržaj polja se naziva **„null“ vrednost**:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:101
+msgid "Result:"
+msgstr "Rezultat:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:112
+msgid ""
+"There are many more datatypes you can use - `check the PostgreSQL manual! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+msgstr ""
+"Postoji još mnogo tipova podataka koje možete koristiti - `pogledajte "
+"PostgreSQL priručnik! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:116
+msgid "Modelling an Address Database"
+msgstr "Modelovanje baze podataka adresa"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:118
+msgid ""
+"Let's use a simple case study to see how a database is constructed. We want "
+"to create an address database."
+msgstr ""
+"Poslužimo se jednostavnom studijom slučaja da vidimo kako se baza podataka "
+"gradi. Želimo da napravimo bazu podataka adresa."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:122
+#: ../../docs/training_manual/database_concepts/db_intro.rst:209
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (Osnovni nivo)` Probajte sami:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:124
+msgid ""
+"Write down the properties which make up a simple address and which we would "
+"want to store in our database."
+msgstr ""
+"Zapišite svojstva koja čine jednostavnu adresu i koja bismo želeli da "
+"sačuvamo u našoj bazi podataka."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:127
+#: ../../docs/training_manual/database_concepts/db_intro.rst:216
+#: ../../docs/training_manual/database_concepts/db_intro.rst:345
+msgid "Answer"
+msgstr "Odgovor"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:130
+msgid ""
+"For our theoretical address table, we might want to store the following "
+"properties::"
+msgstr ""
+"Za našu teorijsku tabelu adresa, možda bismo želeli da sačuvamo sledeća "
+"svojstva::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:140
+msgid ""
+"When creating the table to represent an address object, we would create "
+"columns to represent each of these properties and we would name them with "
+"SQL-compliant and possibly shortened names::"
+msgstr ""
+"Pri pravljenju tabele koja predstavlja objekat adrese, napravili bismo "
+"kolone koje predstavljaju svako od ovih svojstava i dali bismo im nazive u "
+"skladu sa SQL-om, po mogućstvu skraćene::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:152
+msgid "Address Structure"
+msgstr "Struktura adrese"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:154
+msgid ""
+"The properties that describe an address are the columns. The type of "
+"information stored in each column is its datatype. In the next section we "
+"will analyse our conceptual address table to see how we can make it better!"
+msgstr ""
+"Svojstva koja opisuju adresu su kolone. Vrsta informacija sačuvanih u svakoj"
+" koloni je njen tip podataka. U sledećem odeljku analiziraćemo našu "
+"konceptualnu tabelu adresa da vidimo kako je možemo poboljšati!"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:159
+msgid "Database Theory"
+msgstr "Teorija baza podataka"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:161
+msgid ""
+"The process of creating a database involves creating a model of the real "
+"world; taking real world concepts and representing them in the database as "
+"entities."
+msgstr ""
+"Proces pravljenja baze podataka podrazumeva pravljenje modela stvarnog "
+"sveta; uzimanje pojmova iz stvarnog sveta i njihovo predstavljanje u bazi "
+"podataka kao entiteta."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:165
+msgid "Normalisation"
+msgstr "Normalizacija"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:167
+msgid ""
+"One of the main ideas in a database is to avoid data duplication / "
+"redundancy. The process of removing redundancy from a database is called "
+"Normalisation."
+msgstr ""
+"Jedna od glavnih ideja u bazi podataka jeste izbegavanje dupliranja / "
+"redundanse podataka. Proces uklanjanja redundanse iz baze podataka naziva se"
+" normalizacija."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:170
+msgid ""
+"Normalization is a systematic way of ensuring that a database structure is "
+"suitable for general-purpose querying and free of certain undesirable "
+"characteristics - insertion, update, and deletion anomalies - that could "
+"lead to a loss of data integrity. *- Wikipedia*"
+msgstr ""
+"Normalizacija je sistematičan način da se obezbedi da struktura baze "
+"podataka bude pogodna za upite opšte namene i bez određenih nepoželjnih "
+"osobina - anomalija pri umetanju, ažuriranju i brisanju - koje bi mogle "
+"dovesti do gubitka integriteta podataka. *- Vikipedija*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:175
+msgid "There are different kinds of normalisation 'forms'."
+msgstr "Postoje različite „normalne forme“ normalizacije."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:177
+msgid "Let's take a look at a simple example:"
+msgstr "Pogledajmo jednostavan primer:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:204
+msgid ""
+"Imagine you have many friends with the same street name or city. Every time "
+"this data is duplicated, it consumes space. Worse still, if a city name "
+"changes, you have to do a lot of work to update your database."
+msgstr ""
+"Zamislite da imate mnogo prijatelja sa istim nazivom ulice ili istim gradom."
+" Svaki put kada se ti podaci dupliraju, troši se prostor. Još gore, ako se "
+"naziv grada promeni, moraćete mnogo da radite da ažurirate svoju bazu "
+"podataka."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:210
+msgid ""
+"Redesign the theoretical ``people`` table above to reduce duplication and to"
+" normalise the data structure."
+msgstr ""
+"Redizajnirajte gornju teorijsku tabelu ``people`` da biste smanjili "
+"dupliranje i normalizovali strukturu podataka."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:213
+msgid ""
+"You can read more about database normalisation `here "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+msgstr ""
+"Više o normalizaciji baza podataka možete pročitati `ovde "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:219
+msgid ""
+"The major problem with the ``people`` table is that there is a single "
+"address field which contains a person's entire address. Thinking about our "
+"theoretical ``address`` table earlier in this lesson, we know that an "
+"address is made up of many different properties. By storing all these "
+"properties in one field, we make it much harder to update and query our "
+"data. We therefore need to split the address field into the various "
+"properties. This would give us a table which has the following structure::"
+msgstr ""
+"Glavni problem sa tabelom ``people`` jeste to što postoji jedno polje adrese"
+" koje sadrži celu adresu osobe. Razmišljajući o našoj teorijskoj tabeli "
+"``address`` ranije u ovoj lekciji, znamo da se adresa sastoji od mnogo "
+"različitih svojstava. Čuvanjem svih tih svojstava u jednom polju mnogo "
+"otežavamo ažuriranje i postavljanje upita nad našim podacima. Zbog toga "
+"polje adrese moramo podeliti na različita svojstva. To bi nam dalo tabelu "
+"sledeće strukture::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:233
+msgid ""
+"In the next section, you will learn about Foreign Key relationships which "
+"could be used in this example to further improve our database's structure."
+msgstr ""
+"U sledećem odeljku učićete o vezama stranih ključeva, koje bi se u ovom "
+"primeru mogle iskoristiti za dalje poboljšanje strukture naše baze podataka."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:237
+msgid "Indexes"
+msgstr "Indeksi"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:239
+msgid ""
+"A database index is a data structure that improves the speed of data "
+"retrieval operations on a database table. *- Wikipedia*"
+msgstr ""
+"Indeks baze podataka je struktura podataka koja povećava brzinu preuzimanja "
+"podataka iz tabele baze podataka. *- Vikipedija*"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:242
+msgid ""
+"Imagine you are reading a textbook and looking for the explanation of a "
+"concept - and the textbook has no index! You will have to start reading at "
+"one cover and work your way through the entire book until you find the "
+"information you need. The index at the back of a book helps you to jump "
+"quickly to the page with the relevant information:"
+msgstr ""
+"Zamislite da čitate udžbenik i tražite objašnjenje nekog pojma - a udžbenik "
+"nema indeks! Moraćete da počnete od korica i pređete celu knjigu dok ne "
+"nađete informaciju koja vam treba. Indeks na kraju knjige pomaže vam da brzo"
+" skočite na stranicu sa odgovarajućom informacijom:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:252
+msgid "Now searches on name will be faster:"
+msgstr "Sada će pretrage po nazivu biti brže:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:271
+msgid "Sequences"
+msgstr "Sekvence"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:273
+msgid ""
+"A sequence is a unique number generator. It is normally used to create a "
+"unique identifier for a column in a table."
+msgstr ""
+"Sekvenca je generator jedinstvenih brojeva. Obično se koristi za pravljenje "
+"jedinstvenog identifikatora za kolonu u tabeli."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:276
+msgid ""
+"In this example, id is a sequence - the number is incremented each time a "
+"record is added to the table:"
+msgstr ""
+"U ovom primeru, id je sekvenca - broj se uvećava svaki put kada se u tabelu "
+"doda zapis:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:287
+msgid "Entity Relationship Diagramming"
+msgstr "Dijagram entiteta i veza"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:289
+msgid ""
+"In a normalised database, you typically have many relations (tables). The "
+"entity-relationship diagram (ER Diagram) is used to design the logical "
+"dependencies between the relations. Consider our non-normalised ``people`` "
+"table from earlier in the lesson:"
+msgstr ""
+"U normalizovanoj bazi podataka obično imate mnogo relacija (tabela). "
+"Dijagram entiteta i veza (ER dijagram) koristi se za projektovanje logičkih "
+"zavisnosti između relacija. Razmotrite našu nenormalizovanu tabelu "
+"``people`` iz ranijeg dela lekcije:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:304
+msgid ""
+"With a little work we can split it into two tables, removing the need to "
+"repeat the street name for individuals who live in the same street:"
+msgstr ""
+"Uz malo rada možemo je podeliti na dve tabele, čime uklanjamo potrebu da se "
+"naziv ulice ponavlja za osobe koje žive u istoj ulici:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:316
+msgid "and:"
+msgstr "i:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:327
+msgid ""
+"We can then link the two tables using the 'keys' ``streets.id`` and "
+"``people.streets_id``."
+msgstr ""
+"Zatim možemo povezati dve tabele pomoću „ključeva“ ``streets.id`` i "
+"``people.streets_id``."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:330
+msgid ""
+"If we draw an ER Diagram for these two tables it would look something like "
+"this:"
+msgstr ""
+"Ako nacrtamo ER dijagram za ove dve tabele, izgledao bi otprilike ovako:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:336
+msgid ""
+"The ER Diagram helps us to express 'one to many' relationships. In this case"
+" the arrow symbol show that one street can have many people living on it."
+msgstr ""
+"ER dijagram nam pomaže da izrazimo veze „jedan prema više“. U ovom slučaju "
+"simbol strelice pokazuje da jedna ulica može imati mnogo stanovnika."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:340
+msgid ":abbr:`★★☆ (Moderate level)` Try Yourself:"
+msgstr ":abbr:`★★☆ (Srednji nivo)` Probajte sami:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:342
+msgid ""
+"Our `people` model still has some normalisation issues - try to see if you "
+"can normalise it further and show your thoughts by means of an ER Diagram."
+msgstr ""
+"Naš model `people` i dalje ima problema sa normalizacijom - pokušajte da ga "
+"dodatno normalizujete i prikažite svoja razmišljanja pomoću ER dijagrama."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:349
+msgid "Our ``people`` table currently looks like this::"
+msgstr "Naša tabela ``people`` trenutno izgleda ovako::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:355
+msgid ""
+"The :guilabel:`street_id` column represents a 'one to many' relationship "
+"between the people object and the related street object, which is in the "
+"``streets`` table."
+msgstr ""
+"Kolona :guilabel:`street_id` predstavlja vezu „jedan prema više“ između "
+"objekta people i pripadajućeg objekta street, koji se nalazi u tabeli "
+"``streets``."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:358
+msgid ""
+"One way to further normalise the table is to split the name field into "
+"*first_name* and *last_name*::"
+msgstr ""
+"Jedan način dalje normalizacije tabele jeste deljenje polja name na "
+"*first_name* i *last_name*::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:365
+msgid ""
+"We can also create separate tables for the town or city name and country, "
+"linking them to our ``people`` table via 'one to many' relationships::"
+msgstr ""
+"Možemo napraviti i zasebne tabele za naziv mesta ili grada i za državu, "
+"povezujući ih sa našom tabelom ``people`` vezama „jedan prema više“::"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:373
+msgid "An ER Diagram to represent this would look like this:"
+msgstr "ER dijagram koji ovo predstavlja izgledao bi ovako:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:379
+msgid "Constraints, Primary Keys and Foreign Keys"
+msgstr "Ograničenja, primarni i strani ključevi"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:381
+msgid ""
+"A database constraint is used to ensure that data in a relation matches the "
+"modeller's view of how that data should be stored. For example a constraint "
+"on your postal code could ensure that the number falls between ``1000`` and "
+"``9999``."
+msgstr ""
+"Ograničenje baze podataka koristi se da bi se obezbedilo da podaci u "
+"relaciji odgovaraju načinu na koji projektant modela smatra da ti podaci "
+"treba da budu sačuvani. Na primer, ograničenje na poštanskom broju moglo bi "
+"da obezbedi da broj bude između ``1000`` i ``9999``."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:386
+msgid ""
+"A Primary key is one or more field values that make a record unique. Usually"
+" the primary key is called id and is a sequence."
+msgstr ""
+"Primarni ključ je jedna ili više vrednosti polja koje čine zapis "
+"jedinstvenim. Obično se primarni ključ zove id i predstavlja sekvencu."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:389
+msgid ""
+"A Foreign key is used to refer to a unique record on another table (using "
+"that other table's primary key)."
+msgstr ""
+"Strani ključ se koristi za upućivanje na jedinstven zapis u drugoj tabeli "
+"(pomoću primarnog ključa te druge tabele)."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:392
+msgid ""
+"In ER Diagramming, the linkage between tables is normally based on Foreign "
+"keys linking to Primary keys."
+msgstr ""
+"U ER dijagramima, veza između tabela obično se zasniva na stranim ključevima"
+" koji upućuju na primarne ključeve."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:395
+msgid ""
+"If we look at our people example, the table definition shows that the street"
+" column is a foreign key that references the primary key on the streets "
+"table:"
+msgstr ""
+"Ako pogledamo naš primer people, definicija tabele pokazuje da je kolona "
+"street strani ključ koji upućuje na primarni ključ u tabeli streets:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:416
+msgid "Transactions"
+msgstr "Transakcije"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:418
+msgid ""
+"When adding, changing, or deleting data in a database, it is always "
+"important that the database is left in a good state if something goes wrong."
+" Most databases provide a feature called transaction support. Transactions "
+"allow you to create a rollback position that you can return to if your "
+"modifications to the database did not run as planned."
+msgstr ""
+"Pri dodavanju, menjanju ili brisanju podataka u bazi podataka uvek je važno "
+"da baza ostane u dobrom stanju ako nešto pođe naopako. Većina baza podataka "
+"nudi mogućnost koja se zove podrška za transakcije. Transakcije vam "
+"omogućavaju da napravite tačku za vraćanje na koju se možete vratiti ako se "
+"vaše izmene baze podataka nisu odvijale prema planu."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:424
+msgid ""
+"Take a scenario where you have an accounting system. You need to transfer "
+"funds from one account and add them to another. The sequence of steps would "
+"go like this:"
+msgstr ""
+"Zamislite scenario u kojem imate računovodstveni sistem. Potrebno je da "
+"prenesete sredstva sa jednog računa i dodate ih na drugi. Redosled koraka "
+"bio bi ovakav:"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:428
+msgid "remove R20 from Joe"
+msgstr "skini R20 sa Džoovog računa"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:429
+msgid "add R20 to Anne"
+msgstr "dodaj R20 na Anin račun"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:431
+msgid ""
+"If something goes wrong during the process (e.g. power failure), the "
+"transaction will be rolled back."
+msgstr ""
+"Ako nešto pođe naopako tokom procesa (npr. nestanak struje), transakcija će "
+"biti vraćena na prethodno stanje."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:435
+msgid "In Conclusion"
+msgstr "Zaključak"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:437
+msgid ""
+"Databases allow you to manage data in a structured way using simple code "
+"structures."
+msgstr ""
+"Baze podataka omogućavaju vam da podacima upravljate na strukturiran način "
+"pomoću jednostavnih kodnih struktura."
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:441
+msgid "What's Next?"
+msgstr "Šta je sledeće?"
+
+#: ../../docs/training_manual/database_concepts/db_intro.rst:443
+msgid ""
+"Now that we've looked at how databases work in theory, let's create a new "
+"database to implement the theory we've covered."
+msgstr ""
+"Sada kada smo videli kako baze podataka rade u teoriji, napravimo novu bazu "
+"podataka da bismo primenili teoriju koju smo obradili."
