@@ -6,22 +6,55 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
 "Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: sr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/server_manual/services/wms.rst:2
+msgid "Web Map Service (WMS)"
+msgstr "Web Map Service (WMS)"
+
+#: ../../docs/server_manual/services/wms.rst:4
+msgid ""
+"The **1.1.1** and **1.3.0** WMS standards implemented in QGIS Server provide"
+" a HTTP interface to request map or legend images generated from a QGIS "
+"project. A typical WMS request defines the QGIS project to use, the layers "
+"to render as well as the image format to generate. Basic support is also "
+"available for **Styled Layer Descriptor (SLD)**."
+msgstr ""
+"WMS standardi **1.1.1** i **1.3.0** implementirani u QGIS Serveru pružaju "
+"HTTP interfejs za zahtevanje slika karte ili legende generisanih iz QGIS "
+"projekta. Tipičan WMS zahtev definiše QGIS projekat koji se koristi, slojeve"
+" za iscrtavanje, kao i format slike koji se generiše. Dostupna je i osnovna "
+"podrška za **Styled Layer Descriptor (SLD)**."
+
+#: ../../docs/server_manual/services/wms.rst:10
+msgid "Specifications:"
+msgstr "Specifikacije:"
 
 #: ../../docs/server_manual/services/wms.rst:12
 msgid ""
@@ -45,145 +78,390 @@ msgstr ""
 "`SLD 1.1.0 WMS profile "
 "<https://portal.ogc.org/files/?artifact_id=22364&format=pdf>`_"
 
+#: ../../docs/server_manual/services/wms.rst:16
+msgid "Standard requests provided by QGIS Server:"
+msgstr "Standardni zahtevi koje pruža QGIS Server:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Request"
+msgstr "Zahtev"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Description"
+msgstr "Opis"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetCapabilities <wms_getcapabilities>`"
 msgstr ":ref:`GetCapabilities <wms_getcapabilities>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata with information about the server"
+msgstr "Vraća XML metapodatke sa informacijama o serveru"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetMap <wms_getmap>`"
 msgstr ":ref:`GetMap <wms_getmap>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a map"
+msgstr "Vraća kartu"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
 msgstr ":ref:`GetFeatureInfo <wms_getfeatureinfo>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Retrieves data (geometry and values) for a pixel location"
+msgstr "Preuzima podatke (geometriju i vrednosti) za poziciju piksela"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
 msgstr ":ref:`GetLegendGraphic <wms_getlegendgraphic>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns legend symbols"
+msgstr "Vraća simbole legende"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetStyle(s) <wms_getstyle>`"
 msgstr ":ref:`GetStyle(s) <wms_getstyle>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML document with style description in SLD"
+msgstr "Vraća XML dokument sa opisom stila u SLD-u"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`DescribeLayer <wms_describelayer>`"
 msgstr ":ref:`DescribeLayer <wms_describelayer>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"Returns information about WFS and WCS availability respectively for vector "
+"and raster layers"
+msgstr ""
+"Vraća informacije o dostupnosti WFS-a i WCS-a za vektorske odnosno rasterske"
+" slojeve"
+
+#: ../../docs/server_manual/services/wms.rst:30
+msgid "Vendor requests provided by QGIS Server:"
+msgstr "Zahtevi specifični za QGIS Server:"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetPrint <wms_getprint>`"
 msgstr ":ref:`GetPrint <wms_getprint>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns a QGIS layout"
+msgstr "Vraća QGIS prikaz"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetProjectSettings <wms_getprojectsettings>`"
 msgstr ":ref:`GetProjectSettings <wms_getprojectsettings>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns specific information about QGIS Server"
+msgstr "Vraća specifične informacije o QGIS Serveru"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`GetSchemaExtension <wms_getschemaextension>`"
 msgstr ":ref:`GetSchemaExtension <wms_getschemaextension>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Returns XML metadata about optional extended capabilities"
+msgstr "Vraća XML metapodatke o opcionim proširenim mogućnostima"
 
 #: ../../docs/server_manual/services/wms.rst:44
 msgid "GetCapabilities"
 msgstr "GetCapabilities"
+
+#: ../../docs/server_manual/services/wms.rst:46
+msgid ""
+"Standard parameters for the **GetCapabilities** request according to the OGC"
+" WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardni parametri za zahtev **GetCapabilities** prema OGC WMS 1.1.1 i "
+"1.3.0 specifikacijama:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Parameter"
+msgstr "Parametar"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Required"
+msgstr "Obavezno"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SERVICE <services_basics_service>`"
 msgstr ":ref:`SERVICE <services_basics_service>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Yes"
+msgstr "Da"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the service (**WMS**)"
+msgstr "Naziv servisa (**WMS**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`REQUEST <services_basics_request>`"
 msgstr ":ref:`REQUEST <services_basics_request>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetCapabilities**)"
+msgstr "Naziv zahteva (**GetCapabilities**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`VERSION <wms_version>`"
 msgstr ":ref:`VERSION <wms_version>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "No"
+msgstr "Ne"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Version of the service"
+msgstr "Verzija servisa"
+
+#: ../../docs/server_manual/services/wms.rst:57
+msgid ""
+"The **GetCapabilities** request supports as well the following vendor "
+"parameters:"
+msgstr ""
+"Zahtev **GetCapabilities** podržava i sledeće parametre specifične za QGIS "
+"Server:"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`MAP <services_basics_map>`"
 msgstr ":ref:`MAP <services_basics_map>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "QGIS project file"
+msgstr "QGIS projektna datoteka"
+
+#: ../../docs/server_manual/services/wms.rst:66
+#: ../../docs/server_manual/services/wms.rst:129
+#: ../../docs/server_manual/services/wms.rst:338
+#: ../../docs/server_manual/services/wms.rst:435
+#: ../../docs/server_manual/services/wms.rst:478
+#: ../../docs/server_manual/services/wms.rst:643
+#: ../../docs/server_manual/services/wms.rst:881
+#: ../../docs/server_manual/services/wms.rst:1028
+#: ../../docs/server_manual/services/wms.rst:1053
+#: ../../docs/server_manual/services/wms.rst:1082
+#: ../../docs/server_manual/services/wms.rst:1110
+#: ../../docs/server_manual/services/wms.rst:1137
+#: ../../docs/server_manual/services/wms.rst:1164
+#: ../../docs/server_manual/services/wms.rst:1191
+#: ../../docs/server_manual/services/wms.rst:1218
+#: ../../docs/server_manual/services/wms.rst:1245
+#: ../../docs/server_manual/services/wms.rst:1304
+#: ../../docs/server_manual/services/wms.rst:1330
+#: ../../docs/server_manual/services/wms.rst:1360
+#: ../../docs/server_manual/services/wms.rst:1388
+#: ../../docs/server_manual/services/wms.rst:1434
+#: ../../docs/server_manual/services/wms.rst:1460
+#: ../../docs/server_manual/services/wms.rst:1490
+#: ../../docs/server_manual/services/wms.rst:1518
+#: ../../docs/server_manual/services/wms.rst:1642
+#: ../../docs/server_manual/services/wms.rst:1678
+#: ../../docs/server_manual/services/wms.rst:1764
+#: ../../docs/server_manual/services/wms.rst:1855
+#: ../../docs/server_manual/services/wms.rst:1989
+msgid "URL example:"
+msgstr "Primer URL-a:"
 
 #: ../../docs/server_manual/services/wms.rst:79
 msgid "GetMap"
 msgstr "GetMap"
+
+#: ../../docs/server_manual/services/wms.rst:81
+msgid ""
+"Standard parameters for the **GetMap** request according to the OGC WMS "
+"1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardni parametri za zahtev **GetMap** prema OGC WMS 1.1.1 i 1.3.0 "
+"specifikacijama:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetMap**)"
+msgstr "Naziv zahteva (**GetMap**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERS <wms_layers>`"
 msgstr ":ref:`LAYERS <wms_layers>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display"
+msgstr "Slojevi za prikaz"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`STYLES <wms_styles>`"
 msgstr ":ref:`STYLES <wms_styles>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style"
+msgstr "Stil slojeva"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SRS / CRS <wms_srs>`"
 msgstr ":ref:`SRS / CRS <wms_srs>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Coordinate reference system"
+msgstr "Koordinatni referentni sistem"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BBOX <wms_bbox>`"
 msgstr ":ref:`BBOX <wms_bbox>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map extent"
+msgstr "Obuhvat karte"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WIDTH <wms_width>`"
 msgstr ":ref:`WIDTH <wms_width>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the image in pixels"
+msgstr "Širina slike u pikselima"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`HEIGHT <wms_height>`"
 msgstr ":ref:`HEIGHT <wms_height>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the image in pixels"
+msgstr "Visina slike u pikselima"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT <wms_getmap_format>`"
 msgstr ":ref:`FORMAT <wms_getmap_format>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Image format"
+msgstr "Format slike"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TRANSPARENT <wms_transparent>`"
 msgstr ":ref:`TRANSPARENT <wms_transparent>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Transparent background"
+msgstr "Prozirna pozadina"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "SLD"
 msgstr "SLD"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "URL of an SLD to be used for styling"
+msgstr "URL SLD-a koji se koristi za stilizovanje"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "SLD_BODY"
 msgstr "SLD_BODY"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "In-line SLD (XML) to be used for styling"
+msgstr "Ugrađeni SLD (XML) koji se koristi za stilizovanje"
+
+#: ../../docs/server_manual/services/wms.rst:104
+msgid ""
+"In addition to the standard ones, QGIS Server supports :ref:`redlining "
+"<wms_redlining>`, :ref:`external WMS layers <wms_external>` as well as the "
+"following extra parameters:"
+msgstr ""
+"Pored standardnih, QGIS Server podržava :ref:`obeležavanje <wms_redlining>`,"
+" :ref:`spoljne WMS slojeve <wms_external>`, kao i sledeće dodatne parametre:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BGCOLOR <wms_bgcolor>`"
 msgstr ":ref:`BGCOLOR <wms_bgcolor>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the background color"
+msgstr "Zadaje boju pozadine"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`DPI <wms_dpi>`"
 msgstr ":ref:`DPI <wms_dpi>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Specify the output resolution"
+msgstr "Zadaje izlaznu rezoluciju"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`IMAGE_QUALITY <wms_imagequality>`"
 msgstr ":ref:`IMAGE_QUALITY <wms_imagequality>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "JPEG compression"
+msgstr "JPEG kompresija"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`OPACITIES <wms_opacities>`"
 msgstr ":ref:`OPACITIES <wms_opacities>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Opacity for layer or group"
+msgstr "Neprozirnost sloja ili grupe"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FILTER <wms_filter>`"
 msgstr ":ref:`FILTER <wms_filter>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Subset of features"
+msgstr "Podskup objekata"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SELECTION <wms_selection>`"
 msgstr ":ref:`SELECTION <wms_selection>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Highlight features"
+msgstr "Istakni objekte"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid "FILE_NAME"
 msgstr "FILE_NAME"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "File name of the downloaded file"
+msgstr "Naziv preuzete datoteke"
+
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/dxf``"
+msgstr "Samo za ``FORMAT=application/dxf``"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Options of the specified file format"
+msgstr "Opcije zadatog formata datoteke"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TILED <wms_tiled>`"
 msgstr ":ref:`TILED <wms_tiled>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Working in *tiled mode*"
+msgstr "Rad u *režimu pločica*"
+
 #: ../../docs/server_manual/services/wms.rst:153
 msgid "VERSION"
 msgstr "VERSION"
+
+#: ../../docs/server_manual/services/wms.rst:155
+msgid ""
+"This parameter allows to specify the version of the service to use. "
+"Available values for the ``VERSION`` parameter are:"
+msgstr ""
+"Ovaj parametar omogućava zadavanje verzije servisa koja se koristi. Dostupne"
+" vrednosti za parametar ``VERSION`` su:"
 
 #: ../../docs/server_manual/services/wms.rst:158
 msgid "``1.1.1``"
@@ -192,6 +470,14 @@ msgstr "``1.1.1``"
 #: ../../docs/server_manual/services/wms.rst:159
 msgid "``1.3.0``"
 msgstr "``1.3.0``"
+
+#: ../../docs/server_manual/services/wms.rst:161
+msgid ""
+"According to the version number, slight differences have to be expected as "
+"explained later for the next parameters:"
+msgstr ""
+"U zavisnosti od broja verzije, treba očekivati manje razlike, kako je "
+"objašnjeno u nastavku za sledeće parametre:"
 
 #: ../../docs/server_manual/services/wms.rst:164
 msgid "``CRS`` / ``SRS``"
@@ -205,34 +491,182 @@ msgstr "``BBOX``"
 msgid "LAYERS"
 msgstr "LAYERS"
 
+#: ../../docs/server_manual/services/wms.rst:173
+msgid ""
+"This parameter allows to specify the layers to display on the map. Names "
+"have to be separated by a comma."
+msgstr ""
+"Ovaj parametar omogućava zadavanje slojeva koji se prikazuju na karti. "
+"Nazivi moraju biti razdvojeni zarezom."
+
+#: ../../docs/server_manual/services/wms.rst:176
+msgid "In addition, QGIS Server introduced some options to select layers by:"
+msgstr "Pored toga, QGIS Server je uveo neke opcije za izbor slojeva po:"
+
+#: ../../docs/server_manual/services/wms.rst:178
+msgid ""
+"the layer id: the project option allowing to select layers by their id is in"
+" :menuselection:`QGIS Server --> WMS` tab of the :menuselection:`Project -->"
+" Properties...` dialog. Check the :guilabel:`Use layer ids as names` "
+"checkbox to activate this option."
+msgstr ""
+"ID-ju sloja: opcija projekta koja omogućava izbor slojeva po njihovom ID-ju "
+"nalazi se u kartici :menuselection:`QGIS Server --> WMS` dijaloga "
+":menuselection:`Projekat --> Svojstva...`. Označite polje :guilabel:`Koristi"
+" ID-jeve slojeva kao nazive` da biste aktivirali ovu opciju."
+
+#: ../../docs/server_manual/services/wms.rst:181
+msgid "a :ref:`short name <services_basics_short_name>`"
+msgstr "po :ref:`kratkom nazivu <services_basics_short_name>`"
+
 #: ../../docs/server_manual/services/wms.rst:195
 msgid "STYLES"
 msgstr "STYLES"
 
+#: ../../docs/server_manual/services/wms.rst:197
+msgid ""
+"This parameter can be used to specify a layer's style for the rendering "
+"step. Styles have to be separated by a comma. The name of the default style "
+"is ``default``."
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje stila sloja u koraku "
+"iscrtavanja. Stilovi moraju biti razdvojeni zarezom. Naziv podrazumevanog "
+"stila je ``default``."
+
 #: ../../docs/server_manual/services/wms.rst:206
 msgid "SRS / CRS"
 msgstr "SRS / CRS"
+
+#: ../../docs/server_manual/services/wms.rst:208
+msgid ""
+"This parameter allows to indicate the map output Spatial Reference System in"
+" WMS **1.1.1** and has to be formed like ``EPSG:XXXX``. Note that ``CRS`` is"
+" also supported if current version is **1.1.1**."
+msgstr ""
+"Ovaj parametar omogućava naznačavanje prostornog referentnog sistema izlazne"
+" karte u WMS **1.1.1** i mora biti formiran kao ``EPSG:XXXX``. Imajte u vidu"
+" da je ``CRS`` takođe podržan ako je trenutna verzija **1.1.1**."
+
+#: ../../docs/server_manual/services/wms.rst:212
+msgid ""
+"For WMS **1.3.0**, ``CRS`` parameter is preferable but ``SRS`` is also "
+"supported."
+msgstr ""
+"Za WMS **1.3.0** parametar ``CRS`` je poželjniji, ali je i ``SRS`` podržan."
+
+#: ../../docs/server_manual/services/wms.rst:215
+msgid ""
+"Note that if both ``CRS`` and ``SRS`` parameters are indicated in the "
+"request, then it's the current version indicated in ``VERSION`` parameter "
+"which is decisive."
+msgstr ""
+"Imajte u vidu da, ako su u zahtevu naznačena oba parametra ``CRS`` i "
+"``SRS``, presudna je trenutna verzija naznačena u parametru ``VERSION``."
+
+#: ../../docs/server_manual/services/wms.rst:219
+msgid ""
+"In the next case, the ``SRS`` parameter is kept whatever the ``VERSION`` "
+"parameter because ``CRS`` is not indicated:"
+msgstr ""
+"U sledećem slučaju, parametar ``SRS`` se zadržava bez obzira na parametar "
+"``VERSION``, jer ``CRS`` nije naznačen:"
+
+#: ../../docs/server_manual/services/wms.rst:231
+msgid ""
+"In the next case, the ``SRS`` parameter is kept instead of ``CRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr ""
+"U sledećem slučaju, parametar ``SRS`` se zadržava umesto ``CRS`` zbog "
+"parametra ``VERSION``:"
+
+#: ../../docs/server_manual/services/wms.rst:244
+msgid ""
+"In the next case, the ``CRS`` parameter is kept instead of ``SRS`` because "
+"of the ``VERSION`` parameter:"
+msgstr ""
+"U sledećem slučaju, parametar ``CRS`` se zadržava umesto ``SRS`` zbog "
+"parametra ``VERSION``:"
 
 #: ../../docs/server_manual/services/wms.rst:261
 #: ../../docs/server_manual/services/wms.rst:874
 msgid "BBOX"
 msgstr "BBOX"
 
+#: ../../docs/server_manual/services/wms.rst:263
+msgid ""
+"This parameter allows to specify the map extent with units according to the "
+"current CRS. Coordinates have to be separated by a comma."
+msgstr ""
+"Ovaj parametar omogućava zadavanje obuhvata karte u jedinicama prema tekućem"
+" CRS-u. Koordinate moraju biti razdvojene zarezom."
+
+#: ../../docs/server_manual/services/wms.rst:266
+msgid ""
+"The ``BBOX`` parameter is formed like ``min_a,min_b,max_a,max_b`` but ``a`` "
+"and ``b`` axis definition is different according to the current ``VERSION`` "
+"parameter:"
+msgstr ""
+"Parametar ``BBOX`` se formira kao ``min_a,min_b,max_a,max_b``, ali se "
+"definicija osa ``a`` i ``b`` razlikuje u zavisnosti od trenutnog parametra "
+"``VERSION``:"
+
+#: ../../docs/server_manual/services/wms.rst:270
+msgid "in WMS **1.1.1**, the axis ordering is always east/north"
+msgstr "u WMS **1.1.1**, redosled osa je uvek istok/sever"
+
+#: ../../docs/server_manual/services/wms.rst:271
+msgid "in WMS **1.3.0**, the axis ordering depends on the CRS authority"
+msgstr "u WMS **1.3.0**, redosled osa zavisi od autoriteta CRS-a"
+
+#: ../../docs/server_manual/services/wms.rst:273
+msgid ""
+"For example in case of ``EPSG:4326`` and WMS **1.1.1**, ``a`` is the "
+"longitude (east) and ``b`` the latitude (north), leading to a request like:"
+msgstr ""
+"Na primer, u slučaju ``EPSG:4326`` i WMS **1.1.1**, ``a`` je geografska "
+"dužina (istok), a ``b`` geografska širina (sever), što daje zahtev poput:"
+
+#: ../../docs/server_manual/services/wms.rst:286
+msgid ""
+"But in case of WMS **1.3.0**, the axis ordering defined in the EPSG database"
+" is north/east so ``a`` is the latitude and ``b`` the longitude:"
+msgstr ""
+"Ali u slučaju WMS **1.3.0**, redosled osa definisan u EPSG bazi podataka je "
+"sever/istok, pa je ``a`` geografska širina, a ``b`` geografska dužina:"
+
 #: ../../docs/server_manual/services/wms.rst:303
 #: ../../docs/server_manual/services/wms.rst:901
 msgid "WIDTH"
 msgstr "WIDTH"
+
+#: ../../docs/server_manual/services/wms.rst:305
+msgid ""
+"This parameter allows to specify the width in pixels of the output image."
+msgstr "Ovaj parametar omogućava zadavanje širine izlazne slike u pikselima."
 
 #: ../../docs/server_manual/services/wms.rst:312
 #: ../../docs/server_manual/services/wms.rst:921
 msgid "HEIGHT"
 msgstr "HEIGHT"
 
+#: ../../docs/server_manual/services/wms.rst:314
+msgid ""
+"This parameter allows to specify the height in pixels of the output image."
+msgstr "Ovaj parametar omogućava zadavanje visine izlazne slike u pikselima."
+
 #: ../../docs/server_manual/services/wms.rst:321
 #: ../../docs/server_manual/services/wms.rst:941
 #: ../../docs/server_manual/services/wms.rst:1812
 msgid "FORMAT"
 msgstr "FORMAT"
+
+#: ../../docs/server_manual/services/wms.rst:323
+msgid ""
+"This parameter may be used to specify the format of map image. Available "
+"values are:"
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje formata slike karte. Dostupne "
+"vrednosti su:"
 
 #: ../../docs/server_manual/services/wms.rst:326
 #: ../../docs/server_manual/services/wms.rst:1818
@@ -272,6 +706,14 @@ msgstr "``image/png; mode=16bit``"
 msgid "``image/webp``"
 msgstr "``image/webp``"
 
+#: ../../docs/server_manual/services/wms.rst:334
+msgid ""
+"``application/dxf``: only layers that have read access in the WFS service "
+"are exported in the DXF format"
+msgstr ""
+"``application/dxf``: samo slojevi koji imaju pravo čitanja u WFS servisu "
+"izvoze se u DXF formatu"
+
 #: ../../docs/server_manual/services/wms.rst:336
 #: ../../docs/server_manual/services/wms.rst:1825
 msgid "``application/pdf``"
@@ -280,6 +722,14 @@ msgstr "``application/pdf``"
 #: ../../docs/server_manual/services/wms.rst:357
 msgid "TRANSPARENT"
 msgstr "TRANSPARENT"
+
+#: ../../docs/server_manual/services/wms.rst:359
+msgid ""
+"This boolean parameter can be used to specify the background transparency. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Ovaj logički parametar se može koristiti za zadavanje prozirnosti pozadine. "
+"Dostupne vrednosti su (bez razlikovanja velikih i malih slova):"
 
 #: ../../docs/server_manual/services/wms.rst:363
 #: ../../docs/server_manual/services/wms.rst:776
@@ -306,106 +756,441 @@ msgstr "``TRUE``"
 msgid "``FALSE``"
 msgstr "``FALSE``"
 
+#: ../../docs/server_manual/services/wms.rst:366
+msgid ""
+"However, this parameter is ignored if the format of the image indicated with"
+" ``FORMAT`` is different from PNG."
+msgstr ""
+"Međutim, ovaj parametar se zanemaruje ako je format slike naznačen sa "
+"``FORMAT`` različit od PNG."
+
 #: ../../docs/server_manual/services/wms.rst:373
 msgid "BGCOLOR"
 msgstr "BGCOLOR"
+
+#: ../../docs/server_manual/services/wms.rst:375
+msgid ""
+"This parameter allows to indicate a background color for the map image. "
+"However it cannot be combined with ``TRANSPARENT`` parameter in case of PNG "
+"images (transparency takes priority). The colour may be literal or in "
+"hexadecimal notation."
+msgstr ""
+"Ovaj parametar omogućava naznačavanje boje pozadine slike karte. Međutim, ne"
+" može se kombinovati sa parametrom ``TRANSPARENT`` u slučaju PNG slika "
+"(prozirnost ima prioritet). Boja može biti u doslovnom ili heksadecimalnom "
+"zapisu."
+
+#: ../../docs/server_manual/services/wms.rst:380
+msgid "URL example with the literal notation:"
+msgstr "Primer URL-a sa doslovnim zapisom:"
+
+#: ../../docs/server_manual/services/wms.rst:391
+msgid "URL example with the hexadecimal notation:"
+msgstr "Primer URL-a sa heksadecimalnim zapisom:"
 
 #: ../../docs/server_manual/services/wms.rst:406
 msgid "DPI"
 msgstr "DPI"
 
+#: ../../docs/server_manual/services/wms.rst:408
+msgid "This parameter can be used to specify the requested output resolution."
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje željene izlazne rezolucije."
+
 #: ../../docs/server_manual/services/wms.rst:414
 msgid "IMAGE_QUALITY"
 msgstr "IMAGE_QUALITY"
+
+#: ../../docs/server_manual/services/wms.rst:416
+msgid ""
+"This parameter is only used for JPEG images. By default, the JPEG "
+"compression is ``-1``."
+msgstr ""
+"Ovaj parametar se koristi samo za JPEG slike. Podrazumevano je JPEG "
+"kompresija ``-1``."
+
+#: ../../docs/server_manual/services/wms.rst:419
+msgid ""
+"You can change the default per QGIS project in the :menuselection:`OWS "
+"Server --> WMS capabilities` menu of the :menuselection:`Project --> "
+"Properties...` dialog. If you want to override it in a ``GetMap`` request "
+"you can do it using the ``IMAGE_QUALITY`` parameter."
+msgstr ""
+"Podrazumevanu vrednost možete promeniti po QGIS projektu u meniju "
+":menuselection:`OWS Server --> WMS mogućnosti` dijaloga "
+":menuselection:`Projekat --> Svojstva...`. Ako želite da je zamenite u "
+"zahtevu ``GetMap``, to možete uraditi pomoću parametra ``IMAGE_QUALITY``."
 
 #: ../../docs/server_manual/services/wms.rst:429
 msgid "OPACITIES"
 msgstr "OPACITIES"
 
+#: ../../docs/server_manual/services/wms.rst:431
+msgid ""
+"Comma separated list of opacity values. Opacity can be set on layer or group"
+" level. Allowed values range from ``0`` (fully transparent) to ``255`` "
+"(fully opaque)."
+msgstr ""
+"Lista vrednosti neprozirnosti razdvojenih zarezima. Neprozirnost se može "
+"podesiti na nivou sloja ili grupe. Dozvoljene vrednosti su u opsegu od ``0``"
+" (potpuno prozirno) do ``255`` (potpuno neprozirno)."
+
+#: ../../docs/server_manual/services/wms.rst:454
+msgid "To the left ``OPACITIES=255,0`` and to the right ``OPACITIES=255,255``"
+msgstr "Levo ``OPACITIES=255,0`` a desno ``OPACITIES=255,255``"
+
 #: ../../docs/server_manual/services/wms.rst:459
 msgid "FILTER"
 msgstr "FILTER"
 
+#: ../../docs/server_manual/services/wms.rst:461
+msgid ""
+"A subset of layers can be selected with the ``FILTER`` parameter. The syntax"
+" is basically the same as for the QGIS subset string. However, there are "
+"some restrictions to avoid SQL injections into databases via QGIS Server. If"
+" a dangerous string is found in the parameter, QGIS Server will return the "
+"next error:"
+msgstr ""
+"Podskup slojeva može se izabrati parametrom ``FILTER``. Sintaksa je u osnovi"
+" ista kao za QGIS nisku podskupa. Međutim, postoje neka ograničenja radi "
+"izbegavanja SQL injekcija u baze podataka preko QGIS Servera. Ako se u "
+"parametru pronađe opasna niska, QGIS Server će vratiti sledeću grešku:"
+
+#: ../../docs/server_manual/services/wms.rst:497
+msgid "Server response to a GetMap request with FILTER parameter"
+msgstr "Odgovor servera na GetMap zahtev sa parametrom FILTER"
+
+#: ../../docs/server_manual/services/wms.rst:500
+msgid ""
+"In this example, the same filter ``\"name\" = 'France'`` is applied to "
+"layers ``countries`` and ``countries_shapeburst``, while the filter "
+"``\"name\" = 'Paris'`` is only applied to ``places``."
+msgstr ""
+"U ovom primeru, isti filter ``\"name\" = 'France'`` primenjuje se na slojeve"
+" ``countries`` i ``countries_shapeburst``, dok se filter ``\"name\" = "
+"'Paris'`` primenjuje samo na ``places``."
+
+#: ../../docs/server_manual/services/wms.rst:506
+msgid ""
+"It is possible to make attribute searches via GetFeatureInfo and omit the "
+"X/Y parameter if a FILTER is there. QGIS Server then returns info about the "
+"matching features and generates a combined bounding box in the XML output."
+msgstr ""
+"Moguće je vršiti pretrage atributa preko GetFeatureInfo i izostaviti "
+"parametar X/Y ako je prisutan FILTER. QGIS Server tada vraća informacije o "
+"objektima koji se podudaraju i generiše kombinovani granični pravougaonik u "
+"XML izlazu."
+
 #: ../../docs/server_manual/services/wms.rst:515
 msgid "SELECTION"
 msgstr "SELECTION"
+
+#: ../../docs/server_manual/services/wms.rst:517
+msgid ""
+"The ``SELECTION`` parameter can highlight features from one or more layers. "
+"Vector features can be selected by passing comma separated lists with "
+"feature ids."
+msgstr ""
+"Parametar ``SELECTION`` može istaći objekte sa jednog ili više slojeva. "
+"Vektorski objekti mogu se izabrati prosleđivanjem lista ID-jeva objekata "
+"razdvojenih zarezima."
+
+#: ../../docs/server_manual/services/wms.rst:531
+msgid ""
+"The following image presents the response from a GetMap request using the "
+"``SELECTION`` option e.g. "
+"``http://myserver.com/...&SELECTION=countries:171,65``."
+msgstr ""
+"Sledeća slika prikazuje odgovor na GetMap zahtev pomoću opcije "
+"``SELECTION``, npr. ``http://myserver.com/...&SELECTION=countries:171,65``."
+
+#: ../../docs/server_manual/services/wms.rst:535
+msgid ""
+"As those features id's correspond in the source dataset to **France** and "
+"**Romania** they're highlighted in yellow."
+msgstr ""
+"Pošto ti ID-jevi objekata u izvornom skupu podataka odgovaraju "
+"**Francuskoj** i **Rumuniji**, oni su istaknuti žutom bojom."
+
+#: ../../docs/server_manual/services/wms.rst:543
+msgid "Server response to a GetMap request with SELECTION parameter"
+msgstr "Odgovor servera na GetMap zahtev sa parametrom SELECTION"
 
 #: ../../docs/server_manual/services/wms.rst:548
 #: ../../docs/server_manual/services/wms.rst:1833
 msgid "FORMAT_OPTIONS"
 msgstr "FORMAT_OPTIONS"
 
+#: ../../docs/server_manual/services/wms.rst:550
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/dxf`` in GetMap request. Takes a list of key:value "
+"pairs separated by semicolon:"
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje opcija izabranog formata. Samo"
+" za ``FORMAT=application/dxf`` u GetMap zahtevu. Uzima listu parova "
+"ključ:vrednost razdvojenih tačkom i zarezom:"
+
+#: ../../docs/server_manual/services/wms.rst:554
+msgid ""
+"SCALE: to be used for symbology rules, filters and styles (not actual "
+"scaling of the data - data remains in the original scale)."
+msgstr ""
+"SCALE: koristi se za pravila simbologije, filtere i stilove (ne za stvarno "
+"skaliranje podataka - podaci ostaju u izvornoj razmeri)."
+
+#: ../../docs/server_manual/services/wms.rst:556
+msgid ""
+"MODE: corresponds to the export options offered in the QGIS Desktop DXF "
+"export dialog. Possible values are ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` and"
+" ``SYMBOLLAYERSYMBOLOGY``."
+msgstr ""
+"MODE: odgovara opcijama izvoza koje nudi dijalog za izvoz DXF-a u QGIS "
+"Desktopu. Moguće vrednosti su ``NOSYMBOLOGY``, ``FEATURESYMBOLOGY`` i "
+"``SYMBOLLAYERSYMBOLOGY``."
+
+#: ../../docs/server_manual/services/wms.rst:559
+msgid ""
+"LAYERATTRIBUTES: specify a field or in case of many layers a comma separated"
+" list of fields that contains values for DXF layer names - if not specified,"
+" the original QGIS layer names are used."
+msgstr ""
+"LAYERATTRIBUTES: zadaje polje ili, u slučaju više slojeva, listu polja "
+"razdvojenih zarezima koja sadrže vrednosti za nazive DXF slojeva - ako nije "
+"zadato, koriste se izvorni nazivi QGIS slojeva."
+
+#: ../../docs/server_manual/services/wms.rst:561
+msgid ""
+"USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will be used as "
+"layer name."
+msgstr ""
+"USE_TITLE_AS_LAYERNAME: ako je uključeno, naslov sloja koristiće se kao "
+"naziv sloja."
+
+#: ../../docs/server_manual/services/wms.rst:563
+msgid ""
+"CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1`` "
+"check the QGIS desktop DXF export dialog for valid values."
+msgstr ""
+"CODEC: zadaje kodek koji se koristi za kodiranje. Podrazumevano je "
+"``ISO-8859-1``; važeće vrednosti potražite u dijalogu za izvoz DXF-a u QGIS "
+"desktopu."
+
+#: ../../docs/server_manual/services/wms.rst:565
+msgid "NO_MTEXT: Use TEXT instead of MTEXT for labels."
+msgstr "NO_MTEXT: Koristi TEXT umesto MTEXT za natpise."
+
+#: ../../docs/server_manual/services/wms.rst:566
+msgid "FORCE_2D: Force 2D output. This is required for polyline width."
+msgstr "FORCE_2D: Prisili 2D izlaz. Ovo je potrebno za širinu polilinije."
+
 #: ../../docs/server_manual/services/wms.rst:571
 msgid "TILED"
 msgstr "TILED"
 
+#: ../../docs/server_manual/services/wms.rst:573
+msgid ""
+"For performance reasons, QGIS Server can be used in tiled mode. In this "
+"mode, the client requests several small fixed size tiles, and assembles them"
+" to form the whole map. Doing this, symbols at or near the boundary between "
+"two tiles may appeared cut, because they are only present in one of the "
+"tile."
+msgstr ""
+"Iz razloga performansi, QGIS Server se može koristiti u režimu pločica. U "
+"tom režimu klijent zahteva nekoliko malih pločica fiksne veličine i "
+"sastavlja ih u celu kartu. Pri tome simboli na granici ili blizu granice "
+"između dve pločice mogu izgledati odsečeno, jer su prisutni samo na jednoj "
+"od pločica."
+
+#: ../../docs/server_manual/services/wms.rst:579
+msgid ""
+"Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in "
+"*tiled* mode, and to apply the *Tile buffer* configured in the QGIS project "
+"(see :ref:`Creatingwmsfromproject`)."
+msgstr ""
+"Postavite parametar ``TILED`` na ``TRUE`` da biste QGIS Serveru zadali rad u"
+" režimu *pločica* i primenu *Bafera pločice* podešenog u QGIS projektu "
+"(pogledajte :ref:`Creatingwmsfromproject`)."
+
+#: ../../docs/server_manual/services/wms.rst:583
+msgid ""
+"When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in "
+"the QGIS project, features outside the tile extent are drawn to avoid cut "
+"symbols at tile boundaries."
+msgstr ""
+"Kada je ``TILED`` postavljeno na ``TRUE`` i kada je u QGIS projektu podešen "
+"bafer pločice različit od nule, objekti izvan obuhvata pločice se iscrtavaju"
+" kako bi se izbegli odsečeni simboli na granicama pločica."
+
+#: ../../docs/server_manual/services/wms.rst:587
+msgid "``TILED`` defaults to ``FALSE``."
+msgstr "``TILED`` je podrazumevano ``FALSE``."
+
 #: ../../docs/server_manual/services/wms.rst:593
 msgid "GetFeatureInfo"
 msgstr "GetFeatureInfo"
+
+#: ../../docs/server_manual/services/wms.rst:595
+msgid ""
+"Standard parameters for the **GetFeatureInfo** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardni parametri za zahtev **GetFeatureInfo** prema OGC WMS 1.1.1 i "
+"1.3.0 specifikacijama:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetFeatureInfo**)"
+msgstr "Naziv zahteva (**GetFeatureInfo**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`QUERY_LAYERS <wms_querylayers>`"
 msgstr ":ref:`QUERY_LAYERS <wms_querylayers>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to query"
+msgstr "Slojevi nad kojima se vrši upit"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to display (identical to `QUERY_LAYERS`)"
+msgstr "Slojevi za prikaz (isto kao `QUERY_LAYERS`)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`INFO_FORMAT <wms_infoformat>`"
 msgstr ":ref:`INFO_FORMAT <wms_infoformat>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Output format"
+msgstr "Izlazni format"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FEATURE_COUNT <wms_featurecount>`"
 msgstr ":ref:`FEATURE_COUNT <wms_featurecount>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Maximum number of features to return"
+msgstr "Maksimalan broj objekata koji se vraćaju"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`I <wms_i>`"
 msgstr ":ref:`I <wms_i>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel column of the point to query"
+msgstr "Kolona piksela tačke nad kojom se vrši upit"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`X <wms_x>`"
 msgstr ":ref:`X <wms_x>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `I` parameter, but in WMS 1.1.1"
+msgstr "Isto kao parametar `I`, ali u WMS 1.1.1"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`J <wms_j>`"
 msgstr ":ref:`J <wms_j>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Pixel row of the point to query"
+msgstr "Red piksela tačke nad kojom se vrši upit"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`Y <wms_y>`"
 msgstr ":ref:`Y <wms_y>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Same as `J` parameter, but in WMS 1.1.1"
+msgstr "Isto kao parametar `J`, ali u WMS 1.1.1"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid "WMS_PRECISION"
 msgstr "WMS_PRECISION"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid ""
+"The precision (number of digits) to be used when returning geometry (see "
+":ref:`how to add geometry to feature response "
+"<addGeometryToFeatureResponse>`). The default value is ``-1`` meaning that "
+"the precision defined in the project is used."
+msgstr ""
+"Preciznost (broj cifara) koja se koristi pri vraćanju geometrije (pogledajte"
+" :ref:`kako dodati geometriju u odgovor objekta "
+"<addGeometryToFeatureResponse>`). Podrazumevana vrednost je ``-1``, što "
+"znači da se koristi preciznost definisana u projektu."
+
+#: ../../docs/server_manual/services/wms.rst:624
+msgid ""
+"In addition to the standard ones, QGIS Server supports the following extra "
+"parameters:"
+msgstr "Pored standardnih, QGIS Server podržava i sledeće dodatne parametre:"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
 msgstr ":ref:`FI_POINT_TOLERANCE <wms_fipointtolerance>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for point layers"
+msgstr "Tolerancija u pikselima za tačkaste slojeve"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
 msgstr ":ref:`FI_LINE_TOLERANCE <wms_filinetolerance>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for line layers"
+msgstr "Tolerancija u pikselima za linijske slojeve"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
 msgstr ":ref:`FI_POLYGON_TOLERANCE <wms_fipolygontolerance>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Tolerance in pixels for polygon layers"
+msgstr "Tolerancija u pikselima za poligonske slojeve"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FILTER_GEOM <wms_filtergeom>`"
 msgstr ":ref:`FILTER_GEOM <wms_filtergeom>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Geometry filtering"
+msgstr "Filtriranje geometrije"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 msgstr ":ref:`WITH_DISPLAY_NAME <wms_withdisplayname>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Add the feature display name to the output"
+msgstr "Dodaj naziv za prikaz objekta u izlaz"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_MAPTIP <wms_withmaptip>`"
 msgstr ":ref:`WITH_MAPTIP <wms_withmaptip>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add map tips to the output"
+msgstr "Dodaj savete na karti u izlaz"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
 msgstr ":ref:`WITH_GEOMETRY <wms_withgeometry>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add geometry to the output"
+msgstr "Dodaj geometriju u izlaz"
+
 #: ../../docs/server_manual/services/wms.rst:667
 msgid "INFO_FORMAT"
 msgstr "INFO_FORMAT"
+
+#: ../../docs/server_manual/services/wms.rst:669
+msgid ""
+"This parameter may be used to specify the format of the result. Available "
+"values are:"
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje formata rezultata. Dostupne "
+"vrednosti su:"
 
 #: ../../docs/server_manual/services/wms.rst:672
 msgid "``text/xml``"
@@ -432,57 +1217,198 @@ msgstr "``application/json``"
 msgid "QUERY_LAYERS"
 msgstr "QUERY_LAYERS"
 
+#: ../../docs/server_manual/services/wms.rst:683
+msgid ""
+"This parameter specifies the layers to display on the map. Names are "
+"separated by a comma."
+msgstr ""
+"Ovaj parametar zadaje slojeve koji se prikazuju na karti. Nazivi se "
+"razdvajaju zarezom."
+
+#: ../../docs/server_manual/services/wms.rst:686
+msgid "In addition, QGIS Server introduces options to select layers by:"
+msgstr "Pored toga, QGIS Server uvodi opcije za izbor slojeva po:"
+
+#: ../../docs/server_manual/services/wms.rst:688
+msgid "short name"
+msgstr "kratkom nazivu"
+
+#: ../../docs/server_manual/services/wms.rst:689
+msgid "layer id"
+msgstr "ID-ju sloja"
+
+#: ../../docs/server_manual/services/wms.rst:691
+msgid ""
+"See the ``LAYERS`` parameter defined in :ref:`GetMap <wms_layers>` for more "
+"information."
+msgstr ""
+"Više informacija potražite u parametru ``LAYERS`` definisanom u :ref:`GetMap"
+" <wms_layers>`."
+
 #: ../../docs/server_manual/services/wms.rst:697
 msgid "FEATURE_COUNT"
 msgstr "FEATURE_COUNT"
+
+#: ../../docs/server_manual/services/wms.rst:699
+msgid ""
+"This parameter specifies the maximum number of features per layer to return."
+" For example if ``QUERY_LAYERS`` is set to ``layer1,layer2`` and "
+"``FEATURE_COUNT`` is set to ``3`` then a maximum of 3 features from layer1 "
+"will be returned. Likewise a maximum of 3 features from layer2 will be "
+"returned."
+msgstr ""
+"Ovaj parametar zadaje maksimalan broj objekata po sloju koji se vraćaju. Na "
+"primer, ako je ``QUERY_LAYERS`` postavljeno na ``layer1,layer2`` a "
+"``FEATURE_COUNT`` na ``3``, tada će biti vraćeno najviše 3 objekta sa "
+"layer1. Isto tako, najviše 3 objekta biće vraćeno sa layer2."
+
+#: ../../docs/server_manual/services/wms.rst:706
+msgid "By default, only 1 feature per layer is returned."
+msgstr "Podrazumevano se vraća samo 1 objekat po sloju."
 
 #: ../../docs/server_manual/services/wms.rst:711
 msgid "I"
 msgstr "I"
 
+#: ../../docs/server_manual/services/wms.rst:713
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel column"
+" of the query point."
+msgstr ""
+"Ovaj parametar, definisan u WMS 1.3.0, omogućava vam da zadate kolonu "
+"piksela tačke upita."
+
 #: ../../docs/server_manual/services/wms.rst:719
 msgid "X"
 msgstr "X"
+
+#: ../../docs/server_manual/services/wms.rst:721
+msgid "Same parameter as ``I``, but defined in WMS 1.1.1."
+msgstr "Isti parametar kao ``I``, ali definisan u WMS 1.1.1."
 
 #: ../../docs/server_manual/services/wms.rst:726
 msgid "J"
 msgstr "J"
 
+#: ../../docs/server_manual/services/wms.rst:728
+msgid ""
+"This parameter, defined in WMS 1.3.0, allows you to specify the pixel row of"
+" the query point."
+msgstr ""
+"Ovaj parametar, definisan u WMS 1.3.0, omogućava vam da zadate red piksela "
+"tačke upita."
+
 #: ../../docs/server_manual/services/wms.rst:734
 msgid "Y"
 msgstr "Y"
+
+#: ../../docs/server_manual/services/wms.rst:736
+msgid "Same parameter as ``J``, but defined in WMS 1.1.1."
+msgstr "Isti parametar kao ``J``, ali definisan u WMS 1.1.1."
 
 #: ../../docs/server_manual/services/wms.rst:741
 msgid "FI_POINT_TOLERANCE"
 msgstr "FI_POINT_TOLERANCE"
 
+#: ../../docs/server_manual/services/wms.rst:743
+msgid "This parameter specifies the tolerance in pixels for point layers."
+msgstr "Ovaj parametar zadaje toleranciju u pikselima za tačkaste slojeve."
+
 #: ../../docs/server_manual/services/wms.rst:748
 msgid "FI_LINE_TOLERANCE"
 msgstr "FI_LINE_TOLERANCE"
+
+#: ../../docs/server_manual/services/wms.rst:750
+msgid "This parameter specifies the tolerance in pixels for line layers."
+msgstr "Ovaj parametar zadaje toleranciju u pikselima za linijske slojeve."
 
 #: ../../docs/server_manual/services/wms.rst:755
 msgid "FI_POLYGON_TOLERANCE"
 msgstr "FI_POLYGON_TOLERANCE"
 
+#: ../../docs/server_manual/services/wms.rst:757
+msgid "This parameter specifies the tolerance in pixels for polygon layers."
+msgstr "Ovaj parametar zadaje toleranciju u pikselima za poligonske slojeve."
+
 #: ../../docs/server_manual/services/wms.rst:762
 msgid "FILTER_GEOM"
 msgstr "FILTER_GEOM"
+
+#: ../../docs/server_manual/services/wms.rst:764
+msgid ""
+"This parameter specifies a WKT geometry with which features have to "
+"intersect."
+msgstr ""
+"Ovaj parametar zadaje WKT geometriju sa kojom objekti moraju da se preseku."
 
 #: ../../docs/server_manual/services/wms.rst:770
 msgid "WITH_DISPLAY_NAME"
 msgstr "WITH_DISPLAY_NAME"
 
+#: ../../docs/server_manual/services/wms.rst:772
+msgid ""
+"This parameter specifies whether to add feature display name to the output."
+msgstr ""
+"Ovaj parametar zadaje da li se naziv za prikaz objekta dodaje u izlaz."
+
+#: ../../docs/server_manual/services/wms.rst:774
+#: ../../docs/server_manual/services/wms.rst:786
+#: ../../docs/server_manual/services/wms.rst:803
+#: ../../docs/server_manual/services/wms.rst:1271
+msgid "Available values are (not case sensitive):"
+msgstr "Dostupne vrednosti su (bez razlikovanja velikih i malih slova):"
+
 #: ../../docs/server_manual/services/wms.rst:782
 msgid "WITH_MAPTIP"
 msgstr "WITH_MAPTIP"
+
+#: ../../docs/server_manual/services/wms.rst:784
+msgid "This parameter specifies whether to add map tips to the output."
+msgstr "Ovaj parametar zadaje da li se saveti na karti dodaju u izlaz."
+
+#: ../../docs/server_manual/services/wms.rst:790
+msgid ""
+"``HTML_FI_ONLY_MAPTIP``: like ``TRUE``, with the difference that the HTML "
+"response to the feature info request only contains the maptip. This gives "
+"full control over the HTML response using e.g. the built-in layer maptip "
+"editor."
+msgstr ""
+"``HTML_FI_ONLY_MAPTIP``: kao ``TRUE``, s tom razlikom da HTML odgovor na "
+"zahtev za informacije o objektu sadrži samo savet na karti. Time se dobija "
+"potpuna kontrola nad HTML odgovorom pomoću npr. ugrađenog uređivača saveta "
+"na karti za sloj."
 
 #: ../../docs/server_manual/services/wms.rst:797
 msgid "WITH_GEOMETRY"
 msgstr "WITH_GEOMETRY"
 
+#: ../../docs/server_manual/services/wms.rst:799
+msgid ""
+"This parameter specifies whether to add geometries to the output. To use "
+"this feature you must first enable the :guilabel:`Add geometry to feature "
+"response` option in the QGIS project. See :ref:`Configure your project "
+"<Creatingwmsfromproject>`."
+msgstr ""
+"Ovaj parametar zadaje da li se geometrije dodaju u izlaz. Da biste koristili"
+" ovu mogućnost, prvo morate omogućiti opciju :guilabel:`Dodaj geometriju u "
+"odgovor objekta` u QGIS projektu. Pogledajte :ref:`Podesite svoj projekat "
+"<Creatingwmsfromproject>`."
+
 #: ../../docs/server_manual/services/wms.rst:813
 msgid "GetLegendGraphic"
 msgstr "GetLegendGraphic"
+
+#: ../../docs/server_manual/services/wms.rst:815
+msgid ""
+"Standard parameters for the **GetLegendGraphic** request according to the "
+"OGC WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardni parametri za zahtev **GetLegendGraphic** prema OGC WMS 1.1.1 i "
+"1.3.0 specifikacijama:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetLegendGraphic**)"
+msgstr "Naziv zahteva (**GetLegendGraphic**)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BBOX <wms_getlegendgraphic_bbox>`"
@@ -501,228 +1427,811 @@ msgid ":ref:`FORMAT <wms_getlegendgraphic_format>`"
 msgstr ":ref:`FORMAT <wms_getlegendgraphic_format>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Legend format"
+msgstr "Format legende"
+
+#: ../../docs/server_manual/services/wms.rst:835
+msgid ""
+"In addition to the standard ones, QGIS Server supports extra parameters to "
+"change the size of the legend elements or the font properties for layer "
+"titles and item labels:"
+msgstr ""
+"Pored standardnih, QGIS Server podržava dodatne parametre za promenu "
+"veličine elemenata legende ili svojstava fonta za naslove slojeva i natpise "
+"stavki:"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
 msgstr ":ref:`SRCWIDTH <wms_getlegendgraphic_srcwidth>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Map width"
+msgstr "Širina karte"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
 msgstr ":ref:`SRCHEIGHT <wms_getlegendgraphic_srcheight>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Map height"
+msgstr "Visina karte"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
 msgstr ":ref:`SHOWFEATURECOUNT <wms_getlegendgraphic_showfeaturecount>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Add feature count of features"
+msgstr "Dodaj broj objekata"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`RULE <wms_getlegendgraphic_rule>`"
 msgstr ":ref:`RULE <wms_getlegendgraphic_rule>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Rule symbol to render"
+msgstr "Simbol pravila koji se iscrtava"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
 msgstr ":ref:`RULELABEL <wms_getlegendgraphic_rulelabel>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item labels rendering"
+msgstr "Iscrtavanje natpisa stavki"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
 msgstr ":ref:`BOXSPACE <wms_getlegendgraphic_boxspace>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Space between legend frame and content (mm)"
+msgstr "Razmak između okvira legende i sadržaja (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
 msgstr ":ref:`LAYERSPACE <wms_getlegendgraphic_layerspace>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layers (mm)"
+msgstr "Vertikalni razmak između slojeva (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
 msgstr ":ref:`LAYERTITLESPACE <wms_getlegendgraphic_layertitlespace>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between layer title and items (mm)"
+msgstr "Vertikalni razmak između naslova sloja i stavki (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
 msgstr ":ref:`SYMBOLSPACE <wms_getlegendgraphic_symbolspace>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Vertical space between symbol and items (mm)"
+msgstr "Vertikalni razmak između simbola i stavki (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
 msgstr ":ref:`ICONLABELSPACE <wms_getlegendgraphic-iconlabelspace>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Horizontal space between symbol and label (mm)"
+msgstr "Horizontalni razmak između simbola i natpisa (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
 msgstr ":ref:`SYMBOLWIDTH <wms_getlegendgraphic_symbolwidth>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Width of the symbol preview (mm)"
+msgstr "Širina pregleda simbola (mm)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
 msgstr ":ref:`SYMBOLHEIGHT <wms_getlegendgraphic_symbolheight>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Height of the symbol preview (mm)"
+msgstr "Visina pregleda simbola (mm)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
 msgstr ":ref:`LAYERTITLE <wms_getlegendgraphic_layertitle>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title rendering"
+msgstr "Iscrtavanje naslova sloja"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
 msgstr ":ref:`LAYERFONTFAMILY <wms_getlegendgraphic_layerfontfamily>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer font family"
+msgstr "Familija fonta sloja"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
 msgstr ":ref:`LAYERFONTBOLD <wms_getlegendgraphic_layerfontbold>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title bold rendering"
+msgstr "Podebljano iscrtavanje naslova sloja"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
 msgstr ":ref:`LAYERFONTSIZE <wms_getlegendgraphic_layerfontsize>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title font size (pt)"
+msgstr "Veličina fonta naslova sloja (pt)"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
 msgstr ":ref:`LAYERFONTITALIC <wms_getlegendgraphic_layerfontitalic>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title italic rendering"
+msgstr "Kurzivno iscrtavanje naslova sloja"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
 msgstr ":ref:`LAYERFONTCOLOR <wms_getlegendgraphic_layerfontcolor>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layer title color"
+msgstr "Boja naslova sloja"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
 msgstr ":ref:`ITEMFONTFAMILY <wms_getlegendgraphic_itemfontfamily>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item font family"
+msgstr "Familija fonta stavke"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
 msgstr ":ref:`ITEMFONTBOLD <wms_getlegendgraphic_itemfontbold>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label bold rendering"
+msgstr "Podebljano iscrtavanje natpisa stavke"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
 msgstr ":ref:`ITEMFONTSIZE <wms_getlegendgraphic_itemfontsize>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label font size (pt)"
+msgstr "Veličina fonta natpisa stavke (pt)"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
 msgstr ":ref:`ITEMFONTITALIC <wms_getlegendgraphic_itemfontitalic>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label italic rendering"
+msgstr "Kurzivno iscrtavanje natpisa stavke"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
 msgstr ":ref:`ITEMFONTCOLOR <wms_getlegendgraphic_itemfontcolor>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Item label color"
+msgstr "Boja natpisa stavke"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 msgstr ":ref:`SHOWRULEDETAILS <wms_getlegendgraphic_showruledetails>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the rule text to JSON output"
+msgstr "Dodaje tekst pravila u JSON izlaz"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
 msgstr ":ref:`ADDLAYERGROUPS <wms_getlegendgraphic_addlayergroups>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Adds the layer groups to JSON output"
+msgstr "Dodaje grupe slojeva u JSON izlaz"
+
+#: ../../docs/server_manual/services/wms.rst:876
+msgid ""
+"This parameter can be used to specify the geographical area for which the "
+"legend should be built (its format is described :ref:`here <wms_bbox>`) but "
+"cannot be combined with the ``RULE`` parameter. The ``SRS``/``CRS`` "
+"parameter becomes mandatory when using the ``BBOX`` parameter."
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje geografske oblasti za koju "
+"treba izgraditi legendu (njegov format opisan je :ref:`ovde <wms_bbox>`), "
+"ali se ne može kombinovati sa parametrom ``RULE``. Parametar ``SRS``/``CRS``"
+" postaje obavezan kada se koristi parametar ``BBOX``."
+
+#: ../../docs/server_manual/services/wms.rst:894
+msgid ""
+"When the ``BBOX`` parameter is defined, the legend is referred to as a "
+"*content based legend*."
+msgstr ""
+"Kada je parametar ``BBOX`` definisan, legenda se naziva *legenda zasnovana "
+"na sadržaju*."
+
+#: ../../docs/server_manual/services/wms.rst:903
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the width in "
+"pixels of the output image."
+msgstr ""
+"Ovaj parametar se podrazumevano ne koristi, ali postaje obavezan kada je "
+"postavljen parametar ``RULE``. U tom slučaju omogućava zadavanje širine "
+"izlazne slike u pikselima."
+
+#: ../../docs/server_manual/services/wms.rst:923
+msgid ""
+"This parameter is not used by default but becomes mandatory when the "
+"``RULE`` parameter is set. In this case it allows to specify the height in "
+"pixels of the output image."
+msgstr ""
+"Ovaj parametar se podrazumevano ne koristi, ali postaje obavezan kada je "
+"postavljen parametar ``RULE``. U tom slučaju omogućava zadavanje visine "
+"izlazne slike u pikselima."
+
+#: ../../docs/server_manual/services/wms.rst:943
+msgid ""
+"This parameter may be used to specify the format of legend image. Available "
+"values are:"
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje formata slike legende. "
+"Dostupne vrednosti su:"
+
+#: ../../docs/server_manual/services/wms.rst:950
+msgid ""
+"For JSON, symbols are encoded with Base64 and most other options related to "
+"layout or fonts are not taken into account because the legend must be built "
+"on the client side. The ``RULE`` parameter cannot be combined with this "
+"format."
+msgstr ""
+"Za JSON, simboli su kodirani u Base64, a većina drugih opcija vezanih za "
+"raspored ili fontove ne uzima se u obzir jer se legenda mora izgraditi na "
+"strani klijenta. Parametar ``RULE`` ne može se kombinovati sa ovim formatom."
+
+#: ../../docs/server_manual/services/wms.rst:954
+#: ../../docs/server_manual/services/wms.rst:1547
+msgid "URL example with the corresponding JSON output:"
+msgstr "Primer URL-a sa odgovarajućim JSON izlazom:"
+
+#: ../../docs/server_manual/services/wms.rst:964
+#: ../../docs/server_manual/services/wms.rst:1558
+msgid "And the corresponding JSON output:"
+msgstr "I odgovarajući JSON izlaz:"
 
 #: ../../docs/server_manual/services/wms.rst:983
 msgid "SRCWIDTH"
 msgstr "SRCWIDTH"
 
+#: ../../docs/server_manual/services/wms.rst:985
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCWIDTH`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``WIDTH`` parameter while the ``WIDTH`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"Ovaj parametar se može definisati kada je postavljen parametar ``RULE``. U "
+"tom slučaju, vrednost ``SRCWIDTH`` prosleđuje se osnovnom zahtevu ``GetMap``"
+" kao parametar ``WIDTH``, dok se parametar ``WIDTH`` zahteva "
+"``GetLegendGraphic`` koristi za veličinu slike legende."
+
 #: ../../docs/server_manual/services/wms.rst:994
 msgid "SRCHEIGHT"
 msgstr "SRCHEIGHT"
+
+#: ../../docs/server_manual/services/wms.rst:996
+msgid ""
+"This parameter may de defined when the ``RULE`` parameter is set. In this "
+"case, the ``SRCHEIGHT`` value is forwarded to the underlying ``GetMap`` "
+"request as the ``HEIGHT`` parameter while the ``HEIGHT`` parameter of "
+"``GetLegendGraphic`` is used for the image legend size."
+msgstr ""
+"Ovaj parametar se može definisati kada je postavljen parametar ``RULE``. U "
+"tom slučaju, vrednost ``SRCHEIGHT`` prosleđuje se osnovnom zahtevu "
+"``GetMap`` kao parametar ``HEIGHT``, dok se parametar ``HEIGHT`` zahteva "
+"``GetLegendGraphic`` koristi za veličinu slike legende."
 
 #: ../../docs/server_manual/services/wms.rst:1005
 msgid "SHOWFEATURECOUNT"
 msgstr "SHOWFEATURECOUNT"
 
+#: ../../docs/server_manual/services/wms.rst:1007
+msgid ""
+"This parameter can be used to activate feature count in the legend. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Ovaj parametar se može koristiti za aktiviranje broja objekata u legendi. "
+"Dostupne vrednosti su (bez razlikovanja velikih i malih slova):"
+
+#: ../../docs/server_manual/services/wms.rst:1013
+#: ../../docs/server_manual/services/wms.rst:1786
+msgid "For example:"
+msgstr "Na primer:"
+
 #: ../../docs/server_manual/services/wms.rst:1022
 msgid "RULE"
 msgstr "RULE"
+
+#: ../../docs/server_manual/services/wms.rst:1024
+msgid ""
+"This parameter is available on layers with :guilabel:`Rule-based` rendering "
+"and allows to build a legend with only the named rule symbol. It cannot be "
+"combined with ``BBOX`` parameter. ``HEIGHT`` and ``WIDTH`` must be "
+"specified."
+msgstr ""
+"Ovaj parametar je dostupan na slojevima sa iscrtavanjem :guilabel:`Zasnovano"
+" na pravilima` i omogućava izgradnju legende samo sa imenovanim simbolom "
+"pravila. Ne može se kombinovati sa parametrom ``BBOX``. ``HEIGHT`` i "
+"``WIDTH`` moraju biti zadati."
 
 #: ../../docs/server_manual/services/wms.rst:1044
 msgid "RULELABEL"
 msgstr "RULELABEL"
 
+#: ../../docs/server_manual/services/wms.rst:1046
+msgid ""
+"This parameter allows to control the item label rendering. Available values "
+"are (not case sensitive):"
+msgstr ""
+"Ovaj parametar omogućava kontrolu iscrtavanja natpisa stavke. Dostupne "
+"vrednosti su (bez razlikovanja velikih i malih slova):"
+
+#: ../../docs/server_manual/services/wms.rst:1049
+msgid "``TRUE``: display item label"
+msgstr "``TRUE``: prikaži natpis stavke"
+
+#: ../../docs/server_manual/services/wms.rst:1050
+msgid "``FALSE``: hide item label"
+msgstr "``FALSE``: sakrij natpis stavke"
+
+#: ../../docs/server_manual/services/wms.rst:1051
+msgid ""
+"``AUTO``: hide item label for layers with :guilabel:`Single symbol` "
+"rendering"
+msgstr ""
+"``AUTO``: sakrij natpis stavke za slojeve sa iscrtavanjem :guilabel:`Jedan "
+"simbol`"
+
+#: ../../docs/server_manual/services/wms.rst:1070
+msgid "Legend rendering without label for single symbol layers"
+msgstr "Iscrtavanje legende bez natpisa za slojeve sa jednim simbolom"
+
 #: ../../docs/server_manual/services/wms.rst:1077
 msgid "BOXSPACE"
 msgstr "BOXSPACE"
+
+#: ../../docs/server_manual/services/wms.rst:1079
+msgid ""
+"This parameter allows to specify the space between legend frame and content "
+"in millimeters. By default, the space value is ``2`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje razmaka između okvira legende i sadržaja "
+"u milimetrima. Podrazumevano je vrednost razmaka ``2`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1098
+msgid "To the left ``BOXSPACE=0`` and to the right ``BOXSPACE=15``"
+msgstr "Levo ``BOXSPACE=0`` a desno ``BOXSPACE=15``"
 
 #: ../../docs/server_manual/services/wms.rst:1105
 msgid "LAYERSPACE"
 msgstr "LAYERSPACE"
 
+#: ../../docs/server_manual/services/wms.rst:1107
+msgid ""
+"This parameter allows to specify the vertical space between layers in "
+"millimeters. By default, the space value is ``3`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje vertikalnog razmaka između slojeva u "
+"milimetrima. Podrazumevano je vrednost razmaka ``3`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1126
+msgid "To the left ``LAYERSPACE=0`` and to the right ``LAYERSPACE=10``"
+msgstr "Levo ``LAYERSPACE=0`` a desno ``LAYERSPACE=10``"
+
 #: ../../docs/server_manual/services/wms.rst:1132
 msgid "LAYERTITLESPACE"
 msgstr "LAYERTITLESPACE"
+
+#: ../../docs/server_manual/services/wms.rst:1134
+msgid ""
+"This parameter allows to specify the vertical space between layer title and "
+"items following in millimeters. By default the space value is ``3`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje vertikalnog razmaka između naslova sloja "
+"i stavki koje slede, u milimetrima. Podrazumevano je vrednost razmaka ``3`` "
+"mm."
+
+#: ../../docs/server_manual/services/wms.rst:1153
+msgid ""
+"To the left ``LAYERTITLESPACE=0`` and to the right ``LAYERTITLESPACE=10``"
+msgstr "Levo ``LAYERTITLESPACE=0`` a desno ``LAYERTITLESPACE=10``"
 
 #: ../../docs/server_manual/services/wms.rst:1159
 msgid "SYMBOLSPACE"
 msgstr "SYMBOLSPACE"
 
+#: ../../docs/server_manual/services/wms.rst:1161
+msgid ""
+"This parameter allows to specify the vertical space between symbol and item "
+"following in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje vertikalnog razmaka između simbola i "
+"stavke koja sledi, u milimetrima. Podrazumevano je vrednost razmaka ``2`` "
+"mm."
+
+#: ../../docs/server_manual/services/wms.rst:1180
+msgid "To the left ``SYMBOLSPACE=0`` and to the right ``SYMBOLSPACE=5``"
+msgstr "Levo ``SYMBOLSPACE=0`` a desno ``SYMBOLSPACE=5``"
+
 #: ../../docs/server_manual/services/wms.rst:1186
 msgid "ICONLABELSPACE"
 msgstr "ICONLABELSPACE"
+
+#: ../../docs/server_manual/services/wms.rst:1188
+msgid ""
+"This parameter allows to specify the horizontal space between symbol and "
+"label text in millimeters. By default the space value is ``2`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje horizontalnog razmaka između simbola i "
+"teksta natpisa, u milimetrima. Podrazumevano je vrednost razmaka ``2`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1207
+msgid ""
+"To the left ``ICONLABELSPACE=0`` and to the right ``ICONLABELSPACE=10``"
+msgstr "Levo ``ICONLABELSPACE=0`` a desno ``ICONLABELSPACE=10``"
 
 #: ../../docs/server_manual/services/wms.rst:1213
 msgid "SYMBOLWIDTH"
 msgstr "SYMBOLWIDTH"
 
+#: ../../docs/server_manual/services/wms.rst:1215
+msgid ""
+"This parameter allows to specify the width of the symbol preview in "
+"millimeters. By default the width value is ``7`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje širine pregleda simbola u milimetrima. "
+"Podrazumevano je vrednost širine ``7`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1234
+msgid "To the left ``SYMBOLWIDTH=2`` and to the right ``SYMBOLWIDTH=20``"
+msgstr "Levo ``SYMBOLWIDTH=2`` a desno ``SYMBOLWIDTH=20``"
+
 #: ../../docs/server_manual/services/wms.rst:1240
 msgid "SYMBOLHEIGHT"
 msgstr "SYMBOLHEIGHT"
+
+#: ../../docs/server_manual/services/wms.rst:1242
+msgid ""
+"This parameter allows to specify the height of the symbol preview in "
+"millimeters. By default the height value is ``4`` mm."
+msgstr ""
+"Ovaj parametar omogućava zadavanje visine pregleda simbola u milimetrima. "
+"Podrazumevano je vrednost visine ``4`` mm."
+
+#: ../../docs/server_manual/services/wms.rst:1261
+msgid "To the left ``SYMBOLHEIGHT=2`` and to the right ``SYMBOLHEIGHT=6``"
+msgstr "Levo ``SYMBOLHEIGHT=2`` a desno ``SYMBOLHEIGHT=6``"
 
 #: ../../docs/server_manual/services/wms.rst:1267
 msgid "LAYERTITLE"
 msgstr "LAYERTITLE"
 
+#: ../../docs/server_manual/services/wms.rst:1269
+msgid "This parameter specifies whether to render layer title."
+msgstr "Ovaj parametar zadaje da li se iscrtava naslov sloja."
+
+#: ../../docs/server_manual/services/wms.rst:1273
+msgid "``TRUE`` (default value)"
+msgstr "``TRUE`` (podrazumevana vrednost)"
+
 #: ../../docs/server_manual/services/wms.rst:1280
 msgid "LAYERFONTFAMILY"
 msgstr "LAYERFONTFAMILY"
+
+#: ../../docs/server_manual/services/wms.rst:1282
+msgid ""
+"This parameter specifies the font family to use for rendering layer title."
+msgstr ""
+"Ovaj parametar zadaje familiju fonta koja se koristi za iscrtavanje naslova "
+"sloja."
 
 #: ../../docs/server_manual/services/wms.rst:1296
 msgid "LAYERFONTBOLD"
 msgstr "LAYERFONTBOLD"
 
+#: ../../docs/server_manual/services/wms.rst:1298
+msgid ""
+"This parameter specifies whether the layer title is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Ovaj parametar zadaje da li se naslov sloja iscrtava podebljano. Dostupne "
+"vrednosti su (bez razlikovanja velikih i malih slova):"
+
+#: ../../docs/server_manual/services/wms.rst:1320
+msgid "Legend with ``LAYERFONTBOLD=TRUE``"
+msgstr "Legenda sa ``LAYERFONTBOLD=TRUE``"
+
 #: ../../docs/server_manual/services/wms.rst:1326
 msgid "LAYERFONTSIZE"
 msgstr "LAYERFONTSIZE"
+
+#: ../../docs/server_manual/services/wms.rst:1328
+#: ../../docs/server_manual/services/wms.rst:1458
+msgid ""
+"This parameter specifies the font size for rendering layer title in point."
+msgstr ""
+"Ovaj parametar zadaje veličinu fonta za iscrtavanje naslova sloja u tačkama."
+
+#: ../../docs/server_manual/services/wms.rst:1346
+msgid "Legend with ``LAYERFONTSIZE=20``"
+msgstr "Legenda sa ``LAYERFONTSIZE=20``"
 
 #: ../../docs/server_manual/services/wms.rst:1352
 msgid "LAYERFONTITALIC"
 msgstr "LAYERFONTITALIC"
 
+#: ../../docs/server_manual/services/wms.rst:1354
+msgid ""
+"This parameter specifies whether the layer title is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Ovaj parametar zadaje da li se naslov sloja iscrtava kurzivom. Dostupne "
+"vrednosti su (bez razlikovanja velikih i malih slova):"
+
+#: ../../docs/server_manual/services/wms.rst:1376
+msgid "Legend with ``LAYERFONTITALIC=TRUE``"
+msgstr "Legenda sa ``LAYERFONTITALIC=TRUE``"
+
 #: ../../docs/server_manual/services/wms.rst:1382
 msgid "LAYERFONTCOLOR"
 msgstr "LAYERFONTCOLOR"
+
+#: ../../docs/server_manual/services/wms.rst:1384
+msgid ""
+"This parameter specifies the layer title color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"Ovaj parametar zadaje boju naslova sloja. Boja može biti doslovna (``red``, "
+"``green``, ..) ili u heksadecimalnom zapisu (``0xFF0000``, ``0x00FF00``, "
+"...)."
+
+#: ../../docs/server_manual/services/wms.rst:1404
+msgid "Legend with ``LAYERFONTCOLOR=0x5f9930``"
+msgstr "Legenda sa ``LAYERFONTCOLOR=0x5f9930``"
 
 #: ../../docs/server_manual/services/wms.rst:1410
 msgid "ITEMFONTFAMILY"
 msgstr "ITEMFONTFAMILY"
 
+#: ../../docs/server_manual/services/wms.rst:1412
+msgid ""
+"This parameter specifies the font family to use for rendering item label."
+msgstr ""
+"Ovaj parametar zadaje familiju fonta koja se koristi za iscrtavanje natpisa "
+"stavke."
+
 #: ../../docs/server_manual/services/wms.rst:1426
 msgid "ITEMFONTBOLD"
 msgstr "ITEMFONTBOLD"
+
+#: ../../docs/server_manual/services/wms.rst:1428
+msgid ""
+"This parameter specifies whether the item label is rendered in bold. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Ovaj parametar zadaje da li se natpis stavke iscrtava podebljano. Dostupne "
+"vrednosti su (bez razlikovanja velikih i malih slova):"
+
+#: ../../docs/server_manual/services/wms.rst:1450
+msgid "Legend with ``ITEMFONTBOLD=TRUE``"
+msgstr "Legenda sa ``ITEMFONTBOLD=TRUE``"
 
 #: ../../docs/server_manual/services/wms.rst:1456
 msgid "ITEMFONTSIZE"
 msgstr "ITEMFONTSIZE"
 
+#: ../../docs/server_manual/services/wms.rst:1476
+msgid "Legend with ``ITEMFONTSIZE=30``"
+msgstr "Legenda sa ``ITEMFONTSIZE=30``"
+
 #: ../../docs/server_manual/services/wms.rst:1482
 msgid "ITEMFONTITALIC"
 msgstr "ITEMFONTITALIC"
+
+#: ../../docs/server_manual/services/wms.rst:1484
+msgid ""
+"This parameter specifies whether the item label is rendered in italic. "
+"Available values are (not case sensitive):"
+msgstr ""
+"Ovaj parametar zadaje da li se natpis stavke iscrtava kurzivom. Dostupne "
+"vrednosti su (bez razlikovanja velikih i malih slova):"
+
+#: ../../docs/server_manual/services/wms.rst:1506
+msgid "Legend with ``ITEMFONTITALIC=TRUE``"
+msgstr "Legenda sa ``ITEMFONTITALIC=TRUE``"
 
 #: ../../docs/server_manual/services/wms.rst:1512
 msgid "ITEMFONTCOLOR"
 msgstr "ITEMFONTCOLOR"
 
+#: ../../docs/server_manual/services/wms.rst:1514
+msgid ""
+"This parameter specifies the item label color. The color may be literal "
+"(``red``, ``green``, ..) or in hexadecimal notation (``0xFF0000``, "
+"``0x00FF00``, ...)."
+msgstr ""
+"Ovaj parametar zadaje boju natpisa stavke. Boja može biti doslovna (``red``,"
+" ``green``, ..) ili u heksadecimalnom zapisu (``0xFF0000``, ``0x00FF00``, "
+"...)."
+
+#: ../../docs/server_manual/services/wms.rst:1534
+msgid "Legend with ``ITEMFONTCOLOR=0x5f9930``"
+msgstr "Legenda sa ``ITEMFONTCOLOR=0x5f9930``"
+
 #: ../../docs/server_manual/services/wms.rst:1540
 msgid "SHOWRULEDETAILS"
 msgstr "SHOWRULEDETAILS"
+
+#: ../../docs/server_manual/services/wms.rst:1542
+msgid ""
+"This parameter specifies if the JSON output will also contain the details "
+"about the rule that generated the legend entry. This parameter only has "
+"effect when the renderer is rule-based or categorized."
+msgstr ""
+"Ovaj parametar zadaje da li će JSON izlaz sadržati i detalje o pravilu koje "
+"je generisalo stavku legende. Ovaj parametar ima efekta samo kada je "
+"iscrtavač zasnovan na pravilima ili kategorizovan."
 
 #: ../../docs/server_manual/services/wms.rst:1577
 msgid "ADDLAYERGROUPS"
 msgstr "ADDLAYERGROUPS"
 
+#: ../../docs/server_manual/services/wms.rst:1579
+msgid ""
+"This parameter specifies if the JSON output will also display the names of "
+"the layers groups (and subgroups) in the legend entry. Possible values are:"
+msgstr ""
+"Ovaj parametar zadaje da li će JSON izlaz prikazivati i nazive grupa slojeva"
+" (i podgrupa) u stavci legende. Moguće vrednosti su:"
+
+#: ../../docs/server_manual/services/wms.rst:1583
+msgid "``TRUE``: display the groups labels"
+msgstr "``TRUE``: prikaži natpise grupa"
+
+#: ../../docs/server_manual/services/wms.rst:1584
+msgid "``FALSE`` (default): hide the groups labels"
+msgstr "``FALSE`` (podrazumevano): sakrij natpise grupa"
+
+#: ../../docs/server_manual/services/wms.rst:1589
+msgid "Legend without (left) and with (right) layer groups labels display"
+msgstr "Legenda bez (levo) i sa (desno) prikazom natpisa grupa slojeva"
+
+#: ../../docs/server_manual/services/wms.rst:1591
+msgid "The corresponding JSON output showing groups name would look like:"
+msgstr "Odgovarajući JSON izlaz koji prikazuje naziv grupa izgledao bi ovako:"
+
 #: ../../docs/server_manual/services/wms.rst:1621
 msgid "GetStyle(s)"
 msgstr "GetStyle(s)"
+
+#: ../../docs/server_manual/services/wms.rst:1623
+msgid ""
+"Standard parameters for the **GetStyle** (or **GetStyles**) request "
+"according to the OGC WMS 1.1.1 specifications:"
+msgstr ""
+"Standardni parametri za zahtev **GetStyle** (ili **GetStyles**) prema OGC "
+"WMS 1.1.1 specifikacijama:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetStyle** or **GetStyles**)"
+msgstr "Naziv zahteva (**GetStyle** ili **GetStyles**)"
+
+#: ../../docs/server_manual/services/wms.rst:1634
+msgid ""
+"The **GetStyle** request supports as well the following vendor parameters:"
+msgstr ""
+"Zahtev **GetStyle** podržava i sledeće parametre specifične za QGIS Server:"
 
 #: ../../docs/server_manual/services/wms.rst:1655
 msgid "DescribeLayer"
 msgstr "DescribeLayer"
 
+#: ../../docs/server_manual/services/wms.rst:1657
+msgid ""
+"Standard parameters for the **DescribeLayer** request according to the OGC "
+"WMS 1.1.1 and 1.3.0 specifications:"
+msgstr ""
+"Standardni parametri za zahtev **DescribeLayer** prema OGC WMS 1.1.1 i 1.3.0"
+" specifikacijama:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**DescribeLayer**)"
+msgstr "Naziv zahteva (**DescribeLayer**)"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers to describe"
+msgstr "Slojevi koji se opisuju"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
 msgstr ":ref:`SLD_VERSION <wms_describelayer_sldversion>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "SLD version"
+msgstr "Verzija SLD-a"
+
+#: ../../docs/server_manual/services/wms.rst:1669
+msgid ""
+"The **DescribeLayer** request supports as well the following vendor "
+"parameters:"
+msgstr ""
+"Zahtev **DescribeLayer** podržava i sledeće parametre specifične za QGIS "
+"Server:"
+
+#: ../../docs/server_manual/services/wms.rst:1688
+#: ../../docs/server_manual/services/wms.rst:1998
+msgid "The XML document looks like:"
+msgstr "XML dokument izgleda ovako:"
 
 #: ../../docs/server_manual/services/wms.rst:1714
 msgid "SLD_VERSION"
 msgstr "SLD_VERSION"
 
+#: ../../docs/server_manual/services/wms.rst:1716
+msgid ""
+"This parameter allows to specify the version of SLD. Only the value "
+"``1.1.0`` is available."
+msgstr ""
+"Ovaj parametar omogućava zadavanje verzije SLD-a. Dostupna je samo vrednost "
+"``1.1.0``."
+
 #: ../../docs/server_manual/services/wms.rst:1723
 msgid "GetPrint"
 msgstr "GetPrint"
 
+#: ../../docs/server_manual/services/wms.rst:1725
+msgid ""
+"QGIS Server has the capability to create print layout output in pdf or pixel"
+" format. Print layout windows in the published project are used as "
+"templates. In the **GetPrint** request, the client has the possibility to "
+"specify parameters of the contained layout maps and labels."
+msgstr ""
+"QGIS Server ima mogućnost da pravi izlaz štampanog prikaza u pdf ili "
+"pikselskom formatu. Prozori štampanog prikaza u objavljenom projektu koriste"
+" se kao šabloni. U zahtevu **GetPrint** klijent ima mogućnost da zada "
+"parametre sadržanih karata i natpisa prikaza."
+
+#: ../../docs/server_manual/services/wms.rst:1730
+msgid ""
+"The **GetPrint** request supports :ref:`redlining <wms_redlining>`, "
+":ref:`external WMS layers <wms_external>` as well as the following "
+"parameters:"
+msgstr ""
+"Zahtev **GetPrint** podržava :ref:`obeležavanje <wms_redlining>`, "
+":ref:`spoljne WMS slojeve <wms_external>`, kao i sledeće parametre:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetPrint**)"
+msgstr "Naziv zahteva (**GetPrint**)"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`TEMPLATE <wms_template>`"
 msgstr ":ref:`TEMPLATE <wms_template>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layout template to use"
+msgstr "Šablon prikaza koji se koristi"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`FORMAT <wms_getprint_format>`"
@@ -732,41 +2241,106 @@ msgstr ":ref:`FORMAT <wms_getprint_format>`"
 msgid ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 msgstr ":ref:`FORMAT_OPTIONS <wms_getprint_formatoptions>`"
 
+#: ../../docs/server_manual/services/wms.rst:3
+msgid "Only for ``FORMAT=application/pdf``"
+msgstr "Samo za ``FORMAT=application/pdf``"
+
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`ATLAS_PK <wms_atlaspk>`"
 msgstr ":ref:`ATLAS_PK <wms_atlaspk>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Atlas features"
+msgstr "Objekti atlasa"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:EXTENT <wms_mapextent>`"
 msgstr ":ref:`mapX:EXTENT <wms_mapextent>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Extent of the map 'X'"
+msgstr "Obuhvat karte „X“"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:LAYERS <wms_maplayers>`"
 msgstr ":ref:`mapX:LAYERS <wms_maplayers>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers of the map 'X'"
+msgstr "Slojevi karte „X“"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:STYLES <wms_mapstyles>`"
 msgstr ":ref:`mapX:STYLES <wms_mapstyles>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' style of the map 'X'"
+msgstr "Stil slojeva karte „X“"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:SCALE <wms_mapscale>`"
 msgstr ":ref:`mapX:SCALE <wms_mapscale>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Layers' scale of the map 'X'"
+msgstr "Razmera slojeva karte „X“"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:ROTATION <wms_maprotation>`"
 msgstr ":ref:`mapX:ROTATION <wms_maprotation>`"
 
 #: ../../docs/server_manual/services/wms.rst:1
+msgid "Rotation  of the map 'X'"
+msgstr "Rotacija karte „X“"
+
+#: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
 msgstr ":ref:`mapX:GRID_INTERVAL_X <wms_mapgridintervalx>`"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on x axis of the map 'X'"
+msgstr "Interval mreže na x osi karte „X“"
 
 #: ../../docs/server_manual/services/wms.rst:1
 msgid ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 msgstr ":ref:`mapX:GRID_INTERVAL_Y <wms_mapgridintervaly>`"
 
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Grid interval on y axis of the map 'X'"
+msgstr "Interval mreže na y osi karte „X“"
+
+#: ../../docs/server_manual/services/wms.rst:1781
+msgid ""
+"Note that the layout template may contain more than one map. In this way, if"
+" you want to configure a specific map, you have to use ``mapX:`` parameters "
+"where ``X`` is a positive number that you can retrieve thanks to the "
+"**GetProjectSettings** request."
+msgstr ""
+"Imajte u vidu da šablon prikaza može sadržati više od jedne karte. Na taj "
+"način, ako želite da podesite određenu kartu, morate koristiti parametre "
+"``mapX:``, gde je ``X`` pozitivan broj koji možete dobiti zahtevom "
+"**GetProjectSettings**."
+
 #: ../../docs/server_manual/services/wms.rst:1804
 msgid "TEMPLATE"
 msgstr "TEMPLATE"
+
+#: ../../docs/server_manual/services/wms.rst:1806
+msgid ""
+"This parameter can be used to specify the name of a layout template to use "
+"for printing."
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje naziva šablona prikaza koji se"
+" koristi za štampanje."
+
+#: ../../docs/server_manual/services/wms.rst:1814
+msgid ""
+"This parameter specifies the format of map image. Available values are:"
+msgstr "Ovaj parametar zadaje format slike karte. Dostupne vrednosti su:"
+
+#: ../../docs/server_manual/services/wms.rst:1816
+msgid "``png`` (default value)"
+msgstr "``png`` (podrazumevana vrednost)"
 
 #: ../../docs/server_manual/services/wms.rst:1821
 msgid "``svg``"
@@ -784,42 +2358,478 @@ msgstr "``image/svg+xml``"
 msgid "``pdf``"
 msgstr "``pdf``"
 
+#: ../../docs/server_manual/services/wms.rst:1827
+msgid ""
+"If the ``FORMAT`` parameter is different from one of these values, then an "
+"exception is returned."
+msgstr ""
+"Ako je parametar ``FORMAT`` različit od jedne od ovih vrednosti, vraća se "
+"izuzetak."
+
+#: ../../docs/server_manual/services/wms.rst:1835
+msgid ""
+"This parameter can be used to specify options for the selected format. Only "
+"for ``FORMAT=application/pdf`` in GetPrint requests. Takes a list of "
+"key:value pairs separated by semicolon:"
+msgstr ""
+"Ovaj parametar se može koristiti za zadavanje opcija izabranog formata. Samo"
+" za ``FORMAT=application/pdf`` u GetPrint zahtevima. Uzima listu parova "
+"ključ:vrednost razdvojenih tačkom i zarezom:"
+
+#: ../../docs/server_manual/services/wms.rst:1839
+msgid ""
+"``RASTERIZE_WHOLE_IMAGE``: whether the whole pdf should be exported as an "
+"image. Default: false."
+msgstr ""
+"``RASTERIZE_WHOLE_IMAGE``: da li ceo pdf treba izvesti kao sliku. "
+"Podrazumevano: false."
+
+#: ../../docs/server_manual/services/wms.rst:1840
+msgid ""
+"``FORCE_VECTOR_OUTPUT``: whether pdf should be exported as vector. Default: "
+"false."
+msgstr ""
+"``FORCE_VECTOR_OUTPUT``: da li pdf treba izvesti kao vektor. Podrazumevano: "
+"false."
+
+#: ../../docs/server_manual/services/wms.rst:1841
+msgid ""
+"``APPEND_GEOREFERENCE``: whether georeference info shall be added to the "
+"pdf. Default: true."
+msgstr ""
+"``APPEND_GEOREFERENCE``: da li informacije o georeferenciranju treba dodati "
+"u pdf. Podrazumevano: true."
+
+#: ../../docs/server_manual/services/wms.rst:1842
+msgid ""
+"``EXPORT_METADATA``: whether metadata shall be added to the pdf. Default: "
+"true."
+msgstr ""
+"``EXPORT_METADATA``: da li metapodatke treba dodati u pdf. Podrazumevano: "
+"true."
+
+#: ../../docs/server_manual/services/wms.rst:1843
+msgid ""
+"``TEXT_RENDER_FORMAT``: sets the text render format for pdf export. It can "
+"be ``AlwaysOutlines`` (default) or ``AlwaysText``."
+msgstr ""
+"``TEXT_RENDER_FORMAT``: postavlja format iscrtavanja teksta za izvoz pdf-a. "
+"Može biti ``AlwaysOutlines`` (podrazumevano) ili ``AlwaysText``."
+
+#: ../../docs/server_manual/services/wms.rst:1845
+msgid ""
+"``SIMPLIFY_GEOMETRY``: whether features geometries shall be simplified. "
+"Default: true."
+msgstr ""
+"``SIMPLIFY_GEOMETRY``: da li geometrije objekata treba uprostiti. "
+"Podrazumevano: true."
+
+#: ../../docs/server_manual/services/wms.rst:1846
+msgid ""
+"``WRITE_GEO_PDF``: whether a Geospatial PDF shall be exported. Default: "
+"false."
+msgstr ""
+"``WRITE_GEO_PDF``: da li treba izvesti geoprostorni PDF. Podrazumevano: "
+"false."
+
+#: ../../docs/server_manual/services/wms.rst:1847
+msgid ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: whether Iso32000 "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_ISO_32000_EXTENSION_FORMAT_GEOREFERENCING``: da li treba koristiti "
+"Iso32000 georeferenciranje. Podrazumevano: false."
+
+#: ../../docs/server_manual/services/wms.rst:1848
+msgid ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: whether OGC best practice "
+"georeferencing shall be used. Default: false."
+msgstr ""
+"``USE_OGC_BEST_PRACTICE_FORMAT_GEOREFERENCING``: da li treba koristiti OGC "
+"georeferenciranje po najboljoj praksi. Podrazumevano: false."
+
+#: ../../docs/server_manual/services/wms.rst:1849
+msgid ""
+"``EXPORT_THEMES``: a comma separated list of map themes to use for a "
+"Geospatial PDF export"
+msgstr ""
+"``EXPORT_THEMES``: lista tema karte razdvojenih zarezima koje se koriste za "
+"izvoz geoprostornog PDF-a"
+
+#: ../../docs/server_manual/services/wms.rst:1850
+msgid ""
+"``PREDEFINED_MAP_SCALES``: a comma separated list of map scales to render "
+"the map"
+msgstr ""
+"``PREDEFINED_MAP_SCALES``: lista razmera karte razdvojenih zarezima za "
+"iscrtavanje karte"
+
+#: ../../docs/server_manual/services/wms.rst:1851
+msgid ""
+"``LOSSLESS_IMAGE_COMPRESSION``: whether images embedded in pdf must be "
+"compressed using a lossless algorithm. Default: false."
+msgstr ""
+"``LOSSLESS_IMAGE_COMPRESSION``: da li slike ugrađene u pdf moraju biti "
+"kompresovane algoritmom bez gubitaka. Podrazumevano: false."
+
+#: ../../docs/server_manual/services/wms.rst:1852
+msgid ""
+"``DISABLE_TILED_RASTER_RENDERING``: whether rasters shall be untiled in the "
+"pdf. Default: false."
+msgstr ""
+"``DISABLE_TILED_RASTER_RENDERING``: da li rasteri treba da budu bez pločica "
+"u pdf-u. Podrazumevano: false."
+
 #: ../../docs/server_manual/services/wms.rst:1873
 msgid "ATLAS_PK"
 msgstr "ATLAS_PK"
+
+#: ../../docs/server_manual/services/wms.rst:1875
+msgid ""
+"This parameter allows activation of Atlas rendering by indicating which "
+"features we want to print. In order to retrieve an atlas with all features, "
+"the ``*`` symbol may be used (according to the maximum number of features "
+"allowed in the project configuration)."
+msgstr ""
+"Ovaj parametar omogućava aktiviranje iscrtavanja atlasa naznačavanjem "
+"objekata koje želimo da odštampamo. Da biste dobili atlas sa svim objektima,"
+" može se koristiti simbol ``*`` (u skladu sa maksimalnim brojem objekata "
+"dozvoljenim u konfiguraciji projekta)."
+
+#: ../../docs/server_manual/services/wms.rst:1881
+msgid ""
+"When ``FORMAT`` is ``pdf``, a single PDF document combining the feature "
+"pages is returned. For all other formats, a single page is returned."
+msgstr ""
+"Kada je ``FORMAT`` jednako ``pdf``, vraća se jedan PDF dokument koji "
+"kombinuje strane objekata. Za sve ostale formate vraća se jedna strana."
 
 #: ../../docs/server_manual/services/wms.rst:1888
 msgid "mapX:EXTENT"
 msgstr "mapX:EXTENT"
 
+#: ../../docs/server_manual/services/wms.rst:1890
+msgid ""
+"This parameter specifies the extent for a layout map item as "
+"xmin,ymin,xmax,ymax."
+msgstr ""
+"Ovaj parametar zadaje obuhvat stavke karte u prikazu kao "
+"xmin,ymin,xmax,ymax."
+
 #: ../../docs/server_manual/services/wms.rst:1896
 msgid "mapX:ROTATION"
 msgstr "mapX:ROTATION"
+
+#: ../../docs/server_manual/services/wms.rst:1898
+msgid "This parameter specifies the map rotation in degrees."
+msgstr "Ovaj parametar zadaje rotaciju karte u stepenima."
 
 #: ../../docs/server_manual/services/wms.rst:1903
 msgid "mapX:GRID_INTERVAL_X"
 msgstr "mapX:GRID_INTERVAL_X"
 
+#: ../../docs/server_manual/services/wms.rst:1905
+msgid "This parameter specifies the grid line density in the X direction."
+msgstr "Ovaj parametar zadaje gustinu linija mreže u pravcu X."
+
 #: ../../docs/server_manual/services/wms.rst:1910
 msgid "mapX:GRID_INTERVAL_Y"
 msgstr "mapX:GRID_INTERVAL_Y"
+
+#: ../../docs/server_manual/services/wms.rst:1912
+msgid "This parameter specifies the grid line density in the Y direction."
+msgstr "Ovaj parametar zadaje gustinu linija mreže u pravcu Y."
 
 #: ../../docs/server_manual/services/wms.rst:1917
 msgid "mapX:SCALE"
 msgstr "mapX:SCALE"
 
+#: ../../docs/server_manual/services/wms.rst:1919
+msgid ""
+"This parameter specifies the map scale for a layout map item. This is useful"
+" to ensure scale based visibility of layers and labels even if client and "
+"server may have different algorithms to calculate the scale denominator."
+msgstr ""
+"Ovaj parametar zadaje razmeru karte za stavku karte u prikazu. Ovo je "
+"korisno za obezbeđivanje vidljivosti slojeva i natpisa zasnovane na razmeri,"
+" čak i ako klijent i server imaju različite algoritme za računanje imenioca "
+"razmere."
+
 #: ../../docs/server_manual/services/wms.rst:1927
 msgid "mapX:LAYERS"
 msgstr "mapX:LAYERS"
+
+#: ../../docs/server_manual/services/wms.rst:1929
+msgid ""
+"This parameter specifies the layers for a layout map item. See :ref:`GetMap "
+"Layers <wms_layers>` for more information on this parameter."
+msgstr ""
+"Ovaj parametar zadaje slojeve za stavku karte u prikazu. Više informacija o "
+"ovom parametru potražite u :ref:`GetMap slojevi <wms_layers>`."
 
 #: ../../docs/server_manual/services/wms.rst:1936
 msgid "mapX:STYLES"
 msgstr "mapX:STYLES"
 
+#: ../../docs/server_manual/services/wms.rst:1938
+msgid ""
+"This parameter specifies the layers' styles defined in a specific layout map"
+" item. See :ref:`GetMap Styles <wms_styles>` for more information on this "
+"parameter."
+msgstr ""
+"Ovaj parametar zadaje stilove slojeva definisane u određenoj stavci karte u "
+"prikazu. Više informacija o ovom parametru potražite u :ref:`GetMap stilovi "
+"<wms_styles>`."
+
 #: ../../docs/server_manual/services/wms.rst:1947
 msgid "GetProjectSettings"
 msgstr "GetProjectSettings"
 
+#: ../../docs/server_manual/services/wms.rst:1949
+msgid ""
+"This request type works similar to :ref:`GetCapabilities "
+"<wms_getcapabilities>`, but it is more specific to QGIS Server and allows a "
+"client to read additional information which are not available in the "
+":ref:`GetCapabilities <wms_getcapabilities>` output:"
+msgstr ""
+"Ovaj tip zahteva radi slično kao :ref:`GetCapabilities "
+"<wms_getcapabilities>`, ali je specifičniji za QGIS Server i omogućava "
+"klijentu da pročita dodatne informacije koje nisu dostupne u izlazu "
+":ref:`GetCapabilities <wms_getcapabilities>`:"
+
+#: ../../docs/server_manual/services/wms.rst:1954
+msgid "initial visibility of layers"
+msgstr "početna vidljivost slojeva"
+
+#: ../../docs/server_manual/services/wms.rst:1955
+msgid "information about vector attributes and their edit types"
+msgstr "informacije o vektorskim atributima i njihovim tipovima uređivanja"
+
+#: ../../docs/server_manual/services/wms.rst:1956
+msgid "information about layer order and drawing order"
+msgstr "informacije o redosledu slojeva i redosledu iscrtavanja"
+
+#: ../../docs/server_manual/services/wms.rst:1957
+msgid "list of layers published in WFS"
+msgstr "lista slojeva objavljenih u WFS-u"
+
+#: ../../docs/server_manual/services/wms.rst:1958
+msgid ""
+"show if a group in the layer tree is :ref:`mutually exclusive "
+"<group_layers_interact>`"
+msgstr ""
+"prikaz da li je grupa u stablu slojeva :ref:`međusobno isključiva "
+"<group_layers_interact>`"
+
+#: ../../docs/server_manual/services/wms.rst:1960
+msgid "The **GetProjectSettings** request supports the following parameters:"
+msgstr "Zahtev **GetProjectSettings** podržava sledeće parametre:"
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetProjectSettings**)"
+msgstr "Naziv zahteva (**GetProjectSettings**)"
+
 #: ../../docs/server_manual/services/wms.rst:1974
 msgid "GetSchemaExtension"
 msgstr "GetSchemaExtension"
+
+#: ../../docs/server_manual/services/wms.rst:1976
+msgid ""
+"The **GetSchemaExtension** request allows to retrieve optional extended "
+"capabilities and operations of the WMS service such as implemented by QGIS "
+"Server."
+msgstr ""
+"Zahtev **GetSchemaExtension** omogućava preuzimanje opcionih proširenih "
+"mogućnosti i operacija WMS servisa, kako ih implementira QGIS Server."
+
+#: ../../docs/server_manual/services/wms.rst:1
+msgid "Name of the request (**GetSchemaExtension**)"
+msgstr "Naziv zahteva (**GetSchemaExtension**)"
+
+#: ../../docs/server_manual/services/wms.rst:2012
+msgid "External WMS layers"
+msgstr "Spoljni WMS slojevi"
+
+#: ../../docs/server_manual/services/wms.rst:2014
+msgid ""
+"QGIS Server allows including layers from external WMS servers in WMS "
+":ref:`GetMap <wms_getmap>` and WMS :ref:`GetPrint <wms_getprint>` requests. "
+"This is especially useful if a web client uses an external background layer "
+"in the web map. For performance reasons, such layers should be directly "
+"requested by the web client (not cascaded via QGIS server). For printing "
+"however, these layers should be cascaded via QGIS server in order to appear "
+"in the printed map."
+msgstr ""
+"QGIS Server omogućava uključivanje slojeva sa spoljnih WMS servera u WMS "
+":ref:`GetMap <wms_getmap>` i WMS :ref:`GetPrint <wms_getprint>` zahteve. Ovo"
+" je posebno korisno ako veb klijent koristi spoljni sloj podloge na veb "
+"karti. Iz razloga performansi, takve slojeve treba da zahteva direktno veb "
+"klijent (ne kaskadno preko QGIS servera). Za štampanje, međutim, ovi slojevi"
+" treba da budu kaskadni preko QGIS servera kako bi se pojavili na "
+"odštampanoj karti."
+
+#: ../../docs/server_manual/services/wms.rst:2022
+msgid ""
+"External layers can be added to the LAYERS parameter as "
+"EXTERNAL_WMS:<layername>. The parameters for the external WMS layers (e.g. "
+"url, format, dpiMode, crs, layers, styles) can later be given as service "
+"parameters <layername>:<parameter>. In a :ref:`GetMap <wms_getmap>` request,"
+" this might look like this:"
+msgstr ""
+"Spoljni slojevi mogu se dodati u parametar LAYERS kao "
+"EXTERNAL_WMS:<layername>. Parametri za spoljne WMS slojeve (npr. url, "
+"format, dpiMode, crs, layers, styles) kasnije se mogu zadati kao servisni "
+"parametri <layername>:<parameter>. U :ref:`GetMap <wms_getmap>` zahtevu, to "
+"bi moglo izgledati ovako:"
+
+#: ../../docs/server_manual/services/wms.rst:2044
+msgid ""
+"Similarly, external layers can be used in :ref:`GetPrint <wms_getprint>` "
+"requests:"
+msgstr ""
+"Slično, spoljni slojevi mogu se koristiti u :ref:`GetPrint <wms_getprint>` "
+"zahtevima:"
+
+#: ../../docs/server_manual/services/wms.rst:2067
+msgid "Redlining"
+msgstr "Obeležavanje (redlining)"
+
+#: ../../docs/server_manual/services/wms.rst:2069
+msgid ""
+"This feature is available and can be used with :ref:`GetMap <wms_getmap>` "
+"and :ref:`GetPrint <wms_getprint>` requests."
+msgstr ""
+"Ova mogućnost je dostupna i može se koristiti sa :ref:`GetMap <wms_getmap>` "
+"i :ref:`GetPrint <wms_getprint>` zahtevima."
+
+#: ../../docs/server_manual/services/wms.rst:2072
+msgid ""
+"The redlining feature can be used to pass geometries and labels in the "
+"request which are overlapped by the server over the standard returned image "
+"(map). This permits the user to put emphasis or maybe add some comments "
+"(labels) to some areas, locations etc. that are not in the standard map."
+msgstr ""
+"Mogućnost obeležavanja može se koristiti za prosleđivanje geometrija i "
+"natpisa u zahtevu, koje server preklapa preko standardno vraćene slike "
+"(karte). Time se korisniku omogućava da istakne ili možda doda neke "
+"komentare (natpise) na neke oblasti, lokacije itd. koje nisu na standardnoj "
+"karti."
+
+#: ../../docs/server_manual/services/wms.rst:2077
+msgid "The :ref:`GetMap <wms_getmap>` request is in the format:"
+msgstr "Zahtev :ref:`GetMap <wms_getmap>` je u formatu:"
+
+#: ../../docs/server_manual/services/wms.rst:2094
+msgid ""
+"The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that "
+"``mapX:`` parameter is added to tell which map has redlining):"
+msgstr ""
+"Ekvivalent :ref:`GetPrint <wms_getprint>` je u formatu (imajte u vidu da se "
+"parametar ``mapX:`` dodaje da bi se naznačilo koja karta ima obeležavanje):"
+
+#: ../../docs/server_manual/services/wms.rst:2111
+msgid ""
+"Here is the image outputted by the above request in which a polygon and a "
+"label are drawn on top of the normal map:"
+msgstr ""
+"Evo slike koju daje gornji zahtev, na kojoj su poligon i natpis nacrtani "
+"preko normalne karte:"
+
+#: ../../docs/server_manual/services/wms.rst:2119
+msgid "Server response to a GetMap request with redlining parameters"
+msgstr "Odgovor servera na GetMap zahtev sa parametrima obeležavanja"
+
+#: ../../docs/server_manual/services/wms.rst:2121
+msgid ""
+"You can see there are several parameters in this request to control the "
+"redlining feature. The full list includes:"
+msgstr ""
+"Vidite da u ovom zahtevu postoji nekoliko parametara za kontrolu mogućnosti "
+"obeležavanja. Puna lista uključuje:"
+
+#: ../../docs/server_manual/services/wms.rst:2124
+msgid ""
+"**HIGHLIGHT_GEOM**: You can add POINT, MULTILINESTRING, POLYGON etc. It "
+"supports multipart geometries. Here is an example: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. The coordinates should "
+"be in the CRS of the GetMap/GetPrint request."
+msgstr ""
+"**HIGHLIGHT_GEOM**: Možete dodati POINT, MULTILINESTRING, POLYGON itd. "
+"Podržava višedelne geometrije. Evo primera: "
+"``HIGHLIGHT_GEOM=MULTILINESTRING((0 0, 0 1, 1 1))``. Koordinate treba da "
+"budu u CRS-u GetMap/GetPrint zahteva."
+
+#: ../../docs/server_manual/services/wms.rst:2128
+msgid ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: This parameter controls the label buffer "
+"color."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERCOLOR**: Ovaj parametar kontroliše boju bafera "
+"natpisa."
+
+#: ../../docs/server_manual/services/wms.rst:2130
+msgid ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: This parameter controls the label buffer "
+"size."
+msgstr ""
+"**HIGHLIGHT_LABELBUFFERSIZE**: Ovaj parametar kontroliše veličinu bafera "
+"natpisa."
+
+#: ../../docs/server_manual/services/wms.rst:2132
+msgid "**HIGHLIGHT_LABELCOLOR**: This parameter controls the label color."
+msgstr "**HIGHLIGHT_LABELCOLOR**: Ovaj parametar kontroliše boju natpisa."
+
+#: ../../docs/server_manual/services/wms.rst:2133
+msgid ""
+"**HIGHLIGHT_LABEL_DISTANCE**: controls the distance between feature (e.g. "
+"point or line) and the label in mm"
+msgstr ""
+"**HIGHLIGHT_LABEL_DISTANCE**: kontroliše rastojanje između objekta (npr. "
+"tačke ili linije) i natpisa u mm"
+
+#: ../../docs/server_manual/services/wms.rst:2135
+msgid ""
+"**HIGHLIGHT_LABELFONT**: This parameter controls the font of the label (e.g."
+" Arial)"
+msgstr ""
+"**HIGHLIGHT_LABELFONT**: Ovaj parametar kontroliše font natpisa (npr. Arial)"
+
+#: ../../docs/server_manual/services/wms.rst:2137
+msgid ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: places the label horizontally on a"
+" point using the specified alignment (e.g. 'left', 'center', 'right')"
+msgstr ""
+"**HIGHLIGHT_LABEL_HORIZONTAL_ALIGNMENT**: postavlja natpis horizontalno na "
+"tačku pomoću zadatog poravnanja (npr. 'left', 'center', 'right')"
+
+#: ../../docs/server_manual/services/wms.rst:2139
+msgid "**HIGHLIGHT_LABEL_ROTATION**: controls the label rotation in degrees"
+msgstr "**HIGHLIGHT_LABEL_ROTATION**: kontroliše rotaciju natpisa u stepenima"
+
+#: ../../docs/server_manual/services/wms.rst:2140
+msgid ""
+"**HIGHLIGHT_LABELSIZE**: This parameter controls the size of the label."
+msgstr "**HIGHLIGHT_LABELSIZE**: Ovaj parametar kontroliše veličinu natpisa."
+
+#: ../../docs/server_manual/services/wms.rst:2142
+msgid ""
+"**HIGHLIGHT_LABELSTRING**: You can pass your labeling text to this "
+"parameter."
+msgstr ""
+"**HIGHLIGHT_LABELSTRING**: Ovom parametru možete proslediti tekst natpisa."
+
+#: ../../docs/server_manual/services/wms.rst:2144
+msgid ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: places the label vertically on a "
+"point using the specified alignment (e.g. 'top', 'half', 'bottom')"
+msgstr ""
+"**HIGHLIGHT_LABEL_VERTICAL_ALIGNMENT**: postavlja natpis vertikalno na tačku"
+" pomoću zadatog poravnanja (npr. 'top', 'half', 'bottom')"
+
+#: ../../docs/server_manual/services/wms.rst:2146
+msgid ""
+"**HIGHLIGHT_SYMBOL**: This controls how the geometry is outlined and you can"
+" change the stroke width, color and opacity."
+msgstr ""
+"**HIGHLIGHT_SYMBOL**: Ovo kontroliše kako je geometrija ocrtana i možete "
+"promeniti širinu, boju i neprozirnost poteza."
