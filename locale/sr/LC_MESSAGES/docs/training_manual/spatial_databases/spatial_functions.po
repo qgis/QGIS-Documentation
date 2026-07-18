@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
+"Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:2
+msgid "Lesson: PostGIS Setup"
+msgstr "Lekcija: Podešavanje PostGIS-a"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:4
+msgid ""
+"Setting up PostGIS functions will allow you to access spatial functions from"
+" within PostgreSQL."
+msgstr ""
+"Podešavanje PostGIS funkcija će vam omogućiti pristup prostornim "
+"funkcijama iz PostgreSQL-a."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:7
+msgid ""
+"**The goal for this lesson:** To install spatial functions and briefly demo "
+"their effects."
+msgstr ""
+"**Cilj ove lekcije:** Instalirati prostorne funkcije i ukratko demonstrirati"
+" njihove efekte."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:10
+msgid ""
+"We will assume the use of PostGIS version 2.1 or newer in this exercise. The"
+" installation and database configuration are different for older versions, "
+"but the rest of this material in this module will still work. Consult the "
+"documentation for your platform for help with installation and database "
+"configuration."
+msgstr ""
+"U ovoj vežbi pretpostavićemo upotrebu PostGIS verzije 2.1 ili novije. "
+"Instalacija i konfiguracija baze podataka se razlikuju za starije verzije, "
+"ali ostatak materijala u ovom modulu će i dalje funkcionisati. Za pomoć "
+"oko instalacije i konfiguracije baze podataka pogledajte dokumentaciju za "
+"vašu platformu."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:17
+msgid "Installing under Ubuntu"
+msgstr "Instaliranje pod Ubuntuom"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:19
+msgid "Postgis is easily installed from apt."
+msgstr "Postgis se lako instalira iz apt-a."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:26
+msgid "Really, it's that easy..."
+msgstr "Zaista, to je tako lako..."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:28
+msgid ""
+"The exact versions that will be installed depend on which version of Ubuntu "
+"you are using and which repositories you have configured. After installing "
+"you can check the version by issuing a ``select PostGIS_full_version();`` "
+"query with psql or another tool."
+msgstr ""
+"Tačne verzije koje će biti instalirane zavise od toga koju verziju Ubuntua "
+"koristite i koje ste repozitorijume konfigurisali. Nakon instalacije možete "
+"proveriti verziju izdavanjem upita „select PostGIS_full_version();“ pomoću "
+"psql-a ili nekog drugog alata."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:32
+msgid ""
+"To install a specific version (eg, PostgreSQL version 13 and PostGIS 3), you"
+" can use the following commands."
+msgstr ""
+"Da biste instalirali određenu verziju (npr. PostgreSQL verziju 13 i PostGIS "
+"3), možete koristiti sledeće komande."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:46
+msgid "Installing under Windows"
+msgstr "Instalacija na Windows-u"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:48
+msgid ""
+"Installing on Windows can be done from binary packages using a normal "
+"Windows installation dialogs."
+msgstr ""
+"Instalacija na Windows-u može se obaviti iz binarnih paketa pomoću "
+"uobičajenih Windows dijaloga za instalaciju."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:50
+msgid ""
+"First Visit `the download page <https://www.postgresql.org/download/>`_. "
+"Then follow `this guide "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+msgstr ""
+"Prvo posetite `stranicu za preuzimanje "
+"<https://www.postgresql.org/download/>`_. Zatim pratite `ovaj vodič "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:53
+msgid ""
+"More information about installing on Windows can be found on the `PostGIS "
+"website <https://postgis.net/documentation/getting_started/>`_."
+msgstr ""
+"Više informacija o instalaciji na Windows-u možete pronaći na `PostGIS sajtu"
+" <https://postgis.net/documentation/getting_started/>`_."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:57
+msgid "Installing on Other Platforms"
+msgstr "Instalacija na drugim platformama"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
+msgid ""
+"The `PostGIS website download "
+"<https://postgis.net/documentation/getting_started/>`_ has information about"
+" installing on other platforms including macOS and on other Linux "
+"distributions"
+msgstr ""
+"`Preuzimanje sa PostGIS sajta "
+"<https://postgis.net/documentation/getting_started/>`_ sadrži informacije o "
+"instalaciji na drugim platformama, uključujući macOS i druge Linux "
+"distribucije"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:64
+msgid "Configuring Databases to use PostGIS"
+msgstr "Konfigurisanje baza podataka za korišćenje PostGIS-a"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:66
+msgid ""
+"Once PostGIS is installed, you will need to configure your database to use "
+"the extensions. If you have installed PostGIS version > 2.0, this is as "
+"simple as issuing the following command with psql using the address database"
+" from our previous exercise."
+msgstr ""
+"Kada je PostGIS instaliran, potrebno je da konfigurišete svoju bazu podataka"
+" da koristi ekstenzije. Ako ste instalirali PostGIS verziju > 2.0, ovo je "
+"jednostavno kao izdavanje sledeće komande pomoću psql koristeći bazu "
+"podataka address iz naše prethodne vežbe."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:75
+msgid ""
+"Depending on your version, you could find more instructions on how to "
+"spatially enable a database at "
+"https://postgis.net/docs/postgis_administration.html#create_spatial_db."
+msgstr ""
+"U zavisnosti od vaše verzije, više uputstava o tome kako prostorno omogućiti"
+" bazu podataka možete pronaći na "
+"https://postgis.net/docs/postgis_administration.html#create_spatial_db."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:80
+msgid "Looking at the installed PostGIS functions"
+msgstr "Pregled instaliranih PostGIS funkcija"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:82
+msgid ""
+"PostGIS can be thought of as a collection of in-database functions that "
+"extend the core capabilities of PostgreSQL so that it can deal with spatial "
+"data. By 'deal with', we mean store, retrieve, query and manipulate. In "
+"order to do this, a number of functions are installed into the database."
+msgstr ""
+"PostGIS se može zamisliti kao zbirka funkcija unutar baze podataka koje "
+"proširuju osnovne mogućnosti PostgreSQL-a tako da može da radi sa prostornim"
+" podacima. Pod „radi sa“ mislimo na čuvanje, preuzimanje, postavljanje upita"
+" i manipulaciju. Da bi se to postiglo, u bazu podataka se instalira niz "
+"funkcija."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:87
+msgid ""
+"Our PostgreSQL ``address`` database is now geospatially enabled, thanks to "
+"PostGIS. We are going to delve a lot deeper into this in the coming "
+"sections, but let's give you a quick little taster. Let's say we want to "
+"create a point from text. First we use the psql command to find functions "
+"relating to point. If you are not already connected to the ``address`` "
+"database, do so now. Then run:"
+msgstr ""
+"Naša PostgreSQL ``address`` baza podataka sada je geoprostorno omogućena, "
+"zahvaljujući PostGIS-u. U ovo ćemo mnogo dublje zaroniti u narednim "
+"odeljcima, ali dajmo vam kratku probu. Recimo da želimo da napravimo tačku "
+"iz teksta. Prvo koristimo psql komandu da pronađemo funkcije koje se odnose "
+"na tačku. Ako već niste povezani sa ``address`` bazom podataka, povežite se "
+"sada. Zatim pokrenite:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:97
+msgid ""
+"This is the command we're looking for: ``st_pointfromtext``.  To page "
+"through the list, use the down arrow, then press :kbd:`Q` to quit back to "
+"the psql shell."
+msgstr ""
+"Ovo je komanda koju tražimo: ``st_pointfromtext``. Za listanje kroz listu "
+"koristite strelicu nadole, zatim pritisnite :kbd:`Q` da biste izašli nazad u"
+" psql školjku."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:100
+msgid "Try running this command:"
+msgstr "Pokušajte da pokrenete ovu komandu:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:106
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:140
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:207
+msgid "Result:"
+msgstr "Rezultat:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:115
+msgid "Three things to note:"
+msgstr "Tri stvari koje treba primetiti:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:117
+msgid ""
+"We defined a point at position 1,1 (EPSG:4326 is assumed) using ``POINT(1 "
+"1)``,"
+msgstr ""
+"Definisali smo tačku na položaju 1,1 (pretpostavlja se EPSG:4326) pomoću "
+"``POINT(1 1)``,"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:119
+msgid ""
+"We ran an sql statement, but not on any table, just on data entered from the"
+" SQL prompt,"
+msgstr ""
+"Pokrenuli smo sql naredbu, ali ne nad bilo kojom tabelom, već samo nad "
+"podacima unetim iz SQL prompta,"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:121
+msgid "The resulting row does not make much sense."
+msgstr "Rezultujući red nema mnogo smisla."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:123
+msgid ""
+"The resulting row is in the OGC format called 'Well Known Binary' (WKB). We "
+"will look at this format in detail in the next section."
+msgstr ""
+"Rezultujući red je u OGC formatu pod nazivom „Well Known Binary“ (WKB). Ovaj"
+" format ćemo detaljno razmotriti u sledećem odeljku."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:126
+msgid ""
+"To get the results back as text, we can do a quick scan through the function"
+" list for something that returns text:"
+msgstr ""
+"Da bismo rezultate dobili nazad kao tekst, možemo brzo pregledati listu "
+"funkcija za nešto što vraća tekst:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:133
+msgid ""
+"The query we're looking for now is ``st_astext``. Let's combine it with the "
+"previous query:"
+msgstr ""
+"Upit koji sada tražimo je ``st_astext``. Kombinujmo ga sa prethodnim upitom:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:149
+msgid ""
+"Here, we entered the string ``POINT(1,1)``, turned it into a point using "
+"``st_pointfromtext()``, and turned it back into a human-readable form with "
+"``st_astext()``, which gave us back our original string."
+msgstr ""
+"Ovde smo uneli nisku ``POINT(1,1)``, pretvorili je u tačku pomoću "
+"``st_pointfromtext()``, i pretvorili je nazad u čitljiv oblik pomoću "
+"``st_astext()``, što nam je vratilo našu originalnu nisku."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:154
+msgid ""
+"One last example before we really get into the detail of using PostGIS:"
+msgstr ""
+"Još jedan poslednji primer pre nego što zaista uđemo u detalje korišćenja "
+"PostGIS-a:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:160
+msgid ""
+"What did that do? It created a buffer of 1 degree around our point, and "
+"returned the result as text."
+msgstr ""
+"Šta je to uradilo? Napravilo je bafer od 1 stepena oko naše tačke i vratilo "
+"rezultat kao tekst."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:164
+msgid "Spatial Reference Systems"
+msgstr "Prostorni referentni sistemi"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:166
+msgid ""
+"In addition to the PostGIS functions, the extension contains a collection of"
+" spatial reference system (SRS) definitions as defined by the European "
+"Petroleum Survey Group (EPSG). These are used during operations such as "
+"coordinate reference system (CRS) conversions."
+msgstr ""
+"Pored PostGIS funkcija, ekstenzija sadrži zbirku definicija prostornih "
+"referentnih sistema (SRS) kako ih je definisala Evropska grupa za naftna "
+"istraživanja (EPSG). Ove se koriste tokom operacija kao što su pretvaranja "
+"koordinatnih referentnih sistema (CRS)."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:171
+msgid ""
+"We can inspect these SRS definitions in our database as they are stored in "
+"normal database tables."
+msgstr ""
+"Ove SRS definicije možemo pregledati u našoj bazi podataka jer su sačuvane u"
+" običnim tabelama baze podataka."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:174
+msgid ""
+"First, let's look at the schema of the table by entering the following "
+"command in the psql prompt:"
+msgstr "Prvo, pogledajmo šemu tabele unosom sledeće komande u psql prompt:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:181
+msgid "The result should be this:"
+msgstr "Rezultat treba da bude ovo:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:196
+msgid ""
+"You can use standard SQL queries (as we have learned from our introductory "
+"sections), to view and manipulate this table - though its not a good idea to"
+" update or delete any records unless you know what you are doing."
+msgstr ""
+"Možete koristiti standardne SQL upite (kao što smo naučili iz naših uvodnih "
+"odeljaka) za pregled i manipulaciju ovom tabelom - mada nije dobra ideja "
+"ažurirati ili brisati bilo koje zapise osim ako ne znate šta radite."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:200
+msgid ""
+"One SRID you may be interested in is EPSG:4326 - the geographic / lat lon "
+"reference system using the WGS 84 ellipsoid. Let's take a look at it:"
+msgstr ""
+"Jedan SRID koji vas može zanimati je EPSG:4326 - geografski / lat lon "
+"referentni sistem koji koristi WGS 84 elipsoid. Pogledajmo ga:"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:221
+msgid ""
+"The ``srtext`` is the projection definition in well known text (you may "
+"recognise this from .prj files in your shapefile collection)."
+msgstr ""
+"``srtext`` je definicija projekcije u dobro poznatom tekstu (možda ćete ga "
+"prepoznati iz .prj datoteka u svojoj zbirci shapefile-ova)."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:225
+msgid "In Conclusion"
+msgstr "Zaključak"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:227
+msgid ""
+"You now have PostGIS functions installed in your copy of PostgreSQL. With "
+"this you'll be able to make use of PostGIS' extensive spatial functions."
+msgstr ""
+"Sada imate PostGIS funkcije instalirane u svojoj kopiji PostgreSQL-a. Sa "
+"ovim ćete moći da koristite obimne prostorne funkcije PostGIS-a."
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:231
+msgid "What's Next?"
+msgstr "Šta je sledeće?"
+
+#: ../../docs/training_manual/spatial_databases/spatial_functions.rst:233
+msgid "Next you'll learn how spatial features are represented in a database."
+msgstr ""
+"Zatim ćete naučiti kako se prostorni objekti predstavljaju u bazi podataka."
