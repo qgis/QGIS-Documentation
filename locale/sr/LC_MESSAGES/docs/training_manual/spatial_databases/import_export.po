@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Transifex Bot <>, 2026
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"PO-Revision-Date: 2026-03-13 09:53+0000\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
+"Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:2
+msgid "Lesson: Import and Export"
+msgstr "Lekcija: Uvoz i izvoz"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:4
+msgid ""
+"Of course, a database with no easy way to migrate data into it and out of it"
+" would not be of much use. Fortunately, there are a number of tools that "
+"will let you easily move data into and out of PostgreSQL."
+msgstr ""
+"Naravno, baza podataka bez lakog načina za prenos podataka u nju i iz nje ne"
+" bi bila od velike koristi. Srećom, postoji nekoliko alata koji vam "
+"omogućavaju da lako premeštate podatke u PostgreSQL i iz njega."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:9
+msgid "shp2pgsql"
+msgstr "shp2pgsql"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:11
+msgid ""
+"shp2pgsql is a commandline tool to import ESRI Shapefile to the database. "
+"Under Unix, you can use the following command for importing a new PostgreSQL"
+" table:"
+msgstr ""
+"shp2pgsql je alat komandne linije za uvoz ESRI Shapefile-a u bazu podataka. "
+"Na Uniksu možete koristiti sledeću komandu za uvoz nove PostgreSQL tabele:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:20
+msgid "Under Windows, you have to perform the import process in two steps:"
+msgstr "Na Windows-u, postupak uvoza morate obaviti u dva koraka:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:27
+msgid "You may encounter this error:"
+msgstr "Možda ćete naići na ovu grešku:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:34
+msgid ""
+"This is a known issue regarding the creation *in situ* of a spatial index "
+"for the data you're importing. To avoid the error, exclude the ``-I`` "
+"parameter. This will mean that no spatial index is being created directly, "
+"and you'll need to create it in the database after the data have been "
+"imported. (The creation of a spatial index will be covered in the next "
+"lesson.)"
+msgstr ""
+"Ovo je poznat problem u vezi sa pravljenjem *in situ* prostornog indeksa za "
+"podatke koje uvozite. Da biste izbegli grešku, izostavite parametar ``-I``. "
+"To znači da se prostorni indeks ne pravi direktno, pa ćete morati da ga "
+"napravite u bazi podataka nakon uvoza podataka. (Pravljenje prostornog "
+"indeksa biće obrađeno u sledećoj lekciji.)"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:41
+msgid "pgsql2shp"
+msgstr "pgsql2shp"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:43
+msgid ""
+"pgsql2shp is a commandline tool to export PostgreSQL Tables, Views or SQL "
+"select queries. To do this under Unix:"
+msgstr ""
+"pgsql2shp je alat komandne linije za izvoz PostgreSQL tabela, pogleda ili "
+"SQL select upita. Za to na Uniksu:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:51
+msgid "To export the data using a query:"
+msgstr "Za izvoz podataka pomoću upita:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:59
+msgid "ogr2ogr"
+msgstr "ogr2ogr"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:61
+msgid ""
+"ogr2ogr is a very powerful tool to convert data into and from PostgreSQL to "
+"many data formats. ogr2ogr is part of the GDAL library and has to be "
+"installed separately. To export a table from PostgreSQL to GML, you can use "
+"this command:"
+msgstr ""
+"ogr2ogr je veoma moćan alat za pretvaranje podataka u PostgreSQL i iz njega "
+"u mnoge formate podataka. ogr2ogr je deo GDAL biblioteke i mora se "
+"instalirati zasebno. Za izvoz tabele iz PostgreSQL-a u GML, možete koristiti"
+" ovu komandu:"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:71
+msgid "DB Manager"
+msgstr "DB Manager"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:73
+msgid ""
+"You may have noticed another option in the :guilabel:`Database` menu labeled"
+" :guilabel:`DB Manager`. This is a tool that provides a unified interface "
+"for interacting with spatial databases including PostgreSQL. It also allows "
+"you to import and export from databases to other formats. Since the next "
+"module is largely devoted to using this tool, we will only briefly mention "
+"it here."
+msgstr ""
+"Možda ste primetili još jednu opciju u meniju :guilabel:`Baza podataka` pod "
+"nazivom :guilabel:`DB menadžer`. To je alat koji pruža jedinstven interfejs "
+"za rad sa prostornim bazama podataka, uključujući PostgreSQL. Takođe vam "
+"omogućava uvoz i izvoz iz baza podataka u druge formate. Pošto je sledeći "
+"modul u velikoj meri posvećen korišćenju ovog alata, ovde ćemo ga samo "
+"ukratko pomenuti."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:82
+msgid "In Conclusion"
+msgstr "Zaključak"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:84
+msgid ""
+"Importing and exporting data to and from the database can be done in many "
+"various ways. Especially when using disparate data sources, you will "
+"probably use these functions (or others like them) on a regular basis."
+msgstr ""
+"Uvoz i izvoz podataka u bazu podataka i iz nje može se obaviti na mnogo "
+"različitih načina. Naročito pri korišćenju različitih izvora podataka, "
+"verovatno ćete ove funkcije (ili druge slične njima) koristiti redovno."
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:89
+msgid "What's Next?"
+msgstr "Šta je sledeće?"
+
+#: ../../docs/training_manual/spatial_databases/import_export.rst:91
+msgid "Next we'll look at how to query the data we've created before."
+msgstr ""
+"Zatim ćemo pogledati kako da postavljamo upite nad podacima koje smo "
+"prethodno napravili."
