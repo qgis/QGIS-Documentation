@@ -1285,7 +1285,7 @@ which covers the whole layer.
     Concave hulls by feature
 
 
-.. seealso:: :ref:`qgisconvexhull`
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgistightconcavehullofpolygons`
 
 Parameters
 ..........
@@ -1302,7 +1302,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: geometry]
-     - Input vector layer with multipoint features
+     - Input vector layer
    * - **Threshold**
      - ``ALPHA``
      - [numeric: double]
@@ -1369,7 +1369,7 @@ Computes the concave hull covering all features from an input point layer.
 See the :ref:`qgisconcavehullbyfeature` algorithm for a concave hull calculation
 which covers individual features from a layer.
 
-.. seealso:: :ref:`qgisconvexhull`
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgistightconcavehullofpolygons`
 
 Parameters
 ..........
@@ -3274,15 +3274,16 @@ creating 'district' polygons around blocks, or removing gaps and joining disjoin
 The algorithm works by creating a constrained Delaunay Triangulation of the space between
 the polygons and removing the longest outer edges until a target criterion is reached.
 
-The input geometry must be a valid Polygon or MultiPolygon (i.e., the individual polygons must not overlap).
+The input geometry must be a valid Polygon or MultiPolygon
+(i.e., the individual polygons within the same multipolygon must not overlap).
 
 .. figure:: img/fill_gaps_between_polygons.png
     :align: center
 
-    Filling gaps between polygons using ratio values of 0, 0.3 and 1.
+    Filling gaps between polygons using ratio values of 0.3 and 1 (holes allowed).
 
 
-.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisconcavehullbyfeature`
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisconcavehullbyfeature`, :ref:`qgisconcavehull`
 
 Parameters
 ..........
