@@ -1,0 +1,2278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Harrissou Sant-anna, 2026
+# Transifex Bot <>, 2026
+# Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation 3.44\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-13 19:45+0000\n"
+"PO-Revision-Date: 2026-03-13 09:54+0000\n"
+"Last-Translator: Vladimir Vukovic, 2026\n"
+"Language-Team: Serbian (https://app.transifex.com/qgis/teams/6144/sr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../../<rst_prolog>:5
+msgid ""
+"Translation is a community effort :ref:`you can join "
+"<translation_guidelines>`. This page is currently translated at |translation"
+" progress|."
+msgstr ""
+"Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
+"trenutno prevedena na |napredak prevođenja|."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:6
+msgid "Working with the Attribute Table"
+msgstr "Rad sa atributskom tabelom"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:8
+msgid ""
+"The attribute table displays information on features of a selected layer. "
+"Each row in the table represents a feature (with or without geometry), and "
+"each column contains a particular piece of information about the feature. "
+"Features in the table can be searched, selected, moved or even edited."
+msgstr ""
+"Atributska tabela prikazuje informacije o objektima izabranog sloja. Svaki "
+"red u tabeli predstavlja objekat (sa geometrijom ili bez nje), a svaka "
+"kolona sadrži određenu informaciju o objektu. Objekti u tabeli mogu se "
+"pretraživati, birati, pomerati ili čak uređivati."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:22
+msgid "Foreword: Spatial and non-spatial tables"
+msgstr "Uvod: prostorne i neprostorne tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:24
+msgid ""
+"QGIS allows you to load spatial and non-spatial layers. This currently "
+"includes tables supported by GDAL and delimited text, as well as the "
+"PostgreSQL, MS SQL Server, SpatiaLite and Oracle providers. All loaded "
+"layers are listed in the :guilabel:`Layers` panel. Whether a layer is "
+"spatially enabled or not determines whether you can interact with it on the "
+"map."
+msgstr ""
+"QGIS vam omogućava da učitate prostorne i neprostorne slojeve. Ovo trenutno "
+"uključuje tabele koje podržavaju GDAL i razdvojen tekst, kao i PostgreSQL, "
+"MS SQL Server, SpatiaLite i Oracle provajdere. Svi učitani slojevi navedeni "
+"su u panelu :guilabel:`Slojevi`. To da li je sloj prostorno omogućen ili ne "
+"određuje da li možete da komunicirate s njim na karti."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
+msgid ""
+"Non-spatial tables can be browsed and edited using the attribute table view."
+" Furthermore, they can be used for field lookups. For example, you can use "
+"columns of a non-spatial table to define attribute values, or a range of "
+"values that are allowed, to be added to a specific vector layer during "
+"digitizing. Have a closer look at the edit widget in section "
+":ref:`vector_attributes_menu` to find out more."
+msgstr ""
+"Neprostorne tabele mogu se pregledati i uređivati pomoću prikaza atributske "
+"tabele. Osim toga, mogu se koristiti za pretraživanje polja. Na primer, "
+"možete koristiti kolone neprostorne tabele da definišete vrednosti atributa,"
+" ili opseg dozvoljenih vrednosti, koje se dodaju određenom vektorskom sloju "
+"tokom digitalizovanja. Pogledajte pobliže vidžet za uređivanje u odeljku "
+":ref:`vector_attributes_menu` da biste saznali više."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
+msgid "Introducing the attribute table interface"
+msgstr "Predstavljanje interfejsa atributske tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
+msgid ""
+"To open the attribute table for a vector layer, activate the layer by "
+"clicking on it in the :ref:`label_legend`. Then, from the main "
+":menuselection:`Layer` menu, choose |openTable| :menuselection:`Open "
+"Attribute Table`. It is also possible to right-click on the layer and choose"
+" |openTable| :menuselection:`Open Attribute Table` from the drop-down menu, "
+"or to click on the |openTable| :guilabel:`Open Attribute Table` button in "
+"the Attributes toolbar. If you prefer shortcuts, :kbd:`F6` will open the "
+"attribute table. :kbd:`Shift+F6` will open the attribute table filtered to "
+"selected features and :kbd:`Ctrl+F6` will open the attribute table filtered "
+"to visible features."
+msgstr ""
+"Da biste otvorili atributsku tabelu za vektorski sloj, aktivirajte sloj "
+"klikom na njega u :ref:`label_legend`. Zatim iz glavnog menija "
+":menuselection:`Sloj` izaberite |openTable| :menuselection:`Otvori "
+"atributsku tabelu`. Takođe je moguće kliknuti desnim tasterom na sloj i "
+"izabrati |openTable| :menuselection:`Otvori atributsku tabelu` iz padajućeg "
+"menija, ili kliknuti na dugme |openTable| :guilabel:`Otvori atributsku "
+"tabelu` u paleti alatki Atributi. Ako preferirate prečice, :kbd:`F6` će "
+"otvoriti atributsku tabelu. :kbd:`Shift+F6` će otvoriti atributsku tabelu "
+"filtriranu na izabrane objekte, a :kbd:`Ctrl+F6` će otvoriti atributsku "
+"tabelu filtriranu na vidljive objekte."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:865
+msgid "openTable"
+msgstr "openTable"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:53
+msgid ""
+"This will open a new window that displays the feature attributes for the "
+"layer (figure_attributes_table_). According to the setting in "
+":menuselection:`Settings --> Options --> Data sources` menu, the attribute "
+"table will open in a docked window or a regular window. The total number of "
+"features in the layer and the number of currently selected/filtered features"
+" are shown in the attribute table title, as well as if the layer is "
+"spatially limited."
+msgstr ""
+"Time će se otvoriti novi prozor koji prikazuje atribute objekata sloja "
+"(figure_attributes_table_). Prema podešavanju u meniju "
+":menuselection:`Podešavanja --> Opcije --> Izvori podataka`, atributska "
+"tabela će se otvoriti u usidrenom prozoru ili običnom prozoru. Ukupan broj "
+"objekata u sloju i broj trenutno izabranih/filtriranih objekata prikazani su"
+" u naslovu atributske tabele, kao i da li je sloj prostorno ograničen."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:66
+msgid "Attribute Table for regions layer"
+msgstr "Atributska tabela za sloj regiona"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:68
+msgid ""
+"The buttons at the top of the attribute table window provide the following "
+"functionality:"
+msgstr ""
+"Dugmad na vrhu prozora atributske tabele pružaju sledeću funkcionalnost:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
+msgid "Available Tools"
+msgstr "Dostupne alatke"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Icon"
+msgstr "Ikona"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Label"
+msgstr "Oznaka"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Purpose"
+msgstr "Svrha"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Default Shortcut"
+msgstr "Podrazumevana prečica"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|toggleEditing|"
+msgstr "|toggleEditing|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:895
+msgid "toggleEditing"
+msgstr "toggleEditing"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Toggle editing mode"
+msgstr "Uključi/isključi režim uređivanja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Enable editing functionalities"
+msgstr "Omogući funkcionalnosti uređivanja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+E`"
+msgstr ":kbd:`Ctrl+E`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|multiEdit|"
+msgstr "|multiEdit|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:853
+msgid "multiEdit"
+msgstr "multiEdit"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Toggle multi edit mode"
+msgstr "Uključi/isključi režim višestrukog uređivanja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Update multiple fields of many features"
+msgstr "Ažuriraj više polja mnogih objekata"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|saveEdits|"
+msgstr "|saveEdits|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:885
+msgid "saveEdits"
+msgstr "saveEdits"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Save Edits"
+msgstr "Sačuvaj izmene"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Save current modifications"
+msgstr "Sačuvaj trenutne izmene"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|refresh|"
+msgstr "|refresh|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:883
+msgid "refresh"
+msgstr "refresh"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Reload the table"
+msgstr "Ponovo učitaj tabelu"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|newTableRow| :menuselection:`-->` ([1]_)"
+msgstr "|newTableRow| :menuselection:`-->` ([1]_)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:863
+msgid "newTableRow"
+msgstr "newTableRow"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature"
+msgstr "Dodaj objekat"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add new geometryless feature"
+msgstr "Dodaj novi objekat bez geometrije"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":menuselection:`-->` |newTableRow|"
+msgstr ":menuselection:`-->` |newTableRow|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature via attribute table"
+msgstr "Dodaj objekat preko atributske tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Inserts a new empty row in the attribute table to be filled in"
+msgstr "Umeće novi prazan red u atributsku tabelu koji treba popuniti"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":menuselection:`-->` |formSelect|"
+msgstr ":menuselection:`-->` |formSelect|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:839
+msgid "formSelect"
+msgstr "formSelect"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add feature via attribute form"
+msgstr "Dodaj objekat preko atributskog obrasca"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Opens the feature attributes form for data entry"
+msgstr "Otvara obrazac atributa objekta za unos podataka"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deleteSelectedFeatures|"
+msgstr "|deleteSelectedFeatures|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:821
+msgid "deleteSelectedFeatures"
+msgstr "deleteSelectedFeatures"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Delete selected features"
+msgstr "Obriši izabrane objekte"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Remove selected features from the layer"
+msgstr "Ukloni izabrane objekte iz sloja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|editCut|"
+msgstr "|editCut|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:827
+msgid "editCut"
+msgstr "editCut"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Cut selected features to clipboard"
+msgstr "Iseci izabrane objekte u ostavu"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+X`"
+msgstr ":kbd:`Ctrl+X`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|copySelected|"
+msgstr "|copySelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:817
+msgid "copySelected"
+msgstr "copySelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Copy selected features to clipboard"
+msgstr "Kopiraj izabrane objekte u ostavu"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+C`"
+msgstr ":kbd:`Ctrl+C`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|editPaste|"
+msgstr "|editPaste|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:829
+msgid "editPaste"
+msgstr "editPaste"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Paste features from clipboard"
+msgstr "Nalepi objekte iz ostave"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Insert new features from copied ones"
+msgstr "Umetni nove objekte iz kopiranih"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+V`"
+msgstr ":kbd:`Ctrl+V`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|expressionSelect|"
+msgstr "|expressionSelect|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:835
+msgid "expressionSelect"
+msgstr "expressionSelect"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select features using an Expression"
+msgstr "Izaberi objekte pomoću izraza"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|selectAll|"
+msgstr "|selectAll|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:887
+msgid "selectAll"
+msgstr "selectAll"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select All"
+msgstr "Izaberi sve"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Select all features in the layer"
+msgstr "Izaberi sve objekte u sloju"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+A`"
+msgstr ":kbd:`Ctrl+A`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|invertSelection|"
+msgstr "|invertSelection|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:851
+msgid "invertSelection"
+msgstr "invertSelection"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Invert selection"
+msgstr "Obrni izbor"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Invert the current selection in the layer"
+msgstr "Obrni trenutni izbor u sloju"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+R`"
+msgstr ":kbd:`Ctrl+R`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deselectActiveLayer|"
+msgstr "|deselectActiveLayer|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:823
+msgid "deselectActiveLayer"
+msgstr "deselectActiveLayer"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Deselect all"
+msgstr "Poništi ceo izbor"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Deselect all features in the current layer"
+msgstr "Poništi izbor svih objekata u trenutnom sloju"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+Shift+A`"
+msgstr ":kbd:`Ctrl+Shift+A`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|filterMap|"
+msgstr "|filterMap|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:837
+msgid "filterMap"
+msgstr "filterMap"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Filter/Select features using form"
+msgstr "Filtriraj/izaberi objekte pomoću obrasca"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+F`"
+msgstr ":kbd:`Ctrl+F`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|selectedToTop|"
+msgstr "|selectedToTop|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:889
+msgid "selectedToTop"
+msgstr "selectedToTop"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Move selected to top"
+msgstr "Pomeri izabrano na vrh"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Move selected rows to the top of the table"
+msgstr "Pomeri izabrane redove na vrh tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|panToSelected|"
+msgstr "|panToSelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:877
+msgid "panToSelected"
+msgstr "panToSelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Pan map to the selected rows"
+msgstr "Pomeri kartu na izabrane redove"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+P`"
+msgstr ":kbd:`Ctrl+P`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|zoomToSelected|"
+msgstr "|zoomToSelected|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:901
+msgid "zoomToSelected"
+msgstr "zoomToSelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Zoom map to the selected rows"
+msgstr "Uveličaj kartu na izabrane redove"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+J`"
+msgstr ":kbd:`Ctrl+J`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|newAttribute|"
+msgstr "|newAttribute|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:861
+msgid "newAttribute"
+msgstr "newAttribute"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "New field"
+msgstr "Novo polje"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Add a new field to the data source"
+msgstr "Dodaj novo polje u izvor podataka"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+W`"
+msgstr ":kbd:`Ctrl+W`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|deleteAttribute|"
+msgstr "|deleteAttribute|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:819
+msgid "deleteAttribute"
+msgstr "deleteAttribute"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Delete field"
+msgstr "Obriši polje"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Remove a field from the data source"
+msgstr "Ukloni polje iz izvora podataka"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|editTable|"
+msgstr "|editTable|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:831
+msgid "editTable"
+msgstr "editTable"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Organize columns"
+msgstr "Organizuj kolone"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Show/hide fields from the attribute table"
+msgstr "Prikaži/sakrij polja iz atributske tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|calculateField|"
+msgstr "|calculateField|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:811
+msgid "calculateField"
+msgstr "calculateField"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Open field calculator"
+msgstr "Otvori kalkulator polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Update field for many features in a row"
+msgstr "Ažuriraj polje za mnoge objekte odjednom"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid ":kbd:`Ctrl+I`"
+msgstr ":kbd:`Ctrl+I`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|conditionalFormatting|"
+msgstr "|conditionalFormatting|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:815
+msgid "conditionalFormatting"
+msgstr "conditionalFormatting"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Conditional formatting"
+msgstr "Uslovno formatiranje"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Enable table formatting"
+msgstr "Omogući formatiranje tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|dock|"
+msgstr "|dock|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:825
+msgid "dock"
+msgstr "dock"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Dock attribute table"
+msgstr "Usidri atributsku tabelu"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Allows to dock/undock the attribute table"
+msgstr "Omogućava usidravanje/odsidravanje atributske tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "|actionRun|"
+msgstr "|actionRun|"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:809
+msgid "actionRun"
+msgstr "actionRun"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Actions"
+msgstr "Actions"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
+msgid "Lists the actions related to the layer"
+msgstr "Navodi radnje povezane sa slojem"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:105
+msgid ""
+"Press and hold to select whether to add the feature via the attribute table "
+"or form."
+msgstr ""
+"Pritisnite i držite da biste izabrali da li da dodate objekat preko "
+"atributske tabele ili obrasca."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:107
+msgid ""
+"Depending on the format of the data and the GDAL library built with your "
+"QGIS version, some tools may not be available."
+msgstr ""
+"U zavisnosti od formata podataka i GDAL biblioteke sa kojom je izgrađena "
+"vaša verzija QGIS-a, neke alatke možda neće biti dostupne."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:110
+msgid ""
+"Below these buttons is the Quick Field Calculation bar (enabled only in "
+":ref:`edit mode <sec_edit_existing_layer>`), which allows to quickly apply "
+"calculations to all or part of the features in the layer. This bar uses the "
+"same :ref:`expressions <vector_expressions>` as the |calculateField| "
+":sup:`Field Calculator` (see :ref:`calculate_fields_values`)."
+msgstr ""
+"Ispod ove dugmadi je traka za brzo računanje polja (omogućena samo u "
+":ref:`režimu uređivanja <sec_edit_existing_layer>`), koja omogućava brzu "
+"primenu izračunavanja na sve ili deo objekata u sloju. Ova traka koristi "
+"iste :ref:`izraze <vector_expressions>` kao |calculateField| "
+":sup:`Kalkulator polja` (pogledajte :ref:`calculate_fields_values`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:120
+msgid "Table view vs Form view"
+msgstr "Prikaz tabele naspram prikaza obrasca"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:122
+msgid ""
+"QGIS provides two view modes to easily manipulate data in the attribute "
+"table:"
+msgstr ""
+"QGIS pruža dva režima prikaza za laku manipulaciju podacima u atributskoj "
+"tabeli:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:124
+msgid ""
+"The |openTable| :sup:`Table view`, displays values of multiple features in a"
+" tabular mode, each row representing a feature and each column a field. A "
+"right-click on the column header allows you to :ref:`configure the table "
+"display <configure_table_columns>` while a right-click on a cell provides "
+":ref:`interaction with the feature <interacting_features_table>`."
+msgstr ""
+"|openTable| :sup:`Prikaz tabele` prikazuje vrednosti više objekata u "
+"tabelarnom režimu, gde svaki red predstavlja objekat, a svaka kolona polje. "
+"Desni klik na zaglavlje kolone omogućava vam da :ref:`konfigurišete prikaz "
+"tabele <configure_table_columns>`, dok desni klik na ćeliju pruža "
+":ref:`interakciju sa objektom <interacting_features_table>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:130
+msgid ""
+"The attribute table supports :kbd:`Shift+Mouse Wheel` scrolling in table "
+"view mode to switch between vertical and horizontal scrolling movements. "
+"This can also be achieved replacing the mouse with the trackpad on macOS."
+msgstr ""
+"Atributska tabela podržava skrolovanje pomoću :kbd:`Shift+Mouse Wheel` u "
+"režimu prikaza tabele radi prebacivanja između vertikalnog i horizontalnog "
+"kretanja skrolovanja. Ovo se takođe može postići zamenom miša trekpadom na "
+"macOS-u."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:133
+msgid ""
+"The |formView| :sup:`Form view` shows :ref:`feature identifiers <maptips>` "
+"in a first panel and displays only the attributes of the clicked identifier "
+"in the second one. There is a pull-down menu at the top of the first panel "
+"where the \"identifier\" can be updated using an attribute "
+"(:menuselection:`Columns -->`) or an :guilabel:`Expression`. A "
+":menuselection:`Sort... -->` menu allows you to sort the returned "
+"identifiers :guilabel:`By display name (ascending)`, :guilabel:`By display "
+"name (descending)` or :guilabel:`By custom expression`. The pull-down also "
+"includes the last 10 expressions for reuse. Form view uses the layer fields "
+"configuration (see :ref:`vector_attributes_menu`)."
+msgstr ""
+"|formView| :sup:`Prikaz obrasca` prikazuje :ref:`identifikatore objekata "
+"<maptips>` u prvom panelu i prikazuje samo atribute objekta na koji je "
+"kliknuto u drugom. Na vrhu prvog panela nalazi se padajući meni gde se "
+"„identifikator“ može ažurirati pomoću atributa (:menuselection:`Kolone -->`)"
+" ili :guilabel:`izraza`. Meni :menuselection:`Sortiraj... -->` omogućava vam"
+" da sortirate vraćene identifikatore :guilabel:`Po prikazanom nazivu "
+"(rastuće)`, :guilabel:`Po prikazanom nazivu (opadajuće)` ili :guilabel:`Po "
+"prilagođenom izrazu`. Padajući meni takođe uključuje poslednjih 10 izraza za"
+" ponovnu upotrebu. Prikaz obrasca koristi konfiguraciju polja sloja "
+"(pogledajte :ref:`vector_attributes_menu`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:841
+msgid "formView"
+msgstr "formView"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:145
+msgid ""
+"You can browse through the feature identifiers with the arrows on the bottom"
+" of the first panel. The features attributes update in the second panel as "
+"you go. It's also possible to identify or move to the active feature in the "
+"map canvas with pushing down any of the button at the bottom:"
+msgstr ""
+"Kroz identifikatore objekata možete se kretati pomoću strelica na dnu prvog "
+"panela. Atributi objekata se ažuriraju u drugom panelu kako idete. Takođe je"
+" moguće identifikovati ili preći na aktivni objekat na platnu karte "
+"pritiskanjem bilo kog dugmeta na dnu:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:150
+msgid ""
+"|highlightFeature| :sup:`Highlight current feature` if visible in the map "
+"canvas"
+msgstr ""
+"|highlightFeature| :sup:`Istakni trenutni objekat` ako je vidljiv na platnu "
+"karte"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:847
+msgid "highlightFeature"
+msgstr "highlightFeature"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:152
+msgid "|panTo| :sup:`Automatically pan to current feature`"
+msgstr "|panTo| :sup:`Automatski pomeri na trenutni objekat`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:875
+msgid "panTo"
+msgstr "panTo"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:153
+msgid "|zoomTo| :sup:`Zoom to current feature`"
+msgstr "|zoomTo| :sup:`Uveličaj na trenutni objekat`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:899
+msgid "zoomTo"
+msgstr "zoomTo"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:155
+msgid ""
+"You can switch from one mode to the other by clicking the corresponding icon"
+" at the bottom right of the dialog."
+msgstr ""
+"Iz jednog režima u drugi možete se prebaciti klikom na odgovarajuću ikonu u "
+"donjem desnom uglu dijaloga."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:158
+msgid ""
+"You can also specify the :guilabel:`Default view` mode at the opening of the"
+" attribute table in :menuselection:`Settings --> Options --> Data Sources` "
+"menu. It can be 'Remember last view', 'Table view' or 'Form view'."
+msgstr ""
+"Takođe možete zadati režim :guilabel:`Podrazumevani prikaz` pri otvaranju "
+"atributske tabele u meniju :menuselection:`Podešavanja --> Opcije --> Izvori"
+" podataka`. To može biti „Zapamti poslednji prikaz“, „Prikaz tabele“ ili "
+"„Prikaz obrasca“."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:167
+msgid "Attribute table in table view (top) vs form view (bottom)"
+msgstr ""
+"Atributska tabela u prikazu tabele (gore) naspram prikaza obrasca (dole)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:175
+msgid "Configuring the columns"
+msgstr "Konfigurisanje kolona"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:177
+msgid ""
+"Right-click in a column header when in table view to have access to tools "
+"that help you control:"
+msgstr ""
+"Kliknite desnim tasterom u zaglavlje kolone dok ste u prikazu tabele da "
+"biste imali pristup alatkama koje vam pomažu da kontrolišete:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:180
+msgid "the :ref:`column(s) size <resize_columns>`"
+msgstr ":ref:`veličinu kolone(a) <resize_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:181
+msgid "the :ref:`column(s) visibility and order <organize_columns>`"
+msgstr ":ref:`vidljivost i redosled kolone(a) <organize_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:182
+msgid "the :ref:`sort order of the data <sort_columns>`"
+msgstr ":ref:`redosled sortiranja podataka <sort_columns>`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:187
+msgid "Resizing columns widths"
+msgstr "Promena širine kolona"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:189
+msgid ""
+"Columns width can be set through a right-click on the column header and "
+"select either:"
+msgstr ""
+"Širina kolona može se postaviti desnim klikom na zaglavlje kolone i izborom "
+"bilo:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:192
+msgid ""
+":guilabel:`Set width...` to enter the desired value. By default, the current"
+" value is displayed in the widget"
+msgstr ""
+":guilabel:`Postavi širinu...` da biste uneli željenu vrednost. Podrazumevano"
+" se u vidžetu prikazuje trenutna vrednost"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:194
+msgid ":guilabel:`Set all column widths...` to the same value"
+msgstr ":guilabel:`Postavi širine svih kolona...` na istu vrednost"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:195
+msgid ":guilabel:`Autosize` to resize at the best fit the column."
+msgstr ""
+":guilabel:`Automatska veličina` za promenu veličine kolone na najbolje "
+"uklapanje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:196
+msgid ":guilabel:`Autosize all columns`"
+msgstr ":guilabel:`Automatska veličina svih kolona`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:198
+msgid ""
+"A column size can also be changed by dragging the boundary on the right of "
+"its heading. The new size of the column is maintained for the layer, and "
+"restored at the next opening of the attribute table."
+msgstr ""
+"Veličina kolone se takođe može promeniti prevlačenjem granice sa desne "
+"strane njenog zaglavlja. Nova veličina kolone se održava za sloj i vraća pri"
+" sledećem otvaranju atributske tabele."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:202
+msgid ""
+"In the :ref:`Data Source Settings <datasources_options>`, you can choose to "
+"|checkbox| :guilabel:`Autosize all columns by default when opening attribute"
+" table`, which will make \"Autosize All Columns\" the default view every "
+"time attribute tables are opened in QGIS."
+msgstr ""
+"U :ref:`Podešavanjima izvora podataka <datasources_options>` možete izabrati"
+" |checkbox| :guilabel:`Podrazumevano automatski postavi veličinu svih kolona"
+" pri otvaranju atributske tabele`, čime će „Automatska veličina svih kolona“"
+" postati podrazumevani prikaz svaki put kada se atributske tabele otvore u "
+"QGIS-u."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:813
+msgid "checkbox"
+msgstr "checkbox"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:209
+msgid "Hiding and organizing columns and enabling actions"
+msgstr "Skrivanje i organizovanje kolona i omogućavanje radnji"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:211
+msgid ""
+"By right-clicking in a column header, you can choose to :guilabel:`Hide "
+"column` from the attribute table (in \"table view\" mode). For more advanced"
+" controls, press the |editTable| :sup:`Organize columns...` button from the "
+"dialog toolbar or choose :guilabel:`Organize columns...` in a column header "
+"contextual menu."
+msgstr ""
+"Desnim klikom u zaglavlje kolone možete izabrati :guilabel:`Sakrij kolonu` "
+"iz atributske tabele (u režimu „prikaz tabele“). Za naprednije kontrole "
+"pritisnite dugme |editTable| :sup:`Organizuj kolone...` iz palete alatki "
+"dijaloga ili izaberite :guilabel:`Organizuj kolone...` u kontekstnom meniju "
+"zaglavlja kolone."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:217
+msgid "In the new dialog, you can:"
+msgstr "U novom dijalogu možete:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:219
+msgid ""
+"check/uncheck columns you want to show or hide: a hidden column will "
+"disappear from every instance of the attribute table dialog until it is "
+"actively restored. It is also possible to:"
+msgstr ""
+"označiti/odznačiti kolone koje želite da prikažete ili sakrijete: skrivena "
+"kolona će nestati iz svake instance dijaloga atributske tabele dok se "
+"aktivno ne vrati. Takođe je moguće:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:223
+msgid ""
+"choose :guilabel:`Show All` to display all the fields (columns) and actions "
+"in the table"
+msgstr ""
+"izabrati :guilabel:`Prikaži sve` da biste prikazali sva polja (kolone) i "
+"radnje u tabeli"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:224
+msgid ""
+"choose :guilabel:`Hide All` to hide all the fields (columns) and actions in "
+"the table"
+msgstr ""
+"izabrati :guilabel:`Sakrij sve` da biste sakrili sva polja (kolone) i radnje"
+" u tabeli"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:225
+msgid ""
+"use the :guilabel:`Toggle selection` to invert visibility of the current "
+"selection of columns. You can use :ref:`keyboard combination "
+"<interacting_features_table>` for selecting multiple columns."
+msgstr ""
+"koristiti :guilabel:`Preokreni izbor` da biste obrnuli vidljivost trenutnog "
+"izbora kolona. Za izbor više kolona možete koristiti :ref:`kombinaciju "
+"tastera <interacting_features_table>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:229
+msgid ""
+"drag-and-drop items to reorder the columns in the attribute table. Note that"
+" this change is for the table rendering and does not alter the fields order "
+"in the layer datasource"
+msgstr ""
+"prevući i ispustiti stavke radi preuređivanja kolona u atributskoj tabeli. "
+"Imajte u vidu da je ova izmena za iscrtavanje tabele i ne menja redosled "
+"polja u izvoru podataka sloja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:232
+msgid ""
+"add a new virtual :guilabel:`Actions` column that displays in each row a "
+"drop-down box or a button list of enabled actions. See :ref:`actions_menu` "
+"for more information about actions."
+msgstr ""
+"dodati novu virtuelnu kolonu :guilabel:`Radnje` koja u svakom redu prikazuje"
+" padajući okvir ili listu dugmadi omogućenih radnji. Za više informacija o "
+"radnjama pogledajte :ref:`actions_menu`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
+msgid "Sorting rows"
+msgstr "Sortiranje redova"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
+msgid ""
+"The rows can be sorted by any column, by clicking on the column header. A "
+"small arrow indicates the sort order (downward pointing means descending "
+"values from the top row down, upward pointing means ascending values from "
+"the top row down). You can also choose to sort the rows with the "
+":guilabel:`Sort...` option of the column header context menu and write an "
+"expression. E.g. to sort the rows using multiple columns you can write "
+"``concat(col0, col1)``."
+msgstr ""
+"Redovi se mogu sortirati po bilo kojoj koloni, klikom na zaglavlje kolone. "
+"Mala strelica označava redosled sortiranja (strelica nadole znači opadajuće "
+"vrednosti od gornjeg reda naniže, strelica nagore znači rastuće vrednosti od"
+" gornjeg reda naniže). Takođe možete izabrati sortiranje redova pomoću "
+"opcije :guilabel:`Sortiraj...` u kontekstnom meniju zaglavlja kolone i "
+"napisati izraz. Npr. za sortiranje redova pomoću više kolona možete napisati"
+" ``concat(col0, col1)``."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:250
+msgid ""
+"In form view, features identifier can be sorted using the |sort| "
+":guilabel:`Sort by preview expression` option."
+msgstr ""
+"U prikazu obrasca, identifikatori objekata mogu se sortirati pomoću opcije "
+"|sort| :guilabel:`Sortiraj po izrazu pregleda`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:891
+msgid "sort"
+msgstr "sort"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:253
+msgid ""
+"Note that sorting the rows only affects the table rendering and does not "
+"alter the features order in the layer datasource."
+msgstr ""
+"Imajte u vidu da sortiranje redova utiče samo na iscrtavanje tabele i ne "
+"menja redosled objekata u izvoru podataka sloja."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:258
+msgid "**Sorting based on columns of different types**"
+msgstr "**Sortiranje na osnovu kolona različitih tipova**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:260
+msgid ""
+"Trying to sort an attribute table based on columns of string and numeric "
+"types may lead to unexpected result because of the ``concat(\"USE\", "
+"\"ID\")`` expression returning string values (ie, ``'Borough105' < "
+"'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
+"lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
+msgstr ""
+"Pokušaj sortiranja atributske tabele na osnovu kolona niskovnog i numeričkog"
+" tipa može dovesti do neočekivanog rezultata jer izraz ``concat(\"USE\", "
+"\"ID\")`` vraća niskovne vrednosti (tj. ``'Borough105' < 'Borough6'``). Ovo "
+"možete zaobići korišćenjem npr. ``concat(\"USE\", lpad(\"ID\", 3, 0))`` koji"
+" vraća ``'Borough105' > 'Borough006'``."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:270
+msgid "Formatting of table cells using conditions"
+msgstr "Formatiranje ćelija tabele pomoću uslova"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:272
+msgid ""
+"Conditional formatting settings can be used to highlight in the attribute "
+"table features you may want to put a particular focus on, using custom "
+"conditions on feature's:"
+msgstr ""
+"Podešavanja uslovnog formatiranja mogu se koristiti za isticanje objekata u "
+"atributskoj tabeli na koje biste možda želeli da stavite poseban fokus, "
+"pomoću prilagođenih uslova na:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:276
+msgid ""
+"geometry (e.g., identifying multi-parts features, small area ones or in a "
+"defined map extent...);"
+msgstr ""
+"geometriju objekta (npr. prepoznavanje višedelnih objekata, onih male "
+"površine ili u definisanom obuhvatu karte...);"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:278
+msgid ""
+"or field value (e.g., comparing values to a threshold, identifying empty "
+"cells, duplicates, ...)."
+msgstr ""
+"ili vrednost polja (npr. poređenje vrednosti sa pragom, prepoznavanje "
+"praznih ćelija, duplikata, ...)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:281
+msgid ""
+"You can enable the conditional formatting panel clicking on "
+"|conditionalFormatting| :sup:`Conditional formatting` button at the top "
+"right of the attributes window in table view (not triggered in form view)."
+msgstr ""
+"Panel uslovnog formatiranja možete omogućiti klikom na dugme "
+"|conditionalFormatting| :sup:`Uslovno formatiranje` u gornjem desnom uglu "
+"prozora atributa u prikazu tabele (ne pokreće se u prikazu obrasca)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:285
+msgid ""
+"The new panel allows user to add new rules to format rendering of "
+"|radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`. "
+"Adding new rule opens a form to define:"
+msgstr ""
+"Novi panel omogućava korisniku da doda nova pravila za formatiranje "
+"iscrtavanja |radioButtonOn|:guilabel:`Polja` ili "
+"|radioButtonOff|:guilabel:`Celog reda`. Dodavanje novog pravila otvara "
+"obrazac za definisanje:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:881
+msgid "radioButtonOn"
+msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:879
+msgid "radioButtonOff"
+msgstr "radioButtonOff"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:289
+msgid "the name of the rule;"
+msgstr "naziva pravila;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:290
+msgid ""
+"a condition using any of the :ref:`expression builder <vector_expressions>` "
+"functions;"
+msgstr ""
+"uslova pomoću bilo koje funkcije :ref:`graditelja izraza "
+"<vector_expressions>`;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:291
+msgid ""
+"the formatting: it can be chosen from a list of predefined formats or "
+"created based on properties like:"
+msgstr ""
+"formatiranja: može se izabrati iz liste unapred definisanih formata ili "
+"napraviti na osnovu svojstava kao što su:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:294
+msgid "background and text colors;"
+msgstr "boje pozadine i teksta;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:295
+msgid "use of icon;"
+msgstr "korišćenje ikone;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:296
+msgid "bold, italic, underline, or strikeout;"
+msgstr "podebljano, kurziv, podvučeno ili precrtano;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:297
+msgid "font."
+msgstr "font."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:304
+msgid "Conditional Formatting of an attribute table"
+msgstr "Uslovno formatiranje atributske tabele"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:311
+msgid "Interacting with features in an attribute table"
+msgstr "Interakcija sa objektima u atributskoj tabeli"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:314
+msgid "Selecting features"
+msgstr "Izbor objekata"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:316
+msgid ""
+"In table view, each row in the attribute table displays the attributes of a "
+"unique feature in the layer. Selecting a row selects the feature and "
+"likewise, selecting a feature in the map canvas (in case of geometry enabled"
+" layer) selects the row in the attribute table. If the set of features "
+"selected in the map canvas (or attribute table) is changed, then the "
+"selection is also updated in the attribute table (or map canvas) "
+"accordingly."
+msgstr ""
+"U prikazu tabele, svaki red u atributskoj tabeli prikazuje atribute "
+"jedinstvenog objekta u sloju. Izbor reda bira objekat, a isto tako, izbor "
+"objekta na platnu karte (u slučaju sloja sa geometrijom) bira red u "
+"atributskoj tabeli. Ako se skup objekata izabranih na platnu karte (ili "
+"atributskoj tabeli) promeni, tada se izbor u skladu s tim ažurira i u "
+"atributskoj tabeli (ili na platnu karte)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:323
+msgid ""
+"Rows can be selected by clicking on the row number on the left side of the "
+"row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key. A "
+"**continuous selection** can be made by holding the :kbd:`Shift` key and "
+"clicking on several row headers on the left side of the rows. All rows "
+"between the current cursor position and the clicked row are selected. Moving"
+" the cursor position in the attribute table, by clicking a cell in the "
+"table, does not change the row selection. Changing the selection in the main"
+" canvas does not move the cursor position in the attribute table."
+msgstr ""
+"Redovi se mogu izabrati klikom na broj reda sa leve strane reda. **Više "
+"redova** može se označiti držanjem tastera :kbd:`Ctrl`. **Neprekidan izbor**"
+" može se napraviti držanjem tastera :kbd:`Shift` i klikom na nekoliko "
+"zaglavlja redova sa leve strane redova. Svi redovi između trenutnog položaja"
+" pokazivača i reda na koji je kliknuto biće izabrani. Pomeranje položaja "
+"pokazivača u atributskoj tabeli, klikom na ćeliju u tabeli, ne menja izbor "
+"reda. Promena izbora na glavnom platnu ne pomera položaj pokazivača u "
+"atributskoj tabeli."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:332
+msgid ""
+"In form view of the attribute table, features are by default identified in "
+"the left panel by the value of their displayed field (see :ref:`maptips`). "
+"This identifier can be replaced using the drop-down list at the top of the "
+"panel, either by selecting an existing field or using a custom expression. "
+"You can also choose to sort the list of features from the drop-down menu."
+msgstr ""
+"U prikazu obrasca atributske tabele, objekti se podrazumevano identifikuju u"
+" levom panelu vrednošću svog prikazanog polja (pogledajte :ref:`maptips`). "
+"Ovaj identifikator se može zameniti pomoću padajuće liste na vrhu panela, "
+"bilo izborom postojećeg polja ili korišćenjem prilagođenog izraza. Takođe "
+"možete izabrati sortiranje liste objekata iz padajućeg menija."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:338
+msgid ""
+"Click a value in the left panel to display the feature's attributes in the "
+"right one. To select a feature, you need to click inside the square symbol "
+"at the left of the identifier. By default, the symbol turns into yellow. "
+"Like in the table view, you can perform multiple feature selection using the"
+" keyboard combinations previously exposed."
+msgstr ""
+"Kliknite na vrednost u levom panelu da biste prikazali atribute objekta u "
+"desnom. Da biste izabrali objekat, potrebno je da kliknete unutar kvadratnog"
+" simbola sa leve strane identifikatora. Podrazumevano simbol postaje žut. "
+"Kao u prikazu tabele, možete izabrati više objekata pomoću prethodno "
+"izloženih kombinacija tastera."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:347
+msgid ""
+"Beyond selecting features with the mouse, you can perform automatic "
+"selection based on feature's attribute using tools available in the "
+"attribute table toolbar, such as (see section :ref:`automatic_selection` and"
+" subsequent for more information and use case):"
+msgstr ""
+"Osim izbora objekata mišem, možete izvršiti automatski izbor na osnovu "
+"atributa objekta pomoću alatki dostupnih u paleti alatki atributske tabele, "
+"kao što su (za više informacija i primere upotrebe pogledajte odeljak "
+":ref:`automatic_selection` i naredne):"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:352
+msgid "|expressionSelect| :guilabel:`Select By Expression...`"
+msgstr "|expressionSelect| :guilabel:`Izaberi pomoću izraza...`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:353
+msgid "|formSelect| :guilabel:`Select Features By Value...`"
+msgstr "|formSelect| :guilabel:`Izaberi objekte po vrednosti...`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:354
+msgid "|deselectActiveLayer| :guilabel:`Deselect All Features from the Layer`"
+msgstr ""
+"|deselectActiveLayer| :guilabel:`Poništi izbor svih objekata iz sloja`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:355
+msgid "|selectAll| :guilabel:`Select All Features`"
+msgstr "|selectAll| :guilabel:`Izaberi sve objekte`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:356
+msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
+msgstr "|invertSelection| :guilabel:`Obrni izbor objekata`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:358
+msgid ""
+"It is also possible to :ref:`select features using forms "
+"<filter_select_form>`."
+msgstr ""
+"Takođe je moguće :ref:`izabrati objekte pomoću obrazaca "
+"<filter_select_form>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:364
+msgid "Filtering features"
+msgstr "Filtriranje objekata"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:366
+msgid ""
+"Once you have selected features in the attribute table, you may want to "
+"display only these records in the table. This can be easily done using the "
+":guilabel:`Show Selected Features` item from the drop-down list at the "
+"bottom left of the attribute table dialog. This list offers the following "
+"filters:"
+msgstr ""
+"Kada izaberete objekte u atributskoj tabeli, možda ćete želeti da prikažete "
+"samo te zapise u tabeli. To se lako radi pomoću stavke :guilabel:`Prikaži "
+"izabrane objekte` iz padajuće liste u donjem levom uglu dijaloga atributske "
+"tabele. Ova lista nudi sledeće filtere:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:371
+msgid "|openTable| :guilabel:`Show All Features`"
+msgstr "|openTable| :guilabel:`Prikaži sve objekte`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
+msgid ""
+"|openTableSelected| :guilabel:`Show Selected Features` - same as using "
+":guilabel:`Open Attribute Table (Selected Features)` from the "
+":guilabel:`Layer` menu or the :guilabel:`Attributes Toolbar` or pressing "
+":kbd:`Shift+F6`"
+msgstr ""
+"|openTableSelected| :guilabel:`Prikaži izabrane objekte` - isto kao "
+"korišćenje :guilabel:`Otvori atributsku tabelu (izabrani objekti)` iz menija"
+" :guilabel:`Sloj` ili :guilabel:`palete alatki Atributi` ili pritiskanje "
+":kbd:`Shift+F6`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:871
+msgid "openTableSelected"
+msgstr "openTableSelected"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:375
+msgid ""
+"|openTableVisible| :guilabel:`Show Features visible on map` - same as using "
+":guilabel:`Open Attribute Table (Visible Features)` from the "
+":guilabel:`Layer` menu or the :guilabel:`Attributes Toolbar` or pressing "
+":kbd:`Ctrl+F6`"
+msgstr ""
+"|openTableVisible| :guilabel:`Prikaži objekte vidljive na karti` - isto kao "
+"korišćenje :guilabel:`Otvori atributsku tabelu (vidljivi objekti)` iz menija"
+" :guilabel:`Sloj` ili :guilabel:`palete alatki Atributi` ili pritiskanje "
+":kbd:`Ctrl+F6`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:873
+msgid "openTableVisible"
+msgstr "openTableVisible"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:378
+msgid ""
+"|openTableInvalid| :guilabel:`Show Features with Failing Constraints` - "
+"features will be filtered to only show the ones which have failing "
+":ref:`constraints <constraints>`. Depending on whether the unmet constraint "
+"is hard or soft, failing field values are displayed in respectively dark or "
+"light orange cells."
+msgstr ""
+"|openTableInvalid| :guilabel:`Prikaži objekte sa neispunjenim ograničenjima`"
+" - objekti će biti filtrirani da prikažu samo one koji imaju neispunjena "
+":ref:`ograničenja <constraints>`. U zavisnosti od toga da li je neispunjeno "
+"ograničenje tvrdo ili meko, neispravne vrednosti polja prikazuju se redom u "
+"tamno ili svetlo narandžastim ćelijama."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:869
+msgid "openTableInvalid"
+msgstr "openTableInvalid"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:382
+msgid ""
+"|openTableEdited| :guilabel:`Show Edited and New Features` - same as using "
+":guilabel:`Open Attribute Table (Edited and New Features)` from the "
+":guilabel:`Layer` menu or the :guilabel:`Attributes Toolbar`"
+msgstr ""
+"|openTableEdited| :guilabel:`Prikaži uređene i nove objekte` - isto kao "
+"korišćenje :guilabel:`Otvori atributsku tabelu (uređeni i novi objekti)` iz "
+"menija :guilabel:`Sloj` ili :guilabel:`palete alatki Atributi`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:867
+msgid "openTableEdited"
+msgstr "openTableEdited"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:385
+msgid ""
+":guilabel:`Field Filter` - allows the user to filter based on value of a "
+"field: choose a column from a list, type or select a value and press "
+":kbd:`Enter` to filter. Then, only the features matching ``num_field = "
+"value`` or ``string_field ilike '%value%'`` expression are shown in the "
+"attribute table. You can check |checkbox| :guilabel:`Case sensitive` to be "
+"less permissive with strings."
+msgstr ""
+":guilabel:`Filter polja` - omogućava korisniku da filtrira na osnovu "
+"vrednosti polja: izaberite kolonu iz liste, unesite ili izaberite vrednost i"
+" pritisnite :kbd:`Enter` za filtriranje. Zatim se u atributskoj tabeli "
+"prikazuju samo objekti koji odgovaraju izrazu ``num_field = value`` ili "
+"``string_field ilike '%value%'``. Možete označiti |checkbox| "
+":guilabel:`Osetljivo na velika/mala slova` da biste bili manje popustljivi "
+"sa niskama."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
+msgid ""
+"|filterMap| :guilabel:`Advanced filter (Expression)` - Opens the expression "
+"builder dialog. Within it, you can create :ref:`complex expressions "
+"<vector_expressions>` to match table rows. For example, you can filter the "
+"table using more than one field. When applied, the filter expression will "
+"show up at the bottom of the form."
+msgstr ""
+"|filterMap| :guilabel:`Napredni filter (izraz)` - Otvara dijalog graditelja "
+"izraza. Unutar njega možete praviti :ref:`složene izraze "
+"<vector_expressions>` za podudaranje redova tabele. Na primer, možete "
+"filtrirati tabelu pomoću više od jednog polja. Kada se primeni, izraz "
+"filtera će se pojaviti na dnu obrasca."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:395
+msgid ""
+"|handleStoreFilterExpressionChecked| :menuselection:`Stored filter "
+"expressions -->`: a shortcut to :ref:`saved expressions <store_filter>` "
+"frequently used for filtering your attribute table."
+msgstr ""
+"|handleStoreFilterExpressionChecked| :menuselection:`Sačuvani izrazi filtera"
+" -->`: prečica do :ref:`sačuvanih izraza <store_filter>` koji se često "
+"koriste za filtriranje vaše atributske tabele."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:843
+msgid "handleStoreFilterExpressionChecked"
+msgstr "handleStoreFilterExpressionChecked"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:398
+msgid ""
+"It is also possible to :ref:`filter features using forms "
+"<filter_select_form>`."
+msgstr ""
+"Takođe je moguće :ref:`filtrirati objekte pomoću obrazaca "
+"<filter_select_form>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:402
+msgid ""
+"Filtering records out of the attribute table does not filter features out of"
+" the layer; they are simply momentaneously hidden from the table and can be "
+"accessed from the map canvas or by removing the filter. For filters that do "
+"hide features from the layer, use the :ref:`Query Builder "
+"<vector_query_builder>`."
+msgstr ""
+"Filtriranje zapisa iz atributske tabele ne filtrira objekte iz sloja; oni su"
+" samo trenutno sakriveni iz tabele i mogu se pristupiti sa platna karte ili "
+"uklanjanjem filtera. Za filtere koji sakrivaju objekte iz sloja koristite "
+":ref:`Graditelj upita <vector_query_builder>`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:408
+msgid "**Update datasource filtering with** ``Show Features Visible on Map``"
+msgstr ""
+"**Ažuriraj filtriranje izvora podataka pomoću** ``Prikaži objekte vidljive "
+"na karti``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:410
+msgid ""
+"When for performance reasons, features shown in attribute table are "
+"spatially limited to the canvas extent at its opening (see :ref:`Data Source"
+" Options <tip_table_filtering>` for a how-to), selecting :guilabel:`Show "
+"Features Visible on Map` on a new canvas extent updates the spatial "
+"restriction."
+msgstr ""
+"Kada su, iz razloga performansi, objekti prikazani u atributskoj tabeli "
+"prostorno ograničeni na obuhvat platna pri njenom otvaranju (za uputstvo "
+"pogledajte :ref:`Opcije izvora podataka <tip_table_filtering>`), izbor "
+":guilabel:`Prikaži objekte vidljive na karti` na novom obuhvatu platna "
+"ažurira prostorno ograničenje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:419
+msgid "Storing filter expressions"
+msgstr "Čuvanje izraza filtera"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:421
+msgid ""
+"Expressions you use for attribute table filtering can be saved for further "
+"calls. When using :guilabel:`Field Filter` or :guilabel:`Advanced Filter "
+"(expression)` entries, the expression used is displayed in a text widget in "
+"the bottom of the attribute table dialog. Press the "
+"|handleStoreFilterExpressionUnchecked| :sup:`Save expression with text as "
+"name` next to the box to save the expression in the project. Pressing the "
+"drop-down menu next to the button allows to save the expression with a "
+"custom name (:guilabel:`Save expression as...`). Once a saved expression is "
+"displayed, the |handleStoreFilterExpressionChecked| button is triggered and "
+"its drop-down menu allows you to :guilabel:`Edit the expression` and name if"
+" any, or :guilabel:`Delete stored expression`."
+msgstr ""
+"Izrazi koje koristite za filtriranje atributske tabele mogu se sačuvati za "
+"naredne pozive. Pri korišćenju stavki :guilabel:`Filter polja` ili "
+":guilabel:`Napredni filter (izraz)`, korišćeni izraz se prikazuje u "
+"tekstualnom vidžetu na dnu dijaloga atributske tabele. Pritisnite "
+"|handleStoreFilterExpressionUnchecked| :sup:`Sačuvaj izraz sa tekstom kao "
+"nazivom` pored okvira da biste sačuvali izraz u projektu. Pritiskanje "
+"padajućeg menija pored dugmeta omogućava čuvanje izraza sa prilagođenim "
+"nazivom (:guilabel:`Sačuvaj izraz kao...`). Kada se sačuvani izraz prikaže, "
+"aktivira se dugme |handleStoreFilterExpressionChecked|, a njegov padajući "
+"meni omogućava vam da :guilabel:`Uredite izraz` i naziv ako postoji, ili "
+":guilabel:`Obrišete sačuvani izraz`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:845
+msgid "handleStoreFilterExpressionUnchecked"
+msgstr "handleStoreFilterExpressionUnchecked"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:432
+msgid ""
+"Saved filter expressions are saved in the project and available through the "
+":guilabel:`Stored filter expressions` menu of the attribute table. They are "
+"different from the :ref:`user expressions <user_expressions_functions>`, "
+"shared by all projects of the active user profile."
+msgstr ""
+"Sačuvani izrazi filtera čuvaju se u projektu i dostupni su preko menija "
+":guilabel:`Sačuvani izrazi filtera` atributske tabele. Razlikuju se od "
+":ref:`korisničkih izraza <user_expressions_functions>`, koje dele svi "
+"projekti aktivnog korisničkog profila."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:440
+msgid "Filtering and selecting features using forms"
+msgstr "Filtriranje i izbor objekata pomoću obrazaca"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:442
+msgid ""
+"Clicking the |filterMap| :sup:`Filter/Select features using form` or "
+"pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
+"view and replace each widget with its search variant."
+msgstr ""
+"Klik na |filterMap| :sup:`Filtriraj/izaberi objekte pomoću obrasca` ili "
+"pritiskanje :kbd:`Ctrl+F` će prebaciti dijalog atributske tabele u prikaz "
+"obrasca i zameniti svaki vidžet njegovom varijantom za pretragu."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:446
+msgid ""
+"From this point onwards, this tool functionality is similar to the one "
+"described in :ref:`select_by_value`, where you can find descriptions of all "
+"operators and selecting modes."
+msgstr ""
+"Od ove tačke nadalje, funkcionalnost ovog alata slična je onoj opisanoj u "
+":ref:`select_by_value`, gde možete pronaći opise svih operatora i režima "
+"izbora."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:455
+msgid "Attribute table filtered by the filter form"
+msgstr "Atributska tabela filtrirana obrascem za filtriranje"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:457
+msgid ""
+"When selecting / filtering features from the attribute table, there is a "
+":guilabel:`Filter features` button that allows defining and refining "
+"filters. Its use triggers the :guilabel:`Advanced filter (Expression)` "
+"option and displays the corresponding filter expression in an editable text "
+"widget at the bottom of the form."
+msgstr ""
+"Pri izboru / filtriranju objekata iz atributske tabele, postoji dugme "
+":guilabel:`Filtriraj objekte` koje omogućava definisanje i preciziranje "
+"filtera. Njegovo korišćenje pokreće opciju :guilabel:`Napredni filter "
+"(izraz)` i prikazuje odgovarajući izraz filtera u tekstualnom vidžetu koji "
+"se može uređivati na dnu obrasca."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:462
+msgid ""
+"If there are already filtered features, you can refine the filter using the "
+"drop-down list next to the :guilabel:`Filter features` button. The options "
+"are:"
+msgstr ""
+"Ako već postoje filtrirani objekti, filter možete precizirati pomoću "
+"padajuće liste pored dugmeta :guilabel:`Filtriraj objekte`. Opcije su:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:465
+msgid ":guilabel:`Filter within (\"AND\")`"
+msgstr ":guilabel:`Filtriraj unutar („AND“)`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:466
+msgid ":guilabel:`Extend filter (\"OR\")`"
+msgstr ":guilabel:`Proširi filter („OR“)`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:468
+msgid ""
+"To clear the filter, either select the :guilabel:`Show all features` option "
+"from the bottom left pull-down menu, or clear the expression and click "
+":guilabel:`Apply` or press :kbd:`Enter`."
+msgstr ""
+"Da biste očistili filter, ili izaberite opciju :guilabel:`Prikaži sve "
+"objekte` iz padajućeg menija u donjem levom uglu, ili očistite izraz i "
+"kliknite na :guilabel:`Primeni` ili pritisnite :kbd:`Enter`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
+msgid "More actions on features"
+msgstr "Više radnji nad objektima"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:475
+msgid ""
+"Users have several possibilities to manipulate feature in an attribute "
+"table. Right-click in a cell and you can:"
+msgstr ""
+"Korisnici imaju nekoliko mogućnosti za manipulaciju objektom u atributskoj "
+"tabeli. Kliknite desnim tasterom u ćeliju i možete:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:478
+msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
+msgstr ":guilabel:`Izabrati sve` (:kbd:`Ctrl+A`) objekte;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:479
+msgid ""
+"Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
+"content`;"
+msgstr ""
+"Kopirati sadržaj ćelije u ostavu pomoću :guilabel:`Kopiraj sadržaj ćelije`;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:480
+msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
+msgstr ""
+":guilabel:`Uveličati na objekat` bez potrebe da ga prethodno izaberete;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:481
+msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
+msgstr ""
+":guilabel:`Pomeriti na objekat` bez potrebe da ga prethodno izaberete;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:482
+msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
+msgstr ":guilabel:`Bljesni objekat`, da biste ga istakli na platnu karte;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:483
+msgid ""
+":guilabel:`Open form`: it toggles attribute table into form view with a "
+"focus on the clicked feature."
+msgstr ""
+":guilabel:`Otvori obrazac`: prebacuje atributsku tabelu u prikaz obrasca sa "
+"fokusom na objekat na koji je kliknuto."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:485
+msgid ""
+"Display a :ref:`list of actions <actions_menu>`, previously enabled in the "
+":menuselection:`Layer properties --> Actions` tab."
+msgstr ""
+"Prikazati :ref:`listu radnji <actions_menu>`, prethodno omogućenih u kartici"
+" :menuselection:`Svojstva sloja --> Radnje`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:493
+msgid "Copy cell content button"
+msgstr "Dugme Kopiraj sadržaj ćelije"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:497
+msgid ""
+"If you want to use attribute data in external programs (such as Excel, "
+"LibreOffice, or a custom web application), select one or more row(s) and use"
+" the |copySelected| :sup:`Copy selected rows to clipboard` button or press "
+":kbd:`Ctrl+C`. Moreover, in :menuselection:`Settings --> Options --> Data "
+"Sources` menu you can define the format to paste to with the :guilabel:`Copy"
+" features as` option. More details at :ref:`datasources_options`."
+msgstr ""
+"Ako želite da koristite atributske podatke u spoljnim programima (kao što su"
+" Excel, LibreOffice ili prilagođena veb aplikacija), izaberite jedan ili "
+"više redova i koristite dugme |copySelected| :sup:`Kopiraj izabrane redove u"
+" ostavu` ili pritisnite :kbd:`Ctrl+C`. Osim toga, u meniju "
+":menuselection:`Podešavanja --> Opcije --> Izvori podataka` možete "
+"definisati format u koji se lepi pomoću opcije :guilabel:`Kopiraj objekte "
+"kao`. Više detalja na :ref:`datasources_options`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:510
+msgid "Editing attribute values"
+msgstr "Uređivanje vrednosti atributa"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:512
+msgid ""
+"In order to modify data in an attribute table, you should first toggle the "
+"layer into edit. Press the |toggleEditing| :sup:`Toggle Editing` button. "
+"Depending on the layer geometry type and the clipboard state, a few more "
+"tools are enabled in the attribute table top toolbar."
+msgstr ""
+"Da biste izmenili podatke u atributskoj tabeli, prvo treba da prebacite sloj"
+" u režim uređivanja. Pritisnite dugme |toggleEditing| :sup:`Uključi/isključi"
+" uređivanje`. U zavisnosti od tipa geometrije sloja i stanja ostave, još "
+"nekoliko alatki se omogućava u gornjoj paleti alatki atributske tabele."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:517
+msgid "Editing attribute values can then be done by:"
+msgstr "Uređivanje vrednosti atributa se zatim može obaviti:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:519
+msgid ""
+"typing the new value directly in the cell, whether the attribute table is in"
+" table or form view. Changes are hence done cell by cell, feature by "
+"feature;"
+msgstr ""
+"kucanjem nove vrednosti direktno u ćeliju, bilo da je atributska tabela u "
+"prikazu tabele ili obrasca. Izmene se dakle vrše ćeliju po ćeliju, objekat "
+"po objekat;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:521
+msgid ""
+"using the :ref:`field calculator <vector_field_calculator>`: update in a row"
+" a field that may already exist or to be created but for multiple features. "
+"It can be used to create virtual fields;"
+msgstr ""
+"korišćenjem :ref:`kalkulatora polja <vector_field_calculator>`: ažuriranje "
+"odjednom polja koje možda već postoji ili tek treba da bude napravljeno, ali"
+" za više objekata. Može se koristiti za pravljenje virtuelnih polja;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:524
+msgid ""
+"using the quick field :ref:`calculation bar <quick_field_calculation_bar>`: "
+"same as above but for only existing field;"
+msgstr ""
+"korišćenjem trake za brzo :ref:`računanje polja "
+"<quick_field_calculation_bar>`: isto kao gore, ali samo za postojeće polje;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:526
+msgid ""
+"or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row "
+"multiple fields for multiple features."
+msgstr ""
+"ili korišćenjem režima :ref:`višestrukog uređivanja <multi_edit_fields>`: "
+"ažuriranje odjednom više polja za više objekata."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:529
+msgid ""
+"Putting the layer into edit mode will also allow you to |editPaste| "
+":sup:`Paste features from clipboard` (:kbd:`Ctrl+V`) |editCut| :sup:`Cut "
+"selected rows to clipboard` (:kbd:`Ctrl+X`) or |deleteSelectedFeatures| "
+":sup:`Delete selected features`. More details at :ref:`clipboard_feature`."
+msgstr ""
+"Prebacivanje sloja u režim uređivanja takođe će vam omogućiti da |editPaste|"
+" :sup:`Nalepite objekte iz ostave` (:kbd:`Ctrl+V`), |editCut| :sup:`Isečete "
+"izabrane redove u ostavu` (:kbd:`Ctrl+X`) ili |deleteSelectedFeatures| "
+":sup:`Obrišete izabrane objekte`. Više detalja na :ref:`clipboard_feature`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:538
+msgid "Using the Field Calculator"
+msgstr "Korišćenje kalkulatora polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:540
+msgid ""
+"The |calculateField| :sup:`Field Calculator` button in the attribute table "
+"allows you to perform calculations on the basis of existing attribute values"
+" or defined functions, for instance, to calculate length or area of geometry"
+" features. The results can be used to update an existing field, or written "
+"to a new field (that can be a :ref:`virtual <virtual_field>` one)."
+msgstr ""
+"Dugme |calculateField| :sup:`Kalkulator polja` u atributskoj tabeli "
+"omogućava vam da vršite izračunavanja na osnovu postojećih vrednosti "
+"atributa ili definisanih funkcija, na primer, za računanje dužine ili "
+"površine geometrijskih objekata. Rezultati se mogu koristiti za ažuriranje "
+"postojećeg polja ili upisati u novo polje (koje može biti :ref:`virtuelno "
+"<virtual_field>`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:546
+msgid ""
+"The field calculator is available on any layer that supports edit. When you "
+"click on the field calculator icon the dialog opens (see "
+":numref:`figure_field_calculator`). If the layer is not in edit mode, a "
+"warning is displayed and using the field calculator will cause the layer to "
+"be put in edit mode before the calculation is made."
+msgstr ""
+"Kalkulator polja dostupan je na bilo kom sloju koji podržava uređivanje. "
+"Kada kliknete na ikonu kalkulatora polja, otvara se dijalog (pogledajte "
+":numref:`figure_field_calculator`). Ako sloj nije u režimu uređivanja, "
+"prikazuje se upozorenje, a korišćenje kalkulatora polja uzrokovaće da sloj "
+"bude prebačen u režim uređivanja pre nego što se izvrši izračunavanje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:552
+msgid ""
+"Based on the :ref:`Expression Builder <expression_builder>` dialog, the "
+"field calculator dialog offers a complete interface to define an expression "
+"and apply it to an existing or a newly created field. To use the field "
+"calculator dialog, you must select whether you want to:"
+msgstr ""
+"Zasnovan na dijalogu :ref:`Graditelj izraza <expression_builder>`, dijalog "
+"kalkulatora polja nudi kompletan interfejs za definisanje izraza i njegovu "
+"primenu na postojeće ili novonapravljeno polje. Da biste koristili dijalog "
+"kalkulatora polja, morate izabrati da li želite da:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:557
+msgid "apply calculation on the whole layer or on selected features only"
+msgstr "primenite izračunavanje na ceo sloj ili samo na izabrane objekte"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:558
+msgid "create a new field for the calculation or update an existing one."
+msgstr "napravite novo polje za izračunavanje ili ažurirate postojeće."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:565
+msgid "Field Calculator"
+msgstr "Kalkulator polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:567
+msgid ""
+"If you choose to add a new field, you need to enter a field name, a field "
+"type (integer, real, date or string) and if needed, the total field length "
+"and the field precision. For example, if you choose a field length of 10 and"
+" a field precision of 3, it means you have 7 digits before the dot, and 3 "
+"digits for the decimal part."
+msgstr ""
+"Ako izaberete da dodate novo polje, potrebno je da unesete naziv polja, tip "
+"polja (ceo broj, realni, datum ili niska) i, ako je potrebno, ukupnu dužinu "
+"polja i preciznost polja. Na primer, ako izaberete dužinu polja 10 i "
+"preciznost polja 3, to znači da imate 7 cifara pre tačke i 3 cifre za "
+"decimalni deo."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:573
+msgid ""
+"A short example illustrates how field calculator works when using the "
+":guilabel:`Expression` tab. We want to calculate the length in km of the "
+"``railroads`` layer from the QGIS sample dataset:"
+msgstr ""
+"Kratak primer ilustruje kako kalkulator polja radi pri korišćenju kartice "
+":guilabel:`Izraz`. Želimo da izračunamo dužinu u km sloja ``railroads`` iz "
+"QGIS uzornog skupa podataka:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:577
+msgid ""
+"Load the shapefile :file:`railroads.shp` in QGIS and press |openTable| "
+":sup:`Open Attribute Table`."
+msgstr ""
+"Učitajte shapefile :file:`railroads.shp` u QGIS i pritisnite |openTable| "
+":sup:`Otvori atributsku tabelu`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:579
+msgid ""
+"Click on |toggleEditing| :sup:`Toggle editing mode` and open the "
+"|calculateField| :sup:`Field Calculator` dialog."
+msgstr ""
+"Kliknite na |toggleEditing| :sup:`Uključi/isključi režim uređivanja` i "
+"otvorite dijalog |calculateField| :sup:`Kalkulator polja`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:581
+msgid ""
+"Select the |checkbox| :guilabel:`Create a new field` checkbox to save the "
+"calculations into a new field."
+msgstr ""
+"Izaberite polje za potvrdu |checkbox| :guilabel:`Napravi novo polje` da "
+"biste sačuvali izračunavanja u novo polje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:583
+msgid "Set :guilabel:`Output field name` to  ``length_km``"
+msgstr "Postavite :guilabel:`Naziv izlaznog polja` na ``length_km``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:584
+msgid "Select ``Decimal number (real)`` as :guilabel:`Output field type`"
+msgstr ""
+"Izaberite ``Decimalni broj (realni)`` kao :guilabel:`Tip izlaznog polja`"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:585
+msgid ""
+"Set the :guilabel:`Output field length` to ``10`` and the "
+":guilabel:`Precision` to ``3``"
+msgstr ""
+"Postavite :guilabel:`Dužinu izlaznog polja` na ``10`` i "
+":guilabel:`Preciznost` na ``3``"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:586
+msgid ""
+"Double click on ``$length`` in the :guilabel:`Geometry` group to add the "
+"length of the geometry into the Field calculator expression box (you will "
+"begin to see a preview of the output, up to 60 characters, below the "
+"expression box updating in real-time as the expression is assembled)."
+msgstr ""
+"Dvokliknite na ``$length`` u grupi :guilabel:`Geometrija` da biste dodali "
+"dužinu geometrije u okvir izraza kalkulatora polja (počećete da vidite "
+"pregled izlaza, do 60 znakova, ispod okvira izraza koji se ažurira u realnom"
+" vremenu kako se izraz sastavlja)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:590
+msgid ""
+"Complete the expression by typing ``/ 1000`` in the Field calculator "
+"expression box and click :guilabel:`OK`."
+msgstr ""
+"Dovršite izraz kucanjem ``/ 1000`` u okvir izraza kalkulatora polja i "
+"kliknite na :guilabel:`OK`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:592
+msgid ""
+"You can now find a new :guilabel:`length_km` field in the attribute table."
+msgstr ""
+"Sada u atributskoj tabeli možete pronaći novo polje :guilabel:`length_km`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:597
+msgid "Creating a Virtual Field"
+msgstr "Pravljenje virtuelnog polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:599
+msgid ""
+"A virtual field is a field based on an expression calculated on the fly, "
+"meaning that its value is automatically updated as soon as an underlying "
+"parameter changes. The expression applies to all the features in the layer "
+"and is set once; you no longer need to recalculate the field each time "
+"underlying values change. For example, you may want to use a virtual field "
+"if you need area to be evaluated as you digitize features or to "
+"automatically calculate a duration between dates that may change (e.g., "
+"using ``now()`` function)."
+msgstr ""
+"Virtuelno polje je polje zasnovano na izrazu koji se izračunava u hodu, što "
+"znači da se njegova vrednost automatski ažurira čim se promeni neki od "
+"parametara koji stoje u osnovi. Izraz se primenjuje na sve objekte u sloju i"
+" postavlja se jednom; više ne morate ponovo računati polje svaki put kada se"
+" osnovne vrednosti promene. Na primer, možda ćete želeti da koristite "
+"virtuelno polje ako je potrebno da se površina izračunava dok digitalizujete"
+" objekte ili da se automatski računa trajanje između datuma koji se mogu "
+"promeniti (npr. pomoću funkcije ``now()``)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:607
+msgid ""
+"Creating a virtual field is done through the |calculateField| "
+":guilabel:`Field calculator` dialog and follows the :ref:`same procedure "
+"<vector_field_calculator>` as for regular fields. Simply remember to check "
+"the |checkbox| :guilabel:`Create virtual field` option and use a field type "
+"compatible with the data your expression would generate."
+msgstr ""
+"Pravljenje virtuelnog polja obavlja se kroz dijalog |calculateField| "
+":guilabel:`Kalkulator polja` i prati :ref:`isti postupak "
+"<vector_field_calculator>` kao za obična polja. Samo zapamtite da označite "
+"opciju |checkbox| :guilabel:`Napravi virtuelno polje` i koristite tip polja "
+"kompatibilan sa podacima koje bi vaš izraz generisao."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:612
+msgid ""
+"Editing a virtual field is done through the |sourceFields| "
+":guilabel:`Fields` tab of the layer properties dialog (see "
+":ref:`vector_fields_menu`). The expression defining the field is exposed in "
+"the :guilabel:`Comment` column, and pressing the |expression| button next to"
+" it opens an expression editor window for update."
+msgstr ""
+"Uređivanje virtuelnog polja obavlja se kroz karticu |sourceFields| "
+":guilabel:`Polja` dijaloga svojstava sloja (pogledajte "
+":ref:`vector_fields_menu`). Izraz koji definiše polje prikazan je u koloni "
+":guilabel:`Komentar`, a pritiskanje dugmeta |expression| pored njega otvara "
+"prozor uređivača izraza za ažuriranje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:893
+msgid "sourceFields"
+msgstr "sourceFields"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:833
+msgid "expression"
+msgstr "expression"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:618
+msgid "**Use of Virtual Fields**"
+msgstr "**Korišćenje virtuelnih polja**"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:620
+msgid "A field can be set virtual only at its creation."
+msgstr "Polje se može postaviti kao virtuelno samo pri njegovom pravljenju."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:621
+msgid ""
+"Virtual fields are not permanent in the layer attributes, meaning that "
+"they're only saved and available in the project file they've been created."
+msgstr ""
+"Virtuelna polja nisu trajna u atributima sloja, što znači da se čuvaju i "
+"dostupna su samo u datoteci projekta u kojoj su napravljena."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:628
+msgid "Using the Quick Field Calculation Bar"
+msgstr "Korišćenje trake za brzo računanje polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:630
+msgid ""
+"While Field calculator is always available, the quick field calculation bar "
+"on top of the attribute table is only visible if the layer is in edit mode. "
+"Thanks to the expression engine, it offers a quicker access to edit an "
+"already existing field:"
+msgstr ""
+"Dok je kalkulator polja uvek dostupan, traka za brzo računanje polja na vrhu"
+" atributske tabele vidljiva je samo ako je sloj u režimu uređivanja. "
+"Zahvaljujući mehanizmu za izraze, ona nudi brži pristup uređivanju već "
+"postojećeg polja:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:635
+msgid "Select the field to update in the drop-down list."
+msgstr "Izaberite polje za ažuriranje u padajućoj listi."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:636
+msgid ""
+"Fill the textbox with a value, an expression you directly write or build "
+"using the |expression| expression button."
+msgstr ""
+"Popunite tekstualni okvir vrednošću, izrazom koji direktno napišete ili "
+"napravite pomoću dugmeta izraza |expression|."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:638
+msgid ""
+"Click on :guilabel:`Update All`, :guilabel:`Update Selected` or "
+":guilabel:`Update Filtered` button according to your need."
+msgstr ""
+"Kliknite na dugme :guilabel:`Ažuriraj sve`, :guilabel:`Ažuriraj izabrane` "
+"ili :guilabel:`Ažuriraj filtrirane` prema svojoj potrebi."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:646
+msgid "Quick Field Calculation Bar"
+msgstr "Traka za brzo računanje polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:653
+msgid "Editing multiple fields"
+msgstr "Uređivanje više polja"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:655
+msgid ""
+"Unlike the previous tools, multi edit mode allows multiple attributes of "
+"different features to be edited simultaneously. When the layer is toggled to"
+" edit, multi edit capabilities are accessible:"
+msgstr ""
+"Za razliku od prethodnih alatki, režim višestrukog uređivanja omogućava "
+"istovremeno uređivanje više atributa različitih objekata. Kada se sloj "
+"prebaci u uređivanje, mogućnosti višestrukog uređivanja su dostupne:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:659
+msgid ""
+"using the |multiEdit| :sup:`Toggle multi edit mode` button from the toolbar "
+"inside the attribute table dialog;"
+msgstr ""
+"pomoću dugmeta |multiEdit| :sup:`Uključi/isključi režim višestrukog "
+"uređivanja` iz palete alatki unutar dijaloga atributske tabele;"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:661
+msgid ""
+"or selecting :menuselection:`Edit -->` |multiEdit| :menuselection:`Modify "
+"attributes of selected features` menu."
+msgstr ""
+"ili izborom menija :menuselection:`Uređivanje -->` |multiEdit| "
+":menuselection:`Izmeni atribute izabranih objekata`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:666
+msgid ""
+"Unlike the tool from the attribute table, hitting the :menuselection:`Edit "
+"--> Modify Attributes of Selected Features` option provides you with a modal"
+" dialog to fill attributes changes. Hence, features selection is required "
+"before execution."
+msgstr ""
+"Za razliku od alata iz atributske tabele, izbor opcije "
+":menuselection:`Uređivanje --> Izmeni atribute izabranih objekata` pruža vam"
+" modalni dijalog za popunjavanje izmena atributa. Zato je izbor objekata "
+"potreban pre izvršavanja."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:671
+msgid "In order to edit multiple fields in a row:"
+msgstr "Da biste uredili više polja odjednom:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:673
+msgid "Select the features you want to edit."
+msgstr "Izaberite objekte koje želite da uredite."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:674
+msgid ""
+"From the attribute table toolbar, click the |multiEdit| button. This will "
+"toggle the dialog to its form view. Feature selection could also be made at "
+"this step."
+msgstr ""
+"Iz palete alatki atributske tabele kliknite na dugme |multiEdit|. Time će se"
+" dijalog prebaciti u prikaz obrasca. Izbor objekata takođe se može napraviti"
+" u ovom koraku."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:677
+msgid ""
+"At the right side of the attribute table, fields (and values) of selected "
+"features are shown. New widgets appear next to each field allowing for "
+"display of the current multi edit state:"
+msgstr ""
+"Sa desne strane atributske tabele prikazana su polja (i vrednosti) izabranih"
+" objekata. Novi vidžeti se pojavljuju pored svakog polja omogućavajući "
+"prikaz trenutnog stanja višestrukog uređivanja:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:681
+msgid ""
+"|multiEditMixedValues| The field contains different values for selected "
+"features. It's shown empty and each feature will keep its original value. "
+"You can reset the value of the field from the drop-down list of the widget."
+msgstr ""
+"|multiEditMixedValues| Polje sadrži različite vrednosti za izabrane objekte."
+" Prikazano je prazno i svaki objekat će zadržati svoju originalnu vrednost. "
+"Vrednost polja možete resetovati iz padajuće liste vidžeta."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:857
+msgid "multiEditMixedValues"
+msgstr "multiEditMixedValues"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:684
+msgid ""
+"|multiEditSameValues| All selected features have the same value for this "
+"field and the value displayed in the form will be kept."
+msgstr ""
+"|multiEditSameValues| Svi izabrani objekti imaju istu vrednost za ovo polje "
+"i vrednost prikazana u obrascu će biti zadržana."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:859
+msgid "multiEditSameValues"
+msgstr "multiEditSameValues"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:686
+msgid ""
+"|multiEditChangedValues| The field has been edited and the entered value "
+"will be applied to all the selected features. A message appears at the top "
+"of the dialog, inviting you to either apply or reset your modification."
+msgstr ""
+"|multiEditChangedValues| Polje je uređeno i unesena vrednost će biti "
+"primenjena na sve izabrane objekte. Poruka se pojavljuje na vrhu dijaloga, "
+"pozivajući vas da primenite ili resetujete svoju izmenu."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:855
+msgid "multiEditChangedValues"
+msgstr "multiEditChangedValues"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:690
+msgid ""
+"Clicking any of these widgets allows you to either set the current value for"
+" the field or reset to original value, meaning that you can roll back "
+"changes on a field-by-field basis."
+msgstr ""
+"Klik na bilo koji od ovih vidžeta omogućava vam da ili postavite trenutnu "
+"vrednost za polje ili resetujete na originalnu vrednost, što znači da možete"
+" poništiti izmene polje po polje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:699
+msgid "Editing fields of multiple features"
+msgstr "Uređivanje polja više objekata"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:701
+msgid "Make the changes to the fields you want."
+msgstr "Napravite izmene na poljima koja želite."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:702
+msgid ""
+"Click on **Apply changes** in the upper message text or any other feature in"
+" the left panel."
+msgstr ""
+"Kliknite na **Primeni izmene** u gornjem tekstu poruke ili na bilo koji "
+"drugi objekat u levom panelu."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:705
+msgid ""
+"Changes will apply to **all selected features**. If no feature is selected, "
+"the whole table is updated with your changes. Modifications are made as a "
+"single edit command. So pressing |undo| :sup:`Undo` will rollback the "
+"attribute changes for all selected features at once."
+msgstr ""
+"Izmene će se primeniti na **sve izabrane objekte**. Ako nijedan objekat nije"
+" izabran, cela tabela se ažurira vašim izmenama. Izmene se vrše kao jedna "
+"komanda uređivanja. Zato će pritiskanje |undo| :sup:`Opozovi` poništiti "
+"izmene atributa za sve izabrane objekte odjednom."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:897
+msgid "undo"
+msgstr "undo"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:712
+msgid ""
+"Multi edit mode is only available for auto generated and drag and drop forms"
+" (see :ref:`customize_form`); it is not supported by custom ui forms."
+msgstr ""
+"Režim višestrukog uređivanja dostupan je samo za automatski generisane "
+"obrasce i obrasce prevlačenja (pogledajte :ref:`customize_form`); ne "
+"podržavaju ga prilagođeni ui obrasci."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:719
+msgid "Exploring features attributes through the Identify Tool"
+msgstr "Istraživanje atributa objekata pomoću alatke Identifikuj"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:721
+msgid ""
+"The |identify| :ref:`Identify features <identify>` tool can be used to "
+"display all attributes of a feature in the map canvas. It is a quick way to "
+"view and verify all data without having to search for it in the attribute "
+"table."
+msgstr ""
+"Alatka |identify| :ref:`Identifikuj objekte <identify>` može se koristiti za"
+" prikaz svih atributa objekta na platnu karte. To je brz način da se svi "
+"podaci pregledaju i provere bez potrebe za njihovim traženjem u atributskoj "
+"tabeli."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:849
+msgid "identify"
+msgstr "identify"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:725
+msgid ""
+"To use the :guilabel:`Identify features` tool for vector layers, follow "
+"these steps:"
+msgstr ""
+"Da biste koristili alatku :guilabel:`Identifikuj objekte` za vektorske "
+"slojeve, pratite ove korake:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:727
+msgid "Select the vector layer in the Layers panel."
+msgstr "Izaberite vektorski sloj u panelu Slojevi."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:728
+msgid ""
+"Click on the :guilabel:`Identify features` tool in the toolbar or press "
+":kbd:`Ctrl+Shift+I`."
+msgstr ""
+"Kliknite na alatku :guilabel:`Identifikuj objekte` u paleti alatki ili "
+"pritisnite :kbd:`Ctrl+Shift+I`."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:729
+msgid "Click on a feature in the map view."
+msgstr "Kliknite na objekat u prikazu karte."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:736
+msgid "Identify Results dialog"
+msgstr "Dijalog Rezultati identifikacije"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:738
+msgid ""
+"The :guilabel:`Identify results` panel will display different features "
+"information in a tree view. There are two columns in the panel: "
+":guilabel:`Feature` and :guilabel:`Value`. The first item is the name of the"
+" layer and its children are its identified feature(s). Each feature is "
+"identified by the :ref:`display name <maptips>` field along with its value. "
+"Other information about the feature follows:"
+msgstr ""
+"Panel :guilabel:`Rezultati identifikacije` prikazaće različite informacije o"
+" objektima u prikazu stabla. U panelu postoje dve kolone: "
+":guilabel:`Objekat` i :guilabel:`Vrednost`. Prva stavka je naziv sloja, a "
+"njena deca su njegov(i) identifikovan(i) objekat(i). Svaki objekat se "
+"identifikuje poljem :ref:`prikazanog naziva <maptips>` zajedno sa njegovom "
+"vrednošću. Slede druge informacije o objektu:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:745
+msgid ""
+"**Derived** section - those are the information calculated or derived from "
+"other information in the layer. For example, the area of a polygon or the "
+"length of a line. General information that can be found in this section:"
+msgstr ""
+"Odeljak **Izvedeno** - to su informacije izračunate ili izvedene iz drugih "
+"informacija u sloju. Na primer, površina poligona ili dužina linije. Opšte "
+"informacije koje se mogu naći u ovom odeljku:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:749
+msgid ""
+"Depending on the geometry type, the cartesian measurements of length, "
+"perimeter or area in the layer's CRS units. For 3D line vectors, the "
+"cartesian line length is available."
+msgstr ""
+"U zavisnosti od tipa geometrije, kartezijanska merenja dužine, obima ili "
+"površine u jedinicama CRS-a sloja. Za 3D linijske vektore, dostupna je "
+"kartezijanska dužina linije."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:752
+msgid ""
+"Depending on the geometry type and if an ellipsoid is set in the "
+":guilabel:`Project Properties` dialog (:menuselection:`General --> "
+"Measurements`), ellipsoidal values of length, perimeter, or area using the "
+"specified units."
+msgstr ""
+"U zavisnosti od tipa geometrije i ako je elipsoid postavljen u dijalogu "
+":guilabel:`Svojstva projekta` (:menuselection:`Opšte --> Merenja`), "
+"elipsoidne vrednosti dužine, obima ili površine pomoću zadatih jedinica."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:755
+msgid ""
+"The count of geometry parts in the feature and the number of the part "
+"clicked."
+msgstr "Broj delova geometrije u objektu i broj dela na koji je kliknuto."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:756
+msgid "The count of vertices in the feature."
+msgstr "Broj temena u objektu."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:758
+msgid ""
+"Coordinate information, using the project properties :guilabel:`Coordinates "
+"display` settings:"
+msgstr ""
+"Informacije o koordinatama, pomoću podešavanja :guilabel:`Prikaz koordinata`"
+" u svojstvima projekta:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:761
+msgid "``X`` and ``Y`` coordinate values of the clicked point"
+msgstr "``X`` i ``Y`` vrednosti koordinata tačke na koju je kliknuto"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:762
+msgid "the number of the closest vertex to the clicked point"
+msgstr "broj najbližeg temena tački na koju je kliknuto"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:763
+msgid ""
+"``X`` and ``Y`` coordinate values of the closest vertex (and ``Z``/``M`` if "
+"applicable)"
+msgstr ""
+"``X`` i ``Y`` vrednosti koordinata najbližeg temena (i ``Z``/``M`` ako je "
+"primenljivo)"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:765
+msgid ""
+"if you click on a curved segment, the radius of that section is also "
+"displayed."
+msgstr ""
+"ako kliknete na zakrivljeni segment, prikazuje se i poluprečnik tog dela."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:766
+msgid ""
+"if both the vector layer and the project have vertical datums set and they "
+"differ, the ``Z`` value will be displayed for both datums."
+msgstr ""
+"ako i vektorski sloj i projekat imaju postavljene vertikalne datume i oni se"
+" razlikuju, ``Z`` vrednost će biti prikazana za oba datuma."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:769
+msgid ""
+"**Actions**: Actions can be added to the identify feature windows. The "
+"action is run by clicking on the action label. By default, only one action "
+"is added, namely ``View feature form`` for editing. You can define more "
+"actions in the layer's properties dialog (see :ref:`actions_menu`)."
+msgstr ""
+"**Radnje**: Radnje se mogu dodati u prozore identifikacije objekta. Radnja "
+"se pokreće klikom na natpis radnje. Podrazumevano se dodaje samo jedna "
+"radnja, tj. ``Prikaži obrazac objekta`` za uređivanje. Više radnji možete "
+"definisati u dijalogu svojstava sloja (pogledajte :ref:`actions_menu`)."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:773
+msgid ""
+"**Data attributes**: This is the list of attribute fields and values for the"
+" feature that has been clicked."
+msgstr ""
+"**Atributi podataka**: Ovo je lista atributskih polja i vrednosti za objekat"
+" na koji je kliknuto."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:776
+msgid ""
+"Links in the feature's attributes are clickable from the :guilabel:`Identify"
+" Results` panel and will open in your default web browser."
+msgstr ""
+"Linkovi u atributima objekta mogu se kliknuti iz panela :guilabel:`Rezultati"
+" identifikacije` i otvoriće se u vašem podrazumevanom veb pregledaču."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:780
+msgid ""
+"When a vector layer has defined :ref:`relations <vector_relations>`, the "
+":guilabel:`Identify Results` panel can display both **referenced** and "
+"**referencing** related features. To view these relations, ensure that the "
+":guilabel:`Show relations` option is enabled in the :ref:`Identify Settings "
+"<identify_toolbar>`. Available information for each related feature include:"
+msgstr ""
+"Kada vektorski sloj ima definisane :ref:`relacije <vector_relations>`, panel"
+" :guilabel:`Rezultati identifikacije` može prikazati i **referencirane** i "
+"**referencirajuće** povezane objekte. Da biste videli ove relacije, uverite "
+"se da je opcija :guilabel:`Prikaži relacije` omogućena u :ref:`Podešavanjima"
+" identifikacije <identify_toolbar>`. Dostupne informacije za svaki povezani "
+"objekat uključuju:"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:787
+msgid "the name of the relation and the linked layer"
+msgstr "naziv relacije i povezani sloj"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:788
+msgid ""
+"the entry in the referenced or referencing field, identifying the feature"
+msgstr ""
+"unos u referenciranom ili referencirajućem polju, koji identifikuje objekat"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:789
+msgid "the activated actions"
+msgstr "aktivirane radnje"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:790
+msgid "the list of attribute fields and values"
+msgstr "listu atributskih polja i vrednosti"
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:792
+msgid ""
+"You can expand related features to explore connected records through "
+"multiple levels, including many-to-many (n:m) and polymorphic relations. "
+"Only nodes you explicitly expand are loaded, preventing excessive nesting."
+msgstr ""
+"Povezane objekte možete proširiti da biste istražili povezane zapise kroz "
+"više nivoa, uključujući relacije više-prema-više (n:m) i polimorfne "
+"relacije. Učitavaju se samo čvorovi koje eksplicitno proširite, sprečavajući"
+" preterano ugnežđivanje."
+
+#: ../../docs/user_manual/working_with_vector/attribute_table.rst:796
+msgid ""
+"To focus on a specific related record, right-click it and choose "
+":guilabel:`Identify Feature`. This re-centers the identify results on the "
+"selected feature, starting a new identification tree from it and effectively"
+" limiting the visible nesting depth. Features already shown in ancestor "
+"nodes are automatically omitted to avoid duplicates or circular relations."
+msgstr ""
+"Da biste se fokusirali na određeni povezani zapis, kliknite desnim tasterom "
+"na njega i izaberite :guilabel:`Identifikuj objekat`. Time se rezultati "
+"identifikacije ponovo centriraju na izabrani objekat, počinjući novo stablo "
+"identifikacije od njega i efektivno ograničavajući vidljivu dubinu "
+"ugnežđivanja. Objekti već prikazani u nadređenim čvorovima automatski se "
+"izostavljaju radi izbegavanja duplikata ili kružnih relacija."
