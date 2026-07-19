@@ -8,6 +8,7 @@
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
 # Vladimir Vukovic, 2026
+# Vladimir Vukovic, 2026
 # 
 #, fuzzy
 msgid ""
@@ -34,18 +35,170 @@ msgstr ""
 "Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
 "trenutno prevedena na |napredak prevođenja|."
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:5
+msgid "Offline Editing Plugin"
+msgstr "Dodatak za oflajn uređivanje"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:7
+msgid ""
+"For data collection, it is a common situation to work with a laptop or a "
+"cell phone offline in the field. Upon returning to the network, the changes "
+"need to be synchronized with the master datasource (e.g., a PostgreSQL "
+"database). If several persons are working simultaneously on the same "
+"datasets, it is difficult to merge the edits by hand, even if people don’t "
+"change the same features."
+msgstr ""
+"Za prikupljanje podataka, uobičajena je situacija rad sa laptopom ili "
+"mobilnim telefonom oflajn na terenu. Po povratku u mrežu, izmene je potrebno"
+" sinhronizovati sa glavnim izvorom podataka (npr. PostgreSQL bazom "
+"podataka). Ako više osoba istovremeno radi na istim skupovima podataka, "
+"teško je ručno spojiti izmene, čak i ako ljudi ne menjaju iste objekte."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:13
+msgid ""
+"The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the "
+"synchronisation by copying the content of the datasource to a SpatiaLite or "
+"GeoPackage database and storing the offline edits to dedicated tables. After"
+" being connected to the network again, it is possible to apply the offline "
+"edits to the master dataset."
+msgstr ""
+"Dodatak |offlineEditingCopy| :sup:`Oflajn uređivanje` automatizuje "
+"sinhronizaciju kopiranjem sadržaja izvora podataka u SpatiaLite ili "
+"GeoPackage bazu podataka i čuvanjem oflajn izmena u za to namenjene tabele. "
+"Nakon ponovnog povezivanja na mrežu, moguće je primeniti oflajn izmene na "
+"glavni skup podataka."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:77
 msgid "offlineEditingCopy"
 msgstr "offlineEditingCopy"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:19
+msgid "To use the plugin:"
+msgstr "Da biste koristili dodatak:"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:21
+msgid ""
+"Open a project with some vector layers (e.g., from an Esri Shapefile, "
+"PostgreSQL or WFS-T datasource)."
+msgstr ""
+"Otvorite projekat sa nekim vektorskim slojevima (npr. iz Esri Shapefile, "
+"PostgreSQL ili WFS-T izvora podataka)."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:23
+msgid ""
+"Assuming you have already enabled the plugin (see "
+":ref:`core_and_external_plugins`) go to :menuselection:`Database --> Offline"
+" Editing -->` |offlineEditingCopy| :guilabel:`Convert to offline project`. "
+"The eponym dialog opens."
+msgstr ""
+"Pod pretpostavkom da ste već omogućili dodatak (pogledajte "
+":ref:`core_and_external_plugins`) idite na :menuselection:`Baza podataka -->"
+" Oflajn uređivanje -->` |offlineEditingCopy| :guilabel:`Pretvori u oflajn "
+"projekat`. Otvara se istoimeni dijalog."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:26
+msgid ""
+"Select the :guilabel:`Storage type`. It can be of :guilabel:`GeoPackage` or "
+":guilabel:`SpatiaLite` database type."
+msgstr ""
+"Izaberite :guilabel:`Tip skladišta`. Može biti tipa baze podataka "
+":guilabel:`GeoPackage` ili :guilabel:`SpatiaLite`."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:28
+msgid ""
+"Use the :guilabel:`Browse` button to indicate the location of the database "
+"in which to store the :guilabel:`Offline data`. It can be an existing file "
+"or one to create."
+msgstr ""
+"Koristite dugme :guilabel:`Pregledaj` da biste naznačili lokaciju baze "
+"podataka u kojoj će se čuvati :guilabel:`Oflajn podaci`. To može biti "
+"postojeća datoteka ili ona koju treba napraviti."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:31
+msgid ""
+"In the :guilabel:`Select remote layers` section, check the layers you'd like"
+" to save. The content of the layers is saved to database tables."
+msgstr ""
+"U odeljku :guilabel:`Izaberi udaljene slojeve` označite slojeve koje biste "
+"želeli da sačuvate. Sadržaj slojeva se čuva u tabele baze podataka."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:35
+#, python-brace-format
+msgid ""
+"Since target database formats do not have native list support, the offline "
+"editing plugin transforms {string, number} list fields into string fields "
+"where values are separated by commas. This allows reading and edit of the "
+"contents of those fields when offline."
+msgstr ""
+"Pošto ciljni formati baza podataka nemaju nativnu podršku za liste, dodatak "
+"za oflajn uređivanje transformiše {niska, broj} polja liste u niskovna polja"
+" gde su vrednosti razdvojene zarezima. Ovo omogućava čitanje i uređivanje "
+"sadržaja tih polja kada ste oflajn."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:40
+msgid ""
+"If you would like to handle both the field from the original layer and the "
+"offline layer, you can rely on the :ref:`try() "
+"<expression_function_Conditionals_try>` and :ref:`array <array_functions>` "
+"expression functions, e.g.::"
+msgstr ""
+"Ako biste želeli da rukujete i poljem iz originalnog sloja i oflajn sloja, "
+"možete se osloniti na funkcije izraza :ref:`try() "
+"<expression_function_Conditionals_try>` i :ref:`array <array_functions>`, "
+"npr.::"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:46
+msgid ""
+"You can check |checkbox| :guilabel:`Only synchronize selected features if a "
+"selection is present` allowing to only save and work on a subset. It can be "
+"invaluable in case of large layers."
+msgstr ""
+"Možete označiti |checkbox| :guilabel:`Sinhronizuj samo izabrane objekte ako "
+"je izbor prisutan` čime se omogućava čuvanje i rad samo na podskupu. To može"
+" biti neprocenjivo u slučaju velikih slojeva."
 
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:73
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:50
+msgid "This is all!"
+msgstr "To je sve!"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:51
+msgid "Save your project and bring it on the field."
+msgstr "Sačuvajte svoj projekat i ponesite ga na teren."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:52
+msgid "Edit the layers offline."
+msgstr "Uredite slojeve oflajn."
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:53
+msgid ""
+"After being connected again, upload the changes using "
+":menuselection:`Database --> Offline Editing -->` |offlineEditingSync| "
+":guilabel:`Synchronize`."
+msgstr ""
+"Nakon ponovnog povezivanja, otpremite izmene pomoću :menuselection:`Baza "
+"podataka --> Oflajn uređivanje -->` |offlineEditingSync| "
+":guilabel:`Sinhronizuj`."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:79
 msgid "offlineEditingSync"
 msgstr "offlineEditingSync"
 
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:56
+msgid ""
+"Layers that are used offline are marked with the |indicatorOffline| icon in "
+"the :guilabel:`Layers` panel."
+msgstr ""
+"Slojevi koji se koriste oflajn označeni su ikonom |indicatorOffline| u "
+"panelu :guilabel:`Slojevi`."
+
 #: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:75
 msgid "indicatorOffline"
 msgstr "indicatorOffline"
+
+#: ../../docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:64
+msgid "Create an offline project"
+msgstr "Napravi oflajn projekat"
