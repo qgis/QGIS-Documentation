@@ -33,14 +33,105 @@ msgstr ""
 "Prevod je zajednički napor :ref:`možete se pridružiti `. Ova stranica je "
 "trenutno prevedena na |napredak prevođenja|."
 
+#: ../../docs/training_manual/database_concepts/views.rst:2
+msgid "Lesson: Views"
+msgstr "Lekcija: Pogledi"
+
+#: ../../docs/training_manual/database_concepts/views.rst:4
+msgid ""
+"When you write a query, you need to spend a lot of time and effort "
+"formulating it. With views, you can save the definition of an SQL query in a"
+" reusable 'virtual table'."
+msgstr ""
+"Kada pišete upit, morate potrošiti mnogo vremena i truda na njegovo "
+"formulisanje. Pomoću pogleda možete sačuvati definiciju SQL upita u "
+"„virtuelnu tabelu“ za višekratnu upotrebu."
+
+#: ../../docs/training_manual/database_concepts/views.rst:8
+msgid "**The goal for this lesson:** To save a query as a view."
+msgstr "**Cilj ove lekcije:** Sačuvati upit kao pogled."
+
+#: ../../docs/training_manual/database_concepts/views.rst:11
+msgid "Creating a View"
+msgstr "Pravljenje pogleda"
+
+#: ../../docs/training_manual/database_concepts/views.rst:13
+msgid ""
+"You can treat a view just like a table, but its data is sourced from a "
+"query. Let's make a simple view based on the above:"
+msgstr ""
+"Sa pogledom možete raditi baš kao sa tabelom, ali njegovi podaci potiču iz "
+"upita. Napravimo jednostavan pogled na osnovu gore navedenog:"
+
+#: ../../docs/training_manual/database_concepts/views.rst:23
+msgid ""
+"As you can see the only change is the ``create view roads_count_v as`` part "
+"at the beginning. We can now select data from that view:"
+msgstr ""
+"Kao što vidite, jedina promena je deo ``create view roads_count_v as`` na "
+"početku. Sada možemo izabrati podatke iz tog pogleda:"
+
 #: ../../docs/training_manual/database_concepts/views.rst:30
 msgid "Result:"
 msgstr "Rezultat:"
+
+#: ../../docs/training_manual/database_concepts/views.rst:42
+msgid "Modifying a View"
+msgstr "Izmena pogleda"
+
+#: ../../docs/training_manual/database_concepts/views.rst:44
+msgid ""
+"A view is not fixed, and it contains no 'real data'. This means you can "
+"easily change it without impacting on any data in your database:"
+msgstr ""
+"Pogled nije fiksan i ne sadrži nikakve „stvarne podatke“. To znači da ga "
+"možete lako promeniti bez uticaja na bilo koje podatke u svojoj bazi "
+"podataka:"
+
+#: ../../docs/training_manual/database_concepts/views.rst:55
+msgid ""
+"(This example also shows the best practice convention of using UPPER CASE "
+"for all SQL keywords.)"
+msgstr ""
+"(Ovaj primer takođe prikazuje konvenciju najbolje prakse korišćenja VELIKIH "
+"SLOVA za sve SQL ključne reči.)"
+
+#: ../../docs/training_manual/database_concepts/views.rst:58
+msgid ""
+"You will see that we have added an ``ORDER BY`` clause so that our view rows"
+" are nicely sorted:"
+msgstr ""
+"Videćete da smo dodali ``ORDER BY`` klauzulu tako da su redovi našeg pogleda"
+" lepo sortirani:"
+
+#: ../../docs/training_manual/database_concepts/views.rst:73
+msgid "Dropping a View"
+msgstr "Brisanje pogleda"
+
+#: ../../docs/training_manual/database_concepts/views.rst:75
+msgid "If you no longer need a view, you can delete it like this:"
+msgstr "Ako vam pogled više nije potreban, možete ga obrisati ovako:"
 
 #: ../../docs/training_manual/database_concepts/views.rst:82
 msgid "In Conclusion"
 msgstr "Zaključak"
 
+#: ../../docs/training_manual/database_concepts/views.rst:84
+msgid ""
+"Using views, you can save a query and access its results as if it were a "
+"table."
+msgstr ""
+"Pomoću pogleda možete sačuvati upit i pristupiti njegovim rezultatima kao da"
+" je tabela."
+
 #: ../../docs/training_manual/database_concepts/views.rst:87
 msgid "What's Next?"
 msgstr "Šta je sledeće?"
+
+#: ../../docs/training_manual/database_concepts/views.rst:89
+msgid ""
+"Sometimes, when changing data, you want your changes to have effects "
+"elsewhere in the database. The next lesson will show you how to do this."
+msgstr ""
+"Ponekad, pri promeni podataka, želite da vaše izmene imaju efekte na drugim "
+"mestima u bazi podataka. Sledeća lekcija će vam pokazati kako da to uradite."
