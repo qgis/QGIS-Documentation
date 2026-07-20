@@ -368,6 +368,8 @@ is called **topology**. In the next lesson you'll see an example of why this can
 be useful.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

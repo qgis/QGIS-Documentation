@@ -316,6 +316,8 @@ and click the |symbologyRemove| button to remove it.
 More information on variables usage in the :ref:`general_tools_variables` section.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

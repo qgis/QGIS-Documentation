@@ -161,6 +161,8 @@ In the next lesson, you will digitize the forest stands in your map as polygons
 and add the inventory data to them.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

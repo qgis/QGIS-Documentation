@@ -982,6 +982,8 @@ when used in conjunction with this spatial index syntax.
 .. _PostgreSQL: https://postgresql.org/docs/current/sql-expressions.html
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
