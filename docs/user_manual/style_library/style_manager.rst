@@ -400,6 +400,8 @@ If you press :guilabel:`Save...`, the shape is added to the list and you are dir
 back to the :guilabel:`New Legend Patch Shape` dialog to keep creating new shapes.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

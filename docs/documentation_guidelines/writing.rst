@@ -847,6 +847,8 @@ to help you with the layout and the description:
          new column with the points count
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

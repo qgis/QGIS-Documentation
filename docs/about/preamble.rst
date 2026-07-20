@@ -67,6 +67,8 @@ For a list of new features, visit the `visual changelogs
   We recommend that you use this version over previous releases.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

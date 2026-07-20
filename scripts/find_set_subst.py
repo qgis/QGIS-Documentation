@@ -153,7 +153,7 @@ def append_subst(file, subst_definition):
     :return:
     """
     if subst_definition is not None:
-        with open(file, "a") as f:
+        with open(file, "a", newline="") as f:
             f.write(subst_definition)
 
 

@@ -181,6 +181,8 @@ Installed plugins that provide Processing algorithms may also have their provide
 listed in this group, with custom settings.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

@@ -388,6 +388,8 @@ Now we have a nice-looking map, but how are we going to get it out of
 QGIS and into a format we can print out, or make into an image or PDF? That's the topic of the next lesson!
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
