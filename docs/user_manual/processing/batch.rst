@@ -196,6 +196,8 @@ displays details and steps of the execution process. Progress of the global
 batch task will be shown in the progress bar in the lower part of the dialog.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

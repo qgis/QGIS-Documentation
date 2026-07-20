@@ -260,6 +260,8 @@ go on, let's take a look at some basic interaction with the QGIS interface.
 This is the topic of the next lesson.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

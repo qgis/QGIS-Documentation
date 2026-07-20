@@ -518,6 +518,8 @@ of the overview on the selected map frame. You can customize it with:
     geometries and labels in the map item.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

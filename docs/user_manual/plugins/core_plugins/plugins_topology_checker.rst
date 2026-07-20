@@ -122,6 +122,8 @@ Clicking a row in the table will zoom the map canvas to the concerned feature,
 where you can use :ref:`QGIS digitizing tools <editingvector>` to fix the error.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

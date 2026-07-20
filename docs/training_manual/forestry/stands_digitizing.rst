@@ -401,6 +401,8 @@ The topic of the next lesson will be the creation of forest stands using current
 aerial photos and the addition of some relevant information to your dataset.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

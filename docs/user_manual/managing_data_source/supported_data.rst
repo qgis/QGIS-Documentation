@@ -757,6 +757,8 @@ and a -180..180° representation of a 0..360° data.
    (Figure_vector_crossing_map_).
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

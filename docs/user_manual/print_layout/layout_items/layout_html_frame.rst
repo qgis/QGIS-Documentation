@@ -138,6 +138,8 @@ following functionalities (see :numref:`figure_layout_html_breaks`):
 * Use the :guilabel:`Update HTML` button to see the result of the style sheet settings.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

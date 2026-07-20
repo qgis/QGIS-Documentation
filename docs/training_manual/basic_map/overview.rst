@@ -166,6 +166,8 @@ Now that you are familiar with the basics of the QGIS interface, in the next
 lesson we will see how to load some common data types.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

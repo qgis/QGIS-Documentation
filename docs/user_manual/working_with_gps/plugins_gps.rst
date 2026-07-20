@@ -125,6 +125,8 @@ the GPS download and upload algorithms.
    See `GPX 1.1 Schema Documentation <https://www.topografix.com/GPX/1/1/>`_.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

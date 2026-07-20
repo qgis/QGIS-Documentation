@@ -384,6 +384,8 @@ about using them to change the symbology of objects themselves? That's the
 topic for the next lesson!
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

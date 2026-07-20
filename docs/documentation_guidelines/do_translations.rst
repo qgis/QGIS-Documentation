@@ -450,6 +450,8 @@ For any question, please contact the `QGIS Community Team
 .. _`linguist-translators`: https://doc.qt.io/qt-6/linguist-translators.html
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
