@@ -174,28 +174,7 @@ in order to visualise features.
 Various techniques of shading are used in QGIS and their availability depends
 on the geometry type of the symbol:
 
-* :guilabel:`Legacy (Phong)`: describes the way a surface reflects light as
-  a combination of the :guilabel:`Diffuse` reflection of rough surfaces with
-  the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
-  It also includes an :guilabel:`Ambient` option to account for the small amount
-  of light that is scattered about the entire scene.
-  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
-  Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model>`_.
-* :guilabel:`Legacy Textured (Phong)`: same as the :guilabel:`Legacy (Phong)`
-  except that an image is used as :guilabel:`Diffuse Texture`.
-  The image can be a file on disk, a remote URL or :ref:`embedded in the project
-  <embedded_file_selector>`.
-  To transform the texture, adjust the :guilabel:`Texture scale`, :guilabel:`Texture rotation` or
-  :guilabel:`Texture offset` as needed.
-  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
-* :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
-  so that edge lines and highlights remain visually prominent. Along with the
-  :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` options,
-  you need to provide a :guilabel:`Warm` color (for surface facing toward the light)
-  and a :guilabel:`Cool` color (for the ones facing away).
-  Also, the relative contributions to the cool and warm colors by the diffuse color
-  are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
-  See also `Gooch shading <https://en.wikipedia.org/wiki/Gooch_shading>`_.
+
 * :guilabel:`Physically Based`: renders materials that respond naturally to light, making objects look
   like real-world materials. Available options are:
 
@@ -237,6 +216,31 @@ on the geometry type of the symbol:
      :width: 50%
 
      Physically based (with textures) configuration.
+
+* :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
+  so that edge lines and highlights remain visually prominent. Along with the
+  :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` options,
+  you need to provide a :guilabel:`Warm` color (for surface facing toward the light)
+  and a :guilabel:`Cool` color (for the ones facing away).
+  Also, the relative contributions to the cool and warm colors by the diffuse color
+  are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
+  See also `Gooch shading <https://en.wikipedia.org/wiki/Gooch_shading>`_.
+* :guilabel:`Legacy (Phong)`: describes the way a surface reflects light as
+  a combination of the :guilabel:`Diffuse` reflection of rough surfaces with
+  the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
+  It also includes an :guilabel:`Ambient` option to account for the small amount
+  of light that is scattered about the entire scene.
+  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
+  Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model>`_.
+* :guilabel:`Legacy Textured (Phong)`: same as the :guilabel:`Legacy (Phong)`
+  except that an image is used as :guilabel:`Diffuse Texture`.
+  The image can be a file on disk, a remote URL or :ref:`embedded in the project
+  <embedded_file_selector>`.
+  To transform the texture, adjust the :guilabel:`Texture scale`, :guilabel:`Texture rotation` or
+  :guilabel:`Texture offset` as needed.
+  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
+* :guilabel:`Single Color (Unlit)`: allows user to apply single color that does not
+  interact with lights.
 
 
 Application example
