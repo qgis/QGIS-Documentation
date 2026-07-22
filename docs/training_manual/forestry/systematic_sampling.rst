@@ -199,6 +199,8 @@ automatically generate detailed maps that the field teams will be using to
 navigate to the sample plots assigned to them.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

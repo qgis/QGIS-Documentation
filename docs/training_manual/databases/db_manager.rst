@@ -285,6 +285,8 @@ Next, we will look at how to use many of these same techniques with
 *SpatiaLite* databases.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

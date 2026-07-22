@@ -28,10 +28,10 @@ def get_subst_from_file(file):
     # i.e., anything inside || except is preceded by .. and/or not surrounded by a character
     s_pattern = re.compile(r"(?<!\.\. )(?<!\w)\|([\w\d-]+)\|(?![\w-])")
     s_title = re.compile(
-        r"\.\. Substitutions definitions - AVOID EDITING " r"PAST THIS LINE\n"
+        r"\.\. Substitutions definitions - AVOID EDITING " r"PAST THIS LINE\r?\n"
     )
     subs = []
-    with open(file, "r+", newline="\n", encoding="utf-8") as f:
+    with open(file, "r+", newline="", encoding="utf-8") as f:
         pos = f.tell()
         line = f.readline()
         while line != "":
@@ -153,7 +153,7 @@ def append_subst(file, subst_definition):
     :return:
     """
     if subst_definition is not None:
-        with open(file, "a") as f:
+        with open(file, "a", newline="") as f:
             f.write(subst_definition)
 
 

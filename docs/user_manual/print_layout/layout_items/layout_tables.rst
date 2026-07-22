@@ -426,6 +426,8 @@ the following functionalities (see :numref:`figure_layout_table_frames`):
   prevents the background to be drawn when the table frame has no contents.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

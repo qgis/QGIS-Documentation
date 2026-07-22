@@ -630,6 +630,8 @@ See :ref:`Elevation profile view<label_elevation_profile_view>` for more details
 .. _`QEasingCurve`: https://doc.qt.io/qt-6/qeasingcurve.html#EasingFunction-typedef
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

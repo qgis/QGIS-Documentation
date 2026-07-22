@@ -290,6 +290,8 @@ inventory the forest area you just digitized, and get the overall estimate
 of forest parameters.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

@@ -318,6 +318,8 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 (for example ``/dev/rfcomm0``).
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

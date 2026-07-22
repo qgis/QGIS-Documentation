@@ -236,6 +236,8 @@ In the next lesson you will learn how to analyze vector data using
 QGIS' various vector analysis tools.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

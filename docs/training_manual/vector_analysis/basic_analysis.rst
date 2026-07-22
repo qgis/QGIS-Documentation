@@ -475,6 +475,8 @@ In the next lesson, we will look at how to calculate the shortest
 distance along roads from one point to another.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
