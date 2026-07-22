@@ -1,15 +1,15 @@
 .. _`3dsymbols`:
 
-*********************
- Creating 3D Symbols
-*********************
+************************************
+ Creating 3D Symbols and Materials
+************************************
 
 .. only:: html
 
    .. contents::
       :local:
 
-The :guilabel:`Style Manager` helps you create and store 3D symbols for every geometry type
+The :guilabel:`Style Manager` helps you create and store 3D symbols and materials for every geometry type
 to render in the :ref:`3D map view <label_3dmapview>`.
 
 As of the other items, enable the |3d| :guilabel:`3D Symbols` tab and expand the |symbologyAdd|
@@ -18,6 +18,9 @@ button menu to create:
 * :ref:`3D point symbols <3d_pointlayers>`
 * :ref:`3D line symbols <3d_linelayers>`
 * :ref:`3D polygon symbols <3d_polygonlayers>`
+
+Or click the :guilabel:`Materials` tab and expand the |symbologyAdd|
+button to select a material type.
 
 
 .. _`3d_pointlayers`:
@@ -171,19 +174,49 @@ in order to visualise features.
 Various techniques of shading are used in QGIS and their availability depends
 on the geometry type of the symbol:
 
-* :guilabel:`Realistic (Phong)`: describes the way a surface reflects light as
-  a combination of the :guilabel:`Diffuse` reflection of rough surfaces with
-  the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
-  It also includes an :guilabel:`Ambient` option to account for the small amount
-  of light that is scattered about the entire scene.
-  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
-  Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model>`_.
-* :guilabel:`Realistic Textured (Phong)`: same as the :guilabel:`Realistic (Phong)`
-  except that an image is used as :guilabel:`Diffuse Texture`.
-  The image can be a file on disk, a remote URL or :ref:`embedded in the project
-  <embedded_file_selector>`.
-  The :guilabel:`Texture scale` and :guilabel:`Texture rotation` are required.
-  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
+
+* :guilabel:`Physically Based`: renders materials that respond naturally to light, making objects look
+  like real-world materials. Available options are:
+
+  * :guilabel:`Base color`: allows users to put base color on surface.
+  * :guilabel:`Metalness`: sets how metallic the surface appears.
+  * :guilabel:`Roughness`: controls how rough or smooth the surface is.
+  * :guilabel:`Reflectance`: controls how much light the surface reflects.
+  * :guilabel:`Anisotropy`: creates directional reflections that align with
+    the direction specified in :guilabel:`Anisotropy direction`.
+  * :guilabel:`Clear coat strength`: controls the intensity of the clear coat layer. Higher values
+    create a stronger glossy appearance, lower values create a more subtle protective layer.
+  * :guilabel:`Clear coat roughness`: controls the roughness of the clear coat surface. Higher values
+    create a matte clear coat, lower values create a shiny, glossy clear coat.
+  * :guilabel:`Emission`: an optional setting where users can select solid emission color for metal rough material.
+    Useful for creating emissive solid color material. Adjust the :guilabel:`Emission strength` value
+    to control the intensity of the light.
+
+  Use the :guilabel:`Opacity` slider to adjust transparency.
+* :guilabel:`Physically Based (with textures)`: same as the :guilabel:`Physically Based`, but users can
+  input more complex texture maps. Available options are:
+
+  * :guilabel:`Base color texture`: represents color, pattern, visual detail of the material.
+  * :guilabel:`Metalness texture`: applies metallic material to the surface.
+  * :guilabel:`Roughness texture`: defines surface roughness.
+  * :guilabel:`Normal texture`: adds details to the material. For example: bumps, grooves, scratch and grain.
+  * :guilabel:`Height (displacement) texture`: displaces geometry to add surface depth, making it appear more realistic.
+    Set the :guilabel:`Height texture strength` to modify the depth effect as needed.
+  * :guilabel:`Ambient occlusion texture`: a grayscale image that adds soft shadows to corners, gaps, and areas where objects
+    are close together, making it look more realistic.
+  * :guilabel:`Emission texture`: adds emissive objects to the surface. To brighten
+    the objects, increase the :guilabel:`Emission strength`.
+
+  Set the desired transparency with the :guilabel:`Opacity` slider.
+  To transform the texture, adjust :guilabel:`Texture scale`
+  and :guilabel:`Texture rotation` as desired.
+
+  .. figure:: img/physicallybased_withtextures.png
+     :align: center
+     :width: 50%
+
+     Physically based (with textures) configuration.
+
 * :guilabel:`CAD (Gooch)`: this technique allows shading to occur only in mid-tones
   so that edge lines and highlights remain visually prominent. Along with the
   :guilabel:`Diffuse`, :guilabel:`Specular`, :guilabel:`Shininess` options,
@@ -192,11 +225,22 @@ on the geometry type of the symbol:
   Also, the relative contributions to the cool and warm colors by the diffuse color
   are controlled by :guilabel:`Alpha` and :guilabel:`Beta` properties respectively.
   See also `Gooch shading <https://en.wikipedia.org/wiki/Gooch_shading>`_.
-* :guilabel:`Metal Roughness`: a physically based rendering material
-  that provides an accurate representation of how light interacts with surfaces.
-  Options are available for setting the material :guilabel:`Base color`,
-  :guilabel:`Metalness` and :guilabel:`Roughness`.
-* :guilabel:`Embedded Textures` with 3D models shape
+* :guilabel:`Legacy (Phong)`: describes the way a surface reflects light as
+  a combination of the :guilabel:`Diffuse` reflection of rough surfaces with
+  the :guilabel:`Specular` reflection of shiny surfaces (:guilabel:`Shininess`).
+  It also includes an :guilabel:`Ambient` option to account for the small amount
+  of light that is scattered about the entire scene.
+  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
+  Read more at `Phong reflection description <https://en.wikipedia.org/wiki/Phong_reflection_model>`_.
+* :guilabel:`Legacy Textured (Phong)`: same as the :guilabel:`Legacy (Phong)`
+  except that an image is used as :guilabel:`Diffuse Texture`.
+  The image can be a file on disk, a remote URL or :ref:`embedded in the project
+  <embedded_file_selector>`.
+  To transform the texture, adjust the :guilabel:`Texture scale`, :guilabel:`Texture rotation` or
+  :guilabel:`Texture offset` as needed.
+  Use the :guilabel:`Opacity` slider to render semi-transparent objects in 3D.
+* :guilabel:`Single Color (Unlit)`: allows user to apply single color that does not
+  interact with lights.
 
 
 Application example
