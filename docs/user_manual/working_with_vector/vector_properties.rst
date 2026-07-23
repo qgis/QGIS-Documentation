@@ -218,7 +218,8 @@ to the SQL WHERE clause field, double click its name in the Values list.
 You can use the search box at the top of the Values frame to easily browse and
 find attribute values in the list.
 
-The **Operators** section contains all usable operators. To add an operator to
+The :ref:`Operators <expression_function_Operators_index>` section contains
+all usable operators. To add an operator to
 the SQL WHERE clause field, click the appropriate button. Relational operators
 ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
 operators (``AND``, ``OR``, ...) are available.
