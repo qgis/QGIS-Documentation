@@ -162,13 +162,13 @@ It will also be shown in the lower-right of the QGIS status bar.
 
 Available options are:
 
-* |unchecked| :guilabel:`No CRS (or unknown/non-Earth projection)`:
-  Checking this setting will disable ALL projection handling within the QGIS
+* :guilabel:`No CRS (or unknown)`:
+  selecting this setting will disable ALL projection handling within the QGIS
   project, causing all layers and map coordinates to be treated as simple 2D
   Cartesian coordinates, with no relation to positions on the Earth's surface.
   It can be used to guess a layer CRS (based on its raw coordinates or when
   using QGIS for non earth uses like role-playing game maps, building mapping
-  or microscopic stuff. In this case:
+  or microscopic stuff). In this case:
 
   * No reprojection is done while rendering the layers: features are just drawn
     using their raw coordinates.
@@ -177,12 +177,21 @@ Available options are:
     forced to "unknown units"; all measurements are done in unknown map units,
     and no conversion is possible.
 
-* or an existing coordinate reference system that can be *geographic*, *projected*
-  or *user-defined*. A preview of the CRS extent on earth is displayed to
+* :guilabel:`Predefined CRS`: select an existing coordinate reference system,
+  either geographic or projected.
+  A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
   Layers added to the project are translated on-the-fly to this CRS in order
   to overlay them regardless of their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
+
+* :guilabel:`Custom CRS`: defines your own CRS that must conform to
+  a WKT or Proj string format. See :ref:`Custom CRS <sec_custom_projections>`.
+
+* :guilabel:`Topocentric CRS`: defines coordinates relative to a specific point
+  on the Earth's surface, called the origin. Specify the :guilabel:`Base CRS`
+  as reference and set the :guilabel:`Origin latitude`
+  and :guilabel:`Origin longitude` to define the origin point.
 
 If you change your project's CRS and want the units (for distance and area)
 to match the units defined by the CRS, make sure you have selected :guilabel:`Map units` in the relevant settings,
@@ -449,5 +458,3 @@ to the current project only.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/unchecked.png
-   :width: 1.3em
