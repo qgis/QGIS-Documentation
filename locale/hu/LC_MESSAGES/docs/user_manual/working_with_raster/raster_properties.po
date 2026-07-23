@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Báthory Péter <bathory86p@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# Báthory Péter <bathory86p@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Báthory Péter <bathory86p@gmail.com>, 2026\n"
 "Language-Team: Hungarian (https://app.transifex.com/qgis/teams/6144/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -70,6 +70,16 @@ msgstr ""
 "Egyéb adattípusok, mint például felszínborítás, talajtípusok, csapadék és "
 "sok más."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:20
+msgid ""
+"Raster data can be stored in several supported formats, including GeoTIFF, "
+"ERDAS Imagine, ArcInfo ASCII GRID, PostgreSQL Raster and others. See more at"
+" :ref:`opening_data`."
+msgstr ""
+"A raszteres adatok számos támogatott formátumban tárolhatók, többek között "
+"GeoTIFF, ERDAS Imagine, ArcInfo ASCII GRID, PostgreSQL Raster és más "
+"formátumokban. További információ a :ref:`opening_data` oldalon található."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:24
 msgid ""
 "To view and set the properties for a raster layer, double click on the layer"
@@ -103,17 +113,33 @@ msgstr "|system| :ref:`Forrás <raster_sourcetab>`"
 msgid "system"
 msgstr "system"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:35
+msgid "|symbology| :ref:`Symbology <raster_symbology>` ([1]_)"
+msgstr "|symbology| :ref:`Jelrendszer <raster_symbology>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1467
 msgid "symbology"
 msgstr "symbology"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:36
+msgid "|transparency| :ref:`Transparency <raster_transparency>` ([1]_)"
+msgstr "|transparency| :ref:`Átlátszóság <raster_transparency>` ([1]_)"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1479
 msgid "transparency"
 msgstr "transparency"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:37
+msgid "|labelingSingle| :ref:`Labels <raster_labels>` ([1]_)"
+msgstr "|labelingSingle| :ref:`Címkék <raster_labels>` ([1]_)"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1427
 msgid "labelingSingle"
 msgstr "labelingSingle"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:38
+msgid "|rasterHistogram| :ref:`Histogram <raster_histogram>` ([1]_)"
+msgstr "|rasterHistogram| :ref:`Hisztogram <raster_histogram>` ([1]_)"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1455
 msgid "rasterHistogram"
@@ -159,6 +185,10 @@ msgstr "|editMetadata| :ref:`Metaadat <raster_metadata>`"
 msgid "editMetadata"
 msgstr "editMetadata"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:44
+msgid "|legend| :ref:`Legend <raster_legend>`"
+msgstr "|legend| :ref:`Jelmagyarázat <raster_legend>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1433
 msgid "legend"
 msgstr "legend"
@@ -171,6 +201,10 @@ msgstr "|display| :ref:`Megjelenítés <raster_display>`"
 msgid "display"
 msgstr "display"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:46
+msgid "|openTable| :ref:`Attribute Tables <raster_attribute_tables>`"
+msgstr "|openTable| :ref:`Attribútumtáblák <raster_attribute_tables>`"
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1445
 msgid "openTable"
 msgstr "openTable"
@@ -182,6 +216,24 @@ msgstr "|overlay| :ref:`QGIS Szerver <raster_server>`"
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1447
 msgid "overlay"
 msgstr "overlay"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:48
+msgid ":ref:`External plugins <plugins>` ([2]_) tabs"
+msgstr ":ref:`Külső bővítmények <plugins>` ([2]_) fülei"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:53
+msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
+msgstr "Elérhetőek a :ref:`Rétegstílus panelről <layer_styling_panel>` is"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:55
+msgid ""
+":ref:`External plugins <plugins>` you install can optionally add tabs to "
+"this dialog. Those are not presented in this document. Refer to their "
+"documentation."
+msgstr ""
+"A feltelepített :ref:`Külső bővítmények <plugins>` újabb füleket adhatnak "
+"hozzá a párbeszédablakhoz. Ezek nem szerepelnek ebben a dokumentációban. "
+"Tekintse meg a saját dokumentációjukat."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:59
 msgid "**Live update rendering**"
@@ -1403,6 +1455,25 @@ msgstr ""
 "A QGIS lehetőséget biztosít a raszterrétegek |transparency| "
 ":guilabel:`Átlátszósági` szintjének beállítására."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:646
+msgid ""
+"Use the :guilabel:`Global opacity` slider to set to what extent the "
+"underlying layers (if any) should be visible through the current raster "
+"layer. This is very useful if you overlay raster layers (e.g., a shaded "
+"relief map overlaid by a classified raster map). This will make the look of "
+"the map more three dimensional. The opacity of the raster can be data-"
+"defined, and vary e.g. depending on the visibility of another layer, by "
+"temporal variables, on different pages of an atlas, ..."
+msgstr ""
+"A :guilabel:`Globális átlátszatlanság` csúszkával állítsa be, hogy az alatta"
+" lévő rétegek (ha vannak) milyen mértékben legyenek láthatóak az aktuális "
+"raszterrétegen keresztül. Ez nagyon hasznos, ha raszteres rétegeket "
+"helyezünk egymásra (pl. egy színezett domborzati térképet és fölé egy "
+"osztályozott raszteres térképet). Ezáltal a térkép megjelenése "
+"háromdimenziósabbá válik. A raszterek átlátszatlansága adatvezérelten is "
+"meghatározható, és változhat pl. egy másik réteg láthatóságától függően, "
+"időbeli változók alapján, egy atlasz különböző oldalain, stb."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:662
 msgid "Raster Transparency"
 msgstr "Raszter átlátszósága"
@@ -1738,6 +1809,16 @@ msgid ""
 msgstr ""
 "Kapcsolja be |checkbox| :guilabel:`Dinamikus időbeli vezérlést`, és állítsa "
 "be, hogy a réteg újrarajzolása milyen legyen:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:883
+msgid ""
+":guilabel:`Automatic`: the rendering is controlled by the underlying data "
+"provider if it supports temporal data handling. E.g. this can be used with "
+"WMS-T layers or PostgreSQL rasters."
+msgstr ""
+":guilabel:`Automatikus`: a megjelenítést a mögöttes adatszolgáltató vezérli,"
+" ha támogatja az időbeli adatok kezelését. Ez például WMS-T rétegekkel vagy "
+"PostgreSQL raszterekkel használható."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:894
 msgid ""
@@ -2264,6 +2345,20 @@ msgstr ""
 "Server-manual>` által közzétett adatok beállításainak konfigurálásában. A "
 "következőek konfigurálhatóak:"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1159
+msgid ""
+":guilabel:`Description`: provides information to describe the data, such as "
+":guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Abstract`, a "
+":guilabel:`Keyword list`,  and a :guilabel:`Data URL` whose "
+":guilabel:`Format` can be in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+msgstr ""
+":guilabel:`Leírás`: az adatok leírására szolgáló információkat szolgáltat, "
+"például as :guilabel:`Rövid név`, :guilabel:`Cím`, :guilabel:`Leírás`, a "
+":guilabel:`Kulcsszólista`, és egy :guilabel:`Adat URL` melynek "
+":guilabel:`Formátuma` lehet ``text/html``, ``text/plain`` vagy "
+"``application/pdf``."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1163
 msgid ""
 ":guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL` to identify"
@@ -2302,6 +2397,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1181
 msgid "QGIS Server in Raster Properties"
 msgstr "QGIS Szerver a raszter beállításaiban"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1189
+msgid "Attribute Tables"
+msgstr "Attribútumtáblák"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1387
 msgid "addTable"
@@ -2350,6 +2449,14 @@ msgid ""
 msgstr ""
 "Kattintson az eszköztáron az :guilabel:`Elemek azonosítása` eszközre, vagy "
 "nyomja meg a :kbd:`Ctrl+Shift+I` billentyűkombinációt."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1351
+msgid ""
+"Click on the point in the raster layer that you want to identify. The pixel "
+"will get highlighted."
+msgstr ""
+"Kattintson a raszterréteg azon pontjára, amelyet azonosítani szeretne. A "
+"pixel ki lesz emelve."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1354
 msgid ""
