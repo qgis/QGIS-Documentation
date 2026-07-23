@@ -409,7 +409,8 @@ User Defined CRS
 ................
 
 The |customProjection| :guilabel:`User Defined CRS` tab helps you to define a custom CRS
-which must conform to a WKT or Proj string format.
+which must conform to a WKT or Proj string format. For more details, see
+:ref:`Custom CRS <sec_custom_projections>`.
 
 .. _figure_defined_crs:
 
@@ -417,24 +418,6 @@ which must conform to a WKT or Proj string format.
    :align: center
 
    User Defined CRS
-
-Set a :guilabel:`Name` and use |symbologyAdd| :sup:`Add new CRS`.
-If you want to delete an existing one you can use |symbologyRemove| :sup:`Remove CRS`.
-
-**Definition**
-
-* :guilabel:`Format`
-   * WKT (Recommended)
-   * Proj String (Legacy - Not Recommended)
-
-* :guilabel:`Parameters`
-   * |editCopy| Copy parameters from an existing CRS.
-   * :guilabel:`Validate` tests if your expression is correct.
-
-**Test**
-
-Here you can test your created CRS definition by Latitude and Longitude.
-Use a known coordinate to control if your definition is accurate.
 
 
 .. _datasources_options:
@@ -1997,11 +1980,12 @@ CRS Properties
 The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
 
-* |checkbox| :guilabel:`No CRS (or unknown/non-Earth projection)`:
+* :guilabel:`No CRS (or unknown)`:
   layers are drawn based on their raw coordinates
-* or an existing coordinate reference system that can be *geographic*,
-  *projected*, *user-defined* or *topocentric*. Layers added to the project are translated
-  on-the-fly to this CRS in order to overlay them regardless their original CRS.
+* or a coordinate reference system that can be an existing CRS from the installed PROJ database,
+  a derived one using a specific origin point (*topocentric*) or a custom one defined as a WKT string.
+  Layers added to the project are translated on-the-fly to this CRS in order to overlay them
+  regardless of their original CRS.
 
 Transformations Properties
 --------------------------
