@@ -589,15 +589,17 @@ Generates a Universally Unique Identifier (UUID) for each row using the Qt `QUui
    :widths: 15 85
 
    * - Syntax
-     - uuid([format:='WithBraces'])
+     - uuid([format:='WithBraces'], [version:=4])
 
        [] marks optional arguments
    * - Arguments
      - * **format** - The format, as the UUID will be formatted. 'WithBraces', 'WithoutBraces' or 'Id128'.
+       * **version** - The UUID version to create. Supported versions are version 4 or 7.
    * - Examples
      - * ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
        * ``uuid('WithoutBraces')`` → '0bd2f60f-f157-4a6d-96af-d4ba4cb366a1'
        * ``uuid('Id128')`` → '0bd2f60ff1574a6d96afd4ba4cb366a1'
+       * ``uuid(version:=7)`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
 
 
 .. end_uuid_section
