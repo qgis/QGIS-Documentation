@@ -458,5 +458,3 @@ to the current project only.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |unchecked| image:: /static/common/unchecked.png
-   :width: 1.3em
