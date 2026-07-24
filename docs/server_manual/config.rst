@@ -96,7 +96,7 @@ several ways to define these variables. This is fully described in
 
    * - QGIS_SERVER_API_WFS3_ROOT_PATH
         Defines the root path component of the URL that provides the OGC API services
-     - /oapif
+     - /ogcapi
      - OAPIF/WFS3
 
    * - QGIS_SERVER_APPLICATION_NAME
