@@ -28,7 +28,7 @@ def get_subst_from_file(file):
     # i.e., anything inside || except is preceded by .. and/or not surrounded by a character
     s_pattern = re.compile(r"(?<!\.\. )(?<!\w)\|([\w\d-]+)\|(?![\w-])")
     s_title = re.compile(
-        r"\.\. Substitutions definitions - AVOID EDITING " r"PAST THIS LINE\r?\n"
+        r"\.\. Substitutions definitions - AVOID EDITING PAST THIS LINE"
     )
     subs = []
     with open(file, "r+", newline="", encoding="utf-8") as f:
