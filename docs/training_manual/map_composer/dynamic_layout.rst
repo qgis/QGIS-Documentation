@@ -321,10 +321,7 @@ What's Next?
 -------------------------------------------------------------------------------
 
 On the next page, you will be given an assignment to complete.
-This will allow you to practice the techniques you have learned so
-far.
-
-
+This will allow you to practice the techniques you have learned so far.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

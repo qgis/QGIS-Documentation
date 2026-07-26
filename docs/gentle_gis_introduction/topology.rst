@@ -220,10 +220,7 @@ What's next?
 ============
 
 In the section that follows we will take a closer look at **Coordinate Reference
-Systems** to understand how we relate data from our spherical earth onto flat
-maps!
-
-
+Systems** to understand how we relate data from our spherical earth onto flat maps!
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

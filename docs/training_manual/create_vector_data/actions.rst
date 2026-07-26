@@ -335,8 +335,6 @@ learn how to analyze the data to solve problems.
 That is the topic of the next module.
 
 
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

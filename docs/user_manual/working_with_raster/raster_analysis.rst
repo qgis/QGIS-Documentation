@@ -154,8 +154,6 @@ Or you can use the ``IF`` operator.
   if ( elevation@1 < 50 , 1 , 2 )
 
 
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

@@ -217,8 +217,6 @@ Now launch QGIS under the debugger by clicking the |runDebug| :sup:`Start
 Debugging` in the bottom left of the window.
 
 
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
