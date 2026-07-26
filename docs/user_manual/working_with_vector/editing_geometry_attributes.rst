@@ -2373,10 +2373,7 @@ To edit features in-place:
    is indeed toggled to editing mode with unsaved modification as indicated by
    the |editableEdits| icon next to the layer name.
 #. As usual, press |saveEdits| :sup:`Save layer edits` to commit the changes in
-   the layer. You can also press |undo| :sup:`Undo` to rollback the whole
-   modification.
-
-
+   the layer. You can also press |undo| :sup:`Undo` to rollback the whole modification.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

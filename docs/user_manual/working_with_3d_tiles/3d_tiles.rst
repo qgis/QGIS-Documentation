@@ -221,8 +221,6 @@ to create and edit a metadata report on your layer.
 See :ref:`metadatamenu` for more information.
 
 
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,

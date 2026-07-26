@@ -2084,9 +2084,7 @@ Messaging
 
 The |messageLog| :sup:`Messages` button next to it opens the
 :guilabel:`Log Messages Panel` which has information on underlying
-processes (QGIS startup, plugins loading, processing tools...)
-
-
+processes (QGIS startup, plugins loading, processing tools...).
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
