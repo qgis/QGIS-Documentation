@@ -1384,7 +1384,7 @@ Under the pixel attributes, you will find the :guilabel:`Derived` information,
 such as:
 
 * ``X`` and ``Y`` coordinate values of the point clicked
-* Column and row of the point clicked (pixel) when compatible
+* Column and row of the point clicked (pixel) when compatible.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

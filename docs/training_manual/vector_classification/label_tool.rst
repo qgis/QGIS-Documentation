@@ -380,8 +380,8 @@ What's Next?
 -------------------------------------------------------------------------------
 
 Now that you know how attributes can make a visual difference for your map, how
-about using them to change the symbology of objects themselves? That's the
-topic for the next lesson!
+about using them to change the symbology of objects themselves?
+That's the topic for the next lesson!
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

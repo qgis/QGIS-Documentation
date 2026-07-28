@@ -385,7 +385,8 @@ What's Next?
 ----------------------------------------------------------------------
 
 Now we have a nice-looking map, but how are we going to get it out of
-QGIS and into a format we can print out, or make into an image or PDF? That's the topic of the next lesson!
+QGIS and into a format we can print out, or make into an image or PDF?
+That's the topic of the next lesson!
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
