@@ -297,6 +297,13 @@ From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
   single direction but the light reaches out into infinity.
   A directional light can be rotated given an  :guilabel:`Azimuth`, have an
   :guilabel:`Altitude`, a :guilabel:`Color` and an :guilabel:`Intensity`.
+* up to four :guilabel:`Sun lights`: allows a light source mimicking natural light emitted
+  from the sun. The :guilabel:`Reference time` is set from user's local time by default.
+  Customise the :guilabel:`Color` as desired and increase the :guilabel:`Intensity` for brighter color.
+  Adjust the :guilabel:`Temperature (Celsius)` for the warmth or coolness of the sun light.
+  :guilabel:`Atmospheric pressure (hPa)` controls the density of the simulated atmosphere.
+  :guilabel:`Reference elevation` specifies the height or altitude of the scene.
+
 
 .. _figure_3dmap_configlights:
 
