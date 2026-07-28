@@ -159,10 +159,10 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |stats_today| replace:: *2026-07-21*
+.. |stats_today| replace:: *2026-07-28*
 .. |stats_total_strings| replace:: **32585**
 .. |stats_nb_languages| replace:: **62**
-.. |stats_global_percentage| replace:: **16.39%**
+.. |stats_global_percentage| replace:: **16.4%**
 
 .. |stats_ar| replace:: 4.87
 .. |stats_az| replace:: 0.11
@@ -188,12 +188,12 @@ Statistics of translation
 .. |stats_id| replace:: 3.8
 .. |stats_ig| replace:: 0.04
 .. |stats_it| replace:: 93.57
-.. |stats_ja| replace:: 91.93
+.. |stats_ja| replace:: 92.06
 .. |stats_ka| replace:: 0.16
 .. |stats_kab| replace:: 0.17
 .. |stats_ko| replace:: 86.9
 .. |stats_ku| replace:: 0.12
-.. |stats_lt| replace:: 36.19
+.. |stats_lt| replace:: 36.36
 .. |stats_mi| replace:: 0.28
 .. |stats_mk| replace:: 0.19
 .. |stats_ml| replace:: 0.16
@@ -205,7 +205,7 @@ Statistics of translation
 .. |stats_ne| replace:: 0.29
 .. |stats_nl| replace:: 100.0
 .. |stats_nqo| replace:: 1.7
-.. |stats_pl| replace:: 15.11
+.. |stats_pl| replace:: 15.51
 .. |stats_pt_BR| replace:: 56.95
 .. |stats_pt_PT| replace:: 8.26
 .. |stats_ro| replace:: 29.73
