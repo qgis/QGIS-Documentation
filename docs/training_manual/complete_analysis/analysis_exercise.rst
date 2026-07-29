@@ -854,13 +854,10 @@ This is the final answer to the research question.
 
 For your submission, create a fully labeled layout that includes the
 semi-transparent hillshade layer over an appealing raster of your
-choice (such as the DEM or the slope raster,
-for example).
+choice (such as the DEM or the slope raster, for example).
 Also include the university and the ``suitable_areas`` layer, with
-the four suitable areas that are closest to the university
-highlighted.
-Follow all the best practices for cartography in creating your output
-map.
+the four suitable areas that are closest to the university highlighted.
+Follow all the best practices for cartography in creating your output map.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

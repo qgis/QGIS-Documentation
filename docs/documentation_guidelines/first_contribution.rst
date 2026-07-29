@@ -658,7 +658,7 @@ Further reading
   split into multiple commits that are not necessarily worth it. Git command
   lines help you squash these commits to a smaller number and more meaningful
   commit messages. Some details at `Using git rebase on the command line
-  <https://docs.github.com/en/get-started/using-git/using-git-rebase-on-the-command-line>`_
+  <https://docs.github.com/en/get-started/using-git/using-git-rebase-on-the-command-line>`_.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

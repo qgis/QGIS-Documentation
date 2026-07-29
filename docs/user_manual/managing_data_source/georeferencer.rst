@@ -363,7 +363,6 @@ You can customize the behavior of the georeferencer in :menuselection:`Settings
   showing it as a separate window that can be minimized.
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
