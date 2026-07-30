@@ -920,14 +920,19 @@ Extends the start and end of a linestring geometry by a specified amount. Lines 
    :widths: 15 85
 
    * - Syntax
-     - extend(geometry, start_distance, end_distance)
+     - extend(geometry, start_distance, end_distance, [start_deflection:=0], [end_deflection:=0])
+
+       [] marks optional arguments
    * - Arguments
      - * **geometry** - a (multi)linestring geometry
        * **start_distance** - distance to extend the start of the line
        * **end_distance** - distance to extend the end of the line.
+       * **start_deflection** - angle in degrees clockwise to deflect the extension from the start of the line
+       * **end_deflection** - angle in degrees clockwise to deflect the extension from the end of the line
    * - Examples
      - * ``geom_to_wkt(extend(geom_from_wkt('LineString(0 0, 1 0, 1 1)'),1,2))`` → 'LineString (-1 0, 1 0, 1 3)'
        * ``geom_to_wkt(extend(geom_from_wkt('MultiLineString((0 0, 1 0, 1 1), (2 2, 0 2, 0 5))'),1,2))`` → 'MultiLineString ((-1 0, 1 0, 1 3),(3 2, 0 2, 0 7))'
+       * ``geom_to_wkt(extend(geom_from_wkt('LineString(0 0, 1 0, 1 1)'),1,2, start_deflection:=45, end_deflection:=-90))`` → 'LineString (-0.70710678 0.70710678, 0 0, 1 0, 1 1, -1 1)'
 
 
 .. figure:: /docs/user_manual/processing_algs/qgis/img/extend_lines.png
