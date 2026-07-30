@@ -987,9 +987,10 @@ This group contains functions which calculate or return mesh related values.
 .. include:: expression_help/Meshes.rst
    :start-after: :orphan:
 
+.. _expression_operators:
 
 Operators
-----------
+---------
 
 This group contains operators (e.g., +, -, \*).
 Note that for most of the mathematical functions below,
