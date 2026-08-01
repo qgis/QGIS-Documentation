@@ -284,19 +284,28 @@ Terrain
 Lights
 ------
 
-From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add
+From the :guilabel:`Lights` tab, press the |symbologyAdd| menu to add:
 
-* up to eight :guilabel:`Point lights`: emits light in all directions, like a
+* :guilabel:`Point lights`: emits light in all directions, like a
   sphere of light filling an area. Objects closer to the light will be brighter,
   and objects further away will be darker. A point light has a set position
   (:guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`), a :guilabel:`Color`,
-  an :guilabel:`Intensity` and an :guilabel:`Attenuation`
-* up to four :guilabel:`Directional lights`: mimics the lighting that you would
+  an :guilabel:`Intensity` and an :guilabel:`Attenuation`.
+  You can configure up to eight point lights for the 3D scene.
+* :guilabel:`Sun lights`: represents the real world sun position for the map at a specified date and time.
+  The :guilabel:`Reference time` is set from user's local time by default.
+  Customise the :guilabel:`Color` as desired and increase the :guilabel:`Intensity` for brighter color.
+  Adjust the :guilabel:`Temperature (Celsius)` for the warmth or coolness of the sun light.
+  :guilabel:`Atmospheric pressure (hPa)` controls the density of the simulated atmosphere.
+  :guilabel:`Reference elevation` specifies the height or altitude of the scene
+* :guilabel:`Directional lights`: mimics the lighting that you would
   get from a giant flash light very far away from your objects, always centered
   and that never dies off (e.g. the sun). It emits parallel light rays in a
   single direction but the light reaches out into infinity.
   A directional light can be rotated given an  :guilabel:`Azimuth`, have an
   :guilabel:`Altitude`, a :guilabel:`Color` and an :guilabel:`Intensity`.
+  Combined with sun lights, you can configure up to four lights for the 3D scene.
+
 
 .. _figure_3dmap_configlights:
 
