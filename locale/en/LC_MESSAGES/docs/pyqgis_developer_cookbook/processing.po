@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.34\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-02 07:49+0000\n"
+"POT-Creation-Date: 2026-08-01 07:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,9 +18,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: ../../<rst_prolog>:5
+#: ../../<rst_prologue>:5
 msgid ""
 "Translation is a community effort :ref:`you can join "
 "<translation_guidelines>`. This page is currently translated at "
@@ -134,62 +134,10 @@ msgid ""
 msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/processing.rst:151
-msgid "Implementing custom Processing algorithms"
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:154
 msgid "Creating a custom algorithm"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:156
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:153
 msgid "Here's a simple example of a custom buffer algorithm:"
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:207
-msgid "Customizing the algorithm dialog"
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:209
-msgid ""
-"Custom dialogs are especially useful when working with nested or dynamic "
-"inputs, when parameters depend on external data sources such as APIs "
-"(e.g. dynamically populated dropdowns), or when you need advanced "
-"validation and custom layout behavior that isn’t supported by the default"
-" Processing dialog. To override the default UI (e.g. for complex "
-"parameter types or dynamic logic), subclass "
-":class:`QgsProcessingAlgorithmDialogBase "
-"<qgis.gui.QgsProcessingAlgorithmDialogBase>`. To render your custom UI in"
-" the standard Processing dialog window, you must call "
-"``self.setMainWidget(panel)``, where ``panel`` is a "
-":class:`QgsPanelWidget <qgis.gui.QgsPanelWidget>` containing your custom "
-"layout. This ensures your interface is correctly displayed and interacts "
-"properly with the Processing framework."
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:218
-msgid ""
-"Here is an example that integrates signal management using QTimer_ for "
-"debounced input:"
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:310
-msgid ""
-"To launch the custom dialog for a given algorithm, simply instantiate "
-"``CustomAlgorithmDialog`` with your algorithm instance and call "
-"``exec()``:"
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:320
-msgid "Managing Qt Signals"
-msgstr ""
-
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:322
-msgid ""
-"When building reactive dialogs, manage signal connections carefully. The "
-"above pattern uses a QTimer_ to debounce input from the text field, "
-"preventing rapid repeated calls. This is especially useful when fetching "
-"metadata or updating UI elements based on user input. Always connect "
-"signals once (typically in ``__init__``) and use ``singleShot=True`` to "
-"ensure the slot is triggered only once after a delay."
 msgstr ""
 
