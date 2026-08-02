@@ -12,14 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-07-03 19:09+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -753,11 +753,16 @@ msgid "Custom template functions"
 msgstr "Fonctions de modèle personnalisées"
 
 #: ../../docs/server_manual/services/ogcapif.rst:408
+msgid "``escape( string )``: escapes XHTML tag angle brackets"
+msgstr ""
+"``escape( string )``: échappe les crochets angulaires des balises XHTML"
+
+#: ../../docs/server_manual/services/ogcapif.rst:409
 msgid "``path_append( path )``: appends a directory path to the current url"
 msgstr ""
 "``path_append(path)`` : ajoute un chemin de répertoire à l'url actuelle"
 
-#: ../../docs/server_manual/services/ogcapif.rst:409
+#: ../../docs/server_manual/services/ogcapif.rst:410
 msgid ""
 "``path_chomp( n )``: removes the specified number \"n\" of directory "
 "components from the current url path"
@@ -765,11 +770,11 @@ msgstr ""
 "``path_chomp(n)`` : supprime le nombre spécifié \"n\" de composants de "
 "répertoire du chemin d'URL actuel"
 
-#: ../../docs/server_manual/services/ogcapif.rst:411
+#: ../../docs/server_manual/services/ogcapif.rst:412
 msgid "``json_dump( )``: prints the JSON data passed to the template"
 msgstr "``json_dump()``: affiche les données JSON transmises au modèle"
 
-#: ../../docs/server_manual/services/ogcapif.rst:412
+#: ../../docs/server_manual/services/ogcapif.rst:413
 msgid ""
 "``static( path )``: returns the full URL to the specified static path. For "
 "example: \"static( \"/style/black.css\" )\" with a root path "
@@ -781,7 +786,7 @@ msgstr ""
 "\"http://localhost/qgisserver/wfs3\" renverra "
 "\"http://localhost/qgisserver/wfs3/static/style/black.css\"."
 
-#: ../../docs/server_manual/services/ogcapif.rst:416
+#: ../../docs/server_manual/services/ogcapif.rst:417
 msgid ""
 "``links_filter( links, key, value )``: Returns filtered links from a link "
 "list"
@@ -789,7 +794,7 @@ msgstr ""
 "``links_filter(links, key, value)``: retourne les liens filtrés d'une liste "
 "de liens"
 
-#: ../../docs/server_manual/services/ogcapif.rst:418
+#: ../../docs/server_manual/services/ogcapif.rst:419
 msgid ""
 "``content_type_name( content_type )``: Returns a short name from a content "
 "type, for example \"text/html\" will return \"HTML\""
@@ -797,7 +802,7 @@ msgstr ""
 "``content_type_name(content_type)``: renvoie un nom court à partir d'un type"
 " de contenu, par exemple \"text / html\" renverra \"HTML\""
 
-#: ../../docs/server_manual/services/ogcapif.rst:420
+#: ../../docs/server_manual/services/ogcapif.rst:421
 msgid ""
 "``nl2br( text )``: Returns the input text with all newlines replaced by "
 "\"<br>\" tags"
@@ -805,7 +810,7 @@ msgstr ""
 "``nl2br( text )``: Renvoie le texte en entrée avec les nouvelles lignes "
 "remplacées par les tags \"<br>\""
 
-#: ../../docs/server_manual/services/ogcapif.rst:422
+#: ../../docs/server_manual/services/ogcapif.rst:423
 msgid ""
 "``starts_with( string, prefix )``: returns true if a string begins with the "
 "provided string prefix, false otherwise"
@@ -813,11 +818,11 @@ msgstr ""
 "``starts_with( string, prefix )``: renvoie vrai si un texte commence par le "
 "préfixe indiqué, sinon faux"
 
-#: ../../docs/server_manual/services/ogcapif.rst:429
+#: ../../docs/server_manual/services/ogcapif.rst:430
 msgid "Template overrides"
 msgstr "Remplacements de modèle"
 
-#: ../../docs/server_manual/services/ogcapif.rst:431
+#: ../../docs/server_manual/services/ogcapif.rst:432
 msgid ""
 "Templates and static assets are stored in subdirectories of the QGIS server "
 "default API resource directory "
@@ -831,12 +836,12 @@ msgstr ""
 "répertoire de base peut être personnalisé en modifiant le variable "
 "d'environnement ``QGIS_SERVER_API_RESOURCES_DIRECTORY``."
 
-#: ../../docs/server_manual/services/ogcapif.rst:437
+#: ../../docs/server_manual/services/ogcapif.rst:438
 msgid "A typical Linux installation will have the following directory tree:"
 msgstr ""
 "Une installation Linux typique aura l'arborescence de répertoires suivante:"
 
-#: ../../docs/server_manual/services/ogcapif.rst:462
+#: ../../docs/server_manual/services/ogcapif.rst:463
 msgid ""
 "To override the templates you can copy the whole tree to another location "
 "and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location."
