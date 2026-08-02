@@ -54,7 +54,7 @@ There are two plugin template resources that can help get you started:
   `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
   provides the basic files (skeleton) necessary to create a valid QGIS Python plugin.
 * For a more fully feature plugin template, the
-  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder3/>`_ can create
+  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder4/>`_ can create
   templates for multiple different plugin types, including features such as
   localization (translation) and testing.
 
@@ -630,4 +630,4 @@ It's done with Qt :command:`rcc` command:
 .. _GitHub workflows: https://docs.github.com/en/actions/how-tos/write-workflows
 .. _Gitlab-CI: https://docs.gitlab.com/ci/
 .. _Transifex: https://www.transifex.com
-.. _qgis-plugin-ci: https://opengisch.github.io/qgis-plugin-ci/
+.. _qgis-plugin-ci: https://qgis.github.io/qgis-plugin-ci/
