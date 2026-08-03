@@ -1283,7 +1283,9 @@ values:
   you how your data are distributed.
   A low Z-Score means that the data are likely to be the result of a
   spatially random process, while a high Z-Score means that your data
-  are unlikely to be a result of a spatially random process.
+  A Z-Score close to 0 means that the data are likely to be the result of a
+  spatially random process, while a Z-Score far from 0 means that the data
+  are unlikely to be the result of a spatially random process.
 
 .. note:: This algorithm uses ellipsoid based measurements
   and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
