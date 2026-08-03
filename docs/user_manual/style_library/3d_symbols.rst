@@ -189,8 +189,9 @@ on the geometry type of the symbol:
   * :guilabel:`Clear coat roughness`: controls the roughness of the clear coat surface. Higher values
     create a matte clear coat, lower values create a shiny, glossy clear coat.
   * :guilabel:`Emission`: an optional setting where users can select solid emission color for metal rough material.
-    Useful for creating emissive solid color material. Adjust the :guilabel:`Emission strength` value
-    to control the intensity of the light.
+    Useful for creating emissive solid color material that are not impacted by scene lighting.
+    Adjust the :guilabel:`Emission strength` value to control the intensity of the light.
+    Check |checkbox| :guilabel:`No Emission` if you want materials which are dependent on lighting.
 
   Use the :guilabel:`Opacity` slider to adjust transparency.
 * :guilabel:`Physically Based (with textures)`: same as the :guilabel:`Physically Based`, but users can
@@ -261,8 +262,6 @@ https://app.merginmaps.com/projects/saber/luxembourg/tree.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefine| image:: /static/common/mIconDataDefine.png
-   :width: 1.5em
-.. |materials| image:: /static/common/materials.png
    :width: 1.5em
 .. |symbologyAdd| image:: /static/common/symbologyAdd.png
    :width: 1.5em
