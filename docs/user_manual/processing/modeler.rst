@@ -596,11 +596,6 @@ are flagged as potentially out of date: they are shaded in orange, and a message
 warning is displayed when viewing them to indicate that they may not reflect
 the current state of the model.
 
-.. figure:: img/model_dependent_results.png
-   :align: center
-
-   Flagged dependent results
-
 Documenting your model
 ......................
 
