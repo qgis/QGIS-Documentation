@@ -725,14 +725,13 @@ Generates a point vector layer from an input raster and polygon layer.
 The points correspond to the pixel centroids that intersect the
 polygon layer.
 
-.. warning::
- This algorithm drops existing primary keys or FID values and regenerates them in output layers.
-
-
 .. figure:: img/points_centroids_polygon.png
   :align: center
 
   Points of the pixel centroids
+
+.. warning::
+ This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 
 Parameters
 ..........
