@@ -167,32 +167,12 @@ option from the :menuselection:`Layer` menu or the layer contextual menu.
 
 The Query Builder provides an interface that allows
 you to define a subset of the features in the layer using a SQL-like WHERE
-
-You can use one or more layer attributes to define the filter in the ``Query
-Builder``.
-The use of more than one attribute is shown in :numref:`Figure_vector_querybuilder`.
-In the example, the filter combines the attributes
-
-* ``toa`` (``DateTime`` field: ``cast("toa" as character) > '2017-05-17'`` and
-  ``cast("toa" as character) < '2019-12-24T18:00:00'``),
-* ``name`` (``String`` field: ``"name" > 'S'``) and
-* ``FID`` (``Integer`` field: ``FID > 10``)
-
-using the AND, OR and NOT operators and parenthesis.
-This syntax (including the DateTime format for the ``toa`` field) works for
-GeoPackage datasets.
-
 clause and to display only the result in the main window.
 The filter is made at the data provider (OGR, GeoPackage, PostgreSQL, MS SQL Server...) level.
 So the syntax depends on the data provider (DateTime is for instance not
-The complete expression::
 supported for the ESRI Shapefile format, ILIKE is not supported for SQLite or GeoPackage data).
 For convenience, the data provider is mentioned in the dialog with a link
 to further documentation on its specifics (e.g., new operators, functions or limitations).
-
-  cast("toa" as character) > '2017-05-17' AND
-  cast("toa" as character) < '2019-12-24T18:00:00' AND
-  NOT ("name" > 'S' OR FID > 10)
 
 The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
 the dialog help you to construct the SQL-like query exposed in the
@@ -226,6 +206,32 @@ To add an operator to the SQL WHERE clause field, click the appropriate button.
 Relational operators ( ``=``, ``>``, ...), string comparison operator (``LIKE``),
 and logical operators (``AND``, ``OR``, ...) are available.
 
+* Combining different attributes for filtering
+
+  .. code:: sql
+
+   "continent" = 'Europe' AND "population" > 10 000 000
+
+* Using text comparison (case sensitivity varies by data provider)
+
+  .. code:: sql
+
+   name LIKE 'FR%E'
+
+* Relying on geometry properties (area greater than 5ha)
+
+  .. code:: sql
+
+   OGR_GEOM_AREA > 50 000  -- using the OGR data provider
+   ST_Area(geom) > 50 000  -- using the GeoPackage data provider
+
+* Using special functions and operators to filter on a range of dates
+
+  .. code:: sql
+
+   CAST("start_date" as character) > '2026-08-04T12:15:56' AND CAST("start_date" as character) < '2026-08-22T00:00:00' -- e.g., when datetime is unsupported field type
+
+   "start_date" BETWEEN '2026-08-04T12:15:56' AND '2026-08-22T00:00:00'
 
 
 The :guilabel:`Test` button helps you check your query and displays a message box with
