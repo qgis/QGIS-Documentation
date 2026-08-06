@@ -159,14 +159,15 @@ In this section, select and configure the layer and fields you want to display i
    :ref:`categorized <categorized_renderer>`, :ref:`graduated <graduated_renderer>`,
    or :ref:`rule-based <rule_based_rendering>` renderer applied to the source layer,
    matching the layer's legend entries.
-#. Click the :guilabel:`Modify Series...` button and define the fields using the drop-down lists.
-   Define both the :guilabel:`X-axis` and :guilabel:`Y-axis` fields.
+#. Click the :guilabel:`Modify Series...` button and define the :guilabel:`X-axis`
+   and :guilabel:`Y-axis` fields using the drop-down lists.
 
    When :guilabel:`Generate categories from layer symbology` is enabled, only the
    :guilabel:`Y-axis` field is available; the X axis is driven by the renderer classes.
-   The Y axis value can be left blank to count the number of matching features,
-   or set to a field or expression to compute an aggregated value per class
-   (e.g. ``$length / 1000`` for the total length of line features per category in km).
+   Individual feature values for the Y axis expression are automatically summed per class.
+   Set it to ``1`` to count the number of features per class, a field to sum its values,
+   or an expression computed per feature before summing
+   (e.g. ``$length / 1000`` for the total length of line features per class in km).
 #. Check the |checkbox| :guilabel:`Use only features visible within a map` option to include only features that are currently visible
    in a layout map item. From the :guilabel:`Linked map` drop-down list, select the map to link the chart to.
 #. Check the |checkbox| :guilabel:`Use only features intersecting atlas features` option to include only features that intersect
