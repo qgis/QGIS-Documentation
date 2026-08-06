@@ -454,6 +454,13 @@ Under :guilabel:`Point Symbol`, the size and the unit (e.g. millimeters,
 pixels, inches) with which each data point is displayed can be set.
 Either :guilabel:`Circle` or :guilabel:`Square` can be selected as the style for the points.
 
+The :guilabel:`Color Modification` allows you to apply an expression to adjust
+the colors of the point cloud renderer. Any point cloud attribute can be used in the
+expression as a variable (e.g., ``@Green``, ``@Intensity``, ``@NumberOfReturns``)
+and the base color from the active renderer is available as ``@value``.
+Use the |expression| button to open the :guilabel:`Expression Builder` for help
+building your expression.
+
 .. _pointcloud_rendersurface:
 
 Render as a surface (Triangulate)
@@ -475,18 +482,6 @@ identify actual holes in the data.
    :align: center
 
    Rendering data as a surface with map shading (left) and with map shading, filtering large triangles (right)
-
-.. _color_mod_pointcloud:
-
-Color Modification
-..................
-
-The :guilabel:`Color Modification` allows you to apply an expression to adjust
-the colors of the point cloud renderer. Any point cloud attribute can be used in the
-expression as a variable (e.g., ``@Green``, ``@Intensity``, ``@NumberOfReturns``)
-and the base color from the active renderer is available as ``@value``.
-Use the |expression| button to open the :guilabel:`Expression Builder` for help
-building your expression.
 
 .. _vpc_render:
 
