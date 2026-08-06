@@ -197,11 +197,6 @@ Z-ordering means that layers listed nearer the top of the legend are drawn
 over layers listed lower down in the legend.
 Also a layer or a group of layers can be dragged across several QGIS instances.
 
-To change the label of a symbol item in the legend, expand the layer, select
-the item and press :kbd:`F2`. Enter the new label and press :kbd:`Enter` to
-apply it. This updates the label in the layer's categorized, graduated or
-rule-based renderer.
-
 .. note:: The Z-ordering behavior can be overridden by the
    :ref:`Layer Order <layer_order>` panel.
 
@@ -459,8 +454,13 @@ When using a symbology based on features classification
 (e.g. :ref:`categorized <categorized_renderer>`, :ref:`graduated <graduated_renderer>`
 or :ref:`rule-based <rule_based_rendering>` for vector layers,
 or :ref:`classification <point_cloud_classification>` for point clouds),
-right-clicking a class entry in the :guilabel:`Layers` panels makes it possible
-to edit the visibility of the classes (and their features) and avoid (un)checking them one by one:
+class entries are listed below the layer in the :guilabel:`Layers` panel.
+
+To change the label of a class entry, select it and press :kbd:`F2`.
+Enter the new label and press :kbd:`Enter` to apply it to the layer's renderer.
+
+Right-clicking a class entry makes it possible to edit the visibility of the
+classes (and their features) and avoid (un)checking them one by one:
 
 * |toggleAllLayers| :guilabel:`Toggle Items`
 * |showAllLayers| :guilabel:`Show All Items`
