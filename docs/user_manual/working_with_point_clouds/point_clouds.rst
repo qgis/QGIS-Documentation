@@ -473,9 +473,9 @@ This uses the same shading engine as the :ref:`Global Map Shading <global_map_sh
 to this layer.
 Following parameters can be controlled:
 
-  * :guilabel:`Strength`: increases the contrast, allowing for better depth perception
-  * :guilabel:`Distance`: represents the distance of the used pixels off the center pixel
-    and has the effect of making edges thicker.
+* :guilabel:`Strength`: increases the contrast, allowing for better depth perception
+* :guilabel:`Distance`: represents the distance of the used pixels off the center pixel
+  and has the effect of making edges thicker.
 
 .. _hillshade_pointcloud:
 
@@ -492,16 +492,16 @@ project properties avoids issues where the global shading blends into other
 layers stacked above or below the point cloud.
 Following parameters can be controlled:
 
-  * :guilabel:`Z Factor`: scaling factor applied to the
-    elevation values before computing the shading (the default is ``1``)
-  * :guilabel:`Azimuth`: the horizontal direction of the light source, in
-    degrees measured clockwise from north. Ignored when :guilabel:`Multidirectional`
-    is checked (the default is ``315°``)
-  * :guilabel:`Altitude`: the elevation angle of the light source, in degrees,
-    where ``0°`` places the light on the horizon and ``90°`` places it directly overhead (the default is ``45°``)
-  * |checkbox| :guilabel:`Multidirectional`: combines light from several directions
-    instead of a single azimuth, reducing directional bias on slopes facing away
-    from the light
+* :guilabel:`Z Factor`: scaling factor applied to the elevation values
+  before computing the shading (the default is ``1``)
+* |checkbox| :guilabel:`Use multidirectional lights`: combines light from several directions
+  instead of a single azimuth, reducing directional bias on slopes facing away from the light
+* :guilabel:`Azimuth`: the horizontal direction of the light source,
+  in degrees measured clockwise from north.
+  Ignored when :guilabel:`Use multidirectional lights` is checked (the default is ``315°``)
+* :guilabel:`Altitude`: the elevation angle of the light source, in degrees,
+  where ``0°`` places the light on the horizon and ``90°`` places it directly overhead
+  (the default is ``45°``)
 
 .. _pointcloud_rendersurface:
 
