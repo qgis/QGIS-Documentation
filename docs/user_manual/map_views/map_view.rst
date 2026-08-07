@@ -987,8 +987,9 @@ in the :guilabel:`Layer styling` panel.
     * set the text :guilabel:`Alignment` (left, center or right of the anchor point)
     * configure whether the text should :guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`.
       In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
-  * For text annotation along a line, configure an :guilabel:`Offset from line` in the unit
-    of your choice. Set the text :guilabel:`Alignment` along the line (start, center, end).
+  * For text annotation along a line, set the text :guilabel:`Alignment` along the line
+    (start, center, end), and configure an :guilabel:`Offset from line` in the unit
+    of your choice.
   * For text annotation in rectangle, it is also possible to:
 
     * set the text :guilabel:`Horizontal alignment` (left, center, right or justify)
