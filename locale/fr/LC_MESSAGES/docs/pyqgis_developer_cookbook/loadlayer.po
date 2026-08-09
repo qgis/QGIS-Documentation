@@ -56,9 +56,36 @@ msgstr ""
 msgid "Vector Layers"
 msgstr "Couches vectorielles"
 
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:51
+msgid ""
+"To create and add a vector layer instance to the project, specify the "
+"layer's data source identifier. The data source identifier is a string and "
+"it is specific to each vector data provider. An optional layer name is used "
+"for identifying the layer in the :guilabel:`Layers` panel. It is important "
+"to check whether the layer has been loaded successfully. If it was not, an "
+"invalid layer instance is returned."
+msgstr ""
+"Pour créer et ajouter une couche vectorielle au projet, il faut spécifier "
+"l'identifiant de source de données de la couche. Cet identifiant est une "
+"chaîne de texte, spécifique à chaque type de fournisseur de données "
+"vectorielles. Un nom de couche peut être utilisé pour identifier la couche "
+"dans le panneau :guilabel:`Couches`. Il est important de vérifier si la "
+"couche a été chargée ou pas. Si ce n'était pas le cas, une instance de "
+"couche non valide est retournée."
+
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:57
 msgid "For a geopackage vector layer:"
 msgstr "Pour une couche vectorielle geopackage:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:71
+msgid ""
+"The quickest way to open and display a vector layer in QGIS is the "
+":meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` method of "
+"the :class:`QgisInterface <qgis.gui.QgisInterface>` class:"
+msgstr ""
+"La méthode la plus rapide pour ouvrir et afficher un couche vectorielle dans"
+" QGIS est :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>` "
+"de la classe :class:`QgisInterface <qgis.gui.QgisInterface>` :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:81
 msgid ""
@@ -78,6 +105,16 @@ msgid ""
 msgstr ""
 "La liste suivante montre comment accéder à différentes sources de données "
 "provenant de différents fournisseurs de données vectorielles:"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:98
+msgid "for ESRI Shapefile:"
+msgstr "pour un couche ESRI Shapefile :"
+
+#: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:106
+msgid "for Geopackage (note the internal options in data source uri):"
+msgstr ""
+"pour un GeoPackage (notez les options internes dans l'uri de la source de "
+"données) :"
 
 #: ../../docs/pyqgis_developer_cookbook/loadlayer.rst:136
 msgid "for dxf (note the internal options in data source uri):"

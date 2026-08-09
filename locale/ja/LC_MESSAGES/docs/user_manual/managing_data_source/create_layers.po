@@ -1182,9 +1182,9 @@ msgid ""
 "<vectormetadatamenu>` or :ref:`server <vectorservermenu>` properties of the "
 "layer;"
 msgstr ""
-"|unchecked| :guilabel:レイヤ名そのものではなくレイヤのタイトルを使用します。このタイトルはプロパティレイヤの "
-":ref:`metadata <vectormetadatamenu>` または :ref:`server <vectorservermenu>` "
-"から取得できます。 "
+"レイヤ名の代わりに |unchecked| :guilabel:`設定されている場合はレイヤタイトルを名前として使う` : タイトルはレイヤプロパティの"
+" :ref:`メタデータ <vectormetadatamenu>` または :ref:`サーバー <vectorservermenu>` "
+"から取得されます；"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1035
 msgid "unchecked"
@@ -1294,9 +1294,62 @@ msgstr ""
 "クリップボードからのレイヤ作成は、well-known "
 "text（WKT）を使用してジオメトリが定義されていれば、QGIS内で選択してコピーした地物でも、ほかのアプリケーションの地物でも可能です。"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:633
+msgid ""
+"Beside loading an entire layer in a project or creating new layers from "
+"scratch or pasted features, you can also load layers generated on the fly "
+"from other layer(s). They are the result of a more or less advanced filter "
+"using SQL language, applied to stored layers regardless of their data "
+"provider or their availability in the active project. This means that "
+"temporary layers are not compatible with this feature. Depending on the "
+"provider, one or more layers can be used to write the query. The generated "
+"layer remains dependent on the layer(s) involved in the query and is loaded "
+"with the |indicatorFilter| :sup:`Filter` icon next to it."
+msgstr ""
+"プロジェクト内のレイヤ全体を読み込んだり、ゼロからレイヤを作成したり、地物を貼り付けてレイヤを作成したりするほか、他のレイヤからオンザフライで生成したレイヤを読み込むこともできます。これらは、多少のSQL言語を用いた高度なフィルタリングを適用した結果として生成されるもので、データプロバイダやアクティブなプロジェクト内での利用可否に関係なく、保存済みのレイヤに対して適用されます。つまり、一時レイヤはこの機能に対応していません。プロバイダによっては、1つまたは複数のレイヤを使ったクエリを作成することができます。生成されたレイヤは、クエリに関係したレイヤに依存したままであり、読み込まれたときは横に"
+" |indicatorFilter| :sup:`フィルタ` アイコンが付きます。"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1009
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:643
+msgid "This feature is accessible:"
+msgstr "この地物は次からアクセスできます："
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:645
+msgid ""
+"From the :guilabel:`Browser` panel, right-click on a supported data (plain "
+"layer, database connection, schema or table) and select `Execute SQL...` "
+"entry in the contextual menu."
+msgstr ""
+":guilabel:`ブラウザ` "
+"パネルで、対応しているデータ（プレインレイヤ、データベース接続、スキーマ、またはテーブル）を右クリックし、コンテキストメニューから "
+"`SQLを実行...` を選択します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:648
+msgid ""
+"From the :guilabel:`Layers` panel, select a loaded layer, right-click and "
+"select `Execute SQL...` entry in the contextual menu."
+msgstr ""
+":guilabel:`レイヤ` パネルから、読み込まれたレイヤをひとつ選択し、右クリックしてコンテキストメニューの `SQLを実行...` "
+"を選択します。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:651
+msgid ""
+"This opens a window with a central text box widget where you can write SQL "
+"queries."
+msgstr "これで中央にテキストボックスウィジェットのあるウィンドウが開き、そこにSQLクエリが入力できます。"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:658
+msgid "Executing SQL queries in the Execute SQL window"
+msgstr "SQLを実行ウィンドウでSQLクエリを実行"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:662
+msgid ""
+"At the top of the dialog, a toolbar provides a set of tools to create, store"
+" and manipulate your queries:"
+msgstr "ダイアログの上部には、クエリの作成、保存、および操作を行うための一連のツールを備えたツールバーがあります："
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1003
 msgid "fileOpen"

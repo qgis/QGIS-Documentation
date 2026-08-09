@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-13 19:39+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: tomoyuki arai <tarai.3367@gmail.com>, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -72,9 +72,34 @@ msgid ""
 msgstr ""
 "GeoPackage形式は、QGISで作業する際にラスタデータを保持するのに便利な形式です。一般的で強力な機能を持つGeoTiff形式も良い選択肢になります。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:40
+msgid ""
+"QGIS makes use of georeference information inside the raster layer (e.g., "
+"GeoTiff) or an associated *world file* to properly display the data."
+msgstr ""
+"QGISはデータを適切に表示するためにラスタレイヤ（例： GeoTiff ）の内部や関連付けられた *ワールドファイル* "
+"にあるジオリファレンス情報を利用しています。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "ベクタデータ"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
+msgid ""
+"Many of the features and tools available in QGIS work the same, regardless "
+"of the vector data source. However, because of the differences in format "
+"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
+"formats, AutoCAD DXF, PostgreSQL, SpatiaLite, Oracle Spatial, MS SQL Server,"
+" SAP HANA Spatial databases and many more), QGIS may handle some of their "
+"properties differently. Support is provided by the `GDAL vector drivers "
+"<https://gdal.org/en/latest/drivers/vector/index.html>`_. This section "
+"describes how to work with some of these specifics."
+msgstr ""
+"QGISで利用できる機能やツールの多くは、ベクタデータのソースに関係なく同じように動作します。ただし、フォーマット（GeoPackage、ESRIシェープファイル、MapInfoやMicroStationファイル形式、AutoCAD"
+" DXF、PostgreSQL、SpatiaLite、Oracle Spatial、MS SQL Server、SAP "
+"HANA空間データベース、その他多数）の仕様が異なるため、QGISでは一部のプロパティの扱いが異なる場合があります。フォーマットのサポートは `GDAL"
+" vector drivers <https://gdal.org/en/latest/drivers/vector/index.html>`_ "
+"によって提供されています。このセクションでは、この差異をどのように扱うかについて説明します。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
@@ -82,7 +107,7 @@ msgid ""
 "CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all "
 "optionally with Z and/or M values."
 msgstr ""
-"QGISではポイント（マルチポイント）、ライン（マルチライン）、ポリゴン（マルチポリゴン）、円形ストリング、複合カーブ、カーブポリゴン、マルチカーブ、マルチサーフェスの地物タイプをサポートしており、全ての地物タイプはオプションでZ値やM値を持つことができます。"
+"QGISではポイント（マルチポイント）、ライン（マルチライン）、ポリゴン（マルチポリゴン）、円形ストリング、複合カーブ、カーブポリゴン、マルチカーブ、マルチサーフェスの地物タイプをサポートしており、全ての地物タイプはオプションでZ値及び／又はM値を持つことができます。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:67
 msgid ""
@@ -532,6 +557,14 @@ msgid ""
 "same name, but :file:`.csvt` as the extension."
 msgstr "このファイルは :file:`.csv` ファイルと同じフォルダに同じ名前で保存されますが、拡張子は :file:`.csvt` です。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:279
+msgid ""
+"*You can find more information at* `GDAL CSV Driver "
+"<https://gdal.org/en/latest/drivers/vector/csv.html>`_."
+msgstr ""
+"*更なる情報については* `GDAL CSV Driver "
+"<https://gdal.org/en/latest/drivers/vector/csv.html>`_ を参照してください。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:284
 msgid "**Detect Field Types**"
 msgstr "**フィールド型を検知する**"
@@ -544,6 +577,33 @@ msgid ""
 msgstr ""
 "CSVTファイルを使用してデータ型を伝える代わりに、QGISはフィールド型を自動的に検出し、想定されるフィールド型を変更する可能性を提供します。 "
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:295
+msgid "PostgreSQL Database"
+msgstr "PostgreSQL データベース"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:298
+msgid ""
+"In order to process geographical information in a PostgreSQL database, the "
+"PostGIS extension must first be installed. PostGIS extends the capabilities "
+"of the PostgreSQL relational database by adding support for storing, "
+"indexing, and querying geospatial data."
+msgstr ""
+"PostgreSQL データベースで地理情報を処理するには、まず PostGIS 拡張機能をインストールする必要があります。PostGIS は "
+"PostgreSQL リレーショナルデータベースの機能を拡張し、地理空間データの保存、インデックス作成、およびクエリ実行の機能を追加します。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:303
+msgid ""
+"To enable PostGIS in your database you have to activate the extension in "
+"your database (open database and run ``CREATE EXTENSION postgis;``). PostGIS"
+" enabled databases are also often named \"PostGIS layer\". Using PostGIS, "
+"vector functions such as select and identify work more accurately than they "
+"do with GDAL layers in QGIS."
+msgstr ""
+"データベースで PostGIS を有効にするには、データベース内でこの拡張機能を有効にする必要があります（データベースを開き、``CREATE "
+"EXTENSION postgis;`` "
+"を実行してください）。PostGISが有効になっているデータベースは、しばしば「PostGISレイヤ」と呼ばれることもあります。PostGISを使用すると、select"
+" や identify などのベクタ関数が、QGIS の GDAL レイヤを使用する場合よりも正確に動作します。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:312
 msgid "**PostGIS Layers**"
 msgstr "**PostGISレイヤ**"
@@ -555,7 +615,7 @@ msgid ""
 "geometry_columns table. This includes both tables and views. Refer to your "
 "PostgreSQL manual for information on creating views."
 msgstr ""
-"通常、PostGISレイヤはgeometry_columnsテーブルのエントリがあることによって識別されます。QGISでは、geometry_columnsテーブルのエントリを持たないレイヤもロードすることができます。これには、テーブルとビューの両方が含まれます。ビューの作成については、PostgreSQLのマニュアルを参照してください。"
+"通常、PostGISレイヤはgeometry_columnsテーブルのエントリがあることによって識別されます。QGISでは、geometry_columnsテーブルのエントリを持たないレイヤも読み込むことができます。これには、テーブルとビューの両方が含まれます。ビューの作成については、PostgreSQLのマニュアルを参照してください。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:319
 msgid ""
@@ -566,8 +626,10 @@ msgid ""
 "may help you understand QGIS messages and give you directions for modifying "
 "the PostgreSQL table or view definition to allow QGIS to load it."
 msgstr ""
-"このセクションでは、QGISがPostgreSQLレイヤにアクセスする方法について、いくつかの詳細を説明します。ほとんどの場合、QGIS "
-"は単純にロード可能なデータベーステーブルのリストをユーザーに提供し、要求に応じてテーブルを読み込むだけです。しかし、PostgreSQLのテーブルをQGISに読み込むことができない場合には、以下の情報がQGISのメッセージを理解するための助けとなり、PostgreSQLのテーブルやビュー定義を修正してQGISで読み込めるようになるための方向性が得られるかもしれません。"
+"このセクションでは、QGIS が PostgreSQL レイヤにアクセスする方法について、いくつかの詳細を説明します。ほとんどの場合、QGIS "
+"は単純に読み込み可能なデータベーステーブルのリストをユーザーに提供し、要求に応じてテーブルを読み込むだけです。しかし、PostgreSQL のテーブルを"
+" QGIS に読み込むことができない場合には、以下の情報が QGIS のメッセージを理解するための助けとなり、PostgreSQL "
+"のテーブルやビュー定義を修正して QGIS で読み込めるようになるための方向性が得られるかもしれません。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:328
 msgid "A PostgreSQL database can also store QGIS projects."
@@ -630,9 +692,26 @@ msgstr ""
 msgid "**PostgreSQL foreign table**"
 msgstr "**PostgreSQL外部テーブル**"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:363
+msgid ""
+"PostgreSQL foreign tables are not explicitly supported by the PostgreSQL "
+"provider and will be handled like a view."
+msgstr "PostgreSQL 外部テーブルは PostgreSQL プロバイダによって明示的にサポートされてはおらず、ビューのように扱われます。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:369
 msgid "QGIS layer_style table and database backup"
 msgstr "QGIS layer_style テーブルとデータベースのバックアップ"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:371
+msgid ""
+"If you want to make a backup of your PostgreSQL database using the "
+":file:`pg_dump` and :file:`pg_restore` commands, and the default layer "
+"styles as saved by QGIS fail to restore afterwards, you need to set the XML "
+"option to :file:`DOCUMENT` before the restore command:"
+msgstr ""
+"PostgreSQL データベースのバックアップを作成するために :file:`pg_dump` コマンドと :file:`pg_restore` "
+"コマンドを使用したが、その後で QGIS が保存したデフォルトのレイヤスタイルがリストアに失敗する場合は、リストアコマンドの前に　XML オプションを "
+":file:`DOCUMENT` に設定する必要があります。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:376
 msgid "Make a PLAIN backup of the ``layer_style`` table"
@@ -694,6 +773,14 @@ msgstr ""
 msgid "Importing Data into PostgreSQL"
 msgstr "PostgreSQLへデータをインポートする"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:408
+msgid ""
+"Data can be imported into PostgreSQL using several tools, including the "
+"Browser, DB Manager plugin and the command line tools shp2pgsql and ogr2ogr."
+msgstr ""
+"データは、ブラウザ、DBマネージャプラグインやコマンドラインツールの shp2pgsql、ogr2ogr など、いくつかあるツールを使用して "
+"PostgreSQL にインポートできます。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:413
 msgid "DB Manager"
 msgstr "DB Manager"
@@ -739,9 +826,53 @@ msgstr ""
 "という名前の新規レイヤが作成されます。この新しいレイヤは空間参照識別子（SRID）が2964になります。空間参照系と投影法についての詳細は、 "
 ":ref:`label_projections` を参照してください。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:439
+msgid "**Exporting datasets from PostgreSQL**"
+msgstr "**PostgreSQL からデータセットをエクスポートする**"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:441
+msgid ""
+"There is also a tool for exporting PostgreSQL datasets with geographic data "
+"to Shapefile format: **pgsql2shp**. It is shipped within your PostGIS "
+"distribution."
+msgstr ""
+"地理データを持った PostgreSQL データセットをシェープファイル形式へエクスポートするツール **pgsql2shp** "
+"もあります。このツールはPostGISディストリビューションに付属しています。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:449
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:451
+msgid ""
+"In addition to **shp2pgsql** and **DB Manager**, there is another tool for "
+"feeding geographical data in PostgreSQL: **ogr2ogr**. It is part of your "
+"GDAL installation."
+msgstr ""
+"**shp2pgsql** や **DBマネージャ** の他にも、PostgreSQL に地理データを読み込ませるツール **ogr2ogr** "
+"があります。これはGDALのインストールに含まれています。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:455
+msgid ""
+"To import a Shapefile format dataset into PostgreSQL, do the following::"
+msgstr "シェープファイル形式のデータセットを PostgreSQL にインポートするには、次のコマンドを使用します::"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
+msgid ""
+"This will import the Shapefile format dataset :file:`alaska.shp` into the "
+"database *postgis* using the user *postgres* with the password *topsecret* "
+"on the host server *myhost.de*."
+msgstr ""
+"このコマンドは、シェープファイル形式のデータセット :file:`alaska.shp` をホストサーバー *myhost.de* 上のデータベース "
+"*postgis* にユーザー *postgres* 、パスワード *topsecret* を使用してインポートします。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:464
+msgid ""
+"Note that GDAL must be built with PostgreSQL. You can verify this by typing "
+"(in |nix|)::"
+msgstr ""
+"GDAL は PostgreSQL と一緒にビルドされていなければならないことに注意してください。これは次をタイプすることで確認できます (in "
+"|nix|)::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
@@ -775,6 +906,18 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:486
 msgid "Improving Performance"
 msgstr "パフォーマンスの改善"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:488
+msgid ""
+"Retrieving features from a PostgreSQL database can be time-consuming, "
+"especially over a network. You can improve the drawing performance of "
+"PostgreSQL layers by ensuring that a spatial index exists on each layer in "
+"the database. PostGIS supports creation of a GiST (Generalized Search Tree) "
+"index to speed up spatial searching (GiST index information is taken from "
+"the PostGIS documentation available at https://postgis.net)."
+msgstr ""
+"PostgreSQL データベースからの地物の取得は、特にネットワーク経由では時間がかかります。\n"
+"PostgreSQL レイヤの描画パフォーマンスは、データベース内の各レイヤに空間インデックスを確保することで向上させることができます。PostGIS は空間検索を高速化するために GiST (Generalized Search Tree) インデックスの作成をサポートしています（GiSTインデックスの情報は https://postgis.net にある PostGIS ドキュメントから引用しています）。"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:495
 msgid ""
@@ -821,6 +964,18 @@ msgstr ""
 ":guilabel:`形式` として ``SpatiaLite`` を選択し、 :guilabel:`ファイル名` と :guilabel:`レイヤ名`"
 " を入力してください。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:543
+msgid ""
+"Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in"
+" the :menuselection:`Custom Options --> Data source` field. This tells GDAL "
+"to create a SpatiaLite database. See also "
+"https://gdal.org/en/latest/drivers/vector/sqlite.html."
+msgstr ""
+"また、形式として ``SQLite`` を選択し、 :menuselection:`カスタムオプション --> データソース` フィールドに "
+"``SPATIALITE=YES`` を追加することでもSpatiaLite形式で保存できます。このカスタムオプションは、GDALにSpatiaLite"
+" データベースを作成するように指示します。 https://gdal.org/en/latest/drivers/vector/sqlite.html "
+"も参照してください。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:549
 msgid ""
 "QGIS also supports editable views in SpatiaLite. For SpatiaLite data "
@@ -858,12 +1013,49 @@ msgstr ""
 ":guilabel:`COORDINATE_PRECISION` "
 "座標を書き込む際の小数点区切り文字以下の最大桁数を指定します。デフォルトは15です（注：緯度経度座標の場合には6で十分です）。末尾に続くゼロは切り捨てられます。"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:570
+msgid ""
+":guilabel:`RFC7946` by default GeoJSON 2008 will be used. If set to YES, the"
+" updated RFC 7946 standard will be used. Default is NO (thus GeoJSON 2008). "
+"See https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-"
+"support for the main differences, in short: only EPSG:4326 is allowed, other"
+" crs's will be transformed, polygons will be written such as to follow the "
+"right-hand rule for orientation, values of a \"bbox\" array are [west, "
+"south, east, north], not [minx, miny, maxx, maxy]. Some extension member "
+"names are forbidden in FeatureCollection, Feature and Geometry objects, the "
+"default coordinate precision is 7 decimal digits"
+msgstr ""
+":guilabel:`RFC7946` デフォルトではGeoJSON 2008が使用されます。この値がYESに設定されると、更新されたRFC "
+"7946標準が使用されます。デフォルトはNOです（従ってGeoJSON 2008が使用されます）。 主な違いについては "
+"https://gdal.org/en/latest/drivers/vector/geojson.html#rfc-7946-write-"
+"support を参照してください。簡単に言えば、RFC "
+"7946標準ではEPSG:4326のみが許可され、他のCRSは変換されます。また、ポリゴンは向きの右手ルールに従うように書かれ、\"bbox\" "
+"配列の値は [west, south, east, north] であり、[minx, miny, maxx, maxy] "
+"ではありません。そして、FeatureCollection、Feature、Geometryオブジェクトではいくつかの拡張メンバ名が禁止されており、デフォルトの座標精度は10進数で7桁です。"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:581
 msgid ""
 ":guilabel:`WRITE_BBOX` set to YES to include the bounding box of the "
 "geometries at the feature and feature collection level"
 msgstr ""
 ":guilabel:`WRITE_BBOX` をYESに設定すると、地物や地物コレクションのレベルでジオメトリのバウンディングボックスを含めます。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:584
+msgid ""
+"Besides GeoJSON there is also an option to export to \"GeoJSON - Newline "
+"Delimited\" (see https://gdal.org/en/latest/drivers/vector/geojsonseq.html)."
+" Instead of a FeatureCollection with Features, you can stream one type "
+"(probably only Features) sequentially separated with newlines."
+msgstr ""
+"GeoJSON の他に、\"GeoJSON - Newline Delimited\" （ "
+"https://gdal.org/en/latest/drivers/vector/geojsonseq.html "
+"参照）へエクスポートするオプションもあります。Features を持った FeatureCollection の代わりに、1種類のもの（おそらく "
+"Features のみ）を改行区切りで連続的に並べます。"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:590
+msgid ""
+"GeoJSON - Newline Delimited has some specific Layer options available too:"
+msgstr "GeoJSON - Newline Delimited にもいくつかの特有のレイヤオプションがあります："
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:592
 msgid ":guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)"
