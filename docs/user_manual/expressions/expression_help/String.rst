@@ -368,19 +368,22 @@ Converts a string to lower case letters.
 lpad
 ....
 
-Returns a string padded on the left to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
+Returns a string padded on the left to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated. If the fill parameter is omitted, the function will default to a space character.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - lpad(string, width, fill)
+     - lpad(string, width, [fill:=' '])
+
+       [] marks optional arguments
    * - Arguments
      - * **string** - string to pad
        * **width** - length of new string
        * **fill** - character to pad the remaining space with
    * - Examples
      - * ``lpad('Hello', 10, 'x')`` → 'xxxxxHello'
+       * ``lpad('Hello', 10)`` → '     Hello'
        * ``lpad('Hello', 3, 'x')`` → 'Hel'
 
 
@@ -608,19 +611,22 @@ Returns a substring that contains the *n* rightmost characters of the string.
 rpad
 ....
 
-Returns a string padded on the right to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated.
+Returns a string padded on the right to the specified width, using a fill character. If the target width is smaller than the string's length, the string is truncated. If the fill parameter is omitted, the function will default to a space character.
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - rpad(string, width, fill)
+     - rpad(string, width, [fill:=' '])
+
+       [] marks optional arguments
    * - Arguments
      - * **string** - string to pad
        * **width** - length of new string
        * **fill** - character to pad the remaining space with
    * - Examples
      - * ``rpad('Hello', 10, 'x')`` → 'Helloxxxxx'
+       * ``rpad('Hello', 10)`` → 'Hello     '
        * ``rpad('Hello', 3, 'x')`` → 'Hel'
 
 
