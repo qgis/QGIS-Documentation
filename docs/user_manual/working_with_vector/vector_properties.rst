@@ -162,39 +162,18 @@ Query Builder
 The Query Builder dialog is accessible through the :guilabel:`Query Builder` button
 at the bottom of the :guilabel:`Source` tab in the Layer Properties dialog,
 under the :guilabel:`Provider feature filter` group.
+You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
+option from the :menuselection:`Layer` menu or the layer contextual menu.
 
 The Query Builder provides an interface that allows
 you to define a subset of the features in the layer using a SQL-like WHERE
-clause and to display the result in the main window. As long as the query is
-active, only the features corresponding to its result are available in the
-project.
-
-You can use one or more layer attributes to define the filter in the ``Query
-Builder``.
-The use of more than one attribute is shown in :numref:`Figure_vector_querybuilder`.
-In the example, the filter combines the attributes
-
-* ``toa`` (``DateTime`` field: ``cast("toa" as character) > '2017-05-17'`` and
-  ``cast("toa" as character) < '2019-12-24T18:00:00'``),
-* ``name`` (``String`` field: ``"name" > 'S'``) and
-* ``FID`` (``Integer`` field: ``FID > 10``)
-
-using the AND, OR and NOT operators and parenthesis.
-This syntax (including the DateTime format for the ``toa`` field) works for
-GeoPackage datasets.
-
-The filter is made at the data provider (OGR, PostgreSQL, MS SQL Server...) level.
+clause and to display only the result in the main window.
+The filter is made at the data provider (OGR, GeoPackage, PostgreSQL, MS SQL Server...) level.
 So the syntax depends on the data provider (DateTime is for instance not
-supported for the ESRI Shapefile format).
-The complete expression::
+supported for the ESRI Shapefile format, ILIKE is not supported for SQLite or GeoPackage data).
+For convenience, the data provider is mentioned in the dialog with a link
+to further documentation on its specifics (e.g., new operators, functions or limitations).
 
-  cast("toa" as character) > '2017-05-17' AND
-  cast("toa" as character) < '2019-12-24T18:00:00' AND
-  NOT ("name" > 'S' OR FID > 10)
-
-
-You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
-option from the :menuselection:`Layer` menu or the layer contextual menu.
 The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
 the dialog help you to construct the SQL-like query exposed in the
 :guilabel:`Provider specific filter expression` box.
@@ -207,35 +186,68 @@ the dialog help you to construct the SQL-like query exposed in the
    Query Builder
 
 
-The **Fields** list contains all the fields of the layer. To add an attribute
-column to the SQL WHERE clause field, double-click its name or just type it into
-the SQL box.
+The **Fields** list contains all the fields of the layer.
+To add an attribute column to the SQL WHERE clause field,
+double-click its name or just type it into the SQL box.
 
-The **Values** frame lists the values of the currently selected field. To list all
-unique values of a field, click the :guilabel:`All` button. To instead list the first
-25 unique values of the column, click the :guilabel:`Sample` button. To add a value
-to the SQL WHERE clause field, double click its name in the Values list.
+The **Values** frame lists the values of the currently selected field.
+To list all unique values of a field, click the :guilabel:`All` button.
+To instead list the first 25 unique values of the column, click the :guilabel:`Sample` button.
+To add a value to the SQL WHERE clause field, double click its name in the Values list.
 You can use the search box at the top of the Values frame to easily browse and
 find attribute values in the list.
+When an expression evaluates successfully, the layer is filtered to retain only the matching records,
+and the field values displayed will apply only to those filtered records.
+Check the |unchecked| :guilabel:`Use unfiltered layer` button if you want field values
+to be fetched from the whole layer instead.
 
-The **Operators** section contains all usable
-:ref:`operators <expression_operators>`. To add an operator to
-the SQL WHERE clause field, click the appropriate button. Relational operators
-( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), and logical
-operators (``AND``, ``OR``, ...) are available.
+The **Operators** section contains all usable :ref:`operators <expression_operators>`.
+To add an operator to the SQL WHERE clause field, click the appropriate button.
+Relational operators ( ``=``, ``>``, ...), string comparison operator (``LIKE``),
+and logical operators (``AND``, ``OR``, ...) are available.
+
+* Combining different attributes for filtering
+
+  .. code:: sql
+
+   "continent" = 'Europe' AND "population" > 10 000 000
+
+* Using text comparison (case sensitivity varies by data provider)
+
+  .. code:: sql
+
+   name LIKE 'FR%E'
+
+* Relying on geometry properties (area greater than 5ha)
+
+  .. code:: sql
+
+   OGR_GEOM_AREA > 50 000  -- using the OGR data provider
+   ST_Area(geom) > 50 000  -- using the GeoPackage data provider
+
+* Using special functions and operators to filter on a range of dates
+
+  .. code:: sql
+
+   CAST("start_date" as character) > '2026-08-04T12:15:56' AND CAST("start_date" as character) < '2026-08-22T00:00:00' -- e.g., when datetime is unsupported field type
+
+   "start_date" BETWEEN '2026-08-04T12:15:56' AND '2026-08-22T00:00:00'
+
 
 The :guilabel:`Test` button helps you check your query and displays a message box with
 the number of features satisfying the current query.
+The layer is automatically filtered to the resulting features.
 Use the :guilabel:`Clear` button to wipe the SQL query and revert the layer to its
-original state (ie, fully load all the features).
+original state (i.e., fully load all the features).
 It is possible to :guilabel:`Save...` the query as a :file:`.QQF` file,
 or :guilabel:`Load...` the query from a file into the dialog.
 
-When a filter is applied,
-QGIS treats the resulting subset acts as if it were the entire layer. For
-example if you applied the filter above for 'Borough' (``"TYPE_2" = 'Borough'``),
-you can not display, query, save or edit ``Anchorage``, because that is a
-'Municipality' and therefore not part of the subset.
+When a filter is applied, QGIS treats the resulting subset as if it were the entire layer.
+For example if you applied the following filter on a layer of countries (``"continent" = 'EUROPE'``),
+you can not display, query, save or edit ``GHANA``,
+because that is a country in Africa, and therefore not part of the subset.
+As long as the query is active, only the features corresponding to its result
+are available in the project.
 
 .. tip:: **Filtered layers are indicated in the Layers Panel**
 
