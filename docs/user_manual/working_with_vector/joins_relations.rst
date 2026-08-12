@@ -18,7 +18,7 @@ QGIS provides tools to handle any of these associations, such as:
 * Processing algorithms that can create a new layer as a result of the connection,
   namely :ref:`qgisjoinattributesbylocation`, :ref:`qgisjoinbynearest`,
   :ref:`qgisjoinattributestable`, ...
-* SQL queries to create a new layer from the :ref:`DB Manager <dbmanager>`
+* SQL queries to create a new layer from the :ref:`Browser panel <database_entries>`
   or as a :ref:`virtual layer <vector_virtual_layers>`
 * :ref:`Joins properties <sec_joins>` or :ref:`relations settings <vector_relations>`
   that temporarily extend attributes of features in a given layer,
@@ -367,8 +367,6 @@ and an airline company flies to several airports.
 
 This SQL code creates the three tables we need for an N-M relationship
 in a PostgreSQL schema named *locations*.
-You can run the code using the :menuselection:`Database --> DB Manager…` for PostgreSQL
-or external tools such as `pgAdmin <https://www.pgadmin.org>`_.
 The airports table stores the ``airports`` layer and the airline table stores the ``airlines`` layer.
 In both tables few fields are used for clarity.
 The *tricky* part is the ``airports_airlines`` table.
@@ -376,6 +374,9 @@ We need it to list all airlines for all airports (or vice versa).
 This kind of table is known as a *pivot table*.
 The *constraints* in this table force that an airport can be associated with an airline
 only if both already exist in their layers.
+You can run the code from the :guilabel:`Browser` panel,
+right-clicking the PostgreSQL database item and selecting :guilabel:`Execute SQL`,
+or from external tools such as `pgAdmin <https://www.pgadmin.org>`_.
 
 .. code-block:: sql
 

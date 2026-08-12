@@ -58,7 +58,6 @@ friendly GUI. The many helpful tools available in the GUI include:
 * QGIS browser
 * On-the-fly reprojection
 * 2D and 3D map rendering
-* DB Manager
 * Print layout
 * Report
 * Overview panel
@@ -86,8 +85,7 @@ several formats. QGIS offers the following:
   formats to GPX or down/upload directly to a GPS unit (on Linux,
   usb: has been added to list of GPS devices)
 * Support for visualizing and editing OpenStreetMap data
-* Ability to create spatial database tables from files with the DB
-  Manager plugin
+* Ability to create spatial database tables from files with the Browser panel
 * Improved handling of spatial database tables
 * Tools for managing vector attribute tables
 * Option to save screenshots as georeferenced images
@@ -134,7 +132,6 @@ Core Plugins
 
 Core plugins include:
 
-#. DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
 #. Geometry Checker (check geometries for errors)
 #. Georeferencer GDAL (add projection information to rasters using GDAL)
 #. GPS Tools (load and import GPS data)

@@ -125,7 +125,7 @@ Remember to install the postgis extensions:
 Next, import the data provided in the :file:`exercise_data/postgis/` directory.
 Refer back to the previous lesson for instructions, but remember that you'll
 need to create a new PostGIS connection to the new database. You can import from
-the terminal or via DB Manager. Import the files into the following database
+the terminal or :guilabel:`Browser` panel. Import the files into the following database
 tables:
 
 - :file:`points.shp` into ``building``
