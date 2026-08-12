@@ -1,7 +1,5 @@
 .. index:: Server plugins; Developing, Python; Developing server plugins
 
-.. include:: <isonum.txt>
-
 .. highlight:: python
    :linenothreshold: 5
 
