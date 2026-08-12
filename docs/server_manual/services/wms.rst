@@ -675,7 +675,7 @@ Available values are:
 - ``application/vnd.ogc.gml``
 - ``application/json``
 
-When using ``application/vnd.ogc.gml``, NULL field values responses are 
+When using ``application/vnd.ogc.gml``, NULL field values responses are
 returned as ``xsi:nil="true"``.
 
 When using ``application/json`` as the ``INFO_FORMAT`` value, the response
@@ -2128,19 +2128,25 @@ The :ref:`GetMap <wms_getmap>` request is in the format:
 .. code-block:: bash
 
  http://localhost/qgisserver?
- SERVICE=WMS
+ &SERVICE=WMS
  &VERSION=1.3.0
  &REQUEST=GetMap
- &HIGHLIGHT_GEOM=POLYGON((590000 5647000, 590000 6110620, 2500000 6110620, 2500000 5647000, 590000 5647000))
- &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%23ea1173</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
+ &LAYERS=countries,countries_shapeburst
+ &CRS=EPSG:4326
+ &WIDTH=800
+ &HEIGHT=600
+ &BBOX=34,-9,56,42
+ &FORMAT=image/png
+ &HIGHLIGHT_GEOM=POLYGON((7.5 39.75, 7.5 50.25, 25.5 50.25, 25.5 39.75, 7.5 39.75))
+ &HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%2300FF00</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">7</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
  &HIGHLIGHT_LABELSTRING=Write label here
  &HIGHLIGHT_LABELSIZE=16
  &HIGHLIGHT_LABELCOLOR=%23000000
  &HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
- &HIGHLIGHT_LABELBUFFERSIZE=1.5
+ &HIGHLIGHT_LABELBUFFERSIZE=1.3
  &HIGHLIGHT_LABELFRAMEBACKGROUNDCOLOR=%23FFFF00
- &HIGHLIGHT_LABELFRAMEOUTLINECOLOR=%23FF0000
- &HIGHLIGHT_LABELFRAMEOUTLINEWIDTH=2
+ &HIGHLIGHT_LABELFRAMEOUTLINECOLOR=%230000FF
+ &HIGHLIGHT_LABELFRAMEOUTLINEWIDTH=1
  &HIGHLIGHT_LABELFRAMESIZE=5
 
 
@@ -2150,19 +2156,24 @@ The :ref:`GetPrint <wms_getprint>` equivalent is in the format (note that
 .. code-block:: bash
 
  http://localhost/qgisserver?
- SERVICE=WMS
+ &SERVICE=WMS
  &VERSION=1.3.0
  &REQUEST=GetPrint
- &map0:HIGHLIGHT_GEOM=POLYGON((590000 5647000, 590000 6110620, 2500000 6110620, 2500000 5647000, 590000 5647000))
- &map0:HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%23ea1173</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">1.6</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
+ &TEMPLATE=test
+ &FORMAT=image/png
+ &map0:EXTENT=34,-9,56,42
+ &map0:SRS=EPSG:4326
+ &map0:LAYERS=countries,countries_shapeburst
+ &map0:HIGHLIGHT_GEOM=POLYGON((7.5 39.75, 7.5 50.25, 25.5 50.25, 25.5 39.75, 7.5 39.75))
+ &map0:HIGHLIGHT_SYMBOL=<StyledLayerDescriptor><UserStyle><Name>Highlight</Name><FeatureTypeStyle><Rule><Name>Symbol</Name><LineSymbolizer><Stroke><SvgParameter name="stroke">%2300FF00</SvgParameter><SvgParameter name="stroke-opacity">1</SvgParameter><SvgParameter name="stroke-width">7</SvgParameter></Stroke></LineSymbolizer></Rule></FeatureTypeStyle></UserStyle></StyledLayerDescriptor>
  &map0:HIGHLIGHT_LABELSTRING=Write label here
  &map0:HIGHLIGHT_LABELSIZE=16
  &map0:HIGHLIGHT_LABELCOLOR=%23000000
  &map0:HIGHLIGHT_LABELBUFFERCOLOR=%23FFFFFF
- &map0:HIGHLIGHT_LABELBUFFERSIZE=1.5
+ &map0:HIGHLIGHT_LABELBUFFERSIZE=1.3
  &map0:HIGHLIGHT_LABELFRAMEBACKGROUNDCOLOR=%23FFFF00
- &map0:HIGHLIGHT_LABELFRAMEOUTLINECOLOR=%23FF0000
- &map0:HIGHLIGHT_LABELFRAMEOUTLINEWIDTH=2
+ &map0:HIGHLIGHT_LABELFRAMEOUTLINECOLOR=%230000FF
+ &map0:HIGHLIGHT_LABELFRAMEOUTLINEWIDTH=1
  &map0:HIGHLIGHT_LABELFRAMESIZE=5
 
 Here is the image outputted by the above request in which a polygon and
