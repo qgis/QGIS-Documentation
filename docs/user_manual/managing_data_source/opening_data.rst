@@ -73,11 +73,6 @@ web services supported by QGIS.
    QGIS Data Source Manager dialog
 
 
-Beside this main entry point, you also have the |dbManager|
-:guilabel:`DB Manager` plugin that offers advanced capabilities to analyze and
-manipulate connected databases.
-More information on DB Manager capabilities can be found in :ref:`dbmanager`.
-
 There are many other tools, native or third-party plugins, that help you
 open various data formats.
 
@@ -287,41 +282,11 @@ drag-and-drop from one panel to the other.
    operating system file browser to the :guilabel:`Layers Panel` or the map
    canvas.
 
-.. index:: DB Manager
-
-The DB Manager
-==============
-
-The :guilabel:`DB Manager` Plugin is another tool
-for integrating and managing spatial database formats supported by
-QGIS (PostgreSQL, SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtual
-layers). It can be activated from the
-:menuselection:`Plugins --> Manage and Install Plugins...` menu.
-
-The |dbManager| :sup:`DB Manager` Plugin provides several features:
-
-* connect to databases and display their structure and contents
-* preview tables of databases
-* add layers to the map canvas, either by double-clicking or drag-and-drop.
-* add layers to a database from the QGIS Browser or from another database
-* create SQL queries and add their output to the map canvas
-* create :ref:`virtual layers <vector_virtual_layers>`
-
-More information on DB Manager capabilities is found in :ref:`dbmanager`.
-
-.. _figure_db_manager_bis:
-
-.. figure:: img/db_manager.png
-   :align: center
-
-   DB Manager dialog
-
-
 Provider-based loading tools
 =============================
 
-Beside the Browser Panel and the DB Manager, the main tools provided by QGIS
-to add layers, you'll also find tools that are specific to data providers.
+Beside the Browser Panel, the main tool provided by QGIS to add layers,
+you'll also find tools that are specific to data providers.
 
 .. note::
 
@@ -484,7 +449,7 @@ Layer` tabs allow loading of layers from source types other than :guilabel:`File
 Loading a mesh layer
 --------------------
 
-A mesh is an unstructured grid usually with temporal and other components.
+A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and faces
 in 2D or 3D space. More information on mesh layers at :ref:`label_meshdata`.
 
@@ -691,7 +656,8 @@ contents:
 #. Choose how to import ``blocks`` with the dedicated combobox:
 
    * :guilabel:`Expand Block Geometries`: imports the blocks in the drawing file as normal elements.
-   * :guilabel:`Expand Block Geometries and Add Insert Points`: imports the blocks in the drawing file as normal elements and adds the insertion point as a point layer.
+   * :guilabel:`Expand Block Geometries and Add Insert Points`: imports the blocks in the drawing file
+     as normal elements and adds the insertion point as a point layer.
    * :guilabel:`Add Only Insert Points`: adds the blocks insertion point as a point layer.
 
 #. Check |checkbox| :guilabel:`Use curves` to promote the imported layers
@@ -832,8 +798,8 @@ Connecting to SpatiaLite database is described at :ref:`label_spatialite`.
 
 .. tip:: **Create connection to database from the QGIS Browser Panel**
 
-   Selecting the corresponding database format in the Browser
-   tree, right-clicking and choosing connect will provide you
+   Selecting the corresponding database format in the Browser tree,
+   right-clicking and choosing connect will provide you
    with the database connection dialog.
 
 Most of the connection dialogs follow a common structure:
@@ -1066,13 +1032,16 @@ Optionally, you can activate the following checkboxes:
 
 .. _tip_ORACLE_Spatial_layers:
 
-.. tip:: **Oracle Spatial Layers**
+.. tip:: **Tips with Oracle Spatial Layers**
 
-   Normally, an Oracle Spatial layer is defined by an entry in the
-   **USER_SDO_METADATA** table.
+   * To use spatially enabled layers in QGIS, make sure that they are defined
+     by an entry in the **USER_SDO_METADATA** table.
 
-   To ensure that selection tools work correctly, it is recommended that your
-   tables have a **primary key**.
+   * Use the :guilabel:`Browser` panel :ref:`actions <database_entries>`
+     to interact in more advanced ways with the database and its tables.
+
+   * To ensure that selection tools work correctly, it is recommended that the
+     tables have a **primary key**.
 
 
 .. _create_ms_sql_server_connection:
@@ -1141,11 +1110,10 @@ Optionally, you can activate the following options:
   schemas for MS SQL connection. If enabled, only checked schemas will be displayed.
   You can right-click to :guilabel:`Check` or :guilabel:`Uncheck` any schema in the list.
 
-Renaming a Vector Table (MS SQL)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. tip:: **Using MS SQL Layers**
 
-* In :guilabel:`Browser Panel`, right-click the table and select :menuselection:`Manage --> Rename Layer`.
-* In :guilabel:`DB Manager`, select the table, then choose :menuselection:`Table --> Rename`.
+  Use the :guilabel:`Browser` panel :ref:`actions <database_entries>`
+  to interact in more advanced ways with the database and its tables.
 
 
 .. _create_hana_connection:
@@ -1194,7 +1162,8 @@ The following parameters can be entered:
   QGIS will only search for data in that schema. If this field is left blank,
   QGIS will search for data in all schemas.
 
-* :guilabel:`Authentication`: For general details about the authentication dialog behavior, see :ref:`authentication`.
+* :guilabel:`Authentication`: For general details about the authentication dialog behavior,
+  see :ref:`authentication`.
 
 * :guilabel:`SSL Settings`
 
@@ -1239,9 +1208,11 @@ The following parameters can be entered:
 
 .. tip:: **Connecting to SAP HANA Cloud**
 
-   If you'd like to connect to an SAP HANA Cloud instance, you usually must set
-   :guilabel:`Port Number` to ``443`` and check
-   :guilabel:`Enable TLS/SSL encryption`.
+   * If you'd like to connect to an SAP HANA Cloud instance, you usually must set
+     :guilabel:`Port Number` to ``443`` and check :guilabel:`Enable TLS/SSL encryption`.
+   * Use the :guilabel:`Browser` panel :ref:`actions <database_entries>`
+     to interact in more advanced ways with the database and its tables.
+
 
 .. _vector_loading_database:
 
@@ -1310,13 +1281,14 @@ To load a layer from a database, you can perform the following steps:
 
 .. tip:: **Use the Browser Panel to speed up loading of database table(s)**
 
-  Adding DB tables from the :guilabel:`Data Source Manager` may
-  sometimes be time consuming as QGIS fetches statistics and
-  properties (e.g. geometry type and field, CRS, number of features)
+  Adding DB tables from the :guilabel:`Data Source Manager` may sometimes be time consuming
+  as QGIS fetches statistics and properties (e.g. geometry type and field, CRS, number of features)
   for each table beforehand.
   To avoid this, once :ref:`the connection is set <vector_create_stored_connection>`,
-  it is better to use the :ref:`Browser Panel <browser_panel>` or the
-  :ref:`DB Manager <dbmanager>` to drag and drop the database tables into the map canvas.
+  it is better to use the :ref:`Browser Panel <browser_panel>`
+  to drag and drop the database tables into the map canvas.
+  Moreover the :guilabel:`Browser` panel provides various tools to manage
+  and interact with the database items.
 
 
 .. _layer_metadata_search_panel:
@@ -1824,8 +1796,6 @@ update all its sub-elements (e.g. buckets, folders and files).
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
-.. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em

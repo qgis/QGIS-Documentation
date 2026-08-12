@@ -1598,10 +1598,6 @@ This is what the :menuselection:`Database` menu looks like if all the core plugi
      -
      - :guilabel:`Database`
      - :ref:`execute_sql`
-   * - |dbManager| :guilabel:`DB Manager...`
-     -
-     - :guilabel:`Database`
-     - :ref:`dbmanager`
 
 
 When starting QGIS for the first time not all core plugins are loaded.
@@ -1811,7 +1807,7 @@ Available toolbars are:
    ":guilabel:`Annotations`", ":ref:`sec_annotations`"
    ":guilabel:`Attributes`", ":ref:`sec_attribute_table`, :ref:`general_tools`"
    ":guilabel:`Data Source Manager`", ":ref:`manage_data_source`"
-   ":guilabel:`Database`", ":ref:`dbmanager`"
+   ":guilabel:`Database`", ":ref:`offlinedit`, :ref:`execute_sql`"
    ":guilabel:`Digitizing`", ":ref:`sec_edit_existing_layer`"
    ":guilabel:`GPS`", ":ref:`sec_gpstracking`"
    ":guilabel:`GRASS`", ":ref:`sec_grass`"
@@ -2182,8 +2178,6 @@ processes (QGIS startup, plugins loading, processing tools...).
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
-.. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |delaunay| image:: /static/common/mAlgorithmDelaunay.png
    :width: 1.5em

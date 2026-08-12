@@ -61,10 +61,6 @@ Let's go ahead and do that.
 From here you can start an editing session and start adding data to
 your new database directly.
 
-We also learned about how to import data into a database using the
-DB Manager and you can use this same technique to import data into
-your new SpatiaLite DB.
-
 In Conclusion
 ----------------------------------------------------------------------
 

@@ -53,7 +53,7 @@ QGIS provides a variety of ways to add layers to a project:
 
 * using the :guilabel:`Add` button from the dedicated data provider tab
   in the :ref:`Data source manager <opening_data>` dialog
-* from QGIS :ref:`Browser panel <label_browserpanel>` or :ref:`DB Manager <dbmanager>`:
+* from QGIS :ref:`Browser panel <label_browserpanel>`:
   double-click, drag-and-drop files and layers onto QGIS or use the contextual menu
 * drag-and-drop files from the Operating System files explorer onto QGIS
 

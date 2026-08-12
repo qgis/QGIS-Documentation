@@ -67,15 +67,6 @@ separately. To export a table from PostgreSQL to GML, you can use this command:
   ogr2ogr -f GML export.gml PG:'dbname=<databasename> user=<username>
           host=<hostname>' <Name of PostgreSQL-Table>
 
-DB Manager
--------------------------------------------------------------------------------
-
-You may have noticed another option in the :guilabel:`Database` menu labeled
-:guilabel:`DB Manager`. This is a tool that provides a
-unified interface for interacting with spatial databases including PostgreSQL. It
-also allows you to import and export from databases to other formats. Since the
-next module is largely devoted to using this tool, we will only briefly mention
-it here.
 
 
 In Conclusion

@@ -433,10 +433,8 @@ each level of the dataset tree.
 Importing vector layers into databases using Browser panel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-QGIS allows you to import vector layers directly into a database from the :guilabel:`Browser` panel.
-This provides a simple way to transfer datasets into supported database
-formats without using |dbManager| :sup:`DB Manager` (see :ref:`dbmanager`).
-
+QGIS provides easy ways to transfer vector layers directly to supported database formats
+using the :guilabel:`Browser` panel.
 You can start the import in two ways:
 
 * Drag and drop a single vector layer from the Browser panel or from the Project into
@@ -666,8 +664,6 @@ Supported file types
 .. |cloud| image:: /static/common/mIconCloud.png
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
-   :width: 1.5em
-.. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
