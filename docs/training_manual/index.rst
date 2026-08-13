@@ -25,7 +25,7 @@ QGIS Training Manual
    forestry/index
    database_concepts/index
    spatial_databases/index
-   processing/index
    databases/index
+   processing/index
    appendix/contribute
    appendix/preparing_data
