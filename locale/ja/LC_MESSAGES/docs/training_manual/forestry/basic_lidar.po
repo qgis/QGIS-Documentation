@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -42,20 +43,19 @@ msgid ""
 "You could use the basic map or the aerial image you have been using before, "
 "but a hillshade raster of the terrain will look nicer in some situations."
 msgstr ""
-"さまざまな背景画像を使用することで、地図の外観を改善できます。基本地図も以前に使用してきた空撮画像も使用できますが、地形の陰影起伏ラスターが見栄えを良くする状況もあるでしょう。"
+"さまざまな背景画像を使用することで、地図の外観を改善できます。基本地図も以前に使用してきた航空写真も使用できますが、地形の陰影起伏図ラスタが見栄えを良くする状況もあるでしょう。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:8
 msgid ""
 "You will use LAStools to extract a DEM from a LiDAR dataset and then create "
 "a hillshade raster to use in your map presentation later."
-msgstr ""
-"LAStoolsを使用してレーザー測量データセットからDEMを抽出し、その後、地図のプレゼンテーションで使用する陰影起伏ラスタを作成します。"
+msgstr "LAStoolsを使用してLIDARデータセットからDEMを抽出し、次に地図のプレゼンテーションで使用する陰影起伏図ラスタを作成します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:11
 msgid ""
 "**The goal for this lesson:** Install LAStools and calculate a DEM from "
 "LiDAR data and a hillshade raster."
-msgstr "**このレッスンの目標：** LAStoolsをインストールし、レーザー測量データと陰影起伏ラスタからDEMを計算します。"
+msgstr "**このレッスンの目標：** LAStoolsをインストールし、LIDARデータからDEMを計算し、そして陰影起伏図ラスタを計算します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:16
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Installing Lastools"
@@ -68,7 +68,7 @@ msgid ""
 "install-lastools-toolbox-in-qgis/>`_."
 msgstr ""
 "LiDARのデータをQGISで管理するには、プロセシングフレームワークと `LAStools <https://rapidlasso.de/how-"
-"to-install-lastools-toolbox-in-qgis>`_ が提供するアルゴリズムが必要です。"
+"to-install-lastools-toolbox-in-qgis/>`_ が提供するアルゴリズムが必要です。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:21
 msgid ""
@@ -77,12 +77,12 @@ msgid ""
 "presentation purposes. First you will have to set up the "
 ":guilabel:`Processing` framework settings to properly work with LAStools:"
 msgstr ""
-"レーザー測量点群から数値標高モデル（DEM）を取得して、プレゼンテーション目的のために、視覚的により直感的な陰影起伏ラスタを作成できます。最初に、 "
-":guilabel:`プロセシング` フレームワークの設定を、LAStoolsで動作するように適切に設定する必要があります。"
+"LIDAR点群から数値標高モデル（DEM）を取得して、プレゼンテーション目的のために、視覚的により直感的な陰影起伏図ラスタを作成できます。最初に、LAStoolsで適切に動作するように"
+" :guilabel:`プロセシング` フレームワークの設定をセットアップする必要があります。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:26
 msgid "Close QGIS, if you have already started it."
-msgstr "QGISをすでに開始している場合は閉じます。"
+msgstr "QGISをすでに開始している場合は閉じてください。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:27
 msgid ""
@@ -90,9 +90,27 @@ msgid ""
 "folder :file:`C:/Program Files/QGIS "
 "Valmiera/apps/qgis/python/plugins/processing/`."
 msgstr ""
-"古いライダープラグインは、フォルダ :file:`C:/Program "
+"あなたのシステムに古いライダープラグインが、フォルダ :file:`C:/Program "
 "Files/QGISValmiera/apps/qgis/python/plugins/processing/` "
-"内のシステムにデフォルトでインストールされる可能性があります。"
+"にデフォルトでインストールされている可能性があります。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:29
+msgid ""
+"If you have a folder named :file:`lidar`, delete it. This is valid for some "
+"installations of QGIS 2.2 and 2.4."
+msgstr ""
+":kbd:`lidar` という名前のフォルダーがある場合はそれを削除してください。これは、QGIS 2.2 と 2.4 "
+"の一部のインストールで有効です。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:35
+msgid ""
+"Go to the :file:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there you "
+"can find the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the "
+":file:`lidar` folder to replace the one you just deleted."
+msgstr ""
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` "
+"フォルダーに移動すると、:file:`QGIS_2_2_toolbox.zip` ファイルが見つかります。それを開いて :file:`lidar` "
+"フォルダーを展開し、今削除したものに置き換えてください。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:38
 msgid ""
@@ -112,10 +130,21 @@ msgid ""
 " :file:`C:\\\\lastools\\\\`. The path to the :file:`lastools` folder cannot "
 "have spaces or special characters."
 msgstr ""
-"次に、LAStoolsをコンピュータにインストールする必要があります。最新の *lastools* バージョンを `ここ "
+"次に、LAStools をコンピュータにインストールする必要があります。最新の *lastools* バージョンを `ここ "
 "<https://lastools.github.io/download/LAStools.zip>`_ から入手し、 "
 ":file:`lastools.zip` ファイルの内容をシステム内のフォルダー、例えば :file:`C:\\\\lastools\\\\` "
-"に展開します。file:`lastools` フォルダーのパスには、スペースや特殊文字は使用できません。"
+"に展開します。 :file:`lastools` フォルダーのパスには、スペースや特殊文字は使用できません。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:47
+msgid ""
+"Read the :file:`LICENSE.txt` file inside the :file:`lastools` folder. Some "
+"of the LAStools are open source and other are closed source and require "
+"licensing for most commercial and governmental use.  For education and "
+"evaluation purposes you can use and test LAStools as much as you need to."
+msgstr ""
+":file:`lastools` フォルダーにある :file:`LICENSE.txt` ファイルをお読みください。LAStools "
+"の一部はオープンソースであり、他はクローズドソースであり、ほとんどの商用および政府の使用にはライセンスが必要です。教育と評価の目的の場合は、必要なだけ "
+"LAStools を使用してテストできます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:52
 msgid ""
@@ -123,11 +152,19 @@ msgid ""
 "almost ready to use, you just need to set up the Processing framework to "
 "start using them:"
 msgstr ""
-"今プラグインと実際のアルゴリズムはお手元のコンピュータにインストールされ、使用する準備がほぼできていますので、それらの使用を開始するためにプロセシングフレームワークを設定することが必要であるだけです。"
+"これでプラグインと実際のアルゴリズムは自分のコンピューターにインストールされ、使用する準備がほぼできていますので、プロセシングフレームワークを設定すれば、それらを使い始めることができます："
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:55
 msgid "Open a new project in QGIS."
 msgstr "QGISで新しいプロジェクトを開きます。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:56
+msgid "Set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN`."
+msgstr "プロジェクトのCRSを :guilabel:`ETRS89 / ETRS-TM35FIN` に設定してください。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:57
+msgid "Save the project as :file:`forest_lidar.qgs`."
+msgstr "プロジェクトを :file:`forest_lidar.qgs` として保存します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:59
 msgid "To setup the LAStools in QGIS:"
@@ -148,6 +185,14 @@ msgstr ""
 #: ../../docs/training_manual/forestry/basic_lidar.rst:64
 msgid "Check :guilabel:`Activate`."
 msgstr ":guilabel:`Activate` をチェックします。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:65
+msgid ""
+"For :guilabel:`LAStools folder` set :file:`c:\\\\lastools\\\\` (or the "
+"folder you extracted LAStools to)."
+msgstr ""
+":guilabel:`LAStoolsフォルダ` に :file:`c:\\\\lastools\\\\` （または LAStools "
+"を展開したフォルダ）を設定します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:72
 msgid ""
@@ -234,15 +279,28 @@ msgstr ""
 msgid "Close the viewer when you are ready."
 msgstr "準備ができたら、ビューアを閉じます。"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:109
+msgid ""
+"Creating a DEM with LAStools can be done in two steps, first one to classify"
+" the point cloud into :guilabel:`ground` and :guilabel:`no ground` points "
+"and then calculating a DEM using only the :guilabel:`ground` points."
+msgstr ""
+"LAStools を使ったDEMの作成は2段階で行うことができます。最初に点群を :guilabel:`基準` と :guilabel:`非基準` "
+"点に分類し、次に :guilabel:`基準` 点のみを使用してDEMを計算します。"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:113
 msgid "Go back to the :guilabel:`Processing Toolbox`."
-msgstr ":guilabel:`処理ツールボックス` に戻ります。"
+msgstr ":guilabel:`プロセシングツールボックス` に戻ります。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:114
+msgid "Note the :guilabel:`Search...` box, write ``lasground``."
+msgstr ":guilabel:`検索...` ボックスに ``lasground`` を入力してください。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:115
 msgid ""
 "Double click to open the :guilabel:`lasground` tool and set it as shown in "
 "this image:"
-msgstr "ダブルクリックして :guilabel:`lasground` ツールを開き、この画像のように設定します："
+msgstr ":guilabel:`lasground` ツールをダブルクリックして開き、この画像のように設定します："
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:120
 msgid ""
@@ -250,7 +308,7 @@ msgid ""
 ":file:`rautjarvi_lidar.laz` is located and it is named "
 ":file:`rautjarvi_lidar_1.las`."
 msgstr ""
-"出力ファイルが :file:`rautjarvi_lidar.laz` があるのとと同じフォルダーに "
+"出力ファイルが :file:`rautjarvi_lidar.laz` があるのと同じフォルダーに "
 ":file:`rautjarvi_lidar_1.las` という名前で保存されます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:123
@@ -279,9 +337,19 @@ msgstr ""
 msgid "Close the viewer again."
 msgstr "再びビューアを閉じます。"
 
+#: ../../docs/training_manual/forestry/basic_lidar.rst:137
+msgid "In the :guilabel:`Processing Toolbox`, search for ``las2dem``."
+msgstr ":guilabel:`プロセッシングツールボックス` で ``las2dem`` を検索します。"
+
 #: ../../docs/training_manual/forestry/basic_lidar.rst:138
 msgid "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
 msgstr ":guilabel:`las2dem` ツールを開き、この画像に示すように設定します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:143
+msgid ""
+"The result DEM is added to your map with the generic name :guilabel:`Output "
+"raster file`."
+msgstr "成果 DEM は、 :guilabel:`出力ラスターファイル` という包括的な名前で地図に追加されます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:145
 msgid ""
@@ -299,7 +367,7 @@ msgstr ":abbr:`★☆☆ （初級レベル）` 理解しよう: 地形陰影起
 #: ../../docs/training_manual/forestry/basic_lidar.rst:152
 msgid ""
 "For visualization purposes, a hillshade generated from a DEM gives a better"
-msgstr "可視化の目的にはDEMから生成される陰影起伏がより良い"
+msgstr "可視化の目的にはDEMから生成される陰影起伏図がより良い"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:153
 msgid "visualization of the terrain:"
@@ -307,7 +375,7 @@ msgstr "地形の可視化:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:155
 msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
-msgstr ":menuselection:`ラスタ --> 地形分析 --> 陰影` を開きます。"
+msgstr ":menuselection:`ラスタ --> 地形分析 --> 陰影図` を開きます。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:156
 msgid ""
@@ -321,6 +389,10 @@ msgstr ""
 #: ../../docs/training_manual/forestry/basic_lidar.rst:158
 msgid "Leave the rest of parameters with the default settings."
 msgstr "デフォルトの設定でパラメーターの残りの部分を残します。"
+
+#: ../../docs/training_manual/forestry/basic_lidar.rst:163
+msgid "Select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted."
+msgstr "プロンプトが表示されたら :guilabel:`ETRS89 / ETRS-TM35FIN` をCRSとして選択します。"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:165
 msgid ""
