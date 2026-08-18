@@ -177,7 +177,8 @@ panel provides the following functionalities (see :numref:`figure_layout_legend_
 
   While the default behavior of the legend item is to mimic the
   :guilabel:`Layers` panel tree, displaying the same groups, layers and classes
-  of symbology, right-click any item offers you options to hide layer's name or
+  of symbology, right-click any legend item to access its contextual menu. From
+  this menu, you can :guilabel:`Rename Item`, hide a layer's name, or
   raise it as a group or subgroup. In case you have made some changes to a layer,
   you can revert them by choosing :guilabel:`Reset to defaults` from the
   contextual menu of the legend entry.
