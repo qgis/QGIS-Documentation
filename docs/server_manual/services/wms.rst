@@ -118,7 +118,8 @@ as well as the following extra parameters:
    ":ref:`OPACITIES <wms_opacities>`", "No", "Opacity for layer or group"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
    ":ref:`SELECTION <wms_selection>`", "No", "Highlight features"
-   "FILE_NAME", "No", "File name of the downloaded file
+   "FILE_NAME", "No", "File name of the downloaded file"
+   ":ref:`TIME <wms_time>`", "No", "Temporal filter for time-enabled layers"
 
    Only for ``FORMAT=application/dxf``"
    ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`", "No", "Options of the specified file format
