@@ -11,7 +11,6 @@ Using QGIS Core Plugins
 .. toctree::
    :maxdepth: 1
 
-   plugins_db_manager
    plugins_geometry_checker
    plugins_metasearch
    plugins_offline_editing
@@ -24,7 +23,6 @@ They are not necessarily enabled by default.
 ======================  ============================  ======================================================  ===============================
 Icon                    Plugin                        Description                                             Manual Reference
 ======================  ============================  ======================================================  ===============================
-|dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |grassTools|            GRASS 7                       GRASS functionality                                     :ref:`sec_grass`
 |grassLogo|             GRASS GIS provider            GRASS GIS Processing functionality                      :ref:`sec_grass`
@@ -46,8 +44,6 @@ Icon                    Plugin                        Description               
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |dbManager| image:: /static/common/dbmanager.png
-   :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png

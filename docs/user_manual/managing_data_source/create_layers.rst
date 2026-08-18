@@ -94,8 +94,7 @@ These options can be found under the :guilabel:`Advanced Options`
 together with the :guilabel:`Layer identifier` (short human readable
 name of the layer) and the :guilabel:`Layer description`.
 
-Further management of GeoPackage layers can be done with the
-:ref:`DB Manager <dbmanager>`.
+Further management of GeoPackage layers can be done with :ref:`Browser panel <label_browserpanel>`.
 
 
 .. _vector_create_shapefile:
@@ -196,8 +195,7 @@ If desired, you can select |checkbox| :guilabel:`Create an autoincrementing
 primary key` under the :guilabel:`Advanced Options` section. You can also rename
 the :guilabel:`Geometry column` (``geometry`` by default).
 
-Further management of SpatiaLite layers can be done with :ref:`DB Manager
-<dbmanager>`.
+Further management of SpatiaLite layers can be done with :ref:`Browser panel <label_browserpanel>`.
 
 
 .. index:: New Mesh layer
@@ -811,7 +809,6 @@ To create a virtual layer, open the virtual layer creation dialog by:
   in the :menuselection:`Layer --> Add Layer -->` menu;
 * enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the
   :guilabel:`Data Source Manager` dialog;
-* or using the :guilabel:`DB Manager` dialog tree.
 
 The dialog allows you to specify a :guilabel:`Layer name` and an SQL
 :guilabel:`Query`. The query can use the name (or id) of loaded vector
@@ -845,10 +842,6 @@ and country information:
    JOIN country
    ON airports.country = country.name
 
-.. note::
-
-   It's also possible to create virtual layers using the SQL window of
-   :ref:`dbmanager`.
 
 Embedding layers for use in queries
 -----------------------------------

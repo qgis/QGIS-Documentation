@@ -96,7 +96,7 @@ The information saved in a project file includes:
 * Project default styles
 * Plugins settings
 * QGIS Server settings from the OWS settings tab in the Project properties
-* Queries stored in the DB Manager
+* SQL Queries stored in the project
 
 The project file is saved in XML format (see :ref:`qgisprojectfile`).
 This means that it is possible to edit the file outside of QGIS if you

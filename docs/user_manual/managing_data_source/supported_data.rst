@@ -406,15 +406,7 @@ Importing Data into PostgreSQL
 ..............................
 
 Data can be imported into PostgreSQL using several tools,
-including the Browser, DB Manager plugin and the command line tools
-shp2pgsql and ogr2ogr.
-
-DB Manager
-^^^^^^^^^^
-
-QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`.
-It can be used to load data, and it includes support for schemas.
-See section :ref:`dbmanager` for more information.
+including the Browser panel and the command line tools shp2pgsql and ogr2ogr.
 
 shp2pgsql
 ^^^^^^^^^
@@ -448,7 +440,7 @@ reference systems and projections.
 ogr2ogr
 ^^^^^^^
 
-In addition to **shp2pgsql** and **DB Manager**, there is another tool
+In addition to **shp2pgsql**, there is another tool
 for feeding geographical data in PostgreSQL: **ogr2ogr**.
 It is part of your GDAL installation.
 
@@ -492,11 +484,9 @@ PostGIS supports creation of a GiST (Generalized Search Tree)
 index to speed up spatial searching (GiST index information is taken
 from the PostGIS documentation available at https://postgis.net).
 
-.. tip:: You can use the DBManager to create an index for your layer.
-   You should first select the layer and click on
-   :menuselection:`Table --> Edit table`, go to
-   :menuselection:`Indexes` tab and click on
-   :guilabel:`Add Spatial Index`.
+.. tip:: You can use the :guilabel:`Browser`panel` to create an index for your layer.
+   You should expand the database entry and select the layer,
+   then right-click and press :menuselection:`Manage --> Create Spatial Index`.
 
 The syntax for creating a GiST index is::
 
@@ -547,8 +537,7 @@ This tells GDAL to create a SpatiaLite database.
 See also https://gdal.org/en/latest/drivers/vector/sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
-For SpatiaLite data management, you can also use the core plugin
-:ref:`DB Manager <dbmanager>`.
+For SpatiaLite data management, you can also use the :ref:`Browser <label_browserpanel>` panel.
 
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
@@ -742,8 +731,7 @@ and a -180..180° representation of a 0..360° data.
    Crossing 180° longitude applying the **ST_ShiftLongitude** function
 
 
-#. Import data into PostgreSQL (:ref:`vector_import_data_in_postgis`) using,
-   for example, the DB Manager plugin.
+#. :ref:`Import data into PostgreSQL <vector_import_data_in_postgis>`.
 #. Use the PostgreSQL command line interface to issue the following command:
 
    .. code-block:: sql
@@ -765,8 +753,6 @@ and a -180..180° representation of a 0..360° data.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |dbManager| image:: /static/common/dbmanager.png
-   :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |osx| image:: /static/common/osx.png
