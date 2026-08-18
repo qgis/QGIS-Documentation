@@ -791,7 +791,8 @@ Label modes for line layers include:
   Check the option to allow spaces overlap.
 
 * :guilabel:`Horizontal`: draws labels horizontally along the length of the
-  line feature.
+  line feature. The :guilabel:`Rotation` angle can be set to rotate the label
+  to the desired orientation.
 
 .. _figure_labels_placement_line:
 
