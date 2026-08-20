@@ -586,14 +586,24 @@ need to be written to the currently selected :file:`PROJECT` and :file:`MAPSET`.
 .. _grass_modules:
 
 Working with GRASS modules
----------------------------
+==========================
+
+.. tip:: **Use Processing as replacement for the GRASS modules**
+
+   The :ref:`Processing Toolbox <label_processing>` represents a more modern
+   and integrated environment to do analysis on GRASS datasets within QGIS.
+   Enabling :menuselection:`Plugin Manager --> GRASS GIS Processing` plugin
+   provides access to hundreds of algorithms that replace most of the modules
+   in the GRASS plugin.
 
 The GRASS plugin provides a user-friendly toolbox with about 200 of the available
 GRASS modules and functionalities.
 
+The Interface
+-------------
+
 A complete list of GRASS modules available in the graphical Toolbox in QGIS
-is available in the GRASS wiki at
-https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
+is available in the `GRASS wiki <https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list>`_.
 
 It is also possible to customize the GRASS Toolbox content. This procedure is
 described in section :ref:`sec_toolbox-customizing`.
@@ -606,7 +616,8 @@ By clicking on a graphical module icon, a new tab will be added to the Toolbox d
 providing three new sub-tabs: :guilabel:`Options`, :guilabel:`Output` and
 :guilabel:`Manual`.
 
-**Options**
+Options
+.......
 
 The :guilabel:`Options` tab provides a simplified module dialog where you can
 usually select a raster or vector layer visualized in the QGIS canvas and enter
@@ -620,17 +631,14 @@ further module-specific parameters to run the module.
    GRASS Toolbox Module Options
 
 The provided module parameters are often not complete to keep the dialog simple.
-If you want to use further module parameters and flags, you need to start the
-GRASS shell and run the module in the command line.
+The :guilabel:`Show Advanced Options` button below the simplified module dialog
+in the :guilabel:`Options` tab allows you to use the complete GRASS module options
+without the need to switch to the GRASS shell.
+For some modules however, you may still need to start the GRASS shell
+and run the module in the command line if you want to use further parameters and flags.
 
-A new feature since QGIS 1.8 is the support for a :guilabel:`Show Advanced Options`
-button below the simplified module dialog in the :guilabel:`Options` tab. At the
-moment, it is only added to the module :file:`v.in.ascii` as an example of use, but it will
-probably be part of more or all modules in the GRASS Toolbox in future versions
-of QGIS. This allows you to use the complete GRASS module options without the need
-to switch to the GRASS shell.
-
-**Output**
+Output
+......
 
 .. _figure_grass_module_output:
 
@@ -644,7 +652,8 @@ module. When you click the :guilabel:`Run` button, the module switches to the
 :guilabel:`Output` tab and you see information about the analysis process. If
 all works well, you will finally see a ``Successfully finished`` message.
 
-**Manual**
+Manual
+......
 
 .. _figure_grass_module_manual:
 
@@ -818,8 +827,8 @@ Nearly all GRASS modules can be added to the GRASS Toolbox. An XML interface is
 provided to parse the pretty simple XML files that configure the modules'
 appearance and parameters inside the Toolbox.
 
-A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) looks
-like this:
+A sample XML file for generating the module ``v.buffer`` (:file:`v.buffer.qgm`)
+looks like this:
 
 .. code-block:: xml
 
