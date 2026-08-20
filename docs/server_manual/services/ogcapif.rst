@@ -54,6 +54,7 @@ the following resource representation (output) formats:
 
 - HTML
 - JSON
+- FlatGeobuf
 
 The format that is actually served will depend on content negotiation,
 but a specific format can be explicitly requested by appending a format
@@ -63,6 +64,7 @@ Supported format specifier extensions are:
 
 - ``.json``
 - ``.html``
+- ``.fgb``
 
 Additional format specifier aliases may be defined by specific
 endpoints:
