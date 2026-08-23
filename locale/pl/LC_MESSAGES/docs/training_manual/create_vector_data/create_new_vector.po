@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Jarosław Miazga, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Jarosław Miazga, 2026\n"
 "Language-Team: Polish (https://app.transifex.com/qgis/teams/6144/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -33,9 +34,183 @@ msgstr ""
 "<translation_guidelines>`. Ta strona jest obecnie przetłumaczona w "
 "|translation progress|."
 
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:2
+msgid "Lesson: Creating a New Vector Dataset"
+msgstr "Lekcja: Tworzenie nowego zestawu danych wektorowych"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:4
+msgid ""
+"The data that you use has to come from somewhere. For most common "
+"applications, the data exists already; but the more particular and "
+"specialized the project, the less likely it is that the data will already be"
+" available. In such cases, you'll need to create your own new data."
+msgstr ""
+"Dane używane w Twoim projekcie muszą skądś pochodzić. W większości "
+"przypadków będziesz korzystać z już gotowych danych, ale im bardziej "
+"szczegółowy i wyspecjalizowany projekt, tym większa szansa, że takie dane "
+"nie będą publicznie dostępne. W takich przypadkach należy utworzyć je "
+"samodzielnie."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:9
+msgid "**The goal for this lesson:** To create a new vector dataset."
+msgstr "**Cel lekcji:** Utworzenie nowego zestawu danych wektorowych."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:12
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: The Layer Creation Dialog"
+msgstr ""
+":abbr:`★☆☆ (Poziom podstawowy)` Podążaj za instrukcjami: Okno tworzenia "
+"warstwy"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:14
+msgid ""
+"Before you can add new vector data, you need a vector dataset to add it to. "
+"In our case, you'll begin by creating new data entirely, rather than editing"
+" an existing dataset. Therefore, you'll need to define your own new dataset "
+"first."
+msgstr ""
+"Zanim dodasz nowe dane wektorowe, musisz zdefiniować, do jakiego zestawu "
+"danych je zapisać. W naszym przypadku utworzymy zupełnie nowy zestaw danych,"
+" zamiast korzystać z już istniejącego. Dlatego też musimy najpierw "
+"zdefiniować zestaw danych."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:18
+msgid "Open QGIS and create a new blank project."
+msgstr "Otwórz QGIS i stwórz nowy, pusty projekt."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:19
+msgid ""
+"Navigate to and click on the menu entry :menuselection:`Layer --> Create "
+"Layer --> New Shapefile Layer`. You'll be presented with the :guilabel:`New "
+"Shapefile Layer` dialog, which will allow you to define a new layer."
+msgstr ""
+"Z górnego paska wybierz opcję :menuselection:`Warstwa --> Stwórz warstwę -->"
+" Nowa warstwa Shapefile...`. Pojawi się okienko :guilabel:`Nowa warstwa "
+"Shapefile`, za pomocą którego utworzymy nową warstwę."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:27
+msgid ""
+"Click :guilabel:`...` for the :guilabel:`File name` field. A save dialog "
+"will appear."
+msgstr ""
+"Naciśnij :guilabel:`...` obok pola :guilabel:`Nazwa pliku`. Pojawi się okno "
+"zapisywania."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:29
+msgid "Navigate to the :file:`exercise_data` directory."
+msgstr "Odnajdź folder :file:`exercise_data`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:30
+msgid "Save your new layer as :file:`school_property.shp`."
+msgstr "Zapisz swoją nową warstwę pod nazwą :file:`school_property.shp`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:32
+msgid ""
+"It's important to decide which kind of dataset you want at this stage. Each "
+"different vector layer type is \"built differently\" in the background, so "
+"once you've created the layer, you can't change its type."
+msgstr ""
+"Ważne jest, żeby już na tym etapie zdecydować się, jaki rodzaj danych "
+"zapiszemy. Każdy rodzaj danych wektorowych tworzony jest w inny sposób, więc"
+" nie można go zmienić po utworzeniu warstwy."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:36
+msgid ""
+"For the next exercise, we're going to create new features which describe "
+"areas. For such features, you'll need to create a polygon dataset."
+msgstr ""
+"W następnym ćwiczeniu utworzymy obiekty opisujące powierzchnię. W takim "
+"przypadku należy utworzyć warstwę zawierającą poligony."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:39
+msgid ""
+"For :guilabel:`Geometry Type`, select :guilabel:`Polygon` from the drop down"
+" menu:"
+msgstr ""
+"W polu :guilabel:`Typ geometrii` wybierz opcję :guilabel:`Poligon` z "
+"rozwijalnej listy:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:44
+msgid ""
+"This has no impact on the rest of the dialog, but it will cause the correct "
+"type of geometry to be used when the vector dataset is created."
+msgstr ""
+"Wybór ten nie wpływa na resztę okienka tworzenia nowej warstwy, ale dzięki "
+"temu prawidłowy rodzaj geometrii zostanie użyty do stworzenia zestawu "
+"danych."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:47
+msgid ""
+"The next field allows you to specify the Coordinate Reference System, or "
+"CRS. CRS is a method of associating numerical coordinates with a position on"
+" the surface of the Earth. See the User Manual on :ref:`Working with "
+"Projections <label_projections>` to learn more."
+msgstr ""
+"Następne pole pozwala na wybranie układu współrzędnych warstwy. Układ "
+"współrzędnych odpowiada za dopasowywanie numerycznych współrzędnych do "
+"punktów leżących na powierzchni ziemi. Więcej informacji o układach "
+"współrzędnych dostępnych jest tutaj: :ref:`Working with "
+"Projections<label_projections>`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:53
+msgid ""
+"For this example we will use the default CRS associated with this project, "
+"which is WGS84."
+msgstr ""
+"W tym przykładzie użyjemy domyślnego układu współrzędnych powiązanego z tym "
+"projektem, czyli WGS84."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:59
+msgid ""
+"Next there is a collection of fields grouped under :guilabel:`New Field`. By"
+" default, a new layer has only one attribute, the ``id`` field (which you "
+"should see in the :guilabel:`Fields list`) below. However, in order for the "
+"data you create to be useful, you actually need to say something about the "
+"features you'll be creating in this new layer. For our current purposes, it "
+"will be enough to add one field called ``name`` that will hold ``Text data``"
+" and will be limited to text length of ``80`` characters."
+msgstr ""
+"Następnie mamy cały zestaw opcji zgrupowanych w polu :guilabel:`Nowe pole`. "
+"Domyślnie, nowa warstwa posiada tylko jeden atrybut ``id`` (który powinien "
+"być widoczny w okienku :guilabel:`Lista pól` znajdującym się poniżej). Żeby "
+"jednak tworzone przez nas dane były przydatne, powinniśmy zawrzeć również w "
+"nich informacje o tworzonych przez nas obiektach. Dla naszych potrzeb "
+"wystarczy w tym momencie dodanie jednego pola nazwanego ``nazwa``, "
+"zawierającego rodzaj danych :guilabel:`Tekst (string)` z długością ustawioną"
+" na ``80`` znaków."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:67
+msgid ""
+"Replicate the setup below, then click the :guilabel:`Add to Fields List` "
+"button:"
+msgstr ""
+"Skopiuj pokazane poniżej kroki (z opcjonalną zmianą nazwy pola na polski) i "
+"naciśnij :guilabel:`Dodaj do listy pól`:"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:72
+msgid "Check that your dialog now looks like this:"
+msgstr "Twoje okienko powinno teraz wyglądać tak:"
+
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:77
 msgid "Click :guilabel:`OK`"
 msgstr "Kliknij :guilabel:`OK`"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:79
+msgid "The new layer should appear in your :guilabel:`Layers` panel."
+msgstr "Nowa warstwa powinna pokazać się w panelu :guilabel:`Warstwy`."
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:84
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Data Sources"
+msgstr ""
+":abbr:`★☆☆ (Poziom podstawowy)`: Podążaj za instrukcjami: Źródła danych"
+
+#: ../../docs/training_manual/create_vector_data/create_new_vector.rst:86
+msgid ""
+"When you create new data, it obviously has to be about objects that really "
+"exist on the ground. Therefore, you'll need to get your information from "
+"somewhere."
+msgstr ""
+"Kiedy tworzysz nowe dane, muszą one rzecz jasna odnosić się do istniejących "
+"rzeczy. Musimy więc znaleźć gdzieś informacje źródłowe."
 
 #: ../../docs/training_manual/create_vector_data/create_new_vector.rst:381
 msgid "dataSourceManager"
