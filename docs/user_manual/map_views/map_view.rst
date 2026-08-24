@@ -985,8 +985,6 @@ in the :guilabel:`Layer styling` panel.
   * For text annotation at point, it is also possible to:
 
     * set the text :guilabel:`Alignment` (left, center or right of the anchor point)
-    * configure whether the text should :guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`.
-      In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
   * For text annotation along a line, set the text :guilabel:`Alignment` along the line
     (start, center, end), and configure an :guilabel:`Offset from line` in the unit
     of your choice.
@@ -1008,17 +1006,20 @@ in the :guilabel:`Layer styling` panel.
     proportional to the embedded picture size, or stretch the picture to fill the annotation extent.
   * :guilabel:`Fixed size`: the picture annotation maintains a constant size in screen or output units
     (e.g. pixels or millimeters), regardless of the map scale.
-    The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separatey
+    The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separately
     or adjusted proportionally to the embedded picture size.
   * :guilabel:`Relative to map`: the picture annotation will always be rendered at the same position
     relative to the map canvas bounds, regardless of the map scale.
-    The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separatey
+    The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separately
     or adjusted proportionally to the embedded picture size.
 
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
 
-* For text at point, text inside rectangle and picture annotations, you can :guilabel:`Show callout`
+* For text at point, text inside rectangle and picture annotations,
+  you can configure whether the text should :guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`.
+  In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
+  You can also :guilabel:`Show callout`
   when the picture or text anchor point is offset from its default placement.
   To create a callout for an annotation:
 
