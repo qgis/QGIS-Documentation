@@ -831,7 +831,7 @@ Advanced parameters
      - ``NODATA``
      - [numeric: double]
 
-       Default: -9998.0
+       Default: -9999.0
      - Value to use for NoData cells in the output layer.
    * - **Creation options**
 
