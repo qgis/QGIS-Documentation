@@ -3990,7 +3990,8 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-The |overlay| :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
+The |overlay| :guilabel:`QGIS Server` tab allows to configure properties of the layer
+when published in QGIS Server environment. It consists of :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`Metadata URL`, :guilabel:`Legend URL`
 and :guilabel:`Dimensions` sections.
 
@@ -4026,7 +4027,7 @@ WMS/OAPIF clients request a specific part of the layer's data - for
 example, features at a given date, or within a date range - instead of
 always getting the full dataset.
 
-Click the |symbologyAdd| button to open the
+Click the |symbologyAdd|:sup:`Add new dimension` button to open the
 :guilabel:`Add WMS/OAPIF Dimension` dialog and configure a new dimension:
 
 * :guilabel:`Name`: select a predefined dimension name from the drop-down list,
@@ -4048,8 +4049,8 @@ Click the |symbologyAdd| button to open the
   default, if none is otherwise specified:
 
   * **All values**: display all values of the dimension;
-  * **Min value**: display the minimum value of the dimension;
-  * **Max value**: display the maximum value of the dimension;
+  * **Minimum value**: display the minimum value of the dimension;
+  * **Maximum value**: display the maximum value of the dimension;
   * **Reference value**: display a fixed reference value.
 
 * :guilabel:`Reference value`: only enabled when :guilabel:`Default display` is set to **Reference value**.
@@ -4063,7 +4064,7 @@ Click the |symbologyAdd| button to open the
    Add WMS/OAPIF Dimension dialog
 
 Once added, each dimension is listed in the :guilabel:`Dimensions` table.
-Use the |symbologyEdit| and |symbologyRemove|
+Use the |symbologyEdit|:sup:`Edit selected dimension` and |symbologyRemove|:sup:`Remove selected dimension`
 buttons below the list to edit or remove a selected dimension.
 
 To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
