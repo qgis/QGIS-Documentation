@@ -463,6 +463,8 @@ to edit the visibility of the classes (and their features) and avoid (un)checkin
 
 With vector layer, the contextual menu of a class leaf entry also gives access to:
 
+* :guilabel:`Rename Item`: renames the selected class entry. You can also
+  select the entry and press :kbd:`F2` to rename it.
 * |selectAll| :guilabel:`Select features`: selects in the layer all the features matching that class
 * |openTable| :guilabel:`Show in attribute table`: opens an attribute table
   filtered to only the features matching that class
