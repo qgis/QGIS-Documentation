@@ -4003,9 +4003,17 @@ layout legend <layout_legend_item>`. These options include:
 QGIS Server Properties
 ======================
 
-The |overlay| :guilabel:`QGIS Server` tab consists of :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`Metadata URL`, and :guilabel:`Legend URL`
-sections.
+The |overlay| :guilabel:`QGIS Server` tab allows to configure properties of the layer
+when published in QGIS Server environment. It consists of :guilabel:`Description`,
+:guilabel:`Attribution`, :guilabel:`Metadata URL`, :guilabel:`Legend URL`
+and :guilabel:`Dimensions` sections.
+
+.. _figure_server_vector:
+
+.. figure:: img/vector_server_properties.png
+   :align: center
+
+   QGIS Server tab in vector layers properties dialog
 
 From the :guilabel:`Description` section, you can change the :guilabel:`Short name`
 used to reference the layer in requests (to learn more about short names, read
@@ -4026,12 +4034,51 @@ In the :guilabel:`Legend URL` section, you can provide the url of a legend image
 in the url field. You can use the Format drop-down option to apply the appropriate
 format of the image. Currently png, jpg and jpeg image formats are supported.
 
-.. _figure_server_vector:
+In the :guilabel:`Dimensions` section, you can define one or more **WMS/OAPIF
+dimensions** for the layer, such as time or elevation. A dimension lets
+WMS/OAPIF clients request a specific part of the layer's data - for
+example, features at a given date, or within a date range - instead of
+always getting the full dataset.
 
-.. figure:: img/vector_server_properties.png
+Click the |symbologyAdd|:sup:`Add new dimension` button to open the
+:guilabel:`Add WMS/OAPIF Dimension` dialog and configure a new dimension:
+
+* :guilabel:`Name`: select a predefined dimension name from the drop-down list,
+  or type a custom one. Which names are predefined depends on the target
+  protocol: for OAPIF, only ``Name`` and ``Date`` are supported; for WMS,
+  ``Time`` and ``Elevation`` are predefined (per the OGC specifications),
+  but a custom name can still be used.
+* :guilabel:`Attribute`: the layer's field used to retrieve the value of
+  the dimension for each feature.
+* :guilabel:`End attribute (optional)`: a second field, used when the
+  dimension represents a range of values (e.g. the end of a time
+  interval) rather than a single value.
+* :guilabel:`Units`: the unit of measurement used by the dimension. For
+  the ``Time`` and ``Date`` dimensions, this is filled in automatically (``ISO8601``)
+  and disabled; for other dimensions, including ``Elevation``, it stays
+  empty and editable.
+* :guilabel:`Unit symbol`: the symbol for that unit.
+* :guilabel:`Default display`: which value of the dimension to show by
+  default, if none is otherwise specified:
+
+  * **All values**: display all values of the dimension;
+  * **Minimum value**: display the minimum value of the dimension;
+  * **Maximum value**: display the maximum value of the dimension;
+  * **Reference value**: display a fixed reference value.
+
+* :guilabel:`Reference value`: only enabled when :guilabel:`Default display` is set to **Reference value**.
+
+.. _figure_add_dimensions:
+
+.. figure:: img/add_dimensions_dialog.png
    :align: center
+   :width: 40%
 
-   QGIS Server tab in vector layers properties dialog
+   Add WMS/OAPIF Dimension dialog
+
+Once added, each dimension is listed in the :guilabel:`Dimensions` table.
+Use the |symbologyEdit|:sup:`Edit selected dimension` and |symbologyRemove|:sup:`Remove selected dimension`
+buttons below the list to edit or remove a selected dimension.
 
 To learn more about QGIS Server, read the :ref:`QGIS-Server-manual`.
 
