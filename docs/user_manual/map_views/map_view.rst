@@ -953,7 +953,9 @@ you will be able to interact with any feature annotation:
 
   * :kbd:`Shift+key` for big movement
   * :kbd:`Alt+key` for ``1 px`` movement
-* **Resize and rotation**: move over an annotation and squares (the resize handles) are displayed
+* **Resize and rotation**: when an item is rotated, its selection band
+  rotates together with it.
+  Move over an annotation and squares (the resize handles) are displayed
   on its corners and mid-segments.
   Left-click a square, drag to resize.
   For rotation, left-click the rotation handle, drag to rotate.
