@@ -770,9 +770,9 @@ These properties let you set:
     displays in the :guilabel:`Layers` panel the number of features next to the layer name.
     Feature count of classes, if any, is as well displayed.
     You can right-click on a layer to turn on/off its feature count.
-  * |unchecked| :guilabel:`Display classification attribute names` in the Layers
-    panel, e.g., when applying a categorized or rule-based renderer
-    (see :ref:`vector_style_menu` for more information).
+  * |unchecked| :guilabel:`Display classification attribute names in layer titles`:
+    shows in the :guilabel:`Layers` panel, the field or expression used to classify features
+    when using a :ref:`categorized <categorized_renderer>` or :ref:`graduated <graduated_renderer>` renderer.
   * the :guilabel:`WMS getLegendGraphic Resolution`
   * :guilabel:`Minimum` and :guilabel:`Maximum legend symbol size`
     to control symbol size display in the :guilabel:`Layers` panel
