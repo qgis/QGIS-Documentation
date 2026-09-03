@@ -132,7 +132,7 @@ Manage Layers and overview
   |indicatorTemporal|             ``|indicatorTemporal|``             |indicatorNonRemovable|         ``|indicatorNonRemovable|``
   |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
   |indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
-  |indicatorBadLayer|             ``|indicatorBadLayer|``             |favourites|                    ``|favourites|``
+  |indicatorBadLayer|             ``|indicatorBadLayer|``             |favorites|                     ``|favorites|``
   |indicatorLayerError|           ``|indicatorLayerError|``           |indicatorNotes|                ``|indicatorNotes|``
   |indicatorLowAccuracy|          ``|indicatorLowAccuracy|``          |indicatorOffline|              ``|indicatorOffline|``
   ==============================  ==================================  ==============================  ==================================
@@ -1052,7 +1052,7 @@ Grass integration
    :width: 1.5em
 .. |extractVertices| image:: /static/common/mAlgorithmExtractVertices.png
    :width: 1.5em
-.. |favourites| image:: /static/common/mIconFavourites.png
+.. |favorites| image:: /static/common/mIconFavorites.png
    :width: 1.5em
 .. |fieldInteger| image:: /static/common/mIconFieldInteger.png
    :width: 1.5em
