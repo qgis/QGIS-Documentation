@@ -51,7 +51,7 @@ it. To do so create a directory :file:`qgis-server` and within its directory:
       # Add the current key for package downloading
       # Please refer to QGIS install documentation (https://www.qgis.org/fr/site/forusers/alldownloads.html#debian-ubuntu)
       && mkdir -m755 -p /etc/apt/keyrings \
-      && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://qgis.org/download//downloads/qgis-archive-keyring.gpg \
+      && wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://qgis.org/downloads/qgis-archive-keyring.gpg \
       # Add repository for latest version of qgis-server
       # Please refer to QGIS repositories documentation if you want other version (https://qgis.org/resources/installation-guide/#repositories)
       && echo "deb [signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/debian bookworm main" | tee /etc/apt/sources.list.d/qgis.list \
@@ -226,7 +226,7 @@ Swarm/docker-compose
 
 Docker now has its own orchestrator: Swarm (compatible with docker-compose
 files). You have to
-`enable it <https://docs.docker.com/guides/orchestration/#enable-docker-swarm>`_
+`enable it <https://docs.docker.com/engine/swarm/swarm-mode/>`_
 (the Mac version will also work with Linux).
 
 .. _docker-compose-file:
@@ -235,7 +235,7 @@ Stack description
 ^^^^^^^^^^^^^^^^^
 
 Now that you have Swarm working, create the service file (see
-`Deploy to Swarm <https://docs.docker.com/guides/swarm-deploy/>`_)
+`Deploy to Swarm <https://docs.docker.com/engine/swarm/stack-deploy/>`_)
 :file:`qgis-stack.yaml`:
 
 .. code-block:: yaml
@@ -306,7 +306,7 @@ Installation
 
 If you have a **Docker Desktop** installation, using Kubernetes (aka
 k8s) is pretty straight forward:
-`enable k8s <https://docs.docker.com/guides/orchestration/#turn-on-kubernetes>`_.
+`enable k8s <https://docs.docker.com/desktop/use-desktop/kubernetes/>`_.
 
 If not, follow the
 `minikube tutorial <https://kubernetes.io/docs/tutorials/hello-minikube/>`_
