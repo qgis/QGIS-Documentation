@@ -218,7 +218,7 @@ Some of these entries are not available when multiple selections are made
   :guilabel:`Show Feature Count`                                                  |checkbox|
   |labelingSingle| :guilabel:`Show Label`                                         |checkbox|                      |checkbox|
   :guilabel:`Copy Layer/Group`                                      |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :guilabel:`Rename Layer/Group`                                    |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :guilabel:`Rename Layer/Group` (shortcut: :kbd:`F2`)              |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   |zoomActual| :guilabel:`Zoom to Native Resolution (100%)`                                       |checkbox|
   :guilabel:`Stretch Using Current Extent`                                                        |checkbox|
   |createTable|:guilabel:`Create Raster Attribute Table`                                         |checkbox|
@@ -455,9 +455,6 @@ When using a symbology based on features classification
 or :ref:`rule-based <rule_based_rendering>` for vector layers,
 or :ref:`classification <point_cloud_classification>` for point clouds),
 class entries are listed below the layer in the :guilabel:`Layers` panel.
-
-To change the label of a class entry, select it and press :kbd:`F2`.
-Enter the new label and press :kbd:`Enter` to apply it to the layer's renderer.
 
 Right-clicking a class entry makes it possible to edit the visibility of the
 classes (and their features) and avoid (un)checking them one by one:
