@@ -112,6 +112,7 @@ Manage Layers and overview
   |addTiledSceneLayer|            ``|addTiledSceneLayer|``            |addHanaLayer|                  ``|addHanaLayer|``
   |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
   |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
+  |newFolder|                     ``|newFolder|``                     |newFileGeodatabase|            ``|newFileGeodatabase|``
   |newVirtualLayer|               ``|newVirtualLayer|``               |newMeshLayer|                  ``|newMeshLayer|``
   |newGpx|                        ``|newGpx|``                        |stac|                          ``|stac|``
   |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
@@ -120,7 +121,7 @@ Manage Layers and overview
   |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
   |pointCloudLayer|               ``|pointCloudLayer|``               |gps|                           ``|gps|``
   |tiledSceneLayer|               ``|tiledSceneLayer|``               |hana|                          ``|hana|``
-  |dbSchema|                      ``|dbSchema|``
+  |dbSchema|                      ``|dbSchema|``                      |folder24|                      ``|folder24|``
   |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
   |removeAllFromOverview|         ``|removeAllFromOverview|``         |removeLayer|                   ``|removeLayer|``
   |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
@@ -218,6 +219,7 @@ Digitizing and Advanced Digitizing
   |vertexTool|                     ``|vertexTool|``                      |vertexToolActiveLayer|           ``|vertexToolActiveLayer|``
   |digitizeWithSegment|            ``|digitizeWithSegment|``             |digitizeShape|                   ``|digitizeShape|``
   |streamingDigitize|              ``|streamingDigitize|``               |digitizeWithCurve|               ``|digitizeWithCurve|``
+  |digitizeWithBezier|             ``|digitizeWithBezier|``              |digitizeWithNURBS|               ``|digitizeWithNURBS|``
   |moveFeature|                    ``|moveFeature|``                     |moveFeatureCopy|                 ``|moveFeatureCopy|``
   |moveFeatureLine|                ``|moveFeatureLine|``                 |moveFeatureCopyLine|             ``|moveFeatureCopyLine|``
   |moveFeaturePoint|               ``|moveFeaturePoint|``                |moveFeatureCopyPoint|            ``|moveFeatureCopyPoint|``
@@ -226,11 +228,10 @@ Digitizing and Advanced Digitizing
   |offsetCurve|                    ``|offsetCurve|``                     |offsetPointSymbols|              ``|offsetPointSymbols|``
   |chamferFillet|                  ``|chamferFillet|``                   |reshape|                         ``|reshape|``
   |simplify|                       ``|simplify|``                        |addPart|                         ``|addPart|``
-  |addRing|                        ``|addRing|``
-  |fillRing|                       ``|fillRing|``                        |deletePart|                      ``|deletePart|``
-  |deleteRing|                     ``|deleteRing|``                      |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
-  |mergeFeatures|                  ``|mergeFeatures|``                   |splitParts|                      ``|splitParts|``
-  |splitFeatures|                  ``|splitFeatures|``
+  |addRing|                        ``|addRing|``                         |fillRing|                        ``|fillRing|``
+  |deleteRing|                     ``|deleteRing|``                      |deletePart|                      ``|deletePart|``
+  |mergeFeatures|                  ``|mergeFeatures|``                   |mergeFeatureAttributes|          ``|mergeFeatureAttributes|``
+  |splitFeatures|                  ``|splitFeatures|``                   |splitParts|                      ``|splitParts|``
   |reverseLine|                    ``|reverseLine|``                     |avoidIntersectionsCurrentLayer|  ``|avoidIntersectionsCurrentLayer|``
   |allowIntersections|             ``|allowIntersections|``              |snappingSelf|                    ``|snappingSelf|``
   |avoidIntersectionsLayers|       ``|avoidIntersectionsLayers|``
@@ -273,6 +274,7 @@ Map Navigation and attributes
   |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
   |measureBearing|                ``|measureBearing|``                |measureAngle|                  ``|measureAngle|``
   |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
+  |new3DMapGlobe|                 ``|new3DMapGlobe|``
   |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
   |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
   |camera|                        ``|camera|``                        |shadow|                        ``|shadow|``
@@ -962,7 +964,11 @@ Grass integration
    :width: 1.5em
 .. |digitizeShape| image:: /static/common/mActionDigitizeShape.png
    :width: 1.5em
+.. |digitizeWithBezier| image:: /static/common/mActionDigitizeWithBezier.png
+   :width: 1.5em
 .. |digitizeWithCurve| image:: /static/common/mActionDigitizeWithCurve.png
+   :width: 1.5em
+.. |digitizeWithNURBS| image:: /static/common/mActionDigitizeWithNURBS.png
    :width: 1.5em
 .. |digitizeWithSegment| image:: /static/common/mActionDigitizeWithSegment.png
    :width: 1.5em
@@ -1070,6 +1076,8 @@ Grass integration
 .. |floater| image:: /static/common/floater.png
    :width: 1.5em
 .. |folder| image:: /static/common/mActionFolder.png
+   :width: 1.5em
+.. |folder24| image:: /static/common/mIconFolder24.png
    :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
@@ -1367,11 +1375,17 @@ Grass integration
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
    :width: 1.5em
+.. |new3DMapGlobe| image:: /static/common/mActionNew3DMapGlobe.png
+   :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |newElevationProfile| image:: /static/common/mActionNewElevationProfile.png
+   :width: 1.5em
+.. |newFileGeodatabase| image:: /static/common/mActionNewFileGeodatabase.png
+   :width: 1.5em
+.. |newFolder| image:: /static/common/mActionNewFolder.png
    :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
