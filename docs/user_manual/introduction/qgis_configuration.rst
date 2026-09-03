@@ -945,8 +945,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Snapping**
 
-* |checkbox| :guilabel:`Enable snapping by default` activates snapping when
-  a project is opened
+* |checkbox| :guilabel:`Enable snapping by default` activates snapping by default
+  on all new projects
 * Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Segment', 'Centroid',
   'Middle of segments', 'Line endpoints', 'Area')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
