@@ -401,6 +401,11 @@ Returns the point on geometry1 that is closest to geometry2.
      - * ``geom_to_wkt(closest_point(geom_from_wkt('LINESTRING (20 80, 98 190, 110 180, 50 75 )'),geom_from_wkt('POINT(100 100)')))`` → 'Point(73.0769 115.384)'
 
 
+.. figure:: expression_help/img/closest_point.*
+   :align: center
+
+   The red point is the point on the blue line closest to the orange reference point; the gray dashed line highlights the shortest distance.
+
 .. end_closest_point_section
 
 .. _expression_function_GeometryGroup_collect_geometries:
