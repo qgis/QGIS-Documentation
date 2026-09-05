@@ -43,8 +43,8 @@ msgid ""
 "The models we've created will now need to be populated with the data they're"
 " intended to contain."
 msgstr ""
-"Gli esempi che hai creato ora dovranno essere popolati con i dati  "
-"necessari."
+"I modelli che abbiamo creato dovranno ora essere popolati con i dati che "
+"sono destinati a contenere."
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:7
 msgid ""
@@ -56,15 +56,56 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:11
 msgid "Insert statement"
-msgstr "Inserire dati"
+msgstr "Istruzione INSERT"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:13
+msgid ""
+"How do you add data to a table? The sql ``INSERT`` statement provides the "
+"functionality for this:"
+msgstr ""
+"Come si aggiungono dati a una tabella? L'istruzione SQL ``INSERT`` offre la "
+"funzionalità necessaria a tal fine:"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:20
 msgid "A couple of things to note:"
 msgstr "Alcune cose da segnalare:"
 
+#: ../../docs/training_manual/database_concepts/adding_data.rst:22
+msgid ""
+"After the table name (``streets``), you list the column names that you will "
+"be populating (in this case only the ``name`` column)."
+msgstr ""
+"Dopo il nome della tabella (``streets``), elenca i nomi delle colonne che "
+"vuoi popolare (in questo caso solo la colonna ``name``)."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:24
+msgid "After the ``values`` keyword, place the list of field values."
+msgstr ""
+"Dopo la parola chiave ``values`` inserisci l'elenco dei valori dei campi."
+
 #: ../../docs/training_manual/database_concepts/adding_data.rst:25
 msgid "Strings should be quoted using single quotes."
 msgstr " Le stringhe dovrebbero essere inserite usando virgolette singole."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:26
+msgid ""
+"Note that we did not insert a value for the ``id`` column; this is because "
+"it is a sequence and will be auto-generated."
+msgstr ""
+"Da notare che non abbiamo inserito alcun valore nella colonna ``id``; questo"
+" perché si tratta di una sequenza e verrà generata automaticamente."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:28
+msgid ""
+"If you do manually set the ``id``, you may cause serious problems with the "
+"integrity of your database."
+msgstr ""
+"Se imposti manualmente il campo ``id``, potresti causare gravi problemi "
+"all'integrità del tuo database."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:31
+msgid "You should see ``INSERT 0 1`` if it is successful."
+msgstr "Se l'operazione va a buon fine, dovresti vedere ``INSERT 0 1``. "
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:33
 msgid ""
@@ -81,6 +122,13 @@ msgstr "Risultato:"
 #: ../../docs/training_manual/database_concepts/adding_data.rst:52
 msgid "Try Yourself: :abbr:`★☆☆ (Basic level)`"
 msgstr "Prova Tu: :abbr:`★☆☆ (Basic level)`"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:54
+msgid ""
+"Use the ``INSERT`` command to add a new street to the ``streets`` table."
+msgstr ""
+"Utilizza il comando ``INSERT`` per aggiungere una nuova strada alla tabella "
+"``streets``."
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:56
 #: ../../docs/training_manual/database_concepts/adding_data.rst:96
@@ -103,6 +151,14 @@ msgstr "Aggiunta di dati rispettando i vincoli"
 msgid "Try Yourself: :abbr:`★★☆ (Moderate level)`"
 msgstr "Prova Tu: :abbr:`★★☆ (Moderate level)`"
 
+#: ../../docs/training_manual/database_concepts/adding_data.rst:71
+msgid ""
+"Try to add a person object to the ``people`` table with the following "
+"details::"
+msgstr ""
+"Prova ad aggiungere un elemento persona alla tabella ``people`` con i "
+"seguenti dettagli:"
+
 #: ../../docs/training_manual/database_concepts/adding_data.rst:78
 msgid ""
 "Recall that in this example, we defined phone numbers as strings, not "
@@ -111,6 +167,15 @@ msgstr ""
 "Ricorda che in questo esempio abbiamo definito i numeri di telefono come "
 "stringhe e non come numeri interi."
 
+#: ../../docs/training_manual/database_concepts/adding_data.rst:81
+msgid ""
+"At this point, you should have an error report if you try to do this without"
+" first creating a record for Main Street in the ``streets`` table."
+msgstr ""
+"A questo punto, dovresti ricevere un messaggio di errore se provi a eseguire"
+" questa operazione senza aver prima creato un record per Main Street nella "
+"tabella ``streets``."
+
 #: ../../docs/training_manual/database_concepts/adding_data.rst:84
 msgid "You should have also noticed that:"
 msgstr "Dovresti aver notato che:"
@@ -118,6 +183,14 @@ msgstr "Dovresti aver notato che:"
 #: ../../docs/training_manual/database_concepts/adding_data.rst:86
 msgid "You can't add the street using its name"
 msgstr "Non puoi aggiungere una strada usando il nome"
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:87
+msgid ""
+"You can't add a street using a street ``id`` before first creating the "
+"street record on the ``streets`` table"
+msgstr ""
+"Non puoi aggiungere una strada usando l'``id`` della strada prima di aver "
+"creato il record relativo alla strada nella tabella ``streets``"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:90
 msgid ""
@@ -165,7 +238,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:117
 msgid "Select data"
-msgstr "Seleziona dati"
+msgstr "Selezionare dati"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:119
 msgid ""
@@ -184,7 +257,7 @@ msgstr ""
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:138
 msgid "Update data"
-msgstr "Agggiorna dati"
+msgstr "Agggiornare dati"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:140
 msgid ""
@@ -194,6 +267,15 @@ msgstr ""
 "Come fare per cambiare alcuni dati esistenti? per esempio cambiare il nome "
 "di una strada:"
 
+#: ../../docs/training_manual/database_concepts/adding_data.rst:147
+msgid ""
+"Be very careful using such update statements - if more than one record "
+"matches your ``WHERE`` clause, they will all be updated!"
+msgstr ""
+"Presta molta attenzione quando utilizzi tali istruzioni di aggiornamento: se"
+" più di un record soddisfa la tua clausola “WHERE”, verranno aggiornati "
+"tutti!"
+
 #: ../../docs/training_manual/database_concepts/adding_data.rst:150
 msgid ""
 "A better solution is to use the primary key of the table to reference the "
@@ -202,13 +284,30 @@ msgstr ""
 "Una soluzione migliore è utilizzare la chiave primaria della tabella per "
 "fare riferimento al record da modificare:"
 
+#: ../../docs/training_manual/database_concepts/adding_data.rst:157
+msgid "It should return ``UPDATE 1``."
+msgstr "Dovrebbe restituire ``UPDATE 1``."
+
+#: ../../docs/training_manual/database_concepts/adding_data.rst:159
+msgid ""
+"The ``WHERE`` statement criteria are case sensitive, ``Main Road`` is not "
+"the same as ``Main road``."
+msgstr ""
+"I criteri dell'istruzione ``WHERE`` distinguono tra maiuscole e minuscole: "
+"``Main Road`` non è la stessa cosa di ``Main road``."
+
 #: ../../docs/training_manual/database_concepts/adding_data.rst:163
 msgid "Delete Data"
 msgstr "Cancella dati"
 
+#: ../../docs/training_manual/database_concepts/adding_data.rst:165
+msgid "In order to delete an object from a table, use the ``DELETE`` command:"
+msgstr ""
+"Per eliminare un elemento da una tabella, utilizza il comando ``DELETE``:"
+
 #: ../../docs/training_manual/database_concepts/adding_data.rst:171
 msgid "Let's look at our people table now:"
-msgstr "Dai un'occhiata alla tabelle people:"
+msgstr "Ora dai un'occhiata alla nostra tabella people:"
 
 #: ../../docs/training_manual/database_concepts/adding_data.rst:182
 msgid "Try Yourself: :abbr:`★★★ (Advanced level)`"
