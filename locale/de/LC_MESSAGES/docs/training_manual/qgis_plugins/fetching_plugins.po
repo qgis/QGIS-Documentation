@@ -8,6 +8,7 @@
 # Andreas Kaufmann, 2026
 # Harrissou Sant-anna, 2026
 # Steffen Döring, 2026
+# Mario Blersch, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Steffen Döring, 2026\n"
+"Last-Translator: Mario Blersch, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -35,10 +36,253 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:2
+msgid "Lesson: Installing and Managing Plugins"
+msgstr ""
+"Einheit: Installieren und verwalten von Erweiterungen - engl. Plugins."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:4
+msgid ""
+"To begin using plugins, you need to know how to download, install and "
+"activate them. To do this, you will learn how to use the :guilabel:`Plugin "
+"Installer` and :guilabel:`Plugin Manager`."
+msgstr ""
+"In diesem Abschnitt lernen Sie, wie die :guilabel:`Erweiterungsverwaltung` "
+"von QGIS funktioniert. Damit können Sie Erweiterungen engl. Plugins "
+"herunterladen, installieren und aktivieren."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:8
+msgid ""
+"**The goal for this lesson:** To understand and use QGIS' plugin system."
+msgstr "Ziel: Die Erweiterungsverwaltung von QGIS kennenlernen"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:11
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Managing Plugins"
+msgstr ""
+":abbr:`★☆☆ (Grundlagen)` Zum Mitmachen:  Zum Mitmachen: Erweiterungen verwalten\n"
+" "
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:13
+msgid ""
+"To open the :guilabel:`Plugin Manager`, click on the menu item "
+":menuselection:`Plugins --> Manage and Install Plugins`."
+msgstr ""
+"Um die :guilabel:Erweiterungsverwaltung zu öffnen, klicke auf den "
+"Menüeintrag :menuselection:Erweiterungen > \"Erweiterungen verwalten und "
+"installieren….“"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:15
+msgid "In the dialog that opens, find the :guilabel:`Processing` plugin:"
+msgstr ""
+"Klicken Sie im sich öffnenden Dialogfenster links auf :guilabelInstalliert ."
+" Suchen Sie im tippbaren Bereich nach der Erweiterung :guilabel:Processing."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:20
+msgid "Click in the box next to this plugin and uncheck it to deactivate it."
+msgstr ""
+"Klicken Sie auf das Kontrollkästchen neben dieser Erweiterung. Wenn das "
+"Häkchen verschwunden ist, dann ist die Erweiterung deaktiviert."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:21
+msgid "Click :guilabel:`Close`."
+msgstr "Klicken SIe auf :guilabel:`Schließen`."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:22
+msgid ""
+"Looking at the menu, you will notice that the :guilabel:`Processing` menu is"
+" is now gone. This means that many of the processing functions you have been"
+" using before have disappeared! For example look at the "
+":menuselection:`Vector -->` and :menuselection:`Raster -->` menus. This is "
+"because they are part of the :guilabel:`Processing` plugin, which needs to "
+"be activated to use them."
+msgstr ""
+"Wenn Sie einen Blick auf das Menü im oberen Bereich von QGIS werfen, werden "
+"Sie feststellen, dass der Reiter :guilabel:Verarbeitung verschwunden ist. "
+"Das bedeutet, dass viele der bisher genutzten Verarbeitungsfunktionen nicht "
+"mehr da sind! Schauen Sie sich zum Beispiel die Menüs :menuselection:Vektor "
+"--> und :menuselection:Raster --> an. Dies liegt daran, dass sie Teil der "
+":guilabel:Processing-Erweiterung sind, die aktiviert sein muss, um diese "
+"Werkzeuge nutzen zu können."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:27
+msgid ""
+"Open the :guilabel:`Plugin Manager` again and reactivate the "
+":guilabel:`Processing` plugin by clicking in the checkbox next to it."
+msgstr ""
+"Öffnen Sie die :guilabel:Erweiterungsverwaltung erneut und aktivieren Sie "
+"die :guilabel:Processing-Erweiterung, indem Sie auf das Kontrollkästchen "
+"daneben klicken. Wenn der Hacken erscheint ist die Erweiterung aktiviert."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:29
+msgid ""
+":guilabel:`Close` the dialog. The :guilabel:`Processing` menu and functions "
+"should be available again."
+msgstr ""
+"Schließen Sie den Dialog mit :guilabel:Schließen. Das Menü "
+":guilabel:Verarbeitung sowie die entsprechenden Funktionen sind wieder "
+"verfügbar sein."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:36
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Installing New Plugins"
+msgstr ""
+":abbr:`★☆☆ (Grundlagen)` Zum Mitmachen:  Neue Erweiterungen installieren"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:38
+msgid ""
+"The list of plugins that you can activate and deactivate draws from the "
+"plugins that you currently have installed. To install new plugins:"
+msgstr ""
+"Sie können ausschließlich Erweiterungen aktivieren oder deaktiviere, die "
+"bereits installiert sind. Um neue Erweiterungen zu installieren:"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:41
+msgid ""
+"Select the :guilabel:`Not Installed` option in the :guilabel:`Plugin "
+"Manager` dialog. The plugins available for you to install will be listed "
+"here. This list will vary depending on your existing system setup."
+msgstr ""
+"Öffnen Sie erneut die :guilabel:Erweiterungsverwaltung. Im Dialogfenster "
+"wählen Sie auf der linken Seite den Reiter :guilabel:Nicht installiert aus. "
+"Die zur Installation verfügbaren Erweiterungen werden hier aufgeführt. Diese"
+" Liste variiert je nach vorhandener Systemkonfiguration."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:48
+msgid "Find information about the plugin by selecting it in the list"
+msgstr "Durch anklicken einer Erweiterung erhalten Sie Informationen."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:53
+msgid ""
+"Install the one(s) you are interested in by clicking the :guilabel:`Install "
+"Plugin` button below the plugin information panel."
+msgstr ""
+"Um eine Erweiterung zu installieren, klicken Sie diese in der Liste an "
+"(bspw. QuickMapServices). Unterhalb des Informationsfensters erscheint eine "
+"Schaltfläche mit :guilabel:`Erweiterung installieren`. Klicken Sie darauf "
+"und QGIS installiert die Erweiterung. Wo die Erweiterung nun erscheint, ist "
+"von Plugin zu Plugin unterschiedlich und manchmal nicht allzu leicht zu "
+"finden. Wenn es installiert und aktiviert ist, ist es jedoch Teil von QGIS."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:56
+msgid ""
+"if the plugin has some error it will be listed in the :guilabel:`Invalid` "
+"tab. You can then contact the plugin owner to fix the problem."
+msgstr ""
+"Tritt bei einer Erweiterung ein Fehler auf, wird sie im Reiter "
+":guilabel:Ungültig aufgeführt. Sie können sich dann an den Entwickler der "
+"Erweiterung wenden, um das Problem beheben zu lassen."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:60
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Configuring Additional Plugin "
+"Repositories"
+msgstr ""
+":abbr:`★☆☆ (Grundlagen)` Zum Mitmachen:  Zusätzliche Erweiterungen "
+"konfigurieren"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:62
+msgid ""
+"The plugins that are available to you for installation depend on which "
+"plugin *repositories* you are configured to use."
+msgstr ""
+"Welche Erweiterungen Ihnen zur Installation zur Verfügung stehen, hängt "
+"davon ab, welche Erweiterungs-Quellen Sie konfiguriert haben. Es gibt die "
+"Möglichkeit die Liste der vorgeschlagenen Erweiterungen noch zu erweitern."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:65
+msgid ""
+"QGIS plugins are stored online in repositories. By default, only the "
+"`official repository <https://plugins.qgis.org>`_ is active, meaning that "
+"you can only access plugins that are published there. Given the diversity of"
+" available tools, this repository should meet most of your needs."
+msgstr ""
+"QGIS-Erweiterungen werden online in sogenannten Repositorys gespeichert. "
+"Standardmäßig ist das `offizielle Repository <https://plugins.qgis.org>`_  "
+"aktiviert. Das bedeutet, dass Sie nur auf Erweiterungen zugreifen können, "
+"die dort veröffentlicht wurden. Auf Grund der Vielfalt der verfügbaren "
+"Werkzeuge denkt dieses Repository die meisten Anforderungen ab."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:70
+msgid ""
+"It is possible, however, to try out more plugins than the default ones. "
+"First, you want to configure additional repositories. To do this:"
+msgstr ""
+"Es ist jedoch möglich, mehr als nur die Standard-Erweiterungen "
+"auszuprobieren. Dazu müssen Sie zunächst zusätzliche Repositorys "
+"konfigurieren. Dazu können Sie unter"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:73
+msgid ""
+"Open the :guilabel:`Settings` tab in the :guilabel:`Plugin Manager` dialog"
+msgstr ""
+"dem Reiter :guilabel:`Einstellungen`, der sich innerhalt der "
+"Erweiterungsverwaltung links befindet, öffnen."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:78
+msgid "Click :guilabel:`Add` to find and add a new repository."
+msgstr ""
+"Hier können Sie bspw. auch experimentelle oder veraltete Erweiterungen mit "
+"einbeziehen. Unter Erweiterungsrepositorien können Sie auf den Button "
+":guilabel:`Hinzufügen` klicken und weitere Quellen hinzufügen."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:79
+msgid ""
+"Provide a Name and URL for the new repository you want to configure and make"
+" sure the :guilabel:`Enabled` checkbox is selected."
+msgstr ""
+"Geben Sie einen Namen und eine URL für das neu zu konfigurierende Repository"
+" ein und stellen Sie sicher, dass das Kontrollkästchen "
+":guilabel:Eingeschaltet aktiviert ist."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:85
+msgid ""
+"You will now see the new plugin repo listed in the list of configured Plugin"
+" Repositories"
+msgstr ""
+"Sie sehen das neue Erweiterungs-Repository nun in der Liste der "
+"konfigurierten Erweiterungs-Repositorys aufgeführt."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:91
+msgid ""
+"You can also select the option to display Experimental Plugins by selecting "
+"the :guilabel:`Show also experimental plugins` checkbox."
+msgstr ""
+"Sie können auch die Option aktivieren, experimentelle Erweiterungen "
+"anzuzeigen, indem Sie das Kontrollkästchen :guilabel:Auch experimentelle "
+"Erweiterungen anzeigen auswählen."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:93
+msgid ""
+"If you now switch back to the :guilabel:`Not Installed` tab, you will see "
+"that additional plugins are available for installation."
+msgstr ""
+"Wenn Sie wieder zum Reiter :guilabel:Nicht installiert wechseln, sehen Sie, "
+"dass zusätzliche Erweiterungen zur Installation verfügbar sind."
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:95
+msgid ""
+"To install a plugin, click on it in the list and then on the "
+":guilabel:`Install plugin` button."
+msgstr ""
+"Um eine Erweiterung zu installieren, klicke in der Liste auf den "
+"entsprechenden Namen. Auf der rechten Seite erscheinen Details zur "
+"Erweiterung und es erscheint eine Schaltfläche :guilabel:Erweiterung "
+"installieren. Klicken Sie hierauf und die Erweiterung wird installiert."
+
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:99
 msgid "In Conclusion"
 msgstr "Zusammenfassung"
 
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:101
+msgid "Installing plugins in QGIS should be straightforward and effective!"
+msgstr ""
+"Das Installieren von Erweiterungen in QGIS sollte leicht und effektiv sein!"
+
 #: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:104
 msgid "What's Next?"
 msgstr "Was kommt als Nächstes?"
+
+#: ../../docs/training_manual/qgis_plugins/fetching_plugins.rst:106
+msgid "Next we'll introduce you to some useful plugins as examples."
+msgstr ""
+"Als Nächstes stellen wir Ihnen einige nützliche Erweiterungen beispielhaft "
+"vor."
