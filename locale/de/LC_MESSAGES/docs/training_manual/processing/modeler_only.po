@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Mario Blersch, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Mario Blersch, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -89,6 +90,55 @@ msgstr ""
 "Eingabedaten hinzu. Wir benötigen einen Vektorlayer (nur Punkte) und ein "
 "Attribut des Layers, das wir für die Rasterung verwenden werden."
 
+#: ../../docs/training_manual/processing/modeler_only.rst:25
+msgid ""
+"The next step is to compute the extent of the selected features. That's "
+"where we can use the model-only tool called :guilabel:`Vector layer bounds`."
+" First, we will have to create a layer that has the extent of those selected"
+" features. Then, we can use this tool on that layer."
+msgstr ""
+"Der nächste Schritt besteht darin, die Ausdehnung der ausgewählten Objekte "
+"zu berechnen. Hierfür können wir das reine Modellierungswerkzeug "
+":guilabel:`Vektorlayerbegrenzung` nutzen. Zunächst müssen wir einen Layer "
+"erstellen, der die Ausdehnung dieser ausgewählten Objekte enthält. "
+"Anschließend können wir dieses Werkzeug auf diesen Layer anwenden."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:30
+msgid ""
+"An easy way of creating a layer with the extent of the selected features is "
+"to compute a convex hull of the input points layer. It will use only the "
+"selected point, so the convex hull will have the same bounding box as the "
+"selection. Then we can add the :guilabel:`Vector layer bounds` algorithm, "
+"and use the convex hull layer as input. It should look this in the modeler "
+"canvas:"
+msgstr ""
+"Eine  Möglichkeit, einen Layer mit der Ausdehnung der ausgewählten Objekte "
+"zu erstellen, ist es die konvexe Hülle des Eingabepunktlayers zu berechnen. "
+"Dabei werden nur die ausgewählten Punkte verwendet, sodass die konvexe Hülle"
+" dieselbe Bounding Box wie die Auswahl aufweist. Anschließend können wir den"
+" Algorithmus :guilabel:`Vektorlayerbegrenzung` hinzufügen und den Layer mit "
+"der konvexen Hülle als Eingabe verwenden. Im Arbeitsbereich der Modellierung"
+" sollte das Ganze so aussehen:"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:38
+msgid ""
+"The result from the :guilabel:`Vector layer bounds` is a set of four numeric"
+" values and a extent object. We will use both the numeric outputs and the "
+"extent for this exercise."
+msgstr ""
+"Das Ergebnis von :guilabel:`Vektorlayerbegrenzung` besteht aus vier "
+"numerischen Werten und einem Ausdehnungsobjekt. Für diese Übung werden wir "
+"sowohl die numerischen Ausgaben als auch die Ausdehnung verwenden."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:43
+msgid ""
+"We can now add the algorithm that rasterizes the vector layer, using the "
+"extent from the :guilabel:`Vector layer bounds` algorithm as input."
+msgstr ""
+"Nun können wir den Algorithmus zum Rasterisieren des Vektorlayers hinzufügen"
+" und dabei die Ausdehnung aus dem Algorithmus :guilabel:`Vector layer "
+"bounds` als Eingabe verwenden."
+
 #: ../../docs/training_manual/processing/modeler_only.rst:46
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "Füllen Sie die Paramter des Algorithmus wie folgt:"
@@ -96,6 +146,14 @@ msgstr "Füllen Sie die Paramter des Algorithmus wie folgt:"
 #: ../../docs/training_manual/processing/modeler_only.rst:50
 msgid "The canvas should now look like."
 msgstr "Der Arbeitsbereich sollte jetzt so aussehen:"
+
+#: ../../docs/training_manual/processing/modeler_only.rst:54
+msgid ""
+"Finally, fill the no-data values of the raster layer using the "
+":guilabel:`Close gaps` algorithm."
+msgstr ""
+"Füllen Sie abschließend die NoData-Werte des Rasterlayers mit dem "
+"Algorithmus :guilabel:Close gaps (Lücken schließen)"
 
 #: ../../docs/training_manual/processing/modeler_only.rst:58
 msgid ""
@@ -109,6 +167,20 @@ msgstr ""
 "Interpolation der selektierten Punkte des Eingabelayers ein Raster "
 "erstellen. Das Rasterlayer wird dieselbe Ausdehung wie die selektierten "
 "Punkte im Eingabelayer haben."
+
+#: ../../docs/training_manual/processing/modeler_only.rst:62
+msgid ""
+"Here's an improvement to the algorithm. We have used a hardcoded value for "
+"the cellsize when rasterizing. This value is fine for our test input layer, "
+"but might not be for other cases. We could add a new parameter, so the user "
+"enters the desired value, but a much better approach would be to have that "
+"value automatically computed."
+msgstr ""
+"Ein Verbesserung für den Algorithmus: Aktuell ist die cellsize beim "
+"Rasterisieren noch fest gehardcoded. Für unseren Test-Input-Layer "
+"funktioniert das zwar, bei anderen Use Cases kann das aber auch hinderlich "
+"sein. Statt dafür extra einen manuellen Input-Parameter anzulegen, berechnen"
+" wir den Wert direkt automatisch."
 
 #: ../../docs/training_manual/processing/modeler_only.rst:67
 msgid ""
