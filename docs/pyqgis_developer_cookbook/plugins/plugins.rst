@@ -585,6 +585,55 @@ which can be handy for debugging purposes.
 
     my_plugin = qgis.utils.plugins['My Plugin']
 
+.. index:: Plugins; Python packages, pip
+
+Third-party Python packages
+---------------------------
+
+QGIS runs plugins in its own embedded Python interpreter, and a package the
+plugin needs (for example ``shapely`` or a machine learning library) must be
+installed into that interpreter, or into an environment the plugin adds to
+:data:`sys.path` itself. The usual way to install one is to run pip from the
+interpreter QGIS uses:
+
+.. code-block:: python
+
+    import subprocess
+    import sys
+
+    import qgis.utils
+
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", "--user", "shapely"],
+        env=qgis.utils.subprocess_environment(),
+        check=True,
+    )
+
+Two things make this different from a plain Python script:
+
+* Since QGIS 4.4, :data:`sys.executable` is the interpreter QGIS runs on.
+  In earlier releases it is the QGIS application itself on Windows and macOS,
+  and running it starts a second QGIS. Use
+  :func:`qgis.utils.python_executable` when you need the path without
+  touching :data:`sys.executable`, and look for ``python.exe`` next to
+  :data:`sys.prefix` (Windows) or the ``python`` wrapper next to the QGIS
+  binary (macOS) on releases before 4.4.
+* The QGIS launchers export ``PYTHONHOME``, ``PYTHONPATH`` and, on Windows,
+  ``PYTHONEXECUTABLE`` for the embedded interpreter. A child interpreter which
+  inherits them, in particular a virtual environment, reads the wrong standard
+  library or installs packages in the wrong place.
+  :func:`qgis.utils.subprocess_environment` (QGIS 4.4) returns a copy of the
+  environment without them and without the QGIS directories in ``PATH``. Pass
+  it as ``env`` to every interpreter you start, including
+  :data:`sys.executable` itself.
+
+A package installed with ``--user`` lands in the user site directory, which
+the QGIS interpreter reads at startup; call :func:`importlib.invalidate_caches`
+or ask the user to restart QGIS before importing it. Packages with native
+extensions built against a different Python or NumPy version (``torch``,
+``rasterio``) are better kept in their own virtual environment, created with
+the same interpreter, and imported from there.
+
 Log Messages
 ------------
 
