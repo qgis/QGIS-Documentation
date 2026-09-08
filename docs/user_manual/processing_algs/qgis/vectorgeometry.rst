@@ -59,11 +59,11 @@ Parameters
      - Calculation parameters to use for the geometric properties.
        One of:
 
-       * 0 --- Layer CRS
-       * 1 --- Project CRS
-       * 2 --- Ellipsoidal
+       * 0 --- Cartesian Calculations in Layer's CRS
+       * 1 --- Cartesian Calculations in Project's CRS
+       * 2 --- Ellipsoidal Calculations
 
-   * - **Added geom info**
+   * - **Added geometry info**
      - ``OUTPUT``
      - [same as input]
 
@@ -88,7 +88,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Added geom info**
+   * - **Added geometry info**
      - ``OUTPUT``
      - [same as input]
      - Copy of the input vector layer with the addition of the geometry fields
