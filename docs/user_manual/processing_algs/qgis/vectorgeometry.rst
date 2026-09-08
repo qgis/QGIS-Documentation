@@ -52,7 +52,7 @@ Parameters
      - [vector: geometry]
      - Input vector layer
    * - **Calculate using**
-     - ``CALC_METHOD``
+     - ``METHOD``
      - [enumeration]
 
        Default: 0
