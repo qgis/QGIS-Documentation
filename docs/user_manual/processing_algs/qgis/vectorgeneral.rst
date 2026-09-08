@@ -1531,7 +1531,7 @@ Parameters
      - ``DISCARD_NONMATCHING``
      - [boolean]
 
-       Default: True
+       Default: False
      - Check if you don't want to keep the features that could not be
        joined
    * - **Joined field prefix**
