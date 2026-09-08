@@ -3344,7 +3344,7 @@ Parameters
 
        Default: 1
      - The band of the raster to analyze. If the raster is multiband, specify the band number (starting from 1).
-   * - **Extract**
+   * - **Extract extrema**
      - ``EXTRACT``
      - [enumeration]
 
