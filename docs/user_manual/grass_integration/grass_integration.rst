@@ -685,24 +685,24 @@ The following examples will demonstrate the power of some of the GRASS modules.
 Creating contour lines
 ......................
 
-The first example creates a vector contour map from an elevation raster (DEM).
-Here, it is assumed that you have the Alaska :file:`PROJECT` set up as explained
+This example creates a vector contour map from an elevation raster (DEM).
+Here, it is assumed that you have the Alaska project set up as explained
 in section :ref:`sec_import_loc_data`.
 
-* First, open the project by clicking the
-  |grassOpenMapset| :sup:`Open mapset` button and choosing the Alaska project.
-* Now open the Toolbox with the |grassTools| :sup:`Open GRASS tools` button.
-* In the list of tool categories, double-click :menuselection:`Raster --> Surface
-  Management --> Generate vector contour lines`.
-* Now a single click on the tool **r.contour** will open the tool dialog as
-  explained above (see :ref:`grass_modules`).
-* In the :guilabel:`Name of input raster map` enter ``gtopo30``.
-* Type into the :guilabel:`Increment between Contour levels` |selectNumber|
-  the value 100. (This will create contour lines at intervals of 100 meters.)
-* Type into the :guilabel:`Name for output vector map` the name ``ctour_100``.
-* Click :guilabel:`Run` to start the process. Wait for several moments until the message
-  ``Successfully finished`` appears in the output window. Then click :guilabel:`View Output`
-  and :guilabel:`Close`.
+#. First, open the project by clicking the |grassOpenMapset| :sup:`Open mapset` button
+   and choosing the Alaska project.
+#. Now open the Toolbox with the |grassTools| :sup:`Open GRASS tools` button.
+#. In the list of tool categories, double-click :menuselection:`Raster --> Surface
+   Management --> Generate vector contour lines`.
+#. Now a single click on the tool :guilabel:`r.contour` will open the tool dialog as
+   explained above (see :ref:`grass_modules`).
+#. In the :guilabel:`Name of input raster map` enter ``gtopo30``.
+#. Type into the :guilabel:`Increment between Contour levels`
+   the value 100. (This will create contour lines at intervals of 100 meters.)
+#. Type into the :guilabel:`Name for output vector map` the name ``ctour_100``.
+#. Click :guilabel:`Run` to start the process. Wait for several moments until the message
+   ``Successfully finished`` appears in the output window. Then click :guilabel:`View Output`
+   and :guilabel:`Close`.
 
 Since this is a large region, it will take a while to display. After it finishes
 rendering, you can open the layer properties window to change the line color so
@@ -724,24 +724,24 @@ map, so the detail is unnecessary.
    Douglas-Peuker algorithm.
 
 However, the purpose of this example is different. The contour lines created by
-``r.contour`` have sharp angles that should be smoothed. Among the **v.generalize**
+``r.contour`` have sharp angles that should be smoothed. Among the ``v.generalize``
 algorithms, there is Chaiken's, which does just that (also Hermite splines). Be
 aware that these algorithms can **add** additional vertices to the vector,
 causing it to load even more slowly.
 
-* Open the GRASS Toolbox and double-click the categories :menuselection:`Vector -->
-  Develop map --> Generalization`, then click on the **v.generalize** module to
-  open its options window.
-* Check that the 'ctour_100' vector appears as the :guilabel:`Name of input vector`.
-* From the list of algorithms, choose Chaiken's. Leave all other options at their
-  default, and scroll down to the last row to enter in the field :guilabel:`Name
-  for output vector map` 'ctour_100_smooth', and click :guilabel:`Run`.
-* The process takes several moments. Once ``Successfully finished`` appears in
-  the output windows, click :guilabel:`View Output` and then :guilabel:`Close`.
-* You may change the color of the vector to display it clearly on the raster
-  background and to contrast with the original contour lines. You will notice
-  that the new contour lines have smoother corners than the original while staying
-  faithful to the original overall shape.
+#. Open the GRASS Toolbox and double-click the categories :menuselection:`Vector -->
+   Develop map --> Generalization`, then click on the :guilabel:`v.generalize` module to
+   open its options window.
+#. Check that the 'ctour_100' vector appears as the :guilabel:`Name of input vector`.
+#. From the list of algorithms, choose Chaiken's. Leave all other options at their
+   default, and scroll down to the last row to enter in the field :guilabel:`Name
+   for output vector map` 'ctour_100_smooth', and click :guilabel:`Run`.
+#. The process takes several moments. Once ``Successfully finished`` appears in
+   the output windows, click :guilabel:`View Output` and then :guilabel:`Close`.
+#. You may change the color of the vector to display it clearly on the raster
+   background and to contrast with the original contour lines. You will notice
+   that the new contour lines have smoother corners than the original while staying
+   faithful to the original overall shape.
 
 .. _figure_grass_module_generalize:
 
@@ -757,8 +757,8 @@ causing it to load even more slowly.
    you have a raster map of precipitation data, for example, then the same method
    will be used to create a vector map of isohyetal (constant rainfall) lines.
 
-Creating a Hillshade 3-D effect
-.................................
+Creating a Hillshade 3D effect
+..............................
 
 Several methods are used to display elevation layers and give a 3-D effect to maps.
 The use of contour lines, as shown above, is one popular method often chosen to
@@ -768,18 +768,18 @@ the slope and aspect of each cell, then simulating the sun's position in the sky
 and giving a reflectance value to each cell. Thus, you get sun-facing slopes
 lighted; the slopes facing away from the sun (in shadow) are darkened.
 
-* Begin this example by loading the ``gtopo30`` elevation raster. Start the GRASS
-  Toolbox, and under the Raster category, double-click to open :menuselection:`Spatial
-  analysis --> Terrain analysis`.
-* Then click **r.shaded.relief** to open the module.
-* Change the :guilabel:`azimuth angle` |selectNumber| 270 to 315.
-* Enter ``gtopo30_shade`` for the new hillshade raster, and click :guilabel:`Run`.
-* When the process completes, add the hillshade raster to the map. You should see
-  it displayed in grayscale.
-* To view both the hillshading and the colors of the ``gtopo30`` together, move
-  the hillshade map below the ``gtopo30`` map in the table of contents, then open
-  the :menuselection:`Properties` window of ``gtopo30``, switch to the
-  :guilabel:`Transparency` tab and set its transparency level to about 25%.
+#. Begin this example by loading the ``gtopo30`` elevation raster. Start the GRASS
+   Toolbox, and under the Raster category, double-click to open :menuselection:`Spatial
+   analysis --> Terrain analysis`.
+#. Then click :guilabel:`r.shaded.relief` to open the module.
+#. Change the :guilabel:`Azimuth angle` from 270 to 315.
+#. Enter ``gtopo30_shade`` for the new hillshade raster, and click :guilabel:`Run`.
+#. When the process completes, add the hillshade raster to the map. You should see
+   it displayed in grayscale.
+#. To view both the hillshading and the colors of the ``gtopo30`` together, move
+   the hillshade map below the ``gtopo30`` map in the table of contents, then open
+   the :menuselection:`Properties` window of ``gtopo30``, switch to the
+   :guilabel:`Transparency` tab and set its transparency level to about 25%.
 
 You should now have the ``gtopo30`` elevation with its colormap and transparency
 setting displayed **above** the grayscale hillshade map. In order to see the
@@ -792,29 +792,28 @@ Raster statistics in a vector map
 The next example shows how a GRASS module can aggregate raster data and add columns
 of statistics for each polygon in a vector map.
 
-* Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import the
-  :file:`shapefiles/trees.shp` file into GRASS.
-* Now an intermediate step is required: centroids must be added to the imported
-  trees map to make it a complete GRASS area vector (including both boundaries
-  and centroids).
-* From the Toolbox, choose :menuselection:`Vector --> Manage features`, and open
-  the module **v.centroids**.
-* Enter as the :guilabel:`output vector map` 'forest_areas' and run the module.
-* Now load the ``forest_areas`` vector and display the types of forests - deciduous,
-  evergreen, mixed - in different colors: In the layer :guilabel:`Properties`
-  window, :guilabel:`Symbology` tab, choose from :guilabel:`Legend type`
-  |selectString| 'Unique value' and set the :guilabel:`Classification field`
-  to 'VEGDESC'. (Refer to the explanation of the symbology tab in
-  :ref:`vector_style_menu` of the vector section.)
-* Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector update`
-  by other maps.
-* Click on the **v.rast.stats** module. Enter ``gtopo30`` and ``forest_areas``.
-* Only one additional parameter is needed: Enter :guilabel:`column prefix` ``elev``,
-  and click :guilabel:`Run`. This is a computationally heavy operation, which will run
-  for a long time (probably up to two hours).
-* Finally, open the ``forest_areas`` attribute table, and verify that several new
-  columns have been added, including ``elev_min``, ``elev_max``, ``elev_mean``,
-  etc., for each forest polygon.
+#. Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import the
+   :file:`shapefiles/trees.shp` file into GRASS.
+#. Now an intermediate step is required: centroids must be added to the imported
+   trees map to make it a complete GRASS area vector (including both boundaries
+   and centroids).
+#. From the Toolbox, choose :menuselection:`Vector --> Manage features`,
+   and open the module :guilabel:`v.centroids`.
+#. Enter ``forest_areas`` as the :guilabel:`Output vector map` and run the module.
+#. Now load the ``forest_areas`` vector and display the types of forests - deciduous,
+   evergreen, mixed - in different colors: In the layer :guilabel:`Properties`
+   window, :guilabel:`Symbology` tab, choose 'Unique value' from :guilabel:`Legend type`
+   drop-down menu and set the :guilabel:`Classification field` to 'VEGDESC'.
+   Refer to the explanation of the symbology tab in :ref:`vector_style_menu` of the vector section.
+#. Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector update`
+   by other maps.
+#. Click on the :guilabel:`v.rast.stats` module. Enter ``gtopo30`` and ``forest_areas``.
+#. Only one additional parameter is needed: Enter :guilabel:`column prefix` ``elev``,
+   and click :guilabel:`Run`. This is a computationally heavy operation, which will run
+   for a long time (probably up to two hours).
+#. Finally, open the ``forest_areas`` attribute table, and verify that several new
+   columns have been added, including ``elev_min``, ``elev_max``, ``elev_mean``,
+   etc., for each forest polygon.
 
 .. index::
    single: GRASS; Customize toolbox
@@ -892,9 +891,5 @@ you select the module.
    :width: 1.5em
 .. |rasterLink| image:: /static/common/mIconRasterLink.png
    :width: 1.5em
-.. |selectNumber| image:: /static/common/selectnumber.png
-   :width: 2.8em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
