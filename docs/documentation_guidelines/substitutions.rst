@@ -214,6 +214,7 @@ Digitizing and Advanced Digitizing
   |snappingMiddle|                 ``|snappingMiddle|``                  |snappingEndpoint|                ``|snappingEndpoint|``
   |capturePoint|                   ``|capturePoint|``                    |capturePolygon|                  ``|capturePolygon|``
   |captureLine|                    ``|captureLine|``                     |captureCurveFromFeature|         ``|captureCurveFromFeature|``
+  |captureBoundary|                ``|captureBoundary|``                 |captureCentroid|                 ``|captureCentroid|``
   |deleteSelectedFeatures|         ``|deleteSelectedFeatures|``
   |circularStringCurvePoint|       ``|circularStringCurvePoint|``        |circularStringRadius|            ``|circularStringRadius|``
   |vertexTool|                     ``|vertexTool|``                      |vertexToolActiveLayer|           ``|vertexToolActiveLayer|``
@@ -835,6 +836,10 @@ Grass integration
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |camera| image:: /static/common/mIconCamera.png
+   :width: 1.5em
+.. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
+   :width: 1.5em
+.. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png
    :width: 1.5em
 .. |captureCurveFromFeature| image:: /static/common/mActionCaptureCurveFromFeature.png
    :width: 1.5em
