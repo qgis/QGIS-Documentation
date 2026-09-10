@@ -79,11 +79,12 @@ You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
 
 * Vector digitizing tools
-* Ability to create and edit multiple file formats and GRASS vector layers
+* Ability to create and edit multiple GIS file formats
+  (GeoPackage, PostGIS, SQLite, GRASS, Esri Shapefile and geotadabases,
+  MS SQL Spatial, Oracle Spatial, ...)
 * Georeferencer tool to geocode vectors and images
 * GPS tools to import and export GPX format, and convert other GPS
-  formats to GPX or down/upload directly to a GPS unit (on Linux,
-  usb: has been added to list of GPS devices)
+  formats to GPX or down/upload directly to a GPS unit
 * Support for visualizing and editing OpenStreetMap data
 * Ability to create spatial database tables from files with the Browser panel
 * Improved handling of spatial database tables
@@ -140,6 +141,7 @@ Core plugins include:
    supporting the OGC Catalog Service for the Web (CSW) standard)
 #. Offline Editing (allow offline editing and synchronizing with databases)
 #. Processing (the spatial data processing framework for QGIS)
+#. GRASS GIS Processing (algorithms for use within the QGIS Processing framework)
 #. Topology Checker (find topological errors in vector layers)
 
 

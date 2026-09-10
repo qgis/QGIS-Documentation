@@ -140,7 +140,7 @@ the 'file' type and the (relative) path to the file in its 'name':
    STR: string
    EXTFILE:
      type: file
-     name: custom/grass7/extfile.txt
+     name: custom/path/to/extfile.txt
    OTHER: another param
 
 
