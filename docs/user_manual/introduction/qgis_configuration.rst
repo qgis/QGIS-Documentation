@@ -1741,7 +1741,8 @@ User Profiles` menu. You can also run QGIS with a specific user profile from the
 
    .. code-block:: bash
 
-     qgis-ltr --profile newprofilename
+     # The binary depends on the status of the version in use, e.g., qgis, qgis-ltr, qgis-dev
+     qgis --profile newprofilename
 
 .. _user_profile_setting:
 
