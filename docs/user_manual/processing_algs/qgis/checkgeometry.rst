@@ -770,7 +770,7 @@ Outputs
        - ``gc_errory``: the y coordinate of the centroid of the hole.
        - ``gc_error``
        - ``UNIQUE_ID`` field: the unique ID of the input feature that has a hole.
-   * - **Polygon with holes**
+   * - **Polygons with holes**
      - ``OUTPUT``
      - [vector: polygon]
      - Output polygon layer with features containing holes.

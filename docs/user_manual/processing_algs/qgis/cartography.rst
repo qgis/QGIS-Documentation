@@ -1049,7 +1049,7 @@ Basic parameters
      - Name
      - Type
      - Description
-   * - **Print Layout**
+   * - **Print layout**
      - ``LAYOUT``
      - [layout]
      - Layout to export
