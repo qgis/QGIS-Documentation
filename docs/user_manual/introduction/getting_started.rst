@@ -32,19 +32,18 @@ packages (rpm and deb) or software repositories are provided for many flavors of
 GNU/Linux |nix|.
 
 For more information and instructions for your operating system check
-https://qgis.org/download/.
+the `Download page <https://qgis.org/download/>`_.
 
 Installing from source
 ----------------------
 
-If you need to build QGIS from source, please refer to the installation
-instructions. They are distributed with the QGIS source code in a file
-called :file:`INSTALL`. You can also find them online at :source:`INSTALL.md`.
-
-
-If you want to build a particular release and not the version in development,
-you should replace ``master`` with the release branch (commonly in the
-``release-X_Y`` form) in the above-mentioned link (installation instructions may differ).
+QGIS is a free and open source software subject to the GNU General Public License.
+As such, its source code is available for free, with instructions for building from source
+in the :source:`INSTALL.md` file.
+Because the code of QGIS evolves from release to release,
+these instructions are regularly updated to match the corresponding release.
+If you wish to build a version of QGIS, ensure you pick the appropriate release branch
+in the above-mentioned URL (``master`` for the development branch, or ``release-X_Y``).
 
 Installing on external media
 ----------------------------
