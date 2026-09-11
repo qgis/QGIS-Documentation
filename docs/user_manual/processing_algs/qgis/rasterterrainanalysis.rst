@@ -1167,7 +1167,7 @@ Basic parameters
        Increasing the value of this parameter will
        exaggerate the final result (making it steeper).
        The default is 1 (no exaggeration).
-   * - **Total curvature**
+   * - **Slope**
      - ``OUTPUT``
      - [raster]
 
@@ -1223,7 +1223,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Total curvature**
+   * - **Slope**
      - ``OUTPUT``
      - [raster]
      - The output total curvature raster layer

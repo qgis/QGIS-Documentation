@@ -186,7 +186,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
      - The input vector layer
@@ -336,7 +336,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Select the vector layer you want to create an attribute index
@@ -399,7 +399,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: geometry]
      - Input vector layer
@@ -625,7 +625,7 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - The input layer
-   * - **Fields to match duplicates by**
+   * - **Field to match duplicates by**
      - ``FIELDS``
      - [tablefield: any] [list]
      - Fields defining duplicates.
@@ -1195,7 +1195,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Layer to save the selection from
@@ -1260,7 +1260,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: geometry]
      - ESRI Shapefile (:file:`.SHP`) Layer to extract the encoding information.
@@ -1331,7 +1331,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: geometry]
      - Layer with unknown projection
@@ -1416,7 +1416,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Layer with the relationship that should be de-normalized
@@ -1490,7 +1490,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer. The output layer will consist of
@@ -2109,7 +2109,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layers**
+   * - **Input layers**
      - ``LAYERS``
      - [vector: any] [list]
      - The layers that are to be merged into a single layer.
@@ -2194,7 +2194,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer to sort
@@ -2569,7 +2569,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Saved features**
+   * - **Input layer**
      - ``INPUT``
      - [vector: geometry]
      - Vector layer to set the encoding.
@@ -2727,7 +2727,7 @@ Basic parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer
@@ -2823,7 +2823,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer

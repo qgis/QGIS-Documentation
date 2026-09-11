@@ -591,7 +591,7 @@ Basic parameters
 
        Default: 256
      - Minimum 1, maximum 4096.
-   * - **Use inverted tile Y axis (TMS conventions)**
+   * - **Use inverted tile Y axis (TMS convention)**
      - ``TMS_CONVENTION``
      - [boolean]
 

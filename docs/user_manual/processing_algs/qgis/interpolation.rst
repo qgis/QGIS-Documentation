@@ -431,7 +431,7 @@ Basic parameters
      - [tablefield: numeric]
      - Field of the layer containing the weight factor to use
        during the calculation
-   * - **Search Radius**
+   * - **Search radius**
      - ``RADIUS``
      - [numeric: double]
 
