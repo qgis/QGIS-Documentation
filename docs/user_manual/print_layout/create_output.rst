@@ -63,6 +63,25 @@ and that map overview items are also correctly linked to a map.
 If the checks fail, you are shown a nice warning advising you of the issue.
 
 
+.. index:: Privacy
+.. _export_privacy:
+
+Privacy of exported point locations
+-----------------------------------
+
+.. warning:: **Anti-aliasing is on by default and can leak point locations**
+
+   Anti-aliasing blends the edge of a symbol with the background to make
+   it appear smooth.
+   Studies have shown that those anti-aliasing artifacts can be exploited
+   to recover the individual locations represented by the symbols to
+   within meter precision, even on small-scale maps such as one covering
+   a whole country (`Du et al., ACM CCS 2026
+   <https://arxiv.org/abs/2609.07623>`_).
+   Be careful when publishing a map of individual-level sensitive
+   locations, such as patient residences or crime incidents.
+
+
 .. _export_layout_image:
 
 Export as Image
