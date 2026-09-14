@@ -184,7 +184,7 @@ It allows you to control layers rendering and behavior within the plot canvas:
 * Press |addGroup| :sup:`Add Group` to add individual groups for allowing multiple layers
   to be shown or hidden from the elevation profile at once.
   Selecting multiple layers or groups in the view and right click also allows to
-  :guilabel:`Group selected`items.
+  :guilabel:`Group selected` items.
   Right-clicking over a group allows to :guilabel:`Rename Group` or :guilabel:`Remove Group`.
   A removed group will remove the group node from the layers tree while keeping its child layers
 * Drag-and-drop layers or groups up or down to change the rendering order
