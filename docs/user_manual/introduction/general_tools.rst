@@ -213,7 +213,7 @@ Some of these entries are not available when multiple selections are made
   Option                                                            Group         Vector Layer    Raster Layer    Mesh Layer    Point Cloud Layer    3D Layer
  ================================================================= ============= =============== =============== ============= ==================== =============
   |zoomToLayer| :guilabel:`Zoom to Layer(s)/Group`                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  |zoomToLayer| :guilabel:`Zoom to Selection`                                     |checkbox|
+  |zoomToLayer| :guilabel:`Zoom to Selection` (:kbd:`Ctrl+J`)                     |checkbox|
   |inOverview| :guilabel:`Show in Overview`                                       |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Show Feature Count`                                                  |checkbox|
   |labelingSingle| :guilabel:`Show Label`                                         |checkbox|                      |checkbox|
@@ -224,58 +224,58 @@ Some of these entries are not available when multiple selections are made
   |createTable|:guilabel:`Create Raster Attribute Table`                                         |checkbox|
   |openTable|:guilabel:`Open Raster Attribute Table`                                              |checkbox|
   |addTable|:guilabel:`Load Raster Attribute Table from VAT.DBF`                                  |checkbox|
-  |dbManager| :guilabel:`Update SQL Layer...`                                     |checkbox|
-  |dbManager| :guilabel:`Execute SQL...`                                          |checkbox|
-  |addVirtualLayer| :guilabel:`Edit Virtual Layer...`                             |checkbox|
+  |dbManager| :guilabel:`Update SQL Layer…`                                       |checkbox|
+  |dbManager| :guilabel:`Execute SQL…`                                            |checkbox|
+  |addVirtualLayer| :guilabel:`Edit Virtual Layer…`                               |checkbox|
   |addGroup| :guilabel:`Add Group`                                  |checkbox|
   |duplicateLayer| :guilabel:`Duplicate Layer`                                    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  |removeLayer| :guilabel:`Remove Layer/Group...`                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  |removeLayer| :guilabel:`Remove Layer/Group…` (:kbd:`Ctrl+D`)     |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Move Out of Group`                                                   |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Move to Top`                                           |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Move to Bottom`                                        |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Check and all its Parents`                                           |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Group Selected`                                                      |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  |openTable| :guilabel:`Open Attribute Table`                                    |checkbox|
+  |openTable| :guilabel:`Open Attribute Table` (:kbd:`F6`)                        |checkbox|
   |toggleEditing| :guilabel:`Toggle Editing`                                      |checkbox|                      |checkbox|
   |allEdits| :menuselection:`Current Edits -->`                                   |checkbox|                      |checkbox|
-  :guilabel:`Filter...`                                                           |checkbox|      |checkbox|                    |checkbox|
-  :guilabel:`Change Data Source...`                                               |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :guilabel:`Repair Data Source...`                                               |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Filter…` (:kbd:`Ctrl+F`)                                             |checkbox|      |checkbox|                    |checkbox|
+  :guilabel:`Change Data Source…`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Repair Data Source…`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :menuselection:`Actions on selections -->` (in edit mode)                       |checkbox|
   :menuselection:`--> Duplicate Feature`                                          |checkbox|
   :menuselection:`--> Duplicate Feature and Digitize`                             |checkbox|
-  :guilabel:`Set Layer Scale Visibility...`                                       |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :guilabel:`Set Layer Scale Visibility…`                                         |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :guilabel:`Zoom to Visible Scale`                                               |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :menuselection:`Layer CRS -->`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Set Project CRS from Layer`                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`--> Set to..` (recent CRSs)                                                                     |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`--> Set Layer CRS...`                                           |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`Set Group CRS...`                                 |checkbox|
-  :guilabel:`Set Group WMS Data...`                                 |checkbox|
+  :menuselection:`--> Set to…` recent CRSs                                                                        |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Set Layer CRS…` (:kbd:`Shift+Ctrl+C`)                       |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`Set Group CRS…`                                   |checkbox|
+  :guilabel:`Set Group WMS Data…`                                   |checkbox|
   |unchecked| :guilabel:`Mutually Exclusive Group`                  |checkbox|
-  :guilabel:`Check and all its children (Ctrl-click)`               |checkbox|
-  :guilabel:`Uncheck and all its children (Ctrl-click)`             |checkbox|
+  :guilabel:`Check and all its children` (:kbd:`Ctrl-click`)        |checkbox|
+  :guilabel:`Uncheck and all its children` (:kbd:`Ctrl-click`)      |checkbox|
   :guilabel:`Make Permanent`                                                      |checkbox|
   :menuselection:`Export -->`                                       |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`--> Save As...`                                                                 |checkbox|
-  :menuselection:`--> Save Features As...`                                        |checkbox|
-  :menuselection:`--> Save Selected Features As...`                               |checkbox|
-  :menuselection:`--> Save As Layer Definition File...`             |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`--> Save As QGIS Layer Style File...`                           |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Save As…`                                                                   |checkbox|
+  :menuselection:`--> Save Features As…`                                          |checkbox|
+  :menuselection:`--> Save Selected Features As…`                                 |checkbox|
+  :menuselection:`--> Save As Layer Definition File…`               |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Save As QGIS Layer Style File…`                             |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`Styles -->`                                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Copy Style`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Paste Style`                                  |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :menuselection:`--> Add...`                                                     |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`--> Rename Current...`                                          |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Add…`                                                       |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :menuselection:`--> Rename Current…`                                            |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Load Style`                                   |checkbox|    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
   :menuselection:`--> Save Style`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :menuselection:`--> Edit symbol...`                                             |checkbox|
+  :menuselection:`--> Edit symbol…`                                               |checkbox|
   :menuselection:`--> Copy Symbol`                                                |checkbox|
   :menuselection:`--> Paste Symbol`                                               |checkbox|
-  :guilabel:`Add Layer Notes...`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
-  :guilabel:`Edit Layer Notes...`                                                 |checkbox|      |checkbox|      |checkbox|    |checkbox|
+  :guilabel:`Add Layer Notes…`                                                    |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :guilabel:`Edit Layer Notes…`                                                   |checkbox|      |checkbox|      |checkbox|    |checkbox|
   :guilabel:`Remove Layer Notes`                                                  |checkbox|      |checkbox|      |checkbox|    |checkbox|
-  :guilabel:`Properties...`                                                       |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
+  :guilabel:`Properties…`                                                         |checkbox|      |checkbox|      |checkbox|    |checkbox|           |checkbox|
  ================================================================= ============= =============== =============== ============= ==================== =============
 
 
