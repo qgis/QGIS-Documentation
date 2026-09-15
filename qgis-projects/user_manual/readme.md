@@ -44,3 +44,7 @@ The following list
 ## Processing
 
 * `modeldesigner.qgz`
+
+## 3D
+
+* `3d_lux_clipped_project_3.44.qgz`
