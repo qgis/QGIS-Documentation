@@ -953,12 +953,13 @@ you will be able to interact with any feature annotation:
 
   * :kbd:`Shift+key` for big movement
   * :kbd:`Alt+key` for ``1 px`` movement
-* **Resize and rotation**: when an item is rotated, its selection band
-  rotates together with it.
+* **Resize and rotation**:
   Move over an annotation and squares (the resize handles) are displayed
   on its corners and mid-segments.
   Left-click a square, drag to resize.
   For rotation, left-click the rotation handle, drag to rotate.
+  When an item is rotated, its selection band
+  rotates together with it.
 * **Geometry modification**: move over an annotation and purple squares are displayed
   on nodes of its underlying geometry.
   Left-click on the square, move and click again.
@@ -1021,6 +1022,7 @@ in the :guilabel:`Layer styling` panel.
 * For text at point, text inside rectangle and picture annotations,
   you can configure whether the text should :guilabel:`Ignore map rotation` or :guilabel:`Rotate with map`.
   In both cases, a custom :guilabel:`Angle` can be set for the feature orientation.
+  Its value is clockwise relative to the map canvas rotation.
   You can also :guilabel:`Show callout`
   when the picture or text anchor point is offset from its default placement.
   To create a callout for an annotation:
