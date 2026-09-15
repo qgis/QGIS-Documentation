@@ -12,7 +12,7 @@ To open the log, click on the balloon at the bottom right, on the QGIS status ba
 Some algorithms might leave here information about their execution.
 For instance, those algorithms that call an external application
 usually log the console output of that application to this entry.
-If you have a look at it, you will see that the output of the SAGA algorithm that we just run
+If you have a look at it, you will see that the output of the GRASS algorithm that we just run
 (and that fails to execute because input data was not correct) is stored here.
 
 This is helpful to understand what is going on.
@@ -33,6 +33,8 @@ and you have the full history of your working session.
 Here is how that history looks like:
 
 .. figure:: img/log/history.png
+   :align: center
+   :width: 50%
 
 This can be very useful when starting working with the console, to learn about the syntax of algorithms.
 We will use it when we discuss how to run analysis commands from the console.
