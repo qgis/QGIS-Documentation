@@ -118,7 +118,8 @@ as well as the following extra parameters:
    ":ref:`OPACITIES <wms_opacities>`", "No", "Opacity for layer or group"
    ":ref:`FILTER <wms_filter>`", "No", "Subset of features"
    ":ref:`SELECTION <wms_selection>`", "No", "Highlight features"
-   "FILE_NAME", "No", "File name of the downloaded file
+   "FILE_NAME", "No", "File name of the downloaded file"
+   ":ref:`TIME <wms_time>`", "No", "Temporal filter for time-enabled layers"
 
    Only for ``FORMAT=application/dxf``"
    ":ref:`FORMAT_OPTIONS <wms_getmap_formatoptions>`", "No", "Options of the specified file format
@@ -541,6 +542,39 @@ and **Romania** they're highlighted in yellow.
   :align: center
 
   Server response to a GetMap request with SELECTION parameter
+
+
+.. _wms_time:
+
+TIME
+^^^^^
+
+The ``TIME`` parameter can be used to filter features on layers with
+temporal properties enabled, based on a date/datetime value or interval.
+
+Supported formats:
+
+- ``TIME=2022-06-01T00:00:00``: single instant (exact point in time)
+- ``TIME=2022-01-01/2022-06-01``: closed interval
+- ``TIME=../2022-06-01``: open-start interval (up to date)
+- ``TIME=2022-01-01/..``: open-end interval (from date onward)
+
+URL example:
+
+.. code-block:: text
+
+    http://localhost/qgisserver?
+    SERVICE=WMS
+    &REQUEST=GetMap
+    &VERSION=1.3.0
+    &LAYERS=earthquake
+    &TIME=2026-08-11T00:00:00/2026-08-11T01:00:00
+    &...
+
+.. note::
+
+   If a layer has a manually configured ``TIME`` dimension (legacy method), it will
+   be prioritised over the layer's Temporal Properties.
 
 .. _wms_getmap_formatoptions:
 
