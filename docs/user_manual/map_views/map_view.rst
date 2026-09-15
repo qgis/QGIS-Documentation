@@ -1307,6 +1307,12 @@ It's also possible to directly export the current rendering, without
 a layout.
 This quick "screenshot" of the map view has some convenient features.
 
+.. warning:: **Exported maps can leak the location of individual points**
+
+   Be careful when exporting a map of sensitive point locations: the
+   anti-aliased edges of the symbols encode the sub-pixel position of each
+   point. See :ref:`export_privacy`.
+
 To export the map canvas with the current rendering:
 
 #. Go to :menuselection:`Project --> Import/Export`
