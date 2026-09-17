@@ -7,6 +7,7 @@
 # Translators:
 # Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Alejandra Duque Ropero, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Alejandra Duque Ropero, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -80,6 +81,19 @@ msgstr ""
 msgid "Let's now dive into the process."
 msgstr "Buttiamoci ora nel processo."
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:29
+msgid ""
+"Documentation sources are stored using the Git version control system and "
+"are available on GitHub at https://github.com/qgis/QGIS-Documentation. A "
+"list of issues to fix and features to explain can be found at "
+"https://github.com/qgis/QGIS-Documentation/issues."
+msgstr ""
+"Il sistema di controllo versione Git serve a memorizzare i sorgenti della "
+"documentazione, disponibili su GitHub all'indirizzo "
+"https://github.com/qgis/QGIS-Documentation. Un elenco di problemi in attesa "
+"di correzione e di funzionalità da spiegare è disponibile su "
+"https://github.com/qgis/QGIS-Documentation/issues."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:34
 msgid ""
 "If you are a first-time contributor and do not know where to start from, you"
@@ -130,6 +144,18 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:53
 msgid "create, update, or delete branches"
 msgstr "creare, aggiornare o eliminare rami"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:55
+msgid ""
+"If you are not yet familiar with Git and GitHub vocabulary, you may want to "
+"read the GitHub `Hello-world <https://docs.github.com/en/get-started/start-"
+"your-journey/hello-world>`_ project to learn some basic vocabulary and "
+"actions that will be used below."
+msgstr ""
+"Se non hai ancora familiarità con il vocabolario di Git e GitHub, potresti "
+"voler leggere il progetto GitHub `Hello-world "
+"<https://docs.github.com/en/get-started/start-your-journey/hello-world>`_ "
+"per imparare alcuni vocaboli e azioni di base che verranno usati di seguito."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:59
 msgid "**If you are fixing a reported issue**"
@@ -232,6 +258,20 @@ msgstr ""
 "Questo aprirà il file nel ramo ``qgis:master`` con un messaggio in cima alla"
 " pagina che ti dice che non hai accesso in scrittura a questo repo e le tue "
 "modifiche saranno applicate a un nuovo ramo del tuo repository."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:104
+msgid ""
+"If you do have write access to the QGIS repository, no message is displayed "
+"and your changes will likely be saved directly in the main repository "
+"instead of your fork. However, to keep the repository clean, it is "
+"recommended that even contributors with write access work from their forks "
+"when editing documentation."
+msgstr ""
+"Se hai accesso in scrittura al repository di QGIS, non viene mostrato alcun "
+"messaggio e le tue modifiche verranno probabilmente salvate direttamente nel"
+" repository principale invece che nel tuo fork. Tuttavia, per mantenere "
+"pulito il repository, si consiglia che anche i collaboratori con accesso in "
+"scrittura lavorino dal proprio fork quando modificano la documentazione."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:109
 msgid ""
@@ -1079,6 +1119,20 @@ msgstr "correggere possibili conflitti con il repo principale"
 msgid "build the documentation to test your changes"
 msgstr "costruire la documentazione per testare le tue modifiche"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:416
+msgid ""
+"You need to `install Git <https://git-scm.com/downloads>`_ on your hard "
+"drive in order to get access to more advanced and powerful tools and have a "
+"local copy of the repository. Some basics you may often need are exposed "
+"below. You'll also find rules to care about even if you opt for the web "
+"interface."
+msgstr ""
+"Devi `installare Git <https://git-scm.com/downloads>`_ sul tuo disco rigido "
+"per accedere a strumenti più avanzati e potenti e avere una copia locale del"
+" repository. Di seguito vengono illustrate alcune nozioni di base che "
+"potresti usare spesso. Troverai anche regole da tenere presenti anche se "
+"scegli l'interfaccia web."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:421
 msgid ""
 "In the code samples below, lines beginning with ``$`` show commands you "
@@ -1102,6 +1156,16 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:431
 msgid "You can clone  your QGIS repository using the web URL as follows:"
 msgstr "Puoi copiare il tuo repository QGIS usando l'URL web come segue:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:439
+msgid ""
+"The former command line is simply an example. You should adapt both the path"
+" and the repository URL, replacing ``<YourName>`` with your GitHub user "
+"name."
+msgstr ""
+"La linea di comando precedente è solo un esempio. Devi adattare sia il "
+"percorso sia l'URL del repository, sostituendo ``1`` con il tuo nome utente "
+"GitHub."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:443
 msgid "Check the following:"
@@ -1148,6 +1212,21 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:474
 msgid "Check the following if you used the SSH protocol:"
 msgstr "Verifica quanto segue se hai usato il protocollo SSH:"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:486
+msgid ""
+"You can start to work here but in the long term process you will get a lot "
+"of issues when you will push your contribution (called Pull Request in "
+"GitHub process) as the master branch of the qgis/QGIS-Documentation "
+"repository will diverge from your local/remote repository. You then need to "
+"keep track of the main remote repository and work with branches."
+msgstr ""
+"Puoi iniziare a lavorare qui ma, a lungo termine, incontrerai molti problemi"
+" quando farai il push del tuo contributo (chiamato Pull Request, ovvero "
+"richiesta di pull, nel processo di GitHub), perché il branch master del "
+"repository qgis/QGIS-Documentation divergerà dal tuo repository "
+"locale/remoto. Devi quindi tenere traccia del repository remoto principale e"
+" lavorare con i branch."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:493
 msgid "Add another remote repository"
@@ -1302,9 +1381,32 @@ msgstr ""
 msgid "Share your Changes"
 msgstr "Condividere i tuoi cambiamenti"
 
+#: ../../docs/documentation_guidelines/first_contribution.rst:611
+msgid ""
+"Now you can go to your GitHub repository and :ref:`create a Pull Request "
+"<sharing_changes>` as exposed in a previous section. Ensure you create a PR "
+"from your branch to the remote branch you are targeting in the official "
+"QGIS-Documentation repository."
+msgstr ""
+"Ora puoi andare al tuo repository GitHub e :ref:`creare una Pull Request "
+"<sharing_changes>` come illustrato in una sezione precedente. Assicurati di "
+"creare una PR dal tuo branch al branch remoto di destinazione nel repository"
+" ufficiale QGIS-Documentation."
+
 #: ../../docs/documentation_guidelines/first_contribution.rst:619
 msgid "Clean-up your local and remote repository"
 msgstr "Pulire il tuo repository locale e remoto"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:621
+msgid ""
+"After your PR has been merged into the official QGIS-Documentation, you can "
+"delete your branch. If you work a lot this way, in few weeks you will get a "
+"lot of useless branches. So keep your repository clean this way:"
+msgstr ""
+"Dopo che la tua PR è stata fusa nella QGIS-Documentation ufficiale, puoi "
+"eliminare il tuo branch. Se lavori molto in questo modo, in poche settimane "
+"accumulerai molti branch inutili. Quindi mantieni pulito il tuo repository "
+"così:"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:632
 msgid ""
@@ -1316,6 +1418,18 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:635
 msgid "Further reading"
 msgstr "Altre letture"
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:637
+msgid ""
+"Other than the GitHub web interface and the Git command line tools exposed "
+"above, there are also `GUI applications <https://git-"
+"scm.com/downloads/guis>`_ you can use to create and manage your "
+"contributions to the documentation."
+msgstr ""
+"Oltre all'interfaccia web di GitHub e agli strumenti da linea di comando di "
+"Git illustrati sopra, esistono anche `applicazioni GUI <https://git-"
+"scm.com/downloads/guis>`_ che puoi usare per creare e gestire i tuoi "
+"contributi alla documentazione."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:643
 msgid ""
@@ -1341,6 +1455,25 @@ msgstr ""
 "`Resolving a merge conflict on GitHub <https://docs.github.com/en/pull-"
 "requests/collaborating-with-pull-requests/addressing-merge-"
 "conflicts/resolving-a-merge-conflict-on-github>`_."
+
+#: ../../docs/documentation_guidelines/first_contribution.rst:651
+msgid ""
+"if the conflict involves files renaming or removal, then you'd need to "
+"resolve the conflict using Git command lines. Typically, you have to first "
+"rebase your branch over the target branch using ``git rebase targetBranch`` "
+"call and fix the conflicts that are reported. Read more at `Resolving a "
+"merge conflict using the command line <https://docs.github.com/en/pull-"
+"requests/collaborating-with-pull-requests/addressing-merge-"
+"conflicts/resolving-a-merge-conflict-using-the-command-line>`_"
+msgstr ""
+"Se il conflitto riguarda file da rinominare o rimuovere, dovrai risolverlo "
+"usando le linee di comando di Git. In genere, devi prima eseguire il rebase "
+"del tuo branch sul branch di destinazione con il comando ``git rebase "
+"targetBranch`` e procedere alla correzione dei conflitti segnalati. Leggi di"
+" più su `Risolvere un conflitto nel fondere i branch usando la linea di "
+"comando <https://docs.github.com/en/pull-requests/collaborating-with-pull-"
+"requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-"
+"command-line>`_"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:657
 msgid ""
