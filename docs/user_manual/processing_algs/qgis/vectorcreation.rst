@@ -753,7 +753,7 @@ Parameters
      - ``INPUT_VECTOR``
      - [vector: polygon]
      - Input polygon vector layer
-   * - **Points inside polygons**
+   * - **Pixel centroids**
      - ``OUTPUT``
      - [vector: point]
 
@@ -776,7 +776,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Points inside polygons**
+   * - **Pixel centroids**
      - ``OUTPUT``
      - [vector: point]
      - Resulting point layer of pixel centroids
