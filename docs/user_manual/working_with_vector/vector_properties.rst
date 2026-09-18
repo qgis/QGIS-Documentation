@@ -2253,6 +2253,8 @@ To display a layer in 3D, select from the combobox at the top of the tab, either
 * :guilabel:`Single symbol`: features are rendered using a common 3D symbol
   whose properties can be :ref:`data-defined <data_defined>` or not.
   Read details on :ref:`setting a 3D symbol <3dsymbols>` for each layer geometry type.
+* :guilabel:`Categorized`: features are rendered using user-defined symbols that visually represent their values.
+  See :ref:`Categorized renderer <categorized_renderer>` for detailed usage.
 * :guilabel:`Rule-based`: multiple symbol configurations can be defined and applied
   selectively based on expression filters and scale range.
   More details on how-to at :ref:`Rule-based rendering <rule_based_rendering>`.
