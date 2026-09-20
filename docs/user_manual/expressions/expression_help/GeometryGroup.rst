@@ -92,6 +92,11 @@ Applies a dash pattern to a geometry, returning a MultiLineString geometry which
        * ``geom_to_wkt(apply_dash_pattern(geom_from_wkt('LINESTRING(1 1, 10 1)'), array(3, 1), start_rule:='half_dash'))`` → MultiLineString ((1 1, 2.5 1),(3.5 1, 6.5 1),(7.5 1, 10 1, 10 1))
 
 
+.. figure:: expression_help/img/apply_dash_pattern.*
+   :align: center
+
+   The continuous blue input line (left) and the red MultiLineString returned by applying a dash pattern (right).
+
 .. end_apply_dash_pattern_section
 
 .. _expression_function_GeometryGroup_$area:
@@ -253,6 +258,11 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
        * ``bounds_height(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 1
 
 
+.. figure:: expression_help/img/bounds_height.*
+   :align: center
+
+   The red vertical arrow shows the height of the gray dashed bounding box around the blue input geometry (1 map unit).
+
 .. end_bounds_height_section
 
 .. _expression_function_GeometryGroup_bounds_width:
@@ -273,6 +283,11 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
      - * ``bounds_width(@geometry)`` → width of bounding box of the current feature's geometry
        * ``bounds_width(geom_from_wkt('Polygon((1 1, 0 0, -1 1, 1 1))'))`` → 2
 
+
+.. figure:: expression_help/img/bounds_width.*
+   :align: center
+
+   The red horizontal arrow shows the width of the gray dashed bounding box around the blue input geometry (2 map units).
 
 .. end_bounds_width_section
 
@@ -380,6 +395,11 @@ Returns a closed line string of the input line string by appending the first poi
        * ``geom_to_wkt(close_line(geom_from_wkt('LINESTRING(0 0, 1 0, 1 1, 0 0)')))`` → 'LineString (0 0, 1 0, 1 1, 0 0)'
 
 
+.. figure:: expression_help/img/close_line.*
+   :align: center
+
+   The open blue input line (left) and the red LineString closed by appending its first point to the end (right).
+
 .. end_close_line_section
 
 .. _expression_function_GeometryGroup_closest_point:
@@ -445,6 +465,11 @@ Geometry parts are specified as an array of geometry parts.
      - * ``geom_to_wkt(collect_geometries(array(make_point(1,2), make_point(3,4), make_point(5,6))))`` → 'MultiPoint ((1 2),(3 4),(5 6))'
 
 
+.. figure:: expression_help/img/collect_geometries.*
+   :align: center
+
+   Two separate LineString geometries (blue and orange, left) are collected without changing or connecting them into a single red MultiLineString containing two parts (right).
+
 .. end_collect_geometries_section
 
 .. _expression_function_GeometryGroup_combine:
@@ -466,6 +491,11 @@ Returns the combination of two geometries.
      - * ``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4, 5 5)' ), geom_from_wkt( 'LINESTRING(3 3, 4 4, 2 1)' ) ) )`` → 'MULTILINESTRING((4 4, 2 1), (3 3, 4 4), (4 4, 5 5))'
        * ``geom_to_wkt( combine( geom_from_wkt( 'LINESTRING(3 3, 4 4)' ), geom_from_wkt( 'LINESTRING(3 3, 6 6, 2 1)' ) ) )`` → 'LINESTRING(3 3, 4 4, 6 6, 2 1)'
 
+
+.. figure:: expression_help/img/combine.*
+   :align: center
+
+   Two combinations of blue and orange LineStrings: a shared segment followed by a branch produces a red MultiLineString (top), while an overlap without branching produces a red LineString (bottom).
 
 .. end_combine_section
 
