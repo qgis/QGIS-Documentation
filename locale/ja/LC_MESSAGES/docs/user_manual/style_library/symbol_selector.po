@@ -6,10 +6,10 @@
 # 
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
 # Fuka, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -76,8 +76,8 @@ msgid ""
 "shape a new global symbol. Besides, a dynamic symbol representation is "
 "updated as soon as symbol properties change."
 msgstr ""
-"あるシンボルはいくつかの :guilabel:`シンボルレイヤ` "
-"から構成されます。シンボルツリーはこれらのシンボルレイヤの重なりを表示しており、これが新しいグローバルシンボルを形作るために結合されます。また、シンボルのプロパティが変更されると、動的なシンボル表現はすぐに更新されます。"
+"ひとつのシンボルを複数の :guilabel:`シンボルレイヤ` "
+"から構成することができます。シンボルツリーはそのようなシンボルレイヤの重なりが表示され、それらは後で結合されて新しいグローバルシンボルを形成します。また、シンボルのプロパティが変更されると、動的なシンボル表現はすぐに更新されます。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:40
 msgid ""
@@ -134,7 +134,7 @@ msgstr "シンボルの設定"
 msgid ""
 "In QGIS, configuring a symbol is done in two steps: the symbol and then the "
 "symbol layer."
-msgstr "QGISでは、シンボルの設定は2ステップになっています：シンボルと、シンボルレイヤです。"
+msgstr "QGISでは、シンボルの設定は2ステップで行われます：シンボル、次にシンボルレイヤです。"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:59
 msgid "The symbol"
@@ -429,6 +429,52 @@ msgid ""
 ":guilabel:`Symbol layer types`:"
 msgstr "マーカーシンボルはポイントジオメトリの地物に適したシンボルで、いくつかの :guilabel:`シンボルレイヤタイプ` があります："
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:190
+msgid "List of marker symbol layer types"
+msgstr "マーカーシンボルレイヤタイプの一覧"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:193
+msgid ":ref:`Simple marker <simple_marker_symbol>`"
+msgstr ":ref:`シンプルマーカー <simple_marker_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:194
+msgid ":ref:`Animated marker <animated_marker>`"
+msgstr ":ref:`アニメーションマーカー <animated_marker>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:195
+msgid ":ref:`Ellipse marker <ellipse_marker_symbol>`"
+msgstr ":ref:`楕円マーカー <ellipse_marker_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:196
+msgid ":ref:`Filled marker <filled_marker_symbol>`"
+msgstr ":ref:`塗りつぶしマーカー <filled_marker_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:197
+msgid ":ref:`Font marker <font_marker_symbol>`"
+msgstr ":ref:`フォントマーカー <font_marker_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:198
+#: ../../docs/user_manual/style_library/symbol_selector.rst:317
+#: ../../docs/user_manual/style_library/symbol_selector.rst:594
+msgid ":ref:`Geometry generator <geometry_generator_symbol>`"
+msgstr ":ref:`ジオメトリジェネレータ <geometry_generator_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:199
+msgid ":ref:`Mask <mask_marker_symbol>`"
+msgstr ":ref:`マスク <mask_marker_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:200
+msgid ":ref:`Raster image marker <raster_image_marker>`"
+msgstr ":ref:`ラスタ画像マーカー <raster_image_marker>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:201
+msgid ":ref:`Vector Field marker <vector_field_marker>`"
+msgstr ":ref:`ベクタフィールドマーカー <vector_field_marker>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:202
+msgid ":ref:`SVG marker <svg_marker>`"
+msgstr ":ref:`SVGマーカー <svg_marker>`"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:208
 msgid "**Simple marker** (default)"
 msgstr "**シンプルマーカー** （デフォルト）"
@@ -626,6 +672,46 @@ msgid ""
 "Appropriate for line geometry features, line symbols have the following "
 "symbol layer types:"
 msgstr "ラインシンボルはラインジオメトリの地物に適したシンボルで、以下のようなシンボルレイヤタイプがあります："
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:311
+msgid "List of line symbol layer types"
+msgstr "ラインシンボルレイヤタイプの一覧"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:314
+msgid ":ref:`Simple line <simple_line_symbol>`"
+msgstr ":ref:`直線 <simple_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:315
+msgid ":ref:`Arrow <arrow_symbol>`"
+msgstr ":ref:`矢印 <arrow_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:316
+msgid ":ref:`Filled line <filled_line_symbol>`"
+msgstr ":ref:`塗りつぶし線 <filled_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:318
+msgid ":ref:`Hashed line <hashed_line_symbol>`"
+msgstr ":ref:`ハッシュ線 <hashed_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:319
+msgid ":ref:`Interpolated line <interpolated_line_symbol>`"
+msgstr ":ref:`補間された線 <interpolated_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:320
+msgid ":ref:`Linear referencing <linear_referencing_symbol>`"
+msgstr ":ref:`線に関する参照点 <linear_referencing_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:321
+msgid ":ref:`Lineburst <lineburst_symbol>`"
+msgstr ":ref:`直線バースト <lineburst_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:322
+msgid ":ref:`Marker line <marker_line_symbol>`"
+msgstr ":ref:`マーカー線 <marker_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:323
+msgid ":ref:`Raster line <raster_line_symbol>`"
+msgstr ":ref:`ラスタ線 <raster_line_symbol>`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:330
 msgid "**Simple line** (default)"
@@ -1074,6 +1160,90 @@ msgid ""
 "Appropriate for polygon geometry features, fill symbols have also several "
 "symbol layer types:"
 msgstr "ポリゴンジオメトリの地物に適するように、塗りつぶしシンボルにも以下のような様々なシンボルレイヤタイプがあります："
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:583
+msgid "List of fill symbol layer types"
+msgstr "塗りつぶしシンボルレイヤタイプの一覧"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:588
+msgid "For polygon interior"
+msgstr "ポリゴンの内側"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:588
+msgid "For polygon ring"
+msgstr "ポリゴンリング"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:590
+msgid ":ref:`Simple fill <simple_fill_symbol>`"
+msgstr ":ref:`シンプル塗りつぶし <simple_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:590
+msgid ":ref:`Outline: Arrow <outline_arrow_symbol>`"
+msgstr ":ref:`アウトライン: 矢印 <outline_arrow_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:592
+msgid ":ref:`Centroid fill <centroid_fill_symbol>`"
+msgstr ":ref:`重心塗りつぶし <centroid_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:592
+msgid ":ref:`Outline: Filled line <outline_filled_line_symbol>`"
+msgstr ":ref:`アウトライン: 塗りつぶし線 <outline_filled_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:594
+msgid ":ref:`Outline: Hashed line <outline_hashed_line_symbol>`"
+msgstr ":ref:`アウトライン: ハッシュ線 <outline_hashed_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:596
+msgid ":ref:`Gradient fill <gradient_fill_symbol>`"
+msgstr ":ref:`グラデーション塗りつぶし <gradient_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:596
+msgid ":ref:`Outline: Interpolated line <outline_interpolated_line_symbol>`"
+msgstr ":ref:`アウトライン: 補間された線 <outline_interpolated_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:598
+msgid ":ref:`Line pattern fill <line_pattern_fill_symbol>`"
+msgstr ":ref:`ラインパターン塗りつぶし <line_pattern_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:598
+msgid ":ref:`Outline: Linear referencing <outline_linear_referencing_symbol>`"
+msgstr ":ref:`アウトライン: 線に関する参照点 <outline_linear_referencing_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:600
+msgid ":ref:`Point pattern fill line <point_pattern_fill_symbol>`"
+msgstr ":ref:`ポイントパターン塗りつぶし <point_pattern_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:600
+msgid ":ref:`Outline: Lineburst <outline_lineburst_symbol>`"
+msgstr ":ref:`アウトライン: 直線バースト <outline_lineburst_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:602
+msgid ":ref:`Random marker fill <random_marker_fill>`"
+msgstr ":ref:`マーカーのランダムな塗りつぶし <random_marker_fill>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:602
+msgid ":ref:`Outline: Marker line <outline_marker_line_symbol>`"
+msgstr ":ref:`アウトライン: マーカー線 <outline_marker_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:604
+msgid ":ref:`Raster image <raster_image_fill_symbol>`"
+msgstr ":ref:`ラスタ画像塗りつぶし <raster_image_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:604
+msgid ":ref:`Outline: Raster line <outline_raster_line_symbol>`"
+msgstr ":ref:`アウトライン: ラスタ線 <outline_raster_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:606
+msgid ":ref:`SVG fill <svg_fill_symbol>`"
+msgstr ":ref:`SVG塗りつぶし <svg_fill_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:606
+msgid ":ref:`Outline: Simple line <outline_simple_line_symbol>`"
+msgstr ":ref:`アウトライン: 塗りつぶし線 <outline_simple_line_symbol>`"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:608
+msgid ":ref:`Shapeburst fill <shapeburst_fill_symbol>`"
+msgstr ":ref:`形状バースト塗りつぶし <shapeburst_fill_symbol>`"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:614
 msgid "**Simple fill** (default): fills a polygon with a uniform color"
