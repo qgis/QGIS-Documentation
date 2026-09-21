@@ -1996,7 +1996,7 @@ Basic parameters
      - ``UNIQUE_ID``
      - [tablefield: any]
      - Field storing unique values for feature identification.
-   * - **Minimum angle**
+   * - **Minimum angle (in degrees)**
      - ``MIN_ANGLE``
      - [numeric: double]
      - Allowed minimum angle between adjacent segments in a feature's geometry.

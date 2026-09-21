@@ -1303,7 +1303,7 @@ Parameters
      - ``INPUT``
      - [vector: geometry]
      - Input vector layer
-   * - **Threshold**
+   * - **Threshold (0-1, where 1 is equivalent with Convex Hull)**
      - ``ALPHA``
      - [numeric: double]
 
@@ -1387,7 +1387,7 @@ Parameters
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
-   * - **Threshold**
+   * - **Threshold (0-1, where 1 is equivalent with Convex Hull)**
      - ``ALPHA``
      - [numeric: double]
 
@@ -1405,7 +1405,7 @@ Parameters
 
        Default: True
      - Choose whether to allow holes in the final concave hull
-   * - **Split multipart geometry into singlepart geometries**
+   * - **Split multipart geometry into singleparts**
      - ``NO_MULTIGEOMETRY``
      - [boolean]
 
