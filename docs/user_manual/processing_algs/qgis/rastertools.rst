@@ -544,10 +544,11 @@ Basic parameters
      - [enumeration]
 
        Default: 0
-     - One of:
+     - Output image format for the rendered tiles. One of:
 
        * 0 --- PNG
        * 1 --- JPG
+       * 2 --- WEBP
    * - **Tile width**
 
        Optional
@@ -767,10 +768,11 @@ Basic parameters
      - [enumeration]
 
        Default: 0
-     - One of:
+     - Output image format for the rendered tiles. One of:
 
        * 0 --- PNG
        * 1 --- JPG
+       * 2 --- WEBP
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
