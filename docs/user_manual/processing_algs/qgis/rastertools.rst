@@ -539,12 +539,6 @@ Basic parameters
 
        Default: QColor(0, 0, 0, 0)
      - Choose the background color for the tiles
-   * - **Enable antialiasing**
-     - ``ANTIALIAS``
-     - [boolean]
-
-       Default: True
-     - Determines if antialiasing should be enabled
    * - **Tile format**
      - ``TILE_FORMAT``
      - [enumeration]
@@ -554,27 +548,6 @@ Basic parameters
 
        * 0 --- PNG
        * 1 --- JPG
-
-   * - **Quality (JPG only)**
-
-       Optional
-     - ``QUALITY``
-     - [numeric: integer]
-
-       Default: 75
-     - Minimum 1, maximum 100.
-   * - **Metatile size**
-
-       Optional
-     - ``METATILESIZE``
-     - [numeric: integer]
-
-       Default: 4
-     - Specify a custom metatile size when generating XYZ tiles.
-       Larger values may speed up the rendering of tiles and provide
-       better labelling (fewer gaps without labels) at the expense of
-       using more memory.
-       Minimum 1, maximum 20.
    * - **Tile width**
 
        Optional
@@ -633,6 +606,40 @@ Advanced parameters
      - Name
      - Type
      - Description
+   * - **DPI**
+     - ``DPI``
+     - [numeric: integer]
+
+       Default: 96
+     - Output resolution in DPI for rendered map content.
+       Minimum 48, maximum 600.
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [boolean]
+
+       Default: True
+     - Determines if antialiasing should be applied during tile rendering.
+   * - **Quality (JPG only)**
+
+       Optional
+     - ``QUALITY``
+     - [numeric: integer]
+
+       Default: 75
+     - Image quality percentage used when tile format is set to JPG.
+       Minimum 1, maximum 100.
+   * - **Metatile size**
+
+       Optional
+     - ``METATILESIZE``
+     - [numeric: integer]
+
+       Default: 4
+     - Specify a custom metatile size when generating XYZ tiles.
+       Larger values may speed up the rendering of tiles and provide
+       better labelling (fewer gaps without labels) at the expense of
+       using more memory.
+       Minimum 1, maximum 20.
    * - **Leaflet HTML output title**
 
        Optional
@@ -707,6 +714,9 @@ as a single file in the “MBTiles” format.
 Parameters
 ..........
 
+Basic parameters
+^^^^^^^^^^^^^^^^
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -752,12 +762,6 @@ Parameters
 
        Default: QColor(0, 0, 0, 0)
      - Choose the background color for the tiles
-   * - **Enable antialiasing**
-     - ``ANTIALIAS``
-     - [boolean]
-
-       Default: True
-     - Determines if antialiasing should be enabled
    * - **Tile format**
      - ``TILE_FORMAT``
      - [enumeration]
@@ -768,6 +772,31 @@ Parameters
        * 0 --- PNG
        * 1 --- JPG
 
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **DPI**
+     - ``DPI``
+     - [numeric: integer]
+
+       Default: 96
+     - Output resolution in DPI for rendered map content.
+       Minimum 48, maximum 600.
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [boolean]
+
+       Default: True
+     - Determines if antialiasing should be applied during tile rendering.
    * - **Quality (JPG only)**
 
        Optional
@@ -775,7 +804,8 @@ Parameters
      - [numeric: integer]
 
        Default: 75
-     - Minimum 1, maximum 100.
+     - Image quality percentage used when tile format is set to JPG.
+       Minimum 1, maximum 100.
    * - **Metatile size**
 
        Optional
