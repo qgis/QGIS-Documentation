@@ -481,12 +481,13 @@ Python code
 
 Generate XYZ tiles (Directory)
 -----------------------------------
+Generates XYZ raster tiles from the current project and saves them as individual image files
+in a structured directory hierarchy ({z}/{x}/{y}.png or .jpg).
+All visible map layers from the project will be rendered into tiles
+across the specified extent and zoom range.
 
-Generates raster “XYZ” tiles using the current QGIS project
-as individual images to a directory structure.
-
-Optionally, a Leaflet HTML output file using the generated
-tiles as a map layer could be created.
+Optionally, a standalone Leaflet HTML file can be generated
+for instant web previewing of the tiles.
 
 Parameters
 ..........
@@ -506,7 +507,7 @@ Basic parameters
    * - **Extent (xmin, xmax, ymin, ymax)**
      - ``EXTENT``
      - [extent]
-     - Specify the extent of the tiles.
+     - Specify the spatial extent of the area for tile generation.
        It will internally be extended to a multiple of the tile size.
 
        .. include:: ../algs_include.rst
@@ -518,19 +519,20 @@ Basic parameters
      - [numeric: integer]
 
        Default: 12
-     - Minimum 0, maximum 25.
+     - Minimum zoom level for generated tiles.
+       Lower zoom levels cover broader geographic areas at lower spatial resolution.
+       Must be less than or equal to the maximum zoom level.
+       Minimum 0, maximum 25.
    * - **Maximum zoom**
      - ``ZOOM_MAX``
      - [numeric: integer]
 
        Default: 12
-     - Minimum 0, maximum 25.
-   * - **DPI**
-     - ``DPI``
-     - [numeric: integer]
-
-       Default: 96
-     - Minimum 48, maximum 600.
+     - Maximum zoom level for generated tiles.
+       Higher zoom levels capture finer map details and higher resolution,
+       but exponentially increase total tile count, storage requirements, and rendering time.
+       Must be greater than or equal to the minimum zoom level.
+       Minimum 0, maximum 25.
    * - **Background color**
 
        Optional
@@ -556,7 +558,8 @@ Basic parameters
      - [numeric: integer]
 
        Default: 256
-     - Minimum 1, maximum 4096.
+     - Width of each tile image in pixels.
+       Minimum 1, maximum 4096.
    * - **Tile height**
 
        Optional
@@ -564,13 +567,14 @@ Basic parameters
      - [numeric: integer]
 
        Default: 256
-     - Minimum 1, maximum 4096.
+     - Height of each tile image in pixels.
+       Minimum 1, maximum 4096.
    * - **Use inverted tile Y axis (TMS conventions)**
      - ``TMS_CONVENTION``
      - [boolean]
 
        Default: False
-     -
+     - Inverts the Y tile coordinate naming convention to follow TMS format.
    * - **Output directory**
      - ``OUTPUT_DIRECTORY``
      - [folder]
@@ -715,8 +719,10 @@ Python code
 Generate XYZ tiles (MBTiles)
 ---------------------------------
 
-Generates raster “XYZ” tiles using the current QGIS project
-as a single file in the “MBTiles” format.
+Generates XYZ raster tiles from the current project
+and packages them into a single, portable MBTiles (SQLite) database file.
+All visible map layers from the project will be rendered
+into tiles across the specified extent and zoom range.
 
 Parameters
 ..........
@@ -736,7 +742,7 @@ Basic parameters
    * - **Extent (xmin, xmax, ymin, ymax)**
      - ``EXTENT``
      - [extent]
-     - Specify the extent of the tiles.
+     - Specify the spatial extent of the area for tile generation.
        It will internally be extended to a multiple of the tile size.
 
        .. include:: ../algs_include.rst
@@ -748,19 +754,20 @@ Basic parameters
      - [numeric: integer]
 
        Default: 12
-     - Minimum 0, maximum 25.
+     - Minimum zoom level for generated tiles.
+       Lower zoom levels cover broader geographic areas at lower spatial resolution.
+       Must be less than or equal to the maximum zoom level.
+       Minimum 0, maximum 25.
    * - **Maximum zoom**
      - ``ZOOM_MAX``
      - [numeric: integer]
 
        Default: 12
-     - Minimum 0, maximum 25.
-   * - **DPI**
-     - ``DPI``
-     - [numeric: integer]
-
-       Default: 96
-     - Minimum 48, maximum 600.
+     - Maximum zoom level for generated tiles.
+       Higher zoom levels capture finer map details and higher resolution,
+       but exponentially increase total tile count, storage requirements, and rendering time.
+       Must be greater than or equal to the minimum zoom level.
+       Minimum 0, maximum 25.
    * - **Background color**
 
        Optional
@@ -768,7 +775,7 @@ Basic parameters
      - [color]
 
        Default: QColor(0, 0, 0, 0)
-     - Choose the background color for the tiles
+     - Choose the background color for the tiles.
    * - **Tile format**
      - ``TILE_FORMAT``
      - [enumeration]
