@@ -56,8 +56,9 @@ The ``--profile`` and ``--profiles-path`` (or ``-S``) options select the
 This is how plugins, Processing scripts and settings that live in another
 profile are reached. Unlike QGIS Desktop, ``--profile`` does not create a
 missing profile: it must already exist. ``--profiles-path`` takes precedence
-over the ``QGIS_CUSTOM_CONFIG_PATH`` environment variable. Without any profile
-option, the default profile is used.
+over the ``QGIS_CUSTOM_CONFIG_PATH`` environment variable. With only
+``--profiles-path``, the default profile of that folder is used. Without any
+profile option, the default profile is used.
 
 .. note::
   Only installed plugins that advertise ``hasProcessingProvider=yes``
