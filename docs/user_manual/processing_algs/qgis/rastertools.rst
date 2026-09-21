@@ -579,8 +579,8 @@ Basic parameters
      - Specification of the output directory (for the tiles). :ref:`One of <output_parameter_widget>`:
 
        .. include:: ../algs_include.rst
-          :start-after: **directory_output_types_skip**
-          :end-before: **end_directory_output_types_skip**
+          :start-after: **directory_output_types**
+          :end-before: **end_directory_output_types**
 
    * - **Output html (Leaflet)**
 
@@ -676,8 +676,8 @@ Advanced parameters
 
        Default: False
      - An OpenStreetMap basemap layer (source: https://tile.openstreetmap.org)
-       is included in the Leaflet HTML output file. Proper map attribution is
-       added automatically.
+       is included in the Leaflet HTML output file.
+       Proper map attribution is added automatically.
 
 Outputs
 .......
@@ -779,6 +779,17 @@ Basic parameters
        * 0 --- PNG
        * 1 --- JPG
        * 2 --- WEBP
+   * - **Output**
+     - ``OUTPUT_FILE``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output :file:`mbtiles` file.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
 
 Advanced parameters
 ^^^^^^^^^^^^^^^^^^^
@@ -826,16 +837,6 @@ Advanced parameters
        better labelling (fewer gaps without labels) at the expense of
        using more memory.
        Minimum 1, maximum 20.
-   * - **Output file (for MBTiles)**
-     - ``OUTPUT_FILE``
-     - [file]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output file. :ref:`One of <output_parameter_widget>`:
-
-       .. include:: ../algs_include.rst
-          :start-after: **file_output_types_skip**
-          :end-before: **end_file_output_types_skip**
    * - **Skip empty tiles**
      - ``SKIP_EMPTY_TILES``
      - [boolean]
@@ -855,10 +856,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Output file (for MBTiles)**
+   * - **Output**
      - ``OUTPUT_FILE``
      - [file]
-     - The output file.
+     - The output :file:`.mbtiles` raster layer containing the tiles.
 
 Python code
 ...........
