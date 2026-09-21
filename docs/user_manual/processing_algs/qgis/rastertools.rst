@@ -641,6 +641,12 @@ Advanced parameters
        better labelling (fewer gaps without labels) at the expense of
        using more memory.
        Minimum 1, maximum 20.
+   * - **Skip empty tiles**
+     - ``SKIP_EMPTY_TILES``
+     - [boolean]
+
+       Default: False
+     - If true, completely empty tiles will be skipped in the output.
    * - **Leaflet HTML output title**
 
        Optional
@@ -830,7 +836,12 @@ Advanced parameters
        .. include:: ../algs_include.rst
           :start-after: **file_output_types_skip**
           :end-before: **end_file_output_types_skip**
+   * - **Skip empty tiles**
+     - ``SKIP_EMPTY_TILES``
+     - [boolean]
 
+       Default: False
+     - If true, completely empty tiles will be skipped in the output.
 
 Outputs
 .......
