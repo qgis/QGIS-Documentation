@@ -1995,7 +1995,7 @@ the following statistics are returned for each grouped value:
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:statisticsbycategories``
+**Algorithm ID**: ``native:statisticsbycategories``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**

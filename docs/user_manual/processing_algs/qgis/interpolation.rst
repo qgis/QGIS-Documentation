@@ -241,7 +241,7 @@ The final result is shown in :numref:`Figure_Heatmap_styled_processing`.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``
+**Algorithm ID**: ``native:heatmapkerneldensityestimation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -379,7 +379,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:idwinterpolation``
+**Algorithm ID**: ``native:idwinterpolation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -659,7 +659,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:tininterpolation``
+**Algorithm ID**: ``native:tininterpolation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
