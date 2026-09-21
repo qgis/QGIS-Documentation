@@ -51,10 +51,11 @@ From a command line tool, run ``qgis_process`` and you should get:
 
 
 The ``--profile`` and ``--profiles-path`` (or ``-S``) options select the
-:ref:`user profile <user_profiles>` to run with, like the
-:ref:`options of the same name <profile_commandline>` in QGIS Desktop.
-This is how plugins, Processing scripts and settings that live in another
-profile are reached. Unlike QGIS Desktop, ``--profile`` does not create a
+:ref:`user profile <user_profiles>` to run with, like the options of the same
+name in QGIS Desktop (see :ref:`--profile <profile_commandline>` and
+:ref:`--profiles-path <profiles-path_option>`). This is how Processing
+plugins, scripts and settings that live in another profile are reached.
+Unlike QGIS Desktop, ``--profile`` does not create a
 missing profile: it must already exist. ``--profiles-path`` takes precedence
 over the ``QGIS_CUSTOM_CONFIG_PATH`` environment variable. With only
 ``--profiles-path``, the default profile of that folder is used. Without any
