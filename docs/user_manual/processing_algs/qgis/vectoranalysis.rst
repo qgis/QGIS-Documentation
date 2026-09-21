@@ -513,10 +513,20 @@ Python code
 
 Distance matrix
 ---------------
-Calculates for point features distances to their nearest features in
-the same layer or in another layer.
+Creates a table containing a matrix of distances between all points in a layer
+and their neighbors in the same layer or in another layer.
+
+The algorithm supports both Cartesian and ellipsoidal distance calculations.
+Cartesian calculations are performed using a spatial index and offer high performance,
+but can give inaccurate results when used with CRSs with high distance distortion
+or where shortest distances accounting for great circles is required.
+If ellipsoidal calculations are enabled, the algorithm bypasses the spatial index
+and provides accurate geodetic measurements at a considerable performance cost.
 
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
+
+.. note:: This algorithm uses ellipsoid based measurements
+  and respects the current :ref:`ellipsoid settings <measurements_ellipsoid>`.
 
 .. seealso:: :ref:`qgisjoinbynearest`
 
@@ -566,7 +576,8 @@ Parameters
          The output matrix consists of up to *k* rows per
          input point, and each row has three columns:
          *InputID*, *TargetID* and *Distance*.
-       * 1 --- Standard (N x T) distance matrix
+       * 1 --- Standard (N x T) distance matrix: one row per input point
+         with columns for each target and distance
        * 2 --- Summary distance matrix (mean, std. dev., min,
          max): for each input point, reports statistics on
          the distances to its target points.
@@ -578,6 +589,17 @@ Parameters
      - You can choose to calculate the distance to all the
        points in the target layer (*0*) or limit to a number
        (*k*) of closest features.
+
+   * - **Use ellipsoidal calculations**
+
+       ``Added in 4.4``
+     - ``USE_ELLIPSOID``
+     - [boolean]
+
+       Default: True
+     - If checked, the algorithm will bypass the spatial index
+       and calculate ellipsoidal distances for all point combinations.
+       This will reduce performance but provide accurate results.
 
    * - **Distance matrix**
      - ``OUTPUT``
@@ -614,7 +636,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:distancematrix``
+**Algorithm ID**: ``native:distancematrix``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
