@@ -770,7 +770,7 @@ Outputs
        - ``gc_errory``: the y coordinate of the centroid of the hole.
        - ``gc_error``
        - ``UNIQUE_ID`` field: the unique ID of the input feature that has a hole.
-   * - **Polygon with holes**
+   * - **Polygons with holes**
      - ``OUTPUT``
      - [vector: polygon]
      - Output polygon layer with features containing holes.
@@ -1996,7 +1996,7 @@ Basic parameters
      - ``UNIQUE_ID``
      - [tablefield: any]
      - Field storing unique values for feature identification.
-   * - **Minimum angle**
+   * - **Minimum angle (in degrees)**
      - ``MIN_ANGLE``
      - [numeric: double]
      - Allowed minimum angle between adjacent segments in a feature's geometry.

@@ -30,7 +30,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Layer to import**
+   * - **Layer to export**
      - ``INPUT``
      - [vector: any]
      - Vector layer to add to the database
@@ -159,7 +159,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Layer to import**
+   * - **Layer to export**
      - ``INPUT``
      - [vector: any]
      - Vector layer to add to the database

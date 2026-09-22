@@ -3192,7 +3192,7 @@ Basic parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [raster]
      - Input raster layer
@@ -3426,7 +3426,7 @@ Basic parameters
      - Name
      - Type
      - Description
-   * - **Input layer**
+   * - **Input raster layers**
      - ``INPUT_RASTERS``
      - [raster] [list]
      - Input raster layer(s) to calculate the rank from.
@@ -3550,7 +3550,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **INPUT layer**
+   * - **Input layer**
      - ``INPUT``
      - [raster]
      - Input raster, representing a surface
@@ -4267,11 +4267,11 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input Layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: point]
      - Point vector layer to use for sampling
-   * - **Raster Layer**
+   * - **Raster layer**
      - ``RASTERCOPY``
      - [raster]
      - Raster layer to sample at the given point locations.
