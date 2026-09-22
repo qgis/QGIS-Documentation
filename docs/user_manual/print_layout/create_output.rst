@@ -63,6 +63,37 @@ and that map overview items are also correctly linked to a map.
 If the checks fail, you are shown a nice warning advising you of the issue.
 
 
+.. index:: Privacy
+.. _export_privacy:
+
+Privacy of exported point locations
+-----------------------------------
+
+.. warning:: **Exported maps can leak the location of individual points**
+
+   Anti-aliasing blends the edge of a symbol with the background to make
+   it appear smooth.
+   Studies have shown that those anti-aliasing artifacts can be exploited
+   to recover the individual locations represented by the symbols to
+   within meter precision, even on small-scale maps such as one covering
+   a whole country (`Du et al., ACM CCS 2026
+   <https://arxiv.org/abs/2609.07623>`_).
+   Be careful when publishing a map of individual-level sensitive
+   locations, such as patient residences or crime incidents.
+
+   To reduce this risk, please consider:
+
+   * Reducing the precision of the point locations in the layer, so that
+     any coordinates read from the exported map are no more precise than
+     the level you chose.
+   * Exporting as a raster image with :guilabel:`Enable antialiasing`
+     unchecked in the :guilabel:`Image Export Options`, since the leak
+     comes from the anti-aliased pixels at the edge of the symbol.
+   * Avoiding SVG and PDF output, and the :guilabel:`Always export as
+     vectors` option in particular, since vector output writes the exact
+     coordinates into the output map.
+
+
 .. _export_layout_image:
 
 Export as Image
