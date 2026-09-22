@@ -575,6 +575,7 @@ URL example:
 
    If a layer has a manually configured ``TIME`` dimension (legacy method), it will
    be prioritised over the layer's Temporal Properties.
+   See :ref:`QGIS Server Properties <vectorservermenu>`.
 
 .. _wms_getmap_formatoptions:
 
