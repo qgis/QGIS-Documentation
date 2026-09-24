@@ -874,7 +874,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:relief``
+**Algorithm ID**: ``native:relief``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
