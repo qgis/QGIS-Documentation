@@ -891,7 +891,7 @@ The properties dialog of an annotation layer provides the following tabs:
   * :guilabel:`Render on Terrain Surface`: enables annotations to be rendered as flat items on the terrain surface in 3D views.
   * :guilabel:`3D Billboards`: allows annotations to be rendered as 3D objects in 3D views.
     Billboards always face the camera in 3D views, improving readability during navigation
-    (only for marker and text annotations).
+    (only for marker, text and picture annotations).
 
     * :guilabel:`Relative to Terrain`: billboard elevation is relative to the terrain height.
     * :guilabel:`Absolute`: all billboard will be placed at the same elevation.
