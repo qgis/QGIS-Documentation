@@ -388,38 +388,43 @@ Feature vector model (see section :ref:`sec_create_vector`).
 Digitizing and editing a GRASS vector layer
 ===========================================
 
-GRASS vector layers can be digitized using the standard QGIS digitizing tools.
-There are however some particularities, which you should know about, due to
+When editing GRASS layers, changes are written after each operation.
+There are two main reasons for this behaviour:
 
-* GRASS topological model versus QGIS simple feature
-* complexity of GRASS model
+* It is the nature of GRASS vectors coming from conviction that user wants to do what he is doing
+  and it is better to have data saved when the work is suddenly interrupted (for example, blackout)
+* Necessity for effective editing of topological data is visualized information about topological correctness,
+  such information can only be acquired from GRASS vector map if changes are written to the map.
+
+It is however, possible to undo/redo or discard all changes when closing editing.
+If changes are undone or discarded, original state is rewritten in vector map and attribute tables.
+
+Simultaneous editing of multiple layers within the same vector at the same time is not supported.
+This is mainly due to the impossibility of handling multiple undo stacks for a single data source.
+
+On Linux and macOS only one GRASS layer can be edited at a time.
+This is due to a bug in GRASS which does not allow to close database drivers in random order.
+This is being solved with GRASS developers.
+
+Geometry digitizing
+-------------------
+
+GRASS vector layers can be digitized using the standard QGIS :ref:`digitizing tools <editingvector>`.
+There are however :ref:`some particularities <label_vectmodel>`, which you should consider:
+
+* You must be the owner of the GRASS mapset you want to edit.
+  It is impossible to edit data layers in a mapset that is not yours,
+  even if you have write permission.
+* GRASS topological model versus the usual OGC Simple Feature model
+* Complexity of the GRASS model with:
 
   * multiple layers in single maps
   * multiple geometry types in single map
   * geometry sharing by multiple features from multiple layers
 
-The particularities are discussed in the following sections.
-
-**Save, discard changes, undo, redo**
-
-.. warning:: All the changes done during editing are immediately written to vector map and related attribute tables.
-
-Changes are written after each operation, it is however, possible to do undo/redo
-or discard all changes when closing editing. If undo or discard changes is used, original state
-is rewritten in vector map and attribute tables.
-
-There are two main reasons for this behaviour:
-
-* It is the nature of GRASS vectors coming from conviction that user wants to do what he is
-  doing and it is better to have data saved when the work is suddenly interrupted (for example,
-  blackout)
-* Necessity for effective editing of topological data is visualized information about topological
-  correctness, such information can only be acquired from GRASS vector map if changes are
-  written to the map.
-
-**Toolbar**
-
-The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
+Due to these particularities, the :guilabel:`Digitizing Toolbar` presents specific tools
+when a GRASS layer is edited.
+The :ref:`GRASS plugin <grass_plugin>` must first be enabled.
 
 .. _table_grass_digitizing:
 
@@ -439,15 +444,23 @@ The 'Digitizing Toolbar' has some specific tools when a GRASS layer is edited:
    | |capturePolygon|        | New Closed Boundary    | Digitize new closed boundary                |
    +-------------------------+------------------------+---------------------------------------------+
 
-.. tip:: **Digitizing polygons in GRASS**
+Refer to the :ref:`editingvector` chapter for common ways to digitize point, line or polygon geometries.
+Note however that if you want to create a polygon in GRASS,
+you first digitize the boundary of the polygon.
+Then you add a centroid (label point) into the closed boundary.
+The reason for this is that a topological vector model links the attribute information of
+a polygon always to the centroid and not to the boundary.
 
-   If you want to create a polygon in GRASS, you first digitize the boundary of
-   the polygon. Then you add a centroid (label point) into the closed boundary.
-   The reason for this is that a topological vector model links the attribute information of
-   a polygon always to the centroid and not to the boundary.
+To form an area, vertices of connected boundaries must have **exactly** the same coordinates.
+This can be achieved using snapping tool only if canvas and vector map have the same CRS.
+Otherwise, due to conversion from map coordinates to canvas and back, the coordinate may become
+slightly different due to representation error and CRS transformations.
+
+.. tip:: Use layer's CRS also for canvas when editing.
 
 
-**Category**
+Category
+--------
 
 Category, often called cat, is sort of ID. The name comes from times when GRASS vectors
 had only singly attribute "category". Category is used as a link between geometry and attributes.
@@ -463,10 +476,11 @@ It is not possible to assign more categories to geometry using QGIS editing,
 such data are properly represented as multiple features, and individual features,
 even from different layers, may be deleted.
 
-**Attributes**
+Attributes
+----------
 
 Attributes of currently edited layer can only be modified. If the vector map contains more layers,
-features of other layers will have all attributes set to '<not editable (layer #)>' to warn you that
+features of other layers will have all attributes set to ``<not editable (layer #)>`` to warn you that
 such attribute is not editable. The reason is, that other layers may have and usually have different
 set of fields while QGIS only supports one fixed set of fields per layer.
 
@@ -475,15 +489,17 @@ assigned and new record in attribute table is created when an attribute of that 
 
 .. tip::
 
-   If you want to do bulk update of attributes in table, for example using 'Field Calculator'
-   (:ref:`vector_field_calculator`), and there are features without category which you don't want
-   to update (typically boundaries), you can filter them out by setting 'Advanced Filter' to ``cat is not null``.
+   If you want to do bulk update of attributes in table,
+   for example using :ref:`Field Calculator <vector_field_calculator>`,
+   and there are features without category which you don't want to update (typically boundaries),
+   you can filter them out by setting :guilabel:`Advanced Filter` to ``cat is not null``.
 
-
-**Editing style**
 
 .. index::
    single: GRASS; Style
+
+Editing style
+-------------
 
 The topological symbology is essential for effective editing of topological data. When editing
 starts, a specialized 'GRASS Edit' renderer is set on the layer automatically and original renderer
@@ -492,42 +508,14 @@ The style can also be stored in project file or in separate file as any other st
 If you customize the style, do not change its name, because it is used to reset the style
 when editing is started again.
 
-.. tip::  Do not save project file when the layer is edited, the layer would be stored with
+.. warning:: Do not save project file when the layer is edited, the layer would be stored with
    'Edit Style' which has no meaning if layer is not edited.
 
 The style is based on topological information which is temporarily added to attribute table
 as field 'topo_symbol'. The field is automatically removed when editing is closed.
 
-.. tip::  Do not remove 'topo_symbol' field from attribute table, that would make features
+.. warning:: Do not remove ``topo_symbol`` field from attribute table, that would make features
    invisible because the renderer is based on that column.
-
-
-**Snapping**
-
-To form an area, vertices of connected boundaries must have **exactly** the same coordinates.
-This can be achieved using snapping tool only if canvas and vector map have the same CRS.
-Otherwise, due conversion from map coordinates to canvas and back, the coordinate may become
-slightly different due to representation error and CRS transformations.
-
-.. tip:: Use layer's CRS also for canvas when editing.
-
-
-**Limitations**
-
-Simultaneous editing of multiple layers within the same vector at the same time is not
-supported. This is mainly due to the impossibility of handling multiple undo stacks for
-a single data source.
-
-|nix| |osx| On Linux and macOS only one GRASS layer can be edited at time. This is
-due to a bug in GRASS which does not allow to close database drivers in random order.
-This is being solved with GRASS developers.
-
-
-.. tip:: **GRASS Edit Permissions**
-
-   You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is
-   impossible to edit data layers in a :file:`MAPSET` that is not yours, even
-   if you have write permission.
 
 
 .. index::
@@ -871,10 +859,6 @@ you select the module.
    :width: 1.5em
 .. |import| image:: /static/common/mIconImport.png
    :width: 1.5em
-.. |nix| image:: /static/common/nix.png
-   :width: 1em
-.. |osx| image:: /static/common/osx.png
-   :width: 1em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
