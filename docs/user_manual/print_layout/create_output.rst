@@ -66,9 +66,6 @@ If the checks fail, you are shown a nice warning advising you of the issue.
 .. index:: Privacy
 .. _export_privacy:
 
-Privacy of exported point locations
------------------------------------
-
 .. warning:: **Exported maps can leak the location of individual points**
 
    Anti-aliasing blends the edge of a symbol with the background to make
