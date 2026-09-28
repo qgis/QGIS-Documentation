@@ -241,7 +241,7 @@ The final result is shown in :numref:`Figure_Heatmap_styled_processing`.
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``
+**Algorithm ID**: ``native:heatmapkerneldensityestimation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -252,17 +252,18 @@ Python code
 
 IDW Interpolation
 -----------------
-Generates an Inverse Distance Weighted (IDW) interpolation of a point
-vector layer.
+Generates an Inverse Distance Weighted (IDW) interpolation surface raster
+from one or more vector layers.
 
-Sample points are weighted during interpolation such that the
-influence of one point relative to another declines with distance from
-the unknown point you want to create.
+The IDW interpolation calculates cell values using a linearly weighted combination of sample points.
+The weighting is an inverse function of distance,
+meaning closer sample points exert greater influence on the target cell value than more distant points.
+Input layers can supply sample values from feature attributes or feature Z coordinates.
+Features can be specified as discrete points, structure lines, or breaklines.
 
-The IDW interpolation method also has some disadvantages: the quality
-of the interpolation result can decrease, if the distribution of
-sample data points is uneven.
-
+The IDW interpolation method also has some disadvantages:
+the quality of the interpolation result can decrease,
+if the distribution of sample data points is uneven.
 Furthermore, maximum and minimum values in the interpolated surface
 can only occur at sample data points.
 
@@ -282,10 +283,7 @@ Parameters
    * - **Input layer(s)**
      - ``INTERPOLATION_DATA``
      - [string]
-     - Vector layer(s) and field(s) to use for the interpolation,
-       coded in a string (see the ``ParameterInterpolationData`` class in
-       :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
-       for more details).
+     - Vector layer(s) and field(s) to use for the interpolation, coded in a string.
 
        The following GUI elements are provided to compose the
        interpolation data string:
@@ -296,29 +294,30 @@ Parameters
        * **Use Z-coordinate for interpolation** [boolean]:
          Uses the layer's stored Z values (Default: False)
 
-       For each of the added layer-field combinations, a type can
-       be chosen:
+       For each of the added layer-field combinations,
+       a type defining how features of the vector layer are used should be indicated:
 
-       * :guilabel:`Points`: Elevation sample locations containing the values to be interpolated (e.g., terrain height, Z).
+       * :guilabel:`Points`: Elevation sample locations containing the values to be interpolated
+         (e.g., terrain height, Z).
          These points are the primary input for calculating the output surface.
 
-       * :guilabel:`Structured lines`: Lines representing known continuous surface features that guide the terrain shape or structure
-         (e.g., ridges, road centerlines, levees). They describe terrain direction while assuming continuity along the line.
+       * :guilabel:`Structured lines`: Lines representing known continuous surface features
+         that guide the terrain shape or structure (e.g., ridges, road centerlines, levees).
+         They describe terrain direction while assuming continuity along the line.
 
        * :guilabel:`Break lines`: Lines representing known surface discontinuities or hard boundaries
-         (e.g., cliffs, river banks, excavation edges, lake/pond outlines). They mark where the surface may change sharply.
+         (e.g., cliffs, river banks, excavation edges, lake/pond outlines).
+         They mark where the surface may change sharply.
          It is required if there are significant changes in elevation along the line.
 
-       In the string, the layer-field elements are separated by
-       ``'::|::'``.
-       The sub-elements of the layer-field elements are separated by
-       ``'::~::'``.
+       In the string, the layer-field elements are separated by ``'::|::'``.
+       The sub-elements of the layer-field elements are separated by ``'::~::'``.
    * - **Distance coefficient P**
      - ``DISTANCE_COEFFICIENT``
      - [numeric: double]
 
        Default: 2.0
-     - Sets the distance coefficient for the interpolation.
+     - Determines how influence decreases with distance.
        Minimum: 0.0, maximum: 100.0.
    * - **Extent (xmin, xmax, ymin, ymax)**
      - ``EXTENT``
@@ -337,16 +336,15 @@ Parameters
      - Pixel size of the output raster layer in layer units.
 
        In the GUI, the size can be specified by the number of rows
-       (``Number of rows``) / columns (``Number of columns``) **or**
-       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       (``Rows``) and columns (``Columns``) **OR**
+       the pixel size (``Pixel Size X`` / ``Pixel Size Y``).
        Increasing the number of rows or columns will decrease the cell
        size and increase the file size of the output raster.
        The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
        ``Pixel Size Y`` will be updated simultaneously - doubling the
        number of rows will double the number of columns, and the cell
        size will be halved.
-       The extent of the output raster will remain the same
-       (approximately).
+       The extent of the output raster will remain the same (approximately).
    * - **Interpolated**
      - ``OUTPUT``
      - [raster]
@@ -379,7 +377,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:idwinterpolation``
+**Algorithm ID**: ``native:idwinterpolation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
@@ -517,18 +515,22 @@ Python code
 
 TIN Interpolation
 -----------------
-Generates a Triangulated Irregular Network (TIN) interpolation of a
-point vector layer.
+Generates a Triangulated Irregular Network (TIN) interpolation surface raster
+from one or more vector layers.
 
-With the TIN method you can create a surface formed by triangles of
-nearest neighbor points.
+The TIN method constructs a Delaunay triangulation network from sample features.
+Surfaces within the constructed triangles are interpolated
+using either Linear or Clough-Tocher (cubic) methods.
 To do this, circumcircles around selected sample points are created
 and their intersections are connected to a network of non overlapping
 and as compact as possible triangles.
 The resulting surfaces are not smooth.
 
-The algorithm creates both the raster layer of the interpolated values
-and the vector line layer with the triangulation boundaries.
+Input layers can supply sample values from feature attributes or feature Z coordinates.
+Features can be specified as discrete points, structure lines, or breaklines.
+
+The algorithm creates the raster layer of the interpolated values
+and optionally the vector line layer with the triangulation boundaries.
 
 Parameters
 ..........
@@ -546,10 +548,7 @@ Parameters
    * - **Input layer(s)**
      - ``INTERPOLATION_DATA``
      - [string]
-     - Vector layer(s) and field(s) to use for the interpolation,
-       coded in a string (see the ``ParameterInterpolationData`` class in
-       :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
-       for more details).
+     - Vector layer(s) and field(s) to use for the interpolation, coded in a string.
 
        The following GUI elements are provided to compose the
        interpolation data string:
@@ -560,29 +559,31 @@ Parameters
        * **Use Z-coordinate for interpolation** [boolean]:
          Uses the layer's stored Z values (Default: False)
 
-       For each of the added layer-field combinations, a type can
-       be chosen:
+       For each of the added layer-field combinations,
+       a type defining how features of the vector layer are used should be indicated:
 
-       * :guilabel:`Points`: Elevation sample locations containing the values to be interpolated (e.g., terrain height, Z).
+       * :guilabel:`Points`: Elevation sample locations containing the values to be interpolated
+         (e.g., terrain height, Z).
          These points are the primary input for calculating the output surface.
 
-       * :guilabel:`Structured lines`: Lines representing known continuous surface features that guide the terrain shape or structure
-         (e.g., ridges, road centerlines, levees). They describe terrain direction while assuming continuity along the line.
+       * :guilabel:`Structured lines`: Lines representing known continuous surface features
+         that guide the terrain shape or structure (e.g., ridges, road centerlines, levees).
+         They describe terrain direction while assuming continuity along the line.
 
        * :guilabel:`Break lines`: Lines representing known surface discontinuities or hard boundaries
-         (e.g., cliffs, river banks, excavation edges, lake/pond outlines). They mark where the surface may change sharply.
+         (e.g., cliffs, river banks, excavation edges, lake/pond outlines).
+         They mark where the surface may change sharply.
          It is required if there are significant changes in elevation along the line.
 
-       In the string, the layer-field elements are separated by
-       ``'::|::'``.
-       The sub-elements of the layer-field elements are separated by
-       ``'::~::'``.
+       In the string, the layer-field elements are separated by ``'::|::'``.
+       The sub-elements of the layer-field elements are separated by ``'::~::'``.
    * - **Interpolation method**
      - ``METHOD``
      - [enumeration]
 
        Default: 0
-     - Set the interpolation method to be used. One of:
+     - Set the method used to interpolate values within constructed triangles.
+       One of:
 
        * :guilabel:`Linear`
        * :guilabel:`Clough-Toucher (cubic)`
@@ -604,8 +605,8 @@ Parameters
      - Pixel size of the output raster layer in layer units.
 
        In the GUI, the size can be specified by the number of rows
-       (``Number of rows``) / columns (``Number of columns``) **or**
-       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       (``Rows``) and columns (``Columns``) **OR**
+       the pixel size (``Pixel Size X`` / ``Pixel Size Y``).
        Increasing the number of rows or columns will decrease the cell
        size and increase the file size of the output raster.
        The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
@@ -659,7 +660,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:tininterpolation``
+**Algorithm ID**: ``native:tininterpolation``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
