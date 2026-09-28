@@ -1311,7 +1311,7 @@ This quick "screenshot" of the map view has some convenient features.
 
    Be careful when exporting a map of sensitive point locations: the
    anti-aliased edges of the symbols encode the sub-pixel position of each
-   point. See :ref:`export_privacy`.
+   point. See :ref:`more details here<export_privacy>`.
 
 To export the map canvas with the current rendering:
 
