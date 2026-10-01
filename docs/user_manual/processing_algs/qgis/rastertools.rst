@@ -653,6 +653,16 @@ Advanced parameters
 
        Default: False
      - If true, completely empty tiles will be skipped in the output.
+   * - **Maximum zoom extents**
+
+       ``Optional``
+
+       ``Added in 4.4``
+     - ``TILE_MAX_ZOOM_EXTENTS``
+     - [matrix]
+     - Allows overriding the maximum zoom level for specific geographic regions,
+       so that more detailed tiles can be created for important areas.
+       This is provided as a list of spatial regions (extent) paired with a custom maximum zoom level (integer).
    * - **Target CRS**
 
        ``Added in 4.4``
@@ -906,6 +916,14 @@ Advanced parameters
 
        Default: False
      - If true, completely empty tiles will be skipped in the output.
+   * - **Maximum zoom extents**
+
+       ``Optional``
+     - ``TILE_MAX_ZOOM_EXTENTS``
+     - [matrix]
+     - Allows overriding the maximum zoom level for specific geographic regions,
+       so that more detailed tiles can be created for important areas.
+       This is provided as a list of spatial regions (extent) paired with a custom maximum zoom level (integer).
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -1103,6 +1121,16 @@ Advanced parameters
 
        Default: False
      - If true, completely empty tiles will be skipped in the output.
+   * - **Maximum zoom extents**
+
+       ``Optional``
+
+       ``Added in 4.4``
+     - ``TILE_MAX_ZOOM_EXTENTS``
+     - [matrix]
+     - Allows overriding the maximum zoom level for specific geographic regions,
+       so that more detailed tiles can be created for important areas.
+       This is provided as a list of spatial regions (extent) paired with a custom maximum zoom level (integer).
 
 Outputs
 .......
