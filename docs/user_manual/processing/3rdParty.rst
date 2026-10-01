@@ -457,8 +457,9 @@ version 2.0 of the *Processing R Provider* plugin and a fresh install of
 GRASS
 -----
 
-Configuring GRASS is very easy. First, the path to the GRASS folder has to be
-defined, but only if you are running Windows.
+Configuring GRASS is very easy.
+First, enable the :guilabel:`GRASS GIS Processing`.
+Then set the path to the GRASS folder, but only if you are running Windows.
 
 By default, the Processing framework tries to configure its GRASS
 connector to use the GRASS distribution that ships along with QGIS.
@@ -467,7 +468,7 @@ you might have to configure the GRASS connector manually.
 Also, if you want to use a different GRASS installation, you can
 change the setting to point to the folder where the other version
 is installed.
-GRASS 7 is needed for algorithms to work correctly.
+GRASS is needed for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is
 correctly installed, and that it can be run without problem
