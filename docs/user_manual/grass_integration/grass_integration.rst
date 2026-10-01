@@ -37,24 +37,34 @@ More sample GRASS data are available at the GRASS_ website.
 
 .. _GRASS: https://grass.osgeo.org/download/data/
 
-.. _sec_load_grassdata:
 
-Loading GRASS raster and vector layers
-======================================
+Working with GRASS data in QGIS
+================================
 
-With GRASS installed and loaded in QGIS, you find in the :guilabel:`Browser panel`,
-the GRASS icon |grassLogo| under each folder item which contains a GRASS project.
-Go to the folder :file:`grassdata` and expand project :file:`alaska` and
-mapset :file:`demo`.
+QGIS provides access to GRASS databases and functionalities.
+This integration consists of allowing to browse, manage
+and visualize GRASS raster and vector layers.
+It also includes ability to create new GRASS projects and mapsets,
+change GRASS region, create and edit vector layers
+and apply geoprocessing analysis to GRASS 2D and 3D data.
+This can be done using:
 
-You can load GRASS raster and vector layers like any other layer from the browser either
-by double click on layer item or by dragging and dropping to map canvas or legend.
+* the :guilabel:`Browser Panel`
+* the :guilabel:`GRASS GIS Processing Provider` core plugin
+  from the :menuselection:`Plugins --> Manage and Install Plugins…` menu
+* the :guilabel:`GRASS 8 (deprecated plugin)` core plugin:
+  the most featured tool for GRASS in QGIS, while transitioning to the Browser panel.
 
-.. tip:: **GRASS Data Loading**
+The GRASS project provides official `sample data <https://grass.osgeo.org/download/data/>`_ to work with.
 
-   If you don't see GRASS project item, verify in
-   :menuselection:`Help --> About --> Providers` if
-   GRASS vector provider is loaded.
+.. attention::
+  In order to manipulate GRASS data in QGIS,
+  you first need to `install GRASS <https://grass.osgeo.org/download/>`_.
+  Supported GRASS versions may vary depending on your Operating System.
+  Also verify in :menuselection:`Help --> About --> Providers`
+  if GRASS vector and raster providers are correctly loaded.
+
+
 
 .. _import_data_dnd:
 
@@ -858,8 +868,6 @@ you select the module.
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
-   :width: 1.5em
-.. |grassLogo| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassNewMapset| image:: /static/common/grass_new_mapset.png
    :width: 1.5em
