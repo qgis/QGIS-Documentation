@@ -141,7 +141,7 @@ Core plugins include:
    supporting the OGC Catalog Service for the Web (CSW) standard)
 #. Offline Editing (allow offline editing and synchronizing with databases)
 #. Processing (the spatial data processing framework for QGIS)
-#. GRASS GIS Processing (algorithms for use within the QGIS Processing framework)
+#. GRASS Processing Provider (algorithms for use within the QGIS Processing framework)
 #. Topology Checker (find topological errors in vector layers)
 
 
