@@ -12,11 +12,14 @@ might be tempted to try.
 
 Let's show this more clearly with an example.
 
-Given a set of points and a value of a given variable value at each point,
-you can calculate a raster layer from them using the *Kriging* geoalgorithm.
+Let's say you have raster maps containing elevation and friction costs respectively,
+as well as starting points. It all makes sense to calculate the cost from those points
+to its surrounding using *r.walk.points*.
 The parameters dialog for that module is like the following one.
 
-.. figure:: img/warning/kriging.png
+.. figure:: img/warning/r_walk_points.png
+   :align: center
+   :width: 80%
 
 It looks complex, right?
 
@@ -25,16 +28,18 @@ how to run it in a batch process to create raster layers from hundreds of points
 layers in a single run, or what happens if the input layer has some points selected.
 However, the parameters themselves are not explained. A seasoned analyst with a
 good knowledge of geostatistics will have no problem understanding those parameters.
-If you are not one of them and *sill*, *range*, or *nugget* are not familiar
-concepts to you, then you should not use the *Kriging* module. More than that,
-you are far from being ready to use the *Kriging* module, since it requires
-learning about concepts such as spatial autocorrelation or semivariograms,
+If you are not one of them and *walking energy coefficients*, *friction
+cost*, or *lambda* are not familiar
+concepts to you, then you should not use the *r.walk.points* module. More than that,
+you are far from being ready to use the *r.walk.points* module, since it requires
+learning about concepts such as Naismith's rule for walking times (as adapted by
+Aitken 1977 and Langmuir 1984) or anisotropic cost-surface modelling,
 which probably you also haven't heard before, or at least haven't studied
 long enough. You should first study and understand them, and then come back
 to QGIS to actually run it and perform the analysis. Ignoring this will result
 in wrong results and poor (and most likely useless) analysis.
 
-Although not all algorithms are as complex as kriging (but some of them are
+Although not all algorithms are as complex as r.walk.points (but some of them are
 even more complex!), almost all of them require understanding the fundamental
 analysis ideas that they are based on. Without that knowledge, using them will
 most likely lead to poor results.

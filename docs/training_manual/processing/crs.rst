@@ -15,6 +15,7 @@ some general rules about how they are handled by geoalgorithms when creating a n
   the CRS of input layers is shown along with its name in the parameters dialog.
 
 .. figure:: img/crs/crs_layer.png
+   :align: center
 
 * If there are no input layer, it will use the project CRS, unless the algorithm
   contains a specific CRS field (as it happened in the last lesson with the
@@ -29,8 +30,10 @@ actually the same layer.
 Open the :guilabel:`Add geometry attributes` algorithm.
 
 .. figure:: img/crs/add_geom.png
+   :align: center
+   :width: 70%
 
-This algorithm add new columns to the attributes table of a vector layer.
+This algorithm adds new columns to the attributes table of a vector layer.
 The content of the columns depend on the type of geometry of the layer.
 In the case of points, it adds new columns with the X and Y coordinates
 of each point.
@@ -43,12 +46,12 @@ Select the 4326 layer.
 The other parameter of the algorithm allows to set how the algorithm uses
 coordinates to calculate the new value that it will add to the resulting
 layers. Most algorithms do not have an option like that, and just use the
-coordinates directly. Select the :guilabel:`Layer CRS` option to just use coordinates
+coordinates directly. Select the :guilabel:`Cartesian Calculations in Layer's CRS` option to just use coordinates
 as they are. This is how almost all geoalgorithms work.
 
 You should get a new layer with exactly the same points as the other two layers.
 If you right click on the name of the layer and open its properties, you will
-see that it shares the same CRS of the input layer, that is, EPSG:4326.
+see that it shares the same CRS of the input layer, that is, ``EPSG:4326``.
 When the layer is loaded into QGIS, you will not be asked to enter the CRS
 of the layer, since QGIS already knows about it.
 
@@ -56,6 +59,8 @@ If you open the attributes table of the new layer you will see that it
 contains two new fields with the X and Y coordinates of each point.
 
 .. figure:: img/crs/attribs2.png
+   :align: center
+   :width: 70%
 
 Those coordinate values are given in the layer CRS, since we chose that option.
 However, even if you choose another option, the output CRS of the layer would
@@ -67,12 +72,14 @@ the CRS of the input one.
 
 Now do the same calculation using the other layer. You should find the resulting
 layer rendered exactly in the same place as the other ones, and it will have the
-EPSG:23030 CRS, since that was the one of the input layer.
+``EPSG:23030`` CRS, since that was the one of the input layer.
 
 If you go to its attribute table, you will see values that are different to
 the ones in the first layer that we created.
 
 .. figure:: img/crs/attribs.png
+   :align: center
+   :width: 70%
 
 This is because the original data is different (it uses a different CRS),
 and those coordinates are taken from it.
@@ -97,8 +104,10 @@ but it will not use its CRS for the output one.
 Open the :guilabel:`Reproject layer` algorithm.
 
 .. figure:: img/crs/reprojection.png
+   :align: center
+   :width: 70%
 
-Select any of the layers as input, and select EPSG:23029 as the destination CRS.
+Select any of the layers as input, and select ``EPSG:23029`` as the destination CRS.
 Run the algorithm and you will get a new layer, identical to the input one,
 but with a different CRS. It will appear on the same region of the canvas,
 like the other ones, since QGIS will reproject it on the fly, but its original
