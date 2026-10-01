@@ -655,7 +655,7 @@ Advanced parameters
      - If true, completely empty tiles will be skipped in the output.
    * - **Maximum zoom extents**
 
-       ``Optional``
+       Optional
 
        ``Added in 4.4``
      - ``TILE_MAX_ZOOM_EXTENTS``
@@ -918,7 +918,7 @@ Advanced parameters
      - If true, completely empty tiles will be skipped in the output.
    * - **Maximum zoom extents**
 
-       ``Optional``
+       Optional
      - ``TILE_MAX_ZOOM_EXTENTS``
      - [matrix]
      - Allows overriding the maximum zoom level for specific geographic regions,
@@ -1123,7 +1123,7 @@ Advanced parameters
      - If true, completely empty tiles will be skipped in the output.
    * - **Maximum zoom extents**
 
-       ``Optional``
+       Optional
 
        ``Added in 4.4``
      - ``TILE_MAX_ZOOM_EXTENTS``
