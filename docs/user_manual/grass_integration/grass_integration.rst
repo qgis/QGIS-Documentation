@@ -25,7 +25,31 @@ GRASS 6 or GRASS 7 or for both versions at the same time
 loaded on runtime however.
 
 
+Working with GRASS data in QGIS
+================================
 
+QGIS provides access to GRASS databases and functionalities.
+This integration consists of allowing to browse, manage
+and visualize GRASS raster and vector layers.
+It also includes ability to create new GRASS projects and mapsets,
+change GRASS region, create and edit vector layers
+and apply geoprocessing analysis to GRASS 2D and 3D data.
+This can be done using:
+
+* the :guilabel:`Browser Panel`
+* the :guilabel:`GRASS GIS Processing Provider` core plugin
+  from the :menuselection:`Plugins --> Manage and Install Plugins…` menu
+* the :guilabel:`GRASS 8 (deprecated plugin)` core plugin:
+  the most featured tool for GRASS in QGIS, while transitioning to the Browser panel.
+
+The GRASS project provides official `sample data <https://grass.osgeo.org/download/data/>`_ to work with.
+
+.. attention::
+  In order to manipulate GRASS data in QGIS,
+  you first need to `install GRASS <https://grass.osgeo.org/download/>`_.
+  Supported GRASS versions may vary depending on your Operating System.
+  Also verify in :menuselection:`Help --> About --> Providers`
+  if GRASS vector and raster providers are correctly loaded.
 
 
 .. _import_data_dnd:
