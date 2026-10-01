@@ -5,169 +5,125 @@ You can improve the look of your maps by using different background images.
 You could use the basic map or the aerial image you have been using before,
 but a hillshade raster of the terrain will look nicer in some situations.
 
-You will use LAStools to extract a DEM from a LiDAR dataset and then create a
-hillshade raster to use in your map presentation later.
+You will use QGIS's native point cloud tools to extract a DEM from a LiDAR
+dataset and then create a hillshade raster to use in your map presentation
+later.
 
-**The goal for this lesson:** Install LAStools and calculate a DEM from LiDAR
-data and a hillshade raster.
+**The goal for this lesson:** Calculate a DEM from LiDAR data and create a
+hillshade raster, using the point cloud tools built into QGIS.
+
+.. note:: The :guilabel:`Classify ground points` algorithm used in this
+  lesson requires QGIS 4.0 or later. All point cloud algorithms used here
+  require QGIS installed with PDAL >= 2.5.0 (check under
+  :menuselection:`Help --> About`).
 
 
-:abbr:`★☆☆ (Basic level)` Follow Along: Installing Lastools
+:abbr:`★☆☆ (Basic level)` Follow Along: Viewing the Point Cloud
 -------------------------------------------------------------------------------
 
-Managing LiDAR data within QGIS is possible using the Processing framework and
-the algorithms provided by `LAStools <https://rapidlasso.de/how-to-install-lastools-toolbox-in-qgis/>`_.
+QGIS has native support for point cloud data (LAS, LAZ, COPC, and more), so
+no plugin or external tool needs to be installed.
 
-You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then
-create a hillshade raster that is visually more intuitive for presentation purposes.
-First you will have to set up the :guilabel:`Processing` framework settings to
-properly work with LAStools:
+#. Open a new project in QGIS.
+#. Set the project's CRS to :guilabel:`EPSG:3067 - EUREF-FIN / TM35FIN`.
+#. Save the project as :file:`forest_lidar.qgs`.
+#. Open the :guilabel:`Data Source Manager` and go to the
+   :guilabel:`Point Cloud` tab.
+#. Browse to :file:`exercise_data\\forestry\\lidar\\`, select the
+   :file:`rautjarvi_lidar.laz` file, and click :guilabel:`Add`.
+#. Right-click the layer in the :guilabel:`Layers` panel, go to
+   :guilabel:`Layer CRS`, then click :guilabel:`Set Layer CRS...` and choose
+   :guilabel:`EPSG:3067 - EUREF-FIN / TM35FIN`, if the layer was added without a CRS
+   assigned.
 
-* Close QGIS, if you have already started it.
-* An old lidar plugin might be installed by default in your system in the folder
-  :file:`C:/Program Files/QGIS Valmiera/apps/qgis/python/plugins/processing/`.
-* If you have a folder named :file:`lidar`, delete it. This is valid for some
-  installations of QGIS 2.2 and 2.4.
+The point cloud is added to the map canvas, styled by default.
 
-.. figure:: img/remove_lidar_folder.png
+.. _figure_point_cloud_layer:
+
+.. figure:: img/added_point_cloud_layer.png
    :align: center
 
-* Go to the :file:`exercise_data\\forestry\\lidar\\` folder, there you can find
-  the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the :file:`lidar`
-  folder to replace the one you just deleted.
-* If you are using a different QGIS version, you can see more installation
-  instructions in `this tutorial <https://rapidlasso.de/how-to-install-lastools-toolbox-in-qgis/>`_.
+   Point cloud layer added to the map canvas
 
-Now you need to install the LAStools to your computer. Get the newest
-*lastools* version `here <https://lastools.github.io/download/LAStools.zip>`_
-and extract the content of the :file:`lastools.zip` file into a folder in your
-system, for example, :file:`C:\\lastools\\`. The path to the :file:`lastools`
-folder cannot have spaces or special characters.
+You can pan and zoom the point cloud like any other layer. For a more
+immersive view, you can also open it in the 3D Map View
+(:menuselection:`View --> 3D Map Views --> New 3D Map View`).
 
-.. note:: Read the :file:`LICENSE.txt` file inside the :file:`lastools` folder.
-  Some of the LAStools are open source and other are closed source and require
-  licensing for most commercial and governmental use.  For education and
-  evaluation purposes you can use and test LAStools as much as you need to.
+.. _figure_point_cloud_3d_view:
 
-The plugin and the actual algorithms are now installed in your computer and
-almost ready to use, you just need to set up the Processing framework to start using them:
-
-* Open a new project in QGIS.
-* Set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN`.
-* Save the project as :file:`forest_lidar.qgs`.
-
-To setup the LAStools in QGIS:
-
-* Go to :menuselection:`Processing --> Options and configuration`.
-* In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` and
-  then to :guilabel:`Tools for LiDAR data`.
-* Check :guilabel:`Activate`.
-* For :guilabel:`LAStools folder` set :file:`c:\\lastools\\` (or the folder you
-  extracted LAStools to).
-
-.. figure:: img/processing_options.png
+.. figure:: img/point_cloud_3d_view.png
    :align: center
 
-:abbr:`★☆☆ (Basic level)` Follow Along: Calculating a DEM with LAStools
+   Point cloud layer added to the 3D Map View
+
+Close the 3D Map View when you are ready.
+
+
+:abbr:`★☆☆ (Basic level)` Follow Along: Calculating a DEM
 -------------------------------------------------------------------------------
 
-You have already used the :menuselection:`Processing` toolbox in :doc:`../vector_analysis/spatial_statistics`
-to run some SAGA algorithms. Now you are going to use it to run LAStools programs:
+Creating a DEM takes two steps: classify the point cloud to identify ground
+points, then generate a raster DEM from those ground points only.
 
-* Open :menuselection:`Processing --> Toolbox`.
-* In the dropdown menu at the bottom, select :guilabel:`Advanced interface`.
-* You should see the :guilabel:`Tools for LiDAR data` category.
+#. Open :guilabel:`Processing Toolbox`.
+#. Search for and open :guilabel:`Classify ground points`
+   (see :ref:`pdalclassifyground`).
+#. :guilabel:`Input layer`: ``rautjarvi_lidar``.
+#. Leave the remaining parameters at their defaults.
+#. Save as :file:`rautjarvi_lidar_classified.las` in :file:`exercise_data\\forestry\\lidar\\`.
+#. Click :guilabel:`Run`.
 
-.. figure:: img/processing_toolbox.png
+Add the resulting :file:`rautjarvi_lidar_classified.las` to your project
+you can style it by :guilabel:`Classification` to check the result.
+
+.. _figure_classified_point_cloud:
+
+.. figure:: img/classified_ground_point_cloud.png
    :align: center
 
-* Expand it to see the tools available, and expand also the :guilabel:`LAStools`
-  category (the number of algorithms may vary).
-* Scroll down until you find the :guilabel:`lasview` algorithm, double click it to open.
-* At :guilabel:`Input LAS/LAZ file`, browse to :file:`exercise_data\\forestry\\lidar\\`
-  and select the :file:`rautjarvi_lidar.laz` file.
+   Classified point cloud, symbolized by classification
 
-.. figure:: img/lasview_dialog.png
+#. In the :guilabel:`Processing Toolbox`, search for and open
+   :guilabel:`Export point cloud to raster (using triangulation)`
+   (see :ref:`pdalexportrastertin`).
+#. :guilabel:`Input layer`: ``rautjarvi_lidar_classified``.
+#. Click :guilabel:`Advanced parameters` at the bottom of the dialog, then set
+   :guilabel:`Filter expression` to ``Classification = 2`` to use only the
+   ground points.
+#. Leave resolution at its default, or adjust as needed.
+#. Save the output raster as :file:`exported(using triangulation)` in :file:`exercise_data\\forestry\\lidar\\`.
+#. Click :guilabel:`Run`.
+
+The result DEM is added to your map.
+
+.. _figure_dem_export_triangulation:
+
+.. figure:: img/DEM_export_triangulation.png
    :align: center
 
-* Click :guilabel:`Run`.
-
-Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ viewer` dialog window:
-
-.. figure:: img/full_lidar.png
-   :align: center
-
-There are many things you can do within this viewer, but for now you can just
-click and drag on the viewer to pan the LiDAR point cloud to see what it looks like.
-
-.. note:: If you want to know further details on how the LAStools work, you can
-  read the :file:`README` text files about each of the tools, in the :file:`C:\\lastools\\bin\\`
-  folder. Tutorials and other materials are available at the `Rapidlasso webpage <https://rapidlasso.de/>`_.
-
-* Close the viewer when you are ready.
-
-Creating a DEM with LAStools can be done in two steps, first one to classify the
-point cloud into :guilabel:`ground` and :guilabel:`no ground` points and then calculating
-a DEM using only the :guilabel:`ground` points.
-
-* Go back to the :guilabel:`Processing Toolbox`.
-* Note the :guilabel:`Search...` box, write ``lasground``.
-* Double click to open the :guilabel:`lasground` tool and set it as shown in this image:
-
-.. figure:: img/lasground_dialog.png
-   :align: center
-
-* The output file is saved to the same folder where the :file:`rautjarvi_lidar.laz`
-  is located and it is named :file:`rautjarvi_lidar_1.las`.
-
-You can open it with :guilabel:`lasview` if you want to check it.
-
-.. figure:: img/lasground_result.png
-   :align: center
-
-The brown points are the points classified as ground and the gray ones are the rest,
-you can click the letter :kbd:`g` to visualize only the ground points or the
-letter :kbd:`u` to see only the unclassified points. Click the letter :kbd:`a`
-to see all the points again. Check the :file:`lasview_README.txt` file for more
-commands. If you are interested, also this `tutorial
-<https://rapidlasso.de/tutorial-manual-lidar-editing/>`_
-about editing LiDAR points manually will show you different operations within the viewer.
-
-* Close the viewer again.
-* In the :guilabel:`Processing Toolbox`, search for ``las2dem``.
-* Open the :guilabel:`las2dem` tool and set it as shown in this image:
-
-.. figure:: img/las2dem_dialog.png
-   :align: center
-
-The result DEM is added to your map with the generic name :guilabel:`Output raster file`.
-
-.. note:: The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing.
-  You can use the unlicensed tool as indicated in the license file, but you get
-  the diagonals you can appreciate in the image results.
+   DEM generated from classified ground points
 
 :abbr:`★☆☆ (Basic level)` Follow Along: Creating a Terrain Hillshade
 -------------------------------------------------------------------------------
 
 For visualization purposes, a hillshade generated from a DEM gives a better
- visualization of the terrain:
+visualization of the terrain:
 
-* Open :menuselection:`Raster --> Terrain analysis --> Hillshade`.
-* As the :guilabel:`Output layer`, browse to :file:`exercise_data\\forestry\\lidar\\`
-  and name the file :file:`hillshade.tif`.
-* Leave the rest of parameters with the default settings.
+#. Open :menuselection:`Raster --> Analysis --> Hillshade...`.
+#. As the :guilabel:`Input layer`, select the DEM you just created.
+#. As the :guilabel:`Output layer`, browse to :file:`exercise_data\\forestry\\lidar\\`
+   and name the file :file:`hillshade.tif`.
+#. Leave the rest of parameters with the default settings.
 
-.. figure:: img/dem_hillshade.png
-   :align: center
+   .. figure:: img/hillshade_from_pc.png
+      :align: center
 
-* Select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted.
+      Hillshade raster generated from the DEM
 
-Despite the diagonal lines remaining in the hillshade raster result, you can
-clearly see an accurate relief of the area. You can even see the different
-soil drains that have been dug in the forests.
+#. Select :guilabel:`EPSG:3067 - EUREF-FIN / TM35FIN` as the CRS when prompted.
 
-.. figure:: img/hillshade_result.png
-   :align: center
+You can now clearly see an accurate relief of the area, including the
+different soil drains that have been dug in the forests.
 
 
 In Conclusion
