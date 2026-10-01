@@ -653,6 +653,41 @@ Advanced parameters
 
        Default: False
      - If true, completely empty tiles will be skipped in the output.
+   * - **Target CRS**
+
+       ``Added in 4.4``
+     - ``TARGET_CRS``
+     - [crs]
+
+       Default: ``EPSG:3857``
+     - Specify the Coordinate Reference System used for the output tile matrix set.
+   * - **Zoom 0 extent**
+
+       Optional
+
+       ``Added in 4.4``
+     - ``Z0_EXTENT``
+     - [extent]
+     - Spatial extent of zoom level 0 in target CRS coordinates.
+       Required when target CRS is not ``EPSG:3857``.
+       If the target CRS is ``EPSG:3857`` then this parameter will be ignored
+       and a standard Web Mercator tile matrix will be used instead.
+   * - **Zoom 0 matrix width**
+
+       ``Added in 4.4``
+     - ``Z0_MATRIX_WIDTH``
+     - [numeric: integer]
+
+       Default: 1
+     - Number of tile columns at zoom level 0 (matrix width).
+   * - **Zoom 0 matrix height**
+
+       ``Added in 4.4``
+     - ``Z0_MATRIX_HEIGHT``
+     - [numeric: integer]
+
+       Default: 1
+     - Number of tile rows at zoom level 0 (matrix height).
    * - **Leaflet HTML output title**
 
        Optional
@@ -714,6 +749,216 @@ Python code
 ...........
 
 **Algorithm ID**: ``native:tilesxyzdirectory``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgistilesxyzgpkg:
+
+Generate XYZ tiles (GeoPackage)
+---------------------------------
+``Added in 4.4```
+
+Generates XYZ raster tiles from the current project
+and saves them into an OGC GeoPackage file.
+All visible map layers from the project will be rendered
+into tiles across the specified extent and zoom range.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Specify the spatial extent of the area for tile generation.
+       It will internally be extended to a multiple of the tile size.
+
+       .. include:: ../algs_include.rst
+          :start-after: **extent_options**
+          :end-before: **end_extent_options**
+
+   * - **Minimum zoom**
+     - ``ZOOM_MIN``
+     - [numeric: integer]
+
+       Default: 12
+     - Minimum zoom level for generated tiles.
+       Lower zoom levels cover broader geographic areas at lower spatial resolution.
+       Must be less than or equal to the maximum zoom level.
+       Minimum 0, maximum 25.
+   * - **Maximum zoom**
+     - ``ZOOM_MAX``
+     - [numeric: integer]
+
+       Default: 12
+     - Maximum zoom level for generated tiles.
+       Higher zoom levels capture finer map details and higher resolution,
+       but exponentially increase total tile count, storage requirements, and rendering time.
+       Must be greater than or equal to the minimum zoom level.
+       Minimum 0, maximum 25.
+   * - **Background color**
+
+       Optional
+     - ``BACKGROUND_COLOR``
+     - [color]
+
+       Default: QColor(0, 0, 0, 0)
+     - Choose the background color for the tiles.
+   * - **Tile format**
+     - ``TILE_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - Output image format for the rendered tiles. One of:
+
+       * 0 --- PNG
+       * 1 --- JPG
+       * 2 --- WEBP
+   * - **Tile width**
+     - ``TILE_WIDTH``
+     - [numeric: integer]
+
+       Default: 256
+     - Width of each tile image in pixels.
+       Minimum 1, maximum 4096.
+   * - **Tile height**
+     - ``TILE_HEIGHT``
+     - [numeric: integer]
+
+       Default: 256
+     - Height of each tile image in pixels.
+       Minimum 1, maximum 4096.
+   * - **Output file**
+     - ``OUTPUT_FILE``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output :file:`.gpkg` file.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **DPI**
+     - ``DPI``
+     - [numeric: integer]
+
+       Default: 96
+     - Output resolution in DPI for rendered map content.
+       Minimum 48, maximum 600.
+   * - **Enable antialiasing**
+     - ``ANTIALIAS``
+     - [boolean]
+
+       Default: True
+     - Determines if antialiasing should be applied during tile rendering.
+   * - **Quality (JPG only)**
+
+       Optional
+     - ``QUALITY``
+     - [numeric: integer]
+
+       Default: 75
+     - Image quality percentage used when tile format is set to JPG.
+       Minimum 1, maximum 100.
+   * - **Metatile size**
+
+       Optional
+     - ``METATILESIZE``
+     - [numeric: integer]
+
+       Default: 4
+     - Specify a custom metatile size when generating XYZ tiles.
+       Larger values may speed up the rendering of tiles and provide
+       better labelling (fewer gaps without labels) at the expense of
+       using more memory.
+       Minimum 1, maximum 20.
+   * - **Skip empty tiles**
+     - ``SKIP_EMPTY_TILES``
+     - [boolean]
+
+       Default: False
+     - If true, completely empty tiles will be skipped in the output.
+   * - **Target CRS**
+     - ``TARGET_CRS``
+     - [crs]
+
+       Default: ``EPSG:3857``
+     - Specify the Coordinate Reference System used for the output tile matrix set.
+   * - **Zoom 0 extent**
+
+       Optional
+     - ``Z0_EXTENT``
+     - [extent]
+     - Spatial extent of zoom level 0 in target CRS coordinates.
+       Required when target CRS is not ``EPSG:3857``.
+       If the target CRS is ``EPSG:3857`` then this parameter will be ignored
+       and a standard Web Mercator tile matrix will be used instead.
+   * - **Zoom 0 matrix width**
+     - ``Z0_MATRIX_WIDTH``
+     - [numeric: integer]
+
+       Default: 1
+     - Number of tile columns at zoom level 0 (matrix width).
+   * - **Zoom 0 matrix height**
+     - ``Z0_MATRIX_HEIGHT``
+     - [numeric: integer]
+
+       Default: 1
+     - Number of tile rows at zoom level 0 (matrix height).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output file**
+     - ``OUTPUT_FILE``
+     - [file]
+     - The output :file:`.gpkg` file containing the tiles.
+   * - **Output tiles as raster layer**
+     - ``OUTPUT_LAYER``
+     - [raster]
+     - The output raster layer containing the tiles.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:tilesxyzgpkg``
 
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
