@@ -64,15 +64,15 @@ See section :ref:`env_options` for additional information.
 Downloading sample data
 -----------------------
 
-This user guide contains examples based on the QGIS sample dataset (also called
-the ``Alaska dataset``).  Download the sample data from
-https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and unzip the archive
-on any convenient location on your system.
+This user guide contains examples based on the QGIS sample dataset
+(also called the ``Alaska dataset``).
+Download the `sample data <https://github.com/qgis/QGIS-Sample-Data/archive/master.zip>`_
+and unzip the archive on any convenient location on your system.
 
 The Alaska dataset includes all GIS data that are used for the examples and
-screenshots in this user guide; it also includes a small GRASS database.
+screenshots in this user guide.
 The projection for the QGIS sample datasets is Alaska Albers Equal Area with
-units feet. The EPSG code is 2964.
+units feet. The EPSG code is ``2964``.
 
 ::
 
@@ -97,9 +97,10 @@ units feet. The EPSG code is 2964.
   PARAMETER["false_northing",0],
   UNIT["us_survey_feet",0.3048006096012192]]
 
+The dataset also includes a small GRASS database.
 If you intend to use QGIS as a graphical front end for GRASS, you can find a
 selection of sample locations (e.g., Spearfish or South Dakota) at the
-official GRASS GIS website, https://grass.osgeo.org/download/data/.
+official `GRASS GIS <https://grass.osgeo.org/download/data/>`_ website.
 
 .. index:: Start QGIS, Stop QGIS
 .. _`label_startingqgis`:
@@ -288,8 +289,8 @@ other software. Let's move on to learn more about the available functionality,
 features and settings, and how to use them.
 
 .. note::
- To continue learning QGIS through step-by-step exercises, follow the
- :ref:`Training manual <QGIS-training-manual-index-reference>`.
+ To continue learning QGIS through step-by-step exercises,
+ follow the :ref:`Training manual <QGIS-training-manual-index-reference>`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
