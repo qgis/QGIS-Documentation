@@ -574,7 +574,7 @@ Basic parameters
      - [boolean]
 
        Default: False
-     - Inverts the Y tile coordinate naming convention to follow TMS format.
+     - Inverts the Y tile coordinate naming convention to follow Tile Map Service format.
    * - **Output directory**
      - ``OUTPUT_DIRECTORY``
      - [folder]
@@ -705,6 +705,10 @@ Outputs
      - ``OUTPUT_HTML``
      - [html]
      - The output HTML (Leaflet) file
+   * - **Output tiles as raster layer**
+     - ``OUTPUT_LAYER``
+     - [raster]
+     - The output raster layer containing the tiles.
 
 Python code
 ...........
@@ -870,7 +874,11 @@ Outputs
    * - **Output**
      - ``OUTPUT_FILE``
      - [file]
-     - The output :file:`.mbtiles` raster layer containing the tiles.
+     - The output :file:`.mbtiles` file containing the tiles.
+   * - **Output MBtiles raster layer**
+     - ``OUTPUT_LAYER``
+     - [raster]
+     - The output MBTiles raster layer containing the tiles.
 
 Python code
 ...........
