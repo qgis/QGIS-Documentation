@@ -37,24 +37,235 @@ More sample GRASS data are available at the GRASS_ website.
 
 .. _GRASS: https://grass.osgeo.org/download/data/
 
-.. _sec_load_grassdata:
 
-Loading GRASS raster and vector layers
-======================================
+Working with GRASS data in QGIS
+================================
 
-With GRASS installed and loaded in QGIS, you find in the :guilabel:`Browser panel`,
-the GRASS icon |grassLogo| under each folder item which contains a GRASS project.
-Go to the folder :file:`grassdata` and expand project :file:`alaska` and
-mapset :file:`demo`.
+QGIS provides access to GRASS databases and functionalities.
+This integration consists of allowing to browse, manage
+and visualize GRASS raster and vector layers.
+It also includes ability to create new GRASS projects and mapsets,
+change GRASS region, create and edit vector layers
+and apply geoprocessing analysis to GRASS 2D and 3D data.
+This can be done using:
 
-You can load GRASS raster and vector layers like any other layer from the browser either
-by double click on layer item or by dragging and dropping to map canvas or legend.
+* the :guilabel:`Browser Panel`
+* the :guilabel:`GRASS GIS Processing Provider` core plugin
+  from the :menuselection:`Plugins --> Manage and Install Plugins…` menu
+* the :guilabel:`GRASS 8 (deprecated plugin)` core plugin:
+  the most featured tool for GRASS in QGIS, while transitioning to the Browser panel.
 
-.. tip:: **GRASS Data Loading**
+The GRASS project provides official `sample data <https://grass.osgeo.org/download/data/>`_ to work with.
 
-   If you don't see GRASS project item, verify in
-   :menuselection:`Help --> About --> Providers` if
-   GRASS vector provider is loaded.
+.. attention::
+  In order to manipulate GRASS data in QGIS,
+  you first need to `install GRASS <https://grass.osgeo.org/download/>`_.
+  Supported GRASS versions may vary depending on your Operating System.
+  Also verify in :menuselection:`Help --> About --> Providers`
+  if GRASS vector and raster providers are correctly loaded.
+
+.. _grass_browser_panel:
+
+Browser Panel
+-------------
+
+GRASS menus
+...........
+
+With GRASS installed and provider enabled, browse the :guilabel:`Browser panel`,
+and expand the downloaded dataset to preview the database structure in QGIS.
+GRASS projects and mapsets are identified by the |grassLogo| GRASS icon next to the entry.
+Inside mapset, layers are identifiable by their name and geometry type.
+
+Inside the GRASS database directory you also see a replication of each GRASS project as normal folder,
+with the mapsets displayed as sub-folders of specific structure.
+You shouldn't have to manipulate those folders.
+
+.. _figure_grass_browser:
+
+.. figure:: img/grass_browser.png
+   :align: center
+
+   GRASS data in Browser panel
+
+Right-clicking an item in the GRASS folder will provide you with different options.
+
+.. table:: Contextual menu of GRASS dataset items
+
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | Contextual menu                                                                       | Database   |            |            |            |            |
+   |                                                                                       | Folder     | PROJECT    | MAPSET     | Vector MAP | Raster MAP |
+   +=======================================================================================+============+============+============+============+============+
+   | :guilabel:`GRASS Options…`                                                            |            | |checkbox| | |checkbox| | |checkbox| | |checkbox| |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`New Mapset…`                                                               |            | |checkbox| |            |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Open Mapset`                                                               |            |            | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Add Mapset to Search Path`                                                 |            |            | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Remove Mapset from Search Path`                                            |            |            | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Rename…`                                                                   |            |            |            | |checkbox| | |checkbox| |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Delete…`                                                                   |            |            |            | |checkbox| | |checkbox| |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`New Point Layer…`                                                          |            |            | |checkbox| | |checkbox| |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`New Line Layer…`                                                           |            |            | |checkbox| | |checkbox| |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`New Polygon Layer…`                                                        |            |            | |checkbox| | |checkbox| |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`Export Layer --> To File…`                                            |            |            |            | |checkbox| | |checkbox| |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Refresh`                                                                   | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`New -->` |newFolder| :menuselection:`Directory…`                      | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`New -->` |newGeoPackageLayer| :menuselection:`GeoPackage…`            | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`New -->` |newVectorLayer| :menuselection:`Shapefile…`                 | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`New -->` |newFileGeodatabase| :menuselection:`ESRI FileGeodatabase…`  | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | |favorites| :guilabel:`Add as a Favorite`                                             | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Hide from Browser`                                                         | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Set Color…`                                                                | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`Scanning -->` |checkbox| :menuselection:`Monitor for Changes`         | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :menuselection:`Scanning -->` |unchecked| :menuselection:`Fast Scan this Directory`   | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | |folder24| :guilabel:`Open Directory…`                                                | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | |terminal| :guilabel:`Open in Terminal…`                                              | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Add Layer to Project`                                                      |            |            |            | |checkbox| | |checkbox| |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Layer Properties…`                                                         |            |            |            | |checkbox| | |checkbox| |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Properties…`                                                               | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+   | :guilabel:`Directory Properties…`                                                     | |checkbox| | |checkbox| | |checkbox| |            |            |
+   +---------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+
+.. _grass_options:
+
+GRASS Options
+.............
+
+GRASS options may be set in :guilabel:`GRASS Options` dialog,
+which can be opened by right clicking on the project
+or mapset item in the browser and then choosing :guilabel:`GRASS Options`.
+
+.. This section needs more details and could be moved later next to the GRASS Region.
+
+
+.. _grass_plugin:
+
+Exploring the GRASS plugin
+--------------------------
+
+.. warning::
+   The GRASS plugin is the tool originally used to work with GRASS data in QGIS.
+   There are plans to replace it with tools in both the :guilabel:`Browser` panel
+   and the :ref:`Processing <grass_configure>` toolbox,
+   and as such, it is currently marked as deprecated.
+   In the meantime, it still has functionalities not yet ported to the :guilabel:`Browser` panel
+   we will describe below.
+   Be aware that this plugin can be removed from QGIS at any time.
+
+The GRASS plugin can be used to create new GRASS projects and mapsets,
+change GRASS region, create and edit vector layers
+and analyze GRASS 2D and 3D data with hundreds of GRASS modules.
+To use GRASS plugin:
+
+#. Go to the menu :menuselection:`Plugins -->` |showPluginManager|
+   :menuselection:`Manage and Install Plugins…`
+#. Enable |checkbox| :guilabel:`GRASS 8 (deprecated plugin)`
+#. Press :guilabel:`Close`.
+#. A :guilabel:`GRASS` toolbar is added to QGIS interface.
+   A new menu :menuselection:`Plugins --> GRASS` is also added to QGIS with following entries:
+
+   * |grassOpenMapset| :sup:`Open Mapset`: displays a dialog for selecting database, project
+     and specific mapset to open in QGIS
+   * |grassNewMapset| :sup:`New Mapset`: helps create a new mapset through a wizard dialog in which
+     you define a new or existing database and then select or create a project in it
+     (with CRS and extent parameters)
+   * |grassCloseMapset| :sup:`Close Mapset`: closes the currently opened mapset,
+     making it impossible to interact with its data through the plugin tools
+   * |grassTools| :sup:`Open GRASS Tools`, also available in the :guilabel:`GRASS` toolbar,
+     provides a set of GRASS modules and parameters to work with
+   * |grassRegion| :sup:`Display Current GRASS Region`, also available in the :guilabel:`GRASS` toolbar,
+     shows the current opened mapset extent in the map canvas
+   * |general| :sup:`GRASS Options`: displays :ref:`various options <grass_options>` of the GRASS database
+
+Additional functionalities are available through a new :guilabel:`GRASS Tools` panel.
+To get access to the tools, a GRASS mapset must first be opened.
+This can be achieved either:
+
+* from the :guilabel:`Browser` panel, by right-clicking the mapset
+  and selecting the |grassOpenMapset| :guilabel:`Open Mapset` command;
+* from the newly loaded |grassOpenMapset| :guilabel:`Open Mapset` tool,
+  a dialog helps you fill the GIS database, the project and select the mapset to open.
+
+The :guilabel:`GRASS Tools` panel contains two tabs: :guilabel:`Modules` and :guilabel:`Region`.
+
+.. index::
+   single: GRASS; Toolbox
+.. _subsec_grass_toolbox:
+
+The GRASS Modules
+.................
+
+The :guilabel:`Modules` tab of the plugin provides GRASS module functionalities
+to work with data inside a selected GRASS project and mapset.
+To use the GRASS Toolbox you need to open a project and mapset
+that you have write permission for (usually granted, if you created the mapset).
+This is necessary, because new raster or vector layers created during analysis
+need to be written to the currently selected project and mapset.
+
+.. _figure_grass_toolbox:
+
+.. figure:: img/grass_toolbox_moduletree.png
+   :align: center
+
+   GRASS Toolbox and Module Tree
+
+
+.. index::
+   single: GRASS; Region
+.. _sec_grass_region:
+
+The GRASS Region
+................
+
+The region definition (setting a spatial working window) in GRASS is important
+for working with raster layers. Vector analysis is by default not limited to any
+defined region definitions. But all newly created rasters will have the spatial
+extension and resolution of the currently defined GRASS region, regardless of
+their original extension and resolution. The current GRASS region is stored in
+the :file:`$PROJECT/$MAPSET/WIND` file, and it defines north, south, east and
+west bounds, number of columns and rows, horizontal and vertical spatial resolution.
+
+It is possible to switch on and off the visualization of the GRASS region in the QGIS
+canvas using the |grassRegion| :sup:`Display current GRASS region` button.
+
+.. index::
+   single: GRASS; Region editing
+
+The region can be modified in 'Region' tab in 'GRASS Tools' dock widget.
+Type in the new region bounds and resolution, and click :guilabel:`Apply`.
+If you click on :guilabel:`Select the extent by dragging on canvas` you can select
+a new region interactively with your mouse on the QGIS canvas dragging a rectangle.
+
+The GRASS module :file:`g.region` provides a lot more parameters to define an
+appropriate region extent and resolution for your raster analysis. You can use
+these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass_toolbox`.
+
 
 .. _import_data_dnd:
 
@@ -89,34 +300,6 @@ Managing GRASS data in QGIS Browser
 * Copying maps: GRASS maps may be copied between mapsets within the same project using drag and drop.
 * Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from context menu.
 * Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from context menu.
-
-.. _grass_options:
-
-GRASS Options
-=============
-
-GRASS options may be set in :guilabel:`GRASS Options` dialog, which can be opened by right
-clicking on the project or mapset item in the browser and then choosing :guilabel:`GRASS Options`.
-
-.. _sec_starting_grass:
-
-Starting the GRASS plugin
-=========================
-
-To use GRASS functionalities in QGIS, you must select and load the GRASS plugin using the
-Plugin Manager. To do this, go to the menu :menuselection:`Plugins -->` |showPluginManager|
-:menuselection:`Manage and Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click
-:guilabel:`OK`.
-
-The following main features are provided with the GRASS menu
-(:menuselection:`Plugins --> GRASS`) when you start the GRASS plugin:
-
-* |grassOpenMapset| :sup:`Open Mapset`
-* |grassNewMapset| :sup:`New Mapset`
-* |grassCloseMapset| :sup:`Close Mapset`
-* |grassTools| :sup:`Open GRASS Tools`
-* |grassRegion| :sup:`Display Current GRASS Region`
-* |general| :sup:`GRASS Options`
 
 Opening GRASS mapset
 ====================
@@ -530,59 +713,6 @@ This is being solved with GRASS developers.
    if you have write permission.
 
 
-.. index::
-   single: GRASS; Region
-.. _sec_grass_region:
-
-The GRASS region tool
-=====================
-
-
-The region definition (setting a spatial working window) in GRASS is important
-for working with raster layers. Vector analysis is by default not limited to any
-defined region definitions. But all newly created rasters will have the spatial
-extension and resolution of the currently defined GRASS region, regardless of
-their original extension and resolution. The current GRASS region is stored in
-the :file:`$PROJECT/$MAPSET/WIND` file, and it defines north, south, east and
-west bounds, number of columns and rows, horizontal and vertical spatial resolution.
-
-It is possible to switch on and off the visualization of the GRASS region in the QGIS
-canvas using the |grassRegion| :sup:`Display current GRASS region` button.
-
-.. index::
-   single: GRASS; Region editing
-
-The region can be modified in 'Region' tab in 'GRASS Tolls' dock widget.
-Type in the new region bounds and resolution, and click :guilabel:`Apply`.
-If you click on :guilabel:`Select the extent by dragging on canvas` you can select
-a new region interactively with your mouse on the QGIS canvas dragging a rectangle.
-
-
-The GRASS module :file:`g.region` provides a lot more parameters to define an
-appropriate region extent and resolution for your raster analysis. You can use
-these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass_toolbox`.
-
-.. index::
-   single: GRASS; Toolbox
-.. _subsec_grass_toolbox:
-
-The GRASS Toolbox
-=================
-
-The |grassTools| :sup:`Open GRASS Tools` box provides GRASS module functionalities
-to work with data inside a selected GRASS :file:`PROJECT` and :file:`MAPSET`.
-To use the GRASS Toolbox you need to open a :file:`PROJECT` and :file:`MAPSET`
-that you have write permission for (usually granted, if you created the :file:`MAPSET`).
-This is necessary, because new raster or vector layers created during analysis
-need to be written to the currently selected :file:`PROJECT` and :file:`MAPSET`.
-
-.. _figure_grass_toolbox:
-
-.. figure:: img/grass_toolbox_moduletree.png
-   :align: center
-
-   GRASS Toolbox and Module Tree
-
 .. _grass_modules:
 
 Working with GRASS modules
@@ -855,6 +985,10 @@ you select the module.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |favorites| image:: /static/common/mIconFavorites.png
+   :width: 1.5em
+.. |folder24| image:: /static/common/mIconFolder24.png
+   :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
@@ -870,6 +1004,14 @@ you select the module.
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |import| image:: /static/common/mIconImport.png
+   :width: 1.5em
+.. |newFileGeodatabase| image:: /static/common/mActionNewFileGeodatabase.png
+   :width: 1.5em
+.. |newFolder| image:: /static/common/mActionNewFolder.png
+   :width: 1.5em
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
+.. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
@@ -889,3 +1031,7 @@ you select the module.
    :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
+.. |terminal| image:: /static/common/mActionTerminal.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/unchecked.png
+   :width: 1.3em
