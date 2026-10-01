@@ -6,6 +6,7 @@ Raster terrain analysis
    .. contents::
       :local:
       :depth: 1
+      :class: toc_columns
 
 
 .. _qgisaspect:
@@ -134,6 +135,269 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
+.. _qgischannelnetworkfromdem:
+
+Channel network and drainage basins from DEM
+---------------------------------------------
+``Added in 4.4``
+
+Extracts vector channel network lines, drainage basin polygons,
+and topological junction node points directly from an elevation raster (DEM).
+
+The analysis executes a 3-step pipeline:
+
+#. D8 Flow Routing: Computes single-direction steepest descent flow directions
+#. Strahler Stream Ordering: Calculates topological stream orders
+#. Vector Network Extraction: Traces vector channels, delineates catchments,
+   and identifies key topological junction nodes.
+
+The output Junctions layer contains topological nodes from the channel network.
+These are classified according to type:
+
+* ``Spring``: Channel headwater initiation point matching the stream order threshold.
+* ``Junction``: Tributary confluence point where two or more stream channels meet.
+* ``Outlet``: Terminal discharge node exiting the raster boundary or draining into a terrain sink.
+* ``Mouth``: Confluence pour point entering a higher-order stream segment (delineated when subbasins are enabled).
+
+.. seealso:: This algorithm is a port of SAGA's `Channel Network and Drainage Basins`_ tool.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation raster**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Minimum stream order threshold**
+     - ``THRESHOLD``
+     - [numeric: integer]
+
+       Default: 5
+     - Strahler order to begin a channel. Minimum: 1
+   * - **Delineate subbasins**
+     - ``SUBBASINS``
+     - [boolean]
+
+       Default: True
+     -
+   * - **Channels**
+
+       Optional
+     - ``CHANNELS``
+     - [vector: line]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output line vector layer representing the extracted channels.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+   * - **Drainage Basins**
+
+       Optional
+     - ``BASINS``
+     - [vector: polygon]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output polygon vector layer representing the extracted drainage basins.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+   * - **Junctions**
+
+       Optional
+     - ``JUNCTIONS``
+     - [vector: point]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output point vector layer representing the extracted junctions.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Channels**
+     - ``CHANNELS``
+     - [vector: line]
+     - The output line vector layer representing the extracted channels
+   * - **Drainage Basins**
+     - ``BASINS``
+     - [vector: polygon]
+     - The output polygon vector layer representing the extracted drainage basins
+   * - **Junctions**
+     - ``JUNCTIONS``
+     - [vector: point]
+     - The output point vector layer representing the extracted junctions
+
+Python code
+...........
+
+**Algorithm ID**: ``native:channelnetworkfromdem``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgischannelnetworkfromflowdirandorder:
+
+Channel network and drainage basins from multiple inputs
+---------------------------------------------------------
+``Added in 4.4``
+
+Extracts vector channel network lines, drainage basin polygons,
+and topological junction node points using pre-computed elevation (DEM),
+D8 flow direction, and Strahler stream order rasters.
+
+This algorithm bypasses internal raster flow routing and stream order generation,
+making it ideal when flow direction and Strahler order rasters
+have already been computed in prior processing steps.
+
+The output Junctions layer contains topological nodes from the channel network.
+These are classified according to type:
+
+* ``Spring``: Channel headwater initiation point matching the stream order threshold.
+* ``Junction``: Tributary confluence point where two or more stream channels meet.
+* ``Outlet``: Terminal discharge node exiting the raster boundary or draining into a terrain sink.
+* ``Mouth``: Confluence pour point entering a higher-order stream segment (delineated when subbasins are enabled).
+
+.. seealso:: This algorithm is a port of SAGA's `Channel Network and Drainage Basins`_ tool.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation raster**
+     - ``INPUT_DEM``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Flow direction raster**
+     - ``INPUT_FLOW_DIR``
+     - [raster]
+     -
+   * - **Strahler order raster**
+     - ``INPUT_STRAHLER``
+     - [raster]
+     -
+   * - **Minimum stream order threshold**
+     - ``THRESHOLD``
+     - [numeric: integer]
+
+       Default: 5
+     - Strahler order to begin a channel. Minimum: 1
+   * - **Delineate subbasins**
+     - ``SUBBASINS``
+     - [boolean]
+
+       Default: True
+     -
+   * - **Channels**
+
+       Optional
+     - ``CHANNELS``
+     - [vector: line]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output line vector layer representing the extracted channels.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+   * - **Drainage Basins**
+
+       Optional
+     - ``BASINS``
+     - [vector: polygon]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output polygon vector layer representing the extracted drainage basins.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+   * - **Junctions**
+
+       Optional
+     - ``JUNCTIONS``
+     - [vector: point]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output point vector layer representing the extracted junctions.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types_skip**
+          :end-before: **end_file_output_types_skip**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Channels**
+     - ``CHANNELS``
+     - [vector: line]
+     - The output line vector layer representing the extracted channels
+   * - **Drainage Basins**
+     - ``BASINS``
+     - [vector: polygon]
+     - The output polygon vector layer representing the extracted drainage basins
+   * - **Junctions**
+     - ``JUNCTIONS``
+     - [vector: point]
+     - The output point vector layer representing the extracted junctions
+
+Python code
+...........
+
+**Algorithm ID**: ``native:channelnetworkfromflowdirandorder``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdtmslopebasedfilter:
 
@@ -158,9 +422,7 @@ by either relaxing (``dz_max( d ) = d * s + ci``) or amplifying (``dz_max( d ) =
 *References: Vosselman, G. (2000): Slope based filtering of laser altimetry data.
 IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942*
 
-.. seealso:: This tool is a port of the SAGA `DTM Filter (slope-based)`_
-
-.. _`DTM Filter (slope-based)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/grid_filter_7.html
+.. seealso:: This algorithm is a port of the SAGA `DTM Filter (slope-based)`_ tool.
 
 Parameters
 ..........
@@ -322,9 +584,7 @@ If desired, this is accomplished by preserving a minimum slope gradient (and thu
 in digital elevation models for hydrologic analysis and modelling.
 International Journal of Geographical Information Science, Vol. 20, No. 2: 193-213.*
 
-.. seealso:: This tool is a port of the SAGA `Fill Sinks (Wang & Liu)`_ tool.
-
-.. _`Fill Sinks (Wang & Liu)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/ta_preprocessor_4.html
+.. seealso:: This algorithm is a port of the SAGA `Fill Sinks (Wang & Liu)`_ tool.
 
 Parameters
 ..........
@@ -462,6 +722,223 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgisflowconnectivity:
+
+Flow connectivity
+------------------
+``Added in 4.4``
+
+Calculates deterministic 8 (D8) flow connectivity for each cell in an input elevation raster (DEM).
+
+Output cell values represent the number of immediate 8-neighbor adjacent cells (0 to 8)
+whose D8 steepest downslope flow direction points directly into the cell:
+
+* 0 = Ridge, crest, or spring cell receiving no incoming surface flow.
+* 1 = Channel segment cell receiving flow from a single upstream neighbor.
+* 2+ = Stream junction or confluence cell receiving flow from multiple converging upstream paths.
+
+.. seealso:: This algorithm is a port of the flow connectivity calculation
+    from SAGA `Channel Network and Drainage Basins`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Flow connectivity**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``Save to temporary file``
+     - Specify the output flow connectivity raster layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: integer]
+
+       Default: -9999
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Flow connectivity**
+     - ``OUTPUT``
+     - [raster]
+     - The output flow connectivity raster layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:flowconnectivity``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisflowdirection:
+
+Flow direction
+------------------
+``Added in 4.4``
+
+Calculates deterministic 8 (D8) flow directions for each cell in an input elevation raster (DEM).
+
+Flow direction values are output as 8-neighbor directional indices numbered clockwise starting from North:
+0 = North, 1 = North-East, 2 = East, 3 = South-East, 4 = South, 5 = South-West, 6 = West, 7 = North-West.
+Sink/pit cells are assigned a value of -1 in the output, and flat areas are assigned -2.
+Cells with no downslope neighbor or NoData elevation values are assigned nodata in the output.
+
+.. seealso:: This algorithm is a port of the flow direction calculation
+    from SAGA `Channel Network and Drainage Basins`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Flow direction**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``Save to temporary file``
+     - Specify the output flow direction raster layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: integer]
+
+       Default: -9999
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Flow direction**
+     - ``OUTPUT``
+     - [raster]
+     - The output flow direction raster layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:flowdirection``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgishillshade:
 
@@ -1121,7 +1598,236 @@ Python code
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-.. _nativetotalcurvature:
+
+.. _qgisstrahlerorderfromdem:
+
+Strahler order from DEM
+------------------------
+``Added in 4.4``
+
+Calculates Strahler stream order from an input elevation raster (DEM).
+
+D8 flow directions are computed internally to traverse channel trees topographically.
+Confluences of two stream channels of order N produce a downstream channel of order N + 1.
+When the threshold is set to 1, raw stream orders (1, 2, 3...) are calculated.
+Higher threshold values mask non-stream cells as NoData and offset stream orders.
+
+.. seealso:: This algorithm is a port of the Strahler stream order calculation from SAGA
+    `Channel Network and Drainage Basins`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation raster**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Minimum stream order threshold**
+     - ``THRESHOLD``
+     - [numeric: integer]
+
+       Default: 1
+     - Minimum stream order threshold
+   * - **Strahler order**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output Strahler order raster layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output raster.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Strahler order**
+     - ``OUTPUT``
+     - [raster]
+     - The output Strahler order raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:strahlerorderfromdem``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisstrahlerorderfromflowdirection:
+
+Strahler order from DEM and flow direction
+-------------------------------------------
+``Added in 4.4``
+
+Calculates Strahler stream order from an input elevation raster (DEM)
+and a pre-computed D8 flow direction raster.
+
+Confluences of two stream channels of order N produce a downstream channel of order N + 1.
+When the threshold is set to 1, raw stream orders (1, 2, 3...) are calculated.
+Higher threshold values mask non-stream cells as NoData and offset stream orders.
+
+.. seealso:: This algorithm is a port of the Strahler stream order calculation from SAGA
+    `Channel Network and Drainage Basins`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation raster**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Flow direction raster**
+     - ``INPUT_FLOW_DIRECTION``
+     - [raster]
+     - raster layer representing flow directions
+   * - **Minimum stream order threshold**
+     - ``THRESHOLD``
+     - [numeric: integer]
+
+       Default: 1
+     - Minimum stream order threshold
+   * - **Strahler order**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output Strahler order raster layer. :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output raster.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Strahler order**
+     - ``OUTPUT``
+     - [raster]
+     - The output Strahler order raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:strahlerorderfromflowdirection``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgistotalcurvature:
 
 Total curvature
 ---------------
@@ -1236,3 +1942,306 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _qgisupslopeareafromlayer:
+
+Upslope area (from layer)
+-------------------------
+``Added in 4.4``
+
+Calculates the combined upslope contributing area (catchments)
+for all target point locations provided in an input vector layer.
+
+Each output raster cell value represents the percentage (0% to 100%)
+of surface flow originating at that cell that reaches at least one of the target points
+in the input vector layer. Various flow routing methods are supported.
+An optional sink routes raster layer can be provided to explicitly override topographic flow
+and direct water through karst features, culverts, or artificial depressions.
+
+.. seealso:: This algorithm is a port of the SAGA `Upslope Area`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation**
+     - ``INPUT``
+     - [raster]
+     - Input digital elevation model (DEM) raster layer.
+   * - **Sink routes**
+
+       Optional
+     - ``SINK_ROUTES``
+     - [raster]
+     - Optional raster layer specifying explicit flow routes through sinks/depressions.
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 2
+     - Flow routing methods:
+
+       * 0 --- ``Deterministic 8``: Single-flow direction algorithm, routing 100% of flow
+         to the steepest downslope neighbor (O'Callaghan & Mark 1984).
+       * 1 --- ``Deterministic Infinity``: Continuous single-facet flow direction algorithm,
+         routing flow along triangular facets using a 3×3 finite-difference aspect calculation (Tarboton 1997).
+       * 2 --- ``Multiple Flow Direction``: Divergent flow distribution to all lower-elevation neighbors,
+         weighted by slope and a configurable convergence exponent (Freeman 1991, Quinn et al. 1991).
+       * 3 --- ``Multiple Triangular Flow Direction``: Advanced divergent routing utilizing 3D vector normal cross-products
+         across triangular facets to distribute flow smoothly across complex terrain (Seibert & McGlynn 2007).
+       * 4 --- ``Multiple Maximum Downslope Gradient Based Flow Direction``: Adaptive MFD variant scaling exponent weights
+         dynamically based on the local maximum gradient (Qin et al. 2011).
+   * - **Convergence**
+     - ``CONVERGENCE``
+     - [numeric: double]
+
+       Default: 1.1
+     - Convergence factor for Multiple Flow Direction algorithms.
+   * - **Use contour length weighting**
+     - ``MFD_CONTOUR``
+     - [boolean]
+
+       Default: False
+     - Include pseudo contour length weighting factor in multiple flow routing.
+       Reduces flow to diagonal neighbour cells by a factor of 0.71 (see Quinn et al. 1991 for details).
+   * - **Target point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Vector point layer containing target locations.
+   * - **Upslope area**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output upslope area raster layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: integer]
+
+       Default: -9999
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Upslope area**
+     - ``OUTPUT``
+     - [raster]
+     - The output upslope area raster layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:upslopeareafromlayer``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisupslopeareafrompoint:
+
+Upslope area (from point)
+-------------------------
+``Added in 4.4``
+
+Calculates the upslope contributing area (catchment)
+for a single target coordinate point on a Digital Elevation Model (DEM).
+
+Each output raster cell value represents the percentage (0% to 100%)
+of surface flow originating at that cell that drains to or passes through the target point.
+Various flow routing methods are supported.
+An optional sink routes raster layer can be provided to explicitly override topographic flow
+and direct water through karst features, culverts, or artificial depressions.
+
+.. seealso:: This algorithm is a port of the SAGA `Upslope Area`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation**
+     - ``INPUT``
+     - [raster]
+     - Input digital elevation model (DEM) raster layer.
+   * - **Sink routes**
+
+       Optional
+     - ``SINK_ROUTES``
+     - [raster]
+     - Optional raster layer specifying explicit flow routes through sinks/depressions.
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
+
+       Default: 2
+     - Flow routing methods:
+
+       * 0 --- ``Deterministic 8``: Single-flow direction algorithm, routing 100% of flow
+         to the steepest downslope neighbor (O'Callaghan & Mark 1984).
+       * 1 --- ``Deterministic Infinity``: Continuous single-facet flow direction algorithm,
+         routing flow along triangular facets using a 3×3 finite-difference aspect calculation (Tarboton 1997).
+       * 2 --- ``Multiple Flow Direction``: Divergent flow distribution to all lower-elevation neighbors,
+         weighted by slope and a configurable convergence exponent (Freeman 1991, Quinn et al. 1991).
+       * 3 --- ``Multiple Triangular Flow Direction``: Advanced divergent routing utilizing 3D vector normal cross-products
+         across triangular facets to distribute flow smoothly across complex terrain (Seibert & McGlynn 2007).
+       * 4 --- ``Multiple Maximum Downslope Gradient Based Flow Direction``: Adaptive MFD variant scaling exponent weights
+         dynamically based on the local maximum gradient (Qin et al. 2011).
+
+   * - **Convergence**
+     - ``CONVERGENCE``
+     - [numeric: double]
+
+       Default: 1.1
+     - Convergence factor for Multiple Flow Direction algorithms.
+   * - **Use contour length weighting**
+     - ``MFD_CONTOUR``
+     - [boolean]
+
+       Default: False
+     - Include pseudo contour length weighting factor in multiple flow routing.
+       Reduces flow to diagonal neighbour cells by a factor of 0.71 (see Quinn et al. 1991 for details).
+   * - **Target point**
+     - ``INPUT``
+     - [coordinate]
+     - World coordinate point defining the target cell.
+   * - **Upslope area**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output upslope area raster layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: integer]
+
+       Default: -9999
+     - Value to use for NoData cells in the output layer.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Upslope area**
+     - ``OUTPUT``
+     - [raster]
+     - The output upslope area raster layer.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:upslopeareafrompoint``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _`Channel Network and Drainage Basins`: https://saga-gis.sourceforge.io/saga_tool_doc/9.13.0/ta_channels_5.html
+.. _`DTM Filter (slope-based)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/grid_filter_7.html
+.. _`Fill Sinks (Wang & Liu)`: https://saga-gis.sourceforge.io/saga_tool_doc/9.9.1/ta_preprocessor_4.html
+.. _`Upslope area`: https://saga-gis.sourceforge.io/saga_tool_doc/9.13.0/ta_hydrology_4.html
