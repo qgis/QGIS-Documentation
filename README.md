@@ -29,7 +29,7 @@ The latest documentation of QGIS is available at <https://docs.qgis.org/latest>
 1. If not provided by your OS, you need to install:
 
    - [git](https://git-scm.com/download/)
-   - and [Python](https://www.python.org/downloads/) (>=3.9)
+   - and [Python](https://www.python.org/downloads/) (>=3.11)
 
    You can install both in default places and with default options.
 1. [Clone the repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -42,7 +42,7 @@ The best way to build the documentation is within a Python Virtual Environment (
 You can use your own virtual env by creating it first:
 
 ```sh
-# you NEED python >=3.9. Depending on distro either use `python3` or `python`
+# you NEED python >=3.11. Depending on distro either use `python3` or `python`
 # common name is 'venv' but call it whatever you like
 
 python3 -m venv venv  # using the venv module, create a venv named 'venv'
@@ -99,8 +99,8 @@ make: *** [html] Error 1
 ```
 
 A solution is to edit the Python file `build.py` inside your `venv` folder with a text editor (pico, textEdit, vscode,...).
-The file is stored at `./venv/lib/python3.10/site-packages/sphinx/cmd/build.py`
-(replace `python3.10` with your installed Python version).
+The file is stored at `./venv/lib/python3.11/site-packages/sphinx/cmd/build.py`
+(replace `python3.11` with your installed Python version).
 
 1. Open the file in the text editor
 2. Search and replace:
