@@ -58,10 +58,6 @@ or for :ref:`individual parameters <alg_parameter_types>`.
 * :guilabel:`Override temporary output folder path`: Temporary outputs are
   saved by default in the :file:`tmp` folder on the machine.
   This option helps you set a different place for storage.
-* :guilabel:`Pre-execution script` and :guilabel:`Post-execution script`.
-  These parameters point to files that contain scripts written using the
-  processing scripting functionality, explained in the section covering
-  scripting and the console.
 * :guilabel:`Prefer output filename for layer names`.
   The name of each resulting layer created by an algorithm is defined by
   the algorithm itself.
