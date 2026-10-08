@@ -619,7 +619,7 @@ the 3D vector layer.
 Rendering annotation layers in 3D map views
 ============================================
 
-Text and marker annotations are possible to float above the 3D scene. You can enable this feature
+Text, marker and picture annotations are possible to float above the 3D scene. You can enable this feature
 by selecting the :guilabel:`3D Billboards` option in the layer properties.
 Those layers will always face the camera, making it easier to read them
 when navigating the 3D scene. Lines and polygons annotations are not supported
