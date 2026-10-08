@@ -79,7 +79,7 @@ A typical plugin directory includes the following files:
 .. warning::
     If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
     you must check that your plugin follows some additional rules, required for
-    plugin :ref:`validation<official_pyqgis_repository_validation>`.
+    plugin `validation <https://plugins.qgis.org/docs/publish>`_.
 
 
 .. index:: Plugins; Writing code
