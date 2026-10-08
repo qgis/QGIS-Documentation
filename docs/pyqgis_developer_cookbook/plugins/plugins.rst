@@ -77,7 +77,7 @@ A typical plugin directory includes the following files:
   with no file extension in the filename.
 
 .. warning::
-    If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
+    If you plan to upload the plugin to the QGIS `official plugins repository <https://plugins.qgis.org/>`
     you must check that your plugin follows some additional rules, required for
     plugin `validation <https://plugins.qgis.org/docs/publish>`_.
 
