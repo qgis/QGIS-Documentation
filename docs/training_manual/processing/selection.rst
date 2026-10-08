@@ -8,21 +8,26 @@ Unlike other analysis plugins in QGIS, you will not find in processing geoalgori
 - If the layer has a selection, only selected features are used.
 - If there is no selection, all features are used.
 
-Please note that you can change this behaviour by unselecting the relevant option in the :menuselection:`Processing --> Options --> General` menu.
+Please note that you can change this behaviour by unselecting the relevant option in the :menuselection:`Settings --> Options --> General` menu.
 
 You can test that yourself by selecting a few points in any of the layers that we used in the last chapter, and running the reprojection algorithm on them. The reprojected layer that you will obtain will contain only those points that were selected, unless there was no selection, which will cause the resulting layer to contain all points from the original layer.
 
-To make a selection, you can use any of the available methods and tools in QGIS. However, you can also use a geoalgorithm to do so. Algorithms for creating a selection are found in the toolbox under *Vector/Selection*
+To make a selection, you can use any of the available methods and tools in QGIS. However, you can also use a geoalgorithm to do so. Algorithms for creating a selection are found in the toolbox under *Vector selection*
 
 .. figure:: img/selection/selection_algs.png
+   :align: center
+   :width: 30%
 
 Open the :guilabel:`Random selection` algorithm.
 
 .. figure:: img/selection/random_selection.png
+   :align: center
+   :width: 70%
 
 Leaving the default values, it will select 10 points from the current layer.
 
 .. figure:: img/selection/selected.png
+   :align: center
 
 You will notice that this algorithm does not produce any output, but modifies the input layer (not the layer itself, but its selection). This is an uncommon behaviour, since all the other algorithms will produce new layers and not alter the input layers.
 

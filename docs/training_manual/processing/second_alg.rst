@@ -12,60 +12,69 @@ This algorithm, like the one from the previous lesson, just generates a single o
 
 - *Table*: the table with the coordinates. You should select here the table from the lesson data.
 - *X and Y fields*: these two parameters are linked to the first one. The corresponding selector will show the name of those fields that are available in the selected table. Select the ``XCOORD`` field for the *X* parameter, and the ``YCOORD`` field for the *Y* parameter.
+- *Z and M fields*: optionally can be added if there are elevation or measurement data.
 - *CRS*: Since this algorithm takes no input layers, it cannot assign a CRS to the output layer based on them. Instead, it asks you to manually select the CRS that the coordinates in the table use. Click on the button on the left--hand side to open the QGIS CRS selector, and select EPSG:4326 as the output CRS. We are using this CRS because the coordinates in the table are in that CRS.
 
 Your dialog should look like this.
 
 .. figure:: img/second_alg/points_from_table.png
+   :align: center
+   :width: 70%
 
 Now press the :guilabel:`Run` button to get the following layer (you may need to zoom full to reenter the map around the newly created points):
 
 .. figure:: img/second_alg/points.png
+   :align: center
 
 The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the :guilabel:`Create grid` algorithm, which has the following parameters dialog.
 
 .. figure:: img/second_alg/graticule_dialog.png
+   :align: center
+   :width: 70%
 
-.. warning:: The options are simpler in recent versions of QGIS; you just need to enter min and max for X and Y (suggested values: -5.696226,-5.695122,40.24742,40.248171)
-
-The inputs required to create the grid are all numbers. When you have to enter a numerical value, you have two options: typing it directly on the corresponding box or clicking the button on the right--hand side to get to a dialog like the one shown next.
-
-.. figure:: img/second_alg/number_dialog.png
-
-The dialog contains a simple calculator, so you can type expressions such as ``11 * 34.7 + 4.6``, and the result will be computed and put in the corresponding text box in the parameters dialog. Also, it contains constants that you can use, and values from other layers available.
-
-In this case, we want to create a grid that covers the extent of the input points layer, so we should use its coordinates to calculate the center coordinate of the grid and its width and height, since those are the parameters that the algorithm takes to create the grid. With a little bit of math, try to do that yourself using the calculator dialog and the constants from the input points layer.
+In this case, we want to create a grid that covers the extent of the input points layer.
+You can set the :guilabel:`Grid extent` parameter directly from the input layer's extent.
+Click the extent selector button on the right side and choose :guilabel:`Calculate from Layer`,
+then select the points layer.
 
 Select :guilabel:`Rectangles (polygons)` in the :guilabel:`Grid type` field.
 
-As in the case of the last algorithm, we have to enter the CRS here as well. Select EPSG:4326 as the target CRS, as we did before.
+As you might notice in the dialog above, warnings appear if the CRS is set to geographic CRS.
+It is important to reproject to a projected local coordinate system for more accurate calculation.
+Select ``EPSG:5070`` as the target CRS and you will see the units are now set to meters.
 
 In the end, you should have a parameters dialog like this:
 
 .. figure:: img/second_alg/graticule_parameters.png
-
-(Better add one spacing on the width and height: :guilabel:`Horizontal spacing`: ``0.0001``, :guilabel:`Vertical spacing`: ``0.0001``, :guilabel:`Width`: ``0.001004``, :guilabel:`Height`: ``0.000651``, :guilabel:`Center X`: ``-5.695674``, :guilabel:`Center Y`: ``40.2477955``)
-The case of X center is a bit tricky, see: -5.696126+(( -5.695222+ 5.696126)/2)
+   :align: center
 
 Press :guilabel:`Run` and you will get the graticule layer.
 
 .. figure:: img/second_alg/graticule.png
+   :align: center
 
 The last step is to count the points in each one of the rectangles of that graticule. We will use the :guilabel:`Count points in polygons` algorithm.
 
 .. figure:: img/second_alg/count_points.png
+   :align: center
+   :width: 70%
 
 Now we have the result we were looking for.
 
-Before finishing this lesson, here is a quick tip to make your life easier in case you want to persistently save your data. If you want all your output files to be saved in a given folder, you do not have to type the folder name each time. Instead, go to the processing menu and select the *Options and configuration* item. It will open the configuration dialog.
+Before finishing this lesson, here is a quick tip to make your life easier in case you want to persistently save your data.
+If you want all your output files to be saved in a given folder, you do not have to type the folder name each time.
+Instead, go to the :guilabel:`Settings` in the menu toolbar and select the :guilabel:`Options` item. It will open the configuration dialog.
+Under the :guilabel:`Processing` tab you will see:
 
 .. figure:: img/second_alg/config.png
+   :align: center
 
 In the :guilabel:`Output folder` entry that you will find in the :guilabel:`General` group, type the path to your destination folder.
 
 .. figure:: img/second_alg/output_folder.png
+   :align: center
 
-Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter :file:`graticule.shp` as the output path for the algorithm that we have just used, the result will be saved in :file:`D:\processing_output\graticule.shp`. You can still enter a full path in case you want a result to be saved in a different folder.
+Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter :file:`graticule.shp` as the output path for the algorithm that we have just used, the result will be saved in ``C:\Users\ACER\processing\graticule.shp``. You can still enter a full path in case you want a result to be saved in a different folder.
 
 
 Try yourself the :guilabel:`Create grid` algorithm with different grid sizes, and also with different types of grids.
