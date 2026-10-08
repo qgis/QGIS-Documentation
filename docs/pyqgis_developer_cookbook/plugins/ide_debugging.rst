@@ -128,9 +128,20 @@ installation folder.
 Starting the debug server
 -------------------------
 
-The debug server is started by calling ``debugpy.listen()`` from QGIS, for
-example in the Python console or from an action of a plugin dedicated to
-debugging:
+.. tip:: **Use the QGIS DevTools plugin**
+
+   The easiest way to start the debug server is to install the
+   *QGIS DevTools* plugin from :menuselection:`Plugins --> Manage and
+   Install plugins…`. It adds a button to the status bar of QGIS to start
+   the debug server, takes care of the platform specific details described
+   below, displays the address the server listens on and offers to copy a
+   :file:`launch.json` template for VS Code. See the `QGIS DevTools
+   documentation <https://docs.nextgis.com/docs_ngqgis/source/devtools.html>`_
+   for more information.
+
+To start the debug server manually, call ``debugpy.listen()`` from QGIS,
+for example in the Python console or from an action of a plugin dedicated
+to debugging:
 
 .. code-block:: python
 
@@ -158,15 +169,6 @@ a second time raises an error.
 
    Depending on the installation, this path may also need to be converted
    from its short (8.3) form to its long form.
-
-Rather than writing this code yourself, you can install the
-*QGIS DevTools* plugin from :menuselection:`Plugins --> Manage and Install
-plugins…`. It handles these details, adds a button to the status bar of
-QGIS to start the debug server, and once started, displays the address
-the server listens on and offers to copy a :file:`launch.json` template
-for VS Code. See the `QGIS DevTools documentation
-<https://docs.nextgis.com/docs_ngqgis/source/devtools.html>`_ for more
-information.
 
 Attaching VS Code
 -----------------
