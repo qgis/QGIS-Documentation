@@ -526,11 +526,8 @@ because shapefiles use the Simple Feature vector model (see section :ref:`sec_cr
 It is also possible to add layers to existing vector maps selecting one of the items
 described above from the contextual menu of an existing vector map.
 A new layer of the same name as the map is loaded in the :guilabel:`Layers` panel, ready for editing.
-Note that this is currently possible only if the GRASS plugin is enabled
+Note that this is currently possible only if the :ref:`GRASS plugin <grass_plugin>` is enabled
 from the :guilabel:`Plugin Manager`.
-
-.. text in the above paragraph to update later
- Note that this is currently possible only if the :ref:`GRASS plugin <grass_plugin>` is enabled
 
 
 .. index::
@@ -576,10 +573,8 @@ There are however :ref:`some particularities <label_vectmodel>`, which you shoul
 
 Due to these particularities, the :guilabel:`Digitizing Toolbar` presents specific tools
 when a GRASS layer is edited.
-The :guilabel:`GRASS 8` plugin must first be enabled.
+The :ref:`GRASS 8 <grass_plugin>` plugin must first be enabled.
 
-.. The line above needs to get updated in the future
- The :ref:`GRASS 8 <grass_plugin>` plugin must first be enabled.
 
 .. _table_grass_digitizing:
 
@@ -1033,12 +1028,6 @@ you select the module.
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
-   :width: 1.5em
-.. |nix| image:: /static/common/nix.png
-   :width: 1em
-.. |osx| image:: /static/common/osx.png
-   :width: 1em
-.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
