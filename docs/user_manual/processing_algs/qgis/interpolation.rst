@@ -511,6 +511,313 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+
+.. _qgisglobaltpsinterpolation:
+
+Thin Plate Spline interpolation (global)
+-------------------------------------------
+``Added in 4.4``
+
+Calculates a single global Thin Plate Spline surface passing through all input points simultaneously.
+
+Thin Plate Splines minimize the integral of the squared second derivatives,
+creating a smooth surface resembling a bent thin metal plate.
+Regularisation allows softening the exact fitting constraint to smooth out noise.
+A global Thin Plate Spline interpolation constructs and solves a single linear system
+across all control points up front.
+It guarantees a continuous surface without spatial windowing boundaries,
+but requires high memory and computation time for datasets with large point counts.
+
+.. attention:: This algorithm requires a QGIS build with GSL support enabled.
+
+.. seealso:: This algorithm is a port of the SAGA `Thin Plate Spline`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Vector point layer containing scattered control points with 3D coordinate or attribute values.
+   * - **Z Field**
+     - ``FIELD``
+     - [tablefield: numeric]
+     - Numeric attribute field containing the values (elevation/Z) to interpolate.
+   * - **Regularization**
+     - ``REGULARIZATION``
+     - [numeric: double]
+
+       Default: 0.0001
+     - Regularization parameter (lambda), where a value of 0 produces an exact spline interpolation
+       passing precisely through all control points.
+       Values greater than 0 introduce smoothing/tension to reduce noise and flatten high-frequency variations.
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - Bounding box defining the extent of the output raster grid.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [numeric: double]
+
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+
+       In the GUI, the size can be specified by the number of rows
+       (``Rows``) / columns (``Columns``) **OR**
+       the pixel size (``Pixel size X`` / ``Pixel size Y``).
+       Increasing the number of rows or columns will decrease the cell size
+       and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel size X`` and
+       ``Pixel size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same (approximately).
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output interpolated raster layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output raster.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+     - The output interpolated raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:globaltpsinterpolation``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislocaltpsinterpolation:
+
+Thin Plate Spline interpolation (local)
+-------------------------------------------
+``Added in 4.4``
+
+Creates a 'Thin Plate Spline' (TPS) surface for each grid point
+based on scattered data points within a specified local search distance.
+The number of points evaluated per cell can be constrained
+to a maximum number of closest neighbors.
+
+Thin Plate Splines minimize the integral of the squared second derivatives,
+creating a smooth surface resembling a bent thin metal plate.
+Regularisation allows softening the exact fitting constraint to smooth out noise..
+
+.. attention:: This algorithm requires a QGIS build with GSL support enabled.
+
+.. seealso:: This algorithm is a port of the SAGA `Thin Plate Spline`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Vector point layer containing scattered control points with 3D coordinate or attribute values.
+   * - **Z Field**
+     - ``FIELD``
+     - [tablefield: numeric]
+     - Numeric attribute field containing the values (elevation/Z) to interpolate.
+   * - **Regularization**
+     - ``REGULARIZATION``
+     - [numeric: double]
+
+       Default: 0.0001
+     - Regularization parameter (lambda), where a value of 0 produces an exact spline interpolation
+       passing precisely through all control points.
+       Values greater than 0 introduce smoothing/tension to reduce noise and flatten high-frequency variations.
+   * - **Maximum Search Distance**
+     - ``SEARCH_RADIUS``
+     - [numeric: double]
+
+       Default: 1000.0
+     - Local maximum search radius. Points farther than this distance from a grid cell center are ignored.
+   * - **Maximum number of nearest points**
+     - ``SEARCH_POINTS_MAX``
+     - [numeric: integer]
+
+       Default: 20
+     - Maximum number of nearest points within the search distance to evaluate per grid cell.
+   * - **Minimum number of points**
+     - ``SEARCH_POINTS_MIN``
+     - [numeric: integer]
+
+       Default: 16
+     - Minimum required points within search distance.
+       At least 3 points are mandatory to solve a 2D spline; cells with fewer points are assigned NoData.
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - Bounding box defining the extent of the output raster grid.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [numeric: double]
+
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+
+       In the GUI, the size can be specified by the number of rows
+       (``Rows``) / columns (``Columns``) **OR**
+       the pixel size (``Pixel size X`` / ``Pixel size Y``).
+       Increasing the number of rows or columns will decrease the cell size
+       and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel size X`` and
+       ``Pixel size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same (approximately).
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output interpolated raster layer.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: double]
+
+       Default: -9999.0
+     - Value to use for NoData cells in the output raster.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+     - The output interpolated raster layer
+
+Python code
+...........
+
+**Algorithm ID**: ``native:localtpsinterpolation``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgistininterpolation:
 
 TIN Interpolation
@@ -665,6 +972,9 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _`Thin Plate Spline`: https://saga-gis.sourceforge.io/saga_tool_doc/9.13.0/grid_spline_1.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
