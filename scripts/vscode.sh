@@ -10,26 +10,28 @@ VSCODE_DIR=".vscode"
 LOG_FILE="vscode.log"
 
 REQUIRED_EXTENSIONS=(
-  ms-python.python@2025.6.1
-  mkhl.direnv@0.17.0
-  lextudio.iis@1.0.15
-  shd101wyy.markdown-preview-enhanced@0.8.18
-  DavidAnson.vscode-markdownlint@0.60.0
-  ms-python.debugpy@2025.8.0
-  aikebang.mkdocs-syntax-highlight@0.2.1
-  useblocks.sphinx-needs-vscode@0.3.2
-  trond-snekvik.simple-rst@1.5.4
-  ms-python.vscode-pylance@2025.4.1
-  foxundermoon.shell-format@7.2.5
-  searKing.preview-vscode@2.3.12
-  lextudio.restructuredtext@190.4.10
-  yzhang.markdown-all-in-one@3.6.3
-  lextudio.restructuredtext-pack@1.0.3
-  waderyan.gitblame@11.1.3
-  tht13.rst-vscode@3.0.1
-  timonwong.shellcheck@0.37.7
-  leonhard-s.python-sphinx-highlight@0.3.0
-  naumovs.color-highlight@2.8.0
+    lextudio.restructuredtext@190.4.10
+    shd101wyy.markdown-preview-enhanced@0.8.40
+    naumovs.color-highlight@2.8.0
+    waderyan.gitblame@11.1.3
+    DavidAnson.vscode-markdownlint@0.60.0
+    ms-python.vscode-pylance@2025.4.1
+    leonhard-s.python-sphinx-highlight@0.3.0
+    ms-python.debugpy@2025.8.0
+    ms-python.python@2025.6.1
+    ms-python.vscode-python-envs@1.38.0
+    tht13.rst-vscode@3.0.1
+    mkhl.direnv@0.17.0
+    trond-snekvik.simple-rst@1.5.4
+    yzhang.markdown-all-in-one@3.6.3
+    aikebang.mkdocs-syntax-highlight@0.2.1
+    lextudio.iis@1.0.15
+    ms-python.vscode-python-envs@1.2.0
+    searKing.preview-vscode@2.3.12
+    foxundermoon.shell-format@7.2.5
+    useblocks.sphinx-needs-vscode@0.3.2
+    timonwong.shellcheck@0.37.7
+    lextudio.restructuredtext-pack@1.0.3
 )
 
 # ----------------------------------------------
@@ -55,7 +57,7 @@ list_installed_extensions() {
 }
 
 clean() {
-  rm -rf .vscode .vscode-extensions
+    rm -rf .vscode .vscode-extensions
 }
 print_help() {
     cat <<EOF
