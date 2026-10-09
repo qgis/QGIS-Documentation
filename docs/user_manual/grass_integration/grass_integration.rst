@@ -878,8 +878,6 @@ you select the module.
    :width: 1.5em
 .. |import| image:: /static/common/mIconImport.png
    :width: 1.5em
-.. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
-   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |rasterGroup| image:: /static/common/mIconRasterGroup.png
