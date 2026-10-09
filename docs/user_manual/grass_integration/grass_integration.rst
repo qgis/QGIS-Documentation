@@ -656,8 +656,12 @@ and the vector GML file :file:`lakes.gml` from the QGIS :ref:`Alaska dataset <la
 #. Browse to the folder :file:`raster` in the QGIS 'Alaska' dataset
    and select the file :file:`landcover.img` as raster file to import.
 #. As raster output name, define ``landcover_grass`` and click :guilabel:`Run`.
-   In the :guilabel:`Output` tab, you see the currently running GRASS
-   command ``r.in.gdal -o input=/path/to/landcover.img output=landcover_grass``.
+   In the :guilabel:`Output` tab, you see the currently running GRASS command:
+
+   .. code-block:: sh
+
+      r.in.gdal -o input=/path/to/landcover.img output=landcover_grass
+
 #. When it says **Successfully finished**, click :guilabel:`View Output`.
    The :file:`landcover_grass` raster layer is now imported into GRASS and
    will be visualized in the QGIS canvas.
@@ -669,8 +673,12 @@ and the vector GML file :file:`lakes.gml` from the QGIS :ref:`Alaska dataset <la
    and select the file :file:`lakes.gml` as OGR file to import.
 #. As vector output name, define ``lakes_grass`` and click :guilabel:`Run`.
    You don't have to care about the other options in this example.
-   In the :guilabel:`Output` tab you see the currently running GRASS command
-   ``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass``.
+   In the :guilabel:`Output` tab you see the currently running GRASS command:
+
+   .. code-block:: sh
+
+     v.in.ogr -o dsn=/path/to/lakes.gml output=lakes_grass
+
 #. When it says **Successfully finished**, click :guilabel:`View Output`.
    The :file:`lakes_grass` vector layer is now imported into GRASS
    and will be visualized in the QGIS canvas.
@@ -794,14 +802,14 @@ of statistics for each polygon in a vector map.
    and open the module :guilabel:`v.centroids`.
 #. Enter ``forest_areas`` as the :guilabel:`Output vector map` and run the module.
 #. Now load the ``forest_areas`` vector and display the types of forests - deciduous,
-   evergreen, mixed - in different colors: In the layer :guilabel:`Properties`
-   window, :guilabel:`Symbology` tab, choose 'Unique value' from :guilabel:`Legend type`
-   drop-down menu and set the :guilabel:`Classification field` to 'VEGDESC'.
+   evergreen, mixed - in different colors: in the layer :guilabel:`Properties` window,
+   :guilabel:`Symbology` tab, choose ``Categorized`` in the top drop-down menu
+   and set the :guilabel:`Value` field to ``VEGDESC``. Then press :guilabel:`Classify`.
    Refer to the explanation of the symbology tab in :ref:`vector_style_menu` of the vector section.
 #. Next, reopen the GRASS Toolbox and open :menuselection:`Vector --> Vector update`
    by other maps.
 #. Click on the :guilabel:`v.rast.stats` module. Enter ``gtopo30`` and ``forest_areas``.
-#. Only one additional parameter is needed: Enter :guilabel:`column prefix` ``elev``,
+#. Only one additional parameter is needed: Enter ``elev`` as :guilabel:`Column prefix`,
    and click :guilabel:`Run`. This is a computationally heavy operation, which will run
    for a long time (probably up to two hours).
 #. Finally, open the ``forest_areas`` attribute table, and verify that several new
