@@ -257,7 +257,7 @@ External rasters have a different icon |rasterLink|.
    to achieve the above actions.
 
 
-.. _sec_create_loc:
+.. _sec_create_project:
 
 Creating a new GRASS Project
 ----------------------------
@@ -329,7 +329,7 @@ To create a mapset in an existing GRASS project:
 #. In the :guilabel:`GRASS Project` page, tick :guilabel:`Select project`
    and pick a project from the drop-down menu.
 #. From the :guilabel:`GRASS Project` page, you can create a new mapset within an existing
-   project or :ref:`create a new project <sec_create_loc>` altogether.
+   project or :ref:`create a new project <sec_create_project>` altogether.
    Let's click on the radio button |radioButtonOn| :guilabel:`Select project`
    and pick a project from the drop-down menu.
 #. Click :guilabel:`Next`.
