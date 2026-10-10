@@ -1635,7 +1635,7 @@ More information at :ref:`processing.options`.
 
 .. _figure_processing_settings:
 
-.. figure:: img/options_processing.png
+.. figure:: ../processing/img/options_processing.png
    :align: center
 
    Processing settings
