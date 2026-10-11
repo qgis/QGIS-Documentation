@@ -7,6 +7,7 @@
 # Translators:
 # 徐保才 <1302638819@qq.com>, 2026
 # Harrissou Sant-anna, 2026
+# 徐栖 Xuqi <haoyang@expoundite.net>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: 徐栖 Xuqi <haoyang@expoundite.net>, 2026\n"
 "Language-Team: Chinese Simplified (https://app.transifex.com/qgis/teams/6144/zh-Hans/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -33,6 +34,10 @@ msgstr ""
 "翻译是一项社区工作：ref：`你可以加入<translation_guidelines>`。此页面目前翻译进度为 |translation "
 "progress|。"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:2
+msgid "Lesson: Adding your first layers"
+msgstr "课程：开始添加图层"
+
 #: ../../docs/training_manual/basic_map/preparation.rst:4
 msgid ""
 "We will start the application, and create a basic map to use for examples "
@@ -49,13 +54,13 @@ msgid ""
 "Also, you should have downloaded the :ref:`sample data <data_downloadlink>` "
 "to use."
 msgstr ""
-"在开始本练习之前，必须在计算机上安装QGIS。此外，您还应该下载了 :ref:`示例数据 <data_downloadlink>` 供使用。"
+"在开始本练习之前，必须在计算机上安装QGIS。此外，你应该还下载了 :ref:`示例数据 <data_downloadlink>` 供使用。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:13
 msgid ""
 "Launch QGIS from its desktop shortcut, menu item, etc., depending on how you"
 " configured its installation."
-msgstr "从桌面快捷方式、菜单项等启动QGIS，具体取决于您如何配置其安装的方式。"
+msgstr "取决于安装时的配置方式，你可以从桌面快捷方式、菜单项等启动QGIS。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:16
 msgid ""
@@ -65,17 +70,21 @@ msgid ""
 "instructions will work on any OS. You will need QGIS 3.4 (the latest version"
 " at time of writing) to use this course."
 msgstr ""
-"本课程的截图是在Linux运行的 QGIS 3.4 "
-"中获取的。根据您的设置，遇到的屏幕可能会有所不同。然而，所有相同的按钮仍将可用，并且说明适用于任何操作系统。使用本课程需要 QGIS 3.4 "
-"(撰写本文时的最新版本)。"
+"本课程的截图取自Linux环境中运行的QGIS "
+"3.4版本。在不同的操作系统或软件版本下，你看到的屏幕可能会有所不同。但同样的按钮作用是一样的，课程提到的操作步骤也适用于任何操作系统。使用本课程需要 "
+"QGIS 3.4 (撰写本文时的最新版本)。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:22
 msgid "Let's get started right away!"
 msgstr "让我们马上开始吧！"
 
+#: ../../docs/training_manual/basic_map/preparation.rst:27
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Prepare a map"
+msgstr ":abbr:`★☆☆ (基础级)` 跟着做：制作简单的地图"
+
 #: ../../docs/training_manual/basic_map/preparation.rst:29
 msgid "Open QGIS. You will have a new, blank map."
-msgstr "打开QGIS，您会拥有一张新的空白地图。"
+msgstr "打开QGIS，你会看到一张新的空白地图。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:35
 msgid ""
@@ -83,7 +92,7 @@ msgid ""
 "load depending on the data type. We'll use it to load our dataset: click the"
 " |dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
-":guilabel:`数据源管理器` 对话框允许您根据数据类型选择要加载的数据，我们将使用它加载数据集：单击 |dataSourceManager| "
+":guilabel:`数据源管理器` 对话框能用来选择加载不同类型的数据，我们将使用它载入数据集：单击 |dataSourceManager| "
 ":sup:`打开数据源管理器` 按钮。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:269
@@ -122,13 +131,13 @@ msgstr "按 :guilabel:`矢量数据集` 旁边的 :guilabel:`...` 按钮。"
 msgid ""
 "Select the :file:`exercise_data/shapefile/protected_areas.shp` file in your "
 "training directory."
-msgstr "选择 :file:`exercise_data/shapefile/protected_areas.shp` 培训目录中的文件。"
+msgstr "选择课程目录中 :file:`exercise_data/shapefile/protected_areas.shp` 这个文件。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:53
 msgid ""
 "Click :guilabel:`Open`. You will see the original dialog, with the file path"
 " filled in."
-msgstr "单击 :guilabel:`打开` 。您将看到初始对话框，其中填写了文件路径。"
+msgstr "单击 :guilabel:`打开` 。你将回到原来的对话框，其中填写好了文件路径。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:59
 msgid ""
@@ -136,14 +145,14 @@ msgid ""
 "you can see a ``protected_areas`` item in the :guilabel:`Layers` panel "
 "(bottom left) with its features shown in the main map canvas."
 msgstr ""
-"单击此处的 :guilabel:`添加` 按钮。现在将加载您指定的数据：可以在 :guilabel:`图层` 面板 (左下方) 中看到 "
-"``protected_areas`` 项，其要素显示在主地图画布中。"
+"单击此处的 :guilabel:`添加` 按钮，QGIS会从你指定的文件中加载数据：现在你可以在 :guilabel:`图层` 面板 (左下方) 中看到"
+" ``protected_areas`` 这一行，图层要素同时显示在主地图画布中。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:67
 msgid ""
 "Congratulations! You now have a basic map. Now would be a good time to save "
 "your work."
-msgstr "恭喜！您现在有了一个基本地图。此时正是保存工作的好时机。"
+msgstr "祝贺！你创建了一张简单的地图。此时最好保存这个项目。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:70
 msgid "Click on the :guilabel:`Save As` button: |fileSaveAs|"
@@ -158,8 +167,12 @@ msgid ""
 "Save the map under a :file:`solution` folder next to :file:`exercise_data` "
 "and call it :file:`basic_map.qgz`."
 msgstr ""
-"将地图保存在 :file:`exercise_data` 旁边的 :file:`solution` 文件夹中，并命名为 "
+"将地图保存在和 :file:`exercise_data` 并列的 :file:`solution` 文件夹中，并命名为 "
 ":file:`basic_map.qgz` 。"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:77
+msgid ":abbr:`★☆☆ (Basic level)` Try Yourself:"
+msgstr ":abbr:`★☆☆ (基础级)` 自己动手："
 
 #: ../../docs/training_manual/basic_map/preparation.rst:79
 msgid ""
@@ -167,7 +180,7 @@ msgid ""
 "layers from the same folder (:file:`exercise_data/shapefile`) to the map."
 msgstr ""
 "重复上述步骤，将同一文件夹 (:file:`exercise_data/shapefile`) 中的 :file:`places.shp` 和 "
-":file:`rivers.shp` 图层添加到地图。"
+":file:`rivers.shp` 添加为地图上的图层。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:82
 #: ../../docs/training_manual/basic_map/preparation.rst:197
@@ -181,12 +194,18 @@ msgid ""
 "left panel (your colors may be different from the ones in "
 ":numref:`figure_basic_map` below):"
 msgstr ""
-"在对话框的主要区域，应该会看到许多不同颜色的形状。每个形状都属于一个图层，可以通过左侧面板中的颜色来识别 (您的颜色可能与 "
+"在QGIS窗口的主要区域，你应该会看到许多不同颜色的形状。每类形状都属于一个图层，可以通过左侧面板中的颜色来识别 (你看到的颜色可能与 "
 ":numref:`figure_basic_map` 中的颜色不同)："
 
 #: ../../docs/training_manual/basic_map/preparation.rst:94
 msgid "A basic map"
-msgstr "基本地图"
+msgstr "一张简单地图"
+
+#: ../../docs/training_manual/basic_map/preparation.rst:99
+msgid ""
+":abbr:`★☆☆ (Basic level)` Follow Along: Loading vector data from a "
+"GeoPackage Database"
+msgstr ":abbr:`★☆☆ (基础级)` 跟着做：从GeoPackage数据库中载入矢量数据"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:101
 msgid ""
@@ -196,8 +215,8 @@ msgid ""
 "databases. GIS-specific DBMSes (such as PostGIS) have extra functions, "
 "because they need to handle spatial data."
 msgstr ""
-"数据库允许在一个文件中储存大量相关数据。您可能已经熟悉数据库管理系统 (DBMS)，如 Libreoffice Base 或 MS "
-"Access。GIS应用程序也可以使用数据库。特定于GIS的DBMS (如PostGIS) 具有扩展的功能，因为它们需要处理空间数据。"
+"一个数据库文件中可以存储大量相互关联的数据。你可能已经接触过数据库管理系统 (DBMS)，如 Libreoffice Base 或 MS "
+"Access。GIS应用程序也可以使用数据库。GIS专用的DBMS (如PostGIS) 相比普通DBMS具有更多的功能，用于处理空间数据。"
 
 #: ../../docs/training_manual/basic_map/preparation.rst:107
 msgid ""
