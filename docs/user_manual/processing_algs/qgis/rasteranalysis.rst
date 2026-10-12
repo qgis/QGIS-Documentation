@@ -2822,6 +2822,125 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisrastercellindex:
+
+Raster grid cell index
+-----------------------
+``Added in 4.4``
+
+Ranks valid non-NoData raster grid cells according to their value,
+outputting a new grid where each cell contains its 0-based sorted index (rank).
+NoData cells in the input layer are preserved as NoData in the output layer.
+
+.. seealso:: This algorithm is a port of the SAGA `Grid Cell Index`_ tool.
+
+Parameters
+..........
+
+Basic parameters
+^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+
+       Default: 1
+     - The raster band number with cell values to rank.
+   * - **Sort order**
+
+       Optional
+     - ``ORDER``
+     - [enumeration]
+
+       Default: 0
+     - Sort order:
+
+       * 0 --- ``Ascending``: assigns 0 to the lowest value
+       * 1 --- ``Descending``: assigns 0 to the highest value
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the ranked output raster layer:
+
+       .. include:: ../algs_include.rst
+          :start-after: **file_output_types**
+          :end-before: **end_file_output_types**
+
+Advanced parameters
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output NoData value**
+     - ``NODATA``
+     - [numeric: integer]
+
+       Default: -9999
+     - Value to use for NoData cells in the output raster.
+   * - **Creation options**
+
+       Optional
+     - ``CREATION_OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the raster
+       to be created (colors, block size, file compression...).
+       For convenience, you can rely on predefined profiles
+       (see :ref:`GDAL driver options section <gdal_createoptions>`).
+
+       Batch Process and Model Designer: separate multiple options
+       with a pipe character (``|``).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster file with cells assigned their ranked value.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:rastercellindex``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrasterlayerproperties:
 
 Raster layer properties
@@ -4739,3 +4858,6 @@ Python code
 .. include:: ../algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
+
+
+.. _`Grid Cell Index`: https://saga-gis.sourceforge.io/saga_tool_doc/9.13.0/grid_tools_21.html
