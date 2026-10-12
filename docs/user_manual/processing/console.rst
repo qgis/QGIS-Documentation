@@ -586,19 +586,3 @@ Specify / override these to provide more help to the user.
 
 :meth:`shortDescription() <qgis.core.QgsProcessingAlgorithm.shortDescription>`
 is used in the tooltip when hovering over the algorithm in the toolbox.
-
-Pre- and post-execution script hooks
-------------------------------------
-
-Scripts can also be used as pre- and post-execution hooks that are run before
-and after an algorithm is run, respectively. This can be used to automate tasks
-that should be performed whenever an algorithm is executed.
-
-The syntax is identical to the syntax explained above, but an additional global
-variable named ``alg`` is available, representing the algorithm that has just
-been (or is about to be) executed.
-
-In the :guilabel:`General` group of the processing options dialog, you will find two
-entries named :guilabel:`Pre-execution script` and :guilabel:`Post-execution
-script` where the filenames of the scripts to be run in each case can be
-entered.
