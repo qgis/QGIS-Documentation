@@ -2837,11 +2837,16 @@ With this option, you can choose a path to load and save the profiles (user
 settings). It creates profiles inside a ``{path}\profiles`` folder, which
 includes settings, installed plugins, processing models and scripts, and so on.
 
+Without :ref:`profile_commandline`, QGIS applies the
+:ref:`user profile startup setting <user_profile_setting>` saved in that folder.
+If the folder has no profile yet, a ``default`` profile is created and used.
+
 This option allows you to, for instance, carry all your plugins and settings
 in a flash drive, or, for example, share the settings between different computers
 using a file sharing service.
 
-The equivalent environment variable is ``QGIS_CUSTOM_CONFIG_PATH``.
+The ``QGIS_CUSTOM_CONFIG_PATH`` environment variable can also set this path.
+If both are set, ``--profiles-path`` is used.
 
 ``--version-migration``
 .......................
