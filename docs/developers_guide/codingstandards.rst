@@ -33,6 +33,26 @@ with the Qt API, even implicitly shared objects are passed by const
 reference (e.g. ``setTitle( const QString& title )`` instead of
 ``setTitle( QString title )``.
 
+QgsDebugMsgLevel
+----------------
+The levels used in QgsDebugMsgLevel should be clearly defined. They are used when logging debug messages via `QgsDebugMsg()`.
+
+Common levels include:
+
+- **Qgis.Info** – Informational messages
+- **Qgis.Warning** – Warning messages
+- **Qgis.Critical** – Critical issues
+- **Qgis.Fatal** – Fatal errors that require immediate attention
+
+Example usage:
+
+.. code-block:: python
+
+    from qgis.core import QgsDebugMsg, Qgis
+
+    QgsDebugMsg("This is an info message", Qgis.Info)
+    QgsDebugMsg("This is a warning message", Qgis.Warning)
+
 
 Function Return Values
 ----------------------
