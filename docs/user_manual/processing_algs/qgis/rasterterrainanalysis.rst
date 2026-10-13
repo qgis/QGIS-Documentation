@@ -244,15 +244,38 @@ Outputs
    * - **Channels**
      - ``CHANNELS``
      - [vector: line]
-     - The output line vector layer representing the extracted channels
+     - The output line vector layer representing the channel network
+       with the following fields:
+
+       * ``SEGMENT_ID``: ID of the channel segment
+       * ``NODE_A``: Upstream node of the segment
+       * ``NODE_B``: Downstream node of the segment
+       * ``BASIN``: Basin ID
+       * ``ORDER``: Strahler order
+       * ``ORDER_CELL``: Strahler order of the original raster layer
+       * ``LENGTH``: Length of the segment
    * - **Drainage Basins**
      - ``BASINS``
      - [vector: polygon]
-     - The output polygon vector layer representing the extracted drainage basins
+     - The output polygon vector layer representing the drainage basins
+       with the following attributes:
+
+       * ``VALUE``: Basin ID
+       * ``AREA``: Basin area
+       * ``PERIMETER``: Basin perimeter
+       * ``ORDER``: Basin Strahler order
    * - **Junctions**
      - ``JUNCTIONS``
      - [vector: point]
-     - The output point vector layer representing the extracted junctions
+     - The output point vector layer representing topological nodes
+       from the channel network, with the following attributes:
+
+       * ``ID``: Junction ID
+       * ``TYPE``: Junction type
+       * ``ORDER``: Junction Strahler order
+       * ``BASIN``: Basin ID
+
+       These junctions are classified according to their ``TYPE`` value.
 
 Python code
 ...........
@@ -379,15 +402,38 @@ Outputs
    * - **Channels**
      - ``CHANNELS``
      - [vector: line]
-     - The output line vector layer representing the extracted channels
+     - The output line vector layer representing the channel network
+       with the following fields:
+
+       * ``SEGMENT_ID``: ID of the channel segment
+       * ``NODE_A``: Upstream node of the segment
+       * ``NODE_B``: Downstream node of the segment
+       * ``BASIN``: Basin ID
+       * ``ORDER``: Strahler order
+       * ``ORDER_CELL``: Strahler order of the original raster layer
+       * ``LENGTH``: Length of the segment
    * - **Drainage Basins**
      - ``BASINS``
      - [vector: polygon]
-     - The output polygon vector layer representing the extracted drainage basins
+     - The output polygon vector layer representing the drainage basins
+       with the following attributes:
+
+       * ``VALUE``: Basin ID
+       * ``AREA``: Basin area
+       * ``PERIMETER``: Basin perimeter
+       * ``ORDER``: Basin Strahler order
    * - **Junctions**
      - ``JUNCTIONS``
      - [vector: point]
-     - The output point vector layer representing the extracted junctions
+     - The output point vector layer representing topological nodes
+       from the channel network, with the following attributes:
+
+       * ``ID``: Junction ID
+       * ``TYPE``: Junction type
+       * ``ORDER``: Junction Strahler order
+       * ``BASIN``: Basin ID
+
+       These junctions are classified according to their ``TYPE`` value.
 
 Python code
 ...........
@@ -615,7 +661,7 @@ Basic parameters
      - ``MIN_SLOPE``
      - [numeric: double]
 
-       Default: 0.10
+       Default: 0.01
      - Minimum slope gradient to preserve from cell to cell;
        with a value of zero, sinks are filled up to the spill elevation
        (which results in flat areas).
@@ -1720,6 +1766,7 @@ Strahler order from DEM and flow direction
 Calculates Strahler stream order from an input elevation raster (DEM)
 and a pre-computed D8 flow direction raster.
 
+D8 flow directions are computed internally to traverse channel trees topographically.
 Confluences of two stream channels of order N produce a downstream channel of order N + 1.
 When the threshold is set to 1, raw stream orders (1, 2, 3...) are calculated.
 Higher threshold values mask non-stream cells as NoData and offset stream orders.
@@ -2099,7 +2146,7 @@ Upslope area (from point)
 ``Added in 4.4``
 
 Calculates the upslope contributing area (catchment)
-for a single target coordinate point on a Digital Elevation Model (DEM).
+for a given target coordinate point on a Digital Elevation Model (DEM).
 
 Each output raster cell value represents the percentage (0% to 100%)
 of surface flow originating at that cell that drains to or passes through the target point.
@@ -2168,7 +2215,9 @@ Basic parameters
    * - **Target point**
      - ``INPUT``
      - [coordinate]
-     - World coordinate point defining the target cell.
+     - Coordinate of the point defining the target cell.
+       Press the :guilabel:`…` button next to the option
+       and click on the canvas to fill the parameter with the clicked point coordinate.
    * - **Upslope area**
      - ``OUTPUT``
      - [raster]

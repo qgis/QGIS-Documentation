@@ -511,7 +511,6 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
-
 .. _qgisglobaltpsinterpolation:
 
 Thin Plate Spline interpolation (global)
@@ -669,7 +668,7 @@ to a maximum number of closest neighbors.
 
 Thin Plate Splines minimize the integral of the squared second derivatives,
 creating a smooth surface resembling a bent thin metal plate.
-Regularisation allows softening the exact fitting constraint to smooth out noise..
+Regularisation allows softening the exact fitting constraint to smooth out noise.
 
 .. attention:: This algorithm requires a QGIS build with GSL support enabled.
 
