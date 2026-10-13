@@ -16,7 +16,7 @@ From a command line tool, run ``qgis_process`` and you should get:
 
 .. code-block:: bash
 
-  QGIS Processing Executor - 3.35.0-Master 'Master' (3.35.0-Master)
+  QGIS Processing Executor - 4.3.0-Master 'Master' (4.3.0-Master)
   Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--help] [--version] [--json] [--verbose] [--no-python] [--skip-loading-plugins] [--profile name] [--profiles-path path] [command] [algorithm id, path to model file, or path to Python script] [parameters]
 
   Options:
