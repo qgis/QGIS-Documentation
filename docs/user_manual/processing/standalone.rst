@@ -50,16 +50,21 @@ From a command line tool, run ``qgis_process`` and you should get:
                        When passing parameters as a JSON object from STDIN, these extra arguments can be provided as an "ellipsoid" and a "project_path" key respectively.
 
 
-The ``--profile`` and ``--profiles-path`` (or ``-S``) options select the
-:ref:`user profile <user_profiles>` to run with, like the options of the same
-name in QGIS Desktop (see :ref:`--profile <profile_commandline>` and
-:ref:`--profiles-path <profiles-path_option>`). This is how Processing
-plugins, scripts and settings that live in another profile are reached.
-Unlike QGIS Desktop, ``--profile`` does not create a
-missing profile: it must already exist. ``--profiles-path`` takes precedence
-over the ``QGIS_CUSTOM_CONFIG_PATH`` environment variable. With only
-``--profiles-path``, the default profile of that folder is used. Without any
-profile option, the default profile is used.
+By default, ``qgis_process`` runs with the default profile of the
+:ref:`user profiles folder <user_profiles>`.
+You can choose it with :guilabel:`Always use profile` in the
+:ref:`user profile startup setting <user_profile_setting>`;
+if none was ever set, the profile named ``default`` is used.
+The default profile is created if it does not exist.
+Unlike QGIS Desktop, :guilabel:`Use last closed profile` and
+:guilabel:`Choose profile at start up` are not taken into account.
+
+Use the :ref:`profile_commandline` and :ref:`profiles-path_option` (or ``-S``)
+options to run with the Processing plugins, scripts and settings of another
+profile or profiles folder, as in QGIS Desktop.
+With only ``--profiles-path``, the default profile of that folder is used.
+Unlike QGIS Desktop, a profile selected with ``--profile`` is not created:
+it must already exist, so create and configure it in QGIS Desktop first.
 
 .. note::
   Only installed plugins that advertise ``hasProcessingProvider=yes``
