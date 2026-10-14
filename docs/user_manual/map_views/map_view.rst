@@ -1016,6 +1016,18 @@ in the :guilabel:`Layer styling` panel.
     The :guilabel:`Width` and :guilabel:`Height` of the annotation can be filled separately
     or adjusted proportionally to the embedded picture size.
 
+  Under :guilabel:`3D Appearance`, set the :guilabel:`Sizing mode` to control how
+  the picture is displayed in the 3D map view:
+
+  * :guilabel:`View Independent`: the picture keeps a fixed size on the screen,
+    regardless of the camera distance.
+  * :guilabel:`Perspective Scaled`: the picture is scaled with the camera distance,
+    like any other 3D object.
+
+  Use the :guilabel:`Width` and :guilabel:`Height` options to set the size manually.
+  This allows you to choose a size that works well in the 3D map,
+  rather than following the size defined in the 2D map.
+
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
 
