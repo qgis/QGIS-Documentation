@@ -13,14 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-10-12 13:54+0000\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
 "Last-Translator: Harrissou Sant-anna, 2026\n"
 "Language-Team: Lithuanian (https://app.transifex.com/qgis/teams/6144/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: lt\n"
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
@@ -38,27 +38,15 @@ msgstr ""
 msgid "Configuring the Processing Framework"
 msgstr "Apdorojimo karkaso konfigūravimas"
 
-#: ../../docs/user_manual/processing/configuration.rst:12
-msgid ""
-"The Processing Options menu (:menuselection:`Settings--> Options -->` "
-"|processingAlgorithm| :guilabel:`Processing` tab) allows you to configure "
-"how algorithms work. Configuration parameters are structured in separate "
-"blocks that you can select on the left-hand side of the dialog."
-msgstr ""
-"Apdorojimo parinkčių meniu (:menuselection:`Nustatymai--> Parinktys -->` "
-"|processingAlgorithm| :guilabel:`Apdorojimas` kortelė) leidžia jums "
-"konfigūruoti, kaip veikia algoritmai. Konfigūracijos parametrų struktūroje "
-"yra atskiri blokai, kuriuos jūs galite parinkti kairėje dialogo pusėje."
-
-#: ../../docs/user_manual/processing/configuration.rst:194
+#: ../../docs/user_manual/processing/configuration.rst:197
 msgid "processingAlgorithm"
 msgstr "processingAlgorithm"
 
-#: ../../docs/user_manual/processing/configuration.rst:20
+#: ../../docs/user_manual/processing/configuration.rst:27
 msgid "General"
 msgstr "Bendra"
 
-#: ../../docs/user_manual/processing/configuration.rst:22
+#: ../../docs/user_manual/processing/configuration.rst:29
 msgid ""
 "The :guilabel:`General` block contains the default settings to control how "
 "the algorithm dialog as well as input or output parameters should behave. "
@@ -72,25 +60,25 @@ msgstr ""
 " <alg_override_setting>` ar :ref:`individualiems parametrams "
 "<alg_parameter_types>`."
 
-#: ../../docs/user_manual/processing/configuration.rst:28
+#: ../../docs/user_manual/processing/configuration.rst:35
 msgid ""
 ":guilabel:`Default output raster layer extension` is by default ``tif``"
 msgstr ""
 ":guilabel:`Numatytas išvesties rastro sluoksnio išplėtimas` pagal nutylėjimą"
 " yra ``tif``"
 
-#: ../../docs/user_manual/processing/configuration.rst:29
+#: ../../docs/user_manual/processing/configuration.rst:36
 msgid ""
 ":guilabel:`Default output vector layer extension` is by default ``gpkg``"
 msgstr ""
 ":guilabel:`Numatytasis išvesties vektoriaus sluoksnio išplėtimas` pagal "
 "nutylėjimą yra ``gpkg``"
 
-#: ../../docs/user_manual/processing/configuration.rst:30
+#: ../../docs/user_manual/processing/configuration.rst:37
 msgid ":guilabel:`Invalid features filtering` when executing algorithm:"
 msgstr ":guilabel:`Neteisingų geoobjektų filtravimas` vykdant algoritmą:"
 
-#: ../../docs/user_manual/processing/configuration.rst:32
+#: ../../docs/user_manual/processing/configuration.rst:39
 msgid ""
 ":guilabel:`Do not filter (better performance)`: all the features (with valid"
 " and invalid geometries) are processed, but the result may be erroneous "
@@ -101,7 +89,7 @@ msgstr ""
 "klaidingas priklausomai nuo to, kaip geometrijos netinkamumas įtakoja "
 "veiksmus"
 
-#: ../../docs/user_manual/processing/configuration.rst:35
+#: ../../docs/user_manual/processing/configuration.rst:42
 msgid ""
 ":guilabel:`Skip (ignore) features with invalid geometries`, meaning that "
 "only a subset of your dataset (the valid geometry features) will be "
@@ -111,7 +99,7 @@ msgstr ""
 " tai reiškia, kad bus apdorotas tik jūsų duomenų aibės poaibis (geoobjektai "
 "su tinkama geometrija)"
 
-#: ../../docs/user_manual/processing/configuration.rst:38
+#: ../../docs/user_manual/processing/configuration.rst:45
 msgid ""
 ":guilabel:`Stop algorithm execution when a geometry is invalid`: you'll need"
 " to track and fix the invalid geometries if you want the algorithm to "
@@ -123,7 +111,7 @@ msgstr ""
 " apdorotų visą sluoksnį. Algoritmai, tokie kaip :ref:`qgischeckvalidity` ar "
 ":ref:`qgisfixgeometries` jums gali padėti tai padaryti."
 
-#: ../../docs/user_manual/processing/configuration.rst:43
+#: ../../docs/user_manual/processing/configuration.rst:50
 msgid ""
 "The :guilabel:`Invalid features filtering` setting can be overridden on a "
 "per-input basis, at algorithm runtime."
@@ -131,7 +119,7 @@ msgstr ""
 ":guilabel:`Netinkamų geoobjektų filtravimo` nustatymą galima permušti "
 "algoritmo vykdymo metu kiekvienam įvesties rinkiniui."
 
-#: ../../docs/user_manual/processing/configuration.rst:45
+#: ../../docs/user_manual/processing/configuration.rst:52
 msgid ""
 ":guilabel:`Keep dialog open after running algorithm`. Once an algorithm has "
 "finished execution and its output layers are loaded into the QGIS project, "
@@ -145,18 +133,18 @@ msgstr ""
 "liktų atvertas (kad dar kartą paleistumėte algoritmą su kitokiais "
 "parametrais ar įdėmiau peržvelgtumėte išvestį žurnalo kortelėje)."
 
-#: ../../docs/user_manual/processing/configuration.rst:50
+#: ../../docs/user_manual/processing/configuration.rst:57
 msgid ":guilabel:`Max Threads`"
 msgstr ":guilabel:`Maksimalus gijų skaičius`"
 
-#: ../../docs/user_manual/processing/configuration.rst:196
+#: ../../docs/user_manual/processing/configuration.rst:199
 msgid "processingModel"
 msgstr "processingModel"
 
-#: ../../docs/user_manual/processing/configuration.rst:198
+#: ../../docs/user_manual/processing/configuration.rst:201
 msgid "pythonFile"
 msgstr "pythonFile"
 
-#: ../../docs/user_manual/processing/configuration.rst:190
+#: ../../docs/user_manual/processing/configuration.rst:193
 msgid "checkbox"
 msgstr "checkbox"

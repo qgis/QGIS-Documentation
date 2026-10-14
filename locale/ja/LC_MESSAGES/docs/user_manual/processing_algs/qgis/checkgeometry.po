@@ -7,8 +7,8 @@
 # Translators:
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
 # 藤本理弘 <mfujimot@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-19 21:53+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -34,6 +34,49 @@ msgid ""
 msgstr ""
 "翻訳は :ref:`あなたが参加できる <translation_guidelines>`  コミュニティの取り組みです。このページは現在 "
 "|translation progress| 翻訳されています。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:4
+msgid "Check Geometry"
+msgstr "ジオメトリ検査"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:17
+msgid "Dangle-end lines"
+msgstr "ダングル（飛び出し線）"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:18
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:146
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:275
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:397
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:521
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:654
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:782
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:907
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1035
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1166
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1295
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1407
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1519
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1656
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1794
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1952
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2066
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2208
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2382
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2518
+msgid "``Added in 3.42``"
+msgstr "``3.42 で追加``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:20
+msgid ""
+"Detects dangle-end lines in line geometries and reports them as errors. A "
+"dangle-end line is a line feature that terminates at a vertex connected to "
+"only one segment, resulting in an endpoint without a proper connection."
+msgstr ""
+"ラインジオメトリのダングル（飛び出し線）を検出し、エラーとして報告します。飛び出し線とはライン地物であり、1つのセグメントにしか接続していない頂点で終わっており、適切な接続のない終点を作っているものです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:27
+msgid "Identifying dangle-end features (in red) and vertices (yellow)."
+msgstr "ダングル地物（赤）と頂点（黄色）を確認する"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:30
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:159
@@ -390,6 +433,71 @@ msgstr "``INPUT``"
 msgid "[vector: line]"
 msgstr "[ベクタ：ライン]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:808
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:933
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1066
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1195
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1323
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1435
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1557
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1838
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1982
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2102
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2240
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2412
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2543
+msgid "Layer with the geometries to check."
+msgstr "ジオメトリを検査したいレイヤ"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:177
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:423
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:553
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:684
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:809
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:934
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1067
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1196
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1324
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1558
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1695
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1839
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1983
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2103
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2241
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2413
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2544
+msgid "**Unique feature identifier**"
+msgstr "**地物のID**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:49
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:178
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:299
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:424
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:554
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:685
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:810
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:935
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1068
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1197
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1325
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1437
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1559
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1696
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1840
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1984
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2104
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2242
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2414
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2545
+msgid "``UNIQUE_ID``"
+msgstr "``UNIQUE_ID``"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:50
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:179
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:300
@@ -412,6 +520,73 @@ msgstr "[ベクタ：ライン]"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2546
 msgid "[tablefield: any]"
 msgstr "[テーブルのフィールド：任意]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:812
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:937
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1070
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1199
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1327
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1439
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1561
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1842
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1986
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2106
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2244
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2416
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2547
+msgid "Field storing unique values for feature identification."
+msgstr "地物を識別する一意の値を格納しているフィールド"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:110
+msgid "**Dangle-end errors**"
+msgstr "**エラー（ダングル）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:53
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:111
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:240
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:303
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:363
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:428
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:487
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:562
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:620
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:689
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:747
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:814
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:872
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:943
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1001
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1072
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1130
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1206
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1264
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1333
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1378
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1445
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1490
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1563
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1621
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1700
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1758
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1859
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1917
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1993
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2038
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2115
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2173
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2283
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2348
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2424
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2483
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2549
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2608
+msgid "``ERRORS``"
+msgstr "``ERRORS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:54
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:112
@@ -482,6 +657,19 @@ msgstr "[ベクタ：ポイント]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "デフォルト： ``[一時レイヤを作成]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:432
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:693
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1076
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1567
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1704
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1997
+msgid ""
+"Specification of the output layer containing the errors location. :ref:`One "
+"of <output_parameter_widget>`:"
+msgstr "エラーの場所を格納する出力レイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -506,6 +694,11 @@ msgstr "データベーステーブルに保存..."
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
 msgstr "ここでファイルの文字コードを変更することもできます。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:125
+msgid "**Dangle-end features**"
+msgstr "**ダングルがある地物**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:194
@@ -585,6 +778,12 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2565
 msgid "Default: ``[Skip output]``"
 msgstr "デフォルト： ``[出力をスキップ]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:70
+msgid ""
+"Line layer containing the identified dangle-end line features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr "特定されたダングルライン地物を格納するラインレイヤ。:ref:`次のいずれかです <output_parameter_widget>`："
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
@@ -705,6 +904,34 @@ msgstr "[数値: Integer]"
 msgid "Default: 8"
 msgstr "デフォルト： 8"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:346
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:730
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:855
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:984
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1113
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1247
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1361
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1473
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1604
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1741
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1900
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2021
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2156
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2323
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2466
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2591
+msgid ""
+"Numerical precision of geometric operations, given as an integer n, meaning "
+"that two vertices less than 10\\ :sup:`-n` apart (in map units) are "
+"considered to be merged."
+msgstr ""
+"整数 n で与えられたジオメトリ操作の数値精度。二つの頂点の距離が（地図単位で） 10\\ :sup:`-n` "
+"未満のものは合わさっていると見なされます。"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:99
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:228
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:351
@@ -727,6 +954,129 @@ msgstr "デフォルト： 8"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2596
 msgid "Outputs"
 msgstr "出力"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:242
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:622
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:749
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:874
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1132
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1266
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1380
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1492
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1623
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1760
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1919
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2040
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2175
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2350
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2485
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2610
+msgid ""
+"Output point layer representing the error locations and information. The "
+"output layer contains the following fields:"
+msgstr "エラーの場所と情報を表示する出力ポイントレイヤ。出力レイヤは次のフィールドを格納します："
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:245
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:492
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:752
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:877
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1135
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1269
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1383
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1495
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1626
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1763
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1922
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2043
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2178
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2353
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2488
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2613
+msgid "``gc_layerid``: the ID of the input layer."
+msgstr "``gc_layerid``: 入力レイヤのID。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:246
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:493
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:753
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:878
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1136
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1270
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1384
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1496
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1627
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1764
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1923
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2044
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2179
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2354
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2489
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2614
+msgid "``gc_layername``: the name of the input layer."
+msgstr "``gc_layername``: 入力レイヤの名前。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:118
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"dangle-end."
+msgstr "``gc_partidx``: 地物のダングルを含んでいるジオメトリ部分のインデックス。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:119
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"dangle-end."
+msgstr "``gc_ringidx``: 地物のダングルを含んでいるジオメトリリングのインデックス。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:120
+msgid ""
+"``gc_vertidx``: the vertex index of the dangle-end in the feature's geometry"
+" ring."
+msgstr "``gc_vertidx``: 地物のジオメトリリングにあるダングルの頂点インデックス。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:121
+msgid "``gc_errorx``: the x coordinate of the dangle-end."
+msgstr "``gc_errorx``: ダングルの x 座標。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:122
+msgid "``gc_errory``: the y coordinate of the dangle-end."
+msgstr "``gc_errory``: ダングルの y 座標。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:123
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:252
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:499
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:759
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1142
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1390
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1502
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1633
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1770
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2620
+msgid "``gc_error``"
+msgstr "``gc_error``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:124
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature with the dangle-end."
+msgstr "``UNIQUE_ID`` フィールド: ダングルを持っている入力地物の一意ID。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:128
+msgid ""
+"Output line layer containing the input dangle-end features. If no dangle-end"
+" features are found, the output layer will be empty. Available fields are "
+"the same as in the ``ERRORS`` output."
+msgstr ""
+"入力ダングル地物を含んでいる出力ラインレイヤ。もしダングル地物が見つからない場合、出力レイヤは空になります。利用可能なフィールドは、``ERRORS``"
+" 出力と同じです。"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:133
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:262
@@ -751,6 +1101,10 @@ msgstr "出力"
 msgid "Python code"
 msgstr "Python コード"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:135
+msgid "**Algorithm ID**: ``native:checkgeometrydangle``"
+msgstr "**Algorithm ID**: ``native:checkgeometrydangle``"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:8
 msgid ""
 "The *algorithm id* is displayed when you hover over the algorithm in the "
@@ -761,6 +1115,24 @@ msgstr ""
 "*algorithm id* は、プロセシングツールボックス内でアルゴリズムにマウスカーソルを乗せた際に表示されるIDです。 *parameter "
 "dictionary* は、パラメータの「名前」とその値を指定するマッピング型です。Python "
 "コンソールからプロセシングアルゴリズムを実行する方法の詳細については、 :ref:`processing_console` を参照してください。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:148
+msgid ""
+"Checks the polygons with less than 3 points, which are degenerate polygons. "
+"Degenerate polygons are errors."
+msgstr "退化ポリゴンである、3 ポイント未満しか持っていないポリゴンを検査します。退化ポリゴンはエラーです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:153
+msgid ""
+"This algorithm detects invalid polygon geometries (degenerate polygons). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"このアルゴリズムは、無効なポリゴンジオメトリ（退化ポリゴン）を検出します。処理の前にこれらの無効な地物が除外されないようにするには、:guilabel:`入力レイヤ`"
+" の横にある |options|:sup:`詳細オプション` を開き、:guilabel:`無効地物フィルタ` を "
+"``フィルタリングしない（パフォーマンスが向上します）`` に設定してください。"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2644
 msgid "options"
@@ -791,6 +1163,86 @@ msgstr "options"
 msgid "[vector: polygon]"
 msgstr "[ベクタ：ポリゴン]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:239
+msgid "**Degenerate polygons errors**"
+msgstr "**エラー（退化ポリゴン）**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:186
+msgid ""
+"Specification of the output layer containing the centroid of the degenerate "
+"polygons. :ref:`One of <output_parameter_widget>`:"
+msgstr "退化ポリゴンの重心を格納する出力レイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:254
+msgid "**Degenerate polygons features**"
+msgstr "**退化ポリゴンを含む地物**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:199
+msgid ""
+"Specification of the output layer containing the degenerate polygons. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr "退化ポリゴンを格納する出力レイヤを指定します。:ref:`次のいずれかです <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:247
+msgid ""
+"``gc_partidx``: the index of the geometry part of the degenerate polygon."
+msgstr "``gc_partidx``: 退化ポリゴンのジオメトリ部分のインデックス。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:248
+msgid "``gc_ringidx``: the index of the ring of the degenerate polygon."
+msgstr "``gc_ringidx``: 退化ポリゴンのリングのインデックス。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:249
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:372
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:629
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:756
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:881
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1010
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1139
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1387
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1499
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1767
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1926
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2182
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2357
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2617
+msgid "``gc_vertidx``"
+msgstr "``gc_vertidx``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:250
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the degenerate polygon"
+msgstr "``gc_errorx``: 退化ポリゴンの重心の x 座標"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:251
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the degenerate polygon"
+msgstr "``gc_errory``: 退化ポリゴンの重心の y 座標"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:253
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is degenerate."
+msgstr "``UNIQUE_ID`` フィールド: 退化している入力地物の一意ID"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:257
+msgid ""
+"Output polygon layer with features containing the degenerate polygons. If no"
+" degenerate polygon features are found, the output layer will be empty. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"退化ポリゴンを格納している地物を持った出力ポリゴンレイヤ。退化ポリゴン地物が見つからない場合、出力レイヤは空になります。利用可能なフィールドは "
+"``ERROR`` 出力と同じです。"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:264
+msgid "**Algorithm ID**: ``native:checkgeometrydegeneratepolygon``"
+msgstr "**Algorithm ID**: ``native:checkgeometrydegeneratepolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:274
+msgid "Duplicated geometries"
+msgstr "重複ジオメトリ"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:296
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:551
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2542
@@ -811,6 +1263,40 @@ msgstr "[vector: geometry]"
 msgid "[vector: same as input]"
 msgstr "[ベクタ: 入力と同じ]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:370
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:627
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1137
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1385
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1497
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1924
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2180
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2355
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2615
+msgid "``gc_partidx``"
+msgstr "``gc_partidx``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:371
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:628
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:880
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1009
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1138
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1386
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1498
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1925
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2181
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2356
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2616
+msgid "``gc_ringidx``"
+msgstr "``gc_ringidx``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:386
+msgid "**Algorithm ID**: ``native:checkgeometryduplicate``"
+msgstr "**Algorithm ID**: ``native:checkgeometryduplicate``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:396
+msgid "Duplicated vertices"
+msgstr "重複頂点"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:421
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:940
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1556
@@ -821,10 +1307,70 @@ msgstr "[ベクタ: 入力と同じ]"
 msgid "[vector: line, polygon]"
 msgstr "[ベクタ：ライン、ポリゴン]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:510
+msgid "**Algorithm ID**: ``native:checkgeometryduplicatenodes``"
+msgstr "**Algorithm ID**: ``native:checkgeometryduplicatenodes``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:520
+msgid "Features inside polygon"
+msgstr "ポリゴン内部の地物"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:558
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1441
 msgid "``POLYGONS``"
 msgstr "``POLYGONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:643
+msgid "**Algorithm ID**: ``native:checkgeometrycontained``"
+msgstr "**Algorithm ID**: ``native:checkgeometrycontained``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:653
+msgid "Holes"
+msgstr "孔 (Hole)"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:663
+msgid ":ref:`qgisfixgeometryhole`"
+msgstr ":ref:`qgisfixgeometryhole`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:771
+msgid "**Algorithm ID**: ``native:checkgeometryhole``"
+msgstr "**Algorithm ID**: ``native:checkgeometryhole``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:781
+msgid "Lines intersecting each other"
+msgstr "交差する線"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:896
+msgid "**Algorithm ID**: ``native:checkgeometrylineintersection``"
+msgstr "**Algorithm ID**: ``native:checkgeometrylineintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:906
+msgid "Lines intersecting other layer"
+msgstr "検査レイヤと交差する線"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:939
+msgid "``CHECK_LAYER``"
+msgstr "``CHECK_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1025
+msgid "**Algorithm ID**: ``native:checkgeometrylinelayerintersection``"
+msgstr "**Algorithm ID**: ``native:checkgeometrylinelayerintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1034
+msgid "Missing vertices along borders"
+msgstr "境界沿いの欠損点"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1155
+msgid "**Algorithm ID**: ``native:checkgeometrymissingvertex``"
+msgstr "**Algorithm ID**: ``native:checkgeometrymissingvertex``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1165
+msgid "Overlaps"
+msgstr "重なり"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1201
+msgid "``MIN_OVERLAP_AREA``"
+msgstr "``MIN_OVERLAP_AREA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1202
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1845
@@ -837,14 +1383,67 @@ msgstr "``POLYGONS``"
 msgid "[numeric: double]"
 msgstr "[数値: double]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1285
+msgid "**Algorithm ID**: ``native:checkgeometryoverlap``"
+msgstr "**Algorithm ID**: ``native:checkgeometryoverlap``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1294
+msgid "Points outside lines"
+msgstr "線上の点"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1329
 msgid "``LINES``"
 msgstr "``LINES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1396
+msgid "**Algorithm ID**: ``native:checkgeometrypointcoveredbyline``"
+msgstr "**Algorithm ID**: ``native:checkgeometrypointcoveredbyline``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1406
+msgid "Points outside polygons"
+msgstr "ポリゴン外の点"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1508
+msgid "**Algorithm ID**: ``native:checkgeometrypointinpolygon``"
+msgstr "**Algorithm ID**: ``native:checkgeometrypointinpolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1518
+msgid "Self-contacts"
+msgstr "自己接触"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1577
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1714
 msgid "[same as input]"
 msgstr "[入力レイヤと同じ]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1645
+msgid "**Algorithm ID**: ``native:checkgeometryselfcontact``"
+msgstr "**Algorithm ID**: ``native:checkgeometryselfcontact``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1655
+msgid "Self-intersections"
+msgstr "自己交差"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1784
+msgid "**Algorithm ID**: ``native:checkgeometryselfintersection``"
+msgstr "**Algorithm ID**: ``native:checkgeometryselfintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1793
+msgid "Sliver polygons"
+msgstr "裂片"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1818
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2082
+msgid ":ref:`qgisfixgeometryarea`"
+msgstr ":ref:`qgisfixgeometryarea`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1844
+msgid "``MAX_THINNESS``"
+msgstr "``MAX_THINNESS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1851
+msgid "``MAX_AREA``"
+msgstr "``MAX_AREA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1854
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2249
@@ -853,9 +1452,57 @@ msgstr "[入力レイヤと同じ]"
 msgid "Default: 0.0"
 msgstr "デフォルト： 0.0"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1941
+msgid "**Algorithm ID**: ``native:checkgeometrysliverpolygon``"
+msgstr "**Algorithm ID**: ``native:checkgeometrysliverpolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1951
+msgid "Small angles"
+msgstr "鋭角"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1962
+msgid ":ref:`qgisfixgeometryangle`"
+msgstr ":ref:`qgisfixgeometryangle`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1988
+msgid "``MIN_ANGLE``"
+msgstr "``MIN_ANGLE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2056
+msgid "**Algorithm ID**: ``native:checkgeometryangle``"
+msgstr "**Algorithm ID**: ``native:checkgeometryangle``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2065
+msgid "Small polygons"
+msgstr "微小ポリゴン"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2108
+msgid "``AREATHRESHOLD``"
+msgstr "``AREATHRESHOLD``"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2111
 msgid "Default: 0"
 msgstr "デフォルト： 0"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2197
+msgid "**Algorithm ID**: ``native:checkgeometryarea``"
+msgstr "**Algorithm ID**: ``native:checkgeometryarea``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2207
+msgid "Small gaps"
+msgstr "微小ギャップ"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2246
+msgid "``GAP_THRESHOLD``"
+msgstr "``GAP_THRESHOLD``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2255
+msgid "``ALLOWED_GAPS_LAYER``"
+msgstr "``ALLOWED_GAPS_LAYER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2262
+msgid "``ALLOWED_GAPS_BUFFER``"
+msgstr "``ALLOWED_GAPS_BUFFER``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2270
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2340
@@ -866,3 +1513,31 @@ msgstr "``NEIGHBORS``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2341
 msgid "[vector: table]"
 msgstr "[ベクタ: テーブル]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2371
+msgid "**Algorithm ID**: ``native:checkgeometrygap``"
+msgstr "**Algorithm ID**: ``native:checkgeometrygap``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2381
+msgid "Small segments"
+msgstr "微小セグメント"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2418
+msgid "``MIN_SEGMENT_LENGTH``"
+msgstr "``MIN_SEGMENT_LENGTH``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2506
+msgid "**Algorithm ID**: ``native:checkgeometrysegmentlength``"
+msgstr "**Algorithm ID**: ``native:checkgeometrysegmentlength``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2517
+msgid "Strictly multipart"
+msgstr "マルチパート"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2523
+msgid ":ref:`qgisfixgeometrymultipart`"
+msgstr ":ref:`qgisfixgeometrymultipart`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2631
+msgid "**Algorithm ID**: ``native:checkgeometrymultipart``"
+msgstr "**Algorithm ID**: ``native:checkgeometrymultipart``"

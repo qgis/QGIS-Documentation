@@ -6,15 +6,16 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Transifex Bot <>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-12 16:17+0000\n"
+"POT-Creation-Date: 2026-09-04 12:27+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Transifex Bot <>, 2026\n"
 "Language-Team: French (https://app.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -377,6 +378,20 @@ msgstr ""
 "projet enregistré, tenter de l'ouvrir avec une version plus ancienne peut "
 "échouer en raison de fonctionnalités non disponibles dans cette version."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:138
+msgid ""
+":guilabel:`Enable project's embedded Python code` |selectString|. This "
+"option handles execution of macros that are written to perform an action on "
+"project events, as well as custom Python functions to be used as "
+"expressions. You can choose between 'Never', 'Ask', 'For this session only' "
+"and 'Always (not recommended)'."
+msgstr ""
+":guilabel:`Activer le code Python contenu dans le projet` |selectString| . "
+"Cette option gère les macros devant exécuter des actions sur des événements "
+"du projet, ainsi que les fonctions Python devant être utilisées dans des "
+"expressions. Vous pouvez choisir entre 'Jamais', 'Demander', 'Uniquement "
+"pour cette session' et 'Toujours (non recommandé)'."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:143
 msgid ""
 ":guilabel:`Default paths`: defines whether paths to files and layers used in"
@@ -456,6 +471,26 @@ msgstr ""
 msgid "**Documentation paths**"
 msgstr "**Chemins de documentation**"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:181
+msgid ""
+"Add or Remove :guilabel:`Documentation Path(s)` to use for QGIS help. By "
+"default, a link to the official online User Manual corresponding to the "
+"version being used is added (i.e., "
+"``https://docs.qgis.org/§qgis_short_version/$qgis_locale/docs/user_manual/``)."
+" You can however add other links and prioritize them from top to bottom: "
+"each time you click on a :guilabel:`Help` button in a dialog, the topmost "
+"link is checked and if no corresponding page is found, the next one is "
+"tried, and so on."
+msgstr ""
+"Ajouter ou enlever :guilabel:`Chemins de documentation` pour utiliser l'aide"
+" de QGIS. Par défaut, un lien vers le manuel officiel en ligne correspondant"
+" à la version utilisée est ajouté (c'est-à-dire, "
+"``https://docs.qgis.org/§qgis_short_version/$qgis_locale/docs/user_manual/``).."
+" Vous pouvez cependant ajouter d'autres liens et les hiérarchiser de haut en"
+" bas : à chaque fois que vous cliquez sur le bouton :guilabel:`Aide`, le "
+"lien le plus haut est vérifié et si aucune page correspondante n'est "
+"trouvée, la page suivante est essayée, et ainsi de suite."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:190
 msgid ""
 "Documentation is versioned and translated only for QGIS Long Term Releases "
@@ -495,6 +530,25 @@ msgstr "**Environnement**"
 msgid "System environment variables"
 msgstr "Variables d'environnement Système"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:211
+msgid ""
+"System environment variables can be viewed, and many configured, in the "
+"**Environment** group. This is useful for platforms, such as Mac, where a "
+"GUI application does not necessarily inherit the user's shell environment. "
+"It's also useful for setting and viewing environment variables for the "
+"external tool sets controlled by the Processing toolbox (e.g., GRASS), and "
+"for turning on debugging output for specific sections of the source code."
+msgstr ""
+"Les variables d'environnement Système peuvent maintenant être visualisées "
+"et, pour beaucoup, configurées dans le groupe **Environnement**. Ceci est "
+"pratique sur certaines plateformes, notamment sur macOS, ou une application "
+"avec interface graphique n'hérite pas nécessairement des paramètres de "
+"l'environnement en ligne de commande de l'utilisateur. Ceci est aussi utile "
+"pour paramétrer/visualiser les variables d'environnement des outils externes"
+" contrôlés par la boîte à outils de traitement (par exemple GRASS) et "
+"activer les sorties de débogage pour des sections spécifiques du code "
+"source."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:219
 msgid ""
 "Check |checkbox| :guilabel:`Use custom variables (restart required - include"
@@ -522,6 +576,14 @@ msgstr "symbologyRemove"
 msgid ":guilabel:`Overwrite`: replace any preexisting value of the variable"
 msgstr ""
 ":guilabel:`Ecraser`: remplace toute valeur préexistante de la variable"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:226
+msgid ""
+":guilabel:`If undefined`: use this value for the variable if not already "
+"defined at a higher level (e.g., OS or application levels)"
+msgstr ""
+":guilabel:`Si non défini` : utilise cette valeur de la variable si non déjà "
+"défini à un plus haut niveau (par exemple, niveaux OS ou applicatif)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:228
 msgid ""
@@ -690,6 +752,36 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:296
 msgid "**Accuracy Warnings**"
 msgstr "**Avertissement sur la précision**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:304
+msgid ""
+":guilabel:`Only show CRS accuracy warnings for inaccuracies which exceed` a "
+"given distance: occurs when you are explicitly creating or modifying a "
+"dataset and select a CRS based on a datum ensemble with lower accuracy. The "
+"default is to ``Always show`` the warning if any inaccuracy."
+msgstr ""
+":guilabel:`Montrer les avertissements de précision du SCR uniquement pour "
+"les imprécisions dépassant` une certaine distance : apparait quand vous "
+"créez explicitement ou modifiez un jeu de données et sélectionnez un SCR "
+"basé sur un datum avec une plus faible précision. La valeur par défaut est "
+"de ``Toujours montrer`` l'avertissement pour toute imprécision."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:309
+msgid ""
+"|unchecked| :guilabel:`Show CRS accuracy warning for layers in project "
+"legend`: If checked, any layer with a CRS with accuracy issues (i.e., a "
+"dynamic crs with no coordinate epoch available, or a CRS based on a datum "
+"ensemble with inherent inaccuracy exceeding the user-set limit) will have "
+"the |indicatorLowAccuracy| warning icon in the :guilabel:`Layers` panel "
+"reflecting that it is a low-accuracy layer."
+msgstr ""
+"|unchecked| :guilabel:`Afficher les avertissements de précision du SCR pour "
+"les couches dans la légende du projet` : Si coché, chaque couche dans un SCR"
+" avec des problèmes de précision (c'est-à-dire, un SCR dynamique sans "
+"période de coordonnées disponible, ou un SCR basé sur un datum avec une "
+"imprécision inhérente dépassant la limite fixée par l'utilisateur) va avoir "
+"l'icône d'avertissement |indicatorLowAccuracy| dans le panneau "
+":guilabel:`Couches` indiquant qu'elle est une couche peu précise. "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2905
 msgid "indicatorLowAccuracy"
@@ -872,6 +964,22 @@ msgid "|checkbox| :guilabel:`Open attribute table as docked window`"
 msgstr ""
 "|checkbox| :guilabel:`Ouvrir la table attributaire dans une fenêtre "
 "intégrée`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:405
+msgid ""
+"|checkbox| :guilabel:`Autosize all columns by default when opening attribute"
+" table`"
+msgstr ""
+"|checkbox| :guilabel:`Redimensionner automatiquement toutes les colonnes à "
+"l'ouverture de la table d'attributs`."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:406
+msgid ""
+":guilabel:`Copy features as`: defines the format to use for data when "
+"pasting features in other applications."
+msgstr ""
+":guilabel:`Copier les entités comme` : définit le format à appliquer aux "
+"données lors du collage d'entités dans d'autres applications."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:417
 msgid ""
@@ -1061,6 +1169,20 @@ msgstr ""
 msgid "GDAL Settings"
 msgstr "GDAL"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:493
+msgid ""
+"`GDAL <https://gdal.org/en/latest>`_ is a data exchange library for "
+"geospatial data that supports a large number of vector and raster formats. "
+"It provides drivers to read and (often) write data in these formats. The "
+":guilabel:`GDAL` tab exposes the drivers for raster and vector formats with "
+"their capabilities."
+msgstr ""
+"`GDAL <https://gdal.org/en/latest>`_ est une bibliothèque d'échange de "
+"données qui gère un grand nombre de formats vecteur et raster. Il fournit "
+"des pilotes pour lire et (souvent) écrire des données dans ces différents "
+"formats. L'onglet :guilabel:`GDAL` liste les pilotes pour les formats raster"
+" et vecteurs avec leurs capacités."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:499
 msgid "**GDAL raster and vector drivers**"
 msgstr "**Pilotes rasters et vecteurs de GDAL**"
@@ -1102,6 +1224,21 @@ msgstr ""
 "Ce sous-onglet propose plusieurs manières de personnaliser le comportement "
 "des pilotes raster qui gèrent les accès en lecture et écriture aux données :"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:524
+msgid ""
+":guilabel:`Edit create options`: allows you to edit or add different "
+"profiles of file transformation, i.e., a set of predefined combinations of "
+"parameters (type and level of compression, BIGTIFF support, blocks size, "
+"overview, colorimetry, alpha...) to use when outputting raster files. The "
+"parameters depend on the driver."
+msgstr ""
+":guilabel:`Modifier les options de création` : vous permet d'éditer ou "
+"ajouter différents profils de transformation de fichier, c'est-à-dire une "
+"combinaison prédéfinie de paramètres (type et niveau de compression, support"
+" du BIGTIFF, taille des blocs, aperçu, colorimétrie, alpha...) à utiliser "
+"lors des conversions de fichiers raster. Ces paramètres dépendent des "
+"pilotes."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:534
 msgid "Sample of create options profile (for GeoTiff)"
 msgstr "Exemple de profil d'options de création (pour le GeoTIFF)"
@@ -1142,6 +1279,16 @@ msgid ""
 msgstr ""
 "Cliquer sur le bouton :guilabel:`Valider` permet de vérifier que les options"
 " de création entrées pour le format en question sont valides."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:547
+msgid ""
+"Use the :guilabel:`Help` button to find the parameters to use, or refer to "
+"the `GDAL raster drivers documentation "
+"<https://gdal.org/en/latest/drivers/raster/index.html>`_."
+msgstr ""
+"Utilisez le bouton :guilabel:`Aide` pour trouver les paramètres à utiliser "
+"ou référez-vous à la `documentation GDAL sur les pilotes raster "
+"<https://gdal.org/en/latest/drivers/raster/index.html>`_."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:553
 msgid ":guilabel:`Edit Pyramids Options`"
@@ -1187,6 +1334,12 @@ msgstr ""
 "couches pour éviter que chaque nouvelle couche ne soit restituée sur la "
 "carte et ralentisse le processus."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:584
+msgid "Set the :guilabel:`Maximum cores to use for map rendering`"
+msgstr ""
+"Définir le :guilabel:`Maximum de cœurs à utiliser pour le rendu "
+"cartographique`"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:585
 msgid ""
 "The map canvas renders in the background onto a separate image and at each "
@@ -1223,9 +1376,68 @@ msgstr ""
 msgid "Vector rendering settings"
 msgstr "Rendu de vecteur"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:602
+msgid ""
+"The |polygonLayer| :guilabel:`Vector` tab contains specific settings for "
+"rendering vector layers."
+msgstr ""
+"L'onglet |polygonLayer| :guilabel:`Vecteur` contient les paramètres "
+"spécifiques au rendu des couches vectorielles."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2931
 msgid "polygonLayer"
 msgstr "polygonLayer"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:614
+msgid ""
+"|checkbox| :guilabel:`Enable Feature Simplification by Default for Newly "
+"Added Layers`: you simplify features' geometry (fewer nodes) and as a "
+"result, they display more quickly. Be aware that this can cause rendering "
+"inconsistencies. Available settings are:"
+msgstr ""
+"|checkbox| :guilabel:`Activer la simplification des entités par défaut lors "
+"de l'ajout de nouvelles couches` : active la simplification de la géométrie "
+"des entités (moins de nœuds) pour un affichage plus rapide. Ceci peut "
+"générer des incohérences de rendu. Les paramètres disponibles sont :@"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:619
+msgid ""
+":guilabel:`Simplification threshold (higher values result in more "
+"simplification)`"
+msgstr ""
+":guilabel:`Seuil de simplification (une valeur plus grande induit plus de "
+"simplification)`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:620
+msgid ""
+":guilabel:`Simplification algorithm`: This option performs a local \"on-the-"
+"fly\" simplification on feature's and speeds up geometry rendering. It "
+"doesn't change the geometry fetched from the data providers. This is "
+"important when you have expressions that use the feature geometry (e.g., "
+"calculation of area) - it ensures that these calculations are done on the "
+"original geometry, not on the simplified one. For this purpose, QGIS "
+"provides three algorithms: 'Distance' (default), 'SnapToGrid' and "
+"'Visvalingam'."
+msgstr ""
+":guilabel:`Algorithme de simplification` : Cette option effectue une "
+"simplification \"à la volée\" des entités et accélère le rendu de la "
+"géométrie. Cela ne change pas la géométrie récupérée auprès des fournisseurs"
+" de données. Ainsi, lorsque vous avez des expressions qui utilisent la "
+"géométrie de l'élément (par exemple, le calcul de la surface), cela garantit"
+" que ces calculs soient effectués sur la géométrie originale et non sur la "
+"géométrie simplifiée. QGIS propose trois algorithmes de simplification "
+":'Distance' (par défaut), 'SnapToGrid' et 'Visvalingam'."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:627
+msgid ""
+"|unchecked| :guilabel:`Simplify on provider side if possible`: the "
+"geometries are simplified by the provider (PostgreSQL, Oracle...) and unlike"
+" the local-side simplification, geometry-based calculations may be affected"
+msgstr ""
+"|unchecked| :guilabel:`Réaliser la simplification par le fournisseur de "
+"données lorsque c'est possible` : Les géométries sont simplifiées par le "
+"fournisseur (PostgreSQL, Oracle...) et contrairement à la simplification "
+"locale, les calculs basés sur la géométrie peuvent être affectés."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:630
 msgid ""
@@ -1277,6 +1489,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:660
 msgid "Raster rendering settings"
 msgstr "Rendu de raster"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:651
+msgid ""
+"The |raster| :guilabel:`Raster` tab contains specific settings for rendering"
+" raster layers."
+msgstr ""
+"L'onglet |raster| :guilabel:`Raster` contient les paramètres spécifiques au "
+"rendu des couches raster."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2939
 msgid "raster"
@@ -1389,6 +1609,17 @@ msgstr ":guilabel:`Au dessus de la couche actuellement sélectionée`"
 msgid ":guilabel:`Always on top of the layer tree`"
 msgstr ":guilabel:`Toujours en haut de la liste des couches`"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:739
+msgid ""
+"|unchecked| :guilabel:`Display classification attribute names` in the Layers"
+" panel, e.g., when applying a categorized or rule-based renderer (see "
+":ref:`vector_style_menu` for more information)."
+msgstr ""
+"|unchecked| :guilabel:`Afficher les attributs de classification dans le "
+"titre des couches` dans le panneau des couches, notamment pour la symbologie"
+" catégorisée ou basée sur des règles (voir :ref:`vector_style_menu` pour "
+"plus d'informations)."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:742
 msgid "the :guilabel:`WMS getLegendGraphic Resolution`"
 msgstr "La :guilabel:`résolution de l'image getLegendGraphic pour le WMS`"
@@ -1418,6 +1649,16 @@ msgstr "Outils cartographiques"
 msgid "Map tools settings"
 msgstr "Outils cartographiques"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:782
+msgid "**Measurements, Coordinate and Bearing Display**"
+msgstr "**Affichage des mesures, coordonnées et angles**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:784
+msgid "This section provides ways to configure default units parameters:"
+msgstr ""
+"Cette section offre des moyens de configurer les paramètres par défaut des "
+"unités :"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:786
 msgid "Define :guilabel:`Decimal places`"
 msgstr "Définir le :guilabel:`Nombre de décimales`"
@@ -1441,6 +1682,33 @@ msgstr ""
 "'Tours/révolutions', 'Milliradians (définition SI)' ou 'Mil (définition "
 "OTAN/militaire)'"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:792
+msgid ""
+":guilabel:`Default distance units for new projects`: options are 'Meters', "
+"'Kilometers', 'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', "
+"'Millimeters', 'Inches', 'Degrees' or 'Map Units' (automatically matches the"
+" project’s CRS units)"
+msgstr ""
+":guilabel:`Unités de distance par défaut pour les nouveaux projets` : le "
+"choix est possible entre 'Mètres', 'Kilomètres', 'Pieds', 'Yards', 'Miles', "
+"'Milles Nautiques', 'Centimètres', 'Millimètres', 'Pouces', 'Degrés' ou "
+"'Unités de carte' (correspondant automatiquement à l'unité du SCR du projet)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:795
+msgid ""
+":guilabel:`Preferred area units for new projects`: options are 'Square "
+"meters', 'Square kilometers', 'Square feet', 'Square yards', 'Square miles',"
+" 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters', 'Square"
+" millimeters', 'Square inches', 'Square degrees' or 'Map Units' "
+"(automatically matches the project’s CRS units)"
+msgstr ""
+":guilabel:`Unités de superficie préférées pour les nouveaux projets` : le "
+"choix est possible entre 'Mètres carrés', 'Kilomètres carrés', 'Pieds "
+"carrés', 'Yards carrés', 'Miles carrés', 'Hectares', 'Acres', 'Milles "
+"nautiques carrés', 'Centimètres carrés', 'Millimètres carrés', 'Pouces "
+"carrés', 'Degrés carrés' ou 'Unités de carte' (correspondant automatiquement"
+" à l'unité du SCR du projet)"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2903
 msgid "identify"
 msgstr "identify"
@@ -1448,6 +1716,18 @@ msgstr "identify"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2915
 msgid "measureBearing"
 msgstr "measureBearing"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:809
+msgid "**Identify tool**"
+msgstr "**Outil d'identification**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:811
+msgid ""
+"This group offers some options regarding the behavior of the :ref:`Identify "
+"tool <identify>`."
+msgstr ""
+"Ce groupe propose des options concernant le comportement de l':ref:`Outil "
+"Identifier <identify>`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:813
 msgid ""
@@ -1573,14 +1853,6 @@ msgstr ":guilabel:`Ne pas mettre à jour le contour lors de l'édition`."
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:901
 msgid "**Snapping**"
 msgstr "**Accrochage**"
-
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:903
-msgid ""
-"|checkbox| :guilabel:`Enable snapping by default` activates snapping when a "
-"project is opened"
-msgstr ""
-"|checkbox| :guilabel:`Activer l'accrochage par défaut` active l'accrochage "
-"lors de l'ouverture d'un projet"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:905
 msgid ""
@@ -2454,6 +2726,10 @@ msgstr "Python"
 msgid "PyQGIS"
 msgstr "PyQGIS"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1550
+msgid "PyQt"
+msgstr "PyQt"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1551
 msgid "QScintilla2"
 msgstr "QScintilla2"
@@ -2461,6 +2737,10 @@ msgstr "QScintilla2"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1552
 msgid "osgeo-gdal-ogr"
 msgstr "osgeo-gdal-ogr"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1553
+msgid "osgeo-geos"
+msgstr "osgeo-geos"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1556
 msgid ""
@@ -2634,6 +2914,10 @@ msgstr "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2919
 msgid "nix"
 msgstr "nix"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1646
+msgid "|win| :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
+msgstr "|win| :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1647
 msgid "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
@@ -2986,6 +3270,18 @@ msgstr "symbology"
 msgid "Styles tab"
 msgstr "Onglet Styles"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1952
+msgid "Default symbols"
+msgstr "Symboles par défaut"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1963
+msgid "Symbol options"
+msgstr "Options de symbole"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1965
+msgid "In the :guilabel:`Symbol options` group, you can:"
+msgstr "Dans le groupe :guilabel:`Options de symbole`, vous pouvez :"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1967
 msgid "Apply a default :guilabel:`Opacity` to new layers"
 msgstr "Appliquer une :guilabel:`Opacité` par défaut aux nouvelles couches."
@@ -3006,6 +3302,14 @@ msgstr "Base de données de styles"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2917
 msgid "newPage"
 msgstr "newPage"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2001
+msgid "Colors properties"
+msgstr "Propriétés de couleurs"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2008
+msgid "Colors tab"
+msgstr "Onglet Couleurs"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2873
 msgid "colorSwatches"
@@ -3802,6 +4106,10 @@ msgstr "chemin défini par la variable d'environnement"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2634
 msgid "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
 msgstr "|nix| :file:`$HOME/.local/share/QGIS/QGIS3/`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2635
+msgid "|win| :file:`C:\\\\Users\\\\<username>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\`"
+msgstr "|win| :file:`C:\\\\Users\\\\<username>\\\\AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2636
 msgid "|osx| :file:`$HOME/Library/Application Support/QGIS/QGIS3/`"

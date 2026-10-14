@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
-# tomoya miyoshi, 2026
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2399,6 +2399,13 @@ msgstr "配列内で最も頻出する値を返します。"
 msgid "array_majority(array, [option:='all'])"
 msgstr "array_majority(array, [option:='all'])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:220
+msgid ""
+"**option** - a string specifying the return values handling. Valid options "
+"are:"
+msgstr "**option** - 戻り値の処理を指定する文字列。有効なオプションは次のとおり："
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "all: Default, all most common values are returned in an array."
 msgstr "all: デフォルトの設定で、最頻値すべてを配列形式で返します。"
@@ -2937,6 +2944,14 @@ msgid ""
 "**delimiter** - the string delimiter used to separate concatenated array "
 "elements"
 msgstr "**delimiter** - 連結する配列要素を区切るために使用する区切り文字"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:112
+msgid ""
+"**emptyvalue** - the optional string to use as replacement for empty (zero "
+"length) matches"
+msgstr "**emptyvalue** - （オプション）空（長さゼロ）にマッチしたときに置き換える文字列"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:114
 msgid "``array_to_string(array('1','2','3'))`` → '1,2,3'"
@@ -4521,9 +4536,19 @@ msgstr "``to_base64('QGIS')`` → 'UUdJUw=='"
 msgid "to_bool"
 msgstr "to_bool"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:128
+msgid ""
+"Converts a given value to a boolean. The function will return false if the "
+"value is NULL, an empty string, an empty list, or 0."
+msgstr "与えられた値をブール値に変換します。この関数は値がNULL、空の文字列、空のリストまたは0のとき、falseを返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:134
 msgid "to_bool(value)"
 msgstr "to_bool(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:136
+msgid "**value** - value to convert to boolean"
+msgstr "**value** - ブール値に変換する値"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:138
 msgid "``to_bool('')`` → false"
@@ -4553,6 +4578,20 @@ msgstr "``to_bool(null)`` → false"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:494
 msgid "to_date"
 msgstr "to_date"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:153
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:496
+msgid ""
+"Converts a string into a date object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_ or the "
+"documentation of the format_date function for additional documentation on "
+"the format. By default the current QGIS user locale is used."
+msgstr ""
+"文字列を日付型オブジェクトに変換します。オプションとして、文字列をパースするためのフォーマット文字列を指定できます。フォーマットに関するドキュメントは、"
+" `QDate::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_ または "
+"format_date 関数のドキュメントを参照してください。デフォルトでは現在のQGISユーザーのロケールを使用します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:159
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:502
@@ -4611,6 +4650,23 @@ msgstr "関係する項目: :ref:`expression_function_Date_and_Time_format_date`
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:6
 msgid "to_datetime"
 msgstr "to_datetime"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:8
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:8
+msgid ""
+"Converts a string into a datetime object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_, "
+"`QTime::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ or the "
+"documentation of the format_date function for additional documentation on "
+"the format. By default the current QGIS user locale is used."
+msgstr ""
+"文字列を日付時刻型オブジェクトに変換します。オプションとして、文字列をパースするためのフォーマット文字列を指定できます。フォーマットに関するドキュメントは、"
+" `QDate::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_ 、 "
+"`QTime::fromString <https://doc.qt.io/qt-5.15/qtime.html#fromString-1>`_ または"
+" format_date 関数のドキュメントを参照してください。デフォルトでは現在のQGISユーザーのロケールを使用します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:14
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:14
@@ -4852,6 +4908,14 @@ msgstr "``to_real('123.45')`` → 123.45"
 msgid "to_string"
 msgstr "to_string"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:144
+#: ../../docs/user_manual/expressions/expression_help/String.rst:8
+msgid ""
+"Converts a number to string. The conversion is not locale-aware, see "
+"'format_number' for a locale-aware alternative."
+msgstr ""
+"数値を文字列に変換します。この変換はロケールに依存しません。ロケールに依存する代替方法については、'format_number' を参照してください。"
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:150
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "to_string(number)"
@@ -4876,6 +4940,18 @@ msgstr "関係する項目: :ref:`expression_function_String_format_number`"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:28
 msgid "to_time"
 msgstr "to_time"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:8
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:30
+msgid ""
+"Converts a string into a time object. An optional format string can be "
+"provided to parse the string; see `QTime::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ for "
+"additional documentation on the format."
+msgstr ""
+"文字列を時間型オブジェクトに変換します。オプションとして、文字列をパースするためのフォーマット文字列を指定できます。フォーマットに関するドキュメントは、"
+" `QTime::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ を参照してください。"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:14
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:36
@@ -4914,21 +4990,69 @@ msgstr "``to_time('12:34','HH:mm')`` → 12:34:00"
 msgid "``to_time('12:34','HH:mm','fr')`` → 12:34:00"
 msgstr "``to_time('12:34','HH:mm','fr')`` → 12:34:00"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:181
+msgid "CRS Functions"
+msgstr "CRS 関数"
+
+#: ../../docs/user_manual/expressions/functions_list.rst:183
+msgid ""
+"This group contains functions to operate on coordinate reference system "
+"objects."
+msgstr "このグループには、座標参照系オブジェクトを操作するための関数が含まれます。"
+
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:12
 msgid "crs_from_text"
 msgstr "crs_from_text"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:14
+msgid ""
+"Creates a coordinate reference system from a string definition. The string "
+"can represent an authority ID, a WKT definition, or a PROJ string definition"
+" of the CRS."
+msgstr ""
+"文字列による定義から座標参照系を作成します。この文字列は、CRS の authority ID、WKT定義またはPROJ文字列定義を表すことができます。"
 
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:20
 msgid "crs_from_text(definition)"
 msgstr "crs_from_text(definition)"
 
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:22
+msgid "**definition** - CRS definition"
+msgstr "**definition** - CRS 定義"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:24
+msgid ""
+"``crs_from_text('EPSG:3857')`` → crs value 'EPSG:3857 - WGS 84 / Pseudo-"
+"Mercator'"
+msgstr ""
+"``crs_from_text('EPSG:3857')`` → crs 値 'EPSG:3857 - WGS 84 / Pseudo-"
+"Mercator'"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:25
+msgid ""
+"``crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 "
+"+x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs')`` →"
+" crs value 'EPSG:3857 - WGS 84 / Pseudo-Mercator'"
+msgstr ""
+"``crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 "
+"+x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs')`` →"
+" crs 値 'EPSG:3857 - WGS 84 / Pseudo-Mercator'"
+
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:33
 msgid "crs_to_authid"
 msgstr "crs_to_authid"
 
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:35
+msgid "Returns the authority ID string for a coordinate reference system."
+msgstr "座標参照系の authority ID 文字列を返します。"
+
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:43
+msgid "**crs** - crs value"
+msgstr "**crs** - crs 値"
 
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
 msgid ""
@@ -5202,6 +5326,17 @@ msgstr "``epoch(to_date('2017-01-01'))`` → 1483203600000"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:28
 msgid "format_date"
 msgstr "format_date"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:149
+#: ../../docs/user_manual/expressions/expression_help/String.rst:30
+msgid ""
+"Formats a date type or string into a custom string format. Uses Qt date/time"
+" format strings. See `QDateTime::toString "
+"<https://doc.qt.io/archives/qt-5.15/qdatetime.html#toString>`_."
+msgstr ""
+"日付型または文字列をカスタム書式文字列でフォーマットします。Qtの date/time フォーマット文字列を使用します。詳細は "
+"`QDateTime::toString "
+"<https://doc.qt.io/archives/qt-5.15/qdatetime.html#toString>`_ を参照してください。"
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:155
 #: ../../docs/user_manual/expressions/expression_help/String.rst:36
@@ -6084,6 +6219,14 @@ msgid ""
 "specified then the file source of the layer will be used."
 msgstr ""
 "**path** - 画像ファイルのパスまたはマップレイヤの値。マップレイヤの値が指定された場合、そのレイヤーのファイルソースが使用されます。"
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:45
+msgid ""
+"**tag** - The tag to return. If empty, a map with all possible Exif `tag "
+"values <https://exiftool.org/TagNames/EXIF.html>`_ will be returned."
+msgstr ""
+"**tag** - 取得したいタグ。指定しない場合には、全ての exif `タグの値 "
+"<https://exiftool.org/TagNames/EXIF.html>_ がマップ型で返ります"
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:47
 msgid "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
@@ -6998,6 +7141,23 @@ msgstr "北を基準とした方位を、point_a上の鉛直線からpoint_bへ�
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:167
 msgid "bearing(point_a, point_b, [source_crs], [ellipsoid])"
 msgstr "bearing(point_a, point_b, [source_crs], [ellipsoid])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:173
+msgid ""
+"**source_crs** - an optional string or CRS object representing the source "
+"CRS of the points. By default the current layer's CRS is used."
+msgstr ""
+"**source_crs** - （オプション）ポイントのソース CRS を表す文字列または CRS "
+"オブジェクト。デフォルトでは、現在のレイヤのCRSが使われます。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:174
+msgid ""
+"**ellipsoid** - an optional string representing the acronym or the authority"
+" ID (e.g., 'EPSG:7030') of the ellipsoid on which the bearing should be "
+"measured. By default the current project's ellipsoid setting is used."
+msgstr ""
+"**ellipsoid** - （オプション）方位を測る楕円体の頭字語または authority ID (例: "
+"'EPSG:7030')を表す文字列。デフォルトでは、現在のプロジェクトの楕円体設定が使われます。"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:176
 msgid ""
@@ -10506,10 +10666,80 @@ msgstr ""
 msgid "overlay_equals"
 msgstr "overlay_equals"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns whether the current feature's geometry is exactly equal to at least "
+"one feature's geometry from a target layer, or an array of expression-based "
+"results for the features in the target layer whose geometry is exactly equal"
+" to the current feature's geometry. Note that the order of vertices matters."
+msgstr ""
+"現在の地物のジオメトリが対象レイヤの少なくとも1つの地物のジオメトリと完全に一致するかどうか、または、ジオメトリが現在の地物のジオメトリと完全に一致する対象レイヤの地物について、式に基づいた結果の配列を返します。頂点の順序が関係することに注意してください。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "overlay_equals(layer, [expression], [filter], [limit], [cache:=false])"
 msgstr ""
 "overlay_equals(layer, [expression], [filter], [limit], [cache:=false])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``overlay_equals('regions')`` → TRUE if the current feature's geometry is "
+"exactly the same as the geometry of a region"
+msgstr ""
+"``overlay_equals('regions')`` → 現在の地物のジオメトリが、regions "
+"の少なくともひとつのジオメトリと完全に一致する場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid ""
+"``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature's geometry is exactly the same as the geometry of a region "
+"whose population is greater than 10000"
+msgstr ""
+"``overlay_equals('regions', filter:= population > 10000)`` → 現在の地物のジオメトリが "
+"regions のひとつの地物のジオメトリと完全に一致し、その population が10000より大きい場合にTRUE"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid ""
+"``overlay_equals('regions', name)`` → an array of names, for the regions "
+"exactly equal to the current feature"
+msgstr ""
+"``overlay_equals('regions', name)`` → 現在の地物と完全に一致する regions の地物の name の配列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid ""
+"``array_to_string(overlay_equals('regions', name))`` → a string as a comma "
+"separated list of names, for the regions exactly equal to the current "
+"feature"
+msgstr ""
+"``array_to_string(overlay_equals('regions', name))`` → 現在の地物と完全に一致する regions"
+" の地物の name をコンマ区切りで並べた文字列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
+" population > 10000))`` → an ordered array of names, for the regions exactly"
+" equal to the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
+" population > 10000))`` → 現在の地物と完全に一致し、population が10000よりも大きな値を持つ regions "
+"の地物の name をソートした配列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions exactly"
+" equal to the current feature"
+msgstr ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → 現在の地物と完全に一致する2つまでの regions の地物のジオメトリ（WKT形式）の配列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid ""
+"This function requires exact equality of geometries, meaning that the "
+"geometries 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 0 )' are "
+"different."
+msgstr ""
+"この関数では、ジオメトリが完全に一致している必要があります。つまり、ジオメトリ 'LINESTRING( 0 0, 1 1 )' と "
+"'LINESTRING( 1 1, 0 0 )' は異なるものとみなされます。"
 
 #: ../../docs/user_manual/expressions/functions_list.rst:630
 msgid ""
@@ -11241,10 +11471,30 @@ msgstr ""
 msgid "reverse"
 msgstr "reverse"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+#: ../../docs/user_manual/expressions/expression_help/String.rst:8
+msgid "Reverses the direction of a line string or reverses a string of text."
+msgstr "ラインストリングの方向を反転するか、テキストの文字列を反転します。"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
+#: ../../docs/user_manual/expressions/expression_help/String.rst:12
+msgid "Reverses the order of characters in a string."
+msgstr "文字列の文字の順序を反転します。"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:60
 #: ../../docs/user_manual/expressions/expression_help/String.rst:18
 msgid "reverse(string)"
 msgstr "reverse(string)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+#: ../../docs/user_manual/expressions/expression_help/String.rst:20
+msgid "**string** - string to reverse"
+msgstr "**string** - 反転する文字列"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:64
+#: ../../docs/user_manual/expressions/expression_help/String.rst:22
+msgid "``reverse('hello')`` → 'olleh'"
+msgstr "``reverse('hello')`` → 'olleh'"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:69
 #: ../../docs/user_manual/expressions/expression_help/String.rst:27
@@ -12062,6 +12312,14 @@ msgstr "変換元CRSから変換先CRSに変換されたジオメトリを返し
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "transform(geometry, source_auth_id, dest_auth_id)"
 msgstr "transform(geometry, source_auth_id, dest_auth_id)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid "**source_auth_id** - the source CRS definition or CRS object"
+msgstr "**source_auth_id** - 変換元の CRS 定義または CRS オブジェクト"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "**dest_auth_id** - the destination CRS definition or CRS object"
+msgstr "**dest_auth_id** - 変換先の CRS 定義または CRS オブジェクト"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
 msgid ""
@@ -13066,6 +13324,16 @@ msgid ""
 "path: File path to the layer data source. Only available for file based "
 "layers."
 msgstr "path: レイヤのデータソースへのファイルパス。ファイル形式のレイヤのみ利用可"
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+msgid ""
+"**translate** - whether to return translated string. Currently affects only "
+"'type' property. By default translated strings are returned. Setting this to"
+" false will disable translation, always returning English strings."
+msgstr ""
+"**translate** - 翻訳された文字列を返すかどうかを指定します。現在、この設定は 'type' "
+"プロパティにのみ影響します。デフォルトでは、翻訳された文字列が返されます。これを false "
+"に設定すると、翻訳が無効になり、常に英語の文字列が返されます。"
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
@@ -16401,6 +16669,16 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:6
 msgid "uuid"
 msgstr "uuid"
+
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Generates a Universally Unique Identifier (UUID) for each row using the Qt "
+"`QUuid::createUuid "
+"<https://doc.qt.io/archives/qt-5.15/quuid.html#createUuid>`_ method."
+msgstr ""
+"Qtの `QUuid::createUuid "
+"<https://doc.qt.io/archives/qt-5.15/quuid.html#createUuid>`_ "
+"メソッドを使用して、テーブルの各行のUUID（Universally Unique Identifier）を生成します。"
 
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "uuid([format:='WithBraces'])"

@@ -9,6 +9,7 @@
 # Andreas Kaufmann, 2026
 # Bernhard Ströbl <b.stroebl@stroweb.de>, 2026
 # Harrissou Sant-anna, 2026
+# Mario Blersch, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:53+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Mario Blersch, 2026\n"
 "Language-Team: German (https://app.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -36,9 +37,135 @@ msgstr ""
 "<translation_guidelines>`. Diese Seite ist aktuell zu |translation progress|"
 " übersetzt."
 
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:2
+msgid "Lesson: Reprojecting and Transforming Data"
+msgstr "Lektion: Daten umprojizieren und transformieren"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:4
+msgid ""
+"Let us talk about Coordinate Reference Systems (CRSs) again. We have touched"
+" on this briefly before, but haven't discussed what it means practically."
+msgstr ""
+"Lassen Sie uns noch einmal über Koordinatenbezugssysteme (KBS) sprechen. Wir"
+" haben dieses Thema zuvor bereits kurz angeschnitten, aber noch nicht "
+"erörtert, was es in der Praxis bedeutet."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:8
+msgid ""
+"**The goal for this lesson:** To reproject and transform vector datasets."
+msgstr ""
+"**Das Ziel dieser Lektion:** Vektordatensätze reprojizieren und "
+"transformieren."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:11
+msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Projections"
+msgstr ":abbr:`★☆☆ (Grundlagenl)` Zum Mitmachen: Projektionen"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:13
+msgid ""
+"The CRS that all the data, as well as the map itself are in right now is "
+"called *WGS84*. This is a very common Geographic Coordinate System (GCS) for"
+" representing data. But there's a problem, as we will see."
+msgstr ""
+"Das KBS, in dem sich sowohl alle Daten als auch die Karte selbst derzeit "
+"befinden, heißt *WGS84*. Dabei handelt es sich um ein sehr verbreitetes "
+"geographisches Koordinatensystem (GCS) zur Darstellung von Daten. Doch wie "
+"wir gleich sehen werden, wird hiermit ein Problem auftreten."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:19
+msgid "Save your current map"
+msgstr "Speicheren Sie ihre aktuelle Karte"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:20
+msgid ""
+"Then open the map of the world which you will find under "
+":file:`exercise_data/world/world.qgs`"
+msgstr ""
+"Öffnen Sie anschließend die Weltkarte, die Sie unter "
+":file:`exercise_data/world/world.qgs` finden."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:22
+msgid "Zoom in to South Africa by using the |zoomIn| :sup:`Zoom In` tool"
+msgstr ""
+"Zoomen Sie mithilfe des Werkzeugs |zoomIn| :sup:`Hineinzoomen` auf "
+"Südafrika."
+
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:251
 msgid "zoomIn"
 msgstr "zoomIn"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:23
+msgid ""
+"Try setting a scale in the :guilabel:`Scale` field, which is in the "
+"*Statusbar* along the bottom of the screen. While over South Africa, set "
+"this value to ``1:5 000 000`` (one to five million)."
+msgstr ""
+"Versuchen Sie, im Feld :guilabel:`Maßstab` in der *Statusleiste* am unteren "
+"Bildschirmrand einen Maßstab einzustellen. Setzen Sie diesen Wert, während "
+"Sie sich über Südafrika befinden, auf ``1:5 000 000`` (eins zu fünf "
+"Millionen)."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:27
+msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field"
+msgstr ""
+"Verschieben Sie den Kartenausschnitt und behalten Sie dabei das Feld "
+":guilabel:`Maßstab` im Auge."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:30
+msgid ""
+"Notice the scale changing? That's because you are moving away from the one "
+"point that you zoomed into at ``1:5 000 000``, which was at the center of "
+"your screen. All around that point, the scale is different."
+msgstr ""
+"Fällt Ihnen auf, dass sich der Maßstab ändert? Das liegt daran, dass Sie "
+"sich von dem Punkt entfernen, auf den Sie bei ``1:5 000 000`` gezoomt haben "
+"und der sich im Zentrum Ihres Bildschirms befand. Um diesen Punkt herum ist "
+"der Maßstab überall anders."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:35
+msgid ""
+"To understand why, think about a globe of the Earth. It has lines running "
+"along it from North to South. These longitude lines are far apart at the "
+"equator, but they meet at the poles."
+msgstr ""
+"Um zu verstehen, warum das so ist, stellen Sie sich einen Globus vor. Auf "
+"ihm verlaufen Linien von Nord nach Süd. Diese Längengrade liegen am Äquator "
+"weit auseinander, treffen sich jedoch an den Polen."
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:40
+msgid ""
+"In a GCS, you are working on this sphere, but your screen is flat. When you "
+"try to represent the sphere on a flat surface, distortion occurs, similar to"
+" what would happen if you cut open a tennis ball and tried to flatten it "
+"out. What this means on a map is that the longitude lines stay equally far "
+"apart from each other, even at the poles (where they are supposed to meet). "
+"This means that, as you travel away from the equator on your map, the scale "
+"of the objects that you see gets larger and larger. What this means for us, "
+"practically, is that there is no constant scale on our map!"
+msgstr ""
+"In einem Geographischen Koordinatensystem (GCS) arbeiten Sie auf einer "
+"solchen Kugeloberfläche, während die Darstellung auf Ihr Bildschirm jedoch "
+"flach ist. Wenn Sie versuchen, eine Kugel auf einer ebenen Fläche "
+"abzubilden, entstehen Verzerrungen – vergleichbar mit dem Versuch, einen "
+"aufgeschnittenen Tennisball flachzudrücken. Auf einer Karte führt dies dazu,"
+" dass die Längengrade stets den gleichen Abstand zueinander behalten, selbst"
+" an den Polen (wo sie eigentlich zusammenlaufen müssten). Das bedeutet: Je "
+"weiter Sie sich auf der Karte vom Äquator entfernen, desto größer wird der "
+"Maßstab der dargestellten Objekte. Für die praktische Arbeit heißt das "
+"schlicht, dass es auf unserer Karte keinen einheitlichen Maßstab gibt!"
+
+#: ../../docs/training_manual/vector_analysis/reproject_transform.rst:52
+msgid ""
+"To solve this, let's use a Projected Coordinate System (PCS) instead. A PCS "
+"\"projects\" or converts the data in a way that makes allowance for the "
+"scale change and corrects it. Therefore, to keep the scale constant, we "
+"should reproject our data to use a PCS."
+msgstr ""
+"Um dieses Problem zu lösen, verwenden wir ein projiziertes "
+"Koordinatensystem. Ein projiziertes Koordinatensystem „projiziert“ oder "
+"transformiert die Geodaten so, dass die Maßstabsänderung berücksichtigt und "
+"korrigiert wird. Um den Maßstab konstant zu halten, sollten wir unsere Daten"
+" daher umprojizieren und ein projiziertes Koordinatensystem verwenden."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:245
 msgid "projectionEnabled"

@@ -1643,9 +1643,8 @@ msgid ""
 "particularly useful for working with raster layers where each band "
 "corresponds to a specific time period, such as NetCDF files."
 msgstr ""
-":guilabel:`バンドごとの固定時間範囲`: 現在のアニメーション時間が、そのバンドの :guilabel:`開始` と "
-":guilabel:`終了` "
-"の日付範囲内にあるときのみ、そのバンドを表示します。このオプションでは、各バンドの時間範囲を手動で設定することも、|expression| "
+":guilabel:`バンド別固定時間範囲`: 現在のアニメーション時刻が、そのバンドの :guilabel:`開始` と :guilabel:`終了`"
+" の日付範囲内にあるときのみ、そのバンドを表示します。このオプションでは、各バンドの時間範囲を手動で設定することも、|expression| "
 "ボタンを使用して日時値を自動生成することもでき、詳細な時系列解析や可視化を可能にします。このモードは、各バンドが特定の期間に対応しているNetCDFファイルなどのラスターレイヤを扱う際に特に有用です。"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1407
@@ -1869,6 +1868,24 @@ msgstr ""
 " :guilabel:`Expression` "
 "を使用してすべてのバンド値を式に基づいて自動入力することも可能です。式による自動入力では、バンド名から有用な情報を抽出する式を設計することができます。例えば、\"Band"
 " 001: depth=-5500 (meters)\" のようなバンド名から深度の値を抽出することが可能です。"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1029
+msgid ""
+":guilabel:`Dynamic Elevation Range Per Band`: This mode calculates elevation"
+" ranges for raster bands dynamically using QGIS expressions. It's ideal for "
+"datasets where elevation values follow a consistent pattern across bands "
+"(like equally spaced vertical layers), eliminating the need to manually "
+"assign fixed elevations. Instead of entering individual values for each "
+"band, you define expressions for the :guilabel:`Lower` and :guilabel:`Upper`"
+" elevation bounds. These expressions can use variables like ``@band``, "
+"``@band_name``, or ``@band_description`` automatically computing the "
+"elevation range based on each band's properties."
+msgstr ""
+":guilabel:`バンドごとの動的標高範囲`: "
+"このモードでは、QGIS式を使用してラスタバンドごとの標高範囲を動的に計算します。これは、標高値がバンド間で一貫したパターンに従うデータセット（等間隔の垂直レイヤーなど）に最適であり、固定の標高を手動で割り当てる必要がなくなります。各バンドごとに個別の値を入力する代わりに、:guilabel:`Lower`"
+" および :guilabel:`Upper` "
+"の標高範囲の境界に対する式を定義します。これらの式では、``@band``、``@band_name``、または "
+"``@band_description`` などの変数を使用でき、各バンドのプロパティに基づいて標高範囲が自動的に計算されます。"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1036
 msgid ""
@@ -2109,6 +2126,10 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1181
 msgid "QGIS Server in Raster Properties"
 msgstr "ラスタプロパティの「QGISサーバー」タブ"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1189
+msgid "Attribute Tables"
+msgstr "属性テーブル"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1395
 msgid "createTable"

@@ -5,11 +5,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# tomoya miyoshi, 2026
 # tomoyuki arai <tarai.3367@gmail.com>, 2026
 # aa123201, 2026
 # Kayama Yoichi <yoichi.kayama@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# tomoya miyoshi, 2026
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: tomoya miyoshi, 2026\n"
 "Language-Team: Japanese (https://app.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -39,6 +39,16 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:5
 msgid "Setting a label"
 msgstr "ラベルの設定"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:12
+msgid ""
+"Labels are textual information you can display on maps. They add details you"
+" could not necessarily represent using symbols, and may refer to vector "
+"features, raster cells, mesh elements, or simple annotations on the map... "
+"Two types of text-related items are available in QGIS:"
+msgstr ""
+"ラベルは地図上に表示できるテキスト情報です。 "
+"ラベルは、シンボルのみでは表すことができない詳細情報を追加し、ベクタ地物、ラスタセル、メッシュ要素、地図上の単純な注記などを参照することができます。QGISではテキストに関連した次の2種類のアイテムが利用可能です："
 
 #: ../../docs/user_manual/style_library/label_settings.rst:17
 msgid ""
@@ -66,7 +76,7 @@ msgstr ":guilabel:`テキスト形式` アイテムを作成するには、"
 #: ../../docs/user_manual/style_library/label_settings.rst:27
 #: ../../docs/user_manual/style_library/label_settings.rst:53
 msgid "Open the |styleManager| :guilabel:`Style Manager` dialog"
-msgstr "|styleManager| :guilabel:`スタイルマネージャ` ダイアログを開きます。"
+msgstr "|styleManager| :guilabel:`スタイルマネージャ` ダイアログを開きます"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1178
 msgid "styleManager"
@@ -74,7 +84,7 @@ msgstr "styleManager"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:28
 msgid "Activate the :guilabel:`Text format` tab"
-msgstr ":guilabel:`テキスト形式` タブをアクティブにします。"
+msgstr ":guilabel:`テキスト形式` タブをアクティブにします"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:35
 msgid "Text formats in Style Manager dialog"
@@ -93,6 +103,18 @@ msgstr ""
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:41
+msgid ""
+":guilabel:`Label Settings`: extend the text format settings with properties "
+"related to the location or the interaction with other texts or features "
+"(:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`, "
+":ref:`overlay, scale visibility <labels_rendering>`, :ref:`mask "
+"<labels_mask>` ...)."
+msgstr ""
+":guilabel:`ラベルの設定` ：テキストの位置や、他のテキストや地物との相互関係に関連したプロパティでテキスト形式の設定を拡張します（ "
+":ref:`引出し線付きラベル <labels_callouts>` 、 :ref:`配置 <labels_placement>` 、 "
+":ref:`重なり、縮尺に応じた表示 <labels_rendering>` 、:ref:`マスクグリッド <labels_mask>` ...）。"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:46
 msgid ""
 "They are used to configure smart labelling for vector and mesh layers "
@@ -101,9 +123,10 @@ msgid ""
 "using the |labelingSingle| :sup:`Layer Labeling Options` button of the "
 ":ref:`Label toolbar <label_toolbar>`."
 msgstr ""
-"これらは、ベクトルまたはメッシュ レイヤーの :guilabel:`レイヤー プロパティ` ダイアログまたは :guilabel:`レイヤスタイル` "
-"パネルの  |labelingSingle| :guilabel:`ラベル` タブ、 または :ref:`ラベルツールバー "
-"<label_toolbar>` の |labelingSingle| :sup:`レイヤーラベリングオプション` ボタンを使って呼び出します。"
+"これらはベクタとメッシュレイヤのスマートラベリングの設定に使われ、ベクタまたはメッシュの :guilabel:`レイヤプロパティ` ダイアログまたは "
+":guilabel:`レイヤスタイル` パネルの  |labelingSingle| :guilabel:`ラベル` タブ、 または "
+":ref:`ラベルツールバー <label_toolbar>` の |labelingSingle| :sup:`レイヤラベリングオプション` "
+"ボタンを使って呼び出します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1162
 msgid "labelingSingle"
@@ -1752,6 +1775,52 @@ msgstr "共通の配置設定"
 msgid ""
 "Some label placement settings are available for all layer geometry types:"
 msgstr "ラベル配置の設定の一部は、全てのレイヤジオメトリ型で利用できます:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:890
+msgid "Label Spacing"
+msgstr "ラベルの周辺余白"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:892
+msgid ""
+"The :guilabel:`Label Spacing` option allows you to set the margin around the"
+" label, preventing all other labels from being placed within that area. You "
+"can dynamically control :guilabel:`Margin around label` using the "
+"|dataDefine| :sup:`Data-defined override` button. Choose unit from the unit "
+"selector, and there you can also :ref:`adjust scaling range "
+"<unit_selector>`."
+msgstr ""
+":guilabel:`ラベルの周辺余白` "
+"オプションを使用すると、ラベル周囲に余白を設定でき、その領域内に他のラベルが配置されるのを防ぐことができます。|dataDefine| "
+":sup:`データによって定義された上書き` ボタンを使用して、:guilabel:`ラベルのマージン` "
+"を動的に制御できます。単位セレクタから単位を選択し、そこで :ref:`縮尺範囲の調整 <unit_selector>` をすることもできます。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:898
+#: ../../docs/user_manual/style_library/label_settings.rst:910
+msgid ""
+"This option is only available on QGIS installed with GEOS_ >= 3.10 (see "
+":menuselection:`Help --> About` menu)."
+msgstr ""
+"このオプションは QGIS が GEOS_ >= 3.10 と共にインストールされたときにだけ利用できます（:menuselection:`ヘルプ "
+"--> QGISについて` メニューを参照）。"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:902
+msgid "Duplicate Labels"
+msgstr "ラベルの重複禁止"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:904
+msgid ""
+"Use |checkbox| :guilabel:`Avoid duplicate labels` to improve label "
+"appearance in situations like road networks, where features such as dual "
+"carriageways or service roads can result in many identical labels appearing "
+"close together. When active, it prevents placing labels with the exact same "
+"text (case-sensitive) closer than the minimum distance defined in the "
+":guilabel:`Settings...` option. The setting applies across layers, so "
+"duplicate text from any layer will be considered."
+msgstr ""
+"道路網では中央分離帯のある車道やサービス道路のような地物によって多数の同じラベルが近接して表示されてしまいますが、そのような状況でラベルの見栄えを改善するには、|checkbox|"
+" :guilabel:`ラベル重複禁止` を使用してください。この機能が有効な場合、まったく同じテキスト（大文字小文字を区別）を持つラベルが "
+":guilabel:`設定...` "
+"オプションで定義された最小距離よりも近い位置に配置されることを防ぎます。この設定はレイヤーをまたいで適用されるため、どのレイヤーの重複テキストも対象となります。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:914
 msgid "Geometry Generator"

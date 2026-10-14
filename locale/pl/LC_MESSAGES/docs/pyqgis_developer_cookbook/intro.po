@@ -7,7 +7,7 @@
 # Translators:
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
-# maryla GIS, 2026
+# Maryla Jeż, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: maryla GIS, 2026\n"
+"Last-Translator: Maryla Jeż, 2026\n"
 "Language-Team: Polish (https://app.transifex.com/qgis/teams/6144/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -512,3 +512,168 @@ msgstr ""
 "koniec wywołujemy metodę :meth:`exitQgis() "
 "<qgis.core.QgsApplication.exitQgis>`, aby usunąć dostawców danych i rejestr "
 "warstw z pamięci."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:322
+msgid "Using PyQGIS in custom applications"
+msgstr "Wykorzystanie PyQGIS w aplikacjach dedykowanych"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:324
+msgid ""
+"The only difference between :ref:`standalonescript` and a custom PyQGIS "
+"application is the second argument when instantiating the "
+":class:`QgsApplication <qgis.core.QgsApplication>`. Pass :const:`True` "
+"instead of :const:`False` to indicate that we plan to use a GUI."
+msgstr ""
+"Jedyną różnicą między :ref:`standalonescript` a aplikacją dedykowaną jest "
+"drugi argument przekazywany podczas tworzenia instancji "
+":class:`QgsApplication <qgis.core.QgsApplication>`. Należy przekazać "
+":const:`True` zamiast :const:`False`, aby wskazać, że planujemy użyć GUI."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:354
+msgid ""
+"Now you can work with the QGIS API - load layers and do some processing or "
+"fire up a GUI with a map canvas. The possibilities are endless :-)"
+msgstr ""
+"Teraz możesz korzystać z QGI API - wczytywać warstwy i wykonywać "
+"przetwarzanie lub uruchamiać interfejs graficzny z obszarem roboczym mapy. "
+"Możliwości są nieograniczone :-)"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:362
+msgid "Running Custom Applications"
+msgstr "Uruchamianie aplikacji dedykowanych"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:364
+msgid ""
+"You need to tell your system where to search for QGIS libraries and "
+"appropriate Python modules if they are not in a well-known location - "
+"otherwise Python will complain::"
+msgstr ""
+"Musisz wskazać swojemu systemowi, gdzie szukać bibliotek QGIS-a i "
+"odpowiednich modułów Pythona, jeśli nie znajdują się w znanej lokalizacji - "
+"w przeciwnym razie Python wyświetli komunikat o błędzie:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:371
+msgid ""
+"This can be fixed by setting the ``PYTHONPATH`` environment variable. In the"
+" following commands, ``<qgispath>`` should be replaced with your actual QGIS"
+" installation path:"
+msgstr ""
+"Można to naprawić poprzez ustawienie zmiennej środowiskowej ``PYTHONPATH``. "
+"W poniższych poleceniach ``<qgispath>`` należy zastąpić rzeczywistą ścieżką "
+"instalacji QGIS-a:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:375
+msgid "on Linux: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`"
+msgstr ""
+"na Linuxie: :command:`export PYTHONPATH=/<qgispath>/share/qgis/python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:376
+msgid "on Windows: :command:`set PYTHONPATH=c:\\\\<qgispath>\\\\python`"
+msgstr "na Windowsie: :command:`set PYTHONPATH=c:\\\\<qgispath>\\\\python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:377
+msgid ""
+"on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`"
+msgstr ""
+"na macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:379
+msgid ""
+"Now, the path to the PyQGIS modules is known, but they depend on the "
+"``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve only as "
+"wrappers). The path to these libraries may be unknown to the operating "
+"system, and then you will get an import error again (the message might vary "
+"depending on the system)::"
+msgstr ""
+"Teraz ścieżka do modułów PyQGIS jest znana, ale są one zależne od bibliotek "
+"``qgis_core`` i ``qgis_gui`` (moduły Pythona służą jedynie jako nakładki). "
+"Ścieżka do tych bibliotek może być nieznana systemowi operacyjnemu i wówczas"
+" ponownie pojawi się błąd importu (komunikat może różnić się w zależności od"
+" systemu):"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:389
+msgid ""
+"Fix this by adding the directories where the QGIS libraries reside to the "
+"search path of the dynamic linker:"
+msgstr ""
+"Można to naprawić, dodając katalogi, w których znajdują się biblioteki "
+"QGIS-a, do ścieżki wyszukiwania dynamicznego linkera:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:392
+msgid "on Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`"
+msgstr "na Linuxie: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:393
+msgid ""
+"on Windows: :command:`set "
+"PATH=C:\\\\<qgispath>\\\\bin;C:\\\\<qgispath>\\\\apps\\\\<qgisrelease>\\\\bin;%PATH%`"
+" where ``<qgisrelease>`` should be replaced with the type of release you are"
+" targeting (eg, ``qgis-ltr``, ``qgis``, ``qgis-dev``)"
+msgstr ""
+"na Windowsie: :command:`set "
+"PATH=C:\\\\<qgispath>\\\\bin;C:\\\\<qgispath>\\\\apps\\\\<qgisrelease>\\\\bin;%PATH%`,"
+" gdzie ``<qgisrelease>`` należy zastąpić typem wydania, do którego się "
+"odwołujesz (eg, ``qgis-ltr``, ``qgis``, ``qgis-dev``)"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:397
+msgid ""
+"These commands can be put into a bootstrap script that will take care of the"
+" startup. When deploying custom applications using PyQGIS, there are usually"
+" two possibilities:"
+msgstr ""
+"Te polecenia można umieścić w skrypcie startowym, który zajmie się "
+"inicjalizacją aplikacji. Podczas wdrażania niestandardowych aplikacji przy "
+"użyciu PyQGIS zazwyczaj istnieją dwie możliwości:"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:401
+msgid ""
+"require the user to install QGIS prior to installing your application. The "
+"application installer should look for default locations of QGIS libraries "
+"and allow the user to set the path if not found. This approach has the "
+"advantage of being simpler, however it requires the user to do more steps."
+msgstr ""
+"wymaganie od użytkownika zainstalowania QGIS przed zainstalowaniem twojej "
+"aplikacji. Instalator aplikacji powinien wyszukać domyślne lokalizacje "
+"bibliotek QGIS-a i umożliwić użytkownikowi ustawić ścieżkę, jeśli nie "
+"zostanie odnaleziona. To podejście ma tę zaletę, że jest prostsze, jednak "
+"wymaga od użytkownika wykonania kilku dodatkowych kroków."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:407
+msgid ""
+"package QGIS together with your application. Releasing the application may "
+"be more challenging and the package will be larger, but the user will be "
+"saved from the burden of downloading and installing additional pieces of "
+"software."
+msgstr ""
+"spakowanie QGIS-a razem z aplikacją. Wydanie aplikacji może być trudniejsze,"
+" a pakiet będzie większy, ale użytkownik uniknie kłopotu związanego z "
+"pobieraniem i instalowaniem dodatkowego oprogramowania."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:412
+msgid ""
+"The two deployment models can be mixed.  You can provide a standalone "
+"applications on Windows and macOS, but for Linux leave the installation of "
+"GIS up to the user and his package manager."
+msgstr ""
+"Oba modele wdrażania można ze sobą łączyć. Możesz dostarczać samodzielne "
+"aplikacje na Windowsa i macOS, ale na Linuxie pozostawić instalację GIS "
+"użytkownikowi i jego menadżerowi pakietów."
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:417
+msgid "Technical notes on PyQt and SIP"
+msgstr "Uwagi techniczne dotyczące PyQt i SIP"
+
+#: ../../docs/pyqgis_developer_cookbook/intro.rst:419
+msgid ""
+"We've decided for Python as it's one of the most favoured languages for "
+"scripting. PyQGIS bindings in QGIS 3 depend on SIP and PyQt5. The reason for"
+" using SIP instead of the more widely used SWIG is that the QGIS code "
+"depends on Qt libraries. Python bindings for Qt (PyQt) are done using SIP "
+"and this allows seamless integration of PyQGIS with PyQt."
+msgstr ""
+"Zdecydowaliśmy się na Pythona, ponieważ jest to jeden z najpopularniejszych "
+"języków skryptowych. Powiązania PyQGIS w QGIS 3 zależą od SIP i PyQt5. "
+"Powodem wykorzystania SIP zamiast powszechniej używanego SWIG jest to, że "
+"kod QGIS-a opiera się na bibliotekach Qt. Powiązania Pythona z Qt (PyQt) są "
+"tworzone przy użyciu SIP, co pozwala na bezproblemową integrację PyQGIS z "
+"PyQt,"
