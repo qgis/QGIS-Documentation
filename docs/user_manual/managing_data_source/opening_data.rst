@@ -649,7 +649,6 @@ tool which allows you to:
    the format also used by AutoCAD 2014 to 2017.
    DWG files saved in an older format, or in the AutoCAD 2018 format
    (``AC1032``) used by AutoCAD 2018 and later, cannot be imported.
-   Save them in a supported format first, e.g. AutoCAD 2013.
 
 In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file
 contents:
