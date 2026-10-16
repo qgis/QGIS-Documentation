@@ -8,6 +8,120 @@ Vector coverage
       :depth: 1
 
 
+.. _qgiscoverageclean:
+
+Clean coverage
+-----------------
+``Added in 4.4``
+
+Operates on a coverage (represented as a list of polygon features)
+to fix cases where the geometry does not in fact exactly match,
+repairing small overlaps and gaps to restore a valid topological coverage.
+
+The algorithm uses a combination of snapping and gap/overlap merging.
+Snapping to nearby vertices and line segments improves noding robustness and eliminates small errors.
+If the snapping distance is not specified, an automatic distance based on the data extent is used.
+A distance of 0 disables snapping.
+
+Gaps and holes that are narrower than the a speified width are merged with an adjacent polygon.
+Gaps which are not fully enclosed ("inlets") are not removed.
+When repairing overlaps and gaps, a strategy can be used to determine which adjacent
+polygon the problematic area is merged into (e.g., merging with the polygon that shares
+the longest border, or the one with the maximum/minimum area).
+Polygons that have collapsed during cleaning will be returned as empty polygons.
+
+.. figure:: img/cleaned_coverage.png
+   :align: center
+
+   Cleaning gaps and overlays within a coverage
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Maximum gap width**
+     - ``MAXIMUM_GAP_WIDTH``
+     - [numeric: double]
+
+       Default: 0.0
+     - Gaps which are narrower than this distance are merged with an adjacent polygon.
+       Polygon width is determined as twice the radius of the maximum inscribed circle of the gap polygon.
+       Empty holes in input polygons are treated as gaps, and may be filled in.
+       Gaps which are not fully enclosed ('inlets') are not removed.
+   * - **Snapping distance**
+
+       Optional
+     - ``SNAPPING_DISTANCE``
+     - [numeric: double]
+     - Snapping to nearby vertices and line segment snapping is used to improve noding robustness
+       and eliminate small errors in an efficient way. By default the snapping distance is not set,
+       which means that the clean operation uses a very small snapping distance based on the extent of the input data.
+       A distance of zero prevents snapping from being used.
+   * - **Overlap merge strategy**
+     - ``OVERLAP_MERGE_STRATEGY``
+     - [enumeration]
+
+       Default: 0
+     - Determines the strategy used to merge gaps with adjacent polygons. One of:
+
+       * 0 --- Longest border: the feature sharing the longest border with the gap
+       * 1 --- Maximum area: the biggest adjacent feature
+       * 2 --- Minimum area: the smallest adjacent feature
+       * 3 --- Minimum index: the first encountered adjacent feature  (lowest ID)
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer with cleaned coverage.
+       :ref:`One of <output_parameter_widget>`:
+
+       .. include:: ../algs_include.rst
+          :start-after: **layer_output_types**
+          :end-before: **end_layer_output_types**
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer with cleaned gaps and overlays.
+
+Python code
+...........
+
+**Algorithm ID**: ``native:coverageclean``
+
+.. include:: ../algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgiscoverageunion:
 
 Dissolve coverage
@@ -88,6 +202,9 @@ Also, some geometries (such as polygons which have too few non-repeated points) 
 
 If the input dataset is not a valid coverage due to overlaps, it will still be simplified,
 but invalid topology such as crossing edges will still be invalid.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+of polygon features
 
 .. attention:: Running this algorithm requires QGIS installed with GEOS_ >= 3.12
    (see :menuselection:`Help --> About` menu).
@@ -241,3 +358,13 @@ Python code
 
 
 .. _GEOS: https://libgeos.org/
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
