@@ -644,6 +644,12 @@ tool which allows you to:
 #. import elements from the drawing file into a GeoPackage database.
 #. add imported elements to the project.
 
+.. note:: The tool can import DWG files saved in the formats from
+   AutoCAD Release 13 (``AC1012``) to AutoCAD 2013 (``AC1027``),
+   the format also used by AutoCAD 2014 to 2017.
+   DWG files saved in an older format, or in the AutoCAD 2018 format
+   (``AC1032``) used by AutoCAD 2018 and later, cannot be imported.
+
 In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file
 contents:
 
