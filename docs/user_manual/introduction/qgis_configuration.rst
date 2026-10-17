@@ -2431,14 +2431,17 @@ or panels they need, or a focused workspace built around a specific set of actio
 Ticking the |checkbox| :guilabel:`Enable customization` checkbox is the first step
 on the way to QGIS customization. This enables the toolbar and the widget
 panel from which you can uncheck and thus disable some GUI items.
+The configurable items can be from:
 
-The configurable item can be:
-
-* a **Menu** or some of its sub-menus from the :ref:`label_menubar`
-* a whole **Panel** (see :ref:`sec_panels_and_toolbars`)
-* the **Status bar** described in :ref:`label_statusbar` or some of its items
-* a **Toolbar**: the whole bar or some of its icons
-* or any **widget** from any dialog in QGIS: label, button, combobox...
+* the :guilabel:`Browser` panel: you select whether to show specific data providers
+  (plain files, PostgreSQL, GeoPackage, WMS, WFS, Vector tiles, ...), drives, folders,
+  or type of resources (bookmarks, templates, scripts, ...)
+* :guilabel:`Docks`: you can disable a :ref:`whole panel <panels_tools>`
+* :guilabel:`Menus`: you can disable individual actions from a top menu
+  or a :ref:`whole menu <label_menubar>`
+* the :guilabel:`Status bar`: hide items from the bottom :ref:`status bar <label_statusbar>`
+* :guilabel:`Toolbars`: you can disable individual actions from a toolbar
+  or a :ref:`whole toolbar <label_toolbars>`
 
 With |select| :sup:`Switch to catching widgets in main application`, you
 can click on an item in QGIS interface that you want to be hidden and
