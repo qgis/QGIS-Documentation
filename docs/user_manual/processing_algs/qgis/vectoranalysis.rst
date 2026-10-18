@@ -280,7 +280,8 @@ Python code
 Count points in polygon
 -----------------------
 Takes a point and a polygon layer and counts the number of points from
-the point layer in each of the polygons of the polygon layer.
+the point layer within each of the polygons of the polygon layer.
+Points falling on the boundary of the polygons are ignored.
 
 A new polygon layer is generated, with the exact same content as the
 input polygon layer, but containing an additional field with the
