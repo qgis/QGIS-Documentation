@@ -24,6 +24,8 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
    You can turn them on and off by clicking on.
    They will be saved by saving the project, even if they are turned off.
 
+.. attention:: A 3D map view is created in the CRS of the project unless that's a geographic one, in which case it falls back to web mercator (``epsg: 3857``).
+ Changing the project CRS after creating the 3D map won't change the map's CRS.
 
 .. _figure_3dmapview:
 
@@ -154,8 +156,7 @@ General
 
 Under the |general| :guilabel:`General` tab, you can:
 
-* Limit the 3D scene's contents to a 2D map extent,
-  using the :ref:`spatial extent selector <extent_selector>`:
+* Limit the 3D scene's extent using the :ref:`spatial extent selector <extent_selector>`:
   terrain and features are clipped at the specified extent
   and only the parts falling within the extent are loaded in the scene.
   Elevation range of the terrain, mesh and pointcloud layers is also taken into account
