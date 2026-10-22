@@ -11,18 +11,40 @@
       :local:
 
 
-3D visualization support is offered through the 3D map view.
-You can create, manage and open 3D map views via :menuselection:`View --> 3D Map Views -->` menu:
+3D visualization support is offered through the 3D views.
+Two different types of 3D views are supported:
 
-#. By clicking on |new3DMap| :menuselection:`New 3D Map View` you can create a new 3D map view.
-   A floating and dockable QGIS panel will appear (see :ref:`figure_3dmapview`).
+* ``3D map view``: The scene is rendered on a flat plane using the project's CRS if it is projected,
+  or using the web mercator CRS (``EPSG:3857``) if not.
+  Changing the project's CRS after the 3D map is created won't change the map's CRS.
+  The actual extent of the view can be changed, allowing to clip data displayed in the 3D view
+  to a single city for example. A DEM or a mesh can be used to represent the terrain.
+  3D layers (point clouds, 3D tiles) are rendered in 3D.
+  2D layers (raster, vector) are rendered on the terrain's surface as a texture.
+  Vector layers can also be rendered as 3D entities if they are 3D, or as extruded entities if they are 2D.
+  Some annotation features can also be rendered as billboards.
+  This mode is more suitable for smaller, local scenes, but can still be used to handle world wide scenes too.
+* ``3D globe view``: The scene is rendered on a sphere created using the project's CRS ellipsoid.
+  The extent of the view cannot be limited, and always includes the whole celestial body.
+  It is even possible to use other celestial bodies, such as Mars or Moon,
+  if the project’s CRS is set up accordingly.
+  3D layers (point clouds, 3D tiles) are rendered in 3D.
+  2D layers (raster, vector) can only be rendered on the ellipsoid as a texture.
+  DEM elevations or 3D vectors or extrusions are not supported.
+  This mode is more suitable for world wide data and when the earth's curvature matters.
+
+3D views are stored within the project and saved upon saving the project, even if they are turned off.
+You can create, manage and open 3D views via :menuselection:`View --> 3D Map Views -->` menu:
+
+#. By clicking dedicated |new3DMap| :menuselection:`New 3D Map View` (:kbd:`Ctrl+Alt+M`)
+   or |new3DMapGlobe| :menuselection:`New 3D Globe View` buttons.
+   In both cases, a floating and dockable QGIS panel will appear (see :ref:`figure_3dmapview`).
    It has the same extent and view as the 2D main map canvas
-   and provides a set of navigation tools to turn the view into 3D.
-#. By clicking on :menuselection:`Manage 3D Map Views` you get in the 3D Map Views Manager.
-   Here you get the ability to open, duplicate, remove and rename 3D map views.
-#. If you created one or more 3D map views, you see them listed in :menuselection:`3D Map Views`.
-   You can turn them on and off by clicking on.
-   They will be saved by saving the project, even if they are turned off.
+   and provides a set of navigation tools to toggle the display into 3D.
+#. By selecting a previously created 3D view from the entries
+   in the :menuselection:`View --> 3D Map Views -->` menu;
+#. By clicking on :menuselection:`Manage 3D Map Views` and opening the :guilabel:`3D Map Views Manager` dialog.
+   There, created 3D views are listed, allowing you to open, duplicate, remove and rename any of them.
 
 
 .. _figure_3dmapview:
@@ -32,7 +54,7 @@ You can create, manage and open 3D map views via :menuselection:`View --> 3D Map
 
    The 3D Map View dialog
 
-The following tools are provided at the top of the 3D map view panel:
+The following tools are provided at the top of the 3D view panel:
 
 * |pan| :sup:`Camera Control`: moves the view, keeping the same angle
   and direction of the camera
@@ -73,7 +95,8 @@ The following tools are provided at the top of the 3D map view panel:
 
 .. _3d_mapview_cameramenu:
 
-* The |camera| :sup:`Camera` menu helps you control relation between the 2D and 3D views:
+* Unavailable for 3D globe views, the |camera| :sup:`Camera` menu helps you control relation
+  between the 2D and 3D map views:
 
   * Synchronize the views (:guilabel:`2D map view follows 3D camera` and/or
     :guilabel:`3D camera follows 2D Map view`)
@@ -98,7 +121,7 @@ The following tools are provided at the top of the 3D map view panel:
        :align: center
        :width: 40%
 
-       Camera controls dialog.
+       Camera controls dialog
 
 
     If you check |unchecked| :guilabel:`Live update`, any changes will instantly be shown.
@@ -107,7 +130,8 @@ The following tools are provided at the top of the 3D map view panel:
     This happens in real-time, regardless of the :guilabel:`Live update` setting.
 * The |editCut| :sup:`Cross Section` menu provides these capabilities:
 
-  * |editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene by defining an area on the terrain in the 2D map canvas.
+  * |editCut| :sup:`Cross Section Tool` creates a cross section in 3D scene
+    by defining an area on the terrain in the 2D map canvas.
     Click to set the start point, move the mouse to define the line direction
     and click again to set the end point of the axis.
 
@@ -133,12 +157,12 @@ The following tools are provided at the top of the 3D map view panel:
 Scene Configuration
 ===================
 
-The 3D map view opens with some default settings you can customize.
+A 3D scene opens with some default settings you can customize.
 To do so, press the |options| :sup:`Configure...` button at the top of
 the 3D canvas panel to open the :guilabel:`3D configuration` window.
 
-In the 3D Configuration window there are various options to
-fine-tune the 3D scene:
+In the 3D Configuration window there are various options to fine-tune the 3D scene.
+Their availability depends on whether you have a 3D map view or 3D globe view.
 
 .. _scene_extent:
 
@@ -152,10 +176,10 @@ General
 
    The 3D Map General Configuration dialog
 
-Under the |general| :guilabel:`General` tab, you can:
+Under the |general| :guilabel:`General` tab,
+and depending on the type of 3D view, you can:
 
-* Limit the 3D scene's contents to a 2D map extent,
-  using the :ref:`spatial extent selector <extent_selector>`:
+* Limit the 3D scene's extents using the :ref:`spatial extent selector <extent_selector>`:
   terrain and features are clipped at the specified extent
   and only the parts falling within the extent are loaded in the scene.
   Elevation range of the terrain, mesh and pointcloud layers is also taken into account
@@ -164,7 +188,8 @@ Under the |general| :guilabel:`General` tab, you can:
 
   The set extent is also used as reference extent
   when pressing the |zoomFullExtent| :sup:`Zoom full` button in 3D map view.
-* Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
+
+  Check |checkbox| :guilabel:`Show in 2D map view` to display in the main map canvas
   a rubberband corresponding to the current extent of the 3D scene.
 * Set a :guilabel:`Background` for the 3D scene, choosing between:
 
@@ -234,15 +259,14 @@ Terrain
 
   * The elevation terrain :guilabel:`Type` can be:
 
-    * a :guilabel:`Flat terrain`
+    * a :guilabel:`Flat terrain`, the only mode supported by 3D Globe views
     * a loaded :guilabel:`DEM (Raster Layer)`
     * an :guilabel:`Online` service, loading `elevation tiles
       <http://s3.amazonaws.com/elevation-tiles-prod/>`_
       produced by Mapzen tools -- more details at https://registry.opendata.aws/terrain-tiles/
     * a loaded :guilabel:`Mesh` dataset
     * a :guilabel:`Quantized Mesh` layer from the project
-  * :guilabel:`Elevation`: Raster or mesh layer to be used for generation of
-    the terrain.
+  * :guilabel:`Elevation`: Raster or mesh layer to be used for generation of the terrain.
     The raster layer must contain a band that represents elevation.
     For a mesh layer, the Z values of the vertices are used.
   * :guilabel:`Vertical scale`: Scale factor for vertical axis.
@@ -521,8 +545,8 @@ Advanced
     * |unchecked| :guilabel:`Camera X/Y/Z pos`: sets the camera’s position in 3D space
     * |unchecked| :guilabel:`Looking at X/Y/Z`: sets the target point the camera is looking at
 
-.. note:: When your 3D map view is open in a standalone window, you can
-   use :kbd:`Ctrl+Shift+d` keyboard shortcut to access the debug panel.
+  .. note:: When your 3D map view is open in a standalone window,
+   you can use :kbd:`Ctrl+Shift+d` keyboard shortcut to access the debug panel.
 
 .. _`3d_navigation`:
 
@@ -673,6 +697,8 @@ See :ref:`Elevation profile view<label_elevation_profile_view>` for more details
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
+.. |new3DMapGlobe| image:: /static/common/mActionNew3DMapGlobe.png
    :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em

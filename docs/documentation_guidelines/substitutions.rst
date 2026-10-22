@@ -262,7 +262,7 @@ Map Navigation and attributes
   :class: longtable
 
   ==============================  ==================================  ==============================  ==================================
-  Icon                            Substitution                        Icon                            Substitution
+   Icon                            Substitution                        Icon                            Substitution
   ==============================  ==================================  ==============================  ==================================
   |pan|                           ``|pan|``                           |panToSelected|                 ``|panToSelected|``
   |zoomIn|                        ``|zoomIn|``                        |zoomOut|                       ``|zoomOut|``
