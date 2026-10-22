@@ -1027,6 +1027,7 @@ in the :guilabel:`Layer styling` panel.
   Use the :guilabel:`Width` and :guilabel:`Height` options to set the size manually.
   This allows you to choose a size that works well in the 3D map,
   rather than following the size defined in the 2D map.
+  The size is defined in the units of 3D map CRS (usually meters or feet).
 
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
