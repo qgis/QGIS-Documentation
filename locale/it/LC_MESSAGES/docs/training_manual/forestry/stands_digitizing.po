@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -226,6 +226,14 @@ msgstr ""
 "come un nuovo livello (``Livello incollato``) nel pannello "
 ":guilabel:`Layers`."
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:73
+msgid ""
+"Click the \"eye\" icon next to the original image layer to switch it off, so"
+" that only the ``Pasted Layer`` is visible:"
+msgstr ""
+"Fai clic sull'icona \"occhio\" accanto al livello dell'immagine originale "
+"per spegnerla, in modo che sia visibile solo il ``Pasted Layer``:"
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:81
 msgid ""
 "Finally, select :menuselection:`File --> Export As...`, set "
@@ -369,6 +377,14 @@ msgstr ""
 msgid "Open :menuselection:`Vector --> Geometry Tools --> Centroids...`."
 msgstr ""
 "Apri :menuselection:`Vettore --> Strumenti di Geometria --> Centroidi...`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:134
+msgid ""
+"Set :guilabel:`Input Layer` to |polygonLayer| ``rautjarvi_green_polygon`` "
+"(the polygon layer you have just created)"
+msgstr ""
+"Imposta :guilabel:`Layer in ingresso` a |poligonLayer| "
+"``rautjarvi_green_polygon`` (il layer poligonale appena creato)."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:422
 msgid "polygonLayer"
@@ -524,6 +540,10 @@ msgstr ""
 msgid "snapping"
 msgstr "snapping"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:187
+msgid "Check the ``green_centroids`` and ``forest_stands`` layers"
+msgstr "Seleziona i layer ``green_centroids`` e ``forest_stands``."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:188
 msgid "Set :guilabel:`Type` for each layer to :guilabel:`Vertex`"
 msgstr "Imposta :guilabel:`Tipo` per ogni layer a :guilabel:`Vertice`."
@@ -535,6 +555,13 @@ msgstr "Imposta la :guilabel:`Tolleranza` per ogni layer a ``10``."
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:190
 msgid "Set :guilabel:`Units` for each layer to :guilabel:`pixels`"
 msgstr "Imposta :guilabel:`Unità` per ogni layer a :guilabel:`pixel`."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:191
+msgid ""
+"Check |checkbox| :guilabel:`Avoid Overlap` for the ``forest_stands`` layer"
+msgstr ""
+"Seleziona |checkbox| :guilabel:`Evita Sovrapposizione` per il layer "
+"``forest_stands``."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:192
 msgid "Press |topologicalEditing| :guilabel:`Topological editing`"
@@ -569,6 +596,16 @@ msgstr ""
 "avvicini a uno dei punti del layer dei centroidi o a un qualsiasi vertice "
 "dei poligoni digitalizzati, apparirà un quadrato rosa sul punto a cui verrà "
 "agganciato."
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:204
+msgid ""
+"Finally, turn off the visibility of all the layers except ``forest_stands`` "
+"and ``rautjarvi_georef``. Make sure that the map image has not transparency "
+"any more."
+msgstr ""
+"Infine, disattiva la visibilità di tutti i layer tranne ``forest_stands`` e "
+"``rautjarvi_georef``.  Assicurati che l'immagine della mappa non abbia più "
+"trasparenza."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:207
 msgid "A few important things to note before you start digitizing:"
@@ -696,6 +733,23 @@ msgstr ""
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:243
 msgid "Your digitized polygon will look like this:"
 msgstr "Il tuo poligono digitalizzato si presenterà più o meno così:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:250
+msgid ""
+"Now for the second polygon, pick up the stand number 358. Make sure that "
+"|checkbox| :guilabel:`Avoid Overlap` is checked for the ``forest_stands`` "
+"layer (as shown above). This option ensures polygons do not overlap. So, if "
+"you digitize over an existing polygon, the new polygon will be trimmed to "
+"meet the border of the existing polygons. You can use this option to "
+"automatically obtain a common border."
+msgstr ""
+"Ora, per il secondo poligono, seleziona il popolamento numero 358. "
+"Assicurati che |checkbox| :guilabel:`Evita Sovrapposizione` sia selezionata "
+"per il layer ``forest_stands`` (come mostrato sopra). Questa opzione "
+"assicura che i poligoni non si sovrappongano. Pertanto, se digitalizzi sopra"
+" un poligono esistente, il nuovo poligono sarà tagliato per incontrare il "
+"bordo dei poligoni esistenti. Puoi utilizzare questa opzione per ottenere "
+"automaticamente un confine comune."
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:257
 msgid ""
@@ -901,6 +955,10 @@ msgstr ""
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:335
+msgid "Select :file:`rautjarvi_1994.csv` as the :guilabel:`Join layer`"
+msgstr "Seleziona :file:`rautjarvi_1994.csv` come :guilabel:`Join Layer`."
+
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:336
 msgid "Set the :guilabel:`Join` field to :guilabel:`ID`"
 msgstr "Imposta :guilabel:`Campo unione` a :guilabel:`ID`."
@@ -937,6 +995,10 @@ msgid ""
 msgstr ""
 "Noterai che i nomi dei campi sono preceduti da ``rautjarvi_1994_``. Per "
 "modificare ciò:"
+
+#: ../../docs/training_manual/forestry/stands_digitizing.rst:349
+msgid "Select ``rautjarvi_1994`` as the :guilabel:`Join Layer`"
+msgstr "Seleziona ``rautjarvi_1994`` come il :guilabel:`Join Layer`"
 
 #: ../../docs/training_manual/forestry/stands_digitizing.rst:350
 msgid ""
