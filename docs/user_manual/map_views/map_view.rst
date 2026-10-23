@@ -890,6 +890,8 @@ The properties dialog of an annotation layer provides the following tabs:
 
   * :guilabel:`Render on Terrain Surface`: enables annotations to be rendered as flat items on the terrain surface in 3D views.
   * :guilabel:`3D Billboards`: allows annotations to be rendered as 3D objects in 3D views.
+    When enabled, you can configure :guilabel:`3D Appearance` settings in the :guilabel:`Layer Styling`
+    panel.
     Billboards always face the camera in 3D views, improving readability during navigation
     (only for marker, text and picture annotations).
 
@@ -1027,7 +1029,8 @@ in the :guilabel:`Layer styling` panel.
   Use the :guilabel:`Width` and :guilabel:`Height` options to set the size manually.
   This allows you to choose a size that works well in the 3D map,
   rather than following the size defined in the 2D map.
-  The size is defined in the units of 3D map CRS (usually meters or feet).
+  The size is defined in pixels for :guilabel:`View Independent`,
+  and in 3D map CRS units (usually meters or feet) for :guilabel:`Perspective Scaled`.
 
   Moreover, you can enable display of the :guilabel:`Frame` and :guilabel:`Background` of the rectangle box,
   and configure them using :ref:`fill symbols <vector_fill_symbols>`.
