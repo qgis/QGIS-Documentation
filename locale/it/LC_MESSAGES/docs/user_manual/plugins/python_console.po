@@ -59,6 +59,23 @@ msgstr ""
 "di interagire con i suoi oggetti (layer, elementi o interfacce). QGIS ha "
 "anche una console Python. "
 
+#: ../../docs/user_manual/plugins/python_console.rst:22
+msgid ""
+"The QGIS Python Console is an interactive shell for Python command "
+"executions. It also has a Python file editor that allows you to edit and "
+"save your Python scripts. Both console and editor are based on PyQScintilla2"
+" package. To open the console go to :menuselection:`Plugins --> Python "
+"Console` (:kbd:`Ctrl+Alt+P`) or click on the |pythonFile| :sup:`Python "
+"Console` icon in the :guilabel:`Plugins` toolbar."
+msgstr ""
+"QGIS Python Console è una shell interattiva per l'esecuzione di comandi "
+"Python. Dispone anche di un editor di file Python che consente di modificare"
+" e salvare gli script Python. Sia la console che l'editor sono basati sul "
+"pacchetto PyQScintilla2. Per aprire la console vai su "
+":menuselection:`Plugins --> Python Console` (:kbd:`Ctrl+Alt+P`) o fai clic "
+"sull'icona |pythonFile| :sup:`Python Console` nella Barra degli Strumenti "
+":guilabel:`Plugins`."
+
 #: ../../docs/user_manual/plugins/python_console.rst:284
 msgid "pythonFile"
 msgstr "pythonFile"
@@ -346,13 +363,75 @@ msgstr ""
 msgid "The Code Editor"
 msgstr "L' Editor di Codice"
 
+#: ../../docs/user_manual/plugins/python_console.rst:142
+msgid ""
+"Use the |showEditorConsole| :sup:`Show Editor` button in the Interactive "
+"Console to enable the editor widget. It allows editing and saving Python "
+"scripts and offers advanced functionalities to manage your code. Depending "
+"on the :ref:`enabled settings <console_options>`, it provides various "
+"capabilities for easier code writing, such as code completion, highlighting "
+"syntax and calltips for supported APIs. Automatic indentation, parenthesis "
+"insertion, code commenting and syntax checking are also available."
+msgstr ""
+"Utilizza il pulsante |showEditorConsole| :sup:`Mostra Editor` nella Console "
+"interattiva per attivare il widget dell'editor. Esso consente di modificare "
+"e salvare script Python e offre funzionalità avanzate per la gestione del "
+"codice. A seconda delle :ref:`enabled settings <console_options>`, fornisce "
+"varie funzionalità che facilitano la scrittura del codice, quali il "
+"completamento automatico, l'evidenziazione della sintassi e i suggerimenti "
+"di chiamata per le API supportate. Sono inoltre disponibili l'indentazione "
+"automatica, l'inserimento di parentesi, l'inserimento di commenti nel codice"
+" e il controllo della sintassi."
+
 #: ../../docs/user_manual/plugins/python_console.rst:155
 msgid "The Python Console editor"
 msgstr "L'editor Console Python"
 
+#: ../../docs/user_manual/plugins/python_console.rst:157
+msgid ""
+"The code editor area allows to simultaneously work on different scripts, "
+"each in a specific tab. Press |symbologyAdd| :sup:`New editor` to add a new "
+"tab. You can run partially or totally a script from the :guilabel:`Code "
+"Editor` and output the result in the Interactive Console output area."
+msgstr ""
+"L'area dell'editor di codice consente di lavorare contemporaneamente su "
+"diversi script, ciascuno in una scheda specifica. Premi |symbologyAdd| "
+":sup:`Nuovo editor` per aggiungere una nuova scheda. È possibile eseguire "
+"uno script, in tutto o in parte, dall' :guilabel:`Code Editor` e "
+"visualizzarne il risultato nell'area di output della console interattiva."
+
 #: ../../docs/user_manual/plugins/python_console.rst:302
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
+
+#: ../../docs/user_manual/plugins/python_console.rst:163
+msgid "Press :kbd:`Ctrl+Space` to view the auto-completion list."
+msgstr ""
+"Premi :kbd:`Ctrl+Space` per visualizzare la lista di completamento "
+"automatico."
+
+#: ../../docs/user_manual/plugins/python_console.rst:165
+msgid ""
+"At the top of the dialog, a toolbar provides access to a few commands. "
+"Right-clicking the editor area provides some more options. All available "
+"tools are described in the following table."
+msgstr ""
+"Nella parte superiore della finestra di dialogo, una barra degli strumenti "
+"consente di accedere ad alcuni comandi. Facendo clic con il tasto destro del"
+" mouse sull'area di modifica si aprono ulteriori opzioni. Tutti gli "
+"strumenti disponibili sono descritti nella tabella seguente."
+
+#: ../../docs/user_manual/plugins/python_console.rst:169
+msgid "Python Console Editor Tools"
+msgstr "Strumenti dell'Editor della Console Python"
+
+#: ../../docs/user_manual/plugins/python_console.rst:174
+msgid "Tool name"
+msgstr "Nome Strumento"
+
+#: ../../docs/user_manual/plugins/python_console.rst:174
+msgid "Function"
+msgstr "Funzione"
 
 #: ../../docs/user_manual/plugins/python_console.rst:174
 msgid "Location"
@@ -366,6 +445,24 @@ msgstr "|scriptOpen| :guilabel:`Open script…`"
 msgid "scriptOpen"
 msgstr "scriptOpen"
 
+#: ../../docs/user_manual/plugins/python_console.rst:176
+msgid "Loads a Python file in the code editor dialog, as a new tab"
+msgstr ""
+"Carica un file Python nella finestra di dialogo dell'editor di codice, come "
+"nuova scheda"
+
+#: ../../docs/user_manual/plugins/python_console.rst:178
+msgid "|showEditorConsole| :guilabel:`Open in external editor…`"
+msgstr "|showEditorConsole| :guilabel:`Apre in Editor Esterno`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:178
+msgid ""
+"Opens a saved Python script in the default external program set for Python "
+"file editing"
+msgstr ""
+"Apre uno script Python salvato nel programma esterno predefinito per la "
+"modifica dei file Python"
+
 #: ../../docs/user_manual/plugins/python_console.rst:181
 msgid "|fileSave| :guilabel:`Save` (:kbd:`Ctrl+S`)"
 msgstr "|fileSave| :guilabel:`Salva` (:kbd:`Ctrl+S`)"
@@ -373,6 +470,10 @@ msgstr "|fileSave| :guilabel:`Salva` (:kbd:`Ctrl+S`)"
 #: ../../docs/user_manual/plugins/python_console.rst:274
 msgid "fileSave"
 msgstr "fileSave"
+
+#: ../../docs/user_manual/plugins/python_console.rst:181
+msgid "Saves the current script"
+msgstr "Salva lo script corrente"
 
 #: ../../docs/user_manual/plugins/python_console.rst:183
 msgid "|fileSaveAs| :guilabel:`Save as…` (:kbd:`Ctrl+Shift+S`)"
@@ -382,25 +483,103 @@ msgstr "|fileSaveAs| :guilabel:`Salva come…` (:kbd:`Ctrl+Shift+S`)"
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
 
+#: ../../docs/user_manual/plugins/python_console.rst:183
+msgid "Saves the current script as a new file"
+msgstr "Salva lo script corrente come nuovo file"
+
 #: ../../docs/user_manual/plugins/python_console.rst:186
 msgid "|start| :guilabel:`Run script` (:kbd:`Ctrl+Shift+E`)"
 msgstr "|start| :guilabel:`Esegui script` (:kbd:`Ctrl+Shift+E`)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:186
+msgid ""
+"Executes the whole script in the Interactive console (this creates a byte-"
+"compiled file with the extension :file:`.pyc`)"
+msgstr ""
+"Esegui l'intero script con il comando nella console interattiva (questo crea"
+" un file compilato in byte con estensione :file:`.pyc`)."
+
+#: ../../docs/user_manual/plugins/python_console.rst:186
+#: ../../docs/user_manual/plugins/python_console.rst:192
+msgid "Toolbar & Contextual menu"
+msgstr "Barra degli Strumenti &  Menu Contestuale"
+
+#: ../../docs/user_manual/plugins/python_console.rst:189
+msgid "|helpContents| :guilabel:`Context help` (:kbd:`F1`)"
+msgstr "|helpContents| :guilabel:`Help contestuale` (:kbd:`F1`)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:189
+msgid ""
+"Attempts to display help on the selected string (class, method, object,...) "
+"in its corresponding API documentation"
+msgstr ""
+"Tenta di visualizzare la guida relativa alla stringa selezionata (classe, "
+"metodo, oggetto,...) nella corrispondente documentazione API"
+
+#: ../../docs/user_manual/plugins/python_console.rst:189
+#: ../../docs/user_manual/plugins/python_console.rst:232
+msgid "Contextual menu"
+msgstr "Menu Contestuale"
+
+#: ../../docs/user_manual/plugins/python_console.rst:192
+msgid "|runConsole| :guilabel:`Run selected` (:kbd:`Ctrl+E`)"
+msgstr "|runConsole| :guilabel:`Esegui script` (:kbd:`Ctrl+E`)"
 
 #: ../../docs/user_manual/plugins/python_console.rst:290
 msgid "runConsole"
 msgstr "runConsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:192
+msgid "Executes in the Interactive console the lines selected in the script"
+msgstr "Esegue nella console interattiva le righe selezionate nello script"
+
+#: ../../docs/user_manual/plugins/python_console.rst:194
+msgid "|editCut| :guilabel:`Cut` (:kbd:`Ctrl+X`)"
+msgstr "|editCut| :guilabel:`Taglia` (:kbd:`Ctrl+X`)"
+
 #: ../../docs/user_manual/plugins/python_console.rst:270
 msgid "editCut"
 msgstr "editCut"
+
+#: ../../docs/user_manual/plugins/python_console.rst:194
+msgid "Cuts selected text to the clipboard"
+msgstr "Taglia il testo selezionato dagli appunti"
+
+#: ../../docs/user_manual/plugins/python_console.rst:196
+msgid "|editCopy| :guilabel:`Copy` (:kbd:`Ctrl+C`)"
+msgstr "|editCopy| :guilabel:`Copia` (:kbd:`Ctrl+C`)"
 
 #: ../../docs/user_manual/plugins/python_console.rst:268
 msgid "editCopy"
 msgstr "editCopy"
 
+#: ../../docs/user_manual/plugins/python_console.rst:196
+msgid "Copies selected text to the clipboard"
+msgstr "Copia il testo selezionato negli appunti"
+
+#: ../../docs/user_manual/plugins/python_console.rst:198
+msgid "|editPaste| :guilabel:`Paste` (:kbd:`Ctrl+V`)"
+msgstr "|editPaste| :guilabel:`Incolla` (:kbd:`Ctrl+V`)"
+
 #: ../../docs/user_manual/plugins/python_console.rst:272
 msgid "editPaste"
 msgstr "editPaste"
+
+#: ../../docs/user_manual/plugins/python_console.rst:198
+msgid "Pastes a cut or copied text"
+msgstr "Incolla un testo tagliato o copiato"
+
+#: ../../docs/user_manual/plugins/python_console.rst:200
+msgid "|searchEditorConsole| :guilabel:`Find text`"
+msgstr "|searchEditorConsole| :guilabel:`Trova testo`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:294
+msgid "searchEditorConsole"
+msgstr "searchEditorConsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:200
+msgid "Allows to search and replace a text in the script."
+msgstr "Consente di cercare e sostituire un testo nello script."
 
 #: ../../docs/user_manual/plugins/python_console.rst:202
 msgid ""
@@ -435,6 +614,19 @@ msgstr ""
 msgid "searchRegex"
 msgstr "searchRegex"
 
+#: ../../docs/user_manual/plugins/python_console.rst:209
+msgid ""
+"|replace| :sup:`Replace` the matching text with the text in the replace box."
+" When using a regular expression, you can reference captured groups (e.g. "
+"via ``\\1``) in the replacement text. Use :guilabel:`Replace All` to replace"
+" all matches at once."
+msgstr ""
+"|sostituisci| :sup:`Sostituisci` il testo corrispondente con quello presente"
+" nella casella di sostituzione. Quando si utilizza un'espressione regolare, "
+"puoi fare riferimento ai gruppi catturati (ad esempio tramite ``\\1``) nel "
+"testo di sostituzione. Utilizza :guilabel:`Sostituisci tutto` per sostituire"
+" tutte le corrispondenze in una sola volta."
+
 #: ../../docs/user_manual/plugins/python_console.rst:288
 msgid "replace"
 msgstr "replace"
@@ -443,33 +635,146 @@ msgstr "replace"
 msgid "Pressing :kbd:`Esc` closes the find bar."
 msgstr "Premendo :kbd:`Esc` si chiude la barra di ricerca."
 
+#: ../../docs/user_manual/plugins/python_console.rst:215
+msgid "|commentEditorConsole| :guilabel:`Toggle comment` (:kbd:`Ctrl+:`)"
+msgstr "|commentEditorConsole| :guilabel:`Toggle comment` (:kbd:`Ctrl+:`)"
+
 #: ../../docs/user_manual/plugins/python_console.rst:264
 msgid "commentEditorConsole"
 msgstr "commentEditorConsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:215
+msgid ""
+"Comments out or uncomment selected lines, by adding or removing ``#`` "
+"character (potentially followed by a space) at the start of the lines. If "
+"the selection contains both comments and actual commands, adds ``#`` at the "
+"start of each non empty line. Pressing again the button reverts to the "
+"initial state."
+msgstr ""
+"Consente di commentare o rimuovere il commento dalle righe selezionate, "
+"aggiungendo o rimuovendo il carattere ``#`` (eventualmente seguito da uno "
+"spazio) all'inizio delle righe. Se la selezione contiene sia commenti che "
+"comandi effettivi, aggiungere ``#`` all'inizio di ogni riga non vuota. "
+"Premendo nuovamente il pulsante si torna allo stato iniziale."
+
+#: ../../docs/user_manual/plugins/python_console.rst:221
+msgid "|formatCode| :guilabel:`Reformat code` (:kbd:`Ctrl+Alt+F`)"
+msgstr "|formatCode| :guilabel:`Riformattazione codice` (:kbd:`Ctrl+Alt+F`)"
 
 #: ../../docs/user_manual/plugins/python_console.rst:278
 msgid "formatCode"
 msgstr "formatCode"
 
+#: ../../docs/user_manual/plugins/python_console.rst:221
+msgid ""
+"Allows to manually apply various formatting rules (sort imports, "
+"indentation, line length,…) to the code, following :ref:`user-defined "
+"settings <python_code_formatting>`. This may require installation of "
+"additional Python modules."
+msgstr ""
+"Consente di applicare manualmente varie regole di formattazione (ordinamento"
+" delle importazioni, indentazione, lunghezza delle righe, ecc.) al codice, "
+"in base alle :ref:`user-defined settings <python_code_formatting>`. Ciò "
+"potrebbe richiedere l'installazione di moduli Python aggiuntivi."
+
+#: ../../docs/user_manual/plugins/python_console.rst:226
+msgid "|classBrowserConsole| :guilabel:`Object inspector…`"
+msgstr "|classBrowserConsole| :guilabel:`Ispettore Oggetto…`"
+
 #: ../../docs/user_manual/plugins/python_console.rst:258
 msgid "classBrowserConsole"
 msgstr "classBrowserConsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:226
+msgid ""
+"Shows and hides a dedicated browser with a tree structure for classes and "
+"functions available in the script. Click an item for a quick access to its "
+"definition. The tool requires an activation from the :ref:`Python settings -"
+" Run and Debug <python_debugger>`."
+msgstr ""
+"Mostra e nasconde un browser dedicato con una struttura ad albero delle "
+"classi e delle funzioni disponibili nello script. Clicca su una voce per "
+"accedere rapidamente alla sua definizione. Lo strumento richiede "
+"l'attivazione da :ref:`Python settings - Run and Debug <python_debugger>`."
+
+#: ../../docs/user_manual/plugins/python_console.rst:232
+msgid ":guilabel:`Hide editor`"
+msgstr ":guilabel:`Nascondi editor`"
+
+#: ../../docs/user_manual/plugins/python_console.rst:232
+msgid ""
+"Hides the Python code editor block. To make it visible again, press "
+"|showEditorConsole| :sup:`Show editor button` from the interactive console "
+"toolbar."
+msgstr ""
+"Nasconde il blocco dell'editor di codice Python. Per renderlo nuovamente "
+"visibile, premi |showEditorConsole| :sup:`Mostra pulsante editor` dalla "
+"barra degli strumenti della console interattiva."
+
+#: ../../docs/user_manual/plugins/python_console.rst:236
+msgid "|syntaxErrorConsole| :guilabel:`Check syntax` (:kbd:`Ctrl+4`)"
+msgstr "|syntaxErrorConsole| :guilabel:`Controlla sintassi` (:kbd:`Ctrl+4`)"
 
 #: ../../docs/user_manual/plugins/python_console.rst:304
 msgid "syntaxErrorConsole"
 msgstr "syntaxErrorConsole"
 
+#: ../../docs/user_manual/plugins/python_console.rst:236
+msgid ""
+"Browses the code and reports syntax errors, such as missing parenthesis, "
+"colons, wrong indentation,…"
+msgstr ""
+"Esamina il codice e segnala gli errori di sintassi, come parentesi mancanti,"
+" due punti, indentazione errata, ecc."
+
+#: ../../docs/user_manual/plugins/python_console.rst:239
+msgid "|undo| :guilabel:`Undo` (:kbd:`Ctrl+Z`)"
+msgstr "|undo| :guilabel:`Annulla` (:kbd:`Ctrl+Z`)"
+
 #: ../../docs/user_manual/plugins/python_console.rst:306
 msgid "undo"
 msgstr "undo"
+
+#: ../../docs/user_manual/plugins/python_console.rst:239
+msgid "Undoes the latest action"
+msgstr "Annulla l'ultima operazione"
+
+#: ../../docs/user_manual/plugins/python_console.rst:241
+msgid "|redo| :guilabel:`Redo` (:kbd:`Ctrl+Shift+Z`)"
+msgstr "|redo| :guilabel:`Ripristina` (:kbd:`Ctrl+Shift+Z`)"
 
 #: ../../docs/user_manual/plugins/python_console.rst:286
 msgid "redo"
 msgstr "redo"
 
+#: ../../docs/user_manual/plugins/python_console.rst:241
+msgid "Reverts undone actions to a more recent"
+msgstr "Ripristina le azioni annullate a uno stato più recente"
+
+#: ../../docs/user_manual/plugins/python_console.rst:243
+msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`)"
+msgstr ":guilabel:`Seleziona tutto` (:kbd:`Ctrl+A`)"
+
+#: ../../docs/user_manual/plugins/python_console.rst:243
+msgid "Selects the whole script"
+msgstr "Seleziona l'intero script"
+
+#: ../../docs/user_manual/plugins/python_console.rst:245
+msgid "|codepadConsole| :guilabel:`Share on GitHub`"
+msgstr "|codepadConsole| :guilabel:`Condividi su GitHub`"
+
 #: ../../docs/user_manual/plugins/python_console.rst:262
 msgid "codepadConsole"
 msgstr "codepadConsole"
+
+#: ../../docs/user_manual/plugins/python_console.rst:245
+msgid ""
+"Shares the script as a :guilabel:`Secret Gist` or :guilabel:`Public Gist` on"
+" GitHub, provided a :ref:`GitHub access token <github_token>`."
+msgstr ""
+"Condivide lo script come :guilabel:`Secret Gist` o :guilabel:`Public Gist` "
+"su GitHub, a condizione che sia disponibile un :ref:`GitHub access token "
+"<github_token>`."
 
 #: ../../docs/user_manual/plugins/python_console.rst:248
 msgid "|options| :guilabel:`Options…`"
