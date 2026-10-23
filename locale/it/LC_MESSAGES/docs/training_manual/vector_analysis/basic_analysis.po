@@ -228,6 +228,14 @@ msgstr "Caricali, ed anche :file:`landuse.sqlite`."
 msgid "Zoom to the layer extent to see |majorUrbanName|, South Africa"
 msgstr "Ingrandisci per vedere |majorUrbanName|, South Africa"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:91
+msgid ""
+"Before proceeding we will filter the ``roads`` layer, in order to have only "
+"some specific road types to work with."
+msgstr ""
+"Prima di procedere filtreremo il layer ``roads``, in modo da avere solo "
+"alcuni tipi specifici di strade con cui lavorare."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:94
 msgid ""
 "Some roads in OSM datasets are listed as ``unclassified``, ``tracks``, "
@@ -274,6 +282,16 @@ msgid ""
 msgstr ""
 "``IS NOT NULL`` combinato con l'operatore ``AND`` esclude le strade con "
 "nessun valore nel campo ``highway``."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:113
+msgid ""
+"Note the |indicatorFilter| icon next to the ``roads`` layer. It helps you "
+"remember that this layer has a filter activated, so some features may not be"
+" available in the project."
+msgstr ""
+"Nota l'icona indicatore |indicatorFilter| vicino al layer ``roads``. Ti "
+"aiuta a ricordare che questo layer ha un filtro attivo, così alcuni elementi"
+" potrebbero non essere disponibili per il progetto."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:486
 msgid "indicatorFilter"
@@ -323,6 +341,11 @@ msgid ""
 msgstr ""
 "In questo esempio, useremo il SR *WGS 84 / UTM zone 34S*, ma potresti usare "
 "un SR UTM più appropriato per la tua regione."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:143
+msgid "Right click the ``roads`` layer in the :guilabel:`Layers` panel"
+msgstr ""
+"Clicca col tasto destro il layer ``roads`` nel pannello :guilabel:`Layer`"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:145
 msgid "Click :guilabel:`Export --> Save Features As...`"
@@ -513,7 +536,7 @@ msgid ""
 "Clicking on the :guilabel:`...` button and choose :guilabel:`Save to "
 "GeoPackage...`"
 msgstr ""
-"Cliccando sul pulsante :guilabel:`...` e scegliere :guilabel:`Salva come "
+"Cliccando sul pulsante:guilabel:`...` e scegliere :guilabel:`Salva come "
 "GeoPackage...`"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:225
@@ -550,6 +573,18 @@ msgid ""
 msgstr ""
 "Nota che ci sono aree distinte all'interno del buffer, che corrispondono ad "
 "ogni singola strada. Per eliminare questo problema:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:246
+msgid ""
+"Uncheck the ``roads_buffer_50m`` layer and re-create the buffer with "
+":guilabel:`Dissolve results` enabled."
+msgstr ""
+"Deseleziona il layer ``roads_buffer_50m`` e ricrea il buffer con "
+":guilabel:`Dissolvi il resultato` abilitato."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:252
+msgid "Save the output as ``roads_buffer_50m_dissolved``"
+msgstr "Salva il risultato come ``roads_buffer_50m_dissolved``"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:253
 msgid "Click :guilabel:`Run` and close the :guilabel:`Buffer` dialog"
@@ -602,9 +637,35 @@ msgstr "Soluzione"
 msgid "Your buffer dialog should look like this:"
 msgstr "La tua finestra di dialogo del buffer dovrebbe assomigliare a questa:"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:288
+msgid "The :guilabel:`Buffer distance` is ``1`` kilometer."
+msgstr "La :guilabel:`Distanza` del buffer è  ``1`` chilometro."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:290
+msgid ""
+"The :guilabel:`Segments to approximate` value is set to ``20``. This is "
+"optional, but it's recommended, because it makes the output buffers look "
+"smoother. Compare this:"
+msgstr ""
+"Il valore in :guilabel:`Segmenti di approssimazione` è impostato a ``20``. "
+"Questo è opzionale, ma è raccomandato, perché rende i buffer di uscita più "
+"uniformi. Confronta qui:"
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:297
 msgid "To this:"
 msgstr "Per fare ciò:"
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:302
+msgid ""
+"The first image shows the buffer with the :guilabel:`Segments to "
+"approximate` value set to ``5`` and the second shows the value set to "
+"``20``. In our example, the difference is subtle, but you can see that the "
+"buffer's edges are smoother with the higher value."
+msgstr ""
+"La prima immagine mostra il buffer con il valore :guilabel:`Segmenti` "
+"impostato a ``5`` e la seconda mostra il valore impostato a ``20``. Nel "
+"nostro esempio, la differenza è minima, ma si può vedere che i bordi del "
+"buffer sono più lisci con il valore più alto."
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:308
 msgid ":abbr:`★☆☆ (Basic level)` Follow Along: Overlapping Areas"
@@ -698,6 +759,15 @@ msgstr ""
 msgid "Click :guilabel:`Run` and close the dialog"
 msgstr "Clicca :guilabel:`Esegui` e chiudi il dialogo"
 
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:366
+msgid ""
+"You will probably find that not much seems to have changed. If so, move the "
+"``well_located_houses`` layer to the top of the layers list, then zoom in."
+msgstr ""
+"Probabilmente troverai che non sembra cambiato molto. Se è così, muovi il "
+"layer ``well_located_houses`` in cima alla lista dei layer e poi "
+"ingrandisci."
+
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:373
 msgid ""
 "The red buildings are those which match our criteria, while the buildings in"
@@ -730,6 +800,26 @@ msgstr ""
 "Ora abbiamo un layer che ci mostra tutti gli edifici entro 1km da una scuola"
 " ed entro 50m da una strada. Ora dobbiamo ridurre questa selezione per "
 "vedere solo gli edifici entro 500m da un ristorante."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:387
+msgid ""
+"Using the processes described above, create a new layer called "
+"``houses_restaurants_500m`` which further filters your "
+"``well_located_houses`` layer to show only those which are within 500m of a "
+"restaurant."
+msgstr ""
+"Usando il procedimento prima descritto, crea un nuovo layer chiamato "
+"``houses_restaurants_500m`` che poi filtrerà il tuo layer "
+"``well_located_houses`` per mostrare solo gli edifici entro 500m da un "
+"ristorante."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:395
+msgid ""
+"To create the new ``houses_restaurants_500m`` layer, we go through a two "
+"step process:"
+msgstr ""
+"Per creare il nuovo layer ``houses_restaurants_500m``, passiamo attraverso "
+"un processo in due fasi:"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:398
 msgid ""
@@ -765,6 +855,16 @@ msgid ""
 msgstr ""
 "Per vedere gli edifici della giusta dimensione (più di 100 metri quadrati), "
 "dobbiamo calcolarne la dimensione."
+
+#: ../../docs/training_manual/vector_analysis/basic_analysis.rst:424
+msgid ""
+"Select the ``houses_restaurants_500m`` layer and open the *Field Calculator*"
+" by clicking on the |calculateField| :sup:`Open Field Calculator` button in "
+"the main toolbar or in the attribute table window"
+msgstr ""
+"Seleziona il layer``houses_restaurants_500m`` ed apri il *Calcolatore di "
+"Campi* cliccando sul pulsante |calculateField| :sup:`Apri Calcolatore di "
+"Campi` nella barra strumenti principale o nella tabella attributi"
 
 #: ../../docs/training_manual/vector_analysis/basic_analysis.rst:484
 msgid "calculateField"
