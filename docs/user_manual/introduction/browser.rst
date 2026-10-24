@@ -772,8 +772,6 @@ Tiles and Web Services
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |addLayer| image:: /static/common/mActionAddLayer.png
-   :width: 1.5em
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
