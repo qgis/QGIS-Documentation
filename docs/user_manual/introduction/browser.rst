@@ -110,12 +110,27 @@ A lot can be accomplished in the Browser panel
 * Open a file explorer window and directly select the file
   :guilabel:`Show in Files`
 
+Browser panel top-level entries
+================================
+
+Many types of resources can be found in the :guilabel:`Browser` tree.
+They can be GIS layers (vector, raster, mesh, point cloud, ...),
+QGIS project files or templates, layer styles, bookmark extents,
+Processing scripts and models, Python scripts, various file types (images, pdf, xml, ...).
+The resources can be stored as plain files on disk, tables of database,
+or served through a web service.
+The :guilabel:`Browser` panel generally supports double-clicking those resources
+or drag-and-dropping them across entries within the browser, between the browser
+and the :guilabel:`Layers` panel and from the browser to the map canvas.
+The result of the drag and drop depends on the type of resource and its destination;
+it can load a layer or a project, copy a resource, execute a script or a model, ...
+
+Most of the elements in the :guilabel:`Browser` panel also have actions
+assigned through their contextual menu.
+The actions vary depending on the item you right-clicked over.
 Resource specific actions are listed for the different resource groups
 sorted under the top-level entries listed below.
 
-
-Browser panel top-level entries
-================================
 
 Favorites
 ----------
@@ -123,9 +138,8 @@ Favorites
 Often used file system locations can be tagged as favorites.
 The ones you have tagged will appear here.
 
-In addition to the operations described under *Home*, the
-context menu allows you to :guilabel:`Rename Favorite...` and
-:guilabel:`Remove Favorite`.
+In addition to the operations described under common :ref:`folders and drives <drives_file_system>`,
+the context menu allows you to :guilabel:`Rename Favorite…` and :guilabel:`Remove Favorite`.
 
 
 Spatial Bookmarks
@@ -172,9 +186,9 @@ Displayed in the :guilabel:`Browser` panel, it allows you to quickly
 access data and other files of the project.
 
 It defaults to the project file folder but can be changed through the
-:menuselection:`Project --> Properties... --> General --> Project home` option,
+:menuselection:`Project --> Properties… --> General --> Project home` option,
 or by right-clicking on the :guilabel:`Project Home` item of the Browser panel
-and selecting :guilabel:`Set project home...`.
+and selecting :guilabel:`Set project home…`.
 Customizing that folder is especially useful in contexts where QGIS projects
 are not stored in the root folder of an organisational 'project', along with datasets.
 
@@ -185,22 +199,26 @@ Drives and file system
 
 The next items of the :guilabel:`Browser` panel depend on the OS in use
 and concern the top level entries of its file system.
-
 They are mainly:
 
 * The :guilabel:`Home` folder, pointing to the current user home folder
 * on Unix-based machines, the root :guilabel:`/` folder
-* the connected drives, either local or network. Depending on the OS,
-  they are directly listed (eg, ``C:\``, ``D:\``) or through the ``/Volumes``
-  entry.
+* the connected drives, either local or network.
+  Depending on the OS, they are directly listed (e.g., ``C:\``, ``D:\``)
+  or through the ``/Volumes`` entry.
 
 From the contextual menu of each of these folders or drives, you can:
 
-* refresh the contents
-* create a :menuselection:`New -->` subitem that is a :guilabel:`Directory`,
-  :guilabel:`GeoPackage` or ESRI :guilabel:`Shapefile` format dataset
-* hide the directory (:guilabel:`Hide from Browser`)
-* :guilabel:`Set color`: customize the folder icon color, aiding in rapid
+* :guilabel:`Refresh` the files and folders of the entry
+* create a :menuselection:`New -->` subitem that is a :guilabel:`Directory…`,
+  :guilabel:`GeoPackage…`, ESRI :guilabel:`Shapefile…` or
+  :guilabel:`ESRI FileGeodatabase…` format dataset
+* :guilabel:`Hide from Browser`: hides the selected directory or drive from the panel.
+  The list of hidden folders can be found in :menuselection:`Settings --> Options -->
+  Data sources --> Hidden folders` and the folders can be recovered individually.
+  They also can be recovered from the contextual menu
+  of their parent folder using the :menuselection:`Hidden Items -->` entry.
+* :guilabel:`Set color…`: customize the folder icon color, aiding in rapid
   browser navigation of complex folder structures
 * enable :guilabel:`Scanning`:
 
@@ -212,10 +230,16 @@ From the contextual menu of each of these folders or drives, you can:
     directories which you don't want monitored for other reasons.
     By default, remote or network drives are not automatically monitored.
   * |unchecked| :guilabel:`Fast scan this directory`
-* open the directory in your file manager (:guilabel:`Open Directory...`)
-* open the directory in a terminal window  (:guilabel:`Open in Terminal...`)
-* inspect the :guilabel:`Properties...` or the parent :guilabel:`Directory
-  Properties...`
+* :guilabel:`Open Directory…`: opens the directory in your file manager
+* :guilabel:`Open in Terminal…`: opens the directory in a terminal window
+* inspect the :guilabel:`Properties…` or the parent :guilabel:`Directory Properties…`
+
+.. note:: The abovementioned contextual menu items are also available
+    from any directory in the browser, regardless of its location.
+
+Under the directories, interaction with files may differ depending on
+whether it is a QGIS project file, it is of a data format supported or not by QGIS,
+it is a plain file or a data container, ...
 
 
 Data type
