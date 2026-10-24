@@ -631,6 +631,96 @@ created (and added to map canvas).
    text (WKT).
 
 
+.. _import_vector_db_browser:
+
+Importing vector layers into database
+======================================
+
+QGIS provides easy ways to transfer vector layers directly to supported database formats
+using the :guilabel:`Browser` panel.
+You can start the import in two ways:
+
+* Drag and drop a single vector layer from the Browser panel or from the Project into
+  a database connection or schema item.
+* Right-click on a database connection or schema item and choose :guilabel:`Import Vector Layer…`
+  from the context menu.
+
+This triggers the :guilabel:`Import Vector Layer` dialog for further customisation.
+When multiple layers are dragged into a database, they are imported immediately
+without further options. All imports run in the background, so the QGIS interface remains responsive
+during the process.
+
+.. _figure_importvector_dialog:
+
+.. figure:: img/importvector_dialog.png
+   :align: center
+
+   Import Vector Layer dialog
+
+You can then fill the following options:
+
+* :guilabel:`Source` for defining input layer
+
+  * :guilabel:`Source layer`: the vector layer to import, chosen from the current project layers
+    or the layer dropped onto the database entry.
+  * To import only selected features of the source layer taken from the active project,
+    use the |checkbox| :guilabel:`Selected features only` option.
+* :guilabel:`Output` for defining the destination table
+
+  * :guilabel:`Schema`: when supported by the database, the schema in which to import the layer.
+    It should already exist in the database, or create it in the database
+    and use the |refresh| :sup:`Refresh schemas` button to update the list.
+  * :guilabel:`Table name`: the name of the destination table in the database.
+    By default, it is taken from the source layer name but can be modified.
+    You can also use the |checkbox| :guilabel:`Replace destination table (if exists)`
+    to overwrite an existing table.
+* :guilabel:`Options` for handling the data
+
+  * :guilabel:`Primary key`: when supported by the database, sets the primary key name for the created table.
+    Defaults to the source layer primary key name, or a default provider-specific name
+    if the source layer does not have a primary key.
+    It is also possible to use a custom name and define the new field
+    in the :guilabel:`Attributes` group below.
+  * |checkbox| :guilabel:`Geometry column`: for spatially enabled layer
+    and when supported by the database, this represents the naming for the geometry column.
+    Defaults to the source layer geometry column name, or a default provider-specific name
+    if the source layer does not have a named geometry column.
+  * :guilabel:`Output CRS`: the coordinate reference system of the
+    destination table. By default, it is the CRS of the source layer, but it can
+    be changed using the :ref:`CRS selector <crs_selector>`.
+  * :guilabel:`Comment`:  when supported by the database, a description of the destination table
+* :guilabel:`Attributes`: allows you to modify the dataset (fields and values) as you want.
+  By default, the widget is populated with fields in the source layer with their properties.
+  You can adjust each of them:
+
+  * :guilabel:`Source expression`: allows to use QGIS :ref:`expressions <expression_builder>`
+    to feed fields with calculated values.
+    By default, no modification is applied to the input values.
+  * :guilabel:`Name`: name of the field in the destination table.
+  * :guilabel:`Type`: field data type (integer, text, real, etc.).
+  * :guilabel:`Length` and :guilabel:`Precision`: length and precision of the field,
+    where applicable.
+  * :guilabel:`Constraints`: rules to enforce on the field values (e.g. NOT NULL, UNIQUE, DEFAULT).
+    Support depends on the destination database.
+  * :guilabel:`Alias`: an alternate display name for the field.
+  * :guilabel:`Comment`: a description or note attached to the field.
+
+  You can use buttons on the right side to:
+
+  * |newAttribute| :sup:`Add new field` to add a new field to the destination table.
+  * |deleteAttribute| :sup:`Delete selected field` to avoid adding a field to the destination table.
+  * |arrowUp| :sup:`Move selected field up` or |arrowDown| :sup:`Move selected field down` to reorder fields.
+  * |clearText| :sup:`Reset all fields` to clear any customization to the fields.
+  * |settings| :sup:`Convert All Fields To Lowercase` or |settings| :sup:`Convert All Fields To Uppercase`,
+    to change the case of all field names.
+
+* Optionally, apply a spatial filter with :ref:`Filter by Extent <extent_selector>`.
+  This restricts the import to features within a defined bounding box.
+
+* Optionally, apply an attribute filter with :ref:`Feature filter <expression_builder>`.
+  This allows you to use an expression to select which features are imported.
+
+
 .. _execute_sql:
 
 Creating SQL Query Layers
@@ -993,7 +1083,11 @@ when used in conjunction with this spatial index syntax.
    :width: 1.3em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |clearText| image:: /static/common/mIconClearText.png
+   :width: 1.5em
 .. |createMemory| image:: /static/common/mActionCreateMemory.png
+   :width: 1.5em
+.. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
@@ -1027,9 +1121,13 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |settings| image:: /static/common/settings.png
    :width: 1.5em
 .. |storedqueries| image:: /static/common/mIconStoredQueries.png
    :width: 1.5em
