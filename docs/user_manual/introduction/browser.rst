@@ -89,26 +89,6 @@ resources that are locationed deep down in different branches of the
 browser hierarchy.
 
 
-Resources that can be opened / run from the Browser
-===================================================
-
-A lot can be accomplished in the Browser panel
-
-* Add vector, raster and mesh layers to your map by double-clicking,
-  dragging onto the map canvas or clicking the |addLayer|
-  :sup:`Add Selected Layers` button (after selecting layers)
-* Run Python scripts (including Processing algorithms) by
-  double-clicking or dragging onto the map canvas
-* Run models by double-clicking or dragging onto the map canvas
-* :guilabel:`Extract Symbols...` from QGIS Project files using the
-  context menu
-* Open files with their default applications
-  (:guilabel:`Open <file type> Externally...` in the context menu).
-  Examples: HTML files, spreadsheets, images, PDFs, text files, ...
-* Copy entries
-* Rename and delete (multiple) layers (context menu: :menuselection:`Manage -->`)
-* Open a file explorer window and directly select the file
-  :guilabel:`Show in Files`
 
 Browser panel top-level entries
 ================================
@@ -242,46 +222,89 @@ whether it is a QGIS project file, it is of a data format supported or not by QG
 it is a plain file or a data container, ...
 
 
-Data type
----------
+Layer files
+............
+
+For leaf entries that can act as layers in a QGIS project,
+the contextual menu will present some of the following entries.
 
 .. table:: Available actions for plain layer files
    :widths: 32, 17, 17, 17, 17
    :class: longtable
 
-   +----------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-   | Level and Context menu                       | Types of layers                                                                                              |
-   |                                              +-----------------------------+-----------------------------+------------------------------+-------------------+
-   |                                              | |addRasterLayer|            | |addOgrLayer|               | |addPointCloudLayer|         | |addMeshLayer|    |
-   |                                              | Raster                      | Vector                      | Point clouds                 | Mesh              |
-   |                                              |                             |                             |                              |                   |
-   |                                              | (:ref:`Reference            | (:ref:`Reference            | (:ref:`Reference             | (:ref:`Reference  |
-   |                                              | <raster_properties_dialog>`)| <vector_properties_dialog>`)| <working_with_point_clouds>`)| <label_meshdata>`)|
-   +==============================================+=============================+=============================+==============================+===================+
-   | **File**                                                                                                                                                    |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Delete File <dataset name>`       | |checkbox|                  | |checkbox|                  |                              |                   |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Show in Files`                    | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :menuselection:`Manage`                      | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`File Properties…`                 | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Open <file type> Externally…`     | |checkbox|                  |                             |                              |                   |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | **Layer**                                                                                                                                                   |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Add Layer to Project`             | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :menuselection:`Export Layer`                | |checkbox|                  | |checkbox|                  |                              |                   |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Layer Properties…`                | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Open with Data Source Manager…`   | |checkbox|                  | |checkbox|                  |                              |                   |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
-   | :guilabel:`Execute SQL…`                     |                             | |checkbox|                  |                              |                   |
-   +----------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | Level and Contextual menu                          | Types of layers                                                                                              |
+   |                                                    +-----------------------------+-----------------------------+------------------------------+-------------------+
+   |                                                    | |addRasterLayer|            | |addOgrLayer|               | |addPointCloudLayer|         | |addMeshLayer|    |
+   |                                                    | Raster                      | Vector                      | Point clouds                 | Mesh              |
+   |                                                    |                             |                             |                              |                   |
+   |                                                    | (:ref:`Reference            | (:ref:`Reference            | (:ref:`Reference             | (:ref:`Reference  |
+   |                                                    | <raster_properties_dialog>`)| <vector_properties_dialog>`)| <working_with_point_clouds>`)| <label_meshdata>`)|
+   +====================================================+=============================+=============================+==============================+===================+
+   | :guilabel:`Open <file type> Externally…`           | |checkbox|                  | |checkbox|                  |                              |                   |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`Execute SQL…`                           |                             | |checkbox|                  |                              |                   |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :menuselection:`Export Layer --> To File…`         | |checkbox|                  | |checkbox|                  |                              |                   |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`Add Layer to Project`                   | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`Add Selected Layers to Project`         | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`Layer Properties…`                      | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`Open with Data Source Manager…`         | |checkbox|                  | |checkbox|                  |                              |                   |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :menuselection:`Manage --> Rename <file_name>`     | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :menuselection:`Manage --> Delete <file_name>`     | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :menuselection:`Manage --> Delete Selected Files`  | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`Show in Files`                          | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+   | :guilabel:`File Properties…`                       | |checkbox|                  | |checkbox|                  | |checkbox|                   | |checkbox|        |
+   +----------------------------------------------------+-----------------------------+-----------------------------+------------------------------+-------------------+
+
+
+Some notes about opening options:
+
+* :guilabel:`Open <file type> Externally…` allows to open files
+  (HTML files, spreadsheets, images, PDFs, text files, ...) with their default applications
+* Use :guilabel:`Open with Data Source Manager…` to directly open and configure the data source
+  in the :guilabel:`Data Source Manager` using the URI of your data source.
+  This simplifies the process of adding a layer from the Browser by allowing you
+  to set specific opening options for the data source.
+  It is currently available for vector (including the dedicated GeoPackage entry),
+  raster, and SpatiaLite data sources.
+
+.. _metadata_browser:
+
+Properties of Browser items
+...........................
+
+For files and directories in the :guilabel:`Browser` panel,
+dedicated :guilabel:`File properties…` and :guilabel:`Directory properties…` tools
+in their contextual menu open their properties dialog using the Operating System.
+
+For items in the :guilabel:`Browser` panel that can be used as layers in QGIS,
+the :guilabel:`Layer properties…` contextual menu entry opens a dialog
+with detailed information to better understand the dataset.
+These details can also be displayed automatically at the bottom
+of the :guilabel:`Browser` panel if the |metadata| :sup:`Enable/disable
+properties widget` button in its top toolbar is activated.
+
+* :guilabel:`Metadata`: similar to what you find in the :guilabel:`Information` tab
+  of the layer properties dialog after you load the layer in QGIS.
+  Metadata groups :guilabel:`Information from provider`
+  (if possible, :guilabel:`Path` will be a hyperlink to the source),
+  :guilabel:`Identification`, :guilabel:`Extent`, :guilabel:`Access`,
+  :guilabel:`Fields` (for vector layers), :guilabel:`Bands` (for raster layers),
+  :guilabel:`Contacts`, :guilabel:`Links` (for vector layers),
+  :guilabel:`References` (for raster layers), :guilabel:`History`.
+* :guilabel:`Preview`: helps spatially visualize the data you can pan and zoom.
+* :guilabel:`Attributes`: shows the attribute table, for vector sources.
+
 
 .. _database_entries:
 
