@@ -222,6 +222,31 @@ whether it is a QGIS project file, it is of a data format supported or not by QG
 it is a plain file or a data container, ...
 
 
+Project files
+..............
+
+Project files can be dragged and dropped from the browser to the map canvas
+to open the project or to a database (e.g., GeoPackage, PostgreSQL, ...) for storage.
+Further operations can be done through their contextual menu:
+
+* :guilabel:`Open project`
+* :guilabel:`Extract symbols…`: opens the :ref:`Style manager <vector_style_manager>` dialog
+  filled with all the symbols (marker, text, label, material, 3D symbol, ...).
+  It is then possible to select items and :ref:`share them <share_symbols>` with other contexts.
+* :menuselection:`Manage --> Rename <project_file>…`
+* :menuselection:`Manage --> Delete <project_file>…`
+* :guilabel:`Show in files`: Opens the folder containing the project file
+  in the Operating System file explorer
+* :guilabel:`File properties…`
+
+Project files stored in directories can be expanded in the :guilabel:`Browser`panel,
+showing the full layer tree (including groups) within that project.
+Layers of a project can be loaded from the browser to the active project
+through double-click or drag and drop to map canvas or :guilabel:`Layers` panel.
+They can also be dropped onto a database and :ref:`imported within <import_vector_db_browser>`.
+Their contextual menu allows to :menuselection:`Export Layer --> To File…`,
+:guilabel:`Add Layer to Project` and preview :guilabel:`Layer Properties…`.
+
 Layer files
 ............
 
