@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -336,6 +337,28 @@ msgstr ""
 msgid "Polygon features in detail"
 msgstr "Elementi poligonali in dettaglio"
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:159
+msgid ""
+"Polygon features are **enclosed areas** like dams, islands, country "
+"boundaries and so on. Like polyline features, polygons are created from a "
+"series of vertices that are connected with a continuous line. However "
+"because a polygon always describes an enclosed area, the first and last "
+"vertices should always be at the same place! Polygons often have **shared "
+"geometry** --- boundaries that are in common with a neighbouring polygon. "
+"Many GIS applications have the capability to ensure that the boundaries of "
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
+msgstr ""
+"Gli elementi poligonali sono **aree delimitate** come dighe, isole, confini "
+"nazionali e così via. Come gli elementi polilinea, i poligoni sono creati da"
+" una serie di vertici connessi con una linea continua. Siccome un poligono "
+"descrive sempre un'area delimitata, il primo e l'ultimo vertice dovrebbero "
+"trovarsi nella stessa posizione! I poligoni hanno spesso una **geometria "
+"condivisa** –-- bordi che sono in comune con un poligono adiacente. Molti "
+"applicativi GIS hanno la capacità di assicurare che i bordi di poligoni "
+"adiacenti coincidano esattamente. Vedremo ciò nell'argomento "
+":ref:`gentle_gis_topology` più avanti in questo tutorial."
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:168
 msgid ""
 "As with points and polylines, polygons have **attributes**. The attributes "
@@ -378,6 +401,28 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_data.rst:186
 msgid "Editing vector data"
 msgstr "Modificare i dati vettoriali"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:188
+msgid ""
+"The GIS application will allow you to create and modify the geometry data in"
+" a layer --- a process called **digitising** --- which we will look at more "
+"closely in a later tutorial. If a layer contains polygons (e.g. farm dams), "
+"the GIS application will only allow you to create new polygons in that "
+"layer. Similarly if you want to change the shape of a feature, the "
+"application will only allow you to do it if the changed shape is correct. "
+"For example it won't allow you to edit a line in such a way that it has only"
+" one vertex --- remember in our discussion of lines above that all lines "
+"must have at least two vertices."
+msgstr ""
+"L'applicativo GIS permetterà di creare e modificare i dati geometrici in un "
+"vettore --– un procedimento denominato **digitalizzazione** –-- che "
+"osserveremo più da vicino in un tutorial successivo. Se un vettore contiene "
+"poligoni (ad es. argini), l'applicativo GIS permetterà di creare soltanto "
+"nuovo poligoni in quel layer. Analogamente, se vuoi cambiare la forma di un "
+"elemento, l'applicativo te lo permetterà soltanto se la nuova forma è "
+"corretta. Per esempio, non sarà permesso di modificare una linea in modo che"
+" abbia un solo vertice –-- ricordati della nostra consderazione precedente "
+"sulle linee che devono avere almeno due vertici."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:197
 msgid ""
@@ -772,12 +817,31 @@ msgstr ""
 "identificare esempi dei diversi tipi di dati vettoriali evidenziandoli sulla"
 " mappa."
 
+#: ../../docs/gentle_gis_introduction/vector_data.rst:390
+msgid ""
+"Think of how you would create vector features in a GIS to represent real "
+"world features on your school grounds. Create a table of different features "
+"in and around your school and then task your learners to decide whether they"
+" would be best represented in the GIS as a point, line or polygon. See "
+":numref:`table_vector_geometry` for an example."
+msgstr ""
+"Pensa a come creeresti elementi vettoriali in un GIS per rappresentare gli "
+"elementi del mondo reale negli spazi scolastici. Crea una tabella di "
+"elementi diversi all'interno e attorno alla tua scuola e successivamente "
+"assegna ai tuoi allievi il compito di decidere se essi possano essere meglio"
+" rappresentati nel GIS come un punto, una linea o un poligono. Vedi "
+":numref:`table_vector_geometry` per un esempio."
+
 #: ../../docs/gentle_gis_introduction/vector_data.rst:402
 msgid ""
 "Can you identify two point features and one polygon feature on this map?"
 msgstr ""
 "Puoi identificare due elementi puntuali e un elemento poligonale in questa "
 "mappa?"
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:407
+msgid "Vector data and geometry types"
+msgstr "Dati vettoriali e tipi di geometria"
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:410
 msgid "Real world feature"
@@ -806,6 +870,16 @@ msgstr "I luoghi dove sono posizionati i rubinetti"
 #: ../../docs/gentle_gis_introduction/vector_data.rst:420
 msgid "Etc."
 msgstr "Etc."
+
+#: ../../docs/gentle_gis_introduction/vector_data.rst:423
+msgid ""
+"Create a table like :numref:`table_vector_geometry` (leaving the \"geometry "
+"type\" column empty) and ask your learners to decide on suitable geometry "
+"types."
+msgstr ""
+"Crea una tabella simile a :numref:`table_vector_geometry` (lasciando vuota "
+"la colonna \"geometry type\") e chiedi ai tuoi studenti di scegliere i tipi "
+"di geometria più adatti."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:428
 msgid "Something to think about"
