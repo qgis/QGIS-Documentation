@@ -6,9 +6,9 @@
 # 
 # Translators:
 # Stefano Campus <skampus@gmail.com>, 2026
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Transifex Bot <>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -118,6 +118,25 @@ msgstr ""
 "Ogni geometria ha caratteristiche che possiamo descrivere. Queste possono "
 "essere cose visibili o cose che conosciamo a proposito della geometria (per "
 "esempio l'anno di costruzione)."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:45
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --- they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see :numref:`figure_house_gis`)."
+msgstr ""
+"La geometria di questi oggetti casa è un poligono (basato sulla pianta della"
+" casa), gli attributi che abbiamo registrato sono il colore del tetto, se "
+"c’è un balcone e l’anno in cui è stata costruita la casa. Tieni presente che"
+" gli attributi non devono essere elementi visibili - possono descrivere cose"
+" che sappiamo della geometria, come l’anno in cui è stata costruita. In "
+"un’applicazione GIS, possiamo rappresentare questo tipo di oggetti in un "
+"vettore poligonale delle case e gli attributi in una tabella degli attributi"
+" (vedi :numref:`figure_house_gis`)."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:58
 msgid ""
@@ -253,6 +272,39 @@ msgstr "Caratteristiche dei vettori in breve."
 msgid "Attributes in detail"
 msgstr "Gli attributi in dettaglio"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:128
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. :numref:`table_house_attributes` shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr ""
+"Gli attributi di un dato vettoriale sono memorizzati in una **tabella**. Una"
+" tabella è come un foglio di calcolo. Ogni colonna della tabella si chiama "
+"**campo**. Ogni riga, invece, si chiama **record**. La tabella "
+":numref:`table_house_attributes`  mostra un semplice esempio di come appare "
+"una tabella degli attributi all'interno di un software GIS. Ad ogni record "
+"nella tabella degli attributi corrisponde un elemento. Di solito le "
+"informazioni contenute nella tabella degli attributi sono memorizzate in una"
+" sorta di database. I software GIS collegano gli elementi della tabella e "
+"gli attributi con le geometrie corrispondenti, in questo modo è possibile "
+"sia trovare i record nella tabella degli attributi selezionando gli elementi"
+" nella mappa, che trovare gli elementi nella mappa selezionando i record "
+"corrispondenti nella tabella."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:140
+msgid ""
+"House Attributes: An attribute table has fields (columns) and records (in "
+"rows)."
+msgstr ""
+"House Attributes: una tabella degli attributi è composta da campi (colonne) "
+"e record (nelle righe)."
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
 msgid "Attribute Table"
 msgstr "Tabella degli attributi"
@@ -313,6 +365,22 @@ msgstr "2001"
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:149
 msgid "Silver"
 msgstr "Argento"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:152
+msgid ""
+"Each field in the attribute table contains a specific type of data --- text,"
+" numeric or date. Deciding what attributes to use for a feature requires "
+"some thought and planning. In our house example earlier on in this topic, we"
+" chose roof colour, presence of a balcony and year of construction as "
+"attributes of interest. We could just as easily have chosen other aspects of"
+" a house such as:"
+msgstr ""
+"Ogni campo della tabella degli attributi contiene un tipo specifico di dati:"
+" testo, numeri o date. Decidere quali attributi utilizzare per un elemento "
+"richiede una certa attenzione e progettualità. Nell'esempio della casa, "
+"abbiamo scelto come attributi di interesse il colore del tetto, la presenza "
+"di un balcone e il mese di costruzione. Avremmo potuto scegliere anche altri"
+" aspetti di una casa, come ad esempio:"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:158
 msgid "number of levels"
@@ -477,6 +545,31 @@ msgid "Our map after setting graduated colours for our contours."
 msgstr ""
 "La nostra mappa dopo aver impostato i colori graduati per i nostri contorni."
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:246
+msgid ""
+"Setting colours based on discrete groups of attribute values is called "
+"Graduated Symbology in QGIS. The process is shown in Illustrations "
+":numref:`figure_graduated_symbol` and :numref:`figure_graduated_symbol_map`."
+" **Graduated symbols** are most useful when you want to show clear "
+"differences between features with attribute values in different value "
+"ranges. The GIS Application will analyse the attribute data (e.g. height) "
+"and, based on the number of classes you request, create groupings for you. "
+"This process is illustrated in :numref:`table_graduated`: graduated colour "
+"breaks up the attribute value ranges into the number of classes you select; "
+"each class is represented by a different colour."
+msgstr ""
+"L'impostazione dei colori in base a gruppi distinti di valori di attributo è"
+" denominata Simbologia graduata in QGIS. Il processo è mostrato nella figure"
+" :numref:`figure_graduated_symbol` e :numref:`figure_graduated_symbol_map`. "
+"I **Simboli Graduati** sono molto utili quando vuoi mostrare chiare "
+"differenze tra le geometrie con i valori degli attributi in diversi "
+"intervalli di valori. L'applicazione GIS analizzerà i dati degli attributi "
+"(ad esempio l'altezza) e, in base al numero di classi richieste, creerà "
+"raggruppamenti per te. Questo processo è illustrato nella "
+":numref:`table_graduated`: la gradazione di colore suddivide gli intervalli "
+"dei valori degli attributi nel numero di classi selezionato; ogni classe è "
+"rappresentata da un colore diverso"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:261
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:302
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:374
@@ -554,6 +647,34 @@ msgstr "9"
 msgid "Continuous Colour Symbols"
 msgstr "Simboli a colore continuo"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:286
+msgid ""
+"In the previous section on Graduated Colour symbols we saw that we can draw "
+"features in discrete groups or classes. Sometimes it is useful to draw "
+"features in a **colour range** from one colour to another. The GIS "
+"Application will use a numerical attribute value from a feature (e.g. "
+"contour heights or pollution levels in a stream) to decide which colour to "
+"use. :numref:`table_continuous` shows how the attribute value is used to "
+"define a continuous range of colours. Continuous colour symbology uses a "
+"start colour (e.g. light orange shown here) and an end colour (e.g. dark "
+"brown shown here) and creates a series of shades between those colours."
+msgstr ""
+"Nella precedente sezione su simboli a colori Graduati abbiamo visto che "
+"possiamo disegnare elementi in gruppi o classi discrete. A volte è utile "
+"disegnare gli elementi in **intervalli di colori** passando da un colore "
+"all'altro. L'applicazione GIS utilizzerà il valore numerico di un attributo "
+"di un elemento (ad esempio, le quote delle curve di livello o i livelli di "
+"inquinamento in un corso d'acqua) per determinare quale colore utilizzare. "
+":numref:`table_continuous` mostra come il valore dell'attributo venga "
+"utilizzato per definire una gamma continua di colori. La simbologia "
+"cromatica continua utilizza un colore iniziale (ad esempio l'arancione "
+"chiaro mostrato qui) e un colore finale (ad esempio il marrone scuro "
+"mostrato qui) e crea una serie di sfumature tra questi due colori."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:299
+msgid "Continuous colour symbology"
+msgstr "Simbologia a colore continuo"
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:302
 msgid "Colour (no classes or grouping)"
 msgstr "Colore (nessuna classe o raggruppamento)"
@@ -616,6 +737,35 @@ msgstr ""
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:357
 msgid "Unique Value Symbols"
 msgstr "Simbologia a valore univoco"
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:359
+msgid ""
+"Sometimes the attributes of features are not numeric, but instead "
+"**strings** are used. 'String' is a computer term meaning a group of "
+"letters, numbers and other writing symbols. Strings attributes are often "
+"used to classify things by name. We can tell the GIS Application to give "
+"each unique string or number its own colour and symbol. Road features may "
+"have different classes (e.g. 'street', 'secondary road', 'main road' etc.), "
+"each drawn in the map view of the GIS with different colours or symbols. "
+"This is illustrated in :numref:`table_unique`: unique attribute values for a"
+" feature type (e.g. roads) can each have their own symbol."
+msgstr ""
+"A volte gli attributi degli elementi non sono numerici, ma vengono "
+"utilizzate **stringhe**. 'Stringhe' è un termine informatico che indica un "
+"gruppo di lettere, numeri e altri simboli di scrittura. Gli attributi "
+"riferiti a stringhe sono spesso usati per classificare le cose per il loro "
+"nome.  Possiamo impostare l'applicazione GIS in modo che assegni a ogni "
+"stringa o numero univoco un proprio colore e un proprio simbolo. Gli "
+"elementi stradali possono appartenere a classi diverse (ad esempio ‘street’,"
+" ‘secondary road’, ‘main road’ etc.), ciascuna delle quali viene "
+"rappresentata nella visualizzazione cartografica del GIS con colori o "
+"simboli diversi. Ciò è illustrato in :numref:`table_unique`: i valori "
+"univoci degli attributi per un tipo di elemento (ad esempio le strade) "
+"possono avere ciascuno il proprio simbolo."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:371
+msgid "Unique values and symbols"
+msgstr "Valori univoci e simbologia"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:374
 msgid "Colour class and symbol"
@@ -799,6 +949,18 @@ msgstr "Adesso prova tu!"
 msgid "Here are some ideas for you to try with your learners:"
 msgstr "Di seguito alcune idee da provare con le vostre nuove conoscenze:"
 
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:452
+msgid ""
+"Using the table that you created in the last topic, add a new column for the"
+" symbology type you would use for each feature type and have the learners "
+"identify which symbology type they would use (see "
+":numref:`table_example_symbols` for an example)."
+msgstr ""
+"Usando la tabella che hai creato nell'ultimo argomento, aggiungi una nuova "
+"colonna per il tipo di simbologia che utilizzeresti per ciascun tipo di "
+"geometria e chiedi agli studenti di individuare il tipo di simbologia che "
+"useranno (vedi ad esempio :numref:`table_example_symbols`). "
+
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:456
 msgid ""
 "Try to identify which symbology types you would use for the following types "
@@ -824,6 +986,10 @@ msgid ""
 msgstr ""
 "poligoni per le case con un attributo che mostra se è fatta di mattoni, "
 "legno o altro materiale."
+
+#: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:466
+msgid "Example Feature Types and Symbology"
+msgstr "Esempi di tipologia di elementi e simbologia"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:469
 msgid "Real world feature"
