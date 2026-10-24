@@ -551,6 +551,9 @@ You can then fill the following options:
 * Optionally, apply an attribute filter with :ref:`Feature filter <expression_builder>`.
   This allows you to use an expression to select which features are imported.
 
+
+.. _tiles_web_services:
+
 Tiles and Web Services
 ----------------------
 
