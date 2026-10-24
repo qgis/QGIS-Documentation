@@ -4,8 +4,9 @@
 .. index:: Browser panel
 .. _`label_browserpanel`:
 
-The Browser panel
-======================================================================
+*******************
+ The Browser panel
+*******************
 
 
 .. contents::
@@ -89,7 +90,7 @@ browser hierarchy.
 
 
 Resources that can be opened / run from the Browser
-----------------------------------------------------------------------
+===================================================
 
 A lot can be accomplished in the Browser panel
 
@@ -114,10 +115,11 @@ sorted under the top-level entries listed below.
 
 
 Browser panel top-level entries
-----------------------------------------------------------------------
+================================
 
 Favorites
-......................................................................
+----------
+
 Often used file system locations can be tagged as favorites.
 The ones you have tagged will appear here.
 
@@ -127,7 +129,7 @@ context menu allows you to :guilabel:`Rename Favorite...` and
 
 
 Spatial Bookmarks
-......................................................................
+------------------
 
 This is where you will find your :ref:`spatial bookmarks <sec_bookmarks>`,
 divided into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
@@ -161,7 +163,7 @@ divided into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
 
 
 Project Home
-............
+-------------
 
 Available once the project file has been saved, the :guilabel:`Project home`
 entry is a folder containing data and other contents (scripts, models, text, ...)
@@ -176,9 +178,10 @@ and selecting :guilabel:`Set project home...`.
 Customizing that folder is especially useful in contexts where QGIS projects
 are not stored in the root folder of an organisational 'project', along with datasets.
 
+.. _drives_file_system:
 
 Drives and file system
-......................
+-----------------------
 
 The next items of the :guilabel:`Browser` panel depend on the OS in use
 and concern the top level entries of its file system.
@@ -216,7 +219,7 @@ From the contextual menu of each of these folders or drives, you can:
 
 
 Data type
-.........
+---------
 
 .. table:: Available actions for plain layer files
    :widths: 32, 17, 17, 17, 17
@@ -259,7 +262,7 @@ Data type
 .. _database_entries:
 
 Database entries
-.................
+----------------
 
 Depending on your OS and installed drivers, you might have access to different database
 types to use in QGIS. Below are listed the different entries of contextual menu at
@@ -459,8 +462,10 @@ each level of the dataset tree.
  such as ESRI File Geodatabase, FlatGeobuf, GeoParquet, NetCDF, ... when compatible.
 .. [2] For PostgreSQL connections: only supported with ALTER TABLE privilege.
 
+.. _import_vector_db_browser:
+
 Importing vector layers into databases using Browser panel
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...........................................................
 
 QGIS provides easy ways to transfer vector layers directly to supported database formats
 using the :guilabel:`Browser` panel.
@@ -547,7 +552,7 @@ You can then fill the following options:
   This allows you to use an expression to select which features are imported.
 
 Tiles and Web Services
-......................
+----------------------
 
 .. table:: Available actions for web services (1)
    :widths: 30, 14, 14, 14, 14, 14
@@ -658,7 +663,7 @@ Tiles and Web Services
    +--------------------------------------------------------------+-------------------+-------------------+-----------------------+-------------------+------------------+
 
 Supported file types
-....................
+---------------------
 
 .. table:: Available actions for various supported files
    :class: longtable
