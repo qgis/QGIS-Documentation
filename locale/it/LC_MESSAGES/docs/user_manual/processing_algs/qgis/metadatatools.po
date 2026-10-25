@@ -34,6 +34,14 @@ msgstr ""
 "<translation_guidelines>`. Questa pagina è attualmente tradotta al "
 "|translation progress|."
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:2
+msgid "Metadata tools"
+msgstr "Strumenti per i metadati"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:14
+msgid "Add history metadata"
+msgstr "Aggiungere metadati storici"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:15
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:138
@@ -42,6 +50,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:377
 msgid "``Added in 3.42``"
 msgstr "``Aggiunto nella versione 3.42``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:17
+msgid "Adds a new history entry to the layer's metadata."
+msgstr "Aggiungi un nuovo metadato storico del layer ai metadati."
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:20
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:79
@@ -139,6 +151,22 @@ msgstr "``INPUT``"
 msgid "[layer]"
 msgstr "[layer]"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:34
+msgid ""
+"The input layer (vector, raster, etc.) to which the history entry will be "
+"added."
+msgstr ""
+"Il layer di input (vettoriale, raster, ecc.) a cui verrà aggiunta lo "
+"storico."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:35
+msgid "**History entry**"
+msgstr "**Voce dello storico**"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:36
+msgid "``HISTORY``"
+msgstr "``HISTORY``"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:288
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:294
@@ -150,6 +178,14 @@ msgstr "[layer]"
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:336
 msgid "[string]"
 msgstr "[string]"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:38
+msgid ""
+"The text to be appended as a new entry in the layer's history metadata. This"
+" will be added to any existing history entries."
+msgstr ""
+"Il testo da aggiungere come nuova voce nei metadati storici del layer. "
+"Questo verrà aggiunto alle voci storiche già esistenti."
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:107
@@ -181,6 +217,13 @@ msgstr "``OUTPUT``"
 msgid "[same as input]"
 msgstr "[same as input]"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:56
+msgid ""
+"The resulting layer with the updated history in its **Metadata properties**."
+msgstr ""
+"Il layer risultante con la cronologia aggiornata nelle sue **proprietà dei "
+"metadati**."
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:59
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:125
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:188
@@ -207,6 +250,22 @@ msgstr ""
 ":ref:`processing_console` per dettagli su come eseguire algoritmi di "
 "elaborazione dalla console Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:71
+msgid "Copy Layer Metadata"
+msgstr "Copiare i Metadati di un layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:74
+msgid ""
+"Copies metadata from a source layer to a target layer. Any existing metadata"
+" in the target layer will be replaced with the metadata from the source "
+"layer. This includes all metadata fields, such as history, abstract, and "
+"other properties."
+msgstr ""
+"Copia i metadati da un layer di origine a un layer di destinazione. "
+"Eventuali metadati già presenti nel layer di destinazione verranno "
+"sostituiti con quelli del layer di origine. Ciò include tutti i campi dei "
+"metadati, quali cronologia, abstract e altre proprietà."
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:90
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:394
 msgid "**Source layer**"
@@ -217,10 +276,38 @@ msgstr "**Layer di partenza**"
 msgid "``SOURCE``"
 msgstr "``SOURCE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:93
+msgid "The layer from which metadata will be copied."
+msgstr "Il layer da cui verranno copiati i metadati."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:398
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:416
+msgid "**Target layer**"
+msgstr "**Layer di destinazione**"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:399
 msgid "``TARGET``"
 msgstr "``TARGET``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:97
+msgid ""
+"The layer to which metadata will be pasted. Any existing metadata in this "
+"layer will be replaced."
+msgstr ""
+"Il layer sul quale verranno incollati i metadati. Eventuali metadati già "
+"presenti in questo layer verranno sostituiti."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:98
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:225
+msgid "**Save metadata as default**"
+msgstr "**Salva i metadati come predefiniti**"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:99
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:226
+msgid "``DEFAULT``"
+msgstr "``DEFAULT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:100
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:227
@@ -234,15 +321,47 @@ msgstr "[boolean]"
 msgid "Default: False"
 msgstr "Predefinito: False"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:103
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:230
+msgid ""
+"If checked, the metadata information will be saved with the layer, hence "
+"available by default in subsequent projects."
+msgstr ""
+"Se questa opzione è selezionata, le informazioni sui metadati verranno "
+"salvate insieme al layer e saranno quindi disponibili per impostazione "
+"predefinita nei progetti successivi."
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:118
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:245
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:357
 msgid "**Output layer**"
 msgstr "**Layer in uscita**"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:121
+msgid ""
+"The target layer with the metadata replaced by the metadata from the source "
+"layer. This includes all metadata fields, such as history, abstract, and "
+"other properties."
+msgstr ""
+"Il layer di destinazione con i metadati sostituiti da quelli del layer di "
+"origine. Ciò include tutti i campi dei metadati, quali la cronologia, "
+"l’abstract e altre proprietà."
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:127
 msgid "**Algorithm ID**: ``native:copylayermetadata``"
 msgstr "**ID algoritmo**: ``native:copylayermetadata``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:137
+msgid "Export Layer Metadata"
+msgstr "Esportare i Metadati di un layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:140
+msgid "Exports the metadata of a layer to a QMD file."
+msgstr "Esporta i metadati di un layer in un file QMD."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:157
+msgid "The layer whose metadata will be exported."
+msgstr "Il layer i cui metadati saranno esportati."
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:160
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:183
@@ -272,13 +391,69 @@ msgstr "Salva su File…"
 msgid "**Output file**"
 msgstr "**File in uscita**"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:184
+msgid ""
+"The :file:`.qmd` file containing the exported metadata. This file can be "
+"used to import metadata into another layer."
+msgstr ""
+"Il file :file:`.qmd` contenente i metadati esportati. Questo file può essere"
+" utilizzato per importare i metadati in un altro layer."
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:190
 msgid "**Algorithm ID**: ``native:exportlayermetadata``"
 msgstr "**ID algoritmo**: ``native:exportlayermetadata``"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:200
+msgid "Set Layer Metadata"
+msgstr "Imposta Metadati del layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:203
+msgid "Applies metadata to a layer from a :file:`.qmd` file."
+msgstr "Applica i metadati a un layer da un file :file:`.qmd`."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:220
+msgid "The layer to which the metadata will be applied."
+msgstr "Il layer a cui verranno applicati i metadati."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:221
+msgid "**Metadata file**"
+msgstr "**Metadata file**"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:222
+msgid "``METADATA``"
+msgstr "``METADATA``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:224
+msgid "The :file:`.qmd` file containing the metadata to be applied."
+msgstr "Il file :file:`.qmd` contenente i metadati da applicare."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:248
+msgid ""
+"The input layer with the metadata replaced by the metadata from the "
+":file:`.qmd` file."
+msgstr ""
+"Il layer di input con i metadati sostituiti da quelli contenuti nel file "
+":file:`.qmd`."
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:253
 msgid "**Algorithm ID**: ``native:setlayermetadata``"
 msgstr "**ID algoritmo**: ``native:setlayermetadata``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:263
+msgid "Set Metadata Fields"
+msgstr "Impostazione campi dei metadati"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:266
+msgid "Sets various metadata fields for a layer."
+msgstr "Imposta vari campi di metadati per un layer."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:283
+msgid "The layer whose metadata fields will be updated"
+msgstr "Il layer i cui campi dei metadati verranno aggiornati"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:284
+msgid "**Identifier**"
+msgstr "**Identificatore**"
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:286
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:292
@@ -296,9 +471,21 @@ msgstr "Opzionale"
 msgid "``IDENTIFIER``"
 msgstr "``IDENTIFIER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:289
+msgid "A unique identifier for the layer"
+msgstr "Un identificativo univoco per il layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:290
+msgid "**Parent identifier**"
+msgstr "**Identificatore padre**"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:293
 msgid "``PARENT_IDENTIFIER``"
 msgstr "``PARENT_IDENTIFIER``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:295
+msgid "The identifier of the parent resource, if applicable"
+msgstr "L'identificatore della risorsa padre, se disponibile"
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:296
 msgid "**Title**"
@@ -308,9 +495,33 @@ msgstr "**Titolo**"
 msgid "``TITLE``"
 msgstr "``TITLE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:301
+msgid "The title of the layer"
+msgstr "Il titolo del layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:302
+msgid "**Type**"
+msgstr "**Tipo**"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:305
 msgid "``TYPE``"
 msgstr "``TYPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:307
+msgid "The type of data stored in the layer"
+msgstr "La tipologia di dati memorizzati nel layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:308
+msgid "**Language**"
+msgstr "**Lingua**"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:311
+msgid "``LANGUAGE``"
+msgstr "``LANGUAGE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:313
+msgid "The language of the metadata"
+msgstr "La lingua dei metadati"
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:314
 msgid "**Encoding**"
@@ -320,6 +531,26 @@ msgstr "**Codifica**"
 msgid "``ENCODING``"
 msgstr "``ENCODING``"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:319
+msgid "The character encoding used in the metadata"
+msgstr "La codifica dei caratteri utilizzata nei metadati"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:320
+msgid "**Abstract**"
+msgstr "**Abstract**"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:323
+msgid "``ABSTRACT``"
+msgstr "``ABSTRACT``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:325
+msgid "A brief description or abstract of the layer"
+msgstr "Una breve descrizione o un abstract del layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:326
+msgid "**Coordinate reference system**"
+msgstr "**Sistemi di riferimento delle coordinate**"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:329
 msgid "``CRS``"
 msgstr "``CRS``"
@@ -328,9 +559,74 @@ msgstr "``CRS``"
 msgid "[crs]"
 msgstr "[crs]"
 
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:331
+msgid "The coordinate reference system of the layer"
+msgstr "Il sistema di riferimento delle coordinate del layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:332
+msgid "**Fees**"
+msgstr "**Tariffe**"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:335
+msgid "``FEES``"
+msgstr "``FEES``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:337
+msgid "Information about any fees associated with accessing the layer"
+msgstr "Informazioni sulle eventuali tariffe previste per l'accesso al layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:338
+msgid "**Ignore empty fields**"
+msgstr "**Ignora campi vuoti**"
+
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:339
 msgid "``IGNORE_EMPTY``"
 msgstr "``IGNORE_EMPTY``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:343
+msgid ""
+"If checked, no update will be done to metadata fields that are not filled"
+msgstr ""
+"Se questa opzione è selezionata, non verrà effettuato alcun aggiornamento "
+"dei campi dei metadati che non sono stati compilati"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:360
+msgid "The input layer with the specified metadata fields updated."
+msgstr "Il layer di input con i campi dei metadati specificati aggiornati."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:366
+msgid "**Algorithm ID**: ``native:setmetadatafields``"
+msgstr "**ID algoritmo**: ``native:setmetadatafields``"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:376
+msgid "Update Layer Metadata"
+msgstr "Aggiorna Layer Metadata"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:379
+msgid ""
+"Copies all non-empty metadata fields from a source layer to a target layer. "
+"Leaves empty input fields unchanged in the target."
+msgstr ""
+"Copia tutti i campi dei metadati non vuoti da un layer di origine a un layer"
+" di destinazione. I campi di input vuoti rimangono invariati nel layer di "
+"destinazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:397
+msgid "The layer from which non-empty metadata fields will be copied"
+msgstr "Il layer da cui verranno copiati i campi dei metadati non vuoti"
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:401
+msgid ""
+"The layer to which non-empty metadata fields will be pasted. Empty fields in"
+" the source layer will not overwrite existing metadata in the target layer."
+msgstr ""
+"Il layer in cui verranno incollati i campi dei metadati non vuoti. I campi "
+"vuoti nel layer di origine non sovrascriveranno i metadati esistenti nel "
+"layer di destinazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:419
+msgid "The target layer with updated metadata."
+msgstr "Il layer di destinazione con i metadati aggiornati."
 
 #: ../../docs/user_manual/processing_algs/qgis/metadatatools.rst:425
 msgid "**Algorithm ID**: ``native:updatelayermetadata``"
