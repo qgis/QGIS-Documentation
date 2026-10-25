@@ -16,8 +16,8 @@ From a command line tool, run ``qgis_process`` and you should get:
 
 .. code-block:: bash
 
-  QGIS Processing Executor - 3.35.0-Master 'Master' (3.35.0-Master)
-  Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--help] [--version] [--json] [--verbose] [--no-python] [--skip-loading-plugins] [command] [algorithm id, path to model file, or path to Python script] [parameters]
+  QGIS Processing Executor - 4.3.0-Master 'Master' (4.3.0-Master)
+  Usage: C:\OSGeo4W\apps\qgis-dev\bin\qgis_process.exe [--help] [--version] [--json] [--verbose] [--no-python] [--skip-loading-plugins] [--profile name] [--profiles-path path] [command] [algorithm id, path to model file, or path to Python script] [parameters]
 
   Options:
 
@@ -27,6 +27,9 @@ From a command line tool, run ``qgis_process`` and you should get:
     --verbose               Output verbose logs
     --no-python             Disable Python support (results in faster startup)
     --skip-loading-plugins  Avoid loading enabled plugins (results in faster startup)
+    --profile name          Load an existing named profile
+    --profiles-path path or -S path
+                            Base path containing existing user profiles under {path}/profiles
 
   Available commands:
 
@@ -46,6 +49,22 @@ From a command line tool, run ``qgis_process`` and you should get:
                        If required, an existing QGIS project to use during the algorithm execution can be specified via the "--PROJECT_PATH=path" argument.
                        When passing parameters as a JSON object from STDIN, these extra arguments can be provided as an "ellipsoid" and a "project_path" key respectively.
 
+
+By default, ``qgis_process`` runs with the default profile of the
+:ref:`user profiles folder <user_profiles>`.
+You can choose it with :guilabel:`Always use profile` in the
+:ref:`user profile startup setting <user_profile_setting>`;
+if none was ever set, the profile named ``default`` is used.
+The default profile is created if it does not exist.
+Unlike QGIS Desktop, :guilabel:`Use last closed profile` and
+:guilabel:`Choose profile at start up` are not taken into account.
+
+Use the :ref:`profile_commandline` and :ref:`profiles-path_option` (or ``-S``)
+options to run with the Processing plugins, scripts and settings of another
+profile or profiles folder, as in QGIS Desktop.
+With only ``--profiles-path``, the default profile of that folder is used.
+Unlike QGIS Desktop, a profile selected with ``--profile`` is not created:
+it must already exist, so create and configure it in QGIS Desktop first.
 
 .. note::
   Only installed plugins that advertise ``hasProcessingProvider=yes``
