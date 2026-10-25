@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:6
 msgid "Connecting and Editing Data Across Layers"
-msgstr "Collegamento e Gestione Dati Tra Layer"
+msgstr "Collegamento e Gestione Dati tra i Layer"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:13
 msgid ""
@@ -955,6 +955,32 @@ msgstr ""
 "esempio, i layer ``airports`` e ``airlines``: un aeroporto serve compagnie "
 "aeree e una compagnia aerea opera in diversi aeroporti."
 
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:368
+msgid ""
+"This SQL code creates the three tables we need for an N-M relationship in a "
+"PostgreSQL schema named *locations*. You can run the code using the "
+":menuselection:`Database --> DB Manager…` for PostgreSQL or external tools "
+"such as `pgAdmin <https://www.pgadmin.org>`_. The airports table stores the "
+"``airports`` layer and the airline table stores the ``airlines`` layer. In "
+"both tables few fields are used for clarity. The *tricky* part is the "
+"``airports_airlines`` table. We need it to list all airlines for all "
+"airports (or vice versa). This kind of table is known as a *pivot table*. "
+"The *constraints* in this table force that an airport can be associated with"
+" an airline only if both already exist in their layers."
+msgstr ""
+"Questo codice SQL crea le tre tabelle necessarie per una relazione N-M in "
+"uno schema PostgreSQL chiamato *locations*. Puoi eseguire il codice "
+"utilizzando il menu :menuselection:`Database --> DB Manager...` per "
+"PostgreSQL o strumenti esterni come `pgAdmin <https://www.pgadmin.org>`_. La"
+" tabella aeroporti contiene il layer ``airports`` e la tabella compagnie "
+"aeree contiene il layer ``airlines``. In entrambe le tabelle vengono "
+"utilizzati pochi campi per chiarezza. La parte più complicata è la tabella "
+"``airports_airlines``. Serve per elencare tutte le compagnie aeree per tutti"
+" gli aeroporti (o viceversa). Questo tipo di tabella è noto come *tabella "
+"pivot*. I *vincoli* di questa tabella impongono che un aeroporto possa "
+"essere associato a una compagnia aerea solo se entrambi esistono già nei "
+"rispettivi layer."
+
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:422
 msgid ""
 "Instead of PostgreSQL you can also use GeoPackage. In this case, the three "
@@ -1324,6 +1350,162 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:624
 msgid "The example above uses the following database schema:"
 msgstr "L'esempio precedente utilizza il seguente schema di database:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:659
+msgid ""
+"Once relations are established, the :ref:`Identify Features "
+"<identify_features_vector>` result panel will display related features, "
+"allowing you to view associated data directly."
+msgstr ""
+"Una volta stabilite le relazioni, il pannello dei risultati :ref:`Identify "
+"Features <identify_features_vector>` mostrerà gli elementi correlati, "
+"consentendoti di visualizzare direttamente i dati associati."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:666
+msgid "Dataset-stored Relationships"
+msgstr "Relazioni memorizzate nel dataset"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:668
+msgid ""
+"Other than the above mentioned relationships that are created in the project"
+" properties and apply only in the active project, QGIS can also read "
+"database-level relations, i.e., connections defined between layers in the "
+"dataset. This is supported for database providers such as PostgreSQL, "
+"SpatiaLite, GeoPackage, ESRI FileGeodatabase. When such parent and child "
+"layers are loaded in a project, QGIS can automatically detect the relation "
+"settings and fill appropriately the :menuselection:`Project --> Project "
+"properties --> Relations` tab. This can also be triggered using the "
+"|symbologyAdd| :guilabel:`Discover relations` button."
+msgstr ""
+"Oltre alle relazioni sopra menzionate, che vengono create nelle proprietà "
+"del progetto e si applicano solo al progetto attivo, QGIS è in grado di "
+"leggere anche le relazioni a livello di database, ovvero i collegamenti "
+"definiti tra i layer nel dataset. Questa funzionalità è supportata per "
+"provider di database quali PostgreSQL, SpatiaLite, GeoPackage ed ESRI "
+"FileGeodatabase. Quando tali layer padre e figlio vengono caricati in un "
+"progetto, QGIS è in grado di rilevare automaticamente le impostazioni delle "
+"relazioni e di compilare correttamente la scheda :menuselection:`Progetto "
+"--> Proprietà del progetto --> Relazioni`. Questa operazione può essere "
+"avviata anche utilizzando il pulsante |symbologyAdd| :guilabel:`Rileva "
+"relazioni`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:677
+msgid ""
+"For some data types (e.g., GeoPackage, SpatiaLite or ESRI FileGeodatabase), "
+"QGIS also allows to create and edit the relations between the tables in the "
+"database. This can be managed through the :guilabel:`Browser Panel`. From "
+"the :guilabel:`Browser panel`, right-click on the database entry, select "
+":guilabel:`New relationship...`, and in the new dialog, fill the following "
+"options:"
+msgstr ""
+"Per alcuni tipologie di dati (ad esempio, GeoPackage, SpatiaLite o ESRI "
+"FileGeodatabase), QGIS consente anche di creare e modificare le relazioni "
+"tra le tabelle del database. Questa operazione può essere gestita tramite il"
+" :guilabel:`Pannello Browser`. Dal :guilabel:`Pannello Browser`, fai clic "
+"con il tasto destro del mouse sulla voce del database, selezionare "
+":guilabel:`Nuova relazione...` e, nella nuova finestra di dialogo, compila "
+"le seguenti opzioni:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:683
+msgid ":guilabel:`Name`: set the name of the new relationship."
+msgstr ":guilabel:`Nome`: imposta il nome della nuova relazione."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:684
+msgid ":guilabel:`Cardinality`: define the cardinality of the relationship."
+msgstr ":guilabel:`Cardinalità`: definisce la cardinalità della relazione."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:685
+msgid ":guilabel:`Strength`: specify the strength of the relationship."
+msgstr ":guilabel:`Forza`: specifica la forza della relazione."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:686
+msgid ""
+"Under the :guilabel:`Tables` group, set your :guilabel:`Parent` and "
+":guilabel:`Child` tables."
+msgstr ""
+"Nel gruppo :guilabel:`Tabelle`, imposta le tabelle :guilabel:`Padre` e "
+":guilabel:`Figlio`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:687
+msgid ""
+"Under the :guilabel:`Fields` group, set your :guilabel:`Parent field` and "
+":guilabel:`Child field`."
+msgstr ""
+"Nel gruppo :guilabel:`Campi`, imposta il :guilabel:`Campo padre` e il "
+":guilabel:`Campo figlio`."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:688
+msgid ""
+"Under the :guilabel:`Advanced` section, depending on the database type, you "
+"can set:"
+msgstr ""
+"Nella sezione :guilabel:`Avanzate`, a seconda del tipo di database, puoi "
+"impostare:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:690
+msgid ":guilabel:`Related table type`:"
+msgstr ":guilabel:`Tipo di tabella correlata`:"
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:692
+msgid ":guilabel:`features`: for standard feature tables."
+msgstr ":guilabel:`elementi`: per tabelle con elementi standard."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:693
+msgid ":guilabel:`media`: for tables storing media files."
+msgstr ":guilabel:`media`: per le tabelle che contengono file multimediali."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:694
+msgid ":guilabel:`simple_attributes`: for tables with simple attribute data."
+msgstr ""
+":guilabel:`simple_attributes`: per tabelle con dati relativi ad attributi "
+"semplici."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:695
+msgid ":guilabel:`attributes`: for tables with complex attribute data."
+msgstr ":guilabel:`attributi`: per tabelle con dati attributo complessi."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:696
+msgid ":guilabel:`tiles`: for tables storing tile data."
+msgstr ""
+":guilabel:`tasselli`: per tabelle che memorizzano dati relativi a tasselli."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:698
+msgid ""
+":guilabel:`Forward label`: a name to uniquely identify the relationship when"
+" navigating from the parent table to the child table."
+msgstr ""
+":guilabel:`Etichetta di inoltro`: un nome che identifica in modo univoco la "
+"relazione quando si passa dalla tabella padre alla tabella figlio."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:699
+msgid ""
+":guilabel:`Reverse label`:  a name to uniquely identify the relationship "
+"when navigating from the child table to the parent table."
+msgstr ""
+":guilabel:`Etichetta inversa`: un nome che identifica in modo univoco la "
+"relazione quando si passa dalla tabella figlio alla tabella padre."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:701
+msgid ""
+"Applying the dialog will add a :guilabel:`Relationships` node under the "
+"database entry, with the new relationship as child item."
+msgstr ""
+"Applicando la finestra di dialogo, verrà aggiunto un nodo "
+":guilabel:`Relazioni` sotto la voce del database, con la nuova relazione "
+"come elemento figlio."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:704
+msgid ""
+"Editing or deleting existing relationships can be done by right-clicking on "
+"the relationship in the Browser Panel."
+msgstr ""
+"È possibile modificare o eliminare le relazioni esistenti facendo clic con "
+"il tasto destro del mouse sulla relazione nel Pannello Browser."
+
+#: ../../docs/user_manual/working_with_vector/joins_relations.rst:711
+msgid "Managing dataset-stored relationships in the Browser Panel"
+msgstr ""
+"Gestione nel Pannello Bbrowser delle relazioni memorizzate nel dataset"
 
 #: ../../docs/user_manual/working_with_vector/joins_relations.rst:718
 msgid "Storing and fetching an external resource"
