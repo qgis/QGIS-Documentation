@@ -347,6 +347,26 @@ msgstr ""
 " i livelli dei simboli. Puoi regolare :guilabel:`Dimensione`, "
 ":guilabel:`Stile unione` e :guilabel:`Simbolo` della visualizzazione."
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:129
+msgid ""
+"for all symbol types, enable and configure a distance for the map canvas "
+":ref:`Extent buffer <extent_buffer>`, or the :ref:`Animation settings "
+"<animation_settings>`."
+msgstr ""
+"per tutti i tipi di simboli, abilita e configura una distanza per l'area di "
+"lavoro della mappa :ref:`Extent buffer <extent_buffer>` o le :ref:`Animation"
+" settings <animation_settings>`."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:132
+msgid ""
+"Depending on the :ref:`symbology <vector_style_menu>` of the layer the "
+"symbol is being applied to, additional settings are available in the "
+":guilabel:`Advanced` menu:"
+msgstr ""
+"A seconda della :ref:`symbology <vector_style_menu>` del layer a cui viene "
+"applicato un simbolo, sono disponibili ulteriori impostazioni nel menu "
+":guilabel:`Avanzato`:"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:135
 msgid ""
 ":ref:`Symbol levels... <Symbols_levels>` to define the order of symbols "
@@ -496,6 +516,10 @@ msgid ""
 msgstr ""
 "Adatti per elementi geometrici puntuali, i simboli marker hanno diverse "
 ":guilabel:`Tipologie di simboli`:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:190
+msgid "List of marker symbol layer types"
+msgstr "Elenco dei tipi di livelli simboli dei marcatori"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:193
 msgid ":ref:`Simple marker <simple_marker_symbol>`"
@@ -768,6 +792,10 @@ msgid ""
 msgstr ""
 "Specifici per le geometria lineari, i simboli lineari prevedono le seguenti "
 "tipologie di simboli:"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:311
+msgid "List of line symbol layer types"
+msgstr "Elenco dei tipi di livelli simboli per le linee"
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:314
 msgid ":ref:`Simple line <simple_line_symbol>`"
@@ -1326,6 +1354,18 @@ msgstr ""
 "Appropriati per le geometrie poligonali, i simboli di riempimento sono di "
 "diverse tipologie:"
 
+#: ../../docs/user_manual/style_library/symbol_selector.rst:583
+msgid "List of fill symbol layer types"
+msgstr "Elenco dei tipi di livelli simboli di riempimento"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:588
+msgid "For polygon interior"
+msgstr "Per l'interno del poligono"
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:588
+msgid "For polygon ring"
+msgstr "Per l'anello poligonale"
+
 #: ../../docs/user_manual/style_library/symbol_selector.rst:590
 msgid ":ref:`Simple fill <simple_fill_symbol>`"
 msgstr ":ref:`Simple fill <simple_fill_symbol>`"
@@ -1524,7 +1564,7 @@ msgid ""
 ":guilabel:`Clipping`: allows to control how lines in the fill should be "
 "clipped to the polygon shape. Options are:"
 msgstr ""
-":guilabel:`Ritaglio`: consente di controllare il modo in cui le linee del "
+":guilabel: `Ritaglio`: consente di controllare il modo in cui le linee del "
 "riempimento devono essere ritagliate sulla forma del poligono. Le opzioni "
 "sono:"
 
@@ -1560,6 +1600,22 @@ msgid ""
 msgstr ""
 ":guilabel:`Nessun Ritaglio`: non viene eseguito alcun ritaglio: le linee "
 "copriranno l'intero rettangolo di selezione dell'elemento."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:683
+msgid ""
+"When exporting maps to vector formats such as PDF or SVG, or when the line "
+"symbol in the pattern has data-defined properties, QGIS renders the line "
+"pattern fill using a line-by-line vector-based approach. This results in "
+"smaller output file sizes, higher quality exports, and improved editability "
+"of the pattern lines in external vector graphics applications."
+msgstr ""
+"Quando si esportano mappe in formati vettoriali come PDF o SVG, oppure "
+"quando il simbolo della linea nel pattern presenta proprietà definite dai "
+"dati, QGIS esegue il rendering del riempimento del pattern di linea "
+"utilizzando un approccio vettoriale linea per linea. Ciò si traduce in file "
+"di output di dimensioni più ridotte, esportazioni di qualità superiore e una"
+" maggiore modificabilità delle linee del pattern nelle applicazioni di "
+"grafica vettoriale esterne."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:691
 msgid ""
@@ -1819,6 +1875,136 @@ msgstr ""
 "poligono stesso. I parametri configurabili includono la distanza dal confine"
 " alla sfumatura, l'uso di scale di colore o di semplici gradienti a due "
 "colori, la sfocatura opzionale del riempimento e gli offset."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:801
+msgid ""
+"**Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to "
+"represent the polygon boundary (:guilabel:`Rings`) which can be the interior"
+" rings only, the exterior ring only or all the rings. The settings for the "
+"outline arrow are the same as for arrow line symbols."
+msgstr ""
+"**Contorno: Freccia**: utilizza un livello di linea :ref:`arrow symbol "
+"<arrow_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`), che può essere costituito solo dagli anelli interni, "
+"solo dall'anello esterno o da tutti gli anelli. Le impostazioni per il "
+"contorno a freccia sono le stesse dei simboli di linea a freccia."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:808
+msgid ""
+"**Outline: Filled line**: uses a :ref:`filled line symbol "
+"<filled_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The settings are the same as for filled line symbols."
+msgstr ""
+"**Schema: Linea piena**: utilizza un livello :ref:`filled line symbol "
+"<filled_line_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`), che può essere costituito solo dagli anelli interni, "
+"solo dall'anello esterno o da tutti gli anelli. Le impostazioni sono le "
+"stesse dei simboli a linea piena."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:815
+msgid ""
+"**Outline: Hashed line**: uses a :ref:`hash line symbol "
+"<hashed_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The other settings are the same as for hashed line "
+"symbols."
+msgstr ""
+"**Schema: Linea tratteggiata**: utilizza un livello :ref:`hash line symbol "
+"<hashed_line_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`), che può essere costituito solo dagli anelli interni, "
+"solo dall'anello esterno o da tutti gli anelli. Le altre impostazioni sono "
+"le stesse dei simboli di linea tratteggiata."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:822
+msgid ""
+"**Outline: Interpolated line**: uses an :ref:`interpolated line symbol "
+"<interpolated_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The other settings are the same as for interpolated "
+"line symbols."
+msgstr ""
+"**Contorno: Linea interpolata**: utilizza un livello :ref:`interpolated line"
+" symbol <interpolated_line_symbol>`per rappresentare il contorno del "
+"poligono (:guilabel:`Anelli`), che può essere costituito solo dagli anelli "
+"interni, solo dall'anello esterno o da tutti gli anelli. Le altre "
+"impostazioni sono le stesse dei simboli di linea interpolata."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:829
+msgid ""
+"**Outline: Linear referencing**: uses a :ref:`linear referencing symbol "
+"<hashed_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The other settings are the same as for linear "
+"referencing symbols."
+msgstr ""
+"**Contorno: Riferimento lineare**: utilizza un livello :ref:`linear "
+"referencing symbol <hashed_line_symbol>` per rappresentare il contorno del "
+"poligono (:guilabel:`Anelli`), che può essere costituito solo dagli anelli "
+"interni, solo dall'anello esterno o da tutti gli anelli. Le altre "
+"impostazioni sono le stesse dei simboli di riferimento lineare."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:836
+msgid ""
+"**Outline: Lineburst**: uses a :ref:`lineburst symbol <lineburst_symbol>` "
+"layer to represent the polygon boundary (:guilabel:`Rings`) which can be the"
+" interior rings only, the exterior ring only or all the rings. The other "
+"settings are the same as for lineburst symbols."
+msgstr ""
+"**Contorno: Raggiera di linee**: utilizza un livello :ref:`lineburst symbol "
+"<lineburst_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`) che può comprendere solo gli anelli interni, solo "
+"l'anello esterno o tutti gli anelli. Le altre impostazioni sono le stesse "
+"dei simboli a raggiera di linee."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:843
+msgid ""
+"**Outline: Marker line**: uses a :ref:`marker line symbol "
+"<marker_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The other settings for the outline marker line are "
+"the same as for marker line symbols."
+msgstr ""
+"**Contorno: linea a marcatori**: utilizza un livello :ref:`marker line "
+"symbol <marker_line_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`), che può essere costituito solo dagli anelli interni, "
+"solo dall'anello esterno o da tutti gli anelli. Le altre impostazioni "
+"relative alla linea di demarcazione del contorno sono le stesse dei simboli "
+"della linea a marcatori."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:850
+msgid ""
+"**Outline: Raster line**: uses a :ref:`raster line symbol "
+"<raster_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The other settings for the outline hashed line are "
+"the same as for hashed line symbols."
+msgstr ""
+"**Contorno: linea raster**: utilizza un livello :ref:`raster line symbol "
+"<raster_line_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`), che può comprendere solo gli anelli interni, solo "
+"l'anello esterno o tutti gli anelli. Le altre impostazioni relative alla "
+"linea tratteggiata del contorno sono le stesse previste per i simboli di "
+"linea tratteggiata."
+
+#: ../../docs/user_manual/style_library/symbol_selector.rst:857
+msgid ""
+"**Outline: Simple line**: uses a :ref:`simple line symbol "
+"<simple_line_symbol>` layer to represent the polygon boundary "
+"(:guilabel:`Rings`) which can be the interior rings only, the exterior ring "
+"only or all the rings. The :guilabel:`Draw line only inside polygon` option "
+"displays the polygon borders inside the polygon and can be useful to clearly"
+" represent adjacent polygon boundaries. The other settings for the outline "
+"simple line are the same as for simple line symbols."
+msgstr ""
+"**Contorno: Linea semplice**: utilizza un livello :ref:`simple line symbol "
+"<simple_line_symbol>` per rappresentare il contorno del poligono "
+"(:guilabel:`Anelli`), che può includere solo gli anelli interni, solo "
+"l'anello esterno o tutti gli anelli. L'opzione :guilabel:`Disegna linea solo"
+" all'interno del poligono` visualizza i contorni del poligono all'interno "
+"dello stesso e può essere utile per rappresentare chiaramente i confini dei "
+"poligoni adiacenti. Le altre impostazioni per il contorno a linea semplice "
+"sono le stesse dei simboli a linea semplice."
 
 #: ../../docs/user_manual/style_library/symbol_selector.rst:867
 msgid ""
