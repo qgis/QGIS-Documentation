@@ -49,6 +49,19 @@ msgstr ""
 "lungo una linea. Supporta layer vettoriali, raster, mesh e nuvole di punti. "
 "I dati possono essere di tipo 2D o 3D."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:18
+msgid ""
+"To add an elevation profile view, go to :menuselection:`View -->` "
+"|newElevationProfile| :menuselection:`Elevation Profile` menu. You can add "
+"as many profile views as you want, and they can be docked, piled on top of "
+"each other, or floating."
+msgstr ""
+"Per aggiungere una vista del profilo di elevazione, vai al menu "
+":menuselection:`Visualizza -->` |newElevationProfile| "
+":menuselection:`Profilo Elevazione`. Puoi aggiungere tutte le viste di "
+"profilo che desideri; queste possono essere agganciate, sovrapposte l'una "
+"all'altra o flottanti."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:352
 msgid "newElevationProfile"
 msgstr "newElevationProfile"
@@ -430,6 +443,26 @@ msgstr ""
 msgid ":menuselection:`--> Tolerance`"
 msgstr ":menuselection:`--> Tolleranza`"
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:116
+msgid ""
+"Sets how far from the actual profile line a feature (vector point, line or "
+"polygon, point cloud) can reside to be included in the results. Uses the map"
+" units and is ignored by other layer or geometry types. For some layer types"
+" (e.g. points, lines, polygons), a custom tolerance can be set in the "
+"layer's Elevation properties tab, which replaces the global tolerance and "
+"allows more control over feature inclusion based on distance to the profile "
+"line."
+msgstr ""
+"Definisce la distanza massima dalla linea di profilo effettiva alla quale un"
+" elemento (punto vettoriale, linea o poligono, nuvola di punti) può trovarsi"
+" per essere incluso nei risultati. Utilizza le unità della mappa e viene "
+"ignorato da altri tipi di layer o geometrie. Per alcuni tipi di layer (ad "
+"es. punti, linee, poligoni), è possibile impostare una tolleranza "
+"personalizzata nella scheda Proprietà di elevazione del layer; tale "
+"impostazione sostituisce la tolleranza globale e consente un maggiore "
+"controllo sull’inclusione degli elementi in base alla distanza dalla linea "
+"di profilo."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:122
 msgid ":menuselection:`--> Rename Profile...`"
 msgstr ":menuselection:`--> Rinomina Profilo...`"
@@ -664,9 +697,47 @@ msgstr ""
 "elementi dei layer attivi che attraversano la curva del profilo impostata, "
 "non appena sono configurate le proprietà di elevazione."
 
+#: ../../docs/user_manual/map_views/elevation_profile.rst:202
+msgid "Under |options| :sup:`Options` drop-down menu, you can:"
+msgstr "Nel menu a tendina |options| :sup:`Opzioni`, puoi:"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:204
+msgid ""
+"set the :guilabel:`Tolerance` value. This value is used to create a flat "
+"buffer around the elevation profile line, visible in the main map canvas. "
+"Any visible feature (point, line, polygon, etc.) overlapping that buffer "
+"will be captured in the plot canvas."
+msgstr ""
+"imposta il valore :guilabel:`Tolleranza`. Questo valore viene utilizzato per"
+" creare un buffer piatto attorno alla linea del profilo di elevazione, "
+"visibile nell'area di lavoro principale della mappa. Qualsiasi elemento "
+"visibile (punto, linea, poligono, ecc.) che si sovrapponga a tale buffer "
+"verrà acquisito nell'area di lavoro del grafico."
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:206
+msgid ""
+"select the |checkbox| :guilabel:`Show Subsections Indicator` to display "
+"vertical lines at the distance of the vertices of the profile curve. This "
+"highlights the position of the vertices of the curve on the Elevation "
+"Profile."
+msgstr ""
+"Seleziona la |checkbox| :guilabel:`Mostra indicatore sottosezioni` per "
+"visualizzare delle linee verticali alla distanza dei vertici della curva del"
+" profilo. In questo modo si evidenzia la posizione dei vertici della curva "
+"sul profilo altimetrico."
+
 #: ../../docs/user_manual/map_views/elevation_profile.rst:336
 msgid "checkbox"
 msgstr "checkbox"
+
+#: ../../docs/user_manual/map_views/elevation_profile.rst:208
+msgid ""
+"select the :guilabel:`Subsections Symbology` to set the color, opacity, "
+"width and style of the Subsections Indicator lines."
+msgstr ""
+"Seleziona :guilabel:`Simbologia delle sottosezioni` per impostare il colore,"
+" l'opacità, la larghezza e lo stile delle linee dell'indicatore delle "
+"sottosezioni."
 
 #: ../../docs/user_manual/map_views/elevation_profile.rst:210
 msgid "**Limitations with polygon extrusion**"
