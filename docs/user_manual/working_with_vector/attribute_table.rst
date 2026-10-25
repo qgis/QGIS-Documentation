@@ -102,7 +102,7 @@ following functionality:
    "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
    "|actionRun|", "Actions", "Lists the actions related to the layer"
    "", "Help", "Open the online help for the attribute table"
-   
+
 
 .. [1] Press and hold to select whether to add the feature via the attribute table or form.
 
@@ -917,4 +917,3 @@ Other information about the feature follows:
    :width: 1.5em
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
-
