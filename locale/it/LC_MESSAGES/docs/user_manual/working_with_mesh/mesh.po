@@ -599,13 +599,45 @@ msgstr ""
 "(cioè i cui dati sono memorizzati nel file) sia i dataset virtuali (che sono"
 " :ref:`calculated on the fly <mesh_calculator>`)."
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:208
+msgid ""
+"Use the |symbologyAdd| :sup:`Assign Extra Dataset to Mesh` button to add "
+"more groups to the current mesh layer. You can add dataset group to a mesh "
+"layer with the same name, but not from the same URI. Dataset group names are"
+" automatically renamed to \"Original Name_Number\"."
+msgstr ""
+"Utilizza il pulsante |symbologyAdd| :sup:`Assegna set di dati aggiuntivo "
+"alla mesh` per aggiungere altri gruppi al layer mesh corrente. Puoi "
+"aggiungere un gruppo di set di dati a un layer mesh con lo stesso nome, ma "
+"non proveniente dallo stesso URI. I nomi dei gruppi di set di dati vengono "
+"automaticamente rinominati in \"Original Name_Number\"."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1450
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:212
+msgid ""
+"Use |symbologyRemove| :sup:`Remove Extra Dataset from Mesh` to remove "
+"additional datasets groups from the mesh layer. Note that only dataset "
+"groups not associated with the mesh source file can be removed."
+msgstr ""
+"Utilizza |symbologyRemove| :sup:`Rimuovi dataset extra dalla mesh` per "
+"rimuovere gruppi di dataset aggiuntivi dal layer mesh. Tieni presente che è "
+"possibile rimuovere solo i gruppi di dataset non associati al file sorgente "
+"della mesh."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1452
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:215
+msgid ""
+"|collapseTree| :sup:`Collapse all` and |expandTree| :sup:`Expand all` the "
+"dataset tree, in case of embedded groups"
+msgstr ""
+"|collapseTree| :sup:`Racchiudi tutto` e |expandTree| :sup:`Espandi tutto` "
+"l'albero del set di dati, nel caso di gruppi annidati"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1362
 msgid "collapseTree"
@@ -626,6 +658,14 @@ msgstr ""
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:219
 msgid "Double-click over a name and you can rename the dataset."
 msgstr "Facendo doppio clic su un nome puoi rinominare il dataset."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:220
+msgid ""
+"|refresh| :sup:`Reset to defaults`: checks all the groups and renames them "
+"back to their original name in the provider."
+msgstr ""
+"|refresh| :guilabel:`Ripristina ai Valori Predefiniti`: controlla tutti i "
+"gruppi e li rinomina con il loro nome originale del provider."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1434
 msgid "refresh"
@@ -686,6 +726,14 @@ msgid ""
 msgstr ""
 ":guilabel:`Visualizza dataset`: ad esempio, per il dataset \"bed elevation\""
 " che non è time dipendente."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:236
+msgid ""
+"extract a particular date time: the dataset matching the provided time is "
+"rendered and stays fixed during map navigation."
+msgstr ""
+"estrae una data e un'ora particolare: il dataset corrispondente all'ora "
+"fornita viene reso e rimane fisso durante la navigazione della mappa."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:243
 msgid "Symbology Properties"
@@ -863,9 +911,41 @@ msgstr ""
 "Usa il cursore o la casella di selezione per impostare la "
 ":guilabel:`Opacità` del gruppo corrente, se di tipo mesh 2D."
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:315
+msgid ""
+"|radioButtonOn| :guilabel:`User Defined` allows you to enter the range of "
+"values you want to represent on the current group: use |refresh| :sup:`Load`"
+" to fetch the min and max values of the current group or enter custom values"
+" if you want to exclude some."
+msgstr ""
+"|radioButtonOn| :guilabel:`Definito dall'utente` consente di inserire "
+"l'intervallo di valori che vuoi rappresentare nel gruppo corrente: utilizza "
+"|refresh| :sup:`Carica` per recuperare i valori minimo e massimo del gruppo "
+"corrente oppure inserire valori personalizzati se vuoi escluderne alcuni."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1430
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:318
+msgid ""
+"Select |radioButtonOn| :guilabel:`Min/Max` to set the renderer's minimum and"
+" maximum values based on the chosen extent."
+msgstr ""
+"Seleziona |radioButtonOn| :guilabel:`Min/Max` per impostare i valori minimo "
+"e massimo del visualizzatore in base all'estensione scelta."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:319
+msgid ""
+":guilabel:`Statistics extent` can be :guilabel:`Whole mesh`, "
+":guilabel:`Current canvas` or :guilabel:`Updated canvas`. :guilabel:`Updated"
+" canvas` means that min/max values used for the rendering will change with "
+"the canvas extent (dynamic stretching)."
+msgstr ""
+":guilabel:`Estensione statistiche`: può essere :guilabel:`Intero raster`, "
+":guilabel:`Vista attuale` o :guilabel:`Mappa aggiornata`. :guilabel:`Mappa "
+"aggiornata` significa che i valori min/max usati per la restituzione in "
+"mappa cambieranno con l'estensione della mappa (stretching dinamico)."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:322
 msgid ""
@@ -992,6 +1072,10 @@ msgstr ""
 "Disponibilità e significato delle proprietà della simbologia dei vettori"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:375
+msgid "Label, Description and Properties"
+msgstr "Etichetta, Descrizione e Proprietà"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:375
 msgid "Arrow"
 msgstr "Freccia"
 
@@ -1006,6 +1090,12 @@ msgstr "Tracce"
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:375
 msgid "Wind Barbs"
 msgstr "Frecce di vento"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:377
+msgid ":guilabel:`Line width`: Width of the vector representation"
+msgstr ""
+":guilabel:`Larghezza della linea`: Larghezza della rappresentazione "
+"vettoriale"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:377
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:381
@@ -1024,6 +1114,10 @@ msgstr "|checkbox|"
 msgid "checkbox"
 msgstr "checkbox"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:379
+msgid ":guilabel:`Coloring method`:"
+msgstr ":guilabel:`Metodo di Colorazione`"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:381
 msgid "a :guilabel:`Single color` assigned to all vectors"
 msgstr "un :guilabel:`Colore Singolo` assegnato a tutti i vettori"
@@ -1035,6 +1129,39 @@ msgid ""
 msgstr ""
 "o un colore variabile basato sull'ampiezza dei vettori, usando una "
 ":ref:`Color ramp shader <color_ramp_shader>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:385
+msgid ""
+":guilabel:`Filter by magnitude`: Only vectors whose length for the selected "
+"dataset falls between a :guilabel:`Min` and :guilabel:`Max` range are "
+"displayed"
+msgstr ""
+":guilabel:`Filtra per dimensione`: vengono visualizzati solo i vettori la "
+"cui lunghezza, per il set di dati selezionato, rientra nell'intervallo "
+"compreso tra :guilabel:`Min` e :guilabel:`Max`"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:388
+msgid ""
+":guilabel:`Display on user grid`: Places the vector on a grid with custom "
+":guilabel:`X spacing` and :guilabel:`Y spacing` and interpolates their "
+"length based on neighbours"
+msgstr ""
+":guilabel:`Visualizza sulla griglia utente`: posiziona il vettore su una "
+"griglia con :guilabel:`spaziatura X` e :guilabel:`spaziatura Y` "
+"personalizzate e interpola la loro lunghezza in base agli elementi adiacenti"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:392
+msgid ""
+":guilabel:`Head options`: :guilabel:`Length` and :guilabel:`Width` of the "
+"arrow head, as a percentage of its shaft length"
+msgstr ""
+":guilabel:`Opzioni punta`: :guilabel:`Lunghezza` e :guilabel:`Larghezza` "
+"della punta della freccia, espresse in percentuale della lunghezza del suo "
+"asse."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:395
+msgid ":guilabel:`Arrow length`:"
+msgstr ":guilabel:`Lunghezza freccia`:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:397
 msgid ""
@@ -1058,6 +1185,10 @@ msgstr ""
 msgid "**Fixed**: all the vectors are shown with the same length"
 msgstr "**Fisso**: tutti i vettori sono mostrati con la stessa lunghezza"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:402
+msgid ":guilabel:`Streamlines seeding method`:"
+msgstr ":guilabel:`Metodo di semina linee di flusso`:"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:404
 msgid "**On mesh/grid**: relies on the user grid to display the vectors"
 msgstr ""
@@ -1071,6 +1202,24 @@ msgid ""
 msgstr ""
 "**Casuale**: il posizionamento dei vettori avviene in modo casuale rispetto "
 "a una determinata densità"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:407
+msgid ""
+":guilabel:`Particles count`: The amount of \"sand\" you want to throw into "
+"visualisation"
+msgstr ""
+":guilabel:`Numero di particelle`: la quantità di \"sabbia\" che vuoi "
+"inserire nella visualizzazione"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:409
+msgid ":guilabel:`Max tail length`: The time until the particle fades out"
+msgstr ""
+":guilabel:`Lunghezza massima della coda`: Il tempo che intercorre prima che "
+"la particella svanisca"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:411
+msgid ":guilabel:`Wind Barbs`:"
+msgstr ":guilabel:`Freccette del vento`:"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:413
 msgid ""
@@ -1807,9 +1956,104 @@ msgstr ""
 "creare e modificare un rapporto sui metadati del layer. Per ulteriori "
 "informazioni, vedere :ref:`metadatamenu`."
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:742
+msgid "Exploring mesh datasets"
+msgstr "Esplorazione dei set di dati in formato mesh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:744
+msgid ""
+"To identify mesh elements and their associated datasets, use the |identify| "
+":guilabel:`Identify Features` tool from the :guilabel:`Attributes` toolbar. "
+"Click on a mesh element in the map canvas and the :guilabel:`Identify "
+"Results` panel opens, displaying information about the mesh layer and the "
+"identified element. The panel shows:"
+msgstr ""
+"Per identificare gli elementi della mesh e i set di dati ad essi associati, "
+"utilizzare lo strumento |identify| :guilabel:`Identifica elementi` dalla "
+"barra degli strumenti :guilabel:`Attributi`. Facendo clic su un elemento "
+"della mesh nell'area di lavoro della mappa, si apre il pannello "
+":guilabel:`Risultati dell'identificazione`, che mostra le informazioni "
+"relative al layer della mesh e all'elemento identificato. Il pannello "
+"mostra:"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1376
 msgid "identify"
 msgstr "identify"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:749
+msgid "Layer name"
+msgstr "Nome layer"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:750
+msgid ""
+"Active dataset groups (scalar and/or vector) for the clicked element will be"
+" displayed first. On the other hand, inactive dataset groups are shown "
+"afterwards. For each group, the following derived information may also be "
+"shown, if applicable:"
+msgstr ""
+"I gruppi di set di dati attivi (scalari e/o vettoriali) relativi "
+"all'elemento su cui si è cliccato verranno visualizzati per primi. I gruppi "
+"di set di dati inattivi, invece, verranno visualizzati successivamente. Per "
+"ciascun gruppo, se del caso, potrebbero essere visualizzate anche le "
+"seguenti informazioni derivate:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:754
+msgid "**Source** of the dataset (the file where it is stored)."
+msgstr "**Fonte** del set di dati (il file in cui è memorizzato)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:755
+msgid ""
+"**Time step** of the dataset value being displayed. For non-temporal dataset"
+" groups, this field remains empty."
+msgstr ""
+"**Intervallo di tempo** del valore del set di dati visualizzato. Per i "
+"gruppi di set di dati non temporali, questo campo rimane vuoto."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:756
+msgid ""
+"**Vector x-component** and **Vector y-component** values for vector "
+"datasets."
+msgstr ""
+"Valori della **componente x del vettore** e della **componente y del "
+"vettore** per i set di dati vettoriali."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:758
+msgid ""
+"Please note that when temporal navigation is disabled, the results only "
+"contain values from the :ref:`static dataset groups <meshsource>` defined."
+msgstr ""
+"Da notare che, quando la navigazione temporale è disabilitata, i risultati "
+"contengono solo i valori provenienti dai :ref:`static dataset groups "
+"<meshsource>` definiti."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:761
+msgid ""
+"Geometry information shows the coordinates of the clicked point and may "
+"contain derived information in the following:"
+msgstr ""
+"Le informazioni geometriche indicano le coordinate del punto su cui si è "
+"cliccato e possono contenere le seguenti informazioni derivate:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:764
+msgid "Centroid of the face."
+msgstr "Centroide della faccia."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:765
+msgid ""
+"Coordinates of a snapped vertex (if the click was snapped to a vertex)."
+msgstr ""
+"Coordinate di un vertice a cui è stato effettuato l'aggancio (se il clic ha "
+"determinato l'aggancio a un vertice)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:766
+msgid "Center of a snapped edge (if the click was snapped to an edge)."
+msgstr ""
+"Centro di un bordo a cui si è effettuato l'aggancio (se il clic è stato "
+"agganciato a un bordo)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:773
+msgid "Mesh Identify Results panel"
+msgstr "Pannello Risultati Identificazione Mesh"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:779
 msgid "Editing a mesh layer"
@@ -2101,9 +2345,125 @@ msgstr "clearText"
 msgid "Rules of assignment"
 msgstr "Regole di assegnazione"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:864
+msgid ""
+"This is configured in the drop-down menu of the :guilabel:`Digitize mesh "
+"elements` tool as :guilabel:`New vertex Z value` option. Following methods "
+"are available:"
+msgstr ""
+"Questa impostazione è configurabile nel menu a tendina dello strumento "
+":guilabel:`Digitalizza elementi della mesh` come opzione :guilabel:`Nuovo "
+"valore Z del vertice`. Sono disponibili i seguenti metodi:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:868
+msgid "Z value assignment methods"
+msgstr "Metodi di assegnazione del valore Z"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:873
+msgid "Method"
+msgstr "Metodo"
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:873
 msgid "Description"
 msgstr "Descrizione"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:875
+msgid "**Project terrain**"
+msgstr "**Terreno Progetto**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:875
+msgid ""
+"Z value is always taken or calculated from the :ref:`project reference "
+"terrain <project_terrain>`."
+msgstr ""
+"Il valore Z viene sempre ricavato o calcolato dal :ref:`project reference "
+"terrain <project_terrain>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:878
+msgid ""
+"If it is **Flat terrain**, the value corresponds to the :guilabel:`Terrain "
+"height` set in the project properties."
+msgstr ""
+"Se si tratta di **terreno pianeggiante**, il valore corrisponde alla "
+":guilabel:`Altitudine del terreno` impostata nelle proprietà del progetto."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:880
+msgid ""
+"If it is a **Mesh** layer, the value is interpolated from the surrounding "
+"vertices of the mesh."
+msgstr ""
+"Se si tratta di un layer **Mesh**, il valore viene interpolato dai vertici "
+"circostanti della mesh."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:882
+msgid ""
+"If it is a **DEM (raster layer)**, the value is assigned from the raster "
+"pixel value."
+msgstr ""
+"Se si tratta di un **DEM (layer raster)**, il valore viene ricavato dal "
+"valore del pixel raster."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:884
+msgid ""
+"If there is no terrain under the new vertex, the value falls back to the "
+":guilabel:`Default Z value` set in :ref:`digitizing options "
+"<digitizing_options>`."
+msgstr ""
+"Se sotto il nuovo vertice non è presente alcun terreno, il valore torna a "
+"quello predefinito :guilabel:`Valore Z predefinito` impostato in "
+":ref:`digitizing options <digitizing_options>`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:888
+msgid "**Z widget**"
+msgstr "**Z widget**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:888
+msgid ""
+"Z value is taken from the :guilabel:`Vertex Z value` widget or the "
+":guilabel:`Advanced Digitizing Panel` :guilabel:`Z` widget (if it is in "
+":sup:`Locked` state)."
+msgstr ""
+"Il valore Z viene prelevato dal widget :guilabel:`Valore Z del vertice` o "
+"dal widget :guilabel:`Z` del :guilabel:`Pannello di digitalizzazione "
+"avanzato` (se si trova nello stato :sup:`Bloccato`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:892
+msgid "**Prefer mesh, then Z widget**"
+msgstr "**Prima mesh, poi widget Z**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:892
+msgid ""
+"Interpolates the Z value from the active mesh layer if the vertex is on an "
+"edge or face, otherwise falls back to the :guilabel:`Vertex Z value` or "
+":guilabel:`Advanced Digitizing Panel` :guilabel:`Z` widget (if it is in "
+":sup:`Locked` state)."
+msgstr ""
+"Interpola il valore Z dal layer mesh attivo se il vertice si trova su un "
+"bordo o su una faccia; in caso contrario, ricorre al widget "
+":guilabel:`Valore Z del vertice` o al widget :guilabel:`Pannello di "
+"digitalizzazione avanzato` :guilabel:`Z` (se si trova nello stato "
+":sup:`Bloccato`)."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:897
+msgid "**Prefer mesh, then terrain**"
+msgstr "**Prima mesh, poi terreno**"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:897
+msgid ""
+"Interpolates the Z value from the active mesh layer if the vertex is on the "
+"edge or face, otherwise uses the project reference terrain value."
+msgstr ""
+"Interpola il valore Z dal layer mesh attivo se il vertice si trova su un "
+"bordo o su una faccia; in caso contrario, utilizza il valore del terreno di "
+"riferimento del progetto."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:902
+msgid ""
+"The following detailed logic describes the behavior of the **Prefer mesh, "
+"then Z widget** strategy."
+msgstr ""
+"La logica dettagliata riportata di seguito descrive il comportamento della "
+"strategia **“Prima mesh, poi widget Z”**."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:905
 msgid "Matrix of Z value assignment to new vertex"
@@ -2112,6 +2472,10 @@ msgstr "Matrice di assegnazione del valore Z al nuovo vertice"
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:908
 msgid "Vertex creation"
 msgstr "Creazione vertice"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:908
+msgid "Vertices selected?"
+msgstr "Vertici selezionati?"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:908
 msgid "Source of assigned value"
@@ -2159,6 +2523,10 @@ msgstr "widget :guilabel:`z` se in stato |locked| :sup:`Bloccato`"
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:919
 msgid "Yes"
 msgstr "Yes"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:919
+msgid "Average of the selected vertices or user-defined"
+msgstr "Media dei vertici selezionati o definita dall'utente"
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:922
 msgid "Vertex on an edge"
@@ -2278,6 +2646,64 @@ msgstr ""
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:962
 msgid "Selecting mesh elements"
 msgstr "Selezionare elementi della mesh"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:964
+msgid "To select mesh elements, you can use the following tools:"
+msgstr ""
+"Per selezionare gli elementi della mesh, puoi utilizzare i seguenti "
+"strumenti:"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:966
+msgid ""
+"|meshDigitizing| :sup:`Digitize Mesh Elements` to select different mesh "
+"elements, see more at :ref:`digitize_mesh_elements`."
+msgstr ""
+"|meshDigitizing| :sup:`Digitalizza elementi della mesh` per selezionare "
+"diversi elementi della mesh; per ulteriori informazioni, consulta "
+":ref:`digitize_mesh_elements`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:967
+msgid ""
+"|meshSelectPolygon| :sup:`Select Mesh Elements by Polygon` to select "
+"different mesh elements by polygon, see more at "
+":ref:`select_mesh_by_polygon`."
+msgstr ""
+"|meshSelectPolygon| :sup:`Seleziona elementi della mesh in base al poligono`"
+" per selezionare diversi elementi della mesh in base al poligono; per "
+"ulteriori informazioni, consulta :ref:`select_mesh_by_polygon`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:969
+msgid ""
+"|meshSelectExpression| :sup:`Select Mesh Elements by Expression` to select "
+"different mesh elements by expression, you can choose to :guilabel:`Select "
+"by vertices` or :guilabel:`Select by faces`, see more at "
+":ref:`select_mesh_by_expression`."
+msgstr ""
+"|meshSelectExpression| :sup:`Seleziona elementi della mesh tramite "
+"espressione` per selezionare diversi elementi della mesh tramite "
+"espressione; è possibile scegliere tra :guilabel:`Seleziona per vertici` o "
+":guilabel:`Seleziona per facce`; per ulteriori informazioni, consulta "
+":ref:`select_mesh_by_expression`."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:971
+msgid ""
+"|meshSelectIsolatedVertices| :sup:`Select Isolated Vertices` to select all "
+"vertices that are not part of any mesh face."
+msgstr ""
+"|meshSelectIsolatedVertices| :sup:`Seleziona vertici isolati` per "
+"selezionare tutti i vertici che non fanno parte di alcuna faccia della mesh."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1410
+msgid "meshSelectIsolatedVertices"
+msgstr "meshSelectIsolatedVertices"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:972
+msgid ""
+"|meshSelectAll| :sup:`Select All Vertices` to select all vertices of the "
+"mesh layer."
+msgstr ""
+"|meshSelectAll| :sup:`Seleziona tutti i vertici` per selezionare tutti i "
+"vertici del layer mesh."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1406
 msgid "meshSelectAll"
@@ -2490,6 +2916,28 @@ msgstr ""
 "Premere il pulsante |meshDigitizing| :sup:`Digitalizzazione di elementi "
 "della mesh`."
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1049
+msgid ""
+"A :guilabel:`Vertex Z value` widget is always available on the top right "
+"corner of the map canvas during digitizing. It allows setting or overriding "
+"the Z coordinate assigned to new vertices, depending on the selected :ref:`Z"
+" value assignment method <mesh_z_value_assignment>`."
+msgstr ""
+"Durante la digitalizzazione, il widget :guilabel:`Valore Z del vertice` è "
+"sempre disponibile nell'angolo in alto a destra dell'area di lavoro della "
+"mappa. Consente di impostare o sovrascrivere la coordinata Z assegnata ai "
+"nuovi vertici, a seconda del :ref:`Z value assignment method "
+"<mesh_z_value_assignment>` selezionato."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1053
+msgid ""
+"You can choose other method for assigning Z values to new vertices from the "
+"drop-down menu in the |meshDigitizing| :sup:`Digitize mesh elements` tool."
+msgstr ""
+"Puoi scegliere un altro metodo per assegnare i valori Z ai nuovi vertici dal"
+" menu a tendina presente nello strumento |meshDigitizing| :sup:`Digitalizza "
+"elementi della mesh`."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1055
 msgid "Then double-click:"
 msgstr "Quindi fare doppio clic:"
@@ -2519,6 +2967,21 @@ msgid ""
 msgstr ""
 "all'interno di una faccia: divide la faccia in triangoli i cui bordi "
 "collegano i vertici circostanti al nuovo vertice."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1064
+msgid ""
+"With the :guilabel:`Refine neighboring faces when adding vertices` option "
+"enabled in the |meshDigitizing| :sup:`Digitize mesh elements` button drop-"
+"down menu, a check is applied to triangular faces that share at least one "
+"vertex with the face the new vertex is added to. If their edges do not "
+"satisfy Delaunay triangulation rules, they are flipped accordingly."
+msgstr ""
+"Se l'opzione :guilabel:`Ottimizza le facce adiacenti durante l'aggiunta di "
+"vertici` è abilitata nel menu a tendina del pulsante |meshDigitizing| "
+":sup:`Digitalizza elementi della mesh`, viene effettuato un controllo sulle "
+"facce triangolari che condividono almeno un vertice con la faccia a cui "
+"viene aggiunto il nuovo vertice. Se i loro spigoli non soddisfano le regole "
+"della triangolazione di Delaunay, vengono ruotati di conseguenza."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1070
 msgid "Adding faces"
@@ -2729,6 +3192,23 @@ msgstr ""
 "Inserisci quindi la posizione di destinazione nella casella, come valore "
 "numerico o come espressione (usando la finestra di dialogo |expression| "
 ":sup:`Espressione`)"
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1150
+msgid ""
+"With the |vertexCoordinates| :sup:`Import Coordinates of the Selected "
+"Vertex` pressed, the X, Y and Z boxes are automatically filled with its "
+"coordinates whenever a single vertex is selected. You can adjust Z value by "
+"using |checkbox| :guilabel:`Get the Z value from the project terrain` button"
+" and in that case the Z box is deactivated. A convenient and quick way to "
+"adjust vertices individually."
+msgstr ""
+"Tenendo premuto il pulsante |vertexCoordinates| :sup:`Importa le coordinate "
+"del vertice selezionato`, i campi X, Y e Z vengono automaticamente compilati"
+" con le relative coordinate ogni volta che viene selezionato un singolo "
+"vertice. Puoi regolare il valore Z utilizzando il pulsante |checkbox| "
+":guilabel:`Prendi il valore Z dal terreno del progetto`; in tal caso, il "
+"campo Z viene disattivato. Un modo comodo e veloce per regolare i vertici "
+"singolarmente."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1466
 msgid "vertexCoordinates"
@@ -3134,6 +3614,14 @@ msgid "The :guilabel:`Spatial extent` to consider for calculation can be:"
 msgstr ""
 "La :guilabel:`Estensione Spaziale` da considerare per il calcolo può essere:"
 
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1321
+msgid ""
+"defined as a :guilabel:`Custom extent` using the :ref:`extent selector "
+"<extent_selector>` widget."
+msgstr ""
+"definito come :guilabel:`Estensione personalizzata` utilizzando il widget "
+":ref:`extent selector <extent_selector>`."
+
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1322
 msgid ""
 "defined by a polygon layer (:guilabel:`Mask layer`) of the project: the "
@@ -3157,6 +3645,16 @@ msgstr ""
 "esistenti. Possono anche essere valorizzati utilizzando il pulsante "
 ":guilabel:`Usa Orari di Tutti i Dataset Seezionati` per prendere l'intero "
 "intervallo."
+
+#: ../../docs/user_manual/working_with_mesh/mesh.rst:1328
+msgid ""
+"With the |checkbox| :guilabel:`Add result to project` checkbox, the result "
+"layer will automatically be added to the legend area and can be visualized. "
+"Checked by default."
+msgstr ""
+"Se si seleziona |checkbox| :guilabel:`Aggiungi risultato al progetto`, il "
+"layer risultato verrà automaticamente aggiunto all'area della legenda e "
+"potrà essere visualizzato. È selezionato per impostazione predefinita."
 
 #: ../../docs/user_manual/working_with_mesh/mesh.rst:1332
 msgid ""
