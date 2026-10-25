@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 09:42+0100\n"
 "PO-Revision-Date: 2026-03-13 09:55+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -37,6 +37,19 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:5
 msgid "Setting a label"
 msgstr "Impostare una etichetta"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:12
+msgid ""
+"Labels are textual information you can display on maps. They add details you"
+" could not necessarily represent using symbols, and may refer to vector "
+"features, raster cells, mesh elements, or simple annotations on the map... "
+"Two types of text-related items are available in QGIS:"
+msgstr ""
+"Le etichette sono informazioni testuali che puoi visualizzare sulle mappe. "
+"Aggiungono dettagli che non è sempre possibile rappresentare tramite simboli"
+" e possono riferirsi a elementi vettoriali, celle raster, elementi di mesh o"
+" semplici annotazioni sulla mappa... In QGIS sono disponibili due tipi di "
+"oggetti relativi alle informazioni testuali:"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:17
 msgid ""
@@ -94,6 +107,20 @@ msgstr ""
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:41
+msgid ""
+":guilabel:`Label Settings`: extend the text format settings with properties "
+"related to the location or the interaction with other texts or features "
+"(:ref:`callouts <labels_callouts>`, :ref:`placement <labels_placement>`, "
+":ref:`overlay, scale visibility <labels_rendering>`, :ref:`mask "
+"<labels_mask>` ...)."
+msgstr ""
+":guilabel:`Impostazioni testo`: estende le impostazioni del formato del "
+"testo con proprietà relative alla posizione o all'interazione con altri "
+"testi o oggetti  (:ref:`callouts <labels_callouts>`, :ref:`placement "
+"<labels_placement>`, :ref:`overlay, scale visibility <labels_rendering>`, "
+"maschera ...)."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:46
 msgid ""
 "They are used to configure smart labelling for vector and mesh layers "
@@ -146,6 +173,19 @@ msgstr ""
 msgid "Formatting the label text"
 msgstr "Formattare etichetta testuale"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:75
+msgid ""
+"Whether you are configuring a :guilabel:`Text Format` or :guilabel:`Label "
+"Settings` item, and depending on the type of layer you are configuring, you "
+"will be given the following options:"
+msgstr ""
+"Sia che tu stia configurando un oggetto :guilabel:`Formato testo` o "
+":guilabel:`Impostazioni etichetta`, avrai le seguenti opzioni:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:78
+msgid "Label properties by data type"
+msgstr "Proprietà delle etichette in base al tipo di dati"
+
 #: ../../docs/user_manual/style_library/label_settings.rst:82
 msgid "Properties tab"
 msgstr "Proprietà scheda"
@@ -157,6 +197,14 @@ msgstr "Formato testo"
 #: ../../docs/user_manual/style_library/label_settings.rst:84
 msgid "Label settings"
 msgstr "Impostazioni etichetta"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:85
+msgid "Vector or mesh layer"
+msgstr "Layer vettore o mesh"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:86
+msgid "raster layer"
+msgstr "Layer raster"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:87
 msgid ":guilabel:`Text`"
@@ -229,7 +277,18 @@ msgstr ":guilabel:`Posizionamento`"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:127
 msgid ":guilabel:`Rendering`"
-msgstr ":guilabel:`Visualizzaione`"
+msgstr ":guilabel:`Visualizzazione`"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:133
+msgid ""
+"While for legibility, \"feature\" is the name used below to indicate the "
+"item being labeled, depending on the underlying layer type, it can be "
+"replaced by \"pixel\", \"face\" or \"vertex\"."
+msgstr ""
+"Per motivi di chiarezza, nel testo che segue si utilizza il termine "
+"\"elemento\" per indicare l'oggetto da etichettare; tuttavia, a seconda del "
+"tipo di layer sottostante, tale termine può essere sostituito \"pixel\", "
+"\"face\" o \"vertice\"."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:140
 msgid "Text tab"
@@ -313,6 +372,27 @@ msgstr ""
 #: ../../docs/user_manual/style_library/label_settings.rst:176
 msgid "Allow HTML Formatting"
 msgstr "Permettere formattazione HTML"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:178
+msgid ""
+"With :guilabel:`Allow HTML Formatting` enabled, you need to provide the HTML"
+" code in the :guilabel:`Value` field. Use whitespaces instead of tabs for "
+"any kind of indentation. The expression is parsed and any supported HTML tag"
+" overrides its corresponding setting in the labels properties. Because it is"
+" impossible to list and detail every HTML tag and CSS property that QGIS "
+"currently supports, we invite you to explore and test in your labels `the "
+"ones supported <https://doc.qt.io/archives/qt-5.15/richtext-html-"
+"subset.html>`_ by the underlying Qt library."
+msgstr ""
+"Con l'opzione `Permetti formattazione HTML` abilitata, devi specificare il "
+"codice HTML nel camp:guilabel:`Valore`. Utilizza spazi vuoti anziché "
+"tabulazioni per qualsiasi tipo di rientro. L'espressione viene analizzata e "
+"qualsiasi tag HTML supportato sovrascrive l'impostazione corrispondente "
+"nelle proprietà delle etichette. Poiché è impossibile elencare e descrivere "
+"in dettaglio tutti i tag HTML e le proprietà CSS attualmente supportati da "
+"QGIS, ti invitiamo a esplorare e testare nelle tue etichette `the ones "
+"supported <https://doc.qt.io/archives/qt-5.15/richtext-html-subset.html>`_  "
+"dalla libreria Qt sottostante."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:185
 msgid "**Examples of supported HTML tags:**"
@@ -409,6 +489,51 @@ msgstr ""
 "Allineamento del testo (``vertical-align``, ``text-align``). L'allineamento "
 "orizzontale non può essere utilizzato per etichette curvate."
 
+#: ../../docs/user_manual/style_library/label_settings.rst:236
+msgid ""
+"Line height, in ``points`` or ``percent`` unit, e.g. \"line-height: 40pt\" "
+"or \"line-height: 40%\""
+msgstr ""
+"Altezza della riga, espressa in ``punti`` o in ``percentuale``, ad esempio "
+"``line-height: 40pt`` o “`line-height: 40%``"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:237
+msgid ""
+"Background properties such as ``background-color`` and ``background-image``."
+" They are supported for block type items (e.g. ``div``) or inline items "
+"(e.g. ``span``). For images, the CSS should be formatted as ``background-"
+"image: url(xx)`` and supports local file paths, HTTP links, or base64 "
+"embedded content."
+msgstr ""
+"Proprietà relative allo sfondo, quali ``background-color`` e ``background-"
+"image``. Sono supportate sia per gli oggetti di tipo blocco (ad es. ``div``)"
+" che per quelli di tipo inline (ad es. ``span``). Per le immagini, il CSS "
+"deve essere formattato come ``background-image: url(xx)`` e supporta "
+"percorsi di file locali, collegamenti HTTP o contenuti incorporati in "
+"formato base64."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:242
+msgid ""
+"Backgrounds are not supported for curved text and are always rendered above "
+"any background shape for the label, and below drop shadows/buffers "
+"properties."
+msgstr ""
+"Gli sfondi non sono supportati per il testo curvo e vengono sempre "
+"visualizzati sopra qualsiasi sfondo dell'etichetta e sotto le proprietà "
+"relative alle ombre e ai margini."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:245
+msgid ""
+"Margin properties, available for block type items only, such as ``div``, "
+"``p``, ``h1``,... They can be specified in either the longhand or shorthand "
+"way, in ``points`` unit only. Negative values can be set for the bottom "
+"margin."
+msgstr ""
+"Proprietà dei margini, disponibili solo per gli elementi di tipo blocco, "
+"come ``div``, ``p``, ``h1``, ... Possono essere specificate sia nella forma "
+"estesa che in quella abbreviata, esclusivamente nell'unità di misura "
+"``punti``. È possibile impostare valori negativi per il margine inferiore."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:256
 msgid ""
 "CSS properties can be set on HTML tags with the ``style`` attribute. The "
@@ -473,6 +598,20 @@ msgstr ":guilabel:`Tutto Maiuscolo`"
 msgid ":guilabel:`All lowercase`"
 msgstr ":guilabel:`Tutto Minuscolo`"
 
+#: ../../docs/user_manual/style_library/label_settings.rst:305
+msgid ":guilabel:`Small Caps`: renders lowercase characters as small caps."
+msgstr ""
+":guilabel:`Small Caps`: visualizza i caratteri minuscoli come maiuscole "
+"minuscole."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:306
+msgid ""
+":guilabel:`All Small Caps`: renders all characters as small caps regardless "
+"of their original case."
+msgstr ""
+":guilabel:`All Small Caps`: visualizza tutti i caratteri in maiuscolo "
+"piccolo, indipendentemente dal loro formato originale."
+
 #: ../../docs/user_manual/style_library/label_settings.rst:308
 msgid ""
 ":guilabel:`Title case`: modifies the first letter of each word into capital,"
@@ -512,6 +651,20 @@ msgstr ""
 "sostituzione per i caratteri :kbd:`Tab` nell'etichetta, in qualsiasi unità "
 "supportata. Questo consente, ad esempio, di separare correttamente o "
 "allineare verticalmente gli elementi di un testo di legenda del layout."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:322
+msgid ""
+"Pressing the |options| :sup:`Configure tab stops` button on the right, you "
+"can add a list of tab positions, instead of a single distance. This allows "
+"e.g. the creation of table-like multiline labels, where texts are split over"
+" different \"columns\" and lined up nicely, based on the :kbd:`Tab` "
+"characters."
+msgstr ""
+"Premendo il pulsante |options| :sup:`Configura i punti di tabulazione` sulla"
+" destra, è possibile aggiungere un elenco di posizioni di tabulazione, "
+"anziché una singola distanza. Ciò consente, ad esempio, di creare etichette "
+"multilinea simili a tabelle, in cui i testi sono suddivisi in diverse "
+"\"colonne\" e allineati correttamente, in base ai caratteri :kbd:`Tab`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:1172
 msgid "options"
@@ -1996,6 +2149,60 @@ msgid ""
 msgstr ""
 "Alcune impostazioni di posizionamento delle etichette sono disponibili per "
 "tutti i tipi di geometria di layer:"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:890
+msgid "Label Spacing"
+msgstr "Spaziature etichetta"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:892
+msgid ""
+"The :guilabel:`Label Spacing` option allows you to set the margin around the"
+" label, preventing all other labels from being placed within that area. You "
+"can dynamically control :guilabel:`Margin around label` using the "
+"|dataDefine| :sup:`Data-defined override` button. Choose unit from the unit "
+"selector, and there you can also :ref:`adjust scaling range "
+"<unit_selector>`."
+msgstr ""
+"L'opzione :guilabel:`Spaziatura etichetta` consente di impostare il margine "
+"attorno all'etichetta, impedendo che tutte le altre etichette vengano "
+"posizionate all'interno di quell'area. Puoi controllare dinamicamente "
+":guilabel:`Margine attorno all'etichetta` utilizzando il pulsante "
+"|dataDefine| :sup:`Sovrascrittura definita dai dati`. Scegli l'unità dal "
+"selettore delle unità; da lì puoi anche :ref:`adjust scaling range "
+"<unit_selector>`."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:898
+#: ../../docs/user_manual/style_library/label_settings.rst:910
+msgid ""
+"This option is only available on QGIS installed with GEOS_ >= 3.10 (see "
+":menuselection:`Help --> About` menu)."
+msgstr ""
+"Questa opzione è disponibile solo nelle installazioni di QGIS con GEOS_ >= "
+"3.10 (vedere il menu :menuselection:`Aiuto --> Informazioni`)."
+
+#: ../../docs/user_manual/style_library/label_settings.rst:902
+msgid "Duplicate Labels"
+msgstr "Etichette duplicate"
+
+#: ../../docs/user_manual/style_library/label_settings.rst:904
+msgid ""
+"Use |checkbox| :guilabel:`Avoid duplicate labels` to improve label "
+"appearance in situations like road networks, where features such as dual "
+"carriageways or service roads can result in many identical labels appearing "
+"close together. When active, it prevents placing labels with the exact same "
+"text (case-sensitive) closer than the minimum distance defined in the "
+":guilabel:`Settings...` option. The setting applies across layers, so "
+"duplicate text from any layer will be considered."
+msgstr ""
+"Utilizza |checkbox| :guilabel:`Evita etichette duplicate` per migliorare "
+"l'aspetto delle etichette in contesti come le reti stradali, dove elementi "
+"quali le strade a doppia carreggiata o le strade di servizio possono causare"
+" la comparsa di numerose etichette identiche ravvicinate. Quando è attiva, "
+"questa opzione impedisce di posizionare etichette con testo esattamente "
+"identico (si distingue tra maiuscole e minuscole) a una distanza inferiore a"
+" quella minima definita nell'opzione :guilabel:`Impostazioni...`. "
+"L'impostazione si applica a tutti i layer, pertanto verrà preso in "
+"considerazione il testo duplicato proveniente da qualsiasi layer."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:914
 msgid "Geometry Generator"
