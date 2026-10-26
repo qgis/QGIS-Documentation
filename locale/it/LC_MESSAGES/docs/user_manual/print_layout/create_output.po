@@ -5,22 +5,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation 3.44\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-13 09:42+0100\n"
+"POT-Creation-Date: 2026-09-30 15:13+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 "Language: it\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -75,7 +75,7 @@ msgstr ""
 "stampante collegata o su un file PostScript, a seconda dei driver di stampa "
 "installati."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:643
+#: ../../docs/user_manual/print_layout/create_output.rst:671
 msgid "filePrint"
 msgstr "filePrint"
 
@@ -89,7 +89,7 @@ msgstr ""
 "immagine del layout di stampa come :file:`PNG`, :file:`BMP`, :file:`TIF`, "
 ":file:`JPG`, e molti altri..."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:651
+#: ../../docs/user_manual/print_layout/create_output.rst:679
 msgid "saveMapAsImage"
 msgstr "saveMapAsImage"
 
@@ -101,7 +101,7 @@ msgstr ""
 "L'icona |saveAsSVG| :sup:`Esporta come SVG...` salva il layout di stampa "
 "come :file:`SVG` (Scalable Vector Graphic)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:649
+#: ../../docs/user_manual/print_layout/create_output.rst:677
 msgid "saveAsSVG"
 msgstr "saveAsSVG"
 
@@ -113,7 +113,7 @@ msgstr ""
 "L'icona |saveAsPDF| :sup:`Esporta come PDF...` salva il layout di stampa "
 "definito direttamente come file :file:`PDF` (Portable Document Format)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:647
+#: ../../docs/user_manual/print_layout/create_output.rst:675
 msgid "saveAsPDF"
 msgstr "saveAsPDF"
 
@@ -175,18 +175,79 @@ msgstr ""
 "che segnala il problema."
 
 #: ../../docs/user_manual/print_layout/create_output.rst:69
+msgid "**Exported maps can leak the location of individual points**"
+msgstr ""
+"**Le mappe esportate possono avere la posizione di singoli punti che non "
+"dovrebbero essere mostrati**"
+
+#: ../../docs/user_manual/print_layout/create_output.rst:71
+msgid ""
+"Anti-aliasing blends the edge of a symbol with the background to make it "
+"appear smooth. Studies have shown that those anti-aliasing artifacts can be "
+"exploited to recover the individual locations represented by the symbols to "
+"within meter precision, even on small-scale maps such as one covering a "
+"whole country (`Du et al., ACM CCS 2026 "
+"<https://arxiv.org/abs/2609.07623>`_). Be careful when publishing a map of "
+"individual-level sensitive locations, such as patient residences or crime "
+"incidents."
+msgstr ""
+"L'anti-aliasing fonde il bordo di un simbolo con lo sfondo per farlo "
+"apparire uniforme. Gli studi hanno dimostrato che tali artefatti di anti-"
+"aliasing possono essere sfruttati per recuperare le singole posizioni "
+"rappresentate dai simboli con una precisione dell'ordine del metro, anche su"
+" mappe in scala ridotta come quelle che coprono un intero Paese (`Du et al.,"
+" ACM CCS 2026 <https://arxiv.org/abs/2609.07623>`_). Prestare attenzione "
+"quando si pubblica una mappa di luoghi sensibili a livello individuale, come"
+" le residenze dei pazienti o i luoghi in cui si sono verificati reati."
+
+#: ../../docs/user_manual/print_layout/create_output.rst:81
+msgid "To reduce this risk, please consider:"
+msgstr "Per ridurre questo rischio, prendi in considerazione quanto segue:"
+
+#: ../../docs/user_manual/print_layout/create_output.rst:83
+msgid ""
+"Reducing the precision of the point locations in the layer, so that any "
+"coordinates read from the exported map are no more precise than the level "
+"you chose."
+msgstr ""
+"Diminuendo la precisione delle posizioni dei punti nel layer, in modo che le"
+" coordinate lette dalla mappa esportata non siano più precise del livello "
+"che hai scelto."
+
+#: ../../docs/user_manual/print_layout/create_output.rst:86
+msgid ""
+"Exporting as a raster image with :guilabel:`Enable antialiasing` unchecked "
+"in the :guilabel:`Image Export Options`, since the leak comes from the anti-"
+"aliased pixels at the edge of the symbol."
+msgstr ""
+"Esportando come immagine raster con l'opzione :guilabel:`Abilita "
+"l'antialiasing` deselezionata nelle :guilabel:`Opzioni di esportazione "
+"immagine`, poiché la perdita proviene dai pixel con antialiasing sul bordo "
+"del simbolo."
+
+#: ../../docs/user_manual/print_layout/create_output.rst:89
+msgid ""
+"Avoiding SVG and PDF output, and the :guilabel:`Always export as vectors` "
+"option in particular, since vector output writes the exact coordinates into "
+"the output map."
+msgstr ""
+"Evitando l'output SVG e PDF e, in particolare, l'opzione :guilabel:`Esporta "
+"sempre come vettori`, poiché l'output vettoriale scrive le coordinate esatte"
+" nella mappa di output."
+
+#: ../../docs/user_manual/print_layout/create_output.rst:97
 msgid "Export as Image"
 msgstr "Esportare in formato Immagine"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:71
+#: ../../docs/user_manual/print_layout/create_output.rst:99
 msgid "To export a layout as an image:"
 msgstr "Per esportare un layout come immagine:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:73
+#: ../../docs/user_manual/print_layout/create_output.rst:101
 msgid "Click the |saveMapAsImage| :sup:`Export as image` icon"
 msgstr "Clicca sull'icona |saveMapAsImage| :sup:`Esporta come immagine...`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:74
+#: ../../docs/user_manual/print_layout/create_output.rst:102
 msgid ""
 "Select the image format, the folder and filename (e.g. :file:`myill.png`) to"
 " use. If the layout contains more than one page, each page will be exported "
@@ -198,13 +259,13 @@ msgstr ""
 "ogni pagina verrà esportata in un file con il nome del file dato con "
 "l'aggiunta del numero di pagina (ad esempio :file:`myill_2.png`)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:79
+#: ../../docs/user_manual/print_layout/create_output.rst:107
 msgid "In the next (:guilabel:`Image Export Options`) dialog:"
 msgstr ""
 "Nella successiva finestra di dialogo (:guilabel:`Opzioni Esportazione "
 "Immagine`):"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:81
+#: ../../docs/user_manual/print_layout/create_output.rst:109
 msgid ""
 "You can override the print layout :guilabel:`Export resolution` and the "
 "exported page dimensions (as set in :guilabel:`Layout` panel)."
@@ -213,7 +274,15 @@ msgstr ""
 "esportazione` e le dimensioni della pagina esportata (come impostato nel "
 "pannello :guilabel:`Layout`)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:85
+#: ../../docs/user_manual/print_layout/create_output.rst:111
+msgid ""
+"For JPEG and JPG image formats, you can set the :guilabel:`JPEG Quality` of "
+"the output image."
+msgstr ""
+"Per i formati di immagine JPEG e JPG, puoi impostare la :guilabel:`Qualità "
+"JPEG` dell'immagine di output."
+
+#: ../../docs/user_manual/print_layout/create_output.rst:113
 msgid ""
 "Image rendering can also be improved with the :guilabel:`Enable "
 "antialiasing` option."
@@ -221,7 +290,7 @@ msgstr ""
 "La rappresentazione delle immagini può anche essere migliorata con l'opzione"
 " :guilabel:`Attiva l'antialias`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:87
+#: ../../docs/user_manual/print_layout/create_output.rst:115
 msgid ""
 "If you want to export your layout as a **georeferenced image** (e.g., to "
 "share with other projects), check the |unchecked| :guilabel:`Generate world "
@@ -238,11 +307,11 @@ msgstr ""
 "all'esportazione. Questa opzione può anche essere selezionata di default nel"
 " :ref:`layout panel <layout_panel>`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:655
+#: ../../docs/user_manual/print_layout/create_output.rst:683
 msgid "unchecked"
 msgstr "unchecked"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:97
+#: ../../docs/user_manual/print_layout/create_output.rst:125
 msgid ""
 "For multi-page output, only the page that contains the :ref:`reference map "
 "<reference_map>` will get a world file (assuming that the "
@@ -252,7 +321,7 @@ msgstr ""
 ":ref:`reference map <reference_map>` otterrà un world file (assumendo che "
 "l'opzione :guilabel:`Genera il world file` sia selezionata)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:105
+#: ../../docs/user_manual/print_layout/create_output.rst:133
 msgid ""
 "By checking |checkbox| :guilabel:`Crop to content` option, the image output "
 "by the layout will include the minimal area enclosing all the items (map, "
@@ -263,11 +332,11 @@ msgstr ""
 "gli elementi (mappa, legenda, barra di scala, forme, etichetta, "
 "immagine....) di ogni pagina della composizione:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:639
+#: ../../docs/user_manual/print_layout/create_output.rst:667
 msgid "checkbox"
 msgstr "checkbox"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:109
+#: ../../docs/user_manual/print_layout/create_output.rst:137
 msgid ""
 "If the composition includes a single page, then the output is resized to "
 "include EVERYTHING on the composition. The page can then be reduced or "
@@ -279,7 +348,7 @@ msgstr ""
 "essere ridotta o estesa a tutti gli oggetti a seconda della loro posizione "
 "(sopra, sopra, sotto, a sinistra o a destra della pagina)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:113
+#: ../../docs/user_manual/print_layout/create_output.rst:141
 msgid ""
 "In case of a multi-page layout, each page will be resized to include items "
 "in its area (left and right sides for all pages, plus top for the first page"
@@ -291,7 +360,7 @@ msgstr ""
 "pagine, più in alto per la prima pagina e in basso per l'ultima pagina). "
 "Ogni pagina ridimensionata viene esportata in un file separato."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:117
+#: ../../docs/user_manual/print_layout/create_output.rst:145
 msgid ""
 "The :guilabel:`Crop to content` dialog also lets you add margins around the "
 "cropped bounds."
@@ -299,7 +368,7 @@ msgstr ""
 "La finestra di dialogo :guilabel:`Taglia al contenuto` ti permette anche di "
 "aggiungere margini intorno ai limiti ritagliati."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:120
+#: ../../docs/user_manual/print_layout/create_output.rst:148
 msgid ""
 "By checking |checkbox| :guilabel:`Open file after exporting` the exported "
 "file will automatically open in the default image viewer."
@@ -308,11 +377,11 @@ msgstr ""
 "file esportato verrà automaticamente aperto nel visualizzatore di immagini "
 "predefinito."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:128
+#: ../../docs/user_manual/print_layout/create_output.rst:156
 msgid "Image Export Options"
 msgstr "Opzioni Esportazione Immagine"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:131
+#: ../../docs/user_manual/print_layout/create_output.rst:159
 msgid ""
 "**Use image formats that support transparency when items extend beyond the "
 "paper extent**"
@@ -320,7 +389,7 @@ msgstr ""
 "**Utilizza formati immagine che supportano la trasparenza quando gli oggetti"
 " si estendono oltre l'estensione della carta**"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:134
+#: ../../docs/user_manual/print_layout/create_output.rst:162
 msgid ""
 "Layout items may be placed outside the paper extent. When exporting with the"
 " :guilabel:`Crop to content` option, the resulting image may therefore "
@@ -340,7 +409,7 @@ msgstr ""
 "Usa formati compatibili con la trasparenza (per esempio ``TIFF`` e ``PNG``) "
 "in questi casi."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:144
+#: ../../docs/user_manual/print_layout/create_output.rst:172
 msgid ""
 "When supported by the format (e.g. :file:`PNG`) and the underlying Qt "
 "library, the exported image may include :ref:`project metadata "
@@ -350,19 +419,19 @@ msgstr ""
 " sottostante, l'immagine esportata può includere :ref:`project metadata "
 "<project_metadata>` (autore, titolo, data, descrizione...)"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:152
+#: ../../docs/user_manual/print_layout/create_output.rst:180
 msgid "Export as SVG"
 msgstr "Esportare in formato SVG"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:154
+#: ../../docs/user_manual/print_layout/create_output.rst:182
 msgid "To export a layout as SVG:"
 msgstr "Per esportare un layout come SVG:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:156
+#: ../../docs/user_manual/print_layout/create_output.rst:184
 msgid "Click the |saveAsSVG| :sup:`Export as SVG` icon"
 msgstr "Fai clic sull'icona |saveAsSVG| :sup:`Esporta come SVG...`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:157
+#: ../../docs/user_manual/print_layout/create_output.rst:185
 msgid ""
 "Fill in the path and filename (used as a base name for all the files in case"
 " of multi-page composition, as for image export)"
@@ -371,7 +440,7 @@ msgstr ""
 "i file in caso di composizione di più pagine, come per l'esportazione di "
 "immagini)"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:159
+#: ../../docs/user_manual/print_layout/create_output.rst:187
 msgid ""
 "In the next :guilabel:`SVG Export Options` dialog, you can override the "
 "layout default :ref:`export settings <layout_export_settings>` or configure "
@@ -381,7 +450,7 @@ msgstr ""
 "puoi sovrascrivere il layout predefinito :ref:`export settings "
 "<layout_export_settings>` o configurare nuove impostazioni:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:163
+#: ../../docs/user_manual/print_layout/create_output.rst:191
 msgid ""
 "|unchecked| :guilabel:`Export map layers as SVG groups`: exported items are "
 "grouped within layers whose name matches the layer names from QGIS, making "
@@ -392,8 +461,8 @@ msgstr ""
 "nomi dei layer da QGIS, rendendo molto più facile capire il contenuto del "
 "documento."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:166
-#: ../../docs/user_manual/print_layout/create_output.rst:219
+#: ../../docs/user_manual/print_layout/create_output.rst:194
+#: ../../docs/user_manual/print_layout/create_output.rst:247
 msgid ""
 "|unchecked| :guilabel:`Always export as vectors`: some rendering options "
 "require items to be rasterized for a better rendering. Check this option to "
@@ -408,8 +477,8 @@ msgstr ""
 "non corrispondere all'anteprima del layout di stampa (per maggiori dettagli,"
 " vedi :ref:`layout_export_settings`)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:171
-#: ../../docs/user_manual/print_layout/create_output.rst:234
+#: ../../docs/user_manual/print_layout/create_output.rst:199
+#: ../../docs/user_manual/print_layout/create_output.rst:262
 msgid ""
 "|checkbox| :guilabel:`Export RDF metadata` of the document such as the "
 "title, author, date, description..."
@@ -417,7 +486,7 @@ msgstr ""
 "|checkbox| :guilabel:`Esporta RDF metadata` del documento come il titolo, "
 "l'autore, la data, la descrizione..."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:173
+#: ../../docs/user_manual/print_layout/create_output.rst:201
 msgid ""
 "|checkbox| :guilabel:`Simplify geometries to reduce output file size`: this "
 "avoids exporting ALL geometry vertices, which can result in a ridiculously "
@@ -437,8 +506,8 @@ msgstr ""
 "esportazione è di ``300 dpi``, i vertici che sono a meno di ``1/600 "
 "pollici`` saranno rimossi)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:180
-#: ../../docs/user_manual/print_layout/create_output.rst:236
+#: ../../docs/user_manual/print_layout/create_output.rst:208
+#: ../../docs/user_manual/print_layout/create_output.rst:264
 msgid ""
 "Set the :guilabel:`Text export`: controls whether text labels are always or "
 "preferably exported as :ref:`text or outline objects <render_labels_text>`."
@@ -447,14 +516,14 @@ msgstr ""
 "vengono sempre o preferibilmente esportate come :ref:`text o outline objects"
 " <render_labels_text>`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:182
+#: ../../docs/user_manual/print_layout/create_output.rst:210
 msgid ""
 "Apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`"
 msgstr ""
 "Applica |checkbox| :guilabel:`Taglia al Contenuto` :ref:`option "
 "<crop_to_content>`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:183
+#: ../../docs/user_manual/print_layout/create_output.rst:211
 msgid ""
 "|unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting "
 "files, QGIS uses a built-in raster layer tiled rendering that saves memory. "
@@ -469,7 +538,7 @@ msgstr ""
 "opzione si risolverebbe il problema, al costo di un maggiore utilizzo di "
 "memoria durante le esportazioni."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:188
+#: ../../docs/user_manual/print_layout/create_output.rst:216
 msgid ""
 "By checking |checkbox| :guilabel:`Open file after exporting` the exported "
 "file will automatically open in the default SVG viewer."
@@ -478,11 +547,11 @@ msgstr ""
 "file esportato verrà automaticamente aperto nel visualizzatore SVG "
 "predefinito."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:196
+#: ../../docs/user_manual/print_layout/create_output.rst:224
 msgid "SVG Export Options"
 msgstr "Opzioni esportazione SVG"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:200
+#: ../../docs/user_manual/print_layout/create_output.rst:228
 msgid ""
 "Currently, the SVG output is very basic. This is not a QGIS problem, but a "
 "problem with the underlying Qt library. This will hopefully be sorted out in"
@@ -492,19 +561,19 @@ msgstr ""
 "un problema con la libreria Qt sottostante. Questo sarà probabilmente "
 "risolto nelle versioni future."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:208
+#: ../../docs/user_manual/print_layout/create_output.rst:236
 msgid "Export as PDF"
 msgstr "Esportare in formato PDF"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:210
+#: ../../docs/user_manual/print_layout/create_output.rst:238
 msgid "To export a layout as PDF:"
 msgstr "Per esportare un layout come PDF:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:212
+#: ../../docs/user_manual/print_layout/create_output.rst:240
 msgid "Click the |saveAsPDF| :sup:`Export as PDF` icon"
 msgstr "Fai clic sull'icona |saveAsPDF| :sup:`Esporta come PDF...`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:213
+#: ../../docs/user_manual/print_layout/create_output.rst:241
 msgid ""
 "Fill in the path and filename: unlike for image and SVG export, all the "
 "pages in the layout are exported to a single PDF file."
@@ -513,7 +582,7 @@ msgstr ""
 "immagini e SVG, tutte le pagine del layout vengono esportate in un unico "
 "file PDF."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:215
+#: ../../docs/user_manual/print_layout/create_output.rst:243
 msgid ""
 "In the next :guilabel:`PDF Export Options` dialog, you can override the "
 "layout default :ref:`export settings <layout_export_settings>` or configure "
@@ -523,11 +592,11 @@ msgstr ""
 "puoi sovrascrivere il layout predefinito :ref:`export settings "
 "<layout_export_settings>` o configurare nuove impostazioni:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:225
+#: ../../docs/user_manual/print_layout/create_output.rst:253
 msgid "**Mind opacity settings for vector layers**"
 msgstr "**Impostazioni opacità per i layer vettoriali**"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:227
+#: ../../docs/user_manual/print_layout/create_output.rst:255
 msgid ""
 "When you set a layer-wide opacity (or opacity for any vector symbology) to "
 "less than 100%, it forces a rasterized rendering of those objects during PDF"
@@ -540,7 +609,7 @@ msgstr ""
 "dimensioni del layer, ciò potrebbe aumentare considerevolmente le dimensioni"
 " del file PDF."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:231
+#: ../../docs/user_manual/print_layout/create_output.rst:259
 msgid ""
 "|checkbox| :guilabel:`Append georeference information`: available only if "
 "the :ref:`reference map <reference_map>`, from which the information is "
@@ -550,16 +619,16 @@ msgstr ""
 "solo se la :ref:`reference map <reference_map>`, da cui sono prese le "
 "informazioni, è nella prima pagina."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:238
+#: ../../docs/user_manual/print_layout/create_output.rst:266
 msgid "Control the PDF :guilabel:`Image compression` using:"
 msgstr "Controlla il PDF usando :guilabel:`Compressione immagine`:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:240
+#: ../../docs/user_manual/print_layout/create_output.rst:268
 msgid ":guilabel:`Lossy (JPEG)`, which is the default compression mode"
 msgstr ""
 ":guilabel:`Lossy (JPEG)`, che è la modalità di compressione predefinita"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:241
+#: ../../docs/user_manual/print_layout/create_output.rst:269
 msgid ""
 "or :guilabel:`Lossless`, which creates bigger files in most cases, but is "
 "much more suitable for printing outputs or for post-production in external "
@@ -569,7 +638,7 @@ msgstr ""
 "casi, ma è molto più adatto per risultati di stampa o per la post-produzione"
 " in applicazioni esterne (richiede Qt 5.13 o successivo)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:244
+#: ../../docs/user_manual/print_layout/create_output.rst:272
 msgid ""
 "|unchecked| :guilabel:`Create Geospatial PDF`: Generate a georeferenced PDF "
 "file."
@@ -577,7 +646,7 @@ msgstr ""
 "|unchecked| :guilabel:` Crea PDF geospaziale`: Genera un file PDF "
 "georeferenziato."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:246
+#: ../../docs/user_manual/print_layout/create_output.rst:274
 msgid ""
 "|unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting "
 "files, QGIS uses tiled based rendering that saves memory. Sometimes, this "
@@ -592,7 +661,7 @@ msgstr ""
 "opzione si risolverebbe il problema, al costo di un maggiore utilizzo di "
 "memoria durante le esportazioni."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:251
+#: ../../docs/user_manual/print_layout/create_output.rst:279
 msgid ""
 "|checkbox| :guilabel:`Simplify geometries to reduce output file size`: "
 "Geometries will be simplified while exporting the layout by removing "
@@ -611,7 +680,7 @@ msgstr ""
 "esportazione è di ``300 dpi``, i vertici che sono a meno di ``1/600 "
 "pollici`` saranno rimossi)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:258
+#: ../../docs/user_manual/print_layout/create_output.rst:286
 msgid ""
 "By checking |checkbox| :guilabel:`Open file after exporting` the exported "
 "file will automatically open in the default PDF viewer."
@@ -620,11 +689,11 @@ msgstr ""
 "file esportato verrà automaticamente aperto nel visualizzatore PDF "
 "predefinito."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:267
+#: ../../docs/user_manual/print_layout/create_output.rst:295
 msgid "PDF Export Options"
 msgstr "Opzioni esportazione PDF"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:269
+#: ../../docs/user_manual/print_layout/create_output.rst:297
 msgid ""
 "Geospatial PDF export is supported, and a number of Geospatial PDF specific "
 "options are available:"
@@ -632,20 +701,20 @@ msgstr ""
 "È supportata l'esportazione di PDF geospaziali ed è disponibile una serie di"
 " opzioni specifiche per i PDF geospaziali:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:272
+#: ../../docs/user_manual/print_layout/create_output.rst:300
 msgid ""
 ":guilabel:`Format` (Geospatial PDF format - there are some variations),"
 msgstr ""
 ":guilabel:`Formato` (formato PDF geospaziale - ci sono alcune varianti),"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:273
+#: ../../docs/user_manual/print_layout/create_output.rst:301
 msgid ""
 ":guilabel:`Include multiple map themes` (specify map themes to include),"
 msgstr ""
 ":guilabel:`Includi temi mappa multipli` (specificare i temi mappa da "
 "includere),"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:274
+#: ../../docs/user_manual/print_layout/create_output.rst:302
 msgid ""
 ":guilabel:`Include vector feature information` (choose the layers and group "
 "them into logical PDF groups)."
@@ -653,7 +722,7 @@ msgstr ""
 ":guilabel:`Includi informazioni elementi vettoriali` (scegliere i layer e "
 "raggrupparli in gruppi logici PDF)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:280
+#: ../../docs/user_manual/print_layout/create_output.rst:308
 msgid ""
 "Exporting a print layout to formats that supports georeferencing (e.g. "
 "``PDF`` and ``TIFF``) creates a georeferenced output by default."
@@ -662,11 +731,26 @@ msgstr ""
 "georeferenziazione (ad esempio, ``PDF`` e ``TIFF``) crea un risultato "
 "georeferenziato per impostazione predefinita."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:295
+#: ../../docs/user_manual/print_layout/create_output.rst:312
+msgid ""
+"When exporting maps or layouts to vector formats such as PDF or SVG, line "
+"pattern fills are rendered using a line-by-line vector-based approach "
+"instead of rasterized tiles. This change results in smaller and higher-"
+"quality output files, with individual pattern lines remaining fully editable"
+" in external vector graphics software."
+msgstr ""
+"Quando si esportano mappe o layout in formati vettoriali come PDF o SVG, i "
+"riempimenti con motivi a linee vengono resi utilizzando un approccio "
+"vettoriale linea per linea anziché con tasselli rasterizzati. Questa "
+"modifica si traduce in file di output più piccoli e di qualità superiore, "
+"con le singole linee del motivo che rimangono completamente modificabili in "
+"software di grafica vettoriale esterni."
+
+#: ../../docs/user_manual/print_layout/create_output.rst:323
 msgid "Generate an Atlas"
 msgstr "Generazione Atlante"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:297
+#: ../../docs/user_manual/print_layout/create_output.rst:325
 msgid ""
 "Atlas functions allow you to create map books in an automated way. Atlas "
 "uses the features of a table or vector layer (:guilabel:`Coverage layer`) to"
@@ -681,7 +765,7 @@ msgstr ""
 "zoomare un elemento della mappa sulla caratteristica corrente dell'atlante. "
 "Altri casi d'uso includono:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:305
+#: ../../docs/user_manual/print_layout/create_output.rst:333
 msgid ""
 "a map item showing, for another layer, only features that share the same "
 "attribute as the atlas feature or are within its geometry."
@@ -690,14 +774,14 @@ msgstr ""
 "condividono lo stesso attributo dell'elemento dell'atlante o che si trovano "
 "nella sua geometria."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:307
+#: ../../docs/user_manual/print_layout/create_output.rst:335
 msgid ""
 "a label or HTML item whose text is replaced as features are iterated over"
 msgstr ""
 "un'etichetta o un elemento HTML il cui testo viene sostituito quando gli "
 "elementi vengono iterati"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:308
+#: ../../docs/user_manual/print_layout/create_output.rst:336
 msgid ""
 "a table item showing attributes of associated :ref:`parent or children "
 "<vector_relations>` features of the current atlas feature..."
@@ -706,7 +790,7 @@ msgstr ""
 ":ref:`parent or children <vector_relations>` all'oggetto corrente "
 "dell'atlante.... "
 
-#: ../../docs/user_manual/print_layout/create_output.rst:311
+#: ../../docs/user_manual/print_layout/create_output.rst:339
 msgid ""
 "For each feature, the output is processed for all pages and items according "
 "to their exports settings."
@@ -714,11 +798,11 @@ msgstr ""
 "Per ogni elemento, il risultato viene elaborato per tutte le pagine e gli "
 "elementi secondo le loro impostazioni di esportazione."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:314
+#: ../../docs/user_manual/print_layout/create_output.rst:342
 msgid "**Use variables for more flexibility**"
 msgstr "**Usare le variabili per una maggiore flessibilità**"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:316
+#: ../../docs/user_manual/print_layout/create_output.rst:344
 msgid ""
 "QGIS provides a large panel of functions and :ref:`variables "
 "<general_tools_variables>`, including atlas related ones, that you can use "
@@ -732,7 +816,7 @@ msgstr ""
 "layer, secondo lo stato dell'atlante. La combinazione di queste funzionalità"
 " ti dà molta flessibilità e ti aiuta a produrre facilmente mappe avanzate."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:323
+#: ../../docs/user_manual/print_layout/create_output.rst:351
 msgid ""
 "To enable the generation of an atlas and access atlas parameters, refer to "
 "the :guilabel:`Atlas` panel. This panel contains the following (see "
@@ -742,11 +826,11 @@ msgstr ""
 "dell'atlante, fai riferimento al pannello :guilabel:`Atlante`. Questo "
 "pannello contiene quanto segue (vedi :numref:`figure_layout_atlas`):"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:332
+#: ../../docs/user_manual/print_layout/create_output.rst:360
 msgid "Atlas Panel"
 msgstr "Pannello Atlante"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:334
+#: ../../docs/user_manual/print_layout/create_output.rst:362
 msgid ""
 "|checkbox| :guilabel:`Generate an atlas` enables or disables atlas "
 "generation."
@@ -754,11 +838,11 @@ msgstr ""
 "|checkbox| :guilabel:`Genera un atlante` abilita o disabilita la generazione"
 " dell'atlante."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:336
+#: ../../docs/user_manual/print_layout/create_output.rst:364
 msgid ":guilabel:`Configuration`"
 msgstr ":guilabel:`Configurazione`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:338
+#: ../../docs/user_manual/print_layout/create_output.rst:366
 msgid ""
 "A :guilabel:`Coverage layer` |selectString| combo box that allows you to "
 "choose the table or vector layer containing the features to iterate over."
@@ -767,11 +851,11 @@ msgstr ""
 "permette di scegliere la tabella o il layer vettoriale contenente gli "
 "elementi su cui iterare."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:653
+#: ../../docs/user_manual/print_layout/create_output.rst:681
 msgid "selectString"
 msgstr "selectString"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:340
+#: ../../docs/user_manual/print_layout/create_output.rst:368
 msgid ""
 "An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked, "
 "will hide the coverage layer (but not the other layers) during the "
@@ -781,7 +865,7 @@ msgstr ""
 "(solo per i vettori)` che, se selezionata, nasconderà il layer di copertura "
 "(ma non gli altri layer) durante la generazione."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:342
+#: ../../docs/user_manual/print_layout/create_output.rst:370
 msgid ""
 "An optional :guilabel:`Page name` combo box to specify the name for the "
 "feature page(s). You can select a field of the coverage layer or set an "
@@ -795,7 +879,7 @@ msgstr ""
 "Se questa opzione è vuota, QGIS userà un ID interno, secondo il filtro e/o "
 "l'ordine di ordinamento applicato al layer."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:348
+#: ../../docs/user_manual/print_layout/create_output.rst:376
 msgid ""
 "An optional |checkbox| :guilabel:`Filter with` text area that allows you to "
 "specify an expression for filtering features from the coverage layer. If the"
@@ -807,7 +891,7 @@ msgstr ""
 "di copertura. Se l'espressione non è vuota, solo gli elementi che sono "
 "valutati come ``True`` saranno processati."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:352
+#: ../../docs/user_manual/print_layout/create_output.rst:380
 msgid ""
 "An optional |checkbox| :guilabel:`Sort by` that allows you to sort features "
 "of the coverage layer (and the output), using a field of the coverage layer "
@@ -820,7 +904,7 @@ msgstr ""
 "discendente) è impostato dal pulsante a due stati *Direzione di ordinamento*"
 " che mostra una freccia verso l'alto o verso il basso."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:358
+#: ../../docs/user_manual/print_layout/create_output.rst:386
 msgid ""
 ":guilabel:`Output` - this is where the output of the atlas can be "
 "configured:"
@@ -828,7 +912,7 @@ msgstr ""
 ":guilabel:`Risultato` - qui è dove il risultato dell'atlante può essere "
 "configurato:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:360
+#: ../../docs/user_manual/print_layout/create_output.rst:388
 msgid ""
 "An :guilabel:`Output filename expression` textbox that is used to generate a"
 " filename for each atlas feature. It is based on expressions. is meaningful "
@@ -839,7 +923,7 @@ msgstr ""
 "basata su espressioni. è importante solo per la restituzione su file "
 "multipli."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:363
+#: ../../docs/user_manual/print_layout/create_output.rst:391
 msgid ""
 "A |checkbox| :guilabel:`Single file export when possible` that allows you to"
 " force the generation of a single file if this is possible with the chosen "
@@ -852,7 +936,7 @@ msgstr ""
 "selezionato, il valore del campo :guilabel:`Espressione del nome di file in "
 "uscita` è privo di significato."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:367
+#: ../../docs/user_manual/print_layout/create_output.rst:395
 msgid ""
 "An :guilabel:`Image export format` drop-down list to select the output "
 "format when using the |saveMapAsImage| :sup:`Export atlas as Images...` "
@@ -862,11 +946,11 @@ msgstr ""
 "di output quando si usa il tasto |saveMapAsImage| :sup:`Esporta atlante come"
 " immagini....`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:371
+#: ../../docs/user_manual/print_layout/create_output.rst:399
 msgid "Control map by atlas"
 msgstr "Mappa di controllo per atlante"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:373
+#: ../../docs/user_manual/print_layout/create_output.rst:401
 msgid ""
 "The most common usage of atlas is with the map item, zooming to the current "
 "atlas feature, as iteration goes over the coverage layer. This behavior is "
@@ -881,11 +965,11 @@ msgstr ""
 ":ref:`controlled_atlas` per le diverse impostazioni che puoi applicare "
 "all'oggetto mappa."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:381
+#: ../../docs/user_manual/print_layout/create_output.rst:409
 msgid "Customize labels with expression"
 msgstr "Personalizzare le etichette con un'espressione"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:383
+#: ../../docs/user_manual/print_layout/create_output.rst:411
 msgid ""
 "In order to adapt labels to the feature the atlas iterates over, you can "
 "include expressions. Make sure that you place the expression part (including"
@@ -897,7 +981,7 @@ msgstr ""
 "(incluse funzioni, campi o variabili) tra ``[%`` e ``%]`` (vedi "
 ":ref:`layout_label_item` per maggiori dettagli)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:388
+#: ../../docs/user_manual/print_layout/create_output.rst:416
 msgid ""
 "For example, for a city layer with fields ``CITY_NAME`` and ``ZIPCODE``, you"
 " could insert this:"
@@ -905,11 +989,11 @@ msgstr ""
 "Per esempio, per un layer di città con campi ``CITY_NAME`` e ``ZIPCODE``, "
 "potresti inserire questo:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:396
+#: ../../docs/user_manual/print_layout/create_output.rst:424
 msgid "or, another combination:"
 msgstr "o, un'altra espressione:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:403
+#: ../../docs/user_manual/print_layout/create_output.rst:431
 #, python-format
 msgid ""
 "The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  "
@@ -922,11 +1006,11 @@ msgstr ""
 "l'etichetta. Entrambe le espressioni darebbero come risultato il seguente "
 "tipo di etichetta nell'atlante generato:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:415
+#: ../../docs/user_manual/print_layout/create_output.rst:443
 msgid "Explore Data-defined override buttons with atlas"
 msgstr "Esplorare Sovrascrittura definita dai dati con atlante "
 
-#: ../../docs/user_manual/print_layout/create_output.rst:417
+#: ../../docs/user_manual/print_layout/create_output.rst:445
 msgid ""
 "There are several places where you can use a |dataDefine| :sup:`Data defined"
 " override` button to override the selected setting. This is particularly "
@@ -938,11 +1022,11 @@ msgstr ""
 "selezionata. Questo è particolarmente utile con la generazione di atlanti. "
 "Vedi :ref:`data_defined` per maggiori dettagli su questo widget."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:641
+#: ../../docs/user_manual/print_layout/create_output.rst:669
 msgid "dataDefine"
 msgstr "dataDefine"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:422
+#: ../../docs/user_manual/print_layout/create_output.rst:450
 msgid ""
 "For the following examples the :file:`Regions` layer of the QGIS sample "
 "dataset is used and selected as :guilabel:`Coverage layer` for the atlas "
@@ -954,7 +1038,7 @@ msgstr ""
 "la generazione dell'atlante. Assumiamo che si tratti di un layout a pagina "
 "singola contenente un elemento mappa e un elemento etichetta."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:428
+#: ../../docs/user_manual/print_layout/create_output.rst:456
 msgid ""
 "When the height (north-south) of a region extent is greater than its width "
 "(east-west), you should use *Portrait* instead of *Landscape* orientation to"
@@ -967,7 +1051,7 @@ msgstr ""
 "|dataDefine| :sup:`Sovrascrittura definita dai dati` puoi impostare "
 "dinamicamente l'orientamento della carta."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:434
+#: ../../docs/user_manual/print_layout/create_output.rst:462
 msgid ""
 "Right-click on the page and select :guilabel:`Page Properties` to open the "
 "panel. We want to set the orientation dynamically, using an expression "
@@ -984,7 +1068,7 @@ msgstr ""
 "finestra di dialogo :guilabel:`Costruttore di stringhe espressione` e "
 "inserisci la seguente espressione:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:446
+#: ../../docs/user_manual/print_layout/create_output.rst:474
 msgid ""
 "Now if you :ref:`preview the atlas <atlas_preview>`, the paper orients "
 "itself automatically, but item placements may not be ideal. For each Region "
@@ -999,7 +1083,7 @@ msgstr ""
 "sua proprietà :guilabel:`Larghezza` per impostarla in modo dinamico usando "
 "la seguente espressione:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:456
+#: ../../docs/user_manual/print_layout/create_output.rst:484
 msgid ""
 "Likewise, use the |dataDefine| button of the :guilabel:`Height` property to "
 "provide the following expression to constrain map item size:"
@@ -1008,7 +1092,7 @@ msgstr ""
 ":guilabel:`Altezza` per inserire la seguente espressione per vincolare la "
 "dimensione dell'oggetto mappa:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:463
+#: ../../docs/user_manual/print_layout/create_output.rst:491
 msgid ""
 "To ensure the map item is centered in the page, set its :guilabel:`Reference"
 " point` to the upper left radio button and enter ``10`` for its "
@@ -1019,7 +1103,7 @@ msgstr ""
 "alto a sinistra e inserisci ``10`` per le sue posizioni :guilabel:`X` e "
 ":guilabel:`Y`. "
 
-#: ../../docs/user_manual/print_layout/create_output.rst:467
+#: ../../docs/user_manual/print_layout/create_output.rst:495
 msgid ""
 "Let's add a title above the map in the center of the page. Select the label "
 "item and set the horizontal alignment to |radioButtonOn| :guilabel:`Center`."
@@ -1033,11 +1117,11 @@ msgstr ""
 " pulsante centrale per il :guilabel:`Punto di riferimento`, e fornisci la "
 "seguente espressione per il campo :guilabel:`X`:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:645
+#: ../../docs/user_manual/print_layout/create_output.rst:673
 msgid "radioButtonOn"
 msgstr "radioButtonOn"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:477
+#: ../../docs/user_manual/print_layout/create_output.rst:505
 msgid ""
 "For all other layout items you can set the position in a similar way so they"
 " are correctly positioned both for portrait and landscape. You can also do "
@@ -1052,7 +1136,7 @@ msgstr ""
 "cambiare le immagini, ridimensionare il numero di colonne della legenda in "
 "base all'orientamento della pagina, ..."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:484
+#: ../../docs/user_manual/print_layout/create_output.rst:512
 msgid ""
 "The information provided here is an update of the excellent blog (in English"
 " and Portuguese) on the Data Defined Override options "
@@ -1062,7 +1146,7 @@ msgstr ""
 "inglese e portoghese) sulle opzioni di Sovrascrittura definita dai dati "
 "Multiple_format_map_series_using_QGIS_2.6_ ."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:488
+#: ../../docs/user_manual/print_layout/create_output.rst:516
 msgid ""
 "Another example for using data-defined override buttons is the usage of a "
 "dynamic picture. For the following examples we use a geopackage layer "
@@ -1085,7 +1169,7 @@ msgstr ""
 "Sovrascrittura definita dai dati nella sezione :guilabel:`Sorgente Immagine`"
 " della :guilabel:`Proprietà Principali`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:503
+#: ../../docs/user_manual/print_layout/create_output.rst:531
 msgid ""
 "In the following window choose :guilabel:`Edit` so that the "
 ":guilabel:`Expression String Builder` opens. From the :guilabel:`Fields and "
@@ -1099,7 +1183,7 @@ msgstr ""
 "nel livello del geopacchetto. Fai doppio clic sul nome del campo "
 ":file:`logo` e clicca su :guilabel:`OK`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:512
+#: ../../docs/user_manual/print_layout/create_output.rst:540
 msgid ""
 "The atlas iterates over the entries in the BLOB field provided that you "
 "choose the geopackage layer as :guilabel:`Coverage layer` (further "
@@ -1109,7 +1193,7 @@ msgstr ""
 "layer del geopacchetto come :guilabel:`Layer di copertura` (ulteriori "
 "istruzioni le puoi trovare in :ref:`atlas_preview`)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:515
+#: ../../docs/user_manual/print_layout/create_output.rst:543
 msgid ""
 "These are just two examples of how you can use some advanced settings with "
 "atlas."
@@ -1117,15 +1201,15 @@ msgstr ""
 "Questi sono solo due esempi di come puoi usare alcune impostazioni avanzate "
 "con atlante."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:520
+#: ../../docs/user_manual/print_layout/create_output.rst:548
 msgid "Preview and generate an atlas"
 msgstr "Anteprima e generazione dell'atlante"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:527
+#: ../../docs/user_manual/print_layout/create_output.rst:555
 msgid "Atlas Preview toolbar"
 msgstr "Barra degli strumenti anteprima Atlante"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:529
+#: ../../docs/user_manual/print_layout/create_output.rst:557
 msgid ""
 "Once the atlas settings have been configured, and layout items (map, table, "
 "image...) linked to it, you can create a preview of all the pages by "
@@ -1140,43 +1224,43 @@ msgstr ""
 ":sup:`Anteprima atlante`. Puoi poi usare le frecce per navigare attraverso "
 "tutti gli elementi:"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:629
+#: ../../docs/user_manual/print_layout/create_output.rst:657
 msgid "atlas"
 msgstr "atlas"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:535
+#: ../../docs/user_manual/print_layout/create_output.rst:563
 msgid "|atlasFirst| :sup:`First feature`"
 msgstr "|atlasFirst| :sup:`Primo Elemento`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:631
+#: ../../docs/user_manual/print_layout/create_output.rst:659
 msgid "atlasFirst"
 msgstr "atlasFirst"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:536
+#: ../../docs/user_manual/print_layout/create_output.rst:564
 msgid "|atlasPrev| :sup:`Previous feature`"
 msgstr "|atlasPrev| :sup:`Elemento Precedente`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:637
+#: ../../docs/user_manual/print_layout/create_output.rst:665
 msgid "atlasPrev"
 msgstr "atlasPrev"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:537
+#: ../../docs/user_manual/print_layout/create_output.rst:565
 msgid "|atlasNext| :sup:`Next feature`"
 msgstr "|atlasNext| :sup:`Elemento Successiva`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:635
+#: ../../docs/user_manual/print_layout/create_output.rst:663
 msgid "atlasNext"
 msgstr "atlasNext"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:538
+#: ../../docs/user_manual/print_layout/create_output.rst:566
 msgid "|atlasLast| :sup:`Last feature`"
 msgstr "|atlasLast| :sup:`Ultimo Elemento`"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:633
+#: ../../docs/user_manual/print_layout/create_output.rst:661
 msgid "atlasLast"
 msgstr "atlasLast"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:540
+#: ../../docs/user_manual/print_layout/create_output.rst:568
 msgid ""
 "You can also use the combo box to select and preview a specific feature. The"
 " combo box shows atlas feature names according to the expression set in the "
@@ -1187,7 +1271,7 @@ msgstr ""
 "dell'atlante secondo l'espressione impostata nell'opzione Atlante "
 ":guilabel:`Nome pagina`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:544
+#: ../../docs/user_manual/print_layout/create_output.rst:572
 msgid ""
 "As for simple compositions, an atlas can be generated in different ways (see"
 " :ref:`create-output` for more information - just use tools from the "
@@ -1199,7 +1283,7 @@ msgstr ""
 " strumenti del menu o della barra degli strumenti di "
 ":menuselection:`Atlante` invece del menu di :menuselection:`Layout`."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:549
+#: ../../docs/user_manual/print_layout/create_output.rst:577
 msgid ""
 "This means that you can directly print your compositions with "
 ":menuselection:`Atlas --> Print Atlas`. You can also create a PDF using "
@@ -1216,7 +1300,7 @@ msgstr ""
 ":guilabel:`Esporta su file singolo quando possibile`. In questo caso, ti "
 "verrà richiesto di dare un nome al file."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:556
+#: ../../docs/user_manual/print_layout/create_output.rst:584
 msgid ""
 "With :menuselection:`Atlas --> Export Atlas as Images...` or "
 ":menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted"
@@ -1229,7 +1313,7 @@ msgstr ""
 "composizione dell'atlante viene esportata nel formato di file immagine "
 "impostato nel pannello :guilabel:`Atlante` o in SVG."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:562
+#: ../../docs/user_manual/print_layout/create_output.rst:590
 msgid ""
 "With multi-page output, an atlas behaves like a layout in that only the page"
 " that contains the :ref:`reference_map` will get a world file (for each "
@@ -1239,11 +1323,11 @@ msgstr ""
 "senso che solo la pagina che contiene la :ref:`reference_map` otterrà un "
 "world file (per ogni elemento in uscita)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:566
+#: ../../docs/user_manual/print_layout/create_output.rst:594
 msgid "**Print a specific atlas feature**"
 msgstr "**Stampare una specifica geometria dell'Atlante**"
 
-#: ../../docs/user_manual/print_layout/create_output.rst:568
+#: ../../docs/user_manual/print_layout/create_output.rst:596
 msgid ""
 "If you want to print or export the composition of only one feature of the "
 "atlas, simply start the preview, select the desired feature in the drop-down"
@@ -1256,12 +1340,12 @@ msgstr ""
 "Stampa` (oppure :menuselection:`Esporta...` in qualsiasi formato di file "
 "supportato)."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:579
+#: ../../docs/user_manual/print_layout/create_output.rst:607
 msgid "Use project defined relations for atlas creation"
 msgstr ""
 "Usare le relazioni definite nel progetto per la creazione dell'atlante "
 
-#: ../../docs/user_manual/print_layout/create_output.rst:581
+#: ../../docs/user_manual/print_layout/create_output.rst:609
 msgid ""
 "For users with HTML and Javascript knowledge it is possible to operate on "
 "GeoJSON objects and use project defined relations from the QGIS project. The"
@@ -1278,7 +1362,7 @@ msgstr ""
 "Javascript esistenti che operano sulle rappresentazioni dell'elemento "
 "GeoJSON."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:589
+#: ../../docs/user_manual/print_layout/create_output.rst:617
 msgid ""
 "The following code includes all related child features from the defined "
 "relation. Using the JavaScript ``setFeature`` function it allows you to make"
@@ -1292,7 +1376,7 @@ msgstr ""
 "tu vuoi (liste, tabelle, ecc.). Nell'esempio di codice, creiamo un elenco "
 "dinamico delle feature figlio correlate."
 
-#: ../../docs/user_manual/print_layout/create_output.rst:618
+#: ../../docs/user_manual/print_layout/create_output.rst:646
 msgid ""
 "During atlas creation there will be an iteration over the coverage layer "
 "containing the parent features. On each page, you will see a bullet list of "
