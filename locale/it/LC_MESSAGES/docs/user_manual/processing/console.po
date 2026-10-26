@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-12 13:54+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -103,6 +104,30 @@ msgstr ""
 "La prima cosa da fare è importare le funzioni di Processing con la seguente "
 "istruzione:"
 
+#: ../../docs/user_manual/processing/console.rst:44
+msgid ""
+"Now, there is basically just one (interesting) thing you can do with that "
+"from the console: ute an algorithm. That is done using the :func:`run() "
+"<qgis.processing.run>` method, which takes the id of the algorithm to ute as"
+" its first parameter, and then a variable number of additional parameters "
+"depending on the requirements of the algorithm. So the first thing you need "
+"to know is the name of the algorithm to ute. That is not the name you see in"
+" the toolbox, but rather a unique command–line name. To find the right name "
+"for your algorithm, you can use the :class:`processingRegistry "
+"<qgis.core.QgsProcessingRegistry>`. Type the following line in your console:"
+msgstr ""
+"Ora, c'è fondamentalmente solo una cosa (interessante) che puoi fare con "
+"questo dalla console: eseguire un algoritmo. Ciò si ottiene utilizzando il "
+"metodo :func:`run() <qgis.processing.run>`, che accetta come primo parametro"
+" l'ID dell'algoritmo da eseguire e, successivamente, un numero variabile di "
+"parametri aggiuntivi a seconda dei requisiti dell'algoritmo. Quindi, la "
+"prima cosa che devi sapere è il nome dell'algoritmo da eseguire. Non si "
+"tratta del nome che vedi nella casella degli strumenti, bensì di un nome "
+"univoco da usare nella riga di comando. Per trovare il nome giusto per il "
+"tuo algoritmo, puoi usare :class:`processingRegistry "
+"<qgis.core.QgsProcessingRegistry>`. Digita la seguente riga nella tua "
+"console:"
+
 #: ../../docs/user_manual/processing/console.rst:61
 msgid ""
 "You will see something like this (with some extra dashes added to improve "
@@ -120,6 +145,33 @@ msgstr ""
 " nome della fonte e nome dell'algoritmo, insieme ai loro nomi "
 "corrispondenti."
 
+#: ../../docs/user_manual/processing/console.rst:84
+msgid ""
+"Once you know the command-line name of the algorithm, the next thing to do "
+"is to determine the right syntax to ute it. That means knowing which "
+"parameters are needed when calling the :func:`run() <qgis.processing.run>` "
+"method."
+msgstr ""
+"Una volta individuato il nome da riga di comando dell'algoritmo, il passo "
+"successivo consiste nel determinare la sintassi corretta per utilizzarlo. "
+"Ciò significa sapere quali parametri sono necessari quando si chiama il "
+"metodo :func:`run() <qgis.processing.run>`."
+
+#: ../../docs/user_manual/processing/console.rst:89
+msgid ""
+"There is a method to describe an algorithm in detail, which can be used to "
+"get a list of the parameters that an algorithm requires and the outputs that"
+" it will generate. To get this information, you can use the "
+":func:`algorithmHelp() <qgis.processing.algorithmHelp>` method. Pass as "
+"parameter the ID of the algorithm, not the full descriptive name."
+msgstr ""
+"Esiste un metodo che consente di descrivere un algoritmo in dettaglio e che "
+"può essere utilizzato per ottenere un elenco dei parametri richiesti "
+"dall'algoritmo e dei risultati che esso genererà. Per ottenere queste "
+"informazioni, è possibile utilizzare il metodo :func:`algorithmHelp() "
+"<qgis.processing.algorithmHelp>`. Come parametro va specificato l'ID "
+"dell'algoritmo, non il nome descrittivo completo."
+
 #: ../../docs/user_manual/processing/console.rst:95
 msgid ""
 "Calling the method with ``native:buffer`` as parameter (``qgis:buffer`` is "
@@ -129,6 +181,26 @@ msgstr ""
 "Richiamando il metodo con ``native:buffer`` come parametro (``qgis:buffer`` "
 "è un alias di ``native:buffer`` e funzionerà ugualmente), ottieni la "
 "seguente descrizione:"
+
+#: ../../docs/user_manual/processing/console.rst:223
+msgid ""
+"Now you have everything you need to run any algorithm. As we have already "
+"mentioned, algorithms can be run using: :func:`run() <qgis.processing.run>`."
+" Its syntax is as follows:"
+msgstr ""
+"Ora hai tutto ciò che ti serve per eseguire qualsiasi algoritmo. Come "
+"abbiamo già accennato, gli algoritmi possono essere eseguiti utilizzando: "
+":func:`run() <qgis.processing.run>`. La sua sintassi è la seguente:"
+
+#: ../../docs/user_manual/processing/console.rst:231
+msgid ""
+"Where parameters is a dictionary of parameters that depend on the algorithm "
+"you want to run, and is exactly the list that the :func:`algorithmHelp() "
+"<qgis.processing.algorithmHelp>` method gives you."
+msgstr ""
+"Dove parameters è un dizionario di parametri che dipendono dall'algoritmo "
+"che vuoi eseguire, ed è esattamente l'elenco fornito dal metodo "
+":func:`algorithmHelp() <qgis.processing.algorithmHelp>`."
 
 #: ../../docs/user_manual/processing/console.rst:248
 msgid ""
@@ -167,6 +239,21 @@ msgstr ""
 "aperto, verrà aperto ma non aggiunto alla mappa). Se hai un'istanza di un "
 "oggetto QGIS che rappresenta il layer, puoi anche passarlo come parametro."
 
+#: ../../docs/user_manual/processing/console.rst:261
+msgid ""
+"Enumeration. If an algorithm has an enumeration parameter, the value of that"
+" parameter should be entered using an integer value. To know the available "
+"options, you can use the :func:`algorithmHelp() "
+"<qgis.processing.algorithmHelp>` command, as above. For instance, the "
+"``native:buffer`` algorithm has an enumeration called JOIN_STYLE:"
+msgstr ""
+"Ordinamento. Se un algoritmo ha un parametro di ordinamento, il valore di "
+"tale parametro deve essere inserito utilizzando un valore intero. Per "
+"conoscere le opzioni disponibili, puoi utilizzare il comando "
+":func:`algorithmHelp() <qgis.processing.algorithmHelp>`, come sopra. Ad "
+"esempio, l'algoritmo ``native:buffer`` ha un campo di ordinamento di nome "
+"JOIN_STYLE:"
+
 #: ../../docs/user_manual/processing/console.rst:282
 msgid ""
 "In this case, the parameter has three options. Notice that ordering is zero-"
@@ -174,6 +261,10 @@ msgid ""
 msgstr ""
 "In questo caso, il parametro ha tre opzioni. Da notare che l'ordine è su "
 "base zero."
+
+#: ../../docs/user_manual/processing/console.rst:284
+msgid "Boolean.  Use :const:`True` or :const:`False`."
+msgstr "Booleano.  Usa :const:`True` o :const:`False`."
 
 #: ../../docs/user_manual/processing/console.rst:285
 msgid ""
@@ -254,10 +345,59 @@ msgstr ""
 "predefinito per quel tipo di output, e la sua estensione corrispondente "
 "verrà aggiunta al percorso indicato."
 
+#: ../../docs/user_manual/processing/console.rst:311
+msgid ""
+"Unlike when an algorithm is uted from the toolbox, outputs are not added to "
+"the map canvas if you ute that same algorithm from the Python console using "
+"the :func:`run() <qgis.processing.run>` method. That method returns a "
+"dictionary with one or more output names (the ones shown in the algorithm "
+"description) as keys and the file paths of those outputs as values:"
+msgstr ""
+"A differenza di quando un algoritmo viene eseguito dalla toolbox, i "
+"risultati non vengono aggiunti alla area di visualizzazione della mappa se "
+"si esegue lo stesso algoritmo dalla console Python utilizzando il "
+"metodo:func:`run () <qgis.processing. run >` . Questo metodo restituisce un "
+"dizionario con uno o più nomi di output (quelli mostrati nella descrizione "
+"dell'algoritmo) come chiavi e i percorsi dei file di tali output come "
+"valori:"
+
 #: ../../docs/user_manual/processing/console.rst:332
 msgid "You can then load the output in the project as any common layer:"
 msgstr ""
 "Puoi caricare il risultato nel progetto come un qualsiasi comune layer:"
+
+#: ../../docs/user_manual/processing/console.rst:340
+msgid ""
+"To immediately load the processing outputs in the project, you can use the "
+":func:`runAndLoadResults() <qgis.processing.runAndLoadResults>` method "
+"instead of :func:`run() <qgis.processing.run>`."
+msgstr ""
+"Per caricare immediatamente gli output di elaborazione nel progetto, puoi "
+"utilizzare il metodo :func:`runAndLoadResults() "
+"<qgis.processing.runAndLoadResults>` anziché :func:`run() "
+"<qgis.processing.run>`."
+
+#: ../../docs/user_manual/processing/console.rst:350
+msgid ""
+"If you want to open an algorithm dialog from the console you can use the "
+":func:`createAlgorithmDialog <qgis.processing.createAlgorithmDialog>` "
+"method. The only mandatory parameter is the algorithm id, but you can also "
+"define the dictionary of parameters so that the dialog will be filled "
+"automatically:"
+msgstr ""
+"Se vuoi aprire una finestra di dialogo dell'algoritmo dalla console, puoi "
+"utilizzare il metodo :func:`createAlgorithmDialog "
+"<qgis.processing.createAlgorithmDialog>`. L'unico parametro obbligatorio è "
+"l'ID dell'algoritmo, ma puoi anche definire il dizionario dei parametri in "
+"modo che la finestra di dialogo venga compilata automaticamente:"
+
+#: ../../docs/user_manual/processing/console.rst:370
+msgid ""
+"The :func:`execAlgorithmDialog <qgis.processing.execAlgorithmDialog>` method"
+" opens the dialog immediately:"
+msgstr ""
+"Il metodo :func:`execAlgorithmDialog <qgis.processing.execAlgorithmDialog>` "
+"apre immediatamente la finestra di dialogo:"
 
 #: ../../docs/user_manual/processing/console.rst:387
 msgid "Creating scripts and running them from the toolbox"
@@ -407,6 +547,32 @@ msgstr ""
 " parametro (per l'interfaccia utente). Il resto dei parametri sono specifici"
 " del tipo di parametro."
 
+#: ../../docs/user_manual/processing/console.rst:507
+msgid ""
+"The input can be turned into QGIS classes using the ``parameterAs…`` "
+"functions of :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`. For instance to get the number provided"
+" for the buffer distance as a double::"
+msgstr ""
+"L'input può essere trasformato in classi QGIS utilizzando le funzioni "
+"``parameterAs…`` di :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`. Ad esempio, per ottenere il numero "
+"fornito per la distanza del buffer come numero a virgola mobile::"
+
+#: ../../docs/user_manual/processing/console.rst:513
+msgid ""
+"The :meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` function should return "
+"a dictionary containing values for every output defined by the algorithm. "
+"This allows access to these outputs from other algorithms, including other "
+"algorithms contained within the same model."
+msgstr ""
+"La funzione :meth:`processAlgorithm() "
+"<qgis.core.QgsProcessingAlgorithm.processAlgorithm>` dovrebbe restituire un "
+"dizionario contenente i valori per ogni output definito dall'algoritmo. Ciò "
+"consente di accedere a questi output da altri algoritmi, inclusi altri "
+"algoritmi contenuti nello stesso modello."
+
 #: ../../docs/user_manual/processing/console.rst:518
 msgid ""
 "Well behaved algorithms should define and return as many outputs as makes "
@@ -452,6 +618,27 @@ msgstr ""
 "di avanzamento (da 0 a 100) per informare l'utente sul avanzamento "
 "dell'algoritmo. Questo è molto utile se il tuo algoritmo richiede molto "
 "tempo per essere completato."
+
+#: ../../docs/user_manual/processing/console.rst:538
+msgid ""
+"The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an "
+":meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` method that should "
+"be monitored to enable cancellation of the algorithm by the user. The "
+":meth:`pushInfo() <qgis.core.QgsProcessingFeedback.pushInfo>` method of "
+":class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send "
+"information to the user, and :meth:`reportError() "
+"<qgis.core.QgsProcessingFeedback.reportError>` is handy for pushing non-"
+"fatal errors to users."
+msgstr ""
+"Il metodo :class:`feedback <qgis.core.QgsProcessingFeedback>` fornisce un "
+"metodo :meth:`isCanceled() <qgis.core.QgsFeedback.isCanceled>` che deve "
+"essere monitorato per consentire l'annullamento dell'algoritmo da parte "
+"dell'utente. Il metodo :meth:`pushInfo() "
+"<qgis.core.QgsProcessingFeedback.pushInfo>` di :class:`feedback "
+"<qgis.core.QgsProcessingFeedback>` può essere utilizzato per inviare "
+"informazioni all'utente, e :meth:`reportError() "
+"<qgis.core.QgsProcessingFeedback.reportError>` è utile per segnalare agli "
+"utenti errori non fatali."
 
 #: ../../docs/user_manual/processing/console.rst:546
 msgid ""
