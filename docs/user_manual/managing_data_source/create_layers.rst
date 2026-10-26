@@ -626,9 +626,8 @@ A new layer, filled with selected features and their attributes is
 created (and added to map canvas).
 
 .. note:: Creating layers from the clipboard is possible with features
-   selected and copied within QGIS as well as features from another
-   application, as long as their geometries are defined using well-known
-   text (WKT).
+   selected and copied within QGIS as well as features from another application,
+   as long as their geometries are defined using well-known text (WKT).
 
 
 .. _import_vector_db_browser:
@@ -637,13 +636,13 @@ Importing vector layers into database
 ======================================
 
 QGIS provides easy ways to transfer vector layers directly to supported database formats
-using the :guilabel:`Browser` panel.
+(GeoPackage, SpatiaLite, PostgreSQL, MS SQL Server, ...) using the :guilabel:`Browser` panel.
 You can start the import in two ways:
 
-* Drag and drop a single vector layer from the Browser panel or from the Project into
-  a database connection or schema item.
-* Right-click on a database connection or schema item and choose :guilabel:`Import Vector Layer…`
-  from the context menu.
+* Drag and drop a single vector layer from the :guilabel:`Browser` or :guilabel:`Layers` panel
+  to a database connection or schema item in the :guilabel:`Browser` panel
+* Right-click on a database connection or schema item in the :guilabel:`Browser` panel
+  and choose :guilabel:`Import Vector Layer…` from the context menu.
 
 This triggers the :guilabel:`Import Vector Layer` dialog for further customisation.
 When multiple layers are dragged into a database, they are imported immediately
@@ -674,14 +673,14 @@ You can then fill the following options:
     By default, it is taken from the source layer name but can be modified.
     You can also use the |checkbox| :guilabel:`Replace destination table (if exists)`
     to overwrite an existing table.
-* :guilabel:`Options` for handling the data
+* :guilabel:`Options` for handling the data:
 
   * :guilabel:`Primary key`: when supported by the database, sets the primary key name for the created table.
     Defaults to the source layer primary key name, or a default provider-specific name
     if the source layer does not have a primary key.
     It is also possible to use a custom name and define the new field
     in the :guilabel:`Attributes` group below.
-  * |checkbox| :guilabel:`Geometry column`: for spatially enabled layer
+  * :guilabel:`Geometry column`: for spatially enabled layer
     and when supported by the database, this represents the naming for the geometry column.
     Defaults to the source layer geometry column name, or a default provider-specific name
     if the source layer does not have a named geometry column.
