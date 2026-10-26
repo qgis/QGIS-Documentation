@@ -73,9 +73,79 @@ msgstr ""
 "Vedi :ref:`3d_tiles` per le istruzioni su come aggiungere queste fonti di "
 "dati a QGIS, ."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:33
+msgid "State of 3D Tiles Support"
+msgstr "Stato del supporto per i tasselli 3D"
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:35
 msgid "Currently, QGIS supports two formats of 3D tiles:"
 msgstr "Attualmente, QGIS supporta due formati di tasselli 3D:"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:37
+msgid ""
+"`\"Cesium\" 3D Tiles <https://docs.ogc.org/cs/22-025r4/22-025r4.html>`_ are "
+"used primarily for complex 3D models of buildings or whole cities. Such "
+"datasets can be provided by cloud-based platforms such as Cesium Ion or "
+"Google (*Photorealistic 3D Tiles*)."
+msgstr ""
+"`Cesium 3D tiles <https://cesium.com/why-cesium/3d-tiles/>`_, utilizzate "
+"principalmente per modelli 3D complessi di edifici o intere città. Tali "
+"insiemi di dati possono essere forniti da piattaforme basate su cloud come "
+"Cesium Ion o Google (*Tasselli 3D Fotorealistici*)."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:40
+msgid ""
+"`Quantized Mesh <https://github.com/CesiumGS/quantized-mesh>`_  tiles are "
+"used for terrain elevation data."
+msgstr ""
+"`Quantized Mesh tiles <https://github.com/CesiumGS/quantized-mesh>`_, "
+"tasselli utilizzati per dati di elevazione del terreno."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:42
+msgid "Supported *3D Tiles* features:"
+msgstr "Funzionalità *3D Tiles* supportate"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:44
+msgid ""
+"QGIS currently has partial support for 3D Tiles 1.0 and partial support for "
+"3D Tiles 1.1."
+msgstr ""
+"QGIS attualmente offre un supporto parziale per 3D Tiles 1.0 e un supporto "
+"parziale per 3D Tiles 1.1."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:46
+msgid ""
+"For 3D Tiles 1.0, the tile format Batched 3D Model (``b3dm``) is supported. "
+"The tile formats Instanced 3D Model (``i3dm``), Point Cloud (``pnts``) and "
+"Composite (``cmpt``) are not supported yet."
+msgstr ""
+"Per 3D Tiles 1.0, è supportato il formato di tasselli Modello 3D in batch "
+"(``b3dm``). I formati di tasselli Modello 3D istanziato (``i3dm``), Nube di "
+"punti (``pnts``) e Composito (``cmpt``) non sono ancora supportati."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:49
+msgid ""
+"For 3D Tiles 1.1, the ``3DTILES_content_gltf`` extension is supported, so "
+"tile contents may also be encoded as glTF 2.0 (text or binary). The "
+"``EXT_mesh_gpu_instancing`` extension is not supported yet."
+msgstr ""
+"Per 3D Tiles 1.1, l'estensione ``3DTILES_content_gltf`` è supportata, quindi"
+" i contenuti dei tasselli possono anche essere codificati come glTF 2.0 "
+"(testo o binario). L'estensione ``EXT_mesh_gpu_instancing`` non è ancora "
+"supportata."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:52
+msgid ""
+"Currently only explicit tiling is supported. Implicit tiling is not "
+"supported yet."
+msgstr ""
+"Attualmente è supportato solo il tiling esplicito. Il tiling implicito non è"
+" ancora supportato."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:54
+msgid "Currently only tilesets using EPSG:4978 are supported."
+msgstr ""
+"Attualmente sono supportati solo i set di tasselli che utilizzano EPSG:4978."
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:60
 msgid "3D Tiles Properties"
@@ -304,9 +374,55 @@ msgstr ""
 "potenzialmente il processo di restituzione. È possibile selezionare diverse "
 "unità per adattare l'impostazione alle proprie esigenze specifiche."
 
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:155
+msgid ""
+":guilabel:`Opacity`: Adjusts the visibility of the underlying layer on the "
+"map canvas using this tool. Use slider to tailor the visibility of your "
+"scene layer according to your preferences. Alternatively, specify the exact "
+"percentage of visibility through the menu next to the slider."
+msgstr ""
+":guilabel:`Opacità`: Con questo strumento si regola la visibilità del layer "
+"sottostante sulla mappa. Utilizza il cursore per adattare la visibilità del "
+"layer della scena in base alle tue preferenze. In alternativa, specifica "
+"l'esatta percentuale di visibilità attraverso il menu accanto al cursore."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:159
+msgid ""
+":guilabel:`Blending mode`: You can achieve special rendering effects with "
+"these tools that you may previously only know from graphics programs. The "
+"pixels of your overlaying and underlying layers are mixed through the "
+"settings described in :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Modalità di fusione`: Con questi strumenti puoi ottenere effetti "
+"speciali di visualizzazione che in precedenza conoscevi solo con i programmi"
+" di grafica. I pixel dei layer sovrapposti e sottostanti vengono miscelati "
+"attraverso le impostazioni descritte in :ref:`blend-modes`."
+
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:167
 msgid "3D View Properties"
 msgstr "Proprietà Vista 3D"
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:169
+msgid ""
+":guilabel:`Maximum screen space error`: Determines the threshold for "
+"swapping terrain tiles with more detailed ones (and vice versa) - i.e. how "
+"soon the 3D view will use higher quality tiles. Lower numbers mean more "
+"details in the scene at the expenses of increased rendering complexity."
+msgstr ""
+":guilabel:`Errore massimo di spazio sullo schermo` determina la soglia per "
+"la sostituzione deli tasselli del terreno con altri più dettagliati (e "
+"viceversa), cioè quanto presto la vista 3D utilizzerà tasselli di qualità "
+"superiore. Numeri più bassi significano più dettagli nella scena a scapito "
+"di una maggiore complessità di visualizzazione."
+
+#: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:174
+msgid ""
+"|unchecked| :guilabel:`Show bounding boxes`: Shows 3D bounding boxes of the "
+"terrain tiles (useful for troubleshooting terrain issues)."
+msgstr ""
+"|unchecked| :guilabel:`Mostra i perimetri di delimitazione`: Mostra i "
+"perimetri di delimitazione 3D dei tasselli del terreno (utile per la "
+"soluzione delle tematizzazioni del terreno) "
 
 #: ../../docs/user_manual/working_with_3d_tiles/3d_tiles.rst:252
 msgid "unchecked"
