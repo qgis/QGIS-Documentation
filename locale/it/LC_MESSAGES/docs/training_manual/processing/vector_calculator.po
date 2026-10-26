@@ -6,6 +6,7 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -46,6 +47,22 @@ msgstr ""
 "vettoriale basato su un'espressione matematica, usando il calcolatore campi "
 "per i vettori."
 
+#: ../../docs/training_manual/processing/vector_calculator.rst:8
+msgid ""
+"We already know how to use the raster calculator to create new raster layers"
+" using mathematical expressions. A similar algorithm is available for vector"
+" layers, and generates a new layer with the same attributes of the input "
+"layer, plus an additional one with the result of the expression entered. The"
+" algorithm is called :guilabel:`Field calculator` and has the following "
+"parameters dialog."
+msgstr ""
+"Sappiamo già come usare il calcolatore raster per creare nuovi layer raster "
+"usando espressioni matematiche. Un algoritmo simile è disponibile per i "
+"layer vettoriali e genera un nuovo layer con gli stessi attributi del layer "
+"in ingresso, più uno aggiuntivo con il risultato dell'espressione inserita. "
+"L'algoritmo si chiama :guilabel:`Calcolatore Campi` e ha la seguente "
+"finestra di dialogo dei parametri."
+
 #: ../../docs/training_manual/processing/vector_calculator.rst:15
 msgid ""
 "In newer versions of Processing the interface has changed considerably, it's"
@@ -58,11 +75,30 @@ msgstr ""
 msgid "Here are a few examples of using that algorithm."
 msgstr "Ecco alcuni esempi di utilizzo di questo algoritmo."
 
+#: ../../docs/training_manual/processing/vector_calculator.rst:19
+msgid ""
+"First, let's calculate the population density of white people in each "
+"polygon, which represents a census. We have two fields in the attributes "
+"table that we can use for that, namely ``WHITE`` and ``SHAPE_AREA``. We just"
+" have to divide them and multiply by one million (to have density per square"
+" km), so we can use the following formula in the corresponding field::"
+msgstr ""
+"Per prima cosa, calcoliamo la densità di popolazione bianca in ogni "
+"poligono, che rappresenta un censimento. Abbiamo due campi nella tabella "
+"degli attributi che possiamo usare per questo, cioè ``WHITE`` e "
+"``SHAPE_AREA``. Dobbiamo solo dividerli e moltiplicarli per un milione (per "
+"avere la densità per km quadrato), quindi possiamo usare la seguente formula"
+" nel campo corrispondente"
+
 #: ../../docs/training_manual/processing/vector_calculator.rst:26
 msgid "The parameters dialog should be filled as shown below."
 msgstr ""
 "La finestra di dialogo dei parametri dovrebbe essere riempita come mostrato "
 "qui sotto."
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:30
+msgid "This will generate a new field named ``WHITE_DENS``."
+msgstr "Questo genererà un nuovo campo chiamato ``WHITE_DENS``."
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:32
 msgid ""
@@ -73,6 +109,18 @@ msgstr ""
 "Ora calcoliamo il rapporto tra i campi ``MALES`` e ``FEMALES`` per crearne "
 "uno nuovo che indichi se la popolazione maschile è numericamente "
 "predominante su quella femminile."
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:35
+msgid "Enter the following formula::"
+msgstr "Inserisci la seguente formula:"
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:39
+msgid ""
+"This time the parameters window should look like this before pressing the "
+":guilabel:`OK` button."
+msgstr ""
+"Questa volta la finestra di dialogo dei parametri dovrebbe assomigliare a "
+"questa prima di premere il pulsante :guilabel:`OK`."
 
 #: ../../docs/training_manual/processing/vector_calculator.rst:44
 msgid ""
@@ -99,3 +147,11 @@ msgstr ""
 #: ../../docs/training_manual/processing/vector_calculator.rst:52
 msgid "The parameters window should look like this."
 msgstr "La finestra di dialogo dei parametri dovrebbe assomigliare a questa."
+
+#: ../../docs/training_manual/processing/vector_calculator.rst:56
+msgid ""
+"A python field calculator is available in the :guilabel:`Advanced Python "
+"field calculator`, which will not be detailed here."
+msgstr ""
+"Un calcolatore di campi python è disponibile nel :guilabel:`Calcolatore di "
+"campi Python avanzato`, che non sarà dettagliato qui"
