@@ -427,6 +427,10 @@ msgstr ""
 "basato sulla pendenza. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The "
 "Netherlands, 935-942*."
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:121
+msgid "This tool is a port of the SAGA `DTM Filter (slope-based)`_"
+msgstr "Questo strumento è un porting del `DTM Filter (slope-based)`_ di SAGA"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:129
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:293
 msgid "Basic parameters"
@@ -684,36 +688,153 @@ msgstr "Gli oggetti non terreno rimossi dal filtro."
 msgid "**Algorithm ID**: ``native:dtmslopebasedfilter``"
 msgstr "**ID Algoritmo**: ``native:dtmslopebasedfilter``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:272
+msgid "Fill sinks (Wang & Liu)"
+msgstr "Riempimento superfici depresse (Wang & Liu)"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:273
 msgid "``Added in 3.44``"
 msgstr "``Aggiunto nella versione 3.44``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:275
+msgid ""
+"Uses a method proposed by Wang & Liu to identify and fill surface "
+"depressions in digital elevation models."
+msgstr ""
+"Utilizza un metodo proposto da Wang e Liu per identificare e riempire le "
+"depressioni superficiali nei modelli digitali di elevazione."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:277
+msgid ""
+"The method was enhanced to allow the creation of hydrologically sound "
+"elevation models, i.e. not only to fill the depression(s) but also to "
+"preserve a downward slope along the flow path. If desired, this is "
+"accomplished by preserving a minimum slope gradient (and thus elevation "
+"difference) between cells."
+msgstr ""
+"Il metodo è stato migliorato per consentire la creazione di modelli "
+"altimetrici idrologicamente validi, vale a dire non solo per riempire la/le "
+"depressione/i, ma anche per mantenere una pendenza discendente lungo il "
+"percorso del flusso. Se lo si desidera, ciò si ottiene mantenendo una "
+"pendenza minima (e quindi una differenza di elevazione) tra le celle"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:281
+msgid ""
+"*References: Wang, L. & H. Liu (2006): An efficient method for identifying "
+"and filling surface depressions in digital elevation models for hydrologic "
+"analysis and modelling. International Journal of Geographical Information "
+"Science, Vol. 20, No. 2: 193-213.*"
+msgstr ""
+"*Riferimenti: Wang, L. & H. Liu (2006): An efficient method for identifying "
+"and filling surface depressions in digital elevation models for hydrologic "
+"analysis and modelling. International Journal of Geographical Information "
+"Science, Vol. 20, N. 2: 193-213.*"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:285
+msgid "This tool is a port of the SAGA `Fill Sinks (Wang & Liu)`_ tool."
+msgstr ""
+"Questo strumento è un porting dello strumento SAGA `Fill Sinks (Wang & "
+"Liu)`_."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:312
 msgid "Default: 1"
 msgstr "Predefinito: 1"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:314
+msgid "**Minimum slope (degrees)**"
+msgstr "**Pendenza minima (gradi)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:315
 msgid "``MIN_SLOPE``"
 msgstr "``MIN_SLOPE``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:318
+msgid "Default: 0.10"
+msgstr "Valore predefinito: 0.10"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:319
+msgid ""
+"Minimum slope gradient to preserve from cell to cell; with a value of zero, "
+"sinks are filled up to the spill elevation (which results in flat areas)."
+msgstr ""
+"Pendenza minima da mantenere da cella a cella; con un valore pari a zero, le"
+" depressioni vengono riempite fino alla quota di traboccamento (con "
+"conseguente formazione di aree pianeggianti)."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:322
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:404
+msgid "**Output layer (filled DEM)**"
+msgstr "**Layer risultato (DEM riempito)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:325
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:405
 msgid "``OUTPUT_FILLED_DEM``"
 msgstr "``OUTPUT_FILLED_DEM``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:329
+msgid ""
+"Specify the output raster corresponding to the depression-free DEM. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifica il raster di output corrispondente al DEM privo di depressioni. "
+":ref:`One of <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:336
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:408
+msgid "**Output layer (flow directions)**"
+msgstr "**Layer di output (direzioni del flusso)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:339
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:409
 msgid "``OUTPUT_FLOW_DIRECTIONS``"
 msgstr "``OUTPUT_FLOW_DIRECTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:343
+msgid ""
+"Specify the output raster with computed flow directions. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Specifica il raster di output con le direzioni di flusso calcolate. "
+":ref:`One of <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:350
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:412
+msgid "**Output layer (watershed basins)**"
+msgstr "**Layer risultato (bacini idrografici)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:353
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:413
 msgid "``OUTPUT_WATERSHED_BASINS``"
 msgstr "``OUTPUT_WATERSHED_BASINS``"
 
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:357
+msgid ""
+"Specify the output raster corresponding to the delineated watershed basins. "
+":ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifica il raster di output corrispondente ai bacini idrografici definiti."
+" :ref:`Uno di <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:379
 msgid "``CREATION_OPTIONS``"
 msgstr "``CREATION_OPTIONS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:407
+msgid ""
+"Output raster corresponding to the depression-free digital elevation model."
+msgstr ""
+"Raster di output corrispondente al modello digitale di elevazione privo di "
+"depressioni."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:411
+msgid "Output raster with computed flow directions; 0=N, 1=NE, 2=E, ... 7=NW."
+msgstr ""
+"Raster di output con direzioni di flusso calcolate; 0=N, 1=NE, 2=E, ... "
+"7=NO."
+
+#: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:415
+msgid "Output raster corresponding to the delineated watershed basins."
+msgstr "Raster di output corrispondente ai bacini idrografici individuati."
 
 #: ../../docs/user_manual/processing_algs/qgis/rasterterrainanalysis.rst:420
 msgid "**Algorithm ID**: ``native:fillsinkswangliu``"
