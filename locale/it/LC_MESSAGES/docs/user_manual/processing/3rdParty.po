@@ -5,8 +5,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Harrissou Sant-anna, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -37,6 +37,19 @@ msgstr ""
 #: ../../docs/user_manual/processing/3rdParty.rst:6
 msgid "Configuring external applications"
 msgstr "Configurazione di applicazioni esterne"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:13
+msgid ""
+"The Processing framework can be extended using additional applications. "
+"Algorithms that rely on external applications are managed by their own "
+"algorithm providers. Additional providers can be found as separate plugins, "
+"and installed using the QGIS Plugin Manager."
+msgstr ""
+"Il framework di Processing può essere esteso utilizzando applicazioni "
+"aggiuntive. Gli algoritmi che si avvalgono di applicazioni esterne sono "
+"gestiti dai rispettivi fornitori di algoritmi. È possibile trovare fornitori"
+" aggiuntivi sotto forma di plugin separati e installarli tramite il Plugin "
+"Manager di QGIS."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:19
 msgid ""
@@ -67,6 +80,25 @@ msgstr ""
 #: ../../docs/user_manual/processing/3rdParty.rst:33
 msgid "A note for Windows users"
 msgstr "Nota per gli utenti Windows"
+
+#: ../../docs/user_manual/processing/3rdParty.rst:35
+msgid ""
+"If you are not an advanced user and you are running QGIS on Windows, you "
+"might not be interested in reading the rest of this chapter. Make sure you "
+"install QGIS in your system using the standalone installer. That will "
+"automatically install GRASS in your system and configure it so it can be run"
+" from QGIS. All the algorithms from this provider will be ready to be run "
+"without needing any further configuration. If installing with the OSGeo4W "
+"application, make sure that you also select GRASS for installation."
+msgstr ""
+"Se non sei un utente esperto e utilizzi QGIS su Windows, forse non ti "
+"interessa leggere il resto di questo capitolo. Assicurati di installare QGIS"
+" sul tuo sistema utilizzando il programma di installazione standalone. In "
+"questo modo GRASS verrà installato automaticamente sul tuo sistema e "
+"configurato in modo da poter essere eseguito da QGIS. Tutti gli algoritmi di"
+" questo provider saranno pronti per essere eseguiti senza bisogno di "
+"ulteriori configurazioni. Se esegui l'installazione tramite l'applicazione "
+"OSGeo4W, assicurati di selezionare anche GRASS per l'installazione."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:48
 msgid "A note on file formats"
@@ -280,6 +312,18 @@ msgstr ""
 msgid "Adding R scripts from the QGIS collection"
 msgstr "Aggiungere script R dalla collezione QGIS"
 
+#: ../../docs/user_manual/processing/3rdParty.rst:160
+msgid ""
+"R integration in QGIS is different from that of some other third party "
+"providers like SAGA in that there is not a predefined set of algorithms you "
+"can run (except for some example script that come with the *Processing R "
+"Provider* plugin)."
+msgstr ""
+"L'integrazione di R in QGIS si differenzia da quella offerta da alcuni "
+"fornitori di terze parti, come SAGA, in quanto non prevede un insieme "
+"predefinito di algoritmi eseguibili (ad eccezione di alcuni script di "
+"esempio forniti con il plugin *Processing R Provider*)."
+
 #: ../../docs/user_manual/processing/3rdParty.rst:164
 msgid ""
 "A set of example R scripts is available in the QGIS Repository. Perform the "
@@ -417,6 +461,18 @@ msgstr ""
 ":guilabel:`Aggiungi` nella finestra di dialogo che si apre. È possibile "
 "fornire qui diverse cartelle. Saranno separate da un punto e virgola "
 "(\";\")."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:222
+msgid ""
+"If you would like to get all the R scripts from the QGIS 2 on-line "
+"collection, you can select *QGIS R script collection (from QGIS 2)* instead "
+"of *QGIS R script collection*. You will probably find that scripts that "
+"depend on vector data input or output will not work."
+msgstr ""
+"Se desideri scaricare tutti gli script R dalla raccolta online di QGIS 2, "
+"puoi selezionare *Raccolta di script R di QGIS (da QGIS 2)* invece di "
+"*Raccolta di script R di QGIS*. Probabilmente noterai che gli script che "
+"dipendono dall'input o dall'output di dati vettoriali non funzioneranno."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:234
 msgid "Creating R scripts"
@@ -799,6 +855,14 @@ msgstr ""
 msgid "GRASS"
 msgstr "GRASS"
 
+#: ../../docs/user_manual/processing/3rdParty.rst:460
+msgid ""
+"Configuring GRASS is very easy. First, the path to the GRASS folder has to "
+"be defined, but only if you are running Windows."
+msgstr ""
+"Configurare GRASS è semplicissimo. Innanzitutto, occorre definire il "
+"percorso della cartella GRASS, ma solo se si utilizza Windows."
+
 #: ../../docs/user_manual/processing/3rdParty.rst:463
 msgid ""
 "By default, the Processing framework tries to configure its GRASS connector "
@@ -826,6 +890,17 @@ msgstr ""
 "Se stai usando Linux, devi solo assicurarti che GRASS sia installato "
 "correttamente, e che possa essere eseguito senza problemi da una finestra di"
 " terminale."
+
+#: ../../docs/user_manual/processing/3rdParty.rst:476
+msgid ""
+"GRASS algorithms use a region for calculations. This region can be defined "
+"manually or automatically, taking the minimum extent that covers all the "
+"input layers used to execute the algorithm each time."
+msgstr ""
+"Gli algoritmi GRASS utilizzano una region per i calcoli. Tale area può "
+"essere definita manualmente o automaticamente, assumendo l’estensione minima"
+" necessaria a coprire tutti i layer di input utilizzati per l’esecuzione "
+"dell’algoritmo in ogni occasione."
 
 #: ../../docs/user_manual/processing/3rdParty.rst:484
 msgid "LAStools"
