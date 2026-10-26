@@ -1166,6 +1166,18 @@ msgstr "Una copia del layer vettoriale in ingresso con un indice spaziale"
 msgid "**Algorithm ID**: ``native:createspatialindex``"
 msgstr "**ID Algoritmo**:``native:createspatialindex``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:437
+msgid "Define projection"
+msgstr "Definire proiezione"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:438
+msgid ""
+"Sets an existing layer's projection to the provided CRS without reprojecting"
+" features."
+msgstr ""
+"Imposta la proiezione di un layer esistente sul SR fornito senza "
+"riproiettare gli elementi."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:440
 msgid ""
 "Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the "
@@ -1302,6 +1314,14 @@ msgstr "**ID Algoritmo**: ``native:deleteduplicategeometries``"
 msgid "Delete duplicates by attribute"
 msgstr "Eliminare i duplicati in base all'attributo"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:583
+msgid ""
+"Deletes duplicate rows by only considering the specified field(s). The first"
+" matching row will be retained, and duplicates will be discarded."
+msgstr ""
+"Elimina le righe duplicate considerando solo il/i campo/i specificato/i. La "
+"prima riga trovata verrà mantenuta e i duplicati verranno eliminati."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:586
 msgid ""
 "Optionally, these duplicate records can be saved to a separate output for "
@@ -1376,6 +1396,10 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
 msgstr "Ignora il risultato"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:654
+msgid "Vector layer containing the duplicate features."
+msgstr "Layer vettoriale contenente gli elementi duplicati."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:662
 msgid "Vector layer containing the unique features."
@@ -1671,6 +1695,22 @@ msgid ""
 msgstr ""
 "Le fonti di dati di input sono identificate con ``input1``, ``input2``... "
 "``inputN`` e una semplice query sarà del tipo ``SELECT * FROM input1``."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:897
+msgid ""
+"Beside a simple query, you can add expressions or variables within the ``SQL"
+" query`` parameter itself. This is particularly useful if this algorithm is "
+"executed within a Processing model and you want to use a model input as a "
+"parameter of the query. An example of a query will then be ``SELECT * FROM "
+"[% @table %]`` where ``@table`` is the variable that identifies the model "
+"input."
+msgstr ""
+"Oltre a una semplice query, puoi aggiungere espressioni o variabili "
+"all'interno del parametro ``SQL query`` stesso. Questo è particolarmente "
+"utile se questo algoritmo viene eseguito all'interno di un modello di "
+"elaborazione e si vuoi utilizzare un input del modello come parametro della "
+"query. Un esempio di query sarà quindi ``SELECT * FROM [% @table %]`` dove "
+"``@table`` è la variabile che identifica l'input del modello."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:903
 msgid "The result of the query will be added as a new layer."
@@ -3302,6 +3342,20 @@ msgid ""
 msgstr ""
 "Accorpa più layer vettoriali dello **stesso tipo di geometria** in uno solo."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2055
+msgid ""
+"The attribute table of the resulting layer will contain the fields from all "
+"input layers. If fields with the same name but different types are found "
+"then the exported field will be automatically converted into a string type "
+"field. Optionally, new fields storing the original layer name and source can"
+" be added."
+msgstr ""
+"La tabella degli attributi del layer risultante conterrà i campi di tutti i "
+"layer in ingresso. Se si trovano campi con lo stesso nome ma di tipo "
+"diverso, allora il campo esportato sarà automaticamente convertito in un "
+"campo di tipo stringa. Come opzione, verranno anche aggiunti nuovi campi che"
+" memorizzano il nome del layer originale e la fonte."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2060
 msgid ""
 "If any input layers contain Z or M values, then the output layer will also "
@@ -3352,6 +3406,11 @@ msgstr ""
 "Scegliere il SR per il layer in uscita. Se non viene specificato, viene "
 "usato il SR del primo layer in ingresso."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2104
+msgid "**Add source layer information (layer name and path)**"
+msgstr ""
+"**Aggiunge informazioni sul layer di origine (nome del layer e percorso)**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2106
 msgid "``Added in 3.42``"
 msgstr "``Aggiunto nella versione 3.42``"
@@ -3359,6 +3418,11 @@ msgstr "``Aggiunto nella versione 3.42``"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2107
 msgid "``ADD_SOURCE_FIELDS``"
 msgstr "``ADD_SOURCE_FIELDS``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2111
+msgid "Add fields storing the original layer name and path"
+msgstr ""
+"Aggiunge campi che memorizzano il nome e il percorso del layer originale"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2112
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeneral.rst:2135
