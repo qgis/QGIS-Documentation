@@ -90,6 +90,10 @@ msgstr ""
 "diversi modi per definire queste variabili. Questo è descritto in dettaglio "
 "in :ref:`httpserver`."
 
+#: ../../docs/server_manual/config.rst:53
+msgid "Name & Description"
+msgstr "Nome & Descrizione"
+
 #: ../../docs/server_manual/config.rst:54
 msgid "Default"
 msgstr "Predefinito"
@@ -180,6 +184,18 @@ msgstr ""
 "nella stringa di query (con *MAP*); lo puoi anche impostare come variabile "
 "d'ambiente (per esempio usando il modulo Apache ``mod_rewrite``)."
 
+#: ../../docs/server_manual/config.rst:75
+msgid ""
+"You may also indicate a project stored in PostgreSQL, e.g. "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``"
+" or inside a geopackage file, e.g. "
+"``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName``."
+msgstr ""
+"Puoi anche specificare un progetto memorizzato in PostgreSQL, ad esempio "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``,"
+" oppure all'interno di un file Geopackage, ad esempio "
+"``geopackage:/path/to/geopackage/file.gpkg?projectName=myProjectName``."
+
 #: ../../docs/server_manual/config.rst:81
 msgid "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
 msgstr "QGIS_SERVER_ALLOWED_EXTRA_SQL_TOKENS"
@@ -266,6 +282,10 @@ msgstr "``cache`` nella cartella del profilo"
 #: ../../docs/server_manual/config.rst:108
 msgid "QGIS_SERVER_CACHE_SIZE"
 msgstr "QGIS_SERVER_CACHE_SIZE"
+
+#: ../../docs/server_manual/config.rst:109
+msgid "Sets the network cache size in bytes."
+msgstr "Imposta la dimensione della cache di rete in byte."
 
 #: ../../docs/server_manual/config.rst:110
 msgid "50 MB"
@@ -401,6 +421,16 @@ msgstr ""
 "automaticamente, basta inviare alcune richieste al server. Se non c'è, "
 "controlla i permessi."
 
+#: ../../docs/server_manual/config.rst:168
+msgid ""
+"QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4, use "
+"QGIS_SERVER_LOG_STDERR instead. File logging support will be removed in QGIS"
+" 5.0."
+msgstr ""
+"QGIS_SERVER_LOG_FILE è deprecato da QGIS 3.4, utilizza invece "
+"QGIS_SERVER_LOG_STDERR. Il supporto per la registrazione dei file sarà "
+"rimosso in QGIS 5.0."
+
 #: ../../docs/server_manual/config.rst:180
 msgid "QGIS_SERVER_LOG_LEVEL"
 msgstr "QGIS_SERVER_LOG_LEVEL"
@@ -527,6 +557,16 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:231
 msgid "QGIS_SERVER_PROJECT_CACHE_SIZE"
 msgstr "QGIS_SERVER_PROJECT_CACHE_SIZE"
+
+#: ../../docs/server_manual/config.rst:231
+msgid ""
+"Sets the maximum number of QGIS project files (.qgs/.qgz) to keep in server "
+"cache. This can improve performance when serving the same projects "
+"repeatedly."
+msgstr ""
+"Imposta il numero massimo di file di progetto QGIS (.qgs/.qgz) da conservare"
+" nella cache del server. Ciò può migliorare le prestazioni quando si mettono"
+" a disposizione gli stessi progetti più volte."
 
 #: ../../docs/server_manual/config.rst:233
 msgid "100"
@@ -711,9 +751,29 @@ msgstr "WFS"
 msgid "QGIS_SERVER_WMS_MAX_HEIGHT"
 msgstr "QGIS_SERVER_WMS_MAX_HEIGHT"
 
+#: ../../docs/server_manual/config.rst:305
+msgid ""
+"Maximum height for a WMS request. The most conservative between this and the"
+" project one is used. If the value is ``-1``, it means that there is no "
+"maximum set."
+msgstr ""
+"Altezza massima per una richiesta WMS. Viene utilizzato il valore più "
+"restrittivo tra questo e quello specificato nel progetto. Se il valore è "
+"``-1``, significa che non è stato impostato alcun limite massimo."
+
 #: ../../docs/server_manual/config.rst:311
 msgid "QGIS_SERVER_WMS_MAX_WIDTH"
 msgstr "QGIS_SERVER_WMS_MAX_WIDTH"
+
+#: ../../docs/server_manual/config.rst:311
+msgid ""
+"Maximum width for a WMS request. The most conservative between this and the "
+"project one is used. If the value is ``-1``, it means that there is no "
+"maximum set."
+msgstr ""
+"Larghezza massima per una richiesta WMS. Viene utilizzato il valore più "
+"restrittivo tra questo e quello specificato nel progetto. Se il valore è "
+"``-1``, significa che non è stato impostato alcun limite massimo."
 
 #: ../../docs/server_manual/config.rst:317
 msgid "QGIS_SERVER_WMS_SERVICE_URL"
@@ -794,6 +854,16 @@ msgstr ""
 #: ../../docs/server_manual/config.rst:394
 msgid "Connection to service file"
 msgstr "Connessione a file di servizio"
+
+#: ../../docs/server_manual/config.rst:396
+msgid ""
+"In order to make apache aware of the PostgreSQL service file (see the "
+":ref:`PostgreSQL Service connection file <pg-service-file>` section) you "
+"need to make your :file:`*.conf` file look like:"
+msgstr ""
+"Per far sì che Apache riconosca il file di servizio di PostgreSQL (vedere la"
+" sezione :ref:`PostgreSQL Service connection file <pg-service-file>`), devi "
+"far si che il file :file:`*.conf` abbia il seguente aspetto:"
 
 #: ../../docs/server_manual/config.rst:412
 msgid "Add fonts to your linux server"
