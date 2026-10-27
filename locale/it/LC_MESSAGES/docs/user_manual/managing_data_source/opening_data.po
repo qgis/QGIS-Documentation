@@ -5,9 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 # 
 # Translators:
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
 # Transifex Bot <>, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-13 21:12+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -76,6 +76,14 @@ msgstr ""
 "IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid e molti altri... Leggi "
 "l'elenco completo in `supported raster formats "
 "<https://gdal.org/en/latest/drivers/raster/index.html>`__."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:32
+msgid ""
+"Database formats include PostgreSQL, SQLite/SpatiaLite, Oracle, MS SQL "
+"Server, SAP HANA, MySQL..."
+msgstr ""
+"I formati Database includono PostgreSQL, SQLite/SpatiaLite, Oracle, MS SQL "
+"Server, SAP HANA, MySQL..."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:34
 msgid ""
@@ -827,6 +835,20 @@ msgstr ""
 msgid "The DB Manager"
 msgstr "Il DB Manager"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:295
+msgid ""
+"The :guilabel:`DB Manager` Plugin is another tool for integrating and "
+"managing spatial database formats supported by QGIS (PostgreSQL, SpatiaLite,"
+" GeoPackage, Oracle Spatial, MS SQL Server, Virtual layers). It can be "
+"activated from the :menuselection:`Plugins --> Manage and Install "
+"Plugins...` menu."
+msgstr ""
+"Il Plugin :guilabel:`DB Manager` è un altro strumento per integrare e "
+"gestire i formati di database spaziali supportati da QGIS (PostgreSQL, "
+"SpatiaLite, GeoPackage, Oracle Spatial, MS SQL Server, Virtual layers). Può "
+"essere attivato dal menu :menuselection:`Plugins --> Gestisci e Installa "
+"Plugins...`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:301
 msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
 msgstr "Il Plugin |dbManager| :sup:`DB Manager` offre diverse funzionalità:"
@@ -991,6 +1013,26 @@ msgstr ""
 "Premi :guilabel:`Apri` per caricare il file selezionato nella finestra di "
 "dialogo :guilabel:`Gestore delle Sorgenti Dati`."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:381
+msgid ""
+"Depending on the selected layer type, additional :guilabel:`Options` "
+"(encoding, geometry type, table filtering, file locking, data formatting "
+"...) are available for configuring. These options are described in detail in"
+" the specific GDAL `vector <https://gdal.org/en/latest/drivers/vector/>`__ "
+"or `raster <https://gdal.org/en/latest/drivers/raster>`__ driver "
+"documentation. At the top of the options, a text with hyperlink will "
+"directly lead to the documentation of the appropriate driver for the "
+"selected file format."
+msgstr ""
+"A seconda del tipo di layer selezionato, sono disponibili ulteriori "
+":guilabel:`Opzioni` (codifica, tipo di geometria, filtraggio tabella, blocco"
+" file, formattazione dati ...) per la configurazione. Queste opzioni sono "
+"descritte in dettaglio nella documentazione specifica del driver GDAL`vector"
+" <https://gdal.org/en/latest/drivers/vector/>`__ o `raster "
+"<https://gdal.org/en/latest/drivers/raster>`__ . Nella parte superiore delle"
+" opzioni, un testo con collegamento ipertestuale rimanda direttamente alla "
+"documentazione del driver appropriato per il formato di file selezionato."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:395
 msgid "Loading a Shapefile with open options"
 msgstr "Caricamento di uno Shapefile con le opzioni aperte"
@@ -1086,6 +1128,18 @@ msgstr ""
 "una connessione a un database esistente o crearne una al tipo di database "
 "selezionato. Alcuni tipi di database possibili sono ``ODBC``, ``Esri "
 "Personal Geodatabase``, ``MS SQL Server`` e ``PostgreSQL`` o ``MySQL``.` ."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:440
+msgid ""
+"Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR "
+"Database Connection` dialog whose parameters are among the ones you can find"
+" in :ref:`vector_create_stored_connection`. Pressing :guilabel:`Open` lets "
+"you select from the available tables."
+msgstr ""
+"Premendo il pulsante :guilabel:`Nuovo` si apre la finestra di dialogo "
+":guilabel:`Crea una nuova connessione al database OGR`, i cui parametri sono"
+" quelli riportati in :ref:`vector_create_stored_connection`. Premendo "
+":guilabel:`Apri` puoi selezionare una delle tabelle disponibili."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:444
 msgid ""
@@ -1540,6 +1594,21 @@ msgstr ""
 msgid "setProjection"
 msgstr "setProjection"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:621
+msgid ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial "
+"information is represented as WKT: select the :guilabel:`Geometry field` "
+"containing the WKT geometry and choose the appropriate :guilabel:`Geometry "
+"field` or let QGIS auto-detect it. Provide the appropriate "
+":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)` opzione se le informazioni "
+"spaziali sono rappresentate come WKT: selezionare il :guilabel:`Campo "
+"geometria` contenente la geometria WKT e scegliere il :guilabel:`Campo "
+"geometria` appropriato o lasciare che QGIS lo rilevi automaticamente. "
+"Fornisci l'appropriato :guilabel:`SR della geometria` usando il widget "
+"|setProjection| :sup:`Seleziona SR`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:627
 msgid ""
 "If the file contains non-spatial data, activate |radioButtonOn| "
@@ -1880,7 +1949,7 @@ msgstr ""
 "Questo farà apparire una finestra che ti permetterà o di connetterti ad un "
 "database SpatiaLite già noto a QGIS (che sceglierai dal menu a tendina) o di"
 " definire una nuova connessione ad un nuovo database. Per definire una nuova"
-" connessione, clicca su :guilabel:`Nuovo` e usa il browser dei file per "
+" connessione, clicca su :guilabel: `Nuovo` e usa il browser dei file per "
 "puntare al tuo database SpatiaLite, che è un file con estensione "
 ":file:`.sqlite`."
 
@@ -1943,6 +2012,28 @@ msgstr "Strumenti riferiti ai Database"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:813
 msgid "Creating a stored Connection"
 msgstr "Creazione della connessione"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:815
+msgid ""
+"In order to read and write tables from a database format QGIS supports you "
+"have to create a connection to that database. While :ref:`QGIS Browser Panel"
+" <browser_panel>` is the simplest and recommended way to connect to and use "
+"databases, QGIS provides other tools to connect to each of them and load "
+"their tables:"
+msgstr ""
+"Per leggere e scrivere tabelle da un formato di database supportato da QGIS "
+"devi creare una connessione a quel database. Mentre :ref:`QGIS Browser Panel"
+" <browser_panel>` è il modo più semplice e raccomandato per connettersi e "
+"utilizzare i database, QGIS fornisce altri strumenti per connettersi a "
+"ciascuno di essi e caricare le loro tabelle:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:821
+msgid ""
+"|addPostgisLayer| :menuselection:`Add PostgreSQL Layer...` or by typing "
+":kbd:`Ctrl+Shift+D`"
+msgstr ""
+"layer|addPostgisLayer| :menuselection:`Aggiungi PostgreSQL Layer...` oppure "
+"digitando :kbd:`Ctrl+Shift+D`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1758
 msgid "addPostgisLayer"
@@ -2027,6 +2118,27 @@ msgstr ""
 msgid "Connecting to PostgreSQL"
 msgstr "Connessione a PostgreSQL"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:849
+msgid ""
+"The first time you use a PostgreSQL data source, you must create a "
+"connection to a database that contains the data. Press the appropriate "
+"button as exposed above, opening the :guilabel:`PostgreSQL` tab of the "
+":guilabel:`Data Source Manager` dialog. To access the connection manager, "
+"click on the :guilabel:`New` button to display the :guilabel:`Create a New "
+"PostgreSQL Connection` dialog."
+msgstr ""
+"La prima volta che utilizzi una sorgente dati PostgreSQL, devi creare una "
+"connessione a un database che contenga i dati. Premi il pulsante appropriato"
+" come mostrato sopra, aprendo la scheda :guilabel:`PostgreSQL` della "
+"finestra di dialogo :guilabel:`Gestore delle Sorgenti Dati`. Per accedere al"
+" gestore delle connessioni, fai clic sul pulsante :guilabel:`Nuovo` per "
+"visualizzare la finestra di dialogo :guilabel:`Crea una nuova connessione "
+"PostgreSQL`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:861
+msgid "Create a New PostgreSQL Connection Dialog"
+msgstr "Finestra di dialogo Crea una nuova connessione PostgreSQL"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:863
 msgid ""
 ":guilabel:`Name`: A name for this connection. It can be the same as "
@@ -2034,6 +2146,18 @@ msgid ""
 msgstr ""
 ":guilabel:`Nome`: Un nome per questa connessione. Può essere lo stesso di "
 ":guilabel:`Database`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:864
+msgid ""
+":guilabel:`Service`: Service parameter to be used alternatively to "
+"hostname/port (and potentially database). This can be defined in "
+":file:`pg_service.conf`. Check the :ref:`PostgreSQL Service connection file "
+"<pg-service-file>` section for more details."
+msgstr ""
+":guilabel:`Servizio`: Parametro di servizio da usare in alternativa a "
+"hostname/port (e potenzialmente al database). Può essere definito in "
+":file:`pg_service.conf`.  Consulta la sezione :ref:`PostgreSQL Service "
+"connection file` per maggiori dettagli."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:867
 msgid ""
@@ -2045,6 +2169,14 @@ msgstr ""
 " host risolvibile, come quello che verrebbe usato per aprire una connessione"
 " TCP/IP o per eseguire il ping dell'host. Se il database è sullo stesso "
 "computer di QGIS, inserisci semplicemente *localhost* qui."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:870
+msgid ""
+":guilabel:`Port`: Port number the PostgreSQL database server listens on. The"
+" default port for PostgreSQL is ``5432``."
+msgstr ""
+":guilabel:`Porta`: Numero di porta su cui il server di database PostgreSQL è"
+" in ascolto. La porta predefinita per PostgreSQL è ``5432``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:872
 msgid ":guilabel:`Database`: Name of the database."
@@ -2126,6 +2258,17 @@ msgstr ""
 "tutti i membri del gruppo session_role. Maggiori informazioni in `session "
 "role <https://www.postgresql.org/docs/current/sql-set-role.html>`_."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:894
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1035
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1190
+msgid ""
+":guilabel:`Authentication`: For general details about the authentication "
+"dialog behavior, see :ref:`authentication`."
+msgstr ""
+":guilabel:`Autenticazione`: Per informazioni generali sul funzionamento "
+"della finestra di dialogo di autenticazione, consultare "
+":ref:`authentication`."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:897
 msgid ""
 "Optionally, depending on the type of database, you can activate the "
@@ -2195,6 +2338,11 @@ msgstr ""
 "|checkbox| :guilabel:`Consenti il salvataggio/caricamento dei metadati dei "
 "layer QGIS nel database` - maggiori dettagli :ref:`qui <savemetadatatodb>`"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:918
+msgid "|checkbox| :guilabel:`Also list raster overview tables`"
+msgstr ""
+"|checkbox| :guilabel:`Includi anche le tabelle di sintesi dei dati raster`"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:919
 msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
 msgstr "|checkbox| :guilabel:`Cerca solo nello schema 'public'`"
@@ -2224,6 +2372,10 @@ msgstr ""
 "Una volta impostati tutti i parametri e le opzioni, puoi testare la "
 "connessione cliccando sul pulsante :guilabel:`Prova Connessione` oppure "
 "applicarla cliccando sul pulsante :guilabel:`OK`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:932
+msgid "**PostgreSQL Service connection file**"
+msgstr "**File di connessione servizio PostgreSQL**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:934
 msgid ""
@@ -2387,6 +2539,10 @@ msgstr ""
 msgid "Connecting to Oracle Spatial"
 msgstr "Connessione a Oracle Spatial"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1020
+msgid "Create a New Oracle Connection Dialog"
+msgstr "Finestra di dialogo Crea una Nuova Connessione Oracle"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid ""
 "The spatial features in Oracle Spatial aid users in managing geographic and "
@@ -2396,6 +2552,45 @@ msgstr ""
 "Le funzionalità spaziali di Oracle Spatial aiutano gli utenti a gestire i "
 "dati geografici e di localizzazione in un tipo nativo all'interno di un "
 "database Oracle. La finestra di dialogo di connessione propone:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1026
+msgid ""
+":guilabel:`Name`: A name for this connection. It can be the same as "
+":guilabel:`Database`;"
+msgstr ""
+":guilabel:`Nome`: un nome per questa connessione. Può lo stesso di "
+":guilabel:`Database`;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1027
+msgid ":guilabel:`Database`: SID or SERVICE_NAME of the Oracle instance;"
+msgstr ":guilabel:`Database`: SID o SERVICE_NAME dell'istanza Oracle;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1028
+msgid ":guilabel:`Host`: The name of the database host;"
+msgstr ":guilabel:`Host`: Il nome del database host;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1029
+msgid ""
+":guilabel:`Port`: Port number the Oracle database server listens on. The "
+"default port is ``1521``;"
+msgstr ""
+":guilabel:`Porta`: numero di porta su cui è in ascolto il server del "
+"database Oracle. La porta predefinita è ``1521``;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1031
+msgid ""
+":guilabel:`Options`: Oracle connection specific options (e.g. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). The format of the options"
+" string is a semicolon separated list of option names or option=value pairs;"
+msgstr ""
+":guilabel:`Opzioni`: opzioni specifiche per la connessione a Oracle (ad es. "
+"OCI_ATTR_PREFETCH_ROWS, OCI_ATTR_PREFETCH_MEMORY). Il formato della stringa "
+"delle opzioni è un elenco, separato da punti e virgola, di nomi di opzioni o"
+" coppie opzione=valore;"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1034
+msgid ":guilabel:`Workspace`: Workspace to switch to;"
+msgstr ":guilabel:`Spazio di lavoro`: Spazio di lavoro a cui passare;"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1037
 msgid "Optionally, you can activate the following checkboxes:"
@@ -2873,6 +3068,20 @@ msgstr ""
 msgid "Loading a Database Layer"
 msgstr "Caricare layer da Database"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1244
+msgid ""
+"Once you have one or more connections defined to a database (see section "
+":ref:`vector_create_stored_connection`), you can load layers from it. Of "
+"course, this requires that data are available. See section "
+":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
+" a PostgreSQL database."
+msgstr ""
+"Una volta che hai definito una o più connessioni a un database (vedi la "
+"sezione :ref:`vector_create_stored_connection`), puoi caricare i layer da "
+"esso. Naturalmente, questo richiede che i dati siano disponibili. Vedi la "
+"sezione :ref:`vector_import_data_in_postgis` per una discussione "
+"sull'importazione di dati in un database PostgreSQL."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1250
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr ""
@@ -2893,6 +3102,15 @@ msgid ""
 msgstr ""
 "Scegli il nome della connessione dall'elenco a discesa e premi "
 ":guilabel:`Connetti`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1254
+msgid ""
+"The table below will be filled with your data grouped by schema, with a "
+"number of metadata information helpful for loading."
+msgstr ""
+"La tabella sottostante verrà compilata con i tuoi dati raggruppati per "
+"schema, insieme a una serie di informazioni sui metadati utili per il "
+"caricamento."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1256
 msgid ""
@@ -2927,9 +3145,67 @@ msgstr ""
 "Selezionalo cliccando su di esso. Puoi selezionare più layer tenendo premuto"
 " il tasto :kbd:`Shift` o :kbd:`Ctrl` mentre clicchi."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1265
+msgid ""
+"Layers can be selected only if they have no |warning| warning icon at the "
+"left-hand side of their first column. This may indicate an issue to detect:"
+msgstr ""
+"I layer possono essere selezionati solo se non presentano l'icona di avviso "
+"|warning| sul lato sinistro della prima colonna. Ciò potrebbe indicare la "
+"presenza di un problema da individuare:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1814
 msgid "warning"
 msgstr "warning"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1269
+msgid ""
+"features geometry type: in which case you can select the appropriate one in "
+"the drop-down list of the :guilabel:`Spatial Type` column"
+msgstr ""
+"elementi di tipo geometrico: in tal caso è possibile selezionare quello "
+"appropriato dall'elenco a discesa della colonna :guilabel:`Tipo spaziale`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1271
+msgid ""
+"layer CRS: you can enter the correct code in the :guilabel:`SRID` column"
+msgstr ""
+"SR del layer: puoi inserire il codice corretto nella colonna "
+":guilabel:`SRID`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1272
+msgid ""
+"layer's primary key, in order to unequivocally identify each feature: this "
+"can be fixed by selecting one or more attributes in the drop-down list at "
+"the corresponding :guilabel:`Feature id` column."
+msgstr ""
+"la chiave primaria del layer, al fine di identificare in modo univoco ogni "
+"elemento: è possibile risolvere il problema selezionando uno o più attributi"
+" dall'elenco a discesa nella corrispondente colonna :guilabel:`ID elemento`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1276
+msgid "**Use the first column to store \"primary keys\" for views**"
+msgstr ""
+"**Utilizza la prima colonna per memorizzare le \"chiavi primarie\" delle "
+"viste**"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1278
+msgid ""
+"Since PostgreSQL views don't support primary keys, a unique attribute or "
+"combination of attributes should always be selected. To help users to speed-"
+"up workflows, QGIS automatically selects the first attribute in the view. "
+"Therefore, users can define their views in a way that a unique column is in "
+"the first position of the view's definition. In this way, the view will be "
+"loaded with no extra interaction and the warning icon will never appear."
+msgstr ""
+"Poiché le viste di PostgreSQL non supportano le chiavi primarie, è "
+"necessario selezionare sempre un attributo univoco o una combinazione di "
+"attributi. Per aiutare gli utenti a velocizzare i flussi di lavoro, QGIS "
+"seleziona automaticamente il primo attributo della vista. Pertanto, gli "
+"utenti possono definire le proprie viste in modo tale che una colonna "
+"univoca si trovi nella prima posizione della definizione della vista. In "
+"questo modo, la vista verrà caricata senza alcuna interazione aggiuntiva e "
+"l'icona di avviso non apparirà mai."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1285
 msgid ""
@@ -2962,6 +3238,10 @@ msgstr ""
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
 msgstr ""
 "Clicca sul pulsante :guilabel:`Aggiungi` per aggiungere il layer alla mappa."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1302
+msgid "Add PostgreSQL Table(s) Dialog"
+msgstr "Finestra di dialogo Aggiungi Tabella(e) PostgreSQL"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1304
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
@@ -3223,6 +3503,12 @@ msgstr ""
 " livello di zoom 0 rappresenta il mondo intero in scala 1:500.000.000. Il "
 "livello di zoom 14 rappresenta la scala 1:35.000."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1420
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1480
+msgid "the :ref:`authentication <authentication>` configuration if necessary"
+msgstr ""
+"la configurazione :ref:`authentication <authentication>`, se necessario"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1421
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1482
 msgid "a :guilabel:`Referer`"
@@ -3309,7 +3595,7 @@ msgid ""
 "QGIS provides some default and ready-to-use XYZ Tiles services:"
 msgstr ""
 "I servizi Tasselli XYZ possono essere aggiunti tramite la scheda "
-":guilabel:`XYZ` della finestra di dialogo :guilabel:`Gestore delle Sorgenti"
+":guilabel:`XYZ` della finestra di dialogo :guilabel: `Gestore delle Sorgenti"
 " Dati` o il menu contestuale della voce :guilabel:`Tiles XYZ` nel pannello "
 ":guilabel:`Browser`. Per impostazione predefinita, QGIS fornisce alcuni "
 "servizi predefiniti e pronti all'uso di Tasselli XYZ:"
@@ -3458,7 +3744,7 @@ msgstr ""
 "sola). Nella scheda :menuselection:`Gestore delle Sorgenti Dati --> XYZ`, "
 "modifica le proprietà nel gruppo :guilabel:`Dettagli Connessione`. Il campo "
 "prima di :guilabel:`Nome` dovrebbe diventare ``Personalizzato``. Premi "
-":guilabel:`Aggiungi` per caricare il layer nel progetto. Il nome "
+":guilabel: `Aggiungi` per caricare il layer nel progetto. Il nome "
 "predefinito è ``XYZ Layer``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1540
@@ -3503,9 +3789,81 @@ msgstr ""
 msgid "Using ArcGIS REST Servers"
 msgstr "Utilizzo dei server ArcGIS REST"
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1559
+msgid ""
+"An `ArcGIS REST Server`_ can host many different types of web services "
+"(feature service, map service, image service, ...). ArcGIS REST Servers can "
+"be added via the |addAfsLayer| :guilabel:`ArcGIS REST Server` tab of the "
+":guilabel:`Data Source Manager` dialog or the contextual menu of the "
+":guilabel:`ArcGIS REST Servers` entry in the :guilabel:`Browser` panel:"
+msgstr ""
+"Un `ArcGIS REST Server` può ospitare diversi tipi di servizi web (servizio "
+"di entità, servizio di mappe, servizio di immagini, ...). È possibile "
+"aggiungere server ArcGIS REST tramite la scheda |addAfsLayer| "
+":guilabel:`ArcGIS REST Server` della finestra di dialogo :guilabel:`Gestione"
+" origini dati` oppure tramite il menu contestuale della voce "
+":guilabel:`Server ArcGIS REST` nel pannello :guilabel:`Browser`:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1742
 msgid "addAfsLayer"
 msgstr "addAfsLayer"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1566
+msgid ""
+"Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:"
+msgstr ""
+"Premere :guilabel:`Nuovo` (rispettivamente :guilabel:`Nuova connessione`) e "
+"inserire:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1568
+msgid "a :guilabel:`Name`: A name for the connection."
+msgstr "un :guilabel:`Nome`: Un nome per la connessione."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1569
+msgid "the :guilabel:`URL`: Main address of the ArcGIS REST Server."
+msgstr "l' :guilabel:`URL`: Indirizzo principale del server REST di ArcGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1570
+msgid ""
+"a :guilabel:`Prefix`: Used to specify the proxy prefix in the URL, which is "
+"necessary for some ArcGIS servers that use web proxy prefixes."
+msgstr ""
+"un :guilabel:`Prefisso`: serve a specificare il prefisso del proxy nell'URL;"
+" tale impostazione è necessaria per alcuni server ArcGIS che utilizzano "
+"prefissi di proxy web."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1572
+msgid ""
+"a :guilabel:`Community endpoint URL`: Endpoint URL for ArcGIS Online or "
+"Portal for ArcGIS, used to access content groups."
+msgstr ""
+"un :guilabel:`URL dell'endpoint della community`: URL dell'endpoint di "
+"ArcGIS Online o Portal for ArcGIS, utilizzato per accedere ai gruppi di "
+"contenuti."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1574
+msgid ""
+"a :guilabel:`Content endpoint URL`: Endpoint URL for the content service. "
+"This is used to access items in ArcGIS Online or Portal for ArcGIS."
+msgstr ""
+"un :guilabel:`URL dell'endpoint dei contenuti`: URL dell'endpoint per il "
+"servizio dei contenuti. Viene utilizzato per accedere agli elementi in "
+"ArcGIS Online o Portal for ArcGIS."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1576
+msgid "the :ref:`authentication <authentication>` credentials if necessary."
+msgstr ""
+"le credenziali di :ref:`authentication <authentication>`, se necessario."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1577
+msgid ""
+"a :guilabel:`Referer`: The referer URL to be sent in the HTTP headers when "
+"making requests to the server. This may be required by some servers for "
+"authentication purposes."
+msgstr ""
+"un :guilabel:`Referer`: l'URL di provenienza da inviare nelle intestazioni "
+"HTTP quando si effettuano richieste al server. Alcuni server potrebbero "
+"richiederlo a fini di autenticazione."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1582
 msgid ""
@@ -3533,6 +3891,22 @@ msgstr ""
 "quali può essere espanso per mostrare gli elementi del servizio appartenenti"
 " a quel gruppo."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1591
+msgid ""
+"Then press :guilabel:`OK` to validate the configuration settings. These "
+"configurations can be saved to :file:`.XML` file (:guilabel:`Save`). "
+"Likewise, they can be added from a file (:guilabel:`Load`)."
+msgstr ""
+"Quindi premi :guilabel:`OK` per confermare le impostazioni di "
+"configurazione. Queste configurazioni possono essere salvate in un file "
+":file:`.XML` (:guilabel:`Salva`). Allo stesso modo, possono essere importate"
+" da un file (:guilabel:`Carica`)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1595
+msgid "Once a connection to an ArcGIS REST Server is set, it is possible to:"
+msgstr ""
+"Una volta impostata la connessione a un ArcGIS REST Server, è possibile:"
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1597
 msgid ":guilabel:`Edit` the ArcGIS REST Server connection settings"
 msgstr ""
@@ -3541,6 +3915,120 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1599
 msgid ":guilabel:`Refresh` the connection"
 msgstr ":guilabel:`Aggiorna` la connessione"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1601
+msgid ""
+"Press :guilabel:`Connect` to request the server and display its contents. "
+"They are organized in a tree structure whose nodes depend on the "
+"connection's endpoint."
+msgstr ""
+"Premere :guilabel:`Connetti` per effettuare la richiesta al server e "
+"visualizzarne i contenuti. Questi sono organizzati in una struttura ad "
+"albero i cui nodi dipendono dall'endpoint della connessione."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1609
+msgid "Data Source Manager - ArcGIS REST Server"
+msgstr "Gestore delle Sorgenti Dati - ArcGIS REST Server"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1615
+msgid ""
+"Expand the tree to find and select the layers of interest. Their "
+":guilabel:`Coordinate Reference System` is displayed at the bottom of the "
+"dialog."
+msgstr ""
+"Espandere l'albero per individuare e selezionare i layer di interesse. Il "
+"loro :guilabel:`Sistema di riferimento delle coordinate` viene visualizzato "
+"nella parte inferiore della finestra di dialogo."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1617
+msgid ""
+"For raster-based layers, you can select the :guilabel:`Image encoding` to "
+"use among a number of image formats advertised by the target service ( e.g.,"
+" ``PNG``, ``JPG``, ``GIF``, ``SVG``, ``SVGZ``, ... )."
+msgstr ""
+"Per i layer basati su raster, puoi selezionare la :guilabel:`codifica "
+"immagine` da utilizzare tra i vari formati di immagine supportati dal "
+"servizio di destinazione (ad esempio, ``PNG``, ``JPG``, ``GIF``, ``SVG``, "
+"``SVGZ``, ...)."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1621
+msgid ""
+"To add the selected layers to the map canvas, press :guilabel:`Add` button."
+msgstr ""
+"Per aggiungere i layer selezionati all'area di lavoro della mappa, premi il "
+"pulsante :guilabel:`Aggiungi`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1623
+msgid ""
+"Because layers can sometimes load and render slowly on the client side, "
+"applying a filter to restrict the features retrieved from the service can "
+"significantly improve performance, since only the filtered features are "
+"requested from the server. This can be done by:"
+msgstr ""
+"Poiché a volte i layer possono caricarsi e visualizzarsi lentamente sul lato"
+" client, l'applicazione di un filtro per limitare gli elementi recuperate "
+"dal servizio può migliorare significativamente le prestazioni, poiché al "
+"server vengono richieste sologli elementi filtrati. Ciò può essere fatto:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1628
+msgid ""
+"checking |checkbox| :guilabel:`Only request features overlapping the current"
+" view extent`"
+msgstr ""
+"selezionando |checkbox| :guilabel:`Richiedi solo gli elementi che si "
+"sovrappongono all'estensione della vista corrente`"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1629
+msgid ""
+"for vector layers (feature service), pressing :guilabel:`Add with filter` to"
+" apply attribute-based filters to the layer with :ref:`expression_builder` "
+"functions."
+msgstr ""
+"per i layer vettoriali (feature service), premendo :guilabel:`Aggiungi con "
+"filtro` per applicare filtri basati sugli attributi al layer utilizzando le "
+"funzioni di :ref:`expression_builder`."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1632
+msgid ""
+"In the :guilabel:`Browser` panel, right-click the ArcGIS REST Server layer "
+"and select :guilabel:`Add Filtered Layer to Project` will also open the "
+"builder dialog."
+msgstr ""
+"Nel pannello :guilabel:`Browser`, facendo clic con il tasto destro del mouse"
+" sul layer ArcGIS REST Server e selezionando :guilabel:`Aggiungi layer "
+"filtrato al progetto` si aprirà anche la finestra di dialogo del "
+"costruttore."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1636
+msgid ""
+"Most of the above tools to connect and access layers on an ArcGIS REST "
+"Server are also available from the :guilabel:`Browser` panel, within the "
+"contextual menu of the target node item. Depending on the node, you can "
+"also:"
+msgstr ""
+"La maggior parte degli strumenti sopra indicati, che consentono di "
+"connettersi e accedere ai layer su un server REST di ArcGIS, è disponibile "
+"anche dal pannello :guilabel:`Browser`, all’interno del menu contestuale "
+"dell’elemento nodo di destinazione. A seconda del nodo, puoi anche:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1641
+msgid ""
+":guilabel:`View Service Info` which will open the default web browser and "
+"display information on the requested service."
+msgstr ""
+":guilabel:`Visualizza informazioni sul servizio`, che aprirà il browser web "
+"predefinito e mostrerà le informazioni relative al servizio richiesto."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1643
+msgid ""
+"View the :guilabel:`Layer Properties...` and get access to the metadata and "
+"a preview of the data provided by the service. More settings are available "
+"when the layer has been loaded into the project."
+msgstr ""
+"Visualizzare la finestra :guilabel:`Proprietà layer...` per accedere ai "
+"metadati e a un'anteprima dei dati forniti dal servizio. Ulteriori "
+"impostazioni saranno disponibili una volta che il layer sarà stato caricato "
+"nel progetto."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1652
 msgid "Using 3D tiled scene services"
@@ -3598,6 +4086,11 @@ msgstr ""
 "L'URL può essere remoto (ad esempio ``http://example.com/tileset.json``) o "
 "locale (ad esempio ``file:///path/to/tiles/tileset.json``)."
 
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1676
+msgid "The :ref:`authentication <authentication>` configuration if necessary."
+msgstr ""
+"La configurazione :ref:`authentication <authentication>`, se necessario."
+
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1683
 msgid "Tiled Scene Connection"
 msgstr "Connessione Tasselli Scena"
@@ -3646,6 +4139,10 @@ msgstr ""
 ":guilabel:`Nuova connessione`. Verrà visualizzato un elenco a discesa dei "
 "servizi cloud disponibili. Seleziona il servizio a cui desideri connetterti "
 "e compila i campi richiesti:"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1774
+msgid "cloud"
+msgstr "cloud"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:1723
 msgid "Cloud Connection Dialog"
