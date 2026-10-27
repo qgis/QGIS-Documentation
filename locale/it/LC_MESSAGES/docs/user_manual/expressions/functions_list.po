@@ -7,8 +7,8 @@
 # Translators:
 # Stefano Campus <skampus@gmail.com>, 2026
 # Harrissou Sant-anna, 2026
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Transifex Bot <>, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-07-02 00:01+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2484,6 +2484,15 @@ msgstr "Restituisce i valori più comuni in un array."
 msgid "array_majority(array, [option:='all'])"
 msgstr "array_majority(array, [option:='all'])"
 
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:102
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:220
+msgid ""
+"**option** - a string specifying the return values handling. Valid options "
+"are:"
+msgstr ""
+"**option** - una stringa che specifica la gestione dei valori risultato. Le "
+"opzioni valide sono:"
+
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:104
 msgid "all: Default, all most common values are returned in an array."
 msgstr ""
@@ -3055,6 +3064,16 @@ msgid ""
 msgstr ""
 "**delimiter** - il delimitatore di stringa usato per separare gli elementi "
 "concatenati dell'array"
+
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:20
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:68
+#: ../../docs/user_manual/expressions/expression_help/Arrays.rst:112
+msgid ""
+"**emptyvalue** - the optional string to use as replacement for empty (zero "
+"length) matches"
+msgstr ""
+"**emptyvalue** - la stringa opzionale da utilizzare in sostituzione delle "
+"corrispondenze vuote (di lunghezza zero)"
 
 #: ../../docs/user_manual/expressions/expression_help/Arrays.rst:114
 msgid "``array_to_string(array('1','2','3'))`` → '1,2,3'"
@@ -4791,9 +4810,21 @@ msgstr "``to_base64('QGIS')`` → 'UUdJUw=='"
 msgid "to_bool"
 msgstr "to_bool"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:128
+msgid ""
+"Converts a given value to a boolean. The function will return false if the "
+"value is NULL, an empty string, an empty list, or 0."
+msgstr ""
+"Converte uno specifico valore in un valore booleano. La funzione restituirà "
+"false se il valore è NULL, una stringa vuota, una lista vuota o 0."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:134
 msgid "to_bool(value)"
 msgstr "to_bool(value)"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:136
+msgid "**value** - value to convert to boolean"
+msgstr "**value** - valore da convertire a booleano"
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:138
 msgid "``to_bool('')`` → false"
@@ -4823,6 +4854,22 @@ msgstr "``to_bool(null)`` → false"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:494
 msgid "to_date"
 msgstr "to_date"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:153
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:496
+msgid ""
+"Converts a string into a date object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_ or the "
+"documentation of the format_date function for additional documentation on "
+"the format. By default the current QGIS user locale is used."
+msgstr ""
+"Converte una stringa in un oggetto data. Una stringa di formato opzionale "
+"può essere fornita per analizzare la stringa; vedi `QDate::fromString "
+"<https://doc.qt.io/qt-5.15/qdate.html#fromString-2>`_ o la documentazione "
+"della funzione format_date per ulteriore documentazione sul formato. Per "
+"impostazione predefinita viene usato il formato del paese corrente "
+"dell'utente QGIS."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:159
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:502
@@ -4884,6 +4931,25 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:6
 msgid "to_datetime"
 msgstr "to_datetime"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:8
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:8
+msgid ""
+"Converts a string into a datetime object. An optional format string can be "
+"provided to parse the string; see `QDate::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qdate.html#fromString-2>`_, "
+"`QTime::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ or the "
+"documentation of the format_date function for additional documentation on "
+"the format. By default the current QGIS user locale is used."
+msgstr ""
+"Converte una stringa in un oggetto datetime. Una stringa di formato "
+"opzionale può essere fornita per analizzare la stringa; vedi "
+"`QDate::fromString <https://doc.qt.io/qt-5.15/qdate.html#fromString-2>`_, "
+"`QTime::fromString <https://doc.qt.io/qt-5.15/qtime.html#fromString-1>`_ o "
+"la documentazione della funzione format_date per ulteriore documentazione "
+"sul formato. Per impostazione predefinita viene usato il formato del paese "
+"corrente dell'utente QGIS."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:14
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:14
@@ -5138,6 +5204,16 @@ msgstr "``to_real('123.45')`` → 123.45"
 msgid "to_string"
 msgstr "to_string"
 
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:144
+#: ../../docs/user_manual/expressions/expression_help/String.rst:8
+msgid ""
+"Converts a number to string. The conversion is not locale-aware, see "
+"'format_number' for a locale-aware alternative."
+msgstr ""
+"Converte un numero in una stringa. La conversione non tiene conto delle "
+"impostazioni locali; per un'alternativa che ne tenga conto, vedere "
+"‘format_number’."
+
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:150
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "to_string(number)"
@@ -5164,6 +5240,19 @@ msgstr "Ulteriori letture:  :ref:`expression_function_String_format_number`"
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:28
 msgid "to_time"
 msgstr "to_time"
+
+#: ../../docs/user_manual/expressions/expression_help/Conversions.rst:8
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:30
+msgid ""
+"Converts a string into a time object. An optional format string can be "
+"provided to parse the string; see `QTime::fromString "
+"<https://doc.qt.io/archives/qt-5.15/qtime.html#fromString-1>`_ for "
+"additional documentation on the format."
+msgstr ""
+"Converte una stringa in un oggetto time. Una stringa di formato opzionale "
+"può essere fornita per analizzare la stringa; vedi `QTime::fromString "
+"<https://doc.qt.io/qt-5.15/qtime.html#fromString-1>`_ per ulteriore "
+"documentazione sul formato."
 
 #: ../../docs/user_manual/expressions/expression_help/Conversions.rst:14
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:36
@@ -5208,21 +5297,70 @@ msgstr "``to_time('12:34','HH:mm','fr')`` → 12:34:00"
 msgid "CRS Functions"
 msgstr "Funzioni SR"
 
+#: ../../docs/user_manual/expressions/functions_list.rst:183
+msgid ""
+"This group contains functions to operate on coordinate reference system "
+"objects."
+msgstr ""
+"Questo gruppo contiene funzioni che consentono di operare sugli oggetti del "
+"sistema di riferimento delle coordinate."
+
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:12
 msgid "crs_from_text"
 msgstr "crs_from_text"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:14
+msgid ""
+"Creates a coordinate reference system from a string definition. The string "
+"can represent an authority ID, a WKT definition, or a PROJ string definition"
+" of the CRS."
+msgstr ""
+"Crea un sistema di riferimento delle coordinate a partire da una definizione"
+" sotto forma di stringa. La stringa può rappresentare un ID di autorità, una"
+" definizione WKT o una definizione PROJ del SR."
 
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:20
 msgid "crs_from_text(definition)"
 msgstr "crs_from_text(definition)"
 
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:22
+msgid "**definition** - CRS definition"
+msgstr "**definition** - definizione SR"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:24
+msgid ""
+"``crs_from_text('EPSG:3857')`` → crs value 'EPSG:3857 - WGS 84 / Pseudo-"
+"Mercator'"
+msgstr ""
+"``crs_from_text('EPSG:3857')`` → valore SR 'EPSG:3857 - WGS 84 / Pseudo-"
+"Mercator'"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:25
+msgid ""
+"``crs_from_text('PROJ:+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 "
+"+x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs')`` →"
+" crs value 'EPSG:3857 - WGS 84 / Pseudo-Mercator'"
+msgstr ""
+"``crs_from_text(‘PROJ:+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 "
+"+x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs +type=crs’) `` "
+"→ valore crs 'EPSG:3857 - WGS 84 / Pseudo-Mercator'"
+
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:33
 msgid "crs_to_authid"
 msgstr "crs_to_authid"
 
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:35
+msgid "Returns the authority ID string for a coordinate reference system."
+msgstr ""
+"Restituisce la stringa ID di un sistema di riferimento delle coordinate."
+
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:41
 msgid "crs_to_authid(crs)"
 msgstr "crs_to_authid(crs)"
+
+#: ../../docs/user_manual/expressions/expression_help/CRS.rst:43
+msgid "**crs** - crs value"
+msgstr "**crs** - valore crs"
 
 #: ../../docs/user_manual/expressions/expression_help/CRS.rst:45
 msgid ""
@@ -5515,6 +5653,17 @@ msgstr "``epoch(to_date('2017-01-01'))`` → 1483203600000"
 #: ../../docs/user_manual/expressions/expression_help/String.rst:28
 msgid "format_date"
 msgstr "format_date"
+
+#: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:149
+#: ../../docs/user_manual/expressions/expression_help/String.rst:30
+msgid ""
+"Formats a date type or string into a custom string format. Uses Qt date/time"
+" format strings. See `QDateTime::toString "
+"<https://doc.qt.io/archives/qt-5.15/qdatetime.html#toString>`_."
+msgstr ""
+"Formatta un tipo di data o una stringa in un formato personalizzato. "
+"Utilizza le stringhe del formato data/ora di Qt. Vedi `QDateTime::toString "
+"<https://doc.qt.io/qt-5.15/qdatetime.html#toString>`_."
 
 #: ../../docs/user_manual/expressions/expression_help/Date_and_Time.rst:155
 #: ../../docs/user_manual/expressions/expression_help/String.rst:36
@@ -6455,6 +6604,15 @@ msgstr ""
 "**path** - Un percorso di file immagine o un valore di layer di mappa. Se "
 "viene specificato il valore di un layer di mappa, verrà utilizzata la fonte "
 "del file del layer."
+
+#: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:45
+msgid ""
+"**tag** - The tag to return. If empty, a map with all possible Exif `tag "
+"values <https://exiftool.org/TagNames/EXIF.html>`_ will be returned."
+msgstr ""
+"**tag** - Il tag da restituire. Se vuoto, verrà restituita una mappa "
+"contenente tutti i possibili valori dei tag Exif "
+"`<https://exiftool.org/TagNames/EXIF.html>`."
 
 #: ../../docs/user_manual/expressions/expression_help/Files_and_Paths.rst:47
 msgid "``exif('/my/photo.jpg','Exif.Image.Orientation')`` → 0"
@@ -7458,6 +7616,26 @@ msgstr ""
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:167
 msgid "bearing(point_a, point_b, [source_crs], [ellipsoid])"
 msgstr "bearing(point_a, point_b, [source_crs], [ellipsoid])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:173
+msgid ""
+"**source_crs** - an optional string or CRS object representing the source "
+"CRS of the points. By default the current layer's CRS is used."
+msgstr ""
+"**source_crs** - una stringa facoltativa o un oggetto SR che rappresenta il "
+"SR di origine dei punti. Per impostazione predefinita, viene utilizzato il "
+"SR del layer corrente."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:174
+msgid ""
+"**ellipsoid** - an optional string representing the acronym or the authority"
+" ID (e.g., 'EPSG:7030') of the ellipsoid on which the bearing should be "
+"measured. By default the current project's ellipsoid setting is used."
+msgstr ""
+"**ellipsoid** - una stringa facoltativa che rappresenta l'acronimo o l'ID "
+"dell'ente di riferimento (ad es., 'EPSG:7030') dell'ellissoide su cui deve "
+"essere misurato il rilevamento. Per impostazione predefinita, viene "
+"utilizzata l'impostazione dell'ellissoide del progetto corrente."
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:176
 msgid ""
@@ -11286,10 +11464,90 @@ msgstr ""
 msgid "overlay_equals"
 msgstr "overlay_equals"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:8
+msgid ""
+"Returns whether the current feature's geometry is exactly equal to at least "
+"one feature's geometry from a target layer, or an array of expression-based "
+"results for the features in the target layer whose geometry is exactly equal"
+" to the current feature's geometry. Note that the order of vertices matters."
+msgstr ""
+"Restituisce se la geometria dell'elemento corrente è esattamente uguale a "
+"quella di almeno un elemento di un layer di destinazione, oppure un array di"
+" risultati basati su espressioni per gli elementi del layer di destinazione "
+"la cui geometria è esattamente uguale a quella dell'elemento corrente. Si "
+"noti che l'ordine dei vertici è rilevante."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:14
 msgid "overlay_equals(layer, [expression], [filter], [limit], [cache:=false])"
 msgstr ""
 "overlay_equals(layer, [expression], [filter], [limit], [cache:=false])"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:24
+msgid ""
+"``overlay_equals('regions')`` → TRUE if the current feature's geometry is "
+"exactly the same as the geometry of a region"
+msgstr ""
+"``overlay_equals('regions')`` → TRUE se la geometria dell'elemento corrente "
+"è esattamente uguale alla geometria di una regione"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:25
+msgid ""
+"``overlay_equals('regions', filter:= population > 10000)`` → TRUE if the "
+"current feature's geometry is exactly the same as the geometry of a region "
+"whose population is greater than 10000"
+msgstr ""
+"``overlay_equals('regions', filter:= population > 10000)`` → TRUE se la "
+"geometria dell'elemento corrente è esattamente uguale alla geometria di una "
+"regione la cui popolazione è superiore a 10000"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:26
+msgid ""
+"``overlay_equals('regions', name)`` → an array of names, for the regions "
+"exactly equal to the current feature"
+msgstr ""
+"``overlay_equals('regions', name)`` → un array di nomi, corrispondenti alle "
+"regioni esattamente uguali all'elemento corrente"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:27
+msgid ""
+"``array_to_string(overlay_equals('regions', name))`` → a string as a comma "
+"separated list of names, for the regions exactly equal to the current "
+"feature"
+msgstr ""
+"``array_to_string(overlay_equals('regions', name))`` → una stringa "
+"contenente un elenco di nomi separati da virgole, corrispondente alle "
+"regioni esattamente uguali all'elemento corrente"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:28
+msgid ""
+"``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
+" population > 10000))`` → an ordered array of names, for the regions exactly"
+" equal to the current feature and with a population greater than 10000"
+msgstr ""
+"``array_sort(overlay_equals(layer:='regions', expression:=\"name\", filter:="
+" population > 10000))`` → un array ordinato di nomi, relativo alle regioni "
+"esattamente corrispondenti all'elemento corrente e con una popolazione "
+"superiore a 10000"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:29
+msgid ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → an array of geometries (in WKT), for up to two regions exactly"
+" equal to the current feature"
+msgstr ""
+"``overlay_equals(layer:='regions', expression:= geom_to_wkt(@geometry), "
+"limit:=2)`` → un array di geometrie (in formato WKT), contenente al massimo "
+"due regioni esattamente uguali all'elemento corrente"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid ""
+"This function requires exact equality of geometries, meaning that the "
+"geometries 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 0 )' are "
+"different."
+msgstr ""
+"Questa funzione richiede che le geometrie siano esattamente uguali; ciò "
+"significa che le geometrie 'LINESTRING( 0 0, 1 1 )' and 'LINESTRING( 1 1, 0 "
+"0 )' sono diverse."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:630
 msgid ""
@@ -11716,6 +11974,15 @@ msgstr ""
 "``overlay_touches('regions', name)`` → un array di nomi, per le regioni "
 "toccate dall'elemento corrente"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:31
+msgid ""
+"``array_to_string(overlay_touches('regions', name))`` → a string as a comma "
+"separated list of names, for the regions touched by the current feature"
+msgstr ""
+"``array_to_string(overlay_touches('regions', name))`` → una stringa "
+"contenente un elenco di nomi separati da virgole, corrispondenti alle "
+"regioni toccate dall'elemento corrente"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:32
 msgid ""
 "``array_sort(overlay_touches(layer:='regions', expression:=\"name\", "
@@ -12111,10 +12378,26 @@ msgstr ""
 msgid "reverse"
 msgstr "reverse"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:50
+#: ../../docs/user_manual/expressions/expression_help/String.rst:8
+msgid "Reverses the direction of a line string or reverses a string of text."
+msgstr ""
+"Inverte la direzione di una stringa di linee o inverte una stringa di testo."
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:54
+#: ../../docs/user_manual/expressions/expression_help/String.rst:12
+msgid "Reverses the order of characters in a string."
+msgstr "Inverte l'ordine dei caratteri in una stringa."
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:60
 #: ../../docs/user_manual/expressions/expression_help/String.rst:18
 msgid "reverse(string)"
 msgstr "reverse(string)"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:62
+#: ../../docs/user_manual/expressions/expression_help/String.rst:20
+msgid "**string** - string to reverse"
+msgstr "**string** - stringa da invertire"
 
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:64
 #: ../../docs/user_manual/expressions/expression_help/String.rst:22
@@ -13023,6 +13306,15 @@ msgstr ""
 msgid "transform(geometry, source_auth_id, dest_auth_id)"
 msgstr "transform(geometry, source_auth_id, dest_auth_id)"
 
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:17
+msgid "**source_auth_id** - the source CRS definition or CRS object"
+msgstr "**source_auth_id** - la definizione del SR di origine o l'oggetto SR"
+
+#: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:18
+msgid "**dest_auth_id** - the destination CRS definition or CRS object"
+msgstr ""
+"**dest_auth_id** - la definizione del SR di destinazione o l'oggetto SR"
+
 #: ../../docs/user_manual/expressions/expression_help/GeometryGroup.rst:20
 msgid ""
 "``geom_to_wkt( transform( make_point(488995.53240249, 7104473.38600835), "
@@ -13917,7 +14209,7 @@ msgid ""
 "This function requires the :ref:`Access metadata properties <metadatamenu>` "
 "of the layers to have been filled."
 msgstr ""
-"Questa funzione richiede le :ref:`Access metadata properties`  dei layer da "
+"Questa funzione richiede le: ref:`Access metadata properties`  dei layer da "
 "compilare."
 
 #: ../../docs/user_manual/expressions/functions_list.rst:839
@@ -14123,6 +14415,17 @@ msgid ""
 msgstr ""
 "path: Percorso del file fonte dei dati del layer. Disponibile solo per i "
 "layer basati su file."
+
+#: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:77
+msgid ""
+"**translate** - whether to return translated string. Currently affects only "
+"'type' property. By default translated strings are returned. Setting this to"
+" false will disable translation, always returning English strings."
+msgstr ""
+"**translate** - indica se restituire la stringa tradotta. Attualmente "
+"riguarda solo la proprietà 'type'. Per impostazione predefinita vengono "
+"restituite le stringhe tradotte. Impostando questo parametro su false si "
+"disabilita la traduzione e vengono sempre restituite le stringhe in inglese."
 
 #: ../../docs/user_manual/expressions/expression_help/Map_Layers.rst:79
 msgid "``layer_property('streets','title')`` → 'Basemap Streets'"
@@ -17717,6 +18020,16 @@ msgstr ""
 msgid "uuid"
 msgstr "uuid"
 
+#: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:8
+msgid ""
+"Generates a Universally Unique Identifier (UUID) for each row using the Qt "
+"`QUuid::createUuid "
+"<https://doc.qt.io/archives/qt-5.15/quuid.html#createUuid>`_ method."
+msgstr ""
+"Genera un UUID (Universally Unique Identifier) per ogni riga usando il "
+"metodo Qt `QUuid::createUuid "
+"<https://doc.qt.io/qt-5.15/quuid.html#createUuid>`_."
+
 #: ../../docs/user_manual/expressions/expression_help/Record_and_Attributes.rst:14
 msgid "uuid([format:='WithBraces'])"
 msgstr "uuid([format:='WithBraces'])"
@@ -18304,9 +18617,21 @@ msgstr ""
 msgid "repeat"
 msgstr "repeat"
 
+#: ../../docs/user_manual/expressions/expression_help/String.rst:8
+msgid "Repeats a string a specified number of times."
+msgstr "Ripete una stringa un numero specificato di volte."
+
 #: ../../docs/user_manual/expressions/expression_help/String.rst:14
 msgid "repeat(string, number)"
 msgstr "repeat(string, number)"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:16
+msgid "**string** - string to repeat"
+msgstr "**string** - stringa da ripetere"
+
+#: ../../docs/user_manual/expressions/expression_help/String.rst:17
+msgid "**number** - number of times to repeat string"
+msgstr "**number** - numbe di volte di ripetizione della stringa"
 
 #: ../../docs/user_manual/expressions/expression_help/String.rst:19
 msgid "``repeat('Hello', 3)`` → 'HelloHelloHello'"
