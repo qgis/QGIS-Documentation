@@ -6,8 +6,8 @@
 # 
 # Translators:
 # Harrissou Sant-anna, 2026
-# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # Transifex Bot <>, 2026
+# Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-04 12:27+0000\n"
 "PO-Revision-Date: 2026-03-13 09:54+0000\n"
-"Last-Translator: Transifex Bot <>, 2026\n"
+"Last-Translator: Giuseppe Mattiozzi <mattiozzig@gmail.com>, 2026\n"
 "Language-Team: Italian (https://app.transifex.com/qgis/teams/6144/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -532,6 +532,23 @@ msgstr "**Ambiente**"
 msgid "System environment variables"
 msgstr "Variabili d'ambiente di sistema"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:211
+msgid ""
+"System environment variables can be viewed, and many configured, in the "
+"**Environment** group. This is useful for platforms, such as Mac, where a "
+"GUI application does not necessarily inherit the user's shell environment. "
+"It's also useful for setting and viewing environment variables for the "
+"external tool sets controlled by the Processing toolbox (e.g., GRASS), and "
+"for turning on debugging output for specific sections of the source code."
+msgstr ""
+"Le variabili d'ambiente di sistema possono essere visualizzate, e molte di "
+"esse configurate, nel gruppo **Ambiente**. Ciò risulta utile per piattaforme"
+" come Mac, dove un'applicazione GUI non eredita necessariamente l'ambiente "
+"della shell dell'utente. È utile anche per impostare e visualizzare le "
+"variabili d'ambiente relative ai set di strumenti esterni controllati dal "
+"toolbox di Processing (ad esempio, GRASS), nonché per attivare l'output di "
+"debug per sezioni specifiche del codice sorgente."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:219
 msgid ""
 "Check |checkbox| :guilabel:`Use custom variables (restart required - include"
@@ -733,6 +750,19 @@ msgstr "|radioButtonOff| :guilabel:`Usa SR predefinito per il layer`"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:296
 msgid "**Accuracy Warnings**"
 msgstr "**Avvertenze sull'Accuratezza**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:304
+msgid ""
+":guilabel:`Only show CRS accuracy warnings for inaccuracies which exceed` a "
+"given distance: occurs when you are explicitly creating or modifying a "
+"dataset and select a CRS based on a datum ensemble with lower accuracy. The "
+"default is to ``Always show`` the warning if any inaccuracy."
+msgstr ""
+":guilabel:`Mostra solo avvisi di accuratezza del SR per inaccuratezze che "
+"eccedono` una determinata distanza: si verifica quando si crea o si modifica"
+" esplicitamente un set di dati e si seleziona un SR basato su un insieme di "
+"datum con precisione inferiore. L'impostazione predefinita è quella di "
+"``Mostra sempre`` l'avviso in caso di qualsiasi inaccuratezza."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:309
 msgid ""
@@ -1226,6 +1256,21 @@ msgstr ""
 "Questa scheda fornisce modi per personalizzare il comportamento dei driver "
 "raster che supportano l'accesso in lettura e scrittura:"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:524
+msgid ""
+":guilabel:`Edit create options`: allows you to edit or add different "
+"profiles of file transformation, i.e., a set of predefined combinations of "
+"parameters (type and level of compression, BIGTIFF support, blocks size, "
+"overview, colorimetry, alpha...) to use when outputting raster files. The "
+"parameters depend on the driver."
+msgstr ""
+":guilabel:`Modifica le opzioni di creazione`: consente di modificare o "
+"aggiungere diversi profili di trasformazione dei file, ovvero un insieme di "
+"combinazioni predefinite di parametri (tipo e livello di compressione, "
+"supporto BIGTIFF, dimensione dei blocchi, panoramica, colorimetria, alfa...)"
+" da utilizzare durante la generazione dei file raster. I parametri dipendono"
+" dal driver."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:534
 msgid "Sample of create options profile (for GeoTiff)"
 msgstr "Esempio di creazione di un profilo di opzioni (per GeoTiff)"
@@ -1416,6 +1461,17 @@ msgstr ""
 "eseguiti sulla geometria originale, non su quella semplificata. A tale "
 "scopo, QGIS fornisce tre algoritmi: 'Distanza' (predefinito), 'SnapToGrid' e"
 " 'Visvalingam'."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:627
+msgid ""
+"|unchecked| :guilabel:`Simplify on provider side if possible`: the "
+"geometries are simplified by the provider (PostgreSQL, Oracle...) and unlike"
+" the local-side simplification, geometry-based calculations may be affected"
+msgstr ""
+"|non selezionato| :guilabel:`Semplifica dal lato provider se possibile`: le "
+"geometrie vengono semplificate dal provider (PostgreSQL, Oracle...) e, a "
+"differenza della semplificazione sul lato locale, i calcoli basati sulle "
+"geometrie potrebbero risentirne"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:630
 msgid ""
@@ -1748,6 +1804,16 @@ msgstr "Impostazioni Strumenti Mappa"
 msgid "Map tools settings"
 msgstr "Impostazioni strumenti Mappa"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:782
+msgid "**Measurements, Coordinate and Bearing Display**"
+msgstr "**Visualizzazione di misure, coordinate e orientamento**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:784
+msgid "This section provides ways to configure default units parameters:"
+msgstr ""
+"Questa sezione illustra come configurare i parametri relativi alle unità "
+"predefinite:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:786
 msgid "Define :guilabel:`Decimal places`"
 msgstr "Definisce le :guilabel:`Posizioni decimali`"
@@ -1770,6 +1836,32 @@ msgstr ""
 "'Radianti', 'Gon/gradianti', 'Minuti di arco', 'Secondi di arco', "
 "'Rotazioni/rivoluzioni', 'Milliradianti (definizione SI)' o 'Mil "
 "(NATO/definizione/militare)'"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:792
+msgid ""
+":guilabel:`Default distance units for new projects`: options are 'Meters', "
+"'Kilometers', 'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', "
+"'Millimeters', 'Inches', 'Degrees' or 'Map Units' (automatically matches the"
+" project’s CRS units)"
+msgstr ""
+":guilabel:`Unità di misura predefinite per i nuovi progetti`: le opzioni "
+"disponibili sono  'Metri', 'Chilometri', 'Piedi', 'Iarde', 'Miglia', 'Miglia"
+" Nautiche', 'Centimetri', 'Millimetri', 'Pollici', 'Gradi' o 'Unità Mappa' "
+"(che corrispondono automaticamente alle unità del SR del progetto)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:795
+msgid ""
+":guilabel:`Preferred area units for new projects`: options are 'Square "
+"meters', 'Square kilometers', 'Square feet', 'Square yards', 'Square miles',"
+" 'Hectares', 'Acres', 'Square nautical miles', 'Square centimeters', 'Square"
+" millimeters', 'Square inches', 'Square degrees' or 'Map Units' "
+"(automatically matches the project’s CRS units)"
+msgstr ""
+":guilabel:`Unità preferite per le aree`: le opzioni sono 'Metri Quadrati', "
+"'Chilometri Quadrati', 'Piedi Quadrati', 'Iarde Quadrati', 'Miglia "
+"Quadrate', 'Ettari', 'Acri', 'Miglia Nautiche Quadrate', 'Centimetri "
+"Quadrati', 'Millimetri Quadrati', 'Pollici Quadrati', 'Gradi Quadrati' o "
+"'Unità Mappa' (corrisponde automaticamente alle unità CRS del progetto)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:799
 msgid ""
@@ -1801,6 +1893,29 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2915
 msgid "measureBearing"
 msgstr "measureBearing"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:805
+msgid ""
+"The global options can be overridden at the project level, :ref:`here "
+"<measurements_ellipsoid>` for measurement units and :ref:`here "
+"<coordinate_and_bearing>` for coordinate and bearing formatting."
+msgstr ""
+"Le opzioni globali possono essere sovrascritte a livello di progetto: "
+":ref:`here <measurements_ellipsoid>` per le unità di misura e :ref:`here "
+"<coordinate_and_bearing>` per la formattazione delle coordinate e "
+"dell'orientamento."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:809
+msgid "**Identify tool**"
+msgstr "**Strumento di identificazione**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:811
+msgid ""
+"This group offers some options regarding the behavior of the :ref:`Identify "
+"tool <identify>`."
+msgstr ""
+"Questo gruppo offre alcune opzioni relative al funzionamento dello "
+":ref:`Identify tool <identify>`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:813
 msgid ""
@@ -1964,6 +2079,23 @@ msgstr ""
 " Funziona per ogni livello. Questo comportamento può anche essere "
 "controllato per ogni singolo campo (vedi :ref:`configure_field`)."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:884
+msgid ""
+":guilabel:`Validate geometries`. Editing complex lines and polygons with "
+"many nodes can result in very slow rendering. This is because the default "
+"validation procedures in QGIS can take a lot of time. To speed up rendering,"
+" it is possible to select GEOS geometry validation or to switch it off. GEOS"
+" geometry validation is much faster, but the disadvantage is that only the "
+"first geometry problem will be reported."
+msgstr ""
+":guilabel:`Verifica le geometrie`. La modifica di linee e poligoni complessi"
+" con molti nodi può comportare un rendering molto lento. Ciò è dovuto al "
+"fatto che le procedure di convalida predefinite in QGIS possono richiedere "
+"molto tempo. Per accelerare il rendering, è possibile selezionare la "
+"convalida delle geometrie GEOS oppure disattivarla. La convalida delle "
+"geometrie GEOS è molto più veloce, ma lo svantaggio è che verrà segnalato "
+"solo il primo problema geometrico."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:891
 msgid ""
 "Note that depending on the selection, reports of geometry errors may differ "
@@ -1998,6 +2130,14 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:901
 msgid "**Snapping**"
 msgstr "**Aggancio**"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:903
+msgid ""
+"|checkbox| :guilabel:`Enable snapping by default` activates snapping by "
+"default on all new projects"
+msgstr ""
+"|checkbox| :guilabel:`Abilita sempre l'aggancio` attiva l'aggancio per "
+"impostazione predefinita su tutti i nuovi progetti"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:905
 msgid ""
@@ -2143,6 +2283,25 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:960
 msgid "Elevation settings"
 msgstr "Impostazioni Elevazione"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:962
+msgid ""
+"In |elevationProfile| :guilabel:`Elevation` menu, you can set a specific "
+"color to use as the :guilabel:`Background color` for :ref:`elevation "
+"profiles <label_elevation_profile_view>`. This can make the chart more "
+"readable for certain datasets, e.g., point clouds with RGB coloring, where "
+"the default background color is too similar to point colors to be easily "
+"discernible. If unchanged, the elevation profiles will continue to display "
+"using the standard system background color."
+msgstr ""
+"Nel menu |elevationProfile| :guilabel:`Elevazione`, puoi impostare un colore"
+" specifico da usare come :guilabel:`Colore di sfondo` per :ref:`elevation "
+"profiles <label_elevation_profile_view>`. Questo può rendere il grafico più "
+"leggibile per alcuni set di dati, ad esempio nuvole di punti con colorazione"
+" RGB, dove il colore di sfondo predefinito è troppo simile ai colori dei "
+"punti per essere facilmente distinguibile. Se non modificato, i profili di "
+"elevazione continueranno a essere visualizzati utilizzando il colore di "
+"sfondo standard del sistema."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2887
 msgid "elevationProfile"
@@ -3118,6 +3277,27 @@ msgstr ""
 "OpenStreetMap, Leaflet, OpenLayer, Google Maps, ...). La coordinata è "
 "prevista in WGS 84 (``epsg:4326``) e/o SR della mappa."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1372
+msgid ""
+":guilabel:`Nominatim Geocoder` (``>``): geocodes using the `Nominatim "
+"<https://nominatim.org>`_ geocoding service of the OpenStreetMap Foundation."
+" Press |settings| to limit results to one or more countries using list of "
+"`country codes "
+"<https://wiki.openstreetmap.org/wiki/Nominatim/Country_Codes>`_. This helps "
+"narrow down the search to specific countries, avoiding ambiguous results "
+"from other locations. For example, entering ``DE`` or ``DE,FR`` restricts "
+"results to Germany or Germany and France, respectively."
+msgstr ""
+":guilabel:`Nominatim Geocoder` (``>``): esegue la geocodifica utilizzando il"
+" servizio di geocodifica `Nominatim <https://nominatim.org>`_ della "
+"Fondazione OpenStreetMap. Premi |settings| per limitare i risultati a uno o "
+"più paesi utilizzando l’elenco dei `country codes "
+"<https://wiki.openstreetmap.org/wiki/Nominatim/Country_Codes>`_. Ciò "
+"consente di restringere la ricerca a paesi specifici, evitando risultati "
+"ambigui provenienti da altre località. Ad esempio, inserendo ``DE`` o "
+"``DE,FR`` si limitano i risultati rispettivamente alla Germania o alla "
+"Germania e alla Francia."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1378
 msgid ""
 "Processing Algorithms (``a``): searches and opens a Processing algorithm "
@@ -3317,6 +3497,25 @@ msgstr "il widget contestuale della :guilabel:`Python console`"
 msgid "and the contextual menu of the code editor."
 msgstr "e dal menu contestuale del Editor Codice."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1481
+msgid ""
+"|unchecked| :guilabel:`Autocompletion`: Enables code completion. You can get"
+" autocompletion from the current document, the :ref:`installed API "
+"<used_api>` files or both."
+msgstr ""
+"|unchecked| :guilabel:`Autocompletamento`: Abilita il completamento del "
+"codice. Puoi ottenere il completamento automatico dal documento corrente, "
+"dai file :ref:`installed API <used_api>` o da entrambi."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1484
+msgid ""
+":guilabel:`Autocompletion threshold`: Sets the threshold for displaying the "
+"autocompletion list (in number of characters)"
+msgstr ""
+":guilabel:`Soglia di completamento automatico`: Imposta la soglia per la "
+"visualizzazione dell'elenco di completamento automatico (in numero di "
+"caratteri)"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1487
 msgid "under :guilabel:`Typing`"
 msgstr "in :guilabel:`Digitazione`"
@@ -3366,6 +3565,46 @@ msgstr ""
 "|unchecked| :guilabel:`Inserimento automatico della stringa 'import' su "
 "'from xxx'`: Abilita l'inserimento di 'import' quando si specificano le "
 "importazioni."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1505
+msgid ""
+":guilabel:`Contextual Help (F1)` provides options to control QGIS behavior "
+"when requesting help on a PyQGIS or Qt object in a Python code sample. When "
+"pressing :kbd:`F1`, QGIS will open the API page (or a search results page) "
+"matching:"
+msgstr ""
+":guilabel:`Aiuto contestuale (F1)` offre opzioni per controllare il "
+"comportamento di QGIS quando si richiede aiuto su un oggetto PyQGIS o Qt in "
+"un esempio di codice Python. Premendo :kbd:`F1`, QGIS aprirà la pagina "
+"dell'API (o una pagina dei risultati di ricerca) corrispondente a:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1509
+msgid "the selected text if any OR"
+msgstr "il testo selezionato, se presente, OPPURE"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1510
+msgid ""
+"the word at the mouse position (if |checkbox| :guilabel:`F1 works on hovered"
+" words` is enabled) OR"
+msgstr ""
+"la parola nella posizione del cursore (se la casella di controllo |checkbox|"
+" :guilabel:`F1 funziona sulle parole su cui si passa il mouse` è "
+"selezionata) OPPURE"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1511
+msgid "the word at the text cursor position"
+msgstr "la parola nella posizione del cursore nel testo"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1513
+msgid ""
+"This works for both Qt_ and :pyqgis:`PyQGIS <>` API documentation. The page "
+"is opened either in QGIS, as an :guilabel:`Embedded webview (developer "
+"tools)`, or in the :guilabel:`Default system web browser`."
+msgstr ""
+"Questo funziona sia per la documentazione dell'API Qt_ che per quella di "
+":pyqgis:`PyQGIS <>`. La pagina viene aperta in QGIS, come :guilabel:`Webview"
+" incorporata (strumenti di sviluppo)`, oppure nel :guilabel:`browser web "
+"predefinito del sistema`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1519
 msgid ""
@@ -3447,6 +3686,22 @@ msgstr ""
 "Questa azione memorizzerà un file temporaneo (nella cartella temporanea di "
 "sistema) che verrà cancellato automaticamente dopo l'esecuzione."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1543
+msgid ""
+"Under :guilabel:`APIs`, you can specify which APIs your code should rely on:"
+msgstr ""
+"Nella sezione :guilabel:`APIs`, puoi specificare su quali API deve basarsi "
+"il codice:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1545
+msgid ""
+"|checkbox| :guilabel:`Using preloaded APIs file`: You can choose if you "
+"would like to use the preloaded API files. By default, supported APIs are:"
+msgstr ""
+"|checkbox| :guilabel:`Utilizzo dei file API precaricati`: Puoi scegliere se "
+"utilizzare i file API precaricati. Per impostazione predefinita, le API "
+"supportate sono:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1548
 msgid "Python"
 msgstr "Python"
@@ -3470,6 +3725,10 @@ msgstr "osgeo-gdal-ogr"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1553
 msgid "osgeo-geos"
 msgstr "osgeo-geos"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1555
+msgid "You can also choose to add specific API files."
+msgstr "Puoi anche scegliere di aggiungere file API specifici."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1556
 msgid ""
@@ -4017,6 +4276,19 @@ msgstr ""
 "o uno esistente nella lista predefinita (Clarke 1866, Clarke 1880 IGN, New "
 "International 1967, WGS 84...)."
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1777
+msgid ""
+"the :guilabel:`Units for distance measurements` for length and perimeter, "
+"and the :guilabel:`Units for area measurements`. These settings default to "
+"their corresponding :ref:`global options <global_measure_tool>` and can be "
+"manually changed for the current project. They are used in:"
+msgstr ""
+":guilabel:`Unità di misura per le distanze` per lunghezza e perimetro, e "
+":guilabel:`Unità di misura dell'area`. Queste impostazioni assumono per "
+"impostazione predefinita i valori delle corrispondenti :ref:`global options "
+"<global_measure_tool>` e possono essere modificate manualmente per il "
+"progetto corrente. Vengono utilizzate in:"
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1783
 msgid "Attribute table field update bar"
 msgstr "Barra di aggiornamento del campo della tabella degli attributi"
@@ -4049,6 +4321,114 @@ msgstr ""
 "Per garantire che le unità di misura (per distanza e area) riflettano sempre"
 " le unità del SR del progetto corrente, selezionare :guilabel:`Unità mappa` "
 "per queste opzioni."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1796
+msgid ""
+"the :guilabel:`Scale calculation method`: when working on large map extents,"
+" especially with geographic CRS, the scale bar may not reflect actual "
+"distance measurement depending on the latitude at which the calculation is "
+"done. This setting helps you define the area you want the calculation to be "
+"taken from:"
+msgstr ""
+":guilabel:`Metodo di calcolo della scala`: quando si lavora su mappe di "
+"grandi dimensioni, in particolare con sistemi di riferimento geografici "
+"(SR), la barra di scala potrebbe non riflettere la misura effettiva della "
+"distanza a seconda della latitudine alla quale viene effettuato il calcolo. "
+"Questa impostazione consente di definire l'area nella quale si desidera che "
+"venga effettuato il calcolo:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1801
+msgid ":guilabel:`Average top, middle and bottom scales`"
+msgstr ":guilabel:`Scala media superiore, centrale e inferiore`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1802
+msgid ":guilabel:`Calculate along top of map`"
+msgstr ":guilabel:`Calcola lungo il bordo superiore della mappa`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1803
+msgid ":guilabel:`Calculate along middle of map` (the default)"
+msgstr ""
+":guilabel:`Calcola lungo il centro della mappa` (impostazione predefinita)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1804
+msgid ":guilabel:`Calculate along bottom of map`"
+msgstr ":guilabel:`Calcola lungo il bordo inferiore della mappa`"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1805
+msgid ""
+":guilabel:`Always calculate at equator`, regardless of the actual visible "
+"map extent. It can be used to provide a consistent, static scale for maps in"
+" geographic reference systems, regardless of the latitudes actually visible "
+"in the map (permitting consistent appearance of these maps when rendering "
+"relies on scale based visibility or calculations). Otherwise a project in "
+"e.g. ``EPSG:4326`` which uses scale based visibility of layers and symbols "
+"will see layers and features \"randomly\" disappear as the map is panned, "
+"even though you have not zoomed in or out of the map."
+msgstr ""
+":guilabel:`Calcola sempre all'equatore`, indipendentemente dall'estensione "
+"effettiva visibile della mappa. Può essere utilizzato per fornire una scala "
+"coerente e statica alle mappe nei sistemi di riferimento geografico, "
+"indipendentemente dalle latitudini effettivamente visibili nella mappa "
+"(garantendo un aspetto coerente di queste mappe quando il rendering si basa "
+"sulla visibilità o su calcoli legati alla scala). Altrimenti, in un "
+"progetto, ad esempio in ``EPSG:4326``, che utilizza la visibilità dei layer "
+"e dei simboli basata sulla scala, i layer e gli elementi scompariranno "
+"«casualmente» durante lo scorrimento della mappa, anche se non si è "
+"effettuato alcun ingrandimento o riduzione della mappa."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1813
+msgid ""
+"This method is only applicable when calculating scales with a degree based "
+"reference system, and while it ensures that the scale remains constant and "
+"does not change as the map is panned, it will calculate misleading scales "
+"when the map extent is not close to the equator."
+msgstr ""
+"Questo metodo è applicabile solo nel calcolo delle scale con un sistema di "
+"riferimento basato sui gradi e, sebbene garantisca che la scala rimanga "
+"costante e non cambi durante lo scorrimento della mappa, calcola scale "
+"fuorvianti quando l'estensione della mappa non è vicina all'equatore."
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1818
+msgid "Changing the scale calculation method has the following impacts:"
+msgstr ""
+"La modifica del metodo di calcolo della scala comporta le seguenti "
+"conseguenze:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1820
+msgid ""
+"New layout scale bars will default to the project's scale calculation method"
+msgstr ""
+"Le nuove barre di scala del layout utilizzeranno per impostazione "
+"predefinita il metodo di calcolo della scala del progetto"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1821
+msgid ""
+"The scale calculations for the status bar widget and map renders will be "
+"changed (including flow on impacts like the value of ``@map_scale`` "
+"variable, scale based visibility of layers and symbols)"
+msgstr ""
+"Verranno modificati i calcoli relativi alla scala per il widget della barra "
+"di stato e per la visualizzazione delle mappe (compresi gli effetti a "
+"catena, quali il valore della variabile ``@map_scale``, la visibilità dei "
+"layer e dei simboli in base alla scala)"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1824
+msgid "This also affects QGIS server map rendering"
+msgstr "Ciò influisce anche sul rendering delle mappe di QGIS Server"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1825
+msgid ""
+"Processing algorithms which render maps will respect the project's scale "
+"calculation method"
+msgstr ""
+"Gli algoritmi di elaborazione utilizzati per la generazione delle mappe "
+"rispetteranno il metodo di calcolo della scala adottato dal progetto"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1827
+msgid "Symbology sizes in map units are NOT affected by this setting."
+msgstr ""
+"Le dimensioni della simbologia espresse in unità cartografiche NON sono "
+"influenzate da questa impostazione."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1831
 msgid ""
@@ -4180,6 +4560,16 @@ msgstr "Scheda Generale della finestra di dialogo Proprietà Progetto"
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1879
 msgid "Metadata Properties"
 msgstr "Scheda Metadati"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1881
+msgid ""
+"The |editMetadata| :guilabel:`Metadata` tab provides you with options to "
+"create and edit a metadata report on your project. See :ref:`metadatamenu` "
+"for more information."
+msgstr ""
+"La scheda |editMetadata| :guilabel:`Metadati` offre diverse opzioni per "
+"creare e modificare un report dei metadati relativo al proprio progetto. Per"
+" ulteriori informazioni, consultare :ref:`metadatamenu`."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2883
 msgid "editMetadata"
@@ -4451,9 +4841,36 @@ msgstr ""
 msgid "colorSwatches"
 msgstr "colorSwatches"
 
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2015
+msgid ""
+"Additionally, an option is available for selecting an :guilabel:`ICC "
+"Profile` which allows you to |fileOpen| :guilabel:`Load` a specific ICC "
+"profile that defines the color space for your project. After you load the "
+"ICC profile, you can choose to |fileSave| :guilabel:`Save ICC Profile` to a "
+"file on disk or to |deleteSelected| :guilabel:`Remove selected ICC Profile`."
+" Once applied, QGIS will enforce the selected color model to ensure "
+"consistent color representation."
+msgstr ""
+"Inoltre, è disponibile un'opzione per selezionare un :guilabel:`Profilo ICC`"
+" che consente di |fileOpen| :guilabel:`Caricare` un profilo ICC specifico "
+"che definisce lo spazio colore per il progetto. Dopo aver caricato il "
+"profilo ICC, è possibile scegliere di |fileSave| :guilabel:`Salvare il "
+"profilo ICC` in un file su disco oppure di |deleteSelected| "
+":guilabel:`Rimuovere il profilo ICC selezionato`. Una volta applicato, QGIS "
+"imporrà il modello di colore selezionato per garantire una rappresentazione "
+"cromatica coerente."
+
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2879
 msgid "deleteSelected"
 msgstr "deleteSelected"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2022
+msgid ""
+"Note that the :guilabel:`ICC Profile` option will only be visible if QGIS is"
+" built with Qt 6.8.0 or higher."
+msgstr ""
+"Si noti che l'opzione :guilabel:`Profilo ICC` sarà visibile solo se QGIS è "
+"stato compilato con Qt 6.8.0 o versioni successive."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2025
 msgid ""
@@ -4478,6 +4895,18 @@ msgid "**Use project colors to quickly assign and update color widgets**"
 msgstr ""
 "**Utilizzare i colori del progetto per assegnare e aggiornare rapidamente i "
 "widget dei colori** "
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2042
+msgid ""
+"Project colors can be referred to using their label and the color widgets "
+"they are used in are bound to them. This means that instead of repeatedly "
+"setting the same color for many properties and, to avoid a cumbersome update"
+" you can:"
+msgstr ""
+"I colori del progetto possono essere riferiti all'uso delle loro etichette e"
+" i widget di colore in cui sono usati sono correlati alle stesse. Questo "
+"significa che invece di impostare ripetutamente lo stesso colore per molte "
+"proprietà e, per evitare un aggiornamento impegnativo, puoi:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2047
 msgid "Define the color as a project color"
@@ -4918,6 +5347,16 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2961
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2248
+msgid ""
+":guilabel:`Elevation Range`: helps you define the :guilabel:`Lower` and "
+":guilabel:`Upper` limits for the :ref:`elevation controller "
+"<elevation_controller>` in the project."
+msgstr ""
+":guilabel:`Intervallo Elevazione`: consente di definire i limiti "
+":guilabel:`Inferiore` e :guilabel:`Superiore` per il :ref:`elevation "
+"controller <elevation_controller>` nel progetto."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2251
 msgid ":guilabel:`Terrain` and elevation options are available for:"
@@ -6063,6 +6502,29 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2819
 msgid "If you want to add a custom variable in the global scope:"
 msgstr "Se vuoi aggiungere una variabile personalizzata a livello globale:"
+
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:2826
+msgid ""
+"A lot of settings can be set using the :file:`.INI` file such as WMS/WMTS, "
+"PostgreSQL connections, proxy settings, maptips, default values for "
+"algorithms parameters… For example, if you want to configure organization "
+"wide default values for some algorithms it would be handy if you could "
+"configure it in the prepared ini-file for all users. If the users then open "
+"the toolbox to execute an algorithm, the default values will be there. To "
+"set the default value, e.g., for ``GRID_SIZE`` parameter for the "
+"``native:intersection`` algorithm, you could write the following into the "
+":file:`.INI` file:"
+msgstr ""
+"Molte impostazioni possono essere configurate utilizzando il file "
+":file:`.INI`, come WMS/WMTS, connessioni PostgreSQL, impostazioni proxy, "
+"maptips, valori predefiniti per i parametri degli algoritmi... Ad esempio, "
+"se vuoi configurare i valori predefiniti a livello di organizzazione per "
+"alcuni algoritmi, sarebbe utile poterli configurare nel file ini preparato "
+"per tutti gli utenti. Se gli utenti aprono la casella degli strumenti per "
+"eseguire un algoritmo, i valori predefiniti saranno già presenti. Per "
+"impostare il valore predefinito, ad esempio per il parametro ``GRID_SIZE`` "
+"dell'algoritmo ``native:intersection``, puoi scrivere quanto segue nel file "
+":file:`.INI`:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:2839
 msgid ""
