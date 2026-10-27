@@ -1156,6 +1156,23 @@ msgstr "Valore predefinito: 0"
 msgid "Calculation parameters to use for the geometric properties. One of:"
 msgstr "Parametri di calcolo da usare per le proprietà geometriche. Uno tra:"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:62
+msgid "0 --- Cartesian Calculations in Layer's CRS"
+msgstr "0 --- Calcoli cartesiani nel SR del layer"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:63
+msgid "1 --- Cartesian Calculations in Project's CRS"
+msgstr "1 --- Calcoli cartesiani nel sistema di riferimento del progetto (SR)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:64
+msgid "2 --- Ellipsoidal Calculations"
+msgstr "2 --- Calcoli ellissoidali"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:66
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:91
+msgid "**Added geometry info**"
+msgstr "**Informazioni geometriche aggiunte**"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:92
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:200
@@ -3632,14 +3649,36 @@ msgstr ""
 msgid "**Algorithm ID**: ``native:collect``"
 msgstr "**ID Algoritmo**: ``native:collect``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1187
+msgid "Concave hull (by feature)"
+msgstr "Poligono concavo (in base all'elemento)"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1189
 msgid "``Added in 3.44``"
 msgstr "``Aggiunto nella versione 3.44``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1191
+msgid ""
+"Calculates the concave hull for each multipoint feature in an input layer. "
+"See the :ref:`qgisconcavehull` algorithm for a concave hull calculation "
+"which covers the whole layer."
+msgstr ""
+"Calcola il poligono concavo per ciascun elemento multipunto in un layer di "
+"input. Per il calcolo del poligono concavo che copre l'intero layer, "
+"consulta l'algoritmo :ref:`qgisconcavehull`."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1198
+msgid "Concave hulls by feature"
+msgstr "Poligono concavo in base all'elemento"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1201
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1285
 msgid ":ref:`qgisconvexhull`"
 msgstr ":ref:`qgisconvexhull`"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1218
+msgid "Input vector layer with multipoint features"
+msgstr "Layer vettoriale di input con elementi multipunto"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1219
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1303
@@ -3688,6 +3727,38 @@ msgstr "Predefinito: True"
 msgid "Choose whether to allow holes in the final concave hull"
 msgstr "Scegliere se permettere buchi nel poligono concavo finale"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1237
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1261
+msgid "**Concave hulls**"
+msgstr "**Poligono concavo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1264
+msgid ""
+"The output vector layer with polygons covering individual multipoint "
+"features. Area and perimeter fields are added."
+msgstr ""
+"Il layer vettoriale di output con poligoni che coprono i singoli elementi "
+"multipunto. Vengono aggiunti i campi relativi all’area e al perimetro."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1270
+msgid "**Algorithm ID**: ``native:concavehullbyfeature``"
+msgstr "**ID algoritmo**: ``native:concavehullbyfeature``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1279
+msgid "Concave hull (by layer)"
+msgstr "Poligono concavo (in base al layer)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1281
+msgid ""
+"Computes the concave hull covering all features from an input point layer. "
+"See the :ref:`qgisconcavehullbyfeature` algorithm for a concave hull "
+"calculation which covers individual features from a layer."
+msgstr ""
+"Calcola il poligono concavo che racchiude tutti gli elementi di un layer di "
+"punti in ingresso. Per il calcolo di un poligono concavo che racchiuda "
+"singoli elementi di un layer, consulta l'algoritmo "
+":ref:`qgisconcavehullbyfeature`."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1302
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1650
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1755
@@ -3717,6 +3788,13 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1352
 msgid "**Concave hull**"
 msgstr "**Poligono concavo**"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1355
+msgid ""
+"The output vector layer covering all features from an input point layer."
+msgstr ""
+"Il layer vettoriale di output che contiene tutti gli elementi di un layer di"
+" punti di input."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1360
 msgid "**Algorithm ID**: ``native:concavehull``"
@@ -5117,7 +5195,7 @@ msgstr "**Estratti**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3035
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7219
 msgid "Specify the output layer. :ref:`One of <output_parameter_widget>`:"
-msgstr "Specificare il layer in uscita. :ref:`One of 1`:"
+msgstr "Specifica il layer in uscita. :ref:`One of 1`:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2750
 msgid "The output vector layer (with M values)"
@@ -5623,6 +5701,25 @@ msgid ""
 msgstr ""
 "0 --- ``Linework``: combina tutti gli elementi in un insieme di linee con "
 "nodi e poi estrae poligoni validi da tale linework"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3315
+msgid ""
+"1 --- ``Structure``: first makes all rings valid and then merges shells and "
+"subtracts holes from shells to generate valid result. Assumes that holes and"
+" shells are correctly categorized."
+msgstr ""
+"1 --- ``Structure``: prima rende validi tutti gli elementi, poi unisce le "
+"coperture e sottrae i buchi dalle coperture per generare un risultato "
+"valido. Presuppone che i buchi e le coperture siano correttamente "
+"classificati."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3319
+msgid ""
+"Using this method requires QGIS installed with GEOS_ >= 3.10 (see "
+":menuselection:`Help --> About` menu)."
+msgstr ""
+"Per utilizzare questo metodo è necessario che QGIS sia installato con GEOS_ "
+">= 3.10 (vedere il menu :menuselection:`Aiuto --> Informazioni su`)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3322
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3345
@@ -6226,8 +6323,8 @@ msgid ""
 "``width``, ``height``, ``area`` and ``perimeter`` of the Envelope (Bounding "
 "Box)"
 msgstr ""
-"``width``, ``height``, ``area`` e ``perimeter``dell'Involucro (perimetro di "
-"delimitazione)"
+"``width``, ``height``, ``area`` e ``perimeter`` dell'Involucro (perimetro di"
+" delimitazione)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4095
 msgid ""
@@ -6479,6 +6576,14 @@ msgstr ""
 "Calcola la superficie minima del rettangolo ruotato per ogni elemento nel "
 "layer in ingresso."
 
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4500
+msgid ""
+"For singlepart point features, the output corresponds to the bounding box of"
+" the geometry."
+msgstr ""
+"Per gli elementi puntiformi costituiti da un unico elemento, l'output "
+"corrisponde al riquadro di delimitazione della geometria."
+
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4530
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4553
 msgid "**Bounding boxes**"
@@ -6682,6 +6787,14 @@ msgstr "**Fine offset**"
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4790
 msgid "``END_OFFSET``"
 msgstr "``END_OFFSET``"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4794
+msgid ""
+"Distance from the end of the input line, representing the position beyond "
+"which no point feature should be created."
+msgstr ""
+"Distanza dalla fine della linea di input, che rappresenta la posizione oltre"
+" la quale non deve essere creato alcun elemento puntiforme."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:4822
 msgid ""
@@ -8535,6 +8648,11 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7192
 msgid "Tessellated polygon (right)"
 msgstr "Poligono tassellato (destra)"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7214
+#: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7238
+msgid "**Tessellated**"
+msgstr "**Tassellato**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorgeometry.rst:7241
 msgid "Output multipolygonZ layer"
