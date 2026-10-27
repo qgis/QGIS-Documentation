@@ -179,6 +179,7 @@ information you'd like to highlight.
    band.
 #. :ref:`Contours <raster_contours>` - Generates contours on the
    fly for a source raster band.
+#. :ref:`Vector field <vector_field>` - Vector Field renderer for raster layers (arrows, streamlines, traces, wind barbs.
 
 
 .. _multiband_color:
@@ -404,6 +405,33 @@ Options:
   For a raster block 1000x500 with downscale 10, the renderer will request
   raster 100x50 from provider. Higher downscale makes contour lines
   more simplified (at the expense of losing some detail).
+
+.. _vector_field:
+
+Vector field
+............
+
+This renderer allows you to render render raster layers with :guilabel:`Arrows`, 
+:guilabel:`Streamlines`, :guilabel:`Traces` or :guilabel:`Wind Barbs`.
+
+There are two main modes for generating vectors out of raster data:
+
+* :guilabel:`Component Bands`: use two distinct bands for X and Y components of vectors.
+
+.. _figure_raster_component_bands:
+
+.. figure:: img/rasterComponentBands.png
+   :align: center
+
+   Raster Symbology - Vector Field Renderer with Component Bands
+
+* :guilabel:`Encoded Direction`: use a single band with integer encoded cardinal directions. 
+Choose the encoding of flow directions: :guilabel:`Esri`, :guilabel:`GRASS`, :guilabel:`SAGA` or :guilabel:`PCRaster`.
+
+.. _figure_raster_encoded_direction:
+
+.. figure:: img/rasterEncodedDirection.png
+   :align: center
 
 .. _minmaxvalues:
 
