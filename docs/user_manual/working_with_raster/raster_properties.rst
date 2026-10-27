@@ -411,7 +411,7 @@ Options:
 Vector field
 ............
 
-This renderer allows you to render render raster layers with :guilabel:`Arrows`, 
+This renderer allows you to render render raster layers with :guilabel:`Arrows`,
 :guilabel:`Streamlines`, :guilabel:`Traces` or :guilabel:`Wind Barbs`.
 
 There are two main modes for generating vectors out of raster data:
@@ -425,7 +425,7 @@ There are two main modes for generating vectors out of raster data:
 
    Raster Symbology - Vector Field Renderer with Component Bands
 
-* :guilabel:`Encoded Direction`: use a single band with integer encoded cardinal directions. 
+* :guilabel:`Encoded Direction`: use a single band with integer encoded cardinal directions.
 Choose the encoding of flow directions: :guilabel:`Esri`, :guilabel:`GRASS`, :guilabel:`SAGA` or :guilabel:`PCRaster`.
 
 .. _figure_raster_encoded_direction:
