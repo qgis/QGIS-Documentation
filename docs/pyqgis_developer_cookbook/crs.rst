@@ -161,5 +161,5 @@ Output:
 
 .. testoutput:: crs
 
-   Transformed point: <QgsPointXY: POINT(832713.79873844375833869 553423.98688333143945783)>
+   Transformed point: <QgsPointXY: POINT(832713.79873844387475401 553423.98688333143945783)>
    Transformed back: <QgsPointXY: POINT(18 4.99999999999999911)>
