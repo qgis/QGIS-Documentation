@@ -69,6 +69,16 @@ msgstr ""
 "Altri tipi di dati, come la copertura del suolo, i tipi di suolo, le "
 "precipitazioni e molti altri."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:20
+msgid ""
+"Raster data can be stored in several supported formats, including GeoTIFF, "
+"ERDAS Imagine, ArcInfo ASCII GRID, PostgreSQL Raster and others. See more at"
+" :ref:`opening_data`."
+msgstr ""
+"I dati raster possono essere memorizzati in diversi formati supportati, tra "
+"cui GeoTIFF, ERDAS Imagine, ArcInfo ASCII GRID, PostgreSQL Raster e altri. "
+"Per ulteriori informazioni, consulta :ref:`opening_data`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:24
 msgid ""
 "To view and set the properties for a raster layer, double click on the layer"
@@ -214,6 +224,16 @@ msgstr ":ref:`External plugins <plugins>` ([2]_) tabs"
 msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
 msgstr ""
 "Disponibile anche nel :ref:`Layer styling panel <layer_styling_panel>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:55
+msgid ""
+":ref:`External plugins <plugins>` you install can optionally add tabs to "
+"this dialog. Those are not presented in this document. Refer to their "
+"documentation."
+msgstr ""
+":ref:`External plugins <plugins>` che sinstalli possono, se vuoi, aggiungere"
+" delle schede a questa finestra di dialogo. Tali schede non sono descritte "
+"in questo documento. Fai riferimento alla relativa documentazione."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:59
 msgid "**Live update rendering**"
@@ -362,6 +382,48 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1465
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:120
+msgid ""
+"Depending on the data provider, a :guilabel:`Layer source` group indicates "
+"the path to the source of the dataset and allows for replacing the loaded "
+"layer:"
+msgstr ""
+"A seconda del fornitore dei dati, un gruppo :guilabel:`Layer sorgente` "
+"indica il percorso della fonte del set di dati e consente di sostituire il "
+"layer caricato:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:123
+msgid ""
+"When the layer is stored as file on disk, edit the path shown in the text "
+"box or press :guilabel:`...` :sup:`Browse` to select another file on the "
+"disk"
+msgstr ""
+"Quando il layer è salvato come file su disco, modifica il percorso indicato "
+"nella casella di testo oppure premi :guilabel:`...` :sup:`Sfoglia` per "
+"selezionare un altro file sul disco"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:125
+msgid ""
+"When the layer is provided by an ArcGIS MapServer service, it is possible to"
+" modify its :ref:`authentication settings <authentication>`, while keeping "
+"unchanged the details for connecting to the service."
+msgstr ""
+"Quando il layer è fornito da un servizio ArcGIS MapServer, è possibile "
+"modificare le sue :ref:`authentication settings <authentication>`, "
+"mantenendo invariati i dettagli per la connessione al servizio."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:128
+msgid ""
+"For an XYZ remote layer, it is possible to modify at the layer level any of "
+"its :ref:`connection details <xyz_tile>` (URL, authentication settings, zoom"
+" levels, resolution, ...). Modifications are applied to the layer without "
+"altering the original connection settings."
+msgstr ""
+"Per un layer remoto XYZ, è possibile modificare a livello di layer qualsiasi"
+" suo :ref:`connection details <xyz_tile>` (URL, impostazioni di "
+"autenticazione, livelli di zoom, risoluzione, ...). Le modifiche vengono "
+"applicate al layer senza alterare le impostazioni di connessione originali."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:140
 msgid "Raster Layer Properties - Source Dialog"
@@ -1455,6 +1517,25 @@ msgstr ""
 "QGIS offre la possibilità di impostare il livello di |transparency| "
 ":guilabel:`Trasparenza` di un layer raster."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:646
+msgid ""
+"Use the :guilabel:`Global opacity` slider to set to what extent the "
+"underlying layers (if any) should be visible through the current raster "
+"layer. This is very useful if you overlay raster layers (e.g., a shaded "
+"relief map overlaid by a classified raster map). This will make the look of "
+"the map more three dimensional. The opacity of the raster can be data-"
+"defined, and vary e.g. depending on the visibility of another layer, by "
+"temporal variables, on different pages of an atlas, ..."
+msgstr ""
+"Utilizza il cursore :guilabel:`Opacità globale` per impostare in che misura "
+"i layer sottostanti (se presenti) debbano essere visibili attraverso il "
+"layer raster corrente. Ciò è molto utile se sovrapponi layer raster (ad "
+"esempio, una mappa con rilievo ombreggiato sovrapposta a una mappa raster "
+"classificata). In questo modo l'aspetto della mappa risulterà più "
+"tridimensionale. L'opacità del raster può essere definita dai dati e "
+"variare, ad esempio, in base alla visibilità di un altro layer, a variabili "
+"temporali, sulle diverse pagine di un atlante, ..."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:662
 msgid "Raster Transparency"
 msgstr "Trasparenza Raster"
@@ -1584,6 +1665,18 @@ msgstr "Utilizzo delle tolleranze per raster multibanda"
 msgid "Labels Properties"
 msgstr "Proprietà etichette"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:717
+msgid ""
+"The |labelingSingle| :guilabel:`Labels` properties provides you with all the"
+" needed and appropriate capabilities to configure smart labeling on raster "
+"layers. This dialog can also be accessed from the :guilabel:`Layer Styling` "
+"panel."
+msgstr ""
+"La proprietà |labelingSingle| :guilabel:`Etichette` offre tutte le "
+"funzionalità necessarie e appropriate per configurare l'etichettatura "
+"intelligente sui layer raster. È possibile accedere a questa finestra di "
+"dialogo anche dal pannello :guilabel:`Stile layer`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:721
 msgid "At the top of the dialog, you have:"
 msgstr "Nella parte superiore della finestra di dialogo, hai:"
@@ -1644,6 +1737,63 @@ msgstr ""
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1423
 msgid "labelingNone"
 msgstr "labelingNone"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:737
+msgid ""
+"|labelingSingle| :guilabel:`Label with pixel values`: Show labels on the map"
+" using a band."
+msgstr ""
+"|labelingSingle| :guilabel:`Etichetta con Valori Pixel`: Visualizza le "
+"etichette sulla mappa utilizzando una banda."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:739
+msgid ""
+"Using the |labelingSingle| :guilabel:`Label with pixel values` option, the "
+"following dialog opens."
+msgstr ""
+"Utilizzando l'opzione |labelingSingle| :guilabel:`Etichetta con Valori "
+"Pixel`, si apre la seguente finestra di dialogo."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:748
+msgid "Raster layer labeling settings"
+msgstr "Impostazioni etichettatura layer raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:750
+msgid "At the top of the dialog:"
+msgstr "Nella parte superiore della finestra di dialogo:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:752
+msgid ""
+"A :guilabel:`Value` drop-down list allows you to select the band to take the"
+" values from"
+msgstr ""
+"L'elenco a discesa :guilabel:`Valore` consente di selezionare la banda da "
+"cui prelevare i valori"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:753
+msgid ""
+"Press :guilabel:`Customize` to configure a :ref:`proper number formatting "
+"<number_formatting>`"
+msgstr ""
+"Premi :guilabel:`Personalizza` per configurare una :ref:`proper number "
+"formatting <number_formatting>`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:754
+msgid ""
+"By default, the displayed value represents individual pixel band value. With"
+" :guilabel:`Resample over`, you can compute the  value from the neighbouring"
+" pixels (setting ``2`` means ``2*2=4`` pixels) using a statistical method "
+"set in the :guilabel:`Resample using` widget."
+msgstr ""
+"Per impostazione predefinita, il valore visualizzato rappresenta il valore "
+"della banda di un singolo pixel. Con :guilabel:`Ricampiona su`, puoi "
+"calcolare il valore a partire dai pixel adiacenti (impostando ``2`` si "
+"intendono ``2*2=4`` pixel) utilizzando un metodo statistico definito nel "
+"widget :guilabel:`Ricampiona utilizzando`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:764
+msgid "Pixels labeled using various resampling options"
+msgstr "Pixel etichettati utilizzando varie opzioni di ricampionamento"
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:766
 msgid ""
@@ -1892,6 +2042,35 @@ msgid ""
 msgstr ""
 "Seleziona l'opzione |checkbox| :guilabel:`Controllo Temporale Dinamico` e "
 "imposta se il ridisegno del layer deve avvenire:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:883
+msgid ""
+":guilabel:`Automatic`: the rendering is controlled by the underlying data "
+"provider if it supports temporal data handling. E.g. this can be used with "
+"WMS-T layers or PostgreSQL rasters."
+msgstr ""
+":guilabel:`Automatico`: la visualizzazione è gestita dal provider di dati "
+"sottostante, purché supporti la gestione dei dati temporali. Ad esempio, "
+"questa opzione può essere utilizzata con livelli WMS-T o raster PostgreSQL."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:890
+msgid ""
+":guilabel:`Fixed Date/Time`: only show the raster layer at a single, "
+"specific date/time. This avoids having to enter the same value for both the "
+"start and end of the temporal range."
+msgstr ""
+":guilabel:`Data/ora fissata`: mostra il layer raster solo in una data e ora "
+"specifiche. In questo modo si evita di dover inserire lo stesso valore sia "
+"per l'inizio che per la fine dell'intervallo temporale."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:892
+msgid ""
+":guilabel:`Fixed time range`: only show the raster layer if the animation "
+"time is within a :guilabel:`Start date` and :guilabel:`End date` range."
+msgstr ""
+":guilabel:`Intervallo di tempo fissato`: mostra il layer raster solo se il "
+"periodo dell'animazione rientra nell'intervallo compreso tra la "
+":guilabel:`Data di inizio` e la :guilabel:`Data di fine`."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:894
 msgid ""
@@ -2178,6 +2357,30 @@ msgstr ""
 "band. Ad esempio, estraendo il valore di profondità dal nome di una banda "
 "come \"Banda 001: profondità=-5500 (metri)\"."
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1029
+msgid ""
+":guilabel:`Dynamic Elevation Range Per Band`: This mode calculates elevation"
+" ranges for raster bands dynamically using QGIS expressions. It's ideal for "
+"datasets where elevation values follow a consistent pattern across bands "
+"(like equally spaced vertical layers), eliminating the need to manually "
+"assign fixed elevations. Instead of entering individual values for each "
+"band, you define expressions for the :guilabel:`Lower` and :guilabel:`Upper`"
+" elevation bounds. These expressions can use variables like ``@band``, "
+"``@band_name``, or ``@band_description`` automatically computing the "
+"elevation range based on each band's properties."
+msgstr ""
+":guilabel:`Intervallo di elevazione dinamico per banda`: questa modalità "
+"calcola dinamicamente gli intervalli di elevazione per le bande raster "
+"utilizzando le espressioni di QGIS. È ideale per i set di dati in cui i "
+"valori di elevazione seguono uno schema coerente tra le bande (come i "
+"livelli verticali equidistanti), eliminando la necessità di assegnare "
+"manualmente elevazioni fisse. Anziché inserire singoli valori per ciascuna "
+"banda, è possibile definire espressioni per i limiti di altitudine "
+":guilabel:`Inferiore` e :guilabel:`Superiore`. Queste espressioni possono "
+"utilizzare variabili come ``@band``, ``@band_name`` o ``@band_description``,"
+" calcolando automaticamente l’intervallo di altitudine in base alle "
+"proprietà di ciascuna banda."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1036
 msgid ""
 ":guilabel:`Profile Chart Appearance`: controls the rendering of the raster "
@@ -2420,6 +2623,20 @@ msgstr ""
 "impostazioni dei dati quando vengono pubblicati da :ref:`QGIS Server <QGIS-"
 "Server-manual>`. La configurazione riguarda:"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1159
+msgid ""
+":guilabel:`Description`: provides information to describe the data, such as "
+":guilabel:`Short name`, :guilabel:`Title`, :guilabel:`Abstract`, a "
+":guilabel:`Keyword list`,  and a :guilabel:`Data URL` whose "
+":guilabel:`Format` can be in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+msgstr ""
+":guilabel:`Descrizione`: fornisce informazioni per descrivere i dati, come "
+":guilabel:`Breve descrizione`, :guilabel:`Titolo`, :guilabel:`Riassunto`, "
+"una :guilabel:`Lista di parole chiave` e un :guilabel:`Url dati` il cui "
+":guilabel:`Formato` può essere in ``text/html``, ``text/plain`` or "
+"``application/pdf``."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1163
 msgid ""
 ":guilabel:`Attribution`: a :guilabel:`Title` and :guilabel:`URL` to identify"
@@ -2460,13 +2677,234 @@ msgstr ""
 msgid "QGIS Server in Raster Properties"
 msgstr "QGIS Server nelle Proprietà Raster"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1189
+msgid "Attribute Tables"
+msgstr "Tabelle Attributi"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1191
+msgid ""
+"Similar to vector layers, raster layers in QGIS can have associated Raster "
+"Attribute Tables (RATs) that store additional information about raster pixel"
+" values."
+msgstr ""
+"Analogamente ai layer vettoriali, i layer raster in QGIS possono avere "
+"associate delle tabelle di attributi raster (RAT) che contengono "
+"informazioni aggiuntive sui valori dei pixel raster."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1195
+msgid ""
+"A Raster Attribute Table links raster values (or value ranges) to "
+"descriptive attributes such as class names, pixel counts, and colors. RATs "
+"are commonly used for classified rasters, color tables, and histogram "
+"information, helping QGIS interpret how raster values should be displayed "
+"and classified."
+msgstr ""
+"Una tabella degli attributi raster (RAT) associa i valori raster (o gli "
+"intervalli di valori) ad attributi descrittivi quali nomi delle classi, "
+"numero di pixel e colori. Le RAT sono comunemente utilizzate per i raster "
+"classificati, le tabelle dei colori e le informazioni relative agli "
+"istogrammi, aiutando QGIS a interpretare come i valori raster debbano essere"
+" visualizzati e classificati."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1201
+msgid ""
+"The :guilabel:`Attribute Tables` tab allows you to view and edit raster "
+"attribute data. To access the attribute table of a raster layer, right-click"
+" the layer in the layers panel, open :guilabel:`Properties...` and select "
+":guilabel:`Attribute Tables`."
+msgstr ""
+"La scheda :guilabel:`Tabelle attributi` consente di visualizzare e "
+"modificare i dati degli attributi raster. Per accedere alla tabella "
+"attributi di un livello raster, fare clic con il tasto destro del mouse sul "
+"livello nel pannello dei livelli, aprire :guilabel:`Proprietà...` e "
+"selezionare :guilabel:`Tabelle attributi`."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1209
+msgid "Accessing the raster attribute table"
+msgstr "Accesso alla tabella degli attributi raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1211
+msgid ""
+"When opening the :guilabel:`Attribute Tables` for a raster layer that does "
+"not have an associated Raster Attribute Table, QGIS displays a notice "
+"informing that no attribute table is currently linked to the data source. In"
+" this state, the interface provides two options to define and associate a "
+"new attribute table:"
+msgstr ""
+"Quando si aprono le :guilabel:`Tabelle attributi` di un layer raster che non"
+" dispone di una tabella degli attributi raster associata, QGIS visualizza un"
+" avviso che informa che al momento nessuna tabella degli attributi è "
+"collegata alla fonte dei dati. In questa situazione, l'interfaccia offre due"
+" opzioni per definire e associare una nuova tabella degli attributi:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1216
+msgid ""
+":guilabel:`New attribute table from current symbology`: will appear if your "
+"raster layer has a classified symbology applied. Otherwise, this option is "
+"disabled. Applying classified symbology also triggers an option in the layer"
+" context menu to |createTable|:guilabel:`Create Raster Attribute Table`. "
+"Click this button and set the following options in the :guilabel:`New Raster"
+" Attribute Table` dialog."
+msgstr ""
+":guilabel:`Nuova tabella degli attributi dalla simbologia corrente`: questa "
+"opzione apparirà se al tuo layer raster è stata applicata una simbologia "
+"classificata. In caso contrario, l'opzione è disabilitata. L'applicazione di"
+" una simbologia classificata attiva anche un'opzione nel menu contestuale "
+"del layer denominata |createTable|:guilabel:`Crea tabella degli attributi "
+"raster`. Fai clic su questo pulsante e imposta le seguenti opzioni nella "
+"finestra di dialogo :guilabel:`Nuova tabella degli attributi raster`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1395
 msgid "createTable"
 msgstr "createTable"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1221
+msgid ""
+":guilabel:`Managed by the data provider`: the attribute table will be saved "
+"and managed by the data provider (if supported), overwriting any existing "
+"table for the raster band used by the current style. Depending on the data "
+"provider, the attribute table will be embedded in the main raster file or "
+"saved into a sidecar file managed by the data provider."
+msgstr ""
+":guilabel:`Gestita dal fornitore di dati`: la tabella degli attributi verrà "
+"salvata e gestita dal fornitore di dati (se supportato), sovrascrivendo "
+"qualsiasi tabella esistente relativa alla banda raster utilizzata dallo "
+"stile corrente. A seconda del fornitore di dati, la tabella degli attributi "
+"verrà incorporata nel file raster principale oppure salvata in un file "
+"sidecar gestito dal fornitore di dati."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1226
+msgid ""
+":guilabel:`Sidecar VAT.DBF file`: saves the attribute table into a sidecar "
+"VAT.DBF file. The resulting file will not be associated with any particular "
+"band."
+msgstr ""
+":guilabel:`File VAT.DBF sidecar`: salva la tabella degli attributi in un "
+"file VAT.DBF sidecar. Il file risultante non sarà associato ad alcuna banda "
+"specifica."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1234
+msgid "Create new attribute table from current symbology"
+msgstr "Creare una nuova tabella degli attributi dalla simbologia corrente"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1236
+msgid ""
+":guilabel:`Load attribute table from VAT.DBF file`: retrieves the attribute "
+"table from an external DBF file. :guilabel:`Load Raster Attribute Table` "
+"dialog will appear to let you browse and select the DBF file and associate "
+"it with the raster band. The action also can be done by right-clicking the "
+"raster layer in the layers panel and selecting |addTable|:guilabel:`Load "
+"Raster Attribute Table from VAT.DBF`. |checkbox| :guilabel:`Open the newly "
+"loaded attribute table` allows you to directly open the attribute table "
+"editor after loading the table."
+msgstr ""
+":guilabel:`Carica tabella attributi dal file VAT.DBF`: recupera la tabella "
+"attributi da un file DBF esterno. Verrà visualizzata la finestra di dialogo "
+":guilabel:`Carica tabella attributi raster`, che consente di sfogliare e "
+"selezionare il file DBF e di associarlo alla banda raster. L'operazione può "
+"essere eseguita anche facendo clic con il tasto destro del mouse sul layer "
+"raster nel pannello dei layer e selezionando |addTable|:guilabel:`Carica "
+"tabella attributi raster da VAT.DBF`. |checkbox| :guilabel:`Apri la tabella "
+"attributi appena caricata` consente di aprire direttamente l'editor della "
+"tabella attributi dopo aver caricato la tabella."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1387
 msgid "addTable"
 msgstr "addTable"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1249
+msgid "Load attribute table from VAT.DBF file"
+msgstr "Caricare la tabella degli attributi dal file VAT.DBF"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1252
+msgid "Editing raster attribute tables"
+msgstr "Modifica tabelle attributi raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1254
+msgid ""
+"When set, a raster attribute table can be accessed from the "
+":guilabel:`Attribute tables` tab of the layer properties dialog or by "
+"selecting :guilabel:`Open raster attribute table` from the layer contextual "
+"menu in :guilabel:`Layers` panel. This dialog shows a table whose rows "
+"correspond to the different pixel values or value ranges classified in a "
+"given band of the raster layer. Depending on the type of classification, a "
+"row is described by:"
+msgstr ""
+"Una volta impostata, è possibile accedere alla tabella degli attributi di un"
+" raster dalla scheda :guilabel:`Tabelle Attributi` della finestra di dialogo"
+" delle proprietà del layer oppure selezionando :guilabel:`Apri tabella "
+"attributi raster` dal menu contestuale del layer nel pannello "
+":guilabel:`Layer`. Questa finestra di dialogo mostra una tabella le cui "
+"righe corrispondono ai diversi valori dei pixel o agli intervalli di valori "
+"classificati in una determinata banda del layer raster. A seconda del tipo "
+"di classificazione, una riga è descritta da:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1261
+msgid ""
+"for an exact values classification (e.g., paletted/unique values): the band "
+"name and the applied :guilabel:`Color`. Additional fields of the "
+":guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` and :guilabel:`Opacity`"
+" of the color are displayed."
+msgstr ""
+"per una classificazione basata sui valori esatti (ad esempio, valori "
+"raggruppati in palette/valori unici): il nome della banda e il "
+":guilabel:`Colore` applicato. Vengono visualizzati i campi aggiuntivi "
+"relativi a :guilabel:`Rosso`, :guilabel:`Verde`, :guilabel:`Blu` e "
+":guilabel:`Opacità` del colore."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1264
+msgid ""
+"for range values classification (e.g., singleband pseudocolor): the range of"
+" values defined by their :guilabel:`Min`,  :guilabel:`Max`, the associated "
+"label (:guilabel:`Class`) and color ramp interpolated over the values "
+"(:guilabel:`Color`). Additional fields of the minimum and maximum of  "
+":guilabel:`Red`, :guilabel:`Green`, :guilabel:`Blue` and :guilabel:`Opacity`"
+" of the color ramp are displayed."
+msgstr ""
+"per classificazione di intervalli di valori (ad es., pseudocolore a banda "
+"singola): l'intervallo di valori definito dai valori :guilabel:`Min`, "
+":guilabel:`Max`, dall'etichetta associata (:guilabel:`Classe`) e dalla scala"
+" cromatica interpolata sui valori (:guilabel:`Colore`). Vengono visualizzati"
+" campi aggiuntivi relativi al valore minimo e massimo di :guilabel:`Rosso`, "
+":guilabel:`Verde`, :guilabel:`Blu` e :guilabel:`Opacità` della scala "
+"cromatica."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1270
+msgid ""
+"You can also customize the raster attribute table by adding new fields for "
+"classification and group different value ranges accordingly, modifying value"
+" ranges and their associated colors or labels, adding new rows, ... The new "
+"attribute table can be used to update the current layer symbology."
+msgstr ""
+"Puoi anche personalizzare la tabella degli attributi raster aggiungendo "
+"nuovi campi per la classificazione e raggruppando di conseguenza i diversi "
+"intervalli di valori, modificando gli intervalli di valori e i colori o le "
+"etichette ad essi associati, aggiungendo nuove righe, ... La nuova tabella "
+"degli attributi può essere utilizzata per aggiornare la simbologia del layer"
+" corrente."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1280
+msgid "Raster Attribute Table"
+msgstr "Tabella Attributi Raster"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1282
+msgid ""
+"At the top of the dialog, a set of tools allows to edit and save changes to "
+"the attribute table:"
+msgstr ""
+"Nella parte superiore della finestra di dialogo, una serie di strumenti "
+"consente di modificare e salvare le modifiche apportate alla tabella degli "
+"attributi:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1284
+msgid ""
+"|editTable| :sup:`Edit Attribute Table` turns the table into edit mode. If "
+"no specific row or field is selected, only the |newAttribute| :sup:`Add "
+"Column…` option is available."
+msgstr ""
+"|editTable| :sup:`Modifica tabella attributi` attiva la modalità di modifica"
+" della tabella. Se non è selezionata alcuna riga o campo specifico, è "
+"disponibile solo l'opzione |newAttribute| :sup:`Aggiungi colonna…`."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1403
 msgid "editTable"
@@ -2476,21 +2914,189 @@ msgstr "editTable"
 msgid "newAttribute"
 msgstr "newAttribute"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1286
+msgid ""
+"|newAttribute| :sup:`Add Column...` opens the :guilabel:`Add Column` dialog "
+"to add a new column to the raster attribute table. The dialog lets you "
+"define:"
+msgstr ""
+"|newAttribute| :sup:`Aggiungi colonna...` apre la finestra di dialogo "
+":guilabel:`Aggiungi colonna` per aggiungere una nuova colonna alla tabella "
+"degli attributi del raster. La finestra di dialogo ti consente di definire:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1289
+msgid ":guilabel:`Column Type`, which can be:"
+msgstr ":guilabel:`Tipo di colonna`, che può essere:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1291
+msgid "|radioButtonOff| :guilabel:`Standard column`"
+msgstr "|radioButtonOff| :guilabel:`Colonna standard`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1292
+msgid "|radioButtonOff| :guilabel:`Color RGBA`"
+msgstr "|radioButtonOff| :guilabel:`Colore RGBA`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1293
+msgid ""
+"|radioButtonOff| :guilabel:`Color ramp (RGBA minimum and RGBA maximum)`"
+msgstr ""
+"|radioButtonOff| :guilabel:`Scala di colori (RGBA minimo e RGBA massimo)`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1295
+msgid ":guilabel:`Column Definition`, including:"
+msgstr ":guilabel:`Definizione colonna`, tra cui:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1297
+msgid ":guilabel:`Name` of the column (mandatory)"
+msgstr ":guilabel:`Nome` della colonna (obbligatorio)"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1298
+msgid ":guilabel:`Usage`, which can be:"
+msgstr ":guilabel:`Uso`, che può essere:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1300
+msgid ""
+":guilabel:`Pixel Count`: stores the number of pixels belonging to a given "
+"value or value range."
+msgstr ""
+":guilabel:`Numero di pixel`: memorizza il numero di pixel corrispondenti a "
+"un determinato valore o intervallo di valori."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1301
+msgid ""
+":guilabel:`Generic`: general-purpose column with no predefined meaning."
+msgstr ""
+":guilabel:`Generico`: colonna di uso generale senza un significato "
+"predefinito."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1302
+msgid ""
+":guilabel:`Name`: stores the class name or label associated with a raster "
+"value or range."
+msgstr ""
+":guilabel:`Nome`: memorizza il nome della classe o l'etichetta associata a "
+"un valore o a un intervallo raster."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1304
+msgid ":guilabel:`Data type`, which can be:"
+msgstr ":guilabel:`Tipologia dato`, che può essere:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1306
+msgid ":guilabel:`String`"
+msgstr ":guilabel:`String`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1307
+msgid ":guilabel:`Integer`"
+msgstr ":guilabel:`Integer`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1308
+msgid ":guilabel:`Long Integer`"
+msgstr ":guilabel:`Long Integer`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1309
+msgid ":guilabel:`Double`"
+msgstr ":guilabel:`Double`"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1311
+msgid ""
+":guilabel:`Insertion point`, defining whether the new column is inserted "
+"|radioButtonOff| :guilabel:`Before` or |radioButtonOff| :guilabel:`After` a "
+"selected existing column."
+msgstr ""
+":guilabel:`Punto di inserimento`, che consente di specificare se la nuova "
+"colonna deve essere inserita |radioButtonOff| :guilabel:`prima` o "
+"|radioButtonOff| :guilabel:`dopo` una colonna esistente selezionata."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1319
+msgid "Add Column dialog"
+msgstr "Finestra di dialogo Aggiungi Colonna"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1321
+msgid ""
+"|newTableRow|:guilabel:`Add Row...` opens the :guilabel:`Add Row` dialog to "
+"add a new row to the raster attribute table. Choose the :guilabel:`Insertion"
+" point` as |radioButtonOff|:guilabel:`Before current row` or "
+"|radioButtonOff|:guilabel:`After current row`."
+msgstr ""
+"|newTableRow|:guilabel:`Aggiungi riga...` apre la finestra di dialogo "
+":guilabel:`Aggiungi riga` per aggiungere una nuova riga alla tabella degli "
+"attributi del raster. Scegliere il :guilabel:`Punto di inserimento` tra "
+"|radioButtonOff|:guilabel:`Prima della riga corrente` e "
+"|radioButtonOff|:guilabel:`Dopo la riga corrente`."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1443
 msgid "newTableRow"
 msgstr "newTableRow"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1325
+msgid ""
+"|removeSelectedFeature|:sup:`Remove Row` removes the selected row from the "
+"raster attribute table."
+msgstr ""
+"|removeSelectedFeature|:sup:`Rimuovi riga` rimuove la riga selezionata dalla"
+" tabella degli attributi del raster."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1457
 msgid "removeSelectedFeature"
 msgstr "removeSelectedFeature"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1326
+msgid ""
+"|deleteAttribute|:sup:`Remove Column` removes the selected column from the "
+"raster attribute table."
+msgstr ""
+"|deleteAttribute|:sup:`Rimuovi colonna` rimuove la colonna selezionata dalla"
+" tabella degli attributi del raster."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1397
 msgid "deleteAttribute"
 msgstr "deleteAttribute"
 
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1327
+msgid ""
+"|saveAllEdits|:sup:`Save Changes` saves any modifications made to the raster"
+" attribute table."
+msgstr ""
+"|saveAllEdits|:sup:`Salva modifiche` salva tutte le modifiche apportate alla"
+" tabella degli attributi raster."
+
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1463
 msgid "saveAllEdits"
 msgstr "saveAllEdits"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1329
+msgid ""
+"The next row provides options for controlling the displayed information in "
+"the table:"
+msgstr ""
+"La riga successiva offre alcune opzioni per gestire le informazioni "
+"visualizzate nella tabella:"
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1331
+msgid ""
+":guilabel:`Raster band`: allows selecting which raster band the attribute "
+"table applies to. Raster layers may contain multiple bands (e.g., "
+"multispectral data). Each band can have its own Raster Attribute Table."
+msgstr ""
+":guilabel:`Banda raster`: consente di selezionare a quale banda raster si "
+"applica la tabella degli attributi. I layer raster possono contenere più "
+"bande (ad esempio, dati multispettrali). Ogni banda può avere una propria "
+"tabella degli attributi raster."
+
+#: ../../docs/user_manual/working_with_raster/raster_properties.rst:1334
+msgid ""
+":guilabel:`Classification`: allows selecting the fields used for classifying"
+" the raster layer. Keep in mind that the existing symbology for the raster "
+"will be replaced by a new symbology from the attribute table and any unsaved"
+" changes to the current symbology will be lost. Make sure to save your "
+"symbology style if needed before applying a classification."
+msgstr ""
+":guilabel:`Classificazione`: consente di selezionare i campi utilizzati per "
+"classificare il layer raster. Si tenga presente che la simbologia esistente "
+"per il raster verrà sostituita da una nuova simbologia ricavata dalla "
+"tabella degli attributi e che eventuali modifiche non salvate alla "
+"simbologia corrente andranno perse. Se necessario, assicurarsi di salvare lo"
+" stile di simbologia prima di applicare una classificazione."
 
 #: ../../docs/user_manual/working_with_raster/raster_properties.rst:1342
 msgid "Identify raster cells"
