@@ -1960,6 +1960,43 @@ msgstr "**Metodo**"
 msgid "``METHOD``"
 msgstr "``METHOD``"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1011
+msgid "Initial centers selection method. Possible values are:"
+msgstr "Metodo di selezione dei centri iniziali. I valori possibili sono:"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1014
+msgid ""
+"0 --- Farthest points: the initial centers are selected as the farthest "
+"points from each other."
+msgstr ""
+"0 --- Punti più lontani: i centri iniziali vengono selezionati come i punti "
+"più lontani l'uno dall'altro."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1015
+msgid ""
+"1 --- K-means++: The first center is selected uniformly at random from the "
+"set of input features. Subsequent centers are chosen based on a weighted "
+"probability distribution that favors features farther from existing centers."
+" This ensures that the initial centers are well-dispersed, reducing the "
+"likelihood of poor clustering and improving the algorithm's performance."
+msgstr ""
+"1 --- K-means++: il primo centro viene selezionato in modo uniforme e "
+"casuale dall'insieme degli elementi di input. I centri successivi vengono "
+"scelti sulla base di una distribuzione di probabilità ponderata che "
+"favorisce gli elementi più lontani dai centri esistenti. Ciò garantisce che "
+"i centri iniziali siano ben distribuiti, riducendo la probabilità di un "
+"clustering scadente e migliorando le prestazioni dell'algoritmo."
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1020
+msgid ""
+"*References: Arthur, David & Vassilvitskii, Sergei. (2007). K-Means++: The "
+"Advantages of Careful Seeding. Proc. of the Annu. ACM-SIAM Symp. on Discrete"
+" Algorithms. 8.*"
+msgstr ""
+"*Bibliografia: Arthur, David e Vassilvitskii, Sergei. (2007). K-Means++: i "
+"vantaggi di una selezione accurata dei punti iniziali. Proc. of the Annu. "
+"ACM-SIAM Symp. sugli algoritmi discreti. 8.*"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1025
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1075
 msgid "[vector: same as input]"
@@ -2206,6 +2243,23 @@ msgstr "Indice del vicino più prossimo"
 msgid "Number of points"
 msgstr "Numero di punti"
 
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1282
+msgid ""
+"Z-Score: Comparing the Z-Score with the normal distribution tells you how "
+"your data are distributed. A low Z-Score means that the data are likely to "
+"be the result of a spatially random process, while a high Z-Score means that"
+" your data A Z-Score close to 0 means that the data are likely to be the "
+"result of a spatially random process, while a Z-Score far from 0 means that "
+"the data are unlikely to be the result of a spatially random process."
+msgstr ""
+"Punteggio Z: il confronto del punteggio Z con la distribuzione normale "
+"indica come sono distribuiti i dati. Uno Z-Score basso indica che i dati "
+"sono probabilmente il risultato di un processo casuale spaziale, mentre uno "
+"Z-Score elevato indica che i dati Uno Z-Score vicino a 0 indica che i dati "
+"sono probabilmente il risultato di un processo casuale spaziale, mentre uno "
+"Z-Score lontano da 0 indica che è improbabile che i dati siano il risultato "
+"di un processo casuale spaziale"
+
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1290
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1390
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1890
@@ -2352,6 +2406,15 @@ msgstr "``GRID_SIZE``"
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1445
 msgid "Default: Not set"
 msgstr "Valote predefinito: non impostato"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1446
+msgid ""
+"If provided, the input geometries are snapped to a grid of the given size, "
+"and the result vertices are computed on that same grid."
+msgstr ""
+"Se fornite, le geometrie di input vengono agganciate a una griglia delle "
+"dimensioni specificate e i vertici risultanti vengono calcolati su quella "
+"stessa griglia."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectoranalysis.rst:1464
 msgid ""
