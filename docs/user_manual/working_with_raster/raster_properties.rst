@@ -501,8 +501,8 @@ There are two main modes for generating vectors out of raster data:
   .. figure:: img/rasterFlowDirectionEncoding.png
      :align: center
 
-     Flow direction encodings used by Esri, PCRaster, SAGA and GRASS. 
-     Each number is the value a cell gets when water flows to that neighbour. 
+     Flow direction encodings used by Esri, PCRaster, SAGA and GRASS.
+     Each number is the value a cell gets when water flows to that neighbour.
      The centre cell shows the value for cells without a downstream neighbour.
 
   .. _figure_raster_encoded_direction:
