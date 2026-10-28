@@ -238,6 +238,25 @@ msgstr ""
 "QGIS aggiungerà il nuovo layer alla legenda, e potrai modificarlo come "
 "descritto nella sezione :ref:`sec_edit_existing_layer`."
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:88
+msgid ""
+"By default, when creating a GeoPackage layer, QGIS generates a "
+":guilabel:`Feature id column` called ``fid`` which acts as the primary key "
+"of the layer. The name can be changed. The geometry field, if available, is "
+"named ``geometry``, and you can choose to :guilabel:`Create a spatial index`"
+" on it. These options can be found under the :guilabel:`Advanced Options` "
+"together with the :guilabel:`Layer identifier` (short human readable name of"
+" the layer) and the :guilabel:`Layer description`."
+msgstr ""
+"Per impostazione predefinita, quando si crea un layer GeoPackage, QGIS "
+"genera una colonna :guilabel:`Colonna id elemento` chiamata ``fid`` che "
+"agisce come chiave primaria del layer. Il nome può essere cambiato. Il campo"
+" geometria, se disponibile, è chiamato ``geomety``, e puoi scegliere "
+":guilabel:`Crea un indice spaziale` su di esso. Queste opzioni possono "
+"essere trovate sotto :guilabel:`Opzioni Avanzate` insieme al "
+":guilabel:`Identificatore Layer` (nome breve e leggibile del layer) e alla "
+":guilabel:`Descrizione Layer`."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:97
 msgid ""
 "Further management of GeoPackage layers can be done with the :ref:`DB "
@@ -493,6 +512,16 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:238
 msgid "Check |checkbox| :guilabel:`Initialize Mesh using`"
 msgstr "Seleziona |checkbox| :guilabel:`Inizializza la Maglia Usando`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:239
+msgid ""
+"and select either a :guilabel:`Mesh from the current project` or "
+":guilabel:`Mesh from a file`. Information on the selected mesh file are "
+"displayed for checkup."
+msgstr ""
+"e seleziona una :guilabel:`Mesh dal progetto corrente` o :guilabel:`Mesh da "
+"un file`. Le informazioni sul file di mesh selezionato vengono visualizzate "
+"per il controllo."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:243
 msgid ""
@@ -773,6 +802,16 @@ msgid ""
 msgstr ""
 ":menuselection:`Esporta --> Salva Elementi Come...` o "
 ":menuselection:`Esporta --> Salva Elementi Selezionati Come...` per vettori."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:358
+msgid ""
+"Drag and drop the layer from the layer tree to the PostgreSQL entry in the "
+":guilabel:`Browser Panel`. Note that you must have a PostgreSQL connection "
+"in the :guilabel:`Browser Panel`."
+msgstr ""
+"Trascina e rilascia il layer dall'albero dei layer alla voce PostgreSQL nel "
+":guilabel:`Pannello Browser`. Nota che devi avere una connessione PostgreSQL"
+" nel :guilabel:`Pannello Browser`."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:363
 msgid "Common parameters"
@@ -1456,13 +1495,101 @@ msgstr ""
 "condizione che siano definiti utilizzando il formato stringa well-known text"
 " (WKT)."
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:631
+msgid "Creating SQL Query Layers"
+msgstr "Creazione di Layer tramite SQL Query"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:633
+msgid ""
+"Beside loading an entire layer in a project or creating new layers from "
+"scratch or pasted features, you can also load layers generated on the fly "
+"from other layer(s). They are the result of a more or less advanced filter "
+"using SQL language, applied to stored layers regardless of their data "
+"provider or their availability in the active project. This means that "
+"temporary layers are not compatible with this feature. Depending on the "
+"provider, one or more layers can be used to write the query. The generated "
+"layer remains dependent on the layer(s) involved in the query and is loaded "
+"with the |indicatorFilter| :sup:`Filter` icon next to it."
+msgstr ""
+"Oltre a caricare un intero layer in un progetto o a creare nuovi layer da "
+"zero o incollando elementi, è anche possibile caricare layer generati al "
+"volo da uno o più layer esistenti. Questi sono il risultato di un filtro più"
+" o meno avanzato che utilizza il linguaggio SQL, applicato ai layer "
+"memorizzati indipendentemente dal loro fornitore di dati o dalla loro "
+"disponibilità nel progetto attivo. Ciò significa che i layer temporanei non "
+"sono compatibili con questa funzionalità. A seconda del fornitore, è "
+"possibile utilizzare uno o più layer per scrivere la query. Il livello "
+"generato rimane dipendente dai layer coinvolti nella query e viene caricato "
+"con l’icona |indicatorFilter| :sup:`Filtro` accanto ad esso."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1009
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:643
+msgid "This feature is accessible:"
+msgstr "È possibile accedere a questa funzione:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:645
+msgid ""
+"From the :guilabel:`Browser` panel, right-click on a supported data (plain "
+"layer, database connection, schema or table) and select `Execute SQL...` "
+"entry in the contextual menu."
+msgstr ""
+"Dal pannello :guilabel:`Browser`, fai clic con il tasto destro del mouse su "
+"un dato supportato (layer semplice, connessione al database, schema o "
+"tabella) e seleziona la voce `Esegui SQL...` dal menu contestuale."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:648
+msgid ""
+"From the :guilabel:`Layers` panel, select a loaded layer, right-click and "
+"select `Execute SQL...` entry in the contextual menu."
+msgstr ""
+"Dal pannello :guilabel:`Layer`, seleziona un layer caricato, fai clic con il"
+" tasto destro del mouse e seleziona la voce `Esegui SQL...` dal menu "
+"contestuale."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:651
+msgid ""
+"This opens a window with a central text box widget where you can write SQL "
+"queries."
+msgstr ""
+"Si apre una finestra con un widget di casella di testo al centro, in cui "
+"puoi scrivere query SQL."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:658
+msgid "Executing SQL queries in the Execute SQL window"
+msgstr "Esecuzione di query SQL nella finestra Esegui SQL"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:662
+msgid ""
+"At the top of the dialog, a toolbar provides a set of tools to create, store"
+" and manipulate your queries:"
+msgstr ""
+"Nella parte superiore della finestra di dialogo, una barra degli strumenti "
+"mette a disposizione una serie di strumenti per creare, archiviare e "
+"manipolare le query:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:665
+msgid ""
+"|fileOpen| :sup:`Open Queries...`: fills the text editor widget with "
+"contents from an existing :file:`.sql` file"
+msgstr ""
+"|fileOpen| :sup:`Apri Interrogazione`: popola il widget dell'editor di testo"
+" con il contenuto di un file :file:`.sql` esistente"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1003
 msgid "fileOpen"
 msgstr "fileOpen"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:667
+msgid ""
+"|fileSave| :sup:`Save Queries...` and |fileSaveAs| :sup:`Save Queries as...`"
+" help you store the written query to a :file:`.sql` file"
+msgstr ""
+"|fileSave| :sup:`Salva Interrogazione` e |fileSaveAs| :sup:`Salva "
+"Interrogazione co Nome` consentono di salvare la query scritta in un file "
+":file:`.sql`"
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1005
 msgid "fileSave"
@@ -1471,6 +1598,17 @@ msgstr "fileSave"
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1007
 msgid "fileSaveAs"
 msgstr "fileSaveAs"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:669
+msgid ""
+"Statements of the query can be adjusted using the |editCut| :sup:`Cut`, "
+"|editCopy| :sup:`Copy` and |editPaste| :sup:`Paste` buttons. Likewise, you "
+"can |undo| :sup:`Undo` or |redo| :sup:`Redo` your changes."
+msgstr ""
+"È possibile modificare le istruzioni della query utilizzando i pulsanti "
+"|editCut| :sup:`Taglia`, |editCopy| :sup:`Copia` e |editPaste| "
+":sup:`Incolla`. Allo stesso modo, è possibile |undo| :sup:`Annulla` o |redo|"
+" :sup:`Ripeti` le modifiche apportate."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:999
 msgid "editCut"
@@ -1492,21 +1630,309 @@ msgstr "undo"
 msgid "redo"
 msgstr "redo"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:672
+msgid ""
+"The |search| :sup:`Find & Replace` enables, at the bottom of the dialog, a "
+"widget allowing to look for a particular string in your SQL code. The search"
+" can be case sensitive, affect partial or whole word, rely on a regular "
+"expression. It is then possible to navigate through the found strings, "
+"replacing them one by one or all in a row."
+msgstr ""
+"La funzione |search| :sup:`Find & Replace` attiva, nella parte inferiore "
+"della finestra di dialogo, un widget che consente di cercare una stringa "
+"specifica nel codice SQL. La ricerca può tenere conto delle maiuscole e "
+"delle minuscole, riguardare parole parziali o intere e basarsi su "
+"un'espressione regolare. È quindi possibile scorrere le stringhe trovate, "
+"sostituendole una alla volta o tutte in una volta."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1029
 msgid "search"
 msgstr "search"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:678
+msgid "Use |clearConsole| :sup:`Clear SQL Editor` to wipe the text editor."
+msgstr ""
+"Utilizza |clearConsole| :sup:`Pulisci` per cancellare il contenuto "
+"dell'editor di testo."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:993
 msgid "clearConsole"
 msgstr "clearConsole"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:679
+msgid ""
+"The |queryHistory| :sup:`History` button opens a dialog storing previously "
+"run queries. More at :ref:`sql_history`."
+msgstr ""
+"Il pulsante |queryHistory| :sup:`Cronologia` apre una finestra di dialogo in"
+" cui sono memorizzate le query eseguite in precedenza. Maggiori informazioni"
+" su :ref:`sql_history`."
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1025
 msgid "queryHistory"
 msgstr "queryHistory"
 
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:681
+msgid ""
+"As previously mentioned, queries can be saved as an :file:`.sql` file stored"
+" on disk. Using the |storedqueries| :sup:`Store Current Query` button, they "
+"can also be stored:"
+msgstr ""
+"Come già accennato, le query possono essere salvate come file :file:`.sql` "
+"su disco. È inoltre possibile salvarle utilizzando il pulsante "
+"|storedqueries| :sup:`Salva query corrente`:"
+
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:1033
 msgid "storedqueries"
 msgstr "storedqueries"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:684
+msgid ""
+"In the active :guilabel:`User Profile`, in the associated :file:`QGIS3.ini` "
+"file, thus accessible in subsequent projects"
+msgstr ""
+"Nel :guilabel:`Profilo utente` attivo, nel file :file:`QGIS3.ini` associato,"
+" quindi accessibile nei progetti successivi"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:686
+msgid "or as part of the :guilabel:`Current Project`."
+msgstr "oppure come parte del :guilabel:`Progetto corrente`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:688
+msgid ""
+"Clicking an entry from the stored queries drop-down menu inserts that query "
+"in the expression being written. The stored entry can also be deleted, from "
+"the drop-down menu."
+msgstr ""
+"Facendo clic su una voce del menu a tendina delle query memorizzate, tale "
+"query viene inserita nell'espressione che si sta scrivendo. La voce "
+"memorizzata può anche essere eliminata dal menu a tendina."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:693
+msgid "Running and loading queries as layer"
+msgstr "Esecuzione e caricamento delle query come layer"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:695
+msgid ""
+"In the central part of the :guilabel:`Execute SQL` dialog, you build your "
+"query using the SQL syntax supported by the underlying provider (e.g., OGR_,"
+" GeoPackage_, PostgreSQL_)."
+msgstr ""
+"Nella parte centrale della finestra di dialogo :guilabel:`Esegui SQL`, è "
+"possibile creare la query utilizzando la sintassi SQL supportata dal "
+"provider sottostante (ad esempio, OGR_, GeoPackage_, PostgreSQL_)."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:698
+msgid ""
+"By default, if opened from a layer entry, a sample SQL query is provided. "
+"Editing tools to select, cut, copy, paste, undo and redo are available as "
+"well from the contextual menu."
+msgstr ""
+"Per impostazione predefinita, se si apre una voce di un layer, viene fornita"
+" una query SQL di esempio. Dal menu contestuale sono disponibili anche gli "
+"strumenti di modifica per selezionare, tagliare, copiare, incollare, "
+"annullare e ripetere."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:705
+msgid "**Finding the right SQL syntax for your dataset**"
+msgstr "**Trovare la sintassi SQL più adatta al proprio set di dati**"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:707
+msgid ""
+"To find the appropriate SQL dialect for your dataset, press the "
+":guilabel:`...` button next to the :guilabel:`Subset filter` option in the "
+"bottom part of the dialog."
+msgstr ""
+"Per individuare il dialetto SQL più adatto al proprio set di dati, premere "
+"il pulsante :guilabel:`...` accanto all'opzione :guilabel:`Subset filter` "
+"nella parte inferiore della finestra di dialogo."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:711
+msgid ""
+"When ready, pressing the :guilabel:`Execute` button below the text area will"
+" run the query. It is possible to highlight a portion of the SQL to only "
+"execute that portion when pressing :kbd:`Ctrl+R` or clicking the "
+":guilabel:`Execute selection` button. Use the :guilabel:`Stop` button to "
+"abort the execution."
+msgstr ""
+"Quando si è pronti, premendo il pulsante :guilabel:`Esegui` sotto l'area di "
+"testo si eseguirà la query. È possibile evidenziare una porzione del codice "
+"SQL per eseguire solo quella porzione premendo :kbd:`Ctrl+R` o facendo clic "
+"sul pulsante :guilabel:`Esegui selezione`. Utilizzare il pulsante "
+":guilabel:`Interrompi` per interrompere l'esecuzione."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:717
+msgid ""
+"A successful query execution will display a table at the bottom of the "
+"dialog with returned features. You can select specific cells in the result "
+"set. Use the :kbd:`Ctrl+C` shortcut to copy the selected cells to the "
+"clipboard. The copied data is available as a formatted table. This allows "
+"you to paste the data into other applications, such as spreadsheet where it "
+"will show up as a table."
+msgstr ""
+"Se l'esecuzione della query ha esito positivo, nella parte inferiore della "
+"finestra di dialogo verrà visualizzata una tabella contenente i risultati "
+"restituiti. Puoi selezionare celle specifiche nel set di risultati. Utilizza"
+" la scorciatoia da tastiera :kbd:`Ctrl+C` per copiare le celle selezionate "
+"negli appunti. I dati copiati sono disponibili sotto forma di tabella "
+"formattata. Ciò consente di incollare i dati in altre applicazioni, come un "
+"foglio di calcolo, dove verranno visualizzati come tabella."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:725
+msgid ""
+"The returned table can be loaded in QGIS expanding the :guilabel:`Load as "
+"new layer` group and configuring parameters (their availability depends on "
+"the layer provider):"
+msgstr ""
+"La tabella restituita può essere caricata in QGIS espandendo il gruppo "
+":guilabel:`Carica come nuovo layer` e configurando i parametri (la loro "
+"disponibilità dipende dal provider del layer):"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:728
+msgid ""
+":guilabel:`Column(s) with unique values` to indicate primary key of the "
+"data,"
+msgstr ""
+":guilabel:`Colonna(e) con valori univoci` per indicare la chiave primaria "
+"dei dati,"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:729
+msgid ""
+":guilabel:`Geometry column`: check the box to load the layer as a spatial "
+"one, and indicate the geometry field name"
+msgstr ""
+":guilabel:`Colonna geometria`: seleziona la casella per caricare il layer "
+"come layer spaziale e indica il nome del campo geometria"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:731
+msgid ""
+":guilabel:`Subset filter`: allows to filter the results using a ``WHERE`` "
+"clause. It can be written in the text box, or built using the :ref:`Query "
+"builder <vector_query_builder>` after you pressed :guilabel:`...`. Make sure"
+" to use fields that are available in the SQL layer."
+msgstr ""
+":guilabel:`Filtro sottoinsieme`: consente di filtrare i risultati "
+"utilizzando una clausola ``WHERE``. Può essere digitato nella casella di "
+"testo oppure creato utilizzando il :ref:`Query builder "
+"<vector_query_builder>` dopo aver premuto :guilabel:`...`. Assicurati di "
+"utilizzare campi disponibili nel layer SQL."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:735
+msgid ":guilabel:`Avoid selecting by feature ID`"
+msgstr ":guilabel:`Evita di selezionare in base all'ID dell'elemento`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:736
+msgid ":guilabel:`Layer name` in the project"
+msgstr ":guilabel:`Nome del layer` nel progetto"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:738
+msgid ""
+"At any time, in the :guilabel:`Layers panel`, you can adjust the output "
+"layer by right-clicking and selecting :guilabel:`Update SQL expression...`. "
+"The :guilabel:`Update SQL` dialog opens, prefilled with the applied query "
+"that you can edit as you wish. Once ready, press :guilabel:`Update layer` "
+"and the layer will be modified in-place."
+msgstr ""
+"In qualsiasi momento, nel :guilabel:`pannello Layer`, puoi modificare il "
+"layer risultato facendo clic con il tasto destro del mouse e selezionando "
+":guilabel:`Aggiorna espressione SQL...`. Si aprirà la finestra di dialogo "
+":guilabel:`Aggiorna SQL`, con la query applicata già inserita, che potrai "
+"modificare a tuo piacimento. Una volta pronto, premi :guilabel:`Aggiorna "
+"layer` e il layer verrà modificato direttamente."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:747
+msgid "Query History"
+msgstr "Cronologia delle query"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:749
+msgid ""
+"The :guilabel:`Query History` dialog displays all the previously run "
+"queries, sorted by date and data provider type. It is accessible from the "
+":menuselection:`Database -->` |queryHistory| :guilabel:`Query History…` "
+"menu, or pressing the |queryHistory| :sup:`History` button from the "
+":guilabel:`Execute SQL` dialog."
+msgstr ""
+"La finestra di dialogo :guilabel:`Cronologia query` mostra tutte le query "
+"eseguite in precedenza, ordinate per data e per tipo di provider di dati. È "
+"accessibile dal menu :menuselection:`Database -->` |queryHistory| "
+":guilabel:`Cronologia query…`, oppure premendo il pulsante |queryHistory| "
+":sup:`Cronologia` dalla finestra di dialogo :guilabel:`Esegui SQL`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:759
+msgid "History of the executed SQL queries"
+msgstr "Cronologia delle query SQL eseguite"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:762
+msgid ""
+"At the top of the dialog, a search box can be used to filter out the "
+"queries. The search is done through every strings displayed in the query "
+"history. If the dialog is opened from within the :guilabel:`Execute SQL` "
+"dialog, the search box is preceded by the :ref:`Execute SQL toolbar "
+"<execute_sql_toolbar>`."
+msgstr ""
+"Nella parte superiore della finestra di dialogo è presente una casella di "
+"ricerca che consente di filtrare le query. La ricerca viene effettuata su "
+"tutte le stringhe visualizzate nella cronologia delle query. Se la finestra "
+"di dialogo viene aperta dalla finestra :guilabel:`Esegui SQL`, la casella di"
+" ricerca è preceduta dalla :ref:`Execute SQL toolbar <execute_sql_toolbar>`."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:767
+msgid ""
+"Below, collapsible and sorted date entries list their related queries. Each "
+"query is identifiable by its SQL command, and when expanded, reveals:"
+msgstr ""
+"Di seguito, le voci relative alle date, richiudibili e ordinate, elencano le"
+" query associate. Ogni query è identificabile dal proprio comando SQL e, una"
+" volta espansa, mostra:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:770
+msgid ""
+"The :guilabel:`Connection`: the source of the data the query is based on"
+msgstr "La :guilabel:`Connessione`: la fonte dei dati su cui si basa la query"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:771
+msgid "The :guilabel:`Row count`: number of returned features"
+msgstr "Il :guilabel:`Numero di righe`: numero di elementi restituiti"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:772
+msgid "The :guilabel:`Execution time`"
+msgstr "Il :guilabel:`Tempo di esecuzione`"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:774
+msgid ""
+"Hover over an entry and a tooltip displays the full query. Likewise, "
+"selecting an entry also displayed it in the bottom part of the dialog. You "
+"can interact with the text, copying all or part of it."
+msgstr ""
+"Passando il mouse su una voce, un suggerimento mostra la query completa. "
+"Allo stesso modo, selezionando una voce, questa viene visualizzata anche "
+"nella parte inferiore della finestra di dialogo. Puoi interagire con il "
+"testo, copiandolo in tutto o in parte."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:778
+msgid ""
+"Double-click the SQL command entry and the :guilabel:`Execute SQL` dialog "
+"opens, filled with the clicked query. Any query being written is "
+"overwritten. Right-click the SQL command entry and you can either:"
+msgstr ""
+"Fai doppio clic sulla voce del comando SQL: si aprirà la finestra di dialogo"
+" :guilabel:`Esegui SQL`, con la query selezionata già inserita. Qualsiasi "
+"query in fase di scrittura verrà sovrascritta. Fai clic con il tasto destro "
+"del mouse sulla voce del comando SQL e potrai scegliere tra:"
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:782
+msgid ""
+":guilabel:`Load SQL Command…`, loads the target command into the "
+":guilabel:`Execute SQL` dialog, replacing any existing query. It is the same"
+" as double clicking the entry."
+msgstr ""
+":guilabel:`Carica comando SQL…`, carica il comando di destinazione nella "
+"finestra di dialogo :guilabel:`Esegui SQL`, sostituendo qualsiasi query "
+"esistente. È come fare doppio clic sulla voce."
+
+#: ../../docs/user_manual/managing_data_source/create_layers.rst:785
+msgid ":guilabel:`Copy SQL Command` and paste it wherever you want."
+msgstr ":guilabel:`Copia comando SQL` e incollalo dove preferisci."
 
 #: ../../docs/user_manual/managing_data_source/create_layers.rst:792
 msgid "Creating virtual layers"
