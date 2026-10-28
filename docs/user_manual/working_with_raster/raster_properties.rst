@@ -179,7 +179,7 @@ information you'd like to highlight.
    band.
 #. :ref:`Contours <raster_contours>` - Generates contours on the
    fly for a source raster band.
-#. :ref:`Vector field <vector_field>` - Vector Field renderer for raster layers (arrows, streamlines, traces, wind barbs.
+#. :ref:`Vector field <vector_field>` - Vector Field renderer for raster layers (arrows, streamlines, traces, wind barbs).
 
 
 .. _multiband_color:
