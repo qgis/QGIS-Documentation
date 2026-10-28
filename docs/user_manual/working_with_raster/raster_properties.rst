@@ -498,7 +498,7 @@ There are two main modes for generating vectors out of raster data:
 
   .. _figure_raster_flow_direction_encoding:
 
-  .. figure:: img/rasterFlowDirectionEncoding.png
+  .. figure:: img/rasterFlowDirectionEncodings.png
      :align: center
 
      Flow direction encodings used by Esri, PCRaster, SAGA and GRASS.
