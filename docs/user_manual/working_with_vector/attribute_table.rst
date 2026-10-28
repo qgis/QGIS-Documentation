@@ -101,6 +101,8 @@ following functionality:
    "|conditionalFormatting|", "Conditional formatting", "Enable table formatting"
    "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
    "|actionRun|", "Actions", "Lists the actions related to the layer"
+   "", "Help", "Open the online help for the attribute table"
+
 
 .. [1] Press and hold to select whether to add the feature via the attribute table or form.
 
