@@ -411,27 +411,113 @@ Options:
 Vector field
 ............
 
-This renderer allows you to render render raster layers with :guilabel:`Arrows`,
+This renderer allows you to render raster layers with :guilabel:`Arrows`,
 :guilabel:`Streamlines`, :guilabel:`Traces` or :guilabel:`Wind Barbs`.
+This is useful for raster layers representing flow or wind directions.
+
+* **Arrows**: vectors are represented with arrows at the same place as they are
+  defined in the raw dataset (i.e. on the nodes or center of elements) or on
+  a user-defined grid (hence, they are evenly distributed).
+  The arrow length is proportional to the magnitude of the arrow as defined
+  in the raw data but can be scaled by various methods.
+* **Streamlines**: vectors are represented with streamlines seeded from start
+  points. The seeding points can start from the vertices of the mesh, from
+  a user grid or randomly.
+* **Traces**: a nicer animation of the streamlines, the kind of effect you get
+  when you randomly throws sand in the water and see where the sand items flows.
+* **Wind barbs**: vectors are represented with wind barbs, a common way to
+  represent wind speed and direction.
+
+Available properties depend on the selected symbology as shown in the following table.
+
+.. table:: Availability and meaning of the vectors symbology properties
+  :widths: 46, 12, 14, 12, 14
+  :class: longtable
+
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | Label, Description and Properties                                                         | Arrow      | Streamlines | Traces     | Wind Barbs |
+  +===========================================================================================+============+=============+============+============+
+  | :guilabel:`Line width`: Width of the vector representation                                | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Coloring method`:                                                              |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * a :guilabel:`Single color` assigned to all vectors                                      | |checkbox| | |checkbox|  | |checkbox| | |checkbox| |
+  | * or a variable color based on vectors magnitude, using a                                 |            |             |            |            |
+  |   :ref:`Color ramp shader <color_ramp_shader>`                                            |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Filter by magnitude`: Only vectors whose length for the selected dataset       | |checkbox| | |checkbox|  |            | |checkbox| |
+  | falls between a :guilabel:`Min` and :guilabel:`Max` range are displayed                   |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Display on user grid`: Places the vector on a grid with custom                 | |checkbox| | |checkbox|  |            | |checkbox| |
+  | :guilabel:`X spacing` and :guilabel:`Y spacing` and interpolates their length             |            |             |            |            |
+  | based on neighbours                                                                       |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Head options`: :guilabel:`Length` and :guilabel:`Width` of the arrow head,     | |checkbox| |             |            |            |
+  | as a percentage of its shaft length                                                       |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Arrow length`:                                                                 |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * **Defined by Min and Max**: You specify the minimum and maximum length for the arrows,  | |checkbox| |             |            |            |
+  |   QGIS will interpolate their size based on the underlying vector's magnitude             |            |             |            |            |
+  | * **Scale to magnitude**: arrow length is proportional to their vector's magnitude        |            |             |            |            |
+  | * **Fixed**: all the vectors are shown with the same length                               |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Streamlines seeding method`:                                                   |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * **On Data Points*: relies on the user grid to display the vectors                       |            | |checkbox|  |            |            |
+  | * **Randomly**: vector placement is randomly done with respect to a certain density       |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Particles count`: The amount of "sand" you want to throw into visualisation    |            |             | |checkbox| |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Max tail length`: The time until the particle fades out                        |            |             | |checkbox| |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
+  | :guilabel:`Wind Barbs`:                                                                   |            |             |            |            |
+  |                                                                                           |            |             |            |            |
+  | * **Length**: Specifies the length of the wind barbs. Choose the units from a drop-down   |            |             |            | |checkbox| |
+  |   menu.                                                                                   |            |             |            |            |
+  | * **Data Units**: Specifies the units of wind speed data. Wind barbs encode the wind      |            |             |            |            |
+  |   in knots (nautical miles per hour). Therefore, you should select the units that         |            |             |            |            |
+  |   your data are in, or use a custom :guilabel:`Multiplier` to convert your data units     |            |             |            |            |
+  |   to knots. This ensures that the wind speed is accurately represented.                   |            |             |            |            |
+  +-------------------------------------------------------------------------------------------+------------+-------------+------------+------------+
 
 There are two main modes for generating vectors out of raster data:
 
 * :guilabel:`Component Bands`: use two distinct bands for X and Y components of vectors.
 
-.. _figure_raster_component_bands:
+  .. _figure_raster_component_bands:
 
-.. figure:: img/rasterComponentBands.png
-   :align: center
+  .. figure:: img/rasterComponentBands.png
+     :align: center
 
-   Raster Symbology - Vector Field Renderer with Component Bands
+     Raster Symbology - Vector Field Renderer with Component Bands
 
 * :guilabel:`Encoded Direction`: use a single band with integer encoded cardinal directions.
-Choose the encoding of flow directions: :guilabel:`Esri`, :guilabel:`GRASS`, :guilabel:`SAGA` or :guilabel:`PCRaster`.
+  Choose the encoding of flow directions: :guilabel:`Esri`, :guilabel:`GRASS`, :guilabel:`SAGA` or :guilabel:`PCRaster`.
+  The figure below explains the different encoding values.
 
-.. _figure_raster_encoded_direction:
+  .. _figure_raster_flow_direction_encoding:
 
-.. figure:: img/rasterEncodedDirection.png
+  .. figure:: img/rasterFlowDirectionEncoding.png
+     :align: center
+
+     Flow direction encodings used by Esri, PCRaster, SAGA and GRASS. 
+     Each number is the value a cell gets when water flows to that neighbour. 
+     The centre cell shows the value for cells without a downstream neighbour.
+
+  .. _figure_raster_encoded_direction:
+
+  .. figure:: img/rasterEncodedDirection.png
+     :align: center
+
+     Raster Symbology - Vector Field Renderer with Encoded Direction
+
+.. _figure_raster_vector_field_renderers:
+
+.. figure:: img/rasterVectorFieldRenderers.png
    :align: center
+
+   Vector field renderers in QGIS: Arrows, Wind barbs and Traces, applied to the same wind raster.
 
 .. _minmaxvalues:
 
