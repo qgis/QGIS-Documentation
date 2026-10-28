@@ -80,9 +80,39 @@ msgstr ""
 "Il formato GeoPackage è ideale per memorizzare dati raster quando si lavora "
 "con QGIS. Il popolare e potente formato GeoTiff è una buona alternativa."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:40
+msgid ""
+"QGIS makes use of georeference information inside the raster layer (e.g., "
+"GeoTiff) or an associated *world file* to properly display the data."
+msgstr ""
+"QGIS utilizza le informazioni di georeferenziazione contenute nel layer "
+"raster (ad esempio, GeoTIFF) o in un *file world* associato per visualizzare"
+" correttamente i dati."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr "Dati vettoriali"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:51
+msgid ""
+"Many of the features and tools available in QGIS work the same, regardless "
+"of the vector data source. However, because of the differences in format "
+"specifications (GeoPackage, ESRI Shapefile, MapInfo and MicroStation file "
+"formats, AutoCAD DXF, PostgreSQL, SpatiaLite, Oracle Spatial, MS SQL Server,"
+" SAP HANA Spatial databases and many more), QGIS may handle some of their "
+"properties differently. Support is provided by the `GDAL vector drivers "
+"<https://gdal.org/en/latest/drivers/vector/index.html>`_. This section "
+"describes how to work with some of these specifics."
+msgstr ""
+"Molte delle funzionalità e degli strumenti disponibili in QGIS funzionano "
+"allo stesso modo, indipendentemente dalla fonte di dati vettoriali. "
+"Tuttavia, a causa delle differenze nelle specifiche di formato "
+"(SQLGeoPackage, ESRI Shapefile, MapInfo e MicroStation, AutoCAD DXF, "
+"PostgreSQL, SpatiaLite, Oracle Spatial, MS SQL Server, database spaziali SAP"
+" HANA e molti altri), QGIS potrebbe gestire alcune delle loro proprietà in "
+"modo diverso. Il supporto è fornito dai `GDAL vector drivers "
+"<https://gdal.org/en/latest/drivers/vector/index.html>`_. Questa sezione "
+"descrive come utilizzare queste specifiche."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:63
 msgid ""
@@ -634,6 +664,32 @@ msgstr ""
 msgid "PostgreSQL Database"
 msgstr "PostgreSQL Database"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:298
+msgid ""
+"In order to process geographical information in a PostgreSQL database, the "
+"PostGIS extension must first be installed. PostGIS extends the capabilities "
+"of the PostgreSQL relational database by adding support for storing, "
+"indexing, and querying geospatial data."
+msgstr ""
+"Per poter elaborare informazioni geografiche in un database PostgreSQL, è "
+"necessario innanzitutto installare l'estensione PostGIS. PostGIS amplia le "
+"funzionalità del database relazionale PostgreSQL aggiungendo il supporto per"
+" l'archiviazione, l'indicizzazione e l'interrogazione dei dati geospaziali."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:303
+msgid ""
+"To enable PostGIS in your database you have to activate the extension in "
+"your database (open database and run ``CREATE EXTENSION postgis;``). PostGIS"
+" enabled databases are also often named \"PostGIS layer\". Using PostGIS, "
+"vector functions such as select and identify work more accurately than they "
+"do with GDAL layers in QGIS."
+msgstr ""
+"Per abilitare PostGIS nel tuo database devi attivare l'estensione (aprire il"
+" database ed eseguire il comando ``CREATE EXTENSION postgis;``). I database "
+"in cui è abilitato PostGIS vengono spesso denominati anche “PostGIS layer”. "
+"Con PostGIS, le funzioni vettoriali come select e identify funzionano in "
+"modo più accurato rispetto a quanto avvenga con i layer GDAL in QGIS."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:312
 msgid "**PostGIS Layers**"
 msgstr "**Layer PostGIS**"
@@ -743,9 +799,29 @@ msgstr ""
 msgid "**PostgreSQL foreign table**"
 msgstr "**Tabella esterna PostgreSQL**"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:363
+msgid ""
+"PostgreSQL foreign tables are not explicitly supported by the PostgreSQL "
+"provider and will be handled like a view."
+msgstr ""
+"Le tabelle esterne PostgreSQL non sono esplicitamente supportate dal "
+"provider PostgreSQL e saranno gestite come una vista."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:369
 msgid "QGIS layer_style table and database backup"
 msgstr "Stili di default dei layer QGIS e backup del database"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:371
+msgid ""
+"If you want to make a backup of your PostgreSQL database using the "
+":file:`pg_dump` and :file:`pg_restore` commands, and the default layer "
+"styles as saved by QGIS fail to restore afterwards, you need to set the XML "
+"option to :file:`DOCUMENT` before the restore command:"
+msgstr ""
+"Se vuoi fare una copia di backup del tuo database PostgreSQL usando i "
+"comandi :file:`pg_dump` e :file:`pg_restore`, e gli stili di default dei "
+"layer come salvati da QGIS non ripristinabili in seguito, devi impostare "
+"l’opzione XML su :file:`DOCUMENT` prima del comando di ripristino."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:376
 msgid "Make a PLAIN backup of the ``layer_style`` table"
@@ -813,6 +889,15 @@ msgstr ""
 msgid "Importing Data into PostgreSQL"
 msgstr "Importare dati in PostgreSQL"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:408
+msgid ""
+"Data can be imported into PostgreSQL using several tools, including the "
+"Browser, DB Manager plugin and the command line tools shp2pgsql and ogr2ogr."
+msgstr ""
+"I dati possono essere importati in PostreSQL usando diversi strumenti,  tra "
+"cui il browser, il plugin DB Manager e gli strumenti da riga di comando "
+"shp2pgsql e ogr2ogr."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:413
 msgid "DB Manager"
 msgstr "DB Manager"
@@ -860,9 +945,58 @@ msgstr ""
 "2964. Vedi la sezione :ref:`label_projections` per maggiori informazioni sui"
 " sistemi di riferimento spaziale e le proiezioni."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:439
+msgid "**Exporting datasets from PostgreSQL**"
+msgstr "**Esportare dataset da PostgreSQL**"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:441
+msgid ""
+"There is also a tool for exporting PostgreSQL datasets with geographic data "
+"to Shapefile format: **pgsql2shp**. It is shipped within your PostGIS "
+"distribution."
+msgstr ""
+"C'è anche uno strumento per esportare dataset PostgreSQL in formato "
+"Shapefile: **pgsql2shp**. Viene fornito all'interno della tua distribuzione "
+"PostGIS."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:449
 msgid "ogr2ogr"
 msgstr "ogr2ogr"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:451
+msgid ""
+"In addition to **shp2pgsql** and **DB Manager**, there is another tool for "
+"feeding geographical data in PostgreSQL: **ogr2ogr**. It is part of your "
+"GDAL installation."
+msgstr ""
+"Oltre a **shp2pgsql** e **DB Manager**, esiste un altro strumento per "
+"alimentare i dati geografici in PostgreSQL: **ogr2ogr**. Fa parte della tua "
+"installazione di GDAL."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:455
+msgid ""
+"To import a Shapefile format dataset into PostgreSQL, do the following::"
+msgstr ""
+"Per importare un insieme di dati in formato Shapefile in PostgreSQL, fai "
+"come segue:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:460
+msgid ""
+"This will import the Shapefile format dataset :file:`alaska.shp` into the "
+"database *postgis* using the user *postgres* with the password *topsecret* "
+"on the host server *myhost.de*."
+msgstr ""
+"Questa operazione importerà il dataset in formato Shapefile "
+":file:`alaska.shp` nel database *postgis* utilizzando l'utente *postgres* "
+"con la password *topsecret* sul server host *myhost.de*."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:464
+msgid ""
+"Note that GDAL must be built with PostgreSQL. You can verify this by typing "
+"(in |nix|)::"
+msgstr ""
+"Si noti che GDAL deve essere compilato con PostgreSQL. Puoi verificarlo "
+"digitando (in |nix|)::"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:766
 msgid "nix"
@@ -897,6 +1031,23 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:486
 msgid "Improving Performance"
 msgstr "Migliorare le prestazioni"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:488
+msgid ""
+"Retrieving features from a PostgreSQL database can be time-consuming, "
+"especially over a network. You can improve the drawing performance of "
+"PostgreSQL layers by ensuring that a spatial index exists on each layer in "
+"the database. PostGIS supports creation of a GiST (Generalized Search Tree) "
+"index to speed up spatial searching (GiST index information is taken from "
+"the PostGIS documentation available at https://postgis.net)."
+msgstr ""
+"Recuperare elementi da un database PostgreSQL può essere dispendioso in "
+"termini di tempo, specialmente su una rete. Puoi migliorare le prestazioni "
+"di estrazione dei layer PostgreSQL assicurandoti che su ciascun layer del "
+"database sia presente un indice spaziale. PostGIS supporta la creazione di "
+"un indice GiST (Generalized Search Tree) per velocizzare la ricerca spaziale"
+" (le informazioni sull'indice GiST sono prese dalla documentazione di "
+"PostGIS disponibile all'indirizzo https://postgis.net)."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:495
 msgid ""
@@ -1046,6 +1197,12 @@ msgstr ""
 "(probabilmente solo le Features) separate sequenzialmente da caratteri di "
 "nuova riga."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:590
+msgid ""
+"GeoJSON - Newline Delimited has some specific Layer options available too:"
+msgstr ""
+"GeoJSON - Newline Delimited ha anche alcune opzioni specifiche per i Layer:"
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:592
 msgid ":guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)"
 msgstr ":guilabel:`COORDINATE_PRECISION` vedi sopra (come per GeoJSON)"
@@ -1178,6 +1335,125 @@ msgstr ""
 "colonna :guilabel:`Feature id`. Per ottenere prestazioni ottimali, il valore"
 " :guilabel:`Feature id` dovrebbe essere una singola colonna ``INTEGER``."
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:659
+msgid "Field domain"
+msgstr "Dominio del campo"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:661
+msgid ""
+"Field domains are rules that define acceptable values for a field in a "
+"database table. This is applicable when working with data sources that "
+"support field domains, such as GeoPackage and ESRI File Geodatabase. Field "
+"domains can be managed from the contextual menu of a field in the "
+":guilabel:`Browser` panel. The following types are available:"
+msgstr ""
+"I domini di campo sono regole che definiscono i valori ammessi per un campo "
+"in una tabella di database. Ciò è applicabile quando si lavora con fonti di "
+"dati che supportano i domini di campo, come GeoPackage ed ESRI File "
+"Geodatabase. I domini di campo possono essere gestiti dal menu contestuale "
+"di un campo nel pannello :guilabel:`Browser`. Sono disponibili i seguenti "
+"tipi:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:667
+msgid ""
+":guilabel:`New Range Domain...`: creates a new domain to restrict field "
+"values to a specified numeric range."
+msgstr ""
+":guilabel:`Nuovo intervallo di valori...`: crea un nuovo intervallo per "
+"limitare i valori dei campi a un intervallo numerico specificato."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:669
+msgid ""
+":guilabel:`New Coded Values Domain...`: creates a new domain to restrict "
+"field values to a predefined list of acceptable values."
+msgstr ""
+":guilabel:`Nuovo dominio di valori codificati...`: crea un nuovo dominio per"
+" limitare i valori dei campi a un elenco predefinito di valori ammessi."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:671
+msgid ""
+":guilabel:`New Glob Domain...`: creates a new domain to restrict field "
+"values to matching a regular expression pattern."
+msgstr ""
+":guilabel:`Nuovo dominio Glob...`: crea un nuovo dominio per limitare i "
+"valori dei campi in modo che corrispondano a un modello di espressione "
+"regolare."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:674
+msgid ""
+"When creating a field domain, following options are provided in the dialog:"
+msgstr ""
+"Quando si crea un dominio di campo, nella finestra di dialogo sono "
+"disponibili le seguenti opzioni:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:676
+msgid ":guilabel:`Name`: set the name of the new field domain."
+msgstr ":guilabel:`Nome`: imposta il nome del nuovo dominio di campo."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:677
+msgid ""
+":guilabel:`Description`: provide a description for the new field domain."
+msgstr ""
+":guilabel:`Descrizione`: fornisce una descrizione per il nuovo dominio del "
+"campo."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:678
+msgid ""
+":guilabel:`Field type`: select the data type of the field domain (e.g., "
+"Boolean, Text, Integer, Decimal)."
+msgstr ""
+":guilabel:`Tipo di campo`: seleziona il tipo di dati del dominio del campo "
+"(ad es. booleano, testo, intero, decimale)."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:680
+msgid ""
+"Additional :ref:`Policies <policies>`, only available for ESRI File "
+"Geodatabase format:"
+msgstr ""
+"Ulteriori informazioni: ref:`Policies <policies>`, disponibili solo per il "
+"formato ESRI File Geodatabase:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:682
+msgid ":guilabel:`Split policy`"
+msgstr ":guilabel:`Politica di ripartizione`"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:683
+msgid ":guilabel:`Merge policy`"
+msgstr ":guilabel:`Politica di fusione`"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:685
+msgid "Under :guilabel:`Range`, you can set the following options:"
+msgstr ""
+"Nella sezione :guilabel:`Intervallo`, puoi impostare le seguenti opzioni:"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:687
+msgid ":guilabel:`Minimum`: set the minimum acceptable value for the field."
+msgstr ""
+":guilabel:`Minimo`: imposta il valore minimo accettabile per il campo."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:688
+msgid ":guilabel:`Maximum`: set the maximum acceptable value for the field."
+msgstr ""
+":guilabel:`Massimo`: imposta il valore massimo accettabile per il campo."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:689
+msgid ""
+"Check the |checkbox| :guilabel:`Inclusive` if you want to include the "
+"boundary values in the acceptable range."
+msgstr ""
+"Seleziona la |checkbox| :guilabel:`Inclusivo` se desideri includere i valori"
+" limite nell'intervallo accettabile."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:691
+msgid ""
+":guilabel:`Values`: click the |symbologyAdd| :sup:`Add row` or "
+"|symbologyRemove| :sup:`Remove row` to manage the list of acceptable values "
+"for the field."
+msgstr ""
+":guilabel:`Valori`: fai clic su |symbologyAdd| :sup:`Aggiungi riga` o su "
+"|symbologyRemove| :sup:`Rimuovi riga` per gestire l'elenco dei valori "
+"ammessi per il campo."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:774
 msgid "symbologyAdd"
 msgstr "symbologyAdd"
@@ -1185,6 +1461,14 @@ msgstr "symbologyAdd"
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:776
 msgid "symbologyRemove"
 msgstr "symbologyRemove"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:693
+msgid ""
+":guilabel:`Pattern`: define the :guilabel:`Glob pattern` using wildcard "
+"characters."
+msgstr ""
+":guilabel:`Pattern`: definisce il :guilabel:`Glob pattern` utilizzando "
+"caratteri jolly."
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:696
 msgid ""
@@ -1229,11 +1513,49 @@ msgstr ""
 msgid "Map in lat/lon crossing the 180° longitude line"
 msgstr "Mappa in lat/lon che attraversa la linea di 180° di longitudine"
 
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:723
+msgid "Solving in PostgreSQL"
+msgstr "Risolvere in PostgreSQL"
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:725
+msgid ""
+"A work-around is to transform the longitude values using PostgreSQL and the "
+"`ST_ShiftLongitude <https://postgis.net/docs/ST_ShiftLongitude.html>`_ "
+"function. This function reads every point/vertex in every component of every"
+" feature in a geometry, and shifts its longitude coordinate from -180..0° to"
+" 180..360° and vice versa if between these ranges. This function is "
+"symmetrical so the result is a 0..360° representation of a -180..180° data "
+"and a -180..180° representation of a 0..360° data."
+msgstr ""
+"Una soluzione consiste nel trasformare i valori della longitudine "
+"utilizzando PostgreSQL e la funzione `ST_ShiftLongitude "
+"<https://postgis.net/docs/ST_Shift_Longitude.html>`_. Questa funzione legge "
+"ogni punto/vertice in ogni componente di ogni elemento di una geometria e "
+"sposta la sua coordinata di longitudine da -180..0° a 180..360° e viceversa "
+"se compresa tra questi intervalli. Questa funzione è simmetrica, quindi il "
+"risultato è una rappresentazione a 0..360° di un dato a -180..180° e una "
+"rappresentazione a -180..180° di un dato a 0..360°."
+
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:738
 msgid "Crossing 180° longitude applying the **ST_ShiftLongitude** function"
 msgstr ""
 "Attraversamento del 180° di longitudine applicando la funzione "
 "**ST_ShiftLongitude**."
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:741
+msgid ""
+"Import data into PostgreSQL (:ref:`vector_import_data_in_postgis`) using, "
+"for example, the DB Manager plugin."
+msgstr ""
+"Importa i dati in PostgreSQL (:ref:`vector_import_data_in_postgis`) usando, "
+"per esempio, il plugin DB Manager. "
+
+#: ../../docs/user_manual/managing_data_source/supported_data.rst:743
+msgid ""
+"Use the PostgreSQL command line interface to issue the following command:"
+msgstr ""
+"Utilizza l'interfaccia della linea di comando di PostgreSQL per eseguire il "
+"seguente comando:"
 
 #: ../../docs/user_manual/managing_data_source/supported_data.rst:750
 msgid ""
