@@ -107,6 +107,18 @@ msgstr "**GML** --- Geography Markup Language"
 msgid "**SensorThings API** --- SensorThings API (:ref:`sensor_things`)"
 msgstr "**SensorThings API** --- SensorThings API (:ref:`sensor_things`)"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:39
+msgid ""
+"OGC services are increasingly being used to exchange geospatial data between"
+" different GIS implementations and data stores. QGIS can deal with the above"
+" specifications as a client, being **SFS** (through support of the "
+"PostgreSQL data provider, see section :ref:`label_postgis`)."
+msgstr ""
+"I servizi OGC sempre più numerosi sono utili per scambiare dati geografici "
+"fra differenti implementazioni GIS e archivi di dati. QGIS può gestire le "
+"specifiche sopra esposte come client, essendo **SFS** (tramite il supporto a"
+" PostgreSQL, vedi sezione :ref:`label_postgis`)."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:44
 msgid ""
 "You can also share your maps and data through the WMS, WMTS, WFS, WFS-T and "
@@ -799,6 +811,24 @@ msgstr ""
 "includerà elementi della legenda per gli elementi che non puoi vedere nella "
 "mappa corrente."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:342
+msgid ""
+"You can select several layers at once, but only one image style per layer. "
+"When several layers are selected, they will be combined at the WMS server "
+"and transmitted to QGIS in one go, as a single layer. The default name is a "
+"slash (``/``) separated list of their original title. You can however opt to"
+" |checkbox| :guilabel:`Load as separate layers`, in which case each layer is"
+" added to the map canvas using its default name from the queried service."
+msgstr ""
+"Puoi selezionare più layer contemporaneamente, ma solo uno stile immagine "
+"per ogni layer. Quando sono selezionati più layer, questi verranno combinati"
+" sul server WMS e trasmessi a QGIS in un’unica operazione, come un unico "
+"layer. Il nome predefinito è un elenco di nomi originali separati da una "
+"barra (``/``). Puoi tuttavia selezionare la casella di controllo |checkbox| "
+":guilabel:`Carica come layer separati`; in tal caso, ogni layer viene "
+"aggiunto all’area di lavoro della mappa utilizzando il nome predefinito "
+"fornito dal servizio interrogato."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:351
 msgid "**Layer Order**"
 msgstr "**Ordine dei Layer**"
@@ -1217,11 +1247,11 @@ msgstr ":guilabel:`Fai corrispondere alla fine dell'intervallo`"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:571
 msgid ":guilabel:`Closest match to start of range`"
-msgstr ":guilabel:'Corrispondenza più vicina all'inizio dell'intervallo'."
+msgstr ":guilabel: 'Corrispondenza più vicina all'inizio dell'intervallo'."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:572
 msgid ":guilabel:`Closest match to end of range`"
-msgstr ":guilabel:'Corrispondenza più vicina alla fine dell'intervallo'."
+msgstr ":guilabel: 'Corrispondenza più vicina alla fine dell'intervallo'."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:574
 msgid ""
@@ -1389,6 +1419,17 @@ msgstr ""
 " rete’, ‘sempre rete’) e la fonte dati supporta anche la posizione temporale"
 " se questa è disponibile dal server."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:653
+msgid "**Loading a WCS Layer**"
+msgstr "**Caricare un layer WCS**"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:655
+msgid ""
+"To be able to load a WCS Layer, first create a connection to the WCS server:"
+msgstr ""
+"Per poter caricare un layer WCS, occorre innanzitutto creare una connessione"
+" al server WCS:"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:657
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:752
 msgid ""
@@ -1398,9 +1439,64 @@ msgstr ""
 "Apri la finestra di dialogo :guilabel:`Data Source Manager`  premendo il "
 "pulsante |dataSourceManager| :sup:`Apri Gestore delle Sorgenti Dati`"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:659
+msgid "Enable the |addWcsLayer| :guilabel:`WCS` tab"
+msgstr "Attiva la scheda |addWcsLayer| :guilabel:`WCS`"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1133
 msgid "addWcsLayer"
 msgstr "addWcsLayer"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:660
+msgid ""
+"Click on :guilabel:`New...` to open the :guilabel:`Create a New WCS "
+"Connection` dialog"
+msgstr ""
+"Fai clic su :guilabel:`Nuovo...` per aprire la finestra di dialogo "
+":guilabel:`Crea una nuova connessione WCS`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:668
+msgid "Creating a connection to a WCS server"
+msgstr "Creazione di una connessione a server WCS"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:670
+msgid ""
+":guilabel:`Name`: A name for the connection. This name will be used in the "
+"Server Connections drop-down box so that you can distinguish it from other "
+"WCS servers."
+msgstr ""
+":guilabel:`Nome`: Un nome per la connessione. Questo nome sarà usato nella "
+"casella a discesa Connessioni server in modo da poterlo distinguere da altri"
+" server WCS."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:693
+msgid ""
+"|unchecked| :guilabel:`Ignore GetCoverage URI reported in capabilities`: if "
+"checked, use given URI from the :guilabel:`URL` field above."
+msgstr ""
+"|unchecked| :guilabel:`Ignora la URI GetCoverage riportata nelle "
+"capabilities`: se selezionato, utilizza l'URI specificato nel campo "
+":guilabel:`URL` sopra riportato."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:695
+msgid ""
+"|unchecked| :guilabel:`Ignore reported layer extents`: because the extent "
+"reported by raster layers may be smaller than the actual area which can be "
+"rendered (notably for WCS servers with symbology which takes more space than"
+" the data extent), check this option to avoid cropping raster layers to "
+"their reported extents, resulting in truncated symbols on the borders of "
+"these layers."
+msgstr ""
+"|unchecked| :guilabel:`Ignora estensioni riportate del layer`: poiché "
+"l'estensione riportata dai layer raster può essere più piccola dell'area "
+"effettiva che può essere visualizzata (in particolare per i server WCS con "
+"simbologia che occupa più spazio dell'estensione dei dati), seleziona questa"
+" opzione per evitare di tagliare i layer raster alle loro estensioni "
+"riportate, con il risultato di simboli troncati sui bordi di questi layer."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:701
+msgid "|unchecked| :guilabel:`Ignore axis orientation`"
+msgstr "|unchecked| :guilabel:`Ignora orientamento assi`"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:705
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:809
@@ -1419,6 +1515,11 @@ msgstr ""
 "impostate nelle preferenze. Si noti anche che è possibile utilizzare "
 ":guilabel:`Carica` per i parametri di connessione da un file :file:`.XML` o "
 ":guilabel:`Salva` in un file :file:`.XML`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:711
+msgid "Now we are ready to load WCS layers from the above connection."
+msgstr ""
+"Ora siamo pronti a caricare i layer WCS dalla connessione di cui sopra."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:717
 msgid "WFS and WFS-T Client"
@@ -1504,13 +1605,41 @@ msgstr ""
 "Fai clic su :guilabel:`Nuovo` per aprire la finestra di dialogo "
 ":guilabel:`Crea una nuova connessione WFS`."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:757
+msgid ""
+"In the :guilabel:`Connection Details` group, enter ``Gateway Geomatics`` as "
+"name"
+msgstr ""
+"Nel gruppo :guilabel:`Dettagli connessione`, inserisci ``Gateway Geomatics``"
+" come nome"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:758
 msgid "Enter the URL (see above)"
 msgstr "Immetti l'URL (vedi sopra)"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:759
+msgid "Optionally, enter the :guilabel:`Authentication` settings"
+msgstr ""
+"Opzionalmente, inserisci le impostazioni relative a "
+":guilabel:`Autenticazione`"
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:766
 msgid "Creating a connection to a WFS server"
 msgstr "Creazione di una connessione a server WFS"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:768
+msgid ""
+"In case of an OGC API - Features (OAPIF), the URL to provide should be the "
+":ref:`landing page <oapif_endpoints>`, i.e., the main page from which it is "
+"possible to navigate to all the available service endpoints."
+msgstr ""
+"Nel caso di una OGC API - Features (OAPIF), l'URL da fornire dovrebbe essere"
+" il :ref:`landing page <oapif_endpoints>`, cioè la pagina principale da cui "
+"è possibile navigare verso tutti gli endpoint di servizio disponibili."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:772
+msgid "In the :guilabel:`WFS Options` group, you can:"
+msgstr "Nel gruppo :guilabel:`Opzioni WFS` puoi:"
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:774
 msgid ""
@@ -1519,6 +1648,74 @@ msgid ""
 msgstr ""
 "Indicare la versione WFS del server. Se sconosciuto, premi il pulsante "
 ":guilabel:`Rileva` per recuperarlo automaticamente."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:776
+msgid ""
+"Select the :guilabel:`Preferred HTTP method` to use for requests. The "
+"default is :guilabel:`GET`, but you can also select :guilabel:`POST`."
+msgstr ""
+"Selezionare :guilabel:`Preferred HTTP method` da utilizzare per le "
+"richieste. L'impostazione predefinita è :guilabel:`GET`, ma è possibile "
+"selezionare anche :guilabel:`POST`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:778
+msgid ""
+"Define the :guilabel:`Maximum number of features` retrieved in a single "
+"GetFetFeature request. If empty, no limit is set."
+msgstr ""
+"Definire il :guilabel:`Numero max. di elementi` recuperati in una singola "
+"richiesta GetFetFeature. Se vuoto, non viene impostato alcun limite."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:780
+msgid ""
+":guilabel:`Feature mode (simple vs complex)`: helps determine how to handle "
+"servers serving data with simple or complex GML schemas. Available options "
+"are:"
+msgstr ""
+":guilabel:`Feature mode (simple vs complex)`: aiuta a determinare come "
+"gestire i server che forniscono dati con schemi GML semplici o complessi. Le"
+" opzioni disponibili sono:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:783
+msgid ""
+":guilabel:`Default`: if the server supports editing capabilities, this is "
+"the same as using :guilabel:`Simple Features`. If not, it fallbacks to using"
+" :guilabel:`Complex Features` mode."
+msgstr ""
+":guilabel:`Predefinito`: se il server supporta le funzionalità di modifica, "
+"equivale a utilizzare :guilabel:`Elementi Semplici`. In caso contrario, si "
+"ricorre alla modalità :guilabel:`Elementi Complessi`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:785
+msgid ":guilabel:`Simple Features`: returns data as simple features only"
+msgstr ""
+":guilabel:`Elementi semplici`: restituisce dati solo come elementi semplici"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:786
+msgid ""
+":guilabel:`Complex Features`: uses the `OGR GMLAS "
+"<https://gdal.org/en/stable/drivers/vector/gmlas.html>`, potentially "
+"returning complex features, depending on the data schema, where nested data "
+"structures are exposed by QGIS as JSON."
+msgstr ""
+":guilabel:`Elementi complessi`: utilizza il formato `OGR GMLAS "
+"<https://gdal.org/en/stable/drivers/vector/gmlas.html>`, restituendo "
+"potenzialmente elementi complessi, a seconda dello schema dei dati, in cui "
+"le strutture di dati annidate vengono esposte da QGIS in formato JSON."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:790
+msgid "Depending on the WFS version, indicate whether to:"
+msgstr "A seconda della versione di WFS, indica se:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:792
+msgid ""
+"Enable :guilabel:`Feature paging` and specify the maximum number of features"
+" to retrieve with :guilabel:`Page size`. If no limit is defined, then the "
+"server default is applied."
+msgstr ""
+"Abilita :guilabel:`Elemento paging` e specifica il numero massimo di "
+"elementi da recuperare con :guilabel:`Dimensione pagina`. Se non viene "
+"definito alcun limite, viene applicato il valore predefinito del server."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:795
 msgid "Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`"
@@ -1587,9 +1784,31 @@ msgstr ""
 "tabelle e sulle colonne disponibili del servizio, con ordinamento e "
 "filtraggio e una serie di funzioni SQL, predicati spaziali e operatori."
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:830
+msgid ""
+"The query you build will appear after validation in the :guilabel:`SQL` "
+"column within the :guilabel:`WFS / OGC API - Features` table, and the "
+"filtered layer will display the |indicatorFilter| icon next to it in the "
+":guilabel:`Layers` panel. It is thus possible to adjust the query at any "
+"moment."
+msgstr ""
+"La query che hai costruito apparirà dopo la convalida nella colonna "
+":guilabel:`SQL` all'interno della tabella :guilabel:`WFS / OGC API - "
+"Features` e il layer filtrato mostrerà l'icona |indicatorFilter| accanto ad "
+"esso nel pannello :guilabel:`Layer`. È quindi possibile modificare la query "
+"in qualsiasi momento."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1145
 msgid "indicatorFilter"
 msgstr "indicatorFilter"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:835
+msgid ""
+"Click :guilabel:`Add` to add the layer to the map, using its default name "
+"from the queried service."
+msgstr ""
+"Fai clic su :guilabel:`Aggiungi` per aggiungere il layer alla mappa, "
+"utilizzando il nome predefinito fornito dal servizio interrogato."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:843
 msgid "Adding a WFS layer"
@@ -1609,6 +1828,27 @@ msgstr ""
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:854
 msgid "SensorThings"
 msgstr "SensorThings"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:856
+msgid ""
+"QGIS supports connections to `OGC SensorThings API "
+"<https://www.ogc.org/standards/sensorthings/>`_, a standard providing an "
+"open and unified framework to interconnect IoT sensing devices, data, and "
+"applications over the Web. It is an open standard addressing the syntactic "
+"and semantic interoperability of the Internet of Things. It is based on the "
+"`Observations and Measurements <https://www.ogc.org/standards/om/>`_ data "
+"model, a standardized model for observations, and for features involved in "
+"sampling when making observations."
+msgstr ""
+"QGIS supporta le connessioni a `OGC SensorThings API "
+"<https://www.ogc.org/publications/standard/sensorthings/>`_, uno standard "
+"che fornisce un framework aperto e unificato per interconnettere dispositivi"
+" di rilevamento IoT, dati e applicazioni sul Web. Si tratta di uno standard "
+"aperto che affronta l'interoperabilità sintattica e semantica dell'Internet "
+"delle cose. Si basa sul modello di dati `Observations and Measurements "
+"<https://www.ogc.org/publications/standard/om/>`_, un modello standardizzato"
+" per le osservazioni e per gli elementi coinvolti nel campionamento durante "
+"l'esecuzione delle osservazioni."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:864
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1003
@@ -1874,9 +2114,349 @@ msgstr ""
 msgid "STAC (SpatioTemporal Asset Catalogs)"
 msgstr "STAC (SpatioTemporal Asset Catalogs)"
 
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:971
+msgid ""
+"STAC (SpatioTemporal Asset Catalog) is a specification for describing "
+"geospatial data in a consistent and accessible way. It defines a standard "
+"structure for organizing and indexing spatial-temporal assets such as "
+"satellite imagery, drone photos, or sensor data so that you can search, "
+"preview, and use these datasets across different platforms and tools."
+msgstr ""
+"STAC (SpatioTemporal Asset Catalog) è una specifica che consente di "
+"descrivere i dati geospaziali in modo coerente e accessibile. Definisce una "
+"struttura standard per l'organizzazione e l'indicizzazione di risorse "
+"spazio-temporali quali immagini satellitari, foto scattate da droni o dati "
+"provenienti da sensori, in modo da poter cercare, visualizzare in anteprima "
+"e utilizzare questi set di dati su diverse piattaforme e strumenti."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:976
+msgid ""
+"STAC enables QGIS users to connect to and browse geospatial datasets, either"
+" from static catalogs or dynamic APIs, and download or stream assets such as"
+" imagery or other spatial data."
+msgstr ""
+"STAC consente agli utenti di QGIS di connettersi e consultare set di dati "
+"geospaziali, sia da cataloghi statici che da API dinamiche, nonché di "
+"scaricare o riprodurre in streaming risorse quali immagini o altri dati "
+"spaziali."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:979
+msgid "More information at https://stacspec.org/en."
+msgstr "Maggiori informazioni su https://stacspec.org/en."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:981
+msgid "Key components of STAC in QGIS include:"
+msgstr "Gli elementi chiave di STAC in QGIS includono:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:983
+msgid ""
+"**STAC Items**: The basic unit of a STAC catalog. Each item represents one "
+"geospatial asset or a group of related assets (e.g. image bands) at a "
+"specific time and location. It includes metadata such as geometry, datetime,"
+" links to assets (e.g., TIFFs, JSON, COG), and properties."
+msgstr ""
+"**STAC Items**: L'unità di base di un catalogo STAC. Ciascun elemento "
+"rappresenta una risorsa geospaziale o un gruppo di risorse correlate (ad "
+"esempio, bande di immagini) in un determinato momento e in una determinata "
+"posizione. Comprende metadati quali geometria, data e ora, collegamenti alle"
+" risorse (ad esempio, file TIFF, JSON, COG) e proprietà."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:986
+msgid ""
+"**STAC Collections**: A grouping of items that share common characteristics "
+"and metadata (e.g. satellite mission). Collections may define spatial and "
+"temporal extents, licensing, and keywords."
+msgstr ""
+"**STAC Collections**: un insieme di elementi che condividono caratteristiche"
+" e metadati comuni (ad esempio, una missione satellitare). Le collezioni "
+"possono definire l'estensione spaziale e temporale, le condizioni di licenza"
+" e le parole chiave."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:988
+msgid ""
+"**STAC Catalogs**: A hierarchical container that organizes items and/or "
+"collections. Catalogs allow navigation of STAC datasets but do not "
+"necessarily include search capabilities."
+msgstr ""
+"**STAC Catalogs**: un contenitore gerarchico che organizza elementi e/o "
+"raccolte. I cataloghi consentono la navigazione all'interno dei set di dati "
+"STAC, ma non includono necessariamente funzionalità di ricerca."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:990
+msgid ""
+"**STAC API**: An implementation of the STAC specification that allows "
+"querying and filtering of STAC items using spatial and temporal based "
+"filters, as well as searching within specific collections. STAC APIs follow "
+"the OGC API - Features pattern and support dynamic access to datasets."
+msgstr ""
+"**STAC API**: un'implementazione della specifica STAC che consente di "
+"interrogare e filtrare gli elementi STAC utilizzando filtri spaziali e "
+"temporali, nonché di effettuare ricerche all'interno di collezioni "
+"specifiche. Le API STAC seguono il modello OGC API - Features e supportano "
+"l'accesso dinamico ai set di dati."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:994
+msgid ""
+"There is an important distinction between static STAC catalogs and STAC API "
+"endpoints:"
+msgstr ""
+"Esiste un'importante differenza tra i cataloghi STAC statici e gli endpoint "
+"dell'API STAC:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:996
+msgid ""
+"**Static STAC Catalogs**: are collections of JSON files without search "
+"capabilities. They can be browsed via the Browser panel."
+msgstr ""
+"**Static STAC Catalogs**: sono raccolte di file JSON prive di funzionalità "
+"di ricerca. È possibile sfogliarli tramite il pannello Browser."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:998
+msgid ""
+"**STAC API**: provide search capabilities and can be accessed in QGIS "
+"through both the Browser panel and the Data Source Manager."
+msgstr ""
+"**STAC API**: offre funzionalità di ricerca ed è accessibile in QGIS sia "
+"tramite il pannello Browser che tramite il Data Source Manager."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1005
+msgid ""
+"STAC connections can be added in QGIS using either the :guilabel:`Browser "
+"panel` or the :guilabel:`Data Source Manager`:"
+msgstr ""
+"È possibile aggiungere connessioni STAC in QGIS utilizzando sia il "
+":guilabel:`pannello Browser` sia il :guilabel:`Gestore delle fonti dati`:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1007
+msgid ""
+"**Browser Panel:** In the :guilabel:`Browser panel`, right-click on the "
+"|stac| :guilabel:`STAC` entry and select :guilabel:`New STAC Connection...`."
+" In the dialog that appears, enter a :guilabel:`Name` for the connection, "
+"the :guilabel:`URL` of the STAC catalog and optionally fill in "
+":guilabel:`Authentication` credentials and a :guilabel:`Referer`. Then click"
+" :guilabel:`OK`."
+msgstr ""
+"**Pannello Browser:** Nel :guilabel:`Pannell Browser`, faie clic con il "
+"tasto destro del mouse sulla voce |stac| :guilabel:`STAC` e seleziona "
+":guilabel:`Nuova connessione STAC...`. Nella finestra di dialogo che appare,"
+" inserisci un :guilabel:`Nome` per la connessione, l' :guilabel:`URL` del "
+"catalogo STAC e, se lo desideri, inserisci le credenziali di "
+":guilabel:`Autenticazione` e un :guilabel:`Referer`. Quindi fai clic su "
+":guilabel:`OK`."
+
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1161
 msgid "stac"
 msgstr "stac"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1013
+msgid ""
+"Use this method for browsing static STAC catalogs that do not support search"
+" or filtering."
+msgstr ""
+"Utilizza questo metodo per sfogliare i cataloghi STAC statici che non "
+"supportano la ricerca o il filtraggio."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1015
+msgid ""
+"**Data Source Manager:** For STAC APIs you can use |dataSourceManager| "
+":guilabel:`Data Source Manager` dialog."
+msgstr ""
+"**Gestore fonti dati:** Per le API STAC puoi utilizzare la finestra di "
+"dialogo |dataSourceManager| :guilabel:`Gestore delle Sorgenti Dati`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1018
+msgid ""
+"Open the |dataSourceManager| :guilabel:`Data Source Manager`, choose the "
+"|stac| :guilabel:`STAC` tab and click the :guilabel:`New` button. Fill in "
+"the :guilabel:`Name` and :guilabel:`URL` fields, and (optional) the "
+":guilabel:`Authentication` credentials and a :guilabel:`Referer`. Press "
+":guilabel:`OK` and then :guilabel:`Connect` to establish the connection, "
+"after that you will be able to:"
+msgstr ""
+"Apri |dataSourceManager| :guilabel:`Gestore delle Sorgenti Dati`, seleziona "
+"la scheda |stac| :guilabel:`STAC` e fai clic sul pulsante :guilabel:`Nuovo`."
+" Compila i campi :guilabel:`Nome` e :guilabel:`URL` e, facoltativamente, "
+"inserire le credenziali di :guilabel:`Autenticazione` e un "
+":guilabel:`Referer`. Premi :guilabel:`OK` e poi :guilabel:`Connetti` per "
+"stabilire la connessione; a questo punto potrai:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1025
+msgid ":guilabel:`Edit` the STAC connection settings"
+msgstr ":guilabel:`Modifica` le impostazioni di connessione STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1026
+msgid ":guilabel:`Remove` the STAC connection"
+msgstr ":guilabel:`Rimuovi` la connessione STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1031
+msgid "Creating a connection to a STAC server"
+msgstr "Creazione di una connessione a un server STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1034
+msgid "Browsing STAC Catalogs"
+msgstr "Sfogliare i cataloghi STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1036
+msgid ""
+"Static STAC catalogs are displayed as hierarchical structures within the "
+":guilabel:`Browser panel`. Once connected, the STAC catalog appears under "
+"|stac|:guilabel:`STAC` in the :guilabel:`Browser` panel. You can expand the "
+"catalog node to see its :guilabel:`Collections`. Expanding a collection "
+"reveals the individual :guilabel:`Items` it contains."
+msgstr ""
+"I cataloghi STAC statici vengono visualizzati come strutture gerarchiche "
+"all'interno del :guilabel:`Pannello Browser`. Una volta stabilita la "
+"connessione, il catalogo STAC appare sotto |stac|:guilabel:`STAC` nel "
+":guilabel:`Ppannello Browser`. Puoi espandere il nodo del catalogo per "
+"visualizzarne le :guilabel:`Collezioni`. Espandendo una collezione vengono "
+"visualizzati i singoli :guilabel:`Elementi` in essa contenuti."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1044
+msgid "STAC connection expanded in the Browser, showing Collections and Items"
+msgstr ""
+"Connessione STAC ampliata nel Browser, che mostra le collezioni e gli "
+"elementi"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1046
+msgid ""
+"Right-click any STAC :guilabel:`Item` and choose :guilabel:`Details...` to "
+"view its metadata. The details panel shows the item’s JSON content and a map"
+" of its coverage. If an item’s asset is a cloud-optimized format (e.g. a "
+":file:`.COG`), you can add it directly to the map canvas. Otherwise, "
+":guilabel:`Download Assets...` to save it locally before use."
+msgstr ""
+"Fai clic con il tasto destro del mouse su qualsiasi :guilabel:`Elemento` "
+"STAC e seleziona :guilabel:`Dettagli...` per visualizzarne i metadati. Il "
+"pannello dei dettagli mostra il contenuto JSON dell’elemento e una mappa "
+"della sua copertura. Se il file associato a un elemento è in un formato "
+"ottimizzato per il cloud (ad es. un :file:`.COG`), puoi aggiungerlo "
+"direttamente all’area di lavoro della mappa. Altrimenti, seleziona "
+":guilabel:`Scarica asset. . .` per salvarlo localmente prima dell’uso."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1053
+msgid "Filtering and Searching STAC Items"
+msgstr "Filtraggio e ricerca degli Elementi STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1055
+msgid ""
+"For STAC API endpoints, QGIS supports spatial and temporal filtering, as "
+"well as limiting searches to specific collections."
+msgstr ""
+"Per gli endpoint dell'API STAC, QGIS supporta il filtraggio spaziale e "
+"temporale, oltre alla possibilità di limitare le ricerche a raccolte "
+"specifiche."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1057
+msgid "To search for items:"
+msgstr "Per cercare gli Elementi:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1059
+msgid "Open :guilabel:`Data Source Manager` and go to the :guilabel:`STAC`"
+msgstr "Apri :guilabel:`Gestore delle Sorgenti Dati` e vai a :guilabel:`STAC`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1060
+msgid ""
+"Select the STAC connection you created earlier and click "
+":guilabel:`Filters…`"
+msgstr ""
+"Seleziona la connessione STAC creata in precedenza e fai clic su "
+":guilabel:`Filtri…`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1065
+msgid "Define spatial and temporal filters for a STAC catalog search"
+msgstr ""
+"Definizione filtri spaziali e temporali per una ricerca nel catalogo STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1067
+msgid "In the filter dialog, you can:"
+msgstr "Nella finestra di dialogo del filtro puoi:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1069
+msgid ""
+"Enable |checkbox| :guilabel:`Spatial Extent` to restrict results to a "
+"bounding box or drawn area."
+msgstr ""
+"Attivare la casella di controllo |checkbox| :guilabel:`Estensione spaziale` "
+"per limitare i risultati a un riquadro di delimitazione o a un'area "
+"selezionata."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1070
+msgid ""
+"Enable |checkbox| :guilabel:`Temporal Extent` and define a date or range."
+msgstr ""
+"Attivare |checkbox| :guilabel:`Estensione temporale` e definire una data o "
+"un intervallo."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1071
+msgid ""
+"Limit to specific collections using |checkbox| :guilabel:`Only search within"
+" specific collections`"
+msgstr ""
+"Limita la ricerca a collezioni specifiche utilizzando la casella di "
+"selezione |checkbox| :guilabel:`Cerca solo all'interno di collezioni "
+"specifiche`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1073
+msgid ""
+"After applying filters, results will be listed in the main :guilabel:`Data "
+"Source Manager` panel."
+msgstr ""
+"Dopo aver applicato i filtri, i risultati verranno visualizzati nel pannello"
+" principale :guilabel:`Gestore delle Sorgenti Dati`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1074
+msgid ""
+"Optionally check |checkbox|:guilabel:`Show Footprints` to display the "
+"footprints of the results on the map."
+msgstr ""
+"Opzionalmente, seleziona la casella di controllo |checkbox|:guilabel:`Mostra"
+" Tracciati` per visualizzare i tracciati dei risultati sulla mappa."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1076
+msgid "Right-click a result item to access actions:"
+msgstr ""
+"Fai clic con il tasto destro del mouse su una voce dei risultati per "
+"accedere alle azioni:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1078
+msgid ":guilabel:`Zoom to Item`"
+msgstr ":guilabel:`Zoom all'elemento`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1079
+msgid ":guilabel:`Pan to Item`"
+msgstr ":guilabel:`Sposta su Elemento`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1080
+msgid ":guilabel:`Download Assets`"
+msgstr ":guilabel:`Scarica Asset`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1081
+msgid ":guilabel:`Details...`"
+msgstr ":guilabel:`Dettagli...`"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1083
+msgid ""
+"If the item’s asset requires download, use the :guilabel:`Download Assets` "
+"option."
+msgstr ""
+"Se l'asset dell'elemento richiede il download, utilizza l'opzione "
+":guilabel:`Scarica Asset`."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1088
+msgid "Download STAC item assets"
+msgstr "Scarica asset dell'elemento STAC"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1090
+msgid ""
+"Downloaded assets include the main dataset and any auxiliary files such as "
+"thumbnails or style files. After download, use standard QGIS tools (e.g., "
+"|raster|:guilabel:`Add Raster Layer...`) to load and display the data."
+msgstr ""
+"Gli assett scaricati includono il set di dati principale ed eventuali file "
+"ausiliari, quali miniature o file di stile. Una volta completato il "
+"download, utilizzare gli strumenti standard di QGIS (ad esempio, "
+"|raster|:guilabel:`Aggiungi layer raster...`) per caricare e visualizzare i "
+"dati."
 
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1151
 msgid "raster"
@@ -1885,3 +2465,64 @@ msgstr "raster"
 #: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1098
 msgid "ArcGIS REST Server"
 msgstr "ArcGIS REST Server"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1100
+msgid ""
+"An `ArcGIS REST Server`_ can host many different types of web services "
+"(feature service, map service, image service, ...). Read :ref:`arcgis_rest` "
+"for instructions to connect to an ArcGIS REST server."
+msgstr ""
+"Un `ArcGIS REST Server` può ospitare diversi tipi di servizi web (servizio "
+"di entità, servizio di mappe, servizio di immagini, ...). Leggi "
+":ref:`arcgis_rest` per le istruzioni su come connettersi a un ArcGIS REST "
+"Server."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1104
+msgid ""
+"When loading layers from an ArcGIS Feature Service, symbols are "
+"automatically converted to QGIS-native symbology, allowing QGIS to visually "
+"reproduce the same appearance as ArcGIS web maps."
+msgstr ""
+"Quando si caricano i layer da un ArcGIS Feature Service, i simboli vengono "
+"automaticamente convertiti nella simbologia nativa di QGIS, consentendo a "
+"QGIS di riprodurre visivamente lo stesso aspetto delle mappe web di ArcGIS."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1108
+msgid "Layers from an ArcGIS Feature Service can be editable in QGIS if:"
+msgstr ""
+"I layer provenienti da un Feature Service di ArcGIS possono essere "
+"modificabili in QGIS se:"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1110
+msgid "The ArcGIS service has editing enabled"
+msgstr "Il servizio ArcGIS consente la modifica"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1111
+msgid "Your credentials grant write access"
+msgstr "Le tue credenziali ti consentono l'accesso in scrittura"
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1112
+msgid ""
+"And the remote layer supports editing operations (Create, Update, or Delete "
+"capabilities). If these options are disabled on the server, the layer will "
+"be read-only in QGIS."
+msgstr ""
+"E il layer remoto supporta le operazioni di modifica (funzionalità di "
+"creazione, aggiornamento o eliminazione). Se queste opzioni sono "
+"disabilitate sul server, il layer risulterà di sola lettura in QGIS."
+
+#: ../../docs/user_manual/working_with_ogc/ogc_client_support.rst:1115
+msgid ""
+"Editing these layers follow the :ref:`same procedure "
+"<sec_edit_existing_layer>` as for other vector layers. To update your map "
+"with the latest changes, use :menuselection:`View --> Refresh` or press "
+":kbd:`F5`. If multiple users edit the same layer concurrently, it is "
+"recommended to refresh your data before performing edits to avoid conflicts."
+msgstr ""
+"Per modificare questi layer segui la:ref:`same procedure "
+"<sec_edit_existing_layer>` utilizzata per gli altri layer vettoriali. Per "
+"aggiornare la mappa con le ultime modifiche, utilizza "
+":menuselection:`Visualizza --> Aggiorna` oppure premere :kbd:`F5`. Se più "
+"utenti modificano contemporaneamente lo stesso layer, si consiglia di "
+"aggiornare i dati prima di apportare modifiche, al fine di evitare "
+"conflitti."
