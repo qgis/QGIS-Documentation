@@ -273,6 +273,8 @@ and create the expected header :file:`sipifyheader.expected.sip` file.
 This will also be automatically tested as a unit test of the script itself.
 
 
+.. _settings_coding_standards:
+
 Settings
 ========
 
