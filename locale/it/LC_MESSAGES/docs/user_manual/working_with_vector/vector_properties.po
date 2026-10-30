@@ -266,6 +266,16 @@ msgid "Also available in the :ref:`Layer styling panel <layer_styling_panel>`"
 msgstr ""
 "Disponibile anche nel :ref:`Layer styling panel <layer_styling_panel>`"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:57
+msgid ""
+":ref:`External plugins <plugins>` you install can optionally add tabs to "
+"this dialog. Those are not presented in this document. Refer to their "
+"documentation."
+msgstr ""
+":ref:`External plugins <plugins>` che sinstalli possono, se vuoi, aggiungere"
+" delle schede a questa finestra di dialogo. Tali schede non sono descritte "
+"in questo documento. Fai riferimento alla relativa documentazione."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:60
 msgid "**Share full or partial properties of the layer styles**"
 msgstr ""
@@ -405,6 +415,10 @@ msgstr ""
 "A seconda del formato dei dati, selezionare la :guilabel:`Codifica sorgente "
 "dati` se non viene rilevata correttamente da QGIS."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:126
+msgid "Coordinate Reference System"
+msgstr "Sistema di Riferimento delle Coordinate"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:128
 msgid ""
 "Displays the layer's :ref:`Assigned Coordinate Reference System (CRS) "
@@ -427,6 +441,51 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4215
 msgid "setProjection"
 msgstr "setProjection"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:137
+msgid "Layer source and Geometry"
+msgstr "Layer source and Geometry"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:139
+msgid ""
+"Depending on the data provider, a :guilabel:`Layer source` group indicates "
+"the path to the source of the dataset and allows for replacing the loaded "
+"layer:"
+msgstr ""
+"A seconda del fornitore dei dati, un gruppo :guilabel:`Layer sorgente` "
+"indica il percorso della fonte del set di dati e consente di sostituire il "
+"layer caricato:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:142
+msgid ""
+"When the layer is stored as file on disk, edit the path shown in the text "
+"box or press :guilabel:`...` :sup:`Browse` to select another file on the "
+"disk. Both layers do not need to share attribute fields, geometry type or "
+"file formats."
+msgstr ""
+"Quando il layer è salvato come file su disco, modifica il percorso indicato "
+"nella casella di testo oppure premi :guilabel:`...` :sup:`Sfoglia` per "
+"selezionare un altro file presente sul disco. Non è necessario che i due "
+"layer condividano campi di attributi, tipo di geometria o formati di file."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:145
+msgid ""
+"When the layer is provided by an ArcGIS Feature service, it is possible to "
+"modify its :ref:`authentication settings <authentication>`, while keeping "
+"unchanged the details for connecting to the service."
+msgstr ""
+"Quando il layer è fornito da un servizio Feature di ArcGIS, è possibile "
+"modificare le sue ref:`authentication settings <authentication>`, mantenendo"
+" invariati i dettagli per la connessione al servizio."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:149
+msgid ""
+":guilabel:`Create spatial index` (only for OGR-supported formats): helps "
+"speeding layer rendering and features' geometry retrieval."
+msgstr ""
+":guilabel:`Crea indice spaziale` (solo per i formati supportati da OGR): "
+"contribuisce ad accelerare il rendering dei layer e il recupero delle "
+"geometrie degli elementi."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:151
 msgid ":guilabel:`Update extents` information for a layer."
@@ -553,6 +612,20 @@ msgstr ""
 " lista Valori. Puoi utilizzare la casella di ricerca nella parte superiore "
 "del riquadro Valori per sfogliare e trovare facilmente i valori degli "
 "attributi nella lista. "
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:218
+msgid ""
+"The **Operators** section contains all usable :ref:`operators "
+"<expression_operators>`. To add an operator to the SQL WHERE clause field, "
+"click the appropriate button. Relational operators ( ``=`` , ``>`` , ...), "
+"string comparison operator (``LIKE``), and logical operators (``AND``, "
+"``OR``, ...) are available."
+msgstr ""
+"La sezione **Operatori** contiene tutti gli :ref:`operators "
+"<expression_operators>` utilizzabili. Per aggiungere un operatore al campo "
+"della clausola WHERE di SQL, fai clic sul pulsante corrispondente. Sono "
+"disponibili operatori relazionali (``=``, ``>``, ...), operatori di "
+"confronto tra stringhe (``LIKE``) e operatori logici (``AND``, ``OR``, ...)."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:224
 msgid ""
@@ -919,6 +992,36 @@ msgstr ""
 "Poi clicca sul pulsante :guilabel:`Classifica` per creare classi dai valori "
 "distinti del campo o dell'espressione fornita."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:428
+msgid ""
+"For each class, you can edit the :guilabel:`Legend` column to a more "
+"meaningful label (used in the :guilabel:`Layers` panel and the print "
+"layout)."
+msgstr ""
+"Per ogni classe, puoi modificare la colonna :guilabel:`Legenda` assegnandole"
+" un'etichetta più significativa (utilizzata nel pannello :guilabel:`Layer` e"
+" nel layout di stampa)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:431
+msgid ""
+"Keep in mind that some values may use widgets that do not display the actual"
+" value stored in the field. For example, a checkbox widget may store ``1`` "
+"and ``0`` for checked and unchecked states, while displaying ``True`` and "
+"``False`` labels. In this case, to categorize features based on the checkbox"
+" state, you need to use the stored values (``1`` and ``0``) in the "
+"expression. QGIS will automatically use the display value for the legend "
+"column."
+msgstr ""
+"Tieni presente che alcuni valori potrebbero utilizzare widget che non "
+"visualizzano il valore effettivo memorizzato nel campo. Ad esempio, un "
+"widget casella di controllo potrebbe memorizzare ``1`` e ``0`` "
+"rispettivamente per gli stati selezionato e deselezionato, mentre visualizza"
+" le etichette ``True`` e ``False``. In questo caso, per classificare le "
+"caratteristiche in base allo stato della casella di controllo, devi "
+"utilizzare i valori memorizzati (``1`` e ``0``) nell'espressione. QGIS "
+"utilizzerà automaticamente il valore visualizzato per la colonna della "
+"legenda."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:439
 msgid ""
 ":guilabel:`Apply` the changes if the :ref:`live update "
@@ -946,6 +1049,16 @@ msgstr ""
 msgid "Further tweaks can be done to the default classification:"
 msgstr ""
 "Ulteriori modifiche possono essere fatte alla classificazione predefinita:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:450
+msgid ""
+"You can |symbologyAdd| :sup:`Add` new categories, |symbologyRemove| "
+":sup:`Remove` selected categories, :guilabel:`Delete All` of them or "
+":guilabel:`Delete Unused` categories."
+msgstr ""
+"Puoi |symbologyAdd| :sup:`Aggiungi` nuove categorie, |symbologyRemove| "
+":sup:`Elimina` le categorie selezionate, :guilabel:`Elimina tutte` o "
+":guilabel:`Eliminare quelle inutilizzate`."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4236
 msgid "symbologyAdd"
@@ -2231,6 +2344,20 @@ msgstr ""
 msgid "slider"
 msgstr "slider"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1012
+msgid ""
+":guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` "
+"levels: You can achieve special rendering effects with these tools that you "
+"may previously only know from graphics programs. The pixels of your "
+"overlaying and underlying layers are mixed through the settings described in"
+" :ref:`blend-modes`."
+msgstr ""
+":guilabel:`Modalità di fusione` a livello di :guilabel:`Layer` e "
+":guilabel:`Elemento`: con questi strumenti puoi ottenere effetti di "
+"rendering speciali che forse finora conoscevi solo nei programmi di grafica."
+" I pixel dei livelli sovrapposti e sottostanti vengono fusi tramite le "
+"impostazioni descritte in :ref:`blend-modes`."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1017
 msgid ""
 "Apply :ref:`paint effects <draw_effects>` on all the layer features with the"
@@ -2550,6 +2677,64 @@ msgid "Setting the symbol's rotation to data defined expression"
 msgstr ""
 "Impostazione della rotazione del simbolo in base all'espressione definita "
 "dai dati"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1178
+msgid "Extent buffer"
+msgstr "Estensione buffer"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1179
+msgid ""
+"You may set an extent buffer for a :ref:`symbol <edit_symbol>`. This means "
+"that a buffer is applied to the current map extent so that if a feature is "
+"outside of the actual map extent but inside the buffered extent it will "
+"still be rendered. This is useful for example with symbols which use the "
+"geometry generator where you would like to still see the generated "
+"geometries even if the actual feature is outside of the map extent."
+msgstr ""
+"Puoi impostare una estensione buffer per un :ref:`simbolo <edit_symbol>`. "
+"Ciò significa che viene applicato un buffer all'estensione corrente della "
+"mappa, in modo che se un elemento si trova al di fuori dell'estensione "
+"effettiva della mappa ma all'interno dell'estensione del buffer, verrà "
+"comunque visualizzato. Ciò è utile, ad esempio, con i simboli che utilizzano"
+" il generatore di geometrie, nei casi in cui vuoi continuare a visualizzare "
+"le geometrie generate anche se l'elemento effettivo si trova al di fuori "
+"dell'estensione della mappa."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1185
+msgid ""
+"To edit the extent buffer you can utilize the :guilabel:`Extent buffer` "
+"panel."
+msgstr ""
+"Per modificare l'estensione buffer puoi utilizzare il pannello "
+":guilabel:`Estensione Buffer`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1189
+msgid "Find :guilabel:`Extent buffer` option"
+msgstr "Trova l'opzione :guilabel:`Estensione buffer`"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1190
+msgid "In the new panel you can set the buffer distance"
+msgstr "Nel nuovo pannello puoi impostare la distanza del buffer"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1192
+msgid ""
+"The buffer distance units can be changed. You can also control the distance "
+"value by using the data defined override widget. For example you can change "
+"the value based on the current map scale ``if(@map_scale > 50000, 5000, "
+"0)``:"
+msgstr ""
+"È possibile modificare le unità di misura della dimensione del buffer. Puoi "
+"anche controllare il valore della distanza utilizzando il widget di "
+"sovrascrittura dei dati. Ad esempio, puoi modificare il valore in base alla "
+"scala corrente della mappa ``if(@map_scale > 50000, 5000, 0)``:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1202
+msgid ""
+"Example of the extent buffer with a symbol using a geometry generator symbol"
+" level."
+msgstr ""
+"Esempio di buffer estensione con un simbolo che utilizza un livello di "
+"simbolo del generatore di geometria."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1209
 msgid "Draw effects"
@@ -3169,6 +3354,14 @@ msgstr ""
 "etichette vengano posizionate troppo vicine alle etichette di un layer "
 "diverso."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1460
+msgid ""
+"The last three options are only available on QGIS installed with GEOS_ >= "
+"3.10 (see :menuselection:`Help --> About` menu)."
+msgstr ""
+"Queste tre ultime opzioni sono disponibili solo nelle installazioni di QGIS "
+"con GEOS_ >= 3.10 (vedere il menu :menuselection:`Aiuto --> Informazioni`)."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1463
 msgid ""
 "Fill the properties at your will; you can provide a more meaningful name to "
@@ -3584,6 +3777,16 @@ msgstr ""
 "Etichetta basata su due campi 'name' e 'place' con una virgola come "
 "separatore:"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1656
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1670
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1683
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1702
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1717
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1731
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1744
+msgid "Returns:"
+msgstr "Restituisce:"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1662
 msgid "Label based on two fields 'name' and 'place' with other texts:"
 msgstr "Etichetta basata su due campi 'name' e 'place' con altri testi:"
@@ -3595,6 +3798,10 @@ msgid ""
 msgstr ""
 "Etichetta basata su due campi 'nome' e 'luogo' con altri testi che combinano"
 " diverse funzioni di concatenazione:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1689
+msgid "Or, if the field 'place' is NULL, returns:"
+msgstr "Oppure, se il campo 'place' è NULL, restituisce:"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:1695
 msgid ""
@@ -3807,6 +4014,19 @@ msgstr ""
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4221
 msgid "showUnplacedLabel"
 msgstr "showUnplacedLabel"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:1840
+msgid ""
+"|pinLabels| :sup:`Pin/Unpin Labels and Diagrams`. By clicking or dragging an"
+" area, you pin overlaid items. If you click or drag an area holding "
+":kbd:`Shift`, the items are unpinned. Finally, you can also click or drag an"
+" area holding :kbd:`Ctrl` to toggle their pin status."
+msgstr ""
+"|pinLabels| :sup:`Fissa/Sblocca etichette e grafici`. Cliccando o "
+"trascinando un'area, si fissano gli elementi sovrapposti. Se si clicca o si "
+"trascina un'area tenendo premuto :kbd:`Shift`, gli elementi vengono "
+"sbloccati. Infine, puoi anche cliccare o trascinare un'area tenendo premuto "
+":kbd:`Ctrl` per attivare o disattivare lo stato di fissaggio."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4195
 msgid "pinLabels"
@@ -5050,9 +5270,50 @@ msgstr ""
 "un modello potenzialmente più complesso e completo, come modulo per le "
 "geometrie."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2378
+msgid ""
+"Just below the :guilabel:`Attribute editor layout` setting, a search box "
+"allows you to filter fields, relations, containers and other available "
+"widgets."
+msgstr ""
+"Appena sotto l'impostazione :guilabel:`Layout editor attributi`, una casella"
+" di ricerca consente di filtrare campi, relazioni, contenitori e altri "
+"widget disponibili."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2381
+msgid ""
+"For items that support aliases, like fields or relations, the filter targets"
+" both names and aliases."
+msgstr ""
+"Per gli elementi che supportano gli alias, come i campi o le relazioni, il "
+"filtro agisce sia sui nomi che sugli alias."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2384
+msgid ""
+"The |toggleAliases| :sup:`Show field aliases instead of names` button allows"
+" you to toggle field aliases and field names."
+msgstr ""
+"Il pulsante |toggleAliases| :sup:`Mostra gli alias dei campi invece dei "
+"nomi` consente di alternare la visualizzazione degli alias dei campi e dei "
+"nomi dei campi."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:4248
 msgid "toggleAliases"
 msgstr "toggleAliases"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2387
+msgid ""
+"When showing aliases, fields without an alias set will have their names "
+"displayed in light gray to help identify them easily."
+msgstr ""
+"Quando vengono visualizzati gli alias, i nomi dei campi per i quali non è "
+"stato impostato alcun alias appariranno in grigio chiaro, per facilitarne "
+"l'identificazione."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2395
+msgid "Search fields using aliases and names in Attributes Form page"
+msgstr ""
+"Campi di ricerca che utilizzano alias e nomi nella pagina Modulo Attributi"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2398
 msgid "The autogenerated form"
@@ -5656,6 +5917,49 @@ msgstr ""
 msgid "Dialog to select an edit widget for an attribute column"
 msgstr "Finestra di dialogo per modificare un campo"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2642
+msgid "**Copy and paste widget configuration**"
+msgstr "**Configurazione del widget Copia e incolla**"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2644
+msgid ""
+"The field configuration can be copied to the clipboard and then pasted to "
+"another field via right click on a field in the :guilabel:`Available "
+"widgets` panel."
+msgstr ""
+"La configurazione del campo può essere copiata negli appunti e poi incollata"
+" in un altro campo facendo clic con il tasto destro del mouse su un campo "
+"nel pannello :guilabel:`Widget disponibili`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2647
+msgid ""
+"This comes handy to save time and to make sure that common settings are "
+"correctly applied to several related fields, e.g., when configuring latitude"
+" and longitude field widgets."
+msgstr ""
+"Questa funzione è utile per risparmiare tempo e per assicurarsi che le "
+"impostazioni comuni vengano applicate correttamente a diversi campi "
+"correlati, ad esempio quando si configurano i widget dei campi di latitudine"
+" e longitudine."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2651
+msgid ""
+"Copy and paste of widget configuration can be done between fields of the "
+"same layer, between fields from different layers in the QGIS project, or "
+"between fields from layers in different QGIS instances."
+msgstr ""
+"È possibile copiare e incollare la configurazione di un widget tra campi "
+"dello stesso layer, tra campi di layer diversi all'interno del progetto QGIS"
+" o tra campi di layer presenti in diverse istanze di QGIS."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2655
+msgid ""
+"Note that neither aliases nor comments are copied, since those are specific "
+"to each particular field."
+msgstr ""
+"Da notare che né gli alias né i commenti vengono copiati, poiché sono "
+"specifici di ciascun campo."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2661
 msgid "Common settings"
 msgstr "Impostazioni comuni"
@@ -5965,6 +6269,26 @@ msgstr ""
 msgid "Policies"
 msgstr "Regole"
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2769
+msgid ""
+"Field policies determine how values are assigned to fields during various "
+"editing operations:"
+msgstr ""
+"I criteri relativi ai campi determinano le modalità di assegnazione dei "
+"valori ai campi durante le varie operazioni di modifica:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2771
+msgid "**Split and Duplicate Policies**"
+msgstr "**Criteri relativi alla suddivisione e alla duplicazione**"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2773
+msgid ""
+"These policies apply when :guilabel:`Splitting features` or "
+":guilabel:`Duplicating features`:"
+msgstr ""
+"Questi criteri si applicano quando si esegue :guilabel:`Suddivisione "
+"elementi` o :guilabel:`Duplicazione elementi`:"
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2775
 msgid ""
 ":guilabel:`Duplicate Values`: Keeps the existing value of the field for the "
@@ -5998,6 +6322,79 @@ msgstr ""
 ":guilabel:`Usa rapporto geometrie`: Ricalcola il valore del campo per tutte "
 "le porzioni divise moltiplicando il valore esistente per il rapporto tra le "
 "lunghezze o le aree delle parti divise."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2782
+msgid "**Merge Policies**"
+msgstr "**Criteri di Fusione**"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2784
+msgid ""
+"These policies determine initial values when :guilabel:`Merging features`:"
+msgstr ""
+"Questi criteri determinano i valori iniziali durante l'operazione "
+":guilabel:`Unione elementi`:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2786
+msgid ""
+":guilabel:`Remove Value`: Clears the field to an unset state (data provider "
+"may populate default value)."
+msgstr ""
+":guilabel:`Rimuovi valore`: azzera il campo (il provider di dati potrebbe "
+"inserire un valore predefinito)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2787
+msgid ""
+":guilabel:`Use Default Value`: Uses the default field value set in QGIS. "
+"(expressions use a dummy feature with the merged geometry; references to "
+"other fields won't work)."
+msgstr ""
+":guilabel:`Usa valore predefinito`: utilizza il valore predefinito del campo"
+" impostato in QGIS. (Le espressioni utilizzano un campo fittizio con la "
+"geometria unificata; i riferimenti ad altri campi non funzioneranno)."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2789
+msgid ""
+":guilabel:`Use Sum` (numeric fields only): Sums values from all merged "
+"features."
+msgstr ""
+":guilabel:`Usa somma` (solo campi numerici): somma i valori di tutte le "
+"entità unite."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2790
+msgid ""
+":guilabel:`Use Minimum Value` (numeric fields only): Uses smallest value "
+"from the selected features."
+msgstr ""
+":guilabel:`Usa valore minimo` (solo campi numerici): utilizza il valore più "
+"piccolo tra gli elementi selezionati."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2791
+msgid ""
+":guilabel:`Use Maximum Value` (numeric fields only): Uses largest value from"
+" the selected features."
+msgstr ""
+":guilabel:`Usa valore massimo` (solo campi numerici): utilizza il valore più"
+" alto tra gli elementi selezionati."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2792
+msgid ""
+":guilabel:`Average Weighted by Geometry` (numeric fields only): New values "
+"are computed as the weighted average of the source values."
+msgstr ""
+":guilabel:`Media ponderata in base alla geometria` (solo campi numerici): i "
+"nuovi valori vengono calcolati come media ponderata dei valori di origine."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2794
+msgid ""
+":guilabel:`Use Largest Feature`: Uses value from feature with the largest "
+"geometry."
+msgstr ""
+":guilabel:`Usa elemento più grande`: utilizza il valore dell'elemento con la"
+" geometria più estesa."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2795
+msgid ":guilabel:`Set to NULL`: Sets attribute to NULL."
+msgstr ":guilabel:`Imposta a NULL`: imposta l'attributo a NULL."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2800
 msgid "Edit widgets"
@@ -6049,6 +6446,26 @@ msgstr ""
 "È anche possibile visualizzare l'anteprima del file binario incorporato nel "
 "campo, se combinato in un modulo trascina-e-rilascia con, ad esempio, un "
 ":ref:`QML or HTML widget <other_widgets>`."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2816
+msgid ""
+"**Checkbox**: Displays a checkbox whose state defines the value to insert. "
+"Internally, the widget stores a value (e.g. 1 for checked, 0 for unchecked) "
+"while representing it visually as a toggled box. You can configure the "
+"stored values for the checked and unchecked states in the representation. It"
+" is also possible to display the checkbox state as a plain text using "
+"\"True\"/\"False\" labels. These settings influence how the values are shown"
+" in classification renderers."
+msgstr ""
+"**Checkbox**: visualizza una casella di selezione il cui stato definisce il "
+"valore da inserire. Internamente, il widget memorizza un valore (ad esempio "
+"1 per selezionata, 0 per deselezionata), rappresentandola visivamente come "
+"una casella con lo stato attivato/disattivato. È possibile configurare i "
+"valori memorizzati per gli stati selezionato e deselezionato nella "
+"rappresentazione. È inoltre possibile visualizzare lo stato della casella di"
+" controllo come testo semplice utilizzando le etichette \"True\"/\"False\". "
+"Queste impostazioni influenzano il modo in cui i valori vengono mostrati nei"
+" renderer di classificazione."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2822
 msgid ""
@@ -6125,6 +6542,37 @@ msgstr ""
 "directory del file di progetto :file:`.qgs` o in cartella sottostante, i "
 "percorsi vengono convertiti in percorsi relativi. Ciò aumenta la portabilità"
 " di un progetto :file:`.qgs` con le informazioni multimediali allegate. "
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2847
+msgid ""
+"**Geometry**: Compatible with the *Geometry* field type. For example, "
+"PostgreSQL and Memory layers can contain multiple geometry fields. QGIS uses"
+" the first geometry column as the layer geometry. Applying the Geometry "
+"widget to additional geometry fields allows lossless use of the data in the "
+"attribute form:"
+msgstr ""
+"**Geometry**: Compatibile con il tipo di campo *Geometry*. Ad esempio, i "
+"layer PostgreSQL e Memory possono contenere più campi *Geometry*. QGIS "
+"utilizza la prima colonna *Geometry* come geometria del layer. "
+"L'applicazione del widget *Geometry* a campi *Geometry* aggiuntivi consente "
+"di utilizzare i dati nel modulo degli attributi senza perdita di "
+"informazioni:"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2851
+msgid ""
+"Copy in the formats WKT (Well-known text representation, e.g. ``POINT (30 "
+"10)`` ) or GeoJSON"
+msgstr ""
+"Copia nei formati WKT (Well-known text, ad esempio ``POINT (30 10)``) o "
+"GeoJSON"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2852
+msgid "Paste"
+msgstr "Incolla"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2853
+msgid "Clear"
+msgstr "Cancella"
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2855
 msgid ""
@@ -6210,6 +6658,27 @@ msgstr ""
 "assegnati a un widget **Range** per i campi pertinenti. Il widget sarà "
 "precompilato con i valori minimi e massimi specifici nel dominio."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2882
+msgid ""
+"**Relation Reference**: This is the default widget assigned to the "
+"referencing field (i.e., the foreign key in the child layer) when a "
+":ref:`relation <vector_relations>` is set. It provides direct access to the "
+"parent feature's form which in turn embeds the list and form of its "
+"children. The number of entries in the widget can be limited for efficiency,"
+" and if limit is not set, all entries will be loaded. The field defined in "
+"the display expression is used as representable value in classification "
+"renderers."
+msgstr ""
+"**Relation Reference**: si tratta del widget predefinito assegnato al campo "
+"di riferimento (ovvero la chiave esterna nel livello figlio) quando viene "
+"impostata una :ref:`relazione <vector_relations>`. Fornisce accesso diretto "
+"al modulo dell'elemento padre, che a sua volta incorpora l'elenco e il "
+"modulo dei suoi elementi figli. Il numero di voci nel widget può essere "
+"limitato per motivi di efficienza; se non viene impostato alcun limite, "
+"verranno caricate tutte le voci. Il campo definito nell’espressione di "
+"visualizzazione viene utilizzato come valore rappresentabile nei renderer di"
+" classificazione."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2889
 msgid ""
 "**Text Edit** (default): This opens a text edit field that allows simple "
@@ -6239,6 +6708,21 @@ msgstr ""
 "**Generatore UUID**: genera un campo UUID (Universally Unique Idetifiers) di"
 " sola lettura, se il campo è vuoto."
 
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2897
+msgid ""
+"**Value Map**: A combo box with predefined items. The value is stored in the"
+" attribute, the description is shown in the combo box. You can define values"
+" manually or load them from a layer or a CSV file. The description is used "
+"as the representable value, meaning it will be shown in classification "
+"renderers."
+msgstr ""
+"**Value Map**: una casella combinata con voci predefinite. Il valore viene "
+"memorizzato nell'attributo, mentre la descrizione viene visualizzata nella "
+"casella combinata. Puoi definire i valori manualmente oppure caricarli da un"
+" livello o da un file CSV. La descrizione viene utilizzata come valore "
+"rappresentabile, il che significa che verrà visualizzata nei renderer di "
+"classificazione."
+
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2905
 msgid ""
 "Some layers, such as GeoPackage or ESRI File Geodatabase, with predefined "
@@ -6248,6 +6732,43 @@ msgstr ""
 "Alcuni layer, come GeoPackage o ESRI File Geodatabase, con **domini di campo"
 " codificati** predefiniti verranno riconosciuti automaticamente da QGIS e "
 "assegnati a un widget **Valori Mapp valori** per i campi corrispondenti."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2908
+msgid ""
+"**Value Relation**: Offers values from a related table in a combobox. You "
+"can select layer, key column and value column. The key column is the stored "
+"value in the attribute table, while the value column is the label shown in "
+"the combobox. Value column is also the representable value that will be "
+"shown in the classification renderers. You may also choose to order the list"
+" of displayed values by the :guilabel:`Key` column (the default sort order),"
+" the :guilabel:`Value` column, or a specific :guilabel:`Field` of the layer."
+" Enable the |checkbox| :guilabel:`Descending order` if you wish the values "
+"to be sorted in reverse order."
+msgstr ""
+"**Value Relation**: mostra i valori provenienti da una tabella correlata in "
+"una casella combinata. Puoi selezionare il layer, la colonna chiave e la "
+"colonna dei valori. La colonna chiave è il valore memorizzato nella tabella "
+"degli attributi, mentre la colonna dei valori è l'etichetta visualizzata "
+"nella casella combinata. La colonna dei valori è anche il valore "
+"rappresentabile che verrà mostrato nei renderer di classificazione. Puoi "
+"anche ordinare l’elenco dei valori visualizzati in base alla colonna "
+":guilabel:`Chiave` (ordine di ordinamento predefinito), alla colonna "
+":guilabel:`Valore` o a uno specifico :guilabel:`Campo` del layer. Seleziona "
+"|checkbox| :guilabel:`Ordine discendente` se vuoi che i valori siano "
+"ordinati in ordine inverso."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:2918
+msgid ""
+"Several options are available to change the standard behavior: allow NULL "
+"value, allow multiple selections and use of auto-completer. The forms will "
+"display either a drop-down list or a line edit field when completer checkbox"
+" is enabled."
+msgstr ""
+"Sono disponibili diverse opzioni per modificare il comportamento "
+"predefinito: consentire valori NULL, consentire selezioni multiple e "
+"utilizzare la funzione di completamento automatico. Quando la casella di "
+"controllo relativa al completamento automatico è selezionata, i moduli "
+"mostreranno un elenco a discesa o un campo di immissione testo."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:2922
 msgid ""
@@ -6957,6 +7478,25 @@ msgstr "``konqueror https://www.google.com/search?q=%name``"
 #, python-format
 msgid "``konqueror https://www.google.com/search?q=%%``"
 msgstr "``konqueror https://www.google.com/search?q=%%``"
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3278
+msgid ""
+"In the first example, the web browser konqueror is invoked and passed a URL "
+"to open. The URL performs a Google search on the value of the ``name`` field"
+" from our vector layer. Note that the application or script called by the "
+"action must be in the path, or you must provide the full path. To be "
+"certain, we could rewrite the first example as: ``/opt/kde3/bin/konqueror "
+"https://www.google.com/search?q=%name``. This will ensure that the konqueror"
+" application will be executed when the action is invoked."
+msgstr ""
+"Nel primo esempio, viene avviato il browser web Konqueror e gli viene "
+"passato un URL da aprire. L’URL esegue una ricerca su Google in base al "
+"valore del campo ``name`` del nostro layer vettoriale. Da notare che "
+"l’applicazione o lo script richiamato dall’azione deve trovarsi nel "
+"percorso, oppure devi specificare il percorso completo. Per sicurezza, "
+"potremmo riscrivere il primo esempio come: ``/opt/kde3/bin/konqueror "
+"https://www.google.com/search?q=%name``. In questo modo si garantirà che "
+"l'applicazione Konqueror venga eseguita quando viene richiamata l'azione."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3287
 msgid ""
@@ -8017,6 +8557,31 @@ msgstr ""
 "estendono verticalmente al di sopra della loro base. Questo è utile per "
 "indicare che un layer di geometria 2D, ad esempio un layer di planimetrie di"
 " edifici poligonali, rappresenta in realtà oggetti 3D."
+
+#: ../../docs/user_manual/working_with_vector/vector_properties.rst:3770
+msgid ""
+"|unchecked| :guilabel:`Custom tolerance`: allows you to override the global "
+"sampling tolerance defined in the elevation profile settings, specifically "
+"for this vector layer. When enabled, you can set :guilabel:`Tolerance` that "
+"determines how the layer is sampled along the profile line. This is useful "
+"when you need finer or coarser sampling than the global default, for "
+"example, to improve performance or accuracy for complex geometries."
+msgstr ""
+"|unchecked| :guilabel:`Custom tolerance`: allows you to override the global "
+"sampling tolerance defined in the elevation profile settings, specifically "
+"for this vector layer. When enabled, you can set :guilabel:`Tolerance` that "
+"determines how the layer is|unchecked| :guilabel:`Tolleranza "
+"personalizzata`: consente di sovrascrivere la tolleranza di campionamento "
+"globale definita nelle impostazioni del profilo altimetrico, "
+"specificatamente per questo layer vettoriale. Quando è abilitata, puoi "
+"impostare :guilabel:`Tolleranza`, che determina la modalità di campionamento"
+" del layer lungo la linea del profilo. Ciò risulta utile quando è necessario"
+" un campionamento più fine o più grossolano rispetto all'impostazione "
+"predefinita globale, ad esempio per migliorare le prestazioni o la "
+"precisione in caso di geometrie complesse. sampled along the profile line. "
+"This is useful when you need finer or coarser sampling than the global "
+"default, for example, to improve performance or accuracy for complex "
+"geometries."
 
 #: ../../docs/user_manual/working_with_vector/vector_properties.rst:3775
 msgid ""
