@@ -336,7 +336,7 @@ value, a description and options, followed by the arguments specific to the type
 
 Enum and flag settings are stored by the name of their member rather than
 by its integer value, which keeps the settings file readable.
-Use the ``Qgis.SettingsOption.SaveEnumFlagAsInt`` option to store the
+Use the :attr:`Qgis.SettingsOption.SaveEnumFlagAsInt <qgis.core.Qgis.SettingsOption.SaveEnumFlagAsInt>` option to store the
 integer value instead.
 
 .. testcode:: settings
