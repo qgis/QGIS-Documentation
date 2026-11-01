@@ -38,6 +38,10 @@ msgstr ""
 msgid "Check Geometry"
 msgstr "Verificare Geometria"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:17
+msgid "Dangle-end lines"
+msgstr "Linee con estremità sospese"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:18
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:146
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:275
@@ -60,6 +64,23 @@ msgstr "Verificare Geometria"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2518
 msgid "``Added in 3.42``"
 msgstr "``Aggiunto nella versione 3.42``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:20
+msgid ""
+"Detects dangle-end lines in line geometries and reports them as errors. A "
+"dangle-end line is a line feature that terminates at a vertex connected to "
+"only one segment, resulting in an endpoint without a proper connection."
+msgstr ""
+"Rileva le linee con estremità sospese nelle geometrie lineari e le segnala "
+"come errori. Una linea con estremità sospesa è un elemento lineare che "
+"termina in un vertice collegato a un solo segmento, dando luogo a "
+"un'estremità priva di un collegamento corretto."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:27
+msgid "Identifying dangle-end features (in red) and vertices (yellow)."
+msgstr ""
+"Identificazione delle linee con estremità sospese (in rosso) e dei vertici "
+"(in giallo)."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:30
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:159
@@ -416,6 +437,48 @@ msgstr "``INPUT``"
 msgid "[vector: line]"
 msgstr "[vector: line]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:47
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:176
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:808
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:933
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1066
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1195
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1323
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1435
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1557
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1838
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1982
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2102
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2240
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2412
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2543
+msgid "Layer with the geometries to check."
+msgstr "Layer con le geometrie da controllare."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:48
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:177
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:423
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:553
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:684
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:809
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:934
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1067
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1196
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1324
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1436
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1558
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1695
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1839
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1983
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2103
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2241
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2413
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2544
+msgid "**Unique feature identifier**"
+msgstr "**Identificatore univoco elemento**"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:49
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:178
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:299
@@ -461,6 +524,31 @@ msgstr "``UNIQUE_ID``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2546
 msgid "[tablefield: any]"
 msgstr "[tablefield: any]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:51
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:180
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:556
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:812
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:937
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1070
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1199
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1327
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1439
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1561
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1842
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1986
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2106
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2244
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2416
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2547
+msgid "Field storing unique values for feature identification."
+msgstr ""
+"Campo che contiene valori univoci per l'identificazione dell'elemento."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:52
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:110
+msgid "**Dangle-end errors**"
+msgstr "**Errori linee con estremità sospese**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:53
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:111
@@ -574,6 +662,21 @@ msgstr "[vector: point]"
 msgid "Default: ``[Create temporary layer]``"
 msgstr "Predefinito: ``[Create temporary layer]``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:57
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:307
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:432
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:693
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1076
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1567
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1704
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1997
+msgid ""
+"Specification of the output layer containing the errors location. :ref:`One "
+"of <output_parameter_widget>`:"
+msgstr ""
+"Specifiche del layer in uscita contenente la posizione degli errori. "
+":ref:`One of <output_parameter_widget>`:"
+
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 #: ../../docs/user_manual/processing_algs/algs_include.rst:4
 msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
@@ -598,6 +701,11 @@ msgstr "Salva su Tabella di Database…"
 #: ../../docs/user_manual/processing_algs/algs_include.rst:9
 msgid "The file encoding can also be changed here."
 msgstr "La codifica del file può anche essere cambiata qui."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:63
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:125
+msgid "**Dangle-end features**"
+msgstr "**Elementi linee con estremità sospese**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:65
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:194
@@ -676,11 +784,19 @@ msgstr "``OUTPUT``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2440
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2565
 msgid "Default: ``[Skip output]``"
-msgstr "Predefinito: ``[Skip output]``"
+msgstr "Predefinito: ``[Salta output]``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:70
+msgid ""
+"Line layer containing the identified dangle-end line features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Layer lineare contenente gli elementi con estremità di linea sospese "
+"identificate. :ref:`One of <output_parameter_widget>`:"
 
 #: ../../docs/user_manual/processing_algs/algs_include.rst:3
 msgid "Skip Output"
-msgstr "Tralascia risultato"
+msgstr "Salta risultato"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:78
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:207
@@ -797,6 +913,35 @@ msgstr "[numeric: integer]"
 msgid "Default: 8"
 msgstr "Predefinito: 8"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:94
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:223
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:346
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:603
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:730
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:855
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:984
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1113
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1247
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1361
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1473
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1604
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1741
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1900
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2021
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2156
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2323
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2466
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2591
+msgid ""
+"Numerical precision of geometric operations, given as an integer n, meaning "
+"that two vertices less than 10\\ :sup:`-n` apart (in map units) are "
+"considered to be merged."
+msgstr ""
+"Precisione numerica delle operazioni geometriche, espressa come numero "
+"intero n; ciò significa che due vertici distanti meno di 10\\ :sup:`-n` (in "
+"unità di mappa) vengono considerati uniti."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:99
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:228
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:351
@@ -820,6 +965,110 @@ msgstr "Predefinito: 8"
 msgid "Outputs"
 msgstr "In uscita:"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:113
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:242
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:365
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:489
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:622
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:749
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:874
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1132
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1266
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1380
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1492
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1623
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1760
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1919
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2040
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2175
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2350
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2485
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2610
+msgid ""
+"Output point layer representing the error locations and information. The "
+"output layer contains the following fields:"
+msgstr ""
+"Layer di punti in uscita che rappresenta le posizioni degli errori e le "
+"relative informazioni. Il layer in uscita contiene i seguenti campi:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:116
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:245
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:368
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:492
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:625
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:752
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:877
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1006
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1135
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1269
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1383
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1495
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1626
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1763
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1922
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2043
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2178
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2353
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2488
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2613
+msgid "``gc_layerid``: the ID of the input layer."
+msgstr "``gc_layerid``: l'ID del layer in ingresso."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:117
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:246
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:369
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:493
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:626
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:753
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:878
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1007
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1136
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1270
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1384
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1496
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1627
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1764
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1923
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2044
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2179
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2354
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2489
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2614
+msgid "``gc_layername``: the name of the input layer."
+msgstr "``gc_layername``: il nome del layer in ingresso."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:118
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"dangle-end."
+msgstr ""
+"``gc_partidx``: l'indice della parte geometrica dell'elemento che contiene "
+"l'estremità di linea sospesa."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:119
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"dangle-end."
+msgstr ""
+"``gc_ringidx``: l'indice dell'anello geometrico dell'elemento che contiene "
+"l'estremità di linea sospesa."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:120
+msgid ""
+"``gc_vertidx``: the vertex index of the dangle-end in the feature's geometry"
+" ring."
+msgstr ""
+"``gc_vertidx``: l'indice del vertice dell'estremità di linea sospesa "
+"nell'anello geometrico dell'elemento."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:121
+msgid "``gc_errorx``: the x coordinate of the dangle-end."
+msgstr "``gc_errorx``: la coordinata x dell'estremità di linea."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:122
+msgid "``gc_errory``: the y coordinate of the dangle-end."
+msgstr "``gc_errory``: la coordinata y dell'estremità di linea."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:123
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:252
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:499
@@ -832,6 +1081,24 @@ msgstr "In uscita:"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2620
 msgid "``gc_error``"
 msgstr "``gc_error``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:124
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature with the dangle-end."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso con l'estremità "
+"di linea sospesa."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:128
+msgid ""
+"Output line layer containing the input dangle-end features. If no dangle-end"
+" features are found, the output layer will be empty. Available fields are "
+"the same as in the ``ERRORS`` output."
+msgstr ""
+"Layer di uscita contenente gli elementi con estremità di linea sospesa in "
+"ingresso. Se non vengono rilevati elementi con estremità di linea sospesa, "
+"il layer di uscita risulterà vuoto. I campi disponibili sono gli stessi "
+"presenti nell'output ``ERRORS``."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:133
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:262
@@ -873,6 +1140,32 @@ msgstr ""
 ":ref:`processing_console` per dettagli su come eseguire algoritmi di "
 "elaborazione dalla console Python."
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:145
+msgid "Degenerate polygons"
+msgstr "Poligoni degeneri"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:148
+msgid ""
+"Checks the polygons with less than 3 points, which are degenerate polygons. "
+"Degenerate polygons are errors."
+msgstr ""
+"Verifica la presenza di poligoni con meno di 3 punti, che sono poligoni "
+"degeneri. I poligoni degeneri sono errori."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:153
+msgid ""
+"This algorithm detects invalid polygon geometries (degenerate polygons). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Questo algoritmo rileva le geometrie poligonali non valide (poligoni "
+"degeneri). Per assicurarsi che questi elementi non validi non vengano "
+"filtrati prima dell'elaborazione, apri |options|:sup:`Opzioni avanzate` "
+"accanto a :guilabel:`Layer in ingresso` e imposta :guilabel:`Filtraggio "
+"elementi non validi` su ``Non filtrare (prestazioni migliori)``."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2644
 msgid "options"
 msgstr "options"
@@ -902,6 +1195,21 @@ msgstr "options"
 msgid "[vector: polygon]"
 msgstr "[vector: polygon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:181
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:239
+msgid "**Degenerate polygons errors**"
+msgstr "**Errori poligoni degeneri**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:247
+msgid ""
+"``gc_partidx``: the index of the geometry part of the degenerate polygon."
+msgstr ""
+"``gc_partidx``: l'indice della parte geometrica del poligono degenere."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:248
+msgid "``gc_ringidx``: the index of the ring of the degenerate polygon."
+msgstr "``gc_ringidx``: l'indice dell'anello del poligono degenere."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:249
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:372
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:629
@@ -919,15 +1227,61 @@ msgstr "[vector: polygon]"
 msgid "``gc_vertidx``"
 msgstr "``gc_vertidx``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:250
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the degenerate polygon"
+msgstr "``gc_errorx``: la coordinata x del centroide del poligono degenere"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:251
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the degenerate polygon"
+msgstr "``gc_errory``: la coordinata y del centroide del poligono degenere"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:253
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is degenerate."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che risulta "
+"degenere."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:264
 msgid "**Algorithm ID**: ``native:checkgeometrydegeneratepolygon``"
 msgstr "**ID algoritmo**: ``native:checkgeometrydegeneratepolygon``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:274
+msgid "Duplicated geometries"
+msgstr "Geometrie duplicate"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:277
+msgid ""
+"Checks for duplicated geometries in a vector layer, and reports them as "
+"errors."
+msgstr ""
+"Verifica la presenza di geometrie duplicate in un layer vettoriale e le "
+"segnala come errori."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:296
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:551
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2542
 msgid "[vector: geometry]"
 msgstr "[vector: geometry]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:297
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:422
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:683
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1694
+msgid "Layer with the geometries to check"
+msgstr "Layer con le geometrie da controllare"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:302
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:362
+msgid "**Duplicate geometries errors**"
+msgstr "**Errori relativi a geometrie duplicate**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:313
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:377
+msgid "**Duplicate geometries**"
+msgstr "**Geometrie duplicate**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:317
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:379
@@ -969,6 +1323,21 @@ msgstr "``gc_partidx``"
 msgid "``gc_ringidx``"
 msgstr "``gc_ringidx``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:376
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is a duplicate."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che risulta "
+"essere duplicato."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:380
+msgid ""
+"Output layer containing the geometries that were found to be duplicated. "
+"Available fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Layer di uscita contenente le geometrie risultate duplicate. I campi "
+"disponibili sono gli stessi presenti nell'output ``ERRORS``."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:386
 msgid "**Algorithm ID**: ``native:checkgeometryduplicate``"
 msgstr "**ID algoritmo**: ``native:checkgeometryduplicate``"
@@ -993,14 +1362,104 @@ msgstr ""
 msgid "[vector: line, polygon]"
 msgstr "[vector: line, polygon]"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:427
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:486
+msgid "**Duplicated vertices errors**"
+msgstr "**Errori relativi a vertici duplicati**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:438
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:501
+msgid "**Duplicated vertices features**"
+msgstr "**Elementi con vertici duplicati**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:445
+msgid ""
+"Specification of the output layer containing the features with duplicated "
+"vertices. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifiche del layer in uscita contenente gli elementi con vertici "
+"duplicati. :ref:`One of <output_parameter_widget> `:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:494
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"duplicate vertex."
+msgstr ""
+"``gc_partidx``: l'indice della parte geometrica dell'elemento che contiene "
+"il vertice duplicato."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:495
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"duplicate vertex."
+msgstr ""
+"``gc_ringidx``: l'indice dell'anello della geometria dell'elemento che "
+"contiene il vertice duplicato."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:496
+msgid ""
+"``gc_vertidx``: the index of the duplicate vertex in the feature's geometry "
+"ring."
+msgstr ""
+"``gc_vertidx``: l'indice del vertice duplicato nell'anello della geometria "
+"dell'elemento."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:497
+msgid "``gc_errorx``: the x coordinate of the duplicate vertex."
+msgstr "``gc_errorx``: la coordinata x del vertice duplicato."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:498
+msgid "``gc_errory``: the y coordinate of the duplicate vertex."
+msgstr "```gc_errory``: la coordinata y del vertice duplicato."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:500
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that has duplicate "
+"vertices."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che presenta "
+"vertici duplicati."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:504
+msgid ""
+"Output layer containing the features with duplicated vertices. Available "
+"fields are the same as in the ``ERRORS`` output."
+msgstr ""
+"Layer in uscita contenente gli elementi con vertici duplicati. I campi "
+"disponibili sono gli stessi presenti nel risultato ``ERRORS``."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:510
 msgid "**Algorithm ID**: ``native:checkgeometryduplicatenodes``"
 msgstr "**ID algoritmo**: ``native:checkgeometryduplicatenodes``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:520
+msgid "Features inside polygon"
+msgstr "Elementi interni al poligono"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:523
+msgid ""
+"Checks the input geometries contained in the polygons from the polygon "
+"layers list. A polygon layer can be checked against itself. Any contained "
+"features are reported as errors."
+msgstr ""
+"Verifica le geometrie in ingresso contenute nei poligoni presenti "
+"nell'elenco dei layer poligonali. È possibile verificare un layer poligonale"
+" rispetto a se stesso. Eventuali elementi contenuti vengono segnalati come "
+"errori."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:530
+msgid "Reporting errors on features inside a polygon."
+msgstr "Report errori relativi agli elementi all’interno di un poligono."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:532
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2392
 msgid ":ref:`qgisfixgeometrydeletefeatures`"
 msgstr ":ref:`qgisfixgeometrydeletefeatures`"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:557
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1440
+msgid "**Polygon layers**"
+msgstr "**Layer poligonali**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:558
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1441
@@ -1011,6 +1470,28 @@ msgstr "``POLYGONS``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1442
 msgid "[vector: polygon][list]"
 msgstr "[vector: polygon][list]"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:560
+msgid "List of polygon layers to check against."
+msgstr "Elenco dei layer poligonali da verificare."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:561
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:619
+msgid "**Errors from contained features**"
+msgstr "**Errori negli elementi inclusi**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:566
+msgid ""
+"Point layer representing the contained features. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Layer di punti che rappresenta gli elementi contenuti. :ref:`One of "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:572
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:634
+msgid "**Contained features**"
+msgstr "**Elementi inclusi**"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:643
 msgid "**Algorithm ID**: ``native:checkgeometrycontained``"
@@ -1023,6 +1504,12 @@ msgstr "Buchi"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:656
 msgid "Detects holes in polygon geometries and reports them as errors."
 msgstr "Rileva i buchi nelle geometrie poligono e li segnala come errori."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:661
+msgid "Reporting errors for holes on a polygon feature."
+msgstr ""
+"Segnalazione degli errori relativi ai buchi presenti in un elemento "
+"poligonale."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:663
 msgid ":ref:`qgisfixgeometryhole`"
@@ -1037,9 +1524,56 @@ msgstr "**Errori buchi**"
 msgid "**Polygons with holes**"
 msgstr "**Poligoni con buchi**"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:706
+msgid ""
+"Polygon layer with the features containing holes. :ref:`One of "
+"<output_parameter_widget>`:"
+msgstr ""
+"Layer poligonale con elementi contenenti buchi. :ref:`One of "
+"<output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:754
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"hole."
+msgstr ""
+"``gc_partidx``: l'indice della parte geometrica dell'elemento che contiene "
+"il buco."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:755
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"hole."
+msgstr ""
+"``gc_ringidx``: l'indice dell'anello della geometria dell'elemento "
+"contenente il buco."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:757
+msgid "``gc_errorx``: the x coordinate of the centroid of the hole."
+msgstr "``gc_errorx``: la coordinata x del centroide del buco."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:758
+msgid "``gc_errory``: the y coordinate of the centroid of the hole."
+msgstr "``gc_errory``: la coordinata y del centroide del buco."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:760
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that has a hole."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che presenta un "
+"buco."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:761
+msgid "**Polygon with holes**"
+msgstr "**Poligoni con buchi**"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:771
 msgid "**Algorithm ID**: ``native:checkgeometryhole``"
 msgstr "**ID algoritmo**: ``native:checkgeometryhole``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:781
+msgid "Lines intersecting each other"
+msgstr "Linee che si intersecano"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:787
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:912
@@ -1050,9 +1584,23 @@ msgstr ""
 ":ref:`qgislineintersections`, :ref:`qgisintersection`, "
 ":ref:`qgischeckgeometryselfintersection`"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:813
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:871
+msgid "**Intersection errors**"
+msgstr "**Errori di intersezione**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:824
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:886
+msgid "**Intersecting feature**"
+msgstr "**Elemento con intersezione**"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:896
 msgid "**Algorithm ID**: ``native:checkgeometrylineintersection``"
 msgstr "**ID algoritmo**: ``native:checkgeometrylineintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:906
+msgid "Lines intersecting other layer"
+msgstr "Linee che intersecano un altro layer"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:938
 msgid "**Check layer**"
@@ -1062,6 +1610,28 @@ msgstr "**Verifica layer**"
 msgid "``CHECK_LAYER``"
 msgstr "``CHECK_LAYER``"
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:941
+msgid "Layer with the geometries to check against."
+msgstr "Layer con le geometrie da confrontare."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:942
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1000
+msgid "**Line intersecting other layer errors**"
+msgstr "**Errori linea che interseca un altro layer**"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:947
+msgid ""
+"Specification of the output point layer containing the locations of "
+"intersection errors. :ref:`One of <output_parameter_widget>`:"
+msgstr ""
+"Specifiche del layer di punti in uscita contenente le posizioni degli errori"
+" di intersezione. :ref:`One of <output_parameter_widget>`:"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:953
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1015
+msgid "**Line intersecting other layer features**"
+msgstr "**Linea che interseca elementi di un altro layer**"
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:957
 msgid "[line]"
 msgstr "[line]"
@@ -1069,6 +1639,10 @@ msgstr "[line]"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1025
 msgid "**Algorithm ID**: ``native:checkgeometrylinelayerintersection``"
 msgstr "**ID algoritmo**: ``native:checkgeometrylinelayerintersection``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1034
+msgid "Missing vertices along borders"
+msgstr "Vertici mancanti lungo i bordi"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1046
 msgid ":ref:`qgisfixgeometrymissingvertex`"
@@ -1082,9 +1656,25 @@ msgstr "``gc_errorx``: la coordinata x del vertice mancante."
 msgid "``gc_errory``: the y coordinate of the missing vertex."
 msgstr "``gc_errory``: la coordinata y del vertice mancante."
 
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1143
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that has a missing "
+"vertex."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che ha un "
+"vertice mancante."
+
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1155
 msgid "**Algorithm ID**: ``native:checkgeometrymissingvertex``"
 msgstr "**ID algoritmo**: ``native:checkgeometrymissingvertex``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1165
+msgid "Overlaps"
+msgstr "Sovrapposizioni"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1201
+msgid "``MIN_OVERLAP_AREA``"
+msgstr "``MIN_OVERLAP_AREA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1202
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1845
@@ -1116,6 +1706,10 @@ msgstr "[vector: line][list]"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1396
 msgid "**Algorithm ID**: ``native:checkgeometrypointcoveredbyline``"
 msgstr "**ID algoritmo**: ``native:checkgeometrypointcoveredbyline``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1406
+msgid "Points outside polygons"
+msgstr "Punti esterni ai poligoni"
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:1508
 msgid "**Algorithm ID**: ``native:checkgeometrypointinpolygon``"
@@ -1238,6 +1832,30 @@ msgstr "``MIN_SEGMENT_LENGTH``"
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2506
 msgid "**Algorithm ID**: ``native:checkgeometrysegmentlength``"
 msgstr "**ID algoritmo**: ``native:checkgeometrysegmentlength``"
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2618
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the multipart geometry "
+"that has only one part."
+msgstr ""
+"``gc_errorx``: la coordinata x del centroide della geometria multiparte che "
+"contiene una sola parte."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2619
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the multipart geometry "
+"that has only one part."
+msgstr ""
+"``gc_errory``: la coordinata y del centroide della geometria multiparte che "
+"contiene una sola parte."
+
+#: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2621
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is multipart "
+"but has only one part."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che è multiparte"
+" ma ha una sola parte."
 
 #: ../../docs/user_manual/processing_algs/qgis/checkgeometry.rst:2631
 msgid "**Algorithm ID**: ``native:checkgeometrymultipart``"
