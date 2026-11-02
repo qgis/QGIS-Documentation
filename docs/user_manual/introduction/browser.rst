@@ -11,25 +11,17 @@
 
 .. contents::
    :local:
-   :depth: 2
 
-The QGIS Browser panel is a great tool for browsing, searching,
+
+
+The QGIS :guilabel:`Browser` panel is a great tool for browsing, searching,
 inspecting, copying and loading QGIS resources.
-Only resources that QGIS knows how to handle are shown in the
-browser.
+It is available as:
 
-Using the Browser panel you can locate, inspect and add data, as
-described in :ref:`browser_panel`.
-In addition, the Browser panel supports drag and drop of many QGIS
-resources, such as project files, Python scripts, Processing scripts and
-Processing models.
-
-Python scripts, Processing scripts and Processing models can also be opened for
-editing in an external editor and the graphical modeller.
-
-You can drag and drop layers from the :guilabel:`Layers` panel
-to the :guilabel:`Browser` panel, for instance into a GeoPackage or a
-PostgreSQL database.
+* a :guilabel:`Data Source Manager` tab, enabled pressing the
+  |dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);
+* as a QGIS panel you can open from the menu :menuselection:`View --> Panels`
+  (or |kde| :menuselection:`Settings --> Panels`) or by pressing :kbd:`Ctrl+2`.
 
 .. _figure_browser_panel:
 
@@ -39,55 +31,121 @@ PostgreSQL database.
 
    The Browser panel
 
-The browser panel (:numref:`figure_browser_panel`) is organised
-as an expandable hierarchy with some fixed top-level entries that
-organise the resources handled by the browser.
-Node entries are expanded by clicking on |browserExpand| to the left
-of the entry name.
+
+A second browser panel can be opened by activating the :guilabel:`Browser (2)` panel
+in :menuselection:`View --> Panels`.
+Having two browser panels can be useful when copying layers between resources
+that are located deep down in different branches of the browser hierarchy.
+
+
+Exploring the Interface
+========================
+
+The Toolbar
+-----------
+
+At the top of the :guilabel:`Browser` panel, you find some buttons that help you:
+
+* |addLayer| :sup:`Add Selected Layers`: you can also add data to the map
+  canvas by selecting **Add selected layer(s)** from the layer's context menu;
+* |refresh| :sup:`Refresh` the browser tree;
+* |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
+  word or wildcard and the browser will filter the tree to only show paths to
+  matching DB tables, filenames or folders.
+  Using the |options| :sup:`Options` pull-down menu next to the filter text field,
+  you can:
+
+  * make the comparison :guilabel:`Case Sensitive` or not
+  * set the :guilabel:`Filter pattern syntax` to one of:
+
+    * :guilabel:`Normal`: show items containing the search text
+    * :guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*``
+      characters to specify the position of the search text
+    * :guilabel:`Regular expression`: use full capabilities of regular expression
+      to find specific data.
+
+* |collapseTree| :sup:`Collapse All` the whole tree;
+* |metadata| :sup:`Enable/disable properties widget`: when toggled on,
+  a new widget is added at the bottom of the panel showing, if applicable,
+  metadata for the selected item.
+
+  .. _figure_properties_widget:
+
+  .. figure:: img/browser_p_properties_w.png
+     :align: center
+     :width: 30%
+
+     The properties widget
+
+The Entries
+------------
+
+The main part of the :guilabel:`Browser` panel is organised as an expandable hierarchy
+with some fixed top-level entries that organise the resources handled by the browser.
+Node entries are expanded by clicking on |browserExpand| to the left of the entry name.
 A branch is collapsed by clicking on |browserCollapse|.
-The |collapseTree| :sup:`Collapse All` button collapses all top-level
-entries.
+The |collapseTree| :sup:`Collapse All` button collapses all top-level entries.
+Top level entries include:
 
-In :menuselection:`Settings --> Interface Customization` it is
-possible to disable resources.
-If you, for instance, would not like to show Python scripts in the
-browser, you can uncheck the :menuselection:`Browser --> py` entry,
-and if you want to get rid of your home folder in the browser, you
-can uncheck the :menuselection:`Browser --> special:Home` entry.
+#. :guilabel:`Favorites` where you can place shortcuts to often used locations
+#. :guilabel:`Spatial Bookmarks` where you can store often used map extents
+   (see :ref:`sec_bookmarks`)
+#. :guilabel:`Project Home`: for a quick access to the folder in which (most of)
+   the data related to your project are stored.
+   The default value is the directory where your project file resides.
+#. :guilabel:`Home` directory in the file system and the filesystem root directory.
+#. Connected local or network drives
+#. Then comes a number of container / database types and service protocols,
+   depending on your platform and underlying libraries:
 
-A filter (|filterMap| :sup:`Filter Browser`) can be used for searching
-based on entry names (both leaf entries and node entries in the
-hierarchy).
-Using the |options| :sup:`Options` pull-down menu next to the filter
-text field, you can
+   .. list-table:: Database and service entries in Browser panel
+      :header-rows: 1
+      :widths: 20 80
+      :class: longtable
 
-* toggle :guilabel:`Case Sensitive` search
-* set the :guilabel:`Filter pattern syntax` to one of
+      * - Label
+        - References
+      * - |geoPackage| :guilabel:`GeoPackage`
+        - :ref:`database_entries`, :ref:`vector_create_geopackage`
+      * - |spatialite| :guilabel:`SpatiaLite`
+        - :ref:`database_entries`, :ref:`vector_create_spatialite`, :ref:`label_spatialite`
+      * - |postgis| :guilabel:`PostgreSQL`
+        - :ref:`database_entries`, :ref:`create_postgresql_connection`
+      * - |hana| :guilabel:`SAP HANA`
+        - :ref:`database_entries`, :ref:`create_hana_connection`
+      * - |stac| :guilabel:`STAC`
+        - :ref:`tiles_web_services`, :ref:`stac`
+      * - |mssql| :guilabel:`MS SQL Server`
+        - :ref:`database_entries`, :ref:`create_ms_sql_server_connection`
+      * - |oracle| :guilabel:`Oracle`
+        - :ref:`database_entries`, :ref:`create_oracle_connection`
+      * - |wms| :guilabel:`WMS/WMTS`
+        - :ref:`tiles_web_services`, :ref:`ogc-wms`
+      * - |cloud| :guilabel:`Cloud`
+        - :ref:`tiles_web_services`, :ref:`cloud_connections`
+      * - |tiledSceneLayer| :guilabel:`Scenes`
+        - :ref:`tiles_web_services`, :ref:`3d_tiles`
+      * - |sensor| :guilabel:`SensorThings`
+        - :ref:`tiles_web_services`, :ref:`sensor_things`
+      * - |vectorTileLayer| :guilabel:`Vector Tiles`
+        - :ref:`tiles_web_services`, :ref:`vector_tiles`
+      * - |xyz| :guilabel:`XYZ Tiles`
+        - :ref:`tiles_web_services`, :ref:`xyz_tile`
+      * - |wcs| :guilabel:`WCS`
+        - :ref:`tiles_web_services`, :ref:`ogc-wcs`
+      * - |wfs| :guilabel:`WFS/OGC API-Features`
+        - :ref:`tiles_web_services`, :ref:`ogc-wfs`
+      * - |afs| :guilabel:`ArcGIS REST Servers`
+        - :ref:`tiles_web_services`, :ref:`arcgis_rest`
 
-  * :guilabel:`Normal`
-  * :guilabel:`Wildcard(s)`
-  * :guilabel:`Regular Expressions`
 
-The *Properties widget*, showing useful information about some
-entries / resources, can be enabled / disabled using the |metadata|
-:sup:`Enable/disable properties widget` button.
-When enabled, it opens at the bottom of the browser panel, as shown in
-:numref:`figure_properties_widget`.
-
-.. _figure_properties_widget:
-
-.. figure:: img/browser_p_properties_w.png
-   :align: center
-   :width: 30%
-
-   The properties widget
-
-A second browser panel can be opened by activating the
-:guilabel:`Browser (2)` panel in :menuselection:`View --> Panels`.
-Having two browser panels can be useful when copying layers between
-resources that are locationed deep down in different branches of the
-browser hierarchy.
-
+You can customize the list of displayed items by disabling some of them
+in the :menuselection:`Settings --> Interface Customization` dialog.
+If you, for instance, would not like to show Python scripts in the browser,
+you can uncheck the :menuselection:`Browser --> py` entry,
+and if you want to get rid of your home folder in the browser,
+you can uncheck the :menuselection:`Browser --> special:Home` entry.
+Read :ref:`sec_customization` for more details.
 
 Resources that can be opened / run from the Browser
 ===================================================
@@ -727,6 +785,8 @@ Supported file types
    :width: 1.5em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
@@ -734,6 +794,8 @@ Supported file types
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |hana| image:: /static/common/mIconHana.png
+   :width: 1.5em
+.. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
