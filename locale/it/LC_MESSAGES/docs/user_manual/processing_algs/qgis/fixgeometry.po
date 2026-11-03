@@ -1149,6 +1149,14 @@ msgstr ""
 "Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che presenta "
 "l'errore."
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:544
+msgid ""
+"Output layer with features removed based on detected errors. The layer "
+"contains the same fields as in the input layer."
+msgstr ""
+"Layer in uscita con elementi rimossi in base agli errori rilevati. Il layer "
+"contiene gli stessi campi del layer in ingresso."
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:550
 msgid "**Algorithm ID**: ``native:fixgeometrydeletefeatures``"
 msgstr "**ID algoritmo**: ``native:fixgeometrydeletefeatures``"
@@ -1157,17 +1165,121 @@ msgstr "**ID algoritmo**: ``native:fixgeometrydeletefeatures``"
 msgid "Delete overlaps"
 msgstr "Eliminare sovrapposizioni"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:563
+msgid ""
+"Deletes overlapping areas based on an error layer from the "
+":ref:`qgischeckgeometryoverlap` algorithm."
+msgstr ""
+"Elimina le aree sovrapposte in base a un livello di errore generato "
+"dall'algoritmo :ref:`qgischeckgeometryoverlap`."
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:568
 msgid "Deleting overlapping areas."
 msgstr "Eliminazione aree in sovrapposizione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:598
+msgid "**Field of overlap feature unique identifier**"
+msgstr ""
+"**Campo dell'identificatore univoco dell'elemento di sovrapposizione**"
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:599
 msgid "``OVERLAP_FEATURE_UNIQUE_IDX``"
 msgstr "``OVERLAP_FEATURE_UNIQUE_IDX``"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:601
+msgid ""
+"Field storing unique values for the overlapping feature identification in "
+"input layer, as set in the check algorithm."
+msgstr ""
+"Campo che memorizza i valori univoci per l'identificazione degli elementi "
+"sovrapposti nel layer in ingresso, come definito nell'algoritmo di verifica."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:603
+msgid "**Field of error value**"
+msgstr "**Campo del valore di errore**"
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:604
 msgid "``ERROR_VALUE_ID``"
 msgstr "``ERROR_VALUE_ID``"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:606
+msgid ""
+"Field storing the error value for each feature, as set in the check "
+"algorithm."
+msgstr ""
+"Campo che memorizza il valore di errore per ciascun elemento, come definito "
+"nell'algoritmo di verifica."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:607
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:683
+msgid "**No-overlap layer**"
+msgstr "**Layer senza sovrapposizioni**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:619
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:664
+msgid "**Report layer from fixing overlaps**"
+msgstr "**Report layer da correzione delle sovrapposizioni**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:672
+msgid ""
+"``gc_errorx``: the x coordinate of the centroid of the overlapping area."
+msgstr ""
+"``gc_errorx``: la coordinata x del centroide dell'area di sovrapposizione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:673
+msgid ""
+"``gc_errory``: the y coordinate of the centroid of the overlapping area."
+msgstr ""
+"``gc_errory``: la coordinata y del centroide dell'area di sovrapposizione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:674
+msgid "``gc_error``: the area of the overlapping geometry."
+msgstr "``gc_error``: l'area della geometria in sovrapposizione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:675
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the unique ID of an overlapped input "
+"feature."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco di un elemento in ingresso sovrapposto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:676
+#, python-brace-format
+msgid ""
+"``gc_overlap_feature_{unique_id}``: the ``UNIQUE_ID`` field value for the "
+"other overlapping feature."
+msgstr ""
+"``gc_overlap_feature_{unique_id}``: il valore del campo ``UNIQUE_ID`` "
+"relativo all'altra entità sovrapposta."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:677
+msgid ""
+"``report``: a text field describing the fix applied or justifying the "
+"failure. Possible values are:"
+msgstr ""
+"``report``: un campo di testo che descrive la correzione applicata o che "
+"spiega il motivo dell'errore. I valori possibili sono:"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:680
+msgid ""
+"Remove overlapping area from neighboring polygon with shortest shared edge"
+msgstr ""
+"Rimuove l'area di sovrapposizione dal poligono adiacente con il bordo comune"
+" più corto"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:681
+msgid "Error is obsolete"
+msgstr "L'errore è superato"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:686
+msgid ""
+"Output layer with input features edited. Overlapping areas reported as "
+"errors are removed. The layer contains the same fields as in the input "
+"layer."
+msgstr ""
+"Layer risultato con gli elementi in ingresso modificati. Le aree sovrapposte"
+" segnalate come errori vengono rimosse. Il layer contiene gli stessi campi "
+"presenti nel layer in ingresso."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:693
 msgid "**Algorithm ID**: ``native:fixgeometryoverlap``"
@@ -1176,6 +1288,124 @@ msgstr "**ID algoritmo**: ``native:fixgeometryoverlap``"
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:703
 msgid "Delete small angles"
 msgstr "Eliminare piccoli angoli"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:706
+msgid ""
+"Deletes vertices based on an error layer from the "
+":ref:`qgischeckgeometryangle` algorithm. When deletion of a vertex results "
+"in a duplicate vertex (when a spike vertex is deleted), the duplicate vertex"
+" is deleted to keep a single vertex and preserve topology."
+msgstr ""
+"Elimina i vertici in base a un livello di errore generato dall'algoritmo "
+":ref:`qgischeckgeometryangle`. Quando l'eliminazione di un vertice comporta "
+"la creazione di un vertice duplicato (nel caso in cui venga eliminato un "
+"vertice in una punta acuminata), il vertice duplicato viene eliminato per "
+"mantenere un unico vertice e preservare la topologia."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:710
+msgid ""
+"This algorithm removes the vertex at the reported small angles, generating "
+"new segments that may form a new small angle."
+msgstr ""
+"Questo algoritmo rimuove il vertice in corrispondenza di angoli piccoli "
+"rilevati, che generano nuovi segmenti che potrebbero formare un nuovo angolo"
+" piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:716
+msgid "Fixing reported errors on a line feature for angles lower than 15°."
+msgstr ""
+"Correzione degli errori rilevati su un elemento lineare per angoli inferiori"
+" a 15°."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:736
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1045
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1372
+msgid "Layer with the geometries to fix, same as input in the check algorithm"
+msgstr ""
+"Layer con le geometrie da correggere, stesso input utilizzato nell'algoritmo"
+" di verifica."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:740
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1049
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1376
+msgid "Point layer with the errors location, generated by the check algorithm"
+msgstr ""
+"Layer di punti con la posizione degli errori, generato dall'algoritmo di "
+"verifica"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:744
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1053
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1390
+msgid ""
+"Field storing unique values for feature identification in input layer, as "
+"set in the check algorithm"
+msgstr ""
+"Campo che memorizza valori univoci per l'identificazione degli elementi nel "
+"layer di input, come definito nell'algoritmo di verifica."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:764
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:839
+msgid "**Small angle fixed layer**"
+msgstr "**Layer con angoli piccoli corretto**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:776
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:821
+msgid "**Report layer from fixing small angles**"
+msgstr "**Report layer di correzione degli angoli piccoli**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:829
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part containing the "
+"small angle."
+msgstr ""
+"``gc_partidx``: l'indice della parte geometrica dell'elemento che contiene "
+"l'angolo piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:830
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring containing the "
+"small angle."
+msgstr ""
+"``gc_ringidx``: l'indice dell'anello della geometria dell'elemento "
+"contenente l'angolo piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:831
+msgid ""
+"``gc_vertidx``: the index of the vertex with the small angle in the "
+"feature's geometry ring."
+msgstr ""
+"``gc_vertidx``: l'indice del vertice con l'angolo più piccolo nell'anello "
+"della geometria dell'elemento."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:832
+msgid "``gc_errorx``: the x coordinate of the vertex with the small angle."
+msgstr "``gc_errorx``: la coordinata x del vertice con l'angolo piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:833
+msgid "``gc_errory``: the y coordinate of the vertex with the small angle."
+msgstr "``gc_errory``: la coordinata y del vertice con l'angolo piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:834
+msgid "``gc_error``: the error angle value."
+msgstr "``gc_error``: il valore dell'angolo in errore."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:835
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature with the small "
+"angle."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso con l'angolo "
+"piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:836
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1144
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1313
+msgid ""
+"``report``: a text field describing the fix applied or justifying the "
+"failure."
+msgstr ""
+"``report``: un campo di testo che descrive la correzione applicata o che "
+"spiega il motivo dell'errore."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:841
 msgid "[same as input]"
@@ -1189,6 +1419,24 @@ msgstr "**ID algoritmo**: ``native:fixgeometryangle``"
 msgid "Fill gaps"
 msgstr "Riempire gli spazi vuoti"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:861
+msgid ""
+"Fills the gaps based on a gap and neighbors layer from the "
+":ref:`qgischeckgeometrygap` algorithm. Three different fixing methods are "
+"available."
+msgstr ""
+"Riempie gli spazi vuoti in base a un layer di spazi vuoti e di elementi "
+"adiacenti generato dall'algoritmo :ref:`qgischeckgeometrygap`. Sono "
+"disponibili tre diversi metodi di correzione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:867
+msgid ""
+"Fixing gap between polygon features using the ``Add to largest neighbouring "
+"area`` method."
+msgstr ""
+"Correzione dello spazio vuoto tra gli elementi poligonali utilizzando il "
+"metodo ``Aggiungi all’area vicina più grande``."
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:888
 msgid "**Neighbors layer**"
 msgstr "**Layer confinanti**"
@@ -1200,6 +1448,14 @@ msgstr "``NEIGHBORS``"
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:890
 msgid "[vector: table]"
 msgstr "[vector: table]"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:891
+msgid ""
+"Relational table with the unique ID of the gap and its neighbors in input "
+"layer, generated by the check algorithm."
+msgstr ""
+"Tabella relazionale contenente l'ID univoco dello spazio vuoto e dei suoi "
+"vicini nel layer in ingresso, generata dall'algoritmo di verifica."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:892
 msgid "**Gaps layer**"
@@ -1239,14 +1495,91 @@ msgstr "[enumeration]"
 msgid "Default: 0"
 msgstr "Valore predefinito: 0"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:901
+msgid "Method to apply to the gap fixing. Possible values are:"
+msgstr ""
+"Metodo da applicare per la correzione dello spazio vuoto. I valori possibili"
+" sono:"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:903
+msgid ""
+"0 --- ``Add to longest shared edge``: adds the gap to the neighboring "
+"feature with the longest shared edge."
+msgstr ""
+"0 --- ``Aggiungi al bordo condiviso più lungo``: aggiunge lo spazio vuoto "
+"all'elemento adiacente con il bordo condiviso più lungo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:905
+msgid "1 --- ``Create new feature``: creates a new feature for each gap."
+msgstr ""
+"1 --- ``Crea nuovo elemento``: crea un nuovo elemento per ogni spazio vuoto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:907
+msgid ""
+"2 --- ``Add to largest neighbouring area``: adds the gap to the neighboring "
+"feature with the largest area."
+msgstr ""
+"2 --- ``Aggiungi all'area adiacente più estesa``: aggiunge lo spazio vuoto "
+"all'elemento adiacente con l'area maggiore."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:913
+msgid "Default: gc_errorid"
+msgstr "Valore predefinito: gc_errorid"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:916
+msgid "**Field of error id**"
+msgstr "**Campo dell'ID errore**"
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:917
 msgid "``ERROR_ID_IDX``"
 msgstr "``ERROR_ID_IDX``"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:919
+msgid ""
+"Field storing the error ID for each gap, as output by the check algorithm."
+msgstr ""
+"Campo che memorizza l'ID dell'errore per ogni spazio vuoto, come generato "
+"dall'algoritmo di controllo."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:920
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:995
 msgid "**Gaps-filled layer**"
 msgstr "**Layer spazi vuoti riempiti**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:932
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:977
+msgid "**Report layer from fixing gaps**"
+msgstr "**Report layer derivante dalla correzione degli spazi vuoti**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:988
+msgid "``gc_errorx``: the x coordinate of the centroid of the gap."
+msgstr "``gc_errorx``: la coordinata x del centroide dello spazio vuoto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:989
+msgid "``gc_errory``: the y coordinate of the centroid of the gap."
+msgstr "``gc_errory``: la coordinata y del centroide dello spazio vuoto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:990
+msgid "``gc_error``: the area of the gap."
+msgstr "``gc_error``: l'area dello spazio vuoto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:991
+msgid "``gc_errorid``: the ID of the gap."
+msgstr "``gc_errorid``: l'ID dello spazio vuoto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:992
+msgid "``report``: a text field mentioning the method used to fix the gap."
+msgstr ""
+"``report``: un campo di testo in cui si indica il metodo utilizzato per "
+"correggere lo spazio vuoto."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:998
+msgid ""
+"Output layer of polygons without gaps. The layer contains the same fields as"
+" in the input layer."
+msgstr ""
+"Layer in uscita composto da poligoni senza spazi vuoti. Il layer contiene "
+"gli stessi campi del layer in ingresso."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1004
 msgid "**Algorithm ID**: ``native:fixgeometrygap``"
@@ -1255,6 +1588,14 @@ msgstr "**ID algoritmo**: ``native:fixgeometrygap``"
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1014
 msgid "Fill holes"
 msgstr "Riempire i buchi"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1017
+msgid ""
+"Deletes holes in polygon geometries based on an error layer from the "
+":ref:`qgischeckgeometryhole` algorithm."
+msgstr ""
+"Elimina i buchi nelle geometrie poligonali in base a un livello di errore "
+"generato dall'algoritmo :ref:`qgischeckgeometryhole`."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1023
 msgid "Deleting holes in a polygon feature."
@@ -1273,6 +1614,11 @@ msgstr "[tablefield: integer] Valore predefinito: ``gc_partidx``"
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1147
 msgid "**Holes-filled layer**"
 msgstr "**Layer con i buchi riempiti**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1084
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1129
+msgid "**Report layer from fixing holes**"
+msgstr "**Report layer derivante dalla correzione dei buchi**"
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1137
 msgid ""
@@ -1305,9 +1651,81 @@ msgstr ""
 "Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che presenta un "
 "buco."
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1150
+msgid ""
+"Output layer of polygons without holes. The layer contains the same fields "
+"as in the input layer."
+msgstr ""
+"Layer in uscita composto da poligoni senza buchi. Il layer contiene gli "
+"stessi campi del layer in ingresso."
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1156
 msgid "**Algorithm ID**: ``native:fixgeometryhole``"
 msgstr "**ID algoritmo**: ``native:fixgeometryhole``"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1165
+msgid "Fix small polygons"
+msgstr "Correzione poligoni di piccole dimensioni"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1168
+msgid ""
+"Merges neighboring polygons according to the chosen method, based on an "
+"error layer from the :ref:`qgischeckgeometryarea` or "
+":ref:`qgischeckgeometrysliverpolygon` algorithm."
+msgstr ""
+"Unisce i poligoni adiacenti secondo il metodo scelto, sulla base di un "
+"livello di errore derivante dall'algoritmo :ref:`qgischeckgeometryarea` o "
+":ref:`qgischeckgeometrysliverpolygon`."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1174
+msgid ""
+"Before and after fixing small polygons (method: merge with neighboring "
+"polygon with largest area)."
+msgstr ""
+"Prima e dopo la correzione dei poligoni di piccole dimensioni (metodo: "
+"fondere con il poligono adiacente di maggiore superficie)."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1204
+msgid "Method to apply to the small polygon geometries:"
+msgstr "Metodo da applicare ai poligoni con geometrie di piccole dimensioni:"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1206
+msgid ""
+"0 --- ``Merge with neighboring polygon with longest shared edge``: merges "
+"the small polygon geometry with the neighboring polygon that has the longest"
+" shared edge."
+msgstr ""
+"0 --- ``Fondi al poligono adiacente con il bordo comune più lungo``: unisce "
+"la geometria del poligono più piccolo al poligono adiacente che presenta il "
+"bordo comune più lungo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1208
+msgid ""
+"1 --- ``Merge with neighboring polygon with largest area``: merges the small"
+" polygon geometry with the neighboring polygon that has the largest area."
+msgstr ""
+"1 --- ``Fondi con il poligono adiacente con l’area maggiore``: unisce la "
+"geometria del poligono più piccolo con quella del poligono adiacente che "
+"presenta l’area maggiore."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1210
+msgid ""
+"2 --- ``Merge with neighboring polygon with identical attribute value, if "
+"any, or leave as is``: merges the small polygon geometry with a neighboring "
+"polygon that has the same attribute value, if such a polygon exists."
+msgstr ""
+"2 --- ``Fondi con il poligono adiacente che presenta lo stesso valore "
+"dell'attributo, se presente, oppure lascia così com'è``: unisce la geometria"
+" del poligono più piccolo con un poligono adiacente che presenta lo stesso "
+"valore dell'attributo, se tale poligono esiste."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1213
+msgid ""
+"**Field to consider when merging polygons with the identical attribute "
+"method**"
+msgstr ""
+"**Campo da considerare quando si fondono poligoni con lo stesso metodo di "
+"attribuzione**"
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1215
 msgid "Optional"
@@ -1317,13 +1735,123 @@ msgstr "Opzionale"
 msgid "``MERGE_ATTRIBUTE``"
 msgstr "``MERGE_ATTRIBUTE``"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1218
+msgid ""
+"Field in the input layer to consider when merging polygons with the "
+"identical attribute method."
+msgstr ""
+"Campo nel layer in ingresso da considerare durante la fusione di poligoni "
+"con il metodo degli attributi identici."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1241
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1316
+msgid "**Small polygons merged layer**"
+msgstr "**Layer poligoni piccoli fusi**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1253
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1298
+msgid "**Report layer from merging small polygons**"
+msgstr "**Report layer derivante dalla fusione di piccoli poligoni**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1309
+msgid "``gc_errorx``: the x coordinate of the centroid of the small polygon."
+msgstr "``gc_errorx``: la coordinata x del centroide del piccolo poligono."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1310
+msgid "``gc_errory``: the y coordinate of the centroid of the small polygon."
+msgstr "``gc_errory``: la coordinata y del centroide del piccolo poligono."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1311
+msgid "``gc_error``: the area of the small polygon."
+msgstr "``gc_error``: l'area del poligono piccolo."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1312
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the input feature that is a small "
+"polygon."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che è un "
+"poligono di piccole dimensioni."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1319
+msgid ""
+"Output layer of polygons with small polygons merged according to the chosen "
+"method. The layer contains the same fields as in the input layer."
+msgstr ""
+"Layer in uscita composto da poligoni, in cui i poligoni di piccole "
+"dimensioni sono stati uniti secondo il metodo scelto. Il layer contiene gli "
+"stessi campi del layer di input."
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1325
 msgid "**Algorithm ID**: ``native:fixgeometryarea``"
 msgstr "**ID algoritmo**: ``native:fixgeometryarea``"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1335
+msgid "Split self-intersecting geometries"
+msgstr "Dividere geometrie autointersecanti"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1338
+msgid ""
+"Splits self-intersecting geometries based on an error layer from the "
+":ref:`qgischeckgeometryselfintersection` algorithm."
+msgstr ""
+"Suddivide le geometrie autointersecanti in base a un livello di errore "
+"derivato dall'algoritmo :ref:`qgischeckgeometryselfintersection`."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1343
+msgid ""
+"This algorithm detects invalid polygon geometries (self-intersections). To "
+"ensure these invalid features are not filtered out before processing, open "
+"|options|:sup:`Advanced options` next to the :guilabel:`Input layer` and set"
+" :guilabel:`Invalid feature filtering` to ``Do not Filter (Better "
+"Performance)``."
+msgstr ""
+"Questo algoritmo rileva le geometrie poligonali non valide (auto-"
+"intersezioni) . Per assicurarsi che questi elementi non validi non vengano "
+"filtrati prima dell'elaborazione, apri |options|:sup:`Opzioni avanzate` "
+"accanto a :guilabel:`Layer in ngresso` e imposta :guilabel:`Filtraggio "
+"elementi non validi` su ``Non filtrare (prestazioni migliori)``."
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1520
 msgid "options"
 msgstr "options"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1351
+msgid ""
+"Fixing self-intersection using various methods: as multi-part (middle), and "
+"multiple single-part geometries (right)."
+msgstr ""
+"Correzione dell'autointersezione mediante vari metodi: come geometria "
+"composta da più parti (al centro) e come geometrie multiple costituite da "
+"una singola parte (a destra)."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1381
+msgid "Method to apply to the self-intersecting geometries:"
+msgstr "Metodo da applicare alle geometrie autointersecanti:"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1383
+msgid ""
+"0 -- ``Split feature into a multi-part feature``: splits the self-"
+"intersecting geometry into multiple parts stored in a single multipart "
+"feature."
+msgstr ""
+"0 --``Suddividi l’elemento in un elemento multiparte``: suddivide la "
+"geometria autointersecante in più parti memorizzate in un unico elemento "
+"multiparte."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1385
+msgid ""
+"1 -- ``Split feature into multiple single-part features``: splits the self-"
+"intersecting geometry into multiple parts, each part stored in a separate "
+"feature."
+msgstr ""
+"1 -- ``Suddividi l’elemento in più elementi singoli``: suddivide la "
+"geometria autointersecante in più parti, ciascuna delle quali viene "
+"memorizzata in un elemento separato."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1410
+msgid "**Field of segment 1**"
+msgstr "**Campo del segmento 1**"
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1411
 msgid "``SEGMENT_1``"
@@ -1333,6 +1861,18 @@ msgstr "``SEGMENT_1``"
 msgid "Default: ``gc_segment_1``"
 msgstr "Valore predefinito: ``gc_segment_1``"
 
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1415
+msgid ""
+"Field storing the number of the first segment involved in the erroneous "
+"intersection."
+msgstr ""
+"Campo che memorizza il numero del primo segmento coinvolto nell'intersezione"
+" errata."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1416
+msgid "**Field of segment 2**"
+msgstr "**Campo del segmento 2**"
+
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1417
 msgid "``SEGMENT_2``"
 msgstr "``SEGMENT_2``"
@@ -1340,6 +1880,69 @@ msgstr "``SEGMENT_2``"
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1420
 msgid "Default: ``gc_segment_2``"
 msgstr "Valore predefinito: ``gc_segment_2``"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1421
+msgid ""
+"Field storing the number of the second segment involved in the erroneous "
+"intersection."
+msgstr ""
+"Campo che memorizza il numero del secondo segmento coinvolto "
+"nell'intersezione errata."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1422
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1498
+msgid "**Self-intersections fixed layer**"
+msgstr "**Layer con autointersezioni corrette**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1434
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1479
+msgid "**Report layer from fixing self-intersections**"
+msgstr "**Report layer con autointersezioni corrette**"
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1487
+msgid ""
+"``gc_partidx``: the index of the feature's geometry part where the self-"
+"intersection occurs."
+msgstr ""
+"``gc_partidx``: l'indice della parte geometrica dell'elemento in cui si "
+"verifica l'auto-intersezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1488
+msgid ""
+"``gc_ringidx``: the index of the feature's geometry ring where the self-"
+"intersection occurs."
+msgstr ""
+"``gc_ringidx``: l'indice dell'anello geometrico dell'elemento in cui si "
+"verifica l'auto-intersezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1490
+msgid "``gc_errorx``: the x coordinate of the self-intersection."
+msgstr "``gc_errorx``: la coordinata x dell'autointersezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1491
+msgid "``gc_errory``: the y coordinate of the self-intersection."
+msgstr "``gc_errory``: la coordinata y dell'autointersezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1493
+msgid ""
+"``gc_segment_1``: the index of the first segment involved in the "
+"intersection."
+msgstr ""
+"``gc_segment_1``: l'indice del primo segmento coinvolto nell'intersezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1494
+msgid ""
+"``gc_segment_2``: the index of the second segment involved in the "
+"intersection."
+msgstr ""
+"``gc_segment_2``: l'indice del secondo segmento coinvolto nell'intersezione."
+
+#: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1495
+msgid ""
+"``UNIQUE_ID`` field: the unique ID of the self-intersecting input feature."
+msgstr ""
+"Campo ``UNIQUE_ID``: l'ID univoco dell'elemento in ingresso che si interseca"
+" con se stesso."
 
 #: ../../docs/user_manual/processing_algs/qgis/fixgeometry.rst:1507
 msgid "**Algorithm ID**: ``native:fixgeometryselfintersection``"
