@@ -36,7 +36,7 @@ Getting started
 ===============
 
 Before starting to write a new plugin, have a look at the
-:ref:`official_pyqgis_repository`.
+`official Python plugin repository <https://plugins.qgis.org/>`_.
 The source code of existing plugins can help you to learn more about programming.
 You may also find that a similar plugin already exists and you may be able to
 extend it or at least build on it to develop your own.
@@ -48,15 +48,19 @@ Set up plugin file structure
 
 To get started with a new plugin, we need to set up the necessary plugin files.
 
-There are two plugin template resources that can help get you started:
+There are some plugin template resources that can help get you started:
 
 * For educational purposes or whenever a minimalist approach is desired, the
   `minimal plugin template <https://github.com/wonder-sk/qgis-minimal-plugin>`_
   provides the basic files (skeleton) necessary to create a valid QGIS Python plugin.
 * For a more fully feature plugin template, the
-  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder4/>`_ can create
-  templates for multiple different plugin types, including features such as
+  `Plugin Builder <https://plugins.qgis.org/plugins/pluginbuilder4/>`_ or
+  the `QGIS Plugin Templater GUI <https://plugins.qgis.org/plugins/qgis_plugin_templater_gui/>`_
+  can create templates for multiple different plugin types, including features such as
   localization (translation) and testing.
+* For experienced developers the `QGIS Plugin Templater <https://oslandia.gitlab.io/qgis/template-qgis-plugin/>`_
+  is a `Cookiecutter` that creates templates using modern and relatively accepted ‘good’ practices about tooling,
+  code structuration, documentation and tests.
 
 A typical plugin directory includes the following files:
 
@@ -154,7 +158,8 @@ will be available from `Raster` menu, add this to :file:`metadata.txt`
 
 .. note::
    If `qgisMaximumVersion` is empty, it will be automatically set to the major
-   version plus `.99` when uploaded to the :ref:`official_pyqgis_repository`.
+   version plus `.99` when uploaded to the
+   `official Python plugin repository <https://plugins.qgis.org/>`_.
 
 
 An example for this metadata.txt
@@ -549,7 +554,60 @@ yours! It will extend the possibilities of QGIS and people will be able to learn
 from your code. All hosted plugins can be found and installed from within QGIS
 with the Plugin Manager.
 
-Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
+
+To upload a plugin to the
+`official Python plugin repository <https://plugins.qgis.org/>`_
+you need an OSGEO ID, which you can obtain from the
+`OSGEO web portal <https://www.osgeo.org/community/getting-started-osgeo/osgeo_userid/>`_.
+Each new plugin and each new version of a plugin goes through an automated security
+scan and then a manual or fast-track approval.
+More information can be found at
+`how to add your plugin to the repository <https://plugins.qgis.org/docs/publish/>`_
+and the `approval process <https://plugins.qgis.org/docs/approval/>`_.
+
+Also keep in mind the following when preparing your plugin for publication:
+
+* avoid using a name too similar to an existing plugin
+* if your plugin has a similar functionality to an existing plugin, please explain
+  the differences in the :guilabel:`about` metadata field, so the user will know
+  which one to use without the need to install and test it
+* use the :guilabel:`description` metadata field for a one line description,
+  the :guilabel:`about` field for more detailed instructions
+* choose tags with care: avoid uninformative ones (e.g. ``vector``) and prefer
+  tags already used by others
+* add a proper icon (do not leave the default one)
+* when appropriate (e.g. plugins performing analyses), consider adding the
+  plugin as a subplugin of the Processing framework: this allows users to run
+  it in batch and integrate it in more complex workflows
+
+
+The compressed (``.zip``) package of your plugin must have a specific structure
+to be valid: as it will be unzipped inside the user's plugins folder, it must
+have its own directory inside the ``.zip`` file so it does not interfere with
+other plugins. Mandatory files are :file:`metadata.txt`, :file:`__init__.py`
+and :file:`LICENSE`. A couple of validation rules apply:
+
+* the name of the main folder containing your plugin must contain only ASCII
+  characters (A-Z and a-z), digits and the characters underscore (``_``) and
+  minus (``-``), and cannot start with a digit
+* the `version` metadata field must be unique
+* a license file must be included, saved as :file:`LICENSE` with no extension
+  (i.e. not :file:`LICENSE.txt` for example)
+
+Following is an example of how a :file:`plugin.zip` could look like::
+
+  plugin.zip
+    pluginfolder/
+    |-- i18n
+    |   |-- translation_file_de.ts
+    |-- img
+    |   |-- icon.png
+    |   |-- iconsource.svg
+    |-- __init__.py
+    |-- LICENSE
+    |-- metadata.txt
+    |-- main_code.py
+    |-- README
 
 
 Tips and Tricks
