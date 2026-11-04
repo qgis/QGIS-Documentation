@@ -95,6 +95,9 @@ displayed at the bottom of the frame.
   |radioButtonOn| :guilabel:`Qt default` or a user-defined one
 * Change the :guilabel:`Timeout for timed messages or dialogs`
 * |unchecked| :guilabel:`Hide splash screen at startup`
+* |unchecked| :guilabel:`Show welcome page at startup`: displays the welcome page at QGIS startup.
+  It can show the "News" feed, the project templates
+  and the most recent projects of the :ref:`user profile <user_profiles>`.
 * |checkbox| :guilabel:`Show QGIS news feed on welcome page`: displays a curated
   QGIS news feed on the welcome page, giving you a direct way to be aware of
   project news (user/developer meetings date and summary, community surveys,
@@ -119,9 +122,6 @@ displayed at the bottom of the frame.
 
 * :guilabel:`Open project on launch`
 
-  * 'Welcome Page' (default): can display the "News" feed, the project
-    template(s) and the most recent projects (with thumbnails) of the
-    :ref:`user profile <user_profiles>`. No project is opened by default.
   * 'New': opens a new project, based on the default template
   * 'Most recent': reopens the last saved project
   * and 'Specific': opens a particular project. Use the :guilabel:`...` button
