@@ -126,13 +126,16 @@ displayed at the bottom of the frame.
   * 'Most recent': reopens the last saved project
   * and 'Specific': opens a particular project. Use the :guilabel:`...` button
     to define the project to use by default.
-* |checkbox| :guilabel:`Create new project from default project`. You have the
-  possibility to press on :guilabel:`Set current project as default` or on
-  :guilabel:`Reset default`. You can browse through your files and define a
-  directory where you find your user-defined project templates. This will be
-  added to :menuselection:`Project --> New From Template`. If you first activate
-  |checkbox| :guilabel:`Create new project from default project` and then save
-  a project in the project templates folder.
+* |checkbox| :guilabel:`Create new project from default project`. You have the possibility
+  to press on :guilabel:`Set current project as default` or on :guilabel:`Reset default`.
+* :guilabel:`Template folders`: you can define **multiple folders** containing
+  user-defined project templates. All templates found across the listed folders are made
+  available under :menuselection:`Project --> New From Template` and as sections in the
+  welcome page. Use the |symbologyAdd| :sup:`Add new path` and |symbologyRemove| :sup:`Remove path` buttons
+  to manage the list, you can also use |arrowUp| :sup:`Move selected path up`
+  and |arrowDown| :sup:`Move selected path down` buttons to change the order of the paths.
+  The |undo| :sup:`Reset to default` button resets the list to the
+  default profile templates directory.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
   required` to avoid losing changes you made.
 * |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
@@ -2948,6 +2951,10 @@ in the QGIS user profile.
    :width: 2em
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
@@ -3066,6 +3073,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
 .. |user| image:: /static/common/user.png
    :width: 1.5em
 .. |win| image:: /static/common/win.png
