@@ -3347,26 +3347,8 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 ``%(Derived).Y``. The derived attributes are only available from the
 :guilabel:`Identify Results` dialog box, not the :guilabel:`Attribute Table` dialog box.
 
-.. index::
-   single: Actions; Examples
 
-Two example actions are shown below:
 
-* ``konqueror https://www.google.com/search?q=%name``
-* ``konqueror https://www.google.com/search?q=%%``
-
-In the first example, the web browser konqueror is invoked and passed a URL
-to open. The URL performs a Google search on the value of the ``name`` field
-from our vector layer. Note that the application or script called by the
-action must be in the path, or you must provide the full path. To be certain, we
-could rewrite the first example as:
-``/opt/kde3/bin/konqueror https://www.google.com/search?q=%name``. This will
-ensure that the konqueror application will be executed when the action is
-invoked.
-
-The second example uses the \%\% notation, which does not rely on a particular
-field for its value. When the action is invoked, the \%\% will be replaced by
-the value of the selected field in the identify results or attribute table.
 
 .. index:: Actions, Attribute Actions
    single: Actions; Duplicate an action
@@ -3393,20 +3375,192 @@ identical to the description of any other existing action, "_1" will be added to
 Using Actions
 -------------
 
-QGIS offers many ways to execute actions you enabled on a layer. Depending on
-their settings, they can be available:
+QGIS offers many ways to execute actions you enabled on a layer.
+Depending on their settings, they can be available:
 
 * in the drop-down menu of |actionRun| :sup:`Run Feature Action` button from
   the :guilabel:`Attributes toolbar` or :guilabel:`Attribute table` dialog;
+* in the :guilabel:`Attribute table` dialog (table view), when right-clicking a cell
+  or as items of a dedicated :guilabel:`Actions` column
 * when right-clicking a feature with the |identify| :sup:`Identify Features` tool
   (see :ref:`identify` for more information);
 * from the :guilabel:`Identify Results` panel, under the :guilabel:`Actions` section;
 * as items of an :guilabel:`Actions` column in the :guilabel:`Attribute Table` dialog.
 
-If you are invoking an action that uses the ``%%`` notation, right-click on the
-field value in the :guilabel:`Identify Results` dialog or the
-:guilabel:`Attribute Table` dialog that you wish to pass to the application
-or script.
+Let's walk through some actions' examples.
+
+
+.. index::
+   single: Actions; Examples
+
+Performing a web search with an "Open URL" action
+..................................................
+
+As an exercise, we can create an action that does a Google search on the ``lakes`` layer.
+First, we need to determine the URL required to perform a search on a keyword.
+This is easily done by just going to Google and doing a simple search,
+then grabbing the URL from the address bar in your browser.
+From this little effort, we see that the format is https://www.google.com/search?q=QGIS,
+where ``QGIS`` is the search term. Armed with this information, we can proceed:
+
+#. Make sure the ``lakes`` layer is loaded.
+#. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
+   layer in the legend, or right-click and choose :menuselection:`Properties`
+   from the pop-up menu.
+#. Click on the :guilabel:`Actions` tab.
+#. Click |symbologyAdd| :sup:`Add a new action`.
+#. Choose the :guilabel:`Open URL` action type,
+#. Enter a name for the action, for example ``Google Search``.
+#. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
+#. Choose the :guilabel:`Action Scopes`.
+   See :ref:`adding_actions` for further information.
+   Leave the default settings for this example.
+#. For the action, add the URL used for doing a Google search, up to but not including the search term.
+   The text in the :guilabel:`Action Text` field should now look like this::
+
+     https://www.google.com/search?q=
+
+#. Click on the drop-down box containing the field names for the ``lakes`` layer.
+   It's located just to the left of the :guilabel:`Insert` button.
+#. From the drop-down box, select :guilabel:`NAMES` and click :guilabel:`Insert`.
+#. Your action text now looks like this::
+
+     https://www.google.com/search?q=[%NAMES%]
+
+#. To finalize and add the action, click the :guilabel:`OK` button.
+
+   .. _figure_add_action:
+
+   .. figure:: img/add_action_edit.png
+      :align: center
+
+      Configuring an action
+
+This completes the action, and it is ready to use.
+
+#. Close the :guilabel:`Layer Properties` dialog and zoom in to an area of interest.
+#. Make sure the ``lakes`` layer is active and identify a lake.
+   In the result box you'll now see that our action is visible:
+
+   .. _figure_actions_selection:
+
+   .. figure:: img/action_identifyaction.png
+      :align: center
+
+      Select feature and choose action
+
+#. Click on the action, it brings up your default browser
+   and navigates to the corresponding URL::
+
+    https://www.google.com/search?q=Tustumena
+
+#. It is also possible to add further attribute fields to the action.
+   Therefore, you can add a ``+`` to the end of the action text,
+   select another field and click on :guilabel:`Insert Field`.
+   In this example, there is just no other field available that would make sense to search for.
+
+Performing a web search with a generic action
+...............................................
+
+The previous example can be achieved using the :guilabel:`Generic` type of action.
+In this case you need to indicate the application to run in your command.
+Two example actions are shown below:
+
+* ``firefox https://www.google.com/search?q=%NAMES``
+* ``firefox https://www.google.com/search?q=%%``
+
+In the first example, the web browser Firefox is invoked and passed a URL to open.
+The URL performs a web search on the value of the ``NAMES`` field from our vector layer.
+Note that the application or script called by the action must be in the path,
+or you must provide the full path.
+To be certain that the desired application will be executed when the action is invoked,
+we could rewrite the first example as:
+
+.. code-block:: bash
+
+ /path/to/firefox https://www.google.com/search?q=%NAMES
+
+
+The second example uses the ``%%`` notation, which does not rely on a particular field for its value.
+To invoke such an action, right-click on the field value in the :guilabel:`Identify Results` dialog
+or the :guilabel:`Attribute Table` dialog that you wish to pass to the application or script.
+The ``%%`` will then be replaced by the value of the selected field in the identify results
+or attribute table.
+
+Display images using a Python action
+.......................................
+
+There are all kinds of uses for actions. For example, if you have
+a point layer containing locations of images or photos along with a file name,
+you could create an action to launch a viewer to display the image. You could
+also use actions to launch web-based reports for an attribute field or
+combination of fields, specifying them in the same way we did in our Google search example.
+
+We can also make more complex examples, for instance, using **Python** actions.
+
+Usually, when we create an action to open a file with an external application,
+we can use absolute paths, or eventually relative paths. In the second case,
+the path is relative to the location of the external program executable file.
+But what about if we need to use relative paths, relative to the selected layer
+(a file-based one, like Shapefile or SpatiaLite)? The following code will
+do the trick:
+
+.. code-block:: python
+
+  import os.path
+  import subprocess
+
+  command = "firefox"
+  imagerelpath = "images_test/test_image.jpg"
+  layer = qgis.utils.iface.activeLayer()
+  layerpath = layer.source() if layer.providerType() == 'ogr'
+    else (qgis.core.QgsDataSourceURI(layer.source()).database()
+      if layer.providerType() == 'spatialite' else None)
+  path = os.path.dirname(str(layerpath))
+  image = os.path.join(path,imagerelpath)
+  subprocess.Popen( [command, image ] )
+
+We just have to remember that the action is one of type *Python* and
+the *command* and *imagerelpath* variables must be changed to fit our needs.
+Moreover, you might ensure :ref:`you allowed scripts to run <project_trust>` in the project.
+
+But what if the relative path needs to be relative to the (saved) project file?
+The code of the Python action would be:
+
+.. code-block:: python
+
+  import os.path
+  import subprocess
+
+  command = "firefox"
+  imagerelpath = "images_test/test_image.jpg"
+  projectpath = qgis.core.QgsProject.instance().fileName()
+  path = os.path.dirname(str(projectpath)) if projectpath != '' else None
+  image = os.path.join(path, imagerelpath)
+  subprocess.Popen( [command, image ] )
+
+Another Python action example is the one that allows us to add new layers to the project.
+For instance, the following examples will add to the project respectively a vector and a raster.
+The names of the files to be added to the project
+and the names to be given to the layers are data driven
+(*filename* and *layername* are column names of the attribute table of the vector
+where the action was created):
+
+.. code-block:: python
+
+  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp',
+    '[% "layername" %]', 'ogr')
+
+
+To add a raster (a TIF image in this example), it becomes:
+
+.. code-block:: python
+
+  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif',
+    '[% "layername" %]')
+
+Creating a dataset with a Unix action
+.......................................
 
 Here is another example that pulls data out of a vector layer and inserts
 it into a file using bash and the ``echo`` command (so it will only work on
@@ -3431,142 +3585,6 @@ the output file will show something like this:
   Acacia mearnsii -35.2200000000 149.9300000000
   Acacia mearnsii -32.2700000000 150.4100000000
 
-
-As an exercise, we can create an action that does a Google search on the ``lakes``
-layer. First, we need to determine the URL required to perform a search on a
-keyword. This is easily done by just going to Google and doing a simple
-search, then grabbing the URL from the address bar in your browser. From this
-little effort, we see that the format is https://www.google.com/search?q=QGIS,
-where ``QGIS`` is the search term. Armed with this information, we can proceed:
-
-#. Make sure the ``lakes`` layer is loaded.
-#. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
-   layer in the legend, or right-click and choose :menuselection:`Properties`
-   from the pop-up menu.
-#. Click on the :guilabel:`Actions` tab.
-#. Click |symbologyAdd| :sup:`Add a new action`.
-#. Choose the :guilabel:`Open URL` action type,
-#. Enter a name for the action, for example ``Google Search``.
-#. Additionally you can add a :guilabel:`Short Name` or even an :guilabel:`Icon`.
-#. Choose the :guilabel:`Action Scopes`.
-   See :ref:`adding_actions` for further information.
-   Leave the default settings for this example.
-#. For the action, add the URL used for doing a Google search, up to but not including the search term:
-   ``https://www.google.com/search?q=``
-#. The text in the :guilabel:`Action` field should now look like this::
-
-     https://www.google.com/search?q=
-
-#. Click on the drop-down box containing the field names for the ``lakes`` layer.
-   It's located just to the left of the :guilabel:`Insert` button.
-#. From the drop-down box, select :guilabel:`NAMES` and click :guilabel:`Insert`.
-#. Your action text now looks like this::
-
-     https://www.google.com/search?q=[%NAMES%]
-
-#. To finalize and add the action, click the :guilabel:`OK` button.
-
-   .. _figure_add_action:
-
-   .. figure:: img/add_action_edit.png
-      :align: center
-
-      Edit action dialog configured with the example
-
-This completes the action, and it is ready to use.
-
-Close the :guilabel:`Layer Properties` dialog and zoom in to an area of interest.
-Make sure the ``lakes`` layer is active and identify a lake.
-In the result box you'll now see that our action is visible:
-
-.. _figure_actions_selection:
-
-.. figure:: img/action_identifyaction.png
-   :align: center
-
-   Select feature and choose action
-
-When we click on the action, it brings up our default browser and navigates to the URL
-https://www.google.com/search?q=Tustumena. It is also possible to add further
-attribute fields to the action. Therefore, you can add a ``+`` to the end of
-the action text, select another field and click on :guilabel:`Insert Field`. In
-this example, there is just no other field available that would make sense
-to search for.
-
-You can define multiple actions for a layer, and each will show up in the
-:guilabel:`Identify Results` dialog.
-
-
-You can also invoke actions from the attribute table
-by selecting a row and right-clicking, then choosing the action from the
-pop-up menu.
-
-There are all kinds of uses for actions. For example, if you have
-a point layer containing locations of images or photos along with a file name,
-you could create an action to launch a viewer to display the image. You could
-also use actions to launch web-based reports for an attribute field or
-combination of fields, specifying them in the same way we did in our
-Google search example.
-
-We can also make more complex examples, for instance, using **Python** actions.
-
-Usually, when we create an action to open a file with an external application,
-we can use absolute paths, or eventually relative paths. In the second case,
-the path is relative to the location of the external program executable file.
-But what about if we need to use relative paths, relative to the selected layer
-(a file-based one, like Shapefile or SpatiaLite)? The following code will
-do the trick:
-
-.. code-block:: python
-
-  command = "firefox"
-  imagerelpath = "images_test/test_image.jpg"
-  layer = qgis.utils.iface.activeLayer()
-  import os.path
-  layerpath = layer.source() if layer.providerType() == 'ogr'
-    else (qgis.core.QgsDataSourceURI(layer.source()).database()
-      if layer.providerType() == 'spatialite' else None)
-  path = os.path.dirname(str(layerpath))
-  image = os.path.join(path,imagerelpath)
-  import subprocess
-  subprocess.Popen( [command, image ] )
-
-We just have to remember that the action is one of type *Python* and
-the *command* and *imagerelpath* variables must be changed to fit our needs.
-
-But what about if the relative path needs to be relative to the (saved)
-project file? The code of the Python action would be:
-
-.. code-block:: python
-
-  command = "firefox"
-  imagerelpath = "images_test/test_image.jpg"
-  projectpath = qgis.core.QgsProject.instance().fileName()
-  import os.path
-  path = os.path.dirname(str(projectpath)) if projectpath != '' else None
-  image = os.path.join(path, imagerelpath)
-  import subprocess
-  subprocess.Popen( [command, image ] )
-
-Another Python action example is the one that allows us to add new layers
-to the project. For instance, the following examples will add to the project
-respectively a vector and a raster. The names of the files to be added to the
-project and the names to be given to the layers are data driven (*filename* and
-*layername* are column names of the table of attributes of the vector where
-the action was created):
-
-.. code-block:: python
-
-  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp',
-    '[% "layername" %]', 'ogr')
-
-
-To add a raster (a TIF image in this example), it becomes:
-
-.. code-block:: python
-
-  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif',
-    '[% "layername" %]')
 
 .. index:: Map Tips
 .. _maptips:
