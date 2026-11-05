@@ -17,7 +17,7 @@ Two different types of 3D views are supported:
 * ``3D map view``: The scene is rendered on a flat plane using the project's CRS if it is projected,
   or using the web mercator CRS (``EPSG:3857``) if not.
   Changing the project's CRS after the 3D map is created won't change the map's CRS.
-  The actual extent of the view can be changed, allowing to clip data displayed in the 3D view
+  The actual extent of the view can be changed, allowing you to clip data displayed in the 3D view
   to a single city for example. A DEM or a mesh can be used to represent the terrain.
   3D layers (point clouds, 3D tiles) are rendered in 3D.
   2D layers (raster, vector) are rendered on the terrain's surface as a texture.
@@ -31,7 +31,7 @@ Two different types of 3D views are supported:
   3D layers (point clouds, 3D tiles) are rendered in 3D.
   2D layers (raster, vector) can only be rendered on the ellipsoid as a texture.
   DEM elevations or 3D vectors or extrusions are not supported.
-  This mode is more suitable for world wide data and when the earth's curvature matters.
+  This mode is more suitable for world wide data and when the Earth's curvature matters.
 
 3D views are stored within the project and saved upon saving the project, even if they are turned off.
 You can create, manage and open 3D views via :menuselection:`View --> 3D Map Views -->` menu:
