@@ -14,9 +14,6 @@ GRASS GIS Integration
 Introduction to GRASS Data
 ===========================
 
-The Data structure
-------------------
-
 QGIS provides access to GRASS databases and functionalities.
 `GRASS (Geographic Resources Analysis Support System) <https://grass.osgeo.org>`_
 is a powerful computational engine for raster, vector, and geospatial processing.
@@ -47,63 +44,6 @@ For more information visit the `GRASS`_ documentation.
    :align: center
 
    Diagram of GRASS data structure (source: `GRASS documentation <https://grass.osgeo.org/programming8/>`_)
-
-
-.. index:: GRASS vector data model
-.. _label_vectmodel:
-
-The GRASS vector data model
----------------------------
-
-It is important to understand the GRASS vector data model prior to digitizing.
-In general, GRASS uses a topological vector model.
-This means that areas are not represented as closed polygons, but by one or more boundaries.
-A boundary between two adjacent areas is digitized only once, and it is shared by both areas.
-Boundaries must be connected and closed without gaps.
-An area is identified (and labelled) by the **centroid** of the area.
-
-Besides boundaries and centroids, a vector map can also contain points and lines.
-All these geometry elements can be mixed in one vector
-and will be represented in different so-called 'layers' inside one GRASS vector map.
-So in GRASS, a layer is not a vector or raster map but a level inside a vector layer.
-This is important to distinguish carefully.
-Although it is possible to mix geometry elements, it is unusual and, even in GRASS,
-only used in special cases such as vector network analysis.
-Normally, you should prefer to store different geometry elements in different layers.
-
-It is possible to store several 'layers' in one vector dataset.
-For example, fields, forests and lakes can be stored in one vector.
-An adjacent forest and lake can share the same boundary, but they have separate attribute tables.
-It is also possible to attach attributes to boundaries.
-An example might be the case where the boundary between a lake and a forest is a road,
-so it can have a different attribute table.
-
-The 'layer' of the feature is defined by the 'layer' inside GRASS.
-'Layer' is the number which defines if there is more than one layer inside the dataset
-(e.g., if the geometry is forest or lake). For now, it can be only a number.
-In the future, GRASS will also support names as fields in the user interface.
-
-Attributes can be stored inside the GRASS Project as SQLite3 (the default), dBase, OGR,
-or in external database tables, for example, PostgreSQL, MySQL, etc.
-
-.. index::
-   single: GRASS; Attribute storage
-
-Attributes in database tables are linked to geometry elements using a 'category'
-value.
-
-.. index::
-   single: GRASS; Attribute linkage
-
-'Category' (key, ID) is an integer attached to geometry primitives, and it is
-used as the link to one key column in the database table.
-
-.. tip:: **Learning the GRASS Vector Model**
-
-   The best way to learn the GRASS vector model and its capabilities is to download
-   one of the many `GRASS tutorials <https://grass-tutorials.osgeo.org/>`_
-   and the `GRASS manuals <https://grass.osgeo.org/learn/manuals/>`_
-   for more information, books and tutorials in several languages.
 
 
 Working with GRASS data in QGIS
@@ -533,10 +473,69 @@ from the :guilabel:`Plugin Manager`.
 Digitizing and editing a GRASS vector layer
 ===========================================
 
+.. index:: GRASS vector data model
+.. _label_vectmodel:
+
+The GRASS vector data model
+---------------------------
+
+It is important to understand the GRASS vector data model prior to digitizing.
+In general, GRASS uses a topological vector model.
+This means that areas are not represented as closed polygons, but by one or more boundaries.
+A boundary between two adjacent areas is digitized only once, and it is shared by both areas.
+Boundaries must be connected and closed without gaps.
+An area is identified (and labelled) by the **centroid** of the area.
+
+Besides boundaries and centroids, a vector map can also contain points and lines.
+All these geometry elements can be mixed in one vector
+and will be represented in different so-called 'layers' inside one GRASS vector map.
+So in GRASS, a layer is not a vector or raster map but a level inside a vector layer.
+This is important to distinguish carefully.
+Although it is possible to mix geometry elements, it is unusual and, even in GRASS,
+only used in special cases such as vector network analysis.
+Normally, you should prefer to store different geometry elements in different layers.
+
+It is possible to store several 'layers' in one vector dataset.
+For example, fields, forests and lakes can be stored in one vector.
+An adjacent forest and lake can share the same boundary, but they have separate attribute tables.
+It is also possible to attach attributes to boundaries.
+An example might be the case where the boundary between a lake and a forest is a road,
+so it can have a different attribute table.
+
+The 'layer' of the feature is defined by the 'layer' inside GRASS.
+'Layer' is the number which defines if there is more than one layer inside the dataset
+(e.g., if the geometry is forest or lake). For now, it can be only a number.
+In the future, GRASS will also support names as fields in the user interface.
+
+Attributes can be stored inside the GRASS Project as SQLite3 (the default), dBase, OGR,
+or in external database tables, for example, PostgreSQL, MySQL, etc.
+
+.. index::
+   single: GRASS; Attribute storage
+
+Attributes in database tables are linked to geometry elements using a 'category'
+value.
+
+.. index::
+   single: GRASS; Attribute linkage
+
+'Category' (key, ID) is an integer attached to geometry primitives, and it is
+used as the link to one key column in the database table.
+
+.. tip:: **Learning the GRASS Vector Model**
+
+   The best way to learn the GRASS vector model and its capabilities is to download
+   one of the many `GRASS tutorials <https://grass-tutorials.osgeo.org/>`_
+   and the `GRASS manuals <https://grass.osgeo.org/learn/manuals/>`_
+   for more information, books and tutorials in several languages.
+
+Editing rules
+--------------
+
 When editing GRASS layers, changes are written after each operation.
 There are two main reasons for this behaviour:
 
-* It is the nature of GRASS vectors coming from conviction that user wants to do what he is doing
+* It is the nature of GRASS vectors coming from conviction that user wants to do what they are doing
   and it is better to have data saved when the work is suddenly interrupted (for example, blackout)
 * Necessity for effective editing of topological data is visualized information about topological correctness,
   such information can only be acquired from GRASS vector map if changes are written to the map.
