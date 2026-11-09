@@ -24,15 +24,15 @@ It supports terrain and ecosystem modeling, hydrology, data management, and imag
 
 GRASS database has a straightforward structure, even if at first it may look complicated.
 The GRASS data are stored in a directory referred to as GISDBASE, often called ``grassdata``.
-Within this directory, the GRASS GIS data are organized by projects
-stored in subdirectories called ``PROJECT``.
+Within this directory, the GRASS data are organized by projects
+stored in subdirectories called *project*.
 Each project is defined by its coordinate system, map projection and geographical boundaries.
-Each project can have several ``MAPSET`` (subdirectories of the project)
+Each project can have several *mapset* (subdirectories of the project)
 that are used to subdivide the project into different topics or sub-regions,
 or as workspaces for individual team members.
 In every project, there is the ``PERMANENT`` mapset, created by default by GRASS,
 in which the core data for the project can be stored.
-Mapsets contain actual geospatial data (called ``MAP``),
+Mapsets contain actual geospatial data (called *map*),
 what we know in other environments as raster or vector data types.
 Mapsets also hold additional data such as color tables
 and the current computational region's extent and resolution.
