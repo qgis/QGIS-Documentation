@@ -28,7 +28,7 @@ loaded on runtime however.
 Working with GRASS data in QGIS
 ================================
 
-QGIS provides access to GRASS databases and functionalities.
+QGIS provides access to GRASS data and functionality.
 This integration consists of allowing to browse, manage
 and visualize GRASS raster and vector layers.
 It also includes ability to create new GRASS projects and mapsets,
