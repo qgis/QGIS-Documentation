@@ -173,8 +173,8 @@ will be available from `Raster` menu, add this to :file:`metadata.txt`
   category=Raster
 
 .. note::
-   If `qgisMaximumVersion` is empty, it will be automatically set to
-   set to the major version plus `.99`(e.g. ``3.99`` for
+   If `qgisMaximumVersion` is empty, it is considered as the major version of
+   `qgisMinimumVersion` followed by `.99` (e.g. ``3.99`` for
    ``qgisMinimumVersion=3.22``).
 
 
