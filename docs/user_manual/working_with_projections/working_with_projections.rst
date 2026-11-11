@@ -482,5 +482,3 @@ When the project CRS is set to a compound CRS, the user can only check the verti
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-
-### Commits tagged with [need-docs] or [FEATURE]
