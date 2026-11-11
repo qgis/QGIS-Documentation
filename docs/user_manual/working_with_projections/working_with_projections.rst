@@ -433,8 +433,8 @@ to the current project only.
 Vertical Datums
 =====================
 
-QGIS also supports vertical datums and units of measurement as part of a vertical CRS. This is especially useful for handling digital elevation models. 
-If the project CRS is a compound CRS (horizontal + vertical), then the vertical CRS for the project will be the vertical component of the main project CRS. Otherwise, the vertical CRS will be the value explicitly set by the user. 
+QGIS also supports vertical datums and units of measurement as part of a vertical CRS. This is especially useful for handling digital elevation models.
+If the project CRS is a compound CRS (horizontal + vertical), then the vertical CRS for the project will be the vertical component of the main project CRS. Otherwise, the vertical CRS will be the value explicitly set by the user.
 
 Users can specify the vertical CRS through the Project Properties, Elevation tab.
 When the project CRS is a horizontal CRS, then the user can specify the vertical CRS for their project:
