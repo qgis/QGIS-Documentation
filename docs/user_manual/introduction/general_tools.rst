@@ -1834,7 +1834,6 @@ to:
 
 .. figure:: img/quick_color_selector.png
    :align: center
-   :width: 30%
 
    Quick color selector menu
 
