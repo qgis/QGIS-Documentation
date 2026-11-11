@@ -10,28 +10,30 @@ VSCODE_DIR=".vscode"
 LOG_FILE="vscode.log"
 
 REQUIRED_EXTENSIONS=(
-    lextudio.restructuredtext@190.4.10
-    shd101wyy.markdown-preview-enhanced@0.8.40
-    naumovs.color-highlight@2.8.0
-    waderyan.gitblame@11.1.3
     DavidAnson.vscode-markdownlint@0.60.0
-    ms-python.vscode-pylance@2025.4.1
+    GitHub.copilot-chat@0.48.1
+    GitHub.copilot@1.388.0
+    GitHub.vscode-pull-request-github@0.104.1
+    aikebang.mkdocs-syntax-highlight@0.2.1
+    foxundermoon.shell-format@7.2.5
     leonhard-s.python-sphinx-highlight@0.3.0
+    lextudio.iis@1.0.15
+    lextudio.restructuredtext-pack@1.0.3
+    lextudio.restructuredtext@190.4.12
+    mkhl.direnv@0.17.0
     ms-python.debugpy@2025.8.0
     ms-python.python@2025.6.1
-    ms-python.vscode-python-envs@1.38.0
-    tht13.rst-vscode@3.0.1
-    mkhl.direnv@0.17.0
-    trond-snekvik.simple-rst@1.5.4
-    yzhang.markdown-all-in-one@3.6.3
-    aikebang.mkdocs-syntax-highlight@0.2.1
-    lextudio.iis@1.0.15
-    ms-python.vscode-python-envs@1.2.0
+    ms-python.vscode-pylance@2025.7.1
+    ms-python.vscode-python-envs@1.8.0
+    naumovs.color-highlight@2.8.0
     searKing.preview-vscode@2.3.12
-    foxundermoon.shell-format@7.2.5
-    useblocks.sphinx-needs-vscode@0.3.2
+    shd101wyy.markdown-preview-enhanced@0.8.40
+    tht13.rst-vscode@3.0.1
     timonwong.shellcheck@0.37.7
-    lextudio.restructuredtext-pack@1.0.3
+    trond-snekvik.simple-rst@1.5.4
+    useblocks.sphinx-needs-vscode@0.3.2
+    waderyan.gitblame@11.1.3
+    yzhang.markdown-all-in-one@3.6.3
 )
 
 # ----------------------------------------------
