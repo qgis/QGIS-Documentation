@@ -1,8 +1,8 @@
 .. _`label_projections`:
 
-************************
+********************************
 Working with Projections and CRS
-************************
+********************************
 
 .. only:: html
 
@@ -431,7 +431,7 @@ to the current project only.
 
 
 Vertical Datums
-=====================
+===============
 
 QGIS also supports vertical datums and units of measurement as part of a vertical CRS. This is especially useful for handling digital elevation models.
 If the project CRS is a compound CRS (horizontal + vertical), then the vertical CRS for the project will be the vertical component of the main project CRS. Otherwise, the vertical CRS will be the value explicitly set by the user.
