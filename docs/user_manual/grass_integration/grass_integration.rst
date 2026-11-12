@@ -255,32 +255,6 @@ appropriate region extent and resolution for your raster analysis. You can use
 these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass_toolbox`.
 
 
-.. _import_data_dnd:
-
-Importing data into a GRASS Project via drag and drop
-======================================================
-
-This section gives an example of how to import raster and vector data into a GRASS mapset.
-
-#. In QGIS browser navigate to the mapset you want to import data into.
-#. In QGIS browser find a layer you want to import to GRASS, note that you can
-   open another instance of the browser (:guilabel:`Browser Panel (2)`) if
-   source data are too far from the mapset in the tree.
-#. Drag a layer and drop it on the target mapset. The import may take some time for
-   larger layers, you will see animated icon |import| in front of new layer item
-   until the import finishes.
-
-When raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate`
-(fast) or :guilabel:`Exact` (precise) transformation. If a link to the source raster
-is created (using ``r.external``), the source data are in the same CRS and the format
-is known to GDAL, the source data CRS will be used. You can set these options in the
-:guilabel:`Browser` tab in :ref:`grass_options`.
-
-If a source raster has more bands, a new GRASS map is created for each layer with
-**.<band number>** suffix and group of all maps with |rasterGroup| icon is created.
-External rasters have a different icon |rasterLink|.
-
-
 .. _sec_about_loc:
 
 GRASS PROJECT and MAPSET
@@ -366,7 +340,6 @@ used as the link to one key column in the database table.
 
 
 .. _managing_grass_data:
-
 Managing GRASS data
 ===================
 
