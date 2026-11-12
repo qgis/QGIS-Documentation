@@ -1813,6 +1813,9 @@ to:
 
 * a color wheel to pick a color from
 * an alpha slider to change color opacity
+* a quick switch to make the color fully transparent.
+  When the color is already fully transparent,
+  the entry changes to opaque fill, allowing you to get the fill back.
 * the color palettes previously set to :guilabel:`Show in Color Buttons`
 * copy the current color and paste it into another widget
 * pick a color from anywhere on your computer display
