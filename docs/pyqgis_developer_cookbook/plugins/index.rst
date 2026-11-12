@@ -12,7 +12,6 @@ Developing Python Plugins
    plugins
    snippets
    ide_debugging
-   releasing
 
 It is possible to create plugins in the Python programming language.
 In comparison with classical plugins written in C++ these should be easier to
