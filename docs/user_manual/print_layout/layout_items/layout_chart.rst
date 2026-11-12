@@ -70,12 +70,20 @@ with the map and legend.
 Chart Ranges
 .............
 
-Set the minimum and maximum values for the axes to determine
+
+:guilabel:`Manual Ranges` allows you to set the minimum and maximum values for the axes to determine
 how the data is displayed. By default, the :guilabel:`Minimum X axis`
 and :guilabel:`Minimum Y axis` are set to 0, while the :guilabel:`Maximum X axis`
 and :guilabel:`Maximum Y axis` are set to 10.
 You can adjust these values to fit your data range and improve the chart's readability.
+
+Select :guilabel:`Fixed Scales` if you wish to set an explicit
+:guilabel:`Distance scale` and :guilabel:`Elevation scale` separately.
+You can also set a :guilabel:`Minimum elevation` value to choose
+where the elevation axis starts and use the fixed scale to determine the maximum elevation for this axis.
+
 For pie charts, these options are not available.
+
 
 .. _layout_chart_symbols:
 
