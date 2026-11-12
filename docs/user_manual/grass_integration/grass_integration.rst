@@ -25,6 +25,90 @@ GRASS 6 or GRASS 7 or for both versions at the same time
 loaded on runtime however.
 
 
+.. _sec_about_loc:
+
+GRASS PROJECT and MAPSET
+=========================
+
+GRASS data are stored in a directory referred to as GISDBASE. This directory, often
+called :file:`grassdata`, must be created before you start working with the GRASS
+plugin in QGIS. Within this directory, the GRASS GIS data are organized by projects
+stored in subdirectories called :file:`PROJECTs`. Each :file:`PROJECT` is defined
+by its coordinate system, map projection and geographical boundaries. Each
+:file:`PROJECT` can have several :file:`MAPSETs` (subdirectories of the
+:file:`PROJECT`) that are used to subdivide the project into different topics or
+sub-regions, or as workspaces for individual team members (see Neteler & Mitasova
+2008 in :ref:`literature_and_web`). In order to analyze vector and raster layers
+with GRASS modules, you generally have to import them into a GRASS :file:`PROJECT`.
+(This is not strictly true -- with the GRASS modules :file:`r.external` and :file:`v.external`
+you can create read-only links to external GDAL-supported datasets without
+importing them. This is not the usual way for beginners to work with GRASS, therefore
+this functionality will not be described here.)
+
+.. _figure_grass_project:
+
+.. figure:: img/grass_project.png
+   :align: center
+
+   GRASS data structure
+
+
+.. index:: GRASS vector data model
+.. _label_vectmodel:
+
+The GRASS vector data model
+===========================
+
+It is important to understand the GRASS vector data model prior to digitizing.
+In general, GRASS uses a topological vector model.
+This means that areas are not represented as closed polygons, but by one or more
+boundaries. A boundary between two adjacent areas is digitized only once, and it
+is shared by both areas. Boundaries must be connected and closed without gaps.
+An area is identified (and labelled) by the **centroid** of the area.
+
+Besides boundaries and centroids, a vector map can also contain points and lines.
+All these geometry elements can be mixed in one vector and will be represented
+in different so-called 'layers' inside one GRASS vector map. So in GRASS, a layer
+is not a vector or raster map but a level inside a vector layer. This is important
+to distinguish carefully. (Although it is possible to mix geometry elements, it
+is unusual and, even in GRASS, only used in special cases such as vector network
+analysis. Normally, you should prefer to store different geometry elements in
+different layers.)
+
+It is possible to store several 'layers' in one vector dataset. For example,
+fields, forests and lakes can be stored in one vector. An adjacent forest and lake
+can share the same boundary, but they have separate attribute tables. It is also
+possible to attach attributes to boundaries. An example might be the case where the boundary
+between a lake and a forest is a road, so it can have a different attribute table.
+
+The 'layer' of the feature is defined by the 'layer' inside GRASS. 'Layer' is the
+number which defines if there is more than one layer inside the dataset (e.g.,
+if the geometry is forest or lake). For now, it can be only a number. In the future,
+GRASS will also support names as fields in the user interface.
+
+Attributes can be stored inside the GRASS :file:`PROJECT` as dBase,  SQLite3 or
+in external database tables, for example, PostgreSQL, MySQL, Oracle, etc.
+
+.. index::
+   single: GRASS; Attribute storage
+
+Attributes in database tables are linked to geometry elements using a 'category'
+value.
+
+.. index::
+   single: GRASS; Attribute linkage
+
+'Category' (key, ID) is an integer attached to geometry primitives, and it is
+used as the link to one key column in the database table.
+
+.. tip:: **Learning the GRASS Vector Model**
+
+   The best way to learn the GRASS vector model and its capabilities is to
+   download one of the many GRASS tutorials where the vector model is described
+   more deeply. See https://grass.osgeo.org/learn/manuals/ for more information,
+   books and tutorials in several languages.
+
+
 Working with GRASS data in QGIS
 ================================
 
@@ -253,116 +337,6 @@ a new region interactively with your mouse on the QGIS canvas dragging a rectang
 The GRASS module :file:`g.region` provides a lot more parameters to define an
 appropriate region extent and resolution for your raster analysis. You can use
 these parameters with the GRASS Toolbox, described in section :ref:`subsec_grass_toolbox`.
-
-
-.. _import_data_dnd:
-
-Importing data into a GRASS Project via drag and drop
-======================================================
-
-This section gives an example of how to import raster and vector data into a GRASS mapset.
-
-#. In QGIS browser navigate to the mapset you want to import data into.
-#. In QGIS browser find a layer you want to import to GRASS, note that you can
-   open another instance of the browser (:guilabel:`Browser Panel (2)`) if
-   source data are too far from the mapset in the tree.
-#. Drag a layer and drop it on the target mapset. The import may take some time for
-   larger layers, you will see animated icon |import| in front of new layer item
-   until the import finishes.
-
-When raster data are in different CRS, they can be reprojected using an :guilabel:`Approximate`
-(fast) or :guilabel:`Exact` (precise) transformation. If a link to the source raster
-is created (using ``r.external``), the source data are in the same CRS and the format
-is known to GDAL, the source data CRS will be used. You can set these options in the
-:guilabel:`Browser` tab in :ref:`grass_options`.
-
-If a source raster has more bands, a new GRASS map is created for each layer with
-**.<band number>** suffix and group of all maps with |rasterGroup| icon is created.
-External rasters have a different icon |rasterLink|.
-
-
-.. _sec_about_loc:
-
-GRASS PROJECT and MAPSET
-=========================
-
-GRASS data are stored in a directory referred to as GISDBASE. This directory, often
-called :file:`grassdata`, must be created before you start working with the GRASS
-plugin in QGIS. Within this directory, the GRASS GIS data are organized by projects
-stored in subdirectories called :file:`PROJECTs`. Each :file:`PROJECT` is defined
-by its coordinate system, map projection and geographical boundaries. Each
-:file:`PROJECT` can have several :file:`MAPSETs` (subdirectories of the
-:file:`PROJECT`) that are used to subdivide the project into different topics or
-sub-regions, or as workspaces for individual team members (see Neteler & Mitasova
-2008 in :ref:`literature_and_web`). In order to analyze vector and raster layers
-with GRASS modules, you generally have to import them into a GRASS :file:`PROJECT`.
-(This is not strictly true -- with the GRASS modules :file:`r.external` and :file:`v.external`
-you can create read-only links to external GDAL-supported datasets without
-importing them. This is not the usual way for beginners to work with GRASS, therefore
-this functionality will not be described here.)
-
-.. _figure_grass_project:
-
-.. figure:: img/grass_project.png
-   :align: center
-
-   GRASS data structure
-
-
-.. index:: GRASS vector data model
-.. _label_vectmodel:
-
-The GRASS vector data model
-===========================
-
-It is important to understand the GRASS vector data model prior to digitizing.
-In general, GRASS uses a topological vector model.
-This means that areas are not represented as closed polygons, but by one or more
-boundaries. A boundary between two adjacent areas is digitized only once, and it
-is shared by both areas. Boundaries must be connected and closed without gaps.
-An area is identified (and labelled) by the **centroid** of the area.
-
-Besides boundaries and centroids, a vector map can also contain points and lines.
-All these geometry elements can be mixed in one vector and will be represented
-in different so-called 'layers' inside one GRASS vector map. So in GRASS, a layer
-is not a vector or raster map but a level inside a vector layer. This is important
-to distinguish carefully. (Although it is possible to mix geometry elements, it
-is unusual and, even in GRASS, only used in special cases such as vector network
-analysis. Normally, you should prefer to store different geometry elements in
-different layers.)
-
-It is possible to store several 'layers' in one vector dataset. For example,
-fields, forests and lakes can be stored in one vector. An adjacent forest and lake
-can share the same boundary, but they have separate attribute tables. It is also
-possible to attach attributes to boundaries. An example might be the case where the boundary
-between a lake and a forest is a road, so it can have a different attribute table.
-
-The 'layer' of the feature is defined by the 'layer' inside GRASS. 'Layer' is the
-number which defines if there is more than one layer inside the dataset (e.g.,
-if the geometry is forest or lake). For now, it can be only a number. In the future,
-GRASS will also support names as fields in the user interface.
-
-Attributes can be stored inside the GRASS :file:`PROJECT` as dBase,  SQLite3 or
-in external database tables, for example, PostgreSQL, MySQL, Oracle, etc.
-
-.. index::
-   single: GRASS; Attribute storage
-
-Attributes in database tables are linked to geometry elements using a 'category'
-value.
-
-.. index::
-   single: GRASS; Attribute linkage
-
-'Category' (key, ID) is an integer attached to geometry primitives, and it is
-used as the link to one key column in the database table.
-
-.. tip:: **Learning the GRASS Vector Model**
-
-   The best way to learn the GRASS vector model and its capabilities is to
-   download one of the many GRASS tutorials where the vector model is described
-   more deeply. See https://grass.osgeo.org/learn/manuals/ for more information,
-   books and tutorials in several languages.
 
 
 .. _managing_grass_data:
