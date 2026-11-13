@@ -40,7 +40,7 @@ When a feature's geometry consists of only a single vertex, it is referred to as
 a **point** feature (see illustration :numref:`figure_geometry_point`). Where the geometry
 consists of two or more vertices and the first and last vertex are not equal, a
 **polyline** feature is formed (see illustration :numref:`figure_geometry_polyline`). Where
-three or more vertices are present, and the last vertex is equal to the first, an
+four or more vertices are present, and the last vertex is equal to the first, an
 enclosed **polygon** feature is formed (see illustration :numref:`figure_geometry_polygon`).
 
 .. _figure_geometry_point:
@@ -89,7 +89,7 @@ Point features in detail
 
 The first thing we need to realise when talking about point features is that what
 we describe as a point in GIS is a matter of opinion, and often dependent on
-scale. let's look at cities for example. If you have a small scale map (which
+scale. Let's look at cities for example. If you have a small scale map (which
 covers a large area), it may make sense to represent a city using a point feature.
 However as you zoom in to the map, moving towards a larger scale, it makes more
 sense to show the city limits as a polygon.
@@ -108,7 +108,7 @@ surface. One of the most common reference systems is **Longitude and Latitude**.
 Lines of Longitude run from the North Pole to the South Pole. Lines of Latitude
 run from the East to West. You can describe precisely where you are at any place
 on the earth by giving someone your Longitude (X) and Latitude (Y). If you make
-a similar measurement for a tree or a telephone pole and marked it on a map, you
+a similar measurement for a tree or a telephone pole and mark it on a map, you
 will have created a point feature.
 
 Since we know the earth is not flat, it is often useful to add a Z value to a
@@ -129,7 +129,7 @@ lines may touch (e.g. at a cliff face) but should never cross over each other.
 Similarly, polylines used to store a road network should be connected at
 intersections. In some GIS applications you can set these special rules for a
 feature type (e.g. roads) and the GIS will ensure that these polylines always
-comply to these rules.
+comply with these rules.
 
 If a curved polyline has very large distances between vertices, it may appear
 **angular** or jagged, depending on the scale at which it is viewed (see
@@ -245,7 +245,7 @@ Symbology
 When you add vector layers to the map view in a GIS application, they will be
 drawn with random colours and basic symbols. One of the great advantages of using
 a GIS is that you can create personalised maps very easily. The GIS program will
-let you choose colours to suite the feature type (e.g. you can tell it to draw a
+let you choose colours to suit the feature type (e.g. you can tell it to draw a
 water bodies vector layer in blue). The GIS will also let you adjust the symbol
 used. So if you have a trees point layer, you can show each tree position with a
 small picture of a tree, rather than the basic circle marker that the GIS uses
