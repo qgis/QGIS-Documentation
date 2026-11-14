@@ -1,8 +1,8 @@
 .. _`label_projections`:
 
-************************
-Working with Projections
-************************
+********************************
+Working with Projections and CRS
+********************************
 
 .. only:: html
 
@@ -428,6 +428,28 @@ may have its own specific set of transformations specified via the
 :guilabel:`CRS` tab of the :guilabel:`Project properties` dialog
 (:menuselection:`Project --> Properties...`). These settings apply
 to the current project only.
+
+
+Vertical Datums
+===============
+
+QGIS also supports vertical datums and units of measurement as part of a vertical CRS. This is especially useful for handling digital elevation models.
+If the project CRS is a compound CRS (horizontal + vertical), then the vertical CRS for the project will be the vertical component of the main project CRS. Otherwise, the vertical CRS will be the value explicitly set by the user.
+
+Users can specify the vertical CRS through the Project Properties, Elevation tab.
+When the project CRS is a horizontal CRS, then the user can specify the vertical CRS for their project:
+
+     .. figure:: img/vertCRS-separate.png
+        :align: center
+
+        Specifying a vertical CRS when the project has a horizontal CRS
+
+When the project CRS is set to a compound CRS, the user can only check the vertical CRS specified, without modifying it:
+
+     .. figure:: img/vertCRS-compound.png
+        :align: center
+
+        Checking a vertical CRS when the project has a compound CRS
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
