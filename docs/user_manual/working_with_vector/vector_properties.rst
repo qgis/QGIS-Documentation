@@ -3240,11 +3240,12 @@ In this case, ``.qgd`` and  ``.qgs`` files are both embedded in the archive.
 Actions Properties
 ==================
 
-The |action| :guilabel:`Actions` tab provides the ability to perform an action
-based on the attributes of a feature.
-This can be used to perform any number of actions, for example,
-running a program with arguments built from the attributes of a feature
-or passing parameters to a web reporting tool.
+The |action| :guilabel:`Actions` tab provides the ability to configure automated actions
+that can be run in various contexts of QGIS (canvas, attribute table, feature form,
+identify results, ...).
+Actions can be based on the attributes of a feature or its location.
+This can be used, for example, to run a program with arguments built
+from the attributes of a feature or pass parameters to a web reporting tool.
 
 .. _figure_actions:
 
@@ -3279,14 +3280,19 @@ They are of different types and can be used like this:
   but using a HTTP POST request.
   Data are posted to a URL, using "multipart/form-data".
 
-There are several examples included in the dialog. You can load them by clicking
-on :guilabel:`Create Default Actions`. To edit any of the examples, double-click
-its row. One example is performing a search based on an attribute value. This
-concept is used in the following discussion.
+By default QGIS contains several examples of actions you can use as starting point.
+You can load them by clicking on :guilabel:`Create Default Actions`.
+The |arrowUp| :sup:`Move the selected action up` and |arrowDown| :sup:`Move the selected action down` buttons
+help you reorganize the list of actions in the table;
+this also affects the order in which they are displayed in their context.
+You can also |symbologyRemove| :sup:`Remove the selected action`,
+|symbologyAdd| :sup:`Add a new action` and |duplicateLayout| :sup:`Duplicate an action`.
+To edit any existing action, double-click its row.
 
-The |checkbox| :guilabel:`Show in Attribute Table` allows you to display in the
-attribute table dialog the checked feature-scoped actions, either as :guilabel:`Combo
-Box` or as :guilabel:`Separate Buttons` (see :ref:`configure_table_columns`).
+The |checkbox| :guilabel:`Show in Attribute Table` allows you to display
+in the attribute table dialog the checked feature-scoped actions,
+either as :guilabel:`Combo Box` or as :guilabel:`Separate Buttons`
+(see :ref:`configure_table_columns`).
 
 
 .. index:: Actions, Attribute Actions
@@ -3350,23 +3356,7 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 
 
 
-.. index:: Actions, Attribute Actions
-   single: Actions; Duplicate an action
-.. _duplicating_actions:
 
-Duplicating Actions
--------------------
-
-QGIS allows you to duplicate existing actions. To duplicate an attribute action,
-open the vector :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab.
-In the :guilabel:`Actions` tab, click the |duplicateLayout| :sup:`Duplicate an action`
-to open the :guilabel:`Duplicate Action` dialog. You must have selected at least one existing action
-in order to create a duplicate.
-
-In the dialogue that appears, make any changes that are necessary. See :ref:`adding_actions`
-for further information. Once finished, press :guilabel:`OK` to create a duplicate of the action with
-any changes that you made. If you did not edit the description, or if you changed it to be
-identical to the description of any other existing action, "_1" will be added to the end of it.
 
 .. index::
    single: Actions; Using actions
