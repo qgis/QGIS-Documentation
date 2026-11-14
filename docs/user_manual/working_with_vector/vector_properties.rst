@@ -3254,32 +3254,6 @@ from the attributes of a feature or pass parameters to a web reporting tool.
 
    Overview action dialog with some sample actions
 
-Actions are useful when you frequently want to run an external application
-or view a web page based on one or more values in your vector layer.
-They are of different types and can be used like this:
-
-* :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
-  and :guilabel:`Unix` actions start an external process.
-* :guilabel:`Python` actions execute a Python expression.
-* :guilabel:`Generic` and :guilabel:`Python` actions are visible everywhere.
-* :guilabel:`macOS`, :guilabel:`Windows` and :guilabel:`Unix`
-  actions are visible only on the respective platform
-  (i.e., you can define three "Edit" actions to open an editor and the users can only
-  see and execute the one "Edit" action for their platform to run the editor).
-* :guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL.
-* :guilabel:`Submit URL (urlencoded or JSON)`:
-  Same as the :guilabel:`Open URL` action but using a HTTP POST request.
-  Data are posted to a URL, using "application/x-www-form-urlencoded"
-  or "application/json" if the body is a valid JSON.
-
-  An example of action call could be::
-
-    http://localhost:8000?/[% url_encode(map('file', 'index.php')) %]
-
-* :guilabel:`Submit URL (multipart)`: Same as the :guilabel:`Open URL` action
-  but using a HTTP POST request.
-  Data are posted to a URL, using "multipart/form-data".
-
 By default QGIS contains several examples of actions you can use as starting point.
 You can load them by clicking on :guilabel:`Create Default Actions`.
 The |arrowUp| :sup:`Move the selected action up` and |arrowDown| :sup:`Move the selected action down` buttons
@@ -3302,60 +3276,89 @@ either as :guilabel:`Combo Box` or as :guilabel:`Separate Buttons`
 Defining Actions
 ----------------
 
-To define an attribute action, open the vector :guilabel:`Layer
-Properties` dialog and click on the :guilabel:`Actions` tab. In the
-:guilabel:`Actions` tab, click the |symbologyAdd| :sup:`Add a new action`
-to open the :guilabel:`Edit Action` dialog.
+To configure an action,  open the vector :guilabel:`Layer Properties` dialog
+and click on the :guilabel:`Actions` tab.
+Then click the |symbologyAdd| :sup:`Add a new action` to open the :guilabel:`Add New Action` dialog.
+This is also possible by double-clicking an existing action
+or pressing |duplicateLayout| :sup:`Duplicate an action` when an action is selected.
+You then need to fill a number of properties:
 
-Select the action :guilabel:`Type` and provide a descriptive name
-for the action. The action itself must contain the name of the application
-that will be executed when the action is invoked.
-You can add one or more attribute field values as arguments to the application.
-When the action is invoked, any set of characters that start with a ``%``
-followed by the name of a field will be replaced by the value of that field.
-The special characters ``%%`` will be replaced by the value of the field
-that was selected from the identify results or attribute table (see :ref:`using_actions`).
-Double quote marks can be used to group text into a single argument to the program, script or command.
-Double quotes will be ignored if preceded by a backslash.
+* The :guilabel:`Type` of action. Different types exist and can be used like this:
 
-Actions can invoke a single process, with arguments, so Boolean operators
-(such as ``&``, ``&&``, ``;``, ``|``) will not work.
-In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
+  * :guilabel:`Generic`, :guilabel:`macOS`, :guilabel:`Windows`
+    and :guilabel:`Unix` actions start an external process.
+  * :guilabel:`Python` actions execute a Python expression.
+  * :guilabel:`Generic` and :guilabel:`Python` actions are visible on every Operating Systems.
+  * :guilabel:`macOS`, :guilabel:`Windows` and :guilabel:`Unix` actions are visible
+     only on the respective platform (i.e., you can define three "Edit" actions to open an editor
+     and the users can only see and execute the single "Edit" action for their platform).
+  * :guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL.
+  * :guilabel:`Submit URL (urlencoded or JSON)`:
+    Same as the :guilabel:`Open URL` action but using a HTTP POST request.
+    Data are posted to a URL, using "application/x-www-form-urlencoded"
+    or "application/json" if the body is a valid JSON.
 
-The :guilabel:`Action Scopes` allows you to define where the action should be available.
-You have following choices:
+    An example of action call could be::
 
-#. :guilabel:`Field`: action is available when right click in the cell
-   within the attribute table, in the feature form and in the default action
-   button of the main toolbar.
-#. :guilabel:`Feature`: action is available when right click in the cell
-   within the attribute table.
-#. :guilabel:`Canvas`: action is available in the main action button in the toolbar.
-#. :guilabel:`Form`: action is available only in a feature form designed
-   using the :ref:`drag-and-drop <drag_drop_designer>` mode.
-#. :guilabel:`Layer`: action is available in the action button in the attribute table toolbar.
-   Be aware that this type of action involves the entire layer and not the single features.
+      http://localhost:8000?/[% url_encode(map('file', 'index.php')) %]
 
-If you have field names that are substrings of other field names (e.g.,
-``col1`` and ``col10``), you should indicate that by surrounding the field name
-(and the \% character) with square brackets (e.g., ``[%col10]``). This will
-prevent the ``%col10`` field name from being mistaken for the ``%col1`` field
-name with a ``0`` on the end. The brackets will be removed by QGIS when it
-substitutes in the value of the field. If you want the substituted field to be
-surrounded by square brackets, use a second set like this: ``[[%col10]]``.
+  * :guilabel:`Submit URL (multipart)`: Same as the :guilabel:`Open URL` action
+    but using a HTTP POST request.
+    Data are posted to a URL, using "multipart/form-data".
 
-Using the :guilabel:`Identify Features` tool, you can open the
-:guilabel:`Identify Results` dialog. It includes a *(Derived)* item that contains
-information relevant to the layer type. The values in this item can be accessed
-in a similar way to the other fields by proceeding the derived field name with
-``(Derived).``. For example, a point layer has an ``X`` and ``Y`` field, and the
-values of these fields can be used in the action with ``%(Derived).X`` and
-``%(Derived).Y``. The derived attributes are only available from the
-:guilabel:`Identify Results` dialog box, not the :guilabel:`Attribute Table` dialog box.
+    The |checkbox| :guilabel:`Capture output` displays in a dialog box the standard output
+    or the error generated by the action.
 
+* Provide a descriptive name for the action.
+  If the name already exists (e.g. when duplicating an action), QGIS will append "_1".
+  If left empty, QGIS will generate one, as a unique name.
+* You can also add a :guilabel:`Short name` or assign an :guilabel:`Icon` to the action.
 
+* The :guilabel:`Action Scopes` allows you to define where the action should be available.
+  You have following choices:
 
+  #. :guilabel:`Field`: action is available when right click in the cell
+     within the attribute table, in the feature form and in the default action
+     button of the main toolbar.
+  #. :guilabel:`Feature`: action is available when right click in the cell
+     within the attribute table.
+  #. :guilabel:`Canvas`: action is available in the main action button in the toolbar.
+  #. :guilabel:`Form`: action is available only in a feature form designed
+     using the :ref:`drag-and-drop <drag_drop_designer>` mode.
+  #. :guilabel:`Layer`: action is available in the action button in the attribute table toolbar.
+     Be aware that this type of action involves the entire layer and not the single features.
 
+* The :guilabel:`Action Text` provides a text box to include the command to run.
+  It must contain the name of the application that will be executed when the action is invoked.
+  You can :guilabel:`Insert` one or more attribute field values as arguments to the application.
+
+  When the action is invoked, any set of characters that start with a ``%``
+  followed by the name of a field will be replaced by the value of that field.
+  The special characters ``%%`` will be replaced by the value of the field
+  that was selected from the identify results or attribute table (see :ref:`using_actions`).
+  Double quote marks can be used to group text into a single argument to the program, script or command.
+  Double quotes will be ignored if preceded by a backslash.
+
+  If you have field names that are substrings of other field names
+  (e.g., ``col1`` and ``col10``), you should indicate that by surrounding the field name
+  (and the \% character) with square brackets (e.g., ``[%col10]``).
+  This will prevent the ``%col10`` field name from being mistaken for the ``%col1`` field
+  name with a ``0`` on the end. The brackets will be removed by QGIS when it
+  substitutes in the value of the field. If you want the substituted field to be
+  surrounded by square brackets, use a second set like this: ``[[%col10]]``.
+
+  Actions can invoke a single process, with arguments, so Boolean operators
+  (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+  In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
+
+  Using the :guilabel:`Identify Features` tool, you can open the :guilabel:`Identify Results` dialog.
+  It includes a *(Derived)* item that contains information relevant to the layer type.
+  The values in this item can be accessed in a similar way to the other fields
+  by proceeding the derived field name with ``(Derived).``.
+  For example, a point layer has an ``X`` and ``Y`` field, and the values of these fields
+  can be used in the action with ``%(Derived).X`` and ``%(Derived).Y``.
+  The derived attributes are only available from the :guilabel:`Identify Results` dialog box,
+  not the :guilabel:`Attribute Table` dialog box.
 
 
 .. index::
