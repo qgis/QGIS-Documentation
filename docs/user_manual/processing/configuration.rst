@@ -11,8 +11,7 @@
 
 The Processing Options menu (:menuselection:`Settings --> Options -->`
 |processingAlgorithm| :guilabel:`Processing` tab) allows you to configure how algorithms work.
-Configuration parameters are structured in separate blocks that you can
-select on the left-hand side of the dialog.
+Configuration parameters are structured in separate drop-down menus.
 
 .. _figure_processing_configs:
 
@@ -135,7 +134,7 @@ Menus
 The |menu| :guilabel:`Menus` block controls whether an algorithm, script or
 model (built-in or provided by plugins) should be made available
 through a dedicated menu or toolbar (along with the Processing Toolbox).
-For each item of each provider, you can:
+For each item of each enabled provider, you can:
 
 * :guilabel:`Add button in toolbar`, making it available in the
   :guilabel:`Processing Algorithms` toolbar
@@ -162,23 +161,20 @@ Providers
 You will also find a block for algorithm |processingAlgorithm| :guilabel:`Providers`.
 This is the place where installed providers expose their settings.
 
-By default, QGIS is installed with two algorithm providers:
+Algorithm providers can be added through the :menuselection:`Plugins Manager` dialog.
+Core providers are activated upon enabling their corresponding plugin and are ready to use.
+For the :guilabel:`GRASS Processing Provider`, you may need to set some additional settings
+under the :guilabel:`GRASS` entry:
 
-* :guilabel:`GDAL` whose algorithms you may :guilabel:`Activate` (or not) in this dialog.
-  Read more about the :ref:`GDAL algorithms <gdal_algorithms>`.
-* :guilabel:`GRASS` whose algorithms require the installation
-  of the :guilabel:`GRASS Processing Provider` from the :guilabel:`Plugins Manager`.
-  You could then set some dedicated settings such as:
-
-  * |checkbox| :guilabel:`For raster layers, use r.external (faster) instead of r.in.gdal`
-  * |checkbox| :guilabel:`For vector layers, use v.external (faster) instead of v.in.ogr`
-  * :guilabel:`Location of GRASS docs`: by default, and depending on your OS,
-    QGIS utilizes a hardcoded list of paths for finding the local GRASS documentation
-    and opening it whenever you hit the :guilabel:`Help` button of a GRASS algorithm dialog.
-    Filling this option will override the default path, allowing you to use a custom location,
-    or remote documentation.
-  * |checkbox| :guilabel:`Log console output`
-  * |checkbox| :guilabel:`Log execution commands`
+* |checkbox| :guilabel:`For raster layers, use r.external (faster) instead of r.in.gdal`
+* |checkbox| :guilabel:`For vector layers, use v.external (faster) instead of v.in.ogr`
+* :guilabel:`Location of GRASS docs`: by default, and depending on your OS,
+  QGIS utilizes a hardcoded list of paths for finding the local GRASS documentation
+  and opening it whenever you hit the :guilabel:`Help` button of a GRASS algorithm dialog.
+  Filling this option will override the default path, allowing you to use a custom location,
+  or remote documentation.
+* |checkbox| :guilabel:`Log console output`
+* |checkbox| :guilabel:`Log execution commands`
 
 Installed plugins that provide Processing algorithms may also have their provider
 listed in this group, with custom settings.
