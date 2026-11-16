@@ -336,7 +336,7 @@ value, a description and options, followed by the arguments specific to the type
 
 Enum and flag settings are stored by the name of their member rather than
 by its integer value, which keeps the settings file readable.
-Use the :attr:`Qgis.SettingsOption.SaveEnumFlagAsInt <qgis.core.Qgis.SettingsOption.SaveEnumFlagAsInt>` option to store the
+Use the :attr:`SaveEnumFlagAsInt <qgis.core.Qgis.SettingsOption.SaveEnumFlagAsInt>` option to store the
 integer value instead.
 
 .. testcode:: settings
@@ -355,8 +355,9 @@ integer value instead.
 
   Kilometers
 
-The ``Qgis.SettingsOption.SaveFormerValue`` option keeps the previous value
-of the setting each time it changes. The previous value is then returned by
+The :attr:`SaveFormerValue <qgis.core.Qgis.SettingsOption.SaveFormerValue>`
+option keeps the previous value of the setting each time it changes.
+The previous value is then returned by
 :meth:`formerValue() <qgis.core.QgsSettingsEntryBaseTemplateQStringBase.formerValue>`.
 
 Organizing settings
@@ -412,8 +413,8 @@ additional argument, which is the dynamic part of their key.
   ['beta']
 
 Named list nodes can be nested. The dynamic part of the key is then given as a
-list of names, from the outermost to the innermost item.
-Created with the ``Qgis.SettingsTreeNodeOption.NamedListSelectedItemSetting``
+list of names, from the outermost to the innermost item. Created with the
+:attr:`NamedListSelectedItemSetting <qgis.core.Qgis.SettingsTreeNodeOption.NamedListSelectedItemSetting>`
 option, a named list node also stores which of its items is selected, with
 :meth:`setSelectedItem() <qgis.core.QgsSettingsTreeNamedListNode.setSelectedItem>`
 and
