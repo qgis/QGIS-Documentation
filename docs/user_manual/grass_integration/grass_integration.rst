@@ -1,9 +1,9 @@
 .. index:: GRASS
 .. _sec_grass:
 
-*********************
-GRASS GIS Integration
-*********************
+*********************************
+Integrating GRASS Data and Tools
+*********************************
 
 .. only:: html
 
@@ -121,7 +121,7 @@ and apply geoprocessing analysis to GRASS 2D and 3D data.
 This can be done using:
 
 * the :guilabel:`Browser Panel`
-* the :guilabel:`GRASS GIS Processing Provider` core plugin
+* the :guilabel:`GRASS Processing Provider` core plugin
   from the :menuselection:`Plugins --> Manage and Install Plugins…` menu
 * the :guilabel:`GRASS 8 (deprecated plugin)` core plugin:
   the most featured tool for GRASS in QGIS, while transitioning to the Browser panel.
@@ -651,7 +651,7 @@ Working with GRASS modules
 
    The :ref:`Processing Toolbox <label_processing>` represents a more modern
    and integrated environment to do analysis on GRASS datasets within QGIS.
-   Enabling :menuselection:`Plugin Manager --> GRASS GIS Processing` plugin
+   Enabling :menuselection:`Plugin Manager --> GRASS Processing Provider` plugin
    provides access to hundreds of algorithms that replace most of the modules
    in the GRASS plugin.
 

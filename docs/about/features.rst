@@ -136,7 +136,7 @@ Core plugins include:
 #. Geometry Checker (check geometries for errors)
 #. Georeferencer GDAL (add projection information to rasters using GDAL)
 #. GPS Tools (load and import GPS data)
-#. GRASS (integrate GRASS GIS)
+#. GRASS (integrate GRASS data and tools)
 #. MetaSearch Catalogue Client (interacting with metadata catalog services
    supporting the OGC Catalog Service for the Web (CSW) standard)
 #. Offline Editing (allow offline editing and synchronizing with databases)
