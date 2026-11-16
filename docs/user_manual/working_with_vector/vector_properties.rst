@@ -3319,14 +3319,20 @@ In UNIX-like operating systems multiple commands can be executed via ``bash -c``
 The :guilabel:`Action Scopes` allows you to define where the action should be available.
 You have following choices:
 
-#. :guilabel:`Field`: action is available when right click in the cell
-   within the attribute table, in the feature form and in the default action
-   button of the main toolbar.
-#. :guilabel:`Feature`: action is available when right click in the cell
-   within the attribute table.
-#. :guilabel:`Canvas`: action is available in the main action button in the toolbar.
-#. :guilabel:`Form`: action is available only in a feature form designed
-   using the :ref:`drag-and-drop <drag_drop_designer>` mode.
+#. :guilabel:`Field`: the action is available when right-clicking a cell in the attribute table
+   (using table view).
+#. :guilabel:`Feature`: the action is available when right-clicking the feature
+   with the :guilabel:`Identify` tool, in the :guilabel:`Actions` menu
+   of the :guilabel:`Identify Results` panel, and in the :guilabel:`Actions` menu
+   of the :guilabel:`Feature form`.
+#. :guilabel:`Canvas`: the action is available in the |action| :sup:`Actions` menu
+   of the :guilabel:`Attributes Toolbar`.
+#. :guilabel:`Form`
+
+   .. : action is available only in a feature form designed
+      using the :ref:`drag-and-drop <drag_drop_designer>` mode.
+      **Really? Doesn't seem to be the case!!**
+
 #. :guilabel:`Layer`: action is available in the action button in the attribute table toolbar.
    Be aware that this type of action involves the entire layer and not the single features.
 
