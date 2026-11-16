@@ -921,7 +921,7 @@ set whether the layer redraw should be:
   * Analyzing land use changes, like observing deforestation patterns.
   * Studying flooding by comparing water coverage across different times.
   * Evaluating movement costs in terrain analysis, for example,
-    using GRASS GIS's r.walk tool to calculate travel costs across a landscape.
+    using GRASS r.walk tool to calculate travel costs across a landscape.
 
   .. only:: html
 

@@ -34,8 +34,13 @@ Icon                    Plugin                        Description               
 
 .. note::
 
-   To use the Core Plugins |grassTools| GRASS 7, |grassLogo| GRASS GIS provider,
-   they have to be configured. Information can be found :ref:`here <processing.results>`.
+   To use the Core Plugins |grassTools| :guilabel:`GRASS 8`
+   and |grassLogo| :guilabel:`GRASS Processing provider`,
+   `GRASS`_ needs to be installed and configured.
+   Information can be found :ref:`here <grass_configure>`.
+
+
+.. _`GRASS`: https://grass.osgeo.org/
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

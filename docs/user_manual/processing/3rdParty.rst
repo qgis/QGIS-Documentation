@@ -458,7 +458,7 @@ GRASS
 -----
 
 Configuring GRASS is very easy.
-First, enable the :guilabel:`GRASS GIS Processing`.
+First, enable the :guilabel:`GRASS Processing Provider`.
 Then set the path to the GRASS folder, but only if you are running Windows.
 
 By default, the Processing framework tries to configure its GRASS

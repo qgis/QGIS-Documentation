@@ -305,4 +305,4 @@ You learned how use QGIS Server to provide WMS Services.
 What's Next?
 -------------------------------------------------------------------------------
 
-Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS.
+Next, you'll see how to use QGIS as a frontend for the famous GRASS.

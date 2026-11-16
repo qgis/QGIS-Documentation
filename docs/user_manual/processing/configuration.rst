@@ -167,7 +167,7 @@ By default, QGIS is installed with two algorithm providers:
 * :guilabel:`GDAL` whose algorithms you may :guilabel:`Activate` (or not) in this dialog.
   Read more about the :ref:`GDAL algorithms <gdal_algorithms>`.
 * :guilabel:`GRASS` whose algorithms require the installation
-  of the :guilabel:`GRASS GIS Processing Provider` from the :guilabel:`Plugins Manager`.
+  of the :guilabel:`GRASS Processing Provider` from the :guilabel:`Plugins Manager`.
   You could then set some dedicated settings such as:
 
   * |checkbox| :guilabel:`For raster layers, use r.external (faster) instead of r.in.gdal`
