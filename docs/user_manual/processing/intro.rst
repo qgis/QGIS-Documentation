@@ -10,18 +10,28 @@ spatial analysis tasks more productive and easy to accomplish.
 As a :ref:`Core plugin <core_plugins>`, Processing is installed by default but
 you need to activate it:
 
-#. Go to :menuselection:`Plugins --> Manage and install plugins...`
-#. Click on the :guilabel:`Installed` tab at the left
+#. Go to :menuselection:`Plugins -->`|showPluginManager| :menuselection:`Manage and install plugins…`
+#. In the :guilabel:`Plugins Manager` dialog, click on the :guilabel:`Installed` tab at the left
 #. Check the box next to the |processingAlgorithm| :guilabel:`Processing` entry
 #. Close the dialog.
 
-   A :menuselection:`Processing` menu is now available in the top menu bar.
-   From there you can reach the main components of this framework.
+A :menuselection:`Processing` menu is now available in the top menu bar.
+From there you can reach the main components of this framework.
+By default, the :guilabel:`Processing` plugin will add a set of algorithms to QGIS.
+This covers algorithms that can be called in Python using ``pdal``, ``3d``
+or ``native`` (using ``qgis`` will work also) provider name.
+You can extend the capabilities with additional providers
+you enable also in the :guilabel:`Plugins Manager` dialog:
 
-In the following sections, we will review how to use the graphical elements of
-this framework and make the most out of each one of them.
+* :guilabel:`Additional QGIS Processing Tools` for Python-based QGIS core algorithms,
+  only callable in Python with the ``qgis`` provider name
+* :guilabel:`GDAL Processing provider` for algorithms that rely on GDAL utility tools
+  only callable in Python with the ``gdal`` provider name
+* :guilabel:`GRASS Processing provider` for algorithms that rely on GRASS tools
+  only callable in Python with the ``grass`` provider name
+* third-party plugins may install dedicated providers.
 
-There are four basic elements in the framework GUI, which are used to run
+There are four basic elements in the Processing framework GUI, which are used to run
 algorithms for different purposes. Choosing one tool or another will depend on
 the kind of analysis that is to be performed and the particular characteristics
 of each user and project. All of them (except for the batch processing interface,
@@ -85,4 +95,6 @@ In the following sections, we will review each one of these elements in detail.
    source folder.
 
 .. |processingAlgorithm| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
