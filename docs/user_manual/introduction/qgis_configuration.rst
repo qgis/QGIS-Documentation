@@ -120,16 +120,24 @@ displayed at the bottom of the frame.
 
    Project Files Settings
 
-* :guilabel:`Open project on launch`
+* :guilabel:`Open project on launch` defines the behavior whenever QGIS starts:
 
-  * 'New': opens a new project, based on the default template
+  * 'New': opens a new project based on the :ref:`default project file <default_project_file>`, if set.
+    If no project is set as default, QGIS starts with an empty project.
   * 'Most recent': reopens the last saved project
-  * and 'Specific': opens a particular project. Use the :guilabel:`...` button
-    to define the project to use by default.
-* |checkbox| :guilabel:`Create new project from default project`. You have the possibility
-  to press on :guilabel:`Set current project as default` or on :guilabel:`Reset default`.
+  * and 'Specific': opens a particular project at startup.
+    Use the |fileOpen| :sup:`Select File` button to define the project to use by default.
+
+.. _default_project_file:
+
+* |checkbox| :guilabel:`Create new project from default project`:
+  Instead of starting a new project from scratch (i.e., as a new empty project),
+  this option allows you to open a specific project whenever you press |fileNew| :sup:`New Project`
+  or :menuselection:`Project -->` |fileNew| :menuselection:`New Project`.
+  The project file to use is indicated using the :guilabel:`Set current project as default` button.
+  To start new projects as empty project, either uncheck the option or press :guilabel:`Reset default`.
 * :guilabel:`Template folders`: you can define **multiple folders** containing
-  user-defined project templates. All templates found across the listed folders are made
+  user-defined project templates. All projects found across the listed folders are made
   available under :menuselection:`Project --> New From Template` and as sections in the
   welcome page. Use the |symbologyAdd| :sup:`Add new path` and |symbologyRemove| :sup:`Remove path` buttons
   to manage the list, you can also use |arrowUp| :sup:`Move selected path up`
@@ -2978,6 +2986,8 @@ in the QGIS user profile.
 .. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
