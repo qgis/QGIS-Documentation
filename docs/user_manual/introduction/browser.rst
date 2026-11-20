@@ -297,7 +297,7 @@ Further operations can be done through their contextual menu:
   in the Operating System file explorer
 * :guilabel:`File properties…`
 
-Project files stored in directories can be expanded in the :guilabel:`Browser`panel,
+Project files stored in directories can be expanded in the :guilabel:`Browser` panel,
 showing the full layer tree (including groups) within that project.
 Layers of a project can be loaded from the browser to the active project
 through double-click or drag and drop to map canvas or :guilabel:`Layers` panel.
