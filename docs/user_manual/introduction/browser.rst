@@ -20,7 +20,7 @@ It is available as:
 
 * a :guilabel:`Data Source Manager` tab, enabled pressing the
   |dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);
-* as a QGIS panel you can open from the menu :menuselection:`View --> Panels`
+* a QGIS panel you can open from the menu :menuselection:`View --> Panels`
   (or |kde| :menuselection:`Settings --> Panels`) or by pressing :kbd:`Ctrl+2`.
 
 .. _figure_browser_panel:
