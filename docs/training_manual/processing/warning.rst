@@ -12,34 +12,36 @@ might be tempted to try.
 
 Let's show this more clearly with an example.
 
-Given a set of points and a value of a given variable value at each point,
-you can calculate a raster layer from them using the *Kriging* geoalgorithm.
-The parameters dialog for that module is like the following one.
+Given a point layer with a date/time field, you can find groups of points that
+are close to each other in both space and time using the ST-DBSCAN clustering algorithm.
+The parameters dialog for that algorithm looks like the following one.
 
-.. figure:: img/warning/kriging.png
+.. figure:: img/warning/stdbscan.png
+   :align: center
+
 
 It looks complex, right?
 
-By reading this manual, you will learn things such as how to use that module,
-how to run it in a batch process to create raster layers from hundreds of points
-layers in a single run, or what happens if the input layer has some points selected.
-However, the parameters themselves are not explained. A seasoned analyst with a
-good knowledge of geostatistics will have no problem understanding those parameters.
-If you are not one of them and *sill*, *range*, or *nugget* are not familiar
-concepts to you, then you should not use the *Kriging* module. More than that,
-you are far from being ready to use the *Kriging* module, since it requires
-learning about concepts such as spatial autocorrelation or semivariograms,
-which probably you also haven't heard before, or at least haven't studied
-long enough. You should first study and understand them, and then come back
-to QGIS to actually run it and perform the analysis. Ignoring this will result
-in wrong results and poor (and most likely useless) analysis.
 
-Although not all algorithms are as complex as kriging (but some of them are
+By reading this manual, you will learn things such as how to run it
+in a batch process to create cluster layers from hundreds of point layers
+in a single run, or what happens if the input layer has some points selected.
+However, the parameters themselves are not explained.
+A seasoned analyst with a good knowledge of spatiotemporal analysis will have
+no problem choosing a suitable minimum cluster size, maximum distance
+and maximum time duration. If you are not one of them and density-based clustering,
+noise points or spatial and temporal neighborhoods are not familiar concepts to you,
+then you should study and understand them before coming back.
+The same points can form very different clusters just by changing one value,
+and the algorithm will never tell you which value is right.
+Ignoring this will result in misleading clusters and poor analysis.
+
+Although not all algorithms are as complex as ST-DBSCAN clustering (but some of them are
 even more complex!), almost all of them require understanding the fundamental
 analysis ideas that they are based on. Without that knowledge, using them will
 most likely lead to poor results.
 
-Using geoalgorithms without having a good foundation of spatial analysis is
+Using algorithms without having a good foundation of spatial analysis is
 like trying to write a novel without knowing anything about grammar or syntax,
 and having no knowledge about storytelling. You might get a result, but it is
 likely to have no value at all.  Please, don't fool yourself and think that
