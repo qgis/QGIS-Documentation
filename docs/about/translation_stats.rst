@@ -89,80 +89,86 @@ Statistics of translation
      - |stats_ja|
      - Kabyle
      - |stats_kab|
-   * - Korean
+   * - Kazakh
+     - |stats_kk|
+     - Korean
      - |stats_ko|
      - Kurdish
      - |stats_ku|
-     - Lithuanian
+   * - Lithuanian
      - |stats_lt|
-   * - Macedonian
+     - Macedonian
      - |stats_mk|
      - Malagasy
      - |stats_mg|
-     - Malay
+   * - Malay
      - |stats_ms|
-   * - Malayalam
+     - Malayalam
      - |stats_ml|
      - Maori
      - |stats_mi|
-     - Marathi
+   * - Marathi
      - |stats_mr|
-   * - Mongolian
+     - Mongolian
      - |stats_mn|
      - N'ko
      - |stats_nqo|
-     - Nepali
+   * - Nepali
      - |stats_ne|
-   * - Norwegian Bokmål
+     - Norwegian Bokmål
      - |stats_nb|
      - Persian
      - |stats_fa|
-     - Polish
+   * - Polish
      - |stats_pl|
-   * - Portuguese (Brazil)
+     - Portuguese (Brazil)
      - |stats_pt_BR|
      - Portuguese (Portugal)
      - |stats_pt_PT|
-     - Romanian
+   * - Romanian
      - |stats_ro|
-   * - Russian
+     - Russian
      - |stats_ru|
      - Serbian
      - |stats_sr|
-     - Slovak
+   * - Slovak
      - |stats_sk|
-   * - Slovenian
+     - Slovenian
      - |stats_sl|
      - Spanish
      - |stats_es|
-     - Swahili
+   * - Swahili
      - |stats_sw|
-   * - Swedish
+     - Swedish
      - |stats_sv|
      - Tagalog
      - |stats_tl|
-     - Tamil
+   * - Tamil
      - |stats_ta|
-   * - Telugu
+     - Telugu
      - |stats_te|
      - Thai
      - |stats_th|
-     - Turkish
+   * - Turkish
      - |stats_tr|
-   * - Ukrainian
+     - Ukrainian
      - |stats_uk|
      - Urdu
      - |stats_ur|
-     - Vietnamese
+   * - Vietnamese
      - |stats_vi|
+     -
+     -
+     -
+     -
 
 
 .. list of substitutions for the statistics:
 
-.. |stats_today| replace:: *2026-11-12*
+.. |stats_today| replace:: *2026-11-20*
 .. |stats_total_strings| replace:: **32589**
-.. |stats_nb_languages| replace:: **63**
-.. |stats_global_percentage| replace:: **16.28%**
+.. |stats_nb_languages| replace:: **64**
+.. |stats_global_percentage| replace:: **16.03%**
 
 .. |stats_ar| replace:: 4.87
 .. |stats_az| replace:: 0.11
@@ -191,6 +197,7 @@ Statistics of translation
 .. |stats_ja| replace:: 92.93
 .. |stats_ka| replace:: 0.16
 .. |stats_kab| replace:: 0.17
+.. |stats_kk| replace:: 0.11
 .. |stats_ko| replace:: 86.87
 .. |stats_ku| replace:: 0.12
 .. |stats_lt| replace:: 36.61
