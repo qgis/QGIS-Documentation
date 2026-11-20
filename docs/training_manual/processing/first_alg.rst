@@ -1,4 +1,4 @@
-Running our first algorithm. The  toolbox
+Running our first algorithm from the toolbox
 ============================================================
 
 
@@ -15,32 +15,26 @@ First, open the QGIS project corresponding to this lesson. It contains just a
 single layer with two polygons
 
 .. figure:: img/first_alg/canvas.png
+   :align: center
 
-Now go to the text box at the top of the toolbox. That is the search box, and if
-you type text in it, it will filter the list of algorithms so just those ones
+Now go to the search box at the top of the toolbox.
+The search box is a very practical way of finding the algorithm you are looking
+for. If you type text in it, it will filter the list of algorithms so just those ones
 containing the entered text are shown.
 If there are algorithms that match your search but belong to a provider that is
-not active, an additional label will be shown in the lower part of the toolbox.
+not active, they will not appear.
 
 Type ``centroids`` and you should see something like this.
 
 .. figure:: img/first_alg/toolbox.png
-
-The search box is a very practical way of finding the algorithm you are looking
-for. At the bottom of the dialog, an additional label shows that there are
-algorithms that match your search but belong to a provider that is not active.
-If you click on the link in that label, the list of algorithms will also
-include results from those inactive providers, which will be shown in light gray.
-A link to activate each inactive provider is also shown. We'll see later how to
-activate other providers.
-
-.. figure:: img/first_alg/toolbox_providers.png
+   :align: center
 
 To execute an algorithm, you just have to double-click on its name in the
 toolbox. When you double-click on the :guilabel:`Centroids` algorithm, you will
 see the following dialog.
 
 .. figure:: img/first_alg/centroids.png
+   :align: center
 
 All algorithms have a similar interface, which basically contains input
 parameters that you have to fill, and outputs that you have to select where to
@@ -76,8 +70,9 @@ algorithm.
 You will get the following output.
 
 .. figure:: img/first_alg/canvas2.png
+   :align: center
 
-The output has the same CRS as the input. Geoalgorithms assumes all input layers
+The output has the same CRS as the input. The processing algorithm assumes all input layers
 share the same CRS and do not perform any reprojection. Except in the case of
 some special algorithms (for instance, reprojection ones), the outputs will also
 have that same CRS. We will see more about this soon.
