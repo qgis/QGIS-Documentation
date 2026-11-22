@@ -36,6 +36,7 @@ This usually happens from the October release.
   (normally done automatically during software release steps)
 - [ ] ⚠️ Make sure that the [PyQGIS documentation](https://qgis.org/pyqgis) of the new version is available.
   This may require update of the `current_stable` value in [pyqgis_conf.yml](https://github.com/qgis/pyqgis-api-docs-builder/blob/main/pyqgis_conf.yml).
+- [ ] ⚠️ Make sure that the [docker tag](https://hub.docker.com/r/qgis/qgis/tags) of the new version is available.
 - [ ] ⚠️ Create the `release_x.y` branch in the [repository](https://github.com/qgis/QGIS-Documentation/branches), based on `master`
 - [ ] Add new labels to triage issues and pull requests: `backport <new_branch>`, new target versions
 - [ ] Create a new milestone for the new cycle of LTR that starts
@@ -48,6 +49,7 @@ This usually happens from the October release.
 
 - [ ] In [docs_conf.yml](docs_conf.yml) file, add the new release number to the `version_list` parameter
 - [ ] In [dependabot.yml](.github/dependabot.yml) file, Add label for backporting dependencies update to the new branch
+- [ ] In [auto-label.yml](.github/auto-label.yml) file, update the milestone environment variable to the newly created milestone
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |previous_docs| value with the new version number
 
 </details>
