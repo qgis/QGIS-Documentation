@@ -36,6 +36,8 @@ This usually happens from the October release.
   (normally done automatically during software release steps)
 - [ ] ⚠️ Make sure that the [PyQGIS documentation](https://qgis.org/pyqgis) of the new version is available.
   This may require update of the `current_stable` value in [pyqgis_conf.yml](https://github.com/qgis/pyqgis-api-docs-builder/blob/main/pyqgis_conf.yml).
+- [ ] ⚠️ Make sure that the [docker tag](https://hub.docker.com/r/qgis/qgis/tags) of the new version is available.
+- [ ] ⚠️ Create the `release_x.y` branch in the [repository](https://github.com/qgis/QGIS-Documentation/branches), based on `master`
 - [ ] Add new labels to triage issues and pull requests: `backport <new_branch>`, new target versions
 - [ ] Create a new milestone for the new cycle of LTR that starts
 - [ ] Once docs of the new version is published, reference it in the [docs index page](https://www.qgis.org/resources/hub/#documentation) of QGIS main website.
@@ -45,24 +47,10 @@ This usually happens from the October release.
 
 <details>
 
-#### Before creating the new release branch
-
-Following changes have to be done in `master` branch before you create the new release branch.
-Otherwise, you will have to do the changes twice: in master and in the new branch.
-
-- [ ] In [docs_conf.yml](docs_conf.yml) file: add the new release number to the `version_list` parameter
-- [ ] In [dependabot.yml](.github/dependabot.yml) file: Add label for backporting dependencies update to the new branch
-
-You can now create the `release_x.y` branch in the [repository](https://github.com/qgis/QGIS-Documentation/branches), based on `master`.
-
-#### After the new branch is created
-
+- [ ] In [docs_conf.yml](docs_conf.yml) file, add the new release number to the `version_list` parameter
+- [ ] In [dependabot.yml](.github/dependabot.yml) file, Add label for backporting dependencies update to the new branch
+- [ ] In [auto-label.yml](.github/auto-label.yml) file, update the milestone environment variable to the newly created milestone
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |previous_docs| value with the new version number
-- [ ] In [substitutions.txt](substitutions.txt) file:
-  - [ ] Remove intermediate versions substitutions and their occurrences in the rst files
-  - [ ] Add substitutions for the versions of the next LTR cycle that starts
-        (e.g. if you just create the release_3.22 branch, you should add
-        to the master branch substitutions for 3.24, 3.26 and 3.28)
 
 </details>
 
@@ -79,17 +67,15 @@ You can now create the `release_x.y` branch in the [repository](https://github.c
 <details>
 New releases are branched off the `master` branch and thus require a set of changes.
 
-- [ ] Ensure that changes to do in master before creating the new release branch are applied
-- [ ] If not yet done, create the `release_x.y` branch in [the repository](https://github.com/qgis/QGIS-Documentation/branches), based on `master`
-- [ ] Update the new branch, as follows:
-  - [ ] In [conf.py](conf.py) file:
-    - [ ] set the `version` value (in the form x.y)
-    - [ ] set the html_context `isTesting` and `isLtr` options to `False`
-  - [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of `master`,
-    and current version instead of `testing`
-  - [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
-  - [ ] In [doctest.dockerfile](doctest.dockerfile): set the project container to pull QGIS sources from (i.e. replace `qgis:latest` with `qgis:x.y`)
-  - [ ] In main [index.rst](docs/index.rst) file: replace `testing` with `x.y` in the Table Of Contents
+- [ ] In [conf.py](conf.py) file:
+  - [ ] set the `version` value (in the form x.y)
+  - [ ] set the html_context `isTesting` and `isLtr` options to `False`
+- [ ] In [README.MD](README.MD) file, update the badges to point to the current branch instead of `master`,
+  and to the current version instead of `testing`
+- [ ] In [Makefile](Makefile) file, set the `VERSION` number as in the conf.py file
+- [ ] In [docs_conf.yml](docs_conf.yml) file, add the new release number to the `version_list` parameter
+- [ ] In [doctest.dockerfile](doctest.dockerfile), set the project container to pull QGIS sources from (i.e., replace `qgis:latest` with `qgis:x.y`)
+- [ ] In main [index.rst](docs/index.rst) file, replace `testing` with `x.y` in the Table Of Contents
 
 </details>
 
