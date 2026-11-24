@@ -165,10 +165,10 @@ Statistics of translation
 
 .. list of substitutions for the statistics:
 
-.. |stats_today| replace:: *2026-11-20*
-.. |stats_total_strings| replace:: **32589**
+.. |stats_today| replace:: *2026-11-24*
+.. |stats_total_strings| replace:: **32593**
 .. |stats_nb_languages| replace:: **64**
-.. |stats_global_percentage| replace:: **16.03%**
+.. |stats_global_percentage| replace:: **16.02%**
 
 .. |stats_ar| replace:: 4.87
 .. |stats_az| replace:: 0.11
@@ -177,14 +177,14 @@ Statistics of translation
 .. |stats_ca| replace:: 1.17
 .. |stats_cs| replace:: 6.04
 .. |stats_da| replace:: 0.7
-.. |stats_de| replace:: 54.9
+.. |stats_de| replace:: 54.89
 .. |stats_el| replace:: 1.69
 .. |stats_es| replace:: 91.51
 .. |stats_et| replace:: 3.88
 .. |stats_eu| replace:: 1.16
 .. |stats_fa| replace:: 0.78
 .. |stats_fi| replace:: 1.3
-.. |stats_fr| replace:: 77.84
+.. |stats_fr| replace:: 77.83
 .. |stats_gl| replace:: 0.6
 .. |stats_he| replace:: 0.8
 .. |stats_hi| replace:: 0.36
@@ -193,12 +193,12 @@ Statistics of translation
 .. |stats_hu| replace:: 22.73
 .. |stats_id| replace:: 3.8
 .. |stats_ig| replace:: 0.04
-.. |stats_it| replace:: 100.0
-.. |stats_ja| replace:: 92.93
+.. |stats_it| replace:: 99.99
+.. |stats_ja| replace:: 92.92
 .. |stats_ka| replace:: 0.16
 .. |stats_kab| replace:: 0.17
 .. |stats_kk| replace:: 0.11
-.. |stats_ko| replace:: 86.87
+.. |stats_ko| replace:: 86.86
 .. |stats_ku| replace:: 0.12
 .. |stats_lt| replace:: 36.61
 .. |stats_mg| replace:: 0.11
@@ -216,13 +216,13 @@ Statistics of translation
 .. |stats_pl| replace:: 15.98
 .. |stats_pt_BR| replace:: 56.99
 .. |stats_pt_PT| replace:: 8.25
-.. |stats_ro| replace:: 29.88
+.. |stats_ro| replace:: 29.87
 .. |stats_ru| replace:: 25.35
 .. |stats_sk| replace:: 1.32
 .. |stats_sl| replace:: 2.5
 .. |stats_sq| replace:: 0.55
-.. |stats_sr| replace:: 42.91
-.. |stats_sv| replace:: 91.09
+.. |stats_sr| replace:: 42.9
+.. |stats_sv| replace:: 91.08
 .. |stats_sw| replace:: 0.24
 .. |stats_ta| replace:: 10.74
 .. |stats_te| replace:: 0.06
