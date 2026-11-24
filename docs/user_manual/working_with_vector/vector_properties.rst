@@ -3348,6 +3348,49 @@ values of these fields can be used in the action with ``%(Derived).X`` and
 :guilabel:`Identify Results` dialog box, not the :guilabel:`Attribute Table` dialog box.
 
 
+* :guilabel:`Execute if notification matches`: Depending on the data provider (e.g., PostgreSQL),
+   notifications can be sent to QGIS when changes are applied to the data source, out of QGIS.
+   This option allows to execute the action if the notified message matches the provided text.
+   The filter text is PERL-regex based.
+
+   Given an action in QGIS set to execute if notification message matches ``^count features``,
+   below are some examples of behavior when a notification is sent from the PostgreSQL database side:
+
+   * ``NOTIFY qgis, 'count features'`` will trigger the action
+   * ``NOTIFY qgis, 'count features and show their IDs'`` will trigger the action
+   * ``NOTIFY qgis, 'do not count features or show the IDs'`` will not trigger the action.
+     If the filter text didn't start with the ``^`` character, this notification would have also triggered the action
+     because the message contains the text ``count features``
+
+   Moreover the variable ``notification_message`` is available for use in the action
+   and it holds the content of the notification message.
+   To continue with the previous example, if the action is of Python type with the code:
+
+   .. code-block:: python
+
+     print('[% @notification_message %]')
+
+   The three notifications above will result in two printed lines:
+
+   .. code-block:: text
+
+     count features
+     count features and show their IDs
+
+   .. note::
+
+     For PostgreSQL providers, if a notification command is being listened,
+     set from either the :guilabel:`Action` or :guilabel:`Rendering` tab,
+     a new connection to the database is made to listen to PostgreSQL notifications.
+     This holds even if transaction groups are enabled at the project level.
+
+     Note that once the notification mechanism is started in a QGIS session,
+     it will not stop, even if there is no more need for it
+     (:guilabel:`Refresh layer on notification` unchecked and no :guilabel:`On notification` in any action).
+     Consequently the connection listening to notification will remain open.
+
+ * The |checkbox| :guilabel:`Enable when editable` will make the action available
+   only when the layer is in edit mode.
 
 
 .. index:: Actions, Attribute Actions
@@ -3746,12 +3789,19 @@ The |rendering| :guilabel:`Rendering` tab offers following properties:
 
   It is also possible to set the :guilabel:`Interval (seconds)` between consecutive refreshments.
 
-* Depending on the data provider (e.g. PostgreSQL), notifications can be sent to
-  QGIS when changes are applied to the data source, out of QGIS. Use the |checkbox|
-  :guilabel:`Refresh layer on notification` option to trigger an update.
+* Depending on the data provider (e.g. PostgreSQL), notifications can be sent to QGIS
+  when changes are applied to the data source, out of QGIS.
+  Use the |checkbox| :guilabel:`Refresh layer on notification` option to trigger an update.
+  E.g., using a PostgreSQL datasource, if a ``NOTIFY qgis;`` command is issued
+  by one of the database clients, a refresh of the layer will occur.
   You can also limit the layer refresh to a specific message set in the |checkbox|
   :guilabel:`Only if message is` text box.
+  E.g., if the text box is filled with the string ``refresh``,
+  then a ``NOTIFY qgis, 'refresh';`` command in the database will trigger a layer refresh,
+  while ``NOTIFY qgis;`` or ``NOTIFY qgis, 'something else';`` won't.
 
+  Additional complex and more fine-grained notification instructions can be set
+  through :ref:`actions <adding_actions>`.
 
 .. index:: Temporal
 .. _vectortemporalmenu:
