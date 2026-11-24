@@ -49,7 +49,7 @@ This usually happens from the October release.
 
 - [ ] In [docs_conf.yml](docs_conf.yml) file, add the new release number to the `version_list` parameter
 - [ ] In [dependabot.yml](.github/dependabot.yml) file, Add label for backporting dependencies update to the new branch
-- [ ] In [auto-label.yml](.github/auto-label.yml) file, update the milestone environment variable to the newly created milestone
+- [ ] In [auto-label.yml](.github/workflows/auto-label.yml) file, update the MILESTONE environment variable to the newly created milestone
 - [ ] In [translation_statistcs.yml](.github/workflows/translation_statistcs.yml) file, add the newly created backport label to the LABELS environment variable
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |previous_docs| value with the new version number
 
@@ -113,14 +113,14 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 
 <details>
 
-- [ ] In [conf.py](conf.py) file: set the html_context `isLtr` to `True`
+- [ ] In [conf.py](conf.py) file, set the html_context `isLtr` to `True`
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |ltr| value with the new LTR version number
-- [ ] In [docs_conf.yml](docs_conf.yml) file: add target languages to the `supported_languages` parameter.
+- [ ] In [docs_conf.yml](docs_conf.yml) file, add target languages to the `supported_languages` parameter.
   These are the languages that will be published in the documentation.
   A threshold of 5% is currently applied to candidates.
-- [ ] In [docker-world.sh](docker-world.sh) file: complete the `langs` variable with the supported languages
-- [ ] In the [Makefile](Makefile): add the supported languages to the `LANGUAGES` parameter
-- [ ] Copy the cleaned up [locale](locale) folder from the old LTR branch to the new LTR branch
+- [ ] In [docker-world.sh](docker-world.sh) file, complete the `langs` variable with the supported languages
+- [ ] In the [Makefile](Makefile), add the supported languages to the `LANGUAGES` parameter
+- [ ] Copy the **cleaned up** [locale](locale) folder from the old LTR branch to the new LTR branch
 - [ ] Run `make linkcheck` and fix any new broken links found in the rst files
 - [ ] If necessary, update and run `scripts/strings_fixer.sh` against rst files: `bash scripts/strings_fixer.sh docs rst`
 - [ ] Run `scripts/create_transifex_resources.sh` to update the Transifex [config](.tx/config) file and generate the English source \*.po files
@@ -149,13 +149,13 @@ is being translated. So when a new LTR is published, we disconnect the old one a
 - [ ] In [fix_versions.sh](scripts/fix_versions.sh) file:
   - [ ] add the old LTR number to the `DEPRECATED` parameter
   - [ ] add the new LTR number to the `DOCVERSIONS` parameter
-- [ ] In [pofiles.yml](.github/workflows/pofiles.yml): update branch to the new LTR branch in order
+- [ ] In [pofiles.yml](.github/workflows/pofiles.yml), update branch to the new LTR branch in order
   to generate updated English \*.po source files to push to Transifex
-- [ ] In [pull_minimize_translations.yml](.github/workflows/pull_minimize_translations.yml): update target_branch
+- [ ] In [pull_minimize_translations.yml](.github/workflows/pull_minimize_translations.yml), update TARGET_BRANCH
   to the new LTR branch in which to pull translations from Transifex
 - [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml), remove from the LABELS environment variable
   the backport label of the old LTR branch
-- [ ] In [dependabot.yml](.github/dependabot.yml) file: Remove label for backporting dependencies update to the old LTR version
+- [ ] In [dependabot.yml](.github/dependabot.yml) file, remove label for backporting dependencies update to the old LTR version
 
 - [ ] Run `make linkcheck` and fix any new broken links found in the rst files
 </details>
