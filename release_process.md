@@ -123,7 +123,7 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 - [ ] Copy the cleaned up [locale](locale) folder from the old LTR branch to the new LTR branch
 - [ ] Run `make linkcheck` and fix any new broken links found in the rst files
 - [ ] If necessary, update and run `scripts/strings_fixer.sh` against rst files: `bash scripts/strings_fixer.sh docs rst`
-- [ ] Run `scripts/create_transifex_resources.sh` to generate the `.tx/config` file and English source po files
+- [ ] Run `scripts/create_transifex_resources.sh` to update the Transifex [config](.tx/config) file and generate the English source \*.po files
 
 </details>
 
@@ -133,10 +133,9 @@ In February, the new version is labeled as LTR, and replaces the previous one in
 Translated versions are available only for long term releases and only the active LTR
 is being translated. So when a new LTR is published, we disconnect the old one and connect the new one.
 
-- [ ] ⚠️ Make sure that the translated files from the old LTR branch have been correctly pasted
-  to the new LTR branch
+- [ ] ⚠️ Make sure that all the new LTR branch instructions have been applied
 - [ ] Link the new LTR branch to the QGIS-Documentation project
-  ([read docs on Transifex](https://help.transifex.com/en/articles/6265125-github-via-transifex-ui))
+  ([read docs on Transifex](https://help.transifex.com/en/articles/6265125-github-installation-and-configuration))
 - [ ] If the connection above does not correctly proceed and update files in the transifex platform,
   see workaround instructions in [README](README.md) file
 
