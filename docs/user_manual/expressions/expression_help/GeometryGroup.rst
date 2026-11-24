@@ -99,24 +99,6 @@ Applies a dash pattern to a geometry, returning a MultiLineString geometry which
 
 .. end_apply_dash_pattern_section
 
-.. _expression_function_GeometryGroup_$area:
-
-$area
-.....
-
-Returns the area of the current feature. The area calculated by this function respects both the current project's ellipsoid setting and area unit settings. For example, if an ellipsoid has been set for the project then the calculated area will be ellipsoidal, and if no ellipsoid is set then the calculated area will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $area
-   * - Examples
-     - * ``$area`` → 42
-
-
-.. end_$area_section
-
 .. _expression_function_GeometryGroup_area:
 
 area
@@ -137,6 +119,24 @@ Returns the area of a geometry polygon object. Calculations are always planimetr
 
 
 .. end_area_section
+
+.. _expression_function_GeometryGroup_$area:
+
+$area
+.....
+
+Returns the area of the current feature. The area calculated by this function respects both the current project's ellipsoid setting and area unit settings. For example, if an ellipsoid has been set for the project then the calculated area will be ellipsoidal, and if no ellipsoid is set then the calculated area will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $area
+   * - Examples
+     - * ``$area`` → 42
+
+
+.. end_$area_section
 
 .. _expression_function_GeometryGroup_azimuth:
 
@@ -261,7 +261,7 @@ Returns the height of the bounding box of a geometry. Calculations are in the Sp
 .. figure:: expression_help/img/bounds_height.*
    :align: center
 
-   The red vertical arrow shows the height of the gray dashed bounding box around the blue input geometry (1 map unit).
+   The red vertical arrow shows the height of the gray dashed bounding box around the blue input geometry.
 
 .. end_bounds_height_section
 
@@ -287,7 +287,7 @@ Returns the width of the bounding box of a geometry. Calculations are in the Spa
 .. figure:: expression_help/img/bounds_width.*
    :align: center
 
-   The red horizontal arrow shows the width of the gray dashed bounding box around the blue input geometry (2 map units).
+   The red horizontal arrow shows the width of the gray dashed bounding box around the blue input geometry.
 
 .. end_bounds_width_section
 
@@ -495,7 +495,7 @@ Returns the combination of two geometries.
 .. figure:: expression_help/img/combine.*
    :align: center
 
-   Two combinations of blue and orange LineStrings: a shared segment followed by a branch produces a red MultiLineString (top), while an overlap without branching produces a red LineString (bottom).
+   Three combinations of blue and orange LineStrings: a shared segment followed by a branch produces a red MultiLineString (top), an overlap without branching produces a red LineString (middle), and disjoint inputs produce a red MultiLineString with two separate parts (bottom).
 
 .. end_combine_section
 
@@ -1217,24 +1217,6 @@ Returns the Well-Known Text (WKT) representation of the geometry without SRID me
 
 .. end_geom_to_wkt_section
 
-.. _expression_function_GeometryGroup_$geometry:
-
-$geometry
-.........
-
-Returns the geometry of the current feature. Can be used for processing with other functions. **WARNING: This function is deprecated. It is recommended to use the replacement @geometry variable instead.**
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $geometry
-   * - Examples
-     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
-
-
-.. end_$geometry_section
-
 .. _expression_function_GeometryGroup_geometry:
 
 geometry
@@ -1256,6 +1238,24 @@ Returns a feature's geometry.
 
 
 .. end_geometry_section
+
+.. _expression_function_GeometryGroup_$geometry:
+
+$geometry
+.........
+
+Returns the geometry of the current feature. Can be used for processing with other functions. **WARNING: This function is deprecated. It is recommended to use the replacement @geometry variable instead.**
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $geometry
+   * - Examples
+     - * ``geom_to_wkt( $geometry )`` → 'POINT(6 50)'
+
+
+.. end_$geometry_section
 
 .. _expression_function_GeometryGroup_geometry_n:
 
@@ -1562,24 +1562,6 @@ Returns TRUE if a geometry is valid; if it is well-formed in 2D according to the
 
 .. end_is_valid_section
 
-.. _expression_function_GeometryGroup_$length:
-
-$length
-.......
-
-Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $length
-   * - Examples
-     - * ``$length`` → 42.4711
-
-
-.. end_$length_section
-
 .. _expression_function_GeometryGroup_length:
 
 length
@@ -1619,6 +1601,24 @@ Calculate the length of a geometry line object. Calculations are always planimet
 
 
 .. end_length_section
+
+.. _expression_function_GeometryGroup_$length:
+
+$length
+.......
+
+Returns the length of a linestring. If you need the length of a border of a polygon, use $perimeter instead. The length calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated length will be ellipsoidal, and if no ellipsoid is set then the calculated length will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $length
+   * - Examples
+     - * ``$length`` → 42.4711
+
+
+.. end_$length_section
 
 .. _expression_function_GeometryGroup_length3D:
 
@@ -2862,24 +2862,6 @@ Read more on the underlying GEOS "Within" predicate, as described in PostGIS `ST
 
 .. end_overlay_within_section
 
-.. _expression_function_GeometryGroup_$perimeter:
-
-$perimeter
-..........
-
-Returns the perimeter length of the current feature. The perimeter calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated perimeter will be ellipsoidal, and if no ellipsoid is set then the calculated perimeter will be planimetric.
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $perimeter
-   * - Examples
-     - * ``$perimeter`` → 42
-
-
-.. end_$perimeter_section
-
 .. _expression_function_GeometryGroup_perimeter:
 
 perimeter
@@ -2900,6 +2882,24 @@ Returns the perimeter of a geometry polygon object. Calculations are always plan
 
 
 .. end_perimeter_section
+
+.. _expression_function_GeometryGroup_$perimeter:
+
+$perimeter
+..........
+
+Returns the perimeter length of the current feature. The perimeter calculated by this function respects both the current project's ellipsoid setting and distance unit settings. For example, if an ellipsoid has been set for the project then the calculated perimeter will be ellipsoidal, and if no ellipsoid is set then the calculated perimeter will be planimetric.
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $perimeter
+   * - Examples
+     - * ``$perimeter`` → 42
+
+
+.. end_$perimeter_section
 
 .. _expression_function_GeometryGroup_point_n:
 
@@ -3785,24 +3785,6 @@ Tests whether a geometry is within another. Returns TRUE if the geometry1 is com
 
 .. end_within_section
 
-.. _expression_function_GeometryGroup_$x:
-
-$x
-..
-
-Returns the x coordinate of the current point feature. If the feature is a multipoint feature, then the x-coordinate of the first point will be returned. **WARNING: This function is deprecated. It is recommended to use the replacement x() function with @geometry variable instead.**
-
-.. list-table::
-   :widths: 15 85
-
-   * - Syntax
-     - $x
-   * - Examples
-     - * ``$x`` → 42
-
-
-.. end_$x_section
-
 .. _expression_function_GeometryGroup_x:
 
 x
@@ -3824,25 +3806,23 @@ Returns the x coordinate of a point geometry, or the x coordinate of the centroi
 
 .. end_x_section
 
-.. _expression_function_GeometryGroup_$x_at:
+.. _expression_function_GeometryGroup_$x:
 
-$x_at
-.....
+$x
+..
 
-Retrieves a x coordinate of the current feature's geometry. **WARNING: This function is deprecated. It is recommended to use the replacement x_at function with @geometry variable instead.**
+Returns the x coordinate of the current point feature. If the feature is a multipoint feature, then the x-coordinate of the first point will be returned. **WARNING: This function is deprecated. It is recommended to use the replacement x() function with @geometry variable instead.**
 
 .. list-table::
    :widths: 15 85
 
    * - Syntax
-     - $x_at(vertex)
-   * - Arguments
-     - * **vertex** - index of the vertex of the current geometry (indices start at 0; negative values apply from the last index, starting at -1)
+     - $x
    * - Examples
-     - * ``$x_at(1)`` → 5
+     - * ``$x`` → 42
 
 
-.. end_$x_at_section
+.. end_$x_section
 
 .. _expression_function_GeometryGroup_x_at:
 
@@ -3864,6 +3844,26 @@ Retrieves a x coordinate of the geometry.
 
 
 .. end_x_at_section
+
+.. _expression_function_GeometryGroup_$x_at:
+
+$x_at
+.....
+
+Retrieves a x coordinate of the current feature's geometry. **WARNING: This function is deprecated. It is recommended to use the replacement x_at function with @geometry variable instead.**
+
+.. list-table::
+   :widths: 15 85
+
+   * - Syntax
+     - $x_at(vertex)
+   * - Arguments
+     - * **vertex** - index of the vertex of the current geometry (indices start at 0; negative values apply from the last index, starting at -1)
+   * - Examples
+     - * ``$x_at(1)`` → 5
+
+
+.. end_$x_at_section
 
 .. _expression_function_GeometryGroup_x_max:
 
