@@ -50,6 +50,7 @@ This usually happens from the October release.
 - [ ] In [docs_conf.yml](docs_conf.yml) file, add the new release number to the `version_list` parameter
 - [ ] In [dependabot.yml](.github/dependabot.yml) file, Add label for backporting dependencies update to the new branch
 - [ ] In [auto-label.yml](.github/auto-label.yml) file, update the milestone environment variable to the newly created milestone
+- [ ] In [translation_statistcs.yml](.github/workflows/translation_statistcs.yml) file, add the newly created backport label to the LABELS environment variable
 - [ ] In [substitutions.txt](substitutions.txt) file, replace |previous_docs| value with the new version number
 
 </details>
@@ -153,8 +154,8 @@ is being translated. So when a new LTR is published, we disconnect the old one a
   to generate updated English \*.po source files to push to Transifex
 - [ ] In [pull_minimize_translations.yml](.github/workflows/pull_minimize_translations.yml): update target_branch
   to the new LTR branch in which to pull translations from Transifex
-- [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml): update target_branch
-  to the branch(es) in which to generate translation statistics
+- [ ] In [translation_statistics.yml](.github/workflows/translation_statistics.yml), remove from the LABELS environment variable
+  the backport label of the old LTR branch
 - [ ] In [dependabot.yml](.github/dependabot.yml) file: Remove label for backporting dependencies update to the old LTR version
 
 - [ ] Run `make linkcheck` and fix any new broken links found in the rst files
