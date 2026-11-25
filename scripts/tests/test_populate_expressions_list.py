@@ -44,7 +44,9 @@ class PopulateExpressionsListTest(unittest.TestCase):
         root = Path(temporary.name)
         self.script = root / "scripts/populate_expressions_list.py"
         self.script.parent.mkdir()
-        shutil.copyfile(Path(__file__).resolve().parents[1] / self.script.name, self.script)
+        shutil.copyfile(
+            Path(__file__).resolve().parents[1] / self.script.name, self.script
+        )
         self.qgis = root / "QGIS"
         self.help_folder = self.qgis / "resources/function_help/json"
         self.help_folder.mkdir(parents=True)
@@ -84,7 +86,9 @@ class PopulateExpressionsListTest(unittest.TestCase):
             output.unlink()
         # Control only the filesystem enumeration; execute the actual generator.
         with (
-            patch("os.walk", return_value=iter([(str(self.help_folder), [], filenames)])),
+            patch(
+                "os.walk", return_value=iter([(str(self.help_folder), [], filenames)])
+            ),
             patch.object(sys, "argv", [str(self.script), str(self.qgis)]),
         ):
             runpy.run_path(str(self.script), run_name="__main__")
