@@ -3290,8 +3290,8 @@ You then need to fill a number of properties:
   * :guilabel:`Python` actions execute a Python expression.
   * :guilabel:`Generic` and :guilabel:`Python` actions are visible on every Operating Systems.
   * :guilabel:`macOS`, :guilabel:`Windows` and :guilabel:`Unix` actions are visible
-     only on the respective platform (i.e., you can define three "Edit" actions to open an editor
-     and the users can only see and execute the single "Edit" action for their platform).
+    only on the respective platform (i.e., you can define three "Edit" actions to open an editor
+    and the users can only see and execute the single "Edit" action for their platform).
   * :guilabel:`Open URL`: Uses a HTTP GET request to open a provided URL.
   * :guilabel:`Submit URL (urlencoded or JSON)`:
     Same as the :guilabel:`Open URL` action but using a HTTP POST request.
@@ -3329,7 +3329,8 @@ You then need to fill a number of properties:
      Be aware that this type of action involves the entire layer and not the single features.
 
 * The :guilabel:`Action Text` provides a text box to include the command to run.
-  It must contain the name of the application that will be executed when the action is invoked.
+  It must contain a Python code or the name of the application that will be executed
+  when the action is invoked with optional arguments.
   You can :guilabel:`Insert` one or more attribute field values as arguments to the application.
 
   When the action is invoked, any set of characters that start with a ``%``
@@ -3348,13 +3349,14 @@ You then need to fill a number of properties:
   surrounded by square brackets, use a second set like this: ``[[%col10]]``.
 
   Actions can invoke a single process, with arguments, so Boolean operators
-  (such as ``&``, ``&&``, ``;``, ``|``) will not work.
+  (such as ``&``, ``&&``, ``;``, ``|``) in the action text will not work.
   In UNIX-like operating systems multiple commands can be executed via ``bash -c``.
 
-  Using the :guilabel:`Identify Features` tool, you can open the :guilabel:`Identify Results` dialog.
-  It includes a *(Derived)* item that contains information relevant to the layer type.
-  The values in this item can be accessed in a similar way to the other fields
-  by proceeding the derived field name with ``(Derived).``.
+  When querying a feature with the :guilabel:`Identify Features` tool,
+  the :guilabel:`Identify Results` dialog includes a *(Derived)* item
+  that contains information relevant to the layer type.
+  The values in this item can be accessed from an action in a similar way to the other fields
+  by preceding the derived field name with ``(Derived).``.
   For example, a point layer has an ``X`` and ``Y`` field, and the values of these fields
   can be used in the action with ``%(Derived).X`` and ``%(Derived).Y``.
   The derived attributes are only available from the :guilabel:`Identify Results` dialog box,
@@ -3541,16 +3543,14 @@ where the action was created):
 
 .. code-block:: python
 
-  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp',
-    '[% "layername" %]', 'ogr')
+  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp', '[% "layername" %]', 'ogr')
 
 
 To add a raster (a TIF image in this example), it becomes:
 
 .. code-block:: python
 
-  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif',
-    '[% "layername" %]')
+  qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif', '[% "layername" %]')
 
 Creating a dataset with a Unix action
 .......................................
