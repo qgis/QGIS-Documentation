@@ -318,12 +318,27 @@ clicking on the :guilabel:`Data Filtering` in the :guilabel:`View` menu. The
 side of the map canvas. At the top of the slider, there is a |settings| :sup:`Settings` menu
 where you can:
 
-* Set the :guilabel:`Fixed Range Size` value to lock the elevation range to a specific size.
+* Enter the lowest and highest elevation value to define the :guilabel:`Limits` from
+  all project layers or from the current layer.
+* Define :guilabel:`Range` value to set size of the elevation range.
+  Click the lock button to keep the size while moving the slider or you can press
+  :kbd:`Enter`. Clear it to show the full range.
   This setting is saved within the project and retained across sessions, ensuring consistency
-  for your elevation filter. Use the |checkbox| :guilabel:`Invert Direction` option to reverse
-  the elevation filter slider, so that it moves from high values at the bottom to low values at the top.
-* :guilabel:`Set Elevation Range` to open the project elevation tab, where you can set dedicated lower and upper bounds for the elevation range
-* :guilabel:`Disable Elevation Filter` to remove the elevation filter from the map canvas
+  for your elevation filter.
+  Use the |checkbox| :guilabel:`Invert Direction` option to reverse
+  the elevation filter slider, so that it moves from high values at the bottom to low values at the top
+* :guilabel:`Disable Elevation Filter` to remove the elevation filter from the map canvas.
+
+When the project does not define an elevation range, the controller
+calculates the limits from the layers in the map canvas.
+For raster layers, the range comes from the band statistics of the elevation
+surface.
+
+The limits calculated from layers are rounded.
+For example, ``1234.5 - 3456.7`` becomes ``1200 - 3500``.
+While you drag the slider, it snaps to round values.
+It also snaps to significant elevations of the layers in the map when one is
+closer than the round value, so you can place a handle exactly on a layer surface.
 
 .. index::
    single: Bookmarks
