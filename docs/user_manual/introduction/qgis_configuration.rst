@@ -95,6 +95,9 @@ displayed at the bottom of the frame.
   |radioButtonOn| :guilabel:`Qt default` or a user-defined one
 * Change the :guilabel:`Timeout for timed messages or dialogs`
 * |unchecked| :guilabel:`Hide splash screen at startup`
+* |unchecked| :guilabel:`Show welcome page at startup`: displays the welcome page at QGIS startup.
+  It can show the "News" feed, the project templates
+  and the most recent projects of the :ref:`user profile <user_profiles>`.
 * |checkbox| :guilabel:`Show QGIS news feed on welcome page`: displays a curated
   QGIS news feed on the welcome page, giving you a direct way to be aware of
   project news (user/developer meetings date and summary, community surveys,
@@ -117,22 +120,30 @@ displayed at the bottom of the frame.
 
    Project Files Settings
 
-* :guilabel:`Open project on launch`
+* :guilabel:`Open project on launch` defines the behavior whenever QGIS starts:
 
-  * 'Welcome Page' (default): can display the "News" feed, the project
-    template(s) and the most recent projects (with thumbnails) of the
-    :ref:`user profile <user_profiles>`. No project is opened by default.
-  * 'New': opens a new project, based on the default template
+  * 'New': opens a new project based on the :ref:`default project file <default_project_file>`, if set.
+    If no project is set as default, QGIS starts with an empty project.
   * 'Most recent': reopens the last saved project
-  * and 'Specific': opens a particular project. Use the :guilabel:`...` button
-    to define the project to use by default.
-* |checkbox| :guilabel:`Create new project from default project`. You have the
-  possibility to press on :guilabel:`Set current project as default` or on
-  :guilabel:`Reset default`. You can browse through your files and define a
-  directory where you find your user-defined project templates. This will be
-  added to :menuselection:`Project --> New From Template`. If you first activate
-  |checkbox| :guilabel:`Create new project from default project` and then save
-  a project in the project templates folder.
+  * and 'Specific': opens a particular project at startup.
+    Use the |fileOpen| :sup:`Select File` button to define the project to use by default.
+
+.. _default_project_file:
+
+* |checkbox| :guilabel:`Create new project from default project`:
+  Instead of starting a new project from scratch (i.e., as a new empty project),
+  this option allows you to open a specific project whenever you press |fileNew| :sup:`New Project`
+  or :menuselection:`Project -->` |fileNew| :menuselection:`New Project`.
+  The project file to use is indicated using the :guilabel:`Set current project as default` button.
+  To start new projects as empty project, either uncheck the option or press :guilabel:`Reset default`.
+* :guilabel:`Template folders`: you can define **multiple folders** containing
+  user-defined project templates. All projects found across the listed folders are made
+  available under :menuselection:`Project --> New From Template` and as sections in the
+  welcome page. Use the |symbologyAdd| :sup:`Add new path` and |symbologyRemove| :sup:`Remove path` buttons
+  to manage the list, you can also use |arrowUp| :sup:`Move selected path up`
+  and |arrowDown| :sup:`Move selected path down` buttons to change the order of the paths.
+  The |undo| :sup:`Reset to default` button resets the list to the
+  default profile templates directory.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when
   required` to avoid losing changes you made.
 * |checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`
@@ -2956,6 +2967,10 @@ in the QGIS user profile.
    :width: 2em
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
+.. |arrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |arrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |codeEditor| image:: /static/common/mIconCodeEditor.png
@@ -2979,6 +2994,8 @@ in the QGIS user profile.
 .. |elevationscale| image:: /static/common/elevationscale.png
    :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
+.. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
@@ -3074,6 +3091,8 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/unchecked.png
    :width: 1.3em
+.. |undo| image:: /static/common/mActionUndo.png
+   :width: 1.5em
 .. |user| image:: /static/common/user.png
    :width: 1.5em
 .. |win| image:: /static/common/win.png
