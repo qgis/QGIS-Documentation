@@ -302,10 +302,13 @@ for g_name in groups:
     func_list = groups[g_name]["func_list"]
     if len(func_list) < 1:
         continue
-    # Sort list of functions, maintaining e.g. $geometry and geometry functions closer
+    # Keep related names such as $geometry and geometry adjacent. Break ties by
+    # the full name so their order does not depend on filesystem enumeration.
     func_list = {
         key: val
-        for key, val in sorted(func_list.items(), key=lambda ele: ele[0].strip("$"))
+        for key, val in sorted(
+            func_list.items(), key=lambda ele: (ele[0].strip("$"), ele[0])
+        )
     }
     output_group_file = path.join(output_folder, g_name.replace(" ", "_") + ".rst")
     with open(output_group_file, "w", newline="\n") as f:
