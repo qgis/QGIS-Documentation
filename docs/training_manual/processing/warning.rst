@@ -46,9 +46,7 @@ likely to have no value at all.  Please, don't fool yourself and think that
 after reading this guide you are already capable of performing spatial analysis
 and get sound results. You need to study spatial analysis as well.
 
-Here is a good reference that you can read to learn more about spatial data analysis.
-
-*Geospatial Analysis (3rd Edition)*: A Comprehensive Guide to Principles, Techniques and Software Tools
-Michael John De Smith, Michael F. Goodchild, Paul A. Longley
-
-It is available online `here <https://www.spatialanalysisonline.com/>`_
+Here is a good reference that you can read to learn more about spatial data analysis:
+*Geospatial Analysis: A Comprehensive Guide to Principles, Techniques and Software Tools* -
+Michael John De Smith, Michael F. Goodchild, Paul A. Longley.
+It is available online `here <https://www.spatialanalysisonline.com/>`_.
